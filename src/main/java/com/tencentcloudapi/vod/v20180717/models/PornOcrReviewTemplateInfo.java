@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PornOcrReviewTemplateInfo  extends AbstractModel{
+public class PornOcrReviewTemplateInfo extends AbstractModel{
 
     /**
     * 文本鉴黄任务开关，可选值：
@@ -46,9 +46,9 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * 获取文本鉴黄任务开关，可选值：
+     * Get 文本鉴黄任务开关，可选值：
 <li>ON：开启文本鉴黄任务；</li>
-<li>OFF：关闭文本鉴黄任务。</li>
+<li>OFF：关闭文本鉴黄任务。</li> 
      * @return Switch 文本鉴黄任务开关，可选值：
 <li>ON：开启文本鉴黄任务；</li>
 <li>OFF：关闭文本鉴黄任务。</li>
@@ -58,7 +58,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文本鉴黄任务开关，可选值：
+     * Set 文本鉴黄任务开关，可选值：
 <li>ON：开启文本鉴黄任务；</li>
 <li>OFF：关闭文本鉴黄任务。</li>
      * @param Switch 文本鉴黄任务开关，可选值：
@@ -70,7 +70,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。 
      * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      */
     public Long getBlockConfidence() {
@@ -78,7 +78,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 100 分。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
@@ -86,7 +86,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。 
      * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public Long getReviewConfidence() {
@@ -94,7 +94,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 75 分。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
@@ -102,7 +102,7 @@ public class PornOcrReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

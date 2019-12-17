@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePublicConfigRequest  extends AbstractModel{
+public class CreatePublicConfigRequest extends AbstractModel{
 
     /**
     * 配置项名称
@@ -58,7 +58,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     private String ConfigType;
 
     /**
-     * 获取配置项名称
+     * Get 配置项名称 
      * @return ConfigName 配置项名称
      */
     public String getConfigName() {
@@ -66,7 +66,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称
+     * Set 配置项名称
      * @param ConfigName 配置项名称
      */
     public void setConfigName(String ConfigName) {
@@ -74,7 +74,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本
+     * Get 配置项版本 
      * @return ConfigVersion 配置项版本
      */
     public String getConfigVersion() {
@@ -82,7 +82,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本
+     * Set 配置项版本
      * @param ConfigVersion 配置项版本
      */
     public void setConfigVersion(String ConfigVersion) {
@@ -90,7 +90,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项值，总是接收yaml格式的内容
+     * Get 配置项值，总是接收yaml格式的内容 
      * @return ConfigValue 配置项值，总是接收yaml格式的内容
      */
     public String getConfigValue() {
@@ -98,7 +98,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项值，总是接收yaml格式的内容
+     * Set 配置项值，总是接收yaml格式的内容
      * @param ConfigValue 配置项值，总是接收yaml格式的内容
      */
     public void setConfigValue(String ConfigValue) {
@@ -106,7 +106,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本描述
+     * Get 配置项版本描述 
      * @return ConfigVersionDesc 配置项版本描述
      */
     public String getConfigVersionDesc() {
@@ -114,7 +114,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本描述
+     * Set 配置项版本描述
      * @param ConfigVersionDesc 配置项版本描述
      */
     public void setConfigVersionDesc(String ConfigVersionDesc) {
@@ -122,7 +122,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项类型
+     * Get 配置项类型 
      * @return ConfigType 配置项类型
      */
     public String getConfigType() {
@@ -130,7 +130,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项类型
+     * Set 配置项类型
      * @param ConfigType 配置项类型
      */
     public void setConfigType(String ConfigType) {
@@ -138,7 +138,7 @@ public class CreatePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
+public class InquiryPriceCreateInstanceResponse extends AbstractModel{
 
     /**
     * 刊例价
@@ -62,8 +62,8 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取刊例价
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 刊例价
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginalCost 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置刊例价
+     * Set 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置折扣价格
+     * Set 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取时间单位，"s","m"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 时间单位，"s","m"
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeUnit 时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位，"s","m"
+     * Set 时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 时间单位，"s","m"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取时间数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 时间数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeSpan 时间数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置时间数量
+     * Set 时间数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 时间数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -150,7 +150,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -158,7 +158,7 @@ public class InquiryPriceCreateInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalCost", this.OriginalCost);

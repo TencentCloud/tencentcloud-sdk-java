@@ -29,21 +29,10 @@ public class HaboClient extends AbstractClient{
     private static String endpoint = "habo.tencentcloudapi.com";
     private static String version = "2018-12-03";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public HaboClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public HaboClient(Credential credential, String region, ClientProfile profile) {
         super(HaboClient.endpoint, HaboClient.version, credential, region, profile);
     }

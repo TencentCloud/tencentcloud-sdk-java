@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMonitorsRequest  extends AbstractModel{
+public class DeleteMonitorsRequest extends AbstractModel{
 
     /**
     * 监控任务ID列表
@@ -30,7 +30,7 @@ public class DeleteMonitorsRequest  extends AbstractModel{
     private Integer [] MonitorIds;
 
     /**
-     * 获取监控任务ID列表
+     * Get 监控任务ID列表 
      * @return MonitorIds 监控任务ID列表
      */
     public Integer [] getMonitorIds() {
@@ -38,7 +38,7 @@ public class DeleteMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务ID列表
+     * Set 监控任务ID列表
      * @param MonitorIds 监控任务ID列表
      */
     public void setMonitorIds(Integer [] MonitorIds) {
@@ -46,7 +46,7 @@ public class DeleteMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MonitorIds.", this.MonitorIds);

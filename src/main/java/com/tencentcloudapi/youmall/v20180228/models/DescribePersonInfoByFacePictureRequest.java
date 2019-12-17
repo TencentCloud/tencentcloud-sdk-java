@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
+public class DescribePersonInfoByFacePictureRequest extends AbstractModel{
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -44,7 +44,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     private String Picture;
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -52,7 +52,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -60,7 +60,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public Integer getShopId() {
@@ -68,7 +68,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setShopId(Integer ShopId) {
@@ -76,7 +76,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片BASE编码
+     * Get 人脸图片BASE编码 
      * @return Picture 人脸图片BASE编码
      */
     public String getPicture() {
@@ -84,7 +84,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片BASE编码
+     * Set 人脸图片BASE编码
      * @param Picture 人脸图片BASE编码
      */
     public void setPicture(String Picture) {
@@ -92,7 +92,7 @@ public class DescribePersonInfoByFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

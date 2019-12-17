@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SellConfig  extends AbstractModel{
+public class SellConfig extends AbstractModel{
 
     /**
     * 设备类型
@@ -114,7 +114,7 @@ public class SellConfig  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取设备类型
+     * Get 设备类型 
      * @return Device 设备类型
      */
     public String getDevice() {
@@ -122,7 +122,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型
+     * Set 设备类型
      * @param Device 设备类型
      */
     public void setDevice(String Device) {
@@ -130,7 +130,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取售卖规格描述
+     * Get 售卖规格描述 
      * @return Type 售卖规格描述
      */
     public String getType() {
@@ -138,7 +138,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置售卖规格描述
+     * Set 售卖规格描述
      * @param Type 售卖规格描述
      */
     public void setType(String Type) {
@@ -146,7 +146,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型
+     * Get 实例类型 
      * @return CdbType 实例类型
      */
     public String getCdbType() {
@@ -154,7 +154,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型
+     * Set 实例类型
      * @param CdbType 实例类型
      */
     public void setCdbType(String CdbType) {
@@ -162,7 +162,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位为MB
+     * Get 内存大小，单位为MB 
      * @return Memory 内存大小，单位为MB
      */
     public Integer getMemory() {
@@ -170,7 +170,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位为MB
+     * Set 内存大小，单位为MB
      * @param Memory 内存大小，单位为MB
      */
     public void setMemory(Integer Memory) {
@@ -178,7 +178,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核心数
+     * Get CPU核心数 
      * @return Cpu CPU核心数
      */
     public Integer getCpu() {
@@ -186,7 +186,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核心数
+     * Set CPU核心数
      * @param Cpu CPU核心数
      */
     public void setCpu(Integer Cpu) {
@@ -194,7 +194,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘最小规格，单位为GB
+     * Get 磁盘最小规格，单位为GB 
      * @return VolumeMin 磁盘最小规格，单位为GB
      */
     public Integer getVolumeMin() {
@@ -202,7 +202,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘最小规格，单位为GB
+     * Set 磁盘最小规格，单位为GB
      * @param VolumeMin 磁盘最小规格，单位为GB
      */
     public void setVolumeMin(Integer VolumeMin) {
@@ -210,7 +210,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘最大规格，单位为GB
+     * Get 磁盘最大规格，单位为GB 
      * @return VolumeMax 磁盘最大规格，单位为GB
      */
     public Integer getVolumeMax() {
@@ -218,7 +218,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘最大规格，单位为GB
+     * Set 磁盘最大规格，单位为GB
      * @param VolumeMax 磁盘最大规格，单位为GB
      */
     public void setVolumeMax(Integer VolumeMax) {
@@ -226,7 +226,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘步长，单位为GB
+     * Get 磁盘步长，单位为GB 
      * @return VolumeStep 磁盘步长，单位为GB
      */
     public Integer getVolumeStep() {
@@ -234,7 +234,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘步长，单位为GB
+     * Set 磁盘步长，单位为GB
      * @param VolumeStep 磁盘步长，单位为GB
      */
     public void setVolumeStep(Integer VolumeStep) {
@@ -242,7 +242,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取链接数
+     * Get 链接数 
      * @return Connection 链接数
      */
     public Integer getConnection() {
@@ -250,7 +250,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置链接数
+     * Set 链接数
      * @param Connection 链接数
      */
     public void setConnection(Integer Connection) {
@@ -258,7 +258,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取每秒查询数量
+     * Get 每秒查询数量 
      * @return Qps 每秒查询数量
      */
     public Integer getQps() {
@@ -266,7 +266,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置每秒查询数量
+     * Set 每秒查询数量
      * @param Qps 每秒查询数量
      */
     public void setQps(Integer Qps) {
@@ -274,7 +274,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取每秒IO数量
+     * Get 每秒IO数量 
      * @return Iops 每秒IO数量
      */
     public Integer getIops() {
@@ -282,7 +282,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置每秒IO数量
+     * Set 每秒IO数量
      * @param Iops 每秒IO数量
      */
     public void setIops(Integer Iops) {
@@ -290,7 +290,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取应用场景描述
+     * Get 应用场景描述 
      * @return Info 应用场景描述
      */
     public String getInfo() {
@@ -298,7 +298,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置应用场景描述
+     * Set 应用场景描述
      * @param Info 应用场景描述
      */
     public void setInfo(String Info) {
@@ -306,7 +306,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 获取状态值
+     * Get 状态值 
      * @return Status 状态值
      */
     public Integer getStatus() {
@@ -314,7 +314,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 设置状态值
+     * Set 状态值
      * @param Status 状态值
      */
     public void setStatus(Integer Status) {
@@ -322,7 +322,7 @@ public class SellConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Device", this.Device);

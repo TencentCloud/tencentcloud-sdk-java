@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchMediaResponse  extends AbstractModel{
+public class SearchMediaResponse extends AbstractModel{
 
     /**
     * 符合搜索条件的记录总数。
@@ -46,8 +46,8 @@ public class SearchMediaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * Get 符合搜索条件的记录总数。
+<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li> 
      * @return TotalCount 符合搜索条件的记录总数。
 <li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      */
@@ -56,7 +56,7 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合搜索条件的记录总数。
+     * Set 符合搜索条件的记录总数。
 <li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      * @param TotalCount 符合搜索条件的记录总数。
 <li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
@@ -66,8 +66,8 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件信息列表，只包含基础信息（BasicInfo）。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 媒体文件信息列表，只包含基础信息（BasicInfo）。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件信息列表，只包含基础信息（BasicInfo）。
+     * Set 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInfoSet 媒体文件信息列表，只包含基础信息（BasicInfo）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class SearchMediaResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipAclMap  extends AbstractModel{
+public class EipAclMap extends AbstractModel{
 
     /**
     * EIP 实例 ID
@@ -37,7 +37,7 @@ public class EipAclMap  extends AbstractModel{
     private String AclId;
 
     /**
-     * 获取EIP 实例 ID
+     * Get EIP 实例 ID 
      * @return EipId EIP 实例 ID
      */
     public String getEipId() {
@@ -45,7 +45,7 @@ public class EipAclMap  extends AbstractModel{
     }
 
     /**
-     * 设置EIP 实例 ID
+     * Set EIP 实例 ID
      * @param EipId EIP 实例 ID
      */
     public void setEipId(String EipId) {
@@ -53,7 +53,7 @@ public class EipAclMap  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例 ID
+     * Get ACL 实例 ID 
      * @return AclId ACL 实例 ID
      */
     public String getAclId() {
@@ -61,7 +61,7 @@ public class EipAclMap  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例 ID
+     * Set ACL 实例 ID
      * @param AclId ACL 实例 ID
      */
     public void setAclId(String AclId) {
@@ -69,7 +69,7 @@ public class EipAclMap  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

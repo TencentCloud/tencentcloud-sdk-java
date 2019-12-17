@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceInfo  extends AbstractModel{
+public class FaceInfo extends AbstractModel{
 
     /**
     * 人脸框左上角横坐标。
@@ -71,9 +71,9 @@ public class FaceInfo  extends AbstractModel{
     private FaceQualityInfo FaceQualityInfo;
 
     /**
-     * 获取人脸框左上角横坐标。
+     * Get 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
      * @return X 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -83,7 +83,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角横坐标。
+     * Set 人脸框左上角横坐标。
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      * @param X 人脸框左上角横坐标。
@@ -95,9 +95,9 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框左上角纵坐标。 
+     * Get 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
      * @return Y 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -107,7 +107,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角纵坐标。 
+     * Set 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      * @param Y 人脸框左上角纵坐标。 
@@ -119,7 +119,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框宽度。
+     * Get 人脸框宽度。 
      * @return Width 人脸框宽度。
      */
     public Long getWidth() {
@@ -127,7 +127,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框宽度。
+     * Set 人脸框宽度。
      * @param Width 人脸框宽度。
      */
     public void setWidth(Long Width) {
@@ -135,7 +135,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框高度。
+     * Get 人脸框高度。 
      * @return Height 人脸框高度。
      */
     public Long getHeight() {
@@ -143,7 +143,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框高度。
+     * Set 人脸框高度。
      * @param Height 人脸框高度。
      */
     public void setHeight(Long Height) {
@@ -151,8 +151,8 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * Get 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
+魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。 
      * @return FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
 魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
      */
@@ -161,7 +161,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
+     * Set 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
 魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
      * @param FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
 魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
@@ -171,8 +171,8 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * Set 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

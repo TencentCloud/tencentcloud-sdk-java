@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Candidate  extends AbstractModel{
+public class Candidate extends AbstractModel{
 
     /**
     * 人员ID
@@ -74,7 +74,7 @@ public class Candidate  extends AbstractModel{
     private PersonGroupInfo [] PersonGroupInfos;
 
     /**
-     * 获取人员ID
+     * Get 人员ID 
      * @return PersonId 人员ID
      */
     public String getPersonId() {
@@ -82,7 +82,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置人员ID
+     * Set 人员ID
      * @param PersonId 人员ID
      */
     public void setPersonId(String PersonId) {
@@ -90,7 +90,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取人脸ID
+     * Get 人脸ID 
      * @return FaceId 人脸ID
      */
     public String getFaceId() {
@@ -98,7 +98,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置人脸ID
+     * Set 人脸ID
      * @param FaceId 人脸ID
      */
     public void setFaceId(String FaceId) {
@@ -106,13 +106,13 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取候选者的匹配得分。 
+     * Get 候选者的匹配得分。 
 
 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
 
-一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。 
      * @return Score 候选者的匹配得分。 
 
 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
@@ -126,7 +126,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置候选者的匹配得分。 
+     * Set 候选者的匹配得分。 
 
 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
@@ -146,8 +146,8 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取人员名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人员名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PersonName 人员名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -156,7 +156,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonName 人员名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,8 +166,8 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取人员性别
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人员性别
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Gender 人员性别
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -176,7 +176,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置人员性别
+     * Set 人员性别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Gender 人员性别
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,8 +186,8 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取包含此人员的人员库及描述字段内容列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 包含此人员的人员库及描述字段内容列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PersonGroupInfos 包含此人员的人员库及描述字段内容列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -196,7 +196,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置包含此人员的人员库及描述字段内容列表
+     * Set 包含此人员的人员库及描述字段内容列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonGroupInfos 包含此人员的人员库及描述字段内容列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -206,7 +206,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

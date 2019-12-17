@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpcRequest  extends AbstractModel{
+public class CreateVpcRequest extends AbstractModel{
 
     /**
     * vpc名称，最大长度不能超过60个字节。
@@ -58,7 +58,7 @@ public class CreateVpcRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-     * 获取vpc名称，最大长度不能超过60个字节。
+     * Get vpc名称，最大长度不能超过60个字节。 
      * @return VpcName vpc名称，最大长度不能超过60个字节。
      */
     public String getVpcName() {
@@ -66,7 +66,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置vpc名称，最大长度不能超过60个字节。
+     * Set vpc名称，最大长度不能超过60个字节。
      * @param VpcName vpc名称，最大长度不能超过60个字节。
      */
     public void setVpcName(String VpcName) {
@@ -74,7 +74,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Get vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。 
      * @return CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public String getCidrBlock() {
@@ -82,7 +82,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
+     * Set vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      * @param CidrBlock vpc的cidr，只能为10.0.0.0/16，172.16.0.0/16，192.168.0.0/16这三个内网网段内。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -90,7 +90,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启组播。true: 开启, false: 不开启。
+     * Get 是否开启组播。true: 开启, false: 不开启。 
      * @return EnableMulticast 是否开启组播。true: 开启, false: 不开启。
      */
     public String getEnableMulticast() {
@@ -98,7 +98,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启组播。true: 开启, false: 不开启。
+     * Set 是否开启组播。true: 开启, false: 不开启。
      * @param EnableMulticast 是否开启组播。true: 开启, false: 不开启。
      */
     public void setEnableMulticast(String EnableMulticast) {
@@ -106,7 +106,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取DNS地址，最多支持4个
+     * Get DNS地址，最多支持4个 
      * @return DnsServers DNS地址，最多支持4个
      */
     public String [] getDnsServers() {
@@ -114,7 +114,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置DNS地址，最多支持4个
+     * Set DNS地址，最多支持4个
      * @param DnsServers DNS地址，最多支持4个
      */
     public void setDnsServers(String [] DnsServers) {
@@ -122,7 +122,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return DomainName 域名
      */
     public String getDomainName() {
@@ -130,7 +130,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param DomainName 域名
      */
     public void setDomainName(String DomainName) {
@@ -138,7 +138,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);

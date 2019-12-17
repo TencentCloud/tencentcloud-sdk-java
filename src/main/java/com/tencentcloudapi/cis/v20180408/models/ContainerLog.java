@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainerLog  extends AbstractModel{
+public class ContainerLog extends AbstractModel{
 
     /**
     * 容器名称
@@ -44,7 +44,7 @@ public class ContainerLog  extends AbstractModel{
     private String Time;
 
     /**
-     * 获取容器名称
+     * Get 容器名称 
      * @return Name 容器名称
      */
     public String getName() {
@@ -52,7 +52,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 设置容器名称
+     * Set 容器名称
      * @param Name 容器名称
      */
     public void setName(String Name) {
@@ -60,7 +60,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志
+     * Get 日志 
      * @return Log 日志
      */
     public String getLog() {
@@ -68,7 +68,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志
+     * Set 日志
      * @param Log 日志
      */
     public void setLog(String Log) {
@@ -76,7 +76,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志记录时间
+     * Get 日志记录时间 
      * @return Time 日志记录时间
      */
     public String getTime() {
@@ -84,7 +84,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志记录时间
+     * Set 日志记录时间
      * @param Time 日志记录时间
      */
     public void setTime(String Time) {
@@ -92,7 +92,7 @@ public class ContainerLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7CCRuleResponse  extends AbstractModel{
+public class CreateL7CCRuleResponse extends AbstractModel{
 
     /**
     * 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
@@ -37,7 +37,7 @@ public class CreateL7CCRuleResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
+     * Get 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组 
      * @return RuleConfig 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
      */
     public CCRuleConfig [] getRuleConfig() {
@@ -45,7 +45,7 @@ public class CreateL7CCRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
+     * Set 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
      * @param RuleConfig 7层CC自定义规则参数，当没有开启CC自定义规则时，返回空数组
      */
     public void setRuleConfig(CCRuleConfig [] RuleConfig) {
@@ -53,7 +53,7 @@ public class CreateL7CCRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateL7CCRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateL7CCRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RuleConfig.", this.RuleConfig);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateZoneResponse  extends AbstractModel{
+public class CreateZoneResponse extends AbstractModel{
 
     /**
     * 创建的大区ID
@@ -37,7 +37,7 @@ public class CreateZoneResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取创建的大区ID
+     * Get 创建的大区ID 
      * @return LogicZoneId 创建的大区ID
      */
     public String getLogicZoneId() {
@@ -45,7 +45,7 @@ public class CreateZoneResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建的大区ID
+     * Set 创建的大区ID
      * @param LogicZoneId 创建的大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -53,7 +53,7 @@ public class CreateZoneResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateZoneResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateZoneResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogicZoneId", this.LogicZoneId);

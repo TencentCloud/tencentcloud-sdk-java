@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LifecycleHook  extends AbstractModel{
+public class LifecycleHook extends AbstractModel{
 
     /**
     * 生命周期挂钩ID
@@ -86,7 +86,7 @@ public class LifecycleHook  extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
-     * 获取生命周期挂钩ID
+     * Get 生命周期挂钩ID 
      * @return LifecycleHookId 生命周期挂钩ID
      */
     public String getLifecycleHookId() {
@@ -94,7 +94,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩ID
+     * Set 生命周期挂钩ID
      * @param LifecycleHookId 生命周期挂钩ID
      */
     public void setLifecycleHookId(String LifecycleHookId) {
@@ -102,7 +102,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩名称
+     * Get 生命周期挂钩名称 
      * @return LifecycleHookName 生命周期挂钩名称
      */
     public String getLifecycleHookName() {
@@ -110,7 +110,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩名称
+     * Set 生命周期挂钩名称
      * @param LifecycleHookName 生命周期挂钩名称
      */
     public void setLifecycleHookName(String LifecycleHookName) {
@@ -118,7 +118,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -126,7 +126,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -134,7 +134,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩默认结果
+     * Get 生命周期挂钩默认结果 
      * @return DefaultResult 生命周期挂钩默认结果
      */
     public String getDefaultResult() {
@@ -142,7 +142,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩默认结果
+     * Set 生命周期挂钩默认结果
      * @param DefaultResult 生命周期挂钩默认结果
      */
     public void setDefaultResult(String DefaultResult) {
@@ -150,7 +150,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩等待超时时间
+     * Get 生命周期挂钩等待超时时间 
      * @return HeartbeatTimeout 生命周期挂钩等待超时时间
      */
     public Integer getHeartbeatTimeout() {
@@ -158,7 +158,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩等待超时时间
+     * Set 生命周期挂钩等待超时时间
      * @param HeartbeatTimeout 生命周期挂钩等待超时时间
      */
     public void setHeartbeatTimeout(Integer HeartbeatTimeout) {
@@ -166,7 +166,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩适用场景
+     * Get 生命周期挂钩适用场景 
      * @return LifecycleTransition 生命周期挂钩适用场景
      */
     public String getLifecycleTransition() {
@@ -174,7 +174,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩适用场景
+     * Set 生命周期挂钩适用场景
      * @param LifecycleTransition 生命周期挂钩适用场景
      */
     public void setLifecycleTransition(String LifecycleTransition) {
@@ -182,7 +182,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取通知目标的附加信息
+     * Get 通知目标的附加信息 
      * @return NotificationMetadata 通知目标的附加信息
      */
     public String getNotificationMetadata() {
@@ -190,7 +190,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置通知目标的附加信息
+     * Set 通知目标的附加信息
      * @param NotificationMetadata 通知目标的附加信息
      */
     public void setNotificationMetadata(String NotificationMetadata) {
@@ -198,7 +198,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreatedTime 创建时间
      */
     public String getCreatedTime() {
@@ -206,7 +206,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreatedTime 创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -214,7 +214,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 获取通知目标
+     * Get 通知目标 
      * @return NotificationTarget 通知目标
      */
     public NotificationTarget getNotificationTarget() {
@@ -222,7 +222,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 设置通知目标
+     * Set 通知目标
      * @param NotificationTarget 通知目标
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
@@ -230,7 +230,7 @@ public class LifecycleHook  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);

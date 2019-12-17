@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxiesStatusRequest  extends AbstractModel{
+public class DescribeProxiesStatusRequest extends AbstractModel{
 
     /**
     * （旧参数，请切换到ProxyIds）通道ID列表。
@@ -37,7 +37,7 @@ public class DescribeProxiesStatusRequest  extends AbstractModel{
     private String [] ProxyIds;
 
     /**
-     * 获取（旧参数，请切换到ProxyIds）通道ID列表。
+     * Get （旧参数，请切换到ProxyIds）通道ID列表。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）通道ID列表。
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class DescribeProxiesStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到ProxyIds）通道ID列表。
+     * Set （旧参数，请切换到ProxyIds）通道ID列表。
      * @param InstanceIds （旧参数，请切换到ProxyIds）通道ID列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class DescribeProxiesStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）通道ID列表。
+     * Get （新参数）通道ID列表。 
      * @return ProxyIds （新参数）通道ID列表。
      */
     public String [] getProxyIds() {
@@ -61,7 +61,7 @@ public class DescribeProxiesStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）通道ID列表。
+     * Set （新参数）通道ID列表。
      * @param ProxyIds （新参数）通道ID列表。
      */
     public void setProxyIds(String [] ProxyIds) {
@@ -69,7 +69,7 @@ public class DescribeProxiesStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

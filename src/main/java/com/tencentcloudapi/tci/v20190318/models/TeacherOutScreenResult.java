@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TeacherOutScreenResult  extends AbstractModel{
+public class TeacherOutScreenResult extends AbstractModel{
 
     /**
     * 动作识别结果，InScreen：在屏幕内
@@ -59,8 +59,8 @@ OutScreen：不在屏幕内
     private Long Width;
 
     /**
-     * 获取动作识别结果，InScreen：在屏幕内
-OutScreen：不在屏幕内
+     * Get 动作识别结果，InScreen：在屏幕内
+OutScreen：不在屏幕内 
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
      * @return Class 动作识别结果，InScreen：在屏幕内
 OutScreen：不在屏幕内
@@ -70,7 +70,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 设置动作识别结果，InScreen：在屏幕内
+     * Set 动作识别结果，InScreen：在屏幕内
 OutScreen：不在屏幕内
      * @param Class 动作识别结果，InScreen：在屏幕内
 OutScreen：不在屏幕内
@@ -80,7 +80,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 获取识别结果高度
+     * Get 识别结果高度 
      * @return Height 识别结果高度
      */
     public Long getHeight() {
@@ -88,7 +88,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 设置识别结果高度
+     * Set 识别结果高度
      * @param Height 识别结果高度
      */
     public void setHeight(Long Height) {
@@ -96,7 +96,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 获取识别结果左坐标
+     * Get 识别结果左坐标 
      * @return Left 识别结果左坐标
      */
     public Long getLeft() {
@@ -104,7 +104,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 设置识别结果左坐标
+     * Set 识别结果左坐标
      * @param Left 识别结果左坐标
      */
     public void setLeft(Long Left) {
@@ -112,7 +112,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 获取识别结果顶坐标
+     * Get 识别结果顶坐标 
      * @return Top 识别结果顶坐标
      */
     public Long getTop() {
@@ -120,7 +120,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 设置识别结果顶坐标
+     * Set 识别结果顶坐标
      * @param Top 识别结果顶坐标
      */
     public void setTop(Long Top) {
@@ -128,7 +128,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 获取识别结果宽度
+     * Get 识别结果宽度 
      * @return Width 识别结果宽度
      */
     public Long getWidth() {
@@ -136,7 +136,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 设置识别结果宽度
+     * Set 识别结果宽度
      * @param Width 识别结果宽度
      */
     public void setWidth(Long Width) {
@@ -144,7 +144,7 @@ OutScreen：不在屏幕内
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Class", this.Class);

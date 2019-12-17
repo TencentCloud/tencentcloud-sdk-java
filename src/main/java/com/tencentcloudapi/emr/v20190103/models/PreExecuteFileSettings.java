@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreExecuteFileSettings  extends AbstractModel{
+public class PreExecuteFileSettings extends AbstractModel{
 
     /**
     * 脚本在COS上路径，已废弃
@@ -107,7 +107,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     private String AppId;
 
     /**
-     * 获取脚本在COS上路径，已废弃
+     * Get 脚本在COS上路径，已废弃 
      * @return Path 脚本在COS上路径，已废弃
      */
     public String getPath() {
@@ -115,7 +115,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置脚本在COS上路径，已废弃
+     * Set 脚本在COS上路径，已废弃
      * @param Path 脚本在COS上路径，已废弃
      */
     public void setPath(String Path) {
@@ -123,7 +123,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取执行脚本参数
+     * Get 执行脚本参数 
      * @return Args 执行脚本参数
      */
     public String [] getArgs() {
@@ -131,7 +131,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置执行脚本参数
+     * Set 执行脚本参数
      * @param Args 执行脚本参数
      */
     public void setArgs(String [] Args) {
@@ -139,7 +139,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取COS的Bucket名称，已废弃
+     * Get COS的Bucket名称，已废弃 
      * @return Bucket COS的Bucket名称，已废弃
      */
     public String getBucket() {
@@ -147,7 +147,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置COS的Bucket名称，已废弃
+     * Set COS的Bucket名称，已废弃
      * @param Bucket COS的Bucket名称，已废弃
      */
     public void setBucket(String Bucket) {
@@ -155,7 +155,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取COS的Region名称，已废弃
+     * Get COS的Region名称，已废弃 
      * @return Region COS的Region名称，已废弃
      */
     public String getRegion() {
@@ -163,7 +163,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置COS的Region名称，已废弃
+     * Set COS的Region名称，已废弃
      * @param Region COS的Region名称，已废弃
      */
     public void setRegion(String Region) {
@@ -171,7 +171,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取COS的Domain数据，已废弃
+     * Get COS的Domain数据，已废弃 
      * @return Domain COS的Domain数据，已废弃
      */
     public String getDomain() {
@@ -179,7 +179,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置COS的Domain数据，已废弃
+     * Set COS的Domain数据，已废弃
      * @param Domain COS的Domain数据，已废弃
      */
     public void setDomain(String Domain) {
@@ -187,7 +187,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取执行顺序
+     * Get 执行顺序 
      * @return RunOrder 执行顺序
      */
     public Integer getRunOrder() {
@@ -195,7 +195,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置执行顺序
+     * Set 执行顺序
      * @param RunOrder 执行顺序
      */
     public void setRunOrder(Integer RunOrder) {
@@ -203,7 +203,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取resourceAfter 或 clusterAfter
+     * Get resourceAfter 或 clusterAfter 
      * @return WhenRun resourceAfter 或 clusterAfter
      */
     public String getWhenRun() {
@@ -211,7 +211,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置resourceAfter 或 clusterAfter
+     * Set resourceAfter 或 clusterAfter
      * @param WhenRun resourceAfter 或 clusterAfter
      */
     public void setWhenRun(String WhenRun) {
@@ -219,7 +219,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取脚本文件名，已废弃
+     * Get 脚本文件名，已废弃 
      * @return CosFileName 脚本文件名，已废弃
      */
     public String getCosFileName() {
@@ -227,7 +227,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置脚本文件名，已废弃
+     * Set 脚本文件名，已废弃
      * @param CosFileName 脚本文件名，已废弃
      */
     public void setCosFileName(String CosFileName) {
@@ -235,7 +235,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取脚本的cos地址
+     * Get 脚本的cos地址 
      * @return CosFileURI 脚本的cos地址
      */
     public String getCosFileURI() {
@@ -243,7 +243,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置脚本的cos地址
+     * Set 脚本的cos地址
      * @param CosFileURI 脚本的cos地址
      */
     public void setCosFileURI(String CosFileURI) {
@@ -251,7 +251,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取cos的SecretId
+     * Get cos的SecretId 
      * @return CosSecretId cos的SecretId
      */
     public String getCosSecretId() {
@@ -259,7 +259,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置cos的SecretId
+     * Set cos的SecretId
      * @param CosSecretId cos的SecretId
      */
     public void setCosSecretId(String CosSecretId) {
@@ -267,7 +267,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取Cos的SecretKey
+     * Get Cos的SecretKey 
      * @return CosSecretKey Cos的SecretKey
      */
     public String getCosSecretKey() {
@@ -275,7 +275,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置Cos的SecretKey
+     * Set Cos的SecretKey
      * @param CosSecretKey Cos的SecretKey
      */
     public void setCosSecretKey(String CosSecretKey) {
@@ -283,7 +283,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 获取cos的appid，已废弃
+     * Get cos的appid，已废弃 
      * @return AppId cos的appid，已废弃
      */
     public String getAppId() {
@@ -291,7 +291,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 设置cos的appid，已废弃
+     * Set cos的appid，已废弃
      * @param AppId cos的appid，已废弃
      */
     public void setAppId(String AppId) {
@@ -299,7 +299,7 @@ public class PreExecuteFileSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);

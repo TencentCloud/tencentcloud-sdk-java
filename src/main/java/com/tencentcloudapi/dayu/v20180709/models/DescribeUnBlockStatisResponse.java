@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUnBlockStatisResponse  extends AbstractModel{
+public class DescribeUnBlockStatisResponse extends AbstractModel{
 
     /**
     * 解封总配额数
@@ -58,7 +58,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取解封总配额数
+     * Get 解封总配额数 
      * @return Total 解封总配额数
      */
     public Long getTotal() {
@@ -66,7 +66,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置解封总配额数
+     * Set 解封总配额数
      * @param Total 解封总配额数
      */
     public void setTotal(Long Total) {
@@ -74,7 +74,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已使用次数
+     * Get 已使用次数 
      * @return Used 已使用次数
      */
     public Long getUsed() {
@@ -82,7 +82,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已使用次数
+     * Set 已使用次数
      * @param Used 已使用次数
      */
     public void setUsed(Long Used) {
@@ -90,7 +90,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计起始时间
+     * Get 统计起始时间 
      * @return BeginTime 统计起始时间
      */
     public String getBeginTime() {
@@ -98,7 +98,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计起始时间
+     * Set 统计起始时间
      * @param BeginTime 统计起始时间
      */
     public void setBeginTime(String BeginTime) {
@@ -106,7 +106,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计结束时间
+     * Get 统计结束时间 
      * @return EndTime 统计结束时间
      */
     public String getEndTime() {
@@ -114,7 +114,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计结束时间
+     * Set 统计结束时间
      * @param EndTime 统计结束时间
      */
     public void setEndTime(String EndTime) {
@@ -122,7 +122,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeUnBlockStatisResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);

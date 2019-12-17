@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertDetailRequest  extends AbstractModel{
+public class DescribeCertDetailRequest extends AbstractModel{
 
     /**
     * 证书ID。
@@ -30,7 +30,7 @@ public class DescribeCertDetailRequest  extends AbstractModel{
     private String CertId;
 
     /**
-     * 获取证书ID。
+     * Get 证书ID。 
      * @return CertId 证书ID。
      */
     public String getCertId() {
@@ -38,7 +38,7 @@ public class DescribeCertDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书ID。
+     * Set 证书ID。
      * @param CertId 证书ID。
      */
     public void setCertId(String CertId) {
@@ -46,7 +46,7 @@ public class DescribeCertDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

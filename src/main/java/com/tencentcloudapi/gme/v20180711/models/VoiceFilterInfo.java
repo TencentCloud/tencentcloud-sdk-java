@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilterInfo  extends AbstractModel{
+public class VoiceFilterInfo extends AbstractModel{
 
     /**
     * 应用id
@@ -71,8 +71,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     private VoiceFilter [] Data;
 
     /**
-     * 获取应用id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BizId 应用id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,7 +81,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BizId 应用id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,8 +91,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件id，表示文件唯一id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件id，表示文件唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 文件id，表示文件唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件id，表示文件唯一id
+     * Set 文件id，表示文件唯一id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件id，表示文件唯一id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName 文件名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OpenId 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户id
+     * Set 用户id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 用户id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Timestamp 数据创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据创建时间
+     * Set 数据创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 数据创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置过滤结果列表
+     * Set 过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class VoiceFilterInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

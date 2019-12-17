@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateParamTemplateRequest  extends AbstractModel{
+public class CreateParamTemplateRequest extends AbstractModel{
 
     /**
     * 参数模板名称。
@@ -58,7 +58,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
-     * 获取参数模板名称。
+     * Get 参数模板名称。 
      * @return Name 参数模板名称。
      */
     public String getName() {
@@ -66,7 +66,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板名称。
+     * Set 参数模板名称。
      * @param Name 参数模板名称。
      */
     public void setName(String Name) {
@@ -74,7 +74,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参数模板描述。
+     * Get 参数模板描述。 
      * @return Description 参数模板描述。
      */
     public String getDescription() {
@@ -82,7 +82,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板描述。
+     * Set 参数模板描述。
      * @param Description 参数模板描述。
      */
     public void setDescription(String Description) {
@@ -90,7 +90,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取MySQL 版本号。
+     * Get MySQL 版本号。 
      * @return EngineVersion MySQL 版本号。
      */
     public String getEngineVersion() {
@@ -98,7 +98,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置MySQL 版本号。
+     * Set MySQL 版本号。
      * @param EngineVersion MySQL 版本号。
      */
     public void setEngineVersion(String EngineVersion) {
@@ -106,7 +106,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源参数模板 ID。
+     * Get 源参数模板 ID。 
      * @return TemplateId 源参数模板 ID。
      */
     public Integer getTemplateId() {
@@ -114,7 +114,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源参数模板 ID。
+     * Set 源参数模板 ID。
      * @param TemplateId 源参数模板 ID。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -122,7 +122,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参数列表。
+     * Get 参数列表。 
      * @return ParamList 参数列表。
      */
     public Parameter [] getParamList() {
@@ -130,7 +130,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数列表。
+     * Set 参数列表。
      * @param ParamList 参数列表。
      */
     public void setParamList(Parameter [] ParamList) {
@@ -138,7 +138,7 @@ public class CreateParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BandwidthPriceGradient  extends AbstractModel{
+public class BandwidthPriceGradient extends AbstractModel{
 
     /**
     * 带宽范围。
@@ -37,7 +37,7 @@ public class BandwidthPriceGradient  extends AbstractModel{
     private Float BandwidthUnitPrice;
 
     /**
-     * 获取带宽范围。
+     * Get 带宽范围。 
      * @return BandwidthRange 带宽范围。
      */
     public Long [] getBandwidthRange() {
@@ -45,7 +45,7 @@ public class BandwidthPriceGradient  extends AbstractModel{
     }
 
     /**
-     * 设置带宽范围。
+     * Set 带宽范围。
      * @param BandwidthRange 带宽范围。
      */
     public void setBandwidthRange(Long [] BandwidthRange) {
@@ -53,7 +53,7 @@ public class BandwidthPriceGradient  extends AbstractModel{
     }
 
     /**
-     * 获取在对应带宽范围内的单宽单价，单位：元/Mbps/天。
+     * Get 在对应带宽范围内的单宽单价，单位：元/Mbps/天。 
      * @return BandwidthUnitPrice 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
      */
     public Float getBandwidthUnitPrice() {
@@ -61,7 +61,7 @@ public class BandwidthPriceGradient  extends AbstractModel{
     }
 
     /**
-     * 设置在对应带宽范围内的单宽单价，单位：元/Mbps/天。
+     * Set 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
      * @param BandwidthUnitPrice 在对应带宽范围内的单宽单价，单位：元/Mbps/天。
      */
     public void setBandwidthUnitPrice(Float BandwidthUnitPrice) {
@@ -69,7 +69,7 @@ public class BandwidthPriceGradient  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BandwidthRange.", this.BandwidthRange);

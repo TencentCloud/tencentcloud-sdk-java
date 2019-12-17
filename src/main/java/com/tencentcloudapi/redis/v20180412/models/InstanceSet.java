@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceSet  extends AbstractModel{
+public class InstanceSet extends AbstractModel{
 
     /**
     * 实例名称
@@ -278,7 +278,7 @@ public class InstanceSet  extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -286,7 +286,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -294,7 +294,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -302,7 +302,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -310,7 +310,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取用户的Appid
+     * Get 用户的Appid 
      * @return Appid 用户的Appid
      */
     public Integer getAppid() {
@@ -318,7 +318,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置用户的Appid
+     * Set 用户的Appid
      * @param Appid 用户的Appid
      */
     public void setAppid(Integer Appid) {
@@ -326,7 +326,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
+     * Get 项目Id 
      * @return ProjectId 项目Id
      */
     public Integer getProjectId() {
@@ -334,7 +334,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
      * @param ProjectId 项目Id
      */
     public void setProjectId(Integer ProjectId) {
@@ -342,7 +342,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Get 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
      * @return RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public Integer getRegionId() {
@@ -350,7 +350,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Set 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      * @param RegionId 地域id 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
      */
     public void setRegionId(Integer RegionId) {
@@ -358,7 +358,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取区域id
+     * Get 区域id 
      * @return ZoneId 区域id
      */
     public Integer getZoneId() {
@@ -366,7 +366,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置区域id
+     * Set 区域id
      * @param ZoneId 区域id
      */
     public void setZoneId(Integer ZoneId) {
@@ -374,7 +374,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取vpc网络id 如：75101
+     * Get vpc网络id 如：75101 
      * @return VpcId vpc网络id 如：75101
      */
     public Integer getVpcId() {
@@ -382,7 +382,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置vpc网络id 如：75101
+     * Set vpc网络id 如：75101
      * @param VpcId vpc网络id 如：75101
      */
     public void setVpcId(Integer VpcId) {
@@ -390,7 +390,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取vpc网络下子网id 如：46315
+     * Get vpc网络下子网id 如：46315 
      * @return SubnetId vpc网络下子网id 如：46315
      */
     public Integer getSubnetId() {
@@ -398,7 +398,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置vpc网络下子网id 如：46315
+     * Set vpc网络下子网id 如：46315
      * @param SubnetId vpc网络下子网id 如：46315
      */
     public void setSubnetId(Integer SubnetId) {
@@ -406,7 +406,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * Get 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除 
      * @return Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
     public Integer getStatus() {
@@ -414,7 +414,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+     * Set 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      * @param Status 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
      */
     public void setStatus(Integer Status) {
@@ -422,7 +422,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例vip
+     * Get 实例vip 
      * @return WanIp 实例vip
      */
     public String getWanIp() {
@@ -430,7 +430,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例vip
+     * Set 实例vip
      * @param WanIp 实例vip
      */
     public void setWanIp(String WanIp) {
@@ -438,7 +438,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例端口号
+     * Get 实例端口号 
      * @return Port 实例端口号
      */
     public Integer getPort() {
@@ -446,7 +446,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例端口号
+     * Set 实例端口号
      * @param Port 实例端口号
      */
     public void setPort(Integer Port) {
@@ -454,7 +454,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return Createtime 实例创建时间
      */
     public String getCreatetime() {
@@ -462,7 +462,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param Createtime 实例创建时间
      */
     public void setCreatetime(String Createtime) {
@@ -470,7 +470,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例容量大小，单位：MB
+     * Get 实例容量大小，单位：MB 
      * @return Size 实例容量大小，单位：MB
      */
     public Float getSize() {
@@ -478,7 +478,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例容量大小，单位：MB
+     * Set 实例容量大小，单位：MB
      * @param Size 实例容量大小，单位：MB
      */
     public void setSize(Float Size) {
@@ -486,7 +486,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取该字段已废弃
+     * Get 该字段已废弃 
      * @return SizeUsed 该字段已废弃
      */
     public Float getSizeUsed() {
@@ -494,7 +494,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置该字段已废弃
+     * Set 该字段已废弃
      * @param SizeUsed 该字段已废弃
      */
     public void setSizeUsed(Float SizeUsed) {
@@ -502,7 +502,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+     * Get 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版； 
      * @return Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      */
     public Integer getType() {
@@ -510,7 +510,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
+     * Set 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      * @param Type 实例类型，1：Redis2.8集群版；2：Redis2.8主从版；3：CKV主从版（Redis3.2）；4：CKV集群版（Redis3.2）；5：Redis2.8单机版；6：Redis4.0主从版；7：Redis4.0集群版；
      */
     public void setType(Integer Type) {
@@ -518,7 +518,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+     * Get 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费 
      * @return AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -526,7 +526,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
+     * Set 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      * @param AutoRenewFlag 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -534,7 +534,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间
+     * Get 实例到期时间 
      * @return DeadlineTime 实例到期时间
      */
     public String getDeadlineTime() {
@@ -542,7 +542,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间
+     * Set 实例到期时间
      * @param DeadlineTime 实例到期时间
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -550,7 +550,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取引擎：社区版Redis、腾讯云CKV
+     * Get 引擎：社区版Redis、腾讯云CKV 
      * @return Engine 引擎：社区版Redis、腾讯云CKV
      */
     public String getEngine() {
@@ -558,7 +558,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置引擎：社区版Redis、腾讯云CKV
+     * Set 引擎：社区版Redis、腾讯云CKV
      * @param Engine 引擎：社区版Redis、腾讯云CKV
      */
     public void setEngine(String Engine) {
@@ -566,7 +566,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * Get 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版 
      * @return ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      */
     public String getProductType() {
@@ -574,7 +574,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
+     * Set 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      * @param ProductType 产品类型：Redis2.8集群版、Redis2.8主从版、Redis3.2主从版（CKV主从版）、Redis3.2集群版（CKV集群版）、Redis2.8单机版、Redis4.0集群版
      */
     public void setProductType(String ProductType) {
@@ -582,7 +582,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取vpc网络id 如：vpc-fk33jsf43kgv
+     * Get vpc网络id 如：vpc-fk33jsf43kgv 
      * @return UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      */
     public String getUniqVpcId() {
@@ -590,7 +590,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置vpc网络id 如：vpc-fk33jsf43kgv
+     * Set vpc网络id 如：vpc-fk33jsf43kgv
      * @param UniqVpcId vpc网络id 如：vpc-fk33jsf43kgv
      */
     public void setUniqVpcId(String UniqVpcId) {
@@ -598,7 +598,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * Get vpc网络下子网id 如：subnet-fd3j6l35mm0 
      * @return UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      */
     public String getUniqSubnetId() {
@@ -606,7 +606,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置vpc网络下子网id 如：subnet-fd3j6l35mm0
+     * Set vpc网络下子网id 如：subnet-fd3j6l35mm0
      * @param UniqSubnetId vpc网络下子网id 如：subnet-fd3j6l35mm0
      */
     public void setUniqSubnetId(String UniqSubnetId) {
@@ -614,7 +614,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式：0-按量计费，1-包年包月
+     * Get 计费模式：0-按量计费，1-包年包月 
      * @return BillingMode 计费模式：0-按量计费，1-包年包月
      */
     public Integer getBillingMode() {
@@ -622,7 +622,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式：0-按量计费，1-包年包月
+     * Set 计费模式：0-按量计费，1-包年包月
      * @param BillingMode 计费模式：0-按量计费，1-包年包月
      */
     public void setBillingMode(Integer BillingMode) {
@@ -630,7 +630,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例运行状态描述：如”实例运行中“
+     * Get 实例运行状态描述：如”实例运行中“ 
      * @return InstanceTitle 实例运行状态描述：如”实例运行中“
      */
     public String getInstanceTitle() {
@@ -638,7 +638,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例运行状态描述：如”实例运行中“
+     * Set 实例运行状态描述：如”实例运行中“
      * @param InstanceTitle 实例运行状态描述：如”实例运行中“
      */
     public void setInstanceTitle(String InstanceTitle) {
@@ -646,7 +646,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取计划下线时间
+     * Get 计划下线时间 
      * @return OfflineTime 计划下线时间
      */
     public String getOfflineTime() {
@@ -654,7 +654,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置计划下线时间
+     * Set 计划下线时间
      * @param OfflineTime 计划下线时间
      */
     public void setOfflineTime(String OfflineTime) {
@@ -662,7 +662,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取流程中的实例，返回子状态
+     * Get 流程中的实例，返回子状态 
      * @return SubStatus 流程中的实例，返回子状态
      */
     public Integer getSubStatus() {
@@ -670,7 +670,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置流程中的实例，返回子状态
+     * Set 流程中的实例，返回子状态
      * @param SubStatus 流程中的实例，返回子状态
      */
     public void setSubStatus(Integer SubStatus) {
@@ -678,7 +678,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取反亲和性标签
+     * Get 反亲和性标签 
      * @return Tags 反亲和性标签
      */
     public String [] getTags() {
@@ -686,7 +686,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置反亲和性标签
+     * Set 反亲和性标签
      * @param Tags 反亲和性标签
      */
     public void setTags(String [] Tags) {
@@ -694,7 +694,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例节点信息
+     * Get 实例节点信息 
      * @return InstanceNode 实例节点信息
      */
     public InstanceNode [] getInstanceNode() {
@@ -702,7 +702,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例节点信息
+     * Set 实例节点信息
      * @param InstanceNode 实例节点信息
      */
     public void setInstanceNode(InstanceNode [] InstanceNode) {
@@ -710,7 +710,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取分片大小
+     * Get 分片大小 
      * @return RedisShardSize 分片大小
      */
     public Integer getRedisShardSize() {
@@ -718,7 +718,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置分片大小
+     * Set 分片大小
      * @param RedisShardSize 分片大小
      */
     public void setRedisShardSize(Integer RedisShardSize) {
@@ -726,7 +726,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取分片数量
+     * Get 分片数量 
      * @return RedisShardNum 分片数量
      */
     public Integer getRedisShardNum() {
@@ -734,7 +734,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置分片数量
+     * Set 分片数量
      * @param RedisShardNum 分片数量
      */
     public void setRedisShardNum(Integer RedisShardNum) {
@@ -742,7 +742,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取副本数量
+     * Get 副本数量 
      * @return RedisReplicasNum 副本数量
      */
     public Integer getRedisReplicasNum() {
@@ -750,7 +750,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置副本数量
+     * Set 副本数量
      * @param RedisReplicasNum 副本数量
      */
     public void setRedisReplicasNum(Integer RedisReplicasNum) {
@@ -758,7 +758,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取计费Id
+     * Get 计费Id 
      * @return PriceId 计费Id
      */
     public Integer getPriceId() {
@@ -766,7 +766,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置计费Id
+     * Set 计费Id
      * @param PriceId 计费Id
      */
     public void setPriceId(Integer PriceId) {
@@ -774,7 +774,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取隔离时间
+     * Get 隔离时间 
      * @return CloseTime 隔离时间
      */
     public String getCloseTime() {
@@ -782,7 +782,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置隔离时间
+     * Set 隔离时间
      * @param CloseTime 隔离时间
      */
     public void setCloseTime(String CloseTime) {
@@ -790,7 +790,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取从节点读取权重
+     * Get 从节点读取权重 
      * @return SlaveReadWeight 从节点读取权重
      */
     public Integer getSlaveReadWeight() {
@@ -798,7 +798,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置从节点读取权重
+     * Set 从节点读取权重
      * @param SlaveReadWeight 从节点读取权重
      */
     public void setSlaveReadWeight(Integer SlaveReadWeight) {
@@ -806,8 +806,8 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例关联的标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceTags 实例关联的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -816,7 +816,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例关联的标签信息
+     * Set 实例关联的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTags 实例关联的标签信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -826,8 +826,8 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -836,7 +836,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -846,8 +846,8 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 获取是否为免密实例，true-免密实例；false-非免密实例
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否为免密实例，true-免密实例；false-非免密实例
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NoAuth 是否为免密实例，true-免密实例；false-非免密实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -856,7 +856,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 设置是否为免密实例，true-免密实例；false-非免密实例
+     * Set 是否为免密实例，true-免密实例；false-非免密实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NoAuth 是否为免密实例，true-免密实例；false-非免密实例
 注意：此字段可能返回 null，表示取不到有效值。
@@ -866,7 +866,7 @@ public class InstanceSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonVisitInfoResponse  extends AbstractModel{
+public class DescribePersonVisitInfoResponse extends AbstractModel{
 
     /**
     * 公司ID
@@ -58,7 +58,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -66,7 +66,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -74,7 +74,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -82,7 +82,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -90,7 +90,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总数
+     * Get 总数 
      * @return TotalCount 总数
      */
     public Integer getTotalCount() {
@@ -98,7 +98,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数
+     * Set 总数
      * @param TotalCount 总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -106,7 +106,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户到访明细
+     * Get 用户到访明细 
      * @return PersonVisitInfoSet 用户到访明细
      */
     public PersonVisitInfo [] getPersonVisitInfoSet() {
@@ -114,7 +114,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户到访明细
+     * Set 用户到访明细
      * @param PersonVisitInfoSet 用户到访明细
      */
     public void setPersonVisitInfoSet(PersonVisitInfo [] PersonVisitInfoSet) {
@@ -122,7 +122,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribePersonVisitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Lyric  extends AbstractModel{
+public class Lyric extends AbstractModel{
 
     /**
     * 歌词cdn地址
@@ -44,7 +44,7 @@ public class Lyric  extends AbstractModel{
     private String SubItemType;
 
     /**
-     * 获取歌词cdn地址
+     * Get 歌词cdn地址 
      * @return Url 歌词cdn地址
      */
     public String getUrl() {
@@ -52,7 +52,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 设置歌词cdn地址
+     * Set 歌词cdn地址
      * @param Url 歌词cdn地址
      */
     public void setUrl(String Url) {
@@ -60,7 +60,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 获取歌词后缀名
+     * Get 歌词后缀名 
      * @return FileNameExt 歌词后缀名
      */
     public String getFileNameExt() {
@@ -68,7 +68,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 设置歌词后缀名
+     * Set 歌词后缀名
      * @param FileNameExt 歌词后缀名
      */
     public void setFileNameExt(String FileNameExt) {
@@ -76,7 +76,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 获取歌词类型
+     * Get 歌词类型 
      * @return SubItemType 歌词类型
      */
     public String getSubItemType() {
@@ -84,7 +84,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 设置歌词类型
+     * Set 歌词类型
      * @param SubItemType 歌词类型
      */
     public void setSubItemType(String SubItemType) {
@@ -92,7 +92,7 @@ public class Lyric  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

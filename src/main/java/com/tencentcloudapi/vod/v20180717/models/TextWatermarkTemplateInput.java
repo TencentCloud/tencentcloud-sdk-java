@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextWatermarkTemplateInput  extends AbstractModel{
+public class TextWatermarkTemplateInput extends AbstractModel{
 
     /**
     * 字体类型，目前可以支持两种：
@@ -56,9 +56,9 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     private Float FontAlpha;
 
     /**
-     * 获取字体类型，目前可以支持两种：
+     * Get 字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
-<li>arial.ttf：仅支持英文。</li>
+<li>arial.ttf：仅支持英文。</li> 
      * @return FontType 字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
@@ -68,7 +68,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 设置字体类型，目前可以支持两种：
+     * Set 字体类型，目前可以支持两种：
 <li>simkai.ttf：可以支持中文和英文；</li>
 <li>arial.ttf：仅支持英文。</li>
      * @param FontType 字体类型，目前可以支持两种：
@@ -80,7 +80,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 获取字体大小，格式：Npx，N 为数值。
+     * Get 字体大小，格式：Npx，N 为数值。 
      * @return FontSize 字体大小，格式：Npx，N 为数值。
      */
     public String getFontSize() {
@@ -88,7 +88,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 设置字体大小，格式：Npx，N 为数值。
+     * Set 字体大小，格式：Npx，N 为数值。
      * @param FontSize 字体大小，格式：Npx，N 为数值。
      */
     public void setFontSize(String FontSize) {
@@ -96,7 +96,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 获取字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
+     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。 
      * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      */
     public String getFontColor() {
@@ -104,7 +104,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 设置字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
+     * Set 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）。
      */
     public void setFontColor(String FontColor) {
@@ -112,10 +112,10 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 获取文字透明度，取值范围：(0, 1]
+     * Get 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
-默认值：1。
+默认值：1。 
      * @return FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
@@ -126,7 +126,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 设置文字透明度，取值范围：(0, 1]
+     * Set 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
@@ -140,7 +140,7 @@ public class TextWatermarkTemplateInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FontType", this.FontType);

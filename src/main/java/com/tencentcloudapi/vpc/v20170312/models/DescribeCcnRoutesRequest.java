@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnRoutesRequest  extends AbstractModel{
+public class DescribeCcnRoutesRequest extends AbstractModel{
 
     /**
     * CCN实例ID，形如：ccn-gree226l。
@@ -63,7 +63,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取CCN实例ID，形如：ccn-gree226l。
+     * Get CCN实例ID，形如：ccn-gree226l。 
      * @return CcnId CCN实例ID，形如：ccn-gree226l。
      */
     public String getCcnId() {
@@ -71,7 +71,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID，形如：ccn-gree226l。
+     * Set CCN实例ID，形如：ccn-gree226l。
      * @param CcnId CCN实例ID，形如：ccn-gree226l。
      */
     public void setCcnId(String CcnId) {
@@ -79,7 +79,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
      * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      */
     public String [] getRouteIds() {
@@ -87,7 +87,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      */
     public void setRouteIds(String [] RouteIds) {
@@ -95,12 +95,12 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定RouteIds和Filters。
+     * Get 过滤条件，参数不支持同时指定RouteIds和Filters。
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
 <li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
+<li>instance-id - String -（过滤条件）下一跳实例ID。</li> 
      * @return Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
@@ -113,7 +113,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定RouteIds和Filters。
+     * Set 过滤条件，参数不支持同时指定RouteIds和Filters。
 <li>route-id - String -（过滤条件）路由策略ID。</li>
 <li>cidr-block - String -（过滤条件）目的端。</li>
 <li>instance-type - String -（过滤条件）下一跳类型。</li>
@@ -131,7 +131,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -139,7 +139,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -147,7 +147,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -155,7 +155,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -163,7 +163,7 @@ public class DescribeCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstancesAttributeRequest  extends AbstractModel{
+public class ModifyInstancesAttributeRequest extends AbstractModel{
 
     /**
     * 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
@@ -44,7 +44,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
-     * 获取一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+     * Get 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。 
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      */
     public String [] getInstanceIds() {
@@ -52,7 +52,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
+     * Set 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      * @param InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/9388) API返回值中的`InstanceId`获取。每次请求允许操作的实例数量上限是100。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -60,7 +60,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称。可任意命名，但不得超过60个字符。
+     * Get 实例名称。可任意命名，但不得超过60个字符。 
      * @return InstanceName 实例名称。可任意命名，但不得超过60个字符。
      */
     public String getInstanceName() {
@@ -68,7 +68,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称。可任意命名，但不得超过60个字符。
+     * Set 实例名称。可任意命名，但不得超过60个字符。
      * @param InstanceName 实例名称。可任意命名，但不得超过60个字符。
      */
     public void setInstanceName(String InstanceName) {
@@ -76,7 +76,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+     * Get 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。 
      * @return SecurityGroups 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public String [] getSecurityGroups() {
@@ -84,7 +84,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+     * Set 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      * @param SecurityGroups 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
      */
     public void setSecurityGroups(String [] SecurityGroups) {
@@ -92,7 +92,7 @@ public class ModifyInstancesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigRequest  extends AbstractModel{
+public class DescribePublicConfigRequest extends AbstractModel{
 
     /**
     * 需要查询的配置项ID
@@ -30,7 +30,7 @@ public class DescribePublicConfigRequest  extends AbstractModel{
     private String ConfigId;
 
     /**
-     * 获取需要查询的配置项ID
+     * Get 需要查询的配置项ID 
      * @return ConfigId 需要查询的配置项ID
      */
     public String getConfigId() {
@@ -38,7 +38,7 @@ public class DescribePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的配置项ID
+     * Set 需要查询的配置项ID
      * @param ConfigId 需要查询的配置项ID
      */
     public void setConfigId(String ConfigId) {
@@ -46,7 +46,7 @@ public class DescribePublicConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

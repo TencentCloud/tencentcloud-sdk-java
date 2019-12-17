@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
+public class DescribePublicConfigReleaseLogsRequest extends AbstractModel{
 
     /**
     * 命名空间ID，不传入时查询全量
@@ -44,7 +44,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量 
      * @return NamespaceId 命名空间ID，不传入时查询全量
      */
     public String getNamespaceId() {
@@ -52,7 +52,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量
      * @param NamespaceId 命名空间ID，不传入时查询全量
      */
     public void setNamespaceId(String NamespaceId) {
@@ -60,7 +60,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数，默认为20
+     * Get 每页条数，默认为20 
      * @return Limit 每页条数，默认为20
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数，默认为20
+     * Set 每页条数，默认为20
      * @param Limit 每页条数，默认为20
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class DescribePublicConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);

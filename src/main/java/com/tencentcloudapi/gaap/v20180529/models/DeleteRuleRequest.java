@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRuleRequest  extends AbstractModel{
+public class DeleteRuleRequest extends AbstractModel{
 
     /**
     * 7层监听器ID
@@ -44,7 +44,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     private Long Force;
 
     /**
-     * 获取7层监听器ID
+     * Get 7层监听器ID 
      * @return ListenerId 7层监听器ID
      */
     public String getListenerId() {
@@ -52,7 +52,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置7层监听器ID
+     * Set 7层监听器ID
      * @param ListenerId 7层监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -60,7 +60,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则ID
+     * Get 转发规则ID 
      * @return RuleId 转发规则ID
      */
     public String getRuleId() {
@@ -68,7 +68,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则ID
+     * Set 转发规则ID
      * @param RuleId 转发规则ID
      */
     public void setRuleId(String RuleId) {
@@ -76,7 +76,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否可以强制删除已绑定源站的转发规则，0非强制，1强制
+     * Get 是否可以强制删除已绑定源站的转发规则，0非强制，1强制 
      * @return Force 是否可以强制删除已绑定源站的转发规则，0非强制，1强制
      */
     public Long getForce() {
@@ -84,7 +84,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否可以强制删除已绑定源站的转发规则，0非强制，1强制
+     * Set 是否可以强制删除已绑定源站的转发规则，0非强制，1强制
      * @param Force 是否可以强制删除已绑定源站的转发规则，0非强制，1强制
      */
     public void setForce(Long Force) {
@@ -92,7 +92,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

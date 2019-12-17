@@ -29,21 +29,10 @@ public class TbmClient extends AbstractClient{
     private static String endpoint = "tbm.tencentcloudapi.com";
     private static String version = "2018-01-29";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TbmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TbmClient(Credential credential, String region, ClientProfile profile) {
         super(TbmClient.endpoint, TbmClient.version, credential, region, profile);
     }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyCreditAuditRequest  extends AbstractModel{
+public class ApplyCreditAuditRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Credit
@@ -72,7 +72,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     private String Data;
 
     /**
-     * 获取模块名，本接口取值：Credit
+     * Get 模块名，本接口取值：Credit 
      * @return Module 模块名，本接口取值：Credit
      */
     public String getModule() {
@@ -80,7 +80,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Credit
+     * Set 模块名，本接口取值：Credit
      * @param Module 模块名，本接口取值：Credit
      */
     public void setModule(String Module) {
@@ -88,7 +88,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：Apply
+     * Get 操作名，本接口取值：Apply 
      * @return Operation 操作名，本接口取值：Apply
      */
     public String getOperation() {
@@ -96,7 +96,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：Apply
+     * Set 操作名，本接口取值：Apply
      * @param Operation 操作名，本接口取值：Apply
      */
     public void setOperation(String Operation) {
@@ -104,7 +104,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstId 实例ID
      */
     public String getInstId() {
@@ -112,7 +112,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstId 实例ID
      */
     public void setInstId(String InstId) {
@@ -120,7 +120,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID，形如P******。
+     * Get 产品ID，形如P******。 
      * @return ProductId 产品ID，形如P******。
      */
     public String getProductId() {
@@ -128,7 +128,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID，形如P******。
+     * Set 产品ID，形如P******。
      * @param ProductId 产品ID，形如P******。
      */
     public void setProductId(String ProductId) {
@@ -136,7 +136,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
+     * Get 信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。 
      * @return CaseId 信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
      */
     public String getCaseId() {
@@ -144,7 +144,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
+     * Set 信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
      * @param CaseId 信审任务ID，同一天内，同一InstId下，同一CaseId只能调用一次。
      */
     public void setCaseId(String CaseId) {
@@ -152,7 +152,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回调地址
+     * Get 回调地址 
      * @return CallbackUrl 回调地址
      */
     public String getCallbackUrl() {
@@ -160,7 +160,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回调地址
+     * Set 回调地址
      * @param CallbackUrl 回调地址
      */
     public void setCallbackUrl(String CallbackUrl) {
@@ -168,7 +168,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 获取JSON格式的业务字段。
+     * Get JSON格式的业务字段。 
      * @return Data JSON格式的业务字段。
      */
     public String getData() {
@@ -176,7 +176,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置JSON格式的业务字段。
+     * Set JSON格式的业务字段。
      * @param Data JSON格式的业务字段。
      */
     public void setData(String Data) {
@@ -184,7 +184,7 @@ public class ApplyCreditAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

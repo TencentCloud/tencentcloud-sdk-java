@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentSalesmanElem  extends AbstractModel{
+public class AgentSalesmanElem extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -51,7 +51,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -59,7 +59,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -67,7 +67,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 获取业务员ID
+     * Get 业务员ID 
      * @return SalesUin 业务员ID
      */
     public String getSalesUin() {
@@ -75,7 +75,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 设置业务员ID
+     * Set 业务员ID
      * @param SalesUin 业务员ID
      */
     public void setSalesUin(String SalesUin) {
@@ -83,7 +83,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 获取业务员姓名
+     * Get 业务员姓名 
      * @return SalesName 业务员姓名
      */
     public String getSalesName() {
@@ -91,7 +91,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 设置业务员姓名
+     * Set 业务员姓名
      * @param SalesName 业务员姓名
      */
     public void setSalesName(String SalesName) {
@@ -99,7 +99,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 获取业务员创建时间
+     * Get 业务员创建时间 
      * @return CreateTime 业务员创建时间
      */
     public String getCreateTime() {
@@ -107,7 +107,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 设置业务员创建时间
+     * Set 业务员创建时间
      * @param CreateTime 业务员创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -115,7 +115,7 @@ public class AgentSalesmanElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

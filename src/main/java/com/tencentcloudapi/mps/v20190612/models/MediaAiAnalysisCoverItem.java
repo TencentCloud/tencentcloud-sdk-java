@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisCoverItem  extends AbstractModel{
+public class MediaAiAnalysisCoverItem extends AbstractModel{
 
     /**
     * 智能封面存储路径。
@@ -37,7 +37,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取智能封面存储路径。
+     * Get 智能封面存储路径。 
      * @return CoverPath 智能封面存储路径。
      */
     public String getCoverPath() {
@@ -45,7 +45,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面存储路径。
+     * Set 智能封面存储路径。
      * @param CoverPath 智能封面存储路径。
      */
     public void setCoverPath(String CoverPath) {
@@ -53,7 +53,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能封面的可信度，取值范围是 0 到 100。
+     * Get 智能封面的可信度，取值范围是 0 到 100。 
      * @return Confidence 智能封面的可信度，取值范围是 0 到 100。
      */
     public Float getConfidence() {
@@ -61,7 +61,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面的可信度，取值范围是 0 到 100。
+     * Set 智能封面的可信度，取值范围是 0 到 100。
      * @param Confidence 智能封面的可信度，取值范围是 0 到 100。
      */
     public void setConfidence(Float Confidence) {
@@ -69,7 +69,7 @@ public class MediaAiAnalysisCoverItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CoverPath", this.CoverPath);

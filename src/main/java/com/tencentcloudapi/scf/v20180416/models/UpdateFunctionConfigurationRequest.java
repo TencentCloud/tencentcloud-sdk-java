@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateFunctionConfigurationRequest  extends AbstractModel{
+public class UpdateFunctionConfigurationRequest extends AbstractModel{
 
     /**
     * 要修改的函数名称
@@ -114,7 +114,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     private String L5Enable;
 
     /**
-     * 获取要修改的函数名称
+     * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
     public String getFunctionName() {
@@ -122,7 +122,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的函数名称
+     * Set 要修改的函数名称
      * @param FunctionName 要修改的函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -130,7 +130,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
+     * Get 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文 
      * @return Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      */
     public String getDescription() {
@@ -138,7 +138,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
+     * Set 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      * @param Description 函数描述。最大支持 1000 个英文字母、数字、空格、逗号和英文句号，支持中文
      */
     public void setDescription(String Description) {
@@ -146,7 +146,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+     * Get 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M 
      * @return MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
     public Integer getMemorySize() {
@@ -154,7 +154,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
+     * Set 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      * @param MemorySize 函数运行时内存大小，默认为 128 M，可选范 128 M-1536 M
      */
     public void setMemorySize(Integer MemorySize) {
@@ -162,7 +162,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+     * Get 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
     public Integer getTimeout() {
@@ -170,7 +170,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
+     * Set 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范 1-300 秒，默认为 3 秒
      */
     public void setTimeout(Integer Timeout) {
@@ -178,7 +178,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8 
      * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
      */
     public String getRuntime() {
@@ -186,7 +186,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
+     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
      * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10，PHP5， PHP7，Golang1 和 Java8
      */
     public void setRuntime(String Runtime) {
@@ -194,7 +194,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的环境变量
+     * Get 函数的环境变量 
      * @return Environment 函数的环境变量
      */
     public Environment getEnvironment() {
@@ -202,7 +202,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的环境变量
+     * Set 函数的环境变量
      * @param Environment 函数的环境变量
      */
     public void setEnvironment(Environment Environment) {
@@ -210,7 +210,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属命名空间
+     * Get 函数所属命名空间 
      * @return Namespace 函数所属命名空间
      */
     public String getNamespace() {
@@ -218,7 +218,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属命名空间
+     * Set 函数所属命名空间
      * @param Namespace 函数所属命名空间
      */
     public void setNamespace(String Namespace) {
@@ -226,7 +226,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的私有网络配置
+     * Get 函数的私有网络配置 
      * @return VpcConfig 函数的私有网络配置
      */
     public VpcConfig getVpcConfig() {
@@ -234,7 +234,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的私有网络配置
+     * Set 函数的私有网络配置
      * @param VpcConfig 函数的私有网络配置
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
@@ -242,7 +242,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数绑定的角色
+     * Get 函数绑定的角色 
      * @return Role 函数绑定的角色
      */
     public String getRole() {
@@ -250,7 +250,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数绑定的角色
+     * Set 函数绑定的角色
      * @param Role 函数绑定的角色
      */
     public void setRole(String Role) {
@@ -258,7 +258,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志投递到的cls日志集ID
+     * Get 日志投递到的cls日志集ID 
      * @return ClsLogsetId 日志投递到的cls日志集ID
      */
     public String getClsLogsetId() {
@@ -266,7 +266,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志投递到的cls日志集ID
+     * Set 日志投递到的cls日志集ID
      * @param ClsLogsetId 日志投递到的cls日志集ID
      */
     public void setClsLogsetId(String ClsLogsetId) {
@@ -274,7 +274,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志投递到的cls Topic ID
+     * Get 日志投递到的cls Topic ID 
      * @return ClsTopicId 日志投递到的cls Topic ID
      */
     public String getClsTopicId() {
@@ -282,7 +282,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志投递到的cls Topic ID
+     * Set 日志投递到的cls Topic ID
      * @param ClsTopicId 日志投递到的cls Topic ID
      */
     public void setClsTopicId(String ClsTopicId) {
@@ -290,7 +290,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Get 在更新时是否同步发布新版本，默认为：FALSE，不发布 
      * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public String getPublish() {
@@ -298,7 +298,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Set 在更新时是否同步发布新版本，默认为：FALSE，不发布
      * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public void setPublish(String Publish) {
@@ -306,7 +306,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     * Get 是否开启L5访问能力，TRUE 为开启，FALSE为关闭 
      * @return L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
      */
     public String getL5Enable() {
@@ -314,7 +314,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启L5访问能力，TRUE 为开启，FALSE为关闭
+     * Set 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
      * @param L5Enable 是否开启L5访问能力，TRUE 为开启，FALSE为关闭
      */
     public void setL5Enable(String L5Enable) {
@@ -322,7 +322,7 @@ public class UpdateFunctionConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFileSystemRequest  extends AbstractModel{
+public class CreateFileSystemRequest extends AbstractModel{
 
     /**
     * 文件系统名称
@@ -44,7 +44,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取文件系统名称
+     * Get 文件系统名称 
      * @return FileSystemName 文件系统名称
      */
     public String getFileSystemName() {
@@ -52,7 +52,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统名称
+     * Set 文件系统名称
      * @param FileSystemName 文件系统名称
      */
     public void setFileSystemName(String FileSystemName) {
@@ -60,7 +60,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * Get 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍 
      * @return CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
      */
     public Long getCapacityQuota() {
@@ -68,7 +68,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * Set 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
      * @param CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
      */
     public void setCapacityQuota(Long CapacityQuota) {
@@ -76,7 +76,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统描述
+     * Get 文件系统描述 
      * @return Description 文件系统描述
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统描述
+     * Set 文件系统描述
      * @param Description 文件系统描述
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class CreateFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemName", this.FileSystemName);

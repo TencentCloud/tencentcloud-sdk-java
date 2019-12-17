@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Config  extends AbstractModel{
+public class Config extends AbstractModel{
 
     /**
     * Id
@@ -80,7 +80,7 @@ public class Config  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取Id
+     * Get Id 
      * @return Id Id
      */
     public String getId() {
@@ -88,7 +88,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置Id
+     * Set Id
      * @param Id Id
      */
     public void setId(String Id) {
@@ -96,7 +96,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置名
+     * Get 配置名 
      * @return Name 配置名
      */
     public String getName() {
@@ -104,7 +104,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置名
+     * Set 配置名
      * @param Name 配置名
      */
     public void setName(String Name) {
@@ -112,7 +112,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取模型地址
+     * Get 模型地址 
      * @return ModelUri 模型地址
      */
     public String getModelUri() {
@@ -120,7 +120,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置模型地址
+     * Set 模型地址
      * @param ModelUri 模型地址
      */
     public void setModelUri(String ModelUri) {
@@ -128,7 +128,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -136,7 +136,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -144,7 +144,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境
+     * Get 运行环境 
      * @return Runtime 运行环境
      */
     public String getRuntime() {
@@ -152,7 +152,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境
+     * Set 运行环境
      * @param Runtime 运行环境
      */
     public void setRuntime(String Runtime) {
@@ -160,7 +160,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置版本
+     * Get 配置版本 
      * @return Version 配置版本
      */
     public String getVersion() {
@@ -168,7 +168,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置版本
+     * Set 配置版本
      * @param Version 配置版本
      */
     public void setVersion(String Version) {
@@ -176,7 +176,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -184,7 +184,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -192,8 +192,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 配置描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -202,7 +202,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置描述
+     * Set 配置描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 配置描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,7 +212,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

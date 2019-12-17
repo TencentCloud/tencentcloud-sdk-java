@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CmqRegionInfo  extends AbstractModel{
+public class CmqRegionInfo extends AbstractModel{
 
     /**
     * cmq地域
@@ -37,7 +37,7 @@ public class CmqRegionInfo  extends AbstractModel{
     private String CmqRegionName;
 
     /**
-     * 获取cmq地域
+     * Get cmq地域 
      * @return CmqRegion cmq地域
      */
     public String getCmqRegion() {
@@ -45,7 +45,7 @@ public class CmqRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置cmq地域
+     * Set cmq地域
      * @param CmqRegion cmq地域
      */
     public void setCmqRegion(String CmqRegion) {
@@ -53,7 +53,7 @@ public class CmqRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域描述
+     * Get 地域描述 
      * @return CmqRegionName 地域描述
      */
     public String getCmqRegionName() {
@@ -61,7 +61,7 @@ public class CmqRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域描述
+     * Set 地域描述
      * @param CmqRegionName 地域描述
      */
     public void setCmqRegionName(String CmqRegionName) {
@@ -69,7 +69,7 @@ public class CmqRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);

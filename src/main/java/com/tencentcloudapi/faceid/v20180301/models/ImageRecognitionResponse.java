@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageRecognitionResponse  extends AbstractModel{
+public class ImageRecognitionResponse extends AbstractModel{
 
     /**
     * 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
@@ -51,7 +51,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Get 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一） 
      * @return Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      */
     public Float getSim() {
@@ -59,7 +59,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Set 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      * @param Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      */
     public void setSim(Float Sim) {
@@ -67,7 +67,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Get 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分 
      * @return Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public String getResult() {
@@ -75,7 +75,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Set 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      * @param Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public void setResult(String Result) {
@@ -83,7 +83,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class ImageRecognitionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sim", this.Sim);

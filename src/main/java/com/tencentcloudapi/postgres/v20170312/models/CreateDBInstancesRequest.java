@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest  extends AbstractModel{
+public class CreateDBInstancesRequest extends AbstractModel{
 
     /**
     * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
@@ -107,7 +107,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
@@ -115,7 +115,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Set 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      * @param SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
@@ -123,7 +123,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
+     * Get PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。 
      * @return DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
      */
     public String getDBVersion() {
@@ -131,7 +131,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
+     * Set PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
      * @param DBVersion PostgreSQL内核版本，目前只支持：9.3.5、9.5.4两种版本。
      */
     public void setDBVersion(String DBVersion) {
@@ -139,7 +139,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例容量大小，单位：GB。
+     * Get 实例容量大小，单位：GB。 
      * @return Storage 实例容量大小，单位：GB。
      */
     public Integer getStorage() {
@@ -147,7 +147,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例容量大小，单位：GB。
+     * Set 实例容量大小，单位：GB。
      * @param Storage 实例容量大小，单位：GB。
      */
     public void setStorage(Integer Storage) {
@@ -155,7 +155,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一次性购买的实例数量。取值1-100
+     * Get 一次性购买的实例数量。取值1-100 
      * @return InstanceCount 一次性购买的实例数量。取值1-100
      */
     public Integer getInstanceCount() {
@@ -163,7 +163,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一次性购买的实例数量。取值1-100
+     * Set 一次性购买的实例数量。取值1-100
      * @param InstanceCount 一次性购买的实例数量。取值1-100
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -171,7 +171,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。 
      * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
     public Integer getPeriod() {
@@ -179,7 +179,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
     public void setPeriod(Integer Period) {
@@ -187,7 +187,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
      * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
     public String getZone() {
@@ -195,7 +195,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Set 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
     public void setZone(String Zone) {
@@ -203,7 +203,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID。
+     * Get 项目ID。 
      * @return ProjectId 项目ID。
      */
     public Integer getProjectId() {
@@ -211,7 +211,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID。
+     * Set 项目ID。
      * @param ProjectId 项目ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -219,7 +219,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Get 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。 
      * @return InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      */
     public String getInstanceChargeType() {
@@ -227,7 +227,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Set 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      * @param InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -235,7 +235,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券。1（是），0（否），默认不使用。
+     * Get 是否自动使用代金券。1（是），0（否），默认不使用。 
      * @return AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      */
     public Integer getAutoVoucher() {
@@ -243,7 +243,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券。1（是），0（否），默认不使用。
+     * Set 是否自动使用代金券。1（是），0（否），默认不使用。
      * @param AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
      */
     public void setAutoVoucher(Integer AutoVoucher) {
@@ -251,7 +251,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表，目前仅支持指定一张代金券。
+     * Get 代金券ID列表，目前仅支持指定一张代金券。 
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public String [] getVoucherIds() {
@@ -259,7 +259,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表，目前仅支持指定一张代金券。
+     * Set 代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -267,7 +267,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID。
+     * Get 私有网络ID。 
      * @return VpcId 私有网络ID。
      */
     public String getVpcId() {
@@ -275,7 +275,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID。
+     * Set 私有网络ID。
      * @param VpcId 私有网络ID。
      */
     public void setVpcId(String VpcId) {
@@ -283,7 +283,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络子网ID。
+     * Get 私有网络子网ID。 
      * @return SubnetId 私有网络子网ID。
      */
     public String getSubnetId() {
@@ -291,7 +291,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络子网ID。
+     * Set 私有网络子网ID。
      * @param SubnetId 私有网络子网ID。
      */
     public void setSubnetId(String SubnetId) {
@@ -299,7 +299,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);

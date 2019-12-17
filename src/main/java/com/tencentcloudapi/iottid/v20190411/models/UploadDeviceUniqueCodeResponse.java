@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
+public class UploadDeviceUniqueCodeResponse extends AbstractModel{
 
     /**
     * 本次已上传数量
@@ -60,7 +60,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取本次已上传数量
+     * Get 本次已上传数量 
      * @return Count 本次已上传数量
      */
     public Long getCount() {
@@ -68,7 +68,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置本次已上传数量
+     * Set 本次已上传数量
      * @param Count 本次已上传数量
      */
     public void setCount(Long Count) {
@@ -76,8 +76,8 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取重复的硬件唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 重复的硬件唯一标识码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExistedCodeSet 重复的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -86,7 +86,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置重复的硬件唯一标识码
+     * Set 重复的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExistedCodeSet 重复的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,7 +96,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剩余可上传数量
+     * Get 剩余可上传数量 
      * @return LeftQuantity 剩余可上传数量
      */
     public Long getLeftQuantity() {
@@ -104,7 +104,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剩余可上传数量
+     * Set 剩余可上传数量
      * @param LeftQuantity 剩余可上传数量
      */
     public void setLeftQuantity(Long LeftQuantity) {
@@ -112,8 +112,8 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取错误的硬件唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误的硬件唯一标识码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IllegalCodeSet 错误的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -122,7 +122,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置错误的硬件唯一标识码
+     * Set 错误的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IllegalCodeSet 错误的硬件唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -140,7 +140,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -148,7 +148,7 @@ public class UploadDeviceUniqueCodeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

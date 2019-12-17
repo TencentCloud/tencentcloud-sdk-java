@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GatewayFlowMonitorDetail  extends AbstractModel{
+public class GatewayFlowMonitorDetail extends AbstractModel{
 
     /**
     * 来源`IP`。
@@ -58,7 +58,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     private Integer OutTraffic;
 
     /**
-     * 获取来源`IP`。
+     * Get 来源`IP`。 
      * @return PrivateIpAddress 来源`IP`。
      */
     public String getPrivateIpAddress() {
@@ -66,7 +66,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 设置来源`IP`。
+     * Set 来源`IP`。
      * @param PrivateIpAddress 来源`IP`。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
@@ -74,7 +74,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 获取入包量。
+     * Get 入包量。 
      * @return InPkg 入包量。
      */
     public Integer getInPkg() {
@@ -82,7 +82,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 设置入包量。
+     * Set 入包量。
      * @param InPkg 入包量。
      */
     public void setInPkg(Integer InPkg) {
@@ -90,7 +90,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 获取出包量。
+     * Get 出包量。 
      * @return OutPkg 出包量。
      */
     public Integer getOutPkg() {
@@ -98,7 +98,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 设置出包量。
+     * Set 出包量。
      * @param OutPkg 出包量。
      */
     public void setOutPkg(Integer OutPkg) {
@@ -106,7 +106,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 获取入带宽，单位：`Byte`。
+     * Get 入带宽，单位：`Byte`。 
      * @return InTraffic 入带宽，单位：`Byte`。
      */
     public Integer getInTraffic() {
@@ -114,7 +114,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 设置入带宽，单位：`Byte`。
+     * Set 入带宽，单位：`Byte`。
      * @param InTraffic 入带宽，单位：`Byte`。
      */
     public void setInTraffic(Integer InTraffic) {
@@ -122,7 +122,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 获取出带宽，单位：`Byte`。
+     * Get 出带宽，单位：`Byte`。 
      * @return OutTraffic 出带宽，单位：`Byte`。
      */
     public Integer getOutTraffic() {
@@ -130,7 +130,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 设置出带宽，单位：`Byte`。
+     * Set 出带宽，单位：`Byte`。
      * @param OutTraffic 出带宽，单位：`Byte`。
      */
     public void setOutTraffic(Integer OutTraffic) {
@@ -138,7 +138,7 @@ public class GatewayFlowMonitorDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);

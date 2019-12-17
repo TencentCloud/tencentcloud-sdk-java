@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveDomainRequest  extends AbstractModel{
+public class DeleteLiveDomainRequest extends AbstractModel{
 
     /**
     * 要删除的域名
@@ -37,7 +37,7 @@ public class DeleteLiveDomainRequest  extends AbstractModel{
     private Integer DomainType;
 
     /**
-     * 获取要删除的域名
+     * Get 要删除的域名 
      * @return DomainName 要删除的域名
      */
     public String getDomainName() {
@@ -45,7 +45,7 @@ public class DeleteLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的域名
+     * Set 要删除的域名
      * @param DomainName 要删除的域名
      */
     public void setDomainName(String DomainName) {
@@ -53,7 +53,7 @@ public class DeleteLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取类型。0-推流，1-播放
+     * Get 类型。0-推流，1-播放 
      * @return DomainType 类型。0-推流，1-播放
      */
     public Integer getDomainType() {
@@ -61,7 +61,7 @@ public class DeleteLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置类型。0-推流，1-播放
+     * Set 类型。0-推流，1-播放
      * @param DomainType 类型。0-推流，1-播放
      */
     public void setDomainType(Integer DomainType) {
@@ -69,7 +69,7 @@ public class DeleteLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

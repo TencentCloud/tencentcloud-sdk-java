@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceParamsRequest  extends AbstractModel{
+public class ModifyInstanceParamsRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class ModifyInstanceParamsRequest  extends AbstractModel{
     private InstanceParam [] InstanceParams;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyInstanceParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyInstanceParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例修改的参数列表
+     * Get 实例修改的参数列表 
      * @return InstanceParams 实例修改的参数列表
      */
     public InstanceParam [] getInstanceParams() {
@@ -61,7 +61,7 @@ public class ModifyInstanceParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例修改的参数列表
+     * Set 实例修改的参数列表
      * @param InstanceParams 实例修改的参数列表
      */
     public void setInstanceParams(InstanceParam [] InstanceParams) {
@@ -69,7 +69,7 @@ public class ModifyInstanceParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

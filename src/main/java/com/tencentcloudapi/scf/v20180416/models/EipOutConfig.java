@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipOutConfig  extends AbstractModel{
+public class EipOutConfig extends AbstractModel{
 
     /**
     * 是否是固定IP，["TRUE","FALSE"]
@@ -37,7 +37,7 @@ public class EipOutConfig  extends AbstractModel{
     private String [] Eips;
 
     /**
-     * 获取是否是固定IP，["TRUE","FALSE"]
+     * Get 是否是固定IP，["TRUE","FALSE"] 
      * @return EipFixed 是否是固定IP，["TRUE","FALSE"]
      */
     public String getEipFixed() {
@@ -45,7 +45,7 @@ public class EipOutConfig  extends AbstractModel{
     }
 
     /**
-     * 设置是否是固定IP，["TRUE","FALSE"]
+     * Set 是否是固定IP，["TRUE","FALSE"]
      * @param EipFixed 是否是固定IP，["TRUE","FALSE"]
      */
     public void setEipFixed(String EipFixed) {
@@ -53,7 +53,7 @@ public class EipOutConfig  extends AbstractModel{
     }
 
     /**
-     * 获取IP列表
+     * Get IP列表 
      * @return Eips IP列表
      */
     public String [] getEips() {
@@ -61,7 +61,7 @@ public class EipOutConfig  extends AbstractModel{
     }
 
     /**
-     * 设置IP列表
+     * Set IP列表
      * @param Eips IP列表
      */
     public void setEips(String [] Eips) {
@@ -69,7 +69,7 @@ public class EipOutConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipFixed", this.EipFixed);

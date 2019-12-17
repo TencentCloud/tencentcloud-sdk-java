@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Task  extends AbstractModel{
+public class Task extends AbstractModel{
 
     /**
     * 任务ID，可通过此ID在轮询接口获取识别状态与结果
@@ -30,7 +30,7 @@ public class Task  extends AbstractModel{
     private Long TaskId;
 
     /**
-     * 获取任务ID，可通过此ID在轮询接口获取识别状态与结果
+     * Get 任务ID，可通过此ID在轮询接口获取识别状态与结果 
      * @return TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果
      */
     public Long getTaskId() {
@@ -38,7 +38,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，可通过此ID在轮询接口获取识别状态与结果
+     * Set 任务ID，可通过此ID在轮询接口获取识别状态与结果
      * @param TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果
      */
     public void setTaskId(Long TaskId) {
@@ -46,7 +46,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

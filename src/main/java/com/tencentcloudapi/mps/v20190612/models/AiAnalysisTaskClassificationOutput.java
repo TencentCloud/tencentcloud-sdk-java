@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
+public class AiAnalysisTaskClassificationOutput extends AbstractModel{
 
     /**
     * 视频智能分类列表。
@@ -30,7 +30,7 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
     private MediaAiAnalysisClassificationItem [] ClassificationSet;
 
     /**
-     * 获取视频智能分类列表。
+     * Get 视频智能分类列表。 
      * @return ClassificationSet 视频智能分类列表。
      */
     public MediaAiAnalysisClassificationItem [] getClassificationSet() {
@@ -38,7 +38,7 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频智能分类列表。
+     * Set 视频智能分类列表。
      * @param ClassificationSet 视频智能分类列表。
      */
     public void setClassificationSet(MediaAiAnalysisClassificationItem [] ClassificationSet) {
@@ -46,7 +46,7 @@ public class AiAnalysisTaskClassificationOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ClassificationSet.", this.ClassificationSet);

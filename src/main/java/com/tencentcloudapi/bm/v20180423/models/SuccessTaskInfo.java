@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SuccessTaskInfo  extends AbstractModel{
+public class SuccessTaskInfo extends AbstractModel{
 
     /**
     * 运行脚本的设备ID
@@ -44,7 +44,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     private String CmdTaskId;
 
     /**
-     * 获取运行脚本的设备ID
+     * Get 运行脚本的设备ID 
      * @return InstanceId 运行脚本的设备ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运行脚本的设备ID
+     * Set 运行脚本的设备ID
      * @param InstanceId 运行脚本的设备ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取黑石异步任务ID
+     * Get 黑石异步任务ID 
      * @return TaskId 黑石异步任务ID
      */
     public Integer getTaskId() {
@@ -68,7 +68,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置黑石异步任务ID
+     * Set 黑石异步任务ID
      * @param TaskId 黑石异步任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -76,7 +76,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取黑石自定义脚本运行任务ID
+     * Get 黑石自定义脚本运行任务ID 
      * @return CmdTaskId 黑石自定义脚本运行任务ID
      */
     public String getCmdTaskId() {
@@ -84,7 +84,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置黑石自定义脚本运行任务ID
+     * Set 黑石自定义脚本运行任务ID
      * @param CmdTaskId 黑石自定义脚本运行任务ID
      */
     public void setCmdTaskId(String CmdTaskId) {
@@ -92,7 +92,7 @@ public class SuccessTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

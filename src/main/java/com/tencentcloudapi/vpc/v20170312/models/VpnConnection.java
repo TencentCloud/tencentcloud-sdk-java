@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpnConnection  extends AbstractModel{
+public class VpnConnection extends AbstractModel{
 
     /**
     * 通道实例ID。
@@ -128,7 +128,7 @@ public class VpnConnection  extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-     * 获取通道实例ID。
+     * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
     public String getVpnConnectionId() {
@@ -136,7 +136,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道实例ID。
+     * Set 通道实例ID。
      * @param VpnConnectionId 通道实例ID。
      */
     public void setVpnConnectionId(String VpnConnectionId) {
@@ -144,7 +144,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称。
+     * Get 通道名称。 
      * @return VpnConnectionName 通道名称。
      */
     public String getVpnConnectionName() {
@@ -152,7 +152,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称。
+     * Set 通道名称。
      * @param VpnConnectionName 通道名称。
      */
     public void setVpnConnectionName(String VpnConnectionName) {
@@ -160,7 +160,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -168,7 +168,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -176,7 +176,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -184,7 +184,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -192,7 +192,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端网关实例ID。
+     * Get 对端网关实例ID。 
      * @return CustomerGatewayId 对端网关实例ID。
      */
     public String getCustomerGatewayId() {
@@ -200,7 +200,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端网关实例ID。
+     * Set 对端网关实例ID。
      * @param CustomerGatewayId 对端网关实例ID。
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
@@ -208,7 +208,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取预共享密钥。
+     * Get 预共享密钥。 
      * @return PreShareKey 预共享密钥。
      */
     public String getPreShareKey() {
@@ -216,7 +216,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置预共享密钥。
+     * Set 预共享密钥。
      * @param PreShareKey 预共享密钥。
      */
     public void setPreShareKey(String PreShareKey) {
@@ -224,7 +224,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取通道传输协议。
+     * Get 通道传输协议。 
      * @return VpnProto 通道传输协议。
      */
     public String getVpnProto() {
@@ -232,7 +232,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道传输协议。
+     * Set 通道传输协议。
      * @param VpnProto 通道传输协议。
      */
     public void setVpnProto(String VpnProto) {
@@ -240,7 +240,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取通道加密协议。
+     * Get 通道加密协议。 
      * @return EncryptProto 通道加密协议。
      */
     public String getEncryptProto() {
@@ -248,7 +248,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道加密协议。
+     * Set 通道加密协议。
      * @param EncryptProto 通道加密协议。
      */
     public void setEncryptProto(String EncryptProto) {
@@ -256,7 +256,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取路由类型。
+     * Get 路由类型。 
      * @return RouteType 路由类型。
      */
     public String getRouteType() {
@@ -264,7 +264,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置路由类型。
+     * Set 路由类型。
      * @param RouteType 路由类型。
      */
     public void setRouteType(String RouteType) {
@@ -272,7 +272,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -280,7 +280,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -288,7 +288,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Get 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。 
      * @return State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
      */
     public String getState() {
@@ -296,7 +296,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Set 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
      * @param State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
      */
     public void setState(String State) {
@@ -304,7 +304,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取通道连接状态，AVAILABLE：已连接。
+     * Get 通道连接状态，AVAILABLE：已连接。 
      * @return NetStatus 通道连接状态，AVAILABLE：已连接。
      */
     public String getNetStatus() {
@@ -312,7 +312,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置通道连接状态，AVAILABLE：已连接。
+     * Set 通道连接状态，AVAILABLE：已连接。
      * @param NetStatus 通道连接状态，AVAILABLE：已连接。
      */
     public void setNetStatus(String NetStatus) {
@@ -320,7 +320,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取SPD。
+     * Get SPD。 
      * @return SecurityPolicyDatabaseSet SPD。
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabaseSet() {
@@ -328,7 +328,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置SPD。
+     * Set SPD。
      * @param SecurityPolicyDatabaseSet SPD。
      */
     public void setSecurityPolicyDatabaseSet(SecurityPolicyDatabase [] SecurityPolicyDatabaseSet) {
@@ -336,7 +336,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取IKE选项。
+     * Get IKE选项。 
      * @return IKEOptionsSpecification IKE选项。
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
@@ -344,7 +344,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置IKE选项。
+     * Set IKE选项。
      * @param IKEOptionsSpecification IKE选项。
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
@@ -352,7 +352,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 获取IPSEC选择。
+     * Get IPSEC选择。 
      * @return IPSECOptionsSpecification IPSEC选择。
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
@@ -360,7 +360,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 设置IPSEC选择。
+     * Set IPSEC选择。
      * @param IPSECOptionsSpecification IPSEC选择。
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
@@ -368,7 +368,7 @@ public class VpnConnection  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnConnectionId", this.VpnConnectionId);

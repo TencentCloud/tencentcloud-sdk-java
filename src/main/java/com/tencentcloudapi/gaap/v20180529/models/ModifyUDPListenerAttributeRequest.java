@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
+public class ModifyUDPListenerAttributeRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -58,7 +58,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     private String Scheduler;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -66,7 +66,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -74,7 +74,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
@@ -82,7 +82,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -90,7 +90,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getProxyId() {
@@ -98,7 +98,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -106,7 +106,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -114,7 +114,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -122,7 +122,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器源站调度策略
+     * Get 监听器源站调度策略 
      * @return Scheduler 监听器源站调度策略
      */
     public String getScheduler() {
@@ -130,7 +130,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器源站调度策略
+     * Set 监听器源站调度策略
      * @param Scheduler 监听器源站调度策略
      */
     public void setScheduler(String Scheduler) {
@@ -138,7 +138,7 @@ public class ModifyUDPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Resource  extends AbstractModel{
+public class Resource extends AbstractModel{
 
     /**
     * 节点规格描述
@@ -87,8 +87,8 @@ public class Resource  extends AbstractModel{
     private MultiDisk [] MultiDisks;
 
     /**
-     * 获取节点规格描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 节点规格描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Spec 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置节点规格描述
+     * Set 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 节点规格描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,8 +107,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 存储类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置存储类型
+     * Set 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,8 +127,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 磁盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘类型
+     * Set 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取内存容量,单位为M
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内存容量,单位为M
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemSize 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量,单位为M
+     * Set 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 内存容量,单位为M
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CPU核数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数
+     * Set CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU核数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据盘容量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskSize 数据盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘容量
+     * Set 数据盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 数据盘容量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 系统盘容量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RootSize 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘容量
+     * Set 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘容量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * Set 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,7 +247,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Spec", this.Spec);

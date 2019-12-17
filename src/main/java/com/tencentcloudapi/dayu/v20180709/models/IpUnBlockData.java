@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IpUnBlockData  extends AbstractModel{
+public class IpUnBlockData extends AbstractModel{
 
     /**
     * IP
@@ -51,7 +51,7 @@ public class IpUnBlockData  extends AbstractModel{
     private String ActionType;
 
     /**
-     * 获取IP
+     * Get IP 
      * @return Ip IP
      */
     public String getIp() {
@@ -59,7 +59,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 设置IP
+     * Set IP
      * @param Ip IP
      */
     public void setIp(String Ip) {
@@ -67,7 +67,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 获取封堵时间
+     * Get 封堵时间 
      * @return BlockTime 封堵时间
      */
     public String getBlockTime() {
@@ -75,7 +75,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 设置封堵时间
+     * Set 封堵时间
      * @param BlockTime 封堵时间
      */
     public void setBlockTime(String BlockTime) {
@@ -83,7 +83,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 获取解封时间（实际解封时间）
+     * Get 解封时间（实际解封时间） 
      * @return UnBlockTime 解封时间（实际解封时间）
      */
     public String getUnBlockTime() {
@@ -91,7 +91,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 设置解封时间（实际解封时间）
+     * Set 解封时间（实际解封时间）
      * @param UnBlockTime 解封时间（实际解封时间）
      */
     public void setUnBlockTime(String UnBlockTime) {
@@ -99,7 +99,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Get 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封） 
      * @return ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public String getActionType() {
@@ -107,7 +107,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Set 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      * @param ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public void setActionType(String ActionType) {
@@ -115,7 +115,7 @@ public class IpUnBlockData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

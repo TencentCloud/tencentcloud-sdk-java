@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReviewDetailsResponse  extends AbstractModel{
+public class DescribeReviewDetailsResponse extends AbstractModel{
 
     /**
     * 发起内容审核次数。
@@ -51,7 +51,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取发起内容审核次数。
+     * Get 发起内容审核次数。 
      * @return TotalCount 发起内容审核次数。
      */
     public Long getTotalCount() {
@@ -59,7 +59,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发起内容审核次数。
+     * Set 发起内容审核次数。
      * @param TotalCount 发起内容审核次数。
      */
     public void setTotalCount(Long TotalCount) {
@@ -67,7 +67,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核总时长。
+     * Get 内容审核总时长。 
      * @return TotalDuration 内容审核总时长。
      */
     public Long getTotalDuration() {
@@ -75,7 +75,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核总时长。
+     * Set 内容审核总时长。
      * @param TotalDuration 内容审核总时长。
      */
     public void setTotalDuration(Long TotalDuration) {
@@ -83,7 +83,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核时长统计数据，每天一个数据。
+     * Get 内容审核时长统计数据，每天一个数据。 
      * @return Data 内容审核时长统计数据，每天一个数据。
      */
     public StatDataItem [] getData() {
@@ -91,7 +91,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核时长统计数据，每天一个数据。
+     * Set 内容审核时长统计数据，每天一个数据。
      * @param Data 内容审核时长统计数据，每天一个数据。
      */
     public void setData(StatDataItem [] Data) {
@@ -99,7 +99,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeReviewDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordEmbeddingRequest  extends AbstractModel{
+public class WordEmbeddingRequest extends AbstractModel{
 
     /**
     * 输入的词语（仅支持UTF-8格式，不超过20字）
@@ -30,7 +30,7 @@ public class WordEmbeddingRequest  extends AbstractModel{
     private String Text;
 
     /**
-     * 获取输入的词语（仅支持UTF-8格式，不超过20字）
+     * Get 输入的词语（仅支持UTF-8格式，不超过20字） 
      * @return Text 输入的词语（仅支持UTF-8格式，不超过20字）
      */
     public String getText() {
@@ -38,7 +38,7 @@ public class WordEmbeddingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的词语（仅支持UTF-8格式，不超过20字）
+     * Set 输入的词语（仅支持UTF-8格式，不超过20字）
      * @param Text 输入的词语（仅支持UTF-8格式，不超过20字）
      */
     public void setText(String Text) {
@@ -46,7 +46,7 @@ public class WordEmbeddingRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

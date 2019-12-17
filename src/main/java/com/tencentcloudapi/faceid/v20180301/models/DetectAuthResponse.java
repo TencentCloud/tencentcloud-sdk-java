@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectAuthResponse  extends AbstractModel{
+public class DetectAuthResponse extends AbstractModel{
 
     /**
     * 用于发起核身流程的URL，仅微信H5场景使用。
@@ -45,7 +45,7 @@ public class DetectAuthResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用于发起核身流程的URL，仅微信H5场景使用。
+     * Get 用于发起核身流程的URL，仅微信H5场景使用。 
      * @return Url 用于发起核身流程的URL，仅微信H5场景使用。
      */
     public String getUrl() {
@@ -53,7 +53,7 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用于发起核身流程的URL，仅微信H5场景使用。
+     * Set 用于发起核身流程的URL，仅微信H5场景使用。
      * @param Url 用于发起核身流程的URL，仅微信H5场景使用。
      */
     public void setUrl(String Url) {
@@ -61,8 +61,8 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 获取一次核身流程的标识，有效时间为7,200秒；
-完成核身后，可用该标识获取验证结果信息。
+     * Get 一次核身流程的标识，有效时间为7,200秒；
+完成核身后，可用该标识获取验证结果信息。 
      * @return BizToken 一次核身流程的标识，有效时间为7,200秒；
 完成核身后，可用该标识获取验证结果信息。
      */
@@ -71,7 +71,7 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置一次核身流程的标识，有效时间为7,200秒；
+     * Set 一次核身流程的标识，有效时间为7,200秒；
 完成核身后，可用该标识获取验证结果信息。
      * @param BizToken 一次核身流程的标识，有效时间为7,200秒；
 完成核身后，可用该标识获取验证结果信息。
@@ -81,7 +81,7 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DetectAuthResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

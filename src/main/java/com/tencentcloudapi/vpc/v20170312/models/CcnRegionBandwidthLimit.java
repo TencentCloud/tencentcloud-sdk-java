@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcnRegionBandwidthLimit  extends AbstractModel{
+public class CcnRegionBandwidthLimit extends AbstractModel{
 
     /**
     * 地域，例如：ap-guangzhou
@@ -59,7 +59,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     private Boolean DstIsBm;
 
     /**
-     * 获取地域，例如：ap-guangzhou
+     * Get 地域，例如：ap-guangzhou 
      * @return Region 地域，例如：ap-guangzhou
      */
     public String getRegion() {
@@ -67,7 +67,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 设置地域，例如：ap-guangzhou
+     * Set 地域，例如：ap-guangzhou
      * @param Region 地域，例如：ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -75,7 +75,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 获取出带宽上限，单位：Mbps
+     * Get 出带宽上限，单位：Mbps 
      * @return BandwidthLimit 出带宽上限，单位：Mbps
      */
     public Integer getBandwidthLimit() {
@@ -83,7 +83,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 设置出带宽上限，单位：Mbps
+     * Set 出带宽上限，单位：Mbps
      * @param BandwidthLimit 出带宽上限，单位：Mbps
      */
     public void setBandwidthLimit(Integer BandwidthLimit) {
@@ -91,7 +91,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 获取是否黑石地域，默认`false`。
+     * Get 是否黑石地域，默认`false`。 
      * @return IsBm 是否黑石地域，默认`false`。
      */
     public Boolean getIsBm() {
@@ -99,7 +99,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 设置是否黑石地域，默认`false`。
+     * Set 是否黑石地域，默认`false`。
      * @param IsBm 是否黑石地域，默认`false`。
      */
     public void setIsBm(Boolean IsBm) {
@@ -107,8 +107,8 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 获取目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 目的地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DstRegion 目的地域，例如：ap-shanghai
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 设置目的地域，例如：ap-shanghai
+     * Set 目的地域，例如：ap-shanghai
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DstRegion 目的地域，例如：ap-shanghai
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,7 +127,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 获取目的地域是否为黑石地域，默认`false`。
+     * Get 目的地域是否为黑石地域，默认`false`。 
      * @return DstIsBm 目的地域是否为黑石地域，默认`false`。
      */
     public Boolean getDstIsBm() {
@@ -135,7 +135,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 设置目的地域是否为黑石地域，默认`false`。
+     * Set 目的地域是否为黑石地域，默认`false`。
      * @param DstIsBm 目的地域是否为黑石地域，默认`false`。
      */
     public void setDstIsBm(Boolean DstIsBm) {
@@ -143,7 +143,7 @@ public class CcnRegionBandwidthLimit  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

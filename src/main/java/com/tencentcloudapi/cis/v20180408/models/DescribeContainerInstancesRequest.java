@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerInstancesRequest  extends AbstractModel{
+public class DescribeContainerInstancesRequest extends AbstractModel{
 
     /**
     * 偏移量，默认为0
@@ -47,7 +47,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Integer getOffset() {
@@ -55,7 +55,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Integer Offset) {
@@ -63,7 +63,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为10
+     * Get 返回数量，默认为10 
      * @return Limit 返回数量，默认为10
      */
     public Integer getLimit() {
@@ -71,7 +71,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为10
+     * Set 返回数量，默认为10
      * @param Limit 返回数量，默认为10
      */
     public void setLimit(Integer Limit) {
@@ -79,10 +79,10 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 - Zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。
 - VpcId - String - 是否必填：否 -（过滤条件）按照VpcId过滤。
-- InstanceName - String - 是否必填：否 -（过滤条件）按照容器实例名称做模糊查询。
+- InstanceName - String - 是否必填：否 -（过滤条件）按照容器实例名称做模糊查询。 
      * @return Filters 过滤条件。
 - Zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。
 - VpcId - String - 是否必填：否 -（过滤条件）按照VpcId过滤。
@@ -93,7 +93,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 - Zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。
 - VpcId - String - 是否必填：否 -（过滤条件）按照VpcId过滤。
 - InstanceName - String - 是否必填：否 -（过滤条件）按照容器实例名称做模糊查询。
@@ -107,7 +107,7 @@ public class DescribeContainerInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

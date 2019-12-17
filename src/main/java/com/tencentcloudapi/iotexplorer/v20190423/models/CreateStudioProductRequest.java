@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStudioProductRequest  extends AbstractModel{
+public class CreateStudioProductRequest extends AbstractModel{
 
     /**
     * 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
@@ -79,7 +79,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     private String ProjectId;
 
     /**
-     * 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * Get 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32} 
      * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public String getProductName() {
@@ -87,7 +87,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * Set 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public void setProductName(String ProductName) {
@@ -95,7 +95,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * Get 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID) 
      * @return CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      */
     public Long getCategoryId() {
@@ -103,7 +103,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
+     * Set 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      * @param CategoryId 产品分组模板ID , ( 自定义模板填写1 , 控制台调用会使用预置的其他ID)
      */
     public void setCategoryId(Long CategoryId) {
@@ -111,7 +111,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 填写 ( 0 普通产品 )
+     * Get 产品类型 填写 ( 0 普通产品 ) 
      * @return ProductType 产品类型 填写 ( 0 普通产品 )
      */
     public Long getProductType() {
@@ -119,7 +119,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型 填写 ( 0 普通产品 )
+     * Set 产品类型 填写 ( 0 普通产品 )
      * @param ProductType 产品类型 填写 ( 0 普通产品 )
      */
     public void setProductType(Long ProductType) {
@@ -127,7 +127,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * Get 加密类型 加密类型，1表示证书认证，2表示签名认证。 
      * @return EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
      */
     public String getEncryptionType() {
@@ -135,7 +135,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * Set 加密类型 加密类型，1表示证书认证，2表示签名认证。
      * @param EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
      */
     public void setEncryptionType(String EncryptionType) {
@@ -143,7 +143,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取连接类型 可以填写 wifi cellular else
+     * Get 连接类型 可以填写 wifi cellular else 
      * @return NetType 连接类型 可以填写 wifi cellular else
      */
     public String getNetType() {
@@ -151,7 +151,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置连接类型 可以填写 wifi cellular else
+     * Set 连接类型 可以填写 wifi cellular else
      * @param NetType 连接类型 可以填写 wifi cellular else
      */
     public void setNetType(String NetType) {
@@ -159,7 +159,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据协议 (1 使用物模型)
+     * Get 数据协议 (1 使用物模型) 
      * @return DataProtocol 数据协议 (1 使用物模型)
      */
     public Long getDataProtocol() {
@@ -167,7 +167,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据协议 (1 使用物模型)
+     * Set 数据协议 (1 使用物模型)
      * @param DataProtocol 数据协议 (1 使用物模型)
      */
     public void setDataProtocol(Long DataProtocol) {
@@ -175,7 +175,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return ProductDesc 产品描述
      */
     public String getProductDesc() {
@@ -183,7 +183,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param ProductDesc 产品描述
      */
     public void setProductDesc(String ProductDesc) {
@@ -191,7 +191,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品的项目ID
+     * Get 产品的项目ID 
      * @return ProjectId 产品的项目ID
      */
     public String getProjectId() {
@@ -199,7 +199,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品的项目ID
+     * Set 产品的项目ID
      * @param ProjectId 产品的项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -207,7 +207,7 @@ public class CreateStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadUserCertRequest  extends AbstractModel{
+public class DownloadUserCertRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：cert_mng
@@ -65,7 +65,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     private String GroupName;
 
     /**
-     * 获取模块名，固定字段：cert_mng
+     * Get 模块名，固定字段：cert_mng 
      * @return Module 模块名，固定字段：cert_mng
      */
     public String getModule() {
@@ -73,7 +73,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：cert_mng
+     * Set 模块名，固定字段：cert_mng
      * @param Module 模块名，固定字段：cert_mng
      */
     public void setModule(String Module) {
@@ -81,7 +81,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：cert_download_for_user
+     * Get 操作名，固定字段：cert_download_for_user 
      * @return Operation 操作名，固定字段：cert_download_for_user
      */
     public String getOperation() {
@@ -89,7 +89,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：cert_download_for_user
+     * Set 操作名，固定字段：cert_download_for_user
      * @param Operation 操作名，固定字段：cert_download_for_user
      */
     public void setOperation(String Operation) {
@@ -97,7 +97,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书ID，可以在证书详情页面获取
+     * Get 证书ID，可以在证书详情页面获取 
      * @return CertId 证书ID，可以在证书详情页面获取
      */
     public Integer getCertId() {
@@ -105,7 +105,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书ID，可以在证书详情页面获取
+     * Set 证书ID，可以在证书详情页面获取
      * @param CertId 证书ID，可以在证书详情页面获取
      */
     public void setCertId(Integer CertId) {
@@ -113,7 +113,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书DN，可以在证书详情页面获取
+     * Get 证书DN，可以在证书详情页面获取 
      * @return CertDn 证书DN，可以在证书详情页面获取
      */
     public String getCertDn() {
@@ -121,7 +121,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书DN，可以在证书详情页面获取
+     * Set 证书DN，可以在证书详情页面获取
      * @param CertDn 证书DN，可以在证书详情页面获取
      */
     public void setCertDn(String CertDn) {
@@ -129,7 +129,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -137,7 +137,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -145,7 +145,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -153,7 +153,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 下载证书的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -161,7 +161,7 @@ public class DownloadUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

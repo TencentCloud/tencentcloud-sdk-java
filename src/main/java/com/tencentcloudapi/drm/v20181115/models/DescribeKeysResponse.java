@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKeysResponse  extends AbstractModel{
+public class DescribeKeysResponse extends AbstractModel{
 
     /**
     * 加密密钥列表
@@ -61,7 +61,7 @@ Fairplay方案无该值。
     private String RequestId;
 
     /**
-     * 获取加密密钥列表
+     * Get 加密密钥列表 
      * @return Keys 加密密钥列表
      */
     public Key [] getKeys() {
@@ -69,7 +69,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 设置加密密钥列表
+     * Set 加密密钥列表
      * @param Keys 加密密钥列表
      */
     public void setKeys(Key [] Keys) {
@@ -77,9 +77,9 @@ Fairplay方案无该值。
     }
 
     /**
-     * 获取用来加密密钥。
+     * Get 用来加密密钥。
 如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
-如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
+如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。 
      * @return SessionKey 用来加密密钥。
 如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
 如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
@@ -89,7 +89,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 设置用来加密密钥。
+     * Set 用来加密密钥。
 如果入参中带有RsaPublicKey，则SessionKey为使用Rsa公钥加密后的二进制数据，Base64编码字符串。
 如果入参中没有RsaPublicKey，则SessionKey为原始数据的字符串形式。
      * @param SessionKey 用来加密密钥。
@@ -101,7 +101,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 获取内容ID
+     * Get 内容ID 
      * @return ContentId 内容ID
      */
     public String getContentId() {
@@ -109,7 +109,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 设置内容ID
+     * Set 内容ID
      * @param ContentId 内容ID
      */
     public void setContentId(String ContentId) {
@@ -117,8 +117,8 @@ Fairplay方案无该值。
     }
 
     /**
-     * 获取Widevine方案的Pssh数据，Base64编码。
-Fairplay方案无该值。
+     * Get Widevine方案的Pssh数据，Base64编码。
+Fairplay方案无该值。 
      * @return Pssh Widevine方案的Pssh数据，Base64编码。
 Fairplay方案无该值。
      */
@@ -127,7 +127,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 设置Widevine方案的Pssh数据，Base64编码。
+     * Set Widevine方案的Pssh数据，Base64编码。
 Fairplay方案无该值。
      * @param Pssh Widevine方案的Pssh数据，Base64编码。
 Fairplay方案无该值。
@@ -137,7 +137,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -145,7 +145,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -153,7 +153,7 @@ Fairplay方案无该值。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);

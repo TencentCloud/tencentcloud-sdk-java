@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateProxyRequest  extends AbstractModel{
+public class InquiryPriceCreateProxyRequest extends AbstractModel{
 
     /**
     * 加速区域名称。
@@ -65,7 +65,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     private Long Concurrent;
 
     /**
-     * 获取加速区域名称。
+     * Get 加速区域名称。 
      * @return AccessRegion 加速区域名称。
      */
     public String getAccessRegion() {
@@ -73,7 +73,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域名称。
+     * Set 加速区域名称。
      * @param AccessRegion 加速区域名称。
      */
     public void setAccessRegion(String AccessRegion) {
@@ -81,7 +81,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道带宽上限，单位：Mbps。
+     * Get 通道带宽上限，单位：Mbps。 
      * @return Bandwidth 通道带宽上限，单位：Mbps。
      */
     public Long getBandwidth() {
@@ -89,7 +89,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道带宽上限，单位：Mbps。
+     * Set 通道带宽上限，单位：Mbps。
      * @param Bandwidth 通道带宽上限，单位：Mbps。
      */
     public void setBandwidth(Long Bandwidth) {
@@ -97,7 +97,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（旧参数，请切换到RealServerRegion）源站区域名称。
+     * Get （旧参数，请切换到RealServerRegion）源站区域名称。 
      * @return DestRegion （旧参数，请切换到RealServerRegion）源站区域名称。
      */
     public String getDestRegion() {
@@ -105,7 +105,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到RealServerRegion）源站区域名称。
+     * Set （旧参数，请切换到RealServerRegion）源站区域名称。
      * @param DestRegion （旧参数，请切换到RealServerRegion）源站区域名称。
      */
     public void setDestRegion(String DestRegion) {
@@ -113,7 +113,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+     * Get （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。 
      * @return Concurrency （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public Long getConcurrency() {
@@ -121,7 +121,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+     * Set （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param Concurrency （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public void setConcurrency(Long Concurrency) {
@@ -129,7 +129,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）源站区域名称。
+     * Get （新参数）源站区域名称。 
      * @return RealServerRegion （新参数）源站区域名称。
      */
     public String getRealServerRegion() {
@@ -137,7 +137,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）源站区域名称。
+     * Set （新参数）源站区域名称。
      * @param RealServerRegion （新参数）源站区域名称。
      */
     public void setRealServerRegion(String RealServerRegion) {
@@ -145,7 +145,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
+     * Get （新参数）通道并发量上限，表示同时在线的连接数，单位：万。 
      * @return Concurrent （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public Long getConcurrent() {
@@ -153,7 +153,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
+     * Set （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param Concurrent （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public void setConcurrent(Long Concurrent) {
@@ -161,7 +161,7 @@ public class InquiryPriceCreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);

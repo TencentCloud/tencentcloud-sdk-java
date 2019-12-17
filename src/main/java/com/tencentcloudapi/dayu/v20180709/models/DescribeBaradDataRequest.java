@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBaradDataRequest  extends AbstractModel{
+public class DescribeBaradDataRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
@@ -97,7 +97,7 @@ avg表示均值；
     private String Ip;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
      */
     public String getBusiness() {
@@ -105,7 +105,7 @@ avg表示均值；
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾）
      */
     public void setBusiness(String Business) {
@@ -113,7 +113,7 @@ avg表示均值；
     }
 
     /**
-     * 获取资源实例ID
+     * Get 资源实例ID 
      * @return Id 资源实例ID
      */
     public String getId() {
@@ -121,7 +121,7 @@ avg表示均值；
     }
 
     /**
-     * 设置资源实例ID
+     * Set 资源实例ID
      * @param Id 资源实例ID
      */
     public void setId(String Id) {
@@ -129,7 +129,7 @@ avg表示均值；
     }
 
     /**
-     * 获取指标名，取值：
+     * Get 指标名，取值：
 connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
@@ -137,7 +137,7 @@ intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
 inpkg表示入包速率；
-outpkg表示出包速率；
+outpkg表示出包速率； 
      * @return MetricName 指标名，取值：
 connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
@@ -153,7 +153,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 设置指标名，取值：
+     * Set 指标名，取值：
 connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
@@ -177,7 +177,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 获取统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天）
+     * Get 统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天） 
      * @return Period 统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天）
      */
     public Long getPeriod() {
@@ -185,7 +185,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 设置统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天）
+     * Set 统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天）
      * @param Period 统计时间粒度，单位秒（300表示5分钟；3600表示小时；86400表示天）
      */
     public void setPeriod(Long Period) {
@@ -193,7 +193,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 获取统计开始时间，秒部分保持为0，分钟部分为5的倍数
+     * Get 统计开始时间，秒部分保持为0，分钟部分为5的倍数 
      * @return StartTime 统计开始时间，秒部分保持为0，分钟部分为5的倍数
      */
     public String getStartTime() {
@@ -201,7 +201,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 设置统计开始时间，秒部分保持为0，分钟部分为5的倍数
+     * Set 统计开始时间，秒部分保持为0，分钟部分为5的倍数
      * @param StartTime 统计开始时间，秒部分保持为0，分钟部分为5的倍数
      */
     public void setStartTime(String StartTime) {
@@ -209,7 +209,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 获取统计结束时间，秒部分保持为0，分钟部分为5的倍数
+     * Get 统计结束时间，秒部分保持为0，分钟部分为5的倍数 
      * @return EndTime 统计结束时间，秒部分保持为0，分钟部分为5的倍数
      */
     public String getEndTime() {
@@ -217,7 +217,7 @@ outpkg表示出包速率；
     }
 
     /**
-     * 设置统计结束时间，秒部分保持为0，分钟部分为5的倍数
+     * Set 统计结束时间，秒部分保持为0，分钟部分为5的倍数
      * @param EndTime 统计结束时间，秒部分保持为0，分钟部分为5的倍数
      */
     public void setEndTime(String EndTime) {
@@ -225,10 +225,10 @@ outpkg表示出包速率；
     }
 
     /**
-     * 获取统计方式，取值：
+     * Get 统计方式，取值：
 max表示最大值；
 min表示最小值；
-avg表示均值；
+avg表示均值； 
      * @return Statistics 统计方式，取值：
 max表示最大值；
 min表示最小值；
@@ -239,7 +239,7 @@ avg表示均值；
     }
 
     /**
-     * 设置统计方式，取值：
+     * Set 统计方式，取值：
 max表示最大值；
 min表示最小值；
 avg表示均值；
@@ -253,7 +253,7 @@ avg表示均值；
     }
 
     /**
-     * 获取协议端口数组
+     * Get 协议端口数组 
      * @return ProtocolPort 协议端口数组
      */
     public ProtocolPort [] getProtocolPort() {
@@ -261,7 +261,7 @@ avg表示均值；
     }
 
     /**
-     * 设置协议端口数组
+     * Set 协议端口数组
      * @param ProtocolPort 协议端口数组
      */
     public void setProtocolPort(ProtocolPort [] ProtocolPort) {
@@ -269,7 +269,7 @@ avg表示均值；
     }
 
     /**
-     * 获取资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）；
+     * Get 资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）； 
      * @return Ip 资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）；
      */
     public String getIp() {
@@ -277,7 +277,7 @@ avg表示均值；
     }
 
     /**
-     * 设置资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）；
+     * Set 资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）；
      * @param Ip 资源实例下的IP，只有当Business=net(高防IP专业版)时才必须填写资源的一个IP（因为高防IP专业版资源实例有多个IP，才需要指定）；
      */
     public void setIp(String Ip) {
@@ -285,7 +285,7 @@ avg表示均值；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

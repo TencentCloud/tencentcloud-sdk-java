@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPayModePre2PostRequest  extends AbstractModel{
+public class ModifyPayModePre2PostRequest extends AbstractModel{
 
     /**
     * 需要修改的设备ID列表
@@ -30,7 +30,7 @@ public class ModifyPayModePre2PostRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取需要修改的设备ID列表
+     * Get 需要修改的设备ID列表 
      * @return InstanceIds 需要修改的设备ID列表
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class ModifyPayModePre2PostRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的设备ID列表
+     * Set 需要修改的设备ID列表
      * @param InstanceIds 需要修改的设备ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class ModifyPayModePre2PostRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

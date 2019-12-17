@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClusterRequest  extends AbstractModel{
+public class DeleteClusterRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -37,7 +37,7 @@ public class DeleteClusterRequest  extends AbstractModel{
     private String InstanceDeleteMode;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -45,7 +45,7 @@ public class DeleteClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -53,7 +53,7 @@ public class DeleteClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * Get 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例） 
      * @return InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public String getInstanceDeleteMode() {
@@ -61,7 +61,7 @@ public class DeleteClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * Set 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      * @param InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public void setInstanceDeleteMode(String InstanceDeleteMode) {
@@ -69,7 +69,7 @@ public class DeleteClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

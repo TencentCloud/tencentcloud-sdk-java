@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionType  extends AbstractModel{
+public class ActionType extends AbstractModel{
 
     /**
     * 置信度
@@ -37,7 +37,7 @@ public class ActionType  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取置信度
+     * Get 置信度 
      * @return Confidence 置信度
      */
     public Float getConfidence() {
@@ -45,7 +45,7 @@ public class ActionType  extends AbstractModel{
     }
 
     /**
-     * 设置置信度
+     * Set 置信度
      * @param Confidence 置信度
      */
     public void setConfidence(Float Confidence) {
@@ -53,7 +53,7 @@ public class ActionType  extends AbstractModel{
     }
 
     /**
-     * 获取动作类别
+     * Get 动作类别 
      * @return Type 动作类别
      */
     public String getType() {
@@ -61,7 +61,7 @@ public class ActionType  extends AbstractModel{
     }
 
     /**
-     * 设置动作类别
+     * Set 动作类别
      * @param Type 动作类别
      */
     public void setType(String Type) {
@@ -69,7 +69,7 @@ public class ActionType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

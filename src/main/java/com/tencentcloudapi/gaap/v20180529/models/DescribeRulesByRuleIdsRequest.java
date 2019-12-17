@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRulesByRuleIdsRequest  extends AbstractModel{
+public class DescribeRulesByRuleIdsRequest extends AbstractModel{
 
     /**
     * 规则ID列表。最多支持10个规则。
@@ -30,7 +30,7 @@ public class DescribeRulesByRuleIdsRequest  extends AbstractModel{
     private String [] RuleIds;
 
     /**
-     * 获取规则ID列表。最多支持10个规则。
+     * Get 规则ID列表。最多支持10个规则。 
      * @return RuleIds 规则ID列表。最多支持10个规则。
      */
     public String [] getRuleIds() {
@@ -38,7 +38,7 @@ public class DescribeRulesByRuleIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID列表。最多支持10个规则。
+     * Set 规则ID列表。最多支持10个规则。
      * @param RuleIds 规则ID列表。最多支持10个规则。
      */
     public void setRuleIds(String [] RuleIds) {
@@ -46,7 +46,7 @@ public class DescribeRulesByRuleIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);

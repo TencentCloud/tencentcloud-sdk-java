@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextFormula  extends AbstractModel{
+public class TextFormula extends AbstractModel{
 
     /**
     * 识别出的文本行内容
@@ -30,7 +30,7 @@ public class TextFormula  extends AbstractModel{
     private String DetectedText;
 
     /**
-     * 获取识别出的文本行内容
+     * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
     public String getDetectedText() {
@@ -38,7 +38,7 @@ public class TextFormula  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的文本行内容
+     * Set 识别出的文本行内容
      * @param DetectedText 识别出的文本行内容
      */
     public void setDetectedText(String DetectedText) {
@@ -46,7 +46,7 @@ public class TextFormula  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);

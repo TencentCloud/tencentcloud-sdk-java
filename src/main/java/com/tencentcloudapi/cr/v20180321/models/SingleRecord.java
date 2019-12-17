@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SingleRecord  extends AbstractModel{
+public class SingleRecord extends AbstractModel{
 
     /**
     * 案件编号。
@@ -81,7 +81,7 @@ public class SingleRecord  extends AbstractModel{
     private String RecordCosUrl;
 
     /**
-     * 获取案件编号。
+     * Get 案件编号。 
      * @return AccountNum 案件编号。
      */
     public String getAccountNum() {
@@ -89,7 +89,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置案件编号。
+     * Set 案件编号。
      * @param AccountNum 案件编号。
      */
     public void setAccountNum(String AccountNum) {
@@ -97,7 +97,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取外呼日期。
+     * Get 外呼日期。 
      * @return BizDate 外呼日期。
      */
     public String getBizDate() {
@@ -105,7 +105,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置外呼日期。
+     * Set 外呼日期。
      * @param BizDate 外呼日期。
      */
     public void setBizDate(String BizDate) {
@@ -113,7 +113,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取开始呼叫时间。
+     * Get 开始呼叫时间。 
      * @return CallStartTime 开始呼叫时间。
      */
     public String getCallStartTime() {
@@ -121,7 +121,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置开始呼叫时间。
+     * Set 开始呼叫时间。
      * @param CallStartTime 开始呼叫时间。
      */
     public void setCallStartTime(String CallStartTime) {
@@ -129,7 +129,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取主叫号码。
+     * Get 主叫号码。 
      * @return CallerPhone 主叫号码。
      */
     public String getCallerPhone() {
@@ -137,7 +137,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置主叫号码。
+     * Set 主叫号码。
      * @param CallerPhone 主叫号码。
      */
     public void setCallerPhone(String CallerPhone) {
@@ -145,7 +145,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取呼叫方向，O为呼出，I为呼入。
+     * Get 呼叫方向，O为呼出，I为呼入。 
      * @return Direction 呼叫方向，O为呼出，I为呼入。
      */
     public String getDirection() {
@@ -153,7 +153,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置呼叫方向，O为呼出，I为呼入。
+     * Set 呼叫方向，O为呼出，I为呼入。
      * @param Direction 呼叫方向，O为呼出，I为呼入。
      */
     public void setDirection(String Direction) {
@@ -161,7 +161,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取通话时长。
+     * Get 通话时长。 
      * @return Duration 通话时长。
      */
     public Integer getDuration() {
@@ -169,7 +169,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置通话时长。
+     * Set 通话时长。
      * @param Duration 通话时长。
      */
     public void setDuration(Integer Duration) {
@@ -177,8 +177,8 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 产品ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 产品ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -187,7 +187,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID。
+     * Set 产品ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 产品ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,8 +197,8 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 获取录音下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 录音下载链接。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordCosUrl 录音下载链接。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,7 +207,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 设置录音下载链接。
+     * Set 录音下载链接。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordCosUrl 录音下载链接。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -217,7 +217,7 @@ public class SingleRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountNum", this.AccountNum);

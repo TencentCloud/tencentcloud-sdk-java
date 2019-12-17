@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListPoliciesRequest  extends AbstractModel{
+public class ListPoliciesRequest extends AbstractModel{
 
     /**
     * 每页数量，默认值是 20，必须大于 0 且小于或等于 200
@@ -51,7 +51,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取每页数量，默认值是 20，必须大于 0 且小于或等于 200
+     * Get 每页数量，默认值是 20，必须大于 0 且小于或等于 200 
      * @return Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
      */
     public Long getRp() {
@@ -59,7 +59,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页数量，默认值是 20，必须大于 0 且小于或等于 200
+     * Set 每页数量，默认值是 20，必须大于 0 且小于或等于 200
      * @param Rp 每页数量，默认值是 20，必须大于 0 且小于或等于 200
      */
     public void setRp(Long Rp) {
@@ -67,7 +67,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页码，默认值是 1，从 1开始，不能大于 200
+     * Get 页码，默认值是 1，从 1开始，不能大于 200 
      * @return Page 页码，默认值是 1，从 1开始，不能大于 200
      */
     public Long getPage() {
@@ -75,7 +75,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码，默认值是 1，从 1开始，不能大于 200
+     * Set 页码，默认值是 1，从 1开始，不能大于 200
      * @param Page 页码，默认值是 1，从 1开始，不能大于 200
      */
     public void setPage(Long Page) {
@@ -83,7 +83,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+     * Get 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All' 
      * @return Scope 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
      */
     public String getScope() {
@@ -91,7 +91,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
+     * Set 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
      * @param Scope 可取值 'All'、'QCS' 和 'Local'，'All' 获取所有策略，'QCS' 只获取预设策略，'Local' 只获取自定义策略，默认取 'All'
      */
     public void setScope(String Scope) {
@@ -99,7 +99,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按策略名匹配
+     * Get 按策略名匹配 
      * @return Keyword 按策略名匹配
      */
     public String getKeyword() {
@@ -107,7 +107,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按策略名匹配
+     * Set 按策略名匹配
      * @param Keyword 按策略名匹配
      */
     public void setKeyword(String Keyword) {
@@ -115,7 +115,7 @@ public class ListPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Rp", this.Rp);

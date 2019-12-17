@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDiskAttributesRequest  extends AbstractModel{
+public class ModifyDiskAttributesRequest extends AbstractModel{
 
     /**
     * 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
@@ -65,7 +65,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     private String DiskType;
 
     /**
-     * 获取一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * Get 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。 
      * @return DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      */
     public String [] getDiskIds() {
@@ -73,7 +73,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * Set 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      * @param DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -81,7 +81,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     * Get 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。 
      * @return ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      */
     public Integer getProjectId() {
@@ -89,7 +89,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+     * Set 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      * @param ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -97,7 +97,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的云硬盘名称。
+     * Get 新的云硬盘名称。 
      * @return DiskName 新的云硬盘名称。
      */
     public String getDiskName() {
@@ -105,7 +105,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的云硬盘名称。
+     * Set 新的云硬盘名称。
      * @param DiskName 新的云硬盘名称。
      */
     public void setDiskName(String DiskName) {
@@ -113,7 +113,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * Get 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。 
      * @return Portable 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
      */
     public Boolean getPortable() {
@@ -121,7 +121,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
+     * Set 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
      * @param Portable 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
      */
     public void setPortable(Boolean Portable) {
@@ -129,7 +129,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     * Get 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。 
      * @return DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
      */
     public Boolean getDeleteWithInstance() {
@@ -137,7 +137,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
+     * Set 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
      * @param DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
@@ -145,7 +145,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+     * Get 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。 
      * @return DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
      */
     public String getDiskType() {
@@ -153,7 +153,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+     * Set 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
      * @param DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。<br>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
      */
     public void setDiskType(String DiskType) {
@@ -161,7 +161,7 @@ public class ModifyDiskAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabasesResponse  extends AbstractModel{
+public class DescribeDatabasesResponse extends AbstractModel{
 
     /**
     * 该实例上的数据库列表。
@@ -44,7 +44,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取该实例上的数据库列表。
+     * Get 该实例上的数据库列表。 
      * @return Databases 该实例上的数据库列表。
      */
     public Database [] getDatabases() {
@@ -52,7 +52,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该实例上的数据库列表。
+     * Set 该实例上的数据库列表。
      * @param Databases 该实例上的数据库列表。
      */
     public void setDatabases(Database [] Databases) {
@@ -60,7 +60,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取透传入参。
+     * Get 透传入参。 
      * @return InstanceId 透传入参。
      */
     public String getInstanceId() {
@@ -68,7 +68,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传入参。
+     * Set 透传入参。
      * @param InstanceId 透传入参。
      */
     public void setInstanceId(String InstanceId) {
@@ -76,7 +76,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDatabasesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);

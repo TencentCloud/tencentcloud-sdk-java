@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordTimePair  extends AbstractModel{
+public class WordTimePair extends AbstractModel{
 
     /**
     * 单词出现的那个句子的起始时间
@@ -37,7 +37,7 @@ public class WordTimePair  extends AbstractModel{
     private Long Metm;
 
     /**
-     * 获取单词出现的那个句子的起始时间
+     * Get 单词出现的那个句子的起始时间 
      * @return Mbtm 单词出现的那个句子的起始时间
      */
     public Long getMbtm() {
@@ -45,7 +45,7 @@ public class WordTimePair  extends AbstractModel{
     }
 
     /**
-     * 设置单词出现的那个句子的起始时间
+     * Set 单词出现的那个句子的起始时间
      * @param Mbtm 单词出现的那个句子的起始时间
      */
     public void setMbtm(Long Mbtm) {
@@ -53,7 +53,7 @@ public class WordTimePair  extends AbstractModel{
     }
 
     /**
-     * 获取	单词出现的那个句子的结束时间
+     * Get 	单词出现的那个句子的结束时间 
      * @return Metm 	单词出现的那个句子的结束时间
      */
     public Long getMetm() {
@@ -61,7 +61,7 @@ public class WordTimePair  extends AbstractModel{
     }
 
     /**
-     * 设置	单词出现的那个句子的结束时间
+     * Set 	单词出现的那个句子的结束时间
      * @param Metm 	单词出现的那个句子的结束时间
      */
     public void setMetm(Long Metm) {
@@ -69,7 +69,7 @@ public class WordTimePair  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mbtm", this.Mbtm);

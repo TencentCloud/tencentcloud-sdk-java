@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Resource  extends AbstractModel{
+public class Resource extends AbstractModel{
 
     /**
     * 带宽包资源类型，包括'Address'和'LoadBalance'
@@ -44,7 +44,7 @@ public class Resource  extends AbstractModel{
     private String AddressIp;
 
     /**
-     * 获取带宽包资源类型，包括'Address'和'LoadBalance'
+     * Get 带宽包资源类型，包括'Address'和'LoadBalance' 
      * @return ResourceType 带宽包资源类型，包括'Address'和'LoadBalance'
      */
     public String getResourceType() {
@@ -52,7 +52,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包资源类型，包括'Address'和'LoadBalance'
+     * Set 带宽包资源类型，包括'Address'和'LoadBalance'
      * @param ResourceType 带宽包资源类型，包括'Address'和'LoadBalance'
      */
     public void setResourceType(String ResourceType) {
@@ -60,7 +60,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * Get 带宽包资源Id，形如'eip-xxxx', 'lb-xxxx' 
      * @return ResourceId 带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
      */
     public String getResourceId() {
@@ -68,7 +68,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
+     * Set 带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
      * @param ResourceId 带宽包资源Id，形如'eip-xxxx', 'lb-xxxx'
      */
     public void setResourceId(String ResourceId) {
@@ -76,7 +76,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包资源Ip
+     * Get 带宽包资源Ip 
      * @return AddressIp 带宽包资源Ip
      */
     public String getAddressIp() {
@@ -84,7 +84,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包资源Ip
+     * Set 带宽包资源Ip
      * @param AddressIp 带宽包资源Ip
      */
     public void setAddressIp(String AddressIp) {
@@ -92,7 +92,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);

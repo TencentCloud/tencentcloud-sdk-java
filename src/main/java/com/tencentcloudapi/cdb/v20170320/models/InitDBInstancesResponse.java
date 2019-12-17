@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InitDBInstancesResponse  extends AbstractModel{
+public class InitDBInstancesResponse extends AbstractModel{
 
     /**
     * 异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
@@ -37,7 +37,7 @@ public class InitDBInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
+     * Get 异步任务的请求ID数组，可使用此ID查询异步任务的执行结果 
      * @return AsyncRequestIds 异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
      */
     public String [] getAsyncRequestIds() {
@@ -45,7 +45,7 @@ public class InitDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
+     * Set 异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
      * @param AsyncRequestIds 异步任务的请求ID数组，可使用此ID查询异步任务的执行结果
      */
     public void setAsyncRequestIds(String [] AsyncRequestIds) {
@@ -53,7 +53,7 @@ public class InitDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class InitDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class InitDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AsyncRequestIds.", this.AsyncRequestIds);

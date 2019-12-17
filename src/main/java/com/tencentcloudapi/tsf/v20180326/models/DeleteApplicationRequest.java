@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteApplicationRequest  extends AbstractModel{
+public class DeleteApplicationRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -30,7 +30,7 @@ public class DeleteApplicationRequest  extends AbstractModel{
     private String ApplicationId;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -38,7 +38,7 @@ public class DeleteApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -46,7 +46,7 @@ public class DeleteApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

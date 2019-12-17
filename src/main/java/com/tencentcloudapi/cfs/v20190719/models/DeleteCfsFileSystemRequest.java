@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCfsFileSystemRequest  extends AbstractModel{
+public class DeleteCfsFileSystemRequest extends AbstractModel{
 
     /**
     * 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
@@ -30,7 +30,7 @@ public class DeleteCfsFileSystemRequest  extends AbstractModel{
     private String FileSystemId;
 
     /**
-     * 获取文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
+     * Get 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。 
      * @return FileSystemId 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
      */
     public String getFileSystemId() {
@@ -38,7 +38,7 @@ public class DeleteCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
+     * Set 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
      * @param FileSystemId 文件系统 ID。说明，进行删除文件系统操作前需要先调用 DeleteMountTarget 接口删除该文件系统的挂载点，否则会删除失败。
      */
     public void setFileSystemId(String FileSystemId) {
@@ -46,7 +46,7 @@ public class DeleteCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

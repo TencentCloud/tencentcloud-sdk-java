@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonalAccountRequest  extends AbstractModel{
+public class CreatePersonalAccountRequest extends AbstractModel{
 
     /**
     * 模块名AccountMng
@@ -65,7 +65,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     private String MobilePhone;
 
     /**
-     * 获取模块名AccountMng
+     * Get 模块名AccountMng 
      * @return Module 模块名AccountMng
      */
     public String getModule() {
@@ -73,7 +73,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名AccountMng
+     * Set 模块名AccountMng
      * @param Module 模块名AccountMng
      */
     public void setModule(String Module) {
@@ -81,7 +81,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名CreatePersonalAccount
+     * Get 操作名CreatePersonalAccount 
      * @return Operation 操作名CreatePersonalAccount
      */
     public String getOperation() {
@@ -89,7 +89,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名CreatePersonalAccount
+     * Set 操作名CreatePersonalAccount
      * @param Operation 操作名CreatePersonalAccount
      */
     public void setOperation(String Operation) {
@@ -97,7 +97,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取个人用户姓名
+     * Get 个人用户姓名 
      * @return Name 个人用户姓名
      */
     public String getName() {
@@ -105,7 +105,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置个人用户姓名
+     * Set 个人用户姓名
      * @param Name 个人用户姓名
      */
     public void setName(String Name) {
@@ -113,7 +113,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取个人用户证件类型，0代表身份证，详情请见常见问题
+     * Get 个人用户证件类型，0代表身份证，详情请见常见问题 
      * @return IdentType 个人用户证件类型，0代表身份证，详情请见常见问题
      */
     public Integer getIdentType() {
@@ -121,7 +121,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置个人用户证件类型，0代表身份证，详情请见常见问题
+     * Set 个人用户证件类型，0代表身份证，详情请见常见问题
      * @param IdentType 个人用户证件类型，0代表身份证，详情请见常见问题
      */
     public void setIdentType(Integer IdentType) {
@@ -129,7 +129,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取个人用户证件号码
+     * Get 个人用户证件号码 
      * @return IdentNo 个人用户证件号码
      */
     public String getIdentNo() {
@@ -137,7 +137,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置个人用户证件号码
+     * Set 个人用户证件号码
      * @param IdentNo 个人用户证件号码
      */
     public void setIdentNo(String IdentNo) {
@@ -145,7 +145,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取个人用户手机号
+     * Get 个人用户手机号 
      * @return MobilePhone 个人用户手机号
      */
     public String getMobilePhone() {
@@ -153,7 +153,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置个人用户手机号
+     * Set 个人用户手机号
      * @param MobilePhone 个人用户手机号
      */
     public void setMobilePhone(String MobilePhone) {
@@ -161,7 +161,7 @@ public class CreatePersonalAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

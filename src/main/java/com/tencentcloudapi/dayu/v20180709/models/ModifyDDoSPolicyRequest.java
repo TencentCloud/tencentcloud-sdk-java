@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSPolicyRequest  extends AbstractModel{
+public class ModifyDDoSPolicyRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -72,7 +72,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     private WaterPrintPolicy [] WaterPrint;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -80,7 +80,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -88,7 +88,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -96,7 +96,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -104,7 +104,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取协议禁用，必须填写且数组长度必须为1
+     * Get 协议禁用，必须填写且数组长度必须为1 
      * @return DropOptions 协议禁用，必须填写且数组长度必须为1
      */
     public DDoSPolicyDropOption [] getDropOptions() {
@@ -112,7 +112,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议禁用，必须填写且数组长度必须为1
+     * Set 协议禁用，必须填写且数组长度必须为1
      * @param DropOptions 协议禁用，必须填写且数组长度必须为1
      */
     public void setDropOptions(DDoSPolicyDropOption [] DropOptions) {
@@ -120,7 +120,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取端口禁用，当没有禁用端口时填空数组
+     * Get 端口禁用，当没有禁用端口时填空数组 
      * @return PortLimits 端口禁用，当没有禁用端口时填空数组
      */
     public DDoSPolicyPortLimit [] getPortLimits() {
@@ -128,7 +128,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置端口禁用，当没有禁用端口时填空数组
+     * Set 端口禁用，当没有禁用端口时填空数组
      * @param PortLimits 端口禁用，当没有禁用端口时填空数组
      */
     public void setPortLimits(DDoSPolicyPortLimit [] PortLimits) {
@@ -136,7 +136,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP黑白名单，当没有IP黑白名单时填空数组
+     * Get IP黑白名单，当没有IP黑白名单时填空数组 
      * @return IpAllowDenys IP黑白名单，当没有IP黑白名单时填空数组
      */
     public IpBlackWhite [] getIpAllowDenys() {
@@ -144,7 +144,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP黑白名单，当没有IP黑白名单时填空数组
+     * Set IP黑白名单，当没有IP黑白名单时填空数组
      * @param IpAllowDenys IP黑白名单，当没有IP黑白名单时填空数组
      */
     public void setIpAllowDenys(IpBlackWhite [] IpAllowDenys) {
@@ -152,7 +152,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取报文过滤，当没有报文过滤时填空数组
+     * Get 报文过滤，当没有报文过滤时填空数组 
      * @return PacketFilters 报文过滤，当没有报文过滤时填空数组
      */
     public DDoSPolicyPacketFilter [] getPacketFilters() {
@@ -160,7 +160,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置报文过滤，当没有报文过滤时填空数组
+     * Set 报文过滤，当没有报文过滤时填空数组
      * @param PacketFilters 报文过滤，当没有报文过滤时填空数组
      */
     public void setPacketFilters(DDoSPolicyPacketFilter [] PacketFilters) {
@@ -168,7 +168,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
+     * Get 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1） 
      * @return WaterPrint 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
      */
     public WaterPrintPolicy [] getWaterPrint() {
@@ -176,7 +176,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
+     * Set 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
      * @param WaterPrint 水印策略参数，当没有启用水印功能时填空数组，最多只能传一条水印策略（即数组大小不超过1）
      */
     public void setWaterPrint(WaterPrintPolicy [] WaterPrint) {
@@ -184,7 +184,7 @@ public class ModifyDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

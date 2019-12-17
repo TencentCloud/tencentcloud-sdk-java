@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Task  extends AbstractModel{
+public class Task extends AbstractModel{
 
     /**
     * 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
@@ -37,7 +37,7 @@ public class Task  extends AbstractModel{
     private BatchPublishMessage PublishMessageTask;
 
     /**
-     * 获取批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
+     * Get 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow 
      * @return UpdateShadowTask 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
      */
     public BatchUpdateShadow getUpdateShadowTask() {
@@ -45,7 +45,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
+     * Set 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
      * @param UpdateShadowTask 批量更新影子任务的描述细节，当 taskType 取值为 “UpdateShadow” 时，此字段必填。描述见下 BatchUpdateShadow
      */
     public void setUpdateShadowTask(BatchUpdateShadow UpdateShadowTask) {
@@ -53,7 +53,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
+     * Get 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage 
      * @return PublishMessageTask 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
      */
     public BatchPublishMessage getPublishMessageTask() {
@@ -61,7 +61,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
+     * Set 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
      * @param PublishMessageTask 批量下发消息任务的描述细节，当 taskType 取值为 “PublishMessage” 时，此字段必填。描述见下 BatchPublishMessage
      */
     public void setPublishMessageTask(BatchPublishMessage PublishMessageTask) {
@@ -69,7 +69,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "UpdateShadowTask.", this.UpdateShadowTask);

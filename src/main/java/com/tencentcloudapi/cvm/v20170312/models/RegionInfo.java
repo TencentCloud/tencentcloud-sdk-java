@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInfo  extends AbstractModel{
+public class RegionInfo extends AbstractModel{
 
     /**
     * 地域名称，例如，ap-guangzhou
@@ -44,7 +44,7 @@ public class RegionInfo  extends AbstractModel{
     private String RegionState;
 
     /**
-     * 获取地域名称，例如，ap-guangzhou
+     * Get 地域名称，例如，ap-guangzhou 
      * @return Region 地域名称，例如，ap-guangzhou
      */
     public String getRegion() {
@@ -52,7 +52,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域名称，例如，ap-guangzhou
+     * Set 地域名称，例如，ap-guangzhou
      * @param Region 地域名称，例如，ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -60,7 +60,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域描述，例如，华南地区(广州)
+     * Get 地域描述，例如，华南地区(广州) 
      * @return RegionName 地域描述，例如，华南地区(广州)
      */
     public String getRegionName() {
@@ -68,7 +68,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域描述，例如，华南地区(广州)
+     * Set 地域描述，例如，华南地区(广州)
      * @param RegionName 地域描述，例如，华南地区(广州)
      */
     public void setRegionName(String RegionName) {
@@ -76,7 +76,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域是否可用状态
+     * Get 地域是否可用状态 
      * @return RegionState 地域是否可用状态
      */
     public String getRegionState() {
@@ -84,7 +84,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域是否可用状态
+     * Set 地域是否可用状态
      * @param RegionState 地域是否可用状态
      */
     public void setRegionState(String RegionState) {
@@ -92,7 +92,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

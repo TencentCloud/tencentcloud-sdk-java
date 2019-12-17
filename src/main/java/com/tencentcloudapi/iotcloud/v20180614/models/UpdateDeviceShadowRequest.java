@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateDeviceShadowRequest  extends AbstractModel{
+public class UpdateDeviceShadowRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -51,7 +51,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     private Integer ShadowVersion;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -75,7 +75,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -83,7 +83,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟设备的状态，JSON字符串格式，由desired结构组成
+     * Get 虚拟设备的状态，JSON字符串格式，由desired结构组成 
      * @return State 虚拟设备的状态，JSON字符串格式，由desired结构组成
      */
     public String getState() {
@@ -91,7 +91,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟设备的状态，JSON字符串格式，由desired结构组成
+     * Set 虚拟设备的状态，JSON字符串格式，由desired结构组成
      * @param State 虚拟设备的状态，JSON字符串格式，由desired结构组成
      */
     public void setState(String State) {
@@ -99,7 +99,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前版本号，需要和后台的version保持一致，才能更新成功
+     * Get 当前版本号，需要和后台的version保持一致，才能更新成功 
      * @return ShadowVersion 当前版本号，需要和后台的version保持一致，才能更新成功
      */
     public Integer getShadowVersion() {
@@ -107,7 +107,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前版本号，需要和后台的version保持一致，才能更新成功
+     * Set 当前版本号，需要和后台的version保持一致，才能更新成功
      * @param ShadowVersion 当前版本号，需要和后台的version保持一致，才能更新成功
      */
     public void setShadowVersion(Integer ShadowVersion) {
@@ -115,7 +115,7 @@ public class UpdateDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

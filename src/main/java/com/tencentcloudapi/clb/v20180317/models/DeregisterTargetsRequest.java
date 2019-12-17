@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeregisterTargetsRequest  extends AbstractModel{
+public class DeregisterTargetsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID，格式如 lb-12345678
@@ -65,7 +65,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取负载均衡实例 ID，格式如 lb-12345678
+     * Get 负载均衡实例 ID，格式如 lb-12345678 
      * @return LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      */
     public String getLoadBalancerId() {
@@ -73,7 +73,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID，格式如 lb-12345678
+     * Set 负载均衡实例 ID，格式如 lb-12345678
      * @param LoadBalancerId 负载均衡实例 ID，格式如 lb-12345678
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -81,7 +81,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器 ID，格式如 lbl-12345678
+     * Get 监听器 ID，格式如 lbl-12345678 
      * @return ListenerId 监听器 ID，格式如 lbl-12345678
      */
     public String getListenerId() {
@@ -89,7 +89,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器 ID，格式如 lbl-12345678
+     * Set 监听器 ID，格式如 lbl-12345678
      * @param ListenerId 监听器 ID，格式如 lbl-12345678
      */
     public void setListenerId(String ListenerId) {
@@ -97,7 +97,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要解绑的后端服务列表，数组长度最大支持20
+     * Get 要解绑的后端服务列表，数组长度最大支持20 
      * @return Targets 要解绑的后端服务列表，数组长度最大支持20
      */
     public Target [] getTargets() {
@@ -105,7 +105,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要解绑的后端服务列表，数组长度最大支持20
+     * Set 要解绑的后端服务列表，数组长度最大支持20
      * @param Targets 要解绑的后端服务列表，数组长度最大支持20
      */
     public void setTargets(Target [] Targets) {
@@ -113,7 +113,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * Get 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一 
      * @return LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      */
     public String getLocationId() {
@@ -121,7 +121,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+     * Set 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      * @param LocationId 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
      */
     public void setLocationId(String LocationId) {
@@ -129,7 +129,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标规则的域名，提供LocationId参数时本参数不生效
+     * Get 目标规则的域名，提供LocationId参数时本参数不生效 
      * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效
      */
     public String getDomain() {
@@ -137,7 +137,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标规则的域名，提供LocationId参数时本参数不生效
+     * Set 目标规则的域名，提供LocationId参数时本参数不生效
      * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效
      */
     public void setDomain(String Domain) {
@@ -145,7 +145,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标规则的URL，提供LocationId参数时本参数不生效
+     * Get 目标规则的URL，提供LocationId参数时本参数不生效 
      * @return Url 目标规则的URL，提供LocationId参数时本参数不生效
      */
     public String getUrl() {
@@ -153,7 +153,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标规则的URL，提供LocationId参数时本参数不生效
+     * Set 目标规则的URL，提供LocationId参数时本参数不生效
      * @param Url 目标规则的URL，提供LocationId参数时本参数不生效
      */
     public void setUrl(String Url) {
@@ -161,7 +161,7 @@ public class DeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

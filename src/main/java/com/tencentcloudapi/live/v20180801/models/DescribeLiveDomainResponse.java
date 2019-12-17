@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainResponse  extends AbstractModel{
+public class DescribeLiveDomainResponse extends AbstractModel{
 
     /**
     * 域名信息。
@@ -37,7 +37,7 @@ public class DescribeLiveDomainResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取域名信息。
+     * Get 域名信息。 
      * @return DomainInfo 域名信息。
      */
     public DomainInfo getDomainInfo() {
@@ -45,7 +45,7 @@ public class DescribeLiveDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置域名信息。
+     * Set 域名信息。
      * @param DomainInfo 域名信息。
      */
     public void setDomainInfo(DomainInfo DomainInfo) {
@@ -53,7 +53,7 @@ public class DescribeLiveDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeLiveDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeLiveDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "DomainInfo.", this.DomainInfo);

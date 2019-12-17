@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomImageProcess  extends AbstractModel{
+public class CustomImageProcess extends AbstractModel{
 
     /**
     * 步骤
@@ -44,7 +44,7 @@ public class CustomImageProcess  extends AbstractModel{
     private Integer StepType;
 
     /**
-     * 获取步骤
+     * Get 步骤 
      * @return StepName 步骤
      */
     public String getStepName() {
@@ -52,7 +52,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 设置步骤
+     * Set 步骤
      * @param StepName 步骤
      */
     public void setStepName(String StepName) {
@@ -60,7 +60,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 获取此步骤开始时间
+     * Get 此步骤开始时间 
      * @return StartTime 此步骤开始时间
      */
     public String getStartTime() {
@@ -68,7 +68,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 设置此步骤开始时间
+     * Set 此步骤开始时间
      * @param StartTime 此步骤开始时间
      */
     public void setStartTime(String StartTime) {
@@ -76,7 +76,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 获取0: 已完成 1: 当前进行 2: 未开始
+     * Get 0: 已完成 1: 当前进行 2: 未开始 
      * @return StepType 0: 已完成 1: 当前进行 2: 未开始
      */
     public Integer getStepType() {
@@ -84,7 +84,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 设置0: 已完成 1: 当前进行 2: 未开始
+     * Set 0: 已完成 1: 当前进行 2: 未开始
      * @param StepType 0: 已完成 1: 当前进行 2: 未开始
      */
     public void setStepType(Integer StepType) {
@@ -92,7 +92,7 @@ public class CustomImageProcess  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepName", this.StepName);

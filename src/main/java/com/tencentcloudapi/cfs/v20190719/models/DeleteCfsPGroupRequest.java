@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCfsPGroupRequest  extends AbstractModel{
+public class DeleteCfsPGroupRequest extends AbstractModel{
 
     /**
     * 权限组 ID
@@ -30,7 +30,7 @@ public class DeleteCfsPGroupRequest  extends AbstractModel{
     private String PGroupId;
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -38,7 +38,7 @@ public class DeleteCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -46,7 +46,7 @@ public class DeleteCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

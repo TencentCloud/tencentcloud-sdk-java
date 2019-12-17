@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CardInfo  extends AbstractModel{
+public class CardInfo extends AbstractModel{
 
     /**
     * 卡片id
@@ -222,7 +222,7 @@ public class CardInfo  extends AbstractModel{
     private Integer Provider;
 
     /**
-     * 获取卡片id
+     * Get 卡片id 
      * @return Iccid 卡片id
      */
     public String getIccid() {
@@ -230,7 +230,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置卡片id
+     * Set 卡片id
      * @param Iccid 卡片id
      */
     public void setIccid(String Iccid) {
@@ -238,8 +238,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取卡电话号码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 卡电话号码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Msisdn 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -248,7 +248,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置卡电话号码
+     * Set 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Msisdn 卡电话号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -258,8 +258,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取卡imsi
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 卡imsi
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Imsi 卡imsi
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -268,7 +268,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置卡imsi
+     * Set 卡imsi
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Imsi 卡imsi
 注意：此字段可能返回 null，表示取不到有效值。
@@ -278,8 +278,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取卡imei
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 卡imei
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Imei 卡imei
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -288,7 +288,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置卡imei
+     * Set 卡imei
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Imei 卡imei
 注意：此字段可能返回 null，表示取不到有效值。
@@ -298,7 +298,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public String getSdkappid() {
@@ -306,7 +306,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(String Sdkappid) {
@@ -314,7 +314,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取运营商编号
+     * Get 运营商编号 
      * @return Teleoperator 运营商编号
      */
     public Integer getTeleoperator() {
@@ -322,7 +322,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运营商编号
+     * Set 运营商编号
      * @param Teleoperator 运营商编号
      */
     public void setTeleoperator(Integer Teleoperator) {
@@ -330,7 +330,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+     * Get 卡片状态 1:未激活 2：激活 3：停卡 5：销卡 
      * @return CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
     public Integer getCardStatus() {
@@ -338,7 +338,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置卡片状态 1:未激活 2：激活 3：停卡 5：销卡
+     * Set 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      * @param CardStatus 卡片状态 1:未激活 2：激活 3：停卡 5：销卡
      */
     public void setCardStatus(Integer CardStatus) {
@@ -346,8 +346,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 网络状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NetworkStatus 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -356,7 +356,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络状态
+     * Set 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkStatus 网络状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -366,8 +366,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取激活时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 激活时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActivitedTime 激活时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -376,7 +376,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置激活时间
+     * Set 激活时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivitedTime 激活时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -386,7 +386,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资费类型，1 单卡，2 流量池
+     * Get 资费类型，1 单卡，2 流量池 
      * @return Type 资费类型，1 单卡，2 流量池
      */
     public Integer getType() {
@@ -394,7 +394,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资费类型，1 单卡，2 流量池
+     * Set 资费类型，1 单卡，2 流量池
      * @param Type 资费类型，1 单卡，2 流量池
      */
     public void setType(Integer Type) {
@@ -402,8 +402,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取套餐类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 套餐类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -412,7 +412,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置套餐类型
+     * Set 套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 套餐类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -422,8 +422,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流量池id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流量池id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoolId 流量池id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -432,7 +432,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流量池id
+     * Set 流量池id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoolId 流量池id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -442,8 +442,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取周期套餐流量使用
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 周期套餐流量使用
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataUsedInPeriod 周期套餐流量使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -452,7 +452,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置周期套餐流量使用
+     * Set 周期套餐流量使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataUsedInPeriod 周期套餐流量使用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -462,8 +462,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取周期套餐总量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 周期套餐总量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataTotalInPeriod 周期套餐总量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -472,7 +472,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置周期套餐总量
+     * Set 周期套餐总量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataTotalInPeriod 周期套餐总量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -482,8 +482,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductExpiredTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -492,7 +492,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置过期时间
+     * Set 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductExpiredTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -502,8 +502,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -512,7 +512,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息
+     * Set 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -522,7 +522,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreatedTime 创建时间
      */
     public String getCreatedTime() {
@@ -530,7 +530,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreatedTime 创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -538,7 +538,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifiedTime 修改时间
      */
     public String getModifiedTime() {
@@ -546,7 +546,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifiedTime 修改时间
      */
     public void setModifiedTime(String ModifiedTime) {
@@ -554,8 +554,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取套餐周期
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 套餐周期
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PreorderCnt 套餐周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -564,7 +564,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置套餐周期
+     * Set 套餐周期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PreorderCnt 套餐周期
 注意：此字段可能返回 null，表示取不到有效值。
@@ -574,8 +574,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取激活被回调标志
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 激活被回调标志
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsActivated 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -584,7 +584,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置激活被回调标志
+     * Set 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsActivated 激活被回调标志
 注意：此字段可能返回 null，表示取不到有效值。
@@ -594,8 +594,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取订单id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 订单id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OrderId 订单id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -604,7 +604,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置订单id
+     * Set 订单id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderId 订单id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -614,8 +614,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoRenew 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -624,7 +624,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动续费
+     * Set 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenew 是否自动续费
 注意：此字段可能返回 null，表示取不到有效值。
@@ -634,8 +634,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -644,7 +644,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -654,8 +654,8 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0 不需要开通达量不停卡 1 需要开通达量不停卡
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0 不需要开通达量不停卡 1 需要开通达量不停卡
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -664,7 +664,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0 不需要开通达量不停卡 1 需要开通达量不停卡
+     * Set 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowArrears 0 不需要开通达量不停卡 1 需要开通达量不停卡
 注意：此字段可能返回 null，表示取不到有效值。
@@ -674,7 +674,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开通短信0:未开短信 1:开通短信
+     * Get 是否开通短信0:未开短信 1:开通短信 
      * @return NeedSms 是否开通短信0:未开短信 1:开通短信
      */
     public Integer getNeedSms() {
@@ -682,7 +682,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开通短信0:未开短信 1:开通短信
+     * Set 是否开通短信0:未开短信 1:开通短信
      * @param NeedSms 是否开通短信0:未开短信 1:开通短信
      */
     public void setNeedSms(Integer NeedSms) {
@@ -690,7 +690,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取服务
+     * Get 服务 
      * @return Provider 服务
      */
     public Integer getProvider() {
@@ -698,7 +698,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置服务
+     * Set 服务
      * @param Provider 服务
      */
     public void setProvider(Integer Provider) {
@@ -706,7 +706,7 @@ public class CardInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Iccid", this.Iccid);

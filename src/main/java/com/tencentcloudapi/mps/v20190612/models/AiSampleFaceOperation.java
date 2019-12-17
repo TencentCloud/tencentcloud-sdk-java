@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleFaceOperation  extends AbstractModel{
+public class AiSampleFaceOperation extends AbstractModel{
 
     /**
     * 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
@@ -47,7 +47,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     private String [] FaceContents;
 
     /**
-     * 获取操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
+     * Get 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。 
      * @return Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
      */
     public String getType() {
@@ -55,7 +55,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
+     * Set 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
      * @param Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。重置操作将清空该人物已有人脸数据，并添加 FaceContents 指定人脸数据。
      */
     public void setType(String Type) {
@@ -63,7 +63,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 获取人脸 ID 集合，当 Type为delete 时，该字段必填。
+     * Get 人脸 ID 集合，当 Type为delete 时，该字段必填。 
      * @return FaceIds 人脸 ID 集合，当 Type为delete 时，该字段必填。
      */
     public String [] getFaceIds() {
@@ -71,7 +71,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 设置人脸 ID 集合，当 Type为delete 时，该字段必填。
+     * Set 人脸 ID 集合，当 Type为delete 时，该字段必填。
      * @param FaceIds 人脸 ID 集合，当 Type为delete 时，该字段必填。
      */
     public void setFaceIds(String [] FaceIds) {
@@ -79,10 +79,10 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。 
      * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
@@ -93,7 +93,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
@@ -107,7 +107,7 @@ public class AiSampleFaceOperation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextModerationRequest  extends AbstractModel{
+public class TextModerationRequest extends AbstractModel{
 
     /**
     * 文本内容Base64编码
@@ -30,7 +30,7 @@ public class TextModerationRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取文本内容Base64编码
+     * Get 文本内容Base64编码 
      * @return Content 文本内容Base64编码
      */
     public String getContent() {
@@ -38,7 +38,7 @@ public class TextModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文本内容Base64编码
+     * Set 文本内容Base64编码
      * @param Content 文本内容Base64编码
      */
     public void setContent(String Content) {
@@ -46,7 +46,7 @@ public class TextModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

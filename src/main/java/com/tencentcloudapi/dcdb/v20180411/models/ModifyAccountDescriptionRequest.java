@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountDescriptionRequest  extends AbstractModel{
+public class ModifyAccountDescriptionRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：dcdbt-ow728lmc。
@@ -51,7 +51,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取实例 ID，形如：dcdbt-ow728lmc。
+     * Get 实例 ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：dcdbt-ow728lmc。
+     * Set 实例 ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名。
+     * Get 登录用户名。 
      * @return UserName 登录用户名。
      */
     public String getUserName() {
@@ -75,7 +75,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录用户名。
+     * Set 登录用户名。
      * @param UserName 登录用户名。
      */
     public void setUserName(String UserName) {
@@ -83,7 +83,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Get 用户允许的访问 host，用户名+host唯一确定一个账号。 
      * @return Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public String getHost() {
@@ -91,7 +91,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Set 用户允许的访问 host，用户名+host唯一确定一个账号。
      * @param Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public void setHost(String Host) {
@@ -99,7 +99,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的账号备注，长度 0~256。
+     * Get 新的账号备注，长度 0~256。 
      * @return Description 新的账号备注，长度 0~256。
      */
     public String getDescription() {
@@ -107,7 +107,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的账号备注，长度 0~256。
+     * Set 新的账号备注，长度 0~256。
      * @param Description 新的账号备注，长度 0~256。
      */
     public void setDescription(String Description) {
@@ -115,7 +115,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

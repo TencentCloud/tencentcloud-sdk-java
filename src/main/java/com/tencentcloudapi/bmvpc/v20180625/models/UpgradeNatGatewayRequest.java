@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeNatGatewayRequest  extends AbstractModel{
+public class UpgradeNatGatewayRequest extends AbstractModel{
 
     /**
     * NAT网关ID，例如：nat-kdm476mp
@@ -44,7 +44,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     private Long MaxConcurrent;
 
     /**
-     * 获取NAT网关ID，例如：nat-kdm476mp
+     * Get NAT网关ID，例如：nat-kdm476mp 
      * @return NatId NAT网关ID，例如：nat-kdm476mp
      */
     public String getNatId() {
@@ -52,7 +52,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID，例如：nat-kdm476mp
+     * Set NAT网关ID，例如：nat-kdm476mp
      * @param NatId NAT网关ID，例如：nat-kdm476mp
      */
     public void setNatId(String NatId) {
@@ -60,7 +60,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：vpc-kd7d06of
+     * Get 私有网络ID，例如：vpc-kd7d06of 
      * @return VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：vpc-kd7d06of
+     * Set 私有网络ID，例如：vpc-kd7d06of
      * @param VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
+     * Get 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关 
      * @return MaxConcurrent 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      */
     public Long getMaxConcurrent() {
@@ -84,7 +84,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
+     * Set 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      * @param MaxConcurrent 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
@@ -92,7 +92,7 @@ public class UpgradeNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatId", this.NatId);

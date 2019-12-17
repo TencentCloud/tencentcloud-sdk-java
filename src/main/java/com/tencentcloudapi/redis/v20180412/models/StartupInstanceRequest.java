@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartupInstanceRequest  extends AbstractModel{
+public class StartupInstanceRequest extends AbstractModel{
 
     /**
     * 实例id
@@ -30,7 +30,7 @@ public class StartupInstanceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取实例id
+     * Get 实例id 
      * @return InstanceId 实例id
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class StartupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例id
+     * Set 实例id
      * @param InstanceId 实例id
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class StartupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest  extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel{
 
     /**
     * 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
@@ -72,7 +72,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer Asc;
 
     /**
-     * 获取集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * Get 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage 
      * @return DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
      */
     public String getDisplayStrategy() {
@@ -80,7 +80,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
+     * Set 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
      * @param DisplayStrategy 集群展示策略，该字段取值根据所选页面不同输入不同，集群列表页：clusterList，集群监控：monitorManage，云硬件管理：cloudHardwareManage，组件管理页：componentManage
      */
     public void setDisplayStrategy(String DisplayStrategy) {
@@ -88,7 +88,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询列表,  如果不填写，返回该AppId下所有实例列表
+     * Get 查询列表,  如果不填写，返回该AppId下所有实例列表 
      * @return InstanceIds 查询列表,  如果不填写，返回该AppId下所有实例列表
      */
     public String [] getInstanceIds() {
@@ -96,7 +96,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询列表,  如果不填写，返回该AppId下所有实例列表
+     * Set 查询列表,  如果不填写，返回该AppId下所有实例列表
      * @param InstanceIds 查询列表,  如果不填写，返回该AppId下所有实例列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -104,7 +104,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询偏移量，默认0
+     * Get 查询偏移量，默认0 
      * @return Offset 查询偏移量，默认0
      */
     public Integer getOffset() {
@@ -112,7 +112,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询偏移量，默认0
+     * Set 查询偏移量，默认0
      * @param Offset 查询偏移量，默认0
      */
     public void setOffset(Integer Offset) {
@@ -120,7 +120,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结果限制，默认值10
+     * Get 查询结果限制，默认值10 
      * @return Limit 查询结果限制，默认值10
      */
     public Integer getLimit() {
@@ -128,7 +128,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结果限制，默认值10
+     * Set 查询结果限制，默认值10
      * @param Limit 查询结果限制，默认值10
      */
     public void setLimit(Integer Limit) {
@@ -136,7 +136,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目列表，默认值-1
+     * Get 项目列表，默认值-1 
      * @return ProjectId 项目列表，默认值-1
      */
     public Integer getProjectId() {
@@ -144,7 +144,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目列表，默认值-1
+     * Set 项目列表，默认值-1
      * @param ProjectId 项目列表，默认值-1
      */
     public void setProjectId(Integer ProjectId) {
@@ -152,7 +152,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * Get 排序字段，当前支持以下排序字段：clusterId、addTime、status 
      * @return OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
      */
     public String getOrderField() {
@@ -160,7 +160,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，当前支持以下排序字段：clusterId、addTime、status
+     * Set 排序字段，当前支持以下排序字段：clusterId、addTime、status
      * @param OrderField 排序字段，当前支持以下排序字段：clusterId、addTime、status
      */
     public void setOrderField(String OrderField) {
@@ -168,7 +168,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方法，0降序，1升序
+     * Get 排序方法，0降序，1升序 
      * @return Asc 排序方法，0降序，1升序
      */
     public Integer getAsc() {
@@ -176,7 +176,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方法，0降序，1升序
+     * Set 排序方法，0降序，1升序
      * @param Asc 排序方法，0降序，1升序
      */
     public void setAsc(Integer Asc) {
@@ -184,7 +184,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);

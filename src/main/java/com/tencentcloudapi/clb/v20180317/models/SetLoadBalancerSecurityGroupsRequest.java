@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
+public class SetLoadBalancerSecurityGroupsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -37,7 +37,7 @@ public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+     * Get 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。 
      * @return SecurityGroups 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
      */
     public String [] getSecurityGroups() {
@@ -61,7 +61,7 @@ public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
+     * Set 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
      * @param SecurityGroups 安全组ID构成的数组，一个负载均衡实例最多可绑定50个安全组，如果要解绑所有安全组，可不传此参数，或传入空数组。
      */
     public void setSecurityGroups(String [] SecurityGroups) {
@@ -69,7 +69,7 @@ public class SetLoadBalancerSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonBaseInfoResponse  extends AbstractModel{
+public class GetPersonBaseInfoResponse extends AbstractModel{
 
     /**
     * 人员名称
@@ -51,7 +51,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -59,7 +59,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -67,7 +67,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员性别
+     * Get 人员性别 
      * @return Gender 人员性别
      */
     public Long getGender() {
@@ -75,7 +75,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员性别
+     * Set 人员性别
      * @param Gender 人员性别
      */
     public void setGender(Long Gender) {
@@ -83,7 +83,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取包含的人脸 ID 列表
+     * Get 包含的人脸 ID 列表 
      * @return FaceIds 包含的人脸 ID 列表
      */
     public String [] getFaceIds() {
@@ -91,7 +91,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置包含的人脸 ID 列表
+     * Set 包含的人脸 ID 列表
      * @param FaceIds 包含的人脸 ID 列表
      */
     public void setFaceIds(String [] FaceIds) {
@@ -99,7 +99,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class GetPersonBaseInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonName", this.PersonName);

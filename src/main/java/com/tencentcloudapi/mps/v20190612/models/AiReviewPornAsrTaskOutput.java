@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornAsrTaskOutput  extends AbstractModel{
+public class AiReviewPornAsrTaskOutput extends AbstractModel{
 
     /**
     * Asr 文字涉黄评分，分值为0到100。
@@ -47,7 +47,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * 获取Asr 文字涉黄评分，分值为0到100。
+     * Get Asr 文字涉黄评分，分值为0到100。 
      * @return Confidence Asr 文字涉黄评分，分值为0到100。
      */
     public Float getConfidence() {
@@ -55,7 +55,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字涉黄评分，分值为0到100。
+     * Set Asr 文字涉黄评分，分值为0到100。
      * @param Confidence Asr 文字涉黄评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
@@ -63,10 +63,10 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Asr 文字涉黄结果建议，取值范围：
+     * Get Asr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion Asr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -77,7 +77,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字涉黄结果建议，取值范围：
+     * Set Asr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -91,7 +91,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Asr 文字有涉黄嫌疑的视频片段列表。
+     * Get Asr 文字有涉黄嫌疑的视频片段列表。 
      * @return SegmentSet Asr 文字有涉黄嫌疑的视频片段列表。
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
@@ -99,7 +99,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字有涉黄嫌疑的视频片段列表。
+     * Set Asr 文字有涉黄嫌疑的视频片段列表。
      * @param SegmentSet Asr 文字有涉黄嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
@@ -107,7 +107,7 @@ public class AiReviewPornAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

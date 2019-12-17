@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallBackRuleInfo  extends AbstractModel{
+public class CallBackRuleInfo extends AbstractModel{
 
     /**
     * 规则创建时间。
@@ -58,7 +58,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取规则创建时间。
+     * Get 规则创建时间。 
      * @return CreateTime 规则创建时间。
      */
     public String getCreateTime() {
@@ -66,7 +66,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则创建时间。
+     * Set 规则创建时间。
      * @param CreateTime 规则创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -74,7 +74,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规则更新时间。
+     * Get 规则更新时间。 
      * @return UpdateTime 规则更新时间。
      */
     public String getUpdateTime() {
@@ -82,7 +82,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则更新时间。
+     * Set 规则更新时间。
      * @param UpdateTime 规则更新时间。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -90,7 +90,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板Id。
+     * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
     public Integer getTemplateId() {
@@ -98,7 +98,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板Id。
+     * Set 模板Id。
      * @param TemplateId 模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -106,7 +106,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -114,7 +114,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -122,7 +122,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径。
+     * Get 推流路径。 
      * @return AppName 推流路径。
      */
     public String getAppName() {
@@ -130,7 +130,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径。
+     * Set 推流路径。
      * @param AppName 推流路径。
      */
     public void setAppName(String AppName) {
@@ -138,7 +138,7 @@ public class CallBackRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

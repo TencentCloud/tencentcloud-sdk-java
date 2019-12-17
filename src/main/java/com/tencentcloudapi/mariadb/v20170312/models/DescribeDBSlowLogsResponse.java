@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSlowLogsResponse  extends AbstractModel{
+public class DescribeDBSlowLogsResponse extends AbstractModel{
 
     /**
     * 慢查询日志数据
@@ -65,7 +65,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取慢查询日志数据
+     * Get 慢查询日志数据 
      * @return Data 慢查询日志数据
      */
     public SlowLogData [] getData() {
@@ -73,7 +73,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置慢查询日志数据
+     * Set 慢查询日志数据
      * @param Data 慢查询日志数据
      */
     public void setData(SlowLogData [] Data) {
@@ -81,7 +81,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取所有语句锁时间总和
+     * Get 所有语句锁时间总和 
      * @return LockTimeSum 所有语句锁时间总和
      */
     public Float getLockTimeSum() {
@@ -89,7 +89,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置所有语句锁时间总和
+     * Set 所有语句锁时间总和
      * @param LockTimeSum 所有语句锁时间总和
      */
     public void setLockTimeSum(Float LockTimeSum) {
@@ -97,7 +97,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取所有语句查询总次数
+     * Get 所有语句查询总次数 
      * @return QueryCount 所有语句查询总次数
      */
     public Integer getQueryCount() {
@@ -105,7 +105,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置所有语句查询总次数
+     * Set 所有语句查询总次数
      * @param QueryCount 所有语句查询总次数
      */
     public void setQueryCount(Integer QueryCount) {
@@ -113,7 +113,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return Total 总记录数
      */
     public Integer getTotal() {
@@ -121,7 +121,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param Total 总记录数
      */
     public void setTotal(Integer Total) {
@@ -129,7 +129,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取所有语句查询时间总和
+     * Get 所有语句查询时间总和 
      * @return QueryTimeSum 所有语句查询时间总和
      */
     public Float getQueryTimeSum() {
@@ -137,7 +137,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置所有语句查询时间总和
+     * Set 所有语句查询时间总和
      * @param QueryTimeSum 所有语句查询时间总和
      */
     public void setQueryTimeSum(Float QueryTimeSum) {
@@ -145,7 +145,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeDBSlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

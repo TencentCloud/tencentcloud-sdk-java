@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIPProductInfoRequest  extends AbstractModel{
+public class DescribeIPProductInfoRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
@@ -37,7 +37,7 @@ public class DescribeIPProductInfoRequest  extends AbstractModel{
     private String [] IpList;
 
     /**
-     * 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
+     * Get 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包） 
      * @return Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      */
     public String getBusiness() {
@@ -45,7 +45,7 @@ public class DescribeIPProductInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
+     * Set 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      * @param Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      */
     public void setBusiness(String Business) {
@@ -53,7 +53,7 @@ public class DescribeIPProductInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP列表
+     * Get IP列表 
      * @return IpList IP列表
      */
     public String [] getIpList() {
@@ -61,7 +61,7 @@ public class DescribeIPProductInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP列表
+     * Set IP列表
      * @param IpList IP列表
      */
     public void setIpList(String [] IpList) {
@@ -69,7 +69,7 @@ public class DescribeIPProductInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

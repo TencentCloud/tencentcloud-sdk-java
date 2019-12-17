@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractModel{
+public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel{
 
     /**
     * 网络协议，可选值：`TCP`、`UDP`。
@@ -89,7 +89,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     private String CreatedTime;
 
     /**
-     * 获取网络协议，可选值：`TCP`、`UDP`。
+     * Get 网络协议，可选值：`TCP`、`UDP`。 
      * @return IpProtocol 网络协议，可选值：`TCP`、`UDP`。
      */
     public String getIpProtocol() {
@@ -97,7 +97,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置网络协议，可选值：`TCP`、`UDP`。
+     * Set 网络协议，可选值：`TCP`、`UDP`。
      * @param IpProtocol 网络协议，可选值：`TCP`、`UDP`。
      */
     public void setIpProtocol(String IpProtocol) {
@@ -105,7 +105,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取弹性IP。
+     * Get 弹性IP。 
      * @return PublicIpAddress 弹性IP。
      */
     public String getPublicIpAddress() {
@@ -113,7 +113,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置弹性IP。
+     * Set 弹性IP。
      * @param PublicIpAddress 弹性IP。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
@@ -121,7 +121,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取公网端口。
+     * Get 公网端口。 
      * @return PublicPort 公网端口。
      */
     public Integer getPublicPort() {
@@ -129,7 +129,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置公网端口。
+     * Set 公网端口。
      * @param PublicPort 公网端口。
      */
     public void setPublicPort(Integer PublicPort) {
@@ -137,7 +137,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取内网地址。
+     * Get 内网地址。 
      * @return PrivateIpAddress 内网地址。
      */
     public String getPrivateIpAddress() {
@@ -145,7 +145,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置内网地址。
+     * Set 内网地址。
      * @param PrivateIpAddress 内网地址。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
@@ -153,7 +153,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取内网端口。
+     * Get 内网端口。 
      * @return PrivatePort 内网端口。
      */
     public Integer getPrivatePort() {
@@ -161,7 +161,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置内网端口。
+     * Set 内网端口。
      * @param PrivatePort 内网端口。
      */
     public void setPrivatePort(Integer PrivatePort) {
@@ -169,7 +169,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取NAT网关转发规则描述。
+     * Get NAT网关转发规则描述。 
      * @return Description NAT网关转发规则描述。
      */
     public String getDescription() {
@@ -177,7 +177,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置NAT网关转发规则描述。
+     * Set NAT网关转发规则描述。
      * @param Description NAT网关转发规则描述。
      */
     public void setDescription(String Description) {
@@ -185,8 +185,8 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get NAT网关的ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NatGatewayId NAT网关的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -195,7 +195,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置NAT网关的ID。
+     * Set NAT网关的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NatGatewayId NAT网关的ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -205,8 +205,8 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 私有网络VPC的ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId 私有网络VPC的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -215,7 +215,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置私有网络VPC的ID。
+     * Set 私有网络VPC的ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络VPC的ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -225,8 +225,8 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 获取NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get NAT网关转发规则创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime NAT网关转发规则创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -235,7 +235,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 设置NAT网关转发规则创建时间。
+     * Set NAT网关转发规则创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime NAT网关转发规则创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -245,7 +245,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule  extends AbstractMode
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);

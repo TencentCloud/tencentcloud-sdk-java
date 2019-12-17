@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSnapshotsRequest  extends AbstractModel{
+public class DeleteSnapshotsRequest extends AbstractModel{
 
     /**
     * 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
@@ -30,7 +30,7 @@ public class DeleteSnapshotsRequest  extends AbstractModel{
     private String [] SnapshotIds;
 
     /**
-     * 获取要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Get 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。 
      * @return SnapshotIds 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
     public String [] getSnapshotIds() {
@@ -38,7 +38,7 @@ public class DeleteSnapshotsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Set 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
      * @param SnapshotIds 要删除的快照ID列表，可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
     public void setSnapshotIds(String [] SnapshotIds) {
@@ -46,7 +46,7 @@ public class DeleteSnapshotsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);

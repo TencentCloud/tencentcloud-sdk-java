@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
+public class UpdateAssumeRolePolicyRequest extends AbstractModel{
 
     /**
     * 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
@@ -44,7 +44,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     private String RoleName;
 
     /**
-     * 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+     * Get 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo 
      * @return PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public String getPolicyDocument() {
@@ -52,7 +52,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+     * Set 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public void setPolicyDocument(String PolicyDocument) {
@@ -60,7 +60,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleId() {
@@ -68,7 +68,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleId(String RoleId) {
@@ -76,7 +76,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleName() {
@@ -84,7 +84,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleName(String RoleName) {
@@ -92,7 +92,7 @@ public class UpdateAssumeRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);

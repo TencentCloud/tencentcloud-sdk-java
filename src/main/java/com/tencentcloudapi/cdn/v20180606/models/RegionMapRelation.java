@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionMapRelation  extends AbstractModel{
+public class RegionMapRelation extends AbstractModel{
 
     /**
     * 区域ID。
@@ -37,7 +37,7 @@ public class RegionMapRelation  extends AbstractModel{
     private Integer [] SubRegionIdList;
 
     /**
-     * 获取区域ID。
+     * Get 区域ID。 
      * @return RegionId 区域ID。
      */
     public Integer getRegionId() {
@@ -45,7 +45,7 @@ public class RegionMapRelation  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID。
+     * Set 区域ID。
      * @param RegionId 区域ID。
      */
     public void setRegionId(Integer RegionId) {
@@ -53,7 +53,7 @@ public class RegionMapRelation  extends AbstractModel{
     }
 
     /**
-     * 获取子区域ID列表
+     * Get 子区域ID列表 
      * @return SubRegionIdList 子区域ID列表
      */
     public Integer [] getSubRegionIdList() {
@@ -61,7 +61,7 @@ public class RegionMapRelation  extends AbstractModel{
     }
 
     /**
-     * 设置子区域ID列表
+     * Set 子区域ID列表
      * @param SubRegionIdList 子区域ID列表
      */
     public void setSubRegionIdList(Integer [] SubRegionIdList) {
@@ -69,7 +69,7 @@ public class RegionMapRelation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

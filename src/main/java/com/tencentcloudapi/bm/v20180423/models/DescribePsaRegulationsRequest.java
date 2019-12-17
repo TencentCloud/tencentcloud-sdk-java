@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePsaRegulationsRequest  extends AbstractModel{
+public class DescribePsaRegulationsRequest extends AbstractModel{
 
     /**
     * 数量限制
@@ -72,7 +72,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     private Integer Order;
 
     /**
-     * 获取数量限制
+     * Get 数量限制 
      * @return Limit 数量限制
      */
     public Integer getLimit() {
@@ -80,7 +80,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制
+     * Set 数量限制
      * @param Limit 数量限制
      */
     public void setLimit(Integer Limit) {
@@ -88,7 +88,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -96,7 +96,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -104,7 +104,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID过滤，支持模糊查询
+     * Get 规则ID过滤，支持模糊查询 
      * @return PsaIds 规则ID过滤，支持模糊查询
      */
     public String [] getPsaIds() {
@@ -112,7 +112,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID过滤，支持模糊查询
+     * Set 规则ID过滤，支持模糊查询
      * @param PsaIds 规则ID过滤，支持模糊查询
      */
     public void setPsaIds(String [] PsaIds) {
@@ -120,7 +120,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则别名过滤，支持模糊查询
+     * Get 规则别名过滤，支持模糊查询 
      * @return PsaNames 规则别名过滤，支持模糊查询
      */
     public String [] getPsaNames() {
@@ -128,7 +128,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则别名过滤，支持模糊查询
+     * Set 规则别名过滤，支持模糊查询
      * @param PsaNames 规则别名过滤，支持模糊查询
      */
     public void setPsaNames(String [] PsaNames) {
@@ -136,7 +136,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签过滤
+     * Get 标签过滤 
      * @return Tags 标签过滤
      */
     public Tag [] getTags() {
@@ -144,7 +144,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签过滤
+     * Set 标签过滤
      * @param Tags 标签过滤
      */
     public void setTags(Tag [] Tags) {
@@ -152,7 +152,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，取值支持：CreateTime
+     * Get 排序字段，取值支持：CreateTime 
      * @return OrderField 排序字段，取值支持：CreateTime
      */
     public String getOrderField() {
@@ -160,7 +160,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，取值支持：CreateTime
+     * Set 排序字段，取值支持：CreateTime
      * @param OrderField 排序字段，取值支持：CreateTime
      */
     public void setOrderField(String OrderField) {
@@ -168,7 +168,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式 0:递增(默认) 1:递减
+     * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
     public Integer getOrder() {
@@ -176,7 +176,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式 0:递增(默认) 1:递减
+     * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
     public void setOrder(Integer Order) {
@@ -184,7 +184,7 @@ public class DescribePsaRegulationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);

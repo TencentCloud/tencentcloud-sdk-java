@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePaiInstancesRequest  extends AbstractModel{
+public class DescribePaiInstancesRequest extends AbstractModel{
 
     /**
     * 依据PAI实例的实例ID进行查询。
@@ -51,7 +51,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取依据PAI实例的实例ID进行查询。
+     * Get 依据PAI实例的实例ID进行查询。 
      * @return InstanceIds 依据PAI实例的实例ID进行查询。
      */
     public String [] getInstanceIds() {
@@ -59,7 +59,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置依据PAI实例的实例ID进行查询。
+     * Set 依据PAI实例的实例ID进行查询。
      * @param InstanceIds 依据PAI实例的实例ID进行查询。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -67,7 +67,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。 
      * @return Filters 过滤条件。
      */
     public Filter [] getFilters() {
@@ -75,7 +75,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
      * @param Filters 过滤条件。
      */
     public void setFilters(Filter [] Filters) {
@@ -83,7 +83,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -91,7 +91,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -99,7 +99,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -107,7 +107,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -115,7 +115,7 @@ public class DescribePaiInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

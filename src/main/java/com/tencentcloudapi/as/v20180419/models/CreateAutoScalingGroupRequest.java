@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoScalingGroupRequest  extends AbstractModel{
+public class CreateAutoScalingGroupRequest extends AbstractModel{
 
     /**
     * 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
@@ -152,7 +152,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     private ServiceSettings ServiceSettings;
 
     /**
-     * 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
+     * Get 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。 
      * @return AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
     public String getAutoScalingGroupName() {
@@ -160,7 +160,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
+     * Set 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
@@ -168,7 +168,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置ID
+     * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
     public String getLaunchConfigurationId() {
@@ -176,7 +176,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置ID
+     * Set 启动配置ID
      * @param LaunchConfigurationId 启动配置ID
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -184,7 +184,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为0-2000。 
      * @return MaxSize 最大实例数，取值范围为0-2000。
      */
     public Integer getMaxSize() {
@@ -192,7 +192,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为0-2000。
      * @param MaxSize 最大实例数，取值范围为0-2000。
      */
     public void setMaxSize(Integer MaxSize) {
@@ -200,7 +200,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最小实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为0-2000。 
      * @return MinSize 最小实例数，取值范围为0-2000。
      */
     public Integer getMinSize() {
@@ -208,7 +208,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最小实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为0-2000。
      * @param MinSize 最小实例数，取值范围为0-2000。
      */
     public void setMinSize(Integer MinSize) {
@@ -216,7 +216,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC ID，基础网络则填空字符串
+     * Get VPC ID，基础网络则填空字符串 
      * @return VpcId VPC ID，基础网络则填空字符串
      */
     public String getVpcId() {
@@ -224,7 +224,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC ID，基础网络则填空字符串
+     * Set VPC ID，基础网络则填空字符串
      * @param VpcId VPC ID，基础网络则填空字符串
      */
     public void setVpcId(String VpcId) {
@@ -232,7 +232,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取默认冷却时间，单位秒，默认值为300
+     * Get 默认冷却时间，单位秒，默认值为300 
      * @return DefaultCooldown 默认冷却时间，单位秒，默认值为300
      */
     public Integer getDefaultCooldown() {
@@ -240,7 +240,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置默认冷却时间，单位秒，默认值为300
+     * Set 默认冷却时间，单位秒，默认值为300
      * @param DefaultCooldown 默认冷却时间，单位秒，默认值为300
      */
     public void setDefaultCooldown(Integer DefaultCooldown) {
@@ -248,7 +248,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取期望实例数，大小介于最小实例数和最大实例数之间
+     * Get 期望实例数，大小介于最小实例数和最大实例数之间 
      * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
      */
     public Integer getDesiredCapacity() {
@@ -256,7 +256,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置期望实例数，大小介于最小实例数和最大实例数之间
+     * Set 期望实例数，大小介于最小实例数和最大实例数之间
      * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -264,7 +264,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * Get 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个 
      * @return LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public String [] getLoadBalancerIds() {
@@ -272,7 +272,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * Set 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -280,7 +280,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -288,7 +288,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -296,7 +296,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * Get 应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个 
      * @return ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public ForwardLoadBalancer [] getForwardLoadBalancers() {
@@ -304,7 +304,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * Set 应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      * @param ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public void setForwardLoadBalancers(ForwardLoadBalancer [] ForwardLoadBalancers) {
@@ -312,7 +312,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * Get 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。 
      * @return SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public String [] getSubnetIds() {
@@ -320,7 +320,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * Set 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      * @param SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -328,9 +328,9 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+     * Get 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
-<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
+<br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。 
      * @return TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
@@ -340,7 +340,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
+     * Set 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <br><li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。
 <br><li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。
      * @param TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
@@ -352,7 +352,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * Get 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。 
      * @return Zones 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public String [] getZones() {
@@ -360,7 +360,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * Set 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      * @param Zones 可用区列表，基础网络场景下必须指定可用区。多个可用区以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
      */
     public void setZones(String [] Zones) {
@@ -368,10 +368,10 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
+     * Get 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
-<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
+<br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。 
      * @return RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
@@ -382,7 +382,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
+     * Set 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。
 <br><li> IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。
 <br><li> INCREMENTAL_INTERVALS，间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大，重试间隔从秒级到1天不等。
 <br><li> NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。
@@ -396,12 +396,12 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * Get 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
 
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
-如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
+如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。 
      * @return ZonesCheckPolicy 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
@@ -414,7 +414,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
+     * Set 可用区校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
 <br><li> ALL，所有可用区（Zone）或子网（SubnetId）都可用则通过校验，否则校验报错。
 <br><li> ANY，存在任何一个可用区（Zone）或子网（SubnetId）可用则通过校验，否则校验报错。
 
@@ -432,7 +432,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     * Get 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例， 
      * @return Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
      */
     public Tag [] getTags() {
@@ -440,7 +440,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
+     * Set 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
      * @param Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例，
      */
     public void setTags(Tag [] Tags) {
@@ -448,7 +448,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务设置，包括云监控不健康替换等服务设置。
+     * Get 服务设置，包括云监控不健康替换等服务设置。 
      * @return ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
      */
     public ServiceSettings getServiceSettings() {
@@ -456,7 +456,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务设置，包括云监控不健康替换等服务设置。
+     * Set 服务设置，包括云监控不健康替换等服务设置。
      * @param ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
      */
     public void setServiceSettings(ServiceSettings ServiceSettings) {
@@ -464,7 +464,7 @@ public class CreateAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);

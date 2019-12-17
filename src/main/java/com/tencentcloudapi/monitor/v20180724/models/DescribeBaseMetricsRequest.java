@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBaseMetricsRequest  extends AbstractModel{
+public class DescribeBaseMetricsRequest extends AbstractModel{
 
     /**
     * 业务命名空间
@@ -37,7 +37,7 @@ public class DescribeBaseMetricsRequest  extends AbstractModel{
     private String MetricName;
 
     /**
-     * 获取业务命名空间
+     * Get 业务命名空间 
      * @return Namespace 业务命名空间
      */
     public String getNamespace() {
@@ -45,7 +45,7 @@ public class DescribeBaseMetricsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务命名空间
+     * Set 业务命名空间
      * @param Namespace 业务命名空间
      */
     public void setNamespace(String Namespace) {
@@ -53,7 +53,7 @@ public class DescribeBaseMetricsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指标名
+     * Get 指标名 
      * @return MetricName 指标名
      */
     public String getMetricName() {
@@ -61,7 +61,7 @@ public class DescribeBaseMetricsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指标名
+     * Set 指标名
      * @param MetricName 指标名
      */
     public void setMetricName(String MetricName) {
@@ -69,7 +69,7 @@ public class DescribeBaseMetricsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupIdOfUidInfo  extends AbstractModel{
+public class GroupIdOfUidInfo extends AbstractModel{
 
     /**
     * 子用户 UID
@@ -37,7 +37,7 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     private Long GroupId;
 
     /**
-     * 获取子用户 UID
+     * Get 子用户 UID 
      * @return Uid 子用户 UID
      */
     public Long getUid() {
@@ -45,7 +45,7 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 UID
+     * Set 子用户 UID
      * @param Uid 子用户 UID
      */
     public void setUid(Long Uid) {
@@ -53,7 +53,7 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户组 ID
+     * Get 用户组 ID 
      * @return GroupId 用户组 ID
      */
     public Long getGroupId() {
@@ -61,7 +61,7 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID
+     * Set 用户组 ID
      * @param GroupId 用户组 ID
      */
     public void setGroupId(Long GroupId) {
@@ -69,7 +69,7 @@ public class GroupIdOfUidInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uid", this.Uid);

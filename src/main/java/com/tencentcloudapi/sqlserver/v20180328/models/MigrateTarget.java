@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateTarget  extends AbstractModel{
+public class MigrateTarget extends AbstractModel{
 
     /**
     * 迁移目标实例的ID，格式如：mssql-si2823jyl
@@ -44,7 +44,7 @@ public class MigrateTarget  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取迁移目标实例的ID，格式如：mssql-si2823jyl
+     * Get 迁移目标实例的ID，格式如：mssql-si2823jyl 
      * @return InstanceId 迁移目标实例的ID，格式如：mssql-si2823jyl
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目标实例的ID，格式如：mssql-si2823jyl
+     * Set 迁移目标实例的ID，格式如：mssql-si2823jyl
      * @param InstanceId 迁移目标实例的ID，格式如：mssql-si2823jyl
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目标实例的用户名
+     * Get 迁移目标实例的用户名 
      * @return UserName 迁移目标实例的用户名
      */
     public String getUserName() {
@@ -68,7 +68,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目标实例的用户名
+     * Set 迁移目标实例的用户名
      * @param UserName 迁移目标实例的用户名
      */
     public void setUserName(String UserName) {
@@ -76,7 +76,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目标实例的密码
+     * Get 迁移目标实例的密码 
      * @return Password 迁移目标实例的密码
      */
     public String getPassword() {
@@ -84,7 +84,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目标实例的密码
+     * Set 迁移目标实例的密码
      * @param Password 迁移目标实例的密码
      */
     public void setPassword(String Password) {
@@ -92,7 +92,7 @@ public class MigrateTarget  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

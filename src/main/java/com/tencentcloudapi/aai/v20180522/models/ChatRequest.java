@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChatRequest  extends AbstractModel{
+public class ChatRequest extends AbstractModel{
 
     /**
     * 聊天输入文本
@@ -44,7 +44,7 @@ public class ChatRequest  extends AbstractModel{
     private String User;
 
     /**
-     * 获取聊天输入文本
+     * Get 聊天输入文本 
      * @return Text 聊天输入文本
      */
     public String getText() {
@@ -52,7 +52,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 设置聊天输入文本
+     * Set 聊天输入文本
      * @param Text 聊天输入文本
      */
     public void setText(String Text) {
@@ -60,7 +60,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
     public Integer getProjectId() {
@@ -68,7 +68,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
     public void setProjectId(Integer ProjectId) {
@@ -76,7 +76,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 获取json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
+     * Get json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响 
      * @return User json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
      */
     public String getUser() {
@@ -84,7 +84,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 设置json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
+     * Set json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
      * @param User json格式，比如 {"id":"test","gender":"male"}。记录当前与机器人交互的用户id，非必须但强烈建议传入，否则多轮聊天功能会受影响
      */
     public void setUser(String User) {
@@ -92,7 +92,7 @@ public class ChatRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeliverTidsResponse  extends AbstractModel{
+public class DeliverTidsResponse extends AbstractModel{
 
     /**
     * 空发的TID信息
@@ -45,8 +45,8 @@ public class DeliverTidsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取空发的TID信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 空发的TID信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TidSet 空发的TID信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -55,7 +55,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置空发的TID信息
+     * Set 空发的TID信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TidSet 空发的TID信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,7 +65,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品公钥
+     * Get 产品公钥 
      * @return ProductKey 产品公钥
      */
     public String getProductKey() {
@@ -73,7 +73,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品公钥
+     * Set 产品公钥
      * @param ProductKey 产品公钥
      */
     public void setProductKey(String ProductKey) {
@@ -81,7 +81,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DeliverTidsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TidSet.", this.TidSet);

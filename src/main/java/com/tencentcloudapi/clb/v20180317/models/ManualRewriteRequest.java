@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManualRewriteRequest  extends AbstractModel{
+public class ManualRewriteRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID
@@ -51,7 +51,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     private RewriteLocationMap [] RewriteInfos;
 
     /**
-     * 获取负载均衡实例ID
+     * Get 负载均衡实例ID 
      * @return LoadBalancerId 负载均衡实例ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID
+     * Set 负载均衡实例ID
      * @param LoadBalancerId 负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源监听器ID
+     * Get 源监听器ID 
      * @return SourceListenerId 源监听器ID
      */
     public String getSourceListenerId() {
@@ -75,7 +75,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源监听器ID
+     * Set 源监听器ID
      * @param SourceListenerId 源监听器ID
      */
     public void setSourceListenerId(String SourceListenerId) {
@@ -83,7 +83,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标监听器ID
+     * Get 目标监听器ID 
      * @return TargetListenerId 目标监听器ID
      */
     public String getTargetListenerId() {
@@ -91,7 +91,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标监听器ID
+     * Set 目标监听器ID
      * @param TargetListenerId 目标监听器ID
      */
     public void setTargetListenerId(String TargetListenerId) {
@@ -99,7 +99,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则之间的重定向关系
+     * Get 转发规则之间的重定向关系 
      * @return RewriteInfos 转发规则之间的重定向关系
      */
     public RewriteLocationMap [] getRewriteInfos() {
@@ -107,7 +107,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则之间的重定向关系
+     * Set 转发规则之间的重定向关系
      * @param RewriteInfos 转发规则之间的重定向关系
      */
     public void setRewriteInfos(RewriteLocationMap [] RewriteInfos) {
@@ -115,7 +115,7 @@ public class ManualRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
+public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间，北京时间，
@@ -82,8 +82,8 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     private String OutLanguage;
 
     /**
-     * 获取起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间，北京时间，
+格式：yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      */
@@ -92,7 +92,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间，北京时间，
+     * Set 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -102,9 +102,9 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，北京时间，
+     * Get 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支持最近1天的数据查询。 
      * @return EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
@@ -114,7 +114,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * Set 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      * @param EndTime 结束时间，北京时间，
@@ -126,7 +126,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+     * Get 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。 
      * @return StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
      */
     public String getStatType() {
@@ -134,7 +134,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
+     * Set 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
      * @param StatType 统计的类型，可选值：”Province”，”Isp”，“CountryOrArea”。
      */
     public void setStatType(String StatType) {
@@ -142,7 +142,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取不填则为总体数据。
+     * Get 不填则为总体数据。 
      * @return PlayDomains 不填则为总体数据。
      */
     public String [] getPlayDomains() {
@@ -150,7 +150,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置不填则为总体数据。
+     * Set 不填则为总体数据。
      * @param PlayDomains 不填则为总体数据。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -158,7 +158,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页号，范围是[1,1000]，默认值是1。
+     * Get 页号，范围是[1,1000]，默认值是1。 
      * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public Integer getPageNum() {
@@ -166,7 +166,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页号，范围是[1,1000]，默认值是1。
+     * Set 页号，范围是[1,1000]，默认值是1。
      * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public void setPageNum(Integer PageNum) {
@@ -174,7 +174,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，默认值是20。
+     * Get 每页个数，范围是[1,1000]，默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public Integer getPageSize() {
@@ -182,7 +182,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，默认值是20。
+     * Set 每页个数，范围是[1,1000]，默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public void setPageSize(Integer PageSize) {
@@ -190,7 +190,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Get 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。 
      * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public String getMainlandOrOversea() {
@@ -198,7 +198,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Set 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -206,7 +206,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * Get 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。 
      * @return OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     public String getOutLanguage() {
@@ -214,7 +214,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * Set 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      * @param OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     public void setOutLanguage(String OutLanguage) {
@@ -222,7 +222,7 @@ public class DescribeProIspPlaySumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

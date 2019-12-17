@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceHourRequest  extends AbstractModel{
+public class CreateDBInstanceHourRequest extends AbstractModel{
 
     /**
     * 实例数量，默认值为 1，最小值 1，最大值为 100。
@@ -198,7 +198,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     private String ClientToken;
 
     /**
-     * 获取实例数量，默认值为 1，最小值 1，最大值为 100。
+     * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public Integer getGoodsNum() {
@@ -206,7 +206,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量，默认值为 1，最小值 1，最大值为 100。
+     * Set 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -214,7 +214,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
+     * Get 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。 
      * @return Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
     public Integer getMemory() {
@@ -222,7 +222,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
+     * Set 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      * @param Memory 实例内存大小，单位：MB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的内存规格。
      */
     public void setMemory(Integer Memory) {
@@ -230,7 +230,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
+     * Get 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。 
      * @return Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
     public Integer getVolume() {
@@ -238,7 +238,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
+     * Set 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      * @param Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      */
     public void setVolume(Integer Volume) {
@@ -246,7 +246,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * Get MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。 
      * @return EngineVersion MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      */
     public String getEngineVersion() {
@@ -254,7 +254,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
+     * Set MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      * @param EngineVersion MySQL 版本，值包括：5.5、5.6 和 5.7，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
      */
     public void setEngineVersion(String EngineVersion) {
@@ -262,7 +262,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * Get 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。 
      * @return UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      */
     public String getUniqVpcId() {
@@ -270,7 +270,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * Set 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      * @param UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
      */
     public void setUniqVpcId(String UniqVpcId) {
@@ -278,7 +278,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+     * Get 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。 
      * @return UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      */
     public String getUniqSubnetId() {
@@ -286,7 +286,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
+     * Set 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      * @param UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用[查询子网列表](/document/api/215/15784)。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
@@ -294,7 +294,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * Get 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。 
      * @return ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
     public Integer getProjectId() {
@@ -302,7 +302,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * Set 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      * @param ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -310,7 +310,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
+     * Get 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。 
      * @return Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      */
     public String getZone() {
@@ -318,7 +318,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
+     * Set 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      * @param Zone 可用区信息，该参数缺省时，系统会自动选择一个可用区，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
      */
     public void setZone(String Zone) {
@@ -326,7 +326,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * Get 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。 
      * @return MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public String getMasterInstanceId() {
@@ -334,7 +334,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * Set 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      * @param MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public void setMasterInstanceId(String MasterInstanceId) {
@@ -342,7 +342,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
+     * Get 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。 
      * @return InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      */
     public String getInstanceRole() {
@@ -350,7 +350,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
+     * Set 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      * @param InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
      */
     public void setInstanceRole(String InstanceRole) {
@@ -358,7 +358,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主实例的可用区信息，购买灾备实例时必填。
+     * Get 主实例的可用区信息，购买灾备实例时必填。 
      * @return MasterRegion 主实例的可用区信息，购买灾备实例时必填。
      */
     public String getMasterRegion() {
@@ -366,7 +366,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主实例的可用区信息，购买灾备实例时必填。
+     * Set 主实例的可用区信息，购买灾备实例时必填。
      * @param MasterRegion 主实例的可用区信息，购买灾备实例时必填。
      */
     public void setMasterRegion(String MasterRegion) {
@@ -374,7 +374,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * Get 自定义端口，端口支持范围：[ 1024-65535 ] 。 
      * @return Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
     public Integer getPort() {
@@ -382,7 +382,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * Set 自定义端口，端口支持范围：[ 1024-65535 ] 。
      * @param Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
      */
     public void setPort(Integer Port) {
@@ -390,7 +390,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Get 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public String getPassword() {
@@ -398,7 +398,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Set 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param Password 设置 root 帐号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setPassword(String Password) {
@@ -406,7 +406,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
+     * Get 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。 
      * @return ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      */
     public ParamInfo [] getParamList() {
@@ -414,7 +414,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
+     * Set 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      * @param ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
      */
     public void setParamList(ParamInfo [] ParamList) {
@@ -422,7 +422,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Get 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public Integer getProtectMode() {
@@ -430,7 +430,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Set 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setProtectMode(Integer ProtectMode) {
@@ -438,7 +438,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Get 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public Integer getDeployMode() {
@@ -446,7 +446,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Set 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param DeployMode 多可用区域，默认为 0，支持值包括：0 - 表示单可用区，1 - 表示多可用区，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setDeployMode(Integer DeployMode) {
@@ -454,7 +454,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Get 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。 
      * @return SlaveZone 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public String getSlaveZone() {
@@ -462,7 +462,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
+     * Set 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param SlaveZone 备库 1 的可用区信息，默认为 Zone 的值，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      */
     public void setSlaveZone(String SlaveZone) {
@@ -470,7 +470,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * Get 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。 
      * @return BackupZone 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
      */
     public String getBackupZone() {
@@ -478,7 +478,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
+     * Set 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
      * @param BackupZone 备库 2 的可用区信息，默认为空，购买强同步主实例时可指定该参数，购买其他类型实例时指定该参数无意义。
      */
     public void setBackupZone(String BackupZone) {
@@ -486,7 +486,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
+     * Get 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。 
      * @return SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      */
     public String [] getSecurityGroup() {
@@ -494,7 +494,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
+     * Set 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      */
     public void setSecurityGroup(String [] SecurityGroup) {
@@ -502,7 +502,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取只读实例信息。购买只读实例时，该参数必传。
+     * Get 只读实例信息。购买只读实例时，该参数必传。 
      * @return RoGroup 只读实例信息。购买只读实例时，该参数必传。
      */
     public RoGroup getRoGroup() {
@@ -510,7 +510,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置只读实例信息。购买只读实例时，该参数必传。
+     * Set 只读实例信息。购买只读实例时，该参数必传。
      * @param RoGroup 只读实例信息。购买只读实例时，该参数必传。
      */
     public void setRoGroup(RoGroup RoGroup) {
@@ -518,7 +518,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买按量计费实例该字段无意义。
+     * Get 购买按量计费实例该字段无意义。 
      * @return AutoRenewFlag 购买按量计费实例该字段无意义。
      */
     public Integer getAutoRenewFlag() {
@@ -526,7 +526,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买按量计费实例该字段无意义。
+     * Set 购买按量计费实例该字段无意义。
      * @param AutoRenewFlag 购买按量计费实例该字段无意义。
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -534,7 +534,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称。
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
@@ -542,7 +542,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称。
+     * Set 实例名称。
      * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
@@ -550,7 +550,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例标签信息。
+     * Get 实例标签信息。 
      * @return ResourceTags 实例标签信息。
      */
     public TagInfo [] getResourceTags() {
@@ -558,7 +558,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例标签信息。
+     * Set 实例标签信息。
      * @param ResourceTags 实例标签信息。
      */
     public void setResourceTags(TagInfo [] ResourceTags) {
@@ -566,7 +566,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组 ID。
+     * Get 置放群组 ID。 
      * @return DeployGroupId 置放群组 ID。
      */
     public String getDeployGroupId() {
@@ -574,7 +574,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组 ID。
+     * Set 置放群组 ID。
      * @param DeployGroupId 置放群组 ID。
      */
     public void setDeployGroupId(String DeployGroupId) {
@@ -582,7 +582,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
@@ -590,7 +590,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间在当天内唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
@@ -598,7 +598,7 @@ public class CreateDBInstanceHourRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);

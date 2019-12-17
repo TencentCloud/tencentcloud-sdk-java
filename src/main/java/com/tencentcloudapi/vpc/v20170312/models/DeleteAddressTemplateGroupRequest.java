@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAddressTemplateGroupRequest  extends AbstractModel{
+public class DeleteAddressTemplateGroupRequest extends AbstractModel{
 
     /**
     * IP地址模板集合实例ID，例如：ipmg-90cex8mq。
@@ -30,7 +30,7 @@ public class DeleteAddressTemplateGroupRequest  extends AbstractModel{
     private String AddressTemplateGroupId;
 
     /**
-     * 获取IP地址模板集合实例ID，例如：ipmg-90cex8mq。
+     * Get IP地址模板集合实例ID，例如：ipmg-90cex8mq。 
      * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-90cex8mq。
      */
     public String getAddressTemplateGroupId() {
@@ -38,7 +38,7 @@ public class DeleteAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板集合实例ID，例如：ipmg-90cex8mq。
+     * Set IP地址模板集合实例ID，例如：ipmg-90cex8mq。
      * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-90cex8mq。
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
@@ -46,7 +46,7 @@ public class DeleteAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateGroupId", this.AddressTemplateGroupId);

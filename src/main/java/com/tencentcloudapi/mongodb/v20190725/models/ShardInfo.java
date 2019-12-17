@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShardInfo  extends AbstractModel{
+public class ShardInfo extends AbstractModel{
 
     /**
     * 分片已使用容量
@@ -79,7 +79,7 @@ public class ShardInfo  extends AbstractModel{
     private String RealReplicaSetId;
 
     /**
-     * 获取分片已使用容量
+     * Get 分片已使用容量 
      * @return UsedVolume 分片已使用容量
      */
     public Float getUsedVolume() {
@@ -87,7 +87,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片已使用容量
+     * Set 分片已使用容量
      * @param UsedVolume 分片已使用容量
      */
     public void setUsedVolume(Float UsedVolume) {
@@ -95,7 +95,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片ID
+     * Get 分片ID 
      * @return ReplicaSetId 分片ID
      */
     public String getReplicaSetId() {
@@ -103,7 +103,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片ID
+     * Set 分片ID
      * @param ReplicaSetId 分片ID
      */
     public void setReplicaSetId(String ReplicaSetId) {
@@ -111,7 +111,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片名
+     * Get 分片名 
      * @return ReplicaSetName 分片名
      */
     public String getReplicaSetName() {
@@ -119,7 +119,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片名
+     * Set 分片名
      * @param ReplicaSetName 分片名
      */
     public void setReplicaSetName(String ReplicaSetName) {
@@ -127,7 +127,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片内存规格，单位为MB
+     * Get 分片内存规格，单位为MB 
      * @return Memory 分片内存规格，单位为MB
      */
     public Integer getMemory() {
@@ -135,7 +135,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片内存规格，单位为MB
+     * Set 分片内存规格，单位为MB
      * @param Memory 分片内存规格，单位为MB
      */
     public void setMemory(Integer Memory) {
@@ -143,7 +143,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片磁盘规格，单位为MB
+     * Get 分片磁盘规格，单位为MB 
      * @return Volume 分片磁盘规格，单位为MB
      */
     public Integer getVolume() {
@@ -151,7 +151,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片磁盘规格，单位为MB
+     * Set 分片磁盘规格，单位为MB
      * @param Volume 分片磁盘规格，单位为MB
      */
     public void setVolume(Integer Volume) {
@@ -159,7 +159,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片Oplog大小，单位为MB
+     * Get 分片Oplog大小，单位为MB 
      * @return OplogSize 分片Oplog大小，单位为MB
      */
     public Integer getOplogSize() {
@@ -167,7 +167,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片Oplog大小，单位为MB
+     * Set 分片Oplog大小，单位为MB
      * @param OplogSize 分片Oplog大小，单位为MB
      */
     public void setOplogSize(Integer OplogSize) {
@@ -175,7 +175,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片从节点数
+     * Get 分片从节点数 
      * @return SecondaryNum 分片从节点数
      */
     public Integer getSecondaryNum() {
@@ -183,7 +183,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片从节点数
+     * Set 分片从节点数
      * @param SecondaryNum 分片从节点数
      */
     public void setSecondaryNum(Integer SecondaryNum) {
@@ -191,7 +191,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片物理id
+     * Get 分片物理id 
      * @return RealReplicaSetId 分片物理id
      */
     public String getRealReplicaSetId() {
@@ -199,7 +199,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片物理id
+     * Set 分片物理id
      * @param RealReplicaSetId 分片物理id
      */
     public void setRealReplicaSetId(String RealReplicaSetId) {
@@ -207,7 +207,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UsedVolume", this.UsedVolume);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWeeklyReportNonlocalLoginPlacesRequest  extends AbstractModel{
+public class DescribeWeeklyReportNonlocalLoginPlacesRequest extends AbstractModel{
 
     /**
     * 专业周报开始时间。
@@ -34,17 +34,17 @@ public class DescribeWeeklyReportNonlocalLoginPlacesRequest  extends AbstractMod
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
-     * 获取专业周报开始时间。
+     * Get 专业周报开始时间。 
      * @return BeginDate 专业周报开始时间。
      */
     public String getBeginDate() {
@@ -52,7 +52,7 @@ public class DescribeWeeklyReportNonlocalLoginPlacesRequest  extends AbstractMod
     }
 
     /**
-     * 设置专业周报开始时间。
+     * Set 专业周报开始时间。
      * @param BeginDate 专业周报开始时间。
      */
     public void setBeginDate(String BeginDate) {
@@ -60,39 +60,39 @@ public class DescribeWeeklyReportNonlocalLoginPlacesRequest  extends AbstractMod
     }
 
     /**
-     * 获取返回数量，默认为10，最大值为100。
+     * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为10，最大值为100。
+     * Set 返回数量，默认为10，最大值为100。
      * @param Limit 返回数量，默认为10，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginDate", this.BeginDate);

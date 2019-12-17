@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DstInfo  extends AbstractModel{
+public class DstInfo extends AbstractModel{
 
     /**
     * 目标实例Id，如cdb-jd92ijd8
@@ -58,7 +58,7 @@ public class DstInfo  extends AbstractModel{
     private Integer ReadOnly;
 
     /**
-     * 获取目标实例Id，如cdb-jd92ijd8
+     * Get 目标实例Id，如cdb-jd92ijd8 
      * @return InstanceId 目标实例Id，如cdb-jd92ijd8
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例Id，如cdb-jd92ijd8
+     * Set 目标实例Id，如cdb-jd92ijd8
      * @param InstanceId 目标实例Id，如cdb-jd92ijd8
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例地域，如ap-guangzhou
+     * Get 目标实例地域，如ap-guangzhou 
      * @return Region 目标实例地域，如ap-guangzhou
      */
     public String getRegion() {
@@ -82,7 +82,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例地域，如ap-guangzhou
+     * Set 目标实例地域，如ap-guangzhou
      * @param Region 目标实例地域，如ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -90,7 +90,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例vip。已废弃，无需填写
+     * Get 目标实例vip。已废弃，无需填写 
      * @return Ip 目标实例vip。已废弃，无需填写
      */
     public String getIp() {
@@ -98,7 +98,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例vip。已废弃，无需填写
+     * Set 目标实例vip。已废弃，无需填写
      * @param Ip 目标实例vip。已废弃，无需填写
      */
     public void setIp(String Ip) {
@@ -106,7 +106,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例vport。已废弃，无需填写
+     * Get 目标实例vport。已废弃，无需填写 
      * @return Port 目标实例vport。已废弃，无需填写
      */
     public Integer getPort() {
@@ -114,7 +114,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例vport。已废弃，无需填写
+     * Set 目标实例vport。已废弃，无需填写
      * @param Port 目标实例vport。已废弃，无需填写
      */
     public void setPort(Integer Port) {
@@ -122,7 +122,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+     * Get 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。 
      * @return ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     public Integer getReadOnly() {
@@ -130,7 +130,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
+     * Set 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      * @param ReadOnly 目前只对MySQL有效。当为整实例迁移时，1-只读，0-可读写。
      */
     public void setReadOnly(Integer ReadOnly) {
@@ -138,7 +138,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

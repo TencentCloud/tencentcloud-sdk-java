@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKeysRequest  extends AbstractModel{
+public class DescribeKeysRequest extends AbstractModel{
 
     /**
     * 查询CMK的ID列表，批量查询一次最多支持100个KeyId
@@ -30,7 +30,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     private String [] KeyIds;
 
     /**
-     * 获取查询CMK的ID列表，批量查询一次最多支持100个KeyId
+     * Get 查询CMK的ID列表，批量查询一次最多支持100个KeyId 
      * @return KeyIds 查询CMK的ID列表，批量查询一次最多支持100个KeyId
      */
     public String [] getKeyIds() {
@@ -38,7 +38,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询CMK的ID列表，批量查询一次最多支持100个KeyId
+     * Set 查询CMK的ID列表，批量查询一次最多支持100个KeyId
      * @param KeyIds 查询CMK的ID列表，批量查询一次最多支持100个KeyId
      */
     public void setKeyIds(String [] KeyIds) {
@@ -46,7 +46,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSLevelRequest  extends AbstractModel{
+public class ModifyDDoSLevelRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -51,7 +51,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     private String DDoSLevel;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -75,7 +75,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -83,7 +83,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取=get表示读取防护等级；=set表示修改防护等级
+     * Get =get表示读取防护等级；=set表示修改防护等级 
      * @return Method =get表示读取防护等级；=set表示修改防护等级
      */
     public String getMethod() {
@@ -91,7 +91,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置=get表示读取防护等级；=set表示修改防护等级
+     * Set =get表示读取防护等级；=set表示修改防护等级
      * @param Method =get表示读取防护等级；=set表示修改防护等级
      */
     public void setMethod(String Method) {
@@ -99,7 +99,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取防护等级，取值[low,middle,high]；当Method=set时必填
+     * Get 防护等级，取值[low,middle,high]；当Method=set时必填 
      * @return DDoSLevel 防护等级，取值[low,middle,high]；当Method=set时必填
      */
     public String getDDoSLevel() {
@@ -107,7 +107,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置防护等级，取值[low,middle,high]；当Method=set时必填
+     * Set 防护等级，取值[low,middle,high]；当Method=set时必填
      * @param DDoSLevel 防护等级，取值[low,middle,high]；当Method=set时必填
      */
     public void setDDoSLevel(String DDoSLevel) {
@@ -115,7 +115,7 @@ public class ModifyDDoSLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

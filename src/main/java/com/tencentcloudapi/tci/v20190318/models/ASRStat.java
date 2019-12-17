@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ASRStat  extends AbstractModel{
+public class ASRStat extends AbstractModel{
 
     /**
     * 当前音频的平均语速
@@ -86,7 +86,7 @@ public class ASRStat  extends AbstractModel{
     private Long WordNum;
 
     /**
-     * 获取当前音频的平均语速
+     * Get 当前音频的平均语速 
      * @return AvgSpeed 当前音频的平均语速
      */
     public Float getAvgSpeed() {
@@ -94,7 +94,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的平均语速
+     * Set 当前音频的平均语速
      * @param AvgSpeed 当前音频的平均语速
      */
     public void setAvgSpeed(Float AvgSpeed) {
@@ -102,7 +102,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的平均音量
+     * Get Vad的平均音量 
      * @return AvgVolume Vad的平均音量
      */
     public Float getAvgVolume() {
@@ -110,7 +110,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的平均音量
+     * Set Vad的平均音量
      * @param AvgVolume Vad的平均音量
      */
     public void setAvgVolume(Float AvgVolume) {
@@ -118,7 +118,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的最大音量
+     * Get Vad的最大音量 
      * @return MaxVolume Vad的最大音量
      */
     public Float getMaxVolume() {
@@ -126,7 +126,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的最大音量
+     * Set Vad的最大音量
      * @param MaxVolume Vad的最大音量
      */
     public void setMaxVolume(Float MaxVolume) {
@@ -134,7 +134,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的最小音量
+     * Get Vad的最小音量 
      * @return MinVolume Vad的最小音量
      */
     public Float getMinVolume() {
@@ -142,7 +142,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的最小音量
+     * Set Vad的最小音量
      * @param MinVolume Vad的最小音量
      */
     public void setMinVolume(Float MinVolume) {
@@ -150,7 +150,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取当前音频的非发音时长
+     * Get 当前音频的非发音时长 
      * @return MuteDuration 当前音频的非发音时长
      */
     public Long getMuteDuration() {
@@ -158,7 +158,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的非发音时长
+     * Set 当前音频的非发音时长
      * @param MuteDuration 当前音频的非发音时长
      */
     public void setMuteDuration(Long MuteDuration) {
@@ -166,7 +166,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取当前音频的发音时长
+     * Get 当前音频的发音时长 
      * @return SoundDuration 当前音频的发音时长
      */
     public Long getSoundDuration() {
@@ -174,7 +174,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的发音时长
+     * Set 当前音频的发音时长
      * @param SoundDuration 当前音频的发音时长
      */
     public void setSoundDuration(Long SoundDuration) {
@@ -182,7 +182,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取当前音频的总时长
+     * Get 当前音频的总时长 
      * @return TotalDuration 当前音频的总时长
      */
     public Long getTotalDuration() {
@@ -190,7 +190,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的总时长
+     * Set 当前音频的总时长
      * @param TotalDuration 当前音频的总时长
      */
     public void setTotalDuration(Long TotalDuration) {
@@ -198,7 +198,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取当前音频的句子总数
+     * Get 当前音频的句子总数 
      * @return VadNum 当前音频的句子总数
      */
     public Long getVadNum() {
@@ -206,7 +206,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的句子总数
+     * Set 当前音频的句子总数
      * @param VadNum 当前音频的句子总数
      */
     public void setVadNum(Long VadNum) {
@@ -214,7 +214,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 获取当前音频的单词总数
+     * Get 当前音频的单词总数 
      * @return WordNum 当前音频的单词总数
      */
     public Long getWordNum() {
@@ -222,7 +222,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 设置当前音频的单词总数
+     * Set 当前音频的单词总数
      * @param WordNum 当前音频的单词总数
      */
     public void setWordNum(Long WordNum) {
@@ -230,7 +230,7 @@ public class ASRStat  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AvgSpeed", this.AvgSpeed);

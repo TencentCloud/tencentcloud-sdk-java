@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceProjectResponse  extends AbstractModel{
+public class ModifyDBInstanceProjectResponse extends AbstractModel{
 
     /**
     * 修改成功的实例个数
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,23 +37,23 @@ public class ModifyDBInstanceProjectResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取修改成功的实例个数
+     * Get 修改成功的实例个数 
      * @return Count 修改成功的实例个数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置修改成功的实例个数
+     * Set 修改成功的实例个数
      * @param Count 修改成功的实例个数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class ModifyDBInstanceProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class ModifyDBInstanceProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

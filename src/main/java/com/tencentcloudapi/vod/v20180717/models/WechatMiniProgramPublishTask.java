@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WechatMiniProgramPublishTask  extends AbstractModel{
+public class WechatMiniProgramPublishTask extends AbstractModel{
 
     /**
     * 任务 ID。
@@ -80,7 +80,7 @@ FINISH：已完成。
     private String PublishResult;
 
     /**
-     * 获取任务 ID。
+     * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
     public String getTaskId() {
@@ -88,7 +88,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置任务 ID。
+     * Set 任务 ID。
      * @param TaskId 任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -96,10 +96,10 @@ FINISH：已完成。
     }
 
     /**
-     * 获取任务状态，取值：
+     * Get 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
-FINISH：已完成。
+FINISH：已完成。 
      * @return Status 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
@@ -110,7 +110,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置任务状态，取值：
+     * Set 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
 FINISH：已完成。
@@ -124,9 +124,9 @@ FINISH：已完成。
     }
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
-<li>其他值：失败。</li>
+<li>其他值：失败。</li> 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -136,7 +136,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
      * @param ErrCode 错误码
@@ -148,7 +148,7 @@ FINISH：已完成。
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -156,7 +156,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -164,7 +164,7 @@ FINISH：已完成。
     }
 
     /**
-     * 获取发布视频文件 ID。
+     * Get 发布视频文件 ID。 
      * @return FileId 发布视频文件 ID。
      */
     public String getFileId() {
@@ -172,7 +172,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置发布视频文件 ID。
+     * Set 发布视频文件 ID。
      * @param FileId 发布视频文件 ID。
      */
     public void setFileId(String FileId) {
@@ -180,7 +180,7 @@ FINISH：已完成。
     }
 
     /**
-     * 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
+     * Get 发布视频所对应的转码模板 ID，为 0 代表原始视频。 
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
     public Long getSourceDefinition() {
@@ -188,7 +188,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
+     * Set 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
     public void setSourceDefinition(Long SourceDefinition) {
@@ -196,10 +196,10 @@ FINISH：已完成。
     }
 
     /**
-     * 获取微信小程序视频发布状态，取值：
+     * Get 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
-<li>Rejected：审核未通过。</li>
+<li>Rejected：审核未通过。</li> 
      * @return PublishResult 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
@@ -210,7 +210,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置微信小程序视频发布状态，取值：
+     * Set 微信小程序视频发布状态，取值：
 <li>Pass：发布成功；</li>
 <li>Failed：发布失败；</li>
 <li>Rejected：审核未通过。</li>
@@ -224,7 +224,7 @@ FINISH：已完成。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

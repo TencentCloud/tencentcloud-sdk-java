@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
+public class DescribeVisitTopSumInfoListResponse extends AbstractModel{
 
     /**
     * 页号，
@@ -82,9 +82,9 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取页号，
+     * Get 页号，
 范围是[1,1000]，
-默认值是1。
+默认值是1。 
      * @return PageNum 页号，
 范围是[1,1000]，
 默认值是1。
@@ -94,7 +94,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置页号，
+     * Set 页号，
 范围是[1,1000]，
 默认值是1。
      * @param PageNum 页号，
@@ -106,8 +106,8 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，
-默认值是20。
+     * Get 每页个数，范围是[1,1000]，
+默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，
 默认值是20。
      */
@@ -116,7 +116,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，
+     * Set 每页个数，范围是[1,1000]，
 默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，
 默认值是20。
@@ -126,7 +126,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取峰值指标，可选值包括”Domain”，”StreamId”。
+     * Get 峰值指标，可选值包括”Domain”，”StreamId”。 
      * @return TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
      */
     public String getTopIndex() {
@@ -134,7 +134,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置峰值指标，可选值包括”Domain”，”StreamId”。
+     * Set 峰值指标，可选值包括”Domain”，”StreamId”。
      * @param TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
      */
     public void setTopIndex(String TopIndex) {
@@ -142,7 +142,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * Get 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。 
      * @return OrderParam 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      */
     public String getOrderParam() {
@@ -150,7 +150,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * Set 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      * @param OrderParam 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      */
     public void setOrderParam(String OrderParam) {
@@ -158,7 +158,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取记录总数。
+     * Get 记录总数。 
      * @return TotalNum 记录总数。
      */
     public Integer getTotalNum() {
@@ -166,7 +166,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置记录总数。
+     * Set 记录总数。
      * @param TotalNum 记录总数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -174,7 +174,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取记录总页数。
+     * Get 记录总页数。 
      * @return TotalPage 记录总页数。
      */
     public Integer getTotalPage() {
@@ -182,7 +182,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置记录总页数。
+     * Set 记录总页数。
      * @param TotalPage 记录总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -190,7 +190,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据内容。
+     * Get 数据内容。 
      * @return DataInfoList 数据内容。
      */
     public PlaySumStatInfo [] getDataInfoList() {
@@ -198,7 +198,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据内容。
+     * Set 数据内容。
      * @param DataInfoList 数据内容。
      */
     public void setDataInfoList(PlaySumStatInfo [] DataInfoList) {
@@ -206,7 +206,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -214,7 +214,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -222,7 +222,7 @@ public class DescribeVisitTopSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);

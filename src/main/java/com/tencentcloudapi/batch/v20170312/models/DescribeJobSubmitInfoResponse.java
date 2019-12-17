@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobSubmitInfoResponse  extends AbstractModel{
+public class DescribeJobSubmitInfoResponse extends AbstractModel{
 
     /**
     * 作业ID
@@ -72,7 +72,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -80,7 +80,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -88,7 +88,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取作业名称
+     * Get 作业名称 
      * @return JobName 作业名称
      */
     public String getJobName() {
@@ -96,7 +96,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作业名称
+     * Set 作业名称
      * @param JobName 作业名称
      */
     public void setJobName(String JobName) {
@@ -104,7 +104,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取作业描述
+     * Get 作业描述 
      * @return JobDescription 作业描述
      */
     public String getJobDescription() {
@@ -112,7 +112,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作业描述
+     * Set 作业描述
      * @param JobDescription 作业描述
      */
     public void setJobDescription(String JobDescription) {
@@ -120,7 +120,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Get 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级 
      * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
     public Integer getPriority() {
@@ -128,7 +128,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Set 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
     public void setPriority(Integer Priority) {
@@ -136,7 +136,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务信息
+     * Get 任务信息 
      * @return Tasks 任务信息
      */
     public Task [] getTasks() {
@@ -144,7 +144,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务信息
+     * Set 任务信息
      * @param Tasks 任务信息
      */
     public void setTasks(Task [] Tasks) {
@@ -152,7 +152,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取依赖信息
+     * Get 依赖信息 
      * @return Dependences 依赖信息
      */
     public Dependence [] getDependences() {
@@ -160,7 +160,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置依赖信息
+     * Set 依赖信息
      * @param Dependences 依赖信息
      */
     public void setDependences(Dependence [] Dependences) {
@@ -168,7 +168,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeJobSubmitInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobsRequest  extends AbstractModel{
+public class DescribeJobsRequest extends AbstractModel{
 
     /**
     * 作业ID
@@ -55,7 +55,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobIds 作业ID
      */
     public String [] getJobIds() {
@@ -63,7 +63,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobIds 作业ID
      */
     public void setJobIds(String [] JobIds) {
@@ -71,11 +71,11 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
+     * Get 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li> 
      * @return Filters 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
@@ -87,7 +87,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
@@ -103,7 +103,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -111,7 +111,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -119,7 +119,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -127,7 +127,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -135,7 +135,7 @@ public class DescribeJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "JobIds.", this.JobIds);

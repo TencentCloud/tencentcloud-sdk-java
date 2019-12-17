@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetParametersForImportResponse  extends AbstractModel{
+public class GetParametersForImportResponse extends AbstractModel{
 
     /**
     * CMK的唯一标识，用于指定目标导入密钥材料的CMK。
@@ -58,7 +58,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CMK的唯一标识，用于指定目标导入密钥材料的CMK。
+     * Get CMK的唯一标识，用于指定目标导入密钥材料的CMK。 
      * @return KeyId CMK的唯一标识，用于指定目标导入密钥材料的CMK。
      */
     public String getKeyId() {
@@ -66,7 +66,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的唯一标识，用于指定目标导入密钥材料的CMK。
+     * Set CMK的唯一标识，用于指定目标导入密钥材料的CMK。
      * @param KeyId CMK的唯一标识，用于指定目标导入密钥材料的CMK。
      */
     public void setKeyId(String KeyId) {
@@ -74,7 +74,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
+     * Get 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。 
      * @return ImportToken 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
      */
     public String getImportToken() {
@@ -82,7 +82,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
+     * Set 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
      * @param ImportToken 导入密钥材料需要的token，用于作为 ImportKeyMaterial 的参数。
      */
     public void setImportToken(String ImportToken) {
@@ -90,7 +90,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
+     * Get 用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。 
      * @return PublicKey 用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
      */
     public String getPublicKey() {
@@ -98,7 +98,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
+     * Set 用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
      * @param PublicKey 用于加密密钥材料的RSA公钥，base64编码。使用PublicKey base64解码后的公钥将导入密钥进行加密后作为 ImportKeyMaterial 的参数。
      */
     public void setPublicKey(String PublicKey) {
@@ -106,7 +106,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
+     * Get 该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。 
      * @return ParametersValidTo 该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
      */
     public Long getParametersValidTo() {
@@ -114,7 +114,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
+     * Set 该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
      * @param ParametersValidTo 该导出token和公钥的有效期，超过该时间后无法导入，需要重新调用GetParametersForImport获取。
      */
     public void setParametersValidTo(Long ParametersValidTo) {
@@ -122,7 +122,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class GetParametersForImportResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateDetail  extends AbstractModel{
+public class MigrateDetail extends AbstractModel{
 
     /**
     * 当前环节的名称
@@ -34,10 +34,10 @@ public class MigrateDetail  extends AbstractModel{
     */
     @SerializedName("Progress")
     @Expose
-    private Integer Progress;
+    private Long Progress;
 
     /**
-     * 获取当前环节的名称
+     * Get 当前环节的名称 
      * @return StepName 当前环节的名称
      */
     public String getStepName() {
@@ -45,7 +45,7 @@ public class MigrateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置当前环节的名称
+     * Set 当前环节的名称
      * @param StepName 当前环节的名称
      */
     public void setStepName(String StepName) {
@@ -53,23 +53,23 @@ public class MigrateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取当前环节的进度（单位是%）
+     * Get 当前环节的进度（单位是%） 
      * @return Progress 当前环节的进度（单位是%）
      */
-    public Integer getProgress() {
+    public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * 设置当前环节的进度（单位是%）
+     * Set 当前环节的进度（单位是%）
      * @param Progress 当前环节的进度（单位是%）
      */
-    public void setProgress(Integer Progress) {
+    public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepName", this.StepName);

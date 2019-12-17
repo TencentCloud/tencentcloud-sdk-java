@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnvInfo  extends AbstractModel{
+public class EnvInfo extends AbstractModel{
 
     /**
     * 账户下该环境唯一标识
@@ -107,7 +107,7 @@ public class EnvInfo  extends AbstractModel{
     private String PackageName;
 
     /**
-     * 获取账户下该环境唯一标识
+     * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
     public String getEnvId() {
@@ -115,7 +115,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账户下该环境唯一标识
+     * Set 账户下该环境唯一标识
      * @param EnvId 账户下该环境唯一标识
      */
     public void setEnvId(String EnvId) {
@@ -123,9 +123,9 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取环境来源。包含以下取值：
+     * Get 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+<li>qcloud ：腾讯云</li> 
      * @return Source 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
 <li>qcloud ：腾讯云</li>
@@ -135,7 +135,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置环境来源。包含以下取值：
+     * Set 环境来源。包含以下取值：
 <li>miniapp：微信小程序</li>
 <li>qcloud ：腾讯云</li>
      * @param Source 环境来源。包含以下取值：
@@ -147,7 +147,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Get 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
      * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public String getAlias() {
@@ -155,7 +155,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Set 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public void setAlias(String Alias) {
@@ -163,7 +163,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -171,7 +171,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -179,7 +179,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最后修改时间
+     * Get 最后修改时间 
      * @return UpdateTime 最后修改时间
      */
     public String getUpdateTime() {
@@ -187,7 +187,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最后修改时间
+     * Set 最后修改时间
      * @param UpdateTime 最后修改时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -195,10 +195,10 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取环境状态。包含以下取值：
+     * Get 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
 <li>HALTED：停服，用量超限或后台封禁</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li> 
      * @return Status 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
 <li>HALTED：停服，用量超限或后台封禁</li>
@@ -209,7 +209,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置环境状态。包含以下取值：
+     * Set 环境状态。包含以下取值：
 <li>NORMAL：正常可用</li>
 <li>HALTED：停服，用量超限或后台封禁</li>
 <li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
@@ -223,7 +223,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库列表
+     * Get 数据库列表 
      * @return Databases 数据库列表
      */
     public DatabasesInfo [] getDatabases() {
@@ -231,7 +231,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库列表
+     * Set 数据库列表
      * @param Databases 数据库列表
      */
     public void setDatabases(DatabasesInfo [] Databases) {
@@ -239,7 +239,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储列表
+     * Get 存储列表 
      * @return Storages 存储列表
      */
     public StorageInfo [] getStorages() {
@@ -247,7 +247,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储列表
+     * Set 存储列表
      * @param Storages 存储列表
      */
     public void setStorages(StorageInfo [] Storages) {
@@ -255,7 +255,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取函数列表
+     * Get 函数列表 
      * @return Functions 函数列表
      */
     public FunctionInfo [] getFunctions() {
@@ -263,7 +263,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置函数列表
+     * Set 函数列表
      * @param Functions 函数列表
      */
     public void setFunctions(FunctionInfo [] Functions) {
@@ -271,8 +271,8 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取tcb产品套餐ID，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get tcb产品套餐ID，参考DescribePackages接口的返回值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * Set tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 获取套餐中文名称，参考DescribePackages接口的返回值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 套餐中文名称，参考DescribePackages接口的返回值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackageName 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 设置套餐中文名称，参考DescribePackages接口的返回值。
+     * Set 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageName 套餐中文名称，参考DescribePackages接口的返回值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,7 +311,7 @@ public class EnvInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

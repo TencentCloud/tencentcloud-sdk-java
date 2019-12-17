@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
+public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
 
     /**
     * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
@@ -72,7 +72,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-     * 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
      * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
     public String getZone() {
@@ -80,7 +80,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Set 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
      */
     public void setZone(String Zone) {
@@ -88,7 +88,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * Get 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。 
      * @return SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
@@ -96,7 +96,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * Set 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
      * @param SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
@@ -104,7 +104,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取存储容量大小，单位：GB。
+     * Get 存储容量大小，单位：GB。 
      * @return Storage 存储容量大小，单位：GB。
      */
     public Integer getStorage() {
@@ -112,7 +112,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置存储容量大小，单位：GB。
+     * Set 存储容量大小，单位：GB。
      * @param Storage 存储容量大小，单位：GB。
      */
     public void setStorage(Integer Storage) {
@@ -120,7 +120,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
+     * Get 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。 
      * @return InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      */
     public Integer getInstanceCount() {
@@ -128,7 +128,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
+     * Set 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      * @param InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -136,7 +136,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。 
      * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
     public Integer getPeriod() {
@@ -144,7 +144,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      */
     public void setPeriod(Integer Period) {
@@ -152,7 +152,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Get 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。 
      * @return Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
     public Integer getPid() {
@@ -160,7 +160,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Set 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      * @param Pid 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
      */
     public void setPid(Integer Pid) {
@@ -168,7 +168,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Get 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。 
      * @return InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      */
     public String getInstanceChargeType() {
@@ -176,7 +176,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * Set 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      * @param InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -184,7 +184,7 @@ public class InquiryPriceCreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

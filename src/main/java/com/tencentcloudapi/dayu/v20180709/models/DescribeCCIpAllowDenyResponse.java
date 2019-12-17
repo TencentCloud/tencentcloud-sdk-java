@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
+public class DescribeCCIpAllowDenyResponse extends AbstractModel{
 
     /**
     * 该字段被RecordList字段替代了，请不要使用
@@ -55,7 +55,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取该字段被RecordList字段替代了，请不要使用
+     * Get 该字段被RecordList字段替代了，请不要使用 
      * @return Data 该字段被RecordList字段替代了，请不要使用
      */
     public KeyValue [] getData() {
@@ -63,7 +63,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该字段被RecordList字段替代了，请不要使用
+     * Set 该字段被RecordList字段替代了，请不要使用
      * @param Data 该字段被RecordList字段替代了，请不要使用
      */
     public void setData(KeyValue [] Data) {
@@ -71,7 +71,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取记录数
+     * Get 记录数 
      * @return Total 记录数
      */
     public Long getTotal() {
@@ -79,7 +79,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置记录数
+     * Set 记录数
      * @param Total 记录数
      */
     public void setTotal(Long Total) {
@@ -87,11 +87,11 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回黑/白名单的记录，
+     * Get 返回黑/白名单的记录，
 "Key":"ip"时，"Value":值表示ip;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
-"Key":"protocol"时，"Value":值表示CC防护的协议(http或https);
+"Key":"protocol"时，"Value":值表示CC防护的协议(http或https); 
      * @return RecordList 返回黑/白名单的记录，
 "Key":"ip"时，"Value":值表示ip;
 "Key":"domain"时， "Value":值表示域名;
@@ -103,7 +103,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回黑/白名单的记录，
+     * Set 返回黑/白名单的记录，
 "Key":"ip"时，"Value":值表示ip;
 "Key":"domain"时， "Value":值表示域名;
 "Key":"type"时，"Value":值表示黑白名单类型(white为白名单，block为黑名单);
@@ -119,7 +119,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -127,7 +127,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -135,7 +135,7 @@ public class DescribeCCIpAllowDenyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

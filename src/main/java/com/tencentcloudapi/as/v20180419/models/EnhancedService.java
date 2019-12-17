@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnhancedService  extends AbstractModel{
+public class EnhancedService extends AbstractModel{
 
     /**
     * 开启云安全服务。若不指定该参数，则默认开启云安全服务。
@@ -37,7 +37,7 @@ public class EnhancedService  extends AbstractModel{
     private RunMonitorServiceEnabled MonitorService;
 
     /**
-     * 获取开启云安全服务。若不指定该参数，则默认开启云安全服务。
+     * Get 开启云安全服务。若不指定该参数，则默认开启云安全服务。 
      * @return SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      */
     public RunSecurityServiceEnabled getSecurityService() {
@@ -45,7 +45,7 @@ public class EnhancedService  extends AbstractModel{
     }
 
     /**
-     * 设置开启云安全服务。若不指定该参数，则默认开启云安全服务。
+     * Set 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      * @param SecurityService 开启云安全服务。若不指定该参数，则默认开启云安全服务。
      */
     public void setSecurityService(RunSecurityServiceEnabled SecurityService) {
@@ -53,7 +53,7 @@ public class EnhancedService  extends AbstractModel{
     }
 
     /**
-     * 获取开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * Get 开启云监控服务。若不指定该参数，则默认开启云监控服务。 
      * @return MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public RunMonitorServiceEnabled getMonitorService() {
@@ -61,7 +61,7 @@ public class EnhancedService  extends AbstractModel{
     }
 
     /**
-     * 设置开启云监控服务。若不指定该参数，则默认开启云监控服务。
+     * Set 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      * @param MonitorService 开启云监控服务。若不指定该参数，则默认开启云监控服务。
      */
     public void setMonitorService(RunMonitorServiceEnabled MonitorService) {
@@ -69,7 +69,7 @@ public class EnhancedService  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SecurityService.", this.SecurityService);

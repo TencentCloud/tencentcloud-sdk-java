@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VehicleRegCertOCRResponse  extends AbstractModel{
+public class VehicleRegCertOCRResponse extends AbstractModel{
 
     /**
     * 机动车登记证书识别结果，具体内容请点击左侧链接。
@@ -37,7 +37,7 @@ public class VehicleRegCertOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取机动车登记证书识别结果，具体内容请点击左侧链接。
+     * Get 机动车登记证书识别结果，具体内容请点击左侧链接。 
      * @return VehicleRegCertInfos 机动车登记证书识别结果，具体内容请点击左侧链接。
      */
     public VehicleRegCertInfo [] getVehicleRegCertInfos() {
@@ -45,7 +45,7 @@ public class VehicleRegCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机动车登记证书识别结果，具体内容请点击左侧链接。
+     * Set 机动车登记证书识别结果，具体内容请点击左侧链接。
      * @param VehicleRegCertInfos 机动车登记证书识别结果，具体内容请点击左侧链接。
      */
     public void setVehicleRegCertInfos(VehicleRegCertInfo [] VehicleRegCertInfos) {
@@ -53,7 +53,7 @@ public class VehicleRegCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class VehicleRegCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class VehicleRegCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VehicleRegCertInfos.", this.VehicleRegCertInfos);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddIp6RulesResponse  extends AbstractModel{
+public class AddIp6RulesResponse extends AbstractModel{
 
     /**
     * IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
@@ -37,7 +37,7 @@ public class AddIp6RulesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
+     * Get IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx 
      * @return Ip6RuleSet IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
      */
     public String [] getIp6RuleSet() {
@@ -45,7 +45,7 @@ public class AddIp6RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
+     * Set IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
      * @param Ip6RuleSet IPV6转换规则唯一ID数组，形如rule6-xxxxxxxx
      */
     public void setIp6RuleSet(String [] Ip6RuleSet) {
@@ -53,7 +53,7 @@ public class AddIp6RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class AddIp6RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class AddIp6RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6RuleSet.", this.Ip6RuleSet);

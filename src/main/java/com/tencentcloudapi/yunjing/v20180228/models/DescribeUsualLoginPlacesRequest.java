@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsualLoginPlacesRequest  extends AbstractModel{
+public class DescribeUsualLoginPlacesRequest extends AbstractModel{
 
     /**
     * 云镜客户端UUID
@@ -30,7 +30,7 @@ public class DescribeUsualLoginPlacesRequest  extends AbstractModel{
     private String Uuid;
 
     /**
-     * 获取云镜客户端UUID
+     * Get 云镜客户端UUID 
      * @return Uuid 云镜客户端UUID
      */
     public String getUuid() {
@@ -38,7 +38,7 @@ public class DescribeUsualLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端UUID
+     * Set 云镜客户端UUID
      * @param Uuid 云镜客户端UUID
      */
     public void setUuid(String Uuid) {
@@ -46,7 +46,7 @@ public class DescribeUsualLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

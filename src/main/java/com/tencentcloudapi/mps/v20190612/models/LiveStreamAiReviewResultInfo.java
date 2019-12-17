@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiReviewResultInfo  extends AbstractModel{
+public class LiveStreamAiReviewResultInfo extends AbstractModel{
 
     /**
     * 内容审核结果列表。
@@ -30,7 +30,7 @@ public class LiveStreamAiReviewResultInfo  extends AbstractModel{
     private LiveStreamAiReviewResultItem [] ResultSet;
 
     /**
-     * 获取内容审核结果列表。
+     * Get 内容审核结果列表。 
      * @return ResultSet 内容审核结果列表。
      */
     public LiveStreamAiReviewResultItem [] getResultSet() {
@@ -38,7 +38,7 @@ public class LiveStreamAiReviewResultInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核结果列表。
+     * Set 内容审核结果列表。
      * @param ResultSet 内容审核结果列表。
      */
     public void setResultSet(LiveStreamAiReviewResultItem [] ResultSet) {
@@ -46,7 +46,7 @@ public class LiveStreamAiReviewResultInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);

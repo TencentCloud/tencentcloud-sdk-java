@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HostResource  extends AbstractModel{
+public class HostResource extends AbstractModel{
 
     /**
     * cdh实例总cpu核数
@@ -65,7 +65,7 @@ public class HostResource  extends AbstractModel{
     private Integer DiskAvailable;
 
     /**
-     * 获取cdh实例总cpu核数
+     * Get cdh实例总cpu核数 
      * @return CpuTotal cdh实例总cpu核数
      */
     public Integer getCpuTotal() {
@@ -73,7 +73,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例总cpu核数
+     * Set cdh实例总cpu核数
      * @param CpuTotal cdh实例总cpu核数
      */
     public void setCpuTotal(Integer CpuTotal) {
@@ -81,7 +81,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 获取cdh实例可用cpu核数
+     * Get cdh实例可用cpu核数 
      * @return CpuAvailable cdh实例可用cpu核数
      */
     public Integer getCpuAvailable() {
@@ -89,7 +89,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例可用cpu核数
+     * Set cdh实例可用cpu核数
      * @param CpuAvailable cdh实例可用cpu核数
      */
     public void setCpuAvailable(Integer CpuAvailable) {
@@ -97,7 +97,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 获取cdh实例总内存大小（单位为:GiB）
+     * Get cdh实例总内存大小（单位为:GiB） 
      * @return MemTotal cdh实例总内存大小（单位为:GiB）
      */
     public Float getMemTotal() {
@@ -105,7 +105,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例总内存大小（单位为:GiB）
+     * Set cdh实例总内存大小（单位为:GiB）
      * @param MemTotal cdh实例总内存大小（单位为:GiB）
      */
     public void setMemTotal(Float MemTotal) {
@@ -113,7 +113,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 获取cdh实例可用内存大小（单位为:GiB）
+     * Get cdh实例可用内存大小（单位为:GiB） 
      * @return MemAvailable cdh实例可用内存大小（单位为:GiB）
      */
     public Float getMemAvailable() {
@@ -121,7 +121,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例可用内存大小（单位为:GiB）
+     * Set cdh实例可用内存大小（单位为:GiB）
      * @param MemAvailable cdh实例可用内存大小（单位为:GiB）
      */
     public void setMemAvailable(Float MemAvailable) {
@@ -129,7 +129,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 获取cdh实例总磁盘大小（单位为:GiB）
+     * Get cdh实例总磁盘大小（单位为:GiB） 
      * @return DiskTotal cdh实例总磁盘大小（单位为:GiB）
      */
     public Integer getDiskTotal() {
@@ -137,7 +137,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例总磁盘大小（单位为:GiB）
+     * Set cdh实例总磁盘大小（单位为:GiB）
      * @param DiskTotal cdh实例总磁盘大小（单位为:GiB）
      */
     public void setDiskTotal(Integer DiskTotal) {
@@ -145,7 +145,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 获取cdh实例可用磁盘大小（单位为:GiB）
+     * Get cdh实例可用磁盘大小（单位为:GiB） 
      * @return DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
      */
     public Integer getDiskAvailable() {
@@ -153,7 +153,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 设置cdh实例可用磁盘大小（单位为:GiB）
+     * Set cdh实例可用磁盘大小（单位为:GiB）
      * @param DiskAvailable cdh实例可用磁盘大小（单位为:GiB）
      */
     public void setDiskAvailable(Integer DiskAvailable) {
@@ -161,7 +161,7 @@ public class HostResource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CpuTotal", this.CpuTotal);

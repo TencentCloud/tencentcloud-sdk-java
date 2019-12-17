@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchPersonsResponse  extends AbstractModel{
+public class SearchPersonsResponse extends AbstractModel{
 
     /**
     * 识别结果。
@@ -52,7 +52,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别结果。
+     * Get 识别结果。 
      * @return Results 识别结果。
      */
     public Result [] getResults() {
@@ -60,7 +60,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果。
+     * Set 识别结果。
      * @param Results 识别结果。
      */
     public void setResults(Result [] Results) {
@@ -68,7 +68,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
+     * Get 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。 
      * @return PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      */
     public Long getPersonNum() {
@@ -76,7 +76,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
+     * Set 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      * @param PersonNum 搜索的人员库中包含的人员数。若输入图片中所有人脸均不符合质量要求，则返回0。
      */
     public void setPersonNum(Long PersonNum) {
@@ -84,8 +84,8 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,7 +94,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -112,7 +112,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -120,7 +120,7 @@ public class SearchPersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Results.", this.Results);

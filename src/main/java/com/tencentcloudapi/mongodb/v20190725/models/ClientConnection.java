@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClientConnection  extends AbstractModel{
+public class ClientConnection extends AbstractModel{
 
     /**
     * 连接的客户端IP
@@ -37,7 +37,7 @@ public class ClientConnection  extends AbstractModel{
     private Integer Count;
 
     /**
-     * 获取连接的客户端IP
+     * Get 连接的客户端IP 
      * @return IP 连接的客户端IP
      */
     public String getIP() {
@@ -45,7 +45,7 @@ public class ClientConnection  extends AbstractModel{
     }
 
     /**
-     * 设置连接的客户端IP
+     * Set 连接的客户端IP
      * @param IP 连接的客户端IP
      */
     public void setIP(String IP) {
@@ -53,7 +53,7 @@ public class ClientConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对应客户端IP的连接数
+     * Get 对应客户端IP的连接数 
      * @return Count 对应客户端IP的连接数
      */
     public Integer getCount() {
@@ -61,7 +61,7 @@ public class ClientConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对应客户端IP的连接数
+     * Set 对应客户端IP的连接数
      * @param Count 对应客户端IP的连接数
      */
     public void setCount(Integer Count) {
@@ -69,7 +69,7 @@ public class ClientConnection  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IP", this.IP);

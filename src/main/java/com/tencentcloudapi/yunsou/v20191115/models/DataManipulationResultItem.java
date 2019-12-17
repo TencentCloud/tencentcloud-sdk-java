@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataManipulationResultItem  extends AbstractModel{
+public class DataManipulationResultItem extends AbstractModel{
 
     /**
     * 结果
@@ -44,7 +44,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     private Long Errno;
 
     /**
-     * 获取结果
+     * Get 结果 
      * @return Result 结果
      */
     public String getResult() {
@@ -52,7 +52,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置结果
+     * Set 结果
      * @param Result 结果
      */
     public void setResult(String Result) {
@@ -60,7 +60,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取文档ID
+     * Get 文档ID 
      * @return DocId 文档ID
      */
     public String getDocId() {
@@ -68,7 +68,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置文档ID
+     * Set 文档ID
      * @param DocId 文档ID
      */
     public void setDocId(String DocId) {
@@ -76,7 +76,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
+     * Get 错误码 
      * @return Errno 错误码
      */
     public Long getErrno() {
@@ -84,7 +84,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
      * @param Errno 错误码
      */
     public void setErrno(Long Errno) {
@@ -92,7 +92,7 @@ public class DataManipulationResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

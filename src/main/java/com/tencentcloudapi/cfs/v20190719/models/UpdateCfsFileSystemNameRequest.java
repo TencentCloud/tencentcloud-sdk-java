@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
+public class UpdateCfsFileSystemNameRequest extends AbstractModel{
 
     /**
     * 文件系统 ID
@@ -37,7 +37,7 @@ public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
     private String FsName;
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -45,7 +45,7 @@ public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -53,7 +53,7 @@ public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return FsName 用户自定义文件系统名称
      */
     public String getFsName() {
@@ -61,7 +61,7 @@ public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param FsName 用户自定义文件系统名称
      */
     public void setFsName(String FsName) {
@@ -69,7 +69,7 @@ public class UpdateCfsFileSystemNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

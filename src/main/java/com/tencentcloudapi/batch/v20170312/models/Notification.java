@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Notification  extends AbstractModel{
+public class Notification extends AbstractModel{
 
     /**
     * CMQ主题名字，要求主题名有效且关联订阅
@@ -37,7 +37,7 @@ public class Notification  extends AbstractModel{
     private EventConfig [] EventConfigs;
 
     /**
-     * 获取CMQ主题名字，要求主题名有效且关联订阅
+     * Get CMQ主题名字，要求主题名有效且关联订阅 
      * @return TopicName CMQ主题名字，要求主题名有效且关联订阅
      */
     public String getTopicName() {
@@ -45,7 +45,7 @@ public class Notification  extends AbstractModel{
     }
 
     /**
-     * 设置CMQ主题名字，要求主题名有效且关联订阅
+     * Set CMQ主题名字，要求主题名有效且关联订阅
      * @param TopicName CMQ主题名字，要求主题名有效且关联订阅
      */
     public void setTopicName(String TopicName) {
@@ -53,7 +53,7 @@ public class Notification  extends AbstractModel{
     }
 
     /**
-     * 获取事件配置
+     * Get 事件配置 
      * @return EventConfigs 事件配置
      */
     public EventConfig [] getEventConfigs() {
@@ -61,7 +61,7 @@ public class Notification  extends AbstractModel{
     }
 
     /**
-     * 设置事件配置
+     * Set 事件配置
      * @param EventConfigs 事件配置
      */
     public void setEventConfigs(EventConfig [] EventConfigs) {
@@ -69,7 +69,7 @@ public class Notification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);

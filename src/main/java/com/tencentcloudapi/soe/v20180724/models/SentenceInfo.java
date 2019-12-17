@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceInfo  extends AbstractModel{
+public class SentenceInfo extends AbstractModel{
 
     /**
     * 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
@@ -65,7 +65,7 @@ public class SentenceInfo  extends AbstractModel{
     private Float SuggestedScore;
 
     /**
-     * 获取句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     * Get 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1. 
      * @return SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      */
     public Integer getSentenceId() {
@@ -73,7 +73,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
+     * Set 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      * @param SentenceId 句子序号，在段落、自由说模式下有效，表示断句序号，最后的综合结果的为-1.
      */
     public void setSentenceId(Integer SentenceId) {
@@ -81,7 +81,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取详细发音评估结果
+     * Get 详细发音评估结果 
      * @return Words 详细发音评估结果
      */
     public WordRsp [] getWords() {
@@ -89,7 +89,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置详细发音评估结果
+     * Set 详细发音评估结果
      * @param Words 详细发音评估结果
      */
     public void setWords(WordRsp [] Words) {
@@ -97,7 +97,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
+     * Get 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。 
      * @return PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
      */
     public Float getPronAccuracy() {
@@ -105,7 +105,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
+     * Set 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
      * @param PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -113,7 +113,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
      * @return PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public Float getPronFluency() {
@@ -121,7 +121,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      * @param PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public void setPronFluency(Float PronFluency) {
@@ -129,7 +129,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
      * @return PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public Float getPronCompletion() {
@@ -137,7 +137,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      * @param PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public void setPronCompletion(Float PronCompletion) {
@@ -145,7 +145,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * Get 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。 
      * @return SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      */
     public Float getSuggestedScore() {
@@ -153,7 +153,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * Set 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      * @param SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）* 完整度（PronCompletionfloat）*（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      */
     public void setSuggestedScore(Float SuggestedScore) {
@@ -161,7 +161,7 @@ public class SentenceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SentenceId", this.SentenceId);

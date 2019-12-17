@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneDayFlow  extends AbstractModel{
+public class ZoneDayFlow extends AbstractModel{
 
     /**
     * 日期，如 2018-08-6
@@ -37,7 +37,7 @@ public class ZoneDayFlow  extends AbstractModel{
     private Integer FlowCount;
 
     /**
-     * 获取日期，如 2018-08-6
+     * Get 日期，如 2018-08-6 
      * @return Day 日期，如 2018-08-6
      */
     public String getDay() {
@@ -45,7 +45,7 @@ public class ZoneDayFlow  extends AbstractModel{
     }
 
     /**
-     * 设置日期，如 2018-08-6
+     * Set 日期，如 2018-08-6
      * @param Day 日期，如 2018-08-6
      */
     public void setDay(String Day) {
@@ -53,7 +53,7 @@ public class ZoneDayFlow  extends AbstractModel{
     }
 
     /**
-     * 获取客流量
+     * Get 客流量 
      * @return FlowCount 客流量
      */
     public Integer getFlowCount() {
@@ -61,7 +61,7 @@ public class ZoneDayFlow  extends AbstractModel{
     }
 
     /**
-     * 设置客流量
+     * Set 客流量
      * @param FlowCount 客流量
      */
     public void setFlowCount(Integer FlowCount) {
@@ -69,7 +69,7 @@ public class ZoneDayFlow  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Day", this.Day);

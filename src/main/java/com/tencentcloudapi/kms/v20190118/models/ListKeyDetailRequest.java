@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListKeyDetailRequest  extends AbstractModel{
+public class ListKeyDetailRequest extends AbstractModel{
 
     /**
     * 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
@@ -72,7 +72,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     private String Origin;
 
     /**
-     * 获取含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
     public Long getOffset() {
@@ -80,7 +80,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
+     * Set 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      * @param Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
     public void setOffset(Long Offset) {
@@ -88,7 +88,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Get 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200 
      * @return Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
      */
     public Long getLimit() {
@@ -96,7 +96,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
+     * Set 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
      * @param Limit 含义跟 SQL 查询的 Limit 一致，表示本次获最多获取 Limit 个元素。缺省值为10，最大值为200
      */
     public void setLimit(Long Limit) {
@@ -104,7 +104,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
+     * Get 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk 
      * @return Role 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
      */
     public Long getRole() {
@@ -112,7 +112,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
+     * Set 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
      * @param Role 根据创建者角色筛选，默认 0 表示用户自己创建的cmk， 1 表示授权其它云产品自动创建的cmk
      */
     public void setRole(Long Role) {
@@ -120,7 +120,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+     * Get 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序 
      * @return OrderType 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
      */
     public Long getOrderType() {
@@ -128,7 +128,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
+     * Set 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
      * @param OrderType 根据CMK创建时间排序， 0 表示按照降序排序，1表示按照升序排序
      */
     public void setOrderType(Long OrderType) {
@@ -136,7 +136,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
+     * Get 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK 
      * @return KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
      */
     public Long getKeyState() {
@@ -144,7 +144,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
+     * Set 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
      * @param KeyState 根据CMK状态筛选， 0表示全部CMK， 1 表示仅查询Enabled CMK， 2 表示仅查询Disabled CMK，3 表示查询PendingDelete 状态的CMK(处于计划删除状态的Key)，4 表示查询 PendingImport 状态的CMK
      */
     public void setKeyState(Long KeyState) {
@@ -152,7 +152,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据KeyId或者Alias进行模糊匹配查询
+     * Get 根据KeyId或者Alias进行模糊匹配查询 
      * @return SearchKeyAlias 根据KeyId或者Alias进行模糊匹配查询
      */
     public String getSearchKeyAlias() {
@@ -160,7 +160,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据KeyId或者Alias进行模糊匹配查询
+     * Set 根据KeyId或者Alias进行模糊匹配查询
      * @param SearchKeyAlias 根据KeyId或者Alias进行模糊匹配查询
      */
     public void setSearchKeyAlias(String SearchKeyAlias) {
@@ -168,7 +168,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * Get 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。 
      * @return Origin 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
      */
     public String getOrigin() {
@@ -176,7 +176,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
+     * Set 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
      * @param Origin 根据CMK类型筛选， "TENCENT_KMS" 表示筛选密钥材料由KMS创建的CMK， "EXTERNAL" 表示筛选密钥材料需要用户导入的 EXTERNAL类型CMK，"ALL" 或者不设置表示两种类型都查询，大小写敏感。
      */
     public void setOrigin(String Origin) {
@@ -184,7 +184,7 @@ public class ListKeyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

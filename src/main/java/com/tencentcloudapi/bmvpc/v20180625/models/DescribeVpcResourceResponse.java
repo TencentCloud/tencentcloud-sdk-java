@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcResourceResponse  extends AbstractModel{
+public class DescribeVpcResourceResponse extends AbstractModel{
 
     /**
     * VPC数据
@@ -44,7 +44,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取VPC数据
+     * Get VPC数据 
      * @return VpcResourceSet VPC数据
      */
     public VpcResource [] getVpcResourceSet() {
@@ -52,7 +52,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置VPC数据
+     * Set VPC数据
      * @param VpcResourceSet VPC数据
      */
     public void setVpcResourceSet(VpcResource [] VpcResourceSet) {
@@ -60,7 +60,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取VPC个数
+     * Get VPC个数 
      * @return TotalCount VPC个数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置VPC个数
+     * Set VPC个数
      * @param TotalCount VPC个数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeVpcResourceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VpcResourceSet.", this.VpcResourceSet);

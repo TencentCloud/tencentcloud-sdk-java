@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDealsByCondResponse  extends AbstractModel{
+public class DescribeDealsByCondResponse extends AbstractModel{
 
     /**
     * 订单列表
@@ -44,7 +44,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取订单列表
+     * Get 订单列表 
      * @return Deals 订单列表
      */
     public Deal [] getDeals() {
@@ -52,7 +52,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订单列表
+     * Set 订单列表
      * @param Deals 订单列表
      */
     public void setDeals(Deal [] Deals) {
@@ -60,7 +60,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 获取订单总数
+     * Get 订单总数 
      * @return TotalCount 订单总数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订单总数
+     * Set 订单总数
      * @param TotalCount 订单总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDealsByCondResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Deals.", this.Deals);

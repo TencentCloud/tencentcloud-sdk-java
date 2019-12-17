@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsSendStatus  extends AbstractModel{
+public class PullSmsSendStatus extends AbstractModel{
 
     /**
     * 用户实际接收到短信的时间
@@ -72,7 +72,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取用户实际接收到短信的时间
+     * Get 用户实际接收到短信的时间 
      * @return UserReceiveTime 用户实际接收到短信的时间
      */
     public String getUserReceiveTime() {
@@ -80,7 +80,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置用户实际接收到短信的时间
+     * Set 用户实际接收到短信的时间
      * @param UserReceiveTime 用户实际接收到短信的时间
      */
     public void setUserReceiveTime(String UserReceiveTime) {
@@ -88,7 +88,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取国家（或地区）码
+     * Get 国家（或地区）码 
      * @return NationCode 国家（或地区）码
      */
     public String getNationCode() {
@@ -96,7 +96,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置国家（或地区）码
+     * Set 国家（或地区）码
      * @param NationCode 国家（或地区）码
      */
     public void setNationCode(String NationCode) {
@@ -104,7 +104,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号 
      * @return PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public String getPurePhoneNumber() {
@@ -112,7 +112,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      * @param PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public void setPurePhoneNumber(String PurePhoneNumber) {
@@ -120,7 +120,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取手机号码，普通格式，示例如：13711112222
+     * Get 手机号码，普通格式，示例如：13711112222 
      * @return PhoneNumber 手机号码，普通格式，示例如：13711112222
      */
     public String getPhoneNumber() {
@@ -128,7 +128,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置手机号码，普通格式，示例如：13711112222
+     * Set 手机号码，普通格式，示例如：13711112222
      * @param PhoneNumber 手机号码，普通格式，示例如：13711112222
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -136,7 +136,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取本次发送标识 ID
+     * Get 本次发送标识 ID 
      * @return SerialNo 本次发送标识 ID
      */
     public String getSerialNo() {
@@ -144,7 +144,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置本次发送标识 ID
+     * Set 本次发送标识 ID
      * @param SerialNo 本次发送标识 ID
      */
     public void setSerialNo(String SerialNo) {
@@ -152,7 +152,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
+     * Get 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败） 
      * @return ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
      */
     public String getReportStatus() {
@@ -160,7 +160,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
+     * Set 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
      * @param ReportStatus 实际是否收到短信接收状态，SUCCESS（成功）、FAIL（失败）
      */
     public void setReportStatus(String ReportStatus) {
@@ -168,7 +168,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 获取用户接收短信状态描述
+     * Get 用户接收短信状态描述 
      * @return Description 用户接收短信状态描述
      */
     public String getDescription() {
@@ -176,7 +176,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 设置用户接收短信状态描述
+     * Set 用户接收短信状态描述
      * @param Description 用户接收短信状态描述
      */
     public void setDescription(String Description) {
@@ -184,7 +184,7 @@ public class PullSmsSendStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserReceiveTime", this.UserReceiveTime);

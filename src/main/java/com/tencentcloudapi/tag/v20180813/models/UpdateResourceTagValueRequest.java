@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateResourceTagValueRequest  extends AbstractModel{
+public class UpdateResourceTagValueRequest extends AbstractModel{
 
     /**
     * 资源关联的标签键
@@ -44,7 +44,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     private String Resource;
 
     /**
-     * 获取资源关联的标签键
+     * Get 资源关联的标签键 
      * @return TagKey 资源关联的标签键
      */
     public String getTagKey() {
@@ -52,7 +52,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源关联的标签键
+     * Set 资源关联的标签键
      * @param TagKey 资源关联的标签键
      */
     public void setTagKey(String TagKey) {
@@ -60,7 +60,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的标签值
+     * Get 修改后的标签值 
      * @return TagValue 修改后的标签值
      */
     public String getTagValue() {
@@ -68,7 +68,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的标签值
+     * Set 修改后的标签值
      * @param TagValue 修改后的标签值
      */
     public void setTagValue(String TagValue) {
@@ -76,7 +76,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源的六段式描述
+     * Get 资源的六段式描述 
      * @return Resource 资源的六段式描述
      */
     public String getResource() {
@@ -84,7 +84,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源的六段式描述
+     * Set 资源的六段式描述
      * @param Resource 资源的六段式描述
      */
     public void setResource(String Resource) {
@@ -92,7 +92,7 @@ public class UpdateResourceTagValueRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

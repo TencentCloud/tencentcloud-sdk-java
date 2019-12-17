@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDirectConnectGatewayRequest  extends AbstractModel{
+public class DeleteDirectConnectGatewayRequest extends AbstractModel{
 
     /**
     * 专线网关唯一`ID`，形如：`dcg-9o233uri`。
@@ -30,7 +30,7 @@ public class DeleteDirectConnectGatewayRequest  extends AbstractModel{
     private String DirectConnectGatewayId;
 
     /**
-     * 获取专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Get 专线网关唯一`ID`，形如：`dcg-9o233uri`。 
      * @return DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public String getDirectConnectGatewayId() {
@@ -38,7 +38,7 @@ public class DeleteDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Set 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      * @param DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -46,7 +46,7 @@ public class DeleteDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

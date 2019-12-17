@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvokeResponse  extends AbstractModel{
+public class InvokeResponse extends AbstractModel{
 
     /**
     * 交易ID
@@ -44,7 +44,7 @@ public class InvokeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取交易ID
+     * Get 交易ID 
      * @return Txid 交易ID
      */
     public String getTxid() {
@@ -52,7 +52,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID
+     * Set 交易ID
      * @param Txid 交易ID
      */
     public void setTxid(String Txid) {
@@ -60,7 +60,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易执行结果
+     * Get 交易执行结果 
      * @return Events 交易执行结果
      */
     public String getEvents() {
@@ -68,7 +68,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易执行结果
+     * Set 交易执行结果
      * @param Events 交易执行结果
      */
     public void setEvents(String Events) {
@@ -76,7 +76,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class InvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Txid", this.Txid);

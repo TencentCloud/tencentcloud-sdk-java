@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
+public class DescribeAutoScalingActivitiesResponse extends AbstractModel{
 
     /**
     * 符合条件的伸缩活动数量。
@@ -44,7 +44,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的伸缩活动数量。
+     * Get 符合条件的伸缩活动数量。 
      * @return TotalCount 符合条件的伸缩活动数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的伸缩活动数量。
+     * Set 符合条件的伸缩活动数量。
      * @param TotalCount 符合条件的伸缩活动数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合条件的伸缩活动信息集合。
+     * Get 符合条件的伸缩活动信息集合。 
      * @return ActivitySet 符合条件的伸缩活动信息集合。
      */
     public Activity [] getActivitySet() {
@@ -68,7 +68,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的伸缩活动信息集合。
+     * Set 符合条件的伸缩活动信息集合。
      * @param ActivitySet 符合条件的伸缩活动信息集合。
      */
     public void setActivitySet(Activity [] ActivitySet) {
@@ -76,7 +76,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeAutoScalingActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

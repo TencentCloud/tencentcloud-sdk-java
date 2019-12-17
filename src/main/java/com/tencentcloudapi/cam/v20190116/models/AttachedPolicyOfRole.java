@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachedPolicyOfRole  extends AbstractModel{
+public class AttachedPolicyOfRole extends AbstractModel{
 
     /**
     * 策略ID
@@ -59,7 +59,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     private Long CreateMode;
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public Long getPolicyId() {
@@ -67,7 +67,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(Long PolicyId) {
@@ -75,7 +75,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return PolicyName 策略名称
      */
     public String getPolicyName() {
@@ -83,7 +83,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param PolicyName 策略名称
      */
     public void setPolicyName(String PolicyName) {
@@ -91,7 +91,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 获取绑定时间
+     * Get 绑定时间 
      * @return AddTime 绑定时间
      */
     public String getAddTime() {
@@ -99,7 +99,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 设置绑定时间
+     * Set 绑定时间
      * @param AddTime 绑定时间
      */
     public void setAddTime(String AddTime) {
@@ -107,8 +107,8 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 获取策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略类型，User表示自定义策略，QCS表示预设策略
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 设置策略类型，User表示自定义策略，QCS表示预设策略
+     * Set 策略类型，User表示自定义策略，QCS表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,7 +127,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 获取策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
+     * Get 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建 
      * @return CreateMode 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
      */
     public Long getCreateMode() {
@@ -135,7 +135,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 设置策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
+     * Set 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
      * @param CreateMode 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
      */
     public void setCreateMode(Long CreateMode) {
@@ -143,7 +143,7 @@ public class AttachedPolicyOfRole  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

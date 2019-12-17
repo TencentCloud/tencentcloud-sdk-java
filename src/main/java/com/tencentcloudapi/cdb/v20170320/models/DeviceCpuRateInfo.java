@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceCpuRateInfo  extends AbstractModel{
+public class DeviceCpuRateInfo extends AbstractModel{
 
     /**
     * Cpu核编号
@@ -37,7 +37,7 @@ public class DeviceCpuRateInfo  extends AbstractModel{
     private Integer [] Rate;
 
     /**
-     * 获取Cpu核编号
+     * Get Cpu核编号 
      * @return CpuCore Cpu核编号
      */
     public Integer getCpuCore() {
@@ -45,7 +45,7 @@ public class DeviceCpuRateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cpu核编号
+     * Set Cpu核编号
      * @param CpuCore Cpu核编号
      */
     public void setCpuCore(Integer CpuCore) {
@@ -53,7 +53,7 @@ public class DeviceCpuRateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Cpu使用率
+     * Get Cpu使用率 
      * @return Rate Cpu使用率
      */
     public Integer [] getRate() {
@@ -61,7 +61,7 @@ public class DeviceCpuRateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cpu使用率
+     * Set Cpu使用率
      * @param Rate Cpu使用率
      */
     public void setRate(Integer [] Rate) {
@@ -69,7 +69,7 @@ public class DeviceCpuRateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CpuCore", this.CpuCore);

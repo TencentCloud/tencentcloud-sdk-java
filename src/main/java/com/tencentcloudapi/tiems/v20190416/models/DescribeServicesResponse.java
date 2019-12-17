@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServicesResponse  extends AbstractModel{
+public class DescribeServicesResponse extends AbstractModel{
 
     /**
     * 服务列表
@@ -44,7 +44,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取服务列表
+     * Get 服务列表 
      * @return Services 服务列表
      */
     public ModelService [] getServices() {
@@ -52,7 +52,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务列表
+     * Set 服务列表
      * @param Services 服务列表
      */
     public void setServices(ModelService [] Services) {
@@ -60,7 +60,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务总数
+     * Get 服务总数 
      * @return TotalCount 服务总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务总数
+     * Set 服务总数
      * @param TotalCount 服务总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeServicesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Services.", this.Services);

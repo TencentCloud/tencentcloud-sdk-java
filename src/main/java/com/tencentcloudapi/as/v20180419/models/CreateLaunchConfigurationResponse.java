@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchConfigurationResponse  extends AbstractModel{
+public class CreateLaunchConfigurationResponse extends AbstractModel{
 
     /**
     * 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
@@ -37,7 +37,7 @@ public class CreateLaunchConfigurationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+     * Get 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。 
      * @return LaunchConfigurationId 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
      */
     public String getLaunchConfigurationId() {
@@ -45,7 +45,7 @@ public class CreateLaunchConfigurationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
+     * Set 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
      * @param LaunchConfigurationId 当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -53,7 +53,7 @@ public class CreateLaunchConfigurationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateLaunchConfigurationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateLaunchConfigurationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);

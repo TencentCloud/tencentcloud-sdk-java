@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonsResponse  extends AbstractModel{
+public class DescribePersonsResponse extends AbstractModel{
 
     /**
     * 人员列表
@@ -44,7 +44,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员列表
+     * Get 人员列表 
      * @return PersonSet 人员列表
      */
     public Person [] getPersonSet() {
@@ -52,7 +52,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员列表
+     * Set 人员列表
      * @param PersonSet 人员列表
      */
     public void setPersonSet(Person [] PersonSet) {
@@ -60,7 +60,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员总数
+     * Get 人员总数 
      * @return TotalCount 人员总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员总数
+     * Set 人员总数
      * @param TotalCount 人员总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribePersonsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PersonSet.", this.PersonSet);

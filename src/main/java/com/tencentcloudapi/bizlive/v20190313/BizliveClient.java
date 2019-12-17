@@ -29,21 +29,10 @@ public class BizliveClient extends AbstractClient{
     private static String endpoint = "bizlive.tencentcloudapi.com";
     private static String version = "2019-03-13";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public BizliveClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public BizliveClient(Credential credential, String region, ClientProfile profile) {
         super(BizliveClient.endpoint, BizliveClient.version, credential, region, profile);
     }

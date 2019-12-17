@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealServerStatus  extends AbstractModel{
+public class RealServerStatus extends AbstractModel{
 
     /**
     * 源站ID。
@@ -44,7 +44,7 @@ public class RealServerStatus  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取源站ID。
+     * Get 源站ID。 
      * @return RealServerId 源站ID。
      */
     public String getRealServerId() {
@@ -52,7 +52,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 设置源站ID。
+     * Set 源站ID。
      * @param RealServerId 源站ID。
      */
     public void setRealServerId(String RealServerId) {
@@ -60,7 +60,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 获取0: 未被绑定 1：被规则或者监听器绑定。
+     * Get 0: 未被绑定 1：被规则或者监听器绑定。 
      * @return BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
      */
     public Long getBindStatus() {
@@ -68,7 +68,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 设置0: 未被绑定 1：被规则或者监听器绑定。
+     * Set 0: 未被绑定 1：被规则或者监听器绑定。
      * @param BindStatus 0: 未被绑定 1：被规则或者监听器绑定。
      */
     public void setBindStatus(Long BindStatus) {
@@ -76,7 +76,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 获取绑定此源站的通道ID，没有绑定时为空字符串。
+     * Get 绑定此源站的通道ID，没有绑定时为空字符串。 
      * @return ProxyId 绑定此源站的通道ID，没有绑定时为空字符串。
      */
     public String getProxyId() {
@@ -84,7 +84,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 设置绑定此源站的通道ID，没有绑定时为空字符串。
+     * Set 绑定此源站的通道ID，没有绑定时为空字符串。
      * @param ProxyId 绑定此源站的通道ID，没有绑定时为空字符串。
      */
     public void setProxyId(String ProxyId) {
@@ -92,7 +92,7 @@ public class RealServerStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);

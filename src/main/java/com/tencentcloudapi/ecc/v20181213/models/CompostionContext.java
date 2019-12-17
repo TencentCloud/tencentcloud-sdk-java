@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompostionContext  extends AbstractModel{
+public class CompostionContext extends AbstractModel{
 
     /**
     * 作文内容
@@ -54,7 +54,7 @@ public class CompostionContext  extends AbstractModel{
     private String SessionId;
 
     /**
-     * 获取作文内容
+     * Get 作文内容 
      * @return Content 作文内容
      */
     public String getContent() {
@@ -62,7 +62,7 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 设置作文内容
+     * Set 作文内容
      * @param Content 作文内容
      */
     public void setContent(String Content) {
@@ -70,8 +70,8 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 获取批改结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 批改结果
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CorrectData 批改结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -80,7 +80,7 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 设置批改结果
+     * Set 批改结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CorrectData 批改结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,8 +90,8 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 获取任务 id，用于查询接口
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务 id，用于查询接口
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务 id，用于查询接口
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,7 +100,7 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 设置任务 id，用于查询接口
+     * Set 任务 id，用于查询接口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务 id，用于查询接口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,8 +110,8 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 获取图像识别唯一标识，一次识别一个 SessionId
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 图像识别唯一标识，一次识别一个 SessionId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionId 图像识别唯一标识，一次识别一个 SessionId
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 设置图像识别唯一标识，一次识别一个 SessionId
+     * Set 图像识别唯一标识，一次识别一个 SessionId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 图像识别唯一标识，一次识别一个 SessionId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ public class CompostionContext  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachCcnInstancesRequest  extends AbstractModel{
+public class AttachCcnInstancesRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -44,7 +44,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     private String CcnUin;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -52,7 +52,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -60,7 +60,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关联网络实例列表
+     * Get 关联网络实例列表 
      * @return Instances 关联网络实例列表
      */
     public CcnInstance [] getInstances() {
@@ -68,7 +68,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关联网络实例列表
+     * Set 关联网络实例列表
      * @param Instances 关联网络实例列表
      */
     public void setInstances(CcnInstance [] Instances) {
@@ -76,7 +76,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN所属UIN（根账号），默认当前账号所属UIN
+     * Get CCN所属UIN（根账号），默认当前账号所属UIN 
      * @return CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
      */
     public String getCcnUin() {
@@ -84,7 +84,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN所属UIN（根账号），默认当前账号所属UIN
+     * Set CCN所属UIN（根账号），默认当前账号所属UIN
      * @param CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
      */
     public void setCcnUin(String CcnUin) {
@@ -92,7 +92,7 @@ public class AttachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

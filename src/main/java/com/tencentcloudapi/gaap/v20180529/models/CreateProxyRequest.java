@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxyRequest  extends AbstractModel{
+public class CreateProxyRequest extends AbstractModel{
 
     /**
     * 通道的项目ID。
@@ -95,7 +95,7 @@ public class CreateProxyRequest  extends AbstractModel{
     private String ClonedProxyId;
 
     /**
-     * 获取通道的项目ID。
+     * Get 通道的项目ID。 
      * @return ProjectId 通道的项目ID。
      */
     public Long getProjectId() {
@@ -103,7 +103,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道的项目ID。
+     * Set 通道的项目ID。
      * @param ProjectId 通道的项目ID。
      */
     public void setProjectId(Long ProjectId) {
@@ -111,7 +111,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称。
+     * Get 通道名称。 
      * @return ProxyName 通道名称。
      */
     public String getProxyName() {
@@ -119,7 +119,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称。
+     * Set 通道名称。
      * @param ProxyName 通道名称。
      */
     public void setProxyName(String ProxyName) {
@@ -127,7 +127,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取接入地域。
+     * Get 接入地域。 
      * @return AccessRegion 接入地域。
      */
     public String getAccessRegion() {
@@ -135,7 +135,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置接入地域。
+     * Set 接入地域。
      * @param AccessRegion 接入地域。
      */
     public void setAccessRegion(String AccessRegion) {
@@ -143,7 +143,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道带宽上限，单位：Mbps。
+     * Get 通道带宽上限，单位：Mbps。 
      * @return Bandwidth 通道带宽上限，单位：Mbps。
      */
     public Long getBandwidth() {
@@ -151,7 +151,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道带宽上限，单位：Mbps。
+     * Set 通道带宽上限，单位：Mbps。
      * @param Bandwidth 通道带宽上限，单位：Mbps。
      */
     public void setBandwidth(Long Bandwidth) {
@@ -159,7 +159,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道并发量上限，表示同时在线的连接数，单位：万。
+     * Get 通道并发量上限，表示同时在线的连接数，单位：万。 
      * @return Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public Long getConcurrent() {
@@ -167,7 +167,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道并发量上限，表示同时在线的连接数，单位：万。
+     * Set 通道并发量上限，表示同时在线的连接数，单位：万。
      * @param Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public void setConcurrent(Long Concurrent) {
@@ -175,7 +175,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
+     * Get 源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段 
      * @return RealServerRegion 源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
      */
     public String getRealServerRegion() {
@@ -183,7 +183,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
+     * Set 源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
      * @param RealServerRegion 源站地域。当GroupId存在时，源站地域为通道组的源站地域,此时可不填该字段。当GroupId不存在时，需要填写该字段
      */
     public void setRealServerRegion(String RealServerRegion) {
@@ -191,8 +191,8 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+更多详细信息请参阅：如何保证幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      */
@@ -201,7 +201,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
@@ -211,7 +211,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
+     * Get 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。 
      * @return GroupId 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
      */
     public String getGroupId() {
@@ -219,7 +219,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
+     * Set 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
      * @param GroupId 通道所在的通道组ID，当在通道组中创建通道时必带，否则忽略该字段。
      */
     public void setGroupId(String GroupId) {
@@ -227,7 +227,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道需要添加的标签列表。
+     * Get 通道需要添加的标签列表。 
      * @return TagSet 通道需要添加的标签列表。
      */
     public TagPair [] getTagSet() {
@@ -235,7 +235,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道需要添加的标签列表。
+     * Set 通道需要添加的标签列表。
      * @param TagSet 通道需要添加的标签列表。
      */
     public void setTagSet(TagPair [] TagSet) {
@@ -243,8 +243,8 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被复制的通道ID。只有处于运行中状态的通道可以被复制。
-当设置该参数时，表示复制该通道。
+     * Get 被复制的通道ID。只有处于运行中状态的通道可以被复制。
+当设置该参数时，表示复制该通道。 
      * @return ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
      */
@@ -253,7 +253,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被复制的通道ID。只有处于运行中状态的通道可以被复制。
+     * Set 被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
      * @param ClonedProxyId 被复制的通道ID。只有处于运行中状态的通道可以被复制。
 当设置该参数时，表示复制该通道。
@@ -263,7 +263,7 @@ public class CreateProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

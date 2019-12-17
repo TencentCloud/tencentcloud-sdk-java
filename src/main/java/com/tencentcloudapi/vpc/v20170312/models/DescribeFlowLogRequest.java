@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogRequest  extends AbstractModel{
+public class DescribeFlowLogRequest extends AbstractModel{
 
     /**
     * 私用网络ID或者统一ID，建议使用统一ID
@@ -37,7 +37,7 @@ public class DescribeFlowLogRequest  extends AbstractModel{
     private String FlowLogId;
 
     /**
-     * 获取私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DescribeFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID
      * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DescribeFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志唯一ID
+     * Get 流日志唯一ID 
      * @return FlowLogId 流日志唯一ID
      */
     public String getFlowLogId() {
@@ -61,7 +61,7 @@ public class DescribeFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志唯一ID
+     * Set 流日志唯一ID
      * @param FlowLogId 流日志唯一ID
      */
     public void setFlowLogId(String FlowLogId) {
@@ -69,7 +69,7 @@ public class DescribeFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

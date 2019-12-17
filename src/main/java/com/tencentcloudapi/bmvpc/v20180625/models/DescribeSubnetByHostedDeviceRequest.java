@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
+public class DescribeSubnetByHostedDeviceRequest extends AbstractModel{
 
     /**
     * 托管机器ID, 如chm-xasdfx2j
@@ -51,7 +51,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取托管机器ID, 如chm-xasdfx2j
+     * Get 托管机器ID, 如chm-xasdfx2j 
      * @return InstanceId 托管机器ID, 如chm-xasdfx2j
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器ID, 如chm-xasdfx2j
+     * Set 托管机器ID, 如chm-xasdfx2j
      * @param InstanceId 托管机器ID, 如chm-xasdfx2j
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
+     * Get 子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网 
      * @return Types 子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
      */
     public Long [] getTypes() {
@@ -75,7 +75,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
+     * Set 子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
      * @param Types 子网类型。0: 物理机子网; 7: DOCKER子网 8: 虚拟子网
      */
     public void setTypes(Long [] Types) {
@@ -83,7 +83,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的起始位置。
+     * Get 查询的起始位置。 
      * @return Offset 查询的起始位置。
      */
     public Long getOffset() {
@@ -91,7 +91,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的起始位置。
+     * Set 查询的起始位置。
      * @param Offset 查询的起始位置。
      */
     public void setOffset(Long Offset) {
@@ -99,7 +99,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的个数。
+     * Get 查询的个数。 
      * @return Limit 查询的个数。
      */
     public Long getLimit() {
@@ -107,7 +107,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的个数。
+     * Set 查询的个数。
      * @param Limit 查询的个数。
      */
     public void setLimit(Long Limit) {
@@ -115,7 +115,7 @@ public class DescribeSubnetByHostedDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

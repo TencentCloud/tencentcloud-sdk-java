@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupConfigRequest  extends AbstractModel{
+public class DescribeBackupConfigRequest extends AbstractModel{
 
     /**
     * 实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
@@ -30,7 +30,7 @@ public class DescribeBackupConfigRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class DescribeBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例短实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class DescribeBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransactionDetailForUserResponse  extends AbstractModel{
+public class GetTransactionDetailForUserResponse extends AbstractModel{
 
     /**
     * 交易ID
@@ -121,7 +121,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取交易ID
+     * Get 交易ID 
      * @return TransactionId 交易ID
      */
     public String getTransactionId() {
@@ -129,7 +129,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID
+     * Set 交易ID
      * @param TransactionId 交易ID
      */
     public void setTransactionId(String TransactionId) {
@@ -137,7 +137,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易hash
+     * Get 交易hash 
      * @return TransactionHash 交易hash
      */
     public String getTransactionHash() {
@@ -145,7 +145,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易hash
+     * Set 交易hash
      * @param TransactionHash 交易hash
      */
     public void setTransactionHash(String TransactionHash) {
@@ -153,7 +153,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建交易的组织名
+     * Get 创建交易的组织名 
      * @return CreateOrgName 创建交易的组织名
      */
     public String getCreateOrgName() {
@@ -161,7 +161,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建交易的组织名
+     * Set 创建交易的组织名
      * @param CreateOrgName 创建交易的组织名
      */
     public void setCreateOrgName(String CreateOrgName) {
@@ -169,7 +169,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易类型（普通交易和配置交易）
+     * Get 交易类型（普通交易和配置交易） 
      * @return TransactionType 交易类型（普通交易和配置交易）
      */
     public String getTransactionType() {
@@ -177,7 +177,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易类型（普通交易和配置交易）
+     * Set 交易类型（普通交易和配置交易）
      * @param TransactionType 交易类型（普通交易和配置交易）
      */
     public void setTransactionType(String TransactionType) {
@@ -185,7 +185,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易状态
+     * Get 交易状态 
      * @return TransactionStatus 交易状态
      */
     public String getTransactionStatus() {
@@ -193,7 +193,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易状态
+     * Set 交易状态
      * @param TransactionStatus 交易状态
      */
     public void setTransactionStatus(String TransactionStatus) {
@@ -201,7 +201,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易创建时间
+     * Get 交易创建时间 
      * @return CreateTime 交易创建时间
      */
     public String getCreateTime() {
@@ -209,7 +209,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易创建时间
+     * Set 交易创建时间
      * @param CreateTime 交易创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -217,7 +217,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易数据
+     * Get 交易数据 
      * @return TransactionData 交易数据
      */
     public String getTransactionData() {
@@ -225,7 +225,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易数据
+     * Set 交易数据
      * @param TransactionData 交易数据
      */
     public void setTransactionData(String TransactionData) {
@@ -233,7 +233,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在区块号
+     * Get 交易所在区块号 
      * @return BlockId 交易所在区块号
      */
     public Integer getBlockId() {
@@ -241,7 +241,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在区块号
+     * Set 交易所在区块号
      * @param BlockId 交易所在区块号
      */
     public void setBlockId(Integer BlockId) {
@@ -249,7 +249,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在区块哈希
+     * Get 交易所在区块哈希 
      * @return BlockHash 交易所在区块哈希
      */
     public String getBlockHash() {
@@ -257,7 +257,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在区块哈希
+     * Set 交易所在区块哈希
      * @param BlockHash 交易所在区块哈希
      */
     public void setBlockHash(String BlockHash) {
@@ -265,7 +265,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在区块高度
+     * Get 交易所在区块高度 
      * @return BlockHeight 交易所在区块高度
      */
     public Integer getBlockHeight() {
@@ -273,7 +273,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在区块高度
+     * Set 交易所在区块高度
      * @param BlockHeight 交易所在区块高度
      */
     public void setBlockHeight(Integer BlockHeight) {
@@ -281,7 +281,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称
+     * Get 通道名称 
      * @return ChannelName 通道名称
      */
     public String getChannelName() {
@@ -289,7 +289,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称
+     * Set 通道名称
      * @param ChannelName 通道名称
      */
     public void setChannelName(String ChannelName) {
@@ -297,7 +297,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在合约名称
+     * Get 交易所在合约名称 
      * @return ContractName 交易所在合约名称
      */
     public String getContractName() {
@@ -305,7 +305,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在合约名称
+     * Set 交易所在合约名称
      * @param ContractName 交易所在合约名称
      */
     public void setContractName(String ContractName) {
@@ -313,7 +313,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取背书组织列表
+     * Get 背书组织列表 
      * @return EndorserOrgList 背书组织列表
      */
     public EndorserGroup [] getEndorserOrgList() {
@@ -321,7 +321,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置背书组织列表
+     * Set 背书组织列表
      * @param EndorserOrgList 背书组织列表
      */
     public void setEndorserOrgList(EndorserGroup [] EndorserOrgList) {
@@ -329,7 +329,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -337,7 +337,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -345,7 +345,7 @@ public class GetTransactionDetailForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TransactionId", this.TransactionId);

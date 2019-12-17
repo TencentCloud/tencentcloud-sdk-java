@@ -29,21 +29,10 @@ public class IcClient extends AbstractClient{
     private static String endpoint = "ic.tencentcloudapi.com";
     private static String version = "2019-03-07";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public IcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public IcClient(Credential credential, String region, ClientProfile profile) {
         super(IcClient.endpoint, IcClient.version, credential, region, profile);
     }

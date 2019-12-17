@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcPrivateIpAddress  extends AbstractModel{
+public class VpcPrivateIpAddress extends AbstractModel{
 
     /**
     * `VPC`内网`IP`。
@@ -51,7 +51,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取`VPC`内网`IP`。
+     * Get `VPC`内网`IP`。 
      * @return PrivateIpAddress `VPC`内网`IP`。
      */
     public String getPrivateIpAddress() {
@@ -59,7 +59,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`内网`IP`。
+     * Set `VPC`内网`IP`。
      * @param PrivateIpAddress `VPC`内网`IP`。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
@@ -67,7 +67,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 获取所属子网`CIDR`。
+     * Get 所属子网`CIDR`。 
      * @return CidrBlock 所属子网`CIDR`。
      */
     public String getCidrBlock() {
@@ -75,7 +75,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 设置所属子网`CIDR`。
+     * Set 所属子网`CIDR`。
      * @param CidrBlock 所属子网`CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -83,7 +83,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 获取内网`IP`类型。
+     * Get 内网`IP`类型。 
      * @return PrivateIpAddressType 内网`IP`类型。
      */
     public String getPrivateIpAddressType() {
@@ -91,7 +91,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 设置内网`IP`类型。
+     * Set 内网`IP`类型。
      * @param PrivateIpAddressType 内网`IP`类型。
      */
     public void setPrivateIpAddressType(String PrivateIpAddressType) {
@@ -99,7 +99,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 获取`IP`申请时间。
+     * Get `IP`申请时间。 
      * @return CreatedTime `IP`申请时间。
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 设置`IP`申请时间。
+     * Set `IP`申请时间。
      * @param CreatedTime `IP`申请时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class VpcPrivateIpAddress  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);

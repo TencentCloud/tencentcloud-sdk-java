@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DirectConnect  extends AbstractModel{
+public class DirectConnect extends AbstractModel{
 
     /**
     * 物理专线ID。
@@ -196,7 +196,7 @@ public class DirectConnect  extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
-     * 获取物理专线ID。
+     * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
     public String getDirectConnectId() {
@@ -204,7 +204,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线ID。
+     * Set 物理专线ID。
      * @param DirectConnectId 物理专线ID。
      */
     public void setDirectConnectId(String DirectConnectId) {
@@ -212,7 +212,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线的名称。
+     * Get 物理专线的名称。 
      * @return DirectConnectName 物理专线的名称。
      */
     public String getDirectConnectName() {
@@ -220,7 +220,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的名称。
+     * Set 物理专线的名称。
      * @param DirectConnectName 物理专线的名称。
      */
     public void setDirectConnectName(String DirectConnectName) {
@@ -228,7 +228,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线的接入点ID。
+     * Get 物理专线的接入点ID。 
      * @return AccessPointId 物理专线的接入点ID。
      */
     public String getAccessPointId() {
@@ -236,7 +236,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的接入点ID。
+     * Set 物理专线的接入点ID。
      * @param AccessPointId 物理专线的接入点ID。
      */
     public void setAccessPointId(String AccessPointId) {
@@ -244,7 +244,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线的状态。
+     * Get 物理专线的状态。
 申请中：PENDING 
 申请驳回：REJECTED   
 待付款：TOPAY 
@@ -252,7 +252,7 @@ public class DirectConnect  extends AbstractModel{
 建设中：ALLOCATED   
 已开通：AVAILABLE  
 删除中 ：DELETING
-已删除：DELETED 。
+已删除：DELETED 。 
      * @return State 物理专线的状态。
 申请中：PENDING 
 申请驳回：REJECTED   
@@ -268,7 +268,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的状态。
+     * Set 物理专线的状态。
 申请中：PENDING 
 申请驳回：REJECTED   
 待付款：TOPAY 
@@ -292,7 +292,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线创建时间。
+     * Get 物理专线创建时间。 
      * @return CreatedTime 物理专线创建时间。
      */
     public String getCreatedTime() {
@@ -300,7 +300,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线创建时间。
+     * Set 物理专线创建时间。
      * @param CreatedTime 物理专线创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -308,7 +308,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线的开通时间。
+     * Get 物理专线的开通时间。 
      * @return EnabledTime 物理专线的开通时间。
      */
     public String getEnabledTime() {
@@ -316,7 +316,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的开通时间。
+     * Set 物理专线的开通时间。
      * @param EnabledTime 物理专线的开通时间。
      */
     public void setEnabledTime(String EnabledTime) {
@@ -324,7 +324,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+     * Get 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。 
      * @return LineOperator 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
      */
     public String getLineOperator() {
@@ -332,7 +332,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+     * Set 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
      * @param LineOperator 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
      */
     public void setLineOperator(String LineOperator) {
@@ -340,7 +340,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取本地数据中心的地理位置。
+     * Get 本地数据中心的地理位置。 
      * @return Location 本地数据中心的地理位置。
      */
     public String getLocation() {
@@ -348,7 +348,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置本地数据中心的地理位置。
+     * Set 本地数据中心的地理位置。
      * @param Location 本地数据中心的地理位置。
      */
     public void setLocation(String Location) {
@@ -356,7 +356,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线接入接口带宽，单位为Mbps。
+     * Get 物理专线接入接口带宽，单位为Mbps。 
      * @return Bandwidth 物理专线接入接口带宽，单位为Mbps。
      */
     public Integer getBandwidth() {
@@ -364,7 +364,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线接入接口带宽，单位为Mbps。
+     * Set 物理专线接入接口带宽，单位为Mbps。
      * @param Bandwidth 物理专线接入接口带宽，单位为Mbps。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -372,7 +372,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
+     * Get 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米） 
      * @return PortType 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
      */
     public String getPortType() {
@@ -380,7 +380,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
+     * Set 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
      * @param PortType 用户侧物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）
      */
     public void setPortType(String PortType) {
@@ -388,8 +388,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取运营商或者服务商为物理专线提供的电路编码。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 运营商或者服务商为物理专线提供的电路编码。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CircuitCode 运营商或者服务商为物理专线提供的电路编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -398,7 +398,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置运营商或者服务商为物理专线提供的电路编码。
+     * Set 运营商或者服务商为物理专线提供的电路编码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CircuitCode 运营商或者服务商为物理专线提供的电路编码。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -408,7 +408,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取冗余物理专线的ID。
+     * Get 冗余物理专线的ID。 
      * @return RedundantDirectConnectId 冗余物理专线的ID。
      */
     public String getRedundantDirectConnectId() {
@@ -416,7 +416,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置冗余物理专线的ID。
+     * Set 冗余物理专线的ID。
      * @param RedundantDirectConnectId 冗余物理专线的ID。
      */
     public void setRedundantDirectConnectId(String RedundantDirectConnectId) {
@@ -424,8 +424,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -434,7 +434,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
+     * Set 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Vlan 物理专线调试VLAN。默认开启VLAN，自动分配VLAN。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -444,8 +444,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试腾讯侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线调试腾讯侧互联IP。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TencentAddress 物理专线调试腾讯侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -454,7 +454,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试腾讯侧互联IP。
+     * Set 物理专线调试腾讯侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TencentAddress 物理专线调试腾讯侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -464,8 +464,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试用户侧互联IP。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线调试用户侧互联IP。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomerAddress 物理专线调试用户侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -474,7 +474,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试用户侧互联IP。
+     * Set 物理专线调试用户侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerAddress 物理专线调试用户侧互联IP。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -484,8 +484,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者姓名。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线申请者姓名。默认从账户体系获取。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomerName 物理专线申请者姓名。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -494,7 +494,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者姓名。默认从账户体系获取。
+     * Set 物理专线申请者姓名。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerName 物理专线申请者姓名。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -504,8 +504,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者联系邮箱。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线申请者联系邮箱。默认从账户体系获取。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -514,7 +514,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者联系邮箱。默认从账户体系获取。
+     * Set 物理专线申请者联系邮箱。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -524,8 +524,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者联系号码。默认从账户体系获取。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线申请者联系号码。默认从账户体系获取。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -534,7 +534,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者联系号码。默认从账户体系获取。
+     * Set 物理专线申请者联系号码。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -544,8 +544,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线的过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线的过期时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpiredTime 物理专线的过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -554,7 +554,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的过期时间。
+     * Set 物理专线的过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 物理专线的过期时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -564,8 +564,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -574,7 +574,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
+     * Set 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 物理专线计费类型。 NON_RECURRING_CHARGE：一次性接入费用；PREPAID_BY_YEAR：按年预付费。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -584,8 +584,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取报障联系人。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 报障联系人。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaultReportContactPerson 报障联系人。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -594,7 +594,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置报障联系人。
+     * Set 报障联系人。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaultReportContactPerson 报障联系人。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -604,8 +604,8 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 获取报障联系电话。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 报障联系电话。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaultReportContactNumber 报障联系电话。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -614,7 +614,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 设置报障联系电话。
+     * Set 报障联系电话。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaultReportContactNumber 报障联系电话。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -624,7 +624,7 @@ public class DirectConnect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);

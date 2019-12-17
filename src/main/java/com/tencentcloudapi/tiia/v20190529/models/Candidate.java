@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Candidate  extends AbstractModel{
+public class Candidate extends AbstractModel{
 
     /**
     * 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
@@ -37,7 +37,7 @@ public class Candidate  extends AbstractModel{
     private Long Confidence;
 
     /**
-     * 获取识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+     * Get 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。 
      * @return Name 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
+     * Set 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
      * @param Name 识别出人脸对应的候选人数组。当前返回相似度最高的候选人。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 获取相似度，0-100之间。
+     * Get 相似度，0-100之间。 
      * @return Confidence 相似度，0-100之间。
      */
     public Long getConfidence() {
@@ -61,7 +61,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 设置相似度，0-100之间。
+     * Set 相似度，0-100之间。
      * @param Confidence 相似度，0-100之间。
      */
     public void setConfidence(Long Confidence) {
@@ -69,7 +69,7 @@ public class Candidate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

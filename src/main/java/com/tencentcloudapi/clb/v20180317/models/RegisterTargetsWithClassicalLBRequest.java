@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
+public class RegisterTargetsWithClassicalLBRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -37,7 +37,7 @@ public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
     private ClassicalTargetInfo [] Targets;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务信息
+     * Get 后端服务信息 
      * @return Targets 后端服务信息
      */
     public ClassicalTargetInfo [] getTargets() {
@@ -61,7 +61,7 @@ public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务信息
+     * Set 后端服务信息
      * @param Targets 后端服务信息
      */
     public void setTargets(ClassicalTargetInfo [] Targets) {
@@ -69,7 +69,7 @@ public class RegisterTargetsWithClassicalLBRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

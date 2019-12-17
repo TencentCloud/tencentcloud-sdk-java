@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
+public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
 
     /**
     * 原始价格，单位：分
@@ -44,7 +44,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取原始价格，单位：分
+     * Get 原始价格，单位：分 
      * @return OriginalPrice 原始价格，单位：分
      */
     public Integer getOriginalPrice() {
@@ -52,7 +52,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置原始价格，单位：分
+     * Set 原始价格，单位：分
      * @param OriginalPrice 原始价格，单位：分
      */
     public void setOriginalPrice(Integer OriginalPrice) {
@@ -60,7 +60,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取折后价格，单位：分
+     * Get 折后价格，单位：分 
      * @return Price 折后价格，单位：分
      */
     public Integer getPrice() {
@@ -68,7 +68,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置折后价格，单位：分
+     * Set 折后价格，单位：分
      * @param Price 折后价格，单位：分
      */
     public void setPrice(Integer Price) {
@@ -76,7 +76,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class InquiryPriceCreateDBInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);

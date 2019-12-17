@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Config  extends AbstractModel{
+public class Config extends AbstractModel{
 
     /**
     * 配置项ID
@@ -119,8 +119,8 @@ public class Config  extends AbstractModel{
     private Long ConfigVersionCount;
 
     /**
-     * 获取配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,7 +129,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID
+     * Set 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,8 +139,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -149,7 +149,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称
+     * Set 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -159,8 +159,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本
+     * Set 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项版本描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersionDesc 配置项版本描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本描述
+     * Set 配置项版本描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersionDesc 配置项版本描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigValue 配置项值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项值
+     * Set 配置项值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigValue 配置项值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,8 +219,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigType 配置项类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -229,7 +229,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项类型
+     * Set 配置项类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigType 配置项类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,8 +239,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreationTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -249,7 +249,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,8 +259,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,7 +269,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,8 +279,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -289,7 +289,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,8 +299,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取删除标识，true：可以删除；false：不可删除
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 删除标识，true：可以删除；false：不可删除
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteFlag 删除标识，true：可以删除；false：不可删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -309,7 +309,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置删除标识，true：可以删除；false：不可删除
+     * Set 删除标识，true：可以删除；false：不可删除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标识，true：可以删除；false：不可删除
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,8 +319,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastUpdateTime 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -329,7 +329,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置最后更新时间
+     * Set 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastUpdateTime 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -339,8 +339,8 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项版本数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersionCount 配置项版本数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -349,7 +349,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本数量
+     * Set 配置项版本数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersionCount 配置项版本数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,7 +359,7 @@ public class Config  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

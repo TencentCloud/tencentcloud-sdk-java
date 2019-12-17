@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceEmbeddingRequest  extends AbstractModel{
+public class SentenceEmbeddingRequest extends AbstractModel{
 
     /**
     * 输入的文本（仅支持UTF-8格式，不超过500字）
@@ -30,7 +30,7 @@ public class SentenceEmbeddingRequest  extends AbstractModel{
     private String Text;
 
     /**
-     * 获取输入的文本（仅支持UTF-8格式，不超过500字）
+     * Get 输入的文本（仅支持UTF-8格式，不超过500字） 
      * @return Text 输入的文本（仅支持UTF-8格式，不超过500字）
      */
     public String getText() {
@@ -38,7 +38,7 @@ public class SentenceEmbeddingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的文本（仅支持UTF-8格式，不超过500字）
+     * Set 输入的文本（仅支持UTF-8格式，不超过500字）
      * @param Text 输入的文本（仅支持UTF-8格式，不超过500字）
      */
     public void setText(String Text) {
@@ -46,7 +46,7 @@ public class SentenceEmbeddingRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

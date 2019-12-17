@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCaptchaResultRequest  extends AbstractModel{
+public class DescribeCaptchaResultRequest extends AbstractModel{
 
     /**
     * 验证码类型，9：滑块验证码
@@ -93,7 +93,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     private String Imei;
 
     /**
-     * 获取验证码类型，9：滑块验证码
+     * Get 验证码类型，9：滑块验证码 
      * @return CaptchaType 验证码类型，9：滑块验证码
      */
     public Long getCaptchaType() {
@@ -101,7 +101,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证码类型，9：滑块验证码
+     * Set 验证码类型，9：滑块验证码
      * @param CaptchaType 验证码类型，9：滑块验证码
      */
     public void setCaptchaType(Long CaptchaType) {
@@ -109,7 +109,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取验证码返回给用户的票据
+     * Get 验证码返回给用户的票据 
      * @return Ticket 验证码返回给用户的票据
      */
     public String getTicket() {
@@ -117,7 +117,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证码返回给用户的票据
+     * Set 验证码返回给用户的票据
      * @param Ticket 验证码返回给用户的票据
      */
     public void setTicket(String Ticket) {
@@ -125,7 +125,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户操作来源的外网 IP
+     * Get 用户操作来源的外网 IP 
      * @return UserIp 用户操作来源的外网 IP
      */
     public String getUserIp() {
@@ -133,7 +133,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户操作来源的外网 IP
+     * Set 用户操作来源的外网 IP
      * @param UserIp 用户操作来源的外网 IP
      */
     public void setUserIp(String UserIp) {
@@ -141,7 +141,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取验证票据需要的随机字符串
+     * Get 验证票据需要的随机字符串 
      * @return Randstr 验证票据需要的随机字符串
      */
     public String getRandstr() {
@@ -149,7 +149,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证票据需要的随机字符串
+     * Set 验证票据需要的随机字符串
      * @param Randstr 验证票据需要的随机字符串
      */
     public void setRandstr(String Randstr) {
@@ -157,7 +157,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取验证码应用ID
+     * Get 验证码应用ID 
      * @return CaptchaAppId 验证码应用ID
      */
     public Long getCaptchaAppId() {
@@ -165,7 +165,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证码应用ID
+     * Set 验证码应用ID
      * @param CaptchaAppId 验证码应用ID
      */
     public void setCaptchaAppId(Long CaptchaAppId) {
@@ -173,7 +173,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * Get 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方 
      * @return AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
      */
     public String getAppSecretKey() {
@@ -181,7 +181,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
+     * Set 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
      * @param AppSecretKey 用于服务器端校验验证码票据的验证密钥，请妥善保密，请勿泄露给第三方
      */
     public void setAppSecretKey(String AppSecretKey) {
@@ -189,7 +189,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+     * Get 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据 
      * @return BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
      */
     public Long getBusinessId() {
@@ -197,7 +197,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+     * Set 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
      * @param BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
      */
     public void setBusinessId(Long BusinessId) {
@@ -205,7 +205,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * Get 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据 
      * @return SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      */
     public Long getSceneId() {
@@ -213,7 +213,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * Set 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      * @param SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
      */
     public void setSceneId(Long SceneId) {
@@ -221,7 +221,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取mac 地址或设备唯一标识
+     * Get mac 地址或设备唯一标识 
      * @return MacAddress mac 地址或设备唯一标识
      */
     public String getMacAddress() {
@@ -229,7 +229,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置mac 地址或设备唯一标识
+     * Set mac 地址或设备唯一标识
      * @param MacAddress mac 地址或设备唯一标识
      */
     public void setMacAddress(String MacAddress) {
@@ -237,7 +237,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取手机设备号
+     * Get 手机设备号 
      * @return Imei 手机设备号
      */
     public String getImei() {
@@ -245,7 +245,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置手机设备号
+     * Set 手机设备号
      * @param Imei 手机设备号
      */
     public void setImei(String Imei) {
@@ -253,7 +253,7 @@ public class DescribeCaptchaResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaptchaType", this.CaptchaType);

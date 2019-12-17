@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DailyTracePoint  extends AbstractModel{
+public class DailyTracePoint extends AbstractModel{
 
     /**
     * 轨迹日期
@@ -37,7 +37,7 @@ public class DailyTracePoint  extends AbstractModel{
     private PersonTracePoint [] TracePointSet;
 
     /**
-     * 获取轨迹日期
+     * Get 轨迹日期 
      * @return TraceDate 轨迹日期
      */
     public String getTraceDate() {
@@ -45,7 +45,7 @@ public class DailyTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹日期
+     * Set 轨迹日期
      * @param TraceDate 轨迹日期
      */
     public void setTraceDate(String TraceDate) {
@@ -53,7 +53,7 @@ public class DailyTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹点序列
+     * Get 轨迹点序列 
      * @return TracePointSet 轨迹点序列
      */
     public PersonTracePoint [] getTracePointSet() {
@@ -61,7 +61,7 @@ public class DailyTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹点序列
+     * Set 轨迹点序列
      * @param TracePointSet 轨迹点序列
      */
     public void setTracePointSet(PersonTracePoint [] TracePointSet) {
@@ -69,7 +69,7 @@ public class DailyTracePoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TraceDate", this.TraceDate);

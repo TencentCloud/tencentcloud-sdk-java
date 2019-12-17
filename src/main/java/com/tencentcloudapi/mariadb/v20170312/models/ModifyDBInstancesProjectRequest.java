@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstancesProjectRequest  extends AbstractModel{
+public class ModifyDBInstancesProjectRequest extends AbstractModel{
 
     /**
     * 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -37,7 +37,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceIds 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceIds 待修改的实例ID列表。实例 ID 形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
+     * Get 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。 
      * @return ProjectId 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      */
     public Integer getProjectId() {
@@ -61,7 +61,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
+     * Set 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      * @param ProjectId 要分配的项目 ID，可以通过 DescribeProjects 查询项目列表接口获取。
      */
     public void setProjectId(Integer ProjectId) {
@@ -69,7 +69,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

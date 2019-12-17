@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSpotDeviceResponse  extends AbstractModel{
+public class CreateSpotDeviceResponse extends AbstractModel{
 
     /**
     * 创建的服务器ID
@@ -44,7 +44,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取创建的服务器ID
+     * Get 创建的服务器ID 
      * @return ResourceIds 创建的服务器ID
      */
     public String [] getResourceIds() {
@@ -52,7 +52,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建的服务器ID
+     * Set 创建的服务器ID
      * @param ResourceIds 创建的服务器ID
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -60,7 +60,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return FlowId 任务ID
      */
     public Integer getFlowId() {
@@ -68,7 +68,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param FlowId 任务ID
      */
     public void setFlowId(Integer FlowId) {
@@ -76,7 +76,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateSpotDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);

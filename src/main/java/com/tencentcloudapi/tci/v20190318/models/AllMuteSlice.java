@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllMuteSlice  extends AbstractModel{
+public class AllMuteSlice extends AbstractModel{
 
     /**
     * 所有静音片段。
@@ -44,7 +44,7 @@ public class AllMuteSlice  extends AbstractModel{
     private Long TotalMuteDuration;
 
     /**
-     * 获取所有静音片段。
+     * Get 所有静音片段。 
      * @return MuteSlice 所有静音片段。
      */
     public MuteSlice [] getMuteSlice() {
@@ -52,7 +52,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 设置所有静音片段。
+     * Set 所有静音片段。
      * @param MuteSlice 所有静音片段。
      */
     public void setMuteSlice(MuteSlice [] MuteSlice) {
@@ -60,7 +60,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 获取静音时长占比。
+     * Get 静音时长占比。 
      * @return MuteRatio 静音时长占比。
      */
     public Float getMuteRatio() {
@@ -68,7 +68,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 设置静音时长占比。
+     * Set 静音时长占比。
      * @param MuteRatio 静音时长占比。
      */
     public void setMuteRatio(Float MuteRatio) {
@@ -76,7 +76,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 获取静音总时长。
+     * Get 静音总时长。 
      * @return TotalMuteDuration 静音总时长。
      */
     public Long getTotalMuteDuration() {
@@ -84,7 +84,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 设置静音总时长。
+     * Set 静音总时长。
      * @param TotalMuteDuration 静音总时长。
      */
     public void setTotalMuteDuration(Long TotalMuteDuration) {
@@ -92,7 +92,7 @@ public class AllMuteSlice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MuteSlice.", this.MuteSlice);

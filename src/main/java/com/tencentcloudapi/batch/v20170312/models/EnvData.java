@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnvData  extends AbstractModel{
+public class EnvData extends AbstractModel{
 
     /**
     * CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
@@ -135,7 +135,7 @@ public class EnvData  extends AbstractModel{
     private VirtualPrivateCloud [] VirtualPrivateClouds;
 
     /**
-     * 获取CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
+     * Get CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。 
      * @return InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      */
     public String getInstanceType() {
@@ -143,7 +143,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
+     * Set CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      * @param InstanceType CVM实例类型，不能与InstanceTypes和InstanceTypeOptions同时出现。
      */
     public void setInstanceType(String InstanceType) {
@@ -151,7 +151,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取CVM镜像ID
+     * Get CVM镜像ID 
      * @return ImageId CVM镜像ID
      */
     public String getImageId() {
@@ -159,7 +159,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM镜像ID
+     * Set CVM镜像ID
      * @param ImageId CVM镜像ID
      */
     public void setImageId(String ImageId) {
@@ -167,7 +167,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取实例系统盘配置信息
+     * Get 实例系统盘配置信息 
      * @return SystemDisk 实例系统盘配置信息
      */
     public SystemDisk getSystemDisk() {
@@ -175,7 +175,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置实例系统盘配置信息
+     * Set 实例系统盘配置信息
      * @param SystemDisk 实例系统盘配置信息
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
@@ -183,7 +183,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取实例数据盘配置信息
+     * Get 实例数据盘配置信息 
      * @return DataDisks 实例数据盘配置信息
      */
     public DataDisk [] getDataDisks() {
@@ -191,7 +191,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置实例数据盘配置信息
+     * Set 实例数据盘配置信息
      * @param DataDisks 实例数据盘配置信息
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -199,7 +199,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+     * Get 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。 
      * @return VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
@@ -207,7 +207,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
+     * Set 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      * @param VirtualPrivateCloud 私有网络相关信息配置，与Zones和VirtualPrivateClouds不能同时指定。
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
@@ -215,7 +215,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取公网带宽相关信息设置
+     * Get 公网带宽相关信息设置 
      * @return InternetAccessible 公网带宽相关信息设置
      */
     public InternetAccessible getInternetAccessible() {
@@ -223,7 +223,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置公网带宽相关信息设置
+     * Set 公网带宽相关信息设置
      * @param InternetAccessible 公网带宽相关信息设置
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -231,7 +231,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例显示名称
+     * Get CVM实例显示名称 
      * @return InstanceName CVM实例显示名称
      */
     public String getInstanceName() {
@@ -239,7 +239,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例显示名称
+     * Set CVM实例显示名称
      * @param InstanceName CVM实例显示名称
      */
     public void setInstanceName(String InstanceName) {
@@ -247,7 +247,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取实例登录设置
+     * Get 实例登录设置 
      * @return LoginSettings 实例登录设置
      */
     public LoginSettings getLoginSettings() {
@@ -255,7 +255,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置实例登录设置
+     * Set 实例登录设置
      * @param LoginSettings 实例登录设置
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
@@ -263,7 +263,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属安全组
+     * Get 实例所属安全组 
      * @return SecurityGroupIds 实例所属安全组
      */
     public String [] getSecurityGroupIds() {
@@ -271,7 +271,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属安全组
+     * Set 实例所属安全组
      * @param SecurityGroupIds 实例所属安全组
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -279,7 +279,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。 
      * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      */
     public EnhancedService getEnhancedService() {
@@ -287,7 +287,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
@@ -295,7 +295,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * Get CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。 
      * @return InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      */
     public String getInstanceChargeType() {
@@ -303,7 +303,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * Set CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      * @param InstanceChargeType CVM实例计费类型<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -311,7 +311,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取实例的市场相关选项，如竞价实例相关参数
+     * Get 实例的市场相关选项，如竞价实例相关参数 
      * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
@@ -319,7 +319,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置实例的市场相关选项，如竞价实例相关参数
+     * Set 实例的市场相关选项，如竞价实例相关参数
      * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
@@ -327,7 +327,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * Get CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。 
      * @return InstanceTypes CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
      */
     public String [] getInstanceTypes() {
@@ -335,7 +335,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
+     * Set CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
      * @param InstanceTypes CVM实例类型列表，不能与InstanceType和InstanceTypeOptions同时出现。指定该字段后，计算节点按照机型先后顺序依次尝试创建，直到实例创建成功，结束遍历过程。最多支持10个机型。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
@@ -343,7 +343,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+     * Get CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。 
      * @return InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
      */
     public InstanceTypeOptions getInstanceTypeOptions() {
@@ -351,7 +351,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
+     * Set CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
      * @param InstanceTypeOptions CVM实例机型配置。不能与InstanceType和InstanceTypes同时出现。
      */
     public void setInstanceTypeOptions(InstanceTypeOptions InstanceTypeOptions) {
@@ -359,7 +359,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     * Get 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。 
      * @return Zones 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
      */
     public String [] getZones() {
@@ -367,7 +367,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
+     * Set 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
      * @param Zones 可用区列表，支持跨可用区创建CVM实例。与VirtualPrivateCloud和VirtualPrivateClouds不能同时指定。
      */
     public void setZones(String [] Zones) {
@@ -375,7 +375,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     * Get 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。 
      * @return VirtualPrivateClouds 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
      */
     public VirtualPrivateCloud [] getVirtualPrivateClouds() {
@@ -383,7 +383,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
+     * Set 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
      * @param VirtualPrivateClouds 私有网络列表，支持跨私有网络创建CVM实例。与VirtualPrivateCloud和Zones不能同时指定。
      */
     public void setVirtualPrivateClouds(VirtualPrivateCloud [] VirtualPrivateClouds) {
@@ -391,7 +391,7 @@ public class EnvData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);

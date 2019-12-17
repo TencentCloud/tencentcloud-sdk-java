@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrafficMirrorReceiver  extends AbstractModel{
+public class TrafficMirrorReceiver extends AbstractModel{
 
     /**
     * 接收机实例ID。
@@ -114,7 +114,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     private String HealthStatus;
 
     /**
-     * 获取接收机实例ID。
+     * Get 接收机实例ID。 
      * @return InstanceId 接收机实例ID。
      */
     public String getInstanceId() {
@@ -122,7 +122,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机实例ID。
+     * Set 接收机实例ID。
      * @param InstanceId 接收机实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -130,7 +130,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机接收端口。
+     * Get 接收机接收端口。 
      * @return Port 接收机接收端口。
      */
     public Integer getPort() {
@@ -138,7 +138,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机接收端口。
+     * Set 接收机接收端口。
      * @param Port 接收机接收端口。
      */
     public void setPort(Integer Port) {
@@ -146,7 +146,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机权重。
+     * Get 接收机权重。 
      * @return Weight 接收机权重。
      */
     public Integer getWeight() {
@@ -154,7 +154,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机权重。
+     * Set 接收机权重。
      * @param Weight 接收机权重。
      */
     public void setWeight(Integer Weight) {
@@ -162,7 +162,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像ID。
+     * Get 流量镜像ID。 
      * @return TrafficMirrorId 流量镜像ID。
      */
     public String getTrafficMirrorId() {
@@ -170,7 +170,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像ID。
+     * Set 流量镜像ID。
      * @param TrafficMirrorId 流量镜像ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -178,7 +178,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机别名。
+     * Get 接收机别名。 
      * @return Alias 接收机别名。
      */
     public String getAlias() {
@@ -186,7 +186,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机别名。
+     * Set 接收机别名。
      * @param Alias 接收机别名。
      */
     public void setAlias(String Alias) {
@@ -194,7 +194,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机内网IP地址。
+     * Get 接收机内网IP地址。 
      * @return LanIp 接收机内网IP地址。
      */
     public String getLanIp() {
@@ -202,7 +202,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机内网IP地址。
+     * Set 接收机内网IP地址。
      * @param LanIp 接收机内网IP地址。
      */
     public void setLanIp(String LanIp) {
@@ -210,7 +210,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的子网的ID。
+     * Get 接收机所在的子网的ID。 
      * @return SubnetId 接收机所在的子网的ID。
      */
     public String getSubnetId() {
@@ -218,7 +218,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的子网的ID。
+     * Set 接收机所在的子网的ID。
      * @param SubnetId 接收机所在的子网的ID。
      */
     public void setSubnetId(String SubnetId) {
@@ -226,7 +226,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的子网的名称。
+     * Get 接收机所在的子网的名称。 
      * @return SubnetName 接收机所在的子网的名称。
      */
     public String getSubnetName() {
@@ -234,7 +234,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的子网的名称。
+     * Set 接收机所在的子网的名称。
      * @param SubnetName 接收机所在的子网的名称。
      */
     public void setSubnetName(String SubnetName) {
@@ -242,7 +242,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的子网的Cidr。
+     * Get 接收机所在的子网的Cidr。 
      * @return SubnetCidrBlock 接收机所在的子网的Cidr。
      */
     public String getSubnetCidrBlock() {
@@ -250,7 +250,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的子网的Cidr。
+     * Set 接收机所在的子网的Cidr。
      * @param SubnetCidrBlock 接收机所在的子网的Cidr。
      */
     public void setSubnetCidrBlock(String SubnetCidrBlock) {
@@ -258,7 +258,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的私有网络的ID。
+     * Get 接收机所在的私有网络的ID。 
      * @return VpcId 接收机所在的私有网络的ID。
      */
     public String getVpcId() {
@@ -266,7 +266,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的私有网络的ID。
+     * Set 接收机所在的私有网络的ID。
      * @param VpcId 接收机所在的私有网络的ID。
      */
     public void setVpcId(String VpcId) {
@@ -274,7 +274,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的私有网络的名称。
+     * Get 接收机所在的私有网络的名称。 
      * @return VpcName 接收机所在的私有网络的名称。
      */
     public String getVpcName() {
@@ -282,7 +282,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的私有网络的名称。
+     * Set 接收机所在的私有网络的名称。
      * @param VpcName 接收机所在的私有网络的名称。
      */
     public void setVpcName(String VpcName) {
@@ -290,7 +290,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机所在的私有网络的Cidr。
+     * Get 接收机所在的私有网络的Cidr。 
      * @return VpcCidrBlock 接收机所在的私有网络的Cidr。
      */
     public String getVpcCidrBlock() {
@@ -298,7 +298,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机所在的私有网络的Cidr。
+     * Set 接收机所在的私有网络的Cidr。
      * @param VpcCidrBlock 接收机所在的私有网络的Cidr。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -306,7 +306,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取接收机的健康状态。
+     * Get 接收机的健康状态。 
      * @return HealthStatus 接收机的健康状态。
      */
     public String getHealthStatus() {
@@ -314,7 +314,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置接收机的健康状态。
+     * Set 接收机的健康状态。
      * @param HealthStatus 接收机的健康状态。
      */
     public void setHealthStatus(String HealthStatus) {
@@ -322,7 +322,7 @@ public class TrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

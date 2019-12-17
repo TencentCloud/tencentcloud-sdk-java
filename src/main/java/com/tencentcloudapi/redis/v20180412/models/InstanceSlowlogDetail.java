@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceSlowlogDetail  extends AbstractModel{
+public class InstanceSlowlogDetail extends AbstractModel{
 
     /**
     * 慢查询耗时
@@ -58,7 +58,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     private String ExecuteTime;
 
     /**
-     * 获取慢查询耗时
+     * Get 慢查询耗时 
      * @return Duration 慢查询耗时
      */
     public Integer getDuration() {
@@ -66,7 +66,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置慢查询耗时
+     * Set 慢查询耗时
      * @param Duration 慢查询耗时
      */
     public void setDuration(Integer Duration) {
@@ -74,7 +74,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取客户端地址
+     * Get 客户端地址 
      * @return Client 客户端地址
      */
     public String getClient() {
@@ -82,7 +82,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置客户端地址
+     * Set 客户端地址
      * @param Client 客户端地址
      */
     public void setClient(String Client) {
@@ -90,7 +90,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取命令
+     * Get 命令 
      * @return Command 命令
      */
     public String getCommand() {
@@ -98,7 +98,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置命令
+     * Set 命令
      * @param Command 命令
      */
     public void setCommand(String Command) {
@@ -106,7 +106,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取详细命令行信息
+     * Get 详细命令行信息 
      * @return CommandLine 详细命令行信息
      */
     public String getCommandLine() {
@@ -114,7 +114,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置详细命令行信息
+     * Set 详细命令行信息
      * @param CommandLine 详细命令行信息
      */
     public void setCommandLine(String CommandLine) {
@@ -122,7 +122,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取执行时间
+     * Get 执行时间 
      * @return ExecuteTime 执行时间
      */
     public String getExecuteTime() {
@@ -130,7 +130,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置执行时间
+     * Set 执行时间
      * @param ExecuteTime 执行时间
      */
     public void setExecuteTime(String ExecuteTime) {
@@ -138,7 +138,7 @@ public class InstanceSlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

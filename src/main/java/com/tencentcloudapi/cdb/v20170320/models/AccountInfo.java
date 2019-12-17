@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountInfo  extends AbstractModel{
+public class AccountInfo extends AbstractModel{
 
     /**
     * 账号备注信息
@@ -65,7 +65,7 @@ public class AccountInfo  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取账号备注信息
+     * Get 账号备注信息 
      * @return Notes 账号备注信息
      */
     public String getNotes() {
@@ -73,7 +73,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号备注信息
+     * Set 账号备注信息
      * @param Notes 账号备注信息
      */
     public void setNotes(String Notes) {
@@ -81,7 +81,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号的域名
+     * Get 账号的域名 
      * @return Host 账号的域名
      */
     public String getHost() {
@@ -89,7 +89,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号的域名
+     * Set 账号的域名
      * @param Host 账号的域名
      */
     public void setHost(String Host) {
@@ -97,7 +97,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号的名称
+     * Get 账号的名称 
      * @return User 账号的名称
      */
     public String getUser() {
@@ -105,7 +105,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号的名称
+     * Set 账号的名称
      * @param User 账号的名称
      */
     public void setUser(String User) {
@@ -113,7 +113,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号信息修改时间
+     * Get 账号信息修改时间 
      * @return ModifyTime 账号信息修改时间
      */
     public String getModifyTime() {
@@ -121,7 +121,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号信息修改时间
+     * Set 账号信息修改时间
      * @param ModifyTime 账号信息修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -129,7 +129,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取修改密码的时间
+     * Get 修改密码的时间 
      * @return ModifyPasswordTime 修改密码的时间
      */
     public String getModifyPasswordTime() {
@@ -137,7 +137,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置修改密码的时间
+     * Set 修改密码的时间
      * @param ModifyPasswordTime 修改密码的时间
      */
     public void setModifyPasswordTime(String ModifyPasswordTime) {
@@ -145,7 +145,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号的创建时间
+     * Get 账号的创建时间 
      * @return CreateTime 账号的创建时间
      */
     public String getCreateTime() {
@@ -153,7 +153,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号的创建时间
+     * Set 账号的创建时间
      * @param CreateTime 账号的创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -161,7 +161,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Notes", this.Notes);

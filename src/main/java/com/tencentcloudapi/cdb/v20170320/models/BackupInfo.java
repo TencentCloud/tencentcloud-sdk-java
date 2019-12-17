@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupInfo  extends AbstractModel{
+public class BackupInfo extends AbstractModel{
 
     /**
     * 备份文件名
@@ -93,7 +93,7 @@ public class BackupInfo  extends AbstractModel{
     private String Creator;
 
     /**
-     * 获取备份文件名
+     * Get 备份文件名 
      * @return Name 备份文件名
      */
     public String getName() {
@@ -101,7 +101,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件名
+     * Set 备份文件名
      * @param Name 备份文件名
      */
     public void setName(String Name) {
@@ -109,7 +109,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件大小，单位：Byte
+     * Get 备份文件大小，单位：Byte 
      * @return Size 备份文件大小，单位：Byte
      */
     public Long getSize() {
@@ -117,7 +117,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件大小，单位：Byte
+     * Set 备份文件大小，单位：Byte
      * @param Size 备份文件大小，单位：Byte
      */
     public void setSize(Long Size) {
@@ -125,7 +125,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份快照时间，时间格式：2016-03-17 02:10:37
+     * Get 备份快照时间，时间格式：2016-03-17 02:10:37 
      * @return Date 备份快照时间，时间格式：2016-03-17 02:10:37
      */
     public String getDate() {
@@ -133,7 +133,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份快照时间，时间格式：2016-03-17 02:10:37
+     * Set 备份快照时间，时间格式：2016-03-17 02:10:37
      * @param Date 备份快照时间，时间格式：2016-03-17 02:10:37
      */
     public void setDate(String Date) {
@@ -141,7 +141,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网下载地址
+     * Get 内网下载地址 
      * @return IntranetUrl 内网下载地址
      */
     public String getIntranetUrl() {
@@ -149,7 +149,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网下载地址
+     * Set 内网下载地址
      * @param IntranetUrl 内网下载地址
      */
     public void setIntranetUrl(String IntranetUrl) {
@@ -157,7 +157,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网下载地址
+     * Get 外网下载地址 
      * @return InternetUrl 外网下载地址
      */
     public String getInternetUrl() {
@@ -165,7 +165,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网下载地址
+     * Set 外网下载地址
      * @param InternetUrl 外网下载地址
      */
     public void setInternetUrl(String InternetUrl) {
@@ -173,7 +173,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * Get 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备 
      * @return Type 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
      */
     public String getType() {
@@ -181,7 +181,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
+     * Set 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
      * @param Type 日志具体类型，可能的值有：logic - 逻辑冷备，physical - 物理冷备
      */
     public void setType(String Type) {
@@ -189,7 +189,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份子任务的ID，删除备份文件时使用
+     * Get 备份子任务的ID，删除备份文件时使用 
      * @return BackupId 备份子任务的ID，删除备份文件时使用
      */
     public Integer getBackupId() {
@@ -197,7 +197,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份子任务的ID，删除备份文件时使用
+     * Set 备份子任务的ID，删除备份文件时使用
      * @param BackupId 备份子任务的ID，删除备份文件时使用
      */
     public void setBackupId(Integer BackupId) {
@@ -205,7 +205,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份任务状态
+     * Get 备份任务状态 
      * @return Status 备份任务状态
      */
     public String getStatus() {
@@ -213,7 +213,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份任务状态
+     * Set 备份任务状态
      * @param Status 备份任务状态
      */
     public void setStatus(String Status) {
@@ -221,7 +221,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份任务的完成时间
+     * Get 备份任务的完成时间 
      * @return FinishTime 备份任务的完成时间
      */
     public String getFinishTime() {
@@ -229,7 +229,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份任务的完成时间
+     * Set 备份任务的完成时间
      * @param FinishTime 备份任务的完成时间
      */
     public void setFinishTime(String FinishTime) {
@@ -237,7 +237,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * Get 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值 
      * @return Creator 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
      */
     public String getCreator() {
@@ -245,7 +245,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
+     * Set 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
      * @param Creator 备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值
      */
     public void setCreator(String Creator) {
@@ -253,7 +253,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

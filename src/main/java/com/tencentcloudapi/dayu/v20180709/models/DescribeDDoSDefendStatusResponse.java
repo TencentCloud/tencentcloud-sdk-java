@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
+public class DescribeDDoSDefendStatusResponse extends AbstractModel{
 
     /**
     * 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
@@ -54,8 +54,8 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DefendStatus 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
+     * Set 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DefendStatus 防护状态，为0表示防护处于关闭状态，为1表示防护处于开启状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,8 +74,8 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取防护临时关闭的过期时间，当防护状态为开启时此字段为空；
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 防护临时关闭的过期时间，当防护状态为开启时此字段为空；
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UndefendExpire 防护临时关闭的过期时间，当防护状态为开启时此字段为空；
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -84,7 +84,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置防护临时关闭的过期时间，当防护状态为开启时此字段为空；
+     * Set 防护临时关闭的过期时间，当防护状态为开启时此字段为空；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UndefendExpire 防护临时关闭的过期时间，当防护状态为开启时此字段为空；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,8 +94,8 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ShowFlag 控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
+     * Set 控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ShowFlag 控制台功能展示字段，为1表示控制台功能展示，为0表示控制台功能隐藏
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,7 +114,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -122,7 +122,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -130,7 +130,7 @@ public class DescribeDDoSDefendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);

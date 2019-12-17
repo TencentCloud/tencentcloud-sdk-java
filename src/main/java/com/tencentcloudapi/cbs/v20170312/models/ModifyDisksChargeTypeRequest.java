@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDisksChargeTypeRequest  extends AbstractModel{
+public class ModifyDisksChargeTypeRequest extends AbstractModel{
 
     /**
     * 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
@@ -37,7 +37,7 @@ public class ModifyDisksChargeTypeRequest  extends AbstractModel{
     private DiskChargePrepaid DiskChargePrepaid;
 
     /**
-     * 获取一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
+     * Get 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。 
      * @return DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
      */
     public String [] getDiskIds() {
@@ -45,7 +45,7 @@ public class ModifyDisksChargeTypeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
+     * Set 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
      * @param DiskIds 一个或多个待操作的云硬盘ID。每次请求批量云盘上限为100。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -53,7 +53,7 @@ public class ModifyDisksChargeTypeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。 
      * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
@@ -61,7 +61,7 @@ public class ModifyDisksChargeTypeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
@@ -69,7 +69,7 @@ public class ModifyDisksChargeTypeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

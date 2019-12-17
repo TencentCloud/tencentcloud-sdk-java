@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClassRequest  extends AbstractModel{
+public class DeleteClassRequest extends AbstractModel{
 
     /**
     * 分类 ID
@@ -37,7 +37,7 @@ public class DeleteClassRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取分类 ID
+     * Get 分类 ID 
      * @return ClassId 分类 ID
      */
     public Long getClassId() {
@@ -45,7 +45,7 @@ public class DeleteClassRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分类 ID
+     * Set 分类 ID
      * @param ClassId 分类 ID
      */
     public void setClassId(Long ClassId) {
@@ -53,7 +53,7 @@ public class DeleteClassRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -61,7 +61,7 @@ public class DeleteClassRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -69,7 +69,7 @@ public class DeleteClassRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);

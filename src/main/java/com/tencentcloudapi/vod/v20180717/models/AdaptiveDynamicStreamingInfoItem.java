@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
+public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
 
     /**
     * 转自适应码流规格。
@@ -51,7 +51,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取转自适应码流规格。
+     * Get 转自适应码流规格。 
      * @return Definition 转自适应码流规格。
      */
     public Long getDefinition() {
@@ -59,7 +59,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流规格。
+     * Set 转自适应码流规格。
      * @param Definition 转自适应码流规格。
      */
     public void setDefinition(Long Definition) {
@@ -67,7 +67,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取打包格式，可能为 hls 和 dash 两种。
+     * Get 打包格式，可能为 hls 和 dash 两种。 
      * @return Package 打包格式，可能为 hls 和 dash 两种。
      */
     public String getPackage() {
@@ -75,7 +75,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置打包格式，可能为 hls 和 dash 两种。
+     * Set 打包格式，可能为 hls 和 dash 两种。
      * @param Package 打包格式，可能为 hls 和 dash 两种。
      */
     public void setPackage(String Package) {
@@ -83,7 +83,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取加密类型。
+     * Get 加密类型。 
      * @return DrmType 加密类型。
      */
     public String getDrmType() {
@@ -91,7 +91,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置加密类型。
+     * Set 加密类型。
      * @param DrmType 加密类型。
      */
     public void setDrmType(String DrmType) {
@@ -99,7 +99,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取播放地址。
+     * Get 播放地址。 
      * @return Url 播放地址。
      */
     public String getUrl() {
@@ -107,7 +107,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置播放地址。
+     * Set 播放地址。
      * @param Url 播放地址。
      */
     public void setUrl(String Url) {
@@ -115,7 +115,7 @@ public class AdaptiveDynamicStreamingInfoItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

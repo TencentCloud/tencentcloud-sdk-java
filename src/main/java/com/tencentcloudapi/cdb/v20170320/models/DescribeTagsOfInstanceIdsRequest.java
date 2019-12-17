@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
+public class DescribeTagsOfInstanceIdsRequest extends AbstractModel{
 
     /**
     * 实例列表。
@@ -44,7 +44,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例列表。
+     * Get 实例列表。 
      * @return InstanceIds 实例列表。
      */
     public String [] getInstanceIds() {
@@ -52,7 +52,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例列表。
+     * Set 实例列表。
      * @param InstanceIds 实例列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -60,7 +60,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页返回多少个标签。
+     * Get 每页返回多少个标签。 
      * @return Limit 每页返回多少个标签。
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页返回多少个标签。
+     * Set 每页返回多少个标签。
      * @param Limit 每页返回多少个标签。
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeTagsOfInstanceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

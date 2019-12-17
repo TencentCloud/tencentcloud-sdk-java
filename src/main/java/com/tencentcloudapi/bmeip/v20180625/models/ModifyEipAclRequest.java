@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEipAclRequest  extends AbstractModel{
+public class ModifyEipAclRequest extends AbstractModel{
 
     /**
     * ACL 实例 ID
@@ -58,7 +58,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     private EipAclRule [] Rules;
 
     /**
-     * 获取ACL 实例 ID
+     * Get ACL 实例 ID 
      * @return AclId ACL 实例 ID
      */
     public String getAclId() {
@@ -66,7 +66,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例 ID
+     * Set ACL 实例 ID
      * @param AclId ACL 实例 ID
      */
     public void setAclId(String AclId) {
@@ -74,7 +74,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 名称
+     * Get ACL 名称 
      * @return AclName ACL 名称
      */
     public String getAclName() {
@@ -82,7 +82,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 名称
+     * Set ACL 名称
      * @param AclName ACL 名称
      */
     public void setAclName(String AclName) {
@@ -90,7 +90,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 状态。0：无状态 1：有状态
+     * Get ACL 状态。0：无状态 1：有状态 
      * @return Status ACL 状态。0：无状态 1：有状态
      */
     public Integer getStatus() {
@@ -98,7 +98,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 状态。0：无状态 1：有状态
+     * Set ACL 状态。0：无状态 1：有状态
      * @param Status ACL 状态。0：无状态 1：有状态
      */
     public void setStatus(Integer Status) {
@@ -106,7 +106,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则类型（in/out）。in：入站规则 out：出站规则
+     * Get 规则类型（in/out）。in：入站规则 out：出站规则 
      * @return Type 规则类型（in/out）。in：入站规则 out：出站规则
      */
     public String getType() {
@@ -114,7 +114,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则类型（in/out）。in：入站规则 out：出站规则
+     * Set 规则类型（in/out）。in：入站规则 out：出站规则
      * @param Type 规则类型（in/out）。in：入站规则 out：出站规则
      */
     public void setType(String Type) {
@@ -122,7 +122,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ACL规则列表
+     * Get ACL规则列表 
      * @return Rules ACL规则列表
      */
     public EipAclRule [] getRules() {
@@ -130,7 +130,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL规则列表
+     * Set ACL规则列表
      * @param Rules ACL规则列表
      */
     public void setRules(EipAclRule [] Rules) {
@@ -138,7 +138,7 @@ public class ModifyEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclId", this.AclId);

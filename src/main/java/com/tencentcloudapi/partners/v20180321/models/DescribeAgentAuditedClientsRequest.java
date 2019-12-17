@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
+public class DescribeAgentAuditedClientsRequest extends AbstractModel{
 
     /**
     * 客户账号ID
@@ -114,7 +114,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     private String SalesName;
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -122,7 +122,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -130,7 +130,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+     * Get 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索 
      * @return ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      */
     public String getClientName() {
@@ -138,7 +138,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+     * Set 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      * @param ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      */
     public void setClientName(String ClientName) {
@@ -146,7 +146,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户类型，a/b，类型定义参考代理商相关政策文档
+     * Get 客户类型，a/b，类型定义参考代理商相关政策文档 
      * @return ClientFlag 客户类型，a/b，类型定义参考代理商相关政策文档
      */
     public String getClientFlag() {
@@ -154,7 +154,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户类型，a/b，类型定义参考代理商相关政策文档
+     * Set 客户类型，a/b，类型定义参考代理商相关政策文档
      * @param ClientFlag 客户类型，a/b，类型定义参考代理商相关政策文档
      */
     public void setClientFlag(String ClientFlag) {
@@ -162,7 +162,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ASC/DESC， 不区分大小写，按审核通过时间排序
+     * Get ASC/DESC， 不区分大小写，按审核通过时间排序 
      * @return OrderDirection ASC/DESC， 不区分大小写，按审核通过时间排序
      */
     public String getOrderDirection() {
@@ -170,7 +170,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ASC/DESC， 不区分大小写，按审核通过时间排序
+     * Set ASC/DESC， 不区分大小写，按审核通过时间排序
      * @param OrderDirection ASC/DESC， 不区分大小写，按审核通过时间排序
      */
     public void setOrderDirection(String OrderDirection) {
@@ -178,7 +178,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户账号ID列表
+     * Get 客户账号ID列表 
      * @return ClientUins 客户账号ID列表
      */
     public String [] getClientUins() {
@@ -186,7 +186,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID列表
+     * Set 客户账号ID列表
      * @param ClientUins 客户账号ID列表
      */
     public void setClientUins(String [] ClientUins) {
@@ -194,7 +194,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否欠费。0：不欠费；1：欠费
+     * Get 是否欠费。0：不欠费；1：欠费 
      * @return HasOverdueBill 是否欠费。0：不欠费；1：欠费
      */
     public Integer getHasOverdueBill() {
@@ -202,7 +202,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否欠费。0：不欠费；1：欠费
+     * Set 是否欠费。0：不欠费；1：欠费
      * @param HasOverdueBill 是否欠费。0：不欠费；1：欠费
      */
     public void setHasOverdueBill(Integer HasOverdueBill) {
@@ -210,7 +210,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户备注
+     * Get 客户备注 
      * @return ClientRemark 客户备注
      */
     public String getClientRemark() {
@@ -218,7 +218,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户备注
+     * Set 客户备注
      * @param ClientRemark 客户备注
      */
     public void setClientRemark(String ClientRemark) {
@@ -226,7 +226,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -234,7 +234,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -242,7 +242,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -250,7 +250,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -258,7 +258,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Get 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空 
      * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      */
     public String getClientType() {
@@ -266,7 +266,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Set 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      */
     public void setClientType(String ClientType) {
@@ -274,7 +274,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * Get 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空 
      * @return ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     public String getProjectType() {
@@ -282,7 +282,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * Set 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     public void setProjectType(String ProjectType) {
@@ -290,7 +290,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务员ID
+     * Get 业务员ID 
      * @return SalesUin 业务员ID
      */
     public String getSalesUin() {
@@ -298,7 +298,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务员ID
+     * Set 业务员ID
      * @param SalesUin 业务员ID
      */
     public void setSalesUin(String SalesUin) {
@@ -306,7 +306,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务员姓名（模糊查询）
+     * Get 业务员姓名（模糊查询） 
      * @return SalesName 业务员姓名（模糊查询）
      */
     public String getSalesName() {
@@ -314,7 +314,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务员姓名（模糊查询）
+     * Set 业务员姓名（模糊查询）
      * @param SalesName 业务员姓名（模糊查询）
      */
     public void setSalesName(String SalesName) {
@@ -322,7 +322,7 @@ public class DescribeAgentAuditedClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);

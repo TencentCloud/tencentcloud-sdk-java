@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListUsersForGroupRequest  extends AbstractModel{
+public class ListUsersForGroupRequest extends AbstractModel{
 
     /**
     * 用户组 ID。
@@ -44,7 +44,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     private Long Rp;
 
     /**
-     * 获取用户组 ID。
+     * Get 用户组 ID。 
      * @return GroupId 用户组 ID。
      */
     public Long getGroupId() {
@@ -52,7 +52,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID。
+     * Set 用户组 ID。
      * @param GroupId 用户组 ID。
      */
     public void setGroupId(Long GroupId) {
@@ -60,7 +60,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页码。默认为1。
+     * Get 页码。默认为1。 
      * @return Page 页码。默认为1。
      */
     public Long getPage() {
@@ -68,7 +68,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码。默认为1。
+     * Set 页码。默认为1。
      * @param Page 页码。默认为1。
      */
     public void setPage(Long Page) {
@@ -76,7 +76,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页数量。默认为20。
+     * Get 每页数量。默认为20。 
      * @return Rp 每页数量。默认为20。
      */
     public Long getRp() {
@@ -84,7 +84,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页数量。默认为20。
+     * Set 每页数量。默认为20。
      * @param Rp 每页数量。默认为20。
      */
     public void setRp(Long Rp) {
@@ -92,7 +92,7 @@ public class ListUsersForGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

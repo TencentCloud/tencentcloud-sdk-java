@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDisksRequest  extends AbstractModel{
+public class CreateDisksRequest extends AbstractModel{
 
     /**
     * 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
@@ -107,7 +107,7 @@ public class CreateDisksRequest  extends AbstractModel{
     private Boolean Shareable;
 
     /**
-     * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。 
      * @return DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
     public String getDiskType() {
@@ -115,7 +115,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * Set 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @param DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
     public void setDiskType(String DiskType) {
@@ -123,7 +123,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * Get 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。 
      * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
      */
     public String getDiskChargeType() {
@@ -131,7 +131,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
+     * Set 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
      * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>CDCPAID：独享集群付费<br>各类型价格请参考云硬盘[价格总览](/document/product/362/2413)。
      */
     public void setDiskChargeType(String DiskChargeType) {
@@ -139,7 +139,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      */
     public Placement getPlacement() {
@@ -147,7 +147,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      */
     public void setPlacement(Placement Placement) {
@@ -155,7 +155,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Get 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。 
      * @return DiskName 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
      */
     public String getDiskName() {
@@ -163,7 +163,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Set 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
      * @param DiskName 云盘显示名称。不传则默认为“未命名”。最大长度不能超60个字节。
      */
     public void setDiskName(String DiskName) {
@@ -171,7 +171,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
+     * Get 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。 
      * @return DiskCount 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
      */
     public Integer getDiskCount() {
@@ -179,7 +179,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
+     * Set 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
      * @param DiskCount 创建云硬盘数量，不传则默认为1。单次请求最多可创建的云盘数有限制，具体参见[云硬盘使用限制](https://cloud.tencent.com/doc/product/362/5145)。
      */
     public void setDiskCount(Integer DiskCount) {
@@ -187,7 +187,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。 
      * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
@@ -195,7 +195,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
@@ -203,7 +203,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * Get 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
      * @return DiskSize 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public Integer getDiskSize() {
@@ -211,7 +211,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * Set 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      * @param DiskSize 云硬盘大小，单位为GB。<br><li>如果传入`SnapshotId`则可不传`DiskSize`，此时新建云盘的大小为快照大小<br><li>如果传入`SnapshotId`同时传入`DiskSize`，则云盘大小必须大于或等于快照大小<br><li>云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public void setDiskSize(Integer DiskSize) {
@@ -219,7 +219,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
+     * Get 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。 
      * @return SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
      */
     public String getSnapshotId() {
@@ -227,7 +227,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
+     * Set 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
      * @param SnapshotId 快照ID，如果传入则根据此快照创建云硬盘，快照类型必须为数据盘快照，可通过[DescribeSnapshots](/document/product/362/15647)接口查询快照，见输出参数DiskUsage解释。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -235,7 +235,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
@@ -243,7 +243,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
@@ -251,7 +251,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+     * Get 传入该参数用于创建加密云盘，取值固定为ENCRYPT。 
      * @return Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      */
     public String getEncrypt() {
@@ -259,7 +259,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置传入该参数用于创建加密云盘，取值固定为ENCRYPT。
+     * Set 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      * @param Encrypt 传入该参数用于创建加密云盘，取值固定为ENCRYPT。
      */
     public void setEncrypt(String Encrypt) {
@@ -267,7 +267,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云盘绑定的标签。
+     * Get 云盘绑定的标签。 
      * @return Tags 云盘绑定的标签。
      */
     public Tag [] getTags() {
@@ -275,7 +275,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云盘绑定的标签。
+     * Set 云盘绑定的标签。
      * @param Tags 云盘绑定的标签。
      */
     public void setTags(Tag [] Tags) {
@@ -283,7 +283,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * Get 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。 
      * @return Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
     public Boolean getShareable() {
@@ -291,7 +291,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
+     * Set 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      * @param Shareable 可选参数，默认为False。传入True时，云盘将创建为共享型云盘。
      */
     public void setShareable(Boolean Shareable) {
@@ -299,7 +299,7 @@ public class CreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);

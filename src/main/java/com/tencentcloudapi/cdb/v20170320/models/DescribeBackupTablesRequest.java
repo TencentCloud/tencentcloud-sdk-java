@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupTablesRequest  extends AbstractModel{
+public class DescribeBackupTablesRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
@@ -65,7 +65,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，格式为：2017-07-12 10:29:20。
+     * Get 开始时间，格式为：2017-07-12 10:29:20。 
      * @return StartTime 开始时间，格式为：2017-07-12 10:29:20。
      */
     public String getStartTime() {
@@ -89,7 +89,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，格式为：2017-07-12 10:29:20。
+     * Set 开始时间，格式为：2017-07-12 10:29:20。
      * @param StartTime 开始时间，格式为：2017-07-12 10:29:20。
      */
     public void setStartTime(String StartTime) {
@@ -97,7 +97,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的数据库名。
+     * Get 指定的数据库名。 
      * @return DatabaseName 指定的数据库名。
      */
     public String getDatabaseName() {
@@ -105,7 +105,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定的数据库名。
+     * Set 指定的数据库名。
      * @param DatabaseName 指定的数据库名。
      */
     public void setDatabaseName(String DatabaseName) {
@@ -113,7 +113,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的数据表名前缀。
+     * Get 要查询的数据表名前缀。 
      * @return SearchTable 要查询的数据表名前缀。
      */
     public String getSearchTable() {
@@ -121,7 +121,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的数据表名前缀。
+     * Set 要查询的数据表名前缀。
      * @param SearchTable 要查询的数据表名前缀。
      */
     public void setSearchTable(String SearchTable) {
@@ -129,7 +129,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移。
+     * Get 分页偏移。 
      * @return Offset 分页偏移。
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移。
+     * Set 分页偏移。
      * @param Offset 分页偏移。
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，最小值为1，最大值为2000。
+     * Get 分页大小，最小值为1，最大值为2000。 
      * @return Limit 分页大小，最小值为1，最大值为2000。
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，最小值为1，最大值为2000。
+     * Set 分页大小，最小值为1，最大值为2000。
      * @param Limit 分页大小，最小值为1，最大值为2000。
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeBackupTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Job  extends AbstractModel{
+public class Job extends AbstractModel{
 
     /**
     * 任务信息
@@ -79,7 +79,7 @@ public class Job  extends AbstractModel{
     private String StateIfCreateCvmFailed;
 
     /**
-     * 获取任务信息
+     * Get 任务信息 
      * @return Tasks 任务信息
      */
     public Task [] getTasks() {
@@ -87,7 +87,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务信息
+     * Set 任务信息
      * @param Tasks 任务信息
      */
     public void setTasks(Task [] Tasks) {
@@ -95,7 +95,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取作业名称
+     * Get 作业名称 
      * @return JobName 作业名称
      */
     public String getJobName() {
@@ -103,7 +103,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置作业名称
+     * Set 作业名称
      * @param JobName 作业名称
      */
     public void setJobName(String JobName) {
@@ -111,7 +111,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取作业描述
+     * Get 作业描述 
      * @return JobDescription 作业描述
      */
     public String getJobDescription() {
@@ -119,7 +119,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置作业描述
+     * Set 作业描述
      * @param JobDescription 作业描述
      */
     public void setJobDescription(String JobDescription) {
@@ -127,7 +127,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Get 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级 
      * @return Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
     public Integer getPriority() {
@@ -135,7 +135,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * Set 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      * @param Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
      */
     public void setPriority(Integer Priority) {
@@ -143,7 +143,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取依赖信息
+     * Get 依赖信息 
      * @return Dependences 依赖信息
      */
     public Dependence [] getDependences() {
@@ -151,7 +151,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置依赖信息
+     * Set 依赖信息
      * @param Dependences 依赖信息
      */
     public void setDependences(Dependence [] Dependences) {
@@ -159,7 +159,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取通知信息
+     * Get 通知信息 
      * @return Notifications 通知信息
      */
     public Notification [] getNotifications() {
@@ -167,7 +167,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置通知信息
+     * Set 通知信息
      * @param Notifications 通知信息
      */
     public void setNotifications(Notification [] Notifications) {
@@ -175,7 +175,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+     * Get 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。 
      * @return TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      */
     public String getTaskExecutionDependOn() {
@@ -183,7 +183,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
+     * Set 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      * @param TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。
      */
     public void setTaskExecutionDependOn(String TaskExecutionDependOn) {
@@ -191,7 +191,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+     * Get 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。 
      * @return StateIfCreateCvmFailed 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      */
     public String getStateIfCreateCvmFailed() {
@@ -199,7 +199,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
+     * Set 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      * @param StateIfCreateCvmFailed 表示创建 CVM 失败按照何种策略处理。取值范围包括 FAILED，RUNNABLE。FAILED 表示创建 CVM 失败按照一次执行失败处理，RUNNABLE 表示创建 CVM 失败按照继续等待处理。默认值为FAILED。StateIfCreateCvmFailed对于提交的指定计算环境的作业无效。
      */
     public void setStateIfCreateCvmFailed(String StateIfCreateCvmFailed) {
@@ -207,7 +207,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesStatusResponse  extends AbstractModel{
+public class DescribeInstancesStatusResponse extends AbstractModel{
 
     /**
     * 符合条件的实例状态数量。
@@ -44,7 +44,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的实例状态数量。
+     * Get 符合条件的实例状态数量。 
      * @return TotalCount 符合条件的实例状态数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的实例状态数量。
+     * Set 符合条件的实例状态数量。
      * @param TotalCount 符合条件的实例状态数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取[实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
+     * Get [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。 
      * @return InstanceStatusSet [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
      */
     public InstanceStatus [] getInstanceStatusSet() {
@@ -68,7 +68,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置[实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
+     * Set [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
      * @param InstanceStatusSet [实例状态](https://cloud.tencent.com/document/api/213/15738) 列表。
      */
     public void setInstanceStatusSet(InstanceStatus [] InstanceStatusSet) {
@@ -76,7 +76,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeInstancesStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

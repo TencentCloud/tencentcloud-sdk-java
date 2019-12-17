@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
+public class AssociateSubDeviceToGatewayProductRequest extends AbstractModel{
 
     /**
     * 子设备产品Id
@@ -37,7 +37,7 @@ public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
     private String GatewayProductId;
 
     /**
-     * 获取子设备产品Id
+     * Get 子设备产品Id 
      * @return SubDeviceProductId 子设备产品Id
      */
     public String getSubDeviceProductId() {
@@ -45,7 +45,7 @@ public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子设备产品Id
+     * Set 子设备产品Id
      * @param SubDeviceProductId 子设备产品Id
      */
     public void setSubDeviceProductId(String SubDeviceProductId) {
@@ -53,7 +53,7 @@ public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网关产品Id
+     * Get 网关产品Id 
      * @return GatewayProductId 网关产品Id
      */
     public String getGatewayProductId() {
@@ -61,7 +61,7 @@ public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网关产品Id
+     * Set 网关产品Id
      * @param GatewayProductId 网关产品Id
      */
     public void setGatewayProductId(String GatewayProductId) {
@@ -69,7 +69,7 @@ public class AssociateSubDeviceToGatewayProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubDeviceProductId", this.SubDeviceProductId);

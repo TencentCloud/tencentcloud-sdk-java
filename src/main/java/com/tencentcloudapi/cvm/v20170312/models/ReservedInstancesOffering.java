@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReservedInstancesOffering  extends AbstractModel{
+public class ReservedInstancesOffering extends AbstractModel{
 
     /**
     * 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
@@ -95,8 +95,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     private Float UsagePrice;
 
     /**
-     * 获取预留实例计费可购买的可用区。形如：ap-guangzhou-1。
-返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
+     * Get 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
+返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a> 
      * @return Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
      */
@@ -105,7 +105,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费可购买的可用区。形如：ap-guangzhou-1。
+     * Set 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
      * @param Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
@@ -115,8 +115,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
-返回项：USD（美元）。
+     * Get 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
+返回项：USD（美元）。 
      * @return CurrencyCode 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
 返回项：USD（美元）。
      */
@@ -125,7 +125,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
+     * Set 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
 返回项：USD（美元）。
      * @param CurrencyCode 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。
 返回项：USD（美元）。
@@ -135,8 +135,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
-计量单位：秒
+     * Get 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
+计量单位：秒 
      * @return Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
      */
@@ -145,7 +145,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
+     * Set 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
      * @param Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒
@@ -155,8 +155,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的购买价格。形如：4000.0。
-计量单位：与 currencyCode 一致，目前支持 USD（美元）
+     * Get 预留实例计费的购买价格。形如：4000.0。
+计量单位：与 currencyCode 一致，目前支持 USD（美元） 
      * @return FixedPrice 预留实例计费的购买价格。形如：4000.0。
 计量单位：与 currencyCode 一致，目前支持 USD（美元）
      */
@@ -165,7 +165,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的购买价格。形如：4000.0。
+     * Set 预留实例计费的购买价格。形如：4000.0。
 计量单位：与 currencyCode 一致，目前支持 USD（美元）
      * @param FixedPrice 预留实例计费的购买价格。形如：4000.0。
 计量单位：与 currencyCode 一致，目前支持 USD（美元）
@@ -175,8 +175,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的实例类型。形如：S3.MEDIUM4。
-返回项：<a href="https://cloud.tencent.com/product/cvm/instances">预留实例计费类型列表</a>
+     * Get 预留实例计费的实例类型。形如：S3.MEDIUM4。
+返回项：<a href="https://cloud.tencent.com/product/cvm/instances">预留实例计费类型列表</a> 
      * @return InstanceType 预留实例计费的实例类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/product/cvm/instances">预留实例计费类型列表</a>
      */
@@ -185,7 +185,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的实例类型。形如：S3.MEDIUM4。
+     * Set 预留实例计费的实例类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/product/cvm/instances">预留实例计费类型列表</a>
      * @param InstanceType 预留实例计费的实例类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/product/cvm/instances">预留实例计费类型列表</a>
@@ -195,8 +195,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的付款类型。形如：All Upfront。
-返回项： All Upfront (预付全部费用)。
+     * Get 预留实例计费的付款类型。形如：All Upfront。
+返回项： All Upfront (预付全部费用)。 
      * @return OfferingType 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
      */
@@ -205,7 +205,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的付款类型。形如：All Upfront。
+     * Set 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
      * @param OfferingType 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
@@ -215,7 +215,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * Get 可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。 
      * @return ReservedInstancesOfferingId 可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      */
     public String getReservedInstancesOfferingId() {
@@ -223,7 +223,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * Set 可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      * @param ReservedInstancesOfferingId 可购买的预留实例计费配置ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      */
     public void setReservedInstancesOfferingId(String ReservedInstancesOfferingId) {
@@ -231,8 +231,8 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * Get 预留实例计费的平台描述（即操作系统）。形如：linux。
+返回项： linux 。 
      * @return ProductDescription 预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
      */
@@ -241,7 +241,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的平台描述（即操作系统）。形如：linux。
+     * Set 预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
      * @param ProductDescription 预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
@@ -251,9 +251,9 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 获取扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
+     * Get 扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
 目前，因为只支持 All Upfront 付款类型，所以默认为 0元/小时。
-计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元）
+计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元） 
      * @return UsagePrice 扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
 目前，因为只支持 All Upfront 付款类型，所以默认为 0元/小时。
 计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元）
@@ -263,7 +263,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 设置扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
+     * Set 扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
 目前，因为只支持 All Upfront 付款类型，所以默认为 0元/小时。
 计量单位：元/小时，货币单位与 currencyCode 一致，目前支持 USD（美元）
      * @param UsagePrice 扣除预付费之后的使用价格 (按小时计费)。形如：0.0。
@@ -275,7 +275,7 @@ public class ReservedInstancesOffering  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

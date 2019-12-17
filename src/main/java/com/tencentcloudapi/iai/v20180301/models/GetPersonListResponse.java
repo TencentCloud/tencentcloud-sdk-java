@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonListResponse  extends AbstractModel{
+public class GetPersonListResponse extends AbstractModel{
 
     /**
     * 返回的人员信息
@@ -61,7 +61,7 @@ public class GetPersonListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的人员信息
+     * Get 返回的人员信息 
      * @return PersonInfos 返回的人员信息
      */
     public PersonInfo [] getPersonInfos() {
@@ -69,7 +69,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的人员信息
+     * Set 返回的人员信息
      * @param PersonInfos 返回的人员信息
      */
     public void setPersonInfos(PersonInfo [] PersonInfos) {
@@ -77,8 +77,8 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该人员库的人员数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该人员库的人员数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PersonNum 该人员库的人员数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该人员库的人员数量
+     * Set 该人员库的人员数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonNum 该人员库的人员数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,8 +97,8 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该人员库的人脸数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该人员库的人脸数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceNum 该人员库的人脸数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -107,7 +107,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该人员库的人脸数量
+     * Set 该人员库的人脸数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceNum 该人员库的人脸数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -117,8 +117,8 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -127,7 +127,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,7 +137,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -145,7 +145,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -153,7 +153,7 @@ public class GetPersonListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PersonInfos.", this.PersonInfos);

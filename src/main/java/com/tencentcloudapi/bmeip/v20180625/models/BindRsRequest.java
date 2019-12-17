@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindRsRequest  extends AbstractModel{
+public class BindRsRequest extends AbstractModel{
 
     /**
     * Eip实例ID
@@ -37,7 +37,7 @@ public class BindRsRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取Eip实例ID
+     * Get Eip实例ID 
      * @return EipId Eip实例ID
      */
     public String getEipId() {
@@ -45,7 +45,7 @@ public class BindRsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID
+     * Set Eip实例ID
      * @param EipId Eip实例ID
      */
     public void setEipId(String EipId) {
@@ -53,7 +53,7 @@ public class BindRsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理服务器实例ID
+     * Get 物理服务器实例ID 
      * @return InstanceId 物理服务器实例ID
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class BindRsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理服务器实例ID
+     * Set 物理服务器实例ID
      * @param InstanceId 物理服务器实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class BindRsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

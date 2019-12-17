@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL4KeepTimeRequest  extends AbstractModel{
+public class ModifyL4KeepTimeRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -58,7 +58,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     private Long KeepTime;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -66,7 +66,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -74,7 +74,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -82,7 +82,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -90,7 +90,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -98,7 +98,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -106,7 +106,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Get 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)] 
      * @return KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public Long getKeepEnable() {
@@ -114,7 +114,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Set 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      * @param KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public void setKeepEnable(Long KeepEnable) {
@@ -122,7 +122,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位秒
+     * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
     public Long getKeepTime() {
@@ -130,7 +130,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位秒
+     * Set 会话保持时间，单位秒
      * @param KeepTime 会话保持时间，单位秒
      */
     public void setKeepTime(Long KeepTime) {
@@ -138,7 +138,7 @@ public class ModifyL4KeepTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestartDBInstanceRequest  extends AbstractModel{
+public class RestartDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-6r233v55
@@ -30,7 +30,7 @@ public class RestartDBInstanceRequest  extends AbstractModel{
     private String DBInstanceId;
 
     /**
-     * 获取实例ID，形如postgres-6r233v55
+     * Get 实例ID，形如postgres-6r233v55 
      * @return DBInstanceId 实例ID，形如postgres-6r233v55
      */
     public String getDBInstanceId() {
@@ -38,7 +38,7 @@ public class RestartDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-6r233v55
+     * Set 实例ID，形如postgres-6r233v55
      * @param DBInstanceId 实例ID，形如postgres-6r233v55
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -46,7 +46,7 @@ public class RestartDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

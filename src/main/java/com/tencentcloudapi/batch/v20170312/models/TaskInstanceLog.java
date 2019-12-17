@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInstanceLog  extends AbstractModel{
+public class TaskInstanceLog extends AbstractModel{
 
     /**
     * 任务实例
@@ -78,7 +78,7 @@ public class TaskInstanceLog  extends AbstractModel{
     private String StderrRedirectFileName;
 
     /**
-     * 获取任务实例
+     * Get 任务实例 
      * @return TaskInstanceIndex 任务实例
      */
     public Integer getTaskInstanceIndex() {
@@ -86,7 +86,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例
+     * Set 任务实例
      * @param TaskInstanceIndex 任务实例
      */
     public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
@@ -94,8 +94,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准输出日志（Base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准输出日志（Base64编码）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutLog 标准输出日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准输出日志（Base64编码）
+     * Set 标准输出日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutLog 标准输出日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,8 +114,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准错误日志（Base64编码）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准错误日志（Base64编码）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrLog 标准错误日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -124,7 +124,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准错误日志（Base64编码）
+     * Set 标准错误日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrLog 标准错误日志（Base64编码）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,8 +134,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准输出重定向路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutRedirectPath 标准输出重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -144,7 +144,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准输出重定向路径
+     * Set 标准输出重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutRedirectPath 标准输出重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -154,8 +154,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrRedirectPath 标准错误重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,7 +164,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准错误重定向路径
+     * Set 标准错误重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectPath 标准错误重定向路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,8 +174,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准输出重定向文件名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutRedirectFileName 标准输出重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -184,7 +184,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准输出重定向文件名
+     * Set 标准输出重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutRedirectFileName 标准输出重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,8 +194,8 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标准错误重定向文件名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrRedirectFileName 标准错误重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -204,7 +204,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置标准错误重定向文件名
+     * Set 标准错误重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectFileName 标准错误重定向文件名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -214,7 +214,7 @@ public class TaskInstanceLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskInstanceIndex", this.TaskInstanceIndex);

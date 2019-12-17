@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppInfo  extends AbstractModel{
+public class AppInfo extends AbstractModel{
 
     /**
     * 应用id
@@ -80,7 +80,7 @@ public class AppInfo  extends AbstractModel{
     private String Uin;
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public String getSdkappid() {
@@ -88,7 +88,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(String Sdkappid) {
@@ -96,7 +96,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用key
+     * Get 应用key 
      * @return Appkey 应用key
      */
     public String getAppkey() {
@@ -104,7 +104,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用key
+     * Set 应用key
      * @param Appkey 应用key
      */
     public void setAppkey(String Appkey) {
@@ -112,7 +112,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户appid
+     * Get 用户appid 
      * @return CloudAppid 用户appid
      */
     public String getCloudAppid() {
@@ -120,7 +120,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户appid
+     * Set 用户appid
      * @param CloudAppid 用户appid
      */
     public void setCloudAppid(String CloudAppid) {
@@ -128,8 +128,8 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用描述
+     * Get 应用描述 
      * @return Description 应用描述
      */
     public String getDescription() {
@@ -156,7 +156,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用描述
+     * Set 应用描述
      * @param Description 应用描述
      */
     public void setDescription(String Description) {
@@ -164,7 +164,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreatedTime 创建时间
      */
     public String getCreatedTime() {
@@ -172,7 +172,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreatedTime 创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -180,7 +180,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
+     * Get 应用类型 
      * @return BizType 应用类型
      */
     public Integer getBizType() {
@@ -188,7 +188,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
      * @param BizType 应用类型
      */
     public void setBizType(Integer BizType) {
@@ -196,7 +196,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户Uin
+     * Get 用户Uin 
      * @return Uin 用户Uin
      */
     public String getUin() {
@@ -204,7 +204,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户Uin
+     * Set 用户Uin
      * @param Uin 用户Uin
      */
     public void setUin(String Uin) {
@@ -212,7 +212,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

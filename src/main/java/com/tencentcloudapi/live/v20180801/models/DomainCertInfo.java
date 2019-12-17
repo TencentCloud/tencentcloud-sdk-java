@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainCertInfo  extends AbstractModel{
+public class DomainCertInfo extends AbstractModel{
 
     /**
     * 证书Id。
@@ -88,7 +88,7 @@ public class DomainCertInfo  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取证书Id。
+     * Get 证书Id。 
      * @return CertId 证书Id。
      */
     public Integer getCertId() {
@@ -96,7 +96,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书Id。
+     * Set 证书Id。
      * @param CertId 证书Id。
      */
     public void setCertId(Integer CertId) {
@@ -104,7 +104,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取证书名称。
+     * Get 证书名称。 
      * @return CertName 证书名称。
      */
     public String getCertName() {
@@ -112,7 +112,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称。
+     * Set 证书名称。
      * @param CertName 证书名称。
      */
     public void setCertName(String CertName) {
@@ -120,7 +120,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
+     * Get 描述信息。 
      * @return Description 描述信息。
      */
     public String getDescription() {
@@ -128,7 +128,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
      * @param Description 描述信息。
      */
     public void setDescription(String Description) {
@@ -136,7 +136,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，UTC格式。
+     * Get 创建时间，UTC格式。 
      * @return CreateTime 创建时间，UTC格式。
      */
     public String getCreateTime() {
@@ -144,7 +144,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，UTC格式。
+     * Set 创建时间，UTC格式。
      * @param CreateTime 创建时间，UTC格式。
      */
     public void setCreateTime(String CreateTime) {
@@ -152,7 +152,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容。
+     * Get 证书内容。 
      * @return HttpsCrt 证书内容。
      */
     public String getHttpsCrt() {
@@ -160,7 +160,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容。
+     * Set 证书内容。
      * @param HttpsCrt 证书内容。
      */
     public void setHttpsCrt(String HttpsCrt) {
@@ -168,9 +168,9 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型。
+     * Get 证书类型。
 0：腾讯云托管证书
-1：用户添加证书。
+1：用户添加证书。 
      * @return CertType 证书类型。
 0：腾讯云托管证书
 1：用户添加证书。
@@ -180,7 +180,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型。
+     * Set 证书类型。
 0：腾讯云托管证书
 1：用户添加证书。
      * @param CertType 证书类型。
@@ -192,7 +192,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取证书过期时间，UTC格式。
+     * Get 证书过期时间，UTC格式。 
      * @return CertExpireTime 证书过期时间，UTC格式。
      */
     public String getCertExpireTime() {
@@ -200,7 +200,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书过期时间，UTC格式。
+     * Set 证书过期时间，UTC格式。
      * @param CertExpireTime 证书过期时间，UTC格式。
      */
     public void setCertExpireTime(String CertExpireTime) {
@@ -208,7 +208,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取使用此证书的域名名称。
+     * Get 使用此证书的域名名称。 
      * @return DomainName 使用此证书的域名名称。
      */
     public String getDomainName() {
@@ -216,7 +216,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置使用此证书的域名名称。
+     * Set 使用此证书的域名名称。
      * @param DomainName 使用此证书的域名名称。
      */
     public void setDomainName(String DomainName) {
@@ -224,7 +224,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 获取证书状态
+     * Get 证书状态 
      * @return Status 证书状态
      */
     public Integer getStatus() {
@@ -232,7 +232,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 设置证书状态
+     * Set 证书状态
      * @param Status 证书状态
      */
     public void setStatus(Integer Status) {
@@ -240,7 +240,7 @@ public class DomainCertInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAppRequest  extends AbstractModel{
+public class CreateAppRequest extends AbstractModel{
 
     /**
     * 应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
@@ -58,7 +58,7 @@ public class CreateAppRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+     * Get 应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX` 
      * @return IdlType 应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
     public String getIdlType() {
@@ -66,7 +66,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
+     * Set 应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      * @param IdlType 应用数据描述语言类型，如：`PROTO`，`TDR`或`MIX`
      */
     public void setIdlType(String IdlType) {
@@ -74,7 +74,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称，可使用中文或英文字符，长度在30个字符以内
+     * Get 应用名称，可使用中文或英文字符，长度在30个字符以内 
      * @return AppName 应用名称，可使用中文或英文字符，长度在30个字符以内
      */
     public String getAppName() {
@@ -82,7 +82,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称，可使用中文或英文字符，长度在30个字符以内
+     * Set 应用名称，可使用中文或英文字符，长度在30个字符以内
      * @param AppName 应用名称，可使用中文或英文字符，长度在30个字符以内
      */
     public void setAppName(String AppName) {
@@ -90,7 +90,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+     * Get 应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z 
      * @return VpcId 应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z
      */
     public String getVpcId() {
@@ -98,7 +98,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z
+     * Set 应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z
      * @param VpcId 应用所绑定的私有网络实例ID，形如：vpc-f49l6u0z
      */
     public void setVpcId(String VpcId) {
@@ -106,7 +106,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用所绑定的子网实例ID，形如：subnet-pxir56ns
+     * Get 应用所绑定的子网实例ID，形如：subnet-pxir56ns 
      * @return SubnetId 应用所绑定的子网实例ID，形如：subnet-pxir56ns
      */
     public String getSubnetId() {
@@ -114,7 +114,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用所绑定的子网实例ID，形如：subnet-pxir56ns
+     * Set 应用所绑定的子网实例ID，形如：subnet-pxir56ns
      * @param SubnetId 应用所绑定的子网实例ID，形如：subnet-pxir56ns
      */
     public void setSubnetId(String SubnetId) {
@@ -122,7 +122,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用访问密码，可使用英文和数字字符，长度为12~16个字符
+     * Get 应用访问密码，可使用英文和数字字符，长度为12~16个字符 
      * @return Password 应用访问密码，可使用英文和数字字符，长度为12~16个字符
      */
     public String getPassword() {
@@ -130,7 +130,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用访问密码，可使用英文和数字字符，长度为12~16个字符
+     * Set 应用访问密码，可使用英文和数字字符，长度为12~16个字符
      * @param Password 应用访问密码，可使用英文和数字字符，长度为12~16个字符
      */
     public void setPassword(String Password) {
@@ -138,7 +138,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdlType", this.IdlType);

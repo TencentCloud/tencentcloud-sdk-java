@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContainerInstanceRequest  extends AbstractModel{
+public class CreateContainerInstanceRequest extends AbstractModel{
 
     /**
     * 可用区
@@ -65,7 +65,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     private Container [] Containers;
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -73,7 +73,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -81,7 +81,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取vpcId
+     * Get vpcId 
      * @return VpcId vpcId
      */
     public String getVpcId() {
@@ -89,7 +89,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置vpcId
+     * Set vpcId
      * @param VpcId vpcId
      */
     public void setVpcId(String VpcId) {
@@ -97,7 +97,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取subnetId
+     * Get subnetId 
      * @return SubnetId subnetId
      */
     public String getSubnetId() {
@@ -105,7 +105,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置subnetId
+     * Set subnetId
      * @param SubnetId subnetId
      */
     public void setSubnetId(String SubnetId) {
@@ -113,7 +113,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
+     * Get 容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符 
      * @return InstanceName 容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
      */
     public String getInstanceName() {
@@ -121,7 +121,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
+     * Set 容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
      * @param InstanceName 容器实例名称，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 40个字符
      */
     public void setInstanceName(String InstanceName) {
@@ -129,7 +129,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重启策略（Always,OnFailure,Never）
+     * Get 重启策略（Always,OnFailure,Never） 
      * @return RestartPolicy 重启策略（Always,OnFailure,Never）
      */
     public String getRestartPolicy() {
@@ -137,7 +137,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重启策略（Always,OnFailure,Never）
+     * Set 重启策略（Always,OnFailure,Never）
      * @param RestartPolicy 重启策略（Always,OnFailure,Never）
      */
     public void setRestartPolicy(String RestartPolicy) {
@@ -145,7 +145,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取容器列表
+     * Get 容器列表 
      * @return Containers 容器列表
      */
     public Container [] getContainers() {
@@ -153,7 +153,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置容器列表
+     * Set 容器列表
      * @param Containers 容器列表
      */
     public void setContainers(Container [] Containers) {
@@ -161,7 +161,7 @@ public class CreateContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

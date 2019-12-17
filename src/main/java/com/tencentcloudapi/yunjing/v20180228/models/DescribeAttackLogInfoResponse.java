@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttackLogInfoResponse  extends AbstractModel{
+public class DescribeAttackLogInfoResponse extends AbstractModel{
 
     /**
     * 日志ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机ID
@@ -41,7 +41,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     */
     @SerializedName("SrcPort")
     @Expose
-    private Integer SrcPort;
+    private Long SrcPort;
 
     /**
     * 攻击来源IP
@@ -55,7 +55,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     */
     @SerializedName("DstPort")
     @Expose
-    private Integer DstPort;
+    private Long DstPort;
 
     /**
     * 攻击目标IP
@@ -142,23 +142,23 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日志ID
+     * Get 日志ID 
      * @return Id 日志ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置日志ID
+     * Set 日志ID
      * @param Id 日志ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取主机ID
+     * Get 主机ID 
      * @return Quuid 主机ID
      */
     public String getQuuid() {
@@ -166,7 +166,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID
+     * Set 主机ID
      * @param Quuid 主机ID
      */
     public void setQuuid(String Quuid) {
@@ -174,23 +174,23 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击来源端口
+     * Get 攻击来源端口 
      * @return SrcPort 攻击来源端口
      */
-    public Integer getSrcPort() {
+    public Long getSrcPort() {
         return this.SrcPort;
     }
 
     /**
-     * 设置攻击来源端口
+     * Set 攻击来源端口
      * @param SrcPort 攻击来源端口
      */
-    public void setSrcPort(Integer SrcPort) {
+    public void setSrcPort(Long SrcPort) {
         this.SrcPort = SrcPort;
     }
 
     /**
-     * 获取攻击来源IP
+     * Get 攻击来源IP 
      * @return SrcIp 攻击来源IP
      */
     public String getSrcIp() {
@@ -198,7 +198,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击来源IP
+     * Set 攻击来源IP
      * @param SrcIp 攻击来源IP
      */
     public void setSrcIp(String SrcIp) {
@@ -206,23 +206,23 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击目标端口
+     * Get 攻击目标端口 
      * @return DstPort 攻击目标端口
      */
-    public Integer getDstPort() {
+    public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * 设置攻击目标端口
+     * Set 攻击目标端口
      * @param DstPort 攻击目标端口
      */
-    public void setDstPort(Integer DstPort) {
+    public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * 获取攻击目标IP
+     * Get 攻击目标IP 
      * @return DstIp 攻击目标IP
      */
     public String getDstIp() {
@@ -230,7 +230,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击目标IP
+     * Set 攻击目标IP
      * @param DstIp 攻击目标IP
      */
     public void setDstIp(String DstIp) {
@@ -238,7 +238,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击方法
+     * Get 攻击方法 
      * @return HttpMethod 攻击方法
      */
     public String getHttpMethod() {
@@ -246,7 +246,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击方法
+     * Set 攻击方法
      * @param HttpMethod 攻击方法
      */
     public void setHttpMethod(String HttpMethod) {
@@ -254,7 +254,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击目标主机
+     * Get 攻击目标主机 
      * @return HttpHost 攻击目标主机
      */
     public String getHttpHost() {
@@ -262,7 +262,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击目标主机
+     * Set 攻击目标主机
      * @param HttpHost 攻击目标主机
      */
     public void setHttpHost(String HttpHost) {
@@ -270,7 +270,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击头信息
+     * Get 攻击头信息 
      * @return HttpHead 攻击头信息
      */
     public String getHttpHead() {
@@ -278,7 +278,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击头信息
+     * Set 攻击头信息
      * @param HttpHead 攻击头信息
      */
     public void setHttpHead(String HttpHead) {
@@ -286,7 +286,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击者浏览器标识
+     * Get 攻击者浏览器标识 
      * @return HttpUserAgent 攻击者浏览器标识
      */
     public String getHttpUserAgent() {
@@ -294,7 +294,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击者浏览器标识
+     * Set 攻击者浏览器标识
      * @param HttpUserAgent 攻击者浏览器标识
      */
     public void setHttpUserAgent(String HttpUserAgent) {
@@ -302,7 +302,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求源
+     * Get 请求源 
      * @return HttpReferer 请求源
      */
     public String getHttpReferer() {
@@ -310,7 +310,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求源
+     * Set 请求源
      * @param HttpReferer 请求源
      */
     public void setHttpReferer(String HttpReferer) {
@@ -318,7 +318,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取威胁类型
+     * Get 威胁类型 
      * @return VulType 威胁类型
      */
     public String getVulType() {
@@ -326,7 +326,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置威胁类型
+     * Set 威胁类型
      * @param VulType 威胁类型
      */
     public void setVulType(String VulType) {
@@ -334,7 +334,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击路径
+     * Get 攻击路径 
      * @return HttpCgi 攻击路径
      */
     public String getHttpCgi() {
@@ -342,7 +342,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击路径
+     * Set 攻击路径
      * @param HttpCgi 攻击路径
      */
     public void setHttpCgi(String HttpCgi) {
@@ -350,7 +350,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击参数
+     * Get 攻击参数 
      * @return HttpParam 攻击参数
      */
     public String getHttpParam() {
@@ -358,7 +358,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击参数
+     * Set 攻击参数
      * @param HttpParam 攻击参数
      */
     public void setHttpParam(String HttpParam) {
@@ -366,7 +366,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击时间
+     * Get 攻击时间 
      * @return CreatedAt 攻击时间
      */
     public String getCreatedAt() {
@@ -374,7 +374,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击时间
+     * Set 攻击时间
      * @param CreatedAt 攻击时间
      */
     public void setCreatedAt(String CreatedAt) {
@@ -382,7 +382,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击内容
+     * Get 攻击内容 
      * @return HttpContent 攻击内容
      */
     public String getHttpContent() {
@@ -390,7 +390,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击内容
+     * Set 攻击内容
      * @param HttpContent 攻击内容
      */
     public void setHttpContent(String HttpContent) {
@@ -398,7 +398,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -406,7 +406,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -414,7 +414,7 @@ public class DescribeAttackLogInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

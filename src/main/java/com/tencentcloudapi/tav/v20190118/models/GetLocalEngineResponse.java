@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetLocalEngineResponse  extends AbstractModel{
+public class GetLocalEngineResponse extends AbstractModel{
 
     /**
     * 接口调用状态，成功返回200，失败返回400
@@ -51,7 +51,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取接口调用状态，成功返回200，失败返回400
+     * Get 接口调用状态，成功返回200，失败返回400 
      * @return Status 接口调用状态，成功返回200，失败返回400
      */
     public Integer getStatus() {
@@ -59,7 +59,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 设置接口调用状态，成功返回200，失败返回400
+     * Set 接口调用状态，成功返回200，失败返回400
      * @param Status 接口调用状态，成功返回200，失败返回400
      */
     public void setStatus(Integer Status) {
@@ -67,7 +67,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 获取接口调用描述信息，成功返回"scan success"，失败返回"scan error"
+     * Get 接口调用描述信息，成功返回"scan success"，失败返回"scan error" 
      * @return Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      */
     public String getInfo() {
@@ -75,7 +75,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 设置接口调用描述信息，成功返回"scan success"，失败返回"scan error"
+     * Set 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      * @param Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      */
     public void setInfo(String Info) {
@@ -83,7 +83,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 获取本地引擎下载地址
+     * Get 本地引擎下载地址 
      * @return Data 本地引擎下载地址
      */
     public String getData() {
@@ -91,7 +91,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 设置本地引擎下载地址
+     * Set 本地引擎下载地址
      * @param Data 本地引擎下载地址
      */
     public void setData(String Data) {
@@ -99,7 +99,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class GetLocalEngineResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

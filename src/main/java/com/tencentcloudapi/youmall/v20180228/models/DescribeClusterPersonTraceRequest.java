@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterPersonTraceRequest  extends AbstractModel{
+public class DescribeClusterPersonTraceRequest extends AbstractModel{
 
     /**
     * 卖场编码
@@ -51,7 +51,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取卖场编码
+     * Get 卖场编码 
      * @return MallId 卖场编码
      */
     public String getMallId() {
@@ -59,7 +59,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卖场编码
+     * Set 卖场编码
      * @param MallId 卖场编码
      */
     public void setMallId(String MallId) {
@@ -67,7 +67,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户编码
+     * Get 客户编码 
      * @return PersonId 客户编码
      */
     public String getPersonId() {
@@ -75,7 +75,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户编码
+     * Set 客户编码
      * @param PersonId 客户编码
      */
     public void setPersonId(String PersonId) {
@@ -83,7 +83,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始时间
+     * Get 查询开始时间 
      * @return StartTime 查询开始时间
      */
     public String getStartTime() {
@@ -91,7 +91,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始时间
+     * Set 查询开始时间
      * @param StartTime 查询开始时间
      */
     public void setStartTime(String StartTime) {
@@ -99,7 +99,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间
+     * Get 查询结束时间 
      * @return EndTime 查询结束时间
      */
     public String getEndTime() {
@@ -107,7 +107,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间
+     * Set 查询结束时间
      * @param EndTime 查询结束时间
      */
     public void setEndTime(String EndTime) {
@@ -115,7 +115,7 @@ public class DescribeClusterPersonTraceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallId", this.MallId);

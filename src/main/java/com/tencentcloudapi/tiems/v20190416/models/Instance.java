@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Instance  extends AbstractModel{
+public class Instance extends AbstractModel{
 
     /**
     * 节点 ID
@@ -149,7 +149,7 @@ public class Instance  extends AbstractModel{
     private Long GpuRequested;
 
     /**
-     * 获取节点 ID
+     * Get 节点 ID 
      * @return Id 节点 ID
      */
     public String getId() {
@@ -157,7 +157,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点 ID
+     * Set 节点 ID
      * @param Id 节点 ID
      */
     public void setId(String Id) {
@@ -165,7 +165,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点所在地区
+     * Get 节点所在地区 
      * @return Zone 节点所在地区
      */
     public String getZone() {
@@ -173,7 +173,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点所在地区
+     * Set 节点所在地区
      * @param Zone 节点所在地区
      */
     public void setZone(String Zone) {
@@ -181,7 +181,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点类型
+     * Get 节点类型 
      * @return InstanceType 节点类型
      */
     public String getInstanceType() {
@@ -189,7 +189,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点类型
+     * Set 节点类型
      * @param InstanceType 节点类型
      */
     public void setInstanceType(String InstanceType) {
@@ -197,7 +197,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点充值类型
+     * Get 节点充值类型 
      * @return InstanceChargeType 节点充值类型
      */
     public String getInstanceChargeType() {
@@ -205,7 +205,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点充值类型
+     * Set 节点充值类型
      * @param InstanceChargeType 节点充值类型
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -213,7 +213,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取Cpu 核数
+     * Get Cpu 核数 
      * @return Cpu Cpu 核数
      */
     public Long getCpu() {
@@ -221,7 +221,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置Cpu 核数
+     * Set Cpu 核数
      * @param Cpu Cpu 核数
      */
     public void setCpu(Long Cpu) {
@@ -229,7 +229,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取内存
+     * Get 内存 
      * @return Memory 内存
      */
     public Long getMemory() {
@@ -237,7 +237,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置内存
+     * Set 内存
      * @param Memory 内存
      */
     public void setMemory(Long Memory) {
@@ -245,7 +245,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取Gpu 核数
+     * Get Gpu 核数 
      * @return Gpu Gpu 核数
      */
     public Long getGpu() {
@@ -253,7 +253,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置Gpu 核数
+     * Set Gpu 核数
      * @param Gpu Gpu 核数
      */
     public void setGpu(Long Gpu) {
@@ -261,7 +261,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点状态
+     * Get 节点状态 
      * @return State 节点状态
      */
     public String getState() {
@@ -269,7 +269,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点状态
+     * Set 节点状态
      * @param State 节点状态
      */
     public void setState(String State) {
@@ -277,7 +277,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点故障信息
+     * Get 节点故障信息 
      * @return AbnormalReason 节点故障信息
      */
     public String getAbnormalReason() {
@@ -285,7 +285,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点故障信息
+     * Set 节点故障信息
      * @param AbnormalReason 节点故障信息
      */
     public void setAbnormalReason(String AbnormalReason) {
@@ -293,7 +293,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return Created 创建时间
      */
     public String getCreated() {
@@ -301,7 +301,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param Created 创建时间
      */
     public void setCreated(String Created) {
@@ -309,7 +309,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return Updated 更新时间
      */
     public String getUpdated() {
@@ -317,7 +317,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param Updated 更新时间
      */
     public void setUpdated(String Updated) {
@@ -325,7 +325,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间
+     * Get 到期时间 
      * @return DeadlineTime 到期时间
      */
     public String getDeadlineTime() {
@@ -333,7 +333,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间
+     * Set 到期时间
      * @param DeadlineTime 到期时间
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -341,7 +341,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取所属资源组 ID
+     * Get 所属资源组 ID 
      * @return ResourceGroupId 所属资源组 ID
      */
     public String getResourceGroupId() {
@@ -349,7 +349,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置所属资源组 ID
+     * Set 所属资源组 ID
      * @param ResourceGroupId 所属资源组 ID
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -357,7 +357,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标签
+     * Get 自动续费标签 
      * @return RenewFlag 自动续费标签
      */
     public String getRenewFlag() {
@@ -365,7 +365,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标签
+     * Set 自动续费标签
      * @param RenewFlag 自动续费标签
      */
     public void setRenewFlag(String RenewFlag) {
@@ -373,7 +373,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点所在地域
+     * Get 节点所在地域 
      * @return Region 节点所在地域
      */
     public String getRegion() {
@@ -381,7 +381,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点所在地域
+     * Set 节点所在地域
      * @param Region 节点所在地域
      */
     public void setRegion(String Region) {
@@ -389,7 +389,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取当前 Cpu 申请使用量
+     * Get 当前 Cpu 申请使用量 
      * @return CpuRequested 当前 Cpu 申请使用量
      */
     public Long getCpuRequested() {
@@ -397,7 +397,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置当前 Cpu 申请使用量
+     * Set 当前 Cpu 申请使用量
      * @param CpuRequested 当前 Cpu 申请使用量
      */
     public void setCpuRequested(Long CpuRequested) {
@@ -405,7 +405,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取当前 Memory 申请使用量
+     * Get 当前 Memory 申请使用量 
      * @return MemoryRequested 当前 Memory 申请使用量
      */
     public Long getMemoryRequested() {
@@ -413,7 +413,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置当前 Memory 申请使用量
+     * Set 当前 Memory 申请使用量
      * @param MemoryRequested 当前 Memory 申请使用量
      */
     public void setMemoryRequested(Long MemoryRequested) {
@@ -421,7 +421,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取当前 Gpu 申请使用量
+     * Get 当前 Gpu 申请使用量 
      * @return GpuRequested 当前 Gpu 申请使用量
      */
     public Long getGpuRequested() {
@@ -429,7 +429,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置当前 Gpu 申请使用量
+     * Set 当前 Gpu 申请使用量
      * @param GpuRequested 当前 Gpu 申请使用量
      */
     public void setGpuRequested(Long GpuRequested) {
@@ -437,7 +437,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

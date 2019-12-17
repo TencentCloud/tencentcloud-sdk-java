@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCThresholdRequest  extends AbstractModel{
+public class ModifyCCThresholdRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -69,7 +69,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     private String RuleId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -77,7 +77,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -85,7 +85,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -93,7 +93,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -101,7 +101,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
+     * Get CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
 当Business为高防IP、高防IP专业版、棋牌盾时，其CC防护最大阈值跟资源的保底防护带宽有关，对应关系如下：
   保底带宽: 最大C防护阈值
   10:  20000,
@@ -111,7 +111,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
   50:  150000,
   60:  200000,
   80:  250000,
-  100: 300000,
+  100: 300000, 
      * @return Threshold CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
 当Business为高防IP、高防IP专业版、棋牌盾时，其CC防护最大阈值跟资源的保底防护带宽有关，对应关系如下：
   保底带宽: 最大C防护阈值
@@ -129,7 +129,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
+     * Set CC防护阈值，取值(0 100 150 240 350 480 550 700 850 1000 1500 2000 3000 5000 10000 20000);
 当Business为高防IP、高防IP专业版、棋牌盾时，其CC防护最大阈值跟资源的保底防护带宽有关，对应关系如下：
   保底带宽: 最大C防护阈值
   10:  20000,
@@ -157,7 +157,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * Get 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段； 
      * @return Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public String getProtocol() {
@@ -165,7 +165,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * Set 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      * @param Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public void setProtocol(String Protocol) {
@@ -173,8 +173,8 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
-当Protocol=https时必须填写；
+     * Get 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+当Protocol=https时必须填写； 
      * @return RuleId 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
 当Protocol=https时必须填写；
      */
@@ -183,7 +183,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+     * Set 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
 当Protocol=https时必须填写；
      * @param RuleId 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
 当Protocol=https时必须填写；
@@ -193,7 +193,7 @@ public class ModifyCCThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceClassPartitionInfo  extends AbstractModel{
+public class DeviceClassPartitionInfo extends AbstractModel{
 
     /**
     * RAID类型ID
@@ -100,7 +100,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     private DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet;
 
     /**
-     * 获取RAID类型ID
+     * Get RAID类型ID 
      * @return RaidId RAID类型ID
      */
     public Integer getRaidId() {
@@ -108,7 +108,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RAID类型ID
+     * Set RAID类型ID
      * @param RaidId RAID类型ID
      */
     public void setRaidId(Integer RaidId) {
@@ -116,7 +116,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RAID名称
+     * Get RAID名称 
      * @return Raid RAID名称
      */
     public String getRaid() {
@@ -124,7 +124,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RAID名称
+     * Set RAID名称
      * @param Raid RAID名称
      */
     public void setRaid(String Raid) {
@@ -132,7 +132,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RAID名称（前台展示用）
+     * Get RAID名称（前台展示用） 
      * @return RaidDisplay RAID名称（前台展示用）
      */
     public String getRaidDisplay() {
@@ -140,7 +140,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RAID名称（前台展示用）
+     * Set RAID名称（前台展示用）
      * @param RaidDisplay RAID名称（前台展示用）
      */
     public void setRaidDisplay(String RaidDisplay) {
@@ -148,7 +148,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘总大小（单位GiB）
+     * Get 系统盘总大小（单位GiB） 
      * @return SystemDiskSize 系统盘总大小（单位GiB）
      */
     public Integer getSystemDiskSize() {
@@ -156,7 +156,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘总大小（单位GiB）
+     * Set 系统盘总大小（单位GiB）
      * @param SystemDiskSize 系统盘总大小（单位GiB）
      */
     public void setSystemDiskSize(Integer SystemDiskSize) {
@@ -164,7 +164,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘/分区默认大小（单位GiB）
+     * Get 系统盘/分区默认大小（单位GiB） 
      * @return SysRootSpace 系统盘/分区默认大小（单位GiB）
      */
     public Integer getSysRootSpace() {
@@ -172,7 +172,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘/分区默认大小（单位GiB）
+     * Set 系统盘/分区默认大小（单位GiB）
      * @param SysRootSpace 系统盘/分区默认大小（单位GiB）
      */
     public void setSysRootSpace(Integer SysRootSpace) {
@@ -180,7 +180,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘swap分区默认大小（单位GiB）
+     * Get 系统盘swap分区默认大小（单位GiB） 
      * @return SysSwaporuefiSpace 系统盘swap分区默认大小（单位GiB）
      */
     public Integer getSysSwaporuefiSpace() {
@@ -188,7 +188,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘swap分区默认大小（单位GiB）
+     * Set 系统盘swap分区默认大小（单位GiB）
      * @param SysSwaporuefiSpace 系统盘swap分区默认大小（单位GiB）
      */
     public void setSysSwaporuefiSpace(Integer SysSwaporuefiSpace) {
@@ -196,7 +196,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘/usr/local分区默认大小（单位GiB）
+     * Get 系统盘/usr/local分区默认大小（单位GiB） 
      * @return SysUsrlocalSpace 系统盘/usr/local分区默认大小（单位GiB）
      */
     public Integer getSysUsrlocalSpace() {
@@ -204,7 +204,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘/usr/local分区默认大小（单位GiB）
+     * Set 系统盘/usr/local分区默认大小（单位GiB）
      * @param SysUsrlocalSpace 系统盘/usr/local分区默认大小（单位GiB）
      */
     public void setSysUsrlocalSpace(Integer SysUsrlocalSpace) {
@@ -212,7 +212,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘/data分区默认大小（单位GiB）
+     * Get 系统盘/data分区默认大小（单位GiB） 
      * @return SysDataSpace 系统盘/data分区默认大小（单位GiB）
      */
     public Integer getSysDataSpace() {
@@ -220,7 +220,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘/data分区默认大小（单位GiB）
+     * Set 系统盘/data分区默认大小（单位GiB）
      * @param SysDataSpace 系统盘/data分区默认大小（单位GiB）
      */
     public void setSysDataSpace(Integer SysDataSpace) {
@@ -228,7 +228,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
+     * Get 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动 
      * @return SysIsUefiType 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      */
     public Integer getSysIsUefiType() {
@@ -236,7 +236,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
+     * Set 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      * @param SysIsUefiType 设备是否是uefi启动方式。0:legacy启动; 1:uefi启动
      */
     public void setSysIsUefiType(Integer SysIsUefiType) {
@@ -244,7 +244,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘总大小
+     * Get 数据盘总大小 
      * @return DataDiskSize 数据盘总大小
      */
     public Integer getDataDiskSize() {
@@ -252,7 +252,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘总大小
+     * Set 数据盘总大小
      * @param DataDiskSize 数据盘总大小
      */
     public void setDataDiskSize(Integer DataDiskSize) {
@@ -260,7 +260,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘列表
+     * Get 硬盘列表 
      * @return DeviceDiskSizeInfoSet 硬盘列表
      */
     public DeviceDiskSizeInfo [] getDeviceDiskSizeInfoSet() {
@@ -268,7 +268,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘列表
+     * Set 硬盘列表
      * @param DeviceDiskSizeInfoSet 硬盘列表
      */
     public void setDeviceDiskSizeInfoSet(DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet) {
@@ -276,7 +276,7 @@ public class DeviceClassPartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RaidId", this.RaidId);

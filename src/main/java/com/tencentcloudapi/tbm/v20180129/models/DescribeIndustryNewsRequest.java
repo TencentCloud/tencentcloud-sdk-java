@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndustryNewsRequest  extends AbstractModel{
+public class DescribeIndustryNewsRequest extends AbstractModel{
 
     /**
     * 行业ID
@@ -65,7 +65,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取行业ID
+     * Get 行业ID 
      * @return IndustryId 行业ID
      */
     public String getIndustryId() {
@@ -73,7 +73,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置行业ID
+     * Set 行业ID
      * @param IndustryId 行业ID
      */
     public void setIndustryId(String IndustryId) {
@@ -81,7 +81,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始时间
+     * Get 查询开始时间 
      * @return StartDate 查询开始时间
      */
     public String getStartDate() {
@@ -89,7 +89,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始时间
+     * Set 查询开始时间
      * @param StartDate 查询开始时间
      */
     public void setStartDate(String StartDate) {
@@ -97,7 +97,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间
+     * Get 查询结束时间 
      * @return EndDate 查询结束时间
      */
     public String getEndDate() {
@@ -105,7 +105,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间
+     * Set 查询结束时间
      * @param EndDate 查询结束时间
      */
     public void setEndDate(String EndDate) {
@@ -113,7 +113,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否显示列表，若为 true，则返回文章列表
+     * Get 是否显示列表，若为 true，则返回文章列表 
      * @return ShowList 是否显示列表，若为 true，则返回文章列表
      */
     public Boolean getShowList() {
@@ -121,7 +121,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否显示列表，若为 true，则返回文章列表
+     * Set 是否显示列表，若为 true，则返回文章列表
      * @param ShowList 是否显示列表，若为 true，则返回文章列表
      */
     public void setShowList(Boolean ShowList) {
@@ -129,7 +129,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询偏移，默认从0开始
+     * Get 查询偏移，默认从0开始 
      * @return Offset 查询偏移，默认从0开始
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询偏移，默认从0开始
+     * Set 查询偏移，默认从0开始
      * @param Offset 查询偏移，默认从0开始
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询条数上限，默认20
+     * Get 查询条数上限，默认20 
      * @return Limit 查询条数上限，默认20
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询条数上限，默认20
+     * Set 查询条数上限，默认20
      * @param Limit 查询条数上限，默认20
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeIndustryNewsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IndustryId", this.IndustryId);

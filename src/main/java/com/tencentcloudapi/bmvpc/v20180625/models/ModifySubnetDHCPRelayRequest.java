@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
+public class ModifySubnetDHCPRelayRequest extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -58,7 +58,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     private Long ReservedIpCount;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -66,7 +66,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -74,7 +74,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -82,7 +82,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -90,7 +90,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启DHCP Relay
+     * Get 是否开启DHCP Relay 
      * @return EnableDHCP 是否开启DHCP Relay
      */
     public Boolean getEnableDHCP() {
@@ -98,7 +98,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启DHCP Relay
+     * Set 是否开启DHCP Relay
      * @param EnableDHCP 是否开启DHCP Relay
      */
     public void setEnableDHCP(Boolean EnableDHCP) {
@@ -106,7 +106,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取DHCP服务器IP
+     * Get DHCP服务器IP 
      * @return ServerIps DHCP服务器IP
      */
     public String [] getServerIps() {
@@ -114,7 +114,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置DHCP服务器IP
+     * Set DHCP服务器IP
      * @param ServerIps DHCP服务器IP
      */
     public void setServerIps(String [] ServerIps) {
@@ -122,7 +122,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预留IP个数
+     * Get 预留IP个数 
      * @return ReservedIpCount 预留IP个数
      */
     public Long getReservedIpCount() {
@@ -130,7 +130,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预留IP个数
+     * Set 预留IP个数
      * @param ReservedIpCount 预留IP个数
      */
     public void setReservedIpCount(Long ReservedIpCount) {
@@ -138,7 +138,7 @@ public class ModifySubnetDHCPRelayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

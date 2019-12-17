@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceShape  extends AbstractModel{
+public class FaceShape extends AbstractModel{
 
     /**
     * 描述脸型轮廓的 21 点。
@@ -86,7 +86,7 @@ public class FaceShape  extends AbstractModel{
     private Point [] RightPupil;
 
     /**
-     * 获取描述脸型轮廓的 21 点。
+     * Get 描述脸型轮廓的 21 点。 
      * @return FaceProfile 描述脸型轮廓的 21 点。
      */
     public Point [] getFaceProfile() {
@@ -94,7 +94,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述脸型轮廓的 21 点。
+     * Set 描述脸型轮廓的 21 点。
      * @param FaceProfile 描述脸型轮廓的 21 点。
      */
     public void setFaceProfile(Point [] FaceProfile) {
@@ -102,7 +102,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述左侧眼睛轮廓的 8 点。
+     * Get 描述左侧眼睛轮廓的 8 点。 
      * @return LeftEye 描述左侧眼睛轮廓的 8 点。
      */
     public Point [] getLeftEye() {
@@ -110,7 +110,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述左侧眼睛轮廓的 8 点。
+     * Set 描述左侧眼睛轮廓的 8 点。
      * @param LeftEye 描述左侧眼睛轮廓的 8 点。
      */
     public void setLeftEye(Point [] LeftEye) {
@@ -118,7 +118,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述右侧眼睛轮廓的 8 点。
+     * Get 描述右侧眼睛轮廓的 8 点。 
      * @return RightEye 描述右侧眼睛轮廓的 8 点。
      */
     public Point [] getRightEye() {
@@ -126,7 +126,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述右侧眼睛轮廓的 8 点。
+     * Set 描述右侧眼睛轮廓的 8 点。
      * @param RightEye 描述右侧眼睛轮廓的 8 点。
      */
     public void setRightEye(Point [] RightEye) {
@@ -134,7 +134,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述左侧眉毛轮廓的 8 点。
+     * Get 描述左侧眉毛轮廓的 8 点。 
      * @return LeftEyeBrow 描述左侧眉毛轮廓的 8 点。
      */
     public Point [] getLeftEyeBrow() {
@@ -142,7 +142,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述左侧眉毛轮廓的 8 点。
+     * Set 描述左侧眉毛轮廓的 8 点。
      * @param LeftEyeBrow 描述左侧眉毛轮廓的 8 点。
      */
     public void setLeftEyeBrow(Point [] LeftEyeBrow) {
@@ -150,7 +150,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述右侧眉毛轮廓的 8 点。
+     * Get 描述右侧眉毛轮廓的 8 点。 
      * @return RightEyeBrow 描述右侧眉毛轮廓的 8 点。
      */
     public Point [] getRightEyeBrow() {
@@ -158,7 +158,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述右侧眉毛轮廓的 8 点。
+     * Set 描述右侧眉毛轮廓的 8 点。
      * @param RightEyeBrow 描述右侧眉毛轮廓的 8 点。
      */
     public void setRightEyeBrow(Point [] RightEyeBrow) {
@@ -166,7 +166,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述嘴巴轮廓的 22 点。
+     * Get 描述嘴巴轮廓的 22 点。 
      * @return Mouth 描述嘴巴轮廓的 22 点。
      */
     public Point [] getMouth() {
@@ -174,7 +174,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述嘴巴轮廓的 22 点。
+     * Set 描述嘴巴轮廓的 22 点。
      * @param Mouth 描述嘴巴轮廓的 22 点。
      */
     public void setMouth(Point [] Mouth) {
@@ -182,7 +182,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取描述鼻子轮廓的 13 点。
+     * Get 描述鼻子轮廓的 13 点。 
      * @return Nose 描述鼻子轮廓的 13 点。
      */
     public Point [] getNose() {
@@ -190,7 +190,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置描述鼻子轮廓的 13 点。
+     * Set 描述鼻子轮廓的 13 点。
      * @param Nose 描述鼻子轮廓的 13 点。
      */
     public void setNose(Point [] Nose) {
@@ -198,7 +198,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取左瞳孔轮廓的 1 个点。
+     * Get 左瞳孔轮廓的 1 个点。 
      * @return LeftPupil 左瞳孔轮廓的 1 个点。
      */
     public Point [] getLeftPupil() {
@@ -206,7 +206,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置左瞳孔轮廓的 1 个点。
+     * Set 左瞳孔轮廓的 1 个点。
      * @param LeftPupil 左瞳孔轮廓的 1 个点。
      */
     public void setLeftPupil(Point [] LeftPupil) {
@@ -214,7 +214,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 获取右瞳孔轮廓的 1 个点。
+     * Get 右瞳孔轮廓的 1 个点。 
      * @return RightPupil 右瞳孔轮廓的 1 个点。
      */
     public Point [] getRightPupil() {
@@ -222,7 +222,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 设置右瞳孔轮廓的 1 个点。
+     * Set 右瞳孔轮廓的 1 个点。
      * @param RightPupil 右瞳孔轮廓的 1 个点。
      */
     public void setRightPupil(Point [] RightPupil) {
@@ -230,7 +230,7 @@ public class FaceShape  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FaceProfile.", this.FaceProfile);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateGroupRequest  extends AbstractModel{
+public class UpdateGroupRequest extends AbstractModel{
 
     /**
     * 用户组 ID
@@ -44,7 +44,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取用户组 ID
+     * Get 用户组 ID 
      * @return GroupId 用户组 ID
      */
     public Long getGroupId() {
@@ -52,7 +52,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID
+     * Set 用户组 ID
      * @param GroupId 用户组 ID
      */
     public void setGroupId(Long GroupId) {
@@ -60,7 +60,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户组名
+     * Get 用户组名 
      * @return GroupName 用户组名
      */
     public String getGroupName() {
@@ -68,7 +68,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户组名
+     * Set 用户组名
      * @param GroupName 用户组名
      */
     public void setGroupName(String GroupName) {
@@ -76,7 +76,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户组描述
+     * Get 用户组描述 
      * @return Remark 用户组描述
      */
     public String getRemark() {
@@ -84,7 +84,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户组描述
+     * Set 用户组描述
      * @param Remark 用户组描述
      */
     public void setRemark(String Remark) {
@@ -92,7 +92,7 @@ public class UpdateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

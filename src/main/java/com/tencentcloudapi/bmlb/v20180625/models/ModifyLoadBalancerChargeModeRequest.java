@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
+public class ModifyLoadBalancerChargeModeRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID。
@@ -44,7 +44,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     private ModifyLoadBalancerChargeModeListener [] ListenerSet;
 
     /**
-     * 获取负载均衡实例ID。
+     * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID。
+     * Set 负载均衡实例ID。
      * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费方式。flow或bandwidth。
+     * Get 计费方式。flow或bandwidth。 
      * @return PayMode 计费方式。flow或bandwidth。
      */
     public String getPayMode() {
@@ -68,7 +68,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费方式。flow或bandwidth。
+     * Set 计费方式。flow或bandwidth。
      * @param PayMode 计费方式。flow或bandwidth。
      */
     public void setPayMode(String PayMode) {
@@ -76,7 +76,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
+     * Get 监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。 
      * @return ListenerSet 监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
      */
     public ModifyLoadBalancerChargeModeListener [] getListenerSet() {
@@ -84,7 +84,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
+     * Set 监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
      * @param ListenerSet 监听器信息，当计费方式选为 bandwidth 且此负载均衡实例下存在监听器时需填入此字段，可以自定义每个监听器带宽上限。
      */
     public void setListenerSet(ModifyLoadBalancerChargeModeListener [] ListenerSet) {
@@ -92,7 +92,7 @@ public class ModifyLoadBalancerChargeModeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

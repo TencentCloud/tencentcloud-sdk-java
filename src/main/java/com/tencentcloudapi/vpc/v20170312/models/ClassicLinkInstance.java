@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassicLinkInstance  extends AbstractModel{
+public class ClassicLinkInstance extends AbstractModel{
 
     /**
     * VPC实例ID
@@ -37,7 +37,7 @@ public class ClassicLinkInstance  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取VPC实例ID
+     * Get VPC实例ID 
      * @return VpcId VPC实例ID
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class ClassicLinkInstance  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID
+     * Set VPC实例ID
      * @param VpcId VPC实例ID
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class ClassicLinkInstance  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器实例唯一ID
+     * Get 云服务器实例唯一ID 
      * @return InstanceId 云服务器实例唯一ID
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class ClassicLinkInstance  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器实例唯一ID
+     * Set 云服务器实例唯一ID
      * @param InstanceId 云服务器实例唯一ID
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class ClassicLinkInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

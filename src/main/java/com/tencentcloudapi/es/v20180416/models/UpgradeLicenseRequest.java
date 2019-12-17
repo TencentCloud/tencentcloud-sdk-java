@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeLicenseRequest  extends AbstractModel{
+public class UpgradeLicenseRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -51,7 +51,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Get License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum 
      * @return LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     public String getLicenseType() {
@@ -75,7 +75,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Set License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      * @param LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     public void setLicenseType(String LicenseType) {
@@ -83,7 +83,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+     * Get 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0 
      * @return AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
     public Integer getAutoVoucher() {
@@ -91,7 +91,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
+     * Set 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      * @param AutoVoucher 是否自动使用代金券<li>0：不自动使用</li><li>1：自动使用</li>默认值0
      */
     public void setAutoVoucher(Integer AutoVoucher) {
@@ -99,7 +99,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表（目前仅支持指定一张代金券）
+     * Get 代金券ID列表（目前仅支持指定一张代金券） 
      * @return VoucherIds 代金券ID列表（目前仅支持指定一张代金券）
      */
     public String [] getVoucherIds() {
@@ -107,7 +107,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表（目前仅支持指定一张代金券）
+     * Set 代金券ID列表（目前仅支持指定一张代金券）
      * @param VoucherIds 代金券ID列表（目前仅支持指定一张代金券）
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -115,7 +115,7 @@ public class UpgradeLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

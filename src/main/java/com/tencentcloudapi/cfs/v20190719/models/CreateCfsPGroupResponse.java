@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsPGroupResponse  extends AbstractModel{
+public class CreateCfsPGroupResponse extends AbstractModel{
 
     /**
     * 权限组 ID
@@ -65,7 +65,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -73,7 +73,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -81,7 +81,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组名字
+     * Get 权限组名字 
      * @return Name 权限组名字
      */
     public String getName() {
@@ -89,7 +89,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名字
+     * Set 权限组名字
      * @param Name 权限组名字
      */
     public void setName(String Name) {
@@ -97,7 +97,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组描述信息
+     * Get 权限组描述信息 
      * @return DescInfo 权限组描述信息
      */
     public String getDescInfo() {
@@ -105,7 +105,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组描述信息
+     * Set 权限组描述信息
      * @param DescInfo 权限组描述信息
      */
     public void setDescInfo(String DescInfo) {
@@ -113,7 +113,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已经与该权限组绑定的文件系统个数
+     * Get 已经与该权限组绑定的文件系统个数 
      * @return BindCfsNum 已经与该权限组绑定的文件系统个数
      */
     public Long getBindCfsNum() {
@@ -121,7 +121,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已经与该权限组绑定的文件系统个数
+     * Set 已经与该权限组绑定的文件系统个数
      * @param BindCfsNum 已经与该权限组绑定的文件系统个数
      */
     public void setBindCfsNum(Long BindCfsNum) {
@@ -129,7 +129,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组创建时间
+     * Get 权限组创建时间 
      * @return CDate 权限组创建时间
      */
     public String getCDate() {
@@ -137,7 +137,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组创建时间
+     * Set 权限组创建时间
      * @param CDate 权限组创建时间
      */
     public void setCDate(String CDate) {
@@ -145,7 +145,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class CreateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceHardwareInfo  extends AbstractModel{
+public class DeviceHardwareInfo extends AbstractModel{
 
     /**
     * 设备实例 ID
@@ -128,7 +128,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     private String RaidDescription;
 
     /**
-     * 获取设备实例 ID
+     * Get 设备实例 ID 
      * @return InstanceId 设备实例 ID
      */
     public String getInstanceId() {
@@ -136,7 +136,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备实例 ID
+     * Set 设备实例 ID
      * @param InstanceId 设备实例 ID
      */
     public void setInstanceId(String InstanceId) {
@@ -144,7 +144,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否自定义机型
+     * Get 是否自定义机型 
      * @return IsElastic 是否自定义机型
      */
     public Integer getIsElastic() {
@@ -152,7 +152,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否自定义机型
+     * Set 是否自定义机型
      * @param IsElastic 是否自定义机型
      */
     public void setIsElastic(Integer IsElastic) {
@@ -160,7 +160,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取机型计费模式，1 为预付费，2 为后付费
+     * Get 机型计费模式，1 为预付费，2 为后付费 
      * @return CpmPayMode 机型计费模式，1 为预付费，2 为后付费
      */
     public Integer getCpmPayMode() {
@@ -168,7 +168,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机型计费模式，1 为预付费，2 为后付费
+     * Set 机型计费模式，1 为预付费，2 为后付费
      * @param CpmPayMode 机型计费模式，1 为预付费，2 为后付费
      */
     public void setCpmPayMode(Integer CpmPayMode) {
@@ -176,7 +176,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型，CPU 型号 ID（非自定义机型返回0）
+     * Get 自定义机型，CPU 型号 ID（非自定义机型返回0） 
      * @return CpuId 自定义机型，CPU 型号 ID（非自定义机型返回0）
      */
     public Integer getCpuId() {
@@ -184,7 +184,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型，CPU 型号 ID（非自定义机型返回0）
+     * Set 自定义机型，CPU 型号 ID（非自定义机型返回0）
      * @param CpuId 自定义机型，CPU 型号 ID（非自定义机型返回0）
      */
     public void setCpuId(Integer CpuId) {
@@ -192,7 +192,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型，内存大小, 单位 GB（非自定义机型返回0）
+     * Get 自定义机型，内存大小, 单位 GB（非自定义机型返回0） 
      * @return Mem 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      */
     public Integer getMem() {
@@ -200,7 +200,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型，内存大小, 单位 GB（非自定义机型返回0）
+     * Set 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      * @param Mem 自定义机型，内存大小, 单位 GB（非自定义机型返回0）
      */
     public void setMem(Integer Mem) {
@@ -208,7 +208,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
+     * Get 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡 
      * @return ContainRaidCard 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      */
     public Integer getContainRaidCard() {
@@ -216,7 +216,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
+     * Set 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      * @param ContainRaidCard 是否有 RAID 卡，0：没有 RAID 卡； 1：有 RAID 卡
      */
     public void setContainRaidCard(Integer ContainRaidCard) {
@@ -224,7 +224,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型系统盘类型ID（若没有则返回0）
+     * Get 自定义机型系统盘类型ID（若没有则返回0） 
      * @return SystemDiskTypeId 自定义机型系统盘类型ID（若没有则返回0）
      */
     public Integer getSystemDiskTypeId() {
@@ -232,7 +232,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型系统盘类型ID（若没有则返回0）
+     * Set 自定义机型系统盘类型ID（若没有则返回0）
      * @param SystemDiskTypeId 自定义机型系统盘类型ID（若没有则返回0）
      */
     public void setSystemDiskTypeId(Integer SystemDiskTypeId) {
@@ -240,7 +240,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型系统盘数量（若没有则返回0）
+     * Get 自定义机型系统盘数量（若没有则返回0） 
      * @return SystemDiskCount 自定义机型系统盘数量（若没有则返回0）
      */
     public Integer getSystemDiskCount() {
@@ -248,7 +248,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型系统盘数量（若没有则返回0）
+     * Set 自定义机型系统盘数量（若没有则返回0）
      * @param SystemDiskCount 自定义机型系统盘数量（若没有则返回0）
      */
     public void setSystemDiskCount(Integer SystemDiskCount) {
@@ -256,7 +256,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型数据盘类型 ID（若没有则返回0）
+     * Get 自定义机型数据盘类型 ID（若没有则返回0） 
      * @return DataDiskTypeId 自定义机型数据盘类型 ID（若没有则返回0）
      */
     public Integer getDataDiskTypeId() {
@@ -264,7 +264,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型数据盘类型 ID（若没有则返回0）
+     * Set 自定义机型数据盘类型 ID（若没有则返回0）
      * @param DataDiskTypeId 自定义机型数据盘类型 ID（若没有则返回0）
      */
     public void setDataDiskTypeId(Integer DataDiskTypeId) {
@@ -272,7 +272,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自定义机型数据盘数量（若没有则返回0）
+     * Get 自定义机型数据盘数量（若没有则返回0） 
      * @return DataDiskCount 自定义机型数据盘数量（若没有则返回0）
      */
     public Integer getDataDiskCount() {
@@ -280,7 +280,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自定义机型数据盘数量（若没有则返回0）
+     * Set 自定义机型数据盘数量（若没有则返回0）
      * @param DataDiskCount 自定义机型数据盘数量（若没有则返回0）
      */
     public void setDataDiskCount(Integer DataDiskCount) {
@@ -288,7 +288,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取CPU 型号描述
+     * Get CPU 型号描述 
      * @return CpuDescription CPU 型号描述
      */
     public String getCpuDescription() {
@@ -296,7 +296,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置CPU 型号描述
+     * Set CPU 型号描述
      * @param CpuDescription CPU 型号描述
      */
     public void setCpuDescription(String CpuDescription) {
@@ -304,7 +304,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存描述
+     * Get 内存描述 
      * @return MemDescription 内存描述
      */
     public String getMemDescription() {
@@ -312,7 +312,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存描述
+     * Set 内存描述
      * @param MemDescription 内存描述
      */
     public void setMemDescription(String MemDescription) {
@@ -320,7 +320,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘描述
+     * Get 磁盘描述 
      * @return DiskDescription 磁盘描述
      */
     public String getDiskDescription() {
@@ -328,7 +328,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘描述
+     * Set 磁盘描述
      * @param DiskDescription 磁盘描述
      */
     public void setDiskDescription(String DiskDescription) {
@@ -336,7 +336,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网卡描述
+     * Get 网卡描述 
      * @return NicDescription 网卡描述
      */
     public String getNicDescription() {
@@ -344,7 +344,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网卡描述
+     * Set 网卡描述
      * @param NicDescription 网卡描述
      */
     public void setNicDescription(String NicDescription) {
@@ -352,7 +352,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持 RAID 的描述
+     * Get 是否支持 RAID 的描述 
      * @return RaidDescription 是否支持 RAID 的描述
      */
     public String getRaidDescription() {
@@ -360,7 +360,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持 RAID 的描述
+     * Set 是否支持 RAID 的描述
      * @param RaidDescription 是否支持 RAID 的描述
      */
     public void setRaidDescription(String RaidDescription) {
@@ -368,7 +368,7 @@ public class DeviceHardwareInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

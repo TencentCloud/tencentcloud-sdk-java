@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupsRequest  extends AbstractModel{
+public class DescribeGroupsRequest extends AbstractModel{
 
     /**
     * 搜索字段
@@ -86,7 +86,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     private String [] GroupResourceTypeList;
 
     /**
-     * 获取搜索字段
+     * Get 搜索字段 
      * @return SearchWord 搜索字段
      */
     public String getSearchWord() {
@@ -94,7 +94,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索字段
+     * Set 搜索字段
      * @param SearchWord 搜索字段
      */
     public void setSearchWord(String SearchWord) {
@@ -102,7 +102,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -110,7 +110,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -118,7 +118,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段
+     * Get 排序字段 
      * @return OrderBy 排序字段
      */
     public String getOrderBy() {
@@ -126,7 +126,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段
+     * Set 排序字段
      * @param OrderBy 排序字段
      */
     public void setOrderBy(String OrderBy) {
@@ -134,7 +134,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式
+     * Get 排序方式 
      * @return OrderType 排序方式
      */
     public Long getOrderType() {
@@ -142,7 +142,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式
+     * Set 排序方式
      * @param OrderType 排序方式
      */
     public void setOrderType(Long OrderType) {
@@ -150,7 +150,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -158,7 +158,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -166,7 +166,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数
+     * Get 分页个数 
      * @return Limit 分页个数
      */
     public Long getLimit() {
@@ -174,7 +174,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数
+     * Set 分页个数
      * @param Limit 分页个数
      */
     public void setLimit(Long Limit) {
@@ -182,7 +182,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
     public String getNamespaceId() {
@@ -190,7 +190,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
      * @param NamespaceId 命名空间ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -198,7 +198,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -206,7 +206,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -214,7 +214,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组资源类型列表
+     * Get 部署组资源类型列表 
      * @return GroupResourceTypeList 部署组资源类型列表
      */
     public String [] getGroupResourceTypeList() {
@@ -222,7 +222,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组资源类型列表
+     * Set 部署组资源类型列表
      * @param GroupResourceTypeList 部署组资源类型列表
      */
     public void setGroupResourceTypeList(String [] GroupResourceTypeList) {
@@ -230,7 +230,7 @@ public class DescribeGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogsResponse  extends AbstractModel{
+public class DescribeFlowLogsResponse extends AbstractModel{
 
     /**
     * 流日志实例集合
@@ -44,7 +44,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取流日志实例集合
+     * Get 流日志实例集合 
      * @return FlowLog 流日志实例集合
      */
     public FlowLog [] getFlowLog() {
@@ -52,7 +52,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例集合
+     * Set 流日志实例集合
      * @param FlowLog 流日志实例集合
      */
     public void setFlowLog(FlowLog [] FlowLog) {
@@ -60,7 +60,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取流日志总数目
+     * Get 流日志总数目 
      * @return TotalNum 流日志总数目
      */
     public Integer getTotalNum() {
@@ -68,7 +68,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置流日志总数目
+     * Set 流日志总数目
      * @param TotalNum 流日志总数目
      */
     public void setTotalNum(Integer TotalNum) {
@@ -76,7 +76,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeFlowLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConfigsRequest  extends AbstractModel{
+public class DescribeConfigsRequest extends AbstractModel{
 
     /**
     * 应用ID，不传入时查询全量
@@ -65,7 +65,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     private String ConfigName;
 
     /**
-     * 获取应用ID，不传入时查询全量
+     * Get 应用ID，不传入时查询全量 
      * @return ApplicationId 应用ID，不传入时查询全量
      */
     public String getApplicationId() {
@@ -73,7 +73,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，不传入时查询全量
+     * Set 应用ID，不传入时查询全量
      * @param ApplicationId 应用ID，不传入时查询全量
      */
     public void setApplicationId(String ApplicationId) {
@@ -81,7 +81,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项ID，不传入时查询全量，高优先级
+     * Get 配置项ID，不传入时查询全量，高优先级 
      * @return ConfigId 配置项ID，不传入时查询全量，高优先级
      */
     public String getConfigId() {
@@ -89,7 +89,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID，不传入时查询全量，高优先级
+     * Set 配置项ID，不传入时查询全量，高优先级
      * @param ConfigId 配置项ID，不传入时查询全量，高优先级
      */
     public void setConfigId(String ConfigId) {
@@ -97,7 +97,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -105,7 +105,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -113,7 +113,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数
+     * Get 每页条数 
      * @return Limit 每页条数
      */
     public Long getLimit() {
@@ -121,7 +121,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数
+     * Set 每页条数
      * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
@@ -129,7 +129,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项ID列表，不传入时查询全量，低优先级
+     * Get 配置项ID列表，不传入时查询全量，低优先级 
      * @return ConfigIdList 配置项ID列表，不传入时查询全量，低优先级
      */
     public String [] getConfigIdList() {
@@ -137,7 +137,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID列表，不传入时查询全量，低优先级
+     * Set 配置项ID列表，不传入时查询全量，低优先级
      * @param ConfigIdList 配置项ID列表，不传入时查询全量，低优先级
      */
     public void setConfigIdList(String [] ConfigIdList) {
@@ -145,7 +145,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项名称，精确查询，不传入时查询全量
+     * Get 配置项名称，精确查询，不传入时查询全量 
      * @return ConfigName 配置项名称，精确查询，不传入时查询全量
      */
     public String getConfigName() {
@@ -153,7 +153,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称，精确查询，不传入时查询全量
+     * Set 配置项名称，精确查询，不传入时查询全量
      * @param ConfigName 配置项名称，精确查询，不传入时查询全量
      */
     public void setConfigName(String ConfigName) {
@@ -161,7 +161,7 @@ public class DescribeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

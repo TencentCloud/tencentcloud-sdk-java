@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DriverLicenseOCRResponse  extends AbstractModel{
+public class DriverLicenseOCRResponse extends AbstractModel{
 
     /**
     * 姓名
@@ -100,7 +100,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -108,7 +108,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -116,7 +116,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -124,7 +124,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -132,7 +132,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取国籍
+     * Get 国籍 
      * @return Nationality 国籍
      */
     public String getNationality() {
@@ -140,7 +140,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置国籍
+     * Set 国籍
      * @param Nationality 国籍
      */
     public void setNationality(String Nationality) {
@@ -148,7 +148,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取住址
+     * Get 住址 
      * @return Address 住址
      */
     public String getAddress() {
@@ -156,7 +156,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置住址
+     * Set 住址
      * @param Address 住址
      */
     public void setAddress(String Address) {
@@ -164,7 +164,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生日期
+     * Get 出生日期 
      * @return DateOfBirth 出生日期
      */
     public String getDateOfBirth() {
@@ -172,7 +172,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生日期
+     * Set 出生日期
      * @param DateOfBirth 出生日期
      */
     public void setDateOfBirth(String DateOfBirth) {
@@ -180,7 +180,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取初次领证日期
+     * Get 初次领证日期 
      * @return DateOfFirstIssue 初次领证日期
      */
     public String getDateOfFirstIssue() {
@@ -188,7 +188,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置初次领证日期
+     * Set 初次领证日期
      * @param DateOfFirstIssue 初次领证日期
      */
     public void setDateOfFirstIssue(String DateOfFirstIssue) {
@@ -196,7 +196,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取准驾车型
+     * Get 准驾车型 
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
      * @return Class 准驾车型
      */
@@ -205,7 +205,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置准驾车型
+     * Set 准驾车型
      * @param Class 准驾车型
      */
     public void setClass(String Class) {
@@ -213,7 +213,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期开始时间
+     * Get 有效期开始时间 
      * @return StartDate 有效期开始时间
      */
     public String getStartDate() {
@@ -221,7 +221,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期开始时间
+     * Set 有效期开始时间
      * @param StartDate 有效期开始时间
      */
     public void setStartDate(String StartDate) {
@@ -229,7 +229,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期截止时间
+     * Get 有效期截止时间 
      * @return EndDate 有效期截止时间
      */
     public String getEndDate() {
@@ -237,7 +237,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期截止时间
+     * Set 有效期截止时间
      * @param EndDate 有效期截止时间
      */
     public void setEndDate(String EndDate) {
@@ -245,7 +245,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证号
+     * Get 证号 
      * @return CardCode 证号
      */
     public String getCardCode() {
@@ -253,7 +253,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证号
+     * Set 证号
      * @param CardCode 证号
      */
     public void setCardCode(String CardCode) {
@@ -261,7 +261,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -269,7 +269,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -277,7 +277,7 @@ public class DriverLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

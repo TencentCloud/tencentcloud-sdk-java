@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightLevelRatioStatistic  extends AbstractModel{
+public class LightLevelRatioStatistic extends AbstractModel{
 
     /**
     * 名称
@@ -37,7 +37,7 @@ public class LightLevelRatioStatistic  extends AbstractModel{
     private Float Ratio;
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Level 名称
      */
     public String getLevel() {
@@ -45,7 +45,7 @@ public class LightLevelRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Level 名称
      */
     public void setLevel(String Level) {
@@ -53,7 +53,7 @@ public class LightLevelRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取比例
+     * Get 比例 
      * @return Ratio 比例
      */
     public Float getRatio() {
@@ -61,7 +61,7 @@ public class LightLevelRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置比例
+     * Set 比例
      * @param Ratio 比例
      */
     public void setRatio(Float Ratio) {
@@ -69,7 +69,7 @@ public class LightLevelRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Level", this.Level);

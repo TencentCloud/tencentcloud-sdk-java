@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficPackagesRequest  extends AbstractModel{
+public class DescribeTrafficPackagesRequest extends AbstractModel{
 
     /**
     * 分页查询起始地址，默认 0（第一页）
@@ -37,7 +37,7 @@ public class DescribeTrafficPackagesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取分页查询起始地址，默认 0（第一页）
+     * Get 分页查询起始地址，默认 0（第一页） 
      * @return Offset 分页查询起始地址，默认 0（第一页）
      */
     public Integer getOffset() {
@@ -45,7 +45,7 @@ public class DescribeTrafficPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页查询起始地址，默认 0（第一页）
+     * Set 分页查询起始地址，默认 0（第一页）
      * @param Offset 分页查询起始地址，默认 0（第一页）
      */
     public void setOffset(Integer Offset) {
@@ -53,7 +53,7 @@ public class DescribeTrafficPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页查询记录个数，默认100，最大1000
+     * Get 分页查询记录个数，默认100，最大1000 
      * @return Limit 分页查询记录个数，默认100，最大1000
      */
     public Integer getLimit() {
@@ -61,7 +61,7 @@ public class DescribeTrafficPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页查询记录个数，默认100，最大1000
+     * Set 分页查询记录个数，默认100，最大1000
      * @param Limit 分页查询记录个数，默认100，最大1000
      */
     public void setLimit(Integer Limit) {
@@ -69,7 +69,7 @@ public class DescribeTrafficPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountDetail  extends AbstractModel{
+public class AccountDetail extends AbstractModel{
 
     /**
     * 账户名
@@ -48,7 +48,7 @@ public class AccountDetail  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 账户更新时间
@@ -79,7 +79,7 @@ public class AccountDetail  extends AbstractModel{
     private DBPrivilege [] Dbs;
 
     /**
-     * 获取账户名
+     * Get 账户名 
      * @return Name 账户名
      */
     public String getName() {
@@ -87,7 +87,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置账户名
+     * Set 账户名
      * @param Name 账户名
      */
     public void setName(String Name) {
@@ -95,7 +95,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取账户备注
+     * Get 账户备注 
      * @return Remark 账户备注
      */
     public String getRemark() {
@@ -103,7 +103,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置账户备注
+     * Set 账户备注
      * @param Remark 账户备注
      */
     public void setRemark(String Remark) {
@@ -111,7 +111,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取账户创建时间
+     * Get 账户创建时间 
      * @return CreateTime 账户创建时间
      */
     public String getCreateTime() {
@@ -119,7 +119,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置账户创建时间
+     * Set 账户创建时间
      * @param CreateTime 账户创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -127,23 +127,23 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Get 账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中 
      * @return Status 账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Set 账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      * @param Status 账户状态，1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取账户更新时间
+     * Get 账户更新时间 
      * @return UpdateTime 账户更新时间
      */
     public String getUpdateTime() {
@@ -151,7 +151,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置账户更新时间
+     * Set 账户更新时间
      * @param UpdateTime 账户更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -159,7 +159,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取密码更新时间
+     * Get 密码更新时间 
      * @return PassTime 密码更新时间
      */
     public String getPassTime() {
@@ -167,7 +167,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置密码更新时间
+     * Set 密码更新时间
      * @param PassTime 密码更新时间
      */
     public void setPassTime(String PassTime) {
@@ -175,7 +175,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取账户内部状态，正常为enable
+     * Get 账户内部状态，正常为enable 
      * @return InternalStatus 账户内部状态，正常为enable
      */
     public String getInternalStatus() {
@@ -183,7 +183,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置账户内部状态，正常为enable
+     * Set 账户内部状态，正常为enable
      * @param InternalStatus 账户内部状态，正常为enable
      */
     public void setInternalStatus(String InternalStatus) {
@@ -191,7 +191,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 获取该账户对相关db的读写权限信息
+     * Get 该账户对相关db的读写权限信息 
      * @return Dbs 该账户对相关db的读写权限信息
      */
     public DBPrivilege [] getDbs() {
@@ -199,7 +199,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 设置该账户对相关db的读写权限信息
+     * Set 该账户对相关db的读写权限信息
      * @param Dbs 该账户对相关db的读写权限信息
      */
     public void setDbs(DBPrivilege [] Dbs) {
@@ -207,7 +207,7 @@ public class AccountDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

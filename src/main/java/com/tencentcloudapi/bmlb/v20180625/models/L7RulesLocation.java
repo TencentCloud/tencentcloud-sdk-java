@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7RulesLocation  extends AbstractModel{
+public class L7RulesLocation extends AbstractModel{
 
     /**
     * 转发路径。
@@ -114,7 +114,7 @@ public class L7RulesLocation  extends AbstractModel{
     private String AddTimestamp;
 
     /**
-     * 获取转发路径。
+     * Get 转发路径。 
      * @return Url 转发路径。
      */
     public String getUrl() {
@@ -122,7 +122,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径。
+     * Set 转发路径。
      * @param Url 转发路径。
      */
     public void setUrl(String Url) {
@@ -130,7 +130,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径实例ID。
+     * Get 转发路径实例ID。 
      * @return LocationId 转发路径实例ID。
      */
     public String getLocationId() {
@@ -138,7 +138,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径实例ID。
+     * Set 转发路径实例ID。
      * @param LocationId 转发路径实例ID。
      */
     public void setLocationId(String LocationId) {
@@ -146,7 +146,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间。
+     * Get 会话保持时间。 
      * @return SessionExpire 会话保持时间。
      */
     public Integer getSessionExpire() {
@@ -154,7 +154,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间。
+     * Set 会话保持时间。
      * @param SessionExpire 会话保持时间。
      */
     public void setSessionExpire(Integer SessionExpire) {
@@ -162,7 +162,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启健康检查。
+     * Get 是否开启健康检查。 
      * @return HealthSwitch 是否开启健康检查。
      */
     public Integer getHealthSwitch() {
@@ -170,7 +170,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启健康检查。
+     * Set 是否开启健康检查。
      * @param HealthSwitch 是否开启健康检查。
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -178,7 +178,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查路径。
+     * Get 健康检查检查路径。 
      * @return HttpCheckPath 健康检查检查路径。
      */
     public String getHttpCheckPath() {
@@ -186,7 +186,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查路径。
+     * Set 健康检查检查路径。
      * @param HttpCheckPath 健康检查检查路径。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -194,7 +194,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查域名。
+     * Get 健康检查检查域名。 
      * @return HttpCheckDomain 健康检查检查域名。
      */
     public String getHttpCheckDomain() {
@@ -202,7 +202,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查域名。
+     * Set 健康检查检查域名。
      * @param HttpCheckDomain 健康检查检查域名。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
@@ -210,7 +210,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查间隔时间。
+     * Get 健康检查检查间隔时间。 
      * @return IntervalTime 健康检查检查间隔时间。
      */
     public Integer getIntervalTime() {
@@ -218,7 +218,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查间隔时间。
+     * Set 健康检查检查间隔时间。
      * @param IntervalTime 健康检查检查间隔时间。
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -226,7 +226,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查健康阈值。
+     * Get 健康检查健康阈值。 
      * @return HealthNum 健康检查健康阈值。
      */
     public Integer getHealthNum() {
@@ -234,7 +234,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查健康阈值。
+     * Set 健康检查健康阈值。
      * @param HealthNum 健康检查健康阈值。
      */
     public void setHealthNum(Integer HealthNum) {
@@ -242,7 +242,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查不健康阈值。
+     * Get 健康检查不健康阈值。 
      * @return UnhealthNum 健康检查不健康阈值。
      */
     public Integer getUnhealthNum() {
@@ -250,7 +250,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查不健康阈值。
+     * Set 健康检查不健康阈值。
      * @param UnhealthNum 健康检查不健康阈值。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -258,7 +258,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public Integer [] getHttpCodes() {
@@ -266,7 +266,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public void setHttpCodes(Integer [] HttpCodes) {
@@ -274,7 +274,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取均衡方式。
+     * Get 均衡方式。 
      * @return BalanceMode 均衡方式。
      */
     public String getBalanceMode() {
@@ -282,7 +282,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置均衡方式。
+     * Set 均衡方式。
      * @param BalanceMode 均衡方式。
      */
     public void setBalanceMode(String BalanceMode) {
@@ -290,7 +290,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Get 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public Integer getStatus() {
@@ -298,7 +298,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Set 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public void setStatus(Integer Status) {
@@ -306,7 +306,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间戳。
+     * Get 创建时间戳。 
      * @return AddTimestamp 创建时间戳。
      */
     public String getAddTimestamp() {
@@ -314,7 +314,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳。
+     * Set 创建时间戳。
      * @param AddTimestamp 创建时间戳。
      */
     public void setAddTimestamp(String AddTimestamp) {
@@ -322,7 +322,7 @@ public class L7RulesLocation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

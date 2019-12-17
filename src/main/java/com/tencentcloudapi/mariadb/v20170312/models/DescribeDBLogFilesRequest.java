@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBLogFilesRequest  extends AbstractModel{
+public class DescribeDBLogFilesRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc。
@@ -37,7 +37,7 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     private Integer Type;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
+     * Get 实例 ID，形如：tdsql-ow728lmc。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
+     * Set 实例 ID，形如：tdsql-ow728lmc。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
+     * Get 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。 
      * @return Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
     public Integer getType() {
@@ -61,7 +61,7 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
+     * Set 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      * @param Type 请求日志类型，取值只能为1、2、3或者4。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
     public void setType(Integer Type) {
@@ -69,7 +69,7 @@ public class DescribeDBLogFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

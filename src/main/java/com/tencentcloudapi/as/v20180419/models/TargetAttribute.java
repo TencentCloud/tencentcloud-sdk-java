@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TargetAttribute  extends AbstractModel{
+public class TargetAttribute extends AbstractModel{
 
     /**
     * 端口
@@ -37,7 +37,7 @@ public class TargetAttribute  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取端口
+     * Get 端口 
      * @return Port 端口
      */
     public Integer getPort() {
@@ -45,7 +45,7 @@ public class TargetAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置端口
+     * Set 端口
      * @param Port 端口
      */
     public void setPort(Integer Port) {
@@ -53,7 +53,7 @@ public class TargetAttribute  extends AbstractModel{
     }
 
     /**
-     * 获取权重
+     * Get 权重 
      * @return Weight 权重
      */
     public Integer getWeight() {
@@ -61,7 +61,7 @@ public class TargetAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置权重
+     * Set 权重
      * @param Weight 权重
      */
     public void setWeight(Integer Weight) {
@@ -69,7 +69,7 @@ public class TargetAttribute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

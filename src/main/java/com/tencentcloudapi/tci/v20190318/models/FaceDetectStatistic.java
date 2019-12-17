@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceDetectStatistic  extends AbstractModel{
+public class FaceDetectStatistic extends AbstractModel{
 
     /**
     * 人脸大小占画面平均占比
@@ -79,7 +79,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     private Float SideFaceRealRatio;
 
     /**
-     * 获取人脸大小占画面平均占比
+     * Get 人脸大小占画面平均占比 
      * @return FaceSizeRatio 人脸大小占画面平均占比
      */
     public Float getFaceSizeRatio() {
@@ -87,7 +87,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人脸大小占画面平均占比
+     * Set 人脸大小占画面平均占比
      * @param FaceSizeRatio 人脸大小占画面平均占比
      */
     public void setFaceSizeRatio(Float FaceSizeRatio) {
@@ -95,7 +95,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取检测到正脸次数
+     * Get 检测到正脸次数 
      * @return FrontalFaceCount 检测到正脸次数
      */
     public Long getFrontalFaceCount() {
@@ -103,7 +103,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置检测到正脸次数
+     * Set 检测到正脸次数
      * @param FrontalFaceCount 检测到正脸次数
      */
     public void setFrontalFaceCount(Long FrontalFaceCount) {
@@ -111,7 +111,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取正脸时长占比
+     * Get 正脸时长占比 
      * @return FrontalFaceRatio 正脸时长占比
      */
     public Float getFrontalFaceRatio() {
@@ -119,7 +119,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置正脸时长占比
+     * Set 正脸时长占比
      * @param FrontalFaceRatio 正脸时长占比
      */
     public void setFrontalFaceRatio(Float FrontalFaceRatio) {
@@ -127,7 +127,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取正脸时长在总出现时常占比
+     * Get 正脸时长在总出现时常占比 
      * @return FrontalFaceRealRatio 正脸时长在总出现时常占比
      */
     public Float getFrontalFaceRealRatio() {
@@ -135,7 +135,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置正脸时长在总出现时常占比
+     * Set 正脸时长在总出现时常占比
      * @param FrontalFaceRealRatio 正脸时长在总出现时常占比
      */
     public void setFrontalFaceRealRatio(Float FrontalFaceRealRatio) {
@@ -143,7 +143,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -151,7 +151,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -159,7 +159,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取检测到侧脸次数
+     * Get 检测到侧脸次数 
      * @return SideFaceCount 检测到侧脸次数
      */
     public Long getSideFaceCount() {
@@ -167,7 +167,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置检测到侧脸次数
+     * Set 检测到侧脸次数
      * @param SideFaceCount 检测到侧脸次数
      */
     public void setSideFaceCount(Long SideFaceCount) {
@@ -175,7 +175,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取侧脸时长占比
+     * Get 侧脸时长占比 
      * @return SideFaceRatio 侧脸时长占比
      */
     public Float getSideFaceRatio() {
@@ -183,7 +183,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置侧脸时长占比
+     * Set 侧脸时长占比
      * @param SideFaceRatio 侧脸时长占比
      */
     public void setSideFaceRatio(Float SideFaceRatio) {
@@ -191,7 +191,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取侧脸时长在总出现时常占比
+     * Get 侧脸时长在总出现时常占比 
      * @return SideFaceRealRatio 侧脸时长在总出现时常占比
      */
     public Float getSideFaceRealRatio() {
@@ -199,7 +199,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置侧脸时长在总出现时常占比
+     * Set 侧脸时长在总出现时常占比
      * @param SideFaceRealRatio 侧脸时长在总出现时常占比
      */
     public void setSideFaceRealRatio(Float SideFaceRealRatio) {
@@ -207,7 +207,7 @@ public class FaceDetectStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceSizeRatio", this.FaceSizeRatio);

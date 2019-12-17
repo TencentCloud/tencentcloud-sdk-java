@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComponentStatistics  extends AbstractModel{
+public class ComponentStatistics extends AbstractModel{
 
     /**
     * 组件ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机数量。
     */
     @SerializedName("MachineNum")
     @Expose
-    private Integer MachineNum;
+    private Long MachineNum;
 
     /**
     * 组件名称。
@@ -60,39 +60,39 @@ public class ComponentStatistics  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取组件ID。
+     * Get 组件ID。 
      * @return Id 组件ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置组件ID。
+     * Set 组件ID。
      * @param Id 组件ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取主机数量。
+     * Get 主机数量。 
      * @return MachineNum 主机数量。
      */
-    public Integer getMachineNum() {
+    public Long getMachineNum() {
         return this.MachineNum;
     }
 
     /**
-     * 设置主机数量。
+     * Set 主机数量。
      * @param MachineNum 主机数量。
      */
-    public void setMachineNum(Integer MachineNum) {
+    public void setMachineNum(Long MachineNum) {
         this.MachineNum = MachineNum;
     }
 
     /**
-     * 获取组件名称。
+     * Get 组件名称。 
      * @return ComponentName 组件名称。
      */
     public String getComponentName() {
@@ -100,7 +100,7 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置组件名称。
+     * Set 组件名称。
      * @param ComponentName 组件名称。
      */
     public void setComponentName(String ComponentName) {
@@ -108,9 +108,9 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取组件类型。
+     * Get 组件类型。
 <li>WEB：web组件</li>
-<li>SYSTEM：系统组件</li>
+<li>SYSTEM：系统组件</li> 
      * @return ComponentType 组件类型。
 <li>WEB：web组件</li>
 <li>SYSTEM：系统组件</li>
@@ -120,7 +120,7 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置组件类型。
+     * Set 组件类型。
 <li>WEB：web组件</li>
 <li>SYSTEM：系统组件</li>
      * @param ComponentType 组件类型。
@@ -132,7 +132,7 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取组件描述。
+     * Get 组件描述。 
      * @return Description 组件描述。
      */
     public String getDescription() {
@@ -140,7 +140,7 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置组件描述。
+     * Set 组件描述。
      * @param Description 组件描述。
      */
     public void setDescription(String Description) {
@@ -148,7 +148,7 @@ public class ComponentStatistics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
+public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
 
     /**
     * 专线网关唯一`ID`，形如：`dcg-9o233uri`。
@@ -44,7 +44,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     private String CcnRouteType;
 
     /**
-     * 获取专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Get 专线网关唯一`ID`，形如：`dcg-9o233uri`。 
      * @return DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public String getDirectConnectGatewayId() {
@@ -52,7 +52,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Set 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      * @param DirectConnectGatewayId 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -60,7 +60,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专线网关名称，可任意命名，但不得超过60个字符。
+     * Get 专线网关名称，可任意命名，但不得超过60个字符。 
      * @return DirectConnectGatewayName 专线网关名称，可任意命名，但不得超过60个字符。
      */
     public String getDirectConnectGatewayName() {
@@ -68,7 +68,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关名称，可任意命名，但不得超过60个字符。
+     * Set 专线网关名称，可任意命名，但不得超过60个字符。
      * @param DirectConnectGatewayName 专线网关名称，可任意命名，但不得超过60个字符。
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
@@ -76,7 +76,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
+     * Get 云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。 
      * @return CcnRouteType 云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
      */
     public String getCcnRouteType() {
@@ -84,7 +84,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
+     * Set 云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
      * @param CcnRouteType 云联网路由学习类型，可选值：`BGP`（自动学习）、`STATIC`（静态，即用户配置）。只有云联网类型专线网关且开启了BGP功能才支持修改`CcnRouteType`。
      */
     public void setCcnRouteType(String CcnRouteType) {
@@ -92,7 +92,7 @@ public class ModifyDirectConnectGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

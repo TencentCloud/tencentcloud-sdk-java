@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiskInfo  extends AbstractModel{
+public class DiskInfo extends AbstractModel{
 
     /**
     * 磁盘ID
@@ -44,7 +44,7 @@ public class DiskInfo  extends AbstractModel{
     private String DiskDescription;
 
     /**
-     * 获取磁盘ID
+     * Get 磁盘ID 
      * @return DiskTypeId 磁盘ID
      */
     public Integer getDiskTypeId() {
@@ -52,7 +52,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘ID
+     * Set 磁盘ID
      * @param DiskTypeId 磁盘ID
      */
     public void setDiskTypeId(Integer DiskTypeId) {
@@ -60,7 +60,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘的容量，单位为G
+     * Get 磁盘的容量，单位为G 
      * @return Size 磁盘的容量，单位为G
      */
     public Integer getSize() {
@@ -68,7 +68,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘的容量，单位为G
+     * Set 磁盘的容量，单位为G
      * @param Size 磁盘的容量，单位为G
      */
     public void setSize(Integer Size) {
@@ -76,7 +76,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘信息描述
+     * Get 磁盘信息描述 
      * @return DiskDescription 磁盘信息描述
      */
     public String getDiskDescription() {
@@ -84,7 +84,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘信息描述
+     * Set 磁盘信息描述
      * @param DiskDescription 磁盘信息描述
      */
     public void setDiskDescription(String DiskDescription) {
@@ -92,7 +92,7 @@ public class DiskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskTypeId", this.DiskTypeId);

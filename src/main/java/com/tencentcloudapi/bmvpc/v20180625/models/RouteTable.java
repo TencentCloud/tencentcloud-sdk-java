@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteTable  extends AbstractModel{
+public class RouteTable extends AbstractModel{
 
     /**
     * VPC实例ID。
@@ -72,7 +72,7 @@ public class RouteTable  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -80,7 +80,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -88,7 +88,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取VPC的名称
+     * Get VPC的名称 
      * @return VpcName VPC的名称
      */
     public String getVpcName() {
@@ -96,7 +96,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置VPC的名称
+     * Set VPC的名称
      * @param VpcName VPC的名称
      */
     public void setVpcName(String VpcName) {
@@ -104,7 +104,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取VPC的CIDR
+     * Get VPC的CIDR 
      * @return VpcCidrBlock VPC的CIDR
      */
     public String getVpcCidrBlock() {
@@ -112,7 +112,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置VPC的CIDR
+     * Set VPC的CIDR
      * @param VpcCidrBlock VPC的CIDR
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -120,7 +120,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -128,7 +128,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -136,7 +136,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -144,7 +144,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -152,7 +152,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表名称。
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
     public String getRouteTableName() {
@@ -160,7 +160,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
      * @param RouteTableName 路由表名称。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -168,7 +168,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -176,7 +176,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -184,7 +184,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

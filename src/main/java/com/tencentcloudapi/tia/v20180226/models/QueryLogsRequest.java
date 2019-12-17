@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryLogsRequest  extends AbstractModel{
+public class QueryLogsRequest extends AbstractModel{
 
     /**
     * 任务的名称
@@ -65,7 +65,7 @@ public class QueryLogsRequest  extends AbstractModel{
     private String Context;
 
     /**
-     * 获取任务的名称
+     * Get 任务的名称 
      * @return JobName 任务的名称
      */
     public String getJobName() {
@@ -73,7 +73,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务的名称
+     * Set 任务的名称
      * @param JobName 任务的名称
      */
     public void setJobName(String JobName) {
@@ -81,7 +81,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务所在集群的名称
+     * Get 任务所在集群的名称 
      * @return Cluster 任务所在集群的名称
      */
     public String getCluster() {
@@ -89,7 +89,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务所在集群的名称
+     * Set 任务所在集群的名称
      * @param Cluster 任务所在集群的名称
      */
     public void setCluster(String Cluster) {
@@ -97,7 +97,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询日志的开始时间，格式：2019-01-01 00:00:00
+     * Get 查询日志的开始时间，格式：2019-01-01 00:00:00 
      * @return StartTime 查询日志的开始时间，格式：2019-01-01 00:00:00
      */
     public String getStartTime() {
@@ -105,7 +105,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询日志的开始时间，格式：2019-01-01 00:00:00
+     * Set 查询日志的开始时间，格式：2019-01-01 00:00:00
      * @param StartTime 查询日志的开始时间，格式：2019-01-01 00:00:00
      */
     public void setStartTime(String StartTime) {
@@ -113,7 +113,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询日志的结束时间，格式：2019-01-01 00:00:00
+     * Get 查询日志的结束时间，格式：2019-01-01 00:00:00 
      * @return EndTime 查询日志的结束时间，格式：2019-01-01 00:00:00
      */
     public String getEndTime() {
@@ -121,7 +121,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询日志的结束时间，格式：2019-01-01 00:00:00
+     * Set 查询日志的结束时间，格式：2019-01-01 00:00:00
      * @param EndTime 查询日志的结束时间，格式：2019-01-01 00:00:00
      */
     public void setEndTime(String EndTime) {
@@ -129,7 +129,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次要返回的日志条数上限
+     * Get 单次要返回的日志条数上限 
      * @return Limit 单次要返回的日志条数上限
      */
     public Integer getLimit() {
@@ -137,7 +137,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次要返回的日志条数上限
+     * Set 单次要返回的日志条数上限
      * @param Limit 单次要返回的日志条数上限
      */
     public void setLimit(Integer Limit) {
@@ -145,7 +145,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+     * Get 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志 
      * @return Context 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public String getContext() {
@@ -153,7 +153,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
+     * Set 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      * @param Context 加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容；使用 Context 翻页最多能获取 10000 条日志
      */
     public void setContext(String Context) {
@@ -161,7 +161,7 @@ public class QueryLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobName", this.JobName);

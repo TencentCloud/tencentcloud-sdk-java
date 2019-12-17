@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
+public class DescribeGroupProIspPlayInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -66,7 +66,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     private String MainlandOrOversea;
 
     /**
-     * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getStartTime() {
@@ -74,7 +74,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setStartTime(String StartTime) {
@@ -82,8 +82,8 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,3小时]，支持最近1个月数据查询。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+时间跨度在（0,3小时]，支持最近1个月数据查询。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,3小时]，支持最近1个月数据查询。
      */
@@ -92,7 +92,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,3小时]，支持最近1个月数据查询。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,3小时]，支持最近1个月数据查询。
@@ -102,7 +102,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名，默认为不填，表示求总体数据。
+     * Get 播放域名，默认为不填，表示求总体数据。 
      * @return PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public String [] getPlayDomains() {
@@ -110,7 +110,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名，默认为不填，表示求总体数据。
+     * Set 播放域名，默认为不填，表示求总体数据。
      * @param PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -118,7 +118,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取省份列表，默认不填，则返回各省份的数据。
+     * Get 省份列表，默认不填，则返回各省份的数据。 
      * @return ProvinceNames 省份列表，默认不填，则返回各省份的数据。
      */
     public String [] getProvinceNames() {
@@ -126,7 +126,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置省份列表，默认不填，则返回各省份的数据。
+     * Set 省份列表，默认不填，则返回各省份的数据。
      * @param ProvinceNames 省份列表，默认不填，则返回各省份的数据。
      */
     public void setProvinceNames(String [] ProvinceNames) {
@@ -134,7 +134,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运营商列表，默认不填，则返回个运营商的数据。
+     * Get 运营商列表，默认不填，则返回个运营商的数据。 
      * @return IspNames 运营商列表，默认不填，则返回个运营商的数据。
      */
     public String [] getIspNames() {
@@ -142,7 +142,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运营商列表，默认不填，则返回个运营商的数据。
+     * Set 运营商列表，默认不填，则返回个运营商的数据。
      * @param IspNames 运营商列表，默认不填，则返回个运营商的数据。
      */
     public void setIspNames(String [] IspNames) {
@@ -150,7 +150,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
+     * Get 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。 
      * @return MainlandOrOversea 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      */
     public String getMainlandOrOversea() {
@@ -158,7 +158,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
+     * Set 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      * @param MainlandOrOversea 国内还是国外，如果为空，查询所有地区数据；如果为“Mainland”，查询国内数据；如果为“Oversea”，则查询国外数据。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -166,7 +166,7 @@ public class DescribeGroupProIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

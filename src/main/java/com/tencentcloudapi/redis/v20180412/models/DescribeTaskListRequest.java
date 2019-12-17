@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskListRequest  extends AbstractModel{
+public class DescribeTaskListRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -86,7 +86,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     private Integer [] TaskStatus;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -94,7 +94,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -102,7 +102,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -110,7 +110,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -118,7 +118,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小
+     * Get 分页大小 
      * @return Limit 分页大小
      */
     public Integer getLimit() {
@@ -126,7 +126,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小
+     * Set 分页大小
      * @param Limit 分页大小
      */
     public void setLimit(Integer Limit) {
@@ -134,7 +134,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取Limit整数倍（自动向下取整）
+     * Get 偏移量，取Limit整数倍（自动向下取整） 
      * @return Offset 偏移量，取Limit整数倍（自动向下取整）
      */
     public Integer getOffset() {
@@ -142,7 +142,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取Limit整数倍（自动向下取整）
+     * Set 偏移量，取Limit整数倍（自动向下取整）
      * @param Offset 偏移量，取Limit整数倍（自动向下取整）
      */
     public void setOffset(Integer Offset) {
@@ -150,7 +150,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
+     * Get 项目Id 
      * @return ProjectIds 项目Id
      */
     public Integer [] getProjectIds() {
@@ -158,7 +158,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
      * @param ProjectIds 项目Id
      */
     public void setProjectIds(Integer [] ProjectIds) {
@@ -166,7 +166,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型
+     * Get 任务类型 
      * @return TaskTypes 任务类型
      */
     public String [] getTaskTypes() {
@@ -174,7 +174,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型
+     * Set 任务类型
      * @param TaskTypes 任务类型
      */
     public void setTaskTypes(String [] TaskTypes) {
@@ -182,7 +182,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间
+     * Get 起始时间 
      * @return BeginTime 起始时间
      */
     public String getBeginTime() {
@@ -190,7 +190,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间
+     * Set 起始时间
      * @param BeginTime 起始时间
      */
     public void setBeginTime(String BeginTime) {
@@ -198,7 +198,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取终止时间
+     * Get 终止时间 
      * @return EndTime 终止时间
      */
     public String getEndTime() {
@@ -206,7 +206,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置终止时间
+     * Set 终止时间
      * @param EndTime 终止时间
      */
     public void setEndTime(String EndTime) {
@@ -214,7 +214,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return TaskStatus 任务状态
      */
     public Integer [] getTaskStatus() {
@@ -222,7 +222,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param TaskStatus 任务状态
      */
     public void setTaskStatus(Integer [] TaskStatus) {
@@ -230,7 +230,7 @@ public class DescribeTaskListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

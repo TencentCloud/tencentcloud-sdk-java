@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransByHashHandlerResponse  extends AbstractModel{
+public class GetTransByHashHandlerResponse extends AbstractModel{
 
     /**
     * 交易信息json字符串
@@ -37,7 +37,7 @@ public class GetTransByHashHandlerResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取交易信息json字符串
+     * Get 交易信息json字符串 
      * @return TransactionJson 交易信息json字符串
      */
     public String getTransactionJson() {
@@ -45,7 +45,7 @@ public class GetTransByHashHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交易信息json字符串
+     * Set 交易信息json字符串
      * @param TransactionJson 交易信息json字符串
      */
     public void setTransactionJson(String TransactionJson) {
@@ -53,7 +53,7 @@ public class GetTransByHashHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class GetTransByHashHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class GetTransByHashHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TransactionJson", this.TransactionJson);

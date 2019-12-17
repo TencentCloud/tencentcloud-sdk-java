@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoutePolicy  extends AbstractModel{
+public class RoutePolicy extends AbstractModel{
 
     /**
     * 目的网段
@@ -83,7 +83,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private Boolean Enabled;
 
     /**
-     * 获取目的网段
+     * Get 目的网段 
      * @return DestinationCidrBlock 目的网段
      */
     public String getDestinationCidrBlock() {
@@ -91,7 +91,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 设置目的网段
+     * Set 目的网段
      * @param DestinationCidrBlock 目的网段
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -99,14 +99,14 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 获取下一跳类型，目前我们支持的类型有：
+     * Get 下一跳类型，目前我们支持的类型有：
 LOCAL：物理机默认路由；
 VPN：VPN网关；
 PEERCONNECTION：对等连接；
 CPM：物理机自定义路由；
 CCN：云联网；
 TGW：公网默认路由；
-SSLVPN : SSH SSL VPN网关。
+SSLVPN : SSH SSL VPN网关。 
      * @return GatewayType 下一跳类型，目前我们支持的类型有：
 LOCAL：物理机默认路由；
 VPN：VPN网关；
@@ -121,7 +121,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 设置下一跳类型，目前我们支持的类型有：
+     * Set 下一跳类型，目前我们支持的类型有：
 LOCAL：物理机默认路由；
 VPN：VPN网关；
 PEERCONNECTION：对等连接；
@@ -143,7 +143,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+     * Get 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。 
      * @return GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
      */
     public String getGatewayId() {
@@ -151,7 +151,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+     * Set 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
      * @param GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
      */
     public void setGatewayId(String GatewayId) {
@@ -159,7 +159,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 获取路由策略描述。
+     * Get 路由策略描述。 
      * @return RouteDescription 路由策略描述。
      */
     public String getRouteDescription() {
@@ -167,7 +167,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 设置路由策略描述。
+     * Set 路由策略描述。
      * @param RouteDescription 路由策略描述。
      */
     public void setRouteDescription(String RouteDescription) {
@@ -175,7 +175,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 获取路由策略ID
+     * Get 路由策略ID 
      * @return RoutePolicyId 路由策略ID
      */
     public String getRoutePolicyId() {
@@ -183,7 +183,7 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 设置路由策略ID
+     * Set 路由策略ID
      * @param RoutePolicyId 路由策略ID
      */
     public void setRoutePolicyId(String RoutePolicyId) {
@@ -191,11 +191,11 @@ SSLVPN : SSH SSL VPN网关。
     }
 
     /**
-     * 获取路由类型，目前我们支持的类型有：
+     * Get 路由类型，目前我们支持的类型有：
 USER：用户自定义路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和编辑USER 类型的路由。
+用户只能添加和编辑USER 类型的路由。 
      * @return RoutePolicyType 路由类型，目前我们支持的类型有：
 USER：用户自定义路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
@@ -207,7 +207,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 设置路由类型，目前我们支持的类型有：
+     * Set 路由类型，目前我们支持的类型有：
 USER：用户自定义路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
@@ -223,7 +223,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 获取是否启用
+     * Get 是否启用 
      * @return Enabled 是否启用
      */
     public Boolean getEnabled() {
@@ -231,7 +231,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 设置是否启用
+     * Set 是否启用
      * @param Enabled 是否启用
      */
     public void setEnabled(Boolean Enabled) {
@@ -239,7 +239,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);

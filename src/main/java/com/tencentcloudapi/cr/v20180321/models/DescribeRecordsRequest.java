@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRecordsRequest  extends AbstractModel{
+public class DescribeRecordsRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Record
@@ -93,7 +93,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Record
+     * Get 模块名，本接口取值：Record 
      * @return Module 模块名，本接口取值：Record
      */
     public String getModule() {
@@ -101,7 +101,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Record
+     * Set 模块名，本接口取值：Record
      * @param Module 模块名，本接口取值：Record
      */
     public void setModule(String Module) {
@@ -109,7 +109,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：List
+     * Get 操作名，本接口取值：List 
      * @return Operation 操作名，本接口取值：List
      */
     public String getOperation() {
@@ -117,7 +117,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：List
+     * Set 操作名，本接口取值：List
      * @param Operation 操作名，本接口取值：List
      */
     public void setOperation(String Operation) {
@@ -125,7 +125,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -133,7 +133,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -141,7 +141,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取案件编号
+     * Get 案件编号 
      * @return AccountNum 案件编号
      */
     public String getAccountNum() {
@@ -149,7 +149,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置案件编号
+     * Set 案件编号
      * @param AccountNum 案件编号
      */
     public void setAccountNum(String AccountNum) {
@@ -157,7 +157,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被叫号码
+     * Get 被叫号码 
      * @return CalledPhone 被叫号码
      */
     public String getCalledPhone() {
@@ -165,7 +165,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被叫号码
+     * Set 被叫号码
      * @param CalledPhone 被叫号码
      */
     public void setCalledPhone(String CalledPhone) {
@@ -173,7 +173,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询起始日期，格式为YYYY-MM-DD
+     * Get 查询起始日期，格式为YYYY-MM-DD 
      * @return StartBizDate 查询起始日期，格式为YYYY-MM-DD
      */
     public String getStartBizDate() {
@@ -181,7 +181,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询起始日期，格式为YYYY-MM-DD
+     * Set 查询起始日期，格式为YYYY-MM-DD
      * @param StartBizDate 查询起始日期，格式为YYYY-MM-DD
      */
     public void setStartBizDate(String StartBizDate) {
@@ -189,7 +189,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束日期，格式为YYYY-MM-DD
+     * Get 查询结束日期，格式为YYYY-MM-DD 
      * @return EndBizDate 查询结束日期，格式为YYYY-MM-DD
      */
     public String getEndBizDate() {
@@ -197,7 +197,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束日期，格式为YYYY-MM-DD
+     * Set 查询结束日期，格式为YYYY-MM-DD
      * @param EndBizDate 查询结束日期，格式为YYYY-MM-DD
      */
     public void setEndBizDate(String EndBizDate) {
@@ -205,7 +205,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，索引，默认为0
+     * Get 分页参数，索引，默认为0 
      * @return Offset 分页参数，索引，默认为0
      */
     public String getOffset() {
@@ -213,7 +213,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，索引，默认为0
+     * Set 分页参数，索引，默认为0
      * @param Offset 分页参数，索引，默认为0
      */
     public void setOffset(String Offset) {
@@ -221,7 +221,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，页长，默认为20
+     * Get 分页参数，页长，默认为20 
      * @return Limit 分页参数，页长，默认为20
      */
     public String getLimit() {
@@ -229,7 +229,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，页长，默认为20
+     * Set 分页参数，页长，默认为20
      * @param Limit 分页参数，页长，默认为20
      */
     public void setLimit(String Limit) {
@@ -237,7 +237,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，不传默认为系统分配的初始实例
+     * Get 实例ID，不传默认为系统分配的初始实例 
      * @return InstId 实例ID，不传默认为系统分配的初始实例
      */
     public String getInstId() {
@@ -245,7 +245,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，不传默认为系统分配的初始实例
+     * Set 实例ID，不传默认为系统分配的初始实例
      * @param InstId 实例ID，不传默认为系统分配的初始实例
      */
     public void setInstId(String InstId) {
@@ -253,7 +253,7 @@ public class DescribeRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterCallbackRequest  extends AbstractModel{
+public class RegisterCallbackRequest extends AbstractModel{
 
     /**
     * 集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -51,7 +51,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     private Integer NeedFacePic;
 
     /**
-     * 获取集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -59,7 +59,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -67,7 +67,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
+     * Get 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/） 
      * @return BackUrl 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
      */
     public String getBackUrl() {
@@ -75,7 +75,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
+     * Set 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
      * @param BackUrl 通知回调地址，完整url，示例（http://youmall.tencentcloudapi.com/）
      */
     public void setBackUrl(String BackUrl) {
@@ -83,7 +83,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求时间戳
+     * Get 请求时间戳 
      * @return Time 请求时间戳
      */
     public Integer getTime() {
@@ -91,7 +91,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求时间戳
+     * Set 请求时间戳
      * @param Time 请求时间戳
      */
     public void setTime(Integer Time) {
@@ -99,7 +99,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要顾客图片，1-需要图片，其它-不需要图片
+     * Get 是否需要顾客图片，1-需要图片，其它-不需要图片 
      * @return NeedFacePic 是否需要顾客图片，1-需要图片，其它-不需要图片
      */
     public Integer getNeedFacePic() {
@@ -107,7 +107,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要顾客图片，1-需要图片，其它-不需要图片
+     * Set 是否需要顾客图片，1-需要图片，其它-不需要图片
      * @param NeedFacePic 是否需要顾客图片，1-需要图片，其它-不需要图片
      */
     public void setNeedFacePic(Integer NeedFacePic) {
@@ -115,7 +115,7 @@ public class RegisterCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

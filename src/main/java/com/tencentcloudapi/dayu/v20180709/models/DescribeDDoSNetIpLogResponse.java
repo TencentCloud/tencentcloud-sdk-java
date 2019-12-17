@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSNetIpLogResponse  extends AbstractModel{
+public class DescribeDDoSNetIpLogResponse extends AbstractModel{
 
     /**
     * 大禹子产品代号（net表示高防IP专业版）
@@ -67,7 +67,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     private String RequestId;
 
     /**
-     * 获取大禹子产品代号（net表示高防IP专业版）
+     * Get 大禹子产品代号（net表示高防IP专业版） 
      * @return Business 大禹子产品代号（net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -75,7 +75,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置大禹子产品代号（net表示高防IP专业版）
+     * Set 大禹子产品代号（net表示高防IP专业版）
      * @param Business 大禹子产品代号（net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -83,7 +83,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -91,7 +91,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -99,7 +99,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 获取攻击开始时间
+     * Get 攻击开始时间 
      * @return StartTime 攻击开始时间
      */
     public String getStartTime() {
@@ -107,7 +107,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置攻击开始时间
+     * Set 攻击开始时间
      * @param StartTime 攻击开始时间
      */
     public void setStartTime(String StartTime) {
@@ -115,7 +115,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 获取攻击结束时间
+     * Get 攻击结束时间 
      * @return EndTime 攻击结束时间
      */
     public String getEndTime() {
@@ -123,7 +123,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置攻击结束时间
+     * Set 攻击结束时间
      * @param EndTime 攻击结束时间
      */
     public void setEndTime(String EndTime) {
@@ -131,9 +131,9 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 获取IP攻击日志，KeyValue数组，Key-Value取值说明：
+     * Get IP攻击日志，KeyValue数组，Key-Value取值说明：
 Key为"LogTime"时，Value值为IP日志时间
-Key为"LogMessage"时，Value值为Ip日志内容
+Key为"LogMessage"时，Value值为Ip日志内容 
      * @return Data IP攻击日志，KeyValue数组，Key-Value取值说明：
 Key为"LogTime"时，Value值为IP日志时间
 Key为"LogMessage"时，Value值为Ip日志内容
@@ -143,7 +143,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置IP攻击日志，KeyValue数组，Key-Value取值说明：
+     * Set IP攻击日志，KeyValue数组，Key-Value取值说明：
 Key为"LogTime"时，Value值为IP日志时间
 Key为"LogMessage"时，Value值为Ip日志内容
      * @param Data IP攻击日志，KeyValue数组，Key-Value取值说明：
@@ -155,7 +155,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -163,7 +163,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -171,7 +171,7 @@ Key为"LogMessage"时，Value值为Ip日志内容
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

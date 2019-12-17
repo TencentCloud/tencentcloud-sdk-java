@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePolicyRequest  extends AbstractModel{
+public class DeletePolicyRequest extends AbstractModel{
 
     /**
     * 数组，数组成员是策略 id，支持批量删除策略
@@ -30,7 +30,7 @@ public class DeletePolicyRequest  extends AbstractModel{
     private Long [] PolicyId;
 
     /**
-     * 获取数组，数组成员是策略 id，支持批量删除策略
+     * Get 数组，数组成员是策略 id，支持批量删除策略 
      * @return PolicyId 数组，数组成员是策略 id，支持批量删除策略
      */
     public Long [] getPolicyId() {
@@ -38,7 +38,7 @@ public class DeletePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数组，数组成员是策略 id，支持批量删除策略
+     * Set 数组，数组成员是策略 id，支持批量删除策略
      * @param PolicyId 数组，数组成员是策略 id，支持批量删除策略
      */
     public void setPolicyId(Long [] PolicyId) {
@@ -46,7 +46,7 @@ public class DeletePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "PolicyId.", this.PolicyId);

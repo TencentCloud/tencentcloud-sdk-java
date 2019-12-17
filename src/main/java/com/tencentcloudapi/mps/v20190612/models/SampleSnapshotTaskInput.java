@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SampleSnapshotTaskInput  extends AbstractModel{
+public class SampleSnapshotTaskInput extends AbstractModel{
 
     /**
     * 采样截图模板 ID。
@@ -60,7 +60,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * 获取采样截图模板 ID。
+     * Get 采样截图模板 ID。 
      * @return Definition 采样截图模板 ID。
      */
     public Long getDefinition() {
@@ -68,7 +68,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图模板 ID。
+     * Set 采样截图模板 ID。
      * @param Definition 采样截图模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -76,7 +76,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     public WatermarkInput [] getWatermarkSet() {
@@ -84,7 +84,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
@@ -92,8 +92,8 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -102,7 +102,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 采样截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,7 +112,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+     * Get 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。 
      * @return OutputObjectPath 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
      */
     public String getOutputObjectPath() {
@@ -120,7 +120,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
+     * Set 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
      * @param OutputObjectPath 采样截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_sampleSnapshot_{definition}_{number}.{format}`。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
@@ -128,8 +128,8 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图后输出路径中的`{number}`变量的规则。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 采样截图后输出路径中的`{number}`变量的规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ObjectNumberFormat 采样截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图后输出路径中的`{number}`变量的规则。
+     * Set 采样截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectNumberFormat 采样截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class SampleSnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

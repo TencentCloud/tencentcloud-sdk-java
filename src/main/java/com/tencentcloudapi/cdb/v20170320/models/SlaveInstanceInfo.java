@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlaveInstanceInfo  extends AbstractModel{
+public class SlaveInstanceInfo extends AbstractModel{
 
     /**
     * 端口号
@@ -51,7 +51,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取端口号
+     * Get 端口号 
      * @return Vport 端口号
      */
     public Integer getVport() {
@@ -59,7 +59,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置端口号
+     * Set 端口号
      * @param Vport 端口号
      */
     public void setVport(Integer Vport) {
@@ -67,7 +67,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -75,7 +75,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -83,7 +83,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟 IP 信息
+     * Get 虚拟 IP 信息 
      * @return Vip 虚拟 IP 信息
      */
     public String getVip() {
@@ -91,7 +91,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟 IP 信息
+     * Set 虚拟 IP 信息
      * @param Vip 虚拟 IP 信息
      */
     public void setVip(String Vip) {
@@ -99,7 +99,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -107,7 +107,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -115,7 +115,7 @@ public class SlaveInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Vport", this.Vport);

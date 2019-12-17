@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SwitchDrToMasterRequest  extends AbstractModel{
+public class SwitchDrToMasterRequest extends AbstractModel{
 
     /**
     * 灾备实例的信息
@@ -37,7 +37,7 @@ public class SwitchDrToMasterRequest  extends AbstractModel{
     private String DatabaseType;
 
     /**
-     * 获取灾备实例的信息
+     * Get 灾备实例的信息 
      * @return DstInfo 灾备实例的信息
      */
     public SyncInstanceInfo getDstInfo() {
@@ -45,7 +45,7 @@ public class SwitchDrToMasterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备实例的信息
+     * Set 灾备实例的信息
      * @param DstInfo 灾备实例的信息
      */
     public void setDstInfo(SyncInstanceInfo DstInfo) {
@@ -53,7 +53,7 @@ public class SwitchDrToMasterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库的类型  （如 mysql）
+     * Get 数据库的类型  （如 mysql） 
      * @return DatabaseType 数据库的类型  （如 mysql）
      */
     public String getDatabaseType() {
@@ -61,7 +61,7 @@ public class SwitchDrToMasterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库的类型  （如 mysql）
+     * Set 数据库的类型  （如 mysql）
      * @param DatabaseType 数据库的类型  （如 mysql）
      */
     public void setDatabaseType(String DatabaseType) {
@@ -69,7 +69,7 @@ public class SwitchDrToMasterRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyElasticLimitRequest  extends AbstractModel{
+public class ModifyElasticLimitRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -44,7 +44,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -52,7 +52,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -60,7 +60,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -68,7 +68,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -76,7 +76,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000]
+     * Get 弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000] 
      * @return Limit 弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000]
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000]
+     * Set 弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000]
      * @param Limit 弹性防护阈值，取值[0 10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 120000 150000 200000 250000 300000 400000 600000 800000 220000 310000 110000 270000 610000]
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class ModifyElasticLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

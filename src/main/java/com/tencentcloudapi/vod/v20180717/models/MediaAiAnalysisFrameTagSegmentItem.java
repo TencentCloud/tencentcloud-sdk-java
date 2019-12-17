@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
+public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel{
 
     /**
     * 按帧标签起始的偏移时间。
@@ -44,7 +44,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     private MediaAiAnalysisFrameTagItem [] TagSet;
 
     /**
-     * 获取按帧标签起始的偏移时间。
+     * Get 按帧标签起始的偏移时间。 
      * @return StartTimeOffset 按帧标签起始的偏移时间。
      */
     public Float getStartTimeOffset() {
@@ -52,7 +52,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置按帧标签起始的偏移时间。
+     * Set 按帧标签起始的偏移时间。
      * @param StartTimeOffset 按帧标签起始的偏移时间。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -60,7 +60,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取按帧标签结束的偏移时间。
+     * Get 按帧标签结束的偏移时间。 
      * @return EndTimeOffset 按帧标签结束的偏移时间。
      */
     public Float getEndTimeOffset() {
@@ -68,7 +68,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置按帧标签结束的偏移时间。
+     * Set 按帧标签结束的偏移时间。
      * @param EndTimeOffset 按帧标签结束的偏移时间。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -76,7 +76,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取时间片段内的标签列表。
+     * Get 时间片段内的标签列表。 
      * @return TagSet 时间片段内的标签列表。
      */
     public MediaAiAnalysisFrameTagItem [] getTagSet() {
@@ -84,7 +84,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置时间片段内的标签列表。
+     * Set 时间片段内的标签列表。
      * @param TagSet 时间片段内的标签列表。
      */
     public void setTagSet(MediaAiAnalysisFrameTagItem [] TagSet) {
@@ -92,7 +92,7 @@ public class MediaAiAnalysisFrameTagSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

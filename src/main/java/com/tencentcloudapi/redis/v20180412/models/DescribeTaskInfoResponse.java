@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskInfoResponse  extends AbstractModel{
+public class DescribeTaskInfoResponse extends AbstractModel{
 
     /**
     * 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
@@ -65,7 +65,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+     * Get 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错 
      * @return Status 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
      */
     public String getStatus() {
@@ -73,7 +73,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+     * Set 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
      * @param Status 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
      */
     public void setStatus(String Status) {
@@ -81,7 +81,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始时间
+     * Get 任务开始时间 
      * @return StartTime 任务开始时间
      */
     public String getStartTime() {
@@ -89,7 +89,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始时间
+     * Set 任务开始时间
      * @param StartTime 任务开始时间
      */
     public void setStartTime(String StartTime) {
@@ -97,7 +97,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型
+     * Get 任务类型 
      * @return TaskType 任务类型
      */
     public String getTaskType() {
@@ -105,7 +105,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型
+     * Set 任务类型
      * @param TaskType 任务类型
      */
     public void setTaskType(String TaskType) {
@@ -113,7 +113,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例的ID
+     * Get 实例的ID 
      * @return InstanceId 实例的ID
      */
     public String getInstanceId() {
@@ -121,7 +121,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例的ID
+     * Set 实例的ID
      * @param InstanceId 实例的ID
      */
     public void setInstanceId(String InstanceId) {
@@ -129,7 +129,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务信息，错误时显示错误信息。执行中与成功则为空
+     * Get 任务信息，错误时显示错误信息。执行中与成功则为空 
      * @return TaskMessage 任务信息，错误时显示错误信息。执行中与成功则为空
      */
     public String getTaskMessage() {
@@ -137,7 +137,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务信息，错误时显示错误信息。执行中与成功则为空
+     * Set 任务信息，错误时显示错误信息。执行中与成功则为空
      * @param TaskMessage 任务信息，错误时显示错误信息。执行中与成功则为空
      */
     public void setTaskMessage(String TaskMessage) {
@@ -145,7 +145,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeTaskInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

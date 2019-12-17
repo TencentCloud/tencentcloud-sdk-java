@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Whiteboard  extends AbstractModel{
+public class Whiteboard extends AbstractModel{
 
     /**
     * 实时录制结果里白板视频宽，默认为1280
@@ -44,7 +44,7 @@ public class Whiteboard  extends AbstractModel{
     private String InitParam;
 
     /**
-     * 获取实时录制结果里白板视频宽，默认为1280
+     * Get 实时录制结果里白板视频宽，默认为1280 
      * @return Width 实时录制结果里白板视频宽，默认为1280
      */
     public Long getWidth() {
@@ -52,7 +52,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 设置实时录制结果里白板视频宽，默认为1280
+     * Set 实时录制结果里白板视频宽，默认为1280
      * @param Width 实时录制结果里白板视频宽，默认为1280
      */
     public void setWidth(Long Width) {
@@ -60,7 +60,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 获取实时录制结果里白板视频高，默认为960
+     * Get 实时录制结果里白板视频高，默认为960 
      * @return Height 实时录制结果里白板视频高，默认为960
      */
     public Long getHeight() {
@@ -68,7 +68,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 设置实时录制结果里白板视频高，默认为960
+     * Set 实时录制结果里白板视频高，默认为960
      * @param Height 实时录制结果里白板视频高，默认为960
      */
     public void setHeight(Long Height) {
@@ -76,7 +76,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 获取白板初始化参数，透传到白板 SDK
+     * Get 白板初始化参数，透传到白板 SDK 
      * @return InitParam 白板初始化参数，透传到白板 SDK
      */
     public String getInitParam() {
@@ -84,7 +84,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 设置白板初始化参数，透传到白板 SDK
+     * Set 白板初始化参数，透传到白板 SDK
      * @param InitParam 白板初始化参数，透传到白板 SDK
      */
     public void setInitParam(String InitParam) {
@@ -92,7 +92,7 @@ public class Whiteboard  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Width", this.Width);

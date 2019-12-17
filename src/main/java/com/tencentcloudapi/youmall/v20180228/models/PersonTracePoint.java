@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonTracePoint  extends AbstractModel{
+public class PersonTracePoint extends AbstractModel{
 
     /**
     * 卖场区域编码
@@ -79,7 +79,7 @@ public class PersonTracePoint  extends AbstractModel{
     private Integer ShoppingBagCount;
 
     /**
-     * 获取卖场区域编码
+     * Get 卖场区域编码 
      * @return MallAreaId 卖场区域编码
      */
     public Integer getMallAreaId() {
@@ -87,7 +87,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置卖场区域编码
+     * Set 卖场区域编码
      * @param MallAreaId 卖场区域编码
      */
     public void setMallAreaId(Integer MallAreaId) {
@@ -95,7 +95,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取门店编码
+     * Get 门店编码 
      * @return ShopId 门店编码
      */
     public Integer getShopId() {
@@ -103,7 +103,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置门店编码
+     * Set 门店编码
      * @param ShopId 门店编码
      */
     public void setShopId(Integer ShopId) {
@@ -111,7 +111,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取卖场区域类型
+     * Get 卖场区域类型 
      * @return MallAreaType 卖场区域类型
      */
     public Integer getMallAreaType() {
@@ -119,7 +119,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置卖场区域类型
+     * Set 卖场区域类型
      * @param MallAreaType 卖场区域类型
      */
     public void setMallAreaType(Integer MallAreaType) {
@@ -127,7 +127,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹事件
+     * Get 轨迹事件 
      * @return TraceEventType 轨迹事件
      */
     public Integer getTraceEventType() {
@@ -135,7 +135,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹事件
+     * Set 轨迹事件
      * @param TraceEventType 轨迹事件
      */
     public void setTraceEventType(Integer TraceEventType) {
@@ -143,7 +143,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹事件发生时间点
+     * Get 轨迹事件发生时间点 
      * @return TraceEventTime 轨迹事件发生时间点
      */
     public String getTraceEventTime() {
@@ -151,7 +151,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹事件发生时间点
+     * Set 轨迹事件发生时间点
      * @param TraceEventTime 轨迹事件发生时间点
      */
     public void setTraceEventTime(String TraceEventTime) {
@@ -159,7 +159,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍图片
+     * Get 抓拍图片 
      * @return CapPic 抓拍图片
      */
     public String getCapPic() {
@@ -167,7 +167,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍图片
+     * Set 抓拍图片
      * @param CapPic 抓拍图片
      */
     public void setCapPic(String CapPic) {
@@ -175,7 +175,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取购物袋类型
+     * Get 购物袋类型 
      * @return ShoppingBagType 购物袋类型
      */
     public Integer getShoppingBagType() {
@@ -183,7 +183,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置购物袋类型
+     * Set 购物袋类型
      * @param ShoppingBagType 购物袋类型
      */
     public void setShoppingBagType(Integer ShoppingBagType) {
@@ -191,7 +191,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 获取购物袋数量
+     * Get 购物袋数量 
      * @return ShoppingBagCount 购物袋数量
      */
     public Integer getShoppingBagCount() {
@@ -199,7 +199,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 设置购物袋数量
+     * Set 购物袋数量
      * @param ShoppingBagCount 购物袋数量
      */
     public void setShoppingBagCount(Integer ShoppingBagCount) {
@@ -207,7 +207,7 @@ public class PersonTracePoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallAreaId", this.MallAreaId);

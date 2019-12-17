@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PeerSet  extends AbstractModel{
+public class PeerSet extends AbstractModel{
 
     /**
     * 节点名称
@@ -37,7 +37,7 @@ public class PeerSet  extends AbstractModel{
     private String OrgName;
 
     /**
-     * 获取节点名称
+     * Get 节点名称 
      * @return PeerName 节点名称
      */
     public String getPeerName() {
@@ -45,7 +45,7 @@ public class PeerSet  extends AbstractModel{
     }
 
     /**
-     * 设置节点名称
+     * Set 节点名称
      * @param PeerName 节点名称
      */
     public void setPeerName(String PeerName) {
@@ -53,7 +53,7 @@ public class PeerSet  extends AbstractModel{
     }
 
     /**
-     * 获取组织名称
+     * Get 组织名称 
      * @return OrgName 组织名称
      */
     public String getOrgName() {
@@ -61,7 +61,7 @@ public class PeerSet  extends AbstractModel{
     }
 
     /**
-     * 设置组织名称
+     * Set 组织名称
      * @param OrgName 组织名称
      */
     public void setOrgName(String OrgName) {
@@ -69,7 +69,7 @@ public class PeerSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PeerName", this.PeerName);

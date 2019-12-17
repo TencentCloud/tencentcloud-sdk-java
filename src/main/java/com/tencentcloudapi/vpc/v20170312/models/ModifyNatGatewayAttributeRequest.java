@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
+public class ModifyNatGatewayAttributeRequest extends AbstractModel{
 
     /**
     * NAT网关的ID，形如：`nat-df45454`。
@@ -44,7 +44,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     private Integer InternetMaxBandwidthOut;
 
     /**
-     * 获取NAT网关的ID，形如：`nat-df45454`。
+     * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public String getNatGatewayId() {
@@ -52,7 +52,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的ID，形如：`nat-df45454`。
+     * Set NAT网关的ID，形如：`nat-df45454`。
      * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -60,7 +60,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关的名称，形如：`test_nat`。
+     * Get NAT网关的名称，形如：`test_nat`。 
      * @return NatGatewayName NAT网关的名称，形如：`test_nat`。
      */
     public String getNatGatewayName() {
@@ -68,7 +68,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的名称，形如：`test_nat`。
+     * Set NAT网关的名称，形如：`test_nat`。
      * @param NatGatewayName NAT网关的名称，形如：`test_nat`。
      */
     public void setNatGatewayName(String NatGatewayName) {
@@ -76,7 +76,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关最大外网出带宽(单位:Mbps)。
+     * Get NAT网关最大外网出带宽(单位:Mbps)。 
      * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -84,7 +84,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关最大外网出带宽(单位:Mbps)。
+     * Set NAT网关最大外网出带宽(单位:Mbps)。
      * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -92,7 +92,7 @@ public class ModifyNatGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

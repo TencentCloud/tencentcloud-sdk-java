@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextWaybill  extends AbstractModel{
+public class TextWaybill extends AbstractModel{
 
     /**
     * 收件人姓名
@@ -72,7 +72,7 @@ public class TextWaybill  extends AbstractModel{
     private WaybillObj WaybillNum;
 
     /**
-     * 获取收件人姓名
+     * Get 收件人姓名 
      * @return RecName 收件人姓名
      */
     public WaybillObj getRecName() {
@@ -80,7 +80,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置收件人姓名
+     * Set 收件人姓名
      * @param RecName 收件人姓名
      */
     public void setRecName(WaybillObj RecName) {
@@ -88,7 +88,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取收件人手机号
+     * Get 收件人手机号 
      * @return RecNum 收件人手机号
      */
     public WaybillObj getRecNum() {
@@ -96,7 +96,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置收件人手机号
+     * Set 收件人手机号
      * @param RecNum 收件人手机号
      */
     public void setRecNum(WaybillObj RecNum) {
@@ -104,7 +104,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取收件人地址
+     * Get 收件人地址 
      * @return RecAddr 收件人地址
      */
     public WaybillObj getRecAddr() {
@@ -112,7 +112,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置收件人地址
+     * Set 收件人地址
      * @param RecAddr 收件人地址
      */
     public void setRecAddr(WaybillObj RecAddr) {
@@ -120,7 +120,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取寄件人姓名
+     * Get 寄件人姓名 
      * @return SenderName 寄件人姓名
      */
     public WaybillObj getSenderName() {
@@ -128,7 +128,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置寄件人姓名
+     * Set 寄件人姓名
      * @param SenderName 寄件人姓名
      */
     public void setSenderName(WaybillObj SenderName) {
@@ -136,7 +136,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取寄件人手机号
+     * Get 寄件人手机号 
      * @return SenderNum 寄件人手机号
      */
     public WaybillObj getSenderNum() {
@@ -144,7 +144,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置寄件人手机号
+     * Set 寄件人手机号
      * @param SenderNum 寄件人手机号
      */
     public void setSenderNum(WaybillObj SenderNum) {
@@ -152,7 +152,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取寄件人地址
+     * Get 寄件人地址 
      * @return SenderAddr 寄件人地址
      */
     public WaybillObj getSenderAddr() {
@@ -160,7 +160,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置寄件人地址
+     * Set 寄件人地址
      * @param SenderAddr 寄件人地址
      */
     public void setSenderAddr(WaybillObj SenderAddr) {
@@ -168,7 +168,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 获取运单号
+     * Get 运单号 
      * @return WaybillNum 运单号
      */
     public WaybillObj getWaybillNum() {
@@ -176,7 +176,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 设置运单号
+     * Set 运单号
      * @param WaybillNum 运单号
      */
     public void setWaybillNum(WaybillObj WaybillNum) {
@@ -184,7 +184,7 @@ public class TextWaybill  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RecName.", this.RecName);

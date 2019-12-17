@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
+public class DescribeVpcPeerConnectionsRequest extends AbstractModel{
 
     /**
     * 对等连接实例ID
@@ -53,7 +53,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取对等连接实例ID
+     * Get 对等连接实例ID 
      * @return VpcPeerConnectionIds 对等连接实例ID
      */
     public String [] getVpcPeerConnectionIds() {
@@ -61,7 +61,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接实例ID
+     * Set 对等连接实例ID
      * @param VpcPeerConnectionIds 对等连接实例ID
      */
     public void setVpcPeerConnectionIds(String [] VpcPeerConnectionIds) {
@@ -69,9 +69,9 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
+     * Get 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
 过滤条件，参数不支持同时指定VpcPeerConnectionIds和Filters。
-<li>peer-name - String - （过滤条件）对等连接名称。</li>
+<li>peer-name - String - （过滤条件）对等连接名称。</li> 
      * @return Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
 过滤条件，参数不支持同时指定VpcPeerConnectionIds和Filters。
 <li>peer-name - String - （过滤条件）对等连接名称。</li>
@@ -81,7 +81,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
+     * Set 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
 过滤条件，参数不支持同时指定VpcPeerConnectionIds和Filters。
 <li>peer-name - String - （过滤条件）对等连接名称。</li>
      * @param Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpcPeerConnectionIds和Filters。
@@ -93,7 +93,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public Long getOffset() {
@@ -101,7 +101,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public void setOffset(Long Offset) {
@@ -109,7 +109,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
@@ -117,7 +117,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -125,7 +125,7 @@ public class DescribeVpcPeerConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpcPeerConnectionIds.", this.VpcPeerConnectionIds);

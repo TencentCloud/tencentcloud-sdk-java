@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCPolicy  extends AbstractModel{
+public class CCPolicy extends AbstractModel{
 
     /**
     * 策略名称
@@ -107,7 +107,7 @@ public class CCPolicy  extends AbstractModel{
     private String Domain;
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return Name 策略名称
      */
     public String getName() {
@@ -115,7 +115,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param Name 策略名称
      */
     public void setName(String Name) {
@@ -123,7 +123,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取匹配模式
+     * Get 匹配模式 
      * @return Smode 匹配模式
      */
     public String getSmode() {
@@ -131,7 +131,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置匹配模式
+     * Set 匹配模式
      * @param Smode 匹配模式
      */
     public void setSmode(String Smode) {
@@ -139,7 +139,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略id
+     * Get 策略id 
      * @return SetId 策略id
      */
     public String getSetId() {
@@ -147,7 +147,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略id
+     * Set 策略id
      * @param SetId 策略id
      */
     public void setSetId(String SetId) {
@@ -155,7 +155,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取每分钟限制的次数
+     * Get 每分钟限制的次数 
      * @return Frequency 每分钟限制的次数
      */
     public Long getFrequency() {
@@ -163,7 +163,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置每分钟限制的次数
+     * Set 每分钟限制的次数
      * @param Frequency 每分钟限制的次数
      */
     public void setFrequency(Long Frequency) {
@@ -171,7 +171,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取执行策略模式，拦截或者验证码
+     * Get 执行策略模式，拦截或者验证码 
      * @return ExeMode 执行策略模式，拦截或者验证码
      */
     public String getExeMode() {
@@ -179,7 +179,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置执行策略模式，拦截或者验证码
+     * Set 执行策略模式，拦截或者验证码
      * @param ExeMode 执行策略模式，拦截或者验证码
      */
     public void setExeMode(String ExeMode) {
@@ -187,7 +187,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取生效开关
+     * Get 生效开关 
      * @return Switch 生效开关
      */
     public Long getSwitch() {
@@ -195,7 +195,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置生效开关
+     * Set 生效开关
      * @param Switch 生效开关
      */
     public void setSwitch(Long Switch) {
@@ -203,7 +203,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -211,7 +211,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -219,7 +219,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取规则列表
+     * Get 规则列表 
      * @return RuleList 规则列表
      */
     public CCRule [] getRuleList() {
@@ -227,7 +227,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置规则列表
+     * Set 规则列表
      * @param RuleList 规则列表
      */
     public void setRuleList(CCRule [] RuleList) {
@@ -235,7 +235,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取IP列表
+     * Get IP列表 
      * @return IpList IP列表
      */
     public String [] getIpList() {
@@ -243,7 +243,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置IP列表
+     * Set IP列表
      * @param IpList IP列表
      */
     public void setIpList(String [] IpList) {
@@ -251,7 +251,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取cc防护类型，取值[http，https]
+     * Get cc防护类型，取值[http，https] 
      * @return Protocol cc防护类型，取值[http，https]
      */
     public String getProtocol() {
@@ -259,7 +259,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置cc防护类型，取值[http，https]
+     * Set cc防护类型，取值[http，https]
      * @param Protocol cc防护类型，取值[http，https]
      */
     public void setProtocol(String Protocol) {
@@ -267,7 +267,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，表示https的CC防护域名对应的转发规则ID;
+     * Get 可选字段，表示https的CC防护域名对应的转发规则ID; 
      * @return RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
      */
     public String getRuleId() {
@@ -275,7 +275,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，表示https的CC防护域名对应的转发规则ID;
+     * Set 可选字段，表示https的CC防护域名对应的转发规则ID;
      * @param RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
      */
     public void setRuleId(String RuleId) {
@@ -283,7 +283,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取https的CC防护域名
+     * Get https的CC防护域名 
      * @return Domain https的CC防护域名
      */
     public String getDomain() {
@@ -291,7 +291,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置https的CC防护域名
+     * Set https的CC防护域名
      * @param Domain https的CC防护域名
      */
     public void setDomain(String Domain) {
@@ -299,7 +299,7 @@ public class CCPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

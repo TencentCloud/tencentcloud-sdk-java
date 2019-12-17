@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordEvaluateRequest  extends AbstractModel{
+public class KeywordEvaluateRequest extends AbstractModel{
 
     /**
     * 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
@@ -86,7 +86,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     private Integer IsQuery;
 
     /**
-     * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+     * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
     public Integer getSeqId() {
@@ -94,7 +94,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+     * Set 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
      */
     public void setSeqId(Integer SeqId) {
@@ -102,7 +102,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * Get 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。 
      * @return IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public Integer getIsEnd() {
@@ -110,7 +110,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * Set 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      * @param IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public void setIsEnd(Integer IsEnd) {
@@ -118,7 +118,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
+     * Get 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。 
      * @return VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public Integer getVoiceFileType() {
@@ -126,7 +126,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
+     * Set 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      * @param VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3, 4: speex (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public void setVoiceFileType(Integer VoiceFileType) {
@@ -134,7 +134,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音编码类型	1:pcm。
+     * Get 语音编码类型	1:pcm。 
      * @return VoiceEncodeType 语音编码类型	1:pcm。
      */
     public Integer getVoiceEncodeType() {
@@ -142,7 +142,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音编码类型	1:pcm。
+     * Set 语音编码类型	1:pcm。
      * @param VoiceEncodeType 语音编码类型	1:pcm。
      */
     public void setVoiceEncodeType(Integer VoiceEncodeType) {
@@ -150,7 +150,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+     * Get 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。 
      * @return UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      */
     public String getUserVoiceData() {
@@ -158,7 +158,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+     * Set 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      * @param UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      */
     public void setUserVoiceData(String UserVoiceData) {
@@ -166,7 +166,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音段唯一标识，一个完整语音一个SessionId。
+     * Get 语音段唯一标识，一个完整语音一个SessionId。 
      * @return SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public String getSessionId() {
@@ -174,7 +174,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音段唯一标识，一个完整语音一个SessionId。
+     * Set 语音段唯一标识，一个完整语音一个SessionId。
      * @param SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public void setSessionId(String SessionId) {
@@ -182,7 +182,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键词列表
+     * Get 关键词列表 
      * @return Keywords 关键词列表
      */
     public Keyword [] getKeywords() {
@@ -190,7 +190,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词列表
+     * Set 关键词列表
      * @param Keywords 关键词列表
      */
     public void setKeywords(Keyword [] Keywords) {
@@ -198,7 +198,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * Get 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。 
      * @return SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      */
     public String getSoeAppId() {
@@ -206,7 +206,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
+     * Set 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      * @param SoeAppId 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 SoeAppId 可以在[控制台](https://console.cloud.tencent.com/soe)【应用管理】下新建。
      */
     public void setSoeAppId(String SoeAppId) {
@@ -214,7 +214,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
+     * Get 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。 
      * @return IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      */
     public Integer getIsQuery() {
@@ -222,7 +222,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
+     * Set 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      * @param IsQuery 查询标识，当该参数为1时，该请求为查询请求，请求返回该 Session 评估结果。
      */
     public void setIsQuery(Integer IsQuery) {
@@ -230,7 +230,7 @@ public class KeywordEvaluateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SeqId", this.SeqId);

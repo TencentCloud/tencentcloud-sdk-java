@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubAppIdInfo  extends AbstractModel{
+public class SubAppIdInfo extends AbstractModel{
 
     /**
     * 子应用 ID。
@@ -60,7 +60,7 @@ public class SubAppIdInfo  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取子应用 ID。
+     * Get 子应用 ID。 
      * @return SubAppId 子应用 ID。
      */
     public Long getSubAppId() {
@@ -68,7 +68,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子应用 ID。
+     * Set 子应用 ID。
      * @param SubAppId 子应用 ID。
      */
     public void setSubAppId(Long SubAppId) {
@@ -76,7 +76,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子应用名称。
+     * Get 子应用名称。 
      * @return Name 子应用名称。
      */
     public String getName() {
@@ -84,7 +84,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子应用名称。
+     * Set 子应用名称。
      * @param Name 子应用名称。
      */
     public void setName(String Name) {
@@ -92,7 +92,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子应用简介。
+     * Get 子应用简介。 
      * @return Description 子应用简介。
      */
     public String getDescription() {
@@ -100,7 +100,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子应用简介。
+     * Set 子应用简介。
      * @param Description 子应用简介。
      */
     public void setDescription(String Description) {
@@ -108,7 +108,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -116,7 +116,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 子应用创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -124,9 +124,9 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子应用状态，有效值：
+     * Get 子应用状态，有效值：
 <li>On：启用；</li>
-<li>Off：停用。</li>
+<li>Off：停用。</li> 
      * @return Status 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
@@ -136,7 +136,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子应用状态，有效值：
+     * Set 子应用状态，有效值：
 <li>On：启用；</li>
 <li>Off：停用。</li>
      * @param Status 子应用状态，有效值：
@@ -148,7 +148,7 @@ public class SubAppIdInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

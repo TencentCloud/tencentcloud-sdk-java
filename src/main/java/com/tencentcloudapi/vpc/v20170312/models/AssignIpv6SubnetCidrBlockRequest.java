@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
+public class AssignIpv6SubnetCidrBlockRequest extends AbstractModel{
 
     /**
     * 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
@@ -37,7 +37,7 @@ public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
     private Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlocks;
 
     /**
-     * 获取子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+     * Get 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。 
      * @return VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+     * Set 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
      * @param VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分配 `IPv6` 子网段列表。
+     * Get 分配 `IPv6` 子网段列表。 
      * @return Ipv6SubnetCidrBlocks 分配 `IPv6` 子网段列表。
      */
     public Ipv6SubnetCidrBlock [] getIpv6SubnetCidrBlocks() {
@@ -61,7 +61,7 @@ public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分配 `IPv6` 子网段列表。
+     * Set 分配 `IPv6` 子网段列表。
      * @param Ipv6SubnetCidrBlocks 分配 `IPv6` 子网段列表。
      */
     public void setIpv6SubnetCidrBlocks(Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlocks) {
@@ -69,7 +69,7 @@ public class AssignIpv6SubnetCidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

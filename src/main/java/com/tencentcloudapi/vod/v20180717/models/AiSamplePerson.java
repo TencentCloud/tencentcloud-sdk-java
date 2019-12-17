@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSamplePerson  extends AbstractModel{
+public class AiSamplePerson extends AbstractModel{
 
     /**
     * 人物 ID。
@@ -81,7 +81,7 @@ public class AiSamplePerson  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取人物 ID。
+     * Get 人物 ID。 
      * @return PersonId 人物 ID。
      */
     public String getPersonId() {
@@ -89,7 +89,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置人物 ID。
+     * Set 人物 ID。
      * @param PersonId 人物 ID。
      */
     public void setPersonId(String PersonId) {
@@ -97,7 +97,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取人物名称。
+     * Get 人物名称。 
      * @return Name 人物名称。
      */
     public String getName() {
@@ -105,7 +105,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置人物名称。
+     * Set 人物名称。
      * @param Name 人物名称。
      */
     public void setName(String Name) {
@@ -113,8 +113,8 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取人物描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人物描述。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 人物描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -123,7 +123,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置人物描述。
+     * Set 人物描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 人物描述。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,7 +133,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取人脸信息。
+     * Get 人脸信息。 
      * @return FaceInfoSet 人脸信息。
      */
     public AiSampleFaceInfo [] getFaceInfoSet() {
@@ -141,7 +141,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置人脸信息。
+     * Set 人脸信息。
      * @param FaceInfoSet 人脸信息。
      */
     public void setFaceInfoSet(AiSampleFaceInfo [] FaceInfoSet) {
@@ -149,8 +149,8 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取人物标签。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人物标签。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagSet 人物标签。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -159,7 +159,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置人物标签。
+     * Set 人物标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 人物标签。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -169,7 +169,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取应用场景。
+     * Get 应用场景。 
      * @return UsageSet 应用场景。
      */
     public String [] getUsageSet() {
@@ -177,7 +177,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置应用场景。
+     * Set 应用场景。
      * @param UsageSet 应用场景。
      */
     public void setUsageSet(String [] UsageSet) {
@@ -185,7 +185,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -193,7 +193,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -201,7 +201,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -209,7 +209,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -217,7 +217,7 @@ public class AiSamplePerson  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

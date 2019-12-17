@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetResponse  extends AbstractModel{
+public class ResetResponse extends AbstractModel{
 
     /**
     * 当前会话状态。取值:"start"/"continue"/"complete"
@@ -101,8 +101,8 @@ public class ResetResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当前会话状态。取值:"start"/"continue"/"complete"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前会话状态。取值:"start"/"continue"/"complete"
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DialogStatus 当前会话状态。取值:"start"/"continue"/"complete"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -111,7 +111,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前会话状态。取值:"start"/"continue"/"complete"
+     * Set 当前会话状态。取值:"start"/"continue"/"complete"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DialogStatus 当前会话状态。取值:"start"/"continue"/"complete"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -121,8 +121,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的机器人名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 匹配到的机器人名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BotName 匹配到的机器人名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -131,7 +131,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的机器人名称
+     * Set 匹配到的机器人名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BotName 匹配到的机器人名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,8 +141,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的意图名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 匹配到的意图名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IntentName 匹配到的意图名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -151,7 +151,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的意图名称
+     * Set 匹配到的意图名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntentName 匹配到的意图名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,7 +161,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器人回答
+     * Get 机器人回答 
      * @return ResponseText 机器人回答
      */
     public String getResponseText() {
@@ -169,7 +169,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机器人回答
+     * Set 机器人回答
      * @param ResponseText 机器人回答
      */
     public void setResponseText(String ResponseText) {
@@ -177,8 +177,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语义解析的槽位结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语义解析的槽位结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlotInfoList 语义解析的槽位结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -187,7 +187,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语义解析的槽位结果列表
+     * Set 语义解析的槽位结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlotInfoList 语义解析的槽位结果列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,8 +197,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取透传字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 透传字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionAttributes 透传字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,7 +207,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传字段
+     * Set 透传字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionAttributes 透传字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -217,8 +217,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Question 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -227,7 +227,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
+     * Set 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Question 用户说法。该说法是用户原生说法或ASR识别结果，未经过语义优化
 注意：此字段可能返回 null，表示取不到有效值。
@@ -237,8 +237,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WaveUrl tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -247,7 +247,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
+     * Set tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WaveUrl tts合成pcm音频存储链接。仅当请求参数NeedTts=true时返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -257,8 +257,8 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WaveData tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -267,7 +267,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
+     * Set tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WaveData tts合成的pcm音频。二进制数组经过base64编码(暂时不返回)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -277,7 +277,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -285,7 +285,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -293,7 +293,7 @@ public class ResetResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DialogStatus", this.DialogStatus);

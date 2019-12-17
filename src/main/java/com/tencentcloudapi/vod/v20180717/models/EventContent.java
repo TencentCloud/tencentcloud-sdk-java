@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EventContent  extends AbstractModel{
+public class EventContent extends AbstractModel{
 
     /**
     * 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
@@ -155,7 +155,7 @@ public class EventContent  extends AbstractModel{
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
-     * 获取事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
+     * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
     public String getEventHandle() {
@@ -163,7 +163,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
+     * Set 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      * @param EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
     public void setEventHandle(String EventHandle) {
@@ -171,7 +171,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取<b>支持事件类型：</b>
+     * Get <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
@@ -185,7 +185,7 @@ public class EventContent  extends AbstractModel{
 <li>ConcatComplete：视频拼接完成；</li>
 <li>ClipComplete：视频剪辑完成；</li>
 <li>CreateImageSpriteComplete：视频截取雪碧图完成；</li>
-<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li>
+<li>CreateSnapshotByTimeOffsetComplete：视频按时间点截图完成。</li> 
      * @return EventType <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
@@ -207,7 +207,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置<b>支持事件类型：</b>
+     * Set <b>支持事件类型：</b>
 <li>NewFileUpload：视频上传完成；</li>
 <li>ProcedureStateChanged：任务流状态变更；</li>
 <li>FileDeleted：视频删除完成；</li>
@@ -243,8 +243,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频上传完成事件，当事件类型为 NewFileUpload 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileUploadEvent 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频上传完成事件，当事件类型为 NewFileUpload 时有效。
+     * Set 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUploadEvent 视频上传完成事件，当事件类型为 NewFileUpload 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProcedureStateChangeEvent 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
+     * Set 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureStateChangeEvent 任务流状态变更事件，当事件类型为 ProcedureStateChanged 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取文件删除事件，当事件类型为 FileDeleted 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件删除事件，当事件类型为 FileDeleted 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置文件删除事件，当事件类型为 FileDeleted 时有效。
+     * Set 文件删除事件，当事件类型为 FileDeleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileDeleteEvent 文件删除事件，当事件类型为 FileDeleted 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,8 +303,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频转拉完成事件，当事件类型为 PullComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转拉完成事件，当事件类型为 PullComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -313,7 +313,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频转拉完成事件，当事件类型为 PullComplete 时有效。
+     * Set 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PullCompleteEvent 视频转拉完成事件，当事件类型为 PullComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,8 +323,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,7 +333,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
+     * Set 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaCompleteEvent 视频编辑完成事件，当事件类型为 EditMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,8 +343,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,7 +353,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
+     * Set 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatPublishCompleteEvent 微信发布完成事件，当事件类型为 WechatPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -363,8 +363,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -373,7 +373,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
+     * Set 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeCompleteEvent 视频转码完成事件，当事件类型为 TranscodeComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,8 +383,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -393,7 +393,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
+     * Set 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConcatCompleteEvent 视频拼接完成事件，当事件类型为 ConcatComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -403,8 +403,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -413,7 +413,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
+     * Set 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClipCompleteEvent 视频剪辑完成事件，当事件类型为 ClipComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -423,8 +423,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -433,7 +433,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
+     * Set 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateImageSpriteCompleteEvent 视频截取雪碧图完成事件，当事件类型为 CreateImageSpriteComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -443,8 +443,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -453,7 +453,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
+     * Set 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetCompleteEvent 视频按时间点截图完成事件，当事件类型为 CreateSnapshotByTimeOffsetComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -463,8 +463,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -473,7 +473,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
+     * Set 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaCompleteEvent 制作媒体文件任务完成事件，当事件类型为 ComposeMediaComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -483,8 +483,8 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 获取微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -493,7 +493,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 设置微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
+     * Set 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishCompleteEvent 微信小程序发布任务完成事件，当事件类型为 WechatMiniProgramPublishComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -503,7 +503,7 @@ public class EventContent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventHandle", this.EventHandle);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTaskFunction  extends AbstractModel{
+public class ImageTaskFunction extends AbstractModel{
 
     /**
     * 大教室场景学生肢体动作识别选项
@@ -93,7 +93,7 @@ public class ImageTaskFunction  extends AbstractModel{
     private Boolean EnableTeacherOutScreen;
 
     /**
-     * 获取大教室场景学生肢体动作识别选项
+     * Get 大教室场景学生肢体动作识别选项 
      * @return EnableActionClass 大教室场景学生肢体动作识别选项
      */
     public Boolean getEnableActionClass() {
@@ -101,7 +101,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置大教室场景学生肢体动作识别选项
+     * Set 大教室场景学生肢体动作识别选项
      * @param EnableActionClass 大教室场景学生肢体动作识别选项
      */
     public void setEnableActionClass(Boolean EnableActionClass) {
@@ -109,7 +109,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检测选项
+     * Get 人脸检测选项 
      * @return EnableFaceDetect 人脸检测选项
      */
     public Boolean getEnableFaceDetect() {
@@ -117,7 +117,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检测选项
+     * Set 人脸检测选项
      * @param EnableFaceDetect 人脸检测选项
      */
     public void setEnableFaceDetect(Boolean EnableFaceDetect) {
@@ -125,7 +125,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取人脸表情识别选项
+     * Get 人脸表情识别选项 
      * @return EnableFaceExpression 人脸表情识别选项
      */
     public Boolean getEnableFaceExpression() {
@@ -133,7 +133,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置人脸表情识别选项
+     * Set 人脸表情识别选项
      * @param EnableFaceExpression 人脸表情识别选项
      */
     public void setEnableFaceExpression(Boolean EnableFaceExpression) {
@@ -141,7 +141,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检索选项
+     * Get 人脸检索选项 
      * @return EnableFaceIdentify 人脸检索选项
      */
     public Boolean getEnableFaceIdentify() {
@@ -149,7 +149,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检索选项
+     * Set 人脸检索选项
      * @param EnableFaceIdentify 人脸检索选项
      */
     public void setEnableFaceIdentify(Boolean EnableFaceIdentify) {
@@ -157,7 +157,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取手势选项
+     * Get 手势选项 
      * @return EnableGesture 手势选项
      */
     public Boolean getEnableGesture() {
@@ -165,7 +165,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置手势选项
+     * Set 手势选项
      * @param EnableGesture 手势选项
      */
     public void setEnableGesture(Boolean EnableGesture) {
@@ -173,7 +173,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取优图手势选项（该功能尚未支持）
+     * Get 优图手势选项（该功能尚未支持） 
      * @return EnableHandTracking 优图手势选项（该功能尚未支持）
      */
     public Boolean getEnableHandTracking() {
@@ -181,7 +181,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置优图手势选项（该功能尚未支持）
+     * Set 优图手势选项（该功能尚未支持）
      * @param EnableHandTracking 优图手势选项（该功能尚未支持）
      */
     public void setEnableHandTracking(Boolean EnableHandTracking) {
@@ -189,7 +189,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取光照选项
+     * Get 光照选项 
      * @return EnableLightJudge 光照选项
      */
     public Boolean getEnableLightJudge() {
@@ -197,7 +197,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置光照选项
+     * Set 光照选项
      * @param EnableLightJudge 光照选项
      */
     public void setEnableLightJudge(Boolean EnableLightJudge) {
@@ -205,7 +205,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取小班课场景学生肢体动作识别选项
+     * Get 小班课场景学生肢体动作识别选项 
      * @return EnableStudentBodyMovements 小班课场景学生肢体动作识别选项
      */
     public Boolean getEnableStudentBodyMovements() {
@@ -213,7 +213,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置小班课场景学生肢体动作识别选项
+     * Set 小班课场景学生肢体动作识别选项
      * @param EnableStudentBodyMovements 小班课场景学生肢体动作识别选项
      */
     public void setEnableStudentBodyMovements(Boolean EnableStudentBodyMovements) {
@@ -221,7 +221,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取教师动作选项（该功能尚未支持）
+     * Get 教师动作选项（该功能尚未支持） 
      * @return EnableTeacherBodyMovements 教师动作选项（该功能尚未支持）
      */
     public Boolean getEnableTeacherBodyMovements() {
@@ -229,7 +229,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置教师动作选项（该功能尚未支持）
+     * Set 教师动作选项（该功能尚未支持）
      * @param EnableTeacherBodyMovements 教师动作选项（该功能尚未支持）
      */
     public void setEnableTeacherBodyMovements(Boolean EnableTeacherBodyMovements) {
@@ -237,7 +237,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 获取判断老师是否在屏幕中
+     * Get 判断老师是否在屏幕中 
      * @return EnableTeacherOutScreen 判断老师是否在屏幕中
      */
     public Boolean getEnableTeacherOutScreen() {
@@ -245,7 +245,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 设置判断老师是否在屏幕中
+     * Set 判断老师是否在屏幕中
      * @param EnableTeacherOutScreen 判断老师是否在屏幕中
      */
     public void setEnableTeacherOutScreen(Boolean EnableTeacherOutScreen) {
@@ -253,7 +253,7 @@ public class ImageTaskFunction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableActionClass", this.EnableActionClass);

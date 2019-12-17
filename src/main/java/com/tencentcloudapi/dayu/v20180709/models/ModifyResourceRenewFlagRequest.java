@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyResourceRenewFlagRequest  extends AbstractModel{
+public class ModifyResourceRenewFlagRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
@@ -44,7 +44,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     private Long RenewFlag;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
      */
     public String getBusiness() {
@@ -52,7 +52,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌盾；bgp表示独享包；bgp-multip表示共享包；insurance表示保险包；staticpack表示三网套餐包）
      */
     public void setBusiness(String Business) {
@@ -60,7 +60,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源Id
+     * Get 资源Id 
      * @return Id 资源Id
      */
     public String getId() {
@@ -68,7 +68,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源Id
+     * Set 资源Id
      * @param Id 资源Id
      */
     public void setId(String Id) {
@@ -76,7 +76,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标记（0手动续费；1自动续费；2到期不续费）
+     * Get 自动续费标记（0手动续费；1自动续费；2到期不续费） 
      * @return RenewFlag 自动续费标记（0手动续费；1自动续费；2到期不续费）
      */
     public Long getRenewFlag() {
@@ -84,7 +84,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标记（0手动续费；1自动续费；2到期不续费）
+     * Set 自动续费标记（0手动续费；1自动续费；2到期不续费）
      * @param RenewFlag 自动续费标记（0手动续费；1自动续费；2到期不续费）
      */
     public void setRenewFlag(Long RenewFlag) {
@@ -92,7 +92,7 @@ public class ModifyResourceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

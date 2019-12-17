@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeThreatInfoRequest  extends AbstractModel{
+public class DescribeThreatInfoRequest extends AbstractModel{
 
     /**
     * 查询对象，域名或IP
@@ -44,7 +44,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     private Integer Option;
 
     /**
-     * 获取查询对象，域名或IP
+     * Get 查询对象，域名或IP 
      * @return Key 查询对象，域名或IP
      */
     public String getKey() {
@@ -52,7 +52,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询对象，域名或IP
+     * Set 查询对象，域名或IP
      * @param Key 查询对象，域名或IP
      */
     public void setKey(String Key) {
@@ -60,7 +60,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询类型，当前取值为domain或ip
+     * Get 查询类型，当前取值为domain或ip 
      * @return Type 查询类型，当前取值为domain或ip
      */
     public String getType() {
@@ -68,7 +68,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询类型，当前取值为domain或ip
+     * Set 查询类型，当前取值为domain或ip
      * @param Type 查询类型，当前取值为domain或ip
      */
     public void setType(String Type) {
@@ -76,7 +76,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+     * Get 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。 
      * @return Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public Integer getOption() {
@@ -84,7 +84,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+     * Set 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      * @param Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public void setOption(Integer Option) {
@@ -92,7 +92,7 @@ public class DescribeThreatInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

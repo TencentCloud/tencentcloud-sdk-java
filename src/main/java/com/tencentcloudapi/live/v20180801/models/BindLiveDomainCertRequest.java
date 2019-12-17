@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindLiveDomainCertRequest  extends AbstractModel{
+public class BindLiveDomainCertRequest extends AbstractModel{
 
     /**
     * 证书Id。
@@ -44,7 +44,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取证书Id。
+     * Get 证书Id。 
      * @return CertId 证书Id。
      */
     public Integer getCertId() {
@@ -52,7 +52,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书Id。
+     * Set 证书Id。
      * @param CertId 证书Id。
      */
     public void setCertId(Integer CertId) {
@@ -60,7 +60,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名。
+     * Get 播放域名。 
      * @return DomainName 播放域名。
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名。
+     * Set 播放域名。
      * @param DomainName 播放域名。
      */
     public void setDomainName(String DomainName) {
@@ -76,7 +76,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取状态，0： 关闭  1：打开。
+     * Get 状态，0： 关闭  1：打开。 
      * @return Status 状态，0： 关闭  1：打开。
      */
     public Integer getStatus() {
@@ -84,7 +84,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置状态，0： 关闭  1：打开。
+     * Set 状态，0： 关闭  1：打开。
      * @param Status 状态，0： 关闭  1：打开。
      */
     public void setStatus(Integer Status) {
@@ -92,7 +92,7 @@ public class BindLiveDomainCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

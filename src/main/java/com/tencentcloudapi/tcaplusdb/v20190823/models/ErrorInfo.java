@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ErrorInfo  extends AbstractModel{
+public class ErrorInfo extends AbstractModel{
 
     /**
     * 错误码
@@ -37,7 +37,7 @@ public class ErrorInfo  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取错误码
+     * Get 错误码 
      * @return Code 错误码
      */
     public String getCode() {
@@ -45,7 +45,7 @@ public class ErrorInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
      * @param Code 错误码
      */
     public void setCode(String Code) {
@@ -53,7 +53,7 @@ public class ErrorInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
+     * Get 错误信息 
      * @return Message 错误信息
      */
     public String getMessage() {
@@ -61,7 +61,7 @@ public class ErrorInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
      * @param Message 错误信息
      */
     public void setMessage(String Message) {
@@ -69,7 +69,7 @@ public class ErrorInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
+public class LiveStreamAiReviewVoicePornResult extends AbstractModel{
 
     /**
     * 嫌疑片段起始的 PTS 时间，单位：秒。
@@ -62,7 +62,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     private String Label;
 
     /**
-     * 获取嫌疑片段起始的 PTS 时间，单位：秒。
+     * Get 嫌疑片段起始的 PTS 时间，单位：秒。 
      * @return StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      */
     public Float getStartPtsTime() {
@@ -70,7 +70,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段起始的 PTS 时间，单位：秒。
+     * Set 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      */
     public void setStartPtsTime(Float StartPtsTime) {
@@ -78,7 +78,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段结束的 PTS 时间，单位：秒。
+     * Get 嫌疑片段结束的 PTS 时间，单位：秒。 
      * @return EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
      */
     public Float getEndPtsTime() {
@@ -86,7 +86,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段结束的 PTS 时间，单位：秒。
+     * Set 嫌疑片段结束的 PTS 时间，单位：秒。
      * @param EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
      */
     public void setEndPtsTime(Float EndPtsTime) {
@@ -94,7 +94,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段涉黄分数。
+     * Get 嫌疑片段涉黄分数。 
      * @return Confidence 嫌疑片段涉黄分数。
      */
     public Float getConfidence() {
@@ -102,7 +102,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段涉黄分数。
+     * Set 嫌疑片段涉黄分数。
      * @param Confidence 嫌疑片段涉黄分数。
      */
     public void setConfidence(Float Confidence) {
@@ -110,10 +110,10 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段鉴黄结果建议，取值范围：
+     * Get 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
-<li>block</li>
+<li>block</li> 
      * @return Suggestion 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
@@ -124,7 +124,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段鉴黄结果建议，取值范围：
+     * Set 嫌疑片段鉴黄结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -138,8 +138,8 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频鉴黄结果标签，取值范围：
-<li>sexual_moan：呻吟。</li>
+     * Get 视频鉴黄结果标签，取值范围：
+<li>sexual_moan：呻吟。</li> 
      * @return Label 视频鉴黄结果标签，取值范围：
 <li>sexual_moan：呻吟。</li>
      */
@@ -148,7 +148,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频鉴黄结果标签，取值范围：
+     * Set 视频鉴黄结果标签，取值范围：
 <li>sexual_moan：呻吟。</li>
      * @param Label 视频鉴黄结果标签，取值范围：
 <li>sexual_moan：呻吟。</li>
@@ -158,7 +158,7 @@ public class LiveStreamAiReviewVoicePornResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);

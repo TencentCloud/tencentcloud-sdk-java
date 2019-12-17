@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstancesProjectRequest  extends AbstractModel{
+public class ModifyDBInstancesProjectRequest extends AbstractModel{
 
     /**
     * postgresql实例ID数组
@@ -37,7 +37,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     private String ProjectId;
 
     /**
-     * 获取postgresql实例ID数组
+     * Get postgresql实例ID数组 
      * @return DBInstanceIdSet postgresql实例ID数组
      */
     public String [] getDBInstanceIdSet() {
@@ -45,7 +45,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置postgresql实例ID数组
+     * Set postgresql实例ID数组
      * @param DBInstanceIdSet postgresql实例ID数组
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
@@ -53,7 +53,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取postgresql实例所属新项目的ID
+     * Get postgresql实例所属新项目的ID 
      * @return ProjectId postgresql实例所属新项目的ID
      */
     public String getProjectId() {
@@ -61,7 +61,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置postgresql实例所属新项目的ID
+     * Set postgresql实例所属新项目的ID
      * @param ProjectId postgresql实例所属新项目的ID
      */
     public void setProjectId(String ProjectId) {
@@ -69,7 +69,7 @@ public class ModifyDBInstancesProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);

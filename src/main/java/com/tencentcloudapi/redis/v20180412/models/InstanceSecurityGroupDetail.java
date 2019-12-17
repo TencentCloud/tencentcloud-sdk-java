@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceSecurityGroupDetail  extends AbstractModel{
+public class InstanceSecurityGroupDetail extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class InstanceSecurityGroupDetail  extends AbstractModel{
     private SecurityGroupDetail [] SecurityGroupDetails;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class InstanceSecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class InstanceSecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组信息
+     * Get 安全组信息 
      * @return SecurityGroupDetails 安全组信息
      */
     public SecurityGroupDetail [] getSecurityGroupDetails() {
@@ -61,7 +61,7 @@ public class InstanceSecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组信息
+     * Set 安全组信息
      * @param SecurityGroupDetails 安全组信息
      */
     public void setSecurityGroupDetails(SecurityGroupDetail [] SecurityGroupDetails) {
@@ -69,7 +69,7 @@ public class InstanceSecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

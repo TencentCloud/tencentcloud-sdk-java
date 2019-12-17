@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
+public class DescribeStreamDayPlayInfoListResponse extends AbstractModel{
 
     /**
     * 播放数据信息列表。
@@ -65,7 +65,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取播放数据信息列表。
+     * Get 播放数据信息列表。 
      * @return DataInfoList 播放数据信息列表。
      */
     public PlayDataInfoByStream [] getDataInfoList() {
@@ -73,7 +73,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置播放数据信息列表。
+     * Set 播放数据信息列表。
      * @param DataInfoList 播放数据信息列表。
      */
     public void setDataInfoList(PlayDataInfoByStream [] DataInfoList) {
@@ -81,7 +81,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总数量。
+     * Get 总数量。 
      * @return TotalNum 总数量。
      */
     public Integer getTotalNum() {
@@ -89,7 +89,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数量。
+     * Set 总数量。
      * @param TotalNum 总数量。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -97,7 +97,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总页数。
+     * Get 总页数。 
      * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
@@ -105,7 +105,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总页数。
+     * Set 总页数。
      * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -113,7 +113,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前数据所处页码。
+     * Get 当前数据所处页码。 
      * @return PageNum 当前数据所处页码。
      */
     public Integer getPageNum() {
@@ -121,7 +121,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前数据所处页码。
+     * Set 当前数据所处页码。
      * @param PageNum 当前数据所处页码。
      */
     public void setPageNum(Integer PageNum) {
@@ -129,7 +129,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数。
+     * Get 每页个数。 
      * @return PageSize 每页个数。
      */
     public Integer getPageSize() {
@@ -137,7 +137,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数。
+     * Set 每页个数。
      * @param PageSize 每页个数。
      */
     public void setPageSize(Integer PageSize) {
@@ -145,7 +145,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeStreamDayPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);

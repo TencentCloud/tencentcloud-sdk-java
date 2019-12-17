@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Model  extends AbstractModel{
+public class Model extends AbstractModel{
 
     /**
     * 模型名称
@@ -135,7 +135,7 @@ public class Model  extends AbstractModel{
     private String DelTime;
 
     /**
-     * 获取模型名称
+     * Get 模型名称 
      * @return Name 模型名称
      */
     public String getName() {
@@ -143,7 +143,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型名称
+     * Set 模型名称
      * @param Name 模型名称
      */
     public void setName(String Name) {
@@ -151,7 +151,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型描述
+     * Get 模型描述 
      * @return Description 模型描述
      */
     public String getDescription() {
@@ -159,7 +159,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型描述
+     * Set 模型描述
      * @param Description 模型描述
      */
     public void setDescription(String Description) {
@@ -167,7 +167,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
+     * Get 集群名称 
      * @return Cluster 集群名称
      */
     public String getCluster() {
@@ -175,7 +175,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
      * @param Cluster 集群名称
      */
     public void setCluster(String Cluster) {
@@ -183,7 +183,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型地址
+     * Get 模型地址 
      * @return Model 模型地址
      */
     public String getModel() {
@@ -191,7 +191,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型地址
+     * Set 模型地址
      * @param Model 模型地址
      */
     public void setModel(String Model) {
@@ -199,7 +199,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境编号
+     * Get 运行环境编号 
      * @return RuntimeVersion 运行环境编号
      */
     public String getRuntimeVersion() {
@@ -207,7 +207,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境编号
+     * Set 运行环境编号
      * @param RuntimeVersion 运行环境编号
      */
     public void setRuntimeVersion(String RuntimeVersion) {
@@ -215,7 +215,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型创建时间
+     * Get 模型创建时间 
      * @return CreateTime 模型创建时间
      */
     public String getCreateTime() {
@@ -223,7 +223,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型创建时间
+     * Set 模型创建时间
      * @param CreateTime 模型创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -231,7 +231,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型运行状态
+     * Get 模型运行状态 
      * @return State 模型运行状态
      */
     public String getState() {
@@ -239,7 +239,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型运行状态
+     * Set 模型运行状态
      * @param State 模型运行状态
      */
     public void setState(String State) {
@@ -247,7 +247,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取提供服务的url
+     * Get 提供服务的url 
      * @return ServingUrl 提供服务的url
      */
     public String getServingUrl() {
@@ -255,7 +255,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置提供服务的url
+     * Set 提供服务的url
      * @param ServingUrl 提供服务的url
      */
     public void setServingUrl(String ServingUrl) {
@@ -263,7 +263,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取相关消息
+     * Get 相关消息 
      * @return Message 相关消息
      */
     public String getMessage() {
@@ -271,7 +271,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置相关消息
+     * Set 相关消息
      * @param Message 相关消息
      */
     public void setMessage(String Message) {
@@ -279,7 +279,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取编号
+     * Get 编号 
      * @return AppId 编号
      */
     public Integer getAppId() {
@@ -287,7 +287,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置编号
+     * Set 编号
      * @param AppId 编号
      */
     public void setAppId(Integer AppId) {
@@ -295,7 +295,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取机型
+     * Get 机型 
      * @return ServType 机型
      */
     public String getServType() {
@@ -303,7 +303,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置机型
+     * Set 机型
      * @param ServType 机型
      */
     public void setServType(String ServType) {
@@ -311,7 +311,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型暴露方式
+     * Get 模型暴露方式 
      * @return Expose 模型暴露方式
      */
     public String getExpose() {
@@ -319,7 +319,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型暴露方式
+     * Set 模型暴露方式
      * @param Expose 模型暴露方式
      */
     public void setExpose(String Expose) {
@@ -327,7 +327,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取部署副本数量
+     * Get 部署副本数量 
      * @return Replicas 部署副本数量
      */
     public Integer getReplicas() {
@@ -335,7 +335,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置部署副本数量
+     * Set 部署副本数量
      * @param Replicas 部署副本数量
      */
     public void setReplicas(Integer Replicas) {
@@ -343,7 +343,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型Id
+     * Get 模型Id 
      * @return Id 模型Id
      */
     public String getId() {
@@ -351,7 +351,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型Id
+     * Set 模型Id
      * @param Id 模型Id
      */
     public void setId(String Id) {
@@ -359,7 +359,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取创建任务的Uin
+     * Get 创建任务的Uin 
      * @return Uin 创建任务的Uin
      */
     public String getUin() {
@@ -367,7 +367,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置创建任务的Uin
+     * Set 创建任务的Uin
      * @param Uin 创建任务的Uin
      */
     public void setUin(String Uin) {
@@ -375,7 +375,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 获取模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Get 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST 
      * @return DelTime 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public String getDelTime() {
@@ -383,7 +383,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 设置模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Set 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      * @param DelTime 模型删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public void setDelTime(String DelTime) {
@@ -391,7 +391,7 @@ public class Model  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

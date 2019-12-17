@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishMsgRequest  extends AbstractModel{
+public class PublishMsgRequest extends AbstractModel{
 
     /**
     * Topic
@@ -44,7 +44,7 @@ public class PublishMsgRequest  extends AbstractModel{
     private Integer Qos;
 
     /**
-     * 获取Topic
+     * Get Topic 
      * @return Topic Topic
      */
     public String getTopic() {
@@ -52,7 +52,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Topic
+     * Set Topic
      * @param Topic Topic
      */
     public void setTopic(String Topic) {
@@ -60,7 +60,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 获取消息内容
+     * Get 消息内容 
      * @return Message 消息内容
      */
     public String getMessage() {
@@ -68,7 +68,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 设置消息内容
+     * Set 消息内容
      * @param Message 消息内容
      */
     public void setMessage(String Message) {
@@ -76,7 +76,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Qos(目前QoS支持0与1)
+     * Get Qos(目前QoS支持0与1) 
      * @return Qos Qos(目前QoS支持0与1)
      */
     public Integer getQos() {
@@ -84,7 +84,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Qos(目前QoS支持0与1)
+     * Set Qos(目前QoS支持0与1)
      * @param Qos Qos(目前QoS支持0与1)
      */
     public void setQos(Integer Qos) {
@@ -92,7 +92,7 @@ public class PublishMsgRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Topic", this.Topic);

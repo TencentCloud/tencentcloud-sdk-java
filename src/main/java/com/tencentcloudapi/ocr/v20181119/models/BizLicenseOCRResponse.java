@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BizLicenseOCRResponse  extends AbstractModel{
+public class BizLicenseOCRResponse extends AbstractModel{
 
     /**
     * 注册号
@@ -93,7 +93,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取注册号
+     * Get 注册号 
      * @return RegNum 注册号
      */
     public String getRegNum() {
@@ -101,7 +101,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置注册号
+     * Set 注册号
      * @param RegNum 注册号
      */
     public void setRegNum(String RegNum) {
@@ -109,7 +109,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取公司名称
+     * Get 公司名称 
      * @return Name 公司名称
      */
     public String getName() {
@@ -117,7 +117,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置公司名称
+     * Set 公司名称
      * @param Name 公司名称
      */
     public void setName(String Name) {
@@ -125,7 +125,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取注册资本
+     * Get 注册资本 
      * @return Capital 注册资本
      */
     public String getCapital() {
@@ -133,7 +133,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置注册资本
+     * Set 注册资本
      * @param Capital 注册资本
      */
     public void setCapital(String Capital) {
@@ -141,7 +141,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取法定代表人
+     * Get 法定代表人 
      * @return Person 法定代表人
      */
     public String getPerson() {
@@ -149,7 +149,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置法定代表人
+     * Set 法定代表人
      * @param Person 法定代表人
      */
     public void setPerson(String Person) {
@@ -157,7 +157,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取地址
+     * Get 地址 
      * @return Address 地址
      */
     public String getAddress() {
@@ -165,7 +165,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置地址
+     * Set 地址
      * @param Address 地址
      */
     public void setAddress(String Address) {
@@ -173,7 +173,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取经营范围
+     * Get 经营范围 
      * @return Business 经营范围
      */
     public String getBusiness() {
@@ -181,7 +181,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置经营范围
+     * Set 经营范围
      * @param Business 经营范围
      */
     public void setBusiness(String Business) {
@@ -189,7 +189,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主体类型
+     * Get 主体类型 
      * @return Type 主体类型
      */
     public String getType() {
@@ -197,7 +197,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主体类型
+     * Set 主体类型
      * @param Type 主体类型
      */
     public void setType(String Type) {
@@ -205,7 +205,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取营业期限
+     * Get 营业期限 
      * @return Period 营业期限
      */
     public String getPeriod() {
@@ -213,7 +213,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置营业期限
+     * Set 营业期限
      * @param Period 营业期限
      */
     public void setPeriod(String Period) {
@@ -221,7 +221,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组成形式
+     * Get 组成形式 
      * @return ComposingForm 组成形式
      */
     public String getComposingForm() {
@@ -229,7 +229,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组成形式
+     * Set 组成形式
      * @param ComposingForm 组成形式
      */
     public void setComposingForm(String ComposingForm) {
@@ -237,7 +237,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class BizLicenseOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegNum", this.RegNum);

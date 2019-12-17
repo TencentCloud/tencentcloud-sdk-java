@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateNatGatewayAddressRequest  extends AbstractModel{
+public class AssociateNatGatewayAddressRequest extends AbstractModel{
 
     /**
     * NAT网关的ID，形如：`nat-df45454`。
@@ -51,7 +51,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取NAT网关的ID，形如：`nat-df45454`。
+     * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public String getNatGatewayId() {
@@ -59,7 +59,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的ID，形如：`nat-df45454`。
+     * Set NAT网关的ID，形如：`nat-df45454`。
      * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -67,7 +67,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
+     * Get 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。 
      * @return AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      */
     public Integer getAddressCount() {
@@ -75,7 +75,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
+     * Set 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      * @param AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP, 其中AddressCount和PublicAddresses至少传递一个。
      */
     public void setAddressCount(Integer AddressCount) {
@@ -83,7 +83,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
+     * Get 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。 
      * @return PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
      */
     public String [] getPublicIpAddresses() {
@@ -91,7 +91,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
+     * Set 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
      * @param PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -99,7 +99,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性IP可以区，自动分配弹性IP时传递。
+     * Get 弹性IP可以区，自动分配弹性IP时传递。 
      * @return Zone 弹性IP可以区，自动分配弹性IP时传递。
      */
     public String getZone() {
@@ -107,7 +107,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性IP可以区，自动分配弹性IP时传递。
+     * Set 弹性IP可以区，自动分配弹性IP时传递。
      * @param Zone 弹性IP可以区，自动分配弹性IP时传递。
      */
     public void setZone(String Zone) {
@@ -115,7 +115,7 @@ public class AssociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

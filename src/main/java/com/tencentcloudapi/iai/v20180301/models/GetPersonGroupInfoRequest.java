@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonGroupInfoRequest  extends AbstractModel{
+public class GetPersonGroupInfoRequest extends AbstractModel{
 
     /**
     * 人员ID
@@ -44,7 +44,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取人员ID
+     * Get 人员ID 
      * @return PersonId 人员ID
      */
     public String getPersonId() {
@@ -52,7 +52,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员ID
+     * Set 人员ID
      * @param PersonId 人员ID
      */
     public void setPersonId(String PersonId) {
@@ -60,7 +60,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始序号，默认值为0
+     * Get 起始序号，默认值为0 
      * @return Offset 起始序号，默认值为0
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始序号，默认值为0
+     * Set 起始序号，默认值为0
      * @param Offset 起始序号，默认值为0
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认值为10，最大值为100
+     * Get 返回数量，默认值为10，最大值为100 
      * @return Limit 返回数量，默认值为10，最大值为100
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认值为10，最大值为100
+     * Set 返回数量，默认值为10，最大值为100
      * @param Limit 返回数量，默认值为10，最大值为100
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class GetPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

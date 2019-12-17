@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttackLogInfoRequest  extends AbstractModel{
+public class DescribeAttackLogInfoRequest extends AbstractModel{
 
     /**
     * 日志ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
-     * 获取日志ID
+     * Get 日志ID 
      * @return Id 日志ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置日志ID
+     * Set 日志ID
      * @param Id 日志ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

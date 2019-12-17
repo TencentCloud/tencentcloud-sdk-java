@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewTerrorismTaskOutput  extends AbstractModel{
+public class AiReviewTerrorismTaskOutput extends AbstractModel{
 
     /**
     * 视频暴恐评分，分值为0到100。
@@ -66,8 +66,8 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * 获取视频暴恐评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频暴恐评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Confidence 视频暴恐评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频暴恐评分，分值为0到100。
+     * Set 视频暴恐评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 视频暴恐评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,11 +86,11 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取暴恐结果建议，取值范围：
+     * Get 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Suggestion 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -102,7 +102,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置暴恐结果建议，取值范围：
+     * Set 暴恐结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -118,7 +118,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取视频暴恐结果标签，取值范围：
+     * Get 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
@@ -127,7 +127,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
 <li>terrorists：暴恐人物。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -144,7 +144,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频暴恐结果标签，取值范围：
+     * Set 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
@@ -170,8 +170,8 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取有暴恐嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 有暴恐嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentSet 有暴恐嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -180,7 +180,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置有暴恐嫌疑的视频片段列表。
+     * Set 有暴恐嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet 有暴恐嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,7 +190,7 @@ public class AiReviewTerrorismTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

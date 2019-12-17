@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchTarget  extends AbstractModel{
+public class BatchTarget extends AbstractModel{
 
     /**
     * 监听器ID
@@ -65,7 +65,7 @@ public class BatchTarget  extends AbstractModel{
     private String LocationId;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -73,7 +73,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -81,7 +81,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 获取绑定端口
+     * Get 绑定端口 
      * @return Port 绑定端口
      */
     public Integer getPort() {
@@ -89,7 +89,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置绑定端口
+     * Set 绑定端口
      * @param Port 绑定端口
      */
     public void setPort(Integer Port) {
@@ -97,7 +97,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 获取子机ID
+     * Get 子机ID 
      * @return InstanceId 子机ID
      */
     public String getInstanceId() {
@@ -105,7 +105,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置子机ID
+     * Set 子机ID
      * @param InstanceId 子机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -113,7 +113,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡ip
+     * Get 弹性网卡ip 
      * @return EniIp 弹性网卡ip
      */
     public String getEniIp() {
@@ -121,7 +121,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡ip
+     * Set 弹性网卡ip
      * @param EniIp 弹性网卡ip
      */
     public void setEniIp(String EniIp) {
@@ -129,7 +129,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 获取子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。 
      * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      */
     public Integer getWeight() {
@@ -137,7 +137,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
+     * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
      */
     public void setWeight(Integer Weight) {
@@ -145,7 +145,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 获取七层规则ID
+     * Get 七层规则ID 
      * @return LocationId 七层规则ID
      */
     public String getLocationId() {
@@ -153,7 +153,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 设置七层规则ID
+     * Set 七层规则ID
      * @param LocationId 七层规则ID
      */
     public void setLocationId(String LocationId) {
@@ -161,7 +161,7 @@ public class BatchTarget  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

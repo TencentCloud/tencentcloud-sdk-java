@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixedInvoiceDetectResponse  extends AbstractModel{
+public class MixedInvoiceDetectResponse extends AbstractModel{
 
     /**
     * 检测出的票据类型列表，具体内容请点击左侧链接。
@@ -37,7 +37,7 @@ public class MixedInvoiceDetectResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测出的票据类型列表，具体内容请点击左侧链接。
+     * Get 检测出的票据类型列表，具体内容请点击左侧链接。 
      * @return InvoiceDetectInfos 检测出的票据类型列表，具体内容请点击左侧链接。
      */
     public InvoiceDetectInfo [] getInvoiceDetectInfos() {
@@ -45,7 +45,7 @@ public class MixedInvoiceDetectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检测出的票据类型列表，具体内容请点击左侧链接。
+     * Set 检测出的票据类型列表，具体内容请点击左侧链接。
      * @param InvoiceDetectInfos 检测出的票据类型列表，具体内容请点击左侧链接。
      */
     public void setInvoiceDetectInfos(InvoiceDetectInfo [] InvoiceDetectInfos) {
@@ -53,7 +53,7 @@ public class MixedInvoiceDetectResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class MixedInvoiceDetectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class MixedInvoiceDetectResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InvoiceDetectInfos.", this.InvoiceDetectInfos);

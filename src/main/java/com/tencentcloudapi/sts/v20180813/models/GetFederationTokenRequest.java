@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFederationTokenRequest  extends AbstractModel{
+public class GetFederationTokenRequest extends AbstractModel{
 
     /**
     * 调用方英文名称，由字母组成。
@@ -48,7 +48,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     private Integer DurationSeconds;
 
     /**
-     * 获取调用方英文名称，由字母组成。
+     * Get 调用方英文名称，由字母组成。 
      * @return Name 调用方英文名称，由字母组成。
      */
     public String getName() {
@@ -56,7 +56,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用方英文名称，由字母组成。
+     * Set 调用方英文名称，由字母组成。
      * @param Name 调用方英文名称，由字母组成。
      */
     public void setName(String Name) {
@@ -64,11 +64,11 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略描述
+     * Get 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
 2、策略语法参照 CAM 策略语法。
-3、策略中不能包含 principal 元素。
+3、策略中不能包含 principal 元素。 
      * @return Policy 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
@@ -80,7 +80,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略描述
+     * Set 策略描述
 注意：
 1、policy 需要做 urlencode（如果通过 GET 方法请求云 API，发送请求前，所有参数都需要按照[云 API 规范](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2)再 urlencode 一次）。
 2、策略语法参照 CAM 策略语法。
@@ -96,7 +96,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * Get 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。 
      * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public Integer getDurationSeconds() {
@@ -104,7 +104,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
+     * Set 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认1800秒，最长可设定有效期为7200秒。
      */
     public void setDurationSeconds(Integer DurationSeconds) {
@@ -112,7 +112,7 @@ public class GetFederationTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

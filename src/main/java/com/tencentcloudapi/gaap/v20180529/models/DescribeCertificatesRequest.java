@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificatesRequest  extends AbstractModel{
+public class DescribeCertificatesRequest extends AbstractModel{
 
     /**
     * 证书类型。其中：
@@ -51,14 +51,14 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取证书类型。其中：
+     * Get 证书类型。其中：
 0，表示基础认证配置；
 1，表示客户端CA证书；
 2，表示服务器SSL证书；
 3，表示源站CA证书；
 4，表示通道SSL证书。
 -1，所有类型。
-默认为-1。
+默认为-1。 
      * @return CertificateType 证书类型。其中：
 0，表示基础认证配置；
 1，表示客户端CA证书；
@@ -73,7 +73,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型。其中：
+     * Set 证书类型。其中：
 0，表示基础认证配置；
 1，表示客户端CA证书；
 2，表示服务器SSL证书；
@@ -95,7 +95,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
@@ -103,7 +103,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -111,7 +111,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数量，默认为20。
+     * Get 限制数量，默认为20。 
      * @return Limit 限制数量，默认为20。
      */
     public Long getLimit() {
@@ -119,7 +119,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数量，默认为20。
+     * Set 限制数量，默认为20。
      * @param Limit 限制数量，默认为20。
      */
     public void setLimit(Long Limit) {
@@ -127,7 +127,7 @@ public class DescribeCertificatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);

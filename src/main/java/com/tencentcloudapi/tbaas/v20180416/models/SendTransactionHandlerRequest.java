@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendTransactionHandlerRequest  extends AbstractModel{
+public class SendTransactionHandlerRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -72,7 +72,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     private String [] FuncParam;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -80,7 +80,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -88,7 +88,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：send_transaction
+     * Get 操作名，固定字段：send_transaction 
      * @return Operation 操作名，固定字段：send_transaction
      */
     public String getOperation() {
@@ -96,7 +96,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：send_transaction
+     * Set 操作名，固定字段：send_transaction
      * @param Operation 操作名，固定字段：send_transaction
      */
     public void setOperation(String Operation) {
@@ -104,7 +104,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取群组编号
+     * Get 群组编号 
      * @return GroupPk 群组编号
      */
     public String getGroupPk() {
@@ -112,7 +112,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置群组编号
+     * Set 群组编号
      * @param GroupPk 群组编号
      */
     public void setGroupPk(String GroupPk) {
@@ -120,7 +120,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私钥用户编号
+     * Get 私钥用户编号 
      * @return KeyUser 私钥用户编号
      */
     public String getKeyUser() {
@@ -128,7 +128,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私钥用户编号
+     * Set 私钥用户编号
      * @param KeyUser 私钥用户编号
      */
     public void setKeyUser(String KeyUser) {
@@ -136,7 +136,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合约编号
+     * Get 合约编号 
      * @return ContractId 合约编号
      */
     public Integer getContractId() {
@@ -144,7 +144,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合约编号
+     * Set 合约编号
      * @param ContractId 合约编号
      */
     public void setContractId(Integer ContractId) {
@@ -152,7 +152,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合约方法名
+     * Get 合约方法名 
      * @return FuncName 合约方法名
      */
     public String getFuncName() {
@@ -160,7 +160,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合约方法名
+     * Set 合约方法名
      * @param FuncName 合约方法名
      */
     public void setFuncName(String FuncName) {
@@ -168,7 +168,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合约方法入参
+     * Get 合约方法入参 
      * @return FuncParam 合约方法入参
      */
     public String [] getFuncParam() {
@@ -176,7 +176,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合约方法入参
+     * Set 合约方法入参
      * @param FuncParam 合约方法入参
      */
     public void setFuncParam(String [] FuncParam) {
@@ -184,7 +184,7 @@ public class SendTransactionHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

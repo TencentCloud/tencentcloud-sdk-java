@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKeysRequest  extends AbstractModel{
+public class DescribeKeysRequest extends AbstractModel{
 
     /**
     * 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
@@ -60,7 +60,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     private String ContentId;
 
     /**
-     * 获取使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+     * Get 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。 
      * @return DrmType 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      */
     public String getDrmType() {
@@ -68,7 +68,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
+     * Set 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      * @param DrmType 使用的DRM方案类型，接口取值WIDEVINE、FAIRPLAY、NORMALAES。
      */
     public void setDrmType(String DrmType) {
@@ -76,7 +76,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加密的track列表，接口取值VIDEO、AUDIO。
+     * Get 加密的track列表，接口取值VIDEO、AUDIO。 
      * @return Tracks 加密的track列表，接口取值VIDEO、AUDIO。
      */
     public String [] getTracks() {
@@ -84,7 +84,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加密的track列表，接口取值VIDEO、AUDIO。
+     * Set 加密的track列表，接口取值VIDEO、AUDIO。
      * @param Tracks 加密的track列表，接口取值VIDEO、AUDIO。
      */
     public void setTracks(String [] Tracks) {
@@ -92,7 +92,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内容类型。接口取值VodVideo,LiveVideo
+     * Get 内容类型。接口取值VodVideo,LiveVideo 
      * @return ContentType 内容类型。接口取值VodVideo,LiveVideo
      */
     public String getContentType() {
@@ -100,7 +100,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内容类型。接口取值VodVideo,LiveVideo
+     * Set 内容类型。接口取值VodVideo,LiveVideo
      * @param ContentType 内容类型。接口取值VodVideo,LiveVideo
      */
     public void setContentType(String ContentType) {
@@ -108,8 +108,8 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Base64编码的Rsa公钥，用来加密出参中的SessionKey。
-如果该参数为空，则出参中SessionKey为明文。
+     * Get Base64编码的Rsa公钥，用来加密出参中的SessionKey。
+如果该参数为空，则出参中SessionKey为明文。 
      * @return RsaPublicKey Base64编码的Rsa公钥，用来加密出参中的SessionKey。
 如果该参数为空，则出参中SessionKey为明文。
      */
@@ -118,7 +118,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Base64编码的Rsa公钥，用来加密出参中的SessionKey。
+     * Set Base64编码的Rsa公钥，用来加密出参中的SessionKey。
 如果该参数为空，则出参中SessionKey为明文。
      * @param RsaPublicKey Base64编码的Rsa公钥，用来加密出参中的SessionKey。
 如果该参数为空，则出参中SessionKey为明文。
@@ -128,8 +128,8 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一个加密内容的唯一标识。
-如果该参数为空，则后台自动生成
+     * Get 一个加密内容的唯一标识。
+如果该参数为空，则后台自动生成 
      * @return ContentId 一个加密内容的唯一标识。
 如果该参数为空，则后台自动生成
      */
@@ -138,7 +138,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个加密内容的唯一标识。
+     * Set 一个加密内容的唯一标识。
 如果该参数为空，则后台自动生成
      * @param ContentId 一个加密内容的唯一标识。
 如果该参数为空，则后台自动生成
@@ -148,7 +148,7 @@ public class DescribeKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductEntry  extends AbstractModel{
+public class ProductEntry extends AbstractModel{
 
     /**
     * 产品Id
@@ -121,7 +121,7 @@ public class ProductEntry  extends AbstractModel{
     private String DeviceType;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -129,7 +129,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -137,7 +137,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品Key
+     * Get 产品Key 
      * @return ProductKey 产品Key
      */
     public String getProductKey() {
@@ -145,7 +145,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品Key
+     * Set 产品Key
      * @param ProductKey 产品Key
      */
     public void setProductKey(String ProductKey) {
@@ -153,7 +153,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取AppId
+     * Get AppId 
      * @return AppId AppId
      */
     public Integer getAppId() {
@@ -161,7 +161,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置AppId
+     * Set AppId
      * @param AppId AppId
      */
     public void setAppId(Integer AppId) {
@@ -169,7 +169,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return Name 产品名称
      */
     public String getName() {
@@ -177,7 +177,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param Name 产品名称
      */
     public void setName(String Name) {
@@ -185,7 +185,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return Description 产品描述
      */
     public String getDescription() {
@@ -193,7 +193,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param Description 产品描述
      */
     public void setDescription(String Description) {
@@ -201,7 +201,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取连接域名
+     * Get 连接域名 
      * @return Domain 连接域名
      */
     public String getDomain() {
@@ -209,7 +209,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置连接域名
+     * Set 连接域名
      * @param Domain 连接域名
      */
     public void setDomain(String Domain) {
@@ -217,7 +217,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权类型（0：直连，1：Token）
+     * Get 鉴权类型（0：直连，1：Token） 
      * @return AuthType 鉴权类型（0：直连，1：Token）
      */
     public Integer getAuthType() {
@@ -225,7 +225,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权类型（0：直连，1：Token）
+     * Set 鉴权类型（0：直连，1：Token）
      * @param AuthType 鉴权类型（0：直连，1：Token）
      */
     public void setAuthType(Integer AuthType) {
@@ -233,7 +233,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取数据协议（native/template）
+     * Get 数据协议（native/template） 
      * @return DataProtocol 数据协议（native/template）
      */
     public String getDataProtocol() {
@@ -241,7 +241,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置数据协议（native/template）
+     * Set 数据协议（native/template）
      * @param DataProtocol 数据协议（native/template）
      */
     public void setDataProtocol(String DataProtocol) {
@@ -249,7 +249,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取删除（0未删除）
+     * Get 删除（0未删除） 
      * @return Deleted 删除（0未删除）
      */
     public Integer getDeleted() {
@@ -257,7 +257,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置删除（0未删除）
+     * Set 删除（0未删除）
      * @param Deleted 删除（0未删除）
      */
     public void setDeleted(Integer Deleted) {
@@ -265,7 +265,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Message 备注
      */
     public String getMessage() {
@@ -273,7 +273,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Message 备注
      */
     public void setMessage(String Message) {
@@ -281,7 +281,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -289,7 +289,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -297,7 +297,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取通信方式
+     * Get 通信方式 
      * @return CommProtocol 通信方式
      */
     public String getCommProtocol() {
@@ -305,7 +305,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置通信方式
+     * Set 通信方式
      * @param CommProtocol 通信方式
      */
     public void setCommProtocol(String CommProtocol) {
@@ -313,7 +313,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -321,7 +321,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -329,7 +329,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型
+     * Get 设备类型 
      * @return DeviceType 设备类型
      */
     public String getDeviceType() {
@@ -337,7 +337,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型
+     * Set 设备类型
      * @param DeviceType 设备类型
      */
     public void setDeviceType(String DeviceType) {
@@ -345,7 +345,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

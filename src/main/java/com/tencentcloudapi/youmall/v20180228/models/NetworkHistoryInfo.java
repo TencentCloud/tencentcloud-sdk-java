@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkHistoryInfo  extends AbstractModel{
+public class NetworkHistoryInfo extends AbstractModel{
 
     /**
     * 总数
@@ -72,7 +72,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     private NetworkInfo [] Infos;
 
     /**
-     * 获取总数
+     * Get 总数 
      * @return Count 总数
      */
     public Integer getCount() {
@@ -80,7 +80,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总数
+     * Set 总数
      * @param Count 总数
      */
     public void setCount(Integer Count) {
@@ -88,7 +88,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -96,7 +96,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -104,7 +104,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -112,7 +112,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -120,7 +120,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺省份
+     * Get 店铺省份 
      * @return Province 店铺省份
      */
     public String getProvince() {
@@ -128,7 +128,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺省份
+     * Set 店铺省份
      * @param Province 店铺省份
      */
     public void setProvince(String Province) {
@@ -136,7 +136,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺城市
+     * Get 店铺城市 
      * @return City 店铺城市
      */
     public String getCity() {
@@ -144,7 +144,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺城市
+     * Set 店铺城市
      * @param City 店铺城市
      */
     public void setCity(String City) {
@@ -152,7 +152,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺名称
+     * Get 店铺名称 
      * @return ShopName 店铺名称
      */
     public String getShopName() {
@@ -160,7 +160,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺名称
+     * Set 店铺名称
      * @param ShopName 店铺名称
      */
     public void setShopName(String ShopName) {
@@ -168,7 +168,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络信息
+     * Get 网络信息 
      * @return Infos 网络信息
      */
     public NetworkInfo [] getInfos() {
@@ -176,7 +176,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络信息
+     * Set 网络信息
      * @param Infos 网络信息
      */
     public void setInfos(NetworkInfo [] Infos) {
@@ -184,7 +184,7 @@ public class NetworkHistoryInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

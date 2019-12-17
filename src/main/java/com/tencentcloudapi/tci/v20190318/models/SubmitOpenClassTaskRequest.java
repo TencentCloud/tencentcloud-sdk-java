@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitOpenClassTaskRequest  extends AbstractModel{
+public class SubmitOpenClassTaskRequest extends AbstractModel{
 
     /**
     * 输入分析对象内容，输入数据格式参考FileType参数释义
@@ -51,7 +51,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     private Long MaxVideoDuration;
 
     /**
-     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * Get 输入分析对象内容，输入数据格式参考FileType参数释义 
      * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
@@ -59,7 +59,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * Set 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
@@ -67,7 +67,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
+     * Get 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码 
      * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
      */
     public String getFileType() {
@@ -75,7 +75,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
+     * Set 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
      * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址,picture: 图片二进制数据的BASE64编码
      */
     public void setFileType(String FileType) {
@@ -83,7 +83,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询人员库列表，可填写学生们的注册照所在人员库
+     * Get 查询人员库列表，可填写学生们的注册照所在人员库 
      * @return LibrarySet 查询人员库列表，可填写学生们的注册照所在人员库
      */
     public String [] getLibrarySet() {
@@ -91,7 +91,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询人员库列表，可填写学生们的注册照所在人员库
+     * Set 查询人员库列表，可填写学生们的注册照所在人员库
      * @param LibrarySet 查询人员库列表，可填写学生们的注册照所在人员库
      */
     public void setLibrarySet(String [] LibrarySet) {
@@ -99,7 +99,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Get 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束 
      * @return MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
@@ -107,7 +107,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Set 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      * @param MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
@@ -115,7 +115,7 @@ public class SubmitOpenClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

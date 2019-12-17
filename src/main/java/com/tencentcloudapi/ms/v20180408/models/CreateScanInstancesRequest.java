@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScanInstancesRequest  extends AbstractModel{
+public class CreateScanInstancesRequest extends AbstractModel{
 
     /**
     * 待扫描的app信息列表，一次最多提交20个
@@ -37,7 +37,7 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     private ScanInfo ScanInfo;
 
     /**
-     * 获取待扫描的app信息列表，一次最多提交20个
+     * Get 待扫描的app信息列表，一次最多提交20个 
      * @return AppInfos 待扫描的app信息列表，一次最多提交20个
      */
     public AppInfo [] getAppInfos() {
@@ -45,7 +45,7 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待扫描的app信息列表，一次最多提交20个
+     * Set 待扫描的app信息列表，一次最多提交20个
      * @param AppInfos 待扫描的app信息列表，一次最多提交20个
      */
     public void setAppInfos(AppInfo [] AppInfos) {
@@ -53,7 +53,7 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描信息
+     * Get 扫描信息 
      * @return ScanInfo 扫描信息
      */
     public ScanInfo getScanInfo() {
@@ -61,7 +61,7 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描信息
+     * Set 扫描信息
      * @param ScanInfo 扫描信息
      */
     public void setScanInfo(ScanInfo ScanInfo) {
@@ -69,7 +69,7 @@ public class CreateScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AppInfos.", this.AppInfos);

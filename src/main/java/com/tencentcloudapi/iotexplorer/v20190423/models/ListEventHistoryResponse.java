@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEventHistoryResponse  extends AbstractModel{
+public class ListEventHistoryResponse extends AbstractModel{
 
     /**
     * 搜索上下文, 用作查询游标
@@ -62,8 +62,8 @@ public class ListEventHistoryResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 搜索上下文, 用作查询游标
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Context 搜索上下文, 用作查询游标
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜索上下文, 用作查询游标
+     * Set 搜索上下文, 用作查询游标
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 搜索上下文, 用作查询游标
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 搜索结果数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Total 搜索结果数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜索结果数量
+     * Set 搜索结果数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 搜索结果数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 搜索结果是否已经结束
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Listover 搜索结果是否已经结束
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜索结果是否已经结束
+     * Set 搜索结果是否已经结束
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Listover 搜索结果是否已经结束
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 搜集结果集
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventHistory 搜集结果集
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜集结果集
+     * Set 搜集结果集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EventHistory 搜集结果集
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -150,7 +150,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -158,7 +158,7 @@ public class ListEventHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Context", this.Context);

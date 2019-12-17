@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceSimilarityRequest  extends AbstractModel{
+public class SentenceSimilarityRequest extends AbstractModel{
 
     /**
     * 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
@@ -37,7 +37,7 @@ public class SentenceSimilarityRequest  extends AbstractModel{
     private String TargetText;
 
     /**
-     * 获取计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Get 计算相似度的源句子（仅支持UTF-8格式，不超过500字） 
      * @return SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
      */
     public String getSrcText() {
@@ -45,7 +45,7 @@ public class SentenceSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算相似度的源句子（仅支持UTF-8格式，不超过500字）
+     * Set 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
      * @param SrcText 计算相似度的源句子（仅支持UTF-8格式，不超过500字）
      */
     public void setSrcText(String SrcText) {
@@ -53,7 +53,7 @@ public class SentenceSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * Get 计算相似度的目标句子（仅支持UTF-8格式，不超过500字） 
      * @return TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
      */
     public String getTargetText() {
@@ -61,7 +61,7 @@ public class SentenceSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
+     * Set 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
      * @param TargetText 计算相似度的目标句子（仅支持UTF-8格式，不超过500字）
      */
     public void setTargetText(String TargetText) {
@@ -69,7 +69,7 @@ public class SentenceSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SrcText", this.SrcText);

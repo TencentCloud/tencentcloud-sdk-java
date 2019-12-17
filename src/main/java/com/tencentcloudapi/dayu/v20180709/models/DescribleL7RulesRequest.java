@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribleL7RulesRequest  extends AbstractModel{
+public class DescribleL7RulesRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -79,7 +79,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     private Long [] StatusList;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -87,7 +87,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -95,7 +95,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -103,7 +103,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -111,7 +111,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID，可选参数，填写后获取指定的规则
+     * Get 规则ID，可选参数，填写后获取指定的规则 
      * @return RuleIdList 规则ID，可选参数，填写后获取指定的规则
      */
     public String [] getRuleIdList() {
@@ -119,7 +119,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID，可选参数，填写后获取指定的规则
+     * Set 规则ID，可选参数，填写后获取指定的规则
      * @param RuleIdList 规则ID，可选参数，填写后获取指定的规则
      */
     public void setRuleIdList(String [] RuleIdList) {
@@ -127,7 +127,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页条数，填0表示不分页
+     * Get 一页条数，填0表示不分页 
      * @return Limit 一页条数，填0表示不分页
      */
     public Long getLimit() {
@@ -135,7 +135,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页条数，填0表示不分页
+     * Set 一页条数，填0表示不分页
      * @param Limit 一页条数，填0表示不分页
      */
     public void setLimit(Long Limit) {
@@ -143,7 +143,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页起始偏移，取值为(页码-1)*一页条数
+     * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
@@ -151,7 +151,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页起始偏移，取值为(页码-1)*一页条数
+     * Set 页起始偏移，取值为(页码-1)*一页条数
      * @param Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
@@ -159,7 +159,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名搜索，选填，当需要搜索域名请填写
+     * Get 域名搜索，选填，当需要搜索域名请填写 
      * @return Domain 域名搜索，选填，当需要搜索域名请填写
      */
     public String getDomain() {
@@ -167,7 +167,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名搜索，选填，当需要搜索域名请填写
+     * Set 域名搜索，选填，当需要搜索域名请填写
      * @param Domain 域名搜索，选填，当需要搜索域名请填写
      */
     public void setDomain(String Domain) {
@@ -175,7 +175,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发协议搜索，选填，取值[http, https, http/https]
+     * Get 转发协议搜索，选填，取值[http, https, http/https] 
      * @return ProtocolList 转发协议搜索，选填，取值[http, https, http/https]
      */
     public String [] getProtocolList() {
@@ -183,7 +183,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议搜索，选填，取值[http, https, http/https]
+     * Set 转发协议搜索，选填，取值[http, https, http/https]
      * @param ProtocolList 转发协议搜索，选填，取值[http, https, http/https]
      */
     public void setProtocolList(String [] ProtocolList) {
@@ -191,7 +191,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
+     * Get 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)] 
      * @return StatusList 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      */
     public Long [] getStatusList() {
@@ -199,7 +199,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
+     * Set 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param StatusList 状态搜索，选填，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      */
     public void setStatusList(Long [] StatusList) {
@@ -207,7 +207,7 @@ public class DescribleL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

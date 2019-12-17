@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AsyncRegisterIpsRequest  extends AbstractModel{
+public class AsyncRegisterIpsRequest extends AbstractModel{
 
     /**
     * 私有网络的唯一ID。
@@ -44,7 +44,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     private String [] Ips;
 
     /**
-     * 获取私有网络的唯一ID。
+     * Get 私有网络的唯一ID。 
      * @return VpcId 私有网络的唯一ID。
      */
     public String getVpcId() {
@@ -52,7 +52,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的唯一ID。
+     * Set 私有网络的唯一ID。
      * @param VpcId 私有网络的唯一ID。
      */
     public void setVpcId(String VpcId) {
@@ -60,7 +60,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网唯一ID。
+     * Get 子网唯一ID。 
      * @return SubnetId 子网唯一ID。
      */
     public String getSubnetId() {
@@ -68,7 +68,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网唯一ID。
+     * Set 子网唯一ID。
      * @param SubnetId 子网唯一ID。
      */
     public void setSubnetId(String SubnetId) {
@@ -76,7 +76,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要注册的IP列表。
+     * Get 需要注册的IP列表。 
      * @return Ips 需要注册的IP列表。
      */
     public String [] getIps() {
@@ -84,7 +84,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要注册的IP列表。
+     * Set 需要注册的IP列表。
      * @param Ips 需要注册的IP列表。
      */
     public void setIps(String [] Ips) {
@@ -92,7 +92,7 @@ public class AsyncRegisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

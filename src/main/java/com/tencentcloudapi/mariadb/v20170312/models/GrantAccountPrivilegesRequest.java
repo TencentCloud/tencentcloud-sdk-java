@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GrantAccountPrivilegesRequest  extends AbstractModel{
+public class GrantAccountPrivilegesRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -83,7 +83,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     private String ColName;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -91,7 +91,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -99,7 +99,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名。
+     * Get 登录用户名。 
      * @return UserName 登录用户名。
      */
     public String getUserName() {
@@ -107,7 +107,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录用户名。
+     * Set 登录用户名。
      * @param UserName 登录用户名。
      */
     public void setUserName(String UserName) {
@@ -115,7 +115,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Get 用户允许的访问 host，用户名+host唯一确定一个账号。 
      * @return Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public String getHost() {
@@ -123,7 +123,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Set 用户允许的访问 host，用户名+host唯一确定一个账号。
      * @param Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public void setHost(String Host) {
@@ -131,7 +131,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
+     * Get 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。 
      * @return DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
      */
     public String getDbName() {
@@ -139,7 +139,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
+     * Set 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
      * @param DbName 数据库名。如果为 \*，表示设置全局权限（即 \*.\*），此时忽略 Type 和 Object 参数。当DbName不为\*时，需要传入参 Type。
      */
     public void setDbName(String DbName) {
@@ -147,11 +147,11 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
+     * Get 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
 库权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER 
 表/视图权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE VIEW，SHOW VIEW，TRIGGER 
 存储过程/函数权限： ALTER ROUTINE，EXECUTE 
-字段权限： INSERT，REFERENCES，SELECT，UPDATE
+字段权限： INSERT，REFERENCES，SELECT，UPDATE 
      * @return Privileges 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
 库权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER 
 表/视图权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE VIEW，SHOW VIEW，TRIGGER 
@@ -163,7 +163,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
+     * Set 全局权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER，SHOW DATABASES 
 库权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE TEMPORARY TABLES，LOCK TABLES，EXECUTE，CREATE VIEW，SHOW VIEW，CREATE ROUTINE，ALTER ROUTINE，EVENT，TRIGGER 
 表/视图权限： SELECT，INSERT，UPDATE，DELETE，CREATE，DROP，REFERENCES，INDEX，ALTER，CREATE VIEW，SHOW VIEW，TRIGGER 
 存储过程/函数权限： ALTER ROUTINE，EXECUTE 
@@ -179,7 +179,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
+     * Get 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数 
      * @return Type 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
      */
     public String getType() {
@@ -187,7 +187,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
+     * Set 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
      * @param Type 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示设置该数据库权限（即db.\*），此时忽略 Object 参数
      */
     public void setType(String Type) {
@@ -195,7 +195,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
+     * Get 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空 
      * @return Object 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      */
     public String getObject() {
@@ -203,7 +203,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
+     * Set 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      * @param Object 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      */
     public void setObject(String Object) {
@@ -211,7 +211,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
+     * Get 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权 
      * @return ColName 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
      */
     public String getColName() {
@@ -219,7 +219,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
+     * Set 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
      * @param ColName 当 Type=table 时，ColName 为 \* 表示对表授权，如果为具体字段名，表示对字段授权
      */
     public void setColName(String ColName) {
@@ -227,7 +227,7 @@ public class GrantAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

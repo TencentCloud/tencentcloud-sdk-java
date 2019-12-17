@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
+public class InquiryPriceDbauditInstanceRequest extends AbstractModel{
 
     /**
     * 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
@@ -58,7 +58,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     private String ServiceRegion;
 
     /**
-     * 获取实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
+     * Get 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版 
      * @return InstanceVersion 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
      */
     public String getInstanceVersion() {
@@ -66,7 +66,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
+     * Set 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
      * @param InstanceVersion 实例规格，取值范围： cdsaudit，cdsaudit_adv， cdsaudit_ent 分别为合规版，高级版，企业版
      */
     public void setInstanceVersion(String InstanceVersion) {
@@ -74,7 +74,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取询价类型： renew，续费；newbuy，新购
+     * Get 询价类型： renew，续费；newbuy，新购 
      * @return InquiryType 询价类型： renew，续费；newbuy，新购
      */
     public String getInquiryType() {
@@ -82,7 +82,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置询价类型： renew，续费；newbuy，新购
+     * Set 询价类型： renew，续费；newbuy，新购
      * @param InquiryType 询价类型： renew，续费；newbuy，新购
      */
     public void setInquiryType(String InquiryType) {
@@ -90,7 +90,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
+     * Get 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m） 
      * @return TimeSpan 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      */
     public Integer getTimeSpan() {
@@ -98,7 +98,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
+     * Set 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      * @param TimeSpan 购买实例的时长。取值范围：1（y/m），2（y/m）,，3（y/m），4（m）， 5（m），6（m）， 7（m），8（m），9（m）， 10（m）
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -106,7 +106,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长单位，y：年；m：月
+     * Get 购买时长单位，y：年；m：月 
      * @return TimeUnit 购买时长单位，y：年；m：月
      */
     public String getTimeUnit() {
@@ -114,7 +114,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长单位，y：年；m：月
+     * Set 购买时长单位，y：年；m：月
      * @param TimeUnit 购买时长单位，y：年；m：月
      */
     public void setTimeUnit(String TimeUnit) {
@@ -122,7 +122,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在地域
+     * Get 实例所在地域 
      * @return ServiceRegion 实例所在地域
      */
     public String getServiceRegion() {
@@ -130,7 +130,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在地域
+     * Set 实例所在地域
      * @param ServiceRegion 实例所在地域
      */
     public void setServiceRegion(String ServiceRegion) {
@@ -138,7 +138,7 @@ public class InquiryPriceDbauditInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);

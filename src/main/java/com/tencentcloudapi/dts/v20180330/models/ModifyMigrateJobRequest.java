@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrateJobRequest  extends AbstractModel{
+public class ModifyMigrateJobRequest extends AbstractModel{
 
     /**
     * 待修改的数据迁移任务ID
@@ -86,7 +86,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     private String DatabaseInfo;
 
     /**
-     * 获取待修改的数据迁移任务ID
+     * Get 待修改的数据迁移任务ID 
      * @return JobId 待修改的数据迁移任务ID
      */
     public String getJobId() {
@@ -94,7 +94,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的数据迁移任务ID
+     * Set 待修改的数据迁移任务ID
      * @param JobId 待修改的数据迁移任务ID
      */
     public void setJobId(String JobId) {
@@ -102,7 +102,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据迁移任务名称
+     * Get 数据迁移任务名称 
      * @return JobName 数据迁移任务名称
      */
     public String getJobName() {
@@ -110,7 +110,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据迁移任务名称
+     * Set 数据迁移任务名称
      * @param JobName 数据迁移任务名称
      */
     public void setJobName(String JobName) {
@@ -118,7 +118,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务配置选项
+     * Get 迁移任务配置选项 
      * @return MigrateOption 迁移任务配置选项
      */
     public MigrateOption getMigrateOption() {
@@ -126,7 +126,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务配置选项
+     * Set 迁移任务配置选项
      * @param MigrateOption 迁移任务配置选项
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
@@ -134,7 +134,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Get 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例) 
      * @return SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public String getSrcAccessType() {
@@ -142,7 +142,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Set 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      * @param SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -150,7 +150,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例信息，具体内容跟迁移任务类型相关
+     * Get 源实例信息，具体内容跟迁移任务类型相关 
      * @return SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public SrcInfo getSrcInfo() {
@@ -158,7 +158,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例信息，具体内容跟迁移任务类型相关
+     * Set 源实例信息，具体内容跟迁移任务类型相关
      * @param SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public void setSrcInfo(SrcInfo SrcInfo) {
@@ -166,7 +166,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * Get 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb. 
      * @return DstAccessType 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
      */
     public String getDstAccessType() {
@@ -174,7 +174,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
+     * Set 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
      * @param DstAccessType 目标实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例). 目前只支持cdb.
      */
     public void setDstAccessType(String DstAccessType) {
@@ -182,7 +182,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例信息, 其中目标实例地域不允许修改.
+     * Get 目标实例信息, 其中目标实例地域不允许修改. 
      * @return DstInfo 目标实例信息, 其中目标实例地域不允许修改.
      */
     public DstInfo getDstInfo() {
@@ -190,7 +190,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例信息, 其中目标实例地域不允许修改.
+     * Set 目标实例信息, 其中目标实例地域不允许修改.
      * @param DstInfo 目标实例信息, 其中目标实例地域不允许修改.
      */
     public void setDstInfo(DstInfo DstInfo) {
@@ -198,14 +198,14 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+     * Get 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 对于database-schema-table三级结构：
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
-如果是'整个实例'的迁移模式,不需设置该字段
+如果是'整个实例'的迁移模式,不需设置该字段 
      * @return DatabaseInfo 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
@@ -220,7 +220,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+     * Set 当选择'指定库表'迁移的时候, 需要设置待迁移的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 
 对于database-table两级结构的数据库：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
@@ -242,7 +242,7 @@ public class ModifyMigrateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

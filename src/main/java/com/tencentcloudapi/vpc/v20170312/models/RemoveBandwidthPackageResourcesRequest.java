@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
+public class RemoveBandwidthPackageResourcesRequest extends AbstractModel{
 
     /**
     * 带宽包唯一标识ID，形如'bwp-xxxx'
@@ -44,7 +44,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-     * 获取带宽包唯一标识ID，形如'bwp-xxxx'
+     * Get 带宽包唯一标识ID，形如'bwp-xxxx' 
      * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      */
     public String getBandwidthPackageId() {
@@ -52,7 +52,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一标识ID，形如'bwp-xxxx'
+     * Set 带宽包唯一标识ID，形如'bwp-xxxx'
      * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -60,7 +60,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源类型，包括‘Address’, ‘LoadBalance’
+     * Get 资源类型，包括‘Address’, ‘LoadBalance’ 
      * @return ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
      */
     public String getResourceType() {
@@ -68,7 +68,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型，包括‘Address’, ‘LoadBalance’
+     * Set 资源类型，包括‘Address’, ‘LoadBalance’
      * @param ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
      */
     public void setResourceType(String ResourceType) {
@@ -76,7 +76,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * Get 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx' 
      * @return ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public String [] getResourceIds() {
@@ -84,7 +84,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * Set 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      * @param ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -92,7 +92,7 @@ public class RemoveBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

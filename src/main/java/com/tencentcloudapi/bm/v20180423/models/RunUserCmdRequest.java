@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunUserCmdRequest  extends AbstractModel{
+public class RunUserCmdRequest extends AbstractModel{
 
     /**
     * 自定义脚本ID
@@ -58,7 +58,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     private String CmdParam;
 
     /**
-     * 获取自定义脚本ID
+     * Get 自定义脚本ID 
      * @return CmdId 自定义脚本ID
      */
     public String getCmdId() {
@@ -66,7 +66,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自定义脚本ID
+     * Set 自定义脚本ID
      * @param CmdId 自定义脚本ID
      */
     public void setCmdId(String CmdId) {
@@ -74,7 +74,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行脚本机器的用户名
+     * Get 执行脚本机器的用户名 
      * @return UserName 执行脚本机器的用户名
      */
     public String getUserName() {
@@ -82,7 +82,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行脚本机器的用户名
+     * Set 执行脚本机器的用户名
      * @param UserName 执行脚本机器的用户名
      */
     public void setUserName(String UserName) {
@@ -90,7 +90,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行脚本机器的用户名的密码
+     * Get 执行脚本机器的用户名的密码 
      * @return Password 执行脚本机器的用户名的密码
      */
     public String getPassword() {
@@ -98,7 +98,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行脚本机器的用户名的密码
+     * Set 执行脚本机器的用户名的密码
      * @param Password 执行脚本机器的用户名的密码
      */
     public void setPassword(String Password) {
@@ -106,7 +106,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行脚本的服务器实例
+     * Get 执行脚本的服务器实例 
      * @return InstanceIds 执行脚本的服务器实例
      */
     public String [] getInstanceIds() {
@@ -114,7 +114,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行脚本的服务器实例
+     * Set 执行脚本的服务器实例
      * @param InstanceIds 执行脚本的服务器实例
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -122,7 +122,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行脚本的参数，必须经过base64编码
+     * Get 执行脚本的参数，必须经过base64编码 
      * @return CmdParam 执行脚本的参数，必须经过base64编码
      */
     public String getCmdParam() {
@@ -130,7 +130,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行脚本的参数，必须经过base64编码
+     * Set 执行脚本的参数，必须经过base64编码
      * @param CmdParam 执行脚本的参数，必须经过base64编码
      */
     public void setCmdParam(String CmdParam) {
@@ -138,7 +138,7 @@ public class RunUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmdId", this.CmdId);

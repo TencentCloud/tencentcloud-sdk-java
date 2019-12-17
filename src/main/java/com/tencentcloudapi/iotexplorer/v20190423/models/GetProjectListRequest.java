@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetProjectListRequest  extends AbstractModel{
+public class GetProjectListRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -37,7 +37,7 @@ public class GetProjectListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -45,7 +45,7 @@ public class GetProjectListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -53,7 +53,7 @@ public class GetProjectListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取个数限制
+     * Get 个数限制 
      * @return Limit 个数限制
      */
     public Long getLimit() {
@@ -61,7 +61,7 @@ public class GetProjectListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置个数限制
+     * Set 个数限制
      * @param Limit 个数限制
      */
     public void setLimit(Long Limit) {
@@ -69,7 +69,7 @@ public class GetProjectListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvaluationRequest  extends AbstractModel{
+public class EvaluationRequest extends AbstractModel{
 
     /**
     * 图片唯一标识，一张图片一个SessionId；
@@ -65,7 +65,7 @@ public class EvaluationRequest  extends AbstractModel{
     private Boolean RejectNonArithmeticImage;
 
     /**
-     * 获取图片唯一标识，一张图片一个SessionId；
+     * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
     public String getSessionId() {
@@ -73,7 +73,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片唯一标识，一张图片一个SessionId；
+     * Set 图片唯一标识，一张图片一个SessionId；
      * @param SessionId 图片唯一标识，一张图片一个SessionId；
      */
     public void setSessionId(String SessionId) {
@@ -81,7 +81,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+     * Get 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可； 
      * @return Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      */
     public String getImage() {
@@ -89,7 +89,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
+     * Set 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      * @param Image 图片数据，需要使用base64对图片的二进制数据进行编码，与url参数二者填一即可；
      */
     public void setImage(String Image) {
@@ -97,7 +97,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * Get 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。 
      * @return HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      */
     public String getHcmAppid() {
@@ -105,7 +105,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
+     * Set 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      * @param HcmAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数，新的 HcmAppid 可以在[控制台](https://console.cloud.tencent.com/hcm)【应用管理】下新建。
      */
     public void setHcmAppid(String HcmAppid) {
@@ -113,7 +113,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片url，与Image参数二者填一即可；
+     * Get 图片url，与Image参数二者填一即可； 
      * @return Url 图片url，与Image参数二者填一即可；
      */
     public String getUrl() {
@@ -121,7 +121,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片url，与Image参数二者填一即可；
+     * Set 图片url，与Image参数二者填一即可；
      * @param Url 图片url，与Image参数二者填一即可；
      */
     public void setUrl(String Url) {
@@ -129,7 +129,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     * Get 横屏拍摄开关，若开启则支持传输横屏拍摄的图片； 
      * @return SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
      */
     public Boolean getSupportHorizontalImage() {
@@ -137,7 +137,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
+     * Set 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
      * @param SupportHorizontalImage 横屏拍摄开关，若开启则支持传输横屏拍摄的图片；
      */
     public void setSupportHorizontalImage(Boolean SupportHorizontalImage) {
@@ -145,7 +145,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     * Get 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。 
      * @return RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      */
     public Boolean getRejectNonArithmeticImage() {
@@ -153,7 +153,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
+     * Set 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      * @param RejectNonArithmeticImage 拒绝非速算图（如风景图、人物图）开关，若开启，则遇到非速算图会快速返回拒绝的结果，但极端情况下可能会影响评估结果（比如算式截图贴到风景画里可能被判为非速算图直接返回了）。
      */
     public void setRejectNonArithmeticImage(Boolean RejectNonArithmeticImage) {
@@ -161,7 +161,7 @@ public class EvaluationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

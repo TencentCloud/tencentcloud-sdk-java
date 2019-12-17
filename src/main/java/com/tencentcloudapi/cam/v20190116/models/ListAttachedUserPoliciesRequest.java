@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAttachedUserPoliciesRequest  extends AbstractModel{
+public class ListAttachedUserPoliciesRequest extends AbstractModel{
 
     /**
     * 子账号 uin
@@ -44,7 +44,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     private Long Rp;
 
     /**
-     * 获取子账号 uin
+     * Get 子账号 uin 
      * @return TargetUin 子账号 uin
      */
     public Long getTargetUin() {
@@ -52,7 +52,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号 uin
+     * Set 子账号 uin
      * @param TargetUin 子账号 uin
      */
     public void setTargetUin(Long TargetUin) {
@@ -60,7 +60,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页码，默认值是 1，从 1 开始
+     * Get 页码，默认值是 1，从 1 开始 
      * @return Page 页码，默认值是 1，从 1 开始
      */
     public Long getPage() {
@@ -68,7 +68,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码，默认值是 1，从 1 开始
+     * Set 页码，默认值是 1，从 1 开始
      * @param Page 页码，默认值是 1，从 1 开始
      */
     public void setPage(Long Page) {
@@ -76,7 +76,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，默认值是 20
+     * Get 每页大小，默认值是 20 
      * @return Rp 每页大小，默认值是 20
      */
     public Long getRp() {
@@ -84,7 +84,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，默认值是 20
+     * Set 每页大小，默认值是 20
      * @param Rp 每页大小，默认值是 20
      */
     public void setRp(Long Rp) {
@@ -92,7 +92,7 @@ public class ListAttachedUserPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);

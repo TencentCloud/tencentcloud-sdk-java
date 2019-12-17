@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WatermarkTemplate  extends AbstractModel{
+public class WatermarkTemplate extends AbstractModel{
 
     /**
     * 水印模板唯一标识。
@@ -121,7 +121,7 @@ public class WatermarkTemplate  extends AbstractModel{
     private String CoordinateOrigin;
 
     /**
-     * 获取水印模板唯一标识。
+     * Get 水印模板唯一标识。 
      * @return Definition 水印模板唯一标识。
      */
     public Long getDefinition() {
@@ -129,7 +129,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板唯一标识。
+     * Set 水印模板唯一标识。
      * @param Definition 水印模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -137,9 +137,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印类型，取值：
+     * Get 水印类型，取值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印。</li> 
      * @return Type 水印类型，取值：
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
@@ -149,7 +149,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印类型，取值：
+     * Set 水印类型，取值：
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
      * @param Type 水印类型，取值：
@@ -161,8 +161,8 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印模板名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 水印模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -171,7 +171,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板名称。
+     * Set 水印模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 水印模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -181,7 +181,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息。
+     * Get 模板描述信息。 
      * @return Comment 模板描述信息。
      */
     public String getComment() {
@@ -189,7 +189,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息。
+     * Set 模板描述信息。
      * @param Comment 模板描述信息。
      */
     public void setComment(String Comment) {
@@ -197,9 +197,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印图片原点距离视频图像原点的水平位置。
+     * Get 水印图片原点距离视频图像原点的水平位置。
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
-<li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
+<li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li> 
      * @return XPos 水印图片原点距离视频图像原点的水平位置。
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
@@ -209,7 +209,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片原点距离视频图像原点的水平位置。
+     * Set 水印图片原点距离视频图像原点的水平位置。
 <li>当字符串以 % 结尾，表示水印 Left 为视频宽度指定百分比的位置，如 10% 表示 Left 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Left 为视频宽度指定像素的位置，如 100px 表示 Left 为 100 像素。</li>
      * @param XPos 水印图片原点距离视频图像原点的水平位置。
@@ -221,9 +221,9 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印图片原点距离视频图像原点的垂直位置。
+     * Get 水印图片原点距离视频图像原点的垂直位置。
 <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
-<li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
+<li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li> 
      * @return YPos 水印图片原点距离视频图像原点的垂直位置。
 <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
@@ -233,7 +233,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片原点距离视频图像原点的垂直位置。
+     * Set 水印图片原点距离视频图像原点的垂直位置。
 <li>当字符串以 % 结尾，表示水印 Top 为视频高度指定百分比的位置，如 10% 表示 Top 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Top 为视频高度指定像素的位置，如 100px 表示 Top 为 100 像素。</li>
      * @param YPos 水印图片原点距离视频图像原点的垂直位置。
@@ -245,8 +245,8 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取图片水印模板，仅当 Type 为 image，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 图片水印模板，仅当 Type 为 image，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -255,7 +255,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置图片水印模板，仅当 Type 为 image，该字段有效。
+     * Set 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageTemplate 图片水印模板，仅当 Type 为 image，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -265,8 +265,8 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取文字水印模板，仅当 Type 为 text，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文字水印模板，仅当 Type 为 text，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextTemplate 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -275,7 +275,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置文字水印模板，仅当 Type 为 text，该字段有效。
+     * Set 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TextTemplate 文字水印模板，仅当 Type 为 text，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -285,8 +285,8 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取SVG 水印模板，当 Type 为 svg，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get SVG 水印模板，当 Type 为 svg，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SvgTemplate SVG 水印模板，当 Type 为 svg，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -295,7 +295,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置SVG 水印模板，当 Type 为 svg，该字段有效。
+     * Set SVG 水印模板，当 Type 为 svg，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SvgTemplate SVG 水印模板，当 Type 为 svg，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -305,7 +305,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -313,7 +313,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -321,7 +321,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -329,7 +329,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -337,11 +337,11 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取原点位置，可选值：
+     * Get 原点位置，可选值：
 <li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
-<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下。；</li>
+<li>bottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下。；</li> 
      * @return CoordinateOrigin 原点位置，可选值：
 <li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
@@ -353,7 +353,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置原点位置，可选值：
+     * Set 原点位置，可选值：
 <li>topLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>topRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>bottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
@@ -369,7 +369,7 @@ public class WatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

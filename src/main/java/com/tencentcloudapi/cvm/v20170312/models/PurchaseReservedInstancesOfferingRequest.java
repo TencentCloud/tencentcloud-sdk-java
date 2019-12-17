@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
+public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
 
     /**
     * 购买预留实例计费数量
@@ -51,7 +51,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     private String ClientToken;
 
     /**
-     * 获取购买预留实例计费数量
+     * Get 购买预留实例计费数量 
      * @return InstanceCount 购买预留实例计费数量
      */
     public Integer getInstanceCount() {
@@ -59,7 +59,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买预留实例计费数量
+     * Set 购买预留实例计费数量
      * @param InstanceCount 购买预留实例计费数量
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -67,7 +67,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费配置ID
+     * Get 预留实例计费配置ID 
      * @return ReservedInstancesOfferingId 预留实例计费配置ID
      */
     public String getReservedInstancesOfferingId() {
@@ -75,7 +75,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费配置ID
+     * Set 预留实例计费配置ID
      * @param ReservedInstancesOfferingId 预留实例计费配置ID
      */
     public void setReservedInstancesOfferingId(String ReservedInstancesOfferingId) {
@@ -83,7 +83,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取试运行
+     * Get 试运行 
      * @return DryRun 试运行
      */
     public Boolean getDryRun() {
@@ -91,7 +91,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置试运行
+     * Set 试运行
      * @param DryRun 试运行
      */
     public void setDryRun(Boolean DryRun) {
@@ -99,7 +99,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
      */
     public String getClientToken() {
@@ -107,7 +107,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。<br>更多详细信息请参阅：如何保证幂等性
      */
     public void setClientToken(String ClientToken) {
@@ -115,7 +115,7 @@ public class PurchaseReservedInstancesOfferingRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteScanInstancesRequest  extends AbstractModel{
+public class DeleteScanInstancesRequest extends AbstractModel{
 
     /**
     * 删除一个或多个扫描的app，最大支持20个
@@ -30,7 +30,7 @@ public class DeleteScanInstancesRequest  extends AbstractModel{
     private String [] AppSids;
 
     /**
-     * 获取删除一个或多个扫描的app，最大支持20个
+     * Get 删除一个或多个扫描的app，最大支持20个 
      * @return AppSids 删除一个或多个扫描的app，最大支持20个
      */
     public String [] getAppSids() {
@@ -38,7 +38,7 @@ public class DeleteScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置删除一个或多个扫描的app，最大支持20个
+     * Set 删除一个或多个扫描的app，最大支持20个
      * @param AppSids 删除一个或多个扫描的app，最大支持20个
      */
     public void setAppSids(String [] AppSids) {
@@ -46,7 +46,7 @@ public class DeleteScanInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AppSids.", this.AppSids);

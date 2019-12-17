@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotByTimeOffset2017  extends AbstractModel{
+public class SnapshotByTimeOffset2017 extends AbstractModel{
 
     /**
     * 错误码
@@ -49,10 +49,10 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -63,7 +63,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -77,8 +77,8 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 获取截图的具体时间点，单位：毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 截图的具体时间点，单位：毫秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeOffset 截图的具体时间点，单位：毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图的具体时间点，单位：毫秒。
+     * Set 截图的具体时间点，单位：毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOffset 截图的具体时间点，单位：毫秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,8 +97,8 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 获取截图输出文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 截图输出文件地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 截图输出文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -107,7 +107,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图输出文件地址。
+     * Set 截图输出文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 截图输出文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -117,7 +117,7 @@ public class SnapshotByTimeOffset2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);

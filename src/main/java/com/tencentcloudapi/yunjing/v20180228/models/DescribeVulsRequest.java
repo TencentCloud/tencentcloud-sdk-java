@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulsRequest  extends AbstractModel{
+public class DescribeVulsRequest extends AbstractModel{
 
     /**
     * 漏洞类型。
@@ -37,14 +37,14 @@ public class DescribeVulsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 过滤条件。
@@ -57,10 +57,10 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     private Filter [] Filters;
 
     /**
-     * 获取漏洞类型。
+     * Get 漏洞类型。
 <li>WEB：Web应用漏洞</li>
 <li>SYSTEM：系统组件漏洞</li>
-<li>BASELINE：安全基线</li>
+<li>BASELINE：安全基线</li> 
      * @return VulType 漏洞类型。
 <li>WEB：Web应用漏洞</li>
 <li>SYSTEM：系统组件漏洞</li>
@@ -71,7 +71,7 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     }
 
     /**
-     * 设置漏洞类型。
+     * Set 漏洞类型。
 <li>WEB：Web应用漏洞</li>
 <li>SYSTEM：系统组件漏洞</li>
 <li>BASELINE：安全基线</li>
@@ -85,42 +85,42 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     }
 
     /**
-     * 获取返回数量，默认为10，最大值为100。
+     * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为10，最大值为100。
+     * Set 返回数量，默认为10，最大值为100。
      * @param Limit 返回数量，默认为10，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
 
-Status过滤条件值只能取其一，不能是“或”逻辑。
+Status过滤条件值只能取其一，不能是“或”逻辑。 
      * @return Filters 过滤条件。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
 
@@ -131,7 +131,7 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li>Status - String - 是否必填：否 - 状态筛选（UN_OPERATED: 待处理 | FIXED：已修复）
 
 Status过滤条件值只能取其一，不能是“或”逻辑。
@@ -145,7 +145,7 @@ Status过滤条件值只能取其一，不能是“或”逻辑。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulType", this.VulType);

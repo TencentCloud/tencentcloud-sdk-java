@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyFairPlayPemResponse  extends AbstractModel{
+public class ModifyFairPlayPemResponse extends AbstractModel{
 
     /**
     * 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
@@ -46,8 +46,8 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FairPlayPemId 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
+     * Set 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FairPlayPemId 设置私钥后，后台返回的pem id，用来唯一标识一个私钥。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取私钥的优先级，优先级数值越高，优先级越高。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 私钥的优先级，优先级数值越高，优先级越高。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Priority 私钥的优先级，优先级数值越高，优先级越高。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置私钥的优先级，优先级数值越高，优先级越高。
+     * Set 私钥的优先级，优先级数值越高，优先级越高。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 私钥的优先级，优先级数值越高，优先级越高。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class ModifyFairPlayPemResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FairPlayPemId", this.FairPlayPemId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListNamespacesRequest  extends AbstractModel{
+public class ListNamespacesRequest extends AbstractModel{
 
     /**
     * 返回数据长度，默认值为 20
@@ -51,7 +51,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     private String Order;
 
     /**
-     * 获取返回数据长度，默认值为 20
+     * Get 返回数据长度，默认值为 20 
      * @return Limit 返回数据长度，默认值为 20
      */
     public Integer getLimit() {
@@ -59,7 +59,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数据长度，默认值为 20
+     * Set 返回数据长度，默认值为 20
      * @param Limit 返回数据长度，默认值为 20
      */
     public void setLimit(Integer Limit) {
@@ -67,7 +67,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据的偏移量，默认值为 0
+     * Get 数据的偏移量，默认值为 0 
      * @return Offset 数据的偏移量，默认值为 0
      */
     public Integer getOffset() {
@@ -75,7 +75,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据的偏移量，默认值为 0
+     * Set 数据的偏移量，默认值为 0
      * @param Offset 数据的偏移量，默认值为 0
      */
     public void setOffset(Integer Offset) {
@@ -83,7 +83,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime 
      * @return Orderby 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
      */
     public String getOrderby() {
@@ -91,7 +91,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
      * @param Orderby 根据哪个字段进行返回结果排序,支持以下字段：Name,Updatetime
      */
     public void setOrderby(String Orderby) {
@@ -99,7 +99,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * Get 以升序还是降序的方式返回结果，可选值 ASC 和 DESC 
      * @return Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
     public String getOrder() {
@@ -107,7 +107,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * Set 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      * @param Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
     public void setOrder(String Order) {
@@ -115,7 +115,7 @@ public class ListNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);

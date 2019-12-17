@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainInfoRequest  extends AbstractModel{
+public class DescribeDomainInfoRequest extends AbstractModel{
 
     /**
     * 要查询的域名
@@ -37,7 +37,7 @@ public class DescribeDomainInfoRequest  extends AbstractModel{
     private Integer Option;
 
     /**
-     * 获取要查询的域名
+     * Get 要查询的域名 
      * @return Key 要查询的域名
      */
     public String getKey() {
@@ -45,7 +45,7 @@ public class DescribeDomainInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的域名
+     * Set 要查询的域名
      * @param Key 要查询的域名
      */
     public void setKey(String Key) {
@@ -53,7 +53,7 @@ public class DescribeDomainInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+     * Get 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。 
      * @return Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public Integer getOption() {
@@ -61,7 +61,7 @@ public class DescribeDomainInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
+     * Set 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      * @param Option 附加字段，是否返回上下文。当为0时不返回上下文，当为1时返回上下文。
      */
     public void setOption(Integer Option) {
@@ -69,7 +69,7 @@ public class DescribeDomainInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

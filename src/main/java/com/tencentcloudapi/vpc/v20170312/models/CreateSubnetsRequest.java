@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubnetsRequest  extends AbstractModel{
+public class CreateSubnetsRequest extends AbstractModel{
 
     /**
     * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
@@ -37,7 +37,7 @@ public class CreateSubnetsRequest  extends AbstractModel{
     private SubnetInput [] Subnets;
 
     /**
-     * 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
      * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class CreateSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class CreateSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网对象列表。
+     * Get 子网对象列表。 
      * @return Subnets 子网对象列表。
      */
     public SubnetInput [] getSubnets() {
@@ -61,7 +61,7 @@ public class CreateSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网对象列表。
+     * Set 子网对象列表。
      * @param Subnets 子网对象列表。
      */
     public void setSubnets(SubnetInput [] Subnets) {
@@ -69,7 +69,7 @@ public class CreateSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

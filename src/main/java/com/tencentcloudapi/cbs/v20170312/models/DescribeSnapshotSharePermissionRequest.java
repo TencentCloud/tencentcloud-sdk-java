@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotSharePermissionRequest  extends AbstractModel{
+public class DescribeSnapshotSharePermissionRequest extends AbstractModel{
 
     /**
     * 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
@@ -30,7 +30,7 @@ public class DescribeSnapshotSharePermissionRequest  extends AbstractModel{
     private String SnapshotId;
 
     /**
-     * 获取要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
+     * Get 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。 
      * @return SnapshotId 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
     public String getSnapshotId() {
@@ -38,7 +38,7 @@ public class DescribeSnapshotSharePermissionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
+     * Set 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      * @param SnapshotId 要查询快照的ID。可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询获取。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -46,7 +46,7 @@ public class DescribeSnapshotSharePermissionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);

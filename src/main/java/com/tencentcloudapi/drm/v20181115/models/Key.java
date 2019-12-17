@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Key  extends AbstractModel{
+public class Key extends AbstractModel{
 
     /**
     * 加密track类型。
@@ -51,7 +51,7 @@ public class Key  extends AbstractModel{
     private String Iv;
 
     /**
-     * 获取加密track类型。
+     * Get 加密track类型。 
      * @return Track 加密track类型。
      */
     public String getTrack() {
@@ -59,7 +59,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 设置加密track类型。
+     * Set 加密track类型。
      * @param Track 加密track类型。
      */
     public void setTrack(String Track) {
@@ -67,7 +67,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 获取密钥ID。
+     * Get 密钥ID。 
      * @return KeyId 密钥ID。
      */
     public String getKeyId() {
@@ -75,7 +75,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 设置密钥ID。
+     * Set 密钥ID。
      * @param KeyId 密钥ID。
      */
     public void setKeyId(String KeyId) {
@@ -83,7 +83,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 获取原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+     * Get 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。 
      * @return Key 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      */
     public String getKey() {
@@ -91,7 +91,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 设置原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+     * Set 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      * @param Key 原始Key使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      */
     public void setKey(String Key) {
@@ -99,7 +99,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 获取原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+     * Get 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。 
      * @return Iv 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      */
     public String getIv() {
@@ -107,7 +107,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 设置原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
+     * Set 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      * @param Iv 原始IV使用AES-128 ECB模式和SessionKey加密的后的二进制数据，Base64编码的字符串。
      */
     public void setIv(String Iv) {
@@ -115,7 +115,7 @@ public class Key  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Track", this.Track);

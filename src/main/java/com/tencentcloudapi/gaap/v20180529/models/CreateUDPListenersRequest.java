@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUDPListenersRequest  extends AbstractModel{
+public class CreateUDPListenersRequest extends AbstractModel{
 
     /**
     * 监听器名称
@@ -72,7 +72,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     private Long [] RealServerPorts;
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -80,7 +80,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -88,7 +88,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口列表
+     * Get 监听器端口列表 
      * @return Ports 监听器端口列表
      */
     public Long [] getPorts() {
@@ -96,7 +96,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口列表
+     * Set 监听器端口列表
      * @param Ports 监听器端口列表
      */
     public void setPorts(Long [] Ports) {
@@ -104,7 +104,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
+     * Get 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc） 
      * @return Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
      */
     public String getScheduler() {
@@ -112,7 +112,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
+     * Set 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
      * @param Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）
      */
     public void setScheduler(String Scheduler) {
@@ -120,7 +120,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器对应源站类型，支持IP或者DOMAIN类型
+     * Get 监听器对应源站类型，支持IP或者DOMAIN类型 
      * @return RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型
      */
     public String getRealServerType() {
@@ -128,7 +128,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器对应源站类型，支持IP或者DOMAIN类型
+     * Set 监听器对应源站类型，支持IP或者DOMAIN类型
      * @param RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型
      */
     public void setRealServerType(String RealServerType) {
@@ -136,7 +136,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getProxyId() {
@@ -144,7 +144,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -152,7 +152,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
@@ -160,7 +160,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -168,7 +168,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站端口列表，该参数仅支持v1版本监听器和通道组监听器
+     * Get 源站端口列表，该参数仅支持v1版本监听器和通道组监听器 
      * @return RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器
      */
     public Long [] getRealServerPorts() {
@@ -176,7 +176,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站端口列表，该参数仅支持v1版本监听器和通道组监听器
+     * Set 源站端口列表，该参数仅支持v1版本监听器和通道组监听器
      * @param RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器
      */
     public void setRealServerPorts(Long [] RealServerPorts) {
@@ -184,7 +184,7 @@ public class CreateUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);

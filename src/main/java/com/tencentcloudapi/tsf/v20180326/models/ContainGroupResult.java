@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainGroupResult  extends AbstractModel{
+public class ContainGroupResult extends AbstractModel{
 
     /**
     * 部署组列表
@@ -38,8 +38,8 @@ public class ContainGroupResult  extends AbstractModel{
     private Long TotalCount;
 
     /**
-     * 获取部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -48,7 +48,7 @@ public class ContainGroupResult  extends AbstractModel{
     }
 
     /**
-     * 设置部署组列表
+     * Set 部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ public class ContainGroupResult  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return TotalCount 总记录数
      */
     public Long getTotalCount() {
@@ -66,7 +66,7 @@ public class ContainGroupResult  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param TotalCount 总记录数
      */
     public void setTotalCount(Long TotalCount) {
@@ -74,7 +74,7 @@ public class ContainGroupResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Content.", this.Content);

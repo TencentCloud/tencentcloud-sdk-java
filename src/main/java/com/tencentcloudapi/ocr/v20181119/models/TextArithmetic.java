@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextArithmetic  extends AbstractModel{
+public class TextArithmetic extends AbstractModel{
 
     /**
     * 识别出的文本行内容
@@ -84,7 +84,7 @@ public class TextArithmetic  extends AbstractModel{
     private String ExpressionType;
 
     /**
-     * 获取识别出的文本行内容
+     * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
     public String getDetectedText() {
@@ -92,7 +92,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的文本行内容
+     * Set 识别出的文本行内容
      * @param DetectedText 识别出的文本行内容
      */
     public void setDetectedText(String DetectedText) {
@@ -100,7 +100,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取算式运算结果
+     * Get 算式运算结果 
      * @return Result 算式运算结果
      */
     public Boolean getResult() {
@@ -108,7 +108,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置算式运算结果
+     * Set 算式运算结果
      * @param Result 算式运算结果
      */
     public void setResult(Boolean Result) {
@@ -116,7 +116,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段，暂不支持
+     * Get 保留字段，暂不支持 
      * @return Confidence 保留字段，暂不支持
      */
     public Integer getConfidence() {
@@ -124,7 +124,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段，暂不支持
+     * Set 保留字段，暂不支持
      * @param Confidence 保留字段，暂不支持
      */
     public void setConfidence(Integer Confidence) {
@@ -132,8 +132,8 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
+     * Set 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Polygon 原图文本行坐标，以四个顶点坐标表示（保留字段，暂不支持）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,7 +152,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段，暂不支持
+     * Get 保留字段，暂不支持 
      * @return AdvancedInfo 保留字段，暂不支持
      */
     public String getAdvancedInfo() {
@@ -160,7 +160,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段，暂不支持
+     * Set 保留字段，暂不支持
      * @param AdvancedInfo 保留字段，暂不支持
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -168,7 +168,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * Get 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height） 
      * @return ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public ItemCoord getItemCoord() {
@@ -176,7 +176,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
+     * Set 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      * @param ItemCoord 文本行旋转纠正之后在图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）
      */
     public void setItemCoord(ItemCoord ItemCoord) {
@@ -184,7 +184,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 获取算式题型编号：
+     * Get 算式题型编号：
 ‘1’: 加减乘除四则
 ‘2’: 加减乘除已知结果求运算因子
 ‘3’: 判断大小
@@ -195,7 +195,7 @@ public class TextArithmetic  extends AbstractModel{
 ‘8’: 竖式加减法
 ‘9’: 竖式乘除法
 ‘10’: 脱式计算
-‘11’: 解方程
+‘11’: 解方程 
      * @return ExpressionType 算式题型编号：
 ‘1’: 加减乘除四则
 ‘2’: 加减乘除已知结果求运算因子
@@ -214,7 +214,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 设置算式题型编号：
+     * Set 算式题型编号：
 ‘1’: 加减乘除四则
 ‘2’: 加减乘除已知结果求运算因子
 ‘3’: 判断大小
@@ -244,7 +244,7 @@ public class TextArithmetic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);

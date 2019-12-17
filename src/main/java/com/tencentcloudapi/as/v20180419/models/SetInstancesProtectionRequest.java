@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetInstancesProtectionRequest  extends AbstractModel{
+public class SetInstancesProtectionRequest extends AbstractModel{
 
     /**
     * 伸缩组ID。
@@ -44,7 +44,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     private Boolean ProtectedFromScaleIn;
 
     /**
-     * 获取伸缩组ID。
+     * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -52,7 +52,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID。
+     * Set 伸缩组ID。
      * @param AutoScalingGroupId 伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -60,7 +60,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID。
+     * Get 实例ID。 
      * @return InstanceIds 实例ID。
      */
     public String [] getInstanceIds() {
@@ -68,7 +68,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID。
+     * Set 实例ID。
      * @param InstanceIds 实例ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -76,7 +76,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例是否需要移出保护。
+     * Get 实例是否需要移出保护。 
      * @return ProtectedFromScaleIn 实例是否需要移出保护。
      */
     public Boolean getProtectedFromScaleIn() {
@@ -84,7 +84,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例是否需要移出保护。
+     * Set 实例是否需要移出保护。
      * @param ProtectedFromScaleIn 实例是否需要移出保护。
      */
     public void setProtectedFromScaleIn(Boolean ProtectedFromScaleIn) {
@@ -92,7 +92,7 @@ public class SetInstancesProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

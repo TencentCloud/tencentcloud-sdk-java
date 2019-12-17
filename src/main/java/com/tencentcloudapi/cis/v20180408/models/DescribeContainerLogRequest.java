@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerLogRequest  extends AbstractModel{
+public class DescribeContainerLogRequest extends AbstractModel{
 
     /**
     * 容器实例名称
@@ -51,7 +51,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     private String SinceTime;
 
     /**
-     * 获取容器实例名称
+     * Get 容器实例名称 
      * @return InstanceName 容器实例名称
      */
     public String getInstanceName() {
@@ -59,7 +59,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例名称
+     * Set 容器实例名称
      * @param InstanceName 容器实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -67,7 +67,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取容器名称
+     * Get 容器名称 
      * @return ContainerName 容器名称
      */
     public String getContainerName() {
@@ -75,7 +75,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置容器名称
+     * Set 容器名称
      * @param ContainerName 容器名称
      */
     public void setContainerName(String ContainerName) {
@@ -83,7 +83,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志显示尾部行数
+     * Get 日志显示尾部行数 
      * @return Tail 日志显示尾部行数
      */
     public Integer getTail() {
@@ -91,7 +91,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志显示尾部行数
+     * Set 日志显示尾部行数
      * @param Tail 日志显示尾部行数
      */
     public void setTail(Integer Tail) {
@@ -99,7 +99,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志起始时间
+     * Get 日志起始时间 
      * @return SinceTime 日志起始时间
      */
     public String getSinceTime() {
@@ -107,7 +107,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志起始时间
+     * Set 日志起始时间
      * @param SinceTime 日志起始时间
      */
     public void setSinceTime(String SinceTime) {
@@ -115,7 +115,7 @@ public class DescribeContainerLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);

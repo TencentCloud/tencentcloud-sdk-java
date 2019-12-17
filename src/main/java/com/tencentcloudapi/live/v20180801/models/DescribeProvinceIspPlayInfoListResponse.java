@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
+public class DescribeProvinceIspPlayInfoListResponse extends AbstractModel{
 
     /**
     * 播放信息列表。
@@ -44,7 +44,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取播放信息列表。
+     * Get 播放信息列表。 
      * @return DataInfoList 播放信息列表。
      */
     public PlayStatInfo [] getDataInfoList() {
@@ -52,7 +52,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置播放信息列表。
+     * Set 播放信息列表。
      * @param DataInfoList 播放信息列表。
      */
     public void setDataInfoList(PlayStatInfo [] DataInfoList) {
@@ -60,7 +60,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计的类型，和输入参数保持一致。
+     * Get 统计的类型，和输入参数保持一致。 
      * @return StatType 统计的类型，和输入参数保持一致。
      */
     public String getStatType() {
@@ -68,7 +68,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计的类型，和输入参数保持一致。
+     * Set 统计的类型，和输入参数保持一致。
      * @param StatType 统计的类型，和输入参数保持一致。
      */
     public void setStatType(String StatType) {
@@ -76,7 +76,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeProvinceIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
+public class MediaProcessTaskImageSpriteResult extends AbstractModel{
 
     /**
     * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -62,7 +62,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     private MediaImageSpriteItem Output;
 
     /**
-     * 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public String getStatus() {
@@ -70,7 +70,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Set 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public void setStatus(String Status) {
@@ -78,10 +78,10 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0 表示成功，其他值表示失败：
+     * Get 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
-<li>70000：内部服务错误，建议重试。</li>
+<li>70000：内部服务错误，建议重试。</li> 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
@@ -92,7 +92,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，0 表示成功，其他值表示失败：
+     * Set 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
@@ -106,7 +106,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -114,7 +114,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -122,7 +122,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截雪碧图任务的输入。
+     * Get 对视频截雪碧图任务的输入。 
      * @return Input 对视频截雪碧图任务的输入。
      */
     public ImageSpriteTaskInput getInput() {
@@ -130,7 +130,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截雪碧图任务的输入。
+     * Set 对视频截雪碧图任务的输入。
      * @param Input 对视频截雪碧图任务的输入。
      */
     public void setInput(ImageSpriteTaskInput Input) {
@@ -138,8 +138,8 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截雪碧图任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频截雪碧图任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 对视频截雪碧图任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截雪碧图任务的输出。
+     * Set 对视频截雪碧图任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 对视频截雪碧图任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ public class MediaProcessTaskImageSpriteResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

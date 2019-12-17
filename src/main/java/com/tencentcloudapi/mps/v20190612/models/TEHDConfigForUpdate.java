@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TEHDConfigForUpdate  extends AbstractModel{
+public class TEHDConfigForUpdate extends AbstractModel{
 
     /**
     * 极速高清类型，可选值：
@@ -39,9 +39,9 @@ public class TEHDConfigForUpdate  extends AbstractModel{
     private Long MaxVideoBitrate;
 
     /**
-     * 获取极速高清类型，可选值：
+     * Get 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
-不填代表不修改。
+不填代表不修改。 
      * @return Type 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
 不填代表不修改。
@@ -51,7 +51,7 @@ public class TEHDConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置极速高清类型，可选值：
+     * Set 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
 不填代表不修改。
      * @param Type 极速高清类型，可选值：
@@ -63,7 +63,7 @@ public class TEHDConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取视频码率上限，不填代表不修改。
+     * Get 视频码率上限，不填代表不修改。 
      * @return MaxVideoBitrate 视频码率上限，不填代表不修改。
      */
     public Long getMaxVideoBitrate() {
@@ -71,7 +71,7 @@ public class TEHDConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置视频码率上限，不填代表不修改。
+     * Set 视频码率上限，不填代表不修改。
      * @param MaxVideoBitrate 视频码率上限，不填代表不修改。
      */
     public void setMaxVideoBitrate(Long MaxVideoBitrate) {
@@ -79,7 +79,7 @@ public class TEHDConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

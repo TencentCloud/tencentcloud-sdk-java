@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProductConfigRequest  extends AbstractModel{
+public class DescribeProductConfigRequest extends AbstractModel{
 
     /**
     * 可用区名称
@@ -30,7 +30,7 @@ public class DescribeProductConfigRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取可用区名称
+     * Get 可用区名称 
      * @return Zone 可用区名称
      */
     public String getZone() {
@@ -38,7 +38,7 @@ public class DescribeProductConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称
+     * Set 可用区名称
      * @param Zone 可用区名称
      */
     public void setZone(String Zone) {
@@ -46,7 +46,7 @@ public class DescribeProductConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

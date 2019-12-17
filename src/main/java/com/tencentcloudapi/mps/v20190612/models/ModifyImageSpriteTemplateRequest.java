@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
+public class ModifyImageSpriteTemplateRequest extends AbstractModel{
 
     /**
     * 雪碧图模板唯一标识。
@@ -83,7 +83,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     private Long ColumnCount;
 
     /**
-     * 获取雪碧图模板唯一标识。
+     * Get 雪碧图模板唯一标识。 
      * @return Definition 雪碧图模板唯一标识。
      */
     public Long getDefinition() {
@@ -91,7 +91,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图模板唯一标识。
+     * Set 雪碧图模板唯一标识。
      * @param Definition 雪碧图模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -99,7 +99,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图模板名称，长度限制：64 个字符。
+     * Get 雪碧图模板名称，长度限制：64 个字符。 
      * @return Name 雪碧图模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -107,7 +107,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图模板名称，长度限制：64 个字符。
+     * Set 雪碧图模板名称，长度限制：64 个字符。
      * @param Name 雪碧图模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -115,7 +115,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+     * Get 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。 
      * @return Width 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
      */
     public Long getWidth() {
@@ -123,7 +123,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+     * Set 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
      * @param Width 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
      */
     public void setWidth(Long Width) {
@@ -131,7 +131,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * Get 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。 
      * @return Height 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
      */
     public Long getHeight() {
@@ -139,7 +139,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * Set 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
      * @param Height 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
      */
     public void setHeight(Long Height) {
@@ -147,9 +147,9 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取采样类型，取值：
+     * Get 采样类型，取值：
 <li>Percent：按百分比。</li>
-<li>Time：按时间间隔。</li>
+<li>Time：按时间间隔。</li> 
      * @return SampleType 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -159,7 +159,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样类型，取值：
+     * Set 采样类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
      * @param SampleType 采样类型，取值：
@@ -171,9 +171,9 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取采样间隔。
+     * Get 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
-<li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
+<li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li> 
      * @return SampleInterval 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
@@ -183,7 +183,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样间隔。
+     * Set 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
      * @param SampleInterval 采样间隔。
@@ -195,7 +195,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的行数。
+     * Get 雪碧图中小图的行数。 
      * @return RowCount 雪碧图中小图的行数。
      */
     public Long getRowCount() {
@@ -203,7 +203,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的行数。
+     * Set 雪碧图中小图的行数。
      * @param RowCount 雪碧图中小图的行数。
      */
     public void setRowCount(Long RowCount) {
@@ -211,7 +211,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的列数。
+     * Get 雪碧图中小图的列数。 
      * @return ColumnCount 雪碧图中小图的列数。
      */
     public Long getColumnCount() {
@@ -219,7 +219,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的列数。
+     * Set 雪碧图中小图的列数。
      * @param ColumnCount 雪碧图中小图的列数。
      */
     public void setColumnCount(Long ColumnCount) {
@@ -227,7 +227,7 @@ public class ModifyImageSpriteTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

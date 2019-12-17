@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountCreateInfo  extends AbstractModel{
+public class AccountCreateInfo extends AbstractModel{
 
     /**
     * 实例用户名
@@ -51,7 +51,7 @@ public class AccountCreateInfo  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取实例用户名
+     * Get 实例用户名 
      * @return UserName 实例用户名
      */
     public String getUserName() {
@@ -59,7 +59,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例用户名
+     * Set 实例用户名
      * @param UserName 实例用户名
      */
     public void setUserName(String UserName) {
@@ -67,7 +67,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例密码
+     * Get 实例密码 
      * @return Password 实例密码
      */
     public String getPassword() {
@@ -75,7 +75,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例密码
+     * Set 实例密码
      * @param Password 实例密码
      */
     public void setPassword(String Password) {
@@ -83,7 +83,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取DB权限列表
+     * Get DB权限列表 
      * @return DBPrivileges DB权限列表
      */
     public DBPrivilege [] getDBPrivileges() {
@@ -91,7 +91,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置DB权限列表
+     * Set DB权限列表
      * @param DBPrivileges DB权限列表
      */
     public void setDBPrivileges(DBPrivilege [] DBPrivileges) {
@@ -99,7 +99,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号备注信息
+     * Get 账号备注信息 
      * @return Remark 账号备注信息
      */
     public String getRemark() {
@@ -107,7 +107,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号备注信息
+     * Set 账号备注信息
      * @param Remark 账号备注信息
      */
     public void setRemark(String Remark) {
@@ -115,7 +115,7 @@ public class AccountCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

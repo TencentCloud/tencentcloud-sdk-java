@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCCEvListRequest  extends AbstractModel{
+public class DescribeCCEvListRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
@@ -72,7 +72,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Get 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -80,7 +80,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Set 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（shield表示棋牌盾；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -88,7 +88,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -96,7 +96,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -104,7 +104,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -112,7 +112,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -120,7 +120,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例ID
+     * Get 资源实例ID 
      * @return Id 资源实例ID
      */
     public String getId() {
@@ -128,7 +128,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例ID
+     * Set 资源实例ID
      * @param Id 资源实例ID
      */
     public void setId(String Id) {
@@ -136,7 +136,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空；
+     * Get 资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空； 
      * @return IpList 资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空；
      */
     public String [] getIpList() {
@@ -144,7 +144,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空；
+     * Set 资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空；
      * @param IpList 资源实例的IP，当business不为basic时，如果IpList不为空则Id也必须不能为空；
      */
     public void setIpList(String [] IpList) {
@@ -152,7 +152,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页条数，填0表示不分页
+     * Get 一页条数，填0表示不分页 
      * @return Limit 一页条数，填0表示不分页
      */
     public Long getLimit() {
@@ -160,7 +160,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页条数，填0表示不分页
+     * Set 一页条数，填0表示不分页
      * @param Limit 一页条数，填0表示不分页
      */
     public void setLimit(Long Limit) {
@@ -168,7 +168,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页起始偏移，取值为(页码-1)*一页条数
+     * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
@@ -176,7 +176,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页起始偏移，取值为(页码-1)*一页条数
+     * Set 页起始偏移，取值为(页码-1)*一页条数
      * @param Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
@@ -184,7 +184,7 @@ public class DescribeCCEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

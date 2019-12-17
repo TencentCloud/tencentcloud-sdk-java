@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeEnvData  extends AbstractModel{
+public class ComputeEnvData extends AbstractModel{
 
     /**
     * CVM实例类型列表
@@ -30,7 +30,7 @@ public class ComputeEnvData  extends AbstractModel{
     private String [] InstanceTypes;
 
     /**
-     * 获取CVM实例类型列表
+     * Get CVM实例类型列表 
      * @return InstanceTypes CVM实例类型列表
      */
     public String [] getInstanceTypes() {
@@ -38,7 +38,7 @@ public class ComputeEnvData  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例类型列表
+     * Set CVM实例类型列表
      * @param InstanceTypes CVM实例类型列表
      */
     public void setInstanceTypes(String [] InstanceTypes) {
@@ -46,7 +46,7 @@ public class ComputeEnvData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);

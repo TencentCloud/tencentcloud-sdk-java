@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonBaseInfoRequest  extends AbstractModel{
+public class ModifyPersonBaseInfoRequest extends AbstractModel{
 
     /**
     * 人员ID
@@ -44,7 +44,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     private Long Gender;
 
     /**
-     * 获取人员ID
+     * Get 人员ID 
      * @return PersonId 人员ID
      */
     public String getPersonId() {
@@ -52,7 +52,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员ID
+     * Set 人员ID
      * @param PersonId 人员ID
      */
     public void setPersonId(String PersonId) {
@@ -60,7 +60,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的人员名称
+     * Get 需要修改的人员名称 
      * @return PersonName 需要修改的人员名称
      */
     public String getPersonName() {
@@ -68,7 +68,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的人员名称
+     * Set 需要修改的人员名称
      * @param PersonName 需要修改的人员名称
      */
     public void setPersonName(String PersonName) {
@@ -76,7 +76,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的人员性别
+     * Get 需要修改的人员性别 
      * @return Gender 需要修改的人员性别
      */
     public Long getGender() {
@@ -84,7 +84,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的人员性别
+     * Set 需要修改的人员性别
      * @param Gender 需要修改的人员性别
      */
     public void setGender(Long Gender) {
@@ -92,7 +92,7 @@ public class ModifyPersonBaseInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

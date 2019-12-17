@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpCodeInfo  extends AbstractModel{
+public class HttpCodeInfo extends AbstractModel{
 
     /**
     * HTTP协议返回码。
@@ -38,8 +38,8 @@ public class HttpCodeInfo  extends AbstractModel{
     private HttpCodeValue [] ValueList;
 
     /**
-     * 获取HTTP协议返回码。
-例："2xx", "3xx", "4xx", "5xx"。
+     * Get HTTP协议返回码。
+例："2xx", "3xx", "4xx", "5xx"。 
      * @return HttpCode HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
      */
@@ -48,7 +48,7 @@ public class HttpCodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置HTTP协议返回码。
+     * Set HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
      * @param HttpCode HTTP协议返回码。
 例："2xx", "3xx", "4xx", "5xx"。
@@ -58,7 +58,7 @@ public class HttpCodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取统计信息，对于无数据的时间点，会补0。
+     * Get 统计信息，对于无数据的时间点，会补0。 
      * @return ValueList 统计信息，对于无数据的时间点，会补0。
      */
     public HttpCodeValue [] getValueList() {
@@ -66,7 +66,7 @@ public class HttpCodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置统计信息，对于无数据的时间点，会补0。
+     * Set 统计信息，对于无数据的时间点，会补0。
      * @param ValueList 统计信息，对于无数据的时间点，会补0。
      */
     public void setValueList(HttpCodeValue [] ValueList) {
@@ -74,7 +74,7 @@ public class HttpCodeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HttpCode", this.HttpCode);

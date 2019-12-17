@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecTaskResponse  extends AbstractModel{
+public class CreateRecTaskResponse extends AbstractModel{
 
     /**
     * 录音文件识别的请求返回结果，包含结果查询需要的TaskId
@@ -37,7 +37,7 @@ public class CreateRecTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * Get 录音文件识别的请求返回结果，包含结果查询需要的TaskId 
      * @return Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
      */
     public Task getData() {
@@ -45,7 +45,7 @@ public class CreateRecTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * Set 录音文件识别的请求返回结果，包含结果查询需要的TaskId
      * @param Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
      */
     public void setData(Task Data) {
@@ -53,7 +53,7 @@ public class CreateRecTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateRecTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateRecTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);

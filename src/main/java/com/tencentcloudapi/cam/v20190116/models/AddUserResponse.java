@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserResponse  extends AbstractModel{
+public class AddUserResponse extends AbstractModel{
 
     /**
     * 子用户 UIN
@@ -72,7 +72,7 @@ public class AddUserResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子用户 UIN
+     * Get 子用户 UIN 
      * @return Uin 子用户 UIN
      */
     public Long getUin() {
@@ -80,7 +80,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 UIN
+     * Set 子用户 UIN
      * @param Uin 子用户 UIN
      */
     public void setUin(Long Uin) {
@@ -88,7 +88,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户用户名
+     * Get 子用户用户名 
      * @return Name 子用户用户名
      */
     public String getName() {
@@ -96,7 +96,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户用户名
+     * Set 子用户用户名
      * @param Name 子用户用户名
      */
     public void setName(String Name) {
@@ -104,7 +104,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取如果输入参数组合为自动生成随机密码，则返回生成的密码
+     * Get 如果输入参数组合为自动生成随机密码，则返回生成的密码 
      * @return Password 如果输入参数组合为自动生成随机密码，则返回生成的密码
      */
     public String getPassword() {
@@ -112,7 +112,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置如果输入参数组合为自动生成随机密码，则返回生成的密码
+     * Set 如果输入参数组合为自动生成随机密码，则返回生成的密码
      * @param Password 如果输入参数组合为自动生成随机密码，则返回生成的密码
      */
     public void setPassword(String Password) {
@@ -120,7 +120,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户密钥 ID
+     * Get 子用户密钥 ID 
      * @return SecretId 子用户密钥 ID
      */
     public String getSecretId() {
@@ -128,7 +128,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户密钥 ID
+     * Set 子用户密钥 ID
      * @param SecretId 子用户密钥 ID
      */
     public void setSecretId(String SecretId) {
@@ -136,7 +136,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户密钥 Key
+     * Get 子用户密钥 Key 
      * @return SecretKey 子用户密钥 Key
      */
     public String getSecretKey() {
@@ -144,7 +144,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户密钥 Key
+     * Set 子用户密钥 Key
      * @param SecretKey 子用户密钥 Key
      */
     public void setSecretKey(String SecretKey) {
@@ -152,7 +152,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户 UID
+     * Get 子用户 UID 
      * @return Uid 子用户 UID
      */
     public Long getUid() {
@@ -160,7 +160,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 UID
+     * Set 子用户 UID
      * @param Uid 子用户 UID
      */
     public void setUid(Long Uid) {
@@ -168,7 +168,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class AddUserResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

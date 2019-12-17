@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DCDBShardInfo  extends AbstractModel{
+public class DCDBShardInfo extends AbstractModel{
 
     /**
     * 所属实例Id
@@ -163,7 +163,7 @@ public class DCDBShardInfo  extends AbstractModel{
     private String ProxyVersion;
 
     /**
-     * 获取所属实例Id
+     * Get 所属实例Id 
      * @return InstanceId 所属实例Id
      */
     public String getInstanceId() {
@@ -171,7 +171,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属实例Id
+     * Set 所属实例Id
      * @param InstanceId 所属实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -179,7 +179,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片SQL透传Id，用于将sql透传到指定分片执行
+     * Get 分片SQL透传Id，用于将sql透传到指定分片执行 
      * @return ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
      */
     public String getShardSerialId() {
@@ -187,7 +187,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片SQL透传Id，用于将sql透传到指定分片执行
+     * Set 分片SQL透传Id，用于将sql透传到指定分片执行
      * @param ShardSerialId 分片SQL透传Id，用于将sql透传到指定分片执行
      */
     public void setShardSerialId(String ShardSerialId) {
@@ -195,7 +195,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取全局唯一的分片Id
+     * Get 全局唯一的分片Id 
      * @return ShardInstanceId 全局唯一的分片Id
      */
     public String getShardInstanceId() {
@@ -203,7 +203,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置全局唯一的分片Id
+     * Set 全局唯一的分片Id
      * @param ShardInstanceId 全局唯一的分片Id
      */
     public void setShardInstanceId(String ShardInstanceId) {
@@ -211,7 +211,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
+     * Get 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化 
      * @return Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      */
     public Integer getStatus() {
@@ -219,7 +219,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
+     * Set 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      * @param Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化
      */
     public void setStatus(Integer Status) {
@@ -227,7 +227,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态中文描述
+     * Get 状态中文描述 
      * @return StatusDesc 状态中文描述
      */
     public String getStatusDesc() {
@@ -235,7 +235,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态中文描述
+     * Set 状态中文描述
      * @param StatusDesc 状态中文描述
      */
     public void setStatusDesc(String StatusDesc) {
@@ -243,7 +243,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -251,7 +251,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -259,7 +259,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取字符串格式的私有网络Id
+     * Get 字符串格式的私有网络Id 
      * @return VpcId 字符串格式的私有网络Id
      */
     public String getVpcId() {
@@ -267,7 +267,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置字符串格式的私有网络Id
+     * Set 字符串格式的私有网络Id
      * @param VpcId 字符串格式的私有网络Id
      */
     public void setVpcId(String VpcId) {
@@ -275,7 +275,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取字符串格式的私有网络子网Id
+     * Get 字符串格式的私有网络子网Id 
      * @return SubnetId 字符串格式的私有网络子网Id
      */
     public String getSubnetId() {
@@ -283,7 +283,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置字符串格式的私有网络子网Id
+     * Set 字符串格式的私有网络子网Id
      * @param SubnetId 字符串格式的私有网络子网Id
      */
     public void setSubnetId(String SubnetId) {
@@ -291,7 +291,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -299,7 +299,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -307,7 +307,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -315,7 +315,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -323,7 +323,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -331,7 +331,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -339,7 +339,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位 GB
+     * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
     public Integer getMemory() {
@@ -347,7 +347,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位 GB
+     * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
     public void setMemory(Integer Memory) {
@@ -355,7 +355,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储大小，单位 GB
+     * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
     public Integer getStorage() {
@@ -363,7 +363,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储大小，单位 GB
+     * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
     public void setStorage(Integer Storage) {
@@ -371,7 +371,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间
+     * Get 到期时间 
      * @return PeriodEndTime 到期时间
      */
     public String getPeriodEndTime() {
@@ -379,7 +379,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间
+     * Set 到期时间
      * @param PeriodEndTime 到期时间
      */
     public void setPeriodEndTime(String PeriodEndTime) {
@@ -387,7 +387,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点数，2 为一主一从， 3 为一主二从
+     * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public Integer getNodeCount() {
@@ -395,7 +395,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点数，2 为一主一从， 3 为一主二从
+     * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public void setNodeCount(Integer NodeCount) {
@@ -403,7 +403,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储使用率，单位为 %
+     * Get 存储使用率，单位为 % 
      * @return StorageUsage 存储使用率，单位为 %
      */
     public Float getStorageUsage() {
@@ -411,7 +411,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储使用率，单位为 %
+     * Set 存储使用率，单位为 %
      * @param StorageUsage 存储使用率，单位为 %
      */
     public void setStorageUsage(Float StorageUsage) {
@@ -419,7 +419,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存使用率，单位为 %
+     * Get 内存使用率，单位为 % 
      * @return MemoryUsage 内存使用率，单位为 %
      */
     public Float getMemoryUsage() {
@@ -427,7 +427,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存使用率，单位为 %
+     * Set 内存使用率，单位为 %
      * @param MemoryUsage 内存使用率，单位为 %
      */
     public void setMemoryUsage(Float MemoryUsage) {
@@ -435,7 +435,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数字分片Id（过时字段，请勿依赖该值）
+     * Get 数字分片Id（过时字段，请勿依赖该值） 
      * @return ShardId 数字分片Id（过时字段，请勿依赖该值）
      */
     public Integer getShardId() {
@@ -443,7 +443,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数字分片Id（过时字段，请勿依赖该值）
+     * Set 数字分片Id（过时字段，请勿依赖该值）
      * @param ShardId 数字分片Id（过时字段，请勿依赖该值）
      */
     public void setShardId(Integer ShardId) {
@@ -451,7 +451,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品ProductID
+     * Get 产品ProductID 
      * @return Pid 产品ProductID
      */
     public Integer getPid() {
@@ -459,7 +459,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品ProductID
+     * Set 产品ProductID
      * @param Pid 产品ProductID
      */
     public void setPid(Integer Pid) {
@@ -467,7 +467,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Proxy版本
+     * Get Proxy版本 
      * @return ProxyVersion Proxy版本
      */
     public String getProxyVersion() {
@@ -475,7 +475,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Proxy版本
+     * Set Proxy版本
      * @param ProxyVersion Proxy版本
      */
     public void setProxyVersion(String ProxyVersion) {
@@ -483,7 +483,7 @@ public class DCDBShardInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL7BackendWeightRequest  extends AbstractModel{
+public class ModifyL7BackendWeightRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -79,7 +79,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     private Integer BindType;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -87,7 +87,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -95,7 +95,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -103,7 +103,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -111,7 +111,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Get 转发域名实例ID，可通过接口DescribeL7Rules查询。 
      * @return DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public String getDomainId() {
@@ -119,7 +119,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Set 转发域名实例ID，可通过接口DescribeL7Rules查询。
      * @param DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public void setDomainId(String DomainId) {
@@ -127,7 +127,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径实例ID，可通过接口DescribeL7Rules查询。
+     * Get 转发路径实例ID，可通过接口DescribeL7Rules查询。 
      * @return LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
      */
     public String getLocationId() {
@@ -135,7 +135,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径实例ID，可通过接口DescribeL7Rules查询。
+     * Set 转发路径实例ID，可通过接口DescribeL7Rules查询。
      * @param LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
      */
     public void setLocationId(String LocationId) {
@@ -143,7 +143,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Get 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。 
      * @return InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public String getInstanceId() {
@@ -151,7 +151,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Set 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      * @param InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -159,7 +159,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权重信息，可选值0~100。
+     * Get 权重信息，可选值0~100。 
      * @return Weight 权重信息，可选值0~100。
      */
     public Integer getWeight() {
@@ -167,7 +167,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权重信息，可选值0~100。
+     * Set 权重信息，可选值0~100。
      * @param Weight 权重信息，可选值0~100。
      */
     public void setWeight(Integer Weight) {
@@ -175,7 +175,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定的主机端口。
+     * Get 已绑定的主机端口。 
      * @return Port 已绑定的主机端口。
      */
     public Integer getPort() {
@@ -183,7 +183,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定的主机端口。
+     * Set 已绑定的主机端口。
      * @param Port 已绑定的主机端口。
      */
     public void setPort(Integer Port) {
@@ -191,7 +191,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定类型。0：物理机 1：虚拟机 2：半托管机器
+     * Get 绑定类型。0：物理机 1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
     public Integer getBindType() {
@@ -199,7 +199,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类型。0：物理机 1：虚拟机 2：半托管机器
+     * Set 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
     public void setBindType(Integer BindType) {
@@ -207,7 +207,7 @@ public class ModifyL7BackendWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

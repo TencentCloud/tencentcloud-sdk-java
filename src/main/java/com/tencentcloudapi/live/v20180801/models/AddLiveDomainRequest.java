@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddLiveDomainRequest  extends AbstractModel{
+public class AddLiveDomainRequest extends AbstractModel{
 
     /**
     * 域名名称。
@@ -60,7 +60,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     private Integer IsDelayLive;
 
     /**
-     * 获取域名名称。
+     * Get 域名名称。 
      * @return DomainName 域名名称。
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名名称。
+     * Set 域名名称。
      * @param DomainName 域名名称。
      */
     public void setDomainName(String DomainName) {
@@ -76,9 +76,9 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名类型，
+     * Get 域名类型，
 0：推流域名，
-1：播放域名。
+1：播放域名。 
      * @return DomainType 域名类型，
 0：推流域名，
 1：播放域名。
@@ -88,7 +88,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名类型，
+     * Set 域名类型，
 0：推流域名，
 1：播放域名。
      * @param DomainType 域名类型，
@@ -100,11 +100,11 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉流域名类型：
+     * Get 拉流域名类型：
 1：国内，
 2：全球，
 3：境外。
-默认值：1。
+默认值：1。 
      * @return PlayType 拉流域名类型：
 1：国内，
 2：全球，
@@ -116,7 +116,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉流域名类型：
+     * Set 拉流域名类型：
 1：国内，
 2：全球，
 3：境外。
@@ -132,10 +132,10 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否是慢直播：
+     * Get 是否是慢直播：
 0： 普通直播，
 1 ：慢直播 。
-默认值： 0。
+默认值： 0。 
      * @return IsDelayLive 是否是慢直播：
 0： 普通直播，
 1 ：慢直播 。
@@ -146,7 +146,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否是慢直播：
+     * Set 是否是慢直播：
 0： 普通直播，
 1 ：慢直播 。
 默认值： 0。
@@ -160,7 +160,7 @@ public class AddLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

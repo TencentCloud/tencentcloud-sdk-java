@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSubnetRequest  extends AbstractModel{
+public class DeleteSubnetRequest extends AbstractModel{
 
     /**
     * 私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -37,7 +37,7 @@ public class DeleteSubnetRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get 私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId 私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DeleteSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set 私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId 私有网络ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DeleteSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * Get 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。 
      * @return SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
      */
     public String getSubnetId() {
@@ -61,7 +61,7 @@ public class DeleteSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * Set 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
      * @param SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
      */
     public void setSubnetId(String SubnetId) {
@@ -69,7 +69,7 @@ public class DeleteSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

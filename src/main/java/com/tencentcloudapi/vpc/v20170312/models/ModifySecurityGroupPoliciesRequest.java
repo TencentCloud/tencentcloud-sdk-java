@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
+public class ModifySecurityGroupPoliciesRequest extends AbstractModel{
 
     /**
     * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
@@ -44,7 +44,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     private Boolean SortPolicys;
 
     /**
-     * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public String getSecurityGroupId() {
@@ -52,7 +52,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -60,7 +60,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
+     * Get 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。 
      * @return SecurityGroupPolicySet 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
      */
     public SecurityGroupPolicySet getSecurityGroupPolicySet() {
@@ -68,7 +68,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
+     * Set 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
      * @param SecurityGroupPolicySet 安全组规则集合。 SecurityGroupPolicySet对象必须同时指定新的出（Egress）入（Ingress）站规则。 SecurityGroupPolicy对象不支持自定义索引（PolicyIndex）。
      */
     public void setSecurityGroupPolicySet(SecurityGroupPolicySet SecurityGroupPolicySet) {
@@ -76,7 +76,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     * Get 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。 
      * @return SortPolicys 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
      */
     public Boolean getSortPolicys() {
@@ -84,7 +84,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
+     * Set 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
      * @param SortPolicys 排序安全组标识。值为True时，支持安全组排序；SortPolicys不存在或SortPolicys为False时，为修改安全组规则。
      */
     public void setSortPolicys(Boolean SortPolicys) {
@@ -92,7 +92,7 @@ public class ModifySecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

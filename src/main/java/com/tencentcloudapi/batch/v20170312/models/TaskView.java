@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskView  extends AbstractModel{
+public class TaskView extends AbstractModel{
 
     /**
     * 任务名称
@@ -52,7 +52,7 @@ public class TaskView  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -60,7 +60,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -68,7 +68,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return TaskState 任务状态
      */
     public String getTaskState() {
@@ -76,7 +76,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param TaskState 任务状态
      */
     public void setTaskState(String TaskState) {
@@ -84,7 +84,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return CreateTime 开始时间
      */
     public String getCreateTime() {
@@ -92,7 +92,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param CreateTime 开始时间
      */
     public void setCreateTime(String CreateTime) {
@@ -100,8 +100,8 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,7 +110,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ public class TaskView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);

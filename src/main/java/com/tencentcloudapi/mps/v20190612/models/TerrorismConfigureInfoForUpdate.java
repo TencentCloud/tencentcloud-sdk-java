@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerrorismConfigureInfoForUpdate  extends AbstractModel{
+public class TerrorismConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 画面鉴恐任务控制参数。
@@ -30,7 +30,7 @@ public class TerrorismConfigureInfoForUpdate  extends AbstractModel{
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-     * 获取画面鉴恐任务控制参数。
+     * Get 画面鉴恐任务控制参数。 
      * @return ImgReviewInfo 画面鉴恐任务控制参数。
      */
     public TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() {
@@ -38,7 +38,7 @@ public class TerrorismConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置画面鉴恐任务控制参数。
+     * Set 画面鉴恐任务控制参数。
      * @param ImgReviewInfo 画面鉴恐任务控制参数。
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo) {
@@ -46,7 +46,7 @@ public class TerrorismConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);

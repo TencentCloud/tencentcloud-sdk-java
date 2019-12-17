@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NormalQueryItem  extends AbstractModel{
+public class NormalQueryItem extends AbstractModel{
 
     /**
     * 用户名
@@ -128,7 +128,7 @@ public class NormalQueryItem  extends AbstractModel{
     private String NormalQuery;
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -136,7 +136,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -144,7 +144,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取调用次数
+     * Get 调用次数 
      * @return Calls 调用次数
      */
     public Integer getCalls() {
@@ -152,7 +152,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置调用次数
+     * Set 调用次数
      * @param Calls 调用次数
      */
     public void setCalls(Integer Calls) {
@@ -160,7 +160,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取粒度点
+     * Get 粒度点 
      * @return CallsGrids 粒度点
      */
     public Integer [] getCallsGrids() {
@@ -168,7 +168,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置粒度点
+     * Set 粒度点
      * @param CallsGrids 粒度点
      */
     public void setCallsGrids(Integer [] CallsGrids) {
@@ -176,7 +176,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取花费总时间
+     * Get 花费总时间 
      * @return CostTime 花费总时间
      */
     public Float getCostTime() {
@@ -184,7 +184,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置花费总时间
+     * Set 花费总时间
      * @param CostTime 花费总时间
      */
     public void setCostTime(Float CostTime) {
@@ -192,7 +192,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取影响的行数
+     * Get 影响的行数 
      * @return Rows 影响的行数
      */
     public Integer getRows() {
@@ -200,7 +200,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置影响的行数
+     * Set 影响的行数
      * @param Rows 影响的行数
      */
     public void setRows(Integer Rows) {
@@ -208,7 +208,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取花费最小时间
+     * Get 花费最小时间 
      * @return MinCostTime 花费最小时间
      */
     public Float getMinCostTime() {
@@ -216,7 +216,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置花费最小时间
+     * Set 花费最小时间
      * @param MinCostTime 花费最小时间
      */
     public void setMinCostTime(Float MinCostTime) {
@@ -224,7 +224,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取花费最大时间
+     * Get 花费最大时间 
      * @return MaxCostTime 花费最大时间
      */
     public Float getMaxCostTime() {
@@ -232,7 +232,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置花费最大时间
+     * Set 花费最大时间
      * @param MaxCostTime 花费最大时间
      */
     public void setMaxCostTime(Float MaxCostTime) {
@@ -240,7 +240,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取最早一条慢SQL时间
+     * Get 最早一条慢SQL时间 
      * @return FirstTime 最早一条慢SQL时间
      */
     public String getFirstTime() {
@@ -248,7 +248,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置最早一条慢SQL时间
+     * Set 最早一条慢SQL时间
      * @param FirstTime 最早一条慢SQL时间
      */
     public void setFirstTime(String FirstTime) {
@@ -256,7 +256,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取最晚一条慢SQL时间
+     * Get 最晚一条慢SQL时间 
      * @return LastTime 最晚一条慢SQL时间
      */
     public String getLastTime() {
@@ -264,7 +264,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置最晚一条慢SQL时间
+     * Set 最晚一条慢SQL时间
      * @param LastTime 最晚一条慢SQL时间
      */
     public void setLastTime(String LastTime) {
@@ -272,7 +272,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取读共享内存块数
+     * Get 读共享内存块数 
      * @return SharedReadBlks 读共享内存块数
      */
     public Integer getSharedReadBlks() {
@@ -280,7 +280,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置读共享内存块数
+     * Set 读共享内存块数
      * @param SharedReadBlks 读共享内存块数
      */
     public void setSharedReadBlks(Integer SharedReadBlks) {
@@ -288,7 +288,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取写共享内存块数
+     * Get 写共享内存块数 
      * @return SharedWriteBlks 写共享内存块数
      */
     public Integer getSharedWriteBlks() {
@@ -296,7 +296,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置写共享内存块数
+     * Set 写共享内存块数
      * @param SharedWriteBlks 写共享内存块数
      */
     public void setSharedWriteBlks(Integer SharedWriteBlks) {
@@ -304,7 +304,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取读io总耗时
+     * Get 读io总耗时 
      * @return ReadCostTime 读io总耗时
      */
     public Integer getReadCostTime() {
@@ -312,7 +312,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置读io总耗时
+     * Set 读io总耗时
      * @param ReadCostTime 读io总耗时
      */
     public void setReadCostTime(Integer ReadCostTime) {
@@ -320,7 +320,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取写io总耗时
+     * Get 写io总耗时 
      * @return WriteCostTime 写io总耗时
      */
     public Integer getWriteCostTime() {
@@ -328,7 +328,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置写io总耗时
+     * Set 写io总耗时
      * @param WriteCostTime 写io总耗时
      */
     public void setWriteCostTime(Integer WriteCostTime) {
@@ -336,7 +336,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名字
+     * Get 数据库名字 
      * @return DatabaseName 数据库名字
      */
     public String getDatabaseName() {
@@ -344,7 +344,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名字
+     * Set 数据库名字
      * @param DatabaseName 数据库名字
      */
     public void setDatabaseName(String DatabaseName) {
@@ -352,7 +352,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 获取脱敏后的慢SQL
+     * Get 脱敏后的慢SQL 
      * @return NormalQuery 脱敏后的慢SQL
      */
     public String getNormalQuery() {
@@ -360,7 +360,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 设置脱敏后的慢SQL
+     * Set 脱敏后的慢SQL
      * @param NormalQuery 脱敏后的慢SQL
      */
     public void setNormalQuery(String NormalQuery) {
@@ -368,7 +368,7 @@ public class NormalQueryItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

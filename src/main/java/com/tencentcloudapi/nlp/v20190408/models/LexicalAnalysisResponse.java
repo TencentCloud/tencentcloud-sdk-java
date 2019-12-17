@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LexicalAnalysisResponse  extends AbstractModel{
+public class LexicalAnalysisResponse extends AbstractModel{
 
     /**
     * 命名实体识别结果。取值范围：
@@ -47,10 +47,10 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取命名实体识别结果。取值范围：
+     * Get 命名实体识别结果。取值范围：
 <li>PER：表示人名</li>
 <li>LOC：表示地名</li>
-<li>ORG：表示机构团体名</li>
+<li>ORG：表示机构团体名</li> 
      * @return NerTokens 命名实体识别结果。取值范围：
 <li>PER：表示人名</li>
 <li>LOC：表示地名</li>
@@ -61,7 +61,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置命名实体识别结果。取值范围：
+     * Set 命名实体识别结果。取值范围：
 <li>PER：表示人名</li>
 <li>LOC：表示地名</li>
 <li>ORG：表示机构团体名</li>
@@ -75,7 +75,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分词&词性标注结果（词性表请参见附录）
+     * Get 分词&词性标注结果（词性表请参见附录） 
      * @return PosTokens 分词&词性标注结果（词性表请参见附录）
      */
     public PosToken [] getPosTokens() {
@@ -83,7 +83,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分词&词性标注结果（词性表请参见附录）
+     * Set 分词&词性标注结果（词性表请参见附录）
      * @param PosTokens 分词&词性标注结果（词性表请参见附录）
      */
     public void setPosTokens(PosToken [] PosTokens) {
@@ -91,7 +91,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -99,7 +99,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -107,7 +107,7 @@ public class LexicalAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NerTokens.", this.NerTokens);

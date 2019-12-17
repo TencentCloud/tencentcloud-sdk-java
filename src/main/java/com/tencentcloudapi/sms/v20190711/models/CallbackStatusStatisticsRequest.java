@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallbackStatusStatisticsRequest  extends AbstractModel{
+public class CallbackStatusStatisticsRequest extends AbstractModel{
 
     /**
     * 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
@@ -61,7 +61,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+     * Get 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时 
      * @return StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
      */
     public Long getStartDateTime() {
@@ -69,7 +69,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+     * Set 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
      * @param StartDateTime 开始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
      */
     public void setStartDateTime(Long StartDateTime) {
@@ -77,8 +77,8 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+     * Get 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
+注：EndDataTime 必须大于StartDateTime 
      * @return EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
 注：EndDataTime 必须大于StartDateTime
      */
@@ -87,7 +87,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
+     * Set 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
 注：EndDataTime 必须大于StartDateTime
      * @param EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
 注：EndDataTime 必须大于StartDateTime
@@ -97,7 +97,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
      * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public String getSmsSdkAppid() {
@@ -105,7 +105,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
@@ -113,8 +113,8 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大上限
-注：目前固定设置为0
+     * Get 最大上限
+注：目前固定设置为0 
      * @return Limit 最大上限
 注：目前固定设置为0
      */
@@ -123,7 +123,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大上限
+     * Set 最大上限
 注：目前固定设置为0
      * @param Limit 最大上限
 注：目前固定设置为0
@@ -133,8 +133,8 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
-注：目前固定设置为0
+     * Get 偏移量
+注：目前固定设置为0 
      * @return Offset 偏移量
 注：目前固定设置为0
      */
@@ -143,7 +143,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
 注：目前固定设置为0
      * @param Offset 偏移量
 注：目前固定设置为0
@@ -153,7 +153,7 @@ public class CallbackStatusStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartDateTime", this.StartDateTime);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnvDataCpm  extends AbstractModel{
+public class EnvDataCpm extends AbstractModel{
 
     /**
     * 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
@@ -170,7 +170,7 @@ public class EnvDataCpm  extends AbstractModel{
     private String [] LanIps;
 
     /**
-     * 获取黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * Get 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。 
      * @return Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
      */
     public String [] getZones() {
@@ -178,7 +178,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
+     * Set 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
      * @param Zones 黑石可用区名称列表。如ap-guangzhou-bls-1, 可通过黑石接口[DescribeRegions]( https://cloud.tencent.com/document/api/386/33564)接口获取。不是Batch可用区名称。目前仅支持一个可用区名称。
      */
     public void setZones(String [] Zones) {
@@ -186,7 +186,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * Get 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。 
      * @return InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
      */
     public String [] getInstanceTypes() {
@@ -194,7 +194,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
+     * Set 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
      * @param InstanceTypes 购买的机型ID。通过黑石接口[DescribeDeviceClass]( https://cloud.tencent.com/document/api/386/32911)查询设备型号，获取机型信息。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
@@ -202,7 +202,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长单位，取值：m(月)。
+     * Get 购买时长单位，取值：m(月)。 
      * @return TimeUnit 购买时长单位，取值：m(月)。
      */
     public String getTimeUnit() {
@@ -210,7 +210,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长单位，取值：m(月)。
+     * Set 购买时长单位，取值：m(月)。
      * @param TimeUnit 购买时长单位，取值：m(月)。
      */
     public void setTimeUnit(String TimeUnit) {
@@ -218,7 +218,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长。
+     * Get 购买时长。 
      * @return TimeSpan 购买时长。
      */
     public Integer getTimeSpan() {
@@ -226,7 +226,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长。
+     * Set 购买时长。
      * @param TimeSpan 购买时长。
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -234,7 +234,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * Get RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。 
      * @return RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
      */
     public Integer getRaidId() {
@@ -242,7 +242,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
+     * Set RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
      * @param RaidId RAID类型ID。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取RAID信息。
      */
     public void setRaidId(Integer RaidId) {
@@ -250,7 +250,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * Get 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。 
      * @return OsTypeId 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
      */
     public Integer getOsTypeId() {
@@ -258,7 +258,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * Set 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
      * @param OsTypeId 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -266,7 +266,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取黑石VPC列表，目前仅支持一个VPC。
+     * Get 黑石VPC列表，目前仅支持一个VPC。 
      * @return VirtualPrivateClouds 黑石VPC列表，目前仅支持一个VPC。
      */
     public CpmVirtualPrivateCloud [] getVirtualPrivateClouds() {
@@ -274,7 +274,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置黑石VPC列表，目前仅支持一个VPC。
+     * Set 黑石VPC列表，目前仅支持一个VPC。
      * @param VirtualPrivateClouds 黑石VPC列表，目前仅支持一个VPC。
      */
     public void setVirtualPrivateClouds(CpmVirtualPrivateCloud [] VirtualPrivateClouds) {
@@ -282,7 +282,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
+     * Get 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。 
      * @return NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
      */
     public Integer getNeedSecurityAgent() {
@@ -290,7 +290,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
+     * Set 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
      * @param NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0。
      */
     public void setNeedSecurityAgent(Integer NeedSecurityAgent) {
@@ -298,7 +298,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。
+     * Get 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。 
      * @return NeedMonitorAgent 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。
      */
     public Integer getNeedMonitorAgent() {
@@ -306,7 +306,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。
+     * Set 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。
      * @param NeedMonitorAgent 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0。
      */
     public void setNeedMonitorAgent(Integer NeedMonitorAgent) {
@@ -314,7 +314,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。
+     * Get 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。 
      * @return AutoRenewFlag 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。
      */
     public Integer getAutoRenewFlag() {
@@ -322,7 +322,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。
+     * Set 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。
      * @param AutoRenewFlag 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0。
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -330,7 +330,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。
+     * Get 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。 
      * @return IsZoning 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。
      */
     public Integer getIsZoning() {
@@ -338,7 +338,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。
+     * Set 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。
      * @param IsZoning 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1。
      */
     public void setIsZoning(Integer IsZoning) {
@@ -346,7 +346,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。
+     * Get 指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。 
      * @return FileSystem 指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。
      */
     public String getFileSystem() {
@@ -354,7 +354,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。
+     * Set 指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。
      * @param FileSystem 指定数据盘的文件系统格式，当前支持 ext4和xfs选项， 默认为ext4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效。
      */
     public void setFileSystem(String FileSystem) {
@@ -362,7 +362,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。
+     * Get 设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。 
      * @return Password 设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。
      */
     public String getPassword() {
@@ -370,7 +370,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。
+     * Set 设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。
      * @param Password 设置Linux root或Windows Administrator的密码。若不设置此参数，默认情况下会随机生成密码，并以站内信方式通知到用户。
      */
     public void setPassword(String Password) {
@@ -378,7 +378,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。
+     * Get 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。 
      * @return ApplyEip 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。
      */
     public Integer getApplyEip() {
@@ -386,7 +386,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。
+     * Set 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。
      * @param ApplyEip 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0。
      */
     public void setApplyEip(Integer ApplyEip) {
@@ -394,7 +394,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
+     * Get 弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。 
      * @return EipPayMode 弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
      */
     public String getEipPayMode() {
@@ -402,7 +402,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
+     * Set 弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
      * @param EipPayMode 弹性公网IP计费模式，取值：flow(按流量计费) bandwidth(按带宽计费)，默认取值flow。
      */
     public void setEipPayMode(String EipPayMode) {
@@ -410,7 +410,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网IP带宽限制，单位Mb。
+     * Get 弹性公网IP带宽限制，单位Mb。 
      * @return EipBandwidth 弹性公网IP带宽限制，单位Mb。
      */
     public Integer getEipBandwidth() {
@@ -418,7 +418,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP带宽限制，单位Mb。
+     * Set 弹性公网IP带宽限制，单位Mb。
      * @param EipBandwidth 弹性公网IP带宽限制，单位Mb。
      */
     public void setEipBandwidth(Integer EipBandwidth) {
@@ -426,7 +426,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取自定义镜像ID，取值生效时用自定义镜像部署物理机。
+     * Get 自定义镜像ID，取值生效时用自定义镜像部署物理机。 
      * @return ImageId 自定义镜像ID，取值生效时用自定义镜像部署物理机。
      */
     public String getImageId() {
@@ -434,7 +434,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置自定义镜像ID，取值生效时用自定义镜像部署物理机。
+     * Set 自定义镜像ID，取值生效时用自定义镜像部署物理机。
      * @param ImageId 自定义镜像ID，取值生效时用自定义镜像部署物理机。
      */
     public void setImageId(String ImageId) {
@@ -442,7 +442,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * Get 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。 
      * @return SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
      */
     public Integer getSysRootSpace() {
@@ -450,7 +450,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
+     * Set 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
      * @param SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过黑石接口[DescribeDeviceClassPartition]( https://cloud.tencent.com/document/api/386/32910)查询机型RAID方式以及系统盘大小，获取根分区信息。
      */
     public void setSysRootSpace(Integer SysRootSpace) {
@@ -458,7 +458,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
+     * Get /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。 
      * @return SysDataSpace /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
      */
     public Integer getSysDataSpace() {
@@ -466,7 +466,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
+     * Set /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
      * @param SysDataSpace /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）。
      */
     public void setSysDataSpace(Integer SysDataSpace) {
@@ -474,7 +474,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
+     * Get 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。 
      * @return HyperThreading 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
      */
     public Integer getHyperThreading() {
@@ -482,7 +482,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
+     * Set 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
      * @param HyperThreading 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1。
      */
     public void setHyperThreading(Integer HyperThreading) {
@@ -490,7 +490,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP列表，不指定时自动分配。
+     * Get 指定的内网IP列表，不指定时自动分配。 
      * @return LanIps 指定的内网IP列表，不指定时自动分配。
      */
     public String [] getLanIps() {
@@ -498,7 +498,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 设置指定的内网IP列表，不指定时自动分配。
+     * Set 指定的内网IP列表，不指定时自动分配。
      * @param LanIps 指定的内网IP列表，不指定时自动分配。
      */
     public void setLanIps(String [] LanIps) {
@@ -506,7 +506,7 @@ public class EnvDataCpm  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);

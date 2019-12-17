@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceSpec  extends AbstractModel{
+public class InstanceSpec extends AbstractModel{
 
     /**
     * 设备型号
@@ -37,7 +37,7 @@ public class InstanceSpec  extends AbstractModel{
     private SpecConfigInfo [] SpecInfos;
 
     /**
-     * 获取设备型号
+     * Get 设备型号 
      * @return Machine 设备型号
      */
     public String getMachine() {
@@ -45,7 +45,7 @@ public class InstanceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置设备型号
+     * Set 设备型号
      * @param Machine 设备型号
      */
     public void setMachine(String Machine) {
@@ -53,7 +53,7 @@ public class InstanceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取该机型对应的可售卖规格列表
+     * Get 该机型对应的可售卖规格列表 
      * @return SpecInfos 该机型对应的可售卖规格列表
      */
     public SpecConfigInfo [] getSpecInfos() {
@@ -61,7 +61,7 @@ public class InstanceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置该机型对应的可售卖规格列表
+     * Set 该机型对应的可售卖规格列表
      * @param SpecInfos 该机型对应的可售卖规格列表
      */
     public void setSpecInfos(SpecConfigInfo [] SpecInfos) {
@@ -69,7 +69,7 @@ public class InstanceSpec  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Machine", this.Machine);

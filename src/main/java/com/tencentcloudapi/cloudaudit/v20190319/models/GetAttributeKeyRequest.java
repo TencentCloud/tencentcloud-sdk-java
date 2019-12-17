@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetAttributeKeyRequest  extends AbstractModel{
+public class GetAttributeKeyRequest extends AbstractModel{
 
     /**
     * 网站类型，取值范围是zh和en。如果不传值默认zh
@@ -30,7 +30,7 @@ public class GetAttributeKeyRequest  extends AbstractModel{
     private String WebsiteType;
 
     /**
-     * 获取网站类型，取值范围是zh和en。如果不传值默认zh
+     * Get 网站类型，取值范围是zh和en。如果不传值默认zh 
      * @return WebsiteType 网站类型，取值范围是zh和en。如果不传值默认zh
      */
     public String getWebsiteType() {
@@ -38,7 +38,7 @@ public class GetAttributeKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网站类型，取值范围是zh和en。如果不传值默认zh
+     * Set 网站类型，取值范围是zh和en。如果不传值默认zh
      * @param WebsiteType 网站类型，取值范围是zh和en。如果不传值默认zh
      */
     public void setWebsiteType(String WebsiteType) {
@@ -46,7 +46,7 @@ public class GetAttributeKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WebsiteType", this.WebsiteType);

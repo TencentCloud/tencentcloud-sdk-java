@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IpInfo  extends AbstractModel{
+public class IpInfo extends AbstractModel{
 
     /**
     * 子网ID
@@ -37,7 +37,7 @@ public class IpInfo  extends AbstractModel{
     private String [] Ips;
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -45,7 +45,7 @@ public class IpInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -53,7 +53,7 @@ public class IpInfo  extends AbstractModel{
     }
 
     /**
-     * 获取IP列表
+     * Get IP列表 
      * @return Ips IP列表
      */
     public String [] getIps() {
@@ -61,7 +61,7 @@ public class IpInfo  extends AbstractModel{
     }
 
     /**
-     * 设置IP列表
+     * Set IP列表
      * @param Ips IP列表
      */
     public void setIps(String [] Ips) {
@@ -69,7 +69,7 @@ public class IpInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupsRequest  extends AbstractModel{
+public class DescribeBackupsRequest extends AbstractModel{
 
     /**
     * 开始时间(yyyy-MM-dd HH:mm:ss)
@@ -48,17 +48,17 @@ public class DescribeBackupsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认为 0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
-     * 获取开始时间(yyyy-MM-dd HH:mm:ss)
+     * Get 开始时间(yyyy-MM-dd HH:mm:ss) 
      * @return StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getStartTime() {
@@ -66,7 +66,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间(yyyy-MM-dd HH:mm:ss)
+     * Set 开始时间(yyyy-MM-dd HH:mm:ss)
      * @param StartTime 开始时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setStartTime(String StartTime) {
@@ -74,7 +74,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间(yyyy-MM-dd HH:mm:ss)
+     * Get 结束时间(yyyy-MM-dd HH:mm:ss) 
      * @return EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public String getEndTime() {
@@ -82,7 +82,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间(yyyy-MM-dd HH:mm:ss)
+     * Set 结束时间(yyyy-MM-dd HH:mm:ss)
      * @param EndTime 结束时间(yyyy-MM-dd HH:mm:ss)
      */
     public void setEndTime(String EndTime) {
@@ -90,7 +90,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，形如mssql-njj2mtpl
+     * Get 实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 实例ID，形如mssql-njj2mtpl
      */
     public String getInstanceId() {
@@ -98,7 +98,7 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-njj2mtpl
+     * Set 实例ID，形如mssql-njj2mtpl
      * @param InstanceId 实例ID，形如mssql-njj2mtpl
      */
     public void setInstanceId(String InstanceId) {
@@ -106,39 +106,39 @@ public class DescribeBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，每页返回数量，默认为20，最大值为 100
+     * Get 分页返回，每页返回数量，默认为20，最大值为 100 
      * @return Limit 分页返回，每页返回数量，默认为20，最大值为 100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页返回，每页返回数量，默认为20，最大值为 100
+     * Set 分页返回，每页返回数量，默认为20，最大值为 100
      * @param Limit 分页返回，每页返回数量，默认为20，最大值为 100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取偏移量，默认为 0
+     * Get 偏移量，默认为 0 
      * @return Offset 偏移量，默认为 0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为 0
+     * Set 偏移量，默认为 0
      * @param Offset 偏移量，默认为 0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

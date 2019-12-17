@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePriceRequest  extends AbstractModel{
+public class DescribePriceRequest extends AbstractModel{
 
     /**
     * 欲新购实例的可用区ID。
@@ -68,7 +68,7 @@ public class DescribePriceRequest  extends AbstractModel{
     private Integer Count;
 
     /**
-     * 获取欲新购实例的可用区ID。
+     * Get 欲新购实例的可用区ID。 
      * @return Zone 欲新购实例的可用区ID。
      */
     public String getZone() {
@@ -76,7 +76,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲新购实例的可用区ID。
+     * Set 欲新购实例的可用区ID。
      * @param Zone 欲新购实例的可用区ID。
      */
     public void setZone(String Zone) {
@@ -84,8 +84,8 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例节点个数，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得。
+     * Get 实例节点个数，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得。 
      * @return NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
@@ -94,7 +94,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例节点个数，可以通过 DescribeDBInstanceSpecs
+     * Set 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -104,8 +104,8 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得。
+     * Get 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得。 
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
@@ -114,7 +114,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -124,8 +124,8 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * Get 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。 
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
@@ -134,7 +134,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
@@ -144,7 +144,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的时长，单位：月。
+     * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
     public Integer getPeriod() {
@@ -152,7 +152,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的时长，单位：月。
+     * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
     public void setPeriod(Integer Period) {
@@ -160,7 +160,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的数量，默认查询购买1个实例的价格。
+     * Get 欲购买的数量，默认查询购买1个实例的价格。 
      * @return Count 欲购买的数量，默认查询购买1个实例的价格。
      */
     public Integer getCount() {
@@ -168,7 +168,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的数量，默认查询购买1个实例的价格。
+     * Set 欲购买的数量，默认查询购买1个实例的价格。
      * @param Count 欲购买的数量，默认查询购买1个实例的价格。
      */
     public void setCount(Integer Count) {
@@ -176,7 +176,7 @@ public class DescribePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

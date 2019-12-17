@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataHistoryEntry  extends AbstractModel{
+public class DataHistoryEntry extends AbstractModel{
 
     /**
     * 日志id
@@ -51,7 +51,7 @@ public class DataHistoryEntry  extends AbstractModel{
     private String Data;
 
     /**
-     * 获取日志id
+     * Get 日志id 
      * @return Id 日志id
      */
     public String getId() {
@@ -59,7 +59,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 设置日志id
+     * Set 日志id
      * @param Id 日志id
      */
     public void setId(String Id) {
@@ -67,7 +67,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 获取时间戳
+     * Get 时间戳 
      * @return Timestamp 时间戳
      */
     public Integer getTimestamp() {
@@ -75,7 +75,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 设置时间戳
+     * Set 时间戳
      * @param Timestamp 时间戳
      */
     public void setTimestamp(Integer Timestamp) {
@@ -83,7 +83,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -91,7 +91,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -99,7 +99,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 获取数据
+     * Get 数据 
      * @return Data 数据
      */
     public String getData() {
@@ -107,7 +107,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 设置数据
+     * Set 数据
      * @param Data 数据
      */
     public void setData(String Data) {
@@ -115,7 +115,7 @@ public class DataHistoryEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

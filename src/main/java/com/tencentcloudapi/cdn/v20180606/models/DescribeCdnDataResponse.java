@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnDataResponse  extends AbstractModel{
+public class DescribeCdnDataResponse extends AbstractModel{
 
     /**
     * 返回数据的时间粒度，查询时指定：
@@ -48,11 +48,11 @@ day：天粒度
     private String RequestId;
 
     /**
-     * 获取返回数据的时间粒度，查询时指定：
+     * Get 返回数据的时间粒度，查询时指定：
 min：1 分钟粒度
 5min：5 分钟粒度
 hour：1 小时粒度
-day：天粒度
+day：天粒度 
      * @return Interval 返回数据的时间粒度，查询时指定：
 min：1 分钟粒度
 5min：5 分钟粒度
@@ -64,7 +64,7 @@ day：天粒度
     }
 
     /**
-     * 设置返回数据的时间粒度，查询时指定：
+     * Set 返回数据的时间粒度，查询时指定：
 min：1 分钟粒度
 5min：5 分钟粒度
 hour：1 小时粒度
@@ -80,7 +80,7 @@ day：天粒度
     }
 
     /**
-     * 获取指定条件查询得到的数据明细
+     * Get 指定条件查询得到的数据明细 
      * @return Data 指定条件查询得到的数据明细
      */
     public ResourceData [] getData() {
@@ -88,7 +88,7 @@ day：天粒度
     }
 
     /**
-     * 设置指定条件查询得到的数据明细
+     * Set 指定条件查询得到的数据明细
      * @param Data 指定条件查询得到的数据明细
      */
     public void setData(ResourceData [] Data) {
@@ -96,7 +96,7 @@ day：天粒度
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -104,7 +104,7 @@ day：天粒度
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -112,7 +112,7 @@ day：天粒度
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Interval", this.Interval);

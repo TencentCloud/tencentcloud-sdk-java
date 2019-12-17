@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncInstanceInfo  extends AbstractModel{
+public class SyncInstanceInfo extends AbstractModel{
 
     /**
     * 地域英文名，如：ap-guangzhou
@@ -37,7 +37,7 @@ public class SyncInstanceInfo  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取地域英文名，如：ap-guangzhou
+     * Get 地域英文名，如：ap-guangzhou 
      * @return Region 地域英文名，如：ap-guangzhou
      */
     public String getRegion() {
@@ -45,7 +45,7 @@ public class SyncInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域英文名，如：ap-guangzhou
+     * Set 地域英文名，如：ap-guangzhou
      * @param Region 地域英文名，如：ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -53,7 +53,7 @@ public class SyncInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例短Id
+     * Get 实例短Id 
      * @return InstanceId 实例短Id
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class SyncInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例短Id
+     * Set 实例短Id
      * @param InstanceId 实例短Id
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class SyncInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

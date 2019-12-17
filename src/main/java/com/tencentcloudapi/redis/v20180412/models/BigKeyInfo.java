@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BigKeyInfo  extends AbstractModel{
+public class BigKeyInfo extends AbstractModel{
 
     /**
     * 所属的database
@@ -58,7 +58,7 @@ public class BigKeyInfo  extends AbstractModel{
     private Integer Updatetime;
 
     /**
-     * 获取所属的database
+     * Get 所属的database 
      * @return DB 所属的database
      */
     public Integer getDB() {
@@ -66,7 +66,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属的database
+     * Set 所属的database
      * @param DB 所属的database
      */
     public void setDB(Integer DB) {
@@ -74,7 +74,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大Key
+     * Get 大Key 
      * @return Key 大Key
      */
     public String getKey() {
@@ -82,7 +82,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大Key
+     * Set 大Key
      * @param Key 大Key
      */
     public void setKey(String Key) {
@@ -90,7 +90,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取类型
+     * Get 类型 
      * @return Type 类型
      */
     public String getType() {
@@ -98,7 +98,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置类型
+     * Set 类型
      * @param Type 类型
      */
     public void setType(String Type) {
@@ -106,7 +106,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大小
+     * Get 大小 
      * @return Size 大小
      */
     public Integer getSize() {
@@ -114,7 +114,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大小
+     * Set 大小
      * @param Size 大小
      */
     public void setSize(Integer Size) {
@@ -122,7 +122,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据时间戳
+     * Get 数据时间戳 
      * @return Updatetime 数据时间戳
      */
     public Integer getUpdatetime() {
@@ -130,7 +130,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间戳
+     * Set 数据时间戳
      * @param Updatetime 数据时间戳
      */
     public void setUpdatetime(Integer Updatetime) {
@@ -138,7 +138,7 @@ public class BigKeyInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DB", this.DB);

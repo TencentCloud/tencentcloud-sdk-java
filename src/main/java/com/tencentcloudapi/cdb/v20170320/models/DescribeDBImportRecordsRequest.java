@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBImportRecordsRequest  extends AbstractModel{
+public class DescribeDBImportRecordsRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -58,7 +58,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，时间格式如：2016-01-01 00:00:01。
+     * Get 开始时间，时间格式如：2016-01-01 00:00:01。 
      * @return StartTime 开始时间，时间格式如：2016-01-01 00:00:01。
      */
     public String getStartTime() {
@@ -82,7 +82,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，时间格式如：2016-01-01 00:00:01。
+     * Set 开始时间，时间格式如：2016-01-01 00:00:01。
      * @param StartTime 开始时间，时间格式如：2016-01-01 00:00:01。
      */
     public void setStartTime(String StartTime) {
@@ -90,7 +90,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，时间格式如：2016-01-01 23:59:59。
+     * Get 结束时间，时间格式如：2016-01-01 23:59:59。 
      * @return EndTime 结束时间，时间格式如：2016-01-01 23:59:59。
      */
     public String getEndTime() {
@@ -98,7 +98,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，时间格式如：2016-01-01 23:59:59。
+     * Set 结束时间，时间格式如：2016-01-01 23:59:59。
      * @param EndTime 结束时间，时间格式如：2016-01-01 23:59:59。
      */
     public void setEndTime(String EndTime) {
@@ -106,7 +106,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，偏移量，默认值为0。
+     * Get 分页参数，偏移量，默认值为0。 
      * @return Offset 分页参数，偏移量，默认值为0。
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，偏移量，默认值为0。
+     * Set 分页参数，偏移量，默认值为0。
      * @param Offset 分页参数，偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Get 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。 
      * @return Limit 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Set 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      * @param Limit 分页参数，单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeDBImportRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

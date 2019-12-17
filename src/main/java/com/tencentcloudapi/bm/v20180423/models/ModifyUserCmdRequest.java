@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUserCmdRequest  extends AbstractModel{
+public class ModifyUserCmdRequest extends AbstractModel{
 
     /**
     * 待修改的脚本ID
@@ -51,7 +51,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取待修改的脚本ID
+     * Get 待修改的脚本ID 
      * @return CmdId 待修改的脚本ID
      */
     public String getCmdId() {
@@ -59,7 +59,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的脚本ID
+     * Set 待修改的脚本ID
      * @param CmdId 待修改的脚本ID
      */
     public void setCmdId(String CmdId) {
@@ -67,7 +67,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待修改的脚本名称
+     * Get 待修改的脚本名称 
      * @return Alias 待修改的脚本名称
      */
     public String getAlias() {
@@ -75,7 +75,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的脚本名称
+     * Set 待修改的脚本名称
      * @param Alias 待修改的脚本名称
      */
     public void setAlias(String Alias) {
@@ -83,7 +83,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取脚本适用的操作系统类型
+     * Get 脚本适用的操作系统类型 
      * @return OsType 脚本适用的操作系统类型
      */
     public String getOsType() {
@@ -91,7 +91,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置脚本适用的操作系统类型
+     * Set 脚本适用的操作系统类型
      * @param OsType 脚本适用的操作系统类型
      */
     public void setOsType(String OsType) {
@@ -99,7 +99,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待修改的脚本内容，必须经过base64编码
+     * Get 待修改的脚本内容，必须经过base64编码 
      * @return Content 待修改的脚本内容，必须经过base64编码
      */
     public String getContent() {
@@ -107,7 +107,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的脚本内容，必须经过base64编码
+     * Set 待修改的脚本内容，必须经过base64编码
      * @param Content 待修改的脚本内容，必须经过base64编码
      */
     public void setContent(String Content) {
@@ -115,7 +115,7 @@ public class ModifyUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmdId", this.CmdId);

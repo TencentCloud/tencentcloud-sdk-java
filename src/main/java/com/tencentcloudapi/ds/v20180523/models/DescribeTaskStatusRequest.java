@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusRequest  extends AbstractModel{
+public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * 模块名CommonMng
@@ -44,7 +44,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private Integer TaskId;
 
     /**
-     * 获取模块名CommonMng
+     * Get 模块名CommonMng 
      * @return Module 模块名CommonMng
      */
     public String getModule() {
@@ -52,7 +52,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名CommonMng
+     * Set 模块名CommonMng
      * @param Module 模块名CommonMng
      */
     public void setModule(String Module) {
@@ -60,7 +60,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名DescribeTaskStatus
+     * Get 操作名DescribeTaskStatus 
      * @return Operation 操作名DescribeTaskStatus
      */
     public String getOperation() {
@@ -68,7 +68,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名DescribeTaskStatus
+     * Set 操作名DescribeTaskStatus
      * @param Operation 操作名DescribeTaskStatus
      */
     public void setOperation(String Operation) {
@@ -76,7 +76,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public Integer getTaskId() {
@@ -84,7 +84,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -92,7 +92,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

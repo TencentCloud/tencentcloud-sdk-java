@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DateCount  extends AbstractModel{
+public class DateCount extends AbstractModel{
 
     /**
     * 统计日期
@@ -37,7 +37,7 @@ public class DateCount  extends AbstractModel{
     private Integer Count;
 
     /**
-     * 获取统计日期
+     * Get 统计日期 
      * @return Date 统计日期
      */
     public String getDate() {
@@ -45,7 +45,7 @@ public class DateCount  extends AbstractModel{
     }
 
     /**
-     * 设置统计日期
+     * Set 统计日期
      * @param Date 统计日期
      */
     public void setDate(String Date) {
@@ -53,7 +53,7 @@ public class DateCount  extends AbstractModel{
     }
 
     /**
-     * 获取统计值
+     * Get 统计值 
      * @return Count 统计值
      */
     public Integer getCount() {
@@ -61,7 +61,7 @@ public class DateCount  extends AbstractModel{
     }
 
     /**
-     * 设置统计值
+     * Set 统计值
      * @param Count 统计值
      */
     public void setCount(Integer Count) {
@@ -69,7 +69,7 @@ public class DateCount  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

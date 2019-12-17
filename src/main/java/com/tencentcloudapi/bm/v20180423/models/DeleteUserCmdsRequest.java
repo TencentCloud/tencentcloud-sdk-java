@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUserCmdsRequest  extends AbstractModel{
+public class DeleteUserCmdsRequest extends AbstractModel{
 
     /**
     * 需要删除的脚本ID
@@ -30,7 +30,7 @@ public class DeleteUserCmdsRequest  extends AbstractModel{
     private String [] CmdIds;
 
     /**
-     * 获取需要删除的脚本ID
+     * Get 需要删除的脚本ID 
      * @return CmdIds 需要删除的脚本ID
      */
     public String [] getCmdIds() {
@@ -38,7 +38,7 @@ public class DeleteUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的脚本ID
+     * Set 需要删除的脚本ID
      * @param CmdIds 需要删除的脚本ID
      */
     public void setCmdIds(String [] CmdIds) {
@@ -46,7 +46,7 @@ public class DeleteUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "CmdIds.", this.CmdIds);

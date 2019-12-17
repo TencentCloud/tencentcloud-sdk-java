@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyUserCertRequest  extends AbstractModel{
+public class ApplyUserCertRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：cert_mng
@@ -86,7 +86,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     private String Notes;
 
     /**
-     * 获取模块名，固定字段：cert_mng
+     * Get 模块名，固定字段：cert_mng 
      * @return Module 模块名，固定字段：cert_mng
      */
     public String getModule() {
@@ -94,7 +94,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：cert_mng
+     * Set 模块名，固定字段：cert_mng
      * @param Module 模块名，固定字段：cert_mng
      */
     public void setModule(String Module) {
@@ -102,7 +102,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：cert_apply_for_user
+     * Get 操作名，固定字段：cert_apply_for_user 
      * @return Operation 操作名，固定字段：cert_apply_for_user
      */
     public String getOperation() {
@@ -110,7 +110,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：cert_apply_for_user
+     * Set 操作名，固定字段：cert_apply_for_user
      * @param Operation 操作名，固定字段：cert_apply_for_user
      */
     public void setOperation(String Operation) {
@@ -118,7 +118,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -126,7 +126,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -134,7 +134,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -142,7 +142,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 申请证书的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -150,7 +150,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
+     * Get 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10 
      * @return UserIdentity 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
      */
     public String getUserIdentity() {
@@ -158,7 +158,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
+     * Set 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
      * @param UserIdentity 用户证书标识，用于标识用户证书，要求由纯小写字母组成，长度小于10
      */
     public void setUserIdentity(String UserIdentity) {
@@ -166,7 +166,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书申请实体，使用腾讯云账号实名认证的名称
+     * Get 证书申请实体，使用腾讯云账号实名认证的名称 
      * @return Applicant 证书申请实体，使用腾讯云账号实名认证的名称
      */
     public String getApplicant() {
@@ -174,7 +174,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书申请实体，使用腾讯云账号实名认证的名称
+     * Set 证书申请实体，使用腾讯云账号实名认证的名称
      * @param Applicant 证书申请实体，使用腾讯云账号实名认证的名称
      */
     public void setApplicant(String Applicant) {
@@ -182,7 +182,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+     * Get 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码 
      * @return IdentityNum 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
      */
     public String getIdentityNum() {
@@ -190,7 +190,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
+     * Set 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
      * @param IdentityNum 证件号码。如果腾讯云账号对应的实名认证类型为企业认证，填入“0”；如果腾讯云账号对应的实名认证类型为个人认证，填入个人身份证号码
      */
     public void setIdentityNum(String IdentityNum) {
@@ -198,7 +198,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取csr p10证书文件。需要用户根据文档生成证书的CSR文件
+     * Get csr p10证书文件。需要用户根据文档生成证书的CSR文件 
      * @return CsrData csr p10证书文件。需要用户根据文档生成证书的CSR文件
      */
     public String getCsrData() {
@@ -206,7 +206,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置csr p10证书文件。需要用户根据文档生成证书的CSR文件
+     * Set csr p10证书文件。需要用户根据文档生成证书的CSR文件
      * @param CsrData csr p10证书文件。需要用户根据文档生成证书的CSR文件
      */
     public void setCsrData(String CsrData) {
@@ -214,7 +214,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书备注信息
+     * Get 证书备注信息 
      * @return Notes 证书备注信息
      */
     public String getNotes() {
@@ -222,7 +222,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书备注信息
+     * Set 证书备注信息
      * @param Notes 证书备注信息
      */
     public void setNotes(String Notes) {
@@ -230,7 +230,7 @@ public class ApplyUserCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

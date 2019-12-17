@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
+public class DescribeZoneFlowDailyByZoneIdResponse extends AbstractModel{
 
     /**
     * 集团id
@@ -65,7 +65,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域ID
+     * Get 区域ID 
      * @return ZoneId 区域ID
      */
     public Integer getZoneId() {
@@ -105,7 +105,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID
+     * Set 区域ID
      * @param ZoneId 区域ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -113,7 +113,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return ZoneName 区域名称
      */
     public String getZoneName() {
@@ -121,7 +121,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param ZoneName 区域名称
      */
     public void setZoneName(String ZoneName) {
@@ -129,7 +129,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每日人流量
+     * Get 每日人流量 
      * @return Data 每日人流量
      */
     public ZoneDayFlow [] getData() {
@@ -137,7 +137,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每日人流量
+     * Set 每日人流量
      * @param Data 每日人流量
      */
     public void setData(ZoneDayFlow [] Data) {
@@ -145,7 +145,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeZoneFlowDailyByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

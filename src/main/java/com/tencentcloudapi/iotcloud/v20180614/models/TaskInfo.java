@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInfo  extends AbstractModel{
+public class TaskInfo extends AbstractModel{
 
     /**
     * 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
@@ -79,7 +79,7 @@ public class TaskInfo  extends AbstractModel{
     private String ErrMsg;
 
     /**
-     * 获取任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Get 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage” 
      * @return Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public String getType() {
@@ -87,7 +87,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Set 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public void setType(String Type) {
@@ -95,7 +95,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务 ID
+     * Get 任务 ID 
      * @return Id 任务 ID
      */
     public String getId() {
@@ -103,7 +103,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID
+     * Set 任务 ID
      * @param Id 任务 ID
      */
     public void setId(String Id) {
@@ -111,7 +111,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品 ID
+     * Get 产品 ID 
      * @return ProductId 产品 ID
      */
     public String getProductId() {
@@ -119,7 +119,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID
+     * Set 产品 ID
      * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
@@ -127,7 +127,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
+     * Get 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消 
      * @return Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
     public Integer getStatus() {
@@ -135,7 +135,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
+     * Set 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      * @param Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
     public void setStatus(Integer Status) {
@@ -143,7 +143,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间，Unix 时间戳
+     * Get 任务创建时间，Unix 时间戳 
      * @return CreateTime 任务创建时间，Unix 时间戳
      */
     public Integer getCreateTime() {
@@ -151,7 +151,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间，Unix 时间戳
+     * Set 任务创建时间，Unix 时间戳
      * @param CreateTime 任务创建时间，Unix 时间戳
      */
     public void setCreateTime(Integer CreateTime) {
@@ -159,7 +159,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最后任务更新时间，Unix 时间戳
+     * Get 最后任务更新时间，Unix 时间戳 
      * @return UpdateTime 最后任务更新时间，Unix 时间戳
      */
     public Integer getUpdateTime() {
@@ -167,7 +167,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最后任务更新时间，Unix 时间戳
+     * Set 最后任务更新时间，Unix 时间戳
      * @param UpdateTime 最后任务更新时间，Unix 时间戳
      */
     public void setUpdateTime(Integer UpdateTime) {
@@ -175,7 +175,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取返回的错误码
+     * Get 返回的错误码 
      * @return RetCode 返回的错误码
      */
     public Integer getRetCode() {
@@ -183,7 +183,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置返回的错误码
+     * Set 返回的错误码
      * @param RetCode 返回的错误码
      */
     public void setRetCode(Integer RetCode) {
@@ -191,7 +191,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取返回的错误信息
+     * Get 返回的错误信息 
      * @return ErrMsg 返回的错误信息
      */
     public String getErrMsg() {
@@ -199,7 +199,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置返回的错误信息
+     * Set 返回的错误信息
      * @param ErrMsg 返回的错误信息
      */
     public void setErrMsg(String ErrMsg) {
@@ -207,7 +207,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

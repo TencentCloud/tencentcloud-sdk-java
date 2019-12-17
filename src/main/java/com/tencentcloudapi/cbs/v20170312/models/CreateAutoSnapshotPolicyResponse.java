@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
+public class CreateAutoSnapshotPolicyResponse extends AbstractModel{
 
     /**
     * 新创建的定期快照策略ID。
@@ -44,7 +44,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新创建的定期快照策略ID。
+     * Get 新创建的定期快照策略ID。 
      * @return AutoSnapshotPolicyId 新创建的定期快照策略ID。
      */
     public String getAutoSnapshotPolicyId() {
@@ -52,7 +52,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置新创建的定期快照策略ID。
+     * Set 新创建的定期快照策略ID。
      * @param AutoSnapshotPolicyId 新创建的定期快照策略ID。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
@@ -60,7 +60,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取首次开始备份的时间。
+     * Get 首次开始备份的时间。 
      * @return NextTriggerTime 首次开始备份的时间。
      */
     public String getNextTriggerTime() {
@@ -68,7 +68,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置首次开始备份的时间。
+     * Set 首次开始备份的时间。
      * @param NextTriggerTime 首次开始备份的时间。
      */
     public void setNextTriggerTime(String NextTriggerTime) {
@@ -76,7 +76,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateAutoSnapshotPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNamespaceRequest  extends AbstractModel{
+public class CreateNamespaceRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -51,7 +51,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     private String NamespaceResourceType;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -59,7 +59,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -67,7 +67,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
+     * Get 命名空间名称 
      * @return NamespaceName 命名空间名称
      */
     public String getNamespaceName() {
@@ -75,7 +75,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
      * @param NamespaceName 命名空间名称
      */
     public void setNamespaceName(String NamespaceName) {
@@ -83,7 +83,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间描述
+     * Get 命名空间描述 
      * @return NamespaceDesc 命名空间描述
      */
     public String getNamespaceDesc() {
@@ -91,7 +91,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间描述
+     * Set 命名空间描述
      * @param NamespaceDesc 命名空间描述
      */
     public void setNamespaceDesc(String NamespaceDesc) {
@@ -99,7 +99,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间资源类型(默认值为DEF)
+     * Get 命名空间资源类型(默认值为DEF) 
      * @return NamespaceResourceType 命名空间资源类型(默认值为DEF)
      */
     public String getNamespaceResourceType() {
@@ -107,7 +107,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间资源类型(默认值为DEF)
+     * Set 命名空间资源类型(默认值为DEF)
      * @param NamespaceResourceType 命名空间资源类型(默认值为DEF)
      */
     public void setNamespaceResourceType(String NamespaceResourceType) {
@@ -115,7 +115,7 @@ public class CreateNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonTraceRoute  extends AbstractModel{
+public class PersonTraceRoute extends AbstractModel{
 
     /**
     * 轨迹编码
@@ -37,7 +37,7 @@ public class PersonTraceRoute  extends AbstractModel{
     private PersonTracePoint [] TracePointSet;
 
     /**
-     * 获取轨迹编码
+     * Get 轨迹编码 
      * @return TraceId 轨迹编码
      */
     public String getTraceId() {
@@ -45,7 +45,7 @@ public class PersonTraceRoute  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹编码
+     * Set 轨迹编码
      * @param TraceId 轨迹编码
      */
     public void setTraceId(String TraceId) {
@@ -53,7 +53,7 @@ public class PersonTraceRoute  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹点序列
+     * Get 轨迹点序列 
      * @return TracePointSet 轨迹点序列
      */
     public PersonTracePoint [] getTracePointSet() {
@@ -61,7 +61,7 @@ public class PersonTraceRoute  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹点序列
+     * Set 轨迹点序列
      * @param TracePointSet 轨迹点序列
      */
     public void setTracePointSet(PersonTracePoint [] TracePointSet) {
@@ -69,7 +69,7 @@ public class PersonTraceRoute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TraceId", this.TraceId);

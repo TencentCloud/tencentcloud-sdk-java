@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeInstanceRequest  extends AbstractModel{
+public class UpgradeInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -51,7 +51,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     private String LicenseType;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标ES版本
+     * Get 目标ES版本 
      * @return EsVersion 目标ES版本
      */
     public String getEsVersion() {
@@ -75,7 +75,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标ES版本
+     * Set 目标ES版本
      * @param EsVersion 目标ES版本
      */
     public void setEsVersion(String EsVersion) {
@@ -83,7 +83,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否只做升级检查，默认值为false
+     * Get 是否只做升级检查，默认值为false 
      * @return CheckOnly 是否只做升级检查，默认值为false
      */
     public Boolean getCheckOnly() {
@@ -91,7 +91,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否只做升级检查，默认值为false
+     * Set 是否只做升级检查，默认值为false
      * @param CheckOnly 是否只做升级检查，默认值为false
      */
     public void setCheckOnly(Boolean CheckOnly) {
@@ -99,7 +99,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
+     * Get 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic 
      * @return LicenseType 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
      */
     public String getLicenseType() {
@@ -107,7 +107,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
+     * Set 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
      * @param LicenseType 目标商业特性版本：<li>oss 开源版</li><li>basic 基础版</li>当前仅在5.6.4升级6.x版本时使用，默认值为basic
      */
     public void setLicenseType(String LicenseType) {
@@ -115,7 +115,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

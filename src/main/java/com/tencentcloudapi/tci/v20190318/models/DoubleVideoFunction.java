@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DoubleVideoFunction  extends AbstractModel{
+public class DoubleVideoFunction extends AbstractModel{
 
     /**
     * 片头片尾增加图片开关
@@ -30,7 +30,7 @@ public class DoubleVideoFunction  extends AbstractModel{
     private Boolean EnableCoverPictures;
 
     /**
-     * 获取片头片尾增加图片开关
+     * Get 片头片尾增加图片开关 
      * @return EnableCoverPictures 片头片尾增加图片开关
      */
     public Boolean getEnableCoverPictures() {
@@ -38,7 +38,7 @@ public class DoubleVideoFunction  extends AbstractModel{
     }
 
     /**
-     * 设置片头片尾增加图片开关
+     * Set 片头片尾增加图片开关
      * @param EnableCoverPictures 片头片尾增加图片开关
      */
     public void setEnableCoverPictures(Boolean EnableCoverPictures) {
@@ -46,7 +46,7 @@ public class DoubleVideoFunction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableCoverPictures", this.EnableCoverPictures);

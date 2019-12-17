@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveIp6RulesRequest  extends AbstractModel{
+public class RemoveIp6RulesRequest extends AbstractModel{
 
     /**
     * IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
@@ -37,7 +37,7 @@ public class RemoveIp6RulesRequest  extends AbstractModel{
     private String [] Ip6RuleIds;
 
     /**
-     * 获取IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     * Get IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx 
      * @return Ip6TranslatorId IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public String getIp6TranslatorId() {
@@ -45,7 +45,7 @@ public class RemoveIp6RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
+     * Set IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
      * @param Ip6TranslatorId IPV6转换规则所属的转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public void setIp6TranslatorId(String Ip6TranslatorId) {
@@ -53,7 +53,7 @@ public class RemoveIp6RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待删除IPV6转换规则，形如rule6-xxxxxxxx
+     * Get 待删除IPV6转换规则，形如rule6-xxxxxxxx 
      * @return Ip6RuleIds 待删除IPV6转换规则，形如rule6-xxxxxxxx
      */
     public String [] getIp6RuleIds() {
@@ -61,7 +61,7 @@ public class RemoveIp6RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除IPV6转换规则，形如rule6-xxxxxxxx
+     * Set 待删除IPV6转换规则，形如rule6-xxxxxxxx
      * @param Ip6RuleIds 待删除IPV6转换规则，形如rule6-xxxxxxxx
      */
     public void setIp6RuleIds(String [] Ip6RuleIds) {
@@ -69,7 +69,7 @@ public class RemoveIp6RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6TranslatorId", this.Ip6TranslatorId);

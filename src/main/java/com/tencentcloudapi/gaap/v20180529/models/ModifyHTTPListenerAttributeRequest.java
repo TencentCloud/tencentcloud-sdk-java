@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
+public class ModifyHTTPListenerAttributeRequest extends AbstractModel{
 
     /**
     * 需要修改的监听器ID
@@ -44,7 +44,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取需要修改的监听器ID
+     * Get 需要修改的监听器ID 
      * @return ListenerId 需要修改的监听器ID
      */
     public String getListenerId() {
@@ -52,7 +52,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的监听器ID
+     * Set 需要修改的监听器ID
      * @param ListenerId 需要修改的监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -60,7 +60,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的监听器名称
+     * Get 新的监听器名称 
      * @return ListenerName 新的监听器名称
      */
     public String getListenerName() {
@@ -68,7 +68,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的监听器名称
+     * Set 新的监听器名称
      * @param ListenerName 新的监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -76,7 +76,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -84,7 +84,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -92,7 +92,7 @@ public class ModifyHTTPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdCardVerificationRequest  extends AbstractModel{
+public class IdCardVerificationRequest extends AbstractModel{
 
     /**
     * 身份证号
@@ -37,7 +37,7 @@ public class IdCardVerificationRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取身份证号
+     * Get 身份证号 
      * @return IdCard 身份证号
      */
     public String getIdCard() {
@@ -45,7 +45,7 @@ public class IdCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
      * @param IdCard 身份证号
      */
     public void setIdCard(String IdCard) {
@@ -53,7 +53,7 @@ public class IdCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class IdCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class IdCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);

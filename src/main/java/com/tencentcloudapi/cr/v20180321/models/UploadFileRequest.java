@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadFileRequest  extends AbstractModel{
+public class UploadFileRequest extends AbstractModel{
 
     /**
     * 模块名
@@ -58,7 +58,7 @@ public class UploadFileRequest  extends AbstractModel{
     private String FileDate;
 
     /**
-     * 获取模块名
+     * Get 模块名 
      * @return Module 模块名
      */
     public String getModule() {
@@ -66,7 +66,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名
+     * Set 模块名
      * @param Module 模块名
      */
     public void setModule(String Module) {
@@ -74,7 +74,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名
+     * Get 操作名 
      * @return Operation 操作名
      */
     public String getOperation() {
@@ -82,7 +82,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名
+     * Set 操作名
      * @param Operation 操作名
      */
     public void setOperation(String Operation) {
@@ -90,7 +90,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
+     * Get 文件上传地址，要求地址协议为HTTPS，且URL端口必须为443 
      * @return FileUrl 文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
      */
     public String getFileUrl() {
@@ -98,7 +98,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
+     * Set 文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
      * @param FileUrl 文件上传地址，要求地址协议为HTTPS，且URL端口必须为443
      */
     public void setFileUrl(String FileUrl) {
@@ -106,7 +106,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件名
+     * Get 文件名 
      * @return FileName 文件名
      */
     public String getFileName() {
@@ -114,7 +114,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
      * @param FileName 文件名
      */
     public void setFileName(String FileName) {
@@ -122,7 +122,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件日期
+     * Get 文件日期 
      * @return FileDate 文件日期
      */
     public String getFileDate() {
@@ -130,7 +130,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件日期
+     * Set 文件日期
      * @param FileDate 文件日期
      */
     public void setFileDate(String FileDate) {
@@ -138,7 +138,7 @@ public class UploadFileRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NatGatewayAddress  extends AbstractModel{
+public class NatGatewayAddress extends AbstractModel{
 
     /**
     * 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
@@ -44,7 +44,7 @@ public class NatGatewayAddress  extends AbstractModel{
     private Boolean IsBlocked;
 
     /**
-     * 获取弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+     * Get 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。 
      * @return AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      */
     public String getAddressId() {
@@ -52,7 +52,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+     * Set 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      * @param AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
      */
     public void setAddressId(String AddressId) {
@@ -60,7 +60,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 获取外网IP地址，形如：`123.121.34.33`。
+     * Get 外网IP地址，形如：`123.121.34.33`。 
      * @return PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
      */
     public String getPublicIpAddress() {
@@ -68,7 +68,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 设置外网IP地址，形如：`123.121.34.33`。
+     * Set 外网IP地址，形如：`123.121.34.33`。
      * @param PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
@@ -76,7 +76,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 获取资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * Get 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。 
      * @return IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
      */
     public Boolean getIsBlocked() {
@@ -84,7 +84,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 设置资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * Set 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
      * @param IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
      */
     public void setIsBlocked(Boolean IsBlocked) {
@@ -92,7 +92,7 @@ public class NatGatewayAddress  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);

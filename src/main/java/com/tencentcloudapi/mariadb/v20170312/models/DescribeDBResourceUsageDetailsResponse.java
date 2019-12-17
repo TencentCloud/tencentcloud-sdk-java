@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
+public class DescribeDBResourceUsageDetailsResponse extends AbstractModel{
 
     /**
     * 主节点资源使用情况监控数据
@@ -53,7 +53,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取主节点资源使用情况监控数据
+     * Get 主节点资源使用情况监控数据 
      * @return Master 主节点资源使用情况监控数据
      */
     public ResourceUsageMonitorSet getMaster() {
@@ -61,7 +61,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主节点资源使用情况监控数据
+     * Set 主节点资源使用情况监控数据
      * @param Master 主节点资源使用情况监控数据
      */
     public void setMaster(ResourceUsageMonitorSet Master) {
@@ -69,8 +69,8 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取备机1资源使用情况监控数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备机1资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Slave1 备机1资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -79,7 +79,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置备机1资源使用情况监控数据
+     * Set 备机1资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Slave1 备机1资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,8 +89,8 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取备机2资源使用情况监控数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备机2资源使用情况监控数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Slave2 备机2资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -99,7 +99,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置备机2资源使用情况监控数据
+     * Set 备机2资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Slave2 备机2资源使用情况监控数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,7 +109,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -117,7 +117,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -125,7 +125,7 @@ public class DescribeDBResourceUsageDetailsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Master.", this.Master);

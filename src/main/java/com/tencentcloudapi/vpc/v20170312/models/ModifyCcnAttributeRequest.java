@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCcnAttributeRequest  extends AbstractModel{
+public class ModifyCcnAttributeRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -44,7 +44,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     private String CcnDescription;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -52,7 +52,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -60,7 +60,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN名称，最大长度不能超过60个字节。
+     * Get CCN名称，最大长度不能超过60个字节。 
      * @return CcnName CCN名称，最大长度不能超过60个字节。
      */
     public String getCcnName() {
@@ -68,7 +68,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN名称，最大长度不能超过60个字节。
+     * Set CCN名称，最大长度不能超过60个字节。
      * @param CcnName CCN名称，最大长度不能超过60个字节。
      */
     public void setCcnName(String CcnName) {
@@ -76,7 +76,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN描述信息，最大长度不能超过100个字节。
+     * Get CCN描述信息，最大长度不能超过100个字节。 
      * @return CcnDescription CCN描述信息，最大长度不能超过100个字节。
      */
     public String getCcnDescription() {
@@ -84,7 +84,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN描述信息，最大长度不能超过100个字节。
+     * Set CCN描述信息，最大长度不能超过100个字节。
      * @param CcnDescription CCN描述信息，最大长度不能超过100个字节。
      */
     public void setCcnDescription(String CcnDescription) {
@@ -92,7 +92,7 @@ public class ModifyCcnAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

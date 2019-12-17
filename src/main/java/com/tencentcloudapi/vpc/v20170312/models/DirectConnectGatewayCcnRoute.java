@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DirectConnectGatewayCcnRoute  extends AbstractModel{
+public class DirectConnectGatewayCcnRoute extends AbstractModel{
 
     /**
     * 路由ID。
@@ -44,7 +44,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     private String [] ASPath;
 
     /**
-     * 获取路由ID。
+     * Get 路由ID。 
      * @return RouteId 路由ID。
      */
     public String getRouteId() {
@@ -52,7 +52,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置路由ID。
+     * Set 路由ID。
      * @param RouteId 路由ID。
      */
     public void setRouteId(String RouteId) {
@@ -60,7 +60,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取IDC网段。
+     * Get IDC网段。 
      * @return DestinationCidrBlock IDC网段。
      */
     public String getDestinationCidrBlock() {
@@ -68,7 +68,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置IDC网段。
+     * Set IDC网段。
      * @param DestinationCidrBlock IDC网段。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -76,7 +76,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取`BGP`的`AS-Path`属性。
+     * Get `BGP`的`AS-Path`属性。 
      * @return ASPath `BGP`的`AS-Path`属性。
      */
     public String [] getASPath() {
@@ -84,7 +84,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置`BGP`的`AS-Path`属性。
+     * Set `BGP`的`AS-Path`属性。
      * @param ASPath `BGP`的`AS-Path`属性。
      */
     public void setASPath(String [] ASPath) {
@@ -92,7 +92,7 @@ public class DirectConnectGatewayCcnRoute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);

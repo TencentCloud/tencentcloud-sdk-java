@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopOnlineRecordRequest  extends AbstractModel{
+public class StopOnlineRecordRequest extends AbstractModel{
 
     /**
     * 客户的SdkAppId
@@ -37,7 +37,7 @@ public class StopOnlineRecordRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取客户的SdkAppId
+     * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
     public Long getSdkAppId() {
@@ -45,7 +45,7 @@ public class StopOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户的SdkAppId
+     * Set 客户的SdkAppId
      * @param SdkAppId 客户的SdkAppId
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -53,7 +53,7 @@ public class StopOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要停止录制的任务 Id
+     * Get 需要停止录制的任务 Id 
      * @return TaskId 需要停止录制的任务 Id
      */
     public String getTaskId() {
@@ -61,7 +61,7 @@ public class StopOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要停止录制的任务 Id
+     * Set 需要停止录制的任务 Id
      * @param TaskId 需要停止录制的任务 Id
      */
     public void setTaskId(String TaskId) {
@@ -69,7 +69,7 @@ public class StopOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadDialogueTextRequest  extends AbstractModel{
+public class DownloadDialogueTextRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Report
@@ -51,7 +51,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Report
+     * Get 模块名，本接口取值：Report 
      * @return Module 模块名，本接口取值：Report
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Report
+     * Set 模块名，本接口取值：Report
      * @param Module 模块名，本接口取值：Report
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：DownloadTextReport
+     * Get 操作名，本接口取值：DownloadTextReport 
      * @return Operation 操作名，本接口取值：DownloadTextReport
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：DownloadTextReport
+     * Set 操作名，本接口取值：DownloadTextReport
      * @param Operation 操作名，本接口取值：DownloadTextReport
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 获取报告日期，格式为YYYY-MM-DD
+     * Get 报告日期，格式为YYYY-MM-DD 
      * @return ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public String getReportDate() {
@@ -91,7 +91,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 设置报告日期，格式为YYYY-MM-DD
+     * Set 报告日期，格式为YYYY-MM-DD
      * @param ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public void setReportDate(String ReportDate) {
@@ -99,7 +99,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstId 实例ID
      */
     public String getInstId() {
@@ -107,7 +107,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstId 实例ID
      */
     public void setInstId(String InstId) {
@@ -115,7 +115,7 @@ public class DownloadDialogueTextRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

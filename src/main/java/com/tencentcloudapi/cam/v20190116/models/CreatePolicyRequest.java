@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePolicyRequest  extends AbstractModel{
+public class CreatePolicyRequest extends AbstractModel{
 
     /**
     * 策略名
@@ -44,7 +44,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取策略名
+     * Get 策略名 
      * @return PolicyName 策略名
      */
     public String getPolicyName() {
@@ -52,7 +52,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略名
+     * Set 策略名
      * @param PolicyName 策略名
      */
     public void setPolicyName(String PolicyName) {
@@ -60,7 +60,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略文档
+     * Get 策略文档 
      * @return PolicyDocument 策略文档
      */
     public String getPolicyDocument() {
@@ -68,7 +68,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略文档
+     * Set 策略文档
      * @param PolicyDocument 策略文档
      */
     public void setPolicyDocument(String PolicyDocument) {
@@ -76,7 +76,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略描述
+     * Get 策略描述 
      * @return Description 策略描述
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略描述
+     * Set 策略描述
      * @param Description 策略描述
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class CreatePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);

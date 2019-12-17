@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountRemarkRequest  extends AbstractModel{
+public class ModifyAccountRemarkRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-j8kv137v
@@ -37,7 +37,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     private AccountRemark [] Accounts;
 
     /**
-     * 获取实例ID，形如mssql-j8kv137v
+     * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-j8kv137v
+     * Set 实例ID，形如mssql-j8kv137v
      * @param InstanceId 实例ID，形如mssql-j8kv137v
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改备注的账户信息
+     * Get 修改备注的账户信息 
      * @return Accounts 修改备注的账户信息
      */
     public AccountRemark [] getAccounts() {
@@ -61,7 +61,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改备注的账户信息
+     * Set 修改备注的账户信息
      * @param Accounts 修改备注的账户信息
      */
     public void setAccounts(AccountRemark [] Accounts) {
@@ -69,7 +69,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWatermarkTemplateRequest  extends AbstractModel{
+public class ModifyWatermarkTemplateRequest extends AbstractModel{
 
     /**
     * 水印模板唯一标识。
@@ -102,7 +102,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取水印模板唯一标识。
+     * Get 水印模板唯一标识。 
      * @return Definition 水印模板唯一标识。
      */
     public Long getDefinition() {
@@ -110,7 +110,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板唯一标识。
+     * Set 水印模板唯一标识。
      * @param Definition 水印模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -118,7 +118,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印模板名称，长度限制：64 个字符。
+     * Get 水印模板名称，长度限制：64 个字符。 
      * @return Name 水印模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -126,7 +126,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板名称，长度限制：64 个字符。
+     * Set 水印模板名称，长度限制：64 个字符。
      * @param Name 水印模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -134,7 +134,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -142,7 +142,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -150,12 +150,12 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取原点位置，可选值：
+     * Get 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-目前，当 Type 为 image，该字段仅支持 TopLeft。
+目前，当 Type 为 image，该字段仅支持 TopLeft。 
      * @return CoordinateOrigin 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
@@ -168,7 +168,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置原点位置，可选值：
+     * Set 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
@@ -186,9 +186,9 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
+     * Get 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
-<li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
+<li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li> 
      * @return XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
@@ -198,7 +198,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
+     * Set 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
      * @param XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
@@ -210,9 +210,9 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
+     * Get 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
-<li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
+<li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li> 
      * @return YPos 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
@@ -222,7 +222,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
+     * Set 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
      * @param YPos 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
@@ -234,7 +234,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片水印模板，该字段仅对图片水印模板有效。
+     * Get 图片水印模板，该字段仅对图片水印模板有效。 
      * @return ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
      */
     public ImageWatermarkInputForUpdate getImageTemplate() {
@@ -242,7 +242,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片水印模板，该字段仅对图片水印模板有效。
+     * Set 图片水印模板，该字段仅对图片水印模板有效。
      * @param ImageTemplate 图片水印模板，该字段仅对图片水印模板有效。
      */
     public void setImageTemplate(ImageWatermarkInputForUpdate ImageTemplate) {
@@ -250,7 +250,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文字水印模板，该字段仅对文字水印模板有效。
+     * Get 文字水印模板，该字段仅对文字水印模板有效。 
      * @return TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
      */
     public TextWatermarkTemplateInputForUpdate getTextTemplate() {
@@ -258,7 +258,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文字水印模板，该字段仅对文字水印模板有效。
+     * Set 文字水印模板，该字段仅对文字水印模板有效。
      * @param TextTemplate 文字水印模板，该字段仅对文字水印模板有效。
      */
     public void setTextTemplate(TextWatermarkTemplateInputForUpdate TextTemplate) {
@@ -266,7 +266,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取SVG 水印模板，该字段仅对 SVG 水印模板有效。
+     * Get SVG 水印模板，该字段仅对 SVG 水印模板有效。 
      * @return SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      */
     public SvgWatermarkInputForUpdate getSvgTemplate() {
@@ -274,7 +274,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置SVG 水印模板，该字段仅对 SVG 水印模板有效。
+     * Set SVG 水印模板，该字段仅对 SVG 水印模板有效。
      * @param SvgTemplate SVG 水印模板，该字段仅对 SVG 水印模板有效。
      */
     public void setSvgTemplate(SvgWatermarkInputForUpdate SvgTemplate) {
@@ -282,7 +282,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -290,7 +290,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -298,7 +298,7 @@ public class ModifyWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

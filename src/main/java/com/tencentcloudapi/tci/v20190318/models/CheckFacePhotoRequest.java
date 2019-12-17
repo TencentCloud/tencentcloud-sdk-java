@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckFacePhotoRequest  extends AbstractModel{
+public class CheckFacePhotoRequest extends AbstractModel{
 
     /**
     * 输入分析对象内容
@@ -37,7 +37,7 @@ public class CheckFacePhotoRequest  extends AbstractModel{
     private String FileType;
 
     /**
-     * 获取输入分析对象内容
+     * Get 输入分析对象内容 
      * @return FileContent 输入分析对象内容
      */
     public String getFileContent() {
@@ -45,7 +45,7 @@ public class CheckFacePhotoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象内容
+     * Set 输入分析对象内容
      * @param FileContent 输入分析对象内容
      */
     public void setFileContent(String FileContent) {
@@ -53,7 +53,7 @@ public class CheckFacePhotoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址
+     * Get 输入分析对象类型，picture_url:图片地址 
      * @return FileType 输入分析对象类型，picture_url:图片地址
      */
     public String getFileType() {
@@ -61,7 +61,7 @@ public class CheckFacePhotoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址
+     * Set 输入分析对象类型，picture_url:图片地址
      * @param FileType 输入分析对象类型，picture_url:图片地址
      */
     public void setFileType(String FileType) {
@@ -69,7 +69,7 @@ public class CheckFacePhotoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

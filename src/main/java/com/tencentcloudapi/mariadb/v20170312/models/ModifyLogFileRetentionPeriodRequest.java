@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
+public class ModifyLogFileRetentionPeriodRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc。
@@ -37,7 +37,7 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     private Integer Days;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
+     * Get 实例 ID，形如：tdsql-ow728lmc。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
+     * Set 实例 ID，形如：tdsql-ow728lmc。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     }
 
     /**
-     * 获取保存的天数,不能超过30
+     * Get 保存的天数,不能超过30 
      * @return Days 保存的天数,不能超过30
      */
     public Integer getDays() {
@@ -61,7 +61,7 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     }
 
     /**
-     * 设置保存的天数,不能超过30
+     * Set 保存的天数,不能超过30
      * @param Days 保存的天数,不能超过30
      */
     public void setDays(Integer Days) {
@@ -69,7 +69,7 @@ public class ModifyLogFileRetentionPeriodRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

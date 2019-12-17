@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetachCcnInstancesRequest  extends AbstractModel{
+public class DetachCcnInstancesRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -37,7 +37,7 @@ public class DetachCcnInstancesRequest  extends AbstractModel{
     private CcnInstance [] Instances;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -45,7 +45,7 @@ public class DetachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -53,7 +53,7 @@ public class DetachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要解关联网络实例列表
+     * Get 要解关联网络实例列表 
      * @return Instances 要解关联网络实例列表
      */
     public CcnInstance [] getInstances() {
@@ -61,7 +61,7 @@ public class DetachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要解关联网络实例列表
+     * Set 要解关联网络实例列表
      * @param Instances 要解关联网络实例列表
      */
     public void setInstances(CcnInstance [] Instances) {
@@ -69,7 +69,7 @@ public class DetachCcnInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

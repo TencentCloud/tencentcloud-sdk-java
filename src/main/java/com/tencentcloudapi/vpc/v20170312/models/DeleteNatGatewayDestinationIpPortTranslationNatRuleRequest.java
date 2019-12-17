@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends AbstractModel{
+public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel{
 
     /**
     * NAT网关的ID，形如：`nat-df45454`。
@@ -37,7 +37,7 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     private DestinationIpPortTranslationNatRule [] DestinationIpPortTranslationNatRules;
 
     /**
-     * 获取NAT网关的ID，形如：`nat-df45454`。
+     * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public String getNatGatewayId() {
@@ -45,7 +45,7 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 设置NAT网关的ID，形如：`nat-df45454`。
+     * Set NAT网关的ID，形如：`nat-df45454`。
      * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -53,7 +53,7 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 获取NAT网关的端口转换规则。
+     * Get NAT网关的端口转换规则。 
      * @return DestinationIpPortTranslationNatRules NAT网关的端口转换规则。
      */
     public DestinationIpPortTranslationNatRule [] getDestinationIpPortTranslationNatRules() {
@@ -61,7 +61,7 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 设置NAT网关的端口转换规则。
+     * Set NAT网关的端口转换规则。
      * @param DestinationIpPortTranslationNatRules NAT网关的端口转换规则。
      */
     public void setDestinationIpPortTranslationNatRules(DestinationIpPortTranslationNatRule [] DestinationIpPortTranslationNatRules) {
@@ -69,7 +69,7 @@ public class DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

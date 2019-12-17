@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityDynamic  extends AbstractModel{
+public class SecurityDynamic extends AbstractModel{
 
     /**
     * 云镜客户端UUID。
@@ -56,7 +56,7 @@ public class SecurityDynamic  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取云镜客户端UUID。
+     * Get 云镜客户端UUID。 
      * @return Uuid 云镜客户端UUID。
      */
     public String getUuid() {
@@ -64,7 +64,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端UUID。
+     * Set 云镜客户端UUID。
      * @param Uuid 云镜客户端UUID。
      */
     public void setUuid(String Uuid) {
@@ -72,7 +72,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 获取安全事件发生事件。
+     * Get 安全事件发生事件。 
      * @return EventTime 安全事件发生事件。
      */
     public String getEventTime() {
@@ -80,7 +80,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 设置安全事件发生事件。
+     * Set 安全事件发生事件。
      * @param EventTime 安全事件发生事件。
      */
     public void setEventTime(String EventTime) {
@@ -88,12 +88,12 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 获取安全事件类型。
+     * Get 安全事件类型。
 <li>MALWARE：木马事件</li>
 <li>NON_LOCAL_LOGIN：异地登录</li>
 <li>BRUTEATTACK_SUCCESS：密码破解成功</li>
 <li>VUL：漏洞</li>
-<li>BASELINE：安全基线</li>
+<li>BASELINE：安全基线</li> 
      * @return EventType 安全事件类型。
 <li>MALWARE：木马事件</li>
 <li>NON_LOCAL_LOGIN：异地登录</li>
@@ -106,7 +106,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 设置安全事件类型。
+     * Set 安全事件类型。
 <li>MALWARE：木马事件</li>
 <li>NON_LOCAL_LOGIN：异地登录</li>
 <li>BRUTEATTACK_SUCCESS：密码破解成功</li>
@@ -124,7 +124,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 获取安全事件消息。
+     * Get 安全事件消息。 
      * @return Message 安全事件消息。
      */
     public String getMessage() {
@@ -132,7 +132,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 设置安全事件消息。
+     * Set 安全事件消息。
      * @param Message 安全事件消息。
      */
     public void setMessage(String Message) {
@@ -140,7 +140,7 @@ public class SecurityDynamic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

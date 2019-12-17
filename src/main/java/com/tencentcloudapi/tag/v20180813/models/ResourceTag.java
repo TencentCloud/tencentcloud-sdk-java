@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceTag  extends AbstractModel{
+public class ResourceTag extends AbstractModel{
 
     /**
     * 资源所在地域
@@ -63,8 +63,8 @@ public class ResourceTag  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源所在地域
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceRegion 资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -73,7 +73,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 设置资源所在地域
+     * Set 资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,8 +83,8 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 获取业务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceType 业务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,7 +93,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 设置业务类型
+     * Set 业务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceType 业务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,8 +103,8 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 获取资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源前缀
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourcePrefix 资源前缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 设置资源前缀
+     * Set 资源前缀
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourcePrefix 资源前缀
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 获取资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源唯一标记
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 资源唯一标记
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 设置资源唯一标记
+     * Set 资源唯一标记
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源唯一标记
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 获取资源标签
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源标签
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 设置资源标签
+     * Set 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 资源标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,7 +163,7 @@ public class ResourceTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);

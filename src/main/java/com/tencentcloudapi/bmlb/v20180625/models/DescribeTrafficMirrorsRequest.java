@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorsRequest  extends AbstractModel{
+public class DescribeTrafficMirrorsRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID的数组，支持批量查询
@@ -58,7 +58,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取流量镜像实例ID的数组，支持批量查询
+     * Get 流量镜像实例ID的数组，支持批量查询 
      * @return TrafficMirrorIds 流量镜像实例ID的数组，支持批量查询
      */
     public String [] getTrafficMirrorIds() {
@@ -66,7 +66,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID的数组，支持批量查询
+     * Set 流量镜像实例ID的数组，支持批量查询
      * @param TrafficMirrorIds 流量镜像实例ID的数组，支持批量查询
      */
     public void setTrafficMirrorIds(String [] TrafficMirrorIds) {
@@ -74,7 +74,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像实例别名数组。
+     * Get 流量镜像实例别名数组。 
      * @return Aliases 流量镜像实例别名数组。
      */
     public String [] getAliases() {
@@ -82,7 +82,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例别名数组。
+     * Set 流量镜像实例别名数组。
      * @param Aliases 流量镜像实例别名数组。
      */
     public void setAliases(String [] Aliases) {
@@ -90,7 +90,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。
+     * Get 流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。 
      * @return VpcIds 流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。
      */
     public String [] getVpcIds() {
@@ -98,7 +98,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。
+     * Set 流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。
      * @param VpcIds 流量镜像实例所属的私有网络ID数组，形如：vpc-xxx。
      */
     public void setVpcIds(String [] VpcIds) {
@@ -106,7 +106,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页的偏移量，也即从第几条记录开始查询
+     * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页的偏移量，也即从第几条记录开始查询
+     * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次查询返回的条目数，默认值：500。
+     * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次查询返回的条目数，默认值：500。
+     * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeTrafficMirrorsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TrafficMirrorIds.", this.TrafficMirrorIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMicroservicesRequest  extends AbstractModel{
+public class DescribeMicroservicesRequest extends AbstractModel{
 
     /**
     * 命名空间ID
@@ -65,7 +65,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取命名空间ID
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
     public String getNamespaceId() {
@@ -73,7 +73,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
      * @param NamespaceId 命名空间ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -81,7 +81,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索字段
+     * Get 搜索字段 
      * @return SearchWord 搜索字段
      */
     public String getSearchWord() {
@@ -89,7 +89,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索字段
+     * Set 搜索字段
      * @param SearchWord 搜索字段
      */
     public void setSearchWord(String SearchWord) {
@@ -97,7 +97,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段
+     * Get 排序字段 
      * @return OrderBy 排序字段
      */
     public String getOrderBy() {
@@ -105,7 +105,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段
+     * Set 排序字段
      * @param OrderBy 排序字段
      */
     public void setOrderBy(String OrderBy) {
@@ -113,7 +113,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型
+     * Get 排序类型 
      * @return OrderType 排序类型
      */
     public Long getOrderType() {
@@ -121,7 +121,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型
+     * Set 排序类型
      * @param OrderType 排序类型
      */
     public void setOrderType(Long OrderType) {
@@ -129,7 +129,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -137,7 +137,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -145,7 +145,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数
+     * Get 分页个数 
      * @return Limit 分页个数
      */
     public Long getLimit() {
@@ -153,7 +153,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数
+     * Set 分页个数
      * @param Limit 分页个数
      */
     public void setLimit(Long Limit) {
@@ -161,7 +161,7 @@ public class DescribeMicroservicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);

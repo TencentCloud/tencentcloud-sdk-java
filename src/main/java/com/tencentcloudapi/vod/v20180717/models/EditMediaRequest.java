@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaRequest  extends AbstractModel{
+public class EditMediaRequest extends AbstractModel{
 
     /**
     * 输入视频的类型，可以取的值为  File，Stream 两种。
@@ -88,7 +88,7 @@ public class EditMediaRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取输入视频的类型，可以取的值为  File，Stream 两种。
+     * Get 输入视频的类型，可以取的值为  File，Stream 两种。 
      * @return InputType 输入视频的类型，可以取的值为  File，Stream 两种。
      */
     public String getInputType() {
@@ -96,7 +96,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入视频的类型，可以取的值为  File，Stream 两种。
+     * Set 输入视频的类型，可以取的值为  File，Stream 两种。
      * @param InputType 输入视频的类型，可以取的值为  File，Stream 两种。
      */
     public void setInputType(String InputType) {
@@ -104,7 +104,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入的视频文件信息，当 InputType 为 File 时必填。
+     * Get 输入的视频文件信息，当 InputType 为 File 时必填。 
      * @return FileInfos 输入的视频文件信息，当 InputType 为 File 时必填。
      */
     public EditMediaFileInfo [] getFileInfos() {
@@ -112,7 +112,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的视频文件信息，当 InputType 为 File 时必填。
+     * Set 输入的视频文件信息，当 InputType 为 File 时必填。
      * @param FileInfos 输入的视频文件信息，当 InputType 为 File 时必填。
      */
     public void setFileInfos(EditMediaFileInfo [] FileInfos) {
@@ -120,7 +120,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入的流信息，当 InputType 为 Stream 时必填。
+     * Get 输入的流信息，当 InputType 为 Stream 时必填。 
      * @return StreamInfos 输入的流信息，当 InputType 为 Stream 时必填。
      */
     public EditMediaStreamInfo [] getStreamInfos() {
@@ -128,7 +128,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的流信息，当 InputType 为 Stream 时必填。
+     * Set 输入的流信息，当 InputType 为 Stream 时必填。
      * @param StreamInfos 输入的流信息，当 InputType 为 Stream 时必填。
      */
     public void setStreamInfos(EditMediaStreamInfo [] StreamInfos) {
@@ -136,9 +136,9 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+     * Get 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
-<li>20：拼接时，以码率最高的输入为基准；</li>
+<li>20：拼接时，以码率最高的输入为基准；</li> 
      * @return Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
 <li>20：拼接时，以码率最高的输入为基准；</li>
@@ -148,7 +148,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
+     * Set 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
 <li>10：拼接时，以分辨率最高的输入为基准；</li>
 <li>20：拼接时，以码率最高的输入为基准；</li>
      * @param Definition 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
@@ -160,7 +160,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
+     * Get [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。 
      * @return ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      */
     public String getProcedureName() {
@@ -168,7 +168,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
+     * Set [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      * @param ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
      */
     public void setProcedureName(String ProcedureName) {
@@ -176,7 +176,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取编辑后生成的文件配置。
+     * Get 编辑后生成的文件配置。 
      * @return OutputConfig 编辑后生成的文件配置。
      */
     public EditMediaOutputConfig getOutputConfig() {
@@ -184,7 +184,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置编辑后生成的文件配置。
+     * Set 编辑后生成的文件配置。
      * @param OutputConfig 编辑后生成的文件配置。
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
@@ -192,7 +192,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
+     * Get 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。 
      * @return SessionContext 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
      */
     public String getSessionContext() {
@@ -200,7 +200,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
+     * Set 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
      * @param SessionContext 标识来源上下文，用于透传用户请求信息，在EditMediaComplete回调和任务流状态变更回调将返回该字段值，最长 1000个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -208,7 +208,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -216,7 +216,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于任务去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -224,7 +224,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -232,7 +232,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -240,7 +240,7 @@ public class EditMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputType", this.InputType);

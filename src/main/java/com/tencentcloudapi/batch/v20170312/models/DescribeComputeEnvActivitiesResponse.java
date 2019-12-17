@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
+public class DescribeComputeEnvActivitiesResponse extends AbstractModel{
 
     /**
     * 计算环境中的活动列表
@@ -44,7 +44,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取计算环境中的活动列表
+     * Get 计算环境中的活动列表 
      * @return ActivitySet 计算环境中的活动列表
      */
     public Activity [] getActivitySet() {
@@ -52,7 +52,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境中的活动列表
+     * Set 计算环境中的活动列表
      * @param ActivitySet 计算环境中的活动列表
      */
     public void setActivitySet(Activity [] ActivitySet) {
@@ -60,7 +60,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取活动数量
+     * Get 活动数量 
      * @return TotalCount 活动数量
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置活动数量
+     * Set 活动数量
      * @param TotalCount 活动数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeComputeEnvActivitiesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ActivitySet.", this.ActivitySet);

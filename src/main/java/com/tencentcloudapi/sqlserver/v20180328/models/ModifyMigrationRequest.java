@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationRequest  extends AbstractModel{
+public class ModifyMigrationRequest extends AbstractModel{
 
     /**
     * 迁移任务ID
     */
     @SerializedName("MigrateId")
     @Expose
-    private Integer MigrateId;
+    private Long MigrateId;
 
     /**
     * 新的迁移任务的名称，若不填则不修改
@@ -41,14 +41,14 @@ public class ModifyMigrationRequest  extends AbstractModel{
     */
     @SerializedName("MigrateType")
     @Expose
-    private Integer MigrateType;
+    private Long MigrateType;
 
     /**
     * 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
     */
     @SerializedName("SourceType")
     @Expose
-    private Integer SourceType;
+    private Long SourceType;
 
     /**
     * 迁移源，若不填则不修改
@@ -72,23 +72,23 @@ public class ModifyMigrationRequest  extends AbstractModel{
     private MigrateDB [] MigrateDBSet;
 
     /**
-     * 获取迁移任务ID
+     * Get 迁移任务ID 
      * @return MigrateId 迁移任务ID
      */
-    public Integer getMigrateId() {
+    public Long getMigrateId() {
         return this.MigrateId;
     }
 
     /**
-     * 设置迁移任务ID
+     * Set 迁移任务ID
      * @param MigrateId 迁移任务ID
      */
-    public void setMigrateId(Integer MigrateId) {
+    public void setMigrateId(Long MigrateId) {
         this.MigrateId = MigrateId;
     }
 
     /**
-     * 获取新的迁移任务的名称，若不填则不修改
+     * Get 新的迁移任务的名称，若不填则不修改 
      * @return MigrateName 新的迁移任务的名称，若不填则不修改
      */
     public String getMigrateName() {
@@ -96,7 +96,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的迁移任务的名称，若不填则不修改
+     * Set 新的迁移任务的名称，若不填则不修改
      * @param MigrateName 新的迁移任务的名称，若不填则不修改
      */
     public void setMigrateName(String MigrateName) {
@@ -104,39 +104,39 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
+     * Get 新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改 
      * @return MigrateType 新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
      */
-    public Integer getMigrateType() {
+    public Long getMigrateType() {
         return this.MigrateType;
     }
 
     /**
-     * 设置新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
+     * Set 新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
      * @param MigrateType 新的迁移类型（1:结构迁移 2:数据迁移 3:增量同步），若不填则不修改
      */
-    public void setMigrateType(Integer MigrateType) {
+    public void setMigrateType(Long MigrateType) {
         this.MigrateType = MigrateType;
     }
 
     /**
-     * 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+     * Get 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改 
      * @return SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
      */
-    public Integer getSourceType() {
+    public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
+     * Set 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
      * @param SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式），若不填则不修改
      */
-    public void setSourceType(Integer SourceType) {
+    public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * 获取迁移源，若不填则不修改
+     * Get 迁移源，若不填则不修改 
      * @return Source 迁移源，若不填则不修改
      */
     public MigrateSource getSource() {
@@ -144,7 +144,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源，若不填则不修改
+     * Set 迁移源，若不填则不修改
      * @param Source 迁移源，若不填则不修改
      */
     public void setSource(MigrateSource Source) {
@@ -152,7 +152,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目标，若不填则不修改
+     * Get 迁移目标，若不填则不修改 
      * @return Target 迁移目标，若不填则不修改
      */
     public MigrateTarget getTarget() {
@@ -160,7 +160,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目标，若不填则不修改
+     * Set 迁移目标，若不填则不修改
      * @param Target 迁移目标，若不填则不修改
      */
     public void setTarget(MigrateTarget Target) {
@@ -168,7 +168,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改
+     * Get 迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改 
      * @return MigrateDBSet 迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改
      */
     public MigrateDB [] getMigrateDBSet() {
@@ -176,7 +176,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改
+     * Set 迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改
      * @param MigrateDBSet 迁移DB对象 ，离线迁移（SourceType=4或SourceType=5）不使用，若不填则不修改
      */
     public void setMigrateDBSet(MigrateDB [] MigrateDBSet) {
@@ -184,7 +184,7 @@ public class ModifyMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MigrateId", this.MigrateId);

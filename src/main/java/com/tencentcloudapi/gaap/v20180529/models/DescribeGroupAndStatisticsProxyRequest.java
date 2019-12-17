@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupAndStatisticsProxyRequest  extends AbstractModel{
+public class DescribeGroupAndStatisticsProxyRequest extends AbstractModel{
 
     /**
     * 项目ID
@@ -30,7 +30,7 @@ public class DescribeGroupAndStatisticsProxyRequest  extends AbstractModel{
     private Long ProjectId;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Long getProjectId() {
@@ -38,7 +38,7 @@ public class DescribeGroupAndStatisticsProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Long ProjectId) {
@@ -46,7 +46,7 @@ public class DescribeGroupAndStatisticsProxyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

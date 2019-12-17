@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
+public class DescribeComputeEnvCreateInfosRequest extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -54,7 +54,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvIds 计算环境ID
      */
     public String [] getEnvIds() {
@@ -62,7 +62,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvIds 计算环境ID
      */
     public void setEnvIds(String [] EnvIds) {
@@ -70,10 +70,10 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
+     * Get 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li> 
      * @return Filters 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
@@ -84,7 +84,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
@@ -98,7 +98,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -106,7 +106,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -114,7 +114,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -122,7 +122,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -130,7 +130,7 @@ public class DescribeComputeEnvCreateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EnvIds.", this.EnvIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcPeerConnection  extends AbstractModel{
+public class VpcPeerConnection extends AbstractModel{
 
     /**
     * 本端VPC唯一ID
@@ -145,7 +145,7 @@ public class VpcPeerConnection  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取本端VPC唯一ID
+     * Get 本端VPC唯一ID 
      * @return VpcId 本端VPC唯一ID
      */
     public String getVpcId() {
@@ -153,7 +153,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置本端VPC唯一ID
+     * Set 本端VPC唯一ID
      * @param VpcId 本端VPC唯一ID
      */
     public void setVpcId(String VpcId) {
@@ -161,7 +161,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端VPC唯一ID
+     * Get 对端VPC唯一ID 
      * @return PeerVpcId 对端VPC唯一ID
      */
     public String getPeerVpcId() {
@@ -169,7 +169,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端VPC唯一ID
+     * Set 对端VPC唯一ID
      * @param PeerVpcId 对端VPC唯一ID
      */
     public void setPeerVpcId(String PeerVpcId) {
@@ -177,7 +177,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取本端APPID
+     * Get 本端APPID 
      * @return AppId 本端APPID
      */
     public String getAppId() {
@@ -185,7 +185,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置本端APPID
+     * Set 本端APPID
      * @param AppId 本端APPID
      */
     public void setAppId(String AppId) {
@@ -193,7 +193,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端APPID
+     * Get 对端APPID 
      * @return PeerAppId 对端APPID
      */
     public String getPeerAppId() {
@@ -201,7 +201,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端APPID
+     * Set 对端APPID
      * @param PeerAppId 对端APPID
      */
     public void setPeerAppId(String PeerAppId) {
@@ -209,7 +209,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接唯一ID
+     * Get 对等连接唯一ID 
      * @return VpcPeerConnectionId 对等连接唯一ID
      */
     public String getVpcPeerConnectionId() {
@@ -217,7 +217,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接唯一ID
+     * Set 对等连接唯一ID
      * @param VpcPeerConnectionId 对等连接唯一ID
      */
     public void setVpcPeerConnectionId(String VpcPeerConnectionId) {
@@ -225,7 +225,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接名称
+     * Get 对等连接名称 
      * @return VpcPeerConnectionName 对等连接名称
      */
     public String getVpcPeerConnectionName() {
@@ -233,7 +233,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接名称
+     * Set 对等连接名称
      * @param VpcPeerConnectionName 对等连接名称
      */
     public void setVpcPeerConnectionName(String VpcPeerConnectionName) {
@@ -241,7 +241,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接状态
+     * Get 对等连接状态 
      * @return State 对等连接状态
      */
     public String getState() {
@@ -249,7 +249,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接状态
+     * Set 对等连接状态
      * @param State 对等连接状态
      */
     public void setState(String State) {
@@ -257,8 +257,8 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取本端VPC所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 本端VPC所属可用区
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcZone 本端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -267,7 +267,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置本端VPC所属可用区
+     * Set 本端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcZone 本端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
@@ -277,8 +277,8 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端VPC所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对端VPC所属可用区
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PeerVpcZone 对端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -287,7 +287,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端VPC所属可用区
+     * Set 对端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerVpcZone 对端VPC所属可用区
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,7 +297,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取本端Uin
+     * Get 本端Uin 
      * @return Uin 本端Uin
      */
     public Long getUin() {
@@ -305,7 +305,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置本端Uin
+     * Set 本端Uin
      * @param Uin 本端Uin
      */
     public void setUin(Long Uin) {
@@ -313,7 +313,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端Uin
+     * Get 对端Uin 
      * @return PeerUin 对端Uin
      */
     public Long getPeerUin() {
@@ -321,7 +321,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端Uin
+     * Set 对端Uin
      * @param PeerUin 对端Uin
      */
     public void setPeerUin(Long PeerUin) {
@@ -329,7 +329,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接类型
+     * Get 对等连接类型 
      * @return PeerType 对等连接类型
      */
     public Long getPeerType() {
@@ -337,7 +337,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接类型
+     * Set 对等连接类型
      * @param PeerType 对等连接类型
      */
     public void setPeerType(Long PeerType) {
@@ -345,7 +345,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接带宽
+     * Get 对等连接带宽 
      * @return Bandwidth 对等连接带宽
      */
     public Long getBandwidth() {
@@ -353,7 +353,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接带宽
+     * Set 对等连接带宽
      * @param Bandwidth 对等连接带宽
      */
     public void setBandwidth(Long Bandwidth) {
@@ -361,7 +361,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取本端VPC地域
+     * Get 本端VPC地域 
      * @return Region 本端VPC地域
      */
     public String getRegion() {
@@ -369,7 +369,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置本端VPC地域
+     * Set 本端VPC地域
      * @param Region 本端VPC地域
      */
     public void setRegion(String Region) {
@@ -377,7 +377,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取对端VPC地域
+     * Get 对端VPC地域 
      * @return PeerRegion 对端VPC地域
      */
     public String getPeerRegion() {
@@ -385,7 +385,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置对端VPC地域
+     * Set 对端VPC地域
      * @param PeerRegion 对端VPC地域
      */
     public void setPeerRegion(String PeerRegion) {
@@ -393,8 +393,8 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取是否允许删除
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否允许删除
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteFlag 是否允许删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -403,7 +403,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置是否允许删除
+     * Set 是否允许删除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 是否允许删除
 注意：此字段可能返回 null，表示取不到有效值。
@@ -413,7 +413,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -421,7 +421,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -429,7 +429,7 @@ public class VpcPeerConnection  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

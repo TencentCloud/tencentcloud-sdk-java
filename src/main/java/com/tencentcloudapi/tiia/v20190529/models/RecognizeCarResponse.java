@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizeCarResponse  extends AbstractModel{
+public class RecognizeCarResponse extends AbstractModel{
 
     /**
     * 汽车的四个矩形顶点坐标
@@ -44,7 +44,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取汽车的四个矩形顶点坐标
+     * Get 汽车的四个矩形顶点坐标 
      * @return CarCoords 汽车的四个矩形顶点坐标
      */
     public Coord [] getCarCoords() {
@@ -52,7 +52,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 设置汽车的四个矩形顶点坐标
+     * Set 汽车的四个矩形顶点坐标
      * @param CarCoords 汽车的四个矩形顶点坐标
      */
     public void setCarCoords(Coord [] CarCoords) {
@@ -60,7 +60,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 获取车辆属性识别的结果数组
+     * Get 车辆属性识别的结果数组 
      * @return CarTags 车辆属性识别的结果数组
      */
     public CarTagItem [] getCarTags() {
@@ -68,7 +68,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 设置车辆属性识别的结果数组
+     * Set 车辆属性识别的结果数组
      * @param CarTags 车辆属性识别的结果数组
      */
     public void setCarTags(CarTagItem [] CarTags) {
@@ -76,7 +76,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class RecognizeCarResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CarCoords.", this.CarCoords);

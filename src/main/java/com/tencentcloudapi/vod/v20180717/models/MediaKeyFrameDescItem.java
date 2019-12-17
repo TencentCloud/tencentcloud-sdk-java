@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaKeyFrameDescItem  extends AbstractModel{
+public class MediaKeyFrameDescItem extends AbstractModel{
 
     /**
     * 打点的视频偏移时间，单位：秒。
@@ -37,7 +37,7 @@ public class MediaKeyFrameDescItem  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取打点的视频偏移时间，单位：秒。
+     * Get 打点的视频偏移时间，单位：秒。 
      * @return TimeOffset 打点的视频偏移时间，单位：秒。
      */
     public Float getTimeOffset() {
@@ -45,7 +45,7 @@ public class MediaKeyFrameDescItem  extends AbstractModel{
     }
 
     /**
-     * 设置打点的视频偏移时间，单位：秒。
+     * Set 打点的视频偏移时间，单位：秒。
      * @param TimeOffset 打点的视频偏移时间，单位：秒。
      */
     public void setTimeOffset(Float TimeOffset) {
@@ -53,7 +53,7 @@ public class MediaKeyFrameDescItem  extends AbstractModel{
     }
 
     /**
-     * 获取打点的内容字符串，限制 1-128 个字符。
+     * Get 打点的内容字符串，限制 1-128 个字符。 
      * @return Content 打点的内容字符串，限制 1-128 个字符。
      */
     public String getContent() {
@@ -61,7 +61,7 @@ public class MediaKeyFrameDescItem  extends AbstractModel{
     }
 
     /**
-     * 设置打点的内容字符串，限制 1-128 个字符。
+     * Set 打点的内容字符串，限制 1-128 个字符。
      * @param Content 打点的内容字符串，限制 1-128 个字符。
      */
     public void setContent(String Content) {
@@ -69,7 +69,7 @@ public class MediaKeyFrameDescItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeOffset", this.TimeOffset);

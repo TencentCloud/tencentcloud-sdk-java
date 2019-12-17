@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceRequest  extends AbstractModel{
+public class CreateDBInstanceRequest extends AbstractModel{
 
     /**
     * 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
@@ -135,7 +135,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private Integer AutoRenewFlag;
 
     /**
-     * 获取每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * Get 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数 
      * @return NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      */
     public Integer getNodeNum() {
@@ -143,7 +143,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+     * Set 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      * @param NodeNum 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
      */
     public void setNodeNum(Integer NodeNum) {
@@ -151,7 +151,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位：GB
+     * Get 实例内存大小，单位：GB 
      * @return Memory 实例内存大小，单位：GB
      */
     public Integer getMemory() {
@@ -159,7 +159,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存大小，单位：GB
+     * Set 实例内存大小，单位：GB
      * @param Memory 实例内存大小，单位：GB
      */
     public void setMemory(Integer Memory) {
@@ -167,7 +167,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例硬盘大小，单位：GB
+     * Get 实例硬盘大小，单位：GB 
      * @return Volume 实例硬盘大小，单位：GB
      */
     public Integer getVolume() {
@@ -175,7 +175,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例硬盘大小，单位：GB
+     * Set 实例硬盘大小，单位：GB
      * @param Volume 实例硬盘大小，单位：GB
      */
     public void setVolume(Integer Volume) {
@@ -183,7 +183,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * Get 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本 
      * @return MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
      */
     public String getMongoVersion() {
@@ -191,7 +191,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
+     * Set 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
      * @param MongoVersion 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本
      */
     public void setMongoVersion(String MongoVersion) {
@@ -199,7 +199,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量, 最小值1，最大值为10
+     * Get 实例数量, 最小值1，最大值为10 
      * @return GoodsNum 实例数量, 最小值1，最大值为10
      */
     public Integer getGoodsNum() {
@@ -207,7 +207,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量, 最小值1，最大值为10
+     * Set 实例数量, 最小值1，最大值为10
      * @param GoodsNum 实例数量, 最小值1，最大值为10
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -215,7 +215,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属区域名称，格式如：ap-guangzhou-2
+     * Get 实例所属区域名称，格式如：ap-guangzhou-2 
      * @return Zone 实例所属区域名称，格式如：ap-guangzhou-2
      */
     public String getZone() {
@@ -223,7 +223,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属区域名称，格式如：ap-guangzhou-2
+     * Set 实例所属区域名称，格式如：ap-guangzhou-2
      * @param Zone 实例所属区域名称，格式如：ap-guangzhou-2
      */
     public void setZone(String Zone) {
@@ -231,7 +231,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Get 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
      * @return Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public Integer getPeriod() {
@@ -239,7 +239,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Set 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public void setPeriod(Integer Period) {
@@ -247,7 +247,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取机器类型，HIO：高IO型；HIO10G：高IO万兆型
+     * Get 机器类型，HIO：高IO型；HIO10G：高IO万兆型 
      * @return MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型
      */
     public String getMachineCode() {
@@ -255,7 +255,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器类型，HIO：高IO型；HIO10G：高IO万兆型
+     * Set 机器类型，HIO：高IO型；HIO10G：高IO万兆型
      * @param MachineCode 机器类型，HIO：高IO型；HIO10G：高IO万兆型
      */
     public void setMachineCode(String MachineCode) {
@@ -263,7 +263,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，REPLSET-副本集，SHARD-分片集群
+     * Get 实例类型，REPLSET-副本集，SHARD-分片集群 
      * @return ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
      */
     public String getClusterType() {
@@ -271,7 +271,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，REPLSET-副本集，SHARD-分片集群
+     * Set 实例类型，REPLSET-副本集，SHARD-分片集群
      * @param ClusterType 实例类型，REPLSET-副本集，SHARD-分片集群
      */
     public void setClusterType(String ClusterType) {
@@ -279,7 +279,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+     * Get 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数 
      * @return ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      */
     public Integer getReplicateSetNum() {
@@ -287,7 +287,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
+     * Set 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      * @param ReplicateSetNum 副本集个数，创建副本集实例时，该参数必须设置为1；创建分片实例时，具体参照查询云数据库的售卖规格返回参数
      */
     public void setReplicateSetNum(Integer ReplicateSetNum) {
@@ -295,7 +295,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，不设置为默认项目
+     * Get 项目ID，不设置为默认项目 
      * @return ProjectId 项目ID，不设置为默认项目
      */
     public Integer getProjectId() {
@@ -303,7 +303,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，不设置为默认项目
+     * Set 项目ID，不设置为默认项目
      * @param ProjectId 项目ID，不设置为默认项目
      */
     public void setProjectId(Integer ProjectId) {
@@ -311,7 +311,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
+     * Get 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表 
      * @return VpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
      */
     public String getVpcId() {
@@ -319,7 +319,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
+     * Set 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
      * @param VpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 查询私有网络列表
      */
     public void setVpcId(String VpcId) {
@@ -327,7 +327,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
+     * Get 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表 
      * @return SubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
      */
     public String getSubnetId() {
@@ -335,7 +335,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
+     * Set 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
      * @param SubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 查询子网列表
      */
     public void setSubnetId(String SubnetId) {
@@ -343,7 +343,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * Get 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种 
      * @return Password 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      */
     public String getPassword() {
@@ -351,7 +351,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+     * Set 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      * @param Password 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
      */
     public void setPassword(String Password) {
@@ -359,7 +359,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例标签信息
+     * Get 实例标签信息 
      * @return Tags 实例标签信息
      */
     public TagInfo [] getTags() {
@@ -367,7 +367,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例标签信息
+     * Set 实例标签信息
      * @param Tags 实例标签信息
      */
     public void setTags(TagInfo [] Tags) {
@@ -375,7 +375,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
+     * Get 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费 
      * @return AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -383,7 +383,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
+     * Set 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      * @param AutoRenewFlag 自动续费标记，可选值为：0 - 不自动续费；1 - 自动续费。默认为不自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -391,7 +391,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);

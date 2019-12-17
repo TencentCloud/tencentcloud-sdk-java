@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateInstanceRequest  extends AbstractModel{
+public class UpdateInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -114,7 +114,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     private CosBackup CosBackup;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -122,7 +122,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -130,7 +130,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+     * Get 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_） 
      * @return InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      */
     public String getInstanceName() {
@@ -138,7 +138,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
+     * Set 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      */
     public void setInstanceName(String InstanceName) {
@@ -146,7 +146,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点个数（2-50个）
+     * Get 节点个数（2-50个） 
      * @return NodeNum 节点个数（2-50个）
      */
     public Integer getNodeNum() {
@@ -154,7 +154,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点个数（2-50个）
+     * Set 节点个数（2-50个）
      * @param NodeNum 节点个数（2-50个）
      */
     public void setNodeNum(Integer NodeNum) {
@@ -162,7 +162,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Get 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li> 
      * @return EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      */
     public String getEsConfig() {
@@ -170,7 +170,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Set 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      * @param EsConfig 配置项（JSON格式字符串）。当前仅支持以下配置项：<li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
      */
     public void setEsConfig(String EsConfig) {
@@ -178,7 +178,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+     * Get 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号） 
      * @return Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      */
     public String getPassword() {
@@ -186,7 +186,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
+     * Set 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      * @param Password 默认用户elastic的密码（8到16位，至少包括两项（[a-z,A-Z],[0-9]和[-!@#$%&^*+=_:;,.?]的特殊符号）
      */
     public void setPassword(String Password) {
@@ -194,7 +194,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取访问控制列表
+     * Get 访问控制列表 
      * @return EsAcl 访问控制列表
      */
     public EsAcl getEsAcl() {
@@ -202,7 +202,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问控制列表
+     * Set 访问控制列表
      * @param EsAcl 访问控制列表
      */
     public void setEsAcl(EsAcl EsAcl) {
@@ -210,7 +210,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘大小（单位GB）
+     * Get 磁盘大小（单位GB） 
      * @return DiskSize 磁盘大小（单位GB）
      */
     public Integer getDiskSize() {
@@ -218,7 +218,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘大小（单位GB）
+     * Set 磁盘大小（单位GB）
      * @param DiskSize 磁盘大小（单位GB）
      */
     public void setDiskSize(Integer DiskSize) {
@@ -226,7 +226,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
      * @return NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getNodeType() {
@@ -234,7 +234,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setNodeType(String NodeType) {
@@ -242,7 +242,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点个数（只支持3个或5个）
+     * Get 专用主节点个数（只支持3个或5个） 
      * @return MasterNodeNum 专用主节点个数（只支持3个或5个）
      */
     public Integer getMasterNodeNum() {
@@ -250,7 +250,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点个数（只支持3个或5个）
+     * Set 专用主节点个数（只支持3个或5个）
      * @param MasterNodeNum 专用主节点个数（只支持3个或5个）
      */
     public void setMasterNodeNum(Integer MasterNodeNum) {
@@ -258,7 +258,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
      * @return MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getMasterNodeType() {
@@ -266,7 +266,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
@@ -274,7 +274,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * Get 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义） 
      * @return MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public Integer getMasterNodeDiskSize() {
@@ -282,7 +282,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
+     * Set 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      * @param MasterNodeDiskSize 专用主节点磁盘大小（单位GB系统默认配置为50GB,暂不支持自定义）
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
@@ -290,7 +290,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
+     * Get 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false 
      * @return ForceRestart 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      */
     public Boolean getForceRestart() {
@@ -298,7 +298,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
+     * Set 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      * @param ForceRestart 更新配置时是否强制重启<li>true强制重启</li><li>false不强制重启</li>当前仅更新EsConfig时需要设置，默认值为false
      */
     public void setForceRestart(Boolean ForceRestart) {
@@ -306,7 +306,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取COS自动备份信息
+     * Get COS自动备份信息 
      * @return CosBackup COS自动备份信息
      */
     public CosBackup getCosBackup() {
@@ -314,7 +314,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置COS自动备份信息
+     * Set COS自动备份信息
      * @param CosBackup COS自动备份信息
      */
     public void setCosBackup(CosBackup CosBackup) {
@@ -322,7 +322,7 @@ public class UpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

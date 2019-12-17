@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCameraPersonResponse  extends AbstractModel{
+public class DescribeCameraPersonResponse extends AbstractModel{
 
     /**
     * 集团id
@@ -65,7 +65,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取摄像机id
+     * Get 摄像机id 
      * @return CameraId 摄像机id
      */
     public Integer getCameraId() {
@@ -105,7 +105,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置摄像机id
+     * Set 摄像机id
      * @param CameraId 摄像机id
      */
     public void setCameraId(Integer CameraId) {
@@ -113,7 +113,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取pos机id
+     * Get pos机id 
      * @return PosId pos机id
      */
     public String getPosId() {
@@ -121,7 +121,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置pos机id
+     * Set pos机id
      * @param PosId pos机id
      */
     public void setPosId(String PosId) {
@@ -129,7 +129,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取抓取的顾客信息
+     * Get 抓取的顾客信息 
      * @return Infos 抓取的顾客信息
      */
     public CameraPersonInfo [] getInfos() {
@@ -137,7 +137,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置抓取的顾客信息
+     * Set 抓取的顾客信息
      * @param Infos 抓取的顾客信息
      */
     public void setInfos(CameraPersonInfo [] Infos) {
@@ -145,7 +145,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeCameraPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

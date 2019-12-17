@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TablePrivilege  extends AbstractModel{
+public class TablePrivilege extends AbstractModel{
 
     /**
     * 数据库名
@@ -44,7 +44,7 @@ public class TablePrivilege  extends AbstractModel{
     private String [] Privileges;
 
     /**
-     * 获取数据库名
+     * Get 数据库名 
      * @return Database 数据库名
      */
     public String getDatabase() {
@@ -52,7 +52,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名
+     * Set 数据库名
      * @param Database 数据库名
      */
     public void setDatabase(String Database) {
@@ -60,7 +60,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 获取数据库表名
+     * Get 数据库表名 
      * @return Table 数据库表名
      */
     public String getTable() {
@@ -68,7 +68,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 设置数据库表名
+     * Set 数据库表名
      * @param Table 数据库表名
      */
     public void setTable(String Table) {
@@ -76,7 +76,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 获取权限信息
+     * Get 权限信息 
      * @return Privileges 权限信息
      */
     public String [] getPrivileges() {
@@ -84,7 +84,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 设置权限信息
+     * Set 权限信息
      * @param Privileges 权限信息
      */
     public void setPrivileges(String [] Privileges) {
@@ -92,7 +92,7 @@ public class TablePrivilege  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Database", this.Database);

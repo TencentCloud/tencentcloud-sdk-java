@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZonesResponse  extends AbstractModel{
+public class DescribeZonesResponse extends AbstractModel{
 
     /**
     * 大区数量
@@ -44,7 +44,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取大区数量
+     * Get 大区数量 
      * @return TotalCount 大区数量
      */
     public Long getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大区数量
+     * Set 大区数量
      * @param TotalCount 大区数量
      */
     public void setTotalCount(Long TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取大区信息列表
+     * Get 大区信息列表 
      * @return Zones 大区信息列表
      */
     public ZoneInfo [] getZones() {
@@ -68,7 +68,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大区信息列表
+     * Set 大区信息列表
      * @param Zones 大区信息列表
      */
     public void setZones(ZoneInfo [] Zones) {
@@ -76,7 +76,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

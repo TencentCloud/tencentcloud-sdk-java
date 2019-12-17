@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskResponse  extends AbstractModel{
+public class DescribeTaskResponse extends AbstractModel{
 
     /**
     * 作业ID
@@ -86,7 +86,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -94,7 +94,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -102,7 +102,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -110,7 +110,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -118,7 +118,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return TaskState 任务状态
      */
     public String getTaskState() {
@@ -126,7 +126,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param TaskState 任务状态
      */
     public void setTaskState(String TaskState) {
@@ -134,7 +134,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -142,7 +142,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -150,7 +150,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -158,7 +158,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -166,7 +166,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例总数
+     * Get 任务实例总数 
      * @return TaskInstanceTotalCount 任务实例总数
      */
     public Integer getTaskInstanceTotalCount() {
@@ -174,7 +174,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例总数
+     * Set 任务实例总数
      * @param TaskInstanceTotalCount 任务实例总数
      */
     public void setTaskInstanceTotalCount(Integer TaskInstanceTotalCount) {
@@ -182,7 +182,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例信息
+     * Get 任务实例信息 
      * @return TaskInstanceSet 任务实例信息
      */
     public TaskInstanceView [] getTaskInstanceSet() {
@@ -190,7 +190,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例信息
+     * Set 任务实例信息
      * @param TaskInstanceSet 任务实例信息
      */
     public void setTaskInstanceSet(TaskInstanceView [] TaskInstanceSet) {
@@ -198,7 +198,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例统计指标
+     * Get 任务实例统计指标 
      * @return TaskInstanceMetrics 任务实例统计指标
      */
     public TaskInstanceMetrics getTaskInstanceMetrics() {
@@ -206,7 +206,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例统计指标
+     * Set 任务实例统计指标
      * @param TaskInstanceMetrics 任务实例统计指标
      */
     public void setTaskInstanceMetrics(TaskInstanceMetrics TaskInstanceMetrics) {
@@ -214,7 +214,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
+public class CreateDDoSPolicyCaseRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -177,7 +177,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     private String HasVPN;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -185,7 +185,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -193,7 +193,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略场景名，字符串长度小于64
+     * Get 策略场景名，字符串长度小于64 
      * @return CaseName 策略场景名，字符串长度小于64
      */
     public String getCaseName() {
@@ -201,7 +201,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略场景名，字符串长度小于64
+     * Set 策略场景名，字符串长度小于64
      * @param CaseName 策略场景名，字符串长度小于64
      */
     public void setCaseName(String CaseName) {
@@ -209,7 +209,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）]
+     * Get 开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）] 
      * @return PlatformTypes 开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）]
      */
     public String [] getPlatformTypes() {
@@ -217,7 +217,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）]
+     * Set 开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）]
      * @param PlatformTypes 开发平台，取值[PC（PC客户端）， MOBILE（移动端）， TV（电视端）， SERVER（主机）]
      */
     public void setPlatformTypes(String [] PlatformTypes) {
@@ -225,7 +225,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）]
+     * Get 细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）] 
      * @return AppType 细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）]
      */
     public String getAppType() {
@@ -233,7 +233,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）]
+     * Set 细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）]
      * @param AppType 细分品类，取值[WEB（网站）， GAME（游戏）， APP（应用）， OTHER（其他）]
      */
     public void setAppType(String AppType) {
@@ -241,7 +241,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）]
+     * Get 应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）] 
      * @return AppProtocols 应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）]
      */
     public String [] getAppProtocols() {
@@ -249,7 +249,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）]
+     * Set 应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）]
      * @param AppProtocols 应用协议，取值[tcp（TCP协议），udp（UDP协议），icmp（ICMP协议），all（其他协议）]
      */
     public void setAppProtocols(String [] AppProtocols) {
@@ -257,7 +257,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TCP业务起始端口，取值(0, 65535]
+     * Get TCP业务起始端口，取值(0, 65535] 
      * @return TcpSportStart TCP业务起始端口，取值(0, 65535]
      */
     public String getTcpSportStart() {
@@ -265,7 +265,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TCP业务起始端口，取值(0, 65535]
+     * Set TCP业务起始端口，取值(0, 65535]
      * @param TcpSportStart TCP业务起始端口，取值(0, 65535]
      */
     public void setTcpSportStart(String TcpSportStart) {
@@ -273,7 +273,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口
+     * Get TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口 
      * @return TcpSportEnd TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口
      */
     public String getTcpSportEnd() {
@@ -281,7 +281,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口
+     * Set TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口
      * @param TcpSportEnd TCP业务结束端口，取值(0, 65535]，必须大于等于TCP业务起始端口
      */
     public void setTcpSportEnd(String TcpSportEnd) {
@@ -289,7 +289,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UDP业务起始端口，取值范围(0, 65535]
+     * Get UDP业务起始端口，取值范围(0, 65535] 
      * @return UdpSportStart UDP业务起始端口，取值范围(0, 65535]
      */
     public String getUdpSportStart() {
@@ -297,7 +297,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UDP业务起始端口，取值范围(0, 65535]
+     * Set UDP业务起始端口，取值范围(0, 65535]
      * @param UdpSportStart UDP业务起始端口，取值范围(0, 65535]
      */
     public void setUdpSportStart(String UdpSportStart) {
@@ -305,7 +305,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口
+     * Get UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口 
      * @return UdpSportEnd UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口
      */
     public String getUdpSportEnd() {
@@ -313,7 +313,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口
+     * Set UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口
      * @param UdpSportEnd UDP业务结束端口，取值范围(0, 65535)，必须大于等于UDP业务起始端口
      */
     public void setUdpSportEnd(String UdpSportEnd) {
@@ -321,7 +321,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否有海外客户，取值[no（没有）, yes（有）]
+     * Get 是否有海外客户，取值[no（没有）, yes（有）] 
      * @return HasAbroad 是否有海外客户，取值[no（没有）, yes（有）]
      */
     public String getHasAbroad() {
@@ -329,7 +329,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否有海外客户，取值[no（没有）, yes（有）]
+     * Set 是否有海外客户，取值[no（没有）, yes（有）]
      * @param HasAbroad 是否有海外客户，取值[no（没有）, yes（有）]
      */
     public void setHasAbroad(String HasAbroad) {
@@ -337,7 +337,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否会主动对外发起TCP请求，取值[no（不会）, yes（会）]
+     * Get 是否会主动对外发起TCP请求，取值[no（不会）, yes（会）] 
      * @return HasInitiateTcp 是否会主动对外发起TCP请求，取值[no（不会）, yes（会）]
      */
     public String getHasInitiateTcp() {
@@ -345,7 +345,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否会主动对外发起TCP请求，取值[no（不会）, yes（会）]
+     * Set 是否会主动对外发起TCP请求，取值[no（不会）, yes（会）]
      * @param HasInitiateTcp 是否会主动对外发起TCP请求，取值[no（不会）, yes（会）]
      */
     public void setHasInitiateTcp(String HasInitiateTcp) {
@@ -353,7 +353,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）]
+     * Get 是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）] 
      * @return HasInitiateUdp 是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）]
      */
     public String getHasInitiateUdp() {
@@ -361,7 +361,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）]
+     * Set 是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）]
      * @param HasInitiateUdp 是否会主动对外发起UDP业务请求，取值[no（不会）, yes（会）]
      */
     public void setHasInitiateUdp(String HasInitiateUdp) {
@@ -369,7 +369,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主动发起TCP请求的端口，取值范围(0, 65535]
+     * Get 主动发起TCP请求的端口，取值范围(0, 65535] 
      * @return PeerTcpPort 主动发起TCP请求的端口，取值范围(0, 65535]
      */
     public String getPeerTcpPort() {
@@ -377,7 +377,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主动发起TCP请求的端口，取值范围(0, 65535]
+     * Set 主动发起TCP请求的端口，取值范围(0, 65535]
      * @param PeerTcpPort 主动发起TCP请求的端口，取值范围(0, 65535]
      */
     public void setPeerTcpPort(String PeerTcpPort) {
@@ -385,7 +385,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主动发起UDP请求的端口，取值范围(0, 65535]
+     * Get 主动发起UDP请求的端口，取值范围(0, 65535] 
      * @return PeerUdpPort 主动发起UDP请求的端口，取值范围(0, 65535]
      */
     public String getPeerUdpPort() {
@@ -393,7 +393,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主动发起UDP请求的端口，取值范围(0, 65535]
+     * Set 主动发起UDP请求的端口，取值范围(0, 65535]
      * @param PeerUdpPort 主动发起UDP请求的端口，取值范围(0, 65535]
      */
     public void setPeerUdpPort(String PeerUdpPort) {
@@ -401,7 +401,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TCP载荷的固定特征码，字符串长度小于512
+     * Get TCP载荷的固定特征码，字符串长度小于512 
      * @return TcpFootprint TCP载荷的固定特征码，字符串长度小于512
      */
     public String getTcpFootprint() {
@@ -409,7 +409,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TCP载荷的固定特征码，字符串长度小于512
+     * Set TCP载荷的固定特征码，字符串长度小于512
      * @param TcpFootprint TCP载荷的固定特征码，字符串长度小于512
      */
     public void setTcpFootprint(String TcpFootprint) {
@@ -417,7 +417,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UDP载荷的固定特征码，字符串长度小于512
+     * Get UDP载荷的固定特征码，字符串长度小于512 
      * @return UdpFootprint UDP载荷的固定特征码，字符串长度小于512
      */
     public String getUdpFootprint() {
@@ -425,7 +425,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UDP载荷的固定特征码，字符串长度小于512
+     * Set UDP载荷的固定特征码，字符串长度小于512
      * @param UdpFootprint UDP载荷的固定特征码，字符串长度小于512
      */
     public void setUdpFootprint(String UdpFootprint) {
@@ -433,7 +433,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Web业务的API的URL
+     * Get Web业务的API的URL 
      * @return WebApiUrl Web业务的API的URL
      */
     public String [] getWebApiUrl() {
@@ -441,7 +441,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Web业务的API的URL
+     * Set Web业务的API的URL
      * @param WebApiUrl Web业务的API的URL
      */
     public void setWebApiUrl(String [] WebApiUrl) {
@@ -449,7 +449,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TCP业务报文长度最小值，取值范围(0, 1500)
+     * Get TCP业务报文长度最小值，取值范围(0, 1500) 
      * @return MinTcpPackageLen TCP业务报文长度最小值，取值范围(0, 1500)
      */
     public String getMinTcpPackageLen() {
@@ -457,7 +457,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TCP业务报文长度最小值，取值范围(0, 1500)
+     * Set TCP业务报文长度最小值，取值范围(0, 1500)
      * @param MinTcpPackageLen TCP业务报文长度最小值，取值范围(0, 1500)
      */
     public void setMinTcpPackageLen(String MinTcpPackageLen) {
@@ -465,7 +465,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值
+     * Get TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值 
      * @return MaxTcpPackageLen TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值
      */
     public String getMaxTcpPackageLen() {
@@ -473,7 +473,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值
+     * Set TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值
      * @param MaxTcpPackageLen TCP业务报文长度最大值，取值范围(0, 1500)，必须大于等于TCP业务报文长度最小值
      */
     public void setMaxTcpPackageLen(String MaxTcpPackageLen) {
@@ -481,7 +481,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UDP业务报文长度最小值，取值范围(0, 1500)
+     * Get UDP业务报文长度最小值，取值范围(0, 1500) 
      * @return MinUdpPackageLen UDP业务报文长度最小值，取值范围(0, 1500)
      */
     public String getMinUdpPackageLen() {
@@ -489,7 +489,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UDP业务报文长度最小值，取值范围(0, 1500)
+     * Set UDP业务报文长度最小值，取值范围(0, 1500)
      * @param MinUdpPackageLen UDP业务报文长度最小值，取值范围(0, 1500)
      */
     public void setMinUdpPackageLen(String MinUdpPackageLen) {
@@ -497,7 +497,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
+     * Get UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值 
      * @return MaxUdpPackageLen UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
      */
     public String getMaxUdpPackageLen() {
@@ -505,7 +505,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
+     * Set UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
      * @param MaxUdpPackageLen UDP业务报文长度最大值，取值范围(0, 1500)，必须大于等于UDP业务报文长度最小值
      */
     public void setMaxUdpPackageLen(String MaxUdpPackageLen) {
@@ -513,7 +513,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否有VPN业务，取值[no（没有）, yes（有）]
+     * Get 是否有VPN业务，取值[no（没有）, yes（有）] 
      * @return HasVPN 是否有VPN业务，取值[no（没有）, yes（有）]
      */
     public String getHasVPN() {
@@ -521,7 +521,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否有VPN业务，取值[no（没有）, yes（有）]
+     * Set 是否有VPN业务，取值[no（没有）, yes（有）]
      * @param HasVPN 是否有VPN业务，取值[no（没有）, yes（有）]
      */
     public void setHasVPN(String HasVPN) {
@@ -529,7 +529,7 @@ public class CreateDDoSPolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

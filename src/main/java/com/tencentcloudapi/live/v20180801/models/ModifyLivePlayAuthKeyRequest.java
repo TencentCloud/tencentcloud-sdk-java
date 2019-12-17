@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
+public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * 域名。
@@ -58,7 +58,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     private String AuthBackKey;
 
     /**
-     * 获取域名。
+     * Get 域名。 
      * @return DomainName 域名。
      */
     public String getDomainName() {
@@ -66,7 +66,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名。
+     * Set 域名。
      * @param DomainName 域名。
      */
     public void setDomainName(String DomainName) {
@@ -74,7 +74,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用，0：关闭，1：启用。
+     * Get 是否启用，0：关闭，1：启用。 
      * @return Enable 是否启用，0：关闭，1：启用。
      */
     public Integer getEnable() {
@@ -82,7 +82,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用，0：关闭，1：启用。
+     * Set 是否启用，0：关闭，1：启用。
      * @param Enable 是否启用，0：关闭，1：启用。
      */
     public void setEnable(Integer Enable) {
@@ -90,7 +90,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权key。
+     * Get 鉴权key。 
      * @return AuthKey 鉴权key。
      */
     public String getAuthKey() {
@@ -98,7 +98,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权key。
+     * Set 鉴权key。
      * @param AuthKey 鉴权key。
      */
     public void setAuthKey(String AuthKey) {
@@ -106,7 +106,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取有效时间，单位：秒。
+     * Get 有效时间，单位：秒。 
      * @return AuthDelta 有效时间，单位：秒。
      */
     public Integer getAuthDelta() {
@@ -114,7 +114,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置有效时间，单位：秒。
+     * Set 有效时间，单位：秒。
      * @param AuthDelta 有效时间，单位：秒。
      */
     public void setAuthDelta(Integer AuthDelta) {
@@ -122,7 +122,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权backkey。
+     * Get 鉴权backkey。 
      * @return AuthBackKey 鉴权backkey。
      */
     public String getAuthBackKey() {
@@ -130,7 +130,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权backkey。
+     * Set 鉴权backkey。
      * @param AuthBackKey 鉴权backkey。
      */
     public void setAuthBackKey(String AuthBackKey) {
@@ -138,7 +138,7 @@ public class ModifyLivePlayAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeployGroupRequest  extends AbstractModel{
+public class CreateDeployGroupRequest extends AbstractModel{
 
     /**
     * 置放群组名称，最长不能超过60个字符。
@@ -37,7 +37,7 @@ public class CreateDeployGroupRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取置放群组名称，最长不能超过60个字符。
+     * Get 置放群组名称，最长不能超过60个字符。 
      * @return DeployGroupName 置放群组名称，最长不能超过60个字符。
      */
     public String getDeployGroupName() {
@@ -45,7 +45,7 @@ public class CreateDeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组名称，最长不能超过60个字符。
+     * Set 置放群组名称，最长不能超过60个字符。
      * @param DeployGroupName 置放群组名称，最长不能超过60个字符。
      */
     public void setDeployGroupName(String DeployGroupName) {
@@ -53,7 +53,7 @@ public class CreateDeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组描述，最长不能超过200个字符。
+     * Get 置放群组描述，最长不能超过200个字符。 
      * @return Description 置放群组描述，最长不能超过200个字符。
      */
     public String getDescription() {
@@ -61,7 +61,7 @@ public class CreateDeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组描述，最长不能超过200个字符。
+     * Set 置放群组描述，最长不能超过200个字符。
      * @param Description 置放群组描述，最长不能超过200个字符。
      */
     public void setDescription(String Description) {
@@ -69,7 +69,7 @@ public class CreateDeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);

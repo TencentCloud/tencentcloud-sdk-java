@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
+public class ModifyServiceTemplateGroupAttributeRequest extends AbstractModel{
 
     /**
     * 协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
@@ -44,7 +44,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     private String [] ServiceTemplateIds;
 
     /**
-     * 获取协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
+     * Get 协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。 
      * @return ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
      */
     public String getServiceTemplateGroupId() {
@@ -52,7 +52,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
+     * Set 协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
      * @param ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-ei8hfd9a。
      */
     public void setServiceTemplateGroupId(String ServiceTemplateGroupId) {
@@ -60,7 +60,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口模板集合名称。
+     * Get 协议端口模板集合名称。 
      * @return ServiceTemplateGroupName 协议端口模板集合名称。
      */
     public String getServiceTemplateGroupName() {
@@ -68,7 +68,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板集合名称。
+     * Set 协议端口模板集合名称。
      * @param ServiceTemplateGroupName 协议端口模板集合名称。
      */
     public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
@@ -76,7 +76,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Get 协议端口模板实例ID，例如：ppm-4dw6agho。 
      * @return ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
      */
     public String [] getServiceTemplateIds() {
@@ -84,7 +84,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Set 协议端口模板实例ID，例如：ppm-4dw6agho。
      * @param ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
      */
     public void setServiceTemplateIds(String [] ServiceTemplateIds) {
@@ -92,7 +92,7 @@ public class ModifyServiceTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateGroupId", this.ServiceTemplateGroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SitesVerification  extends AbstractModel{
+public class SitesVerification extends AbstractModel{
 
     /**
     * 根域名。
@@ -100,7 +100,7 @@ public class SitesVerification  extends AbstractModel{
     private String VerifyFileUrl;
 
     /**
-     * 获取根域名。
+     * Get 根域名。 
      * @return Domain 根域名。
      */
     public String getDomain() {
@@ -108,7 +108,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置根域名。
+     * Set 根域名。
      * @param Domain 根域名。
      */
     public void setDomain(String Domain) {
@@ -116,7 +116,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取txt解析域名验证的name。
+     * Get txt解析域名验证的name。 
      * @return TxtName txt解析域名验证的name。
      */
     public String getTxtName() {
@@ -124,7 +124,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置txt解析域名验证的name。
+     * Set txt解析域名验证的name。
      * @param TxtName txt解析域名验证的name。
      */
     public void setTxtName(String TxtName) {
@@ -132,7 +132,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取txt解析域名验证的text。
+     * Get txt解析域名验证的text。 
      * @return TxtText txt解析域名验证的text。
      */
     public String getTxtText() {
@@ -140,7 +140,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置txt解析域名验证的text。
+     * Set txt解析域名验证的text。
      * @param TxtText txt解析域名验证的text。
      */
     public void setTxtText(String TxtText) {
@@ -148,7 +148,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取验证有效期，在此之前有效。
+     * Get 验证有效期，在此之前有效。 
      * @return ValidTo 验证有效期，在此之前有效。
      */
     public String getValidTo() {
@@ -156,7 +156,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置验证有效期，在此之前有效。
+     * Set 验证有效期，在此之前有效。
      * @param ValidTo 验证有效期，在此之前有效。
      */
     public void setValidTo(String ValidTo) {
@@ -164,7 +164,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     * Get 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。 
      * @return VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
     public Integer getVerifyStatus() {
@@ -172,7 +172,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     * Set 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      * @param VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
     public void setVerifyStatus(Integer VerifyStatus) {
@@ -180,7 +180,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取CreatedAt。
+     * Get CreatedAt。 
      * @return CreatedAt CreatedAt。
      */
     public String getCreatedAt() {
@@ -188,7 +188,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置CreatedAt。
+     * Set CreatedAt。
      * @param CreatedAt CreatedAt。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -196,7 +196,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取UpdatedAt。
+     * Get UpdatedAt。 
      * @return UpdatedAt UpdatedAt。
      */
     public String getUpdatedAt() {
@@ -204,7 +204,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置UpdatedAt。
+     * Set UpdatedAt。
      * @param UpdatedAt UpdatedAt。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -212,7 +212,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取ID。
+     * Get ID。 
      * @return Id ID。
      */
     public Integer getId() {
@@ -220,7 +220,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置ID。
+     * Set ID。
      * @param Id ID。
      */
     public void setId(Integer Id) {
@@ -228,7 +228,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid
+     * Get 云用户appid 
      * @return Appid 云用户appid
      */
     public Integer getAppid() {
@@ -236,7 +236,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid
+     * Set 云用户appid
      * @param Appid 云用户appid
      */
     public void setAppid(Integer Appid) {
@@ -244,7 +244,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取用于验证站点的url，即访问该url获取验证数据。
+     * Get 用于验证站点的url，即访问该url获取验证数据。 
      * @return VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
      */
     public String getVerifyUrl() {
@@ -252,7 +252,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置用于验证站点的url，即访问该url获取验证数据。
+     * Set 用于验证站点的url，即访问该url获取验证数据。
      * @param VerifyUrl 用于验证站点的url，即访问该url获取验证数据。
      */
     public void setVerifyUrl(String VerifyUrl) {
@@ -260,7 +260,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 获取获取验证验证文件的url。
+     * Get 获取验证验证文件的url。 
      * @return VerifyFileUrl 获取验证验证文件的url。
      */
     public String getVerifyFileUrl() {
@@ -268,7 +268,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 设置获取验证验证文件的url。
+     * Set 获取验证验证文件的url。
      * @param VerifyFileUrl 获取验证验证文件的url。
      */
     public void setVerifyFileUrl(String VerifyFileUrl) {
@@ -276,7 +276,7 @@ public class SitesVerification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

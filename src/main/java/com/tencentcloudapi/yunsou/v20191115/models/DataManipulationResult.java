@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataManipulationResult  extends AbstractModel{
+public class DataManipulationResult extends AbstractModel{
 
     /**
     * 应用ID
@@ -60,7 +60,7 @@ public class DataManipulationResult  extends AbstractModel{
     private String ErrorResult;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return AppId 应用ID
      */
     public Long getAppId() {
@@ -68,7 +68,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param AppId 应用ID
      */
     public void setAppId(Long AppId) {
@@ -76,7 +76,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 获取序号
+     * Get 序号 
      * @return Seq 序号
      */
     public Long getSeq() {
@@ -84,7 +84,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 设置序号
+     * Set 序号
      * @param Seq 序号
      */
     public void setSeq(Long Seq) {
@@ -92,7 +92,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 获取结果
+     * Get 结果 
      * @return TotalResult 结果
      */
     public String getTotalResult() {
@@ -100,7 +100,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 设置结果
+     * Set 结果
      * @param TotalResult 结果
      */
     public void setTotalResult(String TotalResult) {
@@ -108,8 +108,8 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 获取操作结果明细
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 操作结果明细
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 操作结果明细
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -118,7 +118,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 设置操作结果明细
+     * Set 操作结果明细
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 操作结果明细
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,8 +128,8 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 获取异常信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 异常信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrorResult 异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 设置异常信息
+     * Set 异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorResult 异常信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class DataManipulationResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);

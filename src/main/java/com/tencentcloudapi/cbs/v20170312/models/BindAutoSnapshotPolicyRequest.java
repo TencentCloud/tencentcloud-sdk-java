@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
+public class BindAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
     * 要绑定的定期快照策略ID。
@@ -37,7 +37,7 @@ public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
     private String [] DiskIds;
 
     /**
-     * 获取要绑定的定期快照策略ID。
+     * Get 要绑定的定期快照策略ID。 
      * @return AutoSnapshotPolicyId 要绑定的定期快照策略ID。
      */
     public String getAutoSnapshotPolicyId() {
@@ -45,7 +45,7 @@ public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要绑定的定期快照策略ID。
+     * Set 要绑定的定期快照策略ID。
      * @param AutoSnapshotPolicyId 要绑定的定期快照策略ID。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
@@ -53,7 +53,7 @@ public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
+     * Get 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。 
      * @return DiskIds 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
      */
     public String [] getDiskIds() {
@@ -61,7 +61,7 @@ public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
+     * Set 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
      * @param DiskIds 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -69,7 +69,7 @@ public class BindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);

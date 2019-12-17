@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Coord  extends AbstractModel{
+public class Coord extends AbstractModel{
 
     /**
     * 横坐标
@@ -37,7 +37,7 @@ public class Coord  extends AbstractModel{
     private Integer Y;
 
     /**
-     * 获取横坐标
+     * Get 横坐标 
      * @return X 横坐标
      */
     public Integer getX() {
@@ -45,7 +45,7 @@ public class Coord  extends AbstractModel{
     }
 
     /**
-     * 设置横坐标
+     * Set 横坐标
      * @param X 横坐标
      */
     public void setX(Integer X) {
@@ -53,7 +53,7 @@ public class Coord  extends AbstractModel{
     }
 
     /**
-     * 获取纵坐标
+     * Get 纵坐标 
      * @return Y 纵坐标
      */
     public Integer getY() {
@@ -61,7 +61,7 @@ public class Coord  extends AbstractModel{
     }
 
     /**
-     * 设置纵坐标
+     * Set 纵坐标
      * @param Y 纵坐标
      */
     public void setY(Integer Y) {
@@ -69,7 +69,7 @@ public class Coord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

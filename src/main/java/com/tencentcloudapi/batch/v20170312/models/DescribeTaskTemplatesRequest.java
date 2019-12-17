@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskTemplatesRequest  extends AbstractModel{
+public class DescribeTaskTemplatesRequest extends AbstractModel{
 
     /**
     * 任务模板ID
@@ -52,7 +52,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取任务模板ID
+     * Get 任务模板ID 
      * @return TaskTemplateIds 任务模板ID
      */
     public String [] getTaskTemplateIds() {
@@ -60,7 +60,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板ID
+     * Set 任务模板ID
      * @param TaskTemplateIds 任务模板ID
      */
     public void setTaskTemplateIds(String [] TaskTemplateIds) {
@@ -68,8 +68,8 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
-<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+     * Get 过滤条件
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li> 
      * @return Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
      */
@@ -78,7 +78,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
      * @param Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
@@ -88,7 +88,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -96,7 +96,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -104,7 +104,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -112,7 +112,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -120,7 +120,7 @@ public class DescribeTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TaskTemplateIds.", this.TaskTemplateIds);

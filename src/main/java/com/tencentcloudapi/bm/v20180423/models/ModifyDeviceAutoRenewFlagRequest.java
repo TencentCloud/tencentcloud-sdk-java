@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
+public class ModifyDeviceAutoRenewFlagRequest extends AbstractModel{
 
     /**
     * 自动续费标志位。0: 不自动续费; 1: 自动续费
@@ -37,7 +37,7 @@ public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取自动续费标志位。0: 不自动续费; 1: 自动续费
+     * Get 自动续费标志位。0: 不自动续费; 1: 自动续费 
      * @return AutoRenewFlag 自动续费标志位。0: 不自动续费; 1: 自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -45,7 +45,7 @@ public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志位。0: 不自动续费; 1: 自动续费
+     * Set 自动续费标志位。0: 不自动续费; 1: 自动续费
      * @param AutoRenewFlag 自动续费标志位。0: 不自动续费; 1: 自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -53,7 +53,7 @@ public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的设备ID列表
+     * Get 需要修改的设备ID列表 
      * @return InstanceIds 需要修改的设备ID列表
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的设备ID列表
+     * Set 需要修改的设备ID列表
      * @param InstanceIds 需要修改的设备ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class ModifyDeviceAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

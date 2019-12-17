@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInstanceNetInfo  extends AbstractModel{
+public class DBInstanceNetInfo extends AbstractModel{
 
     /**
     * DNS域名
@@ -58,7 +58,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取DNS域名
+     * Get DNS域名 
      * @return Address DNS域名
      */
     public String getAddress() {
@@ -66,7 +66,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置DNS域名
+     * Set DNS域名
      * @param Address DNS域名
      */
     public void setAddress(String Address) {
@@ -74,7 +74,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Ip
+     * Get Ip 
      * @return Ip Ip
      */
     public String getIp() {
@@ -82,7 +82,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Ip
+     * Set Ip
      * @param Ip Ip
      */
     public void setIp(String Ip) {
@@ -90,7 +90,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取连接Port地址
+     * Get 连接Port地址 
      * @return Port 连接Port地址
      */
     public Integer getPort() {
@@ -98,7 +98,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置连接Port地址
+     * Set 连接Port地址
      * @param Port 连接Port地址
      */
     public void setPort(Integer Port) {
@@ -106,7 +106,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型，1、inner（内网地址）；2、public（外网地址）
+     * Get 网络类型，1、inner（内网地址）；2、public（外网地址） 
      * @return NetType 网络类型，1、inner（内网地址）；2、public（外网地址）
      */
     public String getNetType() {
@@ -114,7 +114,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型，1、inner（内网地址）；2、public（外网地址）
+     * Set 网络类型，1、inner（内网地址）；2、public（外网地址）
      * @param NetType 网络类型，1、inner（内网地址）；2、public（外网地址）
      */
     public void setNetType(String NetType) {
@@ -122,7 +122,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络连接状态
+     * Get 网络连接状态 
      * @return Status 网络连接状态
      */
     public String getStatus() {
@@ -130,7 +130,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络连接状态
+     * Set 网络连接状态
      * @param Status 网络连接状态
      */
     public void setStatus(String Status) {
@@ -138,7 +138,7 @@ public class DBInstanceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Address", this.Address);

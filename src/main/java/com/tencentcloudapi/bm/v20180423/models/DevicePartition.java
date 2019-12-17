@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicePartition  extends AbstractModel{
+public class DevicePartition extends AbstractModel{
 
     /**
     * 系统盘大小
@@ -79,7 +79,7 @@ public class DevicePartition  extends AbstractModel{
     private DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet;
 
     /**
-     * 获取系统盘大小
+     * Get 系统盘大小 
      * @return SystemDiskSize 系统盘大小
      */
     public Integer getSystemDiskSize() {
@@ -87,7 +87,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘大小
+     * Set 系统盘大小
      * @param SystemDiskSize 系统盘大小
      */
     public void setSystemDiskSize(Integer SystemDiskSize) {
@@ -95,7 +95,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘大小
+     * Get 数据盘大小 
      * @return DataDiskSize 数据盘大小
      */
     public Integer getDataDiskSize() {
@@ -103,7 +103,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘大小
+     * Set 数据盘大小
      * @param DataDiskSize 数据盘大小
      */
     public void setDataDiskSize(Integer DataDiskSize) {
@@ -111,7 +111,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取是否兼容Uefi
+     * Get 是否兼容Uefi 
      * @return SysIsUefiType 是否兼容Uefi
      */
     public Boolean getSysIsUefiType() {
@@ -119,7 +119,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置是否兼容Uefi
+     * Set 是否兼容Uefi
      * @param SysIsUefiType 是否兼容Uefi
      */
     public void setSysIsUefiType(Boolean SysIsUefiType) {
@@ -127,7 +127,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取root分区大小
+     * Get root分区大小 
      * @return SysRootSpace root分区大小
      */
     public Integer getSysRootSpace() {
@@ -135,7 +135,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置root分区大小
+     * Set root分区大小
      * @param SysRootSpace root分区大小
      */
     public void setSysRootSpace(Integer SysRootSpace) {
@@ -143,7 +143,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取Swaporuefi分区大小
+     * Get Swaporuefi分区大小 
      * @return SysSwaporuefiSpace Swaporuefi分区大小
      */
     public Integer getSysSwaporuefiSpace() {
@@ -151,7 +151,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置Swaporuefi分区大小
+     * Set Swaporuefi分区大小
      * @param SysSwaporuefiSpace Swaporuefi分区大小
      */
     public void setSysSwaporuefiSpace(Integer SysSwaporuefiSpace) {
@@ -159,7 +159,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取Usrlocal分区大小
+     * Get Usrlocal分区大小 
      * @return SysUsrlocalSpace Usrlocal分区大小
      */
     public Integer getSysUsrlocalSpace() {
@@ -167,7 +167,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置Usrlocal分区大小
+     * Set Usrlocal分区大小
      * @param SysUsrlocalSpace Usrlocal分区大小
      */
     public void setSysUsrlocalSpace(Integer SysUsrlocalSpace) {
@@ -175,7 +175,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取data分区大小
+     * Get data分区大小 
      * @return SysDataSpace data分区大小
      */
     public Integer getSysDataSpace() {
@@ -183,7 +183,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置data分区大小
+     * Set data分区大小
      * @param SysDataSpace data分区大小
      */
     public void setSysDataSpace(Integer SysDataSpace) {
@@ -191,7 +191,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘大小详情
+     * Get 硬盘大小详情 
      * @return DeviceDiskSizeInfoSet 硬盘大小详情
      */
     public DeviceDiskSizeInfo [] getDeviceDiskSizeInfoSet() {
@@ -199,7 +199,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘大小详情
+     * Set 硬盘大小详情
      * @param DeviceDiskSizeInfoSet 硬盘大小详情
      */
     public void setDeviceDiskSizeInfoSet(DeviceDiskSizeInfo [] DeviceDiskSizeInfoSet) {
@@ -207,7 +207,7 @@ public class DevicePartition  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);

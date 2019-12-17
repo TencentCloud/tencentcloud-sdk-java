@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignProjectRequest  extends AbstractModel{
+public class AssignProjectRequest extends AbstractModel{
 
     /**
     * 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -37,7 +37,7 @@ public class AssignProjectRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class AssignProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class AssignProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -61,7 +61,7 @@ public class AssignProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -69,7 +69,7 @@ public class AssignProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePackIndexRequest  extends AbstractModel{
+public class DescribePackIndexRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
@@ -30,7 +30,7 @@ public class DescribePackIndexRequest  extends AbstractModel{
     private String Business;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -38,7 +38,7 @@ public class DescribePackIndexRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示高防包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -46,7 +46,7 @@ public class DescribePackIndexRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

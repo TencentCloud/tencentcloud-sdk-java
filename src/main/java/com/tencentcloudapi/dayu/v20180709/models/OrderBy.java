@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OrderBy  extends AbstractModel{
+public class OrderBy extends AbstractModel{
 
     /**
     * 排序字段名称，取值[
@@ -40,10 +40,10 @@ overloadCount（超峰值次数）
     private String Order;
 
     /**
-     * 获取排序字段名称，取值[
+     * Get 排序字段名称，取值[
 bandwidth（带宽），
 overloadCount（超峰值次数）
-]
+] 
      * @return Field 排序字段名称，取值[
 bandwidth（带宽），
 overloadCount（超峰值次数）
@@ -54,7 +54,7 @@ overloadCount（超峰值次数）
     }
 
     /**
-     * 设置排序字段名称，取值[
+     * Set 排序字段名称，取值[
 bandwidth（带宽），
 overloadCount（超峰值次数）
 ]
@@ -68,7 +68,7 @@ overloadCount（超峰值次数）
     }
 
     /**
-     * 获取升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
+     * Get 升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）] 
      * @return Order 升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
      */
     public String getOrder() {
@@ -76,7 +76,7 @@ overloadCount（超峰值次数）
     }
 
     /**
-     * 设置升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
+     * Set 升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
      * @param Order 升降序，取值为[asc（升序），（升序），desc（降序）， DESC（降序）]
      */
     public void setOrder(String Order) {
@@ -84,7 +84,7 @@ overloadCount（超峰值次数）
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Field", this.Field);

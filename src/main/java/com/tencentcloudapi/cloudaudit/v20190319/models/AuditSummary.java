@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditSummary  extends AbstractModel{
+public class AuditSummary extends AbstractModel{
 
     /**
     * 跟踪集名称
@@ -51,7 +51,7 @@ public class AuditSummary  extends AbstractModel{
     private String LogFilePrefix;
 
     /**
-     * 获取跟踪集名称
+     * Get 跟踪集名称 
      * @return AuditName 跟踪集名称
      */
     public String getAuditName() {
@@ -59,7 +59,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 设置跟踪集名称
+     * Set 跟踪集名称
      * @param AuditName 跟踪集名称
      */
     public void setAuditName(String AuditName) {
@@ -67,7 +67,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 获取跟踪集状态，1：开启，0：关闭
+     * Get 跟踪集状态，1：开启，0：关闭 
      * @return AuditStatus 跟踪集状态，1：开启，0：关闭
      */
     public Long getAuditStatus() {
@@ -75,7 +75,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 设置跟踪集状态，1：开启，0：关闭
+     * Set 跟踪集状态，1：开启，0：关闭
      * @param AuditStatus 跟踪集状态，1：开启，0：关闭
      */
     public void setAuditStatus(Long AuditStatus) {
@@ -83,7 +83,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 获取COS存储桶名称
+     * Get COS存储桶名称 
      * @return CosBucketName COS存储桶名称
      */
     public String getCosBucketName() {
@@ -91,7 +91,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 设置COS存储桶名称
+     * Set COS存储桶名称
      * @param CosBucketName COS存储桶名称
      */
     public void setCosBucketName(String CosBucketName) {
@@ -99,7 +99,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 获取日志前缀
+     * Get 日志前缀 
      * @return LogFilePrefix 日志前缀
      */
     public String getLogFilePrefix() {
@@ -107,7 +107,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 设置日志前缀
+     * Set 日志前缀
      * @param LogFilePrefix 日志前缀
      */
     public void setLogFilePrefix(String LogFilePrefix) {
@@ -115,7 +115,7 @@ public class AuditSummary  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuditName", this.AuditName);

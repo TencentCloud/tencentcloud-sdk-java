@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchDeregisterTargetsRequest  extends AbstractModel{
+public class BatchDeregisterTargetsRequest extends AbstractModel{
 
     /**
     * 负载均衡ID
@@ -37,7 +37,7 @@ public class BatchDeregisterTargetsRequest  extends AbstractModel{
     private BatchTarget [] Targets;
 
     /**
-     * 获取负载均衡ID
+     * Get 负载均衡ID 
      * @return LoadBalancerId 负载均衡ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class BatchDeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡ID
+     * Set 负载均衡ID
      * @param LoadBalancerId 负载均衡ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class BatchDeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取解绑目标
+     * Get 解绑目标 
      * @return Targets 解绑目标
      */
     public BatchTarget [] getTargets() {
@@ -61,7 +61,7 @@ public class BatchDeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置解绑目标
+     * Set 解绑目标
      * @param Targets 解绑目标
      */
     public void setTargets(BatchTarget [] Targets) {
@@ -69,7 +69,7 @@ public class BatchDeregisterTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCertRequest  extends AbstractModel{
+public class DeleteCertRequest extends AbstractModel{
 
     /**
     * 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
@@ -37,7 +37,7 @@ public class DeleteCertRequest  extends AbstractModel{
     private String ModuleType;
 
     /**
-     * 获取证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
+     * Get 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段 
      * @return Id 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
      */
     public String getId() {
@@ -45,7 +45,7 @@ public class DeleteCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
+     * Set 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
      * @param Id 证书 ID，即通过 GetList 拿到的证书列表的 ID 字段
      */
     public void setId(String Id) {
@@ -53,7 +53,7 @@ public class DeleteCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模块名称，应填ssl
+     * Get 模块名称，应填ssl 
      * @return ModuleType 模块名称，应填ssl
      */
     public String getModuleType() {
@@ -61,7 +61,7 @@ public class DeleteCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，应填ssl
+     * Set 模块名称，应填ssl
      * @param ModuleType 模块名称，应填ssl
      */
     public void setModuleType(String ModuleType) {
@@ -69,7 +69,7 @@ public class DeleteCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

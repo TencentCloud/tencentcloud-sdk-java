@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceListResponse  extends AbstractModel{
+public class DescribeResourceListResponse extends AbstractModel{
 
     /**
     * 总记录数
@@ -51,7 +51,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return Total 总记录数
      */
     public Long getTotal() {
@@ -59,7 +59,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param Total 总记录数
      */
     public void setTotal(Long Total) {
@@ -67,7 +67,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源记录列表
+     * Get 资源记录列表 
      * @return ServicePacks 资源记录列表
      */
     public KeyValueRecord [] getServicePacks() {
@@ -75,7 +75,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源记录列表
+     * Set 资源记录列表
      * @param ServicePacks 资源记录列表
      */
     public void setServicePacks(KeyValueRecord [] ServicePacks) {
@@ -83,7 +83,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌）
+     * Get 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌） 
      * @return Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌）
      */
     public String getBusiness() {
@@ -91,7 +91,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌）
+     * Set 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌）
      * @param Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包；bgpip表示高防IP；net表示高防IP专业版；shield表示棋牌）
      */
     public void setBusiness(String Business) {
@@ -99,7 +99,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeResourceListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);

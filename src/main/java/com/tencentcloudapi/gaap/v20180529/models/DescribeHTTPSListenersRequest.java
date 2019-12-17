@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHTTPSListenersRequest  extends AbstractModel{
+public class DescribeHTTPSListenersRequest extends AbstractModel{
 
     /**
     * 过滤条件，通道ID
@@ -72,7 +72,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     private String SearchValue;
 
     /**
-     * 获取过滤条件，通道ID
+     * Get 过滤条件，通道ID 
      * @return ProxyId 过滤条件，通道ID
      */
     public String getProxyId() {
@@ -80,7 +80,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，通道ID
+     * Set 过滤条件，通道ID
      * @param ProxyId 过滤条件，通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -88,7 +88,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器ID进行精确查询。
+     * Get 过滤条件，根据监听器ID进行精确查询。 
      * @return ListenerId 过滤条件，根据监听器ID进行精确查询。
      */
     public String getListenerId() {
@@ -96,7 +96,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器ID进行精确查询。
+     * Set 过滤条件，根据监听器ID进行精确查询。
      * @param ListenerId 过滤条件，根据监听器ID进行精确查询。
      */
     public void setListenerId(String ListenerId) {
@@ -104,7 +104,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器名称进行精确查询。
+     * Get 过滤条件，根据监听器名称进行精确查询。 
      * @return ListenerName 过滤条件，根据监听器名称进行精确查询。
      */
     public String getListenerName() {
@@ -112,7 +112,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器名称进行精确查询。
+     * Set 过滤条件，根据监听器名称进行精确查询。
      * @param ListenerName 过滤条件，根据监听器名称进行精确查询。
      */
     public void setListenerName(String ListenerName) {
@@ -120,7 +120,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器端口进行精确查询。
+     * Get 过滤条件，根据监听器端口进行精确查询。 
      * @return Port 过滤条件，根据监听器端口进行精确查询。
      */
     public Long getPort() {
@@ -128,7 +128,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器端口进行精确查询。
+     * Set 过滤条件，根据监听器端口进行精确查询。
      * @param Port 过滤条件，根据监听器端口进行精确查询。
      */
     public void setPort(Long Port) {
@@ -136,7 +136,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量， 默认为0
+     * Get 偏移量， 默认为0 
      * @return Offset 偏移量， 默认为0
      */
     public Long getOffset() {
@@ -144,7 +144,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量， 默认为0
+     * Set 偏移量， 默认为0
      * @param Offset 偏移量， 默认为0
      */
     public void setOffset(Long Offset) {
@@ -152,7 +152,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数量，默认为20
+     * Get 限制数量，默认为20 
      * @return Limit 限制数量，默认为20
      */
     public Long getLimit() {
@@ -160,7 +160,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数量，默认为20
+     * Set 限制数量，默认为20
      * @param Limit 限制数量，默认为20
      */
     public void setLimit(Long Limit) {
@@ -168,7 +168,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，支持按照端口或监听器名称进行模糊查询
+     * Get 过滤条件，支持按照端口或监听器名称进行模糊查询 
      * @return SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询
      */
     public String getSearchValue() {
@@ -176,7 +176,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，支持按照端口或监听器名称进行模糊查询
+     * Set 过滤条件，支持按照端口或监听器名称进行模糊查询
      * @param SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询
      */
     public void setSearchValue(String SearchValue) {
@@ -184,7 +184,7 @@ public class DescribeHTTPSListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

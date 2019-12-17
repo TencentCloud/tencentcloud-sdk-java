@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenProxiesRequest  extends AbstractModel{
+public class OpenProxiesRequest extends AbstractModel{
 
     /**
     * （旧参数，请切换到ProxyIds）通道的实例ID列表。
@@ -45,7 +45,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     private String [] ProxyIds;
 
     /**
-     * 获取（旧参数，请切换到ProxyIds）通道的实例ID列表。
+     * Get （旧参数，请切换到ProxyIds）通道的实例ID列表。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）通道的实例ID列表。
      */
     public String [] getInstanceIds() {
@@ -53,7 +53,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到ProxyIds）通道的实例ID列表。
+     * Set （旧参数，请切换到ProxyIds）通道的实例ID列表。
      * @param InstanceIds （旧参数，请切换到ProxyIds）通道的实例ID列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -61,8 +61,8 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+更多详细信息请参阅：如何保证幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      */
@@ -71,7 +71,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
@@ -81,7 +81,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）通道的实例ID列表。
+     * Get （新参数）通道的实例ID列表。 
      * @return ProxyIds （新参数）通道的实例ID列表。
      */
     public String [] getProxyIds() {
@@ -89,7 +89,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）通道的实例ID列表。
+     * Set （新参数）通道的实例ID列表。
      * @param ProxyIds （新参数）通道的实例ID列表。
      */
     public void setProxyIds(String [] ProxyIds) {
@@ -97,7 +97,7 @@ public class OpenProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

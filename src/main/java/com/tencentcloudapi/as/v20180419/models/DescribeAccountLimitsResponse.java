@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountLimitsResponse  extends AbstractModel{
+public class DescribeAccountLimitsResponse extends AbstractModel{
 
     /**
     * 用户账户被允许创建的启动配置最大数量
@@ -58,7 +58,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户账户被允许创建的启动配置最大数量
+     * Get 用户账户被允许创建的启动配置最大数量 
      * @return MaxNumberOfLaunchConfigurations 用户账户被允许创建的启动配置最大数量
      */
     public Integer getMaxNumberOfLaunchConfigurations() {
@@ -66,7 +66,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户账户被允许创建的启动配置最大数量
+     * Set 用户账户被允许创建的启动配置最大数量
      * @param MaxNumberOfLaunchConfigurations 用户账户被允许创建的启动配置最大数量
      */
     public void setMaxNumberOfLaunchConfigurations(Integer MaxNumberOfLaunchConfigurations) {
@@ -74,7 +74,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户账户启动配置的当前数量
+     * Get 用户账户启动配置的当前数量 
      * @return NumberOfLaunchConfigurations 用户账户启动配置的当前数量
      */
     public Integer getNumberOfLaunchConfigurations() {
@@ -82,7 +82,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户账户启动配置的当前数量
+     * Set 用户账户启动配置的当前数量
      * @param NumberOfLaunchConfigurations 用户账户启动配置的当前数量
      */
     public void setNumberOfLaunchConfigurations(Integer NumberOfLaunchConfigurations) {
@@ -90,7 +90,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户账户被允许创建的伸缩组最大数量
+     * Get 用户账户被允许创建的伸缩组最大数量 
      * @return MaxNumberOfAutoScalingGroups 用户账户被允许创建的伸缩组最大数量
      */
     public Integer getMaxNumberOfAutoScalingGroups() {
@@ -98,7 +98,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户账户被允许创建的伸缩组最大数量
+     * Set 用户账户被允许创建的伸缩组最大数量
      * @param MaxNumberOfAutoScalingGroups 用户账户被允许创建的伸缩组最大数量
      */
     public void setMaxNumberOfAutoScalingGroups(Integer MaxNumberOfAutoScalingGroups) {
@@ -106,7 +106,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户账户伸缩组的当前数量
+     * Get 用户账户伸缩组的当前数量 
      * @return NumberOfAutoScalingGroups 用户账户伸缩组的当前数量
      */
     public Integer getNumberOfAutoScalingGroups() {
@@ -114,7 +114,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户账户伸缩组的当前数量
+     * Set 用户账户伸缩组的当前数量
      * @param NumberOfAutoScalingGroups 用户账户伸缩组的当前数量
      */
     public void setNumberOfAutoScalingGroups(Integer NumberOfAutoScalingGroups) {
@@ -122,7 +122,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeAccountLimitsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxNumberOfLaunchConfigurations", this.MaxNumberOfLaunchConfigurations);

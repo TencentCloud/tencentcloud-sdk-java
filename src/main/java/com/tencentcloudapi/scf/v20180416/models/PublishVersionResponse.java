@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishVersionResponse  extends AbstractModel{
+public class PublishVersionResponse extends AbstractModel{
 
     /**
     * 函数的版本
@@ -86,7 +86,7 @@ public class PublishVersionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取函数的版本
+     * Get 函数的版本 
      * @return FunctionVersion 函数的版本
      */
     public String getFunctionVersion() {
@@ -94,7 +94,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本
+     * Set 函数的版本
      * @param FunctionVersion 函数的版本
      */
     public void setFunctionVersion(String FunctionVersion) {
@@ -102,7 +102,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取代码大小
+     * Get 代码大小 
      * @return CodeSize 代码大小
      */
     public Integer getCodeSize() {
@@ -110,7 +110,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代码大小
+     * Set 代码大小
      * @param CodeSize 代码大小
      */
     public void setCodeSize(Integer CodeSize) {
@@ -118,7 +118,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最大可用内存
+     * Get 最大可用内存 
      * @return MemorySize 最大可用内存
      */
     public Integer getMemorySize() {
@@ -126,7 +126,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最大可用内存
+     * Set 最大可用内存
      * @param MemorySize 最大可用内存
      */
     public void setMemorySize(Integer MemorySize) {
@@ -134,7 +134,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的描述
+     * Get 函数的描述 
      * @return Description 函数的描述
      */
     public String getDescription() {
@@ -142,7 +142,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的描述
+     * Set 函数的描述
      * @param Description 函数的描述
      */
     public void setDescription(String Description) {
@@ -150,7 +150,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的入口
+     * Get 函数的入口 
      * @return Handler 函数的入口
      */
     public String getHandler() {
@@ -158,7 +158,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的入口
+     * Set 函数的入口
      * @param Handler 函数的入口
      */
     public void setHandler(String Handler) {
@@ -166,7 +166,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的超时时间
+     * Get 函数的超时时间 
      * @return Timeout 函数的超时时间
      */
     public Integer getTimeout() {
@@ -174,7 +174,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的超时时间
+     * Set 函数的超时时间
      * @param Timeout 函数的超时时间
      */
     public void setTimeout(Integer Timeout) {
@@ -182,7 +182,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的运行环境
+     * Get 函数的运行环境 
      * @return Runtime 函数的运行环境
      */
     public String getRuntime() {
@@ -190,7 +190,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的运行环境
+     * Set 函数的运行环境
      * @param Runtime 函数的运行环境
      */
     public void setRuntime(String Runtime) {
@@ -198,7 +198,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的命名空间
+     * Get 函数的命名空间 
      * @return Namespace 函数的命名空间
      */
     public String getNamespace() {
@@ -206,7 +206,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的命名空间
+     * Set 函数的命名空间
      * @param Namespace 函数的命名空间
      */
     public void setNamespace(String Namespace) {
@@ -214,7 +214,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class PublishVersionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);

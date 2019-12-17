@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorMetric  extends AbstractModel{
+public class MonitorMetric extends AbstractModel{
 
     /**
     * 指标名称。
@@ -45,7 +45,7 @@ public class MonitorMetric  extends AbstractModel{
     private Long [] Values;
 
     /**
-     * 获取指标名称。
+     * Get 指标名称。 
      * @return Metric 指标名称。
      */
     public String getMetric() {
@@ -53,7 +53,7 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 设置指标名称。
+     * Set 指标名称。
      * @param Metric 指标名称。
      */
     public void setMetric(String Metric) {
@@ -61,7 +61,7 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 获取指标单位。
+     * Get 指标单位。 
      * @return Unit 指标单位。
      */
     public String getUnit() {
@@ -69,7 +69,7 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 设置指标单位。
+     * Set 指标单位。
      * @param Unit 指标单位。
      */
     public void setUnit(String Unit) {
@@ -77,8 +77,8 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 获取指标值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 指标值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Values 指标值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 设置指标值。
+     * Set 指标值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 指标值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,7 +97,7 @@ public class MonitorMetric  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Metric", this.Metric);

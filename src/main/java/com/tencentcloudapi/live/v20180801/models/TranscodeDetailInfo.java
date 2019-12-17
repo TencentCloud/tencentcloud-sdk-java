@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodeDetailInfo  extends AbstractModel{
+public class TranscodeDetailInfo extends AbstractModel{
 
     /**
     * 流名称。
@@ -87,7 +87,7 @@ topspeed_H265 =》极速高清-H265。
     private String PushDomain;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -95,7 +95,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -103,8 +103,8 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取开始时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Get 开始时间，北京时间，
+格式：yyyy-mm-dd HH:MM。 
      * @return StartTime 开始时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
      */
@@ -113,7 +113,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置开始时间，北京时间，
+     * Set 开始时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
      * @param StartTime 开始时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
@@ -123,8 +123,8 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取结束时间，北京时间，
-格式：yyyy-mm-dd HH:MM。
+     * Get 结束时间，北京时间，
+格式：yyyy-mm-dd HH:MM。 
      * @return EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
      */
@@ -133,7 +133,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * Set 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
      * @param EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM。
@@ -143,8 +143,8 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取转码时长，单位：分钟。
-注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
+     * Get 转码时长，单位：分钟。
+注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。 
      * @return Duration 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      */
@@ -153,7 +153,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置转码时长，单位：分钟。
+     * Set 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
      * @param Duration 转码时长，单位：分钟。
 注意：因推流过程中可能有中断重推情况，此处时长为真实转码时长累加值，并非结束时间和开始时间的间隔。
@@ -163,12 +163,12 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取编码方式，带模块，
+     * Get 编码方式，带模块，
 示例：
 liveprocessor_H264 =》直播转码-H264，
 liveprocessor_H265 =》 直播转码-H265，
 topspeed_H264 =》极速高清-H264，
-topspeed_H265 =》极速高清-H265。
+topspeed_H265 =》极速高清-H265。 
      * @return ModuleCodec 编码方式，带模块，
 示例：
 liveprocessor_H264 =》直播转码-H264，
@@ -181,7 +181,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置编码方式，带模块，
+     * Set 编码方式，带模块，
 示例：
 liveprocessor_H264 =》直播转码-H264，
 liveprocessor_H265 =》 直播转码-H265，
@@ -199,7 +199,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取码率。
+     * Get 码率。 
      * @return Bitrate 码率。
      */
     public Integer getBitrate() {
@@ -207,7 +207,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置码率。
+     * Set 码率。
      * @param Bitrate 码率。
      */
     public void setBitrate(Integer Bitrate) {
@@ -215,7 +215,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * Get 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。 
      * @return Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
      */
     public String getType() {
@@ -223,7 +223,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
+     * Set 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
      * @param Type 类型，包含：转码(Transcode)，混流(MixStream)，水印(WaterMark)。
      */
     public void setType(String Type) {
@@ -231,7 +231,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return PushDomain 推流域名。
      */
     public String getPushDomain() {
@@ -239,7 +239,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param PushDomain 推流域名。
      */
     public void setPushDomain(String PushDomain) {
@@ -247,7 +247,7 @@ topspeed_H265 =》极速高清-H265。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

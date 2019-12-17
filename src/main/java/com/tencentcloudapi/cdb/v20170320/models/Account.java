@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Account  extends AbstractModel{
+public class Account extends AbstractModel{
 
     /**
     * 新账户的名称
@@ -37,7 +37,7 @@ public class Account  extends AbstractModel{
     private String Host;
 
     /**
-     * 获取新账户的名称
+     * Get 新账户的名称 
      * @return User 新账户的名称
      */
     public String getUser() {
@@ -45,7 +45,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置新账户的名称
+     * Set 新账户的名称
      * @param User 新账户的名称
      */
     public void setUser(String User) {
@@ -53,7 +53,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取新账户的域名
+     * Get 新账户的域名 
      * @return Host 新账户的域名
      */
     public String getHost() {
@@ -61,7 +61,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置新账户的域名
+     * Set 新账户的域名
      * @param Host 新账户的域名
      */
     public void setHost(String Host) {
@@ -69,7 +69,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "User", this.User);

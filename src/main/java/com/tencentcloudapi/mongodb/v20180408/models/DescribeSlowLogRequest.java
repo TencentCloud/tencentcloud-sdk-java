@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogRequest  extends AbstractModel{
+public class DescribeSlowLogRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -65,7 +65,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Get 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
      * @return StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getStartTime() {
@@ -89,7 +89,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Set 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      * @param StartTime 慢日志起始时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-01 10:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setStartTime(String StartTime) {
@@ -97,7 +97,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Get 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。 
      * @return EndTime 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public String getEndTime() {
@@ -105,7 +105,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
+     * Set 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      * @param EndTime 慢日志终止时间，格式：yyyy-mm-dd hh:mm:ss，如：2019-06-02 12:00:00。查询起止时间间隔不能超过24小时，只允许查询最近7天内慢日志。
      */
     public void setEndTime(String EndTime) {
@@ -113,7 +113,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
+     * Get 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。 
      * @return SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      */
     public Integer getSlowMS() {
@@ -121,7 +121,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
+     * Set 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      * @param SlowMS 慢日志执行时间阈值，返回执行时间超过该阈值的慢日志，单位为毫秒(ms)，最小为100毫秒。
      */
     public void setSlowMS(Integer SlowMS) {
@@ -129,7 +129,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，最小值为0，最大值为10000，默认值为0。
+     * Get 偏移量，最小值为0，最大值为10000，默认值为0。 
      * @return Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，最小值为0，最大值为10000，默认值为0。
+     * Set 偏移量，最小值为0，最大值为10000，默认值为0。
      * @param Offset 偏移量，最小值为0，最大值为10000，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，最小值为1，最大值为100，默认值为20。
+     * Get 分页大小，最小值为1，最大值为100，默认值为20。 
      * @return Limit 分页大小，最小值为1，最大值为100，默认值为20。
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，最小值为1，最大值为100，默认值为20。
+     * Set 分页大小，最小值为1，最大值为100，默认值为20。
      * @param Limit 分页大小，最小值为1，最大值为100，默认值为20。
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

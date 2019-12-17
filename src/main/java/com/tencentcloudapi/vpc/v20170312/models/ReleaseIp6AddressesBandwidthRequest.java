@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
+public class ReleaseIp6AddressesBandwidthRequest extends AbstractModel{
 
     /**
     * IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
@@ -37,7 +37,7 @@ public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
     private String [] Ip6AddressIds;
 
     /**
-     * 获取IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * Get IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个 
      * @return Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      */
     public String [] getIp6Addresses() {
@@ -45,7 +45,7 @@ public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * Set IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      * @param Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
      */
     public void setIp6Addresses(String [] Ip6Addresses) {
@@ -53,7 +53,7 @@ public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * Get IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。 
      * @return Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public String [] getIp6AddressIds() {
@@ -61,7 +61,7 @@ public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * Set IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      * @param Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public void setIp6AddressIds(String [] Ip6AddressIds) {
@@ -69,7 +69,7 @@ public class ReleaseIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordEvaluateResponse  extends AbstractModel{
+public class KeywordEvaluateResponse extends AbstractModel{
 
     /**
     * 关键词得分
@@ -44,7 +44,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取关键词得分
+     * Get 关键词得分 
      * @return KeywordScores 关键词得分
      */
     public KeywordScore [] getKeywordScores() {
@@ -52,7 +52,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置关键词得分
+     * Set 关键词得分
      * @param KeywordScores 关键词得分
      */
     public void setKeywordScores(KeywordScore [] KeywordScores) {
@@ -60,7 +60,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语音段唯一标识，一段语音一个SessionId
+     * Get 语音段唯一标识，一段语音一个SessionId 
      * @return SessionId 语音段唯一标识，一段语音一个SessionId
      */
     public String getSessionId() {
@@ -68,7 +68,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语音段唯一标识，一段语音一个SessionId
+     * Set 语音段唯一标识，一段语音一个SessionId
      * @param SessionId 语音段唯一标识，一段语音一个SessionId
      */
     public void setSessionId(String SessionId) {
@@ -76,7 +76,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class KeywordEvaluateResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "KeywordScores.", this.KeywordScores);

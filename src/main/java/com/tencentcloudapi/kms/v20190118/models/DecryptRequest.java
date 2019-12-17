@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DecryptRequest  extends AbstractModel{
+public class DecryptRequest extends AbstractModel{
 
     /**
     * 待解密的密文数据
@@ -37,7 +37,7 @@ public class DecryptRequest  extends AbstractModel{
     private String EncryptionContext;
 
     /**
-     * 获取待解密的密文数据
+     * Get 待解密的密文数据 
      * @return CiphertextBlob 待解密的密文数据
      */
     public String getCiphertextBlob() {
@@ -45,7 +45,7 @@ public class DecryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待解密的密文数据
+     * Set 待解密的密文数据
      * @param CiphertextBlob 待解密的密文数据
      */
     public void setCiphertextBlob(String CiphertextBlob) {
@@ -53,7 +53,7 @@ public class DecryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
+     * Get key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符 
      * @return EncryptionContext key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
      */
     public String getEncryptionContext() {
@@ -61,7 +61,7 @@ public class DecryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
+     * Set key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
      * @param EncryptionContext key/value对的json字符串，如果Encrypt指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024字符
      */
     public void setEncryptionContext(String EncryptionContext) {
@@ -69,7 +69,7 @@ public class DecryptRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);

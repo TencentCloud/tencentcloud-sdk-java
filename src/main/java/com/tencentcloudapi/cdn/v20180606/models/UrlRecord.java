@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UrlRecord  extends AbstractModel{
+public class UrlRecord extends AbstractModel{
 
     /**
     * 状态(disable表示封禁，enable表示解封)
@@ -55,8 +55,8 @@ public class UrlRecord  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取状态(disable表示封禁，enable表示解封)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态(disable表示封禁，enable表示解封)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态(disable表示封禁，enable表示解封)
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -65,7 +65,7 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 设置状态(disable表示封禁，enable表示解封)
+     * Set 状态(disable表示封禁，enable表示解封)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态(disable表示封禁，enable表示解封)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,8 +75,8 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 获取对应的url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对应的url
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealUrl 对应的url
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -85,7 +85,7 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 设置对应的url
+     * Set 对应的url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealUrl 对应的url
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,8 +95,8 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ public class UrlRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

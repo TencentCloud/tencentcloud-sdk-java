@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessMediaByUrlRequest  extends AbstractModel{
+public class ProcessMediaByUrlRequest extends AbstractModel{
 
     /**
     * 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
@@ -93,7 +93,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * Get 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。 
      * @return InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
      */
     public MediaInputInfo getInputInfo() {
@@ -101,7 +101,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
+     * Set 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
      * @param InputInfo 输入视频信息，包括视频 URL ， 名称、视频自定义 ID。
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
@@ -109,7 +109,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件 COS 路径信息。
+     * Get 输出文件 COS 路径信息。 
      * @return OutputInfo 输出文件 COS 路径信息。
      */
     public MediaOutputInfo getOutputInfo() {
@@ -117,7 +117,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件 COS 路径信息。
+     * Set 输出文件 COS 路径信息。
      * @param OutputInfo 输出文件 COS 路径信息。
      */
     public void setOutputInfo(MediaOutputInfo OutputInfo) {
@@ -125,7 +125,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核类型任务参数。
+     * Get 视频内容审核类型任务参数。 
      * @return AiContentReviewTask 视频内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -133,7 +133,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核类型任务参数。
+     * Set 视频内容审核类型任务参数。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -141,7 +141,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析类型任务参数。
+     * Get 视频内容分析类型任务参数。 
      * @return AiAnalysisTask 视频内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -149,7 +149,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析类型任务参数。
+     * Set 视频内容分析类型任务参数。
      * @param AiAnalysisTask 视频内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -157,7 +157,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别类型任务参数。
+     * Get 视频内容识别类型任务参数。 
      * @return AiRecognitionTask 视频内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -165,7 +165,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别类型任务参数。
+     * Set 视频内容识别类型任务参数。
      * @param AiRecognitionTask 视频内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -173,7 +173,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Get 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
      * @return TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public Long getTasksPriority() {
@@ -181,7 +181,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Set 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public void setTasksPriority(Long TasksPriority) {
@@ -189,7 +189,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
+     * Get 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。 
      * @return TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      */
     public String getTasksNotifyMode() {
@@ -197,7 +197,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
+     * Set 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      * @param TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
@@ -205,7 +205,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -213,7 +213,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -221,7 +221,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -229,7 +229,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -237,7 +237,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -245,7 +245,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -253,7 +253,7 @@ public class ProcessMediaByUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);

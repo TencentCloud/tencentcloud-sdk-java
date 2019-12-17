@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddMachineTagRequest  extends AbstractModel{
+public class AddMachineTagRequest extends AbstractModel{
 
     /**
     * 云主机ID
@@ -34,7 +34,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     */
     @SerializedName("TagId")
     @Expose
-    private Integer TagId;
+    private Long TagId;
 
     /**
     * 主机地区
@@ -51,7 +51,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     private String MArea;
 
     /**
-     * 获取云主机ID
+     * Get 云主机ID 
      * @return Quuid 云主机ID
      */
     public String getQuuid() {
@@ -59,7 +59,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云主机ID
+     * Set 云主机ID
      * @param Quuid 云主机ID
      */
     public void setQuuid(String Quuid) {
@@ -67,23 +67,23 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签ID
+     * Get 标签ID 
      * @return TagId 标签ID
      */
-    public Integer getTagId() {
+    public Long getTagId() {
         return this.TagId;
     }
 
     /**
-     * 设置标签ID
+     * Set 标签ID
      * @param TagId 标签ID
      */
-    public void setTagId(Integer TagId) {
+    public void setTagId(Long TagId) {
         this.TagId = TagId;
     }
 
     /**
-     * 获取主机地区
+     * Get 主机地区 
      * @return MRegion 主机地区
      */
     public String getMRegion() {
@@ -91,7 +91,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机地区
+     * Set 主机地区
      * @param MRegion 主机地区
      */
     public void setMRegion(String MRegion) {
@@ -99,7 +99,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机地区类型(CVM|BM)
+     * Get 主机地区类型(CVM|BM) 
      * @return MArea 主机地区类型(CVM|BM)
      */
     public String getMArea() {
@@ -107,7 +107,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机地区类型(CVM|BM)
+     * Set 主机地区类型(CVM|BM)
      * @param MArea 主机地区类型(CVM|BM)
      */
     public void setMArea(String MArea) {
@@ -115,7 +115,7 @@ public class AddMachineTagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);

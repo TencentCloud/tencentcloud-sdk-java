@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileSystemInfo  extends AbstractModel{
+public class FileSystemInfo extends AbstractModel{
 
     /**
     * 创建时间
@@ -135,7 +135,7 @@ public class FileSystemInfo  extends AbstractModel{
     private String KmsKeyId;
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreationTime 创建时间
      */
     public String getCreationTime() {
@@ -143,7 +143,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreationTime 创建时间
      */
     public void setCreationTime(String CreationTime) {
@@ -151,7 +151,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义名称
+     * Get 用户自定义名称 
      * @return CreationToken 用户自定义名称
      */
     public String getCreationToken() {
@@ -159,7 +159,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义名称
+     * Set 用户自定义名称
      * @param CreationToken 用户自定义名称
      */
     public void setCreationToken(String CreationToken) {
@@ -167,7 +167,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -175,7 +175,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -183,7 +183,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统状态
+     * Get 文件系统状态 
      * @return LifeCycleState 文件系统状态
      */
     public String getLifeCycleState() {
@@ -191,7 +191,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统状态
+     * Set 文件系统状态
      * @param LifeCycleState 文件系统状态
      */
     public void setLifeCycleState(String LifeCycleState) {
@@ -199,7 +199,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统已使用容量
+     * Get 文件系统已使用容量 
      * @return SizeByte 文件系统已使用容量
      */
     public Long getSizeByte() {
@@ -207,7 +207,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统已使用容量
+     * Set 文件系统已使用容量
      * @param SizeByte 文件系统已使用容量
      */
     public void setSizeByte(Long SizeByte) {
@@ -215,7 +215,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统最大空间限制
+     * Get 文件系统最大空间限制 
      * @return SizeLimit 文件系统最大空间限制
      */
     public Long getSizeLimit() {
@@ -223,7 +223,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统最大空间限制
+     * Set 文件系统最大空间限制
      * @param SizeLimit 文件系统最大空间限制
      */
     public void setSizeLimit(Long SizeLimit) {
@@ -231,7 +231,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取区域 ID
+     * Get 区域 ID 
      * @return ZoneId 区域 ID
      */
     public Long getZoneId() {
@@ -239,7 +239,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置区域 ID
+     * Set 区域 ID
      * @param ZoneId 区域 ID
      */
     public void setZoneId(Long ZoneId) {
@@ -247,7 +247,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return Zone 区域名称
      */
     public String getZone() {
@@ -255,7 +255,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param Zone 区域名称
      */
     public void setZone(String Zone) {
@@ -263,7 +263,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统协议类型
+     * Get 文件系统协议类型 
      * @return Protocol 文件系统协议类型
      */
     public String getProtocol() {
@@ -271,7 +271,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统协议类型
+     * Set 文件系统协议类型
      * @param Protocol 文件系统协议类型
      */
     public void setProtocol(String Protocol) {
@@ -279,7 +279,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统存储类型
+     * Get 文件系统存储类型 
      * @return StorageType 文件系统存储类型
      */
     public String getStorageType() {
@@ -287,7 +287,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统存储类型
+     * Set 文件系统存储类型
      * @param StorageType 文件系统存储类型
      */
     public void setStorageType(String StorageType) {
@@ -295,7 +295,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统绑定的预付费存储包（暂未支持）
+     * Get 文件系统绑定的预付费存储包（暂未支持） 
      * @return StorageResourcePkg 文件系统绑定的预付费存储包（暂未支持）
      */
     public String getStorageResourcePkg() {
@@ -303,7 +303,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统绑定的预付费存储包（暂未支持）
+     * Set 文件系统绑定的预付费存储包（暂未支持）
      * @param StorageResourcePkg 文件系统绑定的预付费存储包（暂未支持）
      */
     public void setStorageResourcePkg(String StorageResourcePkg) {
@@ -311,7 +311,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统绑定的预付费带宽包（暂未支持）
+     * Get 文件系统绑定的预付费带宽包（暂未支持） 
      * @return BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
      */
     public String getBandwidthResourcePkg() {
@@ -319,7 +319,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统绑定的预付费带宽包（暂未支持）
+     * Set 文件系统绑定的预付费带宽包（暂未支持）
      * @param BandwidthResourcePkg 文件系统绑定的预付费带宽包（暂未支持）
      */
     public void setBandwidthResourcePkg(String BandwidthResourcePkg) {
@@ -327,7 +327,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统绑定权限组信息
+     * Get 文件系统绑定权限组信息 
      * @return PGroup 文件系统绑定权限组信息
      */
     public PGroup getPGroup() {
@@ -335,7 +335,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统绑定权限组信息
+     * Set 文件系统绑定权限组信息
      * @param PGroup 文件系统绑定权限组信息
      */
     public void setPGroup(PGroup PGroup) {
@@ -343,7 +343,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义名称
+     * Get 用户自定义名称 
      * @return FsName 用户自定义名称
      */
     public String getFsName() {
@@ -351,7 +351,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义名称
+     * Set 用户自定义名称
      * @param FsName 用户自定义名称
      */
     public void setFsName(String FsName) {
@@ -359,7 +359,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统是否加密
+     * Get 文件系统是否加密 
      * @return Encrypted 文件系统是否加密
      */
     public Boolean getEncrypted() {
@@ -367,7 +367,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统是否加密
+     * Set 文件系统是否加密
      * @param Encrypted 文件系统是否加密
      */
     public void setEncrypted(Boolean Encrypted) {
@@ -375,7 +375,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * Get 加密所使用的密钥，可以为密钥的 ID 或者 ARN 
      * @return KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      */
     public String getKmsKeyId() {
@@ -383,7 +383,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加密所使用的密钥，可以为密钥的 ID 或者 ARN
+     * Set 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      * @param KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      */
     public void setKmsKeyId(String KmsKeyId) {
@@ -391,7 +391,7 @@ public class FileSystemInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);

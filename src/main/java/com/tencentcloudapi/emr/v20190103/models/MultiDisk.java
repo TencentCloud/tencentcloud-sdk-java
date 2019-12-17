@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MultiDisk  extends AbstractModel{
+public class MultiDisk extends AbstractModel{
 
     /**
     * 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
@@ -44,7 +44,7 @@ public class MultiDisk  extends AbstractModel{
     private Integer Count;
 
     /**
-     * 获取云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+     * Get 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种 
      * @return DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      */
     public String getDiskType() {
@@ -52,7 +52,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 设置云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+     * Set 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      * @param DiskType 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
      */
     public void setDiskType(String DiskType) {
@@ -60,7 +60,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘大小
+     * Get 云盘大小 
      * @return Volume 云盘大小
      */
     public Integer getVolume() {
@@ -68,7 +68,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 设置云盘大小
+     * Set 云盘大小
      * @param Volume 云盘大小
      */
     public void setVolume(Integer Volume) {
@@ -76,7 +76,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 获取该类型云盘个数
+     * Get 该类型云盘个数 
      * @return Count 该类型云盘个数
      */
     public Integer getCount() {
@@ -84,7 +84,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 设置该类型云盘个数
+     * Set 该类型云盘个数
      * @param Count 该类型云盘个数
      */
     public void setCount(Integer Count) {
@@ -92,7 +92,7 @@ public class MultiDisk  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDosPolicy  extends AbstractModel{
+public class DDosPolicy extends AbstractModel{
 
     /**
     * 策略绑定的资源
@@ -109,7 +109,7 @@ public class DDosPolicy  extends AbstractModel{
     private String SceneId;
 
     /**
-     * 获取策略绑定的资源
+     * Get 策略绑定的资源 
      * @return Resources 策略绑定的资源
      */
     public ResourceIp [] getResources() {
@@ -117,7 +117,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略绑定的资源
+     * Set 策略绑定的资源
      * @param Resources 策略绑定的资源
      */
     public void setResources(ResourceIp [] Resources) {
@@ -125,7 +125,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取禁用协议
+     * Get 禁用协议 
      * @return DropOptions 禁用协议
      */
     public DDoSPolicyDropOption getDropOptions() {
@@ -133,7 +133,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置禁用协议
+     * Set 禁用协议
      * @param DropOptions 禁用协议
      */
     public void setDropOptions(DDoSPolicyDropOption DropOptions) {
@@ -141,7 +141,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取禁用端口
+     * Get 禁用端口 
      * @return PortLimits 禁用端口
      */
     public DDoSPolicyPortLimit [] getPortLimits() {
@@ -149,7 +149,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置禁用端口
+     * Set 禁用端口
      * @param PortLimits 禁用端口
      */
     public void setPortLimits(DDoSPolicyPortLimit [] PortLimits) {
@@ -157,7 +157,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取报文过滤
+     * Get 报文过滤 
      * @return PacketFilters 报文过滤
      */
     public DDoSPolicyPacketFilter [] getPacketFilters() {
@@ -165,7 +165,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置报文过滤
+     * Set 报文过滤
      * @param PacketFilters 报文过滤
      */
     public void setPacketFilters(DDoSPolicyPacketFilter [] PacketFilters) {
@@ -173,7 +173,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取黑白IP名单
+     * Get 黑白IP名单 
      * @return IpBlackWhiteLists 黑白IP名单
      */
     public IpBlackWhite [] getIpBlackWhiteLists() {
@@ -181,7 +181,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置黑白IP名单
+     * Set 黑白IP名单
      * @param IpBlackWhiteLists 黑白IP名单
      */
     public void setIpBlackWhiteLists(IpBlackWhite [] IpBlackWhiteLists) {
@@ -189,7 +189,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -197,7 +197,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -205,7 +205,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return PolicyName 策略名称
      */
     public String getPolicyName() {
@@ -213,7 +213,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param PolicyName 策略名称
      */
     public void setPolicyName(String PolicyName) {
@@ -221,7 +221,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略创建时间
+     * Get 策略创建时间 
      * @return CreateTime 策略创建时间
      */
     public String getCreateTime() {
@@ -229,7 +229,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略创建时间
+     * Set 策略创建时间
      * @param CreateTime 策略创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -237,7 +237,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取水印策略参数，最多只有一个，当没有水印策略时数组为空
+     * Get 水印策略参数，最多只有一个，当没有水印策略时数组为空 
      * @return WaterPrint 水印策略参数，最多只有一个，当没有水印策略时数组为空
      */
     public WaterPrintPolicy [] getWaterPrint() {
@@ -245,7 +245,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置水印策略参数，最多只有一个，当没有水印策略时数组为空
+     * Set 水印策略参数，最多只有一个，当没有水印策略时数组为空
      * @param WaterPrint 水印策略参数，最多只有一个，当没有水印策略时数组为空
      */
     public void setWaterPrint(WaterPrintPolicy [] WaterPrint) {
@@ -253,7 +253,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取水印密钥，最多只有2个，当没有水印策略时数组为空
+     * Get 水印密钥，最多只有2个，当没有水印策略时数组为空 
      * @return WaterKey 水印密钥，最多只有2个，当没有水印策略时数组为空
      */
     public WaterPrintKey [] getWaterKey() {
@@ -261,7 +261,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置水印密钥，最多只有2个，当没有水印策略时数组为空
+     * Set 水印密钥，最多只有2个，当没有水印策略时数组为空
      * @param WaterKey 水印密钥，最多只有2个，当没有水印策略时数组为空
      */
     public void setWaterKey(WaterPrintKey [] WaterKey) {
@@ -269,8 +269,8 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略绑定的资源实例
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略绑定的资源实例
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BoundResources 策略绑定的资源实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -279,7 +279,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略绑定的资源实例
+     * Set 策略绑定的资源实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BoundResources 策略绑定的资源实例
 注意：此字段可能返回 null，表示取不到有效值。
@@ -289,8 +289,8 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取策略所属的策略场景
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略所属的策略场景
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SceneId 策略所属的策略场景
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -299,7 +299,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置策略所属的策略场景
+     * Set 策略所属的策略场景
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneId 策略所属的策略场景
 注意：此字段可能返回 null，表示取不到有效值。
@@ -309,7 +309,7 @@ public class DDosPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableType  extends AbstractModel{
+public class AvailableType extends AbstractModel{
 
     /**
     * 协议与售卖详情
@@ -37,7 +37,7 @@ public class AvailableType  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取协议与售卖详情
+     * Get 协议与售卖详情 
      * @return Protocols 协议与售卖详情
      */
     public AvailableProtoStatus [] getProtocols() {
@@ -45,7 +45,7 @@ public class AvailableType  extends AbstractModel{
     }
 
     /**
-     * 设置协议与售卖详情
+     * Set 协议与售卖详情
      * @param Protocols 协议与售卖详情
      */
     public void setProtocols(AvailableProtoStatus [] Protocols) {
@@ -53,7 +53,7 @@ public class AvailableType  extends AbstractModel{
     }
 
     /**
-     * 获取存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * Get 存储类型。可选值有 SD 标准型存储、HP性能型存储 
      * @return Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
      */
     public String getType() {
@@ -61,7 +61,7 @@ public class AvailableType  extends AbstractModel{
     }
 
     /**
-     * 设置存储类型。可选值有 SD 标准型存储、HP性能型存储
+     * Set 存储类型。可选值有 SD 标准型存储、HP性能型存储
      * @param Type 存储类型。可选值有 SD 标准型存储、HP性能型存储
      */
     public void setType(String Type) {
@@ -69,7 +69,7 @@ public class AvailableType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Protocols.", this.Protocols);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsResponse  extends AbstractModel{
+public class DescribeRegionsResponse extends AbstractModel{
 
     /**
     * 返回地域信息总的条目
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 地域信息数组
@@ -44,23 +44,23 @@ public class DescribeRegionsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回地域信息总的条目
+     * Get 返回地域信息总的条目 
      * @return TotalCount 返回地域信息总的条目
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置返回地域信息总的条目
+     * Set 返回地域信息总的条目
      * @param TotalCount 返回地域信息总的条目
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取地域信息数组
+     * Get 地域信息数组 
      * @return RegionSet 地域信息数组
      */
     public RegionInfo [] getRegionSet() {
@@ -68,7 +68,7 @@ public class DescribeRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息数组
+     * Set 地域信息数组
      * @param RegionSet 地域信息数组
      */
     public void setRegionSet(RegionInfo [] RegionSet) {
@@ -76,7 +76,7 @@ public class DescribeRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

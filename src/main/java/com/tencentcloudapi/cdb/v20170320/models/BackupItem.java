@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupItem  extends AbstractModel{
+public class BackupItem extends AbstractModel{
 
     /**
     * 需要备份的库名
@@ -37,7 +37,7 @@ public class BackupItem  extends AbstractModel{
     private String Table;
 
     /**
-     * 获取需要备份的库名
+     * Get 需要备份的库名 
      * @return Db 需要备份的库名
      */
     public String getDb() {
@@ -45,7 +45,7 @@ public class BackupItem  extends AbstractModel{
     }
 
     /**
-     * 设置需要备份的库名
+     * Set 需要备份的库名
      * @param Db 需要备份的库名
      */
     public void setDb(String Db) {
@@ -53,7 +53,7 @@ public class BackupItem  extends AbstractModel{
     }
 
     /**
-     * 获取需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
+     * Get 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库 
      * @return Table 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
      */
     public String getTable() {
@@ -61,7 +61,7 @@ public class BackupItem  extends AbstractModel{
     }
 
     /**
-     * 设置需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
+     * Set 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
      * @param Table 需要备份的表名。 如果传该参数，表示备份该库中的指定表。如果不传该参数则备份该db库
      */
     public void setTable(String Table) {
@@ -69,7 +69,7 @@ public class BackupItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Db", this.Db);

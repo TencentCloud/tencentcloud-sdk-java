@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabaseObjectsResponse  extends AbstractModel{
+public class DescribeDatabaseObjectsResponse extends AbstractModel{
 
     /**
     * 透传入参。
@@ -72,7 +72,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取透传入参。
+     * Get 透传入参。 
      * @return InstanceId 透传入参。
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传入参。
+     * Set 透传入参。
      * @param InstanceId 透传入参。
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称。
+     * Get 数据库名称。 
      * @return DbName 数据库名称。
      */
     public String getDbName() {
@@ -96,7 +96,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称。
+     * Set 数据库名称。
      * @param DbName 数据库名称。
      */
     public void setDbName(String DbName) {
@@ -104,7 +104,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取表列表。
+     * Get 表列表。 
      * @return Tables 表列表。
      */
     public DatabaseTable [] getTables() {
@@ -112,7 +112,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置表列表。
+     * Set 表列表。
      * @param Tables 表列表。
      */
     public void setTables(DatabaseTable [] Tables) {
@@ -120,7 +120,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取视图列表。
+     * Get 视图列表。 
      * @return Views 视图列表。
      */
     public DatabaseView [] getViews() {
@@ -128,7 +128,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置视图列表。
+     * Set 视图列表。
      * @param Views 视图列表。
      */
     public void setViews(DatabaseView [] Views) {
@@ -136,7 +136,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取存储过程列表。
+     * Get 存储过程列表。 
      * @return Procs 存储过程列表。
      */
     public DatabaseProcedure [] getProcs() {
@@ -144,7 +144,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置存储过程列表。
+     * Set 存储过程列表。
      * @param Procs 存储过程列表。
      */
     public void setProcs(DatabaseProcedure [] Procs) {
@@ -152,7 +152,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数列表。
+     * Get 函数列表。 
      * @return Funcs 函数列表。
      */
     public DatabaseFunction [] getFuncs() {
@@ -160,7 +160,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数列表。
+     * Set 函数列表。
      * @param Funcs 函数列表。
      */
     public void setFuncs(DatabaseFunction [] Funcs) {
@@ -168,7 +168,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeDatabaseObjectsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

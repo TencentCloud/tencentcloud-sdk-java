@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRoutePoliciesRequest  extends AbstractModel{
+public class DescribeRoutePoliciesRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-afg8md3c。
@@ -67,7 +67,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     private Long Limit;
 
     /**
-     * 获取路由表实例ID，例如：rtb-afg8md3c。
+     * Get 路由表实例ID，例如：rtb-afg8md3c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-afg8md3c。
      */
     public String getRouteTableId() {
@@ -75,7 +75,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-afg8md3c。
+     * Set 路由表实例ID，例如：rtb-afg8md3c。
      * @param RouteTableId 路由表实例ID，例如：rtb-afg8md3c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -83,7 +83,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 获取路由策略实例ID，例如：rti-azd4dt1c。
+     * Get 路由策略实例ID，例如：rti-azd4dt1c。 
      * @return RoutePolicyIds 路由策略实例ID，例如：rti-azd4dt1c。
      */
     public String [] getRoutePolicyIds() {
@@ -91,7 +91,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 设置路由策略实例ID，例如：rti-azd4dt1c。
+     * Set 路由策略实例ID，例如：rti-azd4dt1c。
      * @param RoutePolicyIds 路由策略实例ID，例如：rti-azd4dt1c。
      */
     public void setRoutePolicyIds(String [] RoutePolicyIds) {
@@ -99,7 +99,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定RoutePolicyIds和Filters。
+     * Get 过滤条件，参数不支持同时指定RoutePolicyIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
 route-policy-id - String - （过滤条件）路由策略ID。
@@ -108,7 +108,7 @@ route-policy-type - String - （过滤条件）路由项策略类型。
 destination-cidr-like - String - （过滤条件）路由项目的地址。
 gateway-id-like - String - （过滤条件）路由项下一跳网关。
 gateway-type - String - （过滤条件）路由项下一条网关类型。
-enable - Bool - （过滤条件）路由策略是否启用。
+enable - Bool - （过滤条件）路由策略是否启用。 
      * @return Filters 过滤条件，参数不支持同时指定RoutePolicyIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
@@ -125,7 +125,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定RoutePolicyIds和Filters。
+     * Set 过滤条件，参数不支持同时指定RoutePolicyIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
 route-policy-id - String - （过滤条件）路由策略ID。
@@ -151,7 +151,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 获取初始行的偏移量，默认为0。
+     * Get 初始行的偏移量，默认为0。 
      * @return Offset 初始行的偏移量，默认为0。
      */
     public Long getOffset() {
@@ -159,7 +159,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 设置初始行的偏移量，默认为0。
+     * Set 初始行的偏移量，默认为0。
      * @param Offset 初始行的偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -167,7 +167,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 获取每页行数，默认为20。
+     * Get 每页行数，默认为20。 
      * @return Limit 每页行数，默认为20。
      */
     public Long getLimit() {
@@ -175,7 +175,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 设置每页行数，默认为20。
+     * Set 每页行数，默认为20。
      * @param Limit 每页行数，默认为20。
      */
     public void setLimit(Long Limit) {
@@ -183,7 +183,7 @@ enable - Bool - （过滤条件）路由策略是否启用。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

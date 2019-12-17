@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteTablesRequest  extends AbstractModel{
+public class DescribeRouteTablesRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -71,7 +71,7 @@ zone - String - （过滤条件）可用区。
     private String OrderDirection;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String [] getRouteTableIds() {
@@ -79,7 +79,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableIds(String [] RouteTableIds) {
@@ -87,13 +87,13 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
+     * Get 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 route-table-name - String - （过滤条件）路由表名称。
 route-table-id-like - String - （模糊过滤条件）路由表实例ID。
 route-table-name-like - String - （模糊过滤条件）路由表名称。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
-zone - String - （过滤条件）可用区。
+zone - String - （过滤条件）可用区。 
      * @return Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 route-table-name - String - （过滤条件）路由表名称。
@@ -107,7 +107,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
+     * Set 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 route-table-id - String - （过滤条件）路由表实例ID。
 route-table-name - String - （过滤条件）路由表名称。
 route-table-id-like - String - （模糊过滤条件）路由表实例ID。
@@ -127,7 +127,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取初始行的偏移量，默认为0。
+     * Get 初始行的偏移量，默认为0。 
      * @return Offset 初始行的偏移量，默认为0。
      */
     public Long getOffset() {
@@ -135,7 +135,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置初始行的偏移量，默认为0。
+     * Set 初始行的偏移量，默认为0。
      * @param Offset 初始行的偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -143,7 +143,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取每页行数，默认为20。
+     * Get 每页行数，默认为20。 
      * @return Limit 每页行数，默认为20。
      */
     public Long getLimit() {
@@ -151,7 +151,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置每页行数，默认为20。
+     * Set 每页行数，默认为20。
      * @param Limit 每页行数，默认为20。
      */
     public void setLimit(Long Limit) {
@@ -159,7 +159,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
+     * Get 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime" 
      * @return OrderField 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
      */
     public String getOrderField() {
@@ -167,7 +167,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
+     * Set 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
      * @param OrderField 排序字段, 支持按“RouteTableId”，“VpcId”, "RouteTableName", "CreateTime"
      */
     public void setOrderField(String OrderField) {
@@ -175,7 +175,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取排序方向, “asc”、“desc”
+     * Get 排序方向, “asc”、“desc” 
      * @return OrderDirection 排序方向, “asc”、“desc”
      */
     public String getOrderDirection() {
@@ -183,7 +183,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置排序方向, “asc”、“desc”
+     * Set 排序方向, “asc”、“desc”
      * @param OrderDirection 排序方向, “asc”、“desc”
      */
     public void setOrderDirection(String OrderDirection) {
@@ -191,7 +191,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);

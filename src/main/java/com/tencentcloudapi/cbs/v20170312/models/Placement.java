@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Placement  extends AbstractModel{
+public class Placement extends AbstractModel{
 
     /**
     * 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
@@ -61,7 +61,7 @@ public class Placement  extends AbstractModel{
     private String CdcName;
 
     /**
-     * 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * Get 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。 
      * @return Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      */
     public String getZone() {
@@ -69,7 +69,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * Set 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      * @param Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。该参数也可以通过调用  [DescribeZones](/document/product/213/15707) 的返回值中的Zone字段来获取。
      */
     public void setZone(String Zone) {
@@ -77,7 +77,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。 
      * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
      */
     public Integer getProjectId() {
@@ -85,7 +85,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
      * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](/document/api/378/4400) 的返回值中的 projectId 字段来获取。不填为默认项目。
      */
     public void setProjectId(Integer ProjectId) {
@@ -93,8 +93,8 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -103,7 +103,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
+     * Set 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 实例所属的独享集群ID。作为入参时，表示对指定的CdcId独享集群的资源进行操作，可为空。 作为出参时，表示资源所属的独享集群的ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -113,8 +113,8 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 获取围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CageId 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -123,7 +123,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 设置围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
+     * Set 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CageId 围笼Id。作为入参时，表示对指定的CageId的资源进行操作，可为空。 作为出参时，表示资源所属围笼ID，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,8 +133,8 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -143,7 +143,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
+     * Set 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,7 +153,7 @@ public class Placement  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

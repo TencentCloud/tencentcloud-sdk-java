@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUnblockIpResponse  extends AbstractModel{
+public class CreateUnblockIpResponse extends AbstractModel{
 
     /**
     * IP
@@ -51,7 +51,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取IP
+     * Get IP 
      * @return Ip IP
      */
     public String getIp() {
@@ -59,7 +59,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 设置IP
+     * Set IP
      * @param Ip IP
      */
     public void setIp(String Ip) {
@@ -67,7 +67,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Get 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封） 
      * @return ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public String getActionType() {
@@ -75,7 +75,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Set 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      * @param ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public void setActionType(String ActionType) {
@@ -83,7 +83,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 获取解封时间（预计解封时间）
+     * Get 解封时间（预计解封时间） 
      * @return UnblockTime 解封时间（预计解封时间）
      */
     public String getUnblockTime() {
@@ -91,7 +91,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 设置解封时间（预计解封时间）
+     * Set 解封时间（预计解封时间）
      * @param UnblockTime 解封时间（预计解封时间）
      */
     public void setUnblockTime(String UnblockTime) {
@@ -99,7 +99,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class CreateUnblockIpResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

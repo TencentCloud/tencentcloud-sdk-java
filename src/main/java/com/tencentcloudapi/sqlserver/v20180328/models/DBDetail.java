@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBDetail  extends AbstractModel{
+public class DBDetail extends AbstractModel{
 
     /**
     * 数据库名称
@@ -55,7 +55,7 @@ public class DBDetail  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 数据库账号权限信息
@@ -72,7 +72,7 @@ public class DBDetail  extends AbstractModel{
     private String InternalStatus;
 
     /**
-     * 获取数据库名称
+     * Get 数据库名称 
      * @return Name 数据库名称
      */
     public String getName() {
@@ -80,7 +80,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称
+     * Set 数据库名称
      * @param Name 数据库名称
      */
     public void setName(String Name) {
@@ -88,7 +88,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取字符集
+     * Get 字符集 
      * @return Charset 字符集
      */
     public String getCharset() {
@@ -96,7 +96,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置字符集
+     * Set 字符集
      * @param Charset 字符集
      */
     public void setCharset(String Charset) {
@@ -104,7 +104,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -112,7 +112,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -120,7 +120,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取数据库创建时间
+     * Get 数据库创建时间 
      * @return CreateTime 数据库创建时间
      */
     public String getCreateTime() {
@@ -128,7 +128,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置数据库创建时间
+     * Set 数据库创建时间
      * @param CreateTime 数据库创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -136,23 +136,23 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
+     * Get 数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中 
      * @return Status 数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
+     * Set 数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
      * @param Status 数据库状态。1--创建中， 2--运行中， 3--修改中，-1--删除中
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取数据库账号权限信息
+     * Get 数据库账号权限信息 
      * @return Accounts 数据库账号权限信息
      */
     public AccountPrivilege [] getAccounts() {
@@ -160,7 +160,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号权限信息
+     * Set 数据库账号权限信息
      * @param Accounts 数据库账号权限信息
      */
     public void setAccounts(AccountPrivilege [] Accounts) {
@@ -168,7 +168,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取内部状态。ONLINE表示运行中
+     * Get 内部状态。ONLINE表示运行中 
      * @return InternalStatus 内部状态。ONLINE表示运行中
      */
     public String getInternalStatus() {
@@ -176,7 +176,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置内部状态。ONLINE表示运行中
+     * Set 内部状态。ONLINE表示运行中
      * @param InternalStatus 内部状态。ONLINE表示运行中
      */
     public void setInternalStatus(String InternalStatus) {
@@ -184,7 +184,7 @@ public class DBDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

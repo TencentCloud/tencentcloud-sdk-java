@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentTransferMoneyRequest  extends AbstractModel{
+public class AgentTransferMoneyRequest extends AbstractModel{
 
     /**
     * 客户账号ID
@@ -37,7 +37,7 @@ public class AgentTransferMoneyRequest  extends AbstractModel{
     private Integer Amount;
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -45,7 +45,7 @@ public class AgentTransferMoneyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -53,7 +53,7 @@ public class AgentTransferMoneyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转账金额，单位分
+     * Get 转账金额，单位分 
      * @return Amount 转账金额，单位分
      */
     public Integer getAmount() {
@@ -61,7 +61,7 @@ public class AgentTransferMoneyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转账金额，单位分
+     * Set 转账金额，单位分
      * @param Amount 转账金额，单位分
      */
     public void setAmount(Integer Amount) {
@@ -69,7 +69,7 @@ public class AgentTransferMoneyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);

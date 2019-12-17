@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssumeRoleWithSAMLResponse  extends AbstractModel{
+public class AssumeRoleWithSAMLResponse extends AbstractModel{
 
     /**
     * 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
@@ -51,7 +51,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
+     * Get 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组 
      * @return Credentials 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
      */
     public Credentials getCredentials() {
@@ -59,7 +59,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
+     * Set 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
      * @param Credentials 对象里面包含 Token，TmpSecretId，TmpSecretKey 三元组
      */
     public void setCredentials(Credentials Credentials) {
@@ -67,7 +67,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书无效的时间，返回 Unix 时间戳，精确到秒
+     * Get 证书无效的时间，返回 Unix 时间戳，精确到秒 
      * @return ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
      */
     public Integer getExpiredTime() {
@@ -75,7 +75,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书无效的时间，返回 Unix 时间戳，精确到秒
+     * Set 证书无效的时间，返回 Unix 时间戳，精确到秒
      * @param ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
      */
     public void setExpiredTime(Integer ExpiredTime) {
@@ -83,7 +83,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书无效的时间，以 ISO8601 格式的 UTC 时间表示
+     * Get 证书无效的时间，以 ISO8601 格式的 UTC 时间表示 
      * @return Expiration 证书无效的时间，以 ISO8601 格式的 UTC 时间表示
      */
     public String getExpiration() {
@@ -91,7 +91,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书无效的时间，以 ISO8601 格式的 UTC 时间表示
+     * Set 证书无效的时间，以 ISO8601 格式的 UTC 时间表示
      * @param Expiration 证书无效的时间，以 ISO8601 格式的 UTC 时间表示
      */
     public void setExpiration(String Expiration) {
@@ -99,7 +99,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class AssumeRoleWithSAMLResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Credentials.", this.Credentials);

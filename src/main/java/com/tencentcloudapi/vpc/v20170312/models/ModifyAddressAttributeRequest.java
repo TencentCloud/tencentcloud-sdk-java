@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAddressAttributeRequest  extends AbstractModel{
+public class ModifyAddressAttributeRequest extends AbstractModel{
 
     /**
     * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
@@ -44,7 +44,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     private String EipDirectConnection;
 
     /**
-     * 获取标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
      * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      */
     public String getAddressId() {
@@ -52,7 +52,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      */
     public void setAddressId(String AddressId) {
@@ -60,7 +60,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的 EIP 名称。长度上限为20个字符。
+     * Get 修改后的 EIP 名称。长度上限为20个字符。 
      * @return AddressName 修改后的 EIP 名称。长度上限为20个字符。
      */
     public String getAddressName() {
@@ -68,7 +68,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的 EIP 名称。长度上限为20个字符。
+     * Set 修改后的 EIP 名称。长度上限为20个字符。
      * @param AddressName 修改后的 EIP 名称。长度上限为20个字符。
      */
     public void setAddressName(String AddressName) {
@@ -76,7 +76,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+     * Get 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。 
      * @return EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
      */
     public String getEipDirectConnection() {
@@ -84,7 +84,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
+     * Set 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
      * @param EipDirectConnection 设定EIP是否直通，"TRUE"表示直通，"FALSE"表示非直通。注意该参数仅对EIP直通功能可见的用户可以设定。
      */
     public void setEipDirectConnection(String EipDirectConnection) {
@@ -92,7 +92,7 @@ public class ModifyAddressAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);

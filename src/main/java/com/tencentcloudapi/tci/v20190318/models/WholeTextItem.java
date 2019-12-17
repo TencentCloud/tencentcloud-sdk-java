@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WholeTextItem  extends AbstractModel{
+public class WholeTextItem extends AbstractModel{
 
     /**
     * 当前句子的信息
@@ -58,7 +58,7 @@ public class WholeTextItem  extends AbstractModel{
     private Float Speed;
 
     /**
-     * 获取当前句子的信息
+     * Get 当前句子的信息 
      * @return TextItem 当前句子的信息
      */
     public TextItem getTextItem() {
@@ -66,7 +66,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子的信息
+     * Set 当前句子的信息
      * @param TextItem 当前句子的信息
      */
     public void setTextItem(TextItem TextItem) {
@@ -74,7 +74,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的平均音量
+     * Get Vad的平均音量 
      * @return AvgVolume Vad的平均音量
      */
     public Float getAvgVolume() {
@@ -82,7 +82,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的平均音量
+     * Set Vad的平均音量
      * @param AvgVolume Vad的平均音量
      */
     public void setAvgVolume(Float AvgVolume) {
@@ -90,7 +90,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的最大音量
+     * Get Vad的最大音量 
      * @return MaxVolume Vad的最大音量
      */
     public Float getMaxVolume() {
@@ -98,7 +98,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的最大音量
+     * Set Vad的最大音量
      * @param MaxVolume Vad的最大音量
      */
     public void setMaxVolume(Float MaxVolume) {
@@ -106,7 +106,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取Vad的最小音量
+     * Get Vad的最小音量 
      * @return MinVolume Vad的最小音量
      */
     public Float getMinVolume() {
@@ -114,7 +114,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置Vad的最小音量
+     * Set Vad的最小音量
      * @param MinVolume Vad的最小音量
      */
     public void setMinVolume(Float MinVolume) {
@@ -122,7 +122,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子的语速
+     * Get 当前句子的语速 
      * @return Speed 当前句子的语速
      */
     public Float getSpeed() {
@@ -130,7 +130,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子的语速
+     * Set 当前句子的语速
      * @param Speed 当前句子的语速
      */
     public void setSpeed(Float Speed) {
@@ -138,7 +138,7 @@ public class WholeTextItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TextItem.", this.TextItem);

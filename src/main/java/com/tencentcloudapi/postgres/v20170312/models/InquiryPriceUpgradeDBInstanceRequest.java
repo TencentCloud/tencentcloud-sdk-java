@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
+public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例的磁盘大小，单位GB
@@ -51,7 +51,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-     * 获取实例的磁盘大小，单位GB
+     * Get 实例的磁盘大小，单位GB 
      * @return Storage 实例的磁盘大小，单位GB
      */
     public Integer getStorage() {
@@ -59,7 +59,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例的磁盘大小，单位GB
+     * Set 实例的磁盘大小，单位GB
      * @param Storage 实例的磁盘大小，单位GB
      */
     public void setStorage(Integer Storage) {
@@ -67,7 +67,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例的内存大小，单位GB
+     * Get 实例的内存大小，单位GB 
      * @return Memory 实例的内存大小，单位GB
      */
     public Integer getMemory() {
@@ -75,7 +75,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例的内存大小，单位GB
+     * Set 实例的内存大小，单位GB
      * @param Memory 实例的内存大小，单位GB
      */
     public void setMemory(Integer Memory) {
@@ -83,7 +83,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，形如postgres-hez4fh0v
+     * Get 实例ID，形如postgres-hez4fh0v 
      * @return DBInstanceId 实例ID，形如postgres-hez4fh0v
      */
     public String getDBInstanceId() {
@@ -91,7 +91,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-hez4fh0v
+     * Set 实例ID，形如postgres-hez4fh0v
      * @param DBInstanceId 实例ID，形如postgres-hez4fh0v
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -99,7 +99,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * Get 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。 
      * @return InstanceChargeType 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
      */
     public String getInstanceChargeType() {
@@ -107,7 +107,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+     * Set 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
      * @param InstanceChargeType 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -115,7 +115,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Storage", this.Storage);

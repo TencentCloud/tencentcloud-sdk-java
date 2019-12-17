@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Device  extends AbstractModel{
+public class Device extends AbstractModel{
 
     /**
     * 产品Id
@@ -65,7 +65,7 @@ public class Device  extends AbstractModel{
     private String DeviceInfo;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -73,7 +73,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -81,7 +81,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -89,7 +89,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -97,7 +97,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取设备密钥
+     * Get 设备密钥 
      * @return DeviceSecret 设备密钥
      */
     public String getDeviceSecret() {
@@ -105,7 +105,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置设备密钥
+     * Set 设备密钥
      * @param DeviceSecret 设备密钥
      */
     public void setDeviceSecret(String DeviceSecret) {
@@ -113,7 +113,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -121,7 +121,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -129,7 +129,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -137,7 +137,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -145,7 +145,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 获取设备信息（json）
+     * Get 设备信息（json） 
      * @return DeviceInfo 设备信息（json）
      */
     public String getDeviceInfo() {
@@ -153,7 +153,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 设置设备信息（json）
+     * Set 设备信息（json）
      * @param DeviceInfo 设备信息（json）
      */
     public void setDeviceInfo(String DeviceInfo) {
@@ -161,7 +161,7 @@ public class Device  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextTable  extends AbstractModel{
+public class TextTable extends AbstractModel{
 
     /**
     * 单元格左上角的列索引
@@ -86,7 +86,7 @@ public class TextTable  extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-     * 获取单元格左上角的列索引
+     * Get 单元格左上角的列索引 
      * @return ColTl 单元格左上角的列索引
      */
     public Integer getColTl() {
@@ -94,7 +94,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格左上角的列索引
+     * Set 单元格左上角的列索引
      * @param ColTl 单元格左上角的列索引
      */
     public void setColTl(Integer ColTl) {
@@ -102,7 +102,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取单元格左上角的行索引
+     * Get 单元格左上角的行索引 
      * @return RowTl 单元格左上角的行索引
      */
     public Integer getRowTl() {
@@ -110,7 +110,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格左上角的行索引
+     * Set 单元格左上角的行索引
      * @param RowTl 单元格左上角的行索引
      */
     public void setRowTl(Integer RowTl) {
@@ -118,7 +118,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取单元格右下角的列索引
+     * Get 单元格右下角的列索引 
      * @return ColBr 单元格右下角的列索引
      */
     public Integer getColBr() {
@@ -126,7 +126,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格右下角的列索引
+     * Set 单元格右下角的列索引
      * @param ColBr 单元格右下角的列索引
      */
     public void setColBr(Integer ColBr) {
@@ -134,7 +134,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取单元格右下角的行索引
+     * Get 单元格右下角的行索引 
      * @return RowBr 单元格右下角的行索引
      */
     public Integer getRowBr() {
@@ -142,7 +142,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格右下角的行索引
+     * Set 单元格右下角的行索引
      * @param RowBr 单元格右下角的行索引
      */
     public void setRowBr(Integer RowBr) {
@@ -150,7 +150,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取单元格文字
+     * Get 单元格文字 
      * @return Text 单元格文字
      */
     public String getText() {
@@ -158,7 +158,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格文字
+     * Set 单元格文字
      * @param Text 单元格文字
      */
     public void setText(String Text) {
@@ -166,7 +166,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
+     * Get 单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种 
      * @return Type 单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
      */
     public String getType() {
@@ -174,7 +174,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
+     * Set 单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
      * @param Type 单元格类型，包含body（表格主体）、header（表头）、footer（表尾）三种
      */
     public void setType(String Type) {
@@ -182,7 +182,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取置信度 0 ~100
+     * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
     public Integer getConfidence() {
@@ -190,7 +190,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置置信度 0 ~100
+     * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
     public void setConfidence(Integer Confidence) {
@@ -198,7 +198,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示
+     * Get 文本行坐标，以四个顶点坐标表示 
      * @return Polygon 文本行坐标，以四个顶点坐标表示
      */
     public Coord [] getPolygon() {
@@ -206,7 +206,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示
+     * Set 文本行坐标，以四个顶点坐标表示
      * @param Polygon 文本行坐标，以四个顶点坐标表示
      */
     public void setPolygon(Coord [] Polygon) {
@@ -214,7 +214,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 获取此字段为扩展字段
+     * Get 此字段为扩展字段 
      * @return AdvancedInfo 此字段为扩展字段
      */
     public String getAdvancedInfo() {
@@ -222,7 +222,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 设置此字段为扩展字段
+     * Set 此字段为扩展字段
      * @param AdvancedInfo 此字段为扩展字段
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -230,7 +230,7 @@ public class TextTable  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ColTl", this.ColTl);

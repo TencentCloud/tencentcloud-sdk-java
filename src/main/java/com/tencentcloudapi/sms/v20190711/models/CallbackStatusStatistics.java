@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallbackStatusStatistics  extends AbstractModel{
+public class CallbackStatusStatistics extends AbstractModel{
 
     /**
     * 短信回执量统计
@@ -86,7 +86,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     private Long FrequencyLimitCount;
 
     /**
-     * 获取短信回执量统计
+     * Get 短信回执量统计 
      * @return CallbackCount 短信回执量统计
      */
     public Long getCallbackCount() {
@@ -94,7 +94,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信回执量统计
+     * Set 短信回执量统计
      * @param CallbackCount 短信回执量统计
      */
     public void setCallbackCount(Long CallbackCount) {
@@ -102,7 +102,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取短信提交成功量统计
+     * Get 短信提交成功量统计 
      * @return RequestSuccessCount 短信提交成功量统计
      */
     public Long getRequestSuccessCount() {
@@ -110,7 +110,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信提交成功量统计
+     * Set 短信提交成功量统计
      * @param RequestSuccessCount 短信提交成功量统计
      */
     public void setRequestSuccessCount(Long RequestSuccessCount) {
@@ -118,7 +118,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取短信回执失败量统计
+     * Get 短信回执失败量统计 
      * @return CallbackFailCount 短信回执失败量统计
      */
     public Long getCallbackFailCount() {
@@ -126,7 +126,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信回执失败量统计
+     * Set 短信回执失败量统计
      * @param CallbackFailCount 短信回执失败量统计
      */
     public void setCallbackFailCount(Long CallbackFailCount) {
@@ -134,7 +134,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取短信回执成功量统计
+     * Get 短信回执成功量统计 
      * @return CallbackSuccessCount 短信回执成功量统计
      */
     public Long getCallbackSuccessCount() {
@@ -142,7 +142,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信回执成功量统计
+     * Set 短信回执成功量统计
      * @param CallbackSuccessCount 短信回执成功量统计
      */
     public void setCallbackSuccessCount(Long CallbackSuccessCount) {
@@ -150,7 +150,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取运营商内部错误统计
+     * Get 运营商内部错误统计 
      * @return InternalErrorCount 运营商内部错误统计
      */
     public Long getInternalErrorCount() {
@@ -158,7 +158,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置运营商内部错误统计
+     * Set 运营商内部错误统计
      * @param InternalErrorCount 运营商内部错误统计
      */
     public void setInternalErrorCount(Long InternalErrorCount) {
@@ -166,7 +166,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取号码无效或空号统计
+     * Get 号码无效或空号统计 
      * @return InvalidNumberCount 号码无效或空号统计
      */
     public Long getInvalidNumberCount() {
@@ -174,7 +174,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置号码无效或空号统计
+     * Set 号码无效或空号统计
      * @param InvalidNumberCount 号码无效或空号统计
      */
     public void setInvalidNumberCount(Long InvalidNumberCount) {
@@ -182,7 +182,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取停机、关机等错误统计
+     * Get 停机、关机等错误统计 
      * @return ShutdownErrorCount 停机、关机等错误统计
      */
     public Long getShutdownErrorCount() {
@@ -190,7 +190,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置停机、关机等错误统计
+     * Set 停机、关机等错误统计
      * @param ShutdownErrorCount 停机、关机等错误统计
      */
     public void setShutdownErrorCount(Long ShutdownErrorCount) {
@@ -198,7 +198,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取号码拉入黑名单统计
+     * Get 号码拉入黑名单统计 
      * @return BlackListCount 号码拉入黑名单统计
      */
     public Long getBlackListCount() {
@@ -206,7 +206,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置号码拉入黑名单统计
+     * Set 号码拉入黑名单统计
      * @param BlackListCount 号码拉入黑名单统计
      */
     public void setBlackListCount(Long BlackListCount) {
@@ -214,7 +214,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取运营商频率限制统计
+     * Get 运营商频率限制统计 
      * @return FrequencyLimitCount 运营商频率限制统计
      */
     public Long getFrequencyLimitCount() {
@@ -222,7 +222,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置运营商频率限制统计
+     * Set 运营商频率限制统计
      * @param FrequencyLimitCount 运营商频率限制统计
      */
     public void setFrequencyLimitCount(Long FrequencyLimitCount) {
@@ -230,7 +230,7 @@ public class CallbackStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallbackCount", this.CallbackCount);

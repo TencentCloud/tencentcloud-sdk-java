@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EsAcl  extends AbstractModel{
+public class EsAcl extends AbstractModel{
 
     /**
     * kibana访问黑名单
@@ -37,7 +37,7 @@ public class EsAcl  extends AbstractModel{
     private String [] WhiteIpList;
 
     /**
-     * 获取kibana访问黑名单
+     * Get kibana访问黑名单 
      * @return BlackIpList kibana访问黑名单
      */
     public String [] getBlackIpList() {
@@ -45,7 +45,7 @@ public class EsAcl  extends AbstractModel{
     }
 
     /**
-     * 设置kibana访问黑名单
+     * Set kibana访问黑名单
      * @param BlackIpList kibana访问黑名单
      */
     public void setBlackIpList(String [] BlackIpList) {
@@ -53,7 +53,7 @@ public class EsAcl  extends AbstractModel{
     }
 
     /**
-     * 获取kibana访问白名单
+     * Get kibana访问白名单 
      * @return WhiteIpList kibana访问白名单
      */
     public String [] getWhiteIpList() {
@@ -61,7 +61,7 @@ public class EsAcl  extends AbstractModel{
     }
 
     /**
-     * 设置kibana访问白名单
+     * Set kibana访问白名单
      * @param WhiteIpList kibana访问白名单
      */
     public void setWhiteIpList(String [] WhiteIpList) {
@@ -69,7 +69,7 @@ public class EsAcl  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BlackIpList.", this.BlackIpList);

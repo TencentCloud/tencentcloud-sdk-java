@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateAliasRequest  extends AbstractModel{
+public class UpdateAliasRequest extends AbstractModel{
 
     /**
     * 新的别名，1-60个字符或数字的组合
@@ -37,7 +37,7 @@ public class UpdateAliasRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取新的别名，1-60个字符或数字的组合
+     * Get 新的别名，1-60个字符或数字的组合 
      * @return Alias 新的别名，1-60个字符或数字的组合
      */
     public String getAlias() {
@@ -45,7 +45,7 @@ public class UpdateAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的别名，1-60个字符或数字的组合
+     * Set 新的别名，1-60个字符或数字的组合
      * @param Alias 新的别名，1-60个字符或数字的组合
      */
     public void setAlias(String Alias) {
@@ -53,7 +53,7 @@ public class UpdateAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的全局唯一标识符
+     * Get CMK的全局唯一标识符 
      * @return KeyId CMK的全局唯一标识符
      */
     public String getKeyId() {
@@ -61,7 +61,7 @@ public class UpdateAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的全局唯一标识符
+     * Set CMK的全局唯一标识符
      * @param KeyId CMK的全局唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -69,7 +69,7 @@ public class UpdateAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Alias", this.Alias);

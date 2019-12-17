@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePayTypeRequest  extends AbstractModel{
+public class DescribePayTypeRequest extends AbstractModel{
 
     /**
     * 指定服务地域查询
@@ -33,10 +33,10 @@ overseas：境外计费方式查询
     private String Area;
 
     /**
-     * 获取指定服务地域查询
+     * Get 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+未填充时默认为 mainland 
      * @return Area 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
@@ -47,7 +47,7 @@ overseas：境外计费方式查询
     }
 
     /**
-     * 设置指定服务地域查询
+     * Set 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
 未填充时默认为 mainland
@@ -61,7 +61,7 @@ overseas：境外计费方式查询
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Area", this.Area);

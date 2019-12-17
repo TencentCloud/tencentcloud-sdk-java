@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Monitor  extends AbstractModel{
+public class Monitor extends AbstractModel{
 
     /**
     * 监控任务ID。
@@ -128,7 +128,7 @@ public class Monitor  extends AbstractModel{
     private Integer ContentScanStatus;
 
     /**
-     * 获取监控任务ID。
+     * Get 监控任务ID。 
      * @return Id 监控任务ID。
      */
     public Integer getId() {
@@ -136,7 +136,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务ID。
+     * Set 监控任务ID。
      * @param Id 监控任务ID。
      */
     public void setId(Integer Id) {
@@ -144,7 +144,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取监控名称。
+     * Get 监控名称。 
      * @return Name 监控名称。
      */
     public String getName() {
@@ -152,7 +152,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置监控名称。
+     * Set 监控名称。
      * @param Name 监控名称。
      */
     public void setName(String Name) {
@@ -160,7 +160,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取监测状态：1-监测中；2-暂停监测。
+     * Get 监测状态：1-监测中；2-暂停监测。 
      * @return MonitorStatus 监测状态：1-监测中；2-暂停监测。
      */
     public Integer getMonitorStatus() {
@@ -168,7 +168,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置监测状态：1-监测中；2-暂停监测。
+     * Set 监测状态：1-监测中；2-暂停监测。
      * @param MonitorStatus 监测状态：1-监测中；2-暂停监测。
      */
     public void setMonitorStatus(Integer MonitorStatus) {
@@ -176,7 +176,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取监测模式，normal-正常扫描；deep-深度扫描。
+     * Get 监测模式，normal-正常扫描；deep-深度扫描。 
      * @return ScannerType 监测模式，normal-正常扫描；deep-深度扫描。
      */
     public String getScannerType() {
@@ -184,7 +184,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置监测模式，normal-正常扫描；deep-深度扫描。
+     * Set 监测模式，normal-正常扫描；deep-深度扫描。
      * @param ScannerType 监测模式，normal-正常扫描；deep-深度扫描。
      */
     public void setScannerType(String ScannerType) {
@@ -192,7 +192,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取扫描周期，单位小时，每X小时执行一次。
+     * Get 扫描周期，单位小时，每X小时执行一次。 
      * @return Crontab 扫描周期，单位小时，每X小时执行一次。
      */
     public Integer getCrontab() {
@@ -200,7 +200,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置扫描周期，单位小时，每X小时执行一次。
+     * Set 扫描周期，单位小时，每X小时执行一次。
      * @param Crontab 扫描周期，单位小时，每X小时执行一次。
      */
     public void setCrontab(Integer Crontab) {
@@ -208,7 +208,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
+     * Get 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。 
      * @return IncludedVulsTypes 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
      */
     public String getIncludedVulsTypes() {
@@ -216,7 +216,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
+     * Set 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
      * @param IncludedVulsTypes 指定扫描类型，3位数每位依次表示：扫描Web漏洞、扫描系统漏洞、扫描系统端口。
      */
     public void setIncludedVulsTypes(String IncludedVulsTypes) {
@@ -224,7 +224,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取速率限制，每秒发送X个HTTP请求。
+     * Get 速率限制，每秒发送X个HTTP请求。 
      * @return RateLimit 速率限制，每秒发送X个HTTP请求。
      */
     public Integer getRateLimit() {
@@ -232,7 +232,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置速率限制，每秒发送X个HTTP请求。
+     * Set 速率限制，每秒发送X个HTTP请求。
      * @param RateLimit 速率限制，每秒发送X个HTTP请求。
      */
     public void setRateLimit(Integer RateLimit) {
@@ -240,7 +240,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取首次扫描开始时间。
+     * Get 首次扫描开始时间。 
      * @return FirstScanStartTime 首次扫描开始时间。
      */
     public String getFirstScanStartTime() {
@@ -248,7 +248,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置首次扫描开始时间。
+     * Set 首次扫描开始时间。
      * @param FirstScanStartTime 首次扫描开始时间。
      */
     public void setFirstScanStartTime(String FirstScanStartTime) {
@@ -256,7 +256,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+     * Get 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。 
      * @return ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
     public Integer getScanStatus() {
@@ -264,7 +264,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+     * Set 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      * @param ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
     public void setScanStatus(Integer ScanStatus) {
@@ -272,7 +272,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取上一次扫描完成时间。
+     * Get 上一次扫描完成时间。 
      * @return LastScanFinishTime 上一次扫描完成时间。
      */
     public String getLastScanFinishTime() {
@@ -280,7 +280,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置上一次扫描完成时间。
+     * Set 上一次扫描完成时间。
      * @param LastScanFinishTime 上一次扫描完成时间。
      */
     public void setLastScanFinishTime(String LastScanFinishTime) {
@@ -288,7 +288,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
+     * Get 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。 
      * @return CurrentScanStartTime 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
      */
     public String getCurrentScanStartTime() {
@@ -296,7 +296,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
+     * Set 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
      * @param CurrentScanStartTime 当前扫描开始时间，如扫描完成则为上一次扫描的开始时间。
      */
     public void setCurrentScanStartTime(String CurrentScanStartTime) {
@@ -304,7 +304,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取CreatedAt。
+     * Get CreatedAt。 
      * @return CreatedAt CreatedAt。
      */
     public String getCreatedAt() {
@@ -312,7 +312,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置CreatedAt。
+     * Set CreatedAt。
      * @param CreatedAt CreatedAt。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -320,7 +320,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取UpdatedAt。
+     * Get UpdatedAt。 
      * @return UpdatedAt UpdatedAt。
      */
     public String getUpdatedAt() {
@@ -328,7 +328,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置UpdatedAt。
+     * Set UpdatedAt。
      * @param UpdatedAt UpdatedAt。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -336,7 +336,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid。
+     * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
     public Integer getAppid() {
@@ -344,7 +344,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid。
+     * Set 云用户appid。
      * @param Appid 云用户appid。
      */
     public void setAppid(Integer Appid) {
@@ -352,7 +352,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 获取扫描状态：0-待检测；1-检测完成
+     * Get 扫描状态：0-待检测；1-检测完成 
      * @return ContentScanStatus 扫描状态：0-待检测；1-检测完成
      */
     public Integer getContentScanStatus() {
@@ -360,7 +360,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 设置扫描状态：0-待检测；1-检测完成
+     * Set 扫描状态：0-待检测；1-检测完成
      * @param ContentScanStatus 扫描状态：0-待检测；1-检测完成
      */
     public void setContentScanStatus(Integer ContentScanStatus) {
@@ -368,7 +368,7 @@ public class Monitor  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

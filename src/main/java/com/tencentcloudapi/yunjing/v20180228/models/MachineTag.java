@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MachineTag  extends AbstractModel{
+public class MachineTag extends AbstractModel{
 
     /**
     * 关联标签ID
     */
     @SerializedName("Rid")
     @Expose
-    private Integer Rid;
+    private Long Rid;
 
     /**
     * 标签名
@@ -37,23 +37,23 @@ public class MachineTag  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取关联标签ID
+     * Get 关联标签ID 
      * @return Rid 关联标签ID
      */
-    public Integer getRid() {
+    public Long getRid() {
         return this.Rid;
     }
 
     /**
-     * 设置关联标签ID
+     * Set 关联标签ID
      * @param Rid 关联标签ID
      */
-    public void setRid(Integer Rid) {
+    public void setRid(Long Rid) {
         this.Rid = Rid;
     }
 
     /**
-     * 获取标签名
+     * Get 标签名 
      * @return Name 标签名
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class MachineTag  extends AbstractModel{
     }
 
     /**
-     * 设置标签名
+     * Set 标签名
      * @param Name 标签名
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class MachineTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Rid", this.Rid);

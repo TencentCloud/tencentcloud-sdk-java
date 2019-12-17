@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Instance  extends AbstractModel{
+public class Instance extends AbstractModel{
 
     /**
     * 实例ID
@@ -114,7 +114,7 @@ public class Instance  extends AbstractModel{
     private String AutoScalingGroupName;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -122,7 +122,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -130,7 +130,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -138,7 +138,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -146,7 +146,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置ID
+     * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
     public String getLaunchConfigurationId() {
@@ -154,7 +154,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置ID
+     * Set 启动配置ID
      * @param LaunchConfigurationId 启动配置ID
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -162,7 +162,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置名称
+     * Get 启动配置名称 
      * @return LaunchConfigurationName 启动配置名称
      */
     public String getLaunchConfigurationName() {
@@ -170,7 +170,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置名称
+     * Set 启动配置名称
      * @param LaunchConfigurationName 启动配置名称
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
@@ -178,7 +178,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     * Get 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等 
      * @return LifeCycleState 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
      */
     public String getLifeCycleState() {
@@ -186,7 +186,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     * Set 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
      * @param LifeCycleState 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
      */
     public void setLifeCycleState(String LifeCycleState) {
@@ -194,7 +194,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取健康状态，取值包括HEALTHY和UNHEALTHY
+     * Get 健康状态，取值包括HEALTHY和UNHEALTHY 
      * @return HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
      */
     public String getHealthStatus() {
@@ -202,7 +202,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置健康状态，取值包括HEALTHY和UNHEALTHY
+     * Set 健康状态，取值包括HEALTHY和UNHEALTHY
      * @param HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
      */
     public void setHealthStatus(String HealthStatus) {
@@ -210,7 +210,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取是否加入缩容保护
+     * Get 是否加入缩容保护 
      * @return ProtectedFromScaleIn 是否加入缩容保护
      */
     public Boolean getProtectedFromScaleIn() {
@@ -218,7 +218,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置是否加入缩容保护
+     * Set 是否加入缩容保护
      * @param ProtectedFromScaleIn 是否加入缩容保护
      */
     public void setProtectedFromScaleIn(Boolean ProtectedFromScaleIn) {
@@ -226,7 +226,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -234,7 +234,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -242,7 +242,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     * Get 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。 
      * @return CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      */
     public String getCreationType() {
@@ -250,7 +250,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
+     * Set 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      * @param CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
      */
     public void setCreationType(String CreationType) {
@@ -258,7 +258,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例加入时间
+     * Get 实例加入时间 
      * @return AddTime 实例加入时间
      */
     public String getAddTime() {
@@ -266,7 +266,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例加入时间
+     * Set 实例加入时间
      * @param AddTime 实例加入时间
      */
     public void setAddTime(String AddTime) {
@@ -274,7 +274,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型
+     * Get 实例类型 
      * @return InstanceType 实例类型
      */
     public String getInstanceType() {
@@ -282,7 +282,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型
+     * Set 实例类型
      * @param InstanceType 实例类型
      */
     public void setInstanceType(String InstanceType) {
@@ -290,7 +290,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取版本号
+     * Get 版本号 
      * @return VersionNumber 版本号
      */
     public Integer getVersionNumber() {
@@ -298,7 +298,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置版本号
+     * Set 版本号
      * @param VersionNumber 版本号
      */
     public void setVersionNumber(Integer VersionNumber) {
@@ -306,7 +306,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组名称
+     * Get 伸缩组名称 
      * @return AutoScalingGroupName 伸缩组名称
      */
     public String getAutoScalingGroupName() {
@@ -314,7 +314,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组名称
+     * Set 伸缩组名称
      * @param AutoScalingGroupName 伸缩组名称
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
@@ -322,7 +322,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

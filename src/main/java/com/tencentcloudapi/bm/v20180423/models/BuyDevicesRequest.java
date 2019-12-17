@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BuyDevicesRequest  extends AbstractModel{
+public class BuyDevicesRequest extends AbstractModel{
 
     /**
     * 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
@@ -290,7 +290,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     private String BuySession;
 
     /**
-     * 获取可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
+     * Get 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息 
      * @return Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
      */
     public String getZone() {
@@ -298,7 +298,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
+     * Set 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
      * @param Zone 可用区ID。通过接口[查询地域以及可用区(DescribeRegions)](https://cloud.tencent.com/document/api/386/33564)获取可用区信息
      */
     public void setZone(String Zone) {
@@ -306,7 +306,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
+     * Get 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息 
      * @return OsTypeId 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
      */
     public Integer getOsTypeId() {
@@ -314,7 +314,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
+     * Set 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
      * @param OsTypeId 部署服务器的操作系统ID。通过接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)获取操作系统信息
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -322,7 +322,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息
+     * Get RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息 
      * @return RaidId RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息
      */
     public Integer getRaidId() {
@@ -330,7 +330,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息
+     * Set RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息
      * @param RaidId RAID类型ID。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取RAID信息
      */
     public void setRaidId(Integer RaidId) {
@@ -338,7 +338,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买数量
+     * Get 购买数量 
      * @return GoodsCount 购买数量
      */
     public Integer getGoodsCount() {
@@ -346,7 +346,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买数量
+     * Set 购买数量
      * @param GoodsCount 购买数量
      */
     public void setGoodsCount(Integer GoodsCount) {
@@ -354,7 +354,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买至私有网络ID
+     * Get 购买至私有网络ID 
      * @return VpcId 购买至私有网络ID
      */
     public String getVpcId() {
@@ -362,7 +362,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买至私有网络ID
+     * Set 购买至私有网络ID
      * @param VpcId 购买至私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -370,7 +370,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买至子网ID
+     * Get 购买至子网ID 
      * @return SubnetId 购买至子网ID
      */
     public String getSubnetId() {
@@ -378,7 +378,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买至子网ID
+     * Set 购买至子网ID
      * @param SubnetId 购买至子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -386,7 +386,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息
+     * Get 购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息 
      * @return DeviceClassCode 购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息
      */
     public String getDeviceClassCode() {
@@ -394,7 +394,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息
+     * Set 购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息
      * @param DeviceClassCode 购买的机型ID。通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)获取机型信息
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -402,7 +402,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长单位，取值：M(月) D(天)
+     * Get 购买时长单位，取值：M(月) D(天) 
      * @return TimeUnit 购买时长单位，取值：M(月) D(天)
      */
     public String getTimeUnit() {
@@ -410,7 +410,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长单位，取值：M(月) D(天)
+     * Set 购买时长单位，取值：M(月) D(天)
      * @param TimeUnit 购买时长单位，取值：M(月) D(天)
      */
     public void setTimeUnit(String TimeUnit) {
@@ -418,7 +418,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长
+     * Get 购买时长 
      * @return TimeSpan 购买时长
      */
     public Integer getTimeSpan() {
@@ -426,7 +426,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长
+     * Set 购买时长
      * @param TimeSpan 购买时长
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -434,7 +434,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Get 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0 
      * @return NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public Integer getNeedSecurityAgent() {
@@ -442,7 +442,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Set 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0
      * @param NeedSecurityAgent 是否安装安全Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public void setNeedSecurityAgent(Integer NeedSecurityAgent) {
@@ -450,7 +450,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Get 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0 
      * @return NeedMonitorAgent 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public Integer getNeedMonitorAgent() {
@@ -458,7 +458,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Set 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0
      * @param NeedMonitorAgent 是否安装监控Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public void setNeedMonitorAgent(Integer NeedMonitorAgent) {
@@ -466,7 +466,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Get 是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0 
      * @return NeedEMRAgent 是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public Integer getNeedEMRAgent() {
@@ -474,7 +474,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
+     * Set 是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
      * @param NeedEMRAgent 是否安装EMR Agent，取值：1(安装) 0(不安装)，默认取值0
      */
     public void setNeedEMRAgent(Integer NeedEMRAgent) {
@@ -482,7 +482,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
+     * Get 是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0 
      * @return NeedEMRSoftware 是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
      */
     public Integer getNeedEMRSoftware() {
@@ -490,7 +490,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
+     * Set 是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
      * @param NeedEMRSoftware 是否安装EMR软件包，取值：1(安装) 0(不安装)，默认取值0
      */
     public void setNeedEMRSoftware(Integer NeedEMRSoftware) {
@@ -498,7 +498,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0
+     * Get 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0 
      * @return ApplyEip 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0
      */
     public Integer getApplyEip() {
@@ -506,7 +506,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0
+     * Set 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0
      * @param ApplyEip 是否分配弹性公网IP，取值：1(分配) 0(不分配)，默认取值0
      */
     public void setApplyEip(Integer ApplyEip) {
@@ -514,7 +514,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow
+     * Get 弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow 
      * @return EipPayMode 弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow
      */
     public String getEipPayMode() {
@@ -522,7 +522,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow
+     * Set 弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow
      * @param EipPayMode 弹性公网IP计费模式，取值：Flow(按流量计费) Bandwidth(按带宽计费)，默认取值Flow
      */
     public void setEipPayMode(String EipPayMode) {
@@ -530,7 +530,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网IP带宽限制，单位Mb
+     * Get 弹性公网IP带宽限制，单位Mb 
      * @return EipBandwidth 弹性公网IP带宽限制，单位Mb
      */
     public Integer getEipBandwidth() {
@@ -538,7 +538,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP带宽限制，单位Mb
+     * Set 弹性公网IP带宽限制，单位Mb
      * @param EipBandwidth 弹性公网IP带宽限制，单位Mb
      */
     public void setEipBandwidth(Integer EipBandwidth) {
@@ -546,7 +546,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1
+     * Get 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1 
      * @return IsZoning 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1
      */
     public Integer getIsZoning() {
@@ -554,7 +554,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1
+     * Set 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1
      * @param IsZoning 数据盘是否格式化，取值：1(格式化) 0(不格式化)，默认取值为1
      */
     public void setIsZoning(Integer IsZoning) {
@@ -562,7 +562,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1
+     * Get 物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1 
      * @return CpmPayMode 物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1
      */
     public Integer getCpmPayMode() {
@@ -570,7 +570,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1
+     * Set 物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1
      * @param CpmPayMode 物理机计费模式，取值：1(预付费) 2(后付费)，默认取值为1
      */
     public void setCpmPayMode(Integer CpmPayMode) {
@@ -578,7 +578,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自定义镜像ID，取值生效时用自定义镜像部署物理机
+     * Get 自定义镜像ID，取值生效时用自定义镜像部署物理机 
      * @return ImageId 自定义镜像ID，取值生效时用自定义镜像部署物理机
      */
     public String getImageId() {
@@ -586,7 +586,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自定义镜像ID，取值生效时用自定义镜像部署物理机
+     * Set 自定义镜像ID，取值生效时用自定义镜像部署物理机
      * @param ImageId 自定义镜像ID，取值生效时用自定义镜像部署物理机
      */
     public void setImageId(String ImageId) {
@@ -594,7 +594,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设置Linux root或Windows Administrator的密码
+     * Get 设置Linux root或Windows Administrator的密码 
      * @return Password 设置Linux root或Windows Administrator的密码
      */
     public String getPassword() {
@@ -602,7 +602,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置Linux root或Windows Administrator的密码
+     * Set 设置Linux root或Windows Administrator的密码
      * @param Password 设置Linux root或Windows Administrator的密码
      */
     public void setPassword(String Password) {
@@ -610,7 +610,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0
+     * Get 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0 
      * @return AutoRenewFlag 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0
      */
     public Integer getAutoRenewFlag() {
@@ -618,7 +618,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0
+     * Set 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0
      * @param AutoRenewFlag 自动续费标志位，取值：1(自动续费) 0(不自动续费)，默认取值0
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -626,7 +626,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息
+     * Get 系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息 
      * @return SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息
      */
     public Integer getSysRootSpace() {
@@ -634,7 +634,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息
+     * Set 系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息
      * @param SysRootSpace 系统盘根分区大小，单位为G，默认取值10G。通过接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/api/386/32910)获取根分区信息
      */
     public void setSysRootSpace(Integer SysRootSpace) {
@@ -642,7 +642,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)
+     * Get 系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911) 
      * @return SysSwaporuefiSpace 系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)
      */
     public Integer getSysSwaporuefiSpace() {
@@ -650,7 +650,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)
+     * Set 系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)
      * @param SysSwaporuefiSpace 系统盘swap分区或/boot/efi分区的大小，单位为G。若是uefi启动的机器，分区为/boot/efi，且此值是默认是2G。 普通机器为swap分区，可以不指定此分区。 机型是否是uefi启动，参见接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)
      */
     public void setSysSwaporuefiSpace(Integer SysSwaporuefiSpace) {
@@ -658,7 +658,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取/usr/local分区大小，单位为G
+     * Get /usr/local分区大小，单位为G 
      * @return SysUsrlocalSpace /usr/local分区大小，单位为G
      */
     public Integer getSysUsrlocalSpace() {
@@ -666,7 +666,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置/usr/local分区大小，单位为G
+     * Set /usr/local分区大小，单位为G
      * @param SysUsrlocalSpace /usr/local分区大小，单位为G
      */
     public void setSysUsrlocalSpace(Integer SysUsrlocalSpace) {
@@ -674,7 +674,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）
+     * Get /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区） 
      * @return SysDataSpace /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）
      */
     public Integer getSysDataSpace() {
@@ -682,7 +682,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置/data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）
+     * Set /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）
      * @param SysDataSpace /data分区大小，单位为G。如果系统盘还有剩余大小，会分配给/data分区。（特殊情况：如果剩余空间不足10G，并且没有指定/data分区，则剩余空间会分配给Root分区）
      */
     public void setSysDataSpace(Integer SysDataSpace) {
@@ -690,7 +690,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启超线程，取值：1(开启) 0(关闭)，默认取值1
+     * Get 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1 
      * @return HyperThreading 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1
      */
     public Integer getHyperThreading() {
@@ -698,7 +698,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启超线程，取值：1(开启) 0(关闭)，默认取值1
+     * Set 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1
      * @param HyperThreading 是否开启超线程，取值：1(开启) 0(关闭)，默认取值1
      */
     public void setHyperThreading(Integer HyperThreading) {
@@ -706,7 +706,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP列表，不指定时自动分配
+     * Get 指定的内网IP列表，不指定时自动分配 
      * @return LanIps 指定的内网IP列表，不指定时自动分配
      */
     public String [] getLanIps() {
@@ -714,7 +714,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定的内网IP列表，不指定时自动分配
+     * Set 指定的内网IP列表，不指定时自动分配
      * @param LanIps 指定的内网IP列表，不指定时自动分配
      */
     public void setLanIps(String [] LanIps) {
@@ -722,7 +722,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称列表
+     * Get 设备名称列表 
      * @return Aliases 设备名称列表
      */
     public String [] getAliases() {
@@ -730,7 +730,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称列表
+     * Set 设备名称列表
      * @param Aliases 设备名称列表
      */
     public void setAliases(String [] Aliases) {
@@ -738,8 +738,8 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CPU型号ID，自定义机型需要传入，取值：
-<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
+     * Get CPU型号ID，自定义机型需要传入，取值：
+<br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/> 
      * @return CpuId CPU型号ID，自定义机型需要传入，取值：
 <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      */
@@ -748,7 +748,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CPU型号ID，自定义机型需要传入，取值：
+     * Set CPU型号ID，自定义机型需要传入，取值：
 <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
      * @param CpuId CPU型号ID，自定义机型需要传入，取值：
 <br/><li>1: E5-2620v3 (6核) * 2</li><li>2: E5-2680v4 (14核) * 2</li><li>3: E5-2670v3 (12核) * 2</li><li>4: E5-2620v4 (8核) * 2</li><li>5: 4110 (8核) * 2</li><li>6: 6133 (20核) * 2</li><br/>
@@ -758,7 +758,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
+     * Get 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入 
      * @return ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
      */
     public Integer getContainRaidCard() {
@@ -766,7 +766,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
+     * Set 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
      * @param ContainRaidCard 是否有RAID卡，取值：1(有) 0(无)，自定义机型需要传入
      */
     public void setContainRaidCard(Integer ContainRaidCard) {
@@ -774,7 +774,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Get 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值 
      * @return MemSize 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public Integer getMemSize() {
@@ -782,7 +782,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Set 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param MemSize 内存大小，单位为G，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public void setMemSize(Integer MemSize) {
@@ -790,7 +790,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Get 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值 
      * @return SystemDiskTypeId 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public Integer getSystemDiskTypeId() {
@@ -798,7 +798,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Set 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param SystemDiskTypeId 系统盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public void setSystemDiskTypeId(Integer SystemDiskTypeId) {
@@ -806,7 +806,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Get 系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值 
      * @return SystemDiskCount 系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public Integer getSystemDiskCount() {
@@ -814,7 +814,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Set 系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param SystemDiskCount 系统盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public void setSystemDiskCount(Integer SystemDiskCount) {
@@ -822,7 +822,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Get 数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值 
      * @return DataDiskTypeId 数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public Integer getDataDiskTypeId() {
@@ -830,7 +830,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Set 数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param DataDiskTypeId 数据盘ID，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public void setDataDiskTypeId(Integer DataDiskTypeId) {
@@ -838,7 +838,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Get 数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值 
      * @return DataDiskCount 数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public Integer getDataDiskCount() {
@@ -846,7 +846,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
+     * Set 数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      * @param DataDiskCount 数据盘数量，自定义机型需要传入。取值参考接口[查询自定义机型部件信息(DescribeHardwareSpecification)](https://cloud.tencent.com/document/api/386/33565)返回值
      */
     public void setDataDiskCount(Integer DataDiskCount) {
@@ -854,7 +854,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的标签列表
+     * Get 绑定的标签列表 
      * @return Tags 绑定的标签列表
      */
     public Tag [] getTags() {
@@ -862,7 +862,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的标签列表
+     * Set 绑定的标签列表
      * @param Tags 绑定的标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -870,7 +870,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     * Get 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效 
      * @return FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
      */
     public String getFileSystem() {
@@ -878,7 +878,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
+     * Set 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
      * @param FileSystem 指定数据盘的文件系统格式，当前支持 EXT4和XFS选项， 默认为EXT4。 参数适用于数据盘和Linux， 且在IsZoning为1时生效
      */
     public void setFileSystem(String FileSystem) {
@@ -886,7 +886,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     * Get 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。 
      * @return BuySession 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
      */
     public String getBuySession() {
@@ -894,7 +894,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
+     * Set 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
      * @param BuySession 此参数是为了防止重复发货。如果两次调用传入相同的BuySession，只会发货一次。 不要以设备别名作为BuySession，这样只会第一次购买成功。参数长度为128位，合法字符为大小字母，数字，下划线，横线。
      */
     public void setBuySession(String BuySession) {
@@ -902,7 +902,7 @@ public class BuyDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

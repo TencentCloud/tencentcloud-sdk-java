@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkAndShopInfo  extends AbstractModel{
+public class NetworkAndShopInfo extends AbstractModel{
 
     /**
     * 集团id
@@ -121,7 +121,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     private String Mac;
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -129,7 +129,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -137,7 +137,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -145,7 +145,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -153,7 +153,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺省份
+     * Get 店铺省份 
      * @return Province 店铺省份
      */
     public String getProvince() {
@@ -161,7 +161,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺省份
+     * Set 店铺省份
      * @param Province 店铺省份
      */
     public void setProvince(String Province) {
@@ -169,7 +169,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺城市
+     * Get 店铺城市 
      * @return City 店铺城市
      */
     public String getCity() {
@@ -177,7 +177,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺城市
+     * Set 店铺城市
      * @param City 店铺城市
      */
     public void setCity(String City) {
@@ -185,7 +185,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取店铺名
+     * Get 店铺名 
      * @return ShopName 店铺名
      */
     public String getShopName() {
@@ -193,7 +193,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置店铺名
+     * Set 店铺名
      * @param ShopName 店铺名
      */
     public void setShopName(String ShopName) {
@@ -201,7 +201,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上传带宽，单位Mb/s，-1：未知
+     * Get 上传带宽，单位Mb/s，-1：未知 
      * @return Upload 上传带宽，单位Mb/s，-1：未知
      */
     public Float getUpload() {
@@ -209,7 +209,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传带宽，单位Mb/s，-1：未知
+     * Set 上传带宽，单位Mb/s，-1：未知
      * @param Upload 上传带宽，单位Mb/s，-1：未知
      */
     public void setUpload(Float Upload) {
@@ -217,7 +217,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取下载带宽，单位Mb/s，-1：未知
+     * Get 下载带宽，单位Mb/s，-1：未知 
      * @return Download 下载带宽，单位Mb/s，-1：未知
      */
     public Float getDownload() {
@@ -225,7 +225,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置下载带宽，单位Mb/s，-1：未知
+     * Set 下载带宽，单位Mb/s，-1：未知
      * @param Download 下载带宽，单位Mb/s，-1：未知
      */
     public void setDownload(Float Download) {
@@ -233,7 +233,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最小延迟，单位ms，-1：未知
+     * Get 最小延迟，单位ms，-1：未知 
      * @return MinRtt 最小延迟，单位ms，-1：未知
      */
     public Float getMinRtt() {
@@ -241,7 +241,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最小延迟，单位ms，-1：未知
+     * Set 最小延迟，单位ms，-1：未知
      * @param MinRtt 最小延迟，单位ms，-1：未知
      */
     public void setMinRtt(Float MinRtt) {
@@ -249,7 +249,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均延迟，单位ms，-1：未知
+     * Get 平均延迟，单位ms，-1：未知 
      * @return AvgRtt 平均延迟，单位ms，-1：未知
      */
     public Float getAvgRtt() {
@@ -257,7 +257,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均延迟，单位ms，-1：未知
+     * Set 平均延迟，单位ms，-1：未知
      * @param AvgRtt 平均延迟，单位ms，-1：未知
      */
     public void setAvgRtt(Float AvgRtt) {
@@ -265,7 +265,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大延迟，单位ms，-1：未知
+     * Get 最大延迟，单位ms，-1：未知 
      * @return MaxRtt 最大延迟，单位ms，-1：未知
      */
     public Float getMaxRtt() {
@@ -273,7 +273,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大延迟，单位ms，-1：未知
+     * Set 最大延迟，单位ms，-1：未知
      * @param MaxRtt 最大延迟，单位ms，-1：未知
      */
     public void setMaxRtt(Float MaxRtt) {
@@ -281,7 +281,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均偏差延迟，单位ms，-1：未知
+     * Get 平均偏差延迟，单位ms，-1：未知 
      * @return MdevRtt 平均偏差延迟，单位ms，-1：未知
      */
     public Float getMdevRtt() {
@@ -289,7 +289,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均偏差延迟，单位ms，-1：未知
+     * Set 平均偏差延迟，单位ms，-1：未知
      * @param MdevRtt 平均偏差延迟，单位ms，-1：未知
      */
     public void setMdevRtt(Float MdevRtt) {
@@ -297,7 +297,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取丢包率百分比，-1：未知
+     * Get 丢包率百分比，-1：未知 
      * @return Loss 丢包率百分比，-1：未知
      */
     public Float getLoss() {
@@ -305,7 +305,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置丢包率百分比，-1：未知
+     * Set 丢包率百分比，-1：未知
      * @param Loss 丢包率百分比，-1：未知
      */
     public void setLoss(Float Loss) {
@@ -313,7 +313,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间戳
+     * Get 更新时间戳 
      * @return UpdateTime 更新时间戳
      */
     public Integer getUpdateTime() {
@@ -321,7 +321,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间戳
+     * Set 更新时间戳
      * @param UpdateTime 更新时间戳
      */
     public void setUpdateTime(Integer UpdateTime) {
@@ -329,7 +329,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上报网络状态设备
+     * Get 上报网络状态设备 
      * @return Mac 上报网络状态设备
      */
     public String getMac() {
@@ -337,7 +337,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上报网络状态设备
+     * Set 上报网络状态设备
      * @param Mac 上报网络状态设备
      */
     public void setMac(String Mac) {
@@ -345,7 +345,7 @@ public class NetworkAndShopInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

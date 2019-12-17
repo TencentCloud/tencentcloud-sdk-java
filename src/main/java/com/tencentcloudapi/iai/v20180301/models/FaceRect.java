@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceRect  extends AbstractModel{
+public class FaceRect extends AbstractModel{
 
     /**
     * 人脸框左上角横坐标。 
@@ -55,9 +55,9 @@ public class FaceRect  extends AbstractModel{
     private Long Height;
 
     /**
-     * 获取人脸框左上角横坐标。 
+     * Get 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
      * @return X 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -67,7 +67,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角横坐标。 
+     * Set 人脸框左上角横坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      * @param X 人脸框左上角横坐标。 
@@ -79,9 +79,9 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框左上角纵坐标。 
+     * Get 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
+若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。 
      * @return Y 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
@@ -91,7 +91,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角纵坐标。 
+     * Set 人脸框左上角纵坐标。 
 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
 若需截取完整人脸，可以在完整分completess满足需求的情况下，将负值坐标取0。
      * @param Y 人脸框左上角纵坐标。 
@@ -103,7 +103,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸宽度
+     * Get 人脸宽度 
      * @return Width 人脸宽度
      */
     public Long getWidth() {
@@ -111,7 +111,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸宽度
+     * Set 人脸宽度
      * @param Width 人脸宽度
      */
     public void setWidth(Long Width) {
@@ -119,7 +119,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸高度
+     * Get 人脸高度 
      * @return Height 人脸高度
      */
     public Long getHeight() {
@@ -127,7 +127,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸高度
+     * Set 人脸高度
      * @param Height 人脸高度
      */
     public void setHeight(Long Height) {
@@ -135,7 +135,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

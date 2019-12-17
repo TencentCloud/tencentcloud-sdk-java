@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEipResponse  extends AbstractModel{
+public class CreateEipResponse extends AbstractModel{
 
     /**
     * EIP列表
@@ -44,7 +44,7 @@ public class CreateEipResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取EIP列表
+     * Get EIP列表 
      * @return EipIds EIP列表
      */
     public String [] getEipIds() {
@@ -52,7 +52,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置EIP列表
+     * Set EIP列表
      * @param EipIds EIP列表
      */
     public void setEipIds(String [] EipIds) {
@@ -60,7 +60,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public Integer getTaskId() {
@@ -68,7 +68,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -76,7 +76,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateEipResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EipIds.", this.EipIds);

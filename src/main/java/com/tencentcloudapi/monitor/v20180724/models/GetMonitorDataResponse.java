@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetMonitorDataResponse  extends AbstractModel{
+public class GetMonitorDataResponse extends AbstractModel{
 
     /**
     * 统计周期
@@ -65,7 +65,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取统计周期
+     * Get 统计周期 
      * @return Period 统计周期
      */
     public Integer getPeriod() {
@@ -73,7 +73,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计周期
+     * Set 统计周期
      * @param Period 统计周期
      */
     public void setPeriod(Integer Period) {
@@ -81,7 +81,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取指标名
+     * Get 指标名 
      * @return MetricName 指标名
      */
     public String getMetricName() {
@@ -89,7 +89,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置指标名
+     * Set 指标名
      * @param MetricName 指标名
      */
     public void setMetricName(String MetricName) {
@@ -97,7 +97,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据点数组
+     * Get 数据点数组 
      * @return DataPoints 数据点数组
      */
     public DataPoint [] getDataPoints() {
@@ -105,7 +105,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据点数组
+     * Set 数据点数组
      * @param DataPoints 数据点数组
      */
     public void setDataPoints(DataPoint [] DataPoints) {
@@ -113,7 +113,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -121,7 +121,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -129,7 +129,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -137,7 +137,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -145,7 +145,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class GetMonitorDataResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);

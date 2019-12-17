@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceFusionResponse  extends AbstractModel{
+public class FaceFusionResponse extends AbstractModel{
 
     /**
     * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
@@ -44,7 +44,7 @@ public class FaceFusionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Get RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。 
      * @return Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      */
     public String getImage() {
@@ -52,7 +52,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Set RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      * @param Image RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
      */
     public void setImage(String Image) {
@@ -60,7 +60,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取鉴政结果
+     * Get 鉴政结果 
      * @return ReviewResultSet 鉴政结果
      */
     public FuseFaceReviewResult [] getReviewResultSet() {
@@ -68,7 +68,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置鉴政结果
+     * Set 鉴政结果
      * @param ReviewResultSet 鉴政结果
      */
     public void setReviewResultSet(FuseFaceReviewResult [] ReviewResultSet) {
@@ -76,7 +76,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class FaceFusionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);

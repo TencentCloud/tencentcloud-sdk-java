@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter  extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
     * 过滤字段，可选值 - Zone，VpcId，InstanceName
@@ -37,7 +37,7 @@ public class Filter  extends AbstractModel{
     private String [] ValueList;
 
     /**
-     * 获取过滤字段，可选值 - Zone，VpcId，InstanceName
+     * Get 过滤字段，可选值 - Zone，VpcId，InstanceName 
      * @return Name 过滤字段，可选值 - Zone，VpcId，InstanceName
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置过滤字段，可选值 - Zone，VpcId，InstanceName
+     * Set 过滤字段，可选值 - Zone，VpcId，InstanceName
      * @param Name 过滤字段，可选值 - Zone，VpcId，InstanceName
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 获取过滤值列表
+     * Get 过滤值列表 
      * @return ValueList 过滤值列表
      */
     public String [] getValueList() {
@@ -61,7 +61,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置过滤值列表
+     * Set 过滤值列表
      * @param ValueList 过滤值列表
      */
     public void setValueList(String [] ValueList) {
@@ -69,7 +69,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewInfo  extends AbstractModel{
+public class MediaMiniProgramReviewInfo extends AbstractModel{
 
     /**
     * 审核信息列表。
@@ -30,7 +30,7 @@ public class MediaMiniProgramReviewInfo  extends AbstractModel{
     private MediaMiniProgramReviewInfoItem [] MiniProgramReviewList;
 
     /**
-     * 获取审核信息列表。
+     * Get 审核信息列表。 
      * @return MiniProgramReviewList 审核信息列表。
      */
     public MediaMiniProgramReviewInfoItem [] getMiniProgramReviewList() {
@@ -38,7 +38,7 @@ public class MediaMiniProgramReviewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置审核信息列表。
+     * Set 审核信息列表。
      * @param MiniProgramReviewList 审核信息列表。
      */
     public void setMiniProgramReviewList(MediaMiniProgramReviewInfoItem [] MiniProgramReviewList) {
@@ -46,7 +46,7 @@ public class MediaMiniProgramReviewInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MiniProgramReviewList.", this.MiniProgramReviewList);

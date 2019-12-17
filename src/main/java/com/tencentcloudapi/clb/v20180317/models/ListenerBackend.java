@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListenerBackend  extends AbstractModel{
+public class ListenerBackend extends AbstractModel{
 
     /**
     * 监听器 ID
@@ -60,7 +60,7 @@ public class ListenerBackend  extends AbstractModel{
     private Backend [] Targets;
 
     /**
-     * 获取监听器 ID
+     * Get 监听器 ID 
      * @return ListenerId 监听器 ID
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器 ID
+     * Set 监听器 ID
      * @param ListenerId 监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的协议
+     * Get 监听器的协议 
      * @return Protocol 监听器的协议
      */
     public String getProtocol() {
@@ -84,7 +84,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的协议
+     * Set 监听器的协议
      * @param Protocol 监听器的协议
      */
     public void setProtocol(String Protocol) {
@@ -92,7 +92,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的端口
+     * Get 监听器的端口 
      * @return Port 监听器的端口
      */
     public Integer getPort() {
@@ -100,7 +100,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的端口
+     * Set 监听器的端口
      * @param Port 监听器的端口
      */
     public void setPort(Integer Port) {
@@ -108,8 +108,8 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 获取监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -118,7 +118,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
+     * Set 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,8 +128,8 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 获取监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 设置监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
+     * Set 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class ListenerBackend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

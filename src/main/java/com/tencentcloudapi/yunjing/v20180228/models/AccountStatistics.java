@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountStatistics  extends AbstractModel{
+public class AccountStatistics extends AbstractModel{
 
     /**
     * 用户名。
@@ -34,10 +34,10 @@ public class AccountStatistics  extends AbstractModel{
     */
     @SerializedName("MachineNum")
     @Expose
-    private Integer MachineNum;
+    private Long MachineNum;
 
     /**
-     * 获取用户名。
+     * Get 用户名。 
      * @return Username 用户名。
      */
     public String getUsername() {
@@ -45,7 +45,7 @@ public class AccountStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置用户名。
+     * Set 用户名。
      * @param Username 用户名。
      */
     public void setUsername(String Username) {
@@ -53,23 +53,23 @@ public class AccountStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取主机数量。
+     * Get 主机数量。 
      * @return MachineNum 主机数量。
      */
-    public Integer getMachineNum() {
+    public Long getMachineNum() {
         return this.MachineNum;
     }
 
     /**
-     * 设置主机数量。
+     * Set 主机数量。
      * @param MachineNum 主机数量。
      */
-    public void setMachineNum(Integer MachineNum) {
+    public void setMachineNum(Long MachineNum) {
         this.MachineNum = MachineNum;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Username", this.Username);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MLIDCardOCRResponse  extends AbstractModel{
+public class MLIDCardOCRResponse extends AbstractModel{
 
     /**
     * 身份证号
@@ -74,7 +74,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取身份证号
+     * Get 身份证号 
      * @return ID 身份证号
      */
     public String getID() {
@@ -82,7 +82,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
      * @param ID 身份证号
      */
     public void setID(String ID) {
@@ -90,7 +90,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -98,7 +98,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -106,7 +106,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取地址
+     * Get 地址 
      * @return Address 地址
      */
     public String getAddress() {
@@ -114,7 +114,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置地址
+     * Set 地址
      * @param Address 地址
      */
     public void setAddress(String Address) {
@@ -122,7 +122,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -130,7 +130,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -138,9 +138,9 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取告警码
+     * Get 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警 
      * @return Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
@@ -150,7 +150,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置告警码
+     * Set 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
      * @param Warn 告警码
@@ -162,7 +162,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证件图片
+     * Get 证件图片 
      * @return Image 证件图片
      */
     public String getImage() {
@@ -170,7 +170,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证件图片
+     * Set 证件图片
      * @param Image 证件图片
      */
     public void setImage(String Image) {
@@ -178,7 +178,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -186,7 +186,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -194,7 +194,7 @@ public class MLIDCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ID", this.ID);

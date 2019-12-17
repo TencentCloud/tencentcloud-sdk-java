@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadContractRequest  extends AbstractModel{
+public class DownloadContractRequest extends AbstractModel{
 
     /**
     * 模块名ContractMng
@@ -44,7 +44,7 @@ public class DownloadContractRequest  extends AbstractModel{
     private String ContractResId;
 
     /**
-     * 获取模块名ContractMng
+     * Get 模块名ContractMng 
      * @return Module 模块名ContractMng
      */
     public String getModule() {
@@ -52,7 +52,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名ContractMng
+     * Set 模块名ContractMng
      * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
@@ -60,7 +60,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名DownloadContract
+     * Get 操作名DownloadContract 
      * @return Operation 操作名DownloadContract
      */
     public String getOperation() {
@@ -68,7 +68,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名DownloadContract
+     * Set 操作名DownloadContract
      * @param Operation 操作名DownloadContract
      */
     public void setOperation(String Operation) {
@@ -76,7 +76,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同ID
+     * Get 合同ID 
      * @return ContractResId 合同ID
      */
     public String getContractResId() {
@@ -84,7 +84,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同ID
+     * Set 合同ID
      * @param ContractResId 合同ID
      */
     public void setContractResId(String ContractResId) {
@@ -92,7 +92,7 @@ public class DownloadContractRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

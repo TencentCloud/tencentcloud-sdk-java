@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceClass  extends AbstractModel{
+public class DeviceClass extends AbstractModel{
 
     /**
     * 机型ID
@@ -114,7 +114,7 @@ public class DeviceClass  extends AbstractModel{
     private Integer Series;
 
     /**
-     * 获取机型ID
+     * Get 机型ID 
      * @return DeviceClassCode 机型ID
      */
     public String getDeviceClassCode() {
@@ -122,7 +122,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置机型ID
+     * Set 机型ID
      * @param DeviceClassCode 机型ID
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -130,7 +130,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取CPU描述
+     * Get CPU描述 
      * @return CpuDescription CPU描述
      */
     public String getCpuDescription() {
@@ -138,7 +138,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置CPU描述
+     * Set CPU描述
      * @param CpuDescription CPU描述
      */
     public void setCpuDescription(String CpuDescription) {
@@ -146,7 +146,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取内存描述
+     * Get 内存描述 
      * @return MemDescription 内存描述
      */
     public String getMemDescription() {
@@ -154,7 +154,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置内存描述
+     * Set 内存描述
      * @param MemDescription 内存描述
      */
     public void setMemDescription(String MemDescription) {
@@ -162,7 +162,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘描述
+     * Get 硬盘描述 
      * @return DiskDescription 硬盘描述
      */
     public String getDiskDescription() {
@@ -170,7 +170,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘描述
+     * Set 硬盘描述
      * @param DiskDescription 硬盘描述
      */
     public void setDiskDescription(String DiskDescription) {
@@ -178,7 +178,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持RAID. 0:不支持; 1:支持
+     * Get 是否支持RAID. 0:不支持; 1:支持 
      * @return HaveRaidCard 是否支持RAID. 0:不支持; 1:支持
      */
     public Integer getHaveRaidCard() {
@@ -186,7 +186,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持RAID. 0:不支持; 1:支持
+     * Set 是否支持RAID. 0:不支持; 1:支持
      * @param HaveRaidCard 是否支持RAID. 0:不支持; 1:支持
      */
     public void setHaveRaidCard(Integer HaveRaidCard) {
@@ -194,7 +194,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取网卡描述
+     * Get 网卡描述 
      * @return NicDescription 网卡描述
      */
     public String getNicDescription() {
@@ -202,7 +202,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置网卡描述
+     * Set 网卡描述
      * @param NicDescription 网卡描述
      */
     public void setNicDescription(String NicDescription) {
@@ -210,7 +210,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取GPU描述
+     * Get GPU描述 
      * @return GpuDescription GPU描述
      */
     public String getGpuDescription() {
@@ -218,7 +218,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置GPU描述
+     * Set GPU描述
      * @param GpuDescription GPU描述
      */
     public void setGpuDescription(String GpuDescription) {
@@ -226,7 +226,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取单价折扣
+     * Get 单价折扣 
      * @return Discount 单价折扣
      */
     public Float getDiscount() {
@@ -234,7 +234,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置单价折扣
+     * Set 单价折扣
      * @param Discount 单价折扣
      */
     public void setDiscount(Float Discount) {
@@ -242,7 +242,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取用户刊例价格
+     * Get 用户刊例价格 
      * @return UnitPrice 用户刊例价格
      */
     public Integer getUnitPrice() {
@@ -250,7 +250,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置用户刊例价格
+     * Set 用户刊例价格
      * @param UnitPrice 用户刊例价格
      */
     public void setUnitPrice(Integer UnitPrice) {
@@ -258,7 +258,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取实际价格
+     * Get 实际价格 
      * @return RealPrice 实际价格
      */
     public Integer getRealPrice() {
@@ -266,7 +266,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置实际价格
+     * Set 实际价格
      * @param RealPrice 实际价格
      */
     public void setRealPrice(Integer RealPrice) {
@@ -274,7 +274,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取官网刊例价格
+     * Get 官网刊例价格 
      * @return NormalPrice 官网刊例价格
      */
     public Integer getNormalPrice() {
@@ -282,7 +282,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置官网刊例价格
+     * Set 官网刊例价格
      * @param NormalPrice 官网刊例价格
      */
     public void setNormalPrice(Integer NormalPrice) {
@@ -290,7 +290,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取设备使用场景类型
+     * Get 设备使用场景类型 
      * @return DeviceType 设备使用场景类型
      */
     public String getDeviceType() {
@@ -298,7 +298,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置设备使用场景类型
+     * Set 设备使用场景类型
      * @param DeviceType 设备使用场景类型
      */
     public void setDeviceType(String DeviceType) {
@@ -306,7 +306,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 获取机型系列
+     * Get 机型系列 
      * @return Series 机型系列
      */
     public Integer getSeries() {
@@ -314,7 +314,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 设置机型系列
+     * Set 机型系列
      * @param Series 机型系列
      */
     public void setSeries(Integer Series) {
@@ -322,7 +322,7 @@ public class DeviceClass  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);

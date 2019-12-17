@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentBillElem  extends AbstractModel{
+public class AgentBillElem extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -117,7 +117,7 @@ public class AgentBillElem  extends AbstractModel{
     private String ActivityId;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -125,7 +125,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -133,7 +133,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取订单号，仅对预付费账单有意义
+     * Get 订单号，仅对预付费账单有意义 
      * @return OrderId 订单号，仅对预付费账单有意义
      */
     public String getOrderId() {
@@ -141,7 +141,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置订单号，仅对预付费账单有意义
+     * Set 订单号，仅对预付费账单有意义
      * @param OrderId 订单号，仅对预付费账单有意义
      */
     public void setOrderId(String OrderId) {
@@ -149,7 +149,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客账号ID
+     * Get 代客账号ID 
      * @return ClientUin 代客账号ID
      */
     public String getClientUin() {
@@ -157,7 +157,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客账号ID
+     * Set 代客账号ID
      * @param ClientUin 代客账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -165,7 +165,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客备注名称
+     * Get 代客备注名称 
      * @return ClientRemark 代客备注名称
      */
     public String getClientRemark() {
@@ -173,7 +173,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客备注名称
+     * Set 代客备注名称
      * @param ClientRemark 代客备注名称
      */
     public void setClientRemark(String ClientRemark) {
@@ -181,7 +181,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取支付时间
+     * Get 支付时间 
      * @return PayTime 支付时间
      */
     public String getPayTime() {
@@ -189,7 +189,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置支付时间
+     * Set 支付时间
      * @param PayTime 支付时间
      */
     public void setPayTime(String PayTime) {
@@ -197,7 +197,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取云产品名称
+     * Get 云产品名称 
      * @return GoodsType 云产品名称
      */
     public String getGoodsType() {
@@ -205,7 +205,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置云产品名称
+     * Set 云产品名称
      * @param GoodsType 云产品名称
      */
     public void setGoodsType(String GoodsType) {
@@ -213,7 +213,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取预付费/后付费
+     * Get 预付费/后付费 
      * @return PayMode 预付费/后付费
      */
     public String getPayMode() {
@@ -221,7 +221,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置预付费/后付费
+     * Set 预付费/后付费
      * @param PayMode 预付费/后付费
      */
     public void setPayMode(String PayMode) {
@@ -229,7 +229,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取支付月份
+     * Get 支付月份 
      * @return SettleMonth 支付月份
      */
     public String getSettleMonth() {
@@ -237,7 +237,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置支付月份
+     * Set 支付月份
      * @param SettleMonth 支付月份
      */
     public void setSettleMonth(String SettleMonth) {
@@ -245,7 +245,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取支付金额，单位分
+     * Get 支付金额，单位分 
      * @return Amt 支付金额，单位分
      */
     public Integer getAmt() {
@@ -253,7 +253,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置支付金额，单位分
+     * Set 支付金额，单位分
      * @param Amt 支付金额，单位分
      */
     public void setAmt(Integer Amt) {
@@ -261,7 +261,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取agentpay：代付；selfpay：自付
+     * Get agentpay：代付；selfpay：自付 
      * @return PayerMode agentpay：代付；selfpay：自付
      */
     public String getPayerMode() {
@@ -269,7 +269,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置agentpay：代付；selfpay：自付
+     * Set agentpay：代付；selfpay：自付
      * @param PayerMode agentpay：代付；selfpay：自付
      */
     public void setPayerMode(String PayerMode) {
@@ -277,8 +277,8 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -287,7 +287,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Set 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,8 +297,8 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -307,7 +307,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * Set 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -317,8 +317,8 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 获取活动ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 活动ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActivityId 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -327,7 +327,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 设置活动ID
+     * Set 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityId 活动ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -337,7 +337,7 @@ public class AgentBillElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StrategyInfo  extends AbstractModel{
+public class StrategyInfo extends AbstractModel{
 
     /**
     * 策略ID。
@@ -90,7 +90,7 @@ public class StrategyInfo  extends AbstractModel{
     private Long IsAttached;
 
     /**
-     * 获取策略ID。
+     * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
     public Long getPolicyId() {
@@ -98,7 +98,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID。
+     * Set 策略ID。
      * @param PolicyId 策略ID。
      */
     public void setPolicyId(Long PolicyId) {
@@ -106,7 +106,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称。
+     * Get 策略名称。 
      * @return PolicyName 策略名称。
      */
     public String getPolicyName() {
@@ -114,7 +114,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称。
+     * Set 策略名称。
      * @param PolicyName 策略名称。
      */
     public void setPolicyName(String PolicyName) {
@@ -122,8 +122,8 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AddTime 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略创建时间。
+     * Set 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略类型。1 表示自定义策略，2 表示预设策略。
+     * Get 策略类型。1 表示自定义策略，2 表示预设策略。 
      * @return Type 策略类型。1 表示自定义策略，2 表示预设策略。
      */
     public Long getType() {
@@ -150,7 +150,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略类型。1 表示自定义策略，2 表示预设策略。
+     * Set 策略类型。1 表示自定义策略，2 表示预设策略。
      * @param Type 策略类型。1 表示自定义策略，2 表示预设策略。
      */
     public void setType(Long Type) {
@@ -158,8 +158,8 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略描述。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略描述。
+     * Set 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,7 +178,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建。 
      * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
      */
     public Long getCreateMode() {
@@ -186,7 +186,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建。
      * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
      */
     public void setCreateMode(Long CreateMode) {
@@ -194,7 +194,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取关联的用户数
+     * Get 关联的用户数 
      * @return Attachments 关联的用户数
      */
     public Long getAttachments() {
@@ -202,7 +202,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关联的用户数
+     * Set 关联的用户数
      * @param Attachments 关联的用户数
      */
     public void setAttachments(Long Attachments) {
@@ -210,8 +210,8 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略关联的产品
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略关联的产品
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceType 策略关联的产品
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -220,7 +220,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略关联的产品
+     * Set 策略关联的产品
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceType 策略关联的产品
 注意：此字段可能返回 null，表示取不到有效值。
@@ -230,8 +230,8 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -240,7 +240,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
+     * Set 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAttached 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -250,7 +250,7 @@ public class StrategyInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

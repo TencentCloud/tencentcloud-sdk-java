@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMultiDevTaskResponse  extends AbstractModel{
+public class DescribeMultiDevTaskResponse extends AbstractModel{
 
     /**
     * 任务 ID
@@ -44,7 +44,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务 ID
+     * Get 任务 ID 
      * @return TaskId 任务 ID
      */
     public String getTaskId() {
@@ -52,7 +52,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID
+     * Set 任务 ID
      * @param TaskId 任务 ID
      */
     public void setTaskId(String TaskId) {
@@ -60,7 +60,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
+     * Get 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成 
      * @return TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
     public Integer getTaskStatus() {
@@ -68,7 +68,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
+     * Set 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      * @param TaskStatus 任务是否完成。0 代表任务未开始，1 代表任务正在执行，2 代表任务已完成
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -76,7 +76,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeMultiDevTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

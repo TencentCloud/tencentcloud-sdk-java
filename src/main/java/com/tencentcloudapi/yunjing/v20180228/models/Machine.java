@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Machine  extends AbstractModel{
+public class Machine extends AbstractModel{
 
     /**
     * 主机名称。
@@ -64,7 +64,7 @@ public class Machine  extends AbstractModel{
     */
     @SerializedName("VulNum")
     @Expose
-    private Integer VulNum;
+    private Long VulNum;
 
     /**
     * 主机IP。
@@ -103,7 +103,7 @@ public class Machine  extends AbstractModel{
     */
     @SerializedName("MalwareNum")
     @Expose
-    private Integer MalwareNum;
+    private Long MalwareNum;
 
     /**
     * 标签信息
@@ -113,7 +113,7 @@ public class Machine  extends AbstractModel{
     private MachineTag [] Tag;
 
     /**
-     * 获取主机名称。
+     * Get 主机名称。 
      * @return MachineName 主机名称。
      */
     public String getMachineName() {
@@ -121,7 +121,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称。
+     * Set 主机名称。
      * @param MachineName 主机名称。
      */
     public void setMachineName(String MachineName) {
@@ -129,7 +129,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取主机系统。
+     * Get 主机系统。 
      * @return MachineOs 主机系统。
      */
     public String getMachineOs() {
@@ -137,7 +137,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机系统。
+     * Set 主机系统。
      * @param MachineOs 主机系统。
      */
     public void setMachineOs(String MachineOs) {
@@ -145,9 +145,9 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取主机状态。
+     * Get 主机状态。
 <li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
+<li>ONLINE: 在线</li> 
      * @return MachineStatus 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
@@ -157,7 +157,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机状态。
+     * Set 主机状态。
 <li>OFFLINE: 离线  </li>
 <li>ONLINE: 在线</li>
      * @param MachineStatus 主机状态。
@@ -169,7 +169,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Get 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。 
      * @return Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      */
     public String getUuid() {
@@ -177,7 +177,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Set 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      * @param Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
      */
     public void setUuid(String Uuid) {
@@ -185,7 +185,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取CVM或BM机器唯一Uuid。
+     * Get CVM或BM机器唯一Uuid。 
      * @return Quuid CVM或BM机器唯一Uuid。
      */
     public String getQuuid() {
@@ -193,7 +193,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置CVM或BM机器唯一Uuid。
+     * Set CVM或BM机器唯一Uuid。
      * @param Quuid CVM或BM机器唯一Uuid。
      */
     public void setQuuid(String Quuid) {
@@ -201,23 +201,23 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞数。
+     * Get 漏洞数。 
      * @return VulNum 漏洞数。
      */
-    public Integer getVulNum() {
+    public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * 设置漏洞数。
+     * Set 漏洞数。
      * @param VulNum 漏洞数。
      */
-    public void setVulNum(Integer VulNum) {
+    public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -225,7 +225,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -233,9 +233,9 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取是否是专业版。
+     * Get 是否是专业版。
 <li>true： 是</li>
-<li>false：否</li>
+<li>false：否</li> 
      * @return IsProVersion 是否是专业版。
 <li>true： 是</li>
 <li>false：否</li>
@@ -245,7 +245,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置是否是专业版。
+     * Set 是否是专业版。
 <li>true： 是</li>
 <li>false：否</li>
      * @param IsProVersion 是否是专业版。
@@ -257,7 +257,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取主机外网IP。
+     * Get 主机外网IP。 
      * @return MachineWanIp 主机外网IP。
      */
     public String getMachineWanIp() {
@@ -265,7 +265,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机外网IP。
+     * Set 主机外网IP。
      * @param MachineWanIp 主机外网IP。
      */
     public void setMachineWanIp(String MachineWanIp) {
@@ -273,9 +273,9 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取主机状态。
+     * Get 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+<li>PREPAY: 表示预付费，即包年包月</li> 
      * @return PayMode 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
@@ -285,7 +285,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置主机状态。
+     * Set 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
      * @param PayMode 主机状态。
@@ -297,23 +297,23 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 获取木马数。
+     * Get 木马数。 
      * @return MalwareNum 木马数。
      */
-    public Integer getMalwareNum() {
+    public Long getMalwareNum() {
         return this.MalwareNum;
     }
 
     /**
-     * 设置木马数。
+     * Set 木马数。
      * @param MalwareNum 木马数。
      */
-    public void setMalwareNum(Integer MalwareNum) {
+    public void setMalwareNum(Long MalwareNum) {
         this.MalwareNum = MalwareNum;
     }
 
     /**
-     * 获取标签信息
+     * Get 标签信息 
      * @return Tag 标签信息
      */
     public MachineTag [] getTag() {
@@ -321,7 +321,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 设置标签信息
+     * Set 标签信息
      * @param Tag 标签信息
      */
     public void setTag(MachineTag [] Tag) {
@@ -329,7 +329,7 @@ public class Machine  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);

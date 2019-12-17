@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MLIDPassportOCRResponse  extends AbstractModel{
+public class MLIDPassportOCRResponse extends AbstractModel{
 
     /**
     * 护照ID
@@ -95,7 +95,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取护照ID
+     * Get 护照ID 
      * @return ID 护照ID
      */
     public String getID() {
@@ -103,7 +103,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置护照ID
+     * Set 护照ID
      * @param ID 护照ID
      */
     public void setID(String ID) {
@@ -111,7 +111,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -119,7 +119,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -127,7 +127,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生日期
+     * Get 出生日期 
      * @return DateOfBirth 出生日期
      */
     public String getDateOfBirth() {
@@ -135,7 +135,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生日期
+     * Set 出生日期
      * @param DateOfBirth 出生日期
      */
     public void setDateOfBirth(String DateOfBirth) {
@@ -143,7 +143,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别（F女，M男）
+     * Get 性别（F女，M男） 
      * @return Sex 性别（F女，M男）
      */
     public String getSex() {
@@ -151,7 +151,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别（F女，M男）
+     * Set 性别（F女，M男）
      * @param Sex 性别（F女，M男）
      */
     public void setSex(String Sex) {
@@ -159,7 +159,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期
+     * Get 有效期 
      * @return DateOfExpiration 有效期
      */
     public String getDateOfExpiration() {
@@ -167,7 +167,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期
+     * Set 有效期
      * @param DateOfExpiration 有效期
      */
     public void setDateOfExpiration(String DateOfExpiration) {
@@ -175,7 +175,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发行国
+     * Get 发行国 
      * @return IssuingCountry 发行国
      */
     public String getIssuingCountry() {
@@ -183,7 +183,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发行国
+     * Set 发行国
      * @param IssuingCountry 发行国
      */
     public void setIssuingCountry(String IssuingCountry) {
@@ -191,7 +191,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取国籍
+     * Get 国籍 
      * @return Nationality 国籍
      */
     public String getNationality() {
@@ -199,7 +199,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置国籍
+     * Set 国籍
      * @param Nationality 国籍
      */
     public void setNationality(String Nationality) {
@@ -207,9 +207,9 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取告警码
+     * Get 告警码
 -9103	证照翻拍告警
--9102	证照复印件告警
+-9102	证照复印件告警 
      * @return Warn 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
@@ -219,7 +219,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置告警码
+     * Set 告警码
 -9103	证照翻拍告警
 -9102	证照复印件告警
      * @param Warn 告警码
@@ -231,7 +231,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证件图片
+     * Get 证件图片 
      * @return Image 证件图片
      */
     public String getImage() {
@@ -239,7 +239,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证件图片
+     * Set 证件图片
      * @param Image 证件图片
      */
     public void setImage(String Image) {
@@ -247,7 +247,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -255,7 +255,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -263,7 +263,7 @@ public class MLIDPassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ID", this.ID);

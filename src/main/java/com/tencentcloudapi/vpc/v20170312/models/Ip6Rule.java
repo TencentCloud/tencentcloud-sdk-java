@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ip6Rule  extends AbstractModel{
+public class Ip6Rule extends AbstractModel{
 
     /**
     * IPV6转换规则唯一ID，形如rule6-xxxxxxxx
@@ -86,7 +86,7 @@ public class Ip6Rule  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取IPV6转换规则唯一ID，形如rule6-xxxxxxxx
+     * Get IPV6转换规则唯一ID，形如rule6-xxxxxxxx 
      * @return Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      */
     public String getIp6RuleId() {
@@ -94,7 +94,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则唯一ID，形如rule6-xxxxxxxx
+     * Set IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      * @param Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      */
     public void setIp6RuleId(String Ip6RuleId) {
@@ -102,7 +102,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则名称
+     * Get IPV6转换规则名称 
      * @return Ip6RuleName IPV6转换规则名称
      */
     public String getIp6RuleName() {
@@ -110,7 +110,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则名称
+     * Set IPV6转换规则名称
      * @param Ip6RuleName IPV6转换规则名称
      */
     public void setIp6RuleName(String Ip6RuleName) {
@@ -118,7 +118,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6地址
+     * Get IPV6地址 
      * @return Vip6 IPV6地址
      */
     public String getVip6() {
@@ -126,7 +126,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址
+     * Set IPV6地址
      * @param Vip6 IPV6地址
      */
     public void setVip6(String Vip6) {
@@ -134,7 +134,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6端口号
+     * Get IPV6端口号 
      * @return Vport6 IPV6端口号
      */
     public Integer getVport6() {
@@ -142,7 +142,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6端口号
+     * Set IPV6端口号
      * @param Vport6 IPV6端口号
      */
     public void setVport6(Integer Vport6) {
@@ -150,7 +150,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取协议类型，支持TCP/UDP
+     * Get 协议类型，支持TCP/UDP 
      * @return Protocol 协议类型，支持TCP/UDP
      */
     public String getProtocol() {
@@ -158,7 +158,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置协议类型，支持TCP/UDP
+     * Set 协议类型，支持TCP/UDP
      * @param Protocol 协议类型，支持TCP/UDP
      */
     public void setProtocol(String Protocol) {
@@ -166,7 +166,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取IPV4地址
+     * Get IPV4地址 
      * @return Vip IPV4地址
      */
     public String getVip() {
@@ -174,7 +174,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV4地址
+     * Set IPV4地址
      * @param Vip IPV4地址
      */
     public void setVip(String Vip) {
@@ -182,7 +182,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取IPV4端口号
+     * Get IPV4端口号 
      * @return Vport IPV4端口号
      */
     public Integer getVport() {
@@ -190,7 +190,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置IPV4端口号
+     * Set IPV4端口号
      * @param Vport IPV4端口号
      */
     public void setVport(Integer Vport) {
@@ -198,7 +198,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
+     * Get 转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING 
      * @return RuleStatus 转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
      */
     public String getRuleStatus() {
@@ -206,7 +206,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
+     * Set 转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
      * @param RuleStatus 转换规则状态，限于CREATING,RUNNING,DELETING,MODIFYING
      */
     public void setRuleStatus(String RuleStatus) {
@@ -214,7 +214,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 获取转换规则创建时间
+     * Get 转换规则创建时间 
      * @return CreatedTime 转换规则创建时间
      */
     public String getCreatedTime() {
@@ -222,7 +222,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转换规则创建时间
+     * Set 转换规则创建时间
      * @param CreatedTime 转换规则创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -230,7 +230,7 @@ public class Ip6Rule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6RuleId", this.Ip6RuleId);

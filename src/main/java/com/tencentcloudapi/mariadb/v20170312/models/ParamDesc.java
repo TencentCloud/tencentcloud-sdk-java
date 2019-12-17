@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParamDesc  extends AbstractModel{
+public class ParamDesc extends AbstractModel{
 
     /**
     * 参数名字
@@ -66,7 +66,7 @@ public class ParamDesc  extends AbstractModel{
     private Boolean HaveSetValue;
 
     /**
-     * 获取参数名字
+     * Get 参数名字 
      * @return Param 参数名字
      */
     public String getParam() {
@@ -74,7 +74,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置参数名字
+     * Set 参数名字
      * @param Param 参数名字
      */
     public void setParam(String Param) {
@@ -82,7 +82,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取当前参数值
+     * Get 当前参数值 
      * @return Value 当前参数值
      */
     public String getValue() {
@@ -90,7 +90,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置当前参数值
+     * Set 当前参数值
      * @param Value 当前参数值
      */
     public void setValue(String Value) {
@@ -98,8 +98,8 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取设置过的值，参数生效后，该值和value一样。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetValue 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,7 +108,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置设置过的值，参数生效后，该值和value一样。
+     * Set 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SetValue 设置过的值，参数生效后，该值和value一样。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,7 +118,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取系统默认值
+     * Get 系统默认值 
      * @return Default 系统默认值
      */
     public String getDefault() {
@@ -126,7 +126,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置系统默认值
+     * Set 系统默认值
      * @param Default 系统默认值
      */
     public void setDefault(String Default) {
@@ -134,7 +134,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取参数限制
+     * Get 参数限制 
      * @return Constraint 参数限制
      */
     public ParamConstraint getConstraint() {
@@ -142,7 +142,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置参数限制
+     * Set 参数限制
      * @param Constraint 参数限制
      */
     public void setConstraint(ParamConstraint Constraint) {
@@ -150,7 +150,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 获取是否有设置过值，false:没有设置过值，true:有设置过值。
+     * Get 是否有设置过值，false:没有设置过值，true:有设置过值。 
      * @return HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
      */
     public Boolean getHaveSetValue() {
@@ -158,7 +158,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 设置是否有设置过值，false:没有设置过值，true:有设置过值。
+     * Set 是否有设置过值，false:没有设置过值，true:有设置过值。
      * @param HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
      */
     public void setHaveSetValue(Boolean HaveSetValue) {
@@ -166,7 +166,7 @@ public class ParamDesc  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Param", this.Param);

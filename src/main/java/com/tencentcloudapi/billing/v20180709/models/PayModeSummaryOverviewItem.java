@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayModeSummaryOverviewItem  extends AbstractModel{
+public class PayModeSummaryOverviewItem extends AbstractModel{
 
     /**
     * 付费模式
@@ -79,7 +79,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     private String VoucherPayAmount;
 
     /**
-     * 获取付费模式
+     * Get 付费模式 
      * @return PayMode 付费模式
      */
     public String getPayMode() {
@@ -87,7 +87,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式
+     * Set 付费模式
      * @param PayMode 付费模式
      */
     public void setPayMode(String PayMode) {
@@ -95,7 +95,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式名称
+     * Get 付费模式名称 
      * @return PayModeName 付费模式名称
      */
     public String getPayModeName() {
@@ -103,7 +103,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式名称
+     * Set 付费模式名称
      * @param PayModeName 付费模式名称
      */
     public void setPayModeName(String PayModeName) {
@@ -111,7 +111,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取实际花费
+     * Get 实际花费 
      * @return RealTotalCost 实际花费
      */
     public String getRealTotalCost() {
@@ -119,7 +119,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置实际花费
+     * Set 实际花费
      * @param RealTotalCost 实际花费
      */
     public void setRealTotalCost(String RealTotalCost) {
@@ -127,7 +127,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取费用所占百分比，两位小数
+     * Get 费用所占百分比，两位小数 
      * @return RealTotalCostRatio 费用所占百分比，两位小数
      */
     public String getRealTotalCostRatio() {
@@ -135,7 +135,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置费用所占百分比，两位小数
+     * Set 费用所占百分比，两位小数
      * @param RealTotalCostRatio 费用所占百分比，两位小数
      */
     public void setRealTotalCostRatio(String RealTotalCostRatio) {
@@ -143,7 +143,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * Get 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情 
      * @return Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public ActionSummaryOverviewItem [] getDetail() {
@@ -151,7 +151,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * Set 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      * @param Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
      */
     public void setDetail(ActionSummaryOverviewItem [] Detail) {
@@ -159,7 +159,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取现金金额
+     * Get 现金金额 
      * @return CashPayAmount 现金金额
      */
     public String getCashPayAmount() {
@@ -167,7 +167,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置现金金额
+     * Set 现金金额
      * @param CashPayAmount 现金金额
      */
     public void setCashPayAmount(String CashPayAmount) {
@@ -175,7 +175,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取赠送金金额
+     * Get 赠送金金额 
      * @return IncentivePayAmount 赠送金金额
      */
     public String getIncentivePayAmount() {
@@ -183,7 +183,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置赠送金金额
+     * Set 赠送金金额
      * @param IncentivePayAmount 赠送金金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
@@ -191,7 +191,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取代金券金额
+     * Get 代金券金额 
      * @return VoucherPayAmount 代金券金额
      */
     public String getVoucherPayAmount() {
@@ -199,7 +199,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置代金券金额
+     * Set 代金券金额
      * @param VoucherPayAmount 代金券金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
@@ -207,7 +207,7 @@ public class PayModeSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);

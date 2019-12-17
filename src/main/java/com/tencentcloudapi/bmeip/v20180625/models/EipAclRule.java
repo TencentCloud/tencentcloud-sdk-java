@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipAclRule  extends AbstractModel{
+public class EipAclRule extends AbstractModel{
 
     /**
     * 源 IP
@@ -58,7 +58,7 @@ public class EipAclRule  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取源 IP
+     * Get 源 IP 
      * @return Ip 源 IP
      */
     public String getIp() {
@@ -66,7 +66,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 设置源 IP
+     * Set 源 IP
      * @param Ip 源 IP
      */
     public void setIp(String Ip) {
@@ -74,7 +74,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口
+     * Get 目标端口 
      * @return Port 目标端口
      */
     public String getPort() {
@@ -82,7 +82,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口
+     * Set 目标端口
      * @param Port 目标端口
      */
     public void setPort(String Port) {
@@ -90,7 +90,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 获取协议(TCP/UDP/ICMP/ANY)
+     * Get 协议(TCP/UDP/ICMP/ANY) 
      * @return Protocol 协议(TCP/UDP/ICMP/ANY)
      */
     public String getProtocol() {
@@ -98,7 +98,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 设置协议(TCP/UDP/ICMP/ANY)
+     * Set 协议(TCP/UDP/ICMP/ANY)
      * @param Protocol 协议(TCP/UDP/ICMP/ANY)
      */
     public void setProtocol(String Protocol) {
@@ -106,7 +106,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 获取策略（accept/drop）
+     * Get 策略（accept/drop） 
      * @return Action 策略（accept/drop）
      */
     public String getAction() {
@@ -114,7 +114,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 设置策略（accept/drop）
+     * Set 策略（accept/drop）
      * @param Action 策略（accept/drop）
      */
     public void setAction(String Action) {
@@ -122,7 +122,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Description 备注
      */
     public String getDescription() {
@@ -130,7 +130,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Description 备注
      */
     public void setDescription(String Description) {
@@ -138,7 +138,7 @@ public class EipAclRule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
+public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
 
     /**
     * 推流域名。
@@ -80,7 +80,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     private String EndDayTime;
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return PushDomain 推流域名。
      */
     public String getPushDomain() {
@@ -88,7 +88,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param PushDomain 推流域名。
      */
     public void setPushDomain(String PushDomain) {
@@ -96,7 +96,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -104,7 +104,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -112,9 +112,9 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询时间，北京时间，
+     * Get 查询时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近3个月内某天的详细数据。
+注意：支持查询近3个月内某天的详细数据。 
      * @return DayTime 查询时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内某天的详细数据。
@@ -124,7 +124,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询时间，北京时间，
+     * Set 查询时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内某天的详细数据。
      * @param DayTime 查询时间，北京时间，
@@ -136,8 +136,8 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页数，默认1，
-不超过100页。
+     * Get 页数，默认1，
+不超过100页。 
      * @return PageNum 页数，默认1，
 不超过100页。
      */
@@ -146,7 +146,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页数，默认1，
+     * Set 页数，默认1，
 不超过100页。
      * @param PageNum 页数，默认1，
 不超过100页。
@@ -156,8 +156,8 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，默认20，
-范围：[10,1000]。
+     * Get 每页个数，默认20，
+范围：[10,1000]。 
      * @return PageSize 每页个数，默认20，
 范围：[10,1000]。
      */
@@ -166,7 +166,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，默认20，
+     * Set 每页个数，默认20，
 范围：[10,1000]。
      * @param PageSize 每页个数，默认20，
 范围：[10,1000]。
@@ -176,9 +176,9 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始天时间，北京时间，
+     * Get 起始天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近3个月内的详细数据。
+注意：支持查询近3个月内的详细数据。 
      * @return StartDayTime 起始天时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内的详细数据。
@@ -188,7 +188,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始天时间，北京时间，
+     * Set 起始天时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内的详细数据。
      * @param StartDayTime 起始天时间，北京时间，
@@ -200,9 +200,9 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束天时间，北京时间，
+     * Get 结束天时间，北京时间，
 格式：yyyymmdd。
-注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
+注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。 
      * @return EndDayTime 结束天时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
@@ -212,7 +212,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束天时间，北京时间，
+     * Set 结束天时间，北京时间，
 格式：yyyymmdd。
 注意：支持查询近3个月内的详细数据，注意DayTime 与（StartDayTime，EndDayTime）必须要传一个，如果都传，会以DayTime为准 。
      * @param EndDayTime 结束天时间，北京时间，
@@ -224,7 +224,7 @@ public class DescribeLiveTranscodeDetailInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);

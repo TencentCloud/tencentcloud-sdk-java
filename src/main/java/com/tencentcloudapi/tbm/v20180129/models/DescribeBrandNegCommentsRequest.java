@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBrandNegCommentsRequest  extends AbstractModel{
+public class DescribeBrandNegCommentsRequest extends AbstractModel{
 
     /**
     * 品牌ID
@@ -58,7 +58,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取品牌ID
+     * Get 品牌ID 
      * @return BrandId 品牌ID
      */
     public String getBrandId() {
@@ -66,7 +66,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置品牌ID
+     * Set 品牌ID
      * @param BrandId 品牌ID
      */
     public void setBrandId(String BrandId) {
@@ -74,7 +74,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始时间
+     * Get 查询开始时间 
      * @return StartDate 查询开始时间
      */
     public String getStartDate() {
@@ -82,7 +82,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始时间
+     * Set 查询开始时间
      * @param StartDate 查询开始时间
      */
     public void setStartDate(String StartDate) {
@@ -90,7 +90,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间
+     * Get 查询结束时间 
      * @return EndDate 查询结束时间
      */
     public String getEndDate() {
@@ -98,7 +98,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间
+     * Set 查询结束时间
      * @param EndDate 查询结束时间
      */
     public void setEndDate(String EndDate) {
@@ -106,7 +106,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询条数上限，默认20
+     * Get 查询条数上限，默认20 
      * @return Limit 查询条数上限，默认20
      */
     public Integer getLimit() {
@@ -114,7 +114,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询条数上限，默认20
+     * Set 查询条数上限，默认20
      * @param Limit 查询条数上限，默认20
      */
     public void setLimit(Integer Limit) {
@@ -122,7 +122,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询偏移，默认从0开始
+     * Get 查询偏移，默认从0开始 
      * @return Offset 查询偏移，默认从0开始
      */
     public Integer getOffset() {
@@ -130,7 +130,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询偏移，默认从0开始
+     * Set 查询偏移，默认从0开始
      * @param Offset 查询偏移，默认从0开始
      */
     public void setOffset(Integer Offset) {
@@ -138,7 +138,7 @@ public class DescribeBrandNegCommentsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BrandId", this.BrandId);

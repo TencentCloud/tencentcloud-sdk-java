@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceVncUrlRequest  extends AbstractModel{
+public class DescribeInstanceVncUrlRequest extends AbstractModel{
 
     /**
     * 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
@@ -30,7 +30,7 @@ public class DescribeInstanceVncUrlRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
+     * Get 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。 
      * @return InstanceId 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class DescribeInstanceVncUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
+     * Set 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
      * @param InstanceId 一个操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API返回值中的`InstanceId`获取。
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class DescribeInstanceVncUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

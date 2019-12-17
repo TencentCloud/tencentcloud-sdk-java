@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupAccessRequest  extends AbstractModel{
+public class DescribeBackupAccessRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -37,7 +37,7 @@ public class DescribeBackupAccessRequest  extends AbstractModel{
     private String BackupName;
 
     /**
-     * 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeBackupAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeBackupAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取下载授权的备份文件名
+     * Get 需要获取下载授权的备份文件名 
      * @return BackupName 需要获取下载授权的备份文件名
      */
     public String getBackupName() {
@@ -61,7 +61,7 @@ public class DescribeBackupAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取下载授权的备份文件名
+     * Set 需要获取下载授权的备份文件名
      * @param BackupName 需要获取下载授权的备份文件名
      */
     public void setBackupName(String BackupName) {
@@ -69,7 +69,7 @@ public class DescribeBackupAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

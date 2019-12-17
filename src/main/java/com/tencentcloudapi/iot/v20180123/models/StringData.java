@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StringData  extends AbstractModel{
+public class StringData extends AbstractModel{
 
     /**
     * 名称
@@ -51,7 +51,7 @@ public class StringData  extends AbstractModel{
     private Integer [] Range;
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 获取描述
+     * Get 描述 
      * @return Desc 描述
      */
     public String getDesc() {
@@ -75,7 +75,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 设置描述
+     * Set 描述
      * @param Desc 描述
      */
     public void setDesc(String Desc) {
@@ -83,7 +83,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 获取读写模式
+     * Get 读写模式 
      * @return Mode 读写模式
      */
     public String getMode() {
@@ -91,7 +91,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 设置读写模式
+     * Set 读写模式
      * @param Mode 读写模式
      */
     public void setMode(String Mode) {
@@ -99,7 +99,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 获取长度范围
+     * Get 长度范围 
      * @return Range 长度范围
      */
     public Integer [] getRange() {
@@ -107,7 +107,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 设置长度范围
+     * Set 长度范围
      * @param Range 长度范围
      */
     public void setRange(Integer [] Range) {
@@ -115,7 +115,7 @@ public class StringData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

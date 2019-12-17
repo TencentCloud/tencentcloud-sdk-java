@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoLoadBalancer  extends AbstractModel{
+public class DevicesBindInfoLoadBalancer extends AbstractModel{
 
     /**
     * 负载均衡实例ID。
@@ -86,7 +86,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     private DevicesBindInfoL7Listener [] L7ListenerSet;
 
     /**
-     * 获取负载均衡实例ID。
+     * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
     public String getLoadBalancerId() {
@@ -94,7 +94,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID。
+     * Set 负载均衡实例ID。
      * @param LoadBalancerId 负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -102,7 +102,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取开发商AppId。
+     * Get 开发商AppId。 
      * @return AppId 开发商AppId。
      */
     public Integer getAppId() {
@@ -110,7 +110,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置开发商AppId。
+     * Set 开发商AppId。
      * @param AppId 开发商AppId。
      */
     public void setAppId(Integer AppId) {
@@ -118,7 +118,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡所属的项目ID。
+     * Get 负载均衡所属的项目ID。 
      * @return ProjectId 负载均衡所属的项目ID。
      */
     public Integer getProjectId() {
@@ -126,7 +126,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡所属的项目ID。
+     * Set 负载均衡所属的项目ID。
      * @param ProjectId 负载均衡所属的项目ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -134,7 +134,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取黑石私有网络唯一ID。
+     * Get 黑石私有网络唯一ID。 
      * @return VpcId 黑石私有网络唯一ID。
      */
     public String getVpcId() {
@@ -142,7 +142,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置黑石私有网络唯一ID。
+     * Set 黑石私有网络唯一ID。
      * @param VpcId 黑石私有网络唯一ID。
      */
     public void setVpcId(String VpcId) {
@@ -150,7 +150,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡的IP地址。
+     * Get 负载均衡的IP地址。 
      * @return Vip 负载均衡的IP地址。
      */
     public String getVip() {
@@ -158,7 +158,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的IP地址。
+     * Set 负载均衡的IP地址。
      * @param Vip 负载均衡的IP地址。
      */
     public void setVip(String Vip) {
@@ -166,7 +166,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。
+     * Get 负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。 
      * @return TgwSetType 负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。
      */
     public String getTgwSetType() {
@@ -174,7 +174,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。
+     * Set 负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。
      * @param TgwSetType 负载均衡对应的TGW集群类别，取值为tunnel或fullnat。tunnel表示隧道集群，fullnat表示FULLNAT集群。
      */
     public void setTgwSetType(String TgwSetType) {
@@ -182,7 +182,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取是否独占TGW集群。
+     * Get 是否独占TGW集群。 
      * @return Exclusive 是否独占TGW集群。
      */
     public Integer getExclusive() {
@@ -190,7 +190,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置是否独占TGW集群。
+     * Set 是否独占TGW集群。
      * @param Exclusive 是否独占TGW集群。
      */
     public void setExclusive(Integer Exclusive) {
@@ -198,7 +198,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取具有该绑定关系的四层监听器列表。
+     * Get 具有该绑定关系的四层监听器列表。 
      * @return L4ListenerSet 具有该绑定关系的四层监听器列表。
      */
     public DevicesBindInfoL4Listener [] getL4ListenerSet() {
@@ -206,7 +206,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置具有该绑定关系的四层监听器列表。
+     * Set 具有该绑定关系的四层监听器列表。
      * @param L4ListenerSet 具有该绑定关系的四层监听器列表。
      */
     public void setL4ListenerSet(DevicesBindInfoL4Listener [] L4ListenerSet) {
@@ -214,7 +214,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取具有该绑定关系的七层监听器列表。
+     * Get 具有该绑定关系的七层监听器列表。 
      * @return L7ListenerSet 具有该绑定关系的七层监听器列表。
      */
     public DevicesBindInfoL7Listener [] getL7ListenerSet() {
@@ -222,7 +222,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置具有该绑定关系的七层监听器列表。
+     * Set 具有该绑定关系的七层监听器列表。
      * @param L7ListenerSet 具有该绑定关系的七层监听器列表。
      */
     public void setL7ListenerSet(DevicesBindInfoL7Listener [] L7ListenerSet) {
@@ -230,7 +230,7 @@ public class DevicesBindInfoLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

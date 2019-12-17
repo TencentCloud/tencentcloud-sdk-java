@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDisableRecordsRequest  extends AbstractModel{
+public class GetDisableRecordsRequest extends AbstractModel{
 
     /**
     * 开始时间，如：2018-12-12 10:24:00。
@@ -67,7 +67,7 @@ enable：当前为可用状态，已解禁，可正常访问
     private Integer Limit;
 
     /**
-     * 获取开始时间，如：2018-12-12 10:24:00。
+     * Get 开始时间，如：2018-12-12 10:24:00。 
      * @return StartTime 开始时间，如：2018-12-12 10:24:00。
      */
     public String getStartTime() {
@@ -75,7 +75,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置开始时间，如：2018-12-12 10:24:00。
+     * Set 开始时间，如：2018-12-12 10:24:00。
      * @param StartTime 开始时间，如：2018-12-12 10:24:00。
      */
     public void setStartTime(String StartTime) {
@@ -83,7 +83,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 获取结束时间，如：2018-12-14 10:24:00。
+     * Get 结束时间，如：2018-12-14 10:24:00。 
      * @return EndTime 结束时间，如：2018-12-14 10:24:00。
      */
     public String getEndTime() {
@@ -91,7 +91,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置结束时间，如：2018-12-14 10:24:00。
+     * Set 结束时间，如：2018-12-14 10:24:00。
      * @param EndTime 结束时间，如：2018-12-14 10:24:00。
      */
     public void setEndTime(String EndTime) {
@@ -99,7 +99,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 获取指定 URL 查询
+     * Get 指定 URL 查询 
      * @return Url 指定 URL 查询
      */
     public String getUrl() {
@@ -107,7 +107,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置指定 URL 查询
+     * Set 指定 URL 查询
      * @param Url 指定 URL 查询
      */
     public void setUrl(String Url) {
@@ -115,9 +115,9 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 获取URL 当前状态
+     * Get URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
-enable：当前为可用状态，已解禁，可正常访问
+enable：当前为可用状态，已解禁，可正常访问 
      * @return Status URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
@@ -127,7 +127,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置URL 当前状态
+     * Set URL 当前状态
 disable：当前仍为禁用状态，访问返回 403
 enable：当前为可用状态，已解禁，可正常访问
      * @param Status URL 当前状态
@@ -139,7 +139,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 获取分页查询偏移量，默认为 0 （第一页）。
+     * Get 分页查询偏移量，默认为 0 （第一页）。 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）。
      */
     public Integer getOffset() {
@@ -147,7 +147,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置分页查询偏移量，默认为 0 （第一页）。
+     * Set 分页查询偏移量，默认为 0 （第一页）。
      * @param Offset 分页查询偏移量，默认为 0 （第一页）。
      */
     public void setOffset(Integer Offset) {
@@ -155,7 +155,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 获取分页查询限制数目，默认为20。
+     * Get 分页查询限制数目，默认为20。 
      * @return Limit 分页查询限制数目，默认为20。
      */
     public Integer getLimit() {
@@ -163,7 +163,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 设置分页查询限制数目，默认为20。
+     * Set 分页查询限制数目，默认为20。
      * @param Limit 分页查询限制数目，默认为20。
      */
     public void setLimit(Integer Limit) {
@@ -171,7 +171,7 @@ enable：当前为可用状态，已解禁，可正常访问
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

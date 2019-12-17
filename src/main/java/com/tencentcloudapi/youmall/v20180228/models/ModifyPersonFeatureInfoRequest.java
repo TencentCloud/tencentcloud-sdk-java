@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
+public class ModifyPersonFeatureInfoRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -65,7 +65,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     private Integer ShopId;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的顾客id
+     * Get 需要修改的顾客id 
      * @return PersonId 需要修改的顾客id
      */
     public Integer getPersonId() {
@@ -89,7 +89,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的顾客id
+     * Set 需要修改的顾客id
      * @param PersonId 需要修改的顾客id
      */
     public void setPersonId(Integer PersonId) {
@@ -97,7 +97,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片BASE编码
+     * Get 图片BASE编码 
      * @return Picture 图片BASE编码
      */
     public String getPicture() {
@@ -105,7 +105,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片BASE编码
+     * Set 图片BASE编码
      * @param Picture 图片BASE编码
      */
     public void setPicture(String Picture) {
@@ -113,7 +113,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片名称（尽量不要重复）
+     * Get 图片名称（尽量不要重复） 
      * @return PictureName 图片名称（尽量不要重复）
      */
     public String getPictureName() {
@@ -121,7 +121,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片名称（尽量不要重复）
+     * Set 图片名称（尽量不要重复）
      * @param PictureName 图片名称（尽量不要重复）
      */
     public void setPictureName(String PictureName) {
@@ -129,7 +129,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Get 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public Integer getPersonType() {
@@ -137,7 +137,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Set 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 人物类型，仅能操作黑白名单顾客（1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -145,7 +145,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID，如果不填表示操作集团身份库
+     * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public Integer getShopId() {
@@ -153,7 +153,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID，如果不填表示操作集团身份库
+     * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public void setShopId(Integer ShopId) {
@@ -161,7 +161,7 @@ public class ModifyPersonFeatureInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

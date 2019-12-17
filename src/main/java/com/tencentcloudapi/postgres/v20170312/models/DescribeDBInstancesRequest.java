@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesRequest  extends AbstractModel{
+public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
     * 过滤条件，目前支持：db-instance-id、db-instance-name两种。
@@ -44,7 +44,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取过滤条件，目前支持：db-instance-id、db-instance-name两种。
+     * Get 过滤条件，目前支持：db-instance-id、db-instance-name两种。 
      * @return Filters 过滤条件，目前支持：db-instance-id、db-instance-name两种。
      */
     public Filter [] getFilters() {
@@ -52,7 +52,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，目前支持：db-instance-id、db-instance-name两种。
+     * Set 过滤条件，目前支持：db-instance-id、db-instance-name两种。
      * @param Filters 过滤条件，目前支持：db-instance-id、db-instance-name两种。
      */
     public void setFilters(Filter [] Filters) {
@@ -60,7 +60,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页显示数量，默认返回10条。
+     * Get 每页显示数量，默认返回10条。 
      * @return Limit 每页显示数量，默认返回10条。
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页显示数量，默认返回10条。
+     * Set 每页显示数量，默认返回10条。
      * @param Limit 每页显示数量，默认返回10条。
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页序号，从0开始。
+     * Get 分页序号，从0开始。 
      * @return Offset 分页序号，从0开始。
      */
     public Integer getOffset() {
@@ -84,7 +84,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页序号，从0开始。
+     * Set 分页序号，从0开始。
      * @param Offset 分页序号，从0开始。
      */
     public void setOffset(Integer Offset) {
@@ -92,7 +92,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

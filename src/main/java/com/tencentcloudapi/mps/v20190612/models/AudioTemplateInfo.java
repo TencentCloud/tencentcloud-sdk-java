@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioTemplateInfo  extends AbstractModel{
+public class AudioTemplateInfo extends AbstractModel{
 
     /**
     * 音频流的编码格式。
@@ -75,7 +75,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     private Long AudioChannel;
 
     /**
-     * 获取音频流的编码格式。
+     * Get 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
@@ -90,7 +90,7 @@ public class AudioTemplateInfo  extends AbstractModel{
 <li>mp2。</li>
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libmp3lame。</li> 
      * @return Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -113,7 +113,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的编码格式。
+     * Set 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当外层参数 Container 为 ogg 或 flac 时，可选值为：
@@ -151,8 +151,8 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
-当取值为 0，表示音频码率和原始音频保持一致。
+     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，表示音频码率和原始音频保持一致。 
      * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      */
@@ -161,7 +161,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
@@ -171,11 +171,11 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的采样率，可选值：
+     * Get 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
-单位：Hz。
+单位：Hz。 
      * @return SampleRate 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
@@ -187,7 +187,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的采样率，可选值：
+     * Set 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -203,11 +203,11 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频通道方式，可选值：
+     * Get 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
-默认值：2。
+默认值：2。 
      * @return AudioChannel 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
@@ -219,7 +219,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频通道方式，可选值：
+     * Set 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
@@ -235,7 +235,7 @@ public class AudioTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Codec", this.Codec);

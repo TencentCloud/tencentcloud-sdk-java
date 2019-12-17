@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModfiyInstancePasswordRequest  extends AbstractModel{
+public class ModfiyInstancePasswordRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -44,7 +44,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例旧密码
+     * Get 实例旧密码 
      * @return OldPassword 实例旧密码
      */
     public String getOldPassword() {
@@ -68,7 +68,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例旧密码
+     * Set 实例旧密码
      * @param OldPassword 实例旧密码
      */
     public void setOldPassword(String OldPassword) {
@@ -76,7 +76,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例新密码
+     * Get 实例新密码 
      * @return Password 实例新密码
      */
     public String getPassword() {
@@ -84,7 +84,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例新密码
+     * Set 实例新密码
      * @param Password 实例新密码
      */
     public void setPassword(String Password) {
@@ -92,7 +92,7 @@ public class ModfiyInstancePasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

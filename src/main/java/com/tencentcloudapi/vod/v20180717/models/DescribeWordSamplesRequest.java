@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWordSamplesRequest  extends AbstractModel{
+public class DescribeWordSamplesRequest extends AbstractModel{
 
     /**
     * <b>关键词应用场景过滤条件，可选值：</b>
@@ -73,7 +73,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取<b>关键词应用场景过滤条件，可选值：</b>
+     * Get <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
 3. Review.Ocr：通过光学字符识别技术，进行内容审核；
@@ -81,7 +81,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
 <b>可合并简写为：</b>
 5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
 6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-可多选，元素间关系为 or，即关键词的应用场景包含该字段集合中任意元素的记录，均符合该条件。
+可多选，元素间关系为 or，即关键词的应用场景包含该字段集合中任意元素的记录，均符合该条件。 
      * @return Usages <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
@@ -97,7 +97,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<b>关键词应用场景过滤条件，可选值：</b>
+     * Set <b>关键词应用场景过滤条件，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
 3. Review.Ocr：通过光学字符识别技术，进行内容审核；
@@ -121,7 +121,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键词过滤条件，数组长度限制：100 个词。
+     * Get 关键词过滤条件，数组长度限制：100 个词。 
      * @return Keywords 关键词过滤条件，数组长度限制：100 个词。
      */
     public String [] getKeywords() {
@@ -129,7 +129,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词过滤条件，数组长度限制：100 个词。
+     * Set 关键词过滤条件，数组长度限制：100 个词。
      * @param Keywords 关键词过滤条件，数组长度限制：100 个词。
      */
     public void setKeywords(String [] Keywords) {
@@ -137,7 +137,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签过滤条件，数组长度限制：20 个词。
+     * Get 标签过滤条件，数组长度限制：20 个词。 
      * @return Tags 标签过滤条件，数组长度限制：20 个词。
      */
     public String [] getTags() {
@@ -145,7 +145,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签过滤条件，数组长度限制：20 个词。
+     * Set 标签过滤条件，数组长度限制：20 个词。
      * @param Tags 标签过滤条件，数组长度限制：20 个词。
      */
     public void setTags(String [] Tags) {
@@ -153,7 +153,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -161,7 +161,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -169,7 +169,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：100，最大值：100。
+     * Get 返回记录条数，默认值：100，最大值：100。 
      * @return Limit 返回记录条数，默认值：100，最大值：100。
      */
     public Long getLimit() {
@@ -177,7 +177,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：100，最大值：100。
+     * Set 返回记录条数，默认值：100，最大值：100。
      * @param Limit 返回记录条数，默认值：100，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -185,7 +185,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -193,7 +193,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -201,7 +201,7 @@ public class DescribeWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Usages.", this.Usages);

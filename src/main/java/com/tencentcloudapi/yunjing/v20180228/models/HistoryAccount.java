@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HistoryAccount  extends AbstractModel{
+public class HistoryAccount extends AbstractModel{
 
     /**
     * 唯一ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端唯一Uuid。
@@ -75,23 +75,23 @@ public class HistoryAccount  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取唯一ID。
+     * Get 唯一ID。 
      * @return Id 唯一ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置唯一ID。
+     * Set 唯一ID。
      * @param Id 唯一ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端唯一Uuid。
+     * Get 云镜客户端唯一Uuid。 
      * @return Uuid 云镜客户端唯一Uuid。
      */
     public String getUuid() {
@@ -99,7 +99,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。
+     * Set 云镜客户端唯一Uuid。
      * @param Uuid 云镜客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
@@ -107,7 +107,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -115,7 +115,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -123,7 +123,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 获取主机名。
+     * Get 主机名。 
      * @return MachineName 主机名。
      */
     public String getMachineName() {
@@ -131,7 +131,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置主机名。
+     * Set 主机名。
      * @param MachineName 主机名。
      */
     public void setMachineName(String MachineName) {
@@ -139,7 +139,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 获取帐号名。
+     * Get 帐号名。 
      * @return Username 帐号名。
      */
     public String getUsername() {
@@ -147,7 +147,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置帐号名。
+     * Set 帐号名。
      * @param Username 帐号名。
      */
     public void setUsername(String Username) {
@@ -155,10 +155,10 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 获取帐号变更类型。
+     * Get 帐号变更类型。
 <li>CREATE：表示新增帐号</li>
 <li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+<li>DELETE：表示删除帐号</li> 
      * @return ModifyType 帐号变更类型。
 <li>CREATE：表示新增帐号</li>
 <li>MODIFY：表示修改帐号</li>
@@ -169,7 +169,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置帐号变更类型。
+     * Set 帐号变更类型。
 <li>CREATE：表示新增帐号</li>
 <li>MODIFY：表示修改帐号</li>
 <li>DELETE：表示删除帐号</li>
@@ -183,7 +183,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 获取变更时间。
+     * Get 变更时间。 
      * @return ModifyTime 变更时间。
      */
     public String getModifyTime() {
@@ -191,7 +191,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 设置变更时间。
+     * Set 变更时间。
      * @param ModifyTime 变更时间。
      */
     public void setModifyTime(String ModifyTime) {
@@ -199,7 +199,7 @@ public class HistoryAccount  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

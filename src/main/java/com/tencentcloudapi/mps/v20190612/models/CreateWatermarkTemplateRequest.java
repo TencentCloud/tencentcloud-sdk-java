@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWatermarkTemplateRequest  extends AbstractModel{
+public class CreateWatermarkTemplateRequest extends AbstractModel{
 
     /**
     * 水印类型，可选值：
@@ -100,10 +100,10 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     private SvgWatermarkInput SvgTemplate;
 
     /**
-     * 获取水印类型，可选值：
+     * Get 水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
-<li>svg：SVG 水印。</li>
+<li>svg：SVG 水印。</li> 
      * @return Type 水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
@@ -114,7 +114,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印类型，可选值：
+     * Set 水印类型，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印；</li>
 <li>svg：SVG 水印。</li>
@@ -128,7 +128,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印模板名称，长度限制：64 个字符。
+     * Get 水印模板名称，长度限制：64 个字符。 
      * @return Name 水印模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -136,7 +136,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板名称，长度限制：64 个字符。
+     * Set 水印模板名称，长度限制：64 个字符。
      * @param Name 水印模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -144,7 +144,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -152,7 +152,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -160,12 +160,12 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取原点位置，可选值：
+     * Get 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。
+默认值：TopLeft。 
      * @return CoordinateOrigin 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
@@ -178,7 +178,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置原点位置，可选值：
+     * Set 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
@@ -196,10 +196,10 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
+     * Get 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
@@ -210,7 +210,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
+     * Set 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 XPos 为指定像素，如 100px 表示 XPos 为 100 像素。</li>
 默认值：0px。
@@ -224,10 +224,10 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
+     * Get 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return YPos 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
@@ -238,7 +238,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
+     * Set 水印原点距离视频图像坐标原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 YPos 为视频高度指定百分比，如 10% 表示 YPos 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 YPos 为指定像素，如 100px 表示 YPos 为 100 像素。</li>
 默认值：0px。
@@ -252,7 +252,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片水印模板，仅当 Type 为 image，该字段必填且有效。
+     * Get 图片水印模板，仅当 Type 为 image，该字段必填且有效。 
      * @return ImageTemplate 图片水印模板，仅当 Type 为 image，该字段必填且有效。
      */
     public ImageWatermarkInput getImageTemplate() {
@@ -260,7 +260,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片水印模板，仅当 Type 为 image，该字段必填且有效。
+     * Set 图片水印模板，仅当 Type 为 image，该字段必填且有效。
      * @param ImageTemplate 图片水印模板，仅当 Type 为 image，该字段必填且有效。
      */
     public void setImageTemplate(ImageWatermarkInput ImageTemplate) {
@@ -268,7 +268,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文字水印模板，仅当 Type 为 text，该字段必填且有效。
+     * Get 文字水印模板，仅当 Type 为 text，该字段必填且有效。 
      * @return TextTemplate 文字水印模板，仅当 Type 为 text，该字段必填且有效。
      */
     public TextWatermarkTemplateInput getTextTemplate() {
@@ -276,7 +276,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文字水印模板，仅当 Type 为 text，该字段必填且有效。
+     * Set 文字水印模板，仅当 Type 为 text，该字段必填且有效。
      * @param TextTemplate 文字水印模板，仅当 Type 为 text，该字段必填且有效。
      */
     public void setTextTemplate(TextWatermarkTemplateInput TextTemplate) {
@@ -284,7 +284,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
+     * Get SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。 
      * @return SvgTemplate SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
      */
     public SvgWatermarkInput getSvgTemplate() {
@@ -292,7 +292,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
+     * Set SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
      * @param SvgTemplate SVG 水印模板，仅当 Type 为 svg，该字段必填且有效。
      */
     public void setSvgTemplate(SvgWatermarkInput SvgTemplate) {
@@ -300,7 +300,7 @@ public class CreateWatermarkTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSAMLProviderRequest  extends AbstractModel{
+public class DeleteSAMLProviderRequest extends AbstractModel{
 
     /**
     * SAML身份提供商名称
@@ -30,7 +30,7 @@ public class DeleteSAMLProviderRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取SAML身份提供商名称
+     * Get SAML身份提供商名称 
      * @return Name SAML身份提供商名称
      */
     public String getName() {
@@ -38,7 +38,7 @@ public class DeleteSAMLProviderRequest  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商名称
+     * Set SAML身份提供商名称
      * @param Name SAML身份提供商名称
      */
     public void setName(String Name) {
@@ -46,7 +46,7 @@ public class DeleteSAMLProviderRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

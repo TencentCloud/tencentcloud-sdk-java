@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BcosBlockObj  extends AbstractModel{
+public class BcosBlockObj extends AbstractModel{
 
     /**
     * 区块哈希
@@ -79,7 +79,7 @@ public class BcosBlockObj  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取区块哈希
+     * Get 区块哈希 
      * @return BlockHash 区块哈希
      */
     public String getBlockHash() {
@@ -87,7 +87,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置区块哈希
+     * Set 区块哈希
      * @param BlockHash 区块哈希
      */
     public void setBlockHash(String BlockHash) {
@@ -95,7 +95,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取区块高度
+     * Get 区块高度 
      * @return BlockNumber 区块高度
      */
     public Integer getBlockNumber() {
@@ -103,7 +103,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置区块高度
+     * Set 区块高度
      * @param BlockNumber 区块高度
      */
     public void setBlockNumber(Integer BlockNumber) {
@@ -111,7 +111,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取区块时间戳
+     * Get 区块时间戳 
      * @return BlockTimestamp 区块时间戳
      */
     public String getBlockTimestamp() {
@@ -119,7 +119,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置区块时间戳
+     * Set 区块时间戳
      * @param BlockTimestamp 区块时间戳
      */
     public void setBlockTimestamp(String BlockTimestamp) {
@@ -127,7 +127,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取打包节点id
+     * Get 打包节点id 
      * @return Sealer 打包节点id
      */
     public String getSealer() {
@@ -135,7 +135,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置打包节点id
+     * Set 打包节点id
      * @param Sealer 打包节点id
      */
     public void setSealer(String Sealer) {
@@ -143,7 +143,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取打包节点索引
+     * Get 打包节点索引 
      * @return SealerIndex 打包节点索引
      */
     public Integer getSealerIndex() {
@@ -151,7 +151,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置打包节点索引
+     * Set 打包节点索引
      * @param SealerIndex 打包节点索引
      */
     public void setSealerIndex(Integer SealerIndex) {
@@ -159,7 +159,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取记录保存时间
+     * Get 记录保存时间 
      * @return CreateTime 记录保存时间
      */
     public String getCreateTime() {
@@ -167,7 +167,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置记录保存时间
+     * Set 记录保存时间
      * @param CreateTime 记录保存时间
      */
     public void setCreateTime(String CreateTime) {
@@ -175,7 +175,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取交易数量
+     * Get 交易数量 
      * @return TransCount 交易数量
      */
     public Integer getTransCount() {
@@ -183,7 +183,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置交易数量
+     * Set 交易数量
      * @param TransCount 交易数量
      */
     public void setTransCount(Integer TransCount) {
@@ -191,7 +191,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 获取记录修改时间
+     * Get 记录修改时间 
      * @return ModifyTime 记录修改时间
      */
     public String getModifyTime() {
@@ -199,7 +199,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置记录修改时间
+     * Set 记录修改时间
      * @param ModifyTime 记录修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -207,7 +207,7 @@ public class BcosBlockObj  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BlockHash", this.BlockHash);

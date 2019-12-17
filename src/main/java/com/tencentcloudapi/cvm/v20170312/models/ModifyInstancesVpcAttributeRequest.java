@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
+public class ModifyInstancesVpcAttributeRequest extends AbstractModel{
 
     /**
     * 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
@@ -51,7 +51,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     private Boolean ReserveHostName;
 
     /**
-     * 获取待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+     * Get 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。 
      * @return InstanceIds 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
     public String [] getInstanceIds() {
@@ -59,7 +59,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
+     * Set 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      * @param InstanceIds 待操作的实例ID数组。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -67,7 +67,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
+     * Get 私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。 
      * @return VirtualPrivateCloud 私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
@@ -75,7 +75,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
+     * Set 私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
      * @param VirtualPrivateCloud 私有网络相关信息配置。通过该参数指定私有网络的ID，子网ID，私有网络ip等信息。当指定私有网络ID和子网ID（子网必须在实例所在的可用区）与指定实例所在私有网络不一致时，会将实例迁移至指定的私有网络的子网下。可通过`PrivateIpAddresses`指定私有网络子网IP，若需指定则所有已指定的实例均需要指定子网IP，此时`InstanceIds`与`PrivateIpAddresses`一一对应。不指定`PrivateIpAddresses`时随机分配私有网络子网IP。
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
@@ -83,7 +83,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否对运行中的实例选择强制关机。默认为TRUE。
+     * Get 是否对运行中的实例选择强制关机。默认为TRUE。 
      * @return ForceStop 是否对运行中的实例选择强制关机。默认为TRUE。
      */
     public Boolean getForceStop() {
@@ -91,7 +91,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否对运行中的实例选择强制关机。默认为TRUE。
+     * Set 是否对运行中的实例选择强制关机。默认为TRUE。
      * @param ForceStop 是否对运行中的实例选择强制关机。默认为TRUE。
      */
     public void setForceStop(Boolean ForceStop) {
@@ -99,7 +99,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否保留主机名。默认为FALSE。
+     * Get 是否保留主机名。默认为FALSE。 
      * @return ReserveHostName 是否保留主机名。默认为FALSE。
      */
     public Boolean getReserveHostName() {
@@ -107,7 +107,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否保留主机名。默认为FALSE。
+     * Set 是否保留主机名。默认为FALSE。
      * @param ReserveHostName 是否保留主机名。默认为FALSE。
      */
     public void setReserveHostName(Boolean ReserveHostName) {
@@ -115,7 +115,7 @@ public class ModifyInstancesVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

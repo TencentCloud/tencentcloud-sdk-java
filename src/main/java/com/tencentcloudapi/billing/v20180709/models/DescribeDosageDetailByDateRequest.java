@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDosageDetailByDateRequest  extends AbstractModel{
+public class DescribeDosageDetailByDateRequest extends AbstractModel{
 
     /**
     * 查询账单开始日期，如 2019-01-01
@@ -79,7 +79,7 @@ cdn业务：
     private String InstanceID;
 
     /**
-     * 获取查询账单开始日期，如 2019-01-01
+     * Get 查询账单开始日期，如 2019-01-01 
      * @return StartDate 查询账单开始日期，如 2019-01-01
      */
     public String getStartDate() {
@@ -87,7 +87,7 @@ cdn业务：
     }
 
     /**
-     * 设置查询账单开始日期，如 2019-01-01
+     * Set 查询账单开始日期，如 2019-01-01
      * @param StartDate 查询账单开始日期，如 2019-01-01
      */
     public void setStartDate(String StartDate) {
@@ -95,7 +95,7 @@ cdn业务：
     }
 
     /**
-     * 获取查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
+     * Get 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天 
      * @return EndDate 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
      */
     public String getEndDate() {
@@ -103,7 +103,7 @@ cdn业务：
     }
 
     /**
-     * 设置查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
+     * Set 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
      * @param EndDate 查询账单结束日期，如 2019-01-01， 时间跨度不超过7天
      */
     public void setEndDate(String EndDate) {
@@ -111,7 +111,7 @@ cdn业务：
     }
 
     /**
-     * 获取互动直播：
+     * Get 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -130,7 +130,7 @@ cdn业务：
 10226 视频直播流量(国内)
 10227 视频直播带宽(国内)
 100763 视频直播流量(海外)
-100762 视频直播宽带(海外)
+100762 视频直播宽带(海外) 
      * @return ProductCode 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
@@ -157,7 +157,7 @@ cdn业务：
     }
 
     /**
-     * 设置互动直播：
+     * Set 互动直播：
 10194   互动直播-核心机房           :
 10195   互动直播-边缘机房
 
@@ -203,8 +203,8 @@ cdn业务：
     }
 
     /**
-     * 获取查询域名 例如 www.qq.com
-非CDN业务查询时值为空
+     * Get 查询域名 例如 www.qq.com
+非CDN业务查询时值为空 
      * @return Domain 查询域名 例如 www.qq.com
 非CDN业务查询时值为空
      */
@@ -213,7 +213,7 @@ cdn业务：
     }
 
     /**
-     * 设置查询域名 例如 www.qq.com
+     * Set 查询域名 例如 www.qq.com
 非CDN业务查询时值为空
      * @param Domain 查询域名 例如 www.qq.com
 非CDN业务查询时值为空
@@ -223,8 +223,8 @@ cdn业务：
     }
 
     /**
-     * 获取1、如果为空，则返回EIP或CLB所有实例的明细；
-2、如果传入实例名，则返回该实例明细
+     * Get 1、如果为空，则返回EIP或CLB所有实例的明细；
+2、如果传入实例名，则返回该实例明细 
      * @return InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
      */
@@ -233,7 +233,7 @@ cdn业务：
     }
 
     /**
-     * 设置1、如果为空，则返回EIP或CLB所有实例的明细；
+     * Set 1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
      * @param InstanceID 1、如果为空，则返回EIP或CLB所有实例的明细；
 2、如果传入实例名，则返回该实例明细
@@ -243,7 +243,7 @@ cdn业务：
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartDate", this.StartDate);

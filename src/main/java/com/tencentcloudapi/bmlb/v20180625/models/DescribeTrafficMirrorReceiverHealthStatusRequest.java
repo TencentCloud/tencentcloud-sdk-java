@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractModel{
+public class DescribeTrafficMirrorReceiverHealthStatusRequest extends AbstractModel{
 
     /**
     * 查询所在的流量镜像ID。
@@ -37,7 +37,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractM
     private DescribeTrafficMirrorReceiver [] ReceiverSet;
 
     /**
-     * 获取查询所在的流量镜像ID。
+     * Get 查询所在的流量镜像ID。 
      * @return TrafficMirrorId 查询所在的流量镜像ID。
      */
     public String getTrafficMirrorId() {
@@ -45,7 +45,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractM
     }
 
     /**
-     * 设置查询所在的流量镜像ID。
+     * Set 查询所在的流量镜像ID。
      * @param TrafficMirrorId 查询所在的流量镜像ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -53,7 +53,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractM
     }
 
     /**
-     * 获取流量镜像接收机实例ID和端口数组。
+     * Get 流量镜像接收机实例ID和端口数组。 
      * @return ReceiverSet 流量镜像接收机实例ID和端口数组。
      */
     public DescribeTrafficMirrorReceiver [] getReceiverSet() {
@@ -61,7 +61,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractM
     }
 
     /**
-     * 设置流量镜像接收机实例ID和端口数组。
+     * Set 流量镜像接收机实例ID和端口数组。
      * @param ReceiverSet 流量镜像接收机实例ID和端口数组。
      */
     public void setReceiverSet(DescribeTrafficMirrorReceiver [] ReceiverSet) {
@@ -69,7 +69,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusRequest  extends AbstractM
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

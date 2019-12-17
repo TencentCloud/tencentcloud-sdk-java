@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEipRequest  extends AbstractModel{
+public class CreateEipRequest extends AbstractModel{
 
     /**
     * 申请数量，默认为1, 最大 20
@@ -72,7 +72,7 @@ public class CreateEipRequest  extends AbstractModel{
     private String [] IpList;
 
     /**
-     * 获取申请数量，默认为1, 最大 20
+     * Get 申请数量，默认为1, 最大 20 
      * @return GoodsNum 申请数量，默认为1, 最大 20
      */
     public Integer getGoodsNum() {
@@ -80,7 +80,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置申请数量，默认为1, 最大 20
+     * Set 申请数量，默认为1, 最大 20
      * @param GoodsNum 申请数量，默认为1, 最大 20
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -88,7 +88,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP计费方式，flow-流量计费；bandwidth-带宽计费
+     * Get EIP计费方式，flow-流量计费；bandwidth-带宽计费 
      * @return PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
      */
     public String getPayMode() {
@@ -96,7 +96,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP计费方式，flow-流量计费；bandwidth-带宽计费
+     * Set EIP计费方式，flow-流量计费；bandwidth-带宽计费
      * @param PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
      */
     public void setPayMode(String PayMode) {
@@ -104,7 +104,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽设定值（只在带宽计费时生效）
+     * Get 带宽设定值（只在带宽计费时生效） 
      * @return Bandwidth 带宽设定值（只在带宽计费时生效）
      */
     public Integer getBandwidth() {
@@ -112,7 +112,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽设定值（只在带宽计费时生效）
+     * Set 带宽设定值（只在带宽计费时生效）
      * @param Bandwidth 带宽设定值（只在带宽计费时生效）
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -120,7 +120,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP模式，目前支持tunnel和fullnat
+     * Get EIP模式，目前支持tunnel和fullnat 
      * @return SetType EIP模式，目前支持tunnel和fullnat
      */
     public String getSetType() {
@@ -128,7 +128,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP模式，目前支持tunnel和fullnat
+     * Set EIP模式，目前支持tunnel和fullnat
      * @param SetType EIP模式，目前支持tunnel和fullnat
      */
     public void setSetType(String SetType) {
@@ -136,7 +136,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否使用独占集群，0：不使用，1：使用。默认为0
+     * Get 是否使用独占集群，0：不使用，1：使用。默认为0 
      * @return Exclusive 是否使用独占集群，0：不使用，1：使用。默认为0
      */
     public Integer getExclusive() {
@@ -144,7 +144,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否使用独占集群，0：不使用，1：使用。默认为0
+     * Set 是否使用独占集群，0：不使用，1：使用。默认为0
      * @param Exclusive 是否使用独占集群，0：不使用，1：使用。默认为0
      */
     public void setExclusive(Integer Exclusive) {
@@ -152,7 +152,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP归属私有网络ID，例如vpc-k7j1t2x1
+     * Get EIP归属私有网络ID，例如vpc-k7j1t2x1 
      * @return VpcId EIP归属私有网络ID，例如vpc-k7j1t2x1
      */
     public String getVpcId() {
@@ -160,7 +160,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP归属私有网络ID，例如vpc-k7j1t2x1
+     * Set EIP归属私有网络ID，例如vpc-k7j1t2x1
      * @param VpcId EIP归属私有网络ID，例如vpc-k7j1t2x1
      */
     public void setVpcId(String VpcId) {
@@ -168,7 +168,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定申请的IP列表
+     * Get 指定申请的IP列表 
      * @return IpList 指定申请的IP列表
      */
     public String [] getIpList() {
@@ -176,7 +176,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定申请的IP列表
+     * Set 指定申请的IP列表
      * @param IpList 指定申请的IP列表
      */
     public void setIpList(String [] IpList) {
@@ -184,7 +184,7 @@ public class CreateEipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);

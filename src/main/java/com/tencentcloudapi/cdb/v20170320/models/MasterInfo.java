@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MasterInfo  extends AbstractModel{
+public class MasterInfo extends AbstractModel{
 
     /**
     * 地域信息
@@ -149,7 +149,7 @@ public class MasterInfo  extends AbstractModel{
     private String ExClusterName;
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -157,7 +157,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -165,7 +165,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域ID
+     * Get 地域ID 
      * @return RegionId 地域ID
      */
     public Integer getRegionId() {
@@ -173,7 +173,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
      * @param RegionId 地域ID
      */
     public void setRegionId(Integer RegionId) {
@@ -181,7 +181,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
      */
     public Integer getZoneId() {
@@ -189,7 +189,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
      * @param ZoneId 可用区ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -197,7 +197,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -205,7 +205,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -213,7 +213,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -221,7 +221,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -229,7 +229,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例长ID
+     * Get 实例长ID 
      * @return ResourceId 实例长ID
      */
     public String getResourceId() {
@@ -237,7 +237,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例长ID
+     * Set 实例长ID
      * @param ResourceId 实例长ID
      */
     public void setResourceId(String ResourceId) {
@@ -245,7 +245,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态
+     * Get 实例状态 
      * @return Status 实例状态
      */
     public Integer getStatus() {
@@ -253,7 +253,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态
+     * Set 实例状态
      * @param Status 实例状态
      */
     public void setStatus(Integer Status) {
@@ -261,7 +261,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -269,7 +269,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -277,7 +277,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型
+     * Get 实例类型 
      * @return InstanceType 实例类型
      */
     public Integer getInstanceType() {
@@ -285,7 +285,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型
+     * Set 实例类型
      * @param InstanceType 实例类型
      */
     public void setInstanceType(Integer InstanceType) {
@@ -293,7 +293,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return TaskStatus 任务状态
      */
     public Integer getTaskStatus() {
@@ -301,7 +301,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param TaskStatus 任务状态
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -309,7 +309,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存容量
+     * Get 内存容量 
      * @return Memory 内存容量
      */
     public Integer getMemory() {
@@ -317,7 +317,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量
+     * Set 内存容量
      * @param Memory 内存容量
      */
     public void setMemory(Integer Memory) {
@@ -325,7 +325,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘容量
+     * Get 硬盘容量 
      * @return Volume 硬盘容量
      */
     public Integer getVolume() {
@@ -333,7 +333,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘容量
+     * Set 硬盘容量
      * @param Volume 硬盘容量
      */
     public void setVolume(Integer Volume) {
@@ -341,7 +341,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型
+     * Get 实例机型 
      * @return DeviceType 实例机型
      */
     public String getDeviceType() {
@@ -349,7 +349,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型
+     * Set 实例机型
      * @param DeviceType 实例机型
      */
     public void setDeviceType(String DeviceType) {
@@ -357,7 +357,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取每秒查询数
+     * Get 每秒查询数 
      * @return Qps 每秒查询数
      */
     public Integer getQps() {
@@ -365,7 +365,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置每秒查询数
+     * Set 每秒查询数
      * @param Qps 每秒查询数
      */
     public void setQps(Integer Qps) {
@@ -373,7 +373,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public Integer getVpcId() {
@@ -381,7 +381,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(Integer VpcId) {
@@ -389,7 +389,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public Integer getSubnetId() {
@@ -397,7 +397,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(Integer SubnetId) {
@@ -405,7 +405,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群ID
+     * Get 独享集群ID 
      * @return ExClusterId 独享集群ID
      */
     public String getExClusterId() {
@@ -413,7 +413,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群ID
+     * Set 独享集群ID
      * @param ExClusterId 独享集群ID
      */
     public void setExClusterId(String ExClusterId) {
@@ -421,7 +421,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群名称
+     * Get 独享集群名称 
      * @return ExClusterName 独享集群名称
      */
     public String getExClusterName() {
@@ -429,7 +429,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群名称
+     * Set 独享集群名称
      * @param ExClusterName 独享集群名称
      */
     public void setExClusterName(String ExClusterName) {
@@ -437,7 +437,7 @@ public class MasterInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

@@ -29,21 +29,10 @@ public class BillingClient extends AbstractClient{
     private static String endpoint = "billing.tencentcloudapi.com";
     private static String version = "2018-07-09";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public BillingClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public BillingClient(Credential credential, String region, ClientProfile profile) {
         super(BillingClient.endpoint, BillingClient.version, credential, region, profile);
     }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OrgCodeCertOCRResponse  extends AbstractModel{
+public class OrgCodeCertOCRResponse extends AbstractModel{
 
     /**
     * 代码
@@ -58,7 +58,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取代码
+     * Get 代码 
      * @return OrgCode 代码
      */
     public String getOrgCode() {
@@ -66,7 +66,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代码
+     * Set 代码
      * @param OrgCode 代码
      */
     public void setOrgCode(String OrgCode) {
@@ -74,7 +74,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机构名称
+     * Get 机构名称 
      * @return Name 机构名称
      */
     public String getName() {
@@ -82,7 +82,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机构名称
+     * Set 机构名称
      * @param Name 机构名称
      */
     public void setName(String Name) {
@@ -90,7 +90,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取地址
+     * Get 地址 
      * @return Address 地址
      */
     public String getAddress() {
@@ -98,7 +98,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置地址
+     * Set 地址
      * @param Address 地址
      */
     public void setAddress(String Address) {
@@ -106,7 +106,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期
+     * Get 有效期 
      * @return ValidDate 有效期
      */
     public String getValidDate() {
@@ -114,7 +114,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期
+     * Set 有效期
      * @param ValidDate 有效期
      */
     public void setValidDate(String ValidDate) {
@@ -122,7 +122,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class OrgCodeCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrgCode", this.OrgCode);

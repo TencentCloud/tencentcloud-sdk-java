@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportResponse  extends AbstractModel{
+public class DownloadReportResponse extends AbstractModel{
 
     /**
     * 到期/逾期提醒日报下载地址
@@ -78,8 +78,8 @@ public class DownloadReportResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取到期/逾期提醒日报下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 到期/逾期提醒日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,7 +88,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置到期/逾期提醒日报下载地址
+     * Set 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DailyReportUrl 到期/逾期提醒日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,8 +98,8 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取到期/逾期提醒结果下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 到期/逾期提醒结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultReportUrl 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,7 +108,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置到期/逾期提醒结果下载地址
+     * Set 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultReportUrl 到期/逾期提醒结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,8 +118,8 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取到期/逾期提醒明细下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 到期/逾期提醒明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DetailReportUrl 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -128,7 +128,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置到期/逾期提醒明细下载地址
+     * Set 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailReportUrl 到期/逾期提醒明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,8 +138,8 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取回访日报下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 回访日报下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CallbackDailyReportUrl 回访日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置回访日报下载地址
+     * Set 回访日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackDailyReportUrl 回访日报下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,8 +158,8 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取回访结果下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 回访结果下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CallbackResultReportUrl 回访结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置回访结果下载地址
+     * Set 回访结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackResultReportUrl 回访结果下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,8 +178,8 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取回访明细下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 回访明细下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CallbackDetailReportUrl 回访明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -188,7 +188,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置回访明细下载地址
+     * Set 回访明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallbackDetailReportUrl 回访明细下载地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,7 +198,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -206,7 +206,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -214,7 +214,7 @@ public class DownloadReportResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DailyReportUrl", this.DailyReportUrl);

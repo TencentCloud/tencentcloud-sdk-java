@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserPortraitResponse  extends AbstractModel{
+public class DescribeUserPortraitResponse extends AbstractModel{
 
     /**
     * 年龄画像
@@ -65,7 +65,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取年龄画像
+     * Get 年龄画像 
      * @return Age 年龄画像
      */
     public AgePortraitInfo getAge() {
@@ -73,7 +73,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置年龄画像
+     * Set 年龄画像
      * @param Age 年龄画像
      */
     public void setAge(AgePortraitInfo Age) {
@@ -81,7 +81,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别画像
+     * Get 性别画像 
      * @return Gender 性别画像
      */
     public GenderPortraitInfo getGender() {
@@ -89,7 +89,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别画像
+     * Set 性别画像
      * @param Gender 性别画像
      */
     public void setGender(GenderPortraitInfo Gender) {
@@ -97,7 +97,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取省份画像
+     * Get 省份画像 
      * @return Province 省份画像
      */
     public ProvincePortraitInfo getProvince() {
@@ -105,7 +105,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置省份画像
+     * Set 省份画像
      * @param Province 省份画像
      */
     public void setProvince(ProvincePortraitInfo Province) {
@@ -113,7 +113,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取电影喜好画像
+     * Get 电影喜好画像 
      * @return Movie 电影喜好画像
      */
     public MoviePortraitInfo getMovie() {
@@ -121,7 +121,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置电影喜好画像
+     * Set 电影喜好画像
      * @param Movie 电影喜好画像
      */
     public void setMovie(MoviePortraitInfo Movie) {
@@ -129,7 +129,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取明星喜好画像
+     * Get 明星喜好画像 
      * @return Star 明星喜好画像
      */
     public StarPortraitInfo getStar() {
@@ -137,7 +137,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置明星喜好画像
+     * Set 明星喜好画像
      * @param Star 明星喜好画像
      */
     public void setStar(StarPortraitInfo Star) {
@@ -145,7 +145,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeUserPortraitResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Age.", this.Age);

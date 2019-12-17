@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyResourceTagsRequest  extends AbstractModel{
+public class ModifyResourceTagsRequest extends AbstractModel{
 
     /**
     * 资源的六段式描述
@@ -44,7 +44,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     private TagKeyObject [] DeleteTags;
 
     /**
-     * 获取资源的六段式描述
+     * Get 资源的六段式描述 
      * @return Resource 资源的六段式描述
      */
     public String getResource() {
@@ -52,7 +52,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源的六段式描述
+     * Set 资源的六段式描述
      * @param Resource 资源的六段式描述
      */
     public void setResource(String Resource) {
@@ -60,7 +60,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+     * Get 需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键 
      * @return ReplaceTags 需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      */
     public Tag [] getReplaceTags() {
@@ -68,7 +68,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+     * Set 需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      * @param ReplaceTags 需要增加或修改的标签集合。如果Resource描述的资源未关联输入的标签键，则增加关联；若已关联，则将该资源关联的键对应的标签值修改为输入值。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      */
     public void setReplaceTags(Tag [] ReplaceTags) {
@@ -76,7 +76,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+     * Get 需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键 
      * @return DeleteTags 需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      */
     public TagKeyObject [] getDeleteTags() {
@@ -84,7 +84,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
+     * Set 需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      * @param DeleteTags 需要解关联的标签集合。本接口中ReplaceTags和DeleteTags二者必须存在其一，且二者不能包含相同的标签键
      */
     public void setDeleteTags(TagKeyObject [] DeleteTags) {
@@ -92,7 +92,7 @@ public class ModifyResourceTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Resource", this.Resource);

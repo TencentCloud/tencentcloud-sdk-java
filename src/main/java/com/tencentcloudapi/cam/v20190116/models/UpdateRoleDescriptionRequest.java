@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateRoleDescriptionRequest  extends AbstractModel{
+public class UpdateRoleDescriptionRequest extends AbstractModel{
 
     /**
     * 角色描述
@@ -44,7 +44,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     private String RoleName;
 
     /**
-     * 获取角色描述
+     * Get 角色描述 
      * @return Description 角色描述
      */
     public String getDescription() {
@@ -52,7 +52,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色描述
+     * Set 角色描述
      * @param Description 角色描述
      */
     public void setDescription(String Description) {
@@ -60,7 +60,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleId() {
@@ -68,7 +68,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleId(String RoleId) {
@@ -76,7 +76,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleName() {
@@ -84,7 +84,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleName(String RoleName) {
@@ -92,7 +92,7 @@ public class UpdateRoleDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);

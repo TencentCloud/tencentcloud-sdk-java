@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrivateIpAddressSpecification  extends AbstractModel{
+public class PrivateIpAddressSpecification extends AbstractModel{
 
     /**
     * 内网IP地址。
@@ -76,7 +76,7 @@ AVAILABLE：可用的
     private String State;
 
     /**
-     * 获取内网IP地址。
+     * Get 内网IP地址。 
      * @return PrivateIpAddress 内网IP地址。
      */
     public String getPrivateIpAddress() {
@@ -84,7 +84,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置内网IP地址。
+     * Set 内网IP地址。
      * @param PrivateIpAddress 内网IP地址。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
@@ -92,7 +92,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取是否是主IP。
+     * Get 是否是主IP。 
      * @return Primary 是否是主IP。
      */
     public Boolean getPrimary() {
@@ -100,7 +100,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置是否是主IP。
+     * Set 是否是主IP。
      * @param Primary 是否是主IP。
      */
     public void setPrimary(Boolean Primary) {
@@ -108,7 +108,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取公网IP地址。
+     * Get 公网IP地址。 
      * @return PublicIpAddress 公网IP地址。
      */
     public String getPublicIpAddress() {
@@ -116,7 +116,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置公网IP地址。
+     * Set 公网IP地址。
      * @param PublicIpAddress 公网IP地址。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
@@ -124,7 +124,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取EIP实例ID，例如：eip-11112222。
+     * Get EIP实例ID，例如：eip-11112222。 
      * @return AddressId EIP实例ID，例如：eip-11112222。
      */
     public String getAddressId() {
@@ -132,7 +132,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置EIP实例ID，例如：eip-11112222。
+     * Set EIP实例ID，例如：eip-11112222。
      * @param AddressId EIP实例ID，例如：eip-11112222。
      */
     public void setAddressId(String AddressId) {
@@ -140,7 +140,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取内网IP描述信息。
+     * Get 内网IP描述信息。 
      * @return Description 内网IP描述信息。
      */
     public String getDescription() {
@@ -148,7 +148,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置内网IP描述信息。
+     * Set 内网IP描述信息。
      * @param Description 内网IP描述信息。
      */
     public void setDescription(String Description) {
@@ -156,7 +156,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取公网IP是否被封堵。
+     * Get 公网IP是否被封堵。 
      * @return IsWanIpBlocked 公网IP是否被封堵。
      */
     public Boolean getIsWanIpBlocked() {
@@ -164,7 +164,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置公网IP是否被封堵。
+     * Set 公网IP是否被封堵。
      * @param IsWanIpBlocked 公网IP是否被封堵。
      */
     public void setIsWanIpBlocked(Boolean IsWanIpBlocked) {
@@ -172,11 +172,11 @@ AVAILABLE：可用的
     }
 
     /**
-     * 获取IP状态：
+     * Get IP状态：
 PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
-AVAILABLE：可用的
+AVAILABLE：可用的 
      * @return State IP状态：
 PENDING：生产中
 MIGRATING：迁移中
@@ -188,7 +188,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 设置IP状态：
+     * Set IP状态：
 PENDING：生产中
 MIGRATING：迁移中
 DELETING：删除中
@@ -204,7 +204,7 @@ AVAILABLE：可用的
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);

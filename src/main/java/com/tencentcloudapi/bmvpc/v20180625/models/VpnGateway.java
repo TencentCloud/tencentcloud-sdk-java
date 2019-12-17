@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpnGateway  extends AbstractModel{
+public class VpnGateway extends AbstractModel{
 
     /**
     * 网关实例ID。
@@ -100,7 +100,7 @@ public class VpnGateway  extends AbstractModel{
     private Long VpnConnNum;
 
     /**
-     * 获取网关实例ID。
+     * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -108,7 +108,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例ID。
+     * Set 网关实例ID。
      * @param VpnGatewayId 网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -116,7 +116,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -124,7 +124,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -132,7 +132,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关实例名称。
+     * Get 网关实例名称。 
      * @return VpnGatewayName 网关实例名称。
      */
     public String getVpnGatewayName() {
@@ -140,7 +140,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例名称。
+     * Set 网关实例名称。
      * @param VpnGatewayName 网关实例名称。
      */
     public void setVpnGatewayName(String VpnGatewayName) {
@@ -148,7 +148,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPC网段
+     * Get VPC网段 
      * @return VpcCidrBlock VPC网段
      */
     public String getVpcCidrBlock() {
@@ -156,7 +156,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPC网段
+     * Set VPC网段
      * @param VpcCidrBlock VPC网段
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -164,7 +164,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPC名称
+     * Get VPC名称 
      * @return VpcName VPC名称
      */
     public String getVpcName() {
@@ -172,7 +172,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPC名称
+     * Set VPC名称
      * @param VpcName VPC名称
      */
     public void setVpcName(String VpcName) {
@@ -180,7 +180,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关出带宽。
+     * Get 网关出带宽。 
      * @return InternetMaxBandwidthOut 网关出带宽。
      */
     public Long getInternetMaxBandwidthOut() {
@@ -188,7 +188,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关出带宽。
+     * Set 网关出带宽。
      * @param InternetMaxBandwidthOut 网关出带宽。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
@@ -196,7 +196,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关实例状态
+     * Get 网关实例状态 
      * @return State 网关实例状态
      */
     public String getState() {
@@ -204,7 +204,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例状态
+     * Set 网关实例状态
      * @param State 网关实例状态
      */
     public void setState(String State) {
@@ -212,7 +212,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关公网IP。
+     * Get 网关公网IP。 
      * @return PublicIpAddress 网关公网IP。
      */
     public String getPublicIpAddress() {
@@ -220,7 +220,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关公网IP。
+     * Set 网关公网IP。
      * @param PublicIpAddress 网关公网IP。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
@@ -228,7 +228,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -236,7 +236,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -244,7 +244,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取可用区，如：ap-guangzhou
+     * Get 可用区，如：ap-guangzhou 
      * @return Zone 可用区，如：ap-guangzhou
      */
     public String getZone() {
@@ -252,7 +252,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置可用区，如：ap-guangzhou
+     * Set 可用区，如：ap-guangzhou
      * @param Zone 可用区，如：ap-guangzhou
      */
     public void setZone(String Zone) {
@@ -260,7 +260,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关的通道数
+     * Get VPN网关的通道数 
      * @return VpnConnNum VPN网关的通道数
      */
     public Long getVpnConnNum() {
@@ -268,7 +268,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关的通道数
+     * Set VPN网关的通道数
      * @param VpnConnNum VPN网关的通道数
      */
     public void setVpnConnNum(Long VpnConnNum) {
@@ -276,7 +276,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

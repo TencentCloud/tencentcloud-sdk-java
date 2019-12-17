@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddFairPlayPemRequest  extends AbstractModel{
+public class AddFairPlayPemRequest extends AbstractModel{
 
     /**
     * 加密后的fairplay方案申请时使用的私钥。
@@ -63,8 +63,8 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     private Integer Priority;
 
     /**
-     * 获取加密后的fairplay方案申请时使用的私钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
+     * Get 加密后的fairplay方案申请时使用的私钥。
+请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。 
      * @return Pem 加密后的fairplay方案申请时使用的私钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
      */
@@ -73,7 +73,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 设置加密后的fairplay方案申请时使用的私钥。
+     * Set 加密后的fairplay方案申请时使用的私钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
      * @param Pem 加密后的fairplay方案申请时使用的私钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对私钥文件中的字段进行加密，并对加密结果进行base64编码。
@@ -83,8 +83,8 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 获取加密后的fairplay方案申请返回的ask数据。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
+     * Get 加密后的fairplay方案申请返回的ask数据。
+请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。 
      * @return Ask 加密后的fairplay方案申请返回的ask数据。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
      */
@@ -93,7 +93,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 设置加密后的fairplay方案申请返回的ask数据。
+     * Set 加密后的fairplay方案申请返回的ask数据。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
      * @param Ask 加密后的fairplay方案申请返回的ask数据。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对Ask字符串进行加密，并对加密结果进行base64编码。
@@ -103,9 +103,9 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 获取私钥的解密密钥。
+     * Get 私钥的解密密钥。
 openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的密钥。
-请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
+请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。 
      * @return PemDecryptKey 私钥的解密密钥。
 openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的密钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
@@ -115,7 +115,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 设置私钥的解密密钥。
+     * Set 私钥的解密密钥。
 openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的密钥。
 请使用腾讯云DRM 提供的公钥，使用rsa加密算法，PKCS1填充方式对解密密钥进行加密，并对加密结果进行base64编码。
      * @param PemDecryptKey 私钥的解密密钥。
@@ -127,7 +127,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 获取委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Get 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。 
      * @return BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public Integer getBailorId() {
@@ -135,7 +135,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 设置委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Set 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public void setBailorId(Integer BailorId) {
@@ -143,8 +143,8 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 获取私钥的优先级，优先级数值越高，优先级越高。
-该值可以不传，后台将自动分配一个优先级。
+     * Get 私钥的优先级，优先级数值越高，优先级越高。
+该值可以不传，后台将自动分配一个优先级。 
      * @return Priority 私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
      */
@@ -153,7 +153,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 设置私钥的优先级，优先级数值越高，优先级越高。
+     * Set 私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
      * @param Priority 私钥的优先级，优先级数值越高，优先级越高。
 该值可以不传，后台将自动分配一个优先级。
@@ -163,7 +163,7 @@ openssl在生成rsa时，可能会需要设置加密密钥，请记住设置的�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pem", this.Pem);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Project  extends AbstractModel{
+public class Project extends AbstractModel{
 
     /**
     * 项目ID
@@ -37,7 +37,7 @@ public class Project  extends AbstractModel{
     private String ProjectName;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -45,7 +45,7 @@ public class Project  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -53,7 +53,7 @@ public class Project  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -61,7 +61,7 @@ public class Project  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -69,7 +69,7 @@ public class Project  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

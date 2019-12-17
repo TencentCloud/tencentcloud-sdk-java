@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulInfoRequest  extends AbstractModel{
+public class DescribeVulInfoRequest extends AbstractModel{
 
     /**
     * 漏洞种类ID。
     */
     @SerializedName("VulId")
     @Expose
-    private Integer VulId;
+    private Long VulId;
 
     /**
-     * 获取漏洞种类ID。
+     * Get 漏洞种类ID。 
      * @return VulId 漏洞种类ID。
      */
-    public Integer getVulId() {
+    public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * 设置漏洞种类ID。
+     * Set 漏洞种类ID。
      * @param VulId 漏洞种类ID。
      */
-    public void setVulId(Integer VulId) {
+    public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);

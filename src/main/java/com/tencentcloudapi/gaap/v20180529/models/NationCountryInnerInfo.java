@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NationCountryInnerInfo  extends AbstractModel{
+public class NationCountryInnerInfo extends AbstractModel{
 
     /**
     * 国家名
@@ -37,7 +37,7 @@ public class NationCountryInnerInfo  extends AbstractModel{
     private String NationCountryInnerCode;
 
     /**
-     * 获取国家名
+     * Get 国家名 
      * @return NationCountryName 国家名
      */
     public String getNationCountryName() {
@@ -45,7 +45,7 @@ public class NationCountryInnerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置国家名
+     * Set 国家名
      * @param NationCountryName 国家名
      */
     public void setNationCountryName(String NationCountryName) {
@@ -53,7 +53,7 @@ public class NationCountryInnerInfo  extends AbstractModel{
     }
 
     /**
-     * 获取国家内部编码
+     * Get 国家内部编码 
      * @return NationCountryInnerCode 国家内部编码
      */
     public String getNationCountryInnerCode() {
@@ -61,7 +61,7 @@ public class NationCountryInnerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置国家内部编码
+     * Set 国家内部编码
      * @param NationCountryInnerCode 国家内部编码
      */
     public void setNationCountryInnerCode(String NationCountryInnerCode) {
@@ -69,7 +69,7 @@ public class NationCountryInnerInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NationCountryName", this.NationCountryName);

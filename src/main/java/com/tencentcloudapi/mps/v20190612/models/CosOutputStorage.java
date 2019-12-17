@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosOutputStorage  extends AbstractModel{
+public class CosOutputStorage extends AbstractModel{
 
     /**
     * 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
@@ -37,7 +37,7 @@ public class CosOutputStorage  extends AbstractModel{
     private String Region;
 
     /**
-     * 获取视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
+     * Get 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。 
      * @return Bucket 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
      */
     public String getBucket() {
@@ -45,7 +45,7 @@ public class CosOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
+     * Set 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
      * @param Bucket 视频处理生成的文件输出的目标 Bucket 名，如 TopRankVideo-125xxx88。如果不填，表示继承上层。
      */
     public void setBucket(String Bucket) {
@@ -53,7 +53,7 @@ public class CosOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
+     * Get 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。 
      * @return Region 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
      */
     public String getRegion() {
@@ -61,7 +61,7 @@ public class CosOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
+     * Set 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
      * @param Region 视频处理生成的文件输出的目标 Bucket 的园区，如 ap-chongqing。如果不填，表示继承上层。
      */
     public void setRegion(String Region) {
@@ -69,7 +69,7 @@ public class CosOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7CCRuleRequest  extends AbstractModel{
+public class CreateL7CCRuleRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -58,7 +58,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     private CCRuleConfig [] RuleConfig;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -66,7 +66,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -74,7 +74,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -82,7 +82,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -90,7 +90,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)]
+     * Get 操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)] 
      * @return Method 操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)]
      */
     public String getMethod() {
@@ -98,7 +98,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)]
+     * Set 操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)]
      * @param Method 操作码，取值[query(表示查询)，add(表示添加)，del(表示删除)]
      */
     public void setMethod(String Method) {
@@ -106,7 +106,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取7层转发规则ID，例如：rule-0000001
+     * Get 7层转发规则ID，例如：rule-0000001 
      * @return RuleId 7层转发规则ID，例如：rule-0000001
      */
     public String getRuleId() {
@@ -114,7 +114,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置7层转发规则ID，例如：rule-0000001
+     * Set 7层转发规则ID，例如：rule-0000001
      * @param RuleId 7层转发规则ID，例如：rule-0000001
      */
     public void setRuleId(String RuleId) {
@@ -122,7 +122,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
+     * Get 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写； 
      * @return RuleConfig 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
      */
     public CCRuleConfig [] getRuleConfig() {
@@ -130,7 +130,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
+     * Set 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
      * @param RuleConfig 7层CC自定义规则参数，当操作码为query时，可以不用填写；当操作码为add或del时，必须填写；
      */
     public void setRuleConfig(CCRuleConfig [] RuleConfig) {
@@ -138,7 +138,7 @@ public class CreateL7CCRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

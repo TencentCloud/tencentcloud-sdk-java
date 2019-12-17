@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInfo  extends AbstractModel{
+public class RegionInfo extends AbstractModel{
 
     /**
     * 地域Ap-Code
@@ -44,7 +44,7 @@ public class RegionInfo  extends AbstractModel{
     private Long RegionId;
 
     /**
-     * 获取地域Ap-Code
+     * Get 地域Ap-Code 
      * @return RegionName 地域Ap-Code
      */
     public String getRegionName() {
@@ -52,7 +52,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域Ap-Code
+     * Set 地域Ap-Code
      * @param RegionName 地域Ap-Code
      */
     public void setRegionName(String RegionName) {
@@ -60,7 +60,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域缩写
+     * Get 地域缩写 
      * @return RegionAbbr 地域缩写
      */
     public String getRegionAbbr() {
@@ -68,7 +68,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域缩写
+     * Set 地域缩写
      * @param RegionAbbr 地域缩写
      */
     public void setRegionAbbr(String RegionAbbr) {
@@ -76,7 +76,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域ID
+     * Get 地域ID 
      * @return RegionId 地域ID
      */
     public Long getRegionId() {
@@ -84,7 +84,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
      * @param RegionId 地域ID
      */
     public void setRegionId(Long RegionId) {
@@ -92,7 +92,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);

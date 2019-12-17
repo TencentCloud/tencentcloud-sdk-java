@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppInfo  extends AbstractModel{
+public class AppInfo extends AbstractModel{
 
     /**
     * 应用名称
@@ -122,7 +122,7 @@ public class AppInfo  extends AbstractModel{
     private String OldPasswordExpireTime;
 
     /**
-     * 获取应用名称
+     * Get 应用名称 
      * @return AppName 应用名称
      */
     public String getAppName() {
@@ -130,7 +130,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
      * @param AppName 应用名称
      */
     public void setAppName(String AppName) {
@@ -138,7 +138,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用实例ID
+     * Get 应用实例ID 
      * @return ApplicationId 应用实例ID
      */
     public String getApplicationId() {
@@ -146,7 +146,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用实例ID
+     * Set 应用实例ID
      * @param ApplicationId 应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -154,7 +154,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在地域
+     * Get 所在地域 
      * @return Region 所在地域
      */
     public String getRegion() {
@@ -162,7 +162,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在地域
+     * Set 所在地域
      * @param Region 所在地域
      */
     public void setRegion(String Region) {
@@ -170,7 +170,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * Get 数据描述语言类型，如：`PROTO`,`TDR`或`MIX` 
      * @return IdlType 数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
      */
     public String getIdlType() {
@@ -178,7 +178,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
+     * Set 数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
      * @param IdlType 数据描述语言类型，如：`PROTO`,`TDR`或`MIX`
      */
     public void setIdlType(String IdlType) {
@@ -186,7 +186,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型
+     * Get 网络类型 
      * @return NetworkType 网络类型
      */
     public String getNetworkType() {
@@ -194,7 +194,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型
+     * Set 网络类型
      * @param NetworkType 网络类型
      */
     public void setNetworkType(String NetworkType) {
@@ -202,7 +202,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取关联的用户私有网络实例ID
+     * Get 关联的用户私有网络实例ID 
      * @return VpcId 关联的用户私有网络实例ID
      */
     public String getVpcId() {
@@ -210,7 +210,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关联的用户私有网络实例ID
+     * Set 关联的用户私有网络实例ID
      * @param VpcId 关联的用户私有网络实例ID
      */
     public void setVpcId(String VpcId) {
@@ -218,7 +218,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取关联的用户子网实例ID
+     * Get 关联的用户子网实例ID 
      * @return SubnetId 关联的用户子网实例ID
      */
     public String getSubnetId() {
@@ -226,7 +226,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关联的用户子网实例ID
+     * Set 关联的用户子网实例ID
      * @param SubnetId 关联的用户子网实例ID
      */
     public void setSubnetId(String SubnetId) {
@@ -234,7 +234,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreatedTime 创建时间
      */
     public String getCreatedTime() {
@@ -242,7 +242,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreatedTime 创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -250,7 +250,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取应用密码
+     * Get 应用密码 
      * @return Password 应用密码
      */
     public String getPassword() {
@@ -258,7 +258,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置应用密码
+     * Set 应用密码
      * @param Password 应用密码
      */
     public void setPassword(String Password) {
@@ -266,7 +266,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取密码状态
+     * Get 密码状态 
      * @return PasswordStatus 密码状态
      */
     public String getPasswordStatus() {
@@ -274,7 +274,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置密码状态
+     * Set 密码状态
      * @param PasswordStatus 密码状态
      */
     public void setPasswordStatus(String PasswordStatus) {
@@ -282,7 +282,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取TcaplusDB SDK连接参数，接入ID
+     * Get TcaplusDB SDK连接参数，接入ID 
      * @return ApiAccessId TcaplusDB SDK连接参数，接入ID
      */
     public String getApiAccessId() {
@@ -290,7 +290,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TcaplusDB SDK连接参数，接入ID
+     * Set TcaplusDB SDK连接参数，接入ID
      * @param ApiAccessId TcaplusDB SDK连接参数，接入ID
      */
     public void setApiAccessId(String ApiAccessId) {
@@ -298,7 +298,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取TcaplusDB SDK连接参数，接入地址
+     * Get TcaplusDB SDK连接参数，接入地址 
      * @return ApiAccessIp TcaplusDB SDK连接参数，接入地址
      */
     public String getApiAccessIp() {
@@ -306,7 +306,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TcaplusDB SDK连接参数，接入地址
+     * Set TcaplusDB SDK连接参数，接入地址
      * @param ApiAccessIp TcaplusDB SDK连接参数，接入地址
      */
     public void setApiAccessIp(String ApiAccessIp) {
@@ -314,7 +314,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取TcaplusDB SDK连接参数，接入端口
+     * Get TcaplusDB SDK连接参数，接入端口 
      * @return ApiAccessPort TcaplusDB SDK连接参数，接入端口
      */
     public Long getApiAccessPort() {
@@ -322,7 +322,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TcaplusDB SDK连接参数，接入端口
+     * Set TcaplusDB SDK连接参数，接入端口
      * @param ApiAccessPort TcaplusDB SDK连接参数，接入端口
      */
     public void setApiAccessPort(Long ApiAccessPort) {
@@ -330,8 +330,8 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -340,7 +340,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
+     * Set 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OldPasswordExpireTime 如果PasswordStatus是unmodifiable说明有旧密码还未过期，此字段将显示旧密码过期的时间，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
@@ -350,7 +350,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

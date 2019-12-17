@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCRule  extends AbstractModel{
+public class CCRule extends AbstractModel{
 
     /**
     * 规则的key, 可以为host、cgi、ua、referer
@@ -44,7 +44,7 @@ public class CCRule  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取规则的key, 可以为host、cgi、ua、referer
+     * Get 规则的key, 可以为host、cgi、ua、referer 
      * @return Skey 规则的key, 可以为host、cgi、ua、referer
      */
     public String getSkey() {
@@ -52,7 +52,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 设置规则的key, 可以为host、cgi、ua、referer
+     * Set 规则的key, 可以为host、cgi、ua、referer
      * @param Skey 规则的key, 可以为host、cgi、ua、referer
      */
     public void setSkey(String Skey) {
@@ -60,7 +60,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 获取规则的条件，可以为include、not_include、equal
+     * Get 规则的条件，可以为include、not_include、equal 
      * @return Operator 规则的条件，可以为include、not_include、equal
      */
     public String getOperator() {
@@ -68,7 +68,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 设置规则的条件，可以为include、not_include、equal
+     * Set 规则的条件，可以为include、not_include、equal
      * @param Operator 规则的条件，可以为include、not_include、equal
      */
     public void setOperator(String Operator) {
@@ -76,7 +76,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 获取规则的值，长度小于31字节
+     * Get 规则的值，长度小于31字节 
      * @return Value 规则的值，长度小于31字节
      */
     public String getValue() {
@@ -84,7 +84,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 设置规则的值，长度小于31字节
+     * Set 规则的值，长度小于31字节
      * @param Value 规则的值，长度小于31字节
      */
     public void setValue(String Value) {
@@ -92,7 +92,7 @@ public class CCRule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Skey", this.Skey);

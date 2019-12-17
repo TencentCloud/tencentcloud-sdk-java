@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveInstancesRequest  extends AbstractModel{
+public class RemoveInstancesRequest extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -37,7 +37,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -45,7 +45,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -53,7 +53,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例ID列表
+     * Get CVM实例ID列表 
      * @return InstanceIds CVM实例ID列表
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例ID列表
+     * Set CVM实例ID列表
      * @param InstanceIds CVM实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

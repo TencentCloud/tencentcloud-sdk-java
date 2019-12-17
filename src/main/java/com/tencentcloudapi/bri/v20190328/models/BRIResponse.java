@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BRIResponse  extends AbstractModel{
+public class BRIResponse extends AbstractModel{
 
     /**
     * 风险分值，取值[0,100], 分值越高风险越高
@@ -61,7 +61,7 @@ public class BRIResponse  extends AbstractModel{
     private String [] Tags;
 
     /**
-     * 获取风险分值，取值[0,100], 分值越高风险越高
+     * Get 风险分值，取值[0,100], 分值越高风险越高 
      * @return Score 风险分值，取值[0,100], 分值越高风险越高
      */
     public Float getScore() {
@@ -69,7 +69,7 @@ public class BRIResponse  extends AbstractModel{
     }
 
     /**
-     * 设置风险分值，取值[0,100], 分值越高风险越高
+     * Set 风险分值，取值[0,100], 分值越高风险越高
      * @param Score 风险分值，取值[0,100], 分值越高风险越高
      */
     public void setScore(Float Score) {
@@ -77,7 +77,7 @@ public class BRIResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当Service为bri_num时,返回的风险标签有:
+     * Get 当Service为bri_num时,返回的风险标签有:
 1) 疑似垃圾流量     说明: 结合号码的历史数据表现，判断该号码历史用互联网业务作恶行为，其产生的互联网行为对于其他业务来说属于作弊或垃圾流量。 
 2) 疑似新客户       说明: 通过号码互联网行为（社交，浏览等）是否异常判断为小号或接码平台帐号。 
 
@@ -101,7 +101,7 @@ public class BRIResponse  extends AbstractModel{
 1) 安全   说明: APK为正规应用
 2) 一般   说明: APK为未发现问题的正常应用
 3) 风险   说明: APK为外挂或色情等风险应用
-4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用
+4) 病毒   说明: APK为包含恶意代码的恶意软件吗,可能破坏系统或者其他app正常使用 
      * @return Tags 当Service为bri_num时,返回的风险标签有:
 1) 疑似垃圾流量     说明: 结合号码的历史数据表现，判断该号码历史用互联网业务作恶行为，其产生的互联网行为对于其他业务来说属于作弊或垃圾流量。 
 2) 疑似新客户       说明: 通过号码互联网行为（社交，浏览等）是否异常判断为小号或接码平台帐号。 
@@ -133,7 +133,7 @@ public class BRIResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当Service为bri_num时,返回的风险标签有:
+     * Set 当Service为bri_num时,返回的风险标签有:
 1) 疑似垃圾流量     说明: 结合号码的历史数据表现，判断该号码历史用互联网业务作恶行为，其产生的互联网行为对于其他业务来说属于作弊或垃圾流量。 
 2) 疑似新客户       说明: 通过号码互联网行为（社交，浏览等）是否异常判断为小号或接码平台帐号。 
 
@@ -189,7 +189,7 @@ public class BRIResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);

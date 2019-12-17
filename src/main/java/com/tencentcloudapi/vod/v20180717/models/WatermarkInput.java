@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WatermarkInput  extends AbstractModel{
+public class WatermarkInput extends AbstractModel{
 
     /**
     * 水印模板 ID。
@@ -66,7 +66,7 @@ public class WatermarkInput  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取水印模板 ID。
+     * Get 水印模板 ID。 
      * @return Definition 水印模板 ID。
      */
     public Long getDefinition() {
@@ -74,7 +74,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板 ID。
+     * Set 水印模板 ID。
      * @param Definition 水印模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -82,8 +82,8 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 获取文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 设置文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
+     * Set 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TextContent 文字内容，长度不超过100个字符。仅当水印类型为文字水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 获取SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 设置SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
+     * Set SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SvgContent SVG 内容。长度不超过 2000000 个字符。仅当水印类型为 SVG 水印时填写。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,10 +122,10 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+     * Get 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
 <li>不填或填0，表示水印从画面开始就出现；</li>
 <li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
-<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
+<li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li> 
      * @return StartTimeOffset 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
 <li>不填或填0，表示水印从画面开始就出现；</li>
 <li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
@@ -136,7 +136,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
+     * Set 水印的起始时间偏移，单位：秒。不填或填0，表示水印从画面出现时开始显现。
 <li>不填或填0，表示水印从画面开始就出现；</li>
 <li>当数值大于0时（假设为 n），表示水印从画面开始的第 n 秒出现；</li>
 <li>当数值小于0时（假设为 -n），表示水印从离画面结束 n 秒前开始出现。</li>
@@ -150,10 +150,10 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印的结束时间偏移，单位：秒。
+     * Get 水印的结束时间偏移，单位：秒。
 <li>不填或填0，表示水印持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
-<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
+<li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li> 
      * @return EndTimeOffset 水印的结束时间偏移，单位：秒。
 <li>不填或填0，表示水印持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
@@ -164,7 +164,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印的结束时间偏移，单位：秒。
+     * Set 水印的结束时间偏移，单位：秒。
 <li>不填或填0，表示水印持续到画面结束；</li>
 <li>当数值大于0时（假设为 n），表示水印持续到第 n 秒时消失；</li>
 <li>当数值小于0时（假设为 -n），表示水印持续到离画面结束 n 秒前消失。</li>
@@ -178,7 +178,7 @@ public class WatermarkInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

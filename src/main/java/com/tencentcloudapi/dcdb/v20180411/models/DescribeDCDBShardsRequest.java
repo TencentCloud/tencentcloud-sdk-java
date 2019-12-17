@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBShardsRequest  extends AbstractModel{
+public class DescribeDCDBShardsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如：dcdbt-ow728lmc。
@@ -65,7 +65,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     private String OrderByType;
 
     /**
-     * 获取实例ID，形如：dcdbt-ow728lmc。
+     * Get 实例ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如：dcdbt-ow728lmc。
+     * Set 实例ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片Id列表。
+     * Get 分片Id列表。 
      * @return ShardInstanceIds 分片Id列表。
      */
     public String [] getShardInstanceIds() {
@@ -89,7 +89,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片Id列表。
+     * Set 分片Id列表。
      * @param ShardInstanceIds 分片Id列表。
      */
     public void setShardInstanceIds(String [] ShardInstanceIds) {
@@ -97,7 +97,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为 0
+     * Get 偏移量，默认为 0 
      * @return Offset 偏移量，默认为 0
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为 0
+     * Set 偏移量，默认为 0
      * @param Offset 偏移量，默认为 0
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为 20，最大值为 100。
+     * Get 返回数量，默认为 20，最大值为 100。 
      * @return Limit 返回数量，默认为 20，最大值为 100。
      */
     public Integer getLimit() {
@@ -121,7 +121,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为 20，最大值为 100。
+     * Set 返回数量，默认为 20，最大值为 100。
      * @param Limit 返回数量，默认为 20，最大值为 100。
      */
     public void setLimit(Integer Limit) {
@@ -129,7 +129,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段， 目前仅支持 createtime
+     * Get 排序字段， 目前仅支持 createtime 
      * @return OrderBy 排序字段， 目前仅支持 createtime
      */
     public String getOrderBy() {
@@ -137,7 +137,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段， 目前仅支持 createtime
+     * Set 排序字段， 目前仅支持 createtime
      * @param OrderBy 排序字段， 目前仅支持 createtime
      */
     public void setOrderBy(String OrderBy) {
@@ -145,7 +145,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型， desc 或者 asc
+     * Get 排序类型， desc 或者 asc 
      * @return OrderByType 排序类型， desc 或者 asc
      */
     public String getOrderByType() {
@@ -153,7 +153,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型， desc 或者 asc
+     * Set 排序类型， desc 或者 asc
      * @param OrderByType 排序类型， desc 或者 asc
      */
     public void setOrderByType(String OrderByType) {
@@ -161,7 +161,7 @@ public class DescribeDCDBShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewProVersionRequest  extends AbstractModel{
+public class RenewProVersionRequest extends AbstractModel{
 
     /**
     * 购买相关参数。
@@ -37,7 +37,7 @@ public class RenewProVersionRequest  extends AbstractModel{
     private String Quuid;
 
     /**
-     * 获取购买相关参数。
+     * Get 购买相关参数。 
      * @return ChargePrepaid 购买相关参数。
      */
     public ChargePrepaid getChargePrepaid() {
@@ -45,7 +45,7 @@ public class RenewProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买相关参数。
+     * Set 购买相关参数。
      * @param ChargePrepaid 购买相关参数。
      */
     public void setChargePrepaid(ChargePrepaid ChargePrepaid) {
@@ -53,7 +53,7 @@ public class RenewProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机唯一ID，对应CVM的uuid、BM的InstanceId。
+     * Get 主机唯一ID，对应CVM的uuid、BM的InstanceId。 
      * @return Quuid 主机唯一ID，对应CVM的uuid、BM的InstanceId。
      */
     public String getQuuid() {
@@ -61,7 +61,7 @@ public class RenewProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机唯一ID，对应CVM的uuid、BM的InstanceId。
+     * Set 主机唯一ID，对应CVM的uuid、BM的InstanceId。
      * @param Quuid 主机唯一ID，对应CVM的uuid、BM的InstanceId。
      */
     public void setQuuid(String Quuid) {
@@ -69,7 +69,7 @@ public class RenewProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);

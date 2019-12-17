@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModelService  extends AbstractModel{
+public class ModelService extends AbstractModel{
 
     /**
     * 服务ID
@@ -207,7 +207,7 @@ public class ModelService  extends AbstractModel{
     private String GpuType;
 
     /**
-     * 获取服务ID
+     * Get 服务ID 
      * @return Id 服务ID
      */
     public String getId() {
@@ -215,7 +215,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务ID
+     * Set 服务ID
      * @param Id 服务ID
      */
     public void setId(String Id) {
@@ -223,8 +223,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取运行集群
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 运行集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cluster 运行集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置运行集群
+     * Set 运行集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cluster 运行集群
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,7 +243,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务名称
+     * Get 服务名称 
      * @return Name 服务名称
      */
     public String getName() {
@@ -251,7 +251,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务名称
+     * Set 服务名称
      * @param Name 服务名称
      */
     public void setName(String Name) {
@@ -259,7 +259,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境
+     * Get 运行环境 
      * @return Runtime 运行环境
      */
     public String getRuntime() {
@@ -267,7 +267,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境
+     * Set 运行环境
      * @param Runtime 运行环境
      */
     public void setRuntime(String Runtime) {
@@ -275,7 +275,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取模型地址
+     * Get 模型地址 
      * @return ModelUri 模型地址
      */
     public String getModelUri() {
@@ -283,7 +283,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置模型地址
+     * Set 模型地址
      * @param ModelUri 模型地址
      */
     public void setModelUri(String ModelUri) {
@@ -291,7 +291,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/1000核
+     * Get 处理器配置, 单位为1/1000核 
      * @return Cpu 处理器配置, 单位为1/1000核
      */
     public Long getCpu() {
@@ -299,7 +299,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置处理器配置, 单位为1/1000核
+     * Set 处理器配置, 单位为1/1000核
      * @param Cpu 处理器配置, 单位为1/1000核
      */
     public void setCpu(Long Cpu) {
@@ -307,7 +307,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取内存配置, 单位为1M
+     * Get 内存配置, 单位为1M 
      * @return Memory 内存配置, 单位为1M
      */
     public Long getMemory() {
@@ -315,7 +315,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置内存配置, 单位为1M
+     * Set 内存配置, 单位为1M
      * @param Memory 内存配置, 单位为1M
      */
     public void setMemory(Long Memory) {
@@ -323,7 +323,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取GPU 配置, 单位为1/1000 卡
+     * Get GPU 配置, 单位为1/1000 卡 
      * @return Gpu GPU 配置, 单位为1/1000 卡
      */
     public Long getGpu() {
@@ -331,7 +331,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置GPU 配置, 单位为1/1000 卡
+     * Set GPU 配置, 单位为1/1000 卡
      * @param Gpu GPU 配置, 单位为1/1000 卡
      */
     public void setGpu(Long Gpu) {
@@ -339,7 +339,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取显存配置, 单位为1M
+     * Get 显存配置, 单位为1M 
      * @return GpuMemory 显存配置, 单位为1M
      */
     public Long getGpuMemory() {
@@ -347,7 +347,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置显存配置, 单位为1M
+     * Set 显存配置, 单位为1M
      * @param GpuMemory 显存配置, 单位为1M
      */
     public void setGpuMemory(Long GpuMemory) {
@@ -355,7 +355,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -363,7 +363,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -371,7 +371,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -379,7 +379,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -387,7 +387,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取支持AUTO, MANUAL
+     * Get 支持AUTO, MANUAL 
      * @return ScaleMode 支持AUTO, MANUAL
      */
     public String getScaleMode() {
@@ -395,7 +395,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置支持AUTO, MANUAL
+     * Set 支持AUTO, MANUAL
      * @param ScaleMode 支持AUTO, MANUAL
      */
     public void setScaleMode(String ScaleMode) {
@@ -403,7 +403,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取弹性伸缩配置
+     * Get 弹性伸缩配置 
      * @return Scaler 弹性伸缩配置
      */
     public Scaler getScaler() {
@@ -411,7 +411,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置弹性伸缩配置
+     * Set 弹性伸缩配置
      * @param Scaler 弹性伸缩配置
      */
     public void setScaler(Scaler Scaler) {
@@ -419,7 +419,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务状态
+     * Get 服务状态 
      * @return Status 服务状态
      */
     public ServiceStatus getStatus() {
@@ -427,7 +427,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务状态
+     * Set 服务状态
      * @param Status 服务状态
      */
     public void setStatus(ServiceStatus Status) {
@@ -435,8 +435,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取访问密钥
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 访问密钥
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessToken 访问密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -445,7 +445,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置访问密钥
+     * Set 访问密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessToken 访问密钥
 注意：此字段可能返回 null，表示取不到有效值。
@@ -455,7 +455,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置Id
+     * Get 服务配置Id 
      * @return ConfigId 服务配置Id
      */
     public String getConfigId() {
@@ -463,7 +463,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置Id
+     * Set 服务配置Id
      * @param ConfigId 服务配置Id
      */
     public void setConfigId(String ConfigId) {
@@ -471,7 +471,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置名
+     * Get 服务配置名 
      * @return ConfigName 服务配置名
      */
     public String getConfigName() {
@@ -479,7 +479,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置名
+     * Set 服务配置名
      * @param ConfigName 服务配置名
      */
     public void setConfigName(String ConfigName) {
@@ -487,7 +487,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务运行时长
+     * Get 服务运行时长 
      * @return ServeSeconds 服务运行时长
      */
     public Long getServeSeconds() {
@@ -495,7 +495,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务运行时长
+     * Set 服务运行时长
      * @param ServeSeconds 服务运行时长
      */
     public void setServeSeconds(Long ServeSeconds) {
@@ -503,8 +503,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取配置版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersion 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -513,7 +513,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置配置版本
+     * Set 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersion 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -523,8 +523,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务使用资源组 Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceGroupId 服务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -533,7 +533,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务使用资源组 Id
+     * Set 服务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupId 服务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -543,8 +543,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 暴露方式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Exposes 暴露方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -553,7 +553,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式
+     * Set 暴露方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Exposes 暴露方式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -563,8 +563,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取Region 名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Region 名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region Region 名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -573,7 +573,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置Region 名
+     * Set Region 名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Region Region 名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -583,8 +583,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取服务使用资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceGroupName 服务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -593,7 +593,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置服务使用资源组名称
+     * Set 服务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupName 服务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -603,8 +603,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -613,7 +613,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -623,8 +623,8 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 获取GPU类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get GPU类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GpuType GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -633,7 +633,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 设置GPU类型
+     * Set GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuType GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -643,7 +643,7 @@ public class ModelService  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

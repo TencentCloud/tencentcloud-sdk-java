@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIdlFileInfosRequest  extends AbstractModel{
+public class DescribeIdlFileInfosRequest extends AbstractModel{
 
     /**
     * 文件所属应用实例ID
@@ -58,7 +58,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取文件所属应用实例ID
+     * Get 文件所属应用实例ID 
      * @return ApplicationId 文件所属应用实例ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件所属应用实例ID
+     * Set 文件所属应用实例ID
      * @param ApplicationId 文件所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件所属大区ID
+     * Get 文件所属大区ID 
      * @return LogicZoneIds 文件所属大区ID
      */
     public String [] getLogicZoneIds() {
@@ -82,7 +82,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件所属大区ID
+     * Set 文件所属大区ID
      * @param LogicZoneIds 文件所属大区ID
      */
     public void setLogicZoneIds(String [] LogicZoneIds) {
@@ -90,7 +90,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定文件ID
+     * Get 指定文件ID 
      * @return IdlFileIds 指定文件ID
      */
     public String [] getIdlFileIds() {
@@ -98,7 +98,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定文件ID
+     * Set 指定文件ID
      * @param IdlFileIds 指定文件ID
      */
     public void setIdlFileIds(String [] IdlFileIds) {
@@ -106,7 +106,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件列表大小
+     * Get 文件列表大小 
      * @return Limit 文件列表大小
      */
     public Long getLimit() {
@@ -130,7 +130,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件列表大小
+     * Set 文件列表大小
      * @param Limit 文件列表大小
      */
     public void setLimit(Long Limit) {
@@ -138,7 +138,7 @@ public class DescribeIdlFileInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

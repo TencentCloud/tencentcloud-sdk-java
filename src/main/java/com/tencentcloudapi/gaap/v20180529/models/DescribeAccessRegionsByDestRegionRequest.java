@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessRegionsByDestRegionRequest  extends AbstractModel{
+public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
 
     /**
     * 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
@@ -30,7 +30,7 @@ public class DescribeAccessRegionsByDestRegionRequest  extends AbstractModel{
     private String DestRegion;
 
     /**
-     * 获取源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
+     * Get 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值 
      * @return DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      */
     public String getDestRegion() {
@@ -38,7 +38,7 @@ public class DescribeAccessRegionsByDestRegionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
+     * Set 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      * @param DestRegion 源站区域：接口DescribeDestRegions返回DestRegionSet中的RegionId字段值
      */
     public void setDestRegion(String DestRegion) {
@@ -46,7 +46,7 @@ public class DescribeAccessRegionsByDestRegionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestRegion", this.DestRegion);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SortBy  extends AbstractModel{
+public class SortBy extends AbstractModel{
 
     /**
     * 排序字段
@@ -37,7 +37,7 @@ public class SortBy  extends AbstractModel{
     private String Order;
 
     /**
-     * 获取排序字段
+     * Get 排序字段 
      * @return Field 排序字段
      */
     public String getField() {
@@ -45,7 +45,7 @@ public class SortBy  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段
+     * Set 排序字段
      * @param Field 排序字段
      */
     public void setField(String Field) {
@@ -53,7 +53,7 @@ public class SortBy  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，可选值：Asc（升序）、Desc（降序）
+     * Get 排序方式，可选值：Asc（升序）、Desc（降序） 
      * @return Order 排序方式，可选值：Asc（升序）、Desc（降序）
      */
     public String getOrder() {
@@ -61,7 +61,7 @@ public class SortBy  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，可选值：Asc（升序）、Desc（降序）
+     * Set 排序方式，可选值：Asc（升序）、Desc（降序）
      * @param Order 排序方式，可选值：Asc（升序）、Desc（降序）
      */
     public void setOrder(String Order) {
@@ -69,7 +69,7 @@ public class SortBy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Field", this.Field);

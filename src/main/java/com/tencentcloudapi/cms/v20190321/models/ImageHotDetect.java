@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageHotDetect  extends AbstractModel{
+public class ImageHotDetect extends AbstractModel{
 
     /**
     * 恶意类型
@@ -60,9 +60,9 @@ public class ImageHotDetect  extends AbstractModel{
     private Long Score;
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
-20103：性感
+20103：性感 
      * @return EvilType 恶意类型
 100：正常
 20103：性感
@@ -72,7 +72,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 20103：性感
      * @param EvilType 恶意类型
@@ -84,7 +84,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 获取处置判定 0：正常 1：可疑
+     * Get 处置判定 0：正常 1：可疑 
      * @return HitFlag 处置判定 0：正常 1：可疑
      */
     public Long getHitFlag() {
@@ -92,7 +92,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 设置处置判定 0：正常 1：可疑
+     * Set 处置判定 0：正常 1：可疑
      * @param HitFlag 处置判定 0：正常 1：可疑
      */
     public void setHitFlag(Long HitFlag) {
@@ -100,7 +100,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 获取关键词明细
+     * Get 关键词明细 
      * @return Keywords 关键词明细
      */
     public String [] getKeywords() {
@@ -108,7 +108,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 设置关键词明细
+     * Set 关键词明细
      * @param Keywords 关键词明细
      */
     public void setKeywords(String [] Keywords) {
@@ -116,7 +116,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 获取性感标签：性感特征中文描述
+     * Get 性感标签：性感特征中文描述 
      * @return Labels 性感标签：性感特征中文描述
      */
     public String [] getLabels() {
@@ -124,7 +124,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 设置性感标签：性感特征中文描述
+     * Set 性感标签：性感特征中文描述
      * @param Labels 性感标签：性感特征中文描述
      */
     public void setLabels(String [] Labels) {
@@ -132,7 +132,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 获取性感分：分值范围 0-100，分数越高性感倾向越明显
+     * Get 性感分：分值范围 0-100，分数越高性感倾向越明显 
      * @return Score 性感分：分值范围 0-100，分数越高性感倾向越明显
      */
     public Long getScore() {
@@ -140,7 +140,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 设置性感分：分值范围 0-100，分数越高性感倾向越明显
+     * Set 性感分：分值范围 0-100，分数越高性感倾向越明显
      * @param Score 性感分：分值范围 0-100，分数越高性感倾向越明显
      */
     public void setScore(Long Score) {
@@ -148,7 +148,7 @@ public class ImageHotDetect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);

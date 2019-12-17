@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateCisRequest  extends AbstractModel{
+public class InquiryPriceCreateCisRequest extends AbstractModel{
 
     /**
     * 可用区
@@ -44,7 +44,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     private Float Memory;
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -52,7 +52,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -60,7 +60,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CPU，单位：核
+     * Get CPU，单位：核 
      * @return Cpu CPU，单位：核
      */
     public Float getCpu() {
@@ -68,7 +68,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CPU，单位：核
+     * Set CPU，单位：核
      * @param Cpu CPU，单位：核
      */
     public void setCpu(Float Cpu) {
@@ -76,7 +76,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存，单位：Gi
+     * Get 内存，单位：Gi 
      * @return Memory 内存，单位：Gi
      */
     public Float getMemory() {
@@ -84,7 +84,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存，单位：Gi
+     * Set 内存，单位：Gi
      * @param Memory 内存，单位：Gi
      */
     public void setMemory(Float Memory) {
@@ -92,7 +92,7 @@ public class InquiryPriceCreateCisRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

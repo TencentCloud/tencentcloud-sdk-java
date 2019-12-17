@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransmitAudioStreamResponse  extends AbstractModel{
+public class TransmitAudioStreamResponse extends AbstractModel{
 
     /**
     * 返回的当前音频的统计信息。当进度为100时返回。
@@ -72,7 +72,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的当前音频的统计信息。当进度为100时返回。
+     * Get 返回的当前音频的统计信息。当进度为100时返回。 
      * @return AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      */
     public ASRStat getAsrStat() {
@@ -80,7 +80,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的当前音频的统计信息。当进度为100时返回。
+     * Set 返回的当前音频的统计信息。当进度为100时返回。
      * @param AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      */
     public void setAsrStat(ASRStat AsrStat) {
@@ -88,7 +88,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+     * Get 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。 
      * @return Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      */
     public WholeTextItem [] getTexts() {
@@ -96,7 +96,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+     * Set 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      * @param Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      */
     public void setTexts(WholeTextItem [] Texts) {
@@ -104,7 +104,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回词汇库中的单词出现的详细时间信息。
+     * Get 返回词汇库中的单词出现的详细时间信息。 
      * @return VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      */
     public VocabDetailInfomation [] getVocabAnalysisDetailInfo() {
@@ -112,7 +112,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回词汇库中的单词出现的详细时间信息。
+     * Set 返回词汇库中的单词出现的详细时间信息。
      * @param VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      */
     public void setVocabAnalysisDetailInfo(VocabDetailInfomation [] VocabAnalysisDetailInfo) {
@@ -120,7 +120,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回词汇库中的单词出现的次数信息。
+     * Get 返回词汇库中的单词出现的次数信息。 
      * @return VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
      */
     public VocabStatInfomation [] getVocabAnalysisStatInfo() {
@@ -128,7 +128,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回词汇库中的单词出现的次数信息。
+     * Set 返回词汇库中的单词出现的次数信息。
      * @param VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
      */
     public void setVocabAnalysisStatInfo(VocabStatInfomation [] VocabAnalysisStatInfo) {
@@ -136,7 +136,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取音频全部文本。
+     * Get 音频全部文本。 
      * @return AllTexts 音频全部文本。
      */
     public String getAllTexts() {
@@ -144,7 +144,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置音频全部文本。
+     * Set 音频全部文本。
      * @param AllTexts 音频全部文本。
      */
     public void setAllTexts(String AllTexts) {
@@ -152,7 +152,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取临时保存的音频链接
+     * Get 临时保存的音频链接 
      * @return AudioUrl 临时保存的音频链接
      */
     public String getAudioUrl() {
@@ -160,7 +160,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置临时保存的音频链接
+     * Set 临时保存的音频链接
      * @param AudioUrl 临时保存的音频链接
      */
     public void setAudioUrl(String AudioUrl) {
@@ -168,7 +168,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class TransmitAudioStreamResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AsrStat.", this.AsrStat);

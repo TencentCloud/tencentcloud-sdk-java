@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PaiInstance  extends AbstractModel{
+public class PaiInstance extends AbstractModel{
 
     /**
     * 实例ID
@@ -44,7 +44,7 @@ public class PaiInstance  extends AbstractModel{
     private String PaiMateUrl;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例域名
+     * Get 实例域名 
      * @return DomainName 实例域名
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例域名
+     * Set 实例域名
      * @param DomainName 实例域名
      */
     public void setDomainName(String DomainName) {
@@ -76,7 +76,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 获取PAI管理页面URL
+     * Get PAI管理页面URL 
      * @return PaiMateUrl PAI管理页面URL
      */
     public String getPaiMateUrl() {
@@ -84,7 +84,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 设置PAI管理页面URL
+     * Set PAI管理页面URL
      * @param PaiMateUrl PAI管理页面URL
      */
     public void setPaiMateUrl(String PaiMateUrl) {
@@ -92,7 +92,7 @@ public class PaiInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

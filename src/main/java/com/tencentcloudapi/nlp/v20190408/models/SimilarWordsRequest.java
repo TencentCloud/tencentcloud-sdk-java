@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SimilarWordsRequest  extends AbstractModel{
+public class SimilarWordsRequest extends AbstractModel{
 
     /**
     * 输入的词语（仅支持UTF-8格式，不超过20字）
@@ -37,7 +37,7 @@ public class SimilarWordsRequest  extends AbstractModel{
     private Long WordNumber;
 
     /**
-     * 获取输入的词语（仅支持UTF-8格式，不超过20字）
+     * Get 输入的词语（仅支持UTF-8格式，不超过20字） 
      * @return Text 输入的词语（仅支持UTF-8格式，不超过20字）
      */
     public String getText() {
@@ -45,7 +45,7 @@ public class SimilarWordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的词语（仅支持UTF-8格式，不超过20字）
+     * Set 输入的词语（仅支持UTF-8格式，不超过20字）
      * @param Text 输入的词语（仅支持UTF-8格式，不超过20字）
      */
     public void setText(String Text) {
@@ -53,7 +53,7 @@ public class SimilarWordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取相似词个数；取值范围：1-200，默认为10；
+     * Get 相似词个数；取值范围：1-200，默认为10； 
      * @return WordNumber 相似词个数；取值范围：1-200，默认为10；
      */
     public Long getWordNumber() {
@@ -61,7 +61,7 @@ public class SimilarWordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置相似词个数；取值范围：1-200，默认为10；
+     * Set 相似词个数；取值范围：1-200，默认为10；
      * @param WordNumber 相似词个数；取值范围：1-200，默认为10；
      */
     public void setWordNumber(Long WordNumber) {
@@ -69,7 +69,7 @@ public class SimilarWordsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

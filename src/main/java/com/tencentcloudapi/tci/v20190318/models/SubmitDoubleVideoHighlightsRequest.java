@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
+public class SubmitDoubleVideoHighlightsRequest extends AbstractModel{
 
     /**
     * 学生视频url
@@ -79,7 +79,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     private String TeacherFileContent;
 
     /**
-     * 获取学生视频url
+     * Get 学生视频url 
      * @return FileContent 学生视频url
      */
     public String getFileContent() {
@@ -87,7 +87,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置学生视频url
+     * Set 学生视频url
      * @param FileContent 学生视频url
      */
     public void setFileContent(String FileContent) {
@@ -95,7 +95,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
+     * Get 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。 
      * @return LibIds 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
      */
     public String [] getLibIds() {
@@ -103,7 +103,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
+     * Set 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
      * @param LibIds 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦；目前仅支持输入一个人脸库。
      */
     public void setLibIds(String [] LibIds) {
@@ -111,7 +111,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取详细功能开关配置项
+     * Get 详细功能开关配置项 
      * @return Functions 详细功能开关配置项
      */
     public DoubleVideoFunction getFunctions() {
@@ -119,7 +119,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置详细功能开关配置项
+     * Set 详细功能开关配置项
      * @param Functions 详细功能开关配置项
      */
     public void setFunctions(DoubleVideoFunction Functions) {
@@ -127,7 +127,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要匹配的人员信息列表。
+     * Get 需要匹配的人员信息列表。 
      * @return PersonInfoList 需要匹配的人员信息列表。
      */
     public PersonInfo [] getPersonInfoList() {
@@ -135,7 +135,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要匹配的人员信息列表。
+     * Set 需要匹配的人员信息列表。
      * @param PersonInfoList 需要匹配的人员信息列表。
      */
     public void setPersonInfoList(PersonInfo [] PersonInfoList) {
@@ -143,7 +143,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理的抽帧间隔，单位毫秒。建议留空。
+     * Get 视频处理的抽帧间隔，单位毫秒。建议留空。 
      * @return FrameInterval 视频处理的抽帧间隔，单位毫秒。建议留空。
      */
     public Long getFrameInterval() {
@@ -151,7 +151,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的抽帧间隔，单位毫秒。建议留空。
+     * Set 视频处理的抽帧间隔，单位毫秒。建议留空。
      * @param FrameInterval 视频处理的抽帧间隔，单位毫秒。建议留空。
      */
     public void setFrameInterval(Long FrameInterval) {
@@ -159,7 +159,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取旧版本需要匹配的人员信息列表。
+     * Get 旧版本需要匹配的人员信息列表。 
      * @return PersonIds 旧版本需要匹配的人员信息列表。
      */
     public String [] getPersonIds() {
@@ -167,7 +167,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置旧版本需要匹配的人员信息列表。
+     * Set 旧版本需要匹配的人员信息列表。
      * @param PersonIds 旧版本需要匹配的人员信息列表。
      */
     public void setPersonIds(String [] PersonIds) {
@@ -175,7 +175,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检索的相似度阈值，默认值0.89。建议留空。
+     * Get 人脸检索的相似度阈值，默认值0.89。建议留空。 
      * @return SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public Float getSimThreshold() {
@@ -183,7 +183,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检索的相似度阈值，默认值0.89。建议留空。
+     * Set 人脸检索的相似度阈值，默认值0.89。建议留空。
      * @param SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public void setSimThreshold(Float SimThreshold) {
@@ -191,7 +191,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取老师视频url
+     * Get 老师视频url 
      * @return TeacherFileContent 老师视频url
      */
     public String getTeacherFileContent() {
@@ -199,7 +199,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置老师视频url
+     * Set 老师视频url
      * @param TeacherFileContent 老师视频url
      */
     public void setTeacherFileContent(String TeacherFileContent) {
@@ -207,7 +207,7 @@ public class SubmitDoubleVideoHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

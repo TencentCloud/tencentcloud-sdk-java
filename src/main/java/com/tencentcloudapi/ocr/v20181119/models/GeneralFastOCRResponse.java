@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralFastOCRResponse  extends AbstractModel{
+public class GeneralFastOCRResponse extends AbstractModel{
 
     /**
     * 检测到的文本信息，具体内容请点击左侧链接。
@@ -45,7 +45,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接。
+     * Get 检测到的文本信息，具体内容请点击左侧链接。 
      * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public TextDetection [] getTextDetections() {
@@ -53,7 +53,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接。
+     * Set 检测到的文本信息，具体内容请点击左侧链接。
      * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public void setTextDetections(TextDetection [] TextDetections) {
@@ -61,8 +61,8 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
-返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
+     * Get 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
+返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。 
      * @return Language 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
 返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      */
@@ -71,7 +71,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
+     * Set 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
 返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
      * @param Language 检测到的语言，目前支持的语种范围为：简体中文、繁体中文、英文、日文、韩文。未来将陆续新增对更多语种的支持。
 返回结果含义为：zh - 中英混合，jap - 日文，kor - 韩文。
@@ -81,7 +81,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class GeneralFastOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubnetAttributeRequest  extends AbstractModel{
+public class ModifySubnetAttributeRequest extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -44,7 +44,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     private String SubnetName;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -52,7 +52,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -60,7 +60,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -68,7 +68,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -76,7 +76,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称
+     * Get 子网名称 
      * @return SubnetName 子网名称
      */
     public String getSubnetName() {
@@ -84,7 +84,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称
+     * Set 子网名称
      * @param SubnetName 子网名称
      */
     public void setSubnetName(String SubnetName) {
@@ -92,7 +92,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

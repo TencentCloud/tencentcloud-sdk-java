@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimeWindowResponse  extends AbstractModel{
+public class DescribeTimeWindowResponse extends AbstractModel{
 
     /**
     * 星期一的可维护时间列表。
@@ -79,7 +79,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取星期一的可维护时间列表。
+     * Get 星期一的可维护时间列表。 
      * @return Monday 星期一的可维护时间列表。
      */
     public String [] getMonday() {
@@ -87,7 +87,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期一的可维护时间列表。
+     * Set 星期一的可维护时间列表。
      * @param Monday 星期一的可维护时间列表。
      */
     public void setMonday(String [] Monday) {
@@ -95,7 +95,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期二的可维护时间列表。
+     * Get 星期二的可维护时间列表。 
      * @return Tuesday 星期二的可维护时间列表。
      */
     public String [] getTuesday() {
@@ -103,7 +103,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期二的可维护时间列表。
+     * Set 星期二的可维护时间列表。
      * @param Tuesday 星期二的可维护时间列表。
      */
     public void setTuesday(String [] Tuesday) {
@@ -111,7 +111,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期三的可维护时间列表。
+     * Get 星期三的可维护时间列表。 
      * @return Wednesday 星期三的可维护时间列表。
      */
     public String [] getWednesday() {
@@ -119,7 +119,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期三的可维护时间列表。
+     * Set 星期三的可维护时间列表。
      * @param Wednesday 星期三的可维护时间列表。
      */
     public void setWednesday(String [] Wednesday) {
@@ -127,7 +127,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期四的可维护时间列表。
+     * Get 星期四的可维护时间列表。 
      * @return Thursday 星期四的可维护时间列表。
      */
     public String [] getThursday() {
@@ -135,7 +135,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期四的可维护时间列表。
+     * Set 星期四的可维护时间列表。
      * @param Thursday 星期四的可维护时间列表。
      */
     public void setThursday(String [] Thursday) {
@@ -143,7 +143,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期五的可维护时间列表。
+     * Get 星期五的可维护时间列表。 
      * @return Friday 星期五的可维护时间列表。
      */
     public String [] getFriday() {
@@ -151,7 +151,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期五的可维护时间列表。
+     * Set 星期五的可维护时间列表。
      * @param Friday 星期五的可维护时间列表。
      */
     public void setFriday(String [] Friday) {
@@ -159,7 +159,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期六的可维护时间列表。
+     * Get 星期六的可维护时间列表。 
      * @return Saturday 星期六的可维护时间列表。
      */
     public String [] getSaturday() {
@@ -167,7 +167,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期六的可维护时间列表。
+     * Set 星期六的可维护时间列表。
      * @param Saturday 星期六的可维护时间列表。
      */
     public void setSaturday(String [] Saturday) {
@@ -175,7 +175,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取星期日的可维护时间列表。
+     * Get 星期日的可维护时间列表。 
      * @return Sunday 星期日的可维护时间列表。
      */
     public String [] getSunday() {
@@ -183,7 +183,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置星期日的可维护时间列表。
+     * Set 星期日的可维护时间列表。
      * @param Sunday 星期日的可维护时间列表。
      */
     public void setSunday(String [] Sunday) {
@@ -191,7 +191,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribeTimeWindowResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Monday.", this.Monday);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageRequest  extends AbstractModel{
+public class CreateImageRequest extends AbstractModel{
 
     /**
     * 镜像名称
@@ -80,7 +80,7 @@ public class CreateImageRequest  extends AbstractModel{
     private Boolean DryRun;
 
     /**
-     * 获取镜像名称
+     * Get 镜像名称 
      * @return ImageName 镜像名称
      */
     public String getImageName() {
@@ -88,7 +88,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像名称
+     * Set 镜像名称
      * @param ImageName 镜像名称
      */
     public void setImageName(String ImageName) {
@@ -96,7 +96,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要制作镜像的实例ID
+     * Get 需要制作镜像的实例ID 
      * @return InstanceId 需要制作镜像的实例ID
      */
     public String getInstanceId() {
@@ -104,7 +104,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要制作镜像的实例ID
+     * Set 需要制作镜像的实例ID
      * @param InstanceId 需要制作镜像的实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -112,7 +112,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像描述
+     * Get 镜像描述 
      * @return ImageDescription 镜像描述
      */
     public String getImageDescription() {
@@ -120,7 +120,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像描述
+     * Set 镜像描述
      * @param ImageDescription 镜像描述
      */
     public void setImageDescription(String ImageDescription) {
@@ -128,8 +128,8 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否执行强制关机以制作镜像。
-取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     * Get 是否执行强制关机以制作镜像。
+取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。 
      * @return ForcePoweroff 是否执行强制关机以制作镜像。
 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
@@ -138,7 +138,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否执行强制关机以制作镜像。
+     * Set 是否执行强制关机以制作镜像。
 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      * @param ForcePoweroff 是否执行强制关机以制作镜像。
 取值范围：<br><li>TRUE：表示关机之后制作镜像<br><li>FALSE：表示开机状态制作镜像<br><br>默认取值：FALSE。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
@@ -148,7 +148,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建Windows镜像时是否启用Sysprep
+     * Get 创建Windows镜像时是否启用Sysprep 
      * @return Sysprep 创建Windows镜像时是否启用Sysprep
      */
     public String getSysprep() {
@@ -156,7 +156,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建Windows镜像时是否启用Sysprep
+     * Set 创建Windows镜像时是否启用Sysprep
      * @param Sysprep 创建Windows镜像时是否启用Sysprep
      */
     public void setSysprep(String Sysprep) {
@@ -164,7 +164,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例需要制作镜像的数据盘Id
+     * Get 实例需要制作镜像的数据盘Id 
      * @return DataDiskIds 实例需要制作镜像的数据盘Id
      */
     public String [] getDataDiskIds() {
@@ -172,7 +172,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例需要制作镜像的数据盘Id
+     * Set 实例需要制作镜像的数据盘Id
      * @param DataDiskIds 实例需要制作镜像的数据盘Id
      */
     public void setDataDiskIds(String [] DataDiskIds) {
@@ -180,7 +180,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要制作镜像的快照ID,必须包含一个系统盘快照
+     * Get 需要制作镜像的快照ID,必须包含一个系统盘快照 
      * @return SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
      */
     public String [] getSnapshotIds() {
@@ -188,7 +188,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要制作镜像的快照ID,必须包含一个系统盘快照
+     * Set 需要制作镜像的快照ID,必须包含一个系统盘快照
      * @param SnapshotIds 需要制作镜像的快照ID,必须包含一个系统盘快照
      */
     public void setSnapshotIds(String [] SnapshotIds) {
@@ -196,7 +196,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检测请求的合法性，但不会对操作的资源产生任何影响
+     * Get 检测请求的合法性，但不会对操作的资源产生任何影响 
      * @return DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public Boolean getDryRun() {
@@ -204,7 +204,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检测请求的合法性，但不会对操作的资源产生任何影响
+     * Set 检测请求的合法性，但不会对操作的资源产生任何影响
      * @param DryRun 检测请求的合法性，但不会对操作的资源产生任何影响
      */
     public void setDryRun(Boolean DryRun) {
@@ -212,7 +212,7 @@ public class CreateImageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);

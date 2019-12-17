@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultListRequest  extends AbstractModel{
+public class DescribeScanResultListRequest extends AbstractModel{
 
     /**
     * 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
@@ -44,7 +44,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Get 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
      * @return BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public Long getBizId() {
@@ -52,7 +52,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Set 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param BizId 应用 ID，登录[控制台](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public void setBizId(Long BizId) {
@@ -60,7 +60,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
+     * Get 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。 
      * @return TaskIdList 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
      */
     public String [] getTaskIdList() {
@@ -68,7 +68,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
+     * Set 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
      * @param TaskIdList 查询的任务 ID 列表，任务 ID 列表最多支持 100 个。
      */
     public void setTaskIdList(String [] TaskIdList) {
@@ -76,7 +76,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     * Get 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果 
      * @return Limit 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
+     * Set 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
      * @param Limit 任务返回结果数量，默认10，上限500。大文件任务忽略此参数，返回全量结果
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class DescribeScanResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

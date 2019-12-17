@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceProjectRequest  extends AbstractModel{
+public class ModifyDBInstanceProjectRequest extends AbstractModel{
 
     /**
     * 实例ID数组，形如mssql-j8kv137v
@@ -34,10 +34,10 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
-     * 获取实例ID数组，形如mssql-j8kv137v
+     * Get 实例ID数组，形如mssql-j8kv137v 
      * @return InstanceIdSet 实例ID数组，形如mssql-j8kv137v
      */
     public String [] getInstanceIdSet() {
@@ -45,7 +45,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID数组，形如mssql-j8kv137v
+     * Set 实例ID数组，形如mssql-j8kv137v
      * @param InstanceIdSet 实例ID数组，形如mssql-j8kv137v
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
@@ -53,23 +53,23 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，为0的话表示默认项目
+     * Get 项目ID，为0的话表示默认项目 
      * @return ProjectId 项目ID，为0的话表示默认项目
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目ID，为0的话表示默认项目
+     * Set 项目ID，为0的话表示默认项目
      * @param ProjectId 项目ID，为0的话表示默认项目
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);

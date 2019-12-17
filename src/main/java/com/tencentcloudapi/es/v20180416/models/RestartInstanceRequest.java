@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestartInstanceRequest  extends AbstractModel{
+public class RestartInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -37,7 +37,7 @@ public class RestartInstanceRequest  extends AbstractModel{
     private Boolean ForceRestart;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class RestartInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class RestartInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * Get 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false 
      * @return ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public Boolean getForceRestart() {
@@ -61,7 +61,7 @@ public class RestartInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
+     * Set 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      * @param ForceRestart 是否强制重启<li>true：强制重启</li><li>false：不强制重启</li>默认false
      */
     public void setForceRestart(Boolean ForceRestart) {
@@ -69,7 +69,7 @@ public class RestartInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

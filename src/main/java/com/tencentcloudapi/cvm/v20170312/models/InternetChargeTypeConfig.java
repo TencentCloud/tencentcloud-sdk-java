@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InternetChargeTypeConfig  extends AbstractModel{
+public class InternetChargeTypeConfig extends AbstractModel{
 
     /**
     * 网络计费模式。
@@ -37,7 +37,7 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取网络计费模式。
+     * Get 网络计费模式。 
      * @return InternetChargeType 网络计费模式。
      */
     public String getInternetChargeType() {
@@ -45,7 +45,7 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置网络计费模式。
+     * Set 网络计费模式。
      * @param InternetChargeType 网络计费模式。
      */
     public void setInternetChargeType(String InternetChargeType) {
@@ -53,7 +53,7 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取网络计费模式描述信息。
+     * Get 网络计费模式描述信息。 
      * @return Description 网络计费模式描述信息。
      */
     public String getDescription() {
@@ -61,7 +61,7 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置网络计费模式描述信息。
+     * Set 网络计费模式描述信息。
      * @param Description 网络计费模式描述信息。
      */
     public void setDescription(String Description) {
@@ -69,7 +69,7 @@ public class InternetChargeTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);

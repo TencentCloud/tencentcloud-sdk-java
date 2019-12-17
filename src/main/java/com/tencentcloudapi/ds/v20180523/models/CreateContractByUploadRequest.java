@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContractByUploadRequest  extends AbstractModel{
+public class CreateContractByUploadRequest extends AbstractModel{
 
     /**
     * 模块名ContractMng
@@ -79,7 +79,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取模块名ContractMng
+     * Get 模块名ContractMng 
      * @return Module 模块名ContractMng
      */
     public String getModule() {
@@ -87,7 +87,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名ContractMng
+     * Set 模块名ContractMng
      * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
@@ -95,7 +95,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名CreateContractByUpload
+     * Get 操作名CreateContractByUpload 
      * @return Operation 操作名CreateContractByUpload
      */
     public String getOperation() {
@@ -103,7 +103,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名CreateContractByUpload
+     * Set 操作名CreateContractByUpload
      * @param Operation 操作名CreateContractByUpload
      */
     public void setOperation(String Operation) {
@@ -111,7 +111,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签署人信息
+     * Get 签署人信息 
      * @return SignInfos 签署人信息
      */
     public SignInfo [] getSignInfos() {
@@ -119,7 +119,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签署人信息
+     * Set 签署人信息
      * @param SignInfos 签署人信息
      */
     public void setSignInfos(SignInfo [] SignInfos) {
@@ -127,7 +127,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同上传链接地址
+     * Get 合同上传链接地址 
      * @return ContractFile 合同上传链接地址
      */
     public String getContractFile() {
@@ -135,7 +135,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同上传链接地址
+     * Set 合同上传链接地址
      * @param ContractFile 合同上传链接地址
      */
     public void setContractFile(String ContractFile) {
@@ -143,7 +143,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同名称
+     * Get 合同名称 
      * @return ContractName 合同名称
      */
     public String getContractName() {
@@ -151,7 +151,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同名称
+     * Set 合同名称
      * @param ContractName 合同名称
      */
     public void setContractName(String ContractName) {
@@ -159,7 +159,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同发起方帐号ID
+     * Get 合同发起方帐号ID 
      * @return Initiator 合同发起方帐号ID
      */
     public String getInitiator() {
@@ -167,7 +167,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同发起方帐号ID
+     * Set 合同发起方帐号ID
      * @param Initiator 合同发起方帐号ID
      */
     public void setInitiator(String Initiator) {
@@ -175,7 +175,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remarks 备注
      */
     public String getRemarks() {
@@ -183,7 +183,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remarks 备注
      */
     public void setRemarks(String Remarks) {
@@ -191,7 +191,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同长时间未签署的过期时间
+     * Get 合同长时间未签署的过期时间 
      * @return ExpireTime 合同长时间未签署的过期时间
      */
     public String getExpireTime() {
@@ -199,7 +199,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同长时间未签署的过期时间
+     * Set 合同长时间未签署的过期时间
      * @param ExpireTime 合同长时间未签署的过期时间
      */
     public void setExpireTime(String ExpireTime) {
@@ -207,7 +207,7 @@ public class CreateContractByUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneHourFlow  extends AbstractModel{
+public class ZoneHourFlow extends AbstractModel{
 
     /**
     * 分时 0~23
@@ -37,7 +37,7 @@ public class ZoneHourFlow  extends AbstractModel{
     private Integer FlowCount;
 
     /**
-     * 获取分时 0~23
+     * Get 分时 0~23 
      * @return Hour 分时 0~23
      */
     public Integer getHour() {
@@ -45,7 +45,7 @@ public class ZoneHourFlow  extends AbstractModel{
     }
 
     /**
-     * 设置分时 0~23
+     * Set 分时 0~23
      * @param Hour 分时 0~23
      */
     public void setHour(Integer Hour) {
@@ -53,7 +53,7 @@ public class ZoneHourFlow  extends AbstractModel{
     }
 
     /**
-     * 获取客流量
+     * Get 客流量 
      * @return FlowCount 客流量
      */
     public Integer getFlowCount() {
@@ -61,7 +61,7 @@ public class ZoneHourFlow  extends AbstractModel{
     }
 
     /**
-     * 设置客流量
+     * Set 客流量
      * @param FlowCount 客流量
      */
     public void setFlowCount(Integer FlowCount) {
@@ -69,7 +69,7 @@ public class ZoneHourFlow  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Hour", this.Hour);

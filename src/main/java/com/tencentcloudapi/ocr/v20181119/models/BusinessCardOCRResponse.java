@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessCardOCRResponse  extends AbstractModel{
+public class BusinessCardOCRResponse extends AbstractModel{
 
     /**
     * 名片识别结果，具体内容请点击左侧链接。
@@ -44,7 +44,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取名片识别结果，具体内容请点击左侧链接。
+     * Get 名片识别结果，具体内容请点击左侧链接。 
      * @return BusinessCardInfos 名片识别结果，具体内容请点击左侧链接。
      */
     public BusinessCardInfo [] getBusinessCardInfos() {
@@ -52,7 +52,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置名片识别结果，具体内容请点击左侧链接。
+     * Set 名片识别结果，具体内容请点击左侧链接。
      * @param BusinessCardInfos 名片识别结果，具体内容请点击左侧链接。
      */
     public void setBusinessCardInfos(BusinessCardInfo [] BusinessCardInfos) {
@@ -60,7 +60,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回图像预处理后的图片，图像预处理未开启时返回内容为空。
+     * Get 返回图像预处理后的图片，图像预处理未开启时返回内容为空。 
      * @return RetImageBase64 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
      */
     public String getRetImageBase64() {
@@ -68,7 +68,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回图像预处理后的图片，图像预处理未开启时返回内容为空。
+     * Set 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
      * @param RetImageBase64 返回图像预处理后的图片，图像预处理未开启时返回内容为空。
      */
     public void setRetImageBase64(String RetImageBase64) {
@@ -76,7 +76,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class BusinessCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BusinessCardInfos.", this.BusinessCardInfos);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PermitOCRResponse  extends AbstractModel{
+public class PermitOCRResponse extends AbstractModel{
 
     /**
     * 姓名
@@ -86,7 +86,7 @@ public class PermitOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -94,7 +94,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -102,7 +102,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取英文姓名
+     * Get 英文姓名 
      * @return EnglishName 英文姓名
      */
     public String getEnglishName() {
@@ -110,7 +110,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置英文姓名
+     * Set 英文姓名
      * @param EnglishName 英文姓名
      */
     public void setEnglishName(String EnglishName) {
@@ -118,7 +118,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证件号
+     * Get 证件号 
      * @return Number 证件号
      */
     public String getNumber() {
@@ -126,7 +126,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证件号
+     * Set 证件号
      * @param Number 证件号
      */
     public void setNumber(String Number) {
@@ -134,7 +134,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -142,7 +142,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -150,7 +150,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期限
+     * Get 有效期限 
      * @return ValidDate 有效期限
      */
     public String getValidDate() {
@@ -158,7 +158,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期限
+     * Set 有效期限
      * @param ValidDate 有效期限
      */
     public void setValidDate(String ValidDate) {
@@ -166,7 +166,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取签发机关
+     * Get 签发机关 
      * @return IssueAuthority 签发机关
      */
     public String getIssueAuthority() {
@@ -174,7 +174,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置签发机关
+     * Set 签发机关
      * @param IssueAuthority 签发机关
      */
     public void setIssueAuthority(String IssueAuthority) {
@@ -182,7 +182,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取签发地点
+     * Get 签发地点 
      * @return IssueAddress 签发地点
      */
     public String getIssueAddress() {
@@ -190,7 +190,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置签发地点
+     * Set 签发地点
      * @param IssueAddress 签发地点
      */
     public void setIssueAddress(String IssueAddress) {
@@ -198,7 +198,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生日期
+     * Get 出生日期 
      * @return Birthday 出生日期
      */
     public String getBirthday() {
@@ -206,7 +206,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生日期
+     * Set 出生日期
      * @param Birthday 出生日期
      */
     public void setBirthday(String Birthday) {
@@ -214,7 +214,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class PermitOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

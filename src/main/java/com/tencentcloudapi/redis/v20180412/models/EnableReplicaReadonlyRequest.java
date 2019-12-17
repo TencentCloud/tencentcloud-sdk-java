@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableReplicaReadonlyRequest  extends AbstractModel{
+public class EnableReplicaReadonlyRequest extends AbstractModel{
 
     /**
     * 实例序号ID
@@ -37,7 +37,7 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     private String [] ReadonlyPolicy;
 
     /**
-     * 获取实例序号ID
+     * Get 实例序号ID 
      * @return InstanceId 实例序号ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例序号ID
+     * Set 实例序号ID
      * @param InstanceId 实例序号ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * Get 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点 
      * @return ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
      */
     public String [] getReadonlyPolicy() {
@@ -61,7 +61,7 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * Set 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
      * @param ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
@@ -69,7 +69,7 @@ public class EnableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

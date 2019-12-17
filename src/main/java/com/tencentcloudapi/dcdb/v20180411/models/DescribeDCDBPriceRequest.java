@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBPriceRequest  extends AbstractModel{
+public class DescribeDCDBPriceRequest extends AbstractModel{
 
     /**
     * 欲新购实例的可用区ID。
@@ -75,7 +75,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     private Integer ShardCount;
 
     /**
-     * 获取欲新购实例的可用区ID。
+     * Get 欲新购实例的可用区ID。 
      * @return Zone 欲新购实例的可用区ID。
      */
     public String getZone() {
@@ -83,7 +83,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲新购实例的可用区ID。
+     * Set 欲新购实例的可用区ID。
      * @param Zone 欲新购实例的可用区ID。
      */
     public void setZone(String Zone) {
@@ -91,7 +91,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买实例的数量，目前只支持购买1个实例
+     * Get 欲购买实例的数量，目前只支持购买1个实例 
      * @return Count 欲购买实例的数量，目前只支持购买1个实例
      */
     public Integer getCount() {
@@ -99,7 +99,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买实例的数量，目前只支持购买1个实例
+     * Set 欲购买实例的数量，目前只支持购买1个实例
      * @param Count 欲购买实例的数量，目前只支持购买1个实例
      */
     public void setCount(Integer Count) {
@@ -107,7 +107,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的时长，单位：月。
+     * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
     public Integer getPeriod() {
@@ -115,7 +115,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的时长，单位：月。
+     * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
     public void setPeriod(Integer Period) {
@@ -123,8 +123,8 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单个分片节点个数大小，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 单个分片节点个数大小，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardNodeCount 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -133,7 +133,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单个分片节点个数大小，可以通过 DescribeShardSpec
+     * Set 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardNodeCount 单个分片节点个数大小，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -143,8 +143,8 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片内存大小，单位：GB，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 分片内存大小，单位：GB，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -153,7 +153,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片内存大小，单位：GB，可以通过 DescribeShardSpec
+     * Set 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -163,8 +163,8 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -173,7 +173,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
+     * Set 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -183,7 +183,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+     * Get 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。 
      * @return ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
     public Integer getShardCount() {
@@ -191,7 +191,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+     * Set 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      * @param ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
     public void setShardCount(Integer ShardCount) {
@@ -199,7 +199,7 @@ public class DescribeDCDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

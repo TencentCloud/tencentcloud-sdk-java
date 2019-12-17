@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SourceCommand  extends AbstractModel{
+public class SourceCommand extends AbstractModel{
 
     /**
     * 命令
@@ -37,7 +37,7 @@ public class SourceCommand  extends AbstractModel{
     private Integer Count;
 
     /**
-     * 获取命令
+     * Get 命令 
      * @return Cmd 命令
      */
     public String getCmd() {
@@ -45,7 +45,7 @@ public class SourceCommand  extends AbstractModel{
     }
 
     /**
-     * 设置命令
+     * Set 命令
      * @param Cmd 命令
      */
     public void setCmd(String Cmd) {
@@ -53,7 +53,7 @@ public class SourceCommand  extends AbstractModel{
     }
 
     /**
-     * 获取执行次数
+     * Get 执行次数 
      * @return Count 执行次数
      */
     public Integer getCount() {
@@ -61,7 +61,7 @@ public class SourceCommand  extends AbstractModel{
     }
 
     /**
-     * 设置执行次数
+     * Set 执行次数
      * @param Count 执行次数
      */
     public void setCount(Integer Count) {
@@ -69,7 +69,7 @@ public class SourceCommand  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cmd", this.Cmd);

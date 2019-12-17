@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightDistributionStatistic  extends AbstractModel{
+public class LightDistributionStatistic extends AbstractModel{
 
     /**
     * 时间点
@@ -37,7 +37,7 @@ public class LightDistributionStatistic  extends AbstractModel{
     private Long Value;
 
     /**
-     * 获取时间点
+     * Get 时间点 
      * @return Time 时间点
      */
     public Long getTime() {
@@ -45,7 +45,7 @@ public class LightDistributionStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置时间点
+     * Set 时间点
      * @param Time 时间点
      */
     public void setTime(Long Time) {
@@ -53,7 +53,7 @@ public class LightDistributionStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取光线值
+     * Get 光线值 
      * @return Value 光线值
      */
     public Long getValue() {
@@ -61,7 +61,7 @@ public class LightDistributionStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置光线值
+     * Set 光线值
      * @param Value 光线值
      */
     public void setValue(Long Value) {
@@ -69,7 +69,7 @@ public class LightDistributionStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

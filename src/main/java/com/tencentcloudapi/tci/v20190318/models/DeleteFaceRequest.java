@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFaceRequest  extends AbstractModel{
+public class DeleteFaceRequest extends AbstractModel{
 
     /**
     * 人脸标识符数组
@@ -44,7 +44,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     private String LibraryId;
 
     /**
-     * 获取人脸标识符数组
+     * Get 人脸标识符数组 
      * @return FaceIdSet 人脸标识符数组
      */
     public String [] getFaceIdSet() {
@@ -52,7 +52,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸标识符数组
+     * Set 人脸标识符数组
      * @param FaceIdSet 人脸标识符数组
      */
     public void setFaceIdSet(String [] FaceIdSet) {
@@ -60,7 +60,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -68,7 +68,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -76,7 +76,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -84,7 +84,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -92,7 +92,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FaceIdSet.", this.FaceIdSet);

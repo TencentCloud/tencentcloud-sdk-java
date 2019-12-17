@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceMessageConf  extends AbstractModel{
+public class VoiceMessageConf extends AbstractModel{
 
     /**
     * 离线语音服务开关，取值：open/close
@@ -37,7 +37,7 @@ public class VoiceMessageConf  extends AbstractModel{
     private String Language;
 
     /**
-     * 获取离线语音服务开关，取值：open/close
+     * Get 离线语音服务开关，取值：open/close 
      * @return Status 离线语音服务开关，取值：open/close
      */
     public String getStatus() {
@@ -45,7 +45,7 @@ public class VoiceMessageConf  extends AbstractModel{
     }
 
     /**
-     * 设置离线语音服务开关，取值：open/close
+     * Set 离线语音服务开关，取值：open/close
      * @param Status 离线语音服务开关，取值：open/close
      */
     public void setStatus(String Status) {
@@ -53,7 +53,7 @@ public class VoiceMessageConf  extends AbstractModel{
     }
 
     /**
-     * 获取离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
+     * Get 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文 
      * @return Language 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
      */
     public String getLanguage() {
@@ -61,7 +61,7 @@ public class VoiceMessageConf  extends AbstractModel{
     }
 
     /**
-     * 设置离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
+     * Set 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
      * @param Language 离线语音支持语种，取值： all-全部，cnen-中英文。默认为中英文
      */
     public void setLanguage(String Language) {
@@ -69,7 +69,7 @@ public class VoiceMessageConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupDetail  extends AbstractModel{
+public class SecurityGroupDetail extends AbstractModel{
 
     /**
     * 项目Id
@@ -72,7 +72,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     private SecurityGroupsInboundAndOutbound [] OutboundRule;
 
     /**
-     * 获取项目Id
+     * Get 项目Id 
      * @return ProjectId 项目Id
      */
     public Integer getProjectId() {
@@ -80,7 +80,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
      * @param ProjectId 项目Id
      */
     public void setProjectId(Integer ProjectId) {
@@ -88,7 +88,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -96,7 +96,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -104,7 +104,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组Id
+     * Get 安全组Id 
      * @return SecurityGroupId 安全组Id
      */
     public String getSecurityGroupId() {
@@ -112,7 +112,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组Id
+     * Set 安全组Id
      * @param SecurityGroupId 安全组Id
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -120,7 +120,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组名称
+     * Get 安全组名称 
      * @return SecurityGroupName 安全组名称
      */
     public String getSecurityGroupName() {
@@ -128,7 +128,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组名称
+     * Set 安全组名称
      * @param SecurityGroupName 安全组名称
      */
     public void setSecurityGroupName(String SecurityGroupName) {
@@ -136,7 +136,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组标记
+     * Get 安全组标记 
      * @return SecurityGroupRemark 安全组标记
      */
     public String getSecurityGroupRemark() {
@@ -144,7 +144,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组标记
+     * Set 安全组标记
      * @param SecurityGroupRemark 安全组标记
      */
     public void setSecurityGroupRemark(String SecurityGroupRemark) {
@@ -152,7 +152,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组入站规则
+     * Get 安全组入站规则 
      * @return InboundRule 安全组入站规则
      */
     public SecurityGroupsInboundAndOutbound [] getInboundRule() {
@@ -160,7 +160,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组入站规则
+     * Set 安全组入站规则
      * @param InboundRule 安全组入站规则
      */
     public void setInboundRule(SecurityGroupsInboundAndOutbound [] InboundRule) {
@@ -168,7 +168,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取安全组出站规则
+     * Get 安全组出站规则 
      * @return OutboundRule 安全组出站规则
      */
     public SecurityGroupsInboundAndOutbound [] getOutboundRule() {
@@ -176,7 +176,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置安全组出站规则
+     * Set 安全组出站规则
      * @param OutboundRule 安全组出站规则
      */
     public void setOutboundRule(SecurityGroupsInboundAndOutbound [] OutboundRule) {
@@ -184,7 +184,7 @@ public class SecurityGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

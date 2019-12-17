@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
+public class DescribeDisasterRecoverGroupQuotaResponse extends AbstractModel{
 
     /**
     * 可创建置放群组数量的上限。
@@ -65,7 +65,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可创建置放群组数量的上限。
+     * Get 可创建置放群组数量的上限。 
      * @return GroupQuota 可创建置放群组数量的上限。
      */
     public Integer getGroupQuota() {
@@ -73,7 +73,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可创建置放群组数量的上限。
+     * Set 可创建置放群组数量的上限。
      * @param GroupQuota 可创建置放群组数量的上限。
      */
     public void setGroupQuota(Integer GroupQuota) {
@@ -81,7 +81,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前用户已经创建的置放群组数量。
+     * Get 当前用户已经创建的置放群组数量。 
      * @return CurrentNum 当前用户已经创建的置放群组数量。
      */
     public Integer getCurrentNum() {
@@ -89,7 +89,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前用户已经创建的置放群组数量。
+     * Set 当前用户已经创建的置放群组数量。
      * @param CurrentNum 当前用户已经创建的置放群组数量。
      */
     public void setCurrentNum(Integer CurrentNum) {
@@ -97,7 +97,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取物理机类型容灾组内实例的配额数。
+     * Get 物理机类型容灾组内实例的配额数。 
      * @return CvmInHostGroupQuota 物理机类型容灾组内实例的配额数。
      */
     public Integer getCvmInHostGroupQuota() {
@@ -105,7 +105,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置物理机类型容灾组内实例的配额数。
+     * Set 物理机类型容灾组内实例的配额数。
      * @param CvmInHostGroupQuota 物理机类型容灾组内实例的配额数。
      */
     public void setCvmInHostGroupQuota(Integer CvmInHostGroupQuota) {
@@ -113,7 +113,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取交换机类型容灾组内实例的配额数。
+     * Get 交换机类型容灾组内实例的配额数。 
      * @return CvmInSwGroupQuota 交换机类型容灾组内实例的配额数。
      */
     public Integer getCvmInSwGroupQuota() {
@@ -121,7 +121,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置交换机类型容灾组内实例的配额数。
+     * Set 交换机类型容灾组内实例的配额数。
      * @param CvmInSwGroupQuota 交换机类型容灾组内实例的配额数。
      */
     public void setCvmInSwGroupQuota(Integer CvmInSwGroupQuota) {
@@ -129,7 +129,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机架类型容灾组内实例的配额数。
+     * Get 机架类型容灾组内实例的配额数。 
      * @return CvmInRackGroupQuota 机架类型容灾组内实例的配额数。
      */
     public Integer getCvmInRackGroupQuota() {
@@ -137,7 +137,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机架类型容灾组内实例的配额数。
+     * Set 机架类型容灾组内实例的配额数。
      * @param CvmInRackGroupQuota 机架类型容灾组内实例的配额数。
      */
     public void setCvmInRackGroupQuota(Integer CvmInRackGroupQuota) {
@@ -145,7 +145,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeDisasterRecoverGroupQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupQuota", this.GroupQuota);

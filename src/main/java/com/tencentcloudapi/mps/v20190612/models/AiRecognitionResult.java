@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionResult  extends AbstractModel{
+public class AiRecognitionResult extends AbstractModel{
 
     /**
     * 任务的类型，取值范围：
@@ -82,14 +82,14 @@ public class AiRecognitionResult  extends AbstractModel{
     private AiRecognitionTaskOcrFullTextResult OcrFullTextTask;
 
     /**
-     * 获取任务的类型，取值范围：
+     * Get 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
-<li>ObjectRecognition：物体识别。</li>
+<li>ObjectRecognition：物体识别。</li> 
      * @return Type 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -104,7 +104,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务的类型，取值范围：
+     * Set 任务的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
@@ -126,9 +126,9 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别结果，当 Type 为 
+     * Get 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,7 +138,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别结果，当 Type 为 
+     * Set 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceTask 人脸识别结果，当 Type 为 
@@ -150,9 +150,9 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取语音关键词识别结果，当 Type 为
+     * Get 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsrWordsTask 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,7 +162,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词识别结果，当 Type 为
+     * Set 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsTask 语音关键词识别结果，当 Type 为
@@ -174,9 +174,9 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取语音全文识别结果，当 Type 为
+     * Get 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,7 +186,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别结果，当 Type 为
+     * Set 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextTask 语音全文识别结果，当 Type 为
@@ -198,9 +198,9 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取文本关键词识别结果，当 Type 为
+     * Get 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrWordsTask 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,7 +210,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置文本关键词识别结果，当 Type 为
+     * Set 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsTask 文本关键词识别结果，当 Type 为
@@ -222,9 +222,9 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取文本全文识别结果，当 Type 为
+     * Get 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrFullTextTask 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,7 +234,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置文本全文识别结果，当 Type 为
+     * Set 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextTask 文本全文识别结果，当 Type 为
@@ -246,7 +246,7 @@ public class AiRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TripleContent  extends AbstractModel{
+public class TripleContent extends AbstractModel{
 
     /**
     * 实体id
@@ -51,7 +51,7 @@ public class TripleContent  extends AbstractModel{
     private Long Popular;
 
     /**
-     * 获取实体id
+     * Get 实体id 
      * @return Id 实体id
      */
     public String getId() {
@@ -59,7 +59,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体id
+     * Set 实体id
      * @param Id 实体id
      */
     public void setId(String Id) {
@@ -67,7 +67,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 获取实体名称
+     * Get 实体名称 
      * @return Name 实体名称
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体名称
+     * Set 实体名称
      * @param Name 实体名称
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 获取实体order
+     * Get 实体order 
      * @return Order 实体order
      */
     public Long getOrder() {
@@ -91,7 +91,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体order
+     * Set 实体order
      * @param Order 实体order
      */
     public void setOrder(Long Order) {
@@ -99,7 +99,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 获取实体流行度
+     * Get 实体流行度 
      * @return Popular 实体流行度
      */
     public Long getPopular() {
@@ -107,7 +107,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体流行度
+     * Set 实体流行度
      * @param Popular 实体流行度
      */
     public void setPopular(Long Popular) {
@@ -115,7 +115,7 @@ public class TripleContent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

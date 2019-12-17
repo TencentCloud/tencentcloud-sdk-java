@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddDeviceRequest  extends AbstractModel{
+public class AddDeviceRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -37,7 +37,7 @@ public class AddDeviceRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -45,7 +45,7 @@ public class AddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -53,7 +53,7 @@ public class AddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称，唯一标识某产品下的一个设备
+     * Get 设备名称，唯一标识某产品下的一个设备 
      * @return DeviceName 设备名称，唯一标识某产品下的一个设备
      */
     public String getDeviceName() {
@@ -61,7 +61,7 @@ public class AddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称，唯一标识某产品下的一个设备
+     * Set 设备名称，唯一标识某产品下的一个设备
      * @param DeviceName 设备名称，唯一标识某产品下的一个设备
      */
     public void setDeviceName(String DeviceName) {
@@ -69,7 +69,7 @@ public class AddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

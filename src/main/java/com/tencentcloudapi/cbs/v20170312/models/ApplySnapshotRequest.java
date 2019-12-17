@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplySnapshotRequest  extends AbstractModel{
+public class ApplySnapshotRequest extends AbstractModel{
 
     /**
     * 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
@@ -37,7 +37,7 @@ public class ApplySnapshotRequest  extends AbstractModel{
     private String DiskId;
 
     /**
-     * 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Get 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。 
      * @return SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
     public String getSnapshotId() {
@@ -45,7 +45,7 @@ public class ApplySnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * Set 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      * @param SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -53,7 +53,7 @@ public class ApplySnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 获取快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public String getDiskId() {
@@ -61,7 +61,7 @@ public class ApplySnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param DiskId 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public void setDiskId(String DiskId) {
@@ -69,7 +69,7 @@ public class ApplySnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);

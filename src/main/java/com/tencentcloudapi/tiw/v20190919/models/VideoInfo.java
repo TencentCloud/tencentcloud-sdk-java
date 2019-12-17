@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoInfo  extends AbstractModel{
+public class VideoInfo extends AbstractModel{
 
     /**
     * 视频开始播放的时间（单位：毫秒）
@@ -84,7 +84,7 @@ public class VideoInfo  extends AbstractModel{
     private String UserId;
 
     /**
-     * 获取视频开始播放的时间（单位：毫秒）
+     * Get 视频开始播放的时间（单位：毫秒） 
      * @return VideoPlayTime 视频开始播放的时间（单位：毫秒）
      */
     public Long getVideoPlayTime() {
@@ -92,7 +92,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频开始播放的时间（单位：毫秒）
+     * Set 视频开始播放的时间（单位：毫秒）
      * @param VideoPlayTime 视频开始播放的时间（单位：毫秒）
      */
     public void setVideoPlayTime(Long VideoPlayTime) {
@@ -100,7 +100,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频大小（字节）
+     * Get 视频大小（字节） 
      * @return VideoSize 视频大小（字节）
      */
     public Long getVideoSize() {
@@ -108,7 +108,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频大小（字节）
+     * Set 视频大小（字节）
      * @param VideoSize 视频大小（字节）
      */
     public void setVideoSize(Long VideoSize) {
@@ -116,7 +116,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频格式
+     * Get 视频格式 
      * @return VideoFormat 视频格式
      */
     public String getVideoFormat() {
@@ -124,7 +124,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频格式
+     * Set 视频格式
      * @param VideoFormat 视频格式
      */
     public void setVideoFormat(String VideoFormat) {
@@ -132,7 +132,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频播放时长（单位：毫秒）
+     * Get 视频播放时长（单位：毫秒） 
      * @return VideoDuration 视频播放时长（单位：毫秒）
      */
     public Long getVideoDuration() {
@@ -140,7 +140,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频播放时长（单位：毫秒）
+     * Set 视频播放时长（单位：毫秒）
      * @param VideoDuration 视频播放时长（单位：毫秒）
      */
     public void setVideoDuration(Long VideoDuration) {
@@ -148,7 +148,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频文件URL
+     * Get 视频文件URL 
      * @return VideoUrl 视频文件URL
      */
     public String getVideoUrl() {
@@ -156,7 +156,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频文件URL
+     * Set 视频文件URL
      * @param VideoUrl 视频文件URL
      */
     public void setVideoUrl(String VideoUrl) {
@@ -164,7 +164,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频文件Id
+     * Get 视频文件Id 
      * @return VideoId 视频文件Id
      */
     public String getVideoId() {
@@ -172,7 +172,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频文件Id
+     * Set 视频文件Id
      * @param VideoId 视频文件Id
      */
     public void setVideoId(String VideoId) {
@@ -180,12 +180,12 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频流类型 
+     * Get 视频流类型 
 - 0：摄像头视频 
 - 1：屏幕分享视频（仅课后录制支持）
 - 2：白板视频 
 - 3：混流视频
-- 4：纯音频（mp3)
+- 4：纯音频（mp3) 
      * @return VideoType 视频流类型 
 - 0：摄像头视频 
 - 1：屏幕分享视频（仅课后录制支持）
@@ -198,7 +198,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频流类型 
+     * Set 视频流类型 
 - 0：摄像头视频 
 - 1：屏幕分享视频（仅课后录制支持）
 - 2：白板视频 
@@ -216,7 +216,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 获取摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * Get 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型） 
      * @return UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
      */
     public String getUserId() {
@@ -224,7 +224,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
+     * Set 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
      * @param UserId 摄像头/屏幕分享视频所属用户的 Id（白板视频为空、混流视频tic_mixstream_房间号_混流布局类型）
      */
     public void setUserId(String UserId) {
@@ -232,7 +232,7 @@ public class VideoInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoPlayTime", this.VideoPlayTime);

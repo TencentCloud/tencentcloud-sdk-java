@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFileSampleRequest  extends AbstractModel{
+public class CreateFileSampleRequest extends AbstractModel{
 
     /**
     * 文件类型结构数组
@@ -64,7 +64,7 @@ video：视频
     private Long Label;
 
     /**
-     * 获取文件类型结构数组
+     * Get 文件类型结构数组 
      * @return Contents 文件类型结构数组
      */
     public FileSample [] getContents() {
@@ -72,7 +72,7 @@ video：视频
     }
 
     /**
-     * 设置文件类型结构数组
+     * Set 文件类型结构数组
      * @param Contents 文件类型结构数组
      */
     public void setContents(FileSample [] Contents) {
@@ -80,7 +80,7 @@ video：视频
     }
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -88,7 +88,7 @@ video：视频
 20007：谩骂 
 24001：暴恐
 21000：综合
-20105：广告引流
+20105：广告引流 
      * @return EvilType 恶意类型
 100：正常
 20001：政治
@@ -104,7 +104,7 @@ video：视频
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -128,10 +128,10 @@ video：视频
     }
 
     /**
-     * 获取文件类型
+     * Get 文件类型
 image：图片
 audio：音频
-video：视频
+video：视频 
      * @return FileType 文件类型
 image：图片
 audio：音频
@@ -142,7 +142,7 @@ video：视频
     }
 
     /**
-     * 设置文件类型
+     * Set 文件类型
 image：图片
 audio：音频
 video：视频
@@ -156,9 +156,9 @@ video：视频
     }
 
     /**
-     * 获取样本类型
+     * Get 样本类型
 1：黑库
-2：白库
+2：白库 
      * @return Label 样本类型
 1：黑库
 2：白库
@@ -168,7 +168,7 @@ video：视频
     }
 
     /**
-     * 设置样本类型
+     * Set 样本类型
 1：黑库
 2：白库
      * @param Label 样本类型
@@ -180,7 +180,7 @@ video：视频
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Contents.", this.Contents);

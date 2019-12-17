@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
+public class AiRecognitionTaskAsrWordsResultItem extends AbstractModel{
 
     /**
     * 语音关键词。
@@ -37,7 +37,7 @@ public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
     private AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet;
 
     /**
-     * 获取语音关键词。
+     * Get 语音关键词。 
      * @return Word 语音关键词。
      */
     public String getWord() {
@@ -45,7 +45,7 @@ public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词。
+     * Set 语音关键词。
      * @param Word 语音关键词。
      */
     public void setWord(String Word) {
@@ -53,7 +53,7 @@ public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取语音关键词出现的时间片段列表。
+     * Get 语音关键词出现的时间片段列表。 
      * @return SegmentSet 语音关键词出现的时间片段列表。
      */
     public AiRecognitionTaskAsrWordsSegmentItem [] getSegmentSet() {
@@ -61,7 +61,7 @@ public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词出现的时间片段列表。
+     * Set 语音关键词出现的时间片段列表。
      * @param SegmentSet 语音关键词出现的时间片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskAsrWordsSegmentItem [] SegmentSet) {
@@ -69,7 +69,7 @@ public class AiRecognitionTaskAsrWordsResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Word", this.Word);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupInfo  extends AbstractModel{
+public class GroupInfo extends AbstractModel{
 
     /**
     * 人员库名称
@@ -70,7 +70,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private Long CreationTimestamp;
 
     /**
-     * 获取人员库名称
+     * Get 人员库名称 
      * @return GroupName 人员库名称
      */
     public String getGroupName() {
@@ -78,7 +78,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员库名称
+     * Set 人员库名称
      * @param GroupName 人员库名称
      */
     public void setGroupName(String GroupName) {
@@ -86,7 +86,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员库ID
+     * Get 人员库ID 
      * @return GroupId 人员库ID
      */
     public String getGroupId() {
@@ -94,7 +94,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员库ID
+     * Set 人员库ID
      * @param GroupId 人员库ID
      */
     public void setGroupId(String GroupId) {
@@ -102,8 +102,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员库自定义描述字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人员库自定义描述字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupExDescriptions 人员库自定义描述字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员库自定义描述字段
+     * Set 人员库自定义描述字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupExDescriptions 人员库自定义描述字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员库信息备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人员库信息备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tag 人员库信息备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员库信息备注
+     * Set 人员库信息备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 人员库信息备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,8 +142,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人脸识别所用的算法模型版本。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -152,7 +152,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,9 +162,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+     * Get Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,7 +174,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+     * Set Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
@@ -186,7 +186,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);

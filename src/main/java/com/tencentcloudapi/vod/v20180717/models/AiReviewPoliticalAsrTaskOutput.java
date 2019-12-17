@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
+public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
 
     /**
     * Asr 文字涉政、敏感评分，分值为0到100。
@@ -50,8 +50,8 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * 获取Asr 文字涉政、敏感评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Asr 文字涉政、敏感评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Confidence Asr 文字涉政、敏感评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -60,7 +60,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字涉政、敏感评分，分值为0到100。
+     * Set Asr 文字涉政、敏感评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence Asr 文字涉政、敏感评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,11 +70,11 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Asr 文字涉政、敏感结果建议，取值范围：
+     * Get Asr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Suggestion Asr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -86,7 +86,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字涉政、敏感结果建议，取值范围：
+     * Set Asr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -102,8 +102,8 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Asr 文字有涉政、敏感嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Asr 文字有涉政、敏感嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Asr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Set Asr 文字有涉政、敏感嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet Asr 文字有涉政、敏感嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,7 +122,7 @@ public class AiReviewPoliticalAsrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

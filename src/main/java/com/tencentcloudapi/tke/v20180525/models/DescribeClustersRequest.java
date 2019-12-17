@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClustersRequest  extends AbstractModel{
+public class DescribeClustersRequest extends AbstractModel{
 
     /**
     * 集群ID列表(为空时，
@@ -52,8 +52,8 @@ public class DescribeClustersRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取集群ID列表(为空时，
-表示获取账号下所有集群)
+     * Get 集群ID列表(为空时，
+表示获取账号下所有集群) 
      * @return ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
      */
@@ -62,7 +62,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID列表(为空时，
+     * Set 集群ID列表(为空时，
 表示获取账号下所有集群)
      * @param ClusterIds 集群ID列表(为空时，
 表示获取账号下所有集群)
@@ -72,7 +72,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量,默认0
+     * Get 偏移量,默认0 
      * @return Offset 偏移量,默认0
      */
     public Integer getOffset() {
@@ -80,7 +80,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量,默认0
+     * Set 偏移量,默认0
      * @param Offset 偏移量,默认0
      */
     public void setOffset(Integer Offset) {
@@ -88,7 +88,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大输出条数，默认20，最大为100
+     * Get 最大输出条数，默认20，最大为100 
      * @return Limit 最大输出条数，默认20，最大为100
      */
     public Integer getLimit() {
@@ -96,7 +96,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大输出条数，默认20，最大为100
+     * Set 最大输出条数，默认20，最大为100
      * @param Limit 最大输出条数，默认20，最大为100
      */
     public void setLimit(Integer Limit) {
@@ -104,7 +104,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Get 过滤条件,当前只支持按照单个条件ClusterName进行过滤 
      * @return Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      */
     public Filter [] getFilters() {
@@ -112,7 +112,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Set 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      * @param Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
      */
     public void setFilters(Filter [] Filters) {
@@ -120,7 +120,7 @@ public class DescribeClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);

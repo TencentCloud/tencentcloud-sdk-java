@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
+public class DescribeInstancesOperationLimitRequest extends AbstractModel{
 
     /**
     * 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
@@ -38,7 +38,7 @@ public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
     private String Operation;
 
     /**
-     * 获取按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
+     * Get 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。 
      * @return InstanceIds 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
      */
     public String [] getInstanceIds() {
@@ -46,7 +46,7 @@ public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
+     * Set 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
      * @param InstanceIds 按照一个或者多个实例ID查询，可通过[DescribeInstances](https://cloud.tencent.com/document/api/213/9388)API返回值中的InstanceId获取。实例ID形如：ins-xxxxxxxx。（此参数的具体格式可参考API[简介](https://cloud.tencent.com/document/api/213/15688)的id.N一节）。每次请求的实例的上限为100。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -54,8 +54,8 @@ public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例操作。
-<li> INSTANCE_DEGRADE：实例降配操作</li>
+     * Get 实例操作。
+<li> INSTANCE_DEGRADE：实例降配操作</li> 
      * @return Operation 实例操作。
 <li> INSTANCE_DEGRADE：实例降配操作</li>
      */
@@ -64,7 +64,7 @@ public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例操作。
+     * Set 实例操作。
 <li> INSTANCE_DEGRADE：实例降配操作</li>
      * @param Operation 实例操作。
 <li> INSTANCE_DEGRADE：实例降配操作</li>
@@ -74,7 +74,7 @@ public class DescribeInstancesOperationLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

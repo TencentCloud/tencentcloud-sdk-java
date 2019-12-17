@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextVehicleBack  extends AbstractModel{
+public class TextVehicleBack extends AbstractModel{
 
     /**
     * 号牌号码
@@ -103,8 +103,8 @@ public class TextVehicleBack  extends AbstractModel{
     private String TotalQuasiMass;
 
     /**
-     * 获取号牌号码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 号牌号码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置号牌号码
+     * Set 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取档案编号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 档案编号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileNo 档案编号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置档案编号
+     * Set 档案编号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileNo 档案编号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取核定人数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 核定人数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowNum 核定人数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置核定人数
+     * Set 核定人数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowNum 核定人数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,8 +163,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取总质量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总质量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalMass 总质量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,7 +173,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置总质量
+     * Set 总质量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalMass 总质量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,8 +183,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取整备质量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 整备质量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CurbWeight 整备质量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置整备质量
+     * Set 整备质量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CurbWeight 整备质量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,8 +203,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取核定载质量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 核定载质量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadQuality 核定载质量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置核定载质量
+     * Set 核定载质量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadQuality 核定载质量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取外廓尺寸
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 外廓尺寸
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExternalSize 外廓尺寸
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置外廓尺寸
+     * Set 外廓尺寸
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalSize 外廓尺寸
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Marks 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Marks 备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取检验记录
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检验记录
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Record 检验记录
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置检验记录
+     * Set 检验记录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Record 检验记录
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 获取准牵引总质量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 准牵引总质量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalQuasiMass 准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 设置准牵引总质量
+     * Set 准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalQuasiMass 准牵引总质量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,7 +303,7 @@ public class TextVehicleBack  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlateNo", this.PlateNo);

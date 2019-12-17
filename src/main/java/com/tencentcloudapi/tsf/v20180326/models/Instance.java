@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Instance  extends AbstractModel{
+public class Instance extends AbstractModel{
 
     /**
     * 机器实例ID
@@ -247,8 +247,8 @@ public class Instance  extends AbstractModel{
     private Long OperationState;
 
     /**
-     * 获取机器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -257,7 +257,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例ID
+     * Set 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 机器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,8 +267,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -277,7 +277,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器名称
+     * Set 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 机器名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -287,8 +287,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器内网地址IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器内网地址IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LanIp 机器内网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -297,7 +297,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器内网地址IP
+     * Set 机器内网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIp 机器内网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -307,8 +307,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器外网地址IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器外网地址IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WanIp 机器外网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -317,7 +317,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器外网地址IP
+     * Set 机器外网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIp 机器外网地址IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -327,8 +327,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceDesc 机器描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -337,7 +337,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器描述信息
+     * Set 机器描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceDesc 机器描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -347,8 +347,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -357,7 +357,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -367,8 +367,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -377,7 +377,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -387,8 +387,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceStatus VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -397,7 +397,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
+     * Set VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus VM的状态 虚机：虚机的状态 容器：Pod所在虚机的状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -407,8 +407,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceAvailableStatus VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -417,7 +417,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
+     * Set VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAvailableStatus VM的可使用状态 虚机：虚机是否能够作为资源使用 容器：虚机是否能够作为资源部署POD
 注意：此字段可能返回 null，表示取不到有效值。
@@ -427,8 +427,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceInstanceStatus 服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -437,7 +437,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
+     * Set 服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceInstanceStatus 服务下的服务实例的状态 虚机：应用是否可用 + Agent状态 容器：Pod状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -447,8 +447,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取标识此instance是否已添加在tsf中
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标识此instance是否已添加在tsf中
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CountInTsf 标识此instance是否已添加在tsf中
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -457,7 +457,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置标识此instance是否已添加在tsf中
+     * Set 标识此instance是否已添加在tsf中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CountInTsf 标识此instance是否已添加在tsf中
 注意：此字段可能返回 null，表示取不到有效值。
@@ -467,8 +467,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器所属部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器所属部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 机器所属部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -477,7 +477,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器所属部署组ID
+     * Set 机器所属部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 机器所属部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -487,8 +487,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器所属应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器所属应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 机器所属应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -497,7 +497,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器所属应用ID
+     * Set 机器所属应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 机器所属应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -507,8 +507,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器所属应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 机器所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -517,7 +517,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器所属应用名称
+     * Set 机器所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 机器所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -527,8 +527,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例在CVM的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例在CVM的创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceCreatedTime 机器实例在CVM的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -537,7 +537,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例在CVM的创建时间
+     * Set 机器实例在CVM的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCreatedTime 机器实例在CVM的创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -547,8 +547,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例在CVM的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例在CVM的过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceExpiredTime 机器实例在CVM的过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -557,7 +557,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例在CVM的过期时间
+     * Set 机器实例在CVM的过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceExpiredTime 机器实例在CVM的过期时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -567,8 +567,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例在CVM的计费模式
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例在CVM的计费模式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceChargeType 机器实例在CVM的计费模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -577,7 +577,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例在CVM的计费模式
+     * Set 机器实例在CVM的计费模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargeType 机器实例在CVM的计费模式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -587,8 +587,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例总CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例总CPU信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceTotalCpu 机器实例总CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -597,7 +597,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例总CPU信息
+     * Set 机器实例总CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTotalCpu 机器实例总CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -607,8 +607,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例总内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例总内存信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceTotalMem 机器实例总内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -617,7 +617,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例总内存信息
+     * Set 机器实例总内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTotalMem 机器实例总内存信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -627,8 +627,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例使用的CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例使用的CPU信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceUsedCpu 机器实例使用的CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -637,7 +637,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例使用的CPU信息
+     * Set 机器实例使用的CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceUsedCpu 机器实例使用的CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -647,8 +647,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例使用的内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例使用的内存信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceUsedMem 机器实例使用的内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -657,7 +657,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例使用的内存信息
+     * Set 机器实例使用的内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceUsedMem 机器实例使用的内存信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -667,8 +667,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例Limit CPU信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例Limit CPU信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceLimitCpu 机器实例Limit CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -677,7 +677,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例Limit CPU信息
+     * Set 机器实例Limit CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceLimitCpu 机器实例Limit CPU信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -687,8 +687,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例Limit 内存信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例Limit 内存信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceLimitMem 机器实例Limit 内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -697,7 +697,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例Limit 内存信息
+     * Set 机器实例Limit 内存信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceLimitMem 机器实例Limit 内存信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -707,8 +707,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取包版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 包版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstancePkgVersion 包版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -717,7 +717,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置包版本
+     * Set 包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePkgVersion 包版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -727,8 +727,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -737,7 +737,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型
+     * Set 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -747,8 +747,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例业务状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例业务状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RestrictState 机器实例业务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -757,7 +757,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例业务状态
+     * Set 机器实例业务状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RestrictState 机器实例业务状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -767,8 +767,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -777,7 +777,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -787,8 +787,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例执行状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例执行状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperationState 实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -797,7 +797,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例执行状态
+     * Set 实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationState 实例执行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -807,7 +807,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

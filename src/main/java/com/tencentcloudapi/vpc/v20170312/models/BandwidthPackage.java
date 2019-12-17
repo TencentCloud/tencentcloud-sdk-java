@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BandwidthPackage  extends AbstractModel{
+public class BandwidthPackage extends AbstractModel{
 
     /**
     * 带宽包唯一标识Id
@@ -79,7 +79,7 @@ public class BandwidthPackage  extends AbstractModel{
     private Integer Bandwidth;
 
     /**
-     * 获取带宽包唯一标识Id
+     * Get 带宽包唯一标识Id 
      * @return BandwidthPackageId 带宽包唯一标识Id
      */
     public String getBandwidthPackageId() {
@@ -87,7 +87,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一标识Id
+     * Set 带宽包唯一标识Id
      * @param BandwidthPackageId 带宽包唯一标识Id
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -95,7 +95,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * Get 带宽包类型，包括'BGP','SINGLEISP','ANYCAST' 
      * @return NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
      */
     public String getNetworkType() {
@@ -103,7 +103,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * Set 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
      * @param NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
      */
     public void setNetworkType(String NetworkType) {
@@ -111,7 +111,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * Get 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH' 
      * @return ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
      */
     public String getChargeType() {
@@ -119,7 +119,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
+     * Set 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
      * @param ChargeType 带宽包计费类型，包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'
      */
     public void setChargeType(String ChargeType) {
@@ -127,7 +127,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包名称
+     * Get 带宽包名称 
      * @return BandwidthPackageName 带宽包名称
      */
     public String getBandwidthPackageName() {
@@ -135,7 +135,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包名称
+     * Set 带宽包名称
      * @param BandwidthPackageName 带宽包名称
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
@@ -143,7 +143,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return CreatedTime 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreatedTime() {
@@ -151,7 +151,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param CreatedTime 带宽包创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -159,7 +159,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
+     * Get 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED' 
      * @return Status 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      */
     public String getStatus() {
@@ -167,7 +167,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
+     * Set 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      * @param Status 带宽包状态，包括'CREATING','CREATED','DELETING','DELETED'
      */
     public void setStatus(String Status) {
@@ -175,7 +175,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包资源信息
+     * Get 带宽包资源信息 
      * @return ResourceSet 带宽包资源信息
      */
     public Resource [] getResourceSet() {
@@ -183,7 +183,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包资源信息
+     * Set 带宽包资源信息
      * @param ResourceSet 带宽包资源信息
      */
     public void setResourceSet(Resource [] ResourceSet) {
@@ -191,7 +191,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。 
      * @return Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public Integer getBandwidth() {
@@ -199,7 +199,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -207,7 +207,7 @@ public class BandwidthPackage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

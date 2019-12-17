@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
+public class DescribeDisasterRecoverGroupsRequest extends AbstractModel{
 
     /**
     * 分散置放群组ID列表。
@@ -51,7 +51,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取分散置放群组ID列表。
+     * Get 分散置放群组ID列表。 
      * @return DisasterRecoverGroupIds 分散置放群组ID列表。
      */
     public String [] getDisasterRecoverGroupIds() {
@@ -59,7 +59,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组ID列表。
+     * Set 分散置放群组ID列表。
      * @param DisasterRecoverGroupIds 分散置放群组ID列表。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
@@ -67,7 +67,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组名称，支持模糊匹配。
+     * Get 分散置放群组名称，支持模糊匹配。 
      * @return Name 分散置放群组名称，支持模糊匹配。
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组名称，支持模糊匹配。
+     * Set 分散置放群组名称，支持模糊匹配。
      * @param Name 分散置放群组名称，支持模糊匹配。
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getOffset() {
@@ -91,7 +91,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setOffset(Integer Offset) {
@@ -99,7 +99,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getLimit() {
@@ -107,7 +107,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setLimit(Integer Limit) {
@@ -115,7 +115,7 @@ public class DescribeDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);

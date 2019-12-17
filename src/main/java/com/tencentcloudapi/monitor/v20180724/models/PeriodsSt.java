@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PeriodsSt  extends AbstractModel{
+public class PeriodsSt extends AbstractModel{
 
     /**
     * 周期
@@ -37,7 +37,7 @@ public class PeriodsSt  extends AbstractModel{
     private String [] StatType;
 
     /**
-     * 获取周期
+     * Get 周期 
      * @return Period 周期
      */
     public String getPeriod() {
@@ -45,7 +45,7 @@ public class PeriodsSt  extends AbstractModel{
     }
 
     /**
-     * 设置周期
+     * Set 周期
      * @param Period 周期
      */
     public void setPeriod(String Period) {
@@ -53,7 +53,7 @@ public class PeriodsSt  extends AbstractModel{
     }
 
     /**
-     * 获取统计方式
+     * Get 统计方式 
      * @return StatType 统计方式
      */
     public String [] getStatType() {
@@ -61,7 +61,7 @@ public class PeriodsSt  extends AbstractModel{
     }
 
     /**
-     * 设置统计方式
+     * Set 统计方式
      * @param StatType 统计方式
      */
     public void setStatType(String [] StatType) {
@@ -69,7 +69,7 @@ public class PeriodsSt  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);

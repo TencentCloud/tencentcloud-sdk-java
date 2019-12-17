@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL7LocationsRequest  extends AbstractModel{
+public class ModifyL7LocationsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -44,7 +44,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     private ModifyL7LocationRule [] RuleSet;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待更新的七层转发规则信息数组。
+     * Get 待更新的七层转发规则信息数组。 
      * @return RuleSet 待更新的七层转发规则信息数组。
      */
     public ModifyL7LocationRule [] getRuleSet() {
@@ -84,7 +84,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待更新的七层转发规则信息数组。
+     * Set 待更新的七层转发规则信息数组。
      * @param RuleSet 待更新的七层转发规则信息数组。
      */
     public void setRuleSet(ModifyL7LocationRule [] RuleSet) {
@@ -92,7 +92,7 @@ public class ModifyL7LocationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

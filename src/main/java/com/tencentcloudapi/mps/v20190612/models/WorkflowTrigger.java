@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkflowTrigger  extends AbstractModel{
+public class WorkflowTrigger extends AbstractModel{
 
     /**
     * 触发器的类型，目前仅支持 CosFileUpload。
@@ -38,7 +38,7 @@ public class WorkflowTrigger  extends AbstractModel{
     private CosFileUploadTrigger CosFileUploadTrigger;
 
     /**
-     * 获取触发器的类型，目前仅支持 CosFileUpload。
+     * Get 触发器的类型，目前仅支持 CosFileUpload。 
      * @return Type 触发器的类型，目前仅支持 CosFileUpload。
      */
     public String getType() {
@@ -46,7 +46,7 @@ public class WorkflowTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器的类型，目前仅支持 CosFileUpload。
+     * Set 触发器的类型，目前仅支持 CosFileUpload。
      * @param Type 触发器的类型，目前仅支持 CosFileUpload。
      */
     public void setType(String Type) {
@@ -54,8 +54,8 @@ public class WorkflowTrigger  extends AbstractModel{
     }
 
     /**
-     * 获取当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosFileUploadTrigger 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class WorkflowTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
+     * Set 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CosFileUploadTrigger 当 Type 为 CosFileUpload 时必填且有效，为 COS 触发规则。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class WorkflowTrigger  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

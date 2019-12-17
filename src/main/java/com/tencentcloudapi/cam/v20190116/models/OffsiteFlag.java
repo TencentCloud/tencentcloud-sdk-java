@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OffsiteFlag  extends AbstractModel{
+public class OffsiteFlag extends AbstractModel{
 
     /**
     * 验证标识
@@ -51,7 +51,7 @@ public class OffsiteFlag  extends AbstractModel{
     private Long NotifyWechat;
 
     /**
-     * 获取验证标识
+     * Get 验证标识 
      * @return VerifyFlag 验证标识
      */
     public Long getVerifyFlag() {
@@ -59,7 +59,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 设置验证标识
+     * Set 验证标识
      * @param VerifyFlag 验证标识
      */
     public void setVerifyFlag(Long VerifyFlag) {
@@ -67,7 +67,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 获取手机通知
+     * Get 手机通知 
      * @return NotifyPhone 手机通知
      */
     public Long getNotifyPhone() {
@@ -75,7 +75,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 设置手机通知
+     * Set 手机通知
      * @param NotifyPhone 手机通知
      */
     public void setNotifyPhone(Long NotifyPhone) {
@@ -83,7 +83,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 获取邮箱通知
+     * Get 邮箱通知 
      * @return NotifyEmail 邮箱通知
      */
     public Long getNotifyEmail() {
@@ -91,7 +91,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 设置邮箱通知
+     * Set 邮箱通知
      * @param NotifyEmail 邮箱通知
      */
     public void setNotifyEmail(Long NotifyEmail) {
@@ -99,7 +99,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 获取微信通知
+     * Get 微信通知 
      * @return NotifyWechat 微信通知
      */
     public Long getNotifyWechat() {
@@ -107,7 +107,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 设置微信通知
+     * Set 微信通知
      * @param NotifyWechat 微信通知
      */
     public void setNotifyWechat(Long NotifyWechat) {
@@ -115,7 +115,7 @@ public class OffsiteFlag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VerifyFlag", this.VerifyFlag);

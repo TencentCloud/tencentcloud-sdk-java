@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParamConstraint  extends AbstractModel{
+public class ParamConstraint extends AbstractModel{
 
     /**
     * 约束类型,如枚举enum，区间section
@@ -52,7 +52,7 @@ public class ParamConstraint  extends AbstractModel{
     private String String;
 
     /**
-     * 获取约束类型,如枚举enum，区间section
+     * Get 约束类型,如枚举enum，区间section 
      * @return Type 约束类型,如枚举enum，区间section
      */
     public String getType() {
@@ -60,7 +60,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型,如枚举enum，区间section
+     * Set 约束类型,如枚举enum，区间section
      * @param Type 约束类型,如枚举enum，区间section
      */
     public void setType(String Type) {
@@ -68,7 +68,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 获取约束类型为enum时的可选值列表
+     * Get 约束类型为enum时的可选值列表 
      * @return Enum 约束类型为enum时的可选值列表
      */
     public String getEnum() {
@@ -76,7 +76,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型为enum时的可选值列表
+     * Set 约束类型为enum时的可选值列表
      * @param Enum 约束类型为enum时的可选值列表
      */
     public void setEnum(String Enum) {
@@ -84,8 +84,8 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 获取约束类型为section时的范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 约束类型为section时的范围
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Range 约束类型为section时的范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,7 +94,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型为section时的范围
+     * Set 约束类型为section时的范围
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Range 约束类型为section时的范围
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 获取约束类型为string时的可选值列表
+     * Get 约束类型为string时的可选值列表 
      * @return String 约束类型为string时的可选值列表
      */
     public String getString() {
@@ -112,7 +112,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型为string时的可选值列表
+     * Set 约束类型为string时的可选值列表
      * @param String 约束类型为string时的可选值列表
      */
     public void setString(String String) {
@@ -120,7 +120,7 @@ public class ParamConstraint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

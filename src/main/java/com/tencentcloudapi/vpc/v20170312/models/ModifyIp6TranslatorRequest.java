@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIp6TranslatorRequest  extends AbstractModel{
+public class ModifyIp6TranslatorRequest extends AbstractModel{
 
     /**
     * IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
@@ -37,7 +37,7 @@ public class ModifyIp6TranslatorRequest  extends AbstractModel{
     private String Ip6TranslatorName;
 
     /**
-     * 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
+     * Get IPV6转换实例唯一ID，形如ip6-xxxxxxxxx 
      * @return Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
      */
     public String getIp6TranslatorId() {
@@ -45,7 +45,7 @@ public class ModifyIp6TranslatorRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
+     * Set IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
      * @param Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxxx
      */
     public void setIp6TranslatorId(String Ip6TranslatorId) {
@@ -53,7 +53,7 @@ public class ModifyIp6TranslatorRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换实例修改名称
+     * Get IPV6转换实例修改名称 
      * @return Ip6TranslatorName IPV6转换实例修改名称
      */
     public String getIp6TranslatorName() {
@@ -61,7 +61,7 @@ public class ModifyIp6TranslatorRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例修改名称
+     * Set IPV6转换实例修改名称
      * @param Ip6TranslatorName IPV6转换实例修改名称
      */
     public void setIp6TranslatorName(String Ip6TranslatorName) {
@@ -69,7 +69,7 @@ public class ModifyIp6TranslatorRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6TranslatorId", this.Ip6TranslatorId);

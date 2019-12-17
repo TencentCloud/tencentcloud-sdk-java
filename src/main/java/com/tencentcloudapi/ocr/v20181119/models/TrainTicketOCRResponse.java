@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrainTicketOCRResponse  extends AbstractModel{
+public class TrainTicketOCRResponse extends AbstractModel{
 
     /**
     * 编号
@@ -100,7 +100,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取编号
+     * Get 编号 
      * @return TicketNum 编号
      */
     public String getTicketNum() {
@@ -108,7 +108,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置编号
+     * Set 编号
      * @param TicketNum 编号
      */
     public void setTicketNum(String TicketNum) {
@@ -116,7 +116,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出发站
+     * Get 出发站 
      * @return StartStation 出发站
      */
     public String getStartStation() {
@@ -124,7 +124,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出发站
+     * Set 出发站
      * @param StartStation 出发站
      */
     public void setStartStation(String StartStation) {
@@ -132,7 +132,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取到达站
+     * Get 到达站 
      * @return DestinationStation 到达站
      */
     public String getDestinationStation() {
@@ -140,7 +140,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置到达站
+     * Set 到达站
      * @param DestinationStation 到达站
      */
     public void setDestinationStation(String DestinationStation) {
@@ -148,7 +148,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出发时间
+     * Get 出发时间 
      * @return Date 出发时间
      */
     public String getDate() {
@@ -156,7 +156,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出发时间
+     * Set 出发时间
      * @param Date 出发时间
      */
     public void setDate(String Date) {
@@ -164,7 +164,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取车次
+     * Get 车次 
      * @return TrainNum 车次
      */
     public String getTrainNum() {
@@ -172,7 +172,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置车次
+     * Set 车次
      * @param TrainNum 车次
      */
     public void setTrainNum(String TrainNum) {
@@ -180,7 +180,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取座位号
+     * Get 座位号 
      * @return Seat 座位号
      */
     public String getSeat() {
@@ -188,7 +188,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置座位号
+     * Set 座位号
      * @param Seat 座位号
      */
     public void setSeat(String Seat) {
@@ -196,7 +196,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -204,7 +204,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -212,7 +212,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取票价
+     * Get 票价 
      * @return Price 票价
      */
     public String getPrice() {
@@ -220,7 +220,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置票价
+     * Set 票价
      * @param Price 票价
      */
     public void setPrice(String Price) {
@@ -228,7 +228,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取席别
+     * Get 席别 
      * @return SeatCategory 席别
      */
     public String getSeatCategory() {
@@ -236,7 +236,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置席别
+     * Set 席别
      * @param SeatCategory 席别
      */
     public void setSeatCategory(String SeatCategory) {
@@ -244,7 +244,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取身份证号
+     * Get 身份证号 
      * @return ID 身份证号
      */
     public String getID() {
@@ -252,7 +252,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
      * @param ID 身份证号
      */
     public void setID(String ID) {
@@ -260,7 +260,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -268,7 +268,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -276,7 +276,7 @@ public class TrainTicketOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);

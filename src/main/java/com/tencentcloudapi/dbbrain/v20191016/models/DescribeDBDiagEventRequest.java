@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagEventRequest  extends AbstractModel{
+public class DescribeDBDiagEventRequest extends AbstractModel{
 
     /**
     * 实例 ID 。
@@ -37,7 +37,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     private Long EventId;
 
     /**
-     * 获取实例 ID 。
+     * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 。
+     * Set 实例 ID 。
      * @param InstanceId 实例 ID 。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     }
 
     /**
-     * 获取事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * Get 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。 
      * @return EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      */
     public Long getEventId() {
@@ -61,7 +61,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     }
 
     /**
-     * 设置事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
+     * Set 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      * @param EventId 事件 ID 。通过“获取实例诊断历史DescribeDBDiagHistory”获取。
      */
     public void setEventId(Long EventId) {
@@ -69,7 +69,7 @@ public class DescribeDBDiagEventRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

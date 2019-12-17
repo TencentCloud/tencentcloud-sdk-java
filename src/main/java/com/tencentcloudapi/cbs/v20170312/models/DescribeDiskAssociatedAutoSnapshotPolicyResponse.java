@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractModel{
+public class DescribeDiskAssociatedAutoSnapshotPolicyResponse extends AbstractModel{
 
     /**
     * 云盘绑定的定期快照数量。
@@ -44,7 +44,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     private String RequestId;
 
     /**
-     * 获取云盘绑定的定期快照数量。
+     * Get 云盘绑定的定期快照数量。 
      * @return TotalCount 云盘绑定的定期快照数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 设置云盘绑定的定期快照数量。
+     * Set 云盘绑定的定期快照数量。
      * @param TotalCount 云盘绑定的定期快照数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 获取云盘绑定的定期快照列表。
+     * Get 云盘绑定的定期快照列表。 
      * @return AutoSnapshotPolicySet 云盘绑定的定期快照列表。
      */
     public AutoSnapshotPolicy [] getAutoSnapshotPolicySet() {
@@ -68,7 +68,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 设置云盘绑定的定期快照列表。
+     * Set 云盘绑定的定期快照列表。
      * @param AutoSnapshotPolicySet 云盘绑定的定期快照列表。
      */
     public void setAutoSnapshotPolicySet(AutoSnapshotPolicy [] AutoSnapshotPolicySet) {
@@ -76,7 +76,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyResponse  extends AbstractM
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

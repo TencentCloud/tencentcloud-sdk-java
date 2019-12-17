@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskOperationLogResponse  extends AbstractModel{
+public class DescribeTaskOperationLogResponse extends AbstractModel{
 
     /**
     * 操作日志
@@ -44,7 +44,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取操作日志
+     * Get 操作日志 
      * @return TaskOperationLogSet 操作日志
      */
     public TaskOperationLog [] getTaskOperationLogSet() {
@@ -52,7 +52,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置操作日志
+     * Set 操作日志
      * @param TaskOperationLogSet 操作日志
      */
     public void setTaskOperationLogSet(TaskOperationLog [] TaskOperationLogSet) {
@@ -60,7 +60,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志条数
+     * Get 日志条数 
      * @return TotalCount 日志条数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志条数
+     * Set 日志条数
      * @param TotalCount 日志条数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeTaskOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskOperationLogSet.", this.TaskOperationLogSet);

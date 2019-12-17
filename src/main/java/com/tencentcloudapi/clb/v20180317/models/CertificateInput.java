@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CertificateInput  extends AbstractModel{
+public class CertificateInput extends AbstractModel{
 
     /**
     * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
@@ -79,7 +79,7 @@ public class CertificateInput  extends AbstractModel{
     private String CertCaContent;
 
     /**
-     * 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证 
      * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public String getSSLMode() {
@@ -87,7 +87,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Set 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public void setSSLMode(String SSLMode) {
@@ -95,7 +95,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * Get 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。 
      * @return CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
      */
     public String getCertId() {
@@ -103,7 +103,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * Set 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
      * @param CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
      */
     public void setCertId(String CertId) {
@@ -111,7 +111,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * Get 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。 
      * @return CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      */
     public String getCertCaId() {
@@ -119,7 +119,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
+     * Set 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      * @param CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=mutual 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      */
     public void setCertCaId(String CertCaId) {
@@ -127,7 +127,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取上传服务端证书的名称，如果没有 CertId，则此项必传。
+     * Get 上传服务端证书的名称，如果没有 CertId，则此项必传。 
      * @return CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
      */
     public String getCertName() {
@@ -135,7 +135,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置上传服务端证书的名称，如果没有 CertId，则此项必传。
+     * Set 上传服务端证书的名称，如果没有 CertId，则此项必传。
      * @param CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
      */
     public void setCertName(String CertName) {
@@ -143,7 +143,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取上传服务端证书的 key，如果没有 CertId，则此项必传。
+     * Get 上传服务端证书的 key，如果没有 CertId，则此项必传。 
      * @return CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
      */
     public String getCertKey() {
@@ -151,7 +151,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置上传服务端证书的 key，如果没有 CertId，则此项必传。
+     * Set 上传服务端证书的 key，如果没有 CertId，则此项必传。
      * @param CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
      */
     public void setCertKey(String CertKey) {
@@ -159,7 +159,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取上传服务端证书的内容，如果没有 CertId，则此项必传。
+     * Get 上传服务端证书的内容，如果没有 CertId，则此项必传。 
      * @return CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
      */
     public String getCertContent() {
@@ -167,7 +167,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置上传服务端证书的内容，如果没有 CertId，则此项必传。
+     * Set 上传服务端证书的内容，如果没有 CertId，则此项必传。
      * @param CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
      */
     public void setCertContent(String CertContent) {
@@ -175,7 +175,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Get 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。 
      * @return CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      */
     public String getCertCaName() {
@@ -183,7 +183,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Set 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      * @param CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      */
     public void setCertCaName(String CertCaName) {
@@ -191,7 +191,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 获取上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Get 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。 
      * @return CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      */
     public String getCertCaContent() {
@@ -199,7 +199,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 设置上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * Set 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      * @param CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
      */
     public void setCertCaContent(String CertCaContent) {
@@ -207,7 +207,7 @@ public class CertificateInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);

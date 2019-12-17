@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PhoneVerificationResponse  extends AbstractModel{
+public class PhoneVerificationResponse extends AbstractModel{
 
     /**
     * 认证结果码:
@@ -56,7 +56,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取认证结果码:
+     * Get 认证结果码:
   '0': '认证通过',
   '-1': '手机号已实名，但是身份证和姓名均与实名信息不一致 ',
   '-2': '手机号已实名，手机号和证件号一致，姓名不一致',
@@ -68,7 +68,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
   '-8': '姓名校验不通过',
   '-9': '没有记录',
   '-10': '认证未通过',
-  '-11': '服务繁忙'
+  '-11': '服务繁忙' 
      * @return Result 认证结果码:
   '0': '认证通过',
   '-1': '手机号已实名，但是身份证和姓名均与实名信息不一致 ',
@@ -88,7 +88,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置认证结果码:
+     * Set 认证结果码:
   '0': '认证通过',
   '-1': '手机号已实名，但是身份证和姓名均与实名信息不一致 ',
   '-2': '手机号已实名，手机号和证件号一致，姓名不一致',
@@ -120,7 +120,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -128,7 +128,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -136,7 +136,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -144,7 +144,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -152,7 +152,7 @@ public class PhoneVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

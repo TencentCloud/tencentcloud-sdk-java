@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdCardOCRVerificationRequest  extends AbstractModel{
+public class IdCardOCRVerificationRequest extends AbstractModel{
 
     /**
     * 身份证号
@@ -58,8 +58,8 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     private String ImageUrl;
 
     /**
-     * 获取身份证号
-姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
+     * Get 身份证号
+姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。 
      * @return IdCard 身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
      */
@@ -68,7 +68,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
      * @param IdCard 身份证号
 姓名和身份证号、ImageBase64、ImageUrl三者必须提供其中之一。若都提供了，则按照姓名和身份证号>ImageBase64>ImageUrl的优先级使用参数。
@@ -78,7 +78,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -86,7 +86,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -94,9 +94,9 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取身份证人像面的 Base64 值
+     * Get 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。 
      * @return ImageBase64 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -106,7 +106,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份证人像面的 Base64 值
+     * Set 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
      * @param ImageBase64 身份证人像面的 Base64 值
@@ -118,11 +118,11 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取身份证人像面的 Url 地址
+     * Get 身份证人像面的 Url 地址
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 身份证人像面的 Url 地址
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -134,7 +134,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份证人像面的 Url 地址
+     * Set 身份证人像面的 Url 地址
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
@@ -150,7 +150,7 @@ public class IdCardOCRVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskOperationLogsRequest  extends AbstractModel{
+public class DescribeDiskOperationLogsRequest extends AbstractModel{
 
     /**
     * 过滤条件。支持以下条件：
@@ -45,8 +45,8 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取过滤条件。支持以下条件：
-<li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。
+     * Get 过滤条件。支持以下条件：
+<li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。 
      * @return Filters 过滤条件。支持以下条件：
 <li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。
      */
@@ -55,7 +55,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。支持以下条件：
+     * Set 过滤条件。支持以下条件：
 <li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。
      * @param Filters 过滤条件。支持以下条件：
 <li>disk-id - Array of String - 是否必填：是 - 按云盘ID过滤，每个请求最多可指定10个云盘ID。
@@ -65,7 +65,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     * Get 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00" 
      * @return BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
      */
     public String getBeginTime() {
@@ -73,7 +73,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
+     * Set 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
      * @param BeginTime 要查询的操作日志的起始时间，例如：“2019-11-22 00:00:00"
      */
     public void setBeginTime(String BeginTime) {
@@ -81,7 +81,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     * Get 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59" 
      * @return EndTime 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
      */
     public String getEndTime() {
@@ -89,7 +89,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
+     * Set 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
      * @param EndTime 要查询的操作日志的截止时间，例如：“2019-11-22 23:59:59"
      */
     public void setEndTime(String EndTime) {
@@ -97,7 +97,7 @@ public class DescribeDiskOperationLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

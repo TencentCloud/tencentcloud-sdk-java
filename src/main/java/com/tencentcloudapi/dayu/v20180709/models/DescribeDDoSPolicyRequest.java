@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSPolicyRequest  extends AbstractModel{
+public class DescribeDDoSPolicyRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -37,7 +37,7 @@ public class DescribeDDoSPolicyRequest  extends AbstractModel{
     private String Id;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -45,7 +45,7 @@ public class DescribeDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -53,7 +53,7 @@ public class DescribeDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
+     * Get 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略 
      * @return Id 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
      */
     public String getId() {
@@ -61,7 +61,7 @@ public class DescribeDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
+     * Set 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
      * @param Id 可选字段，资源ID，如果填写则表示该资源绑定的DDoS高级策略
      */
     public void setId(String Id) {
@@ -69,7 +69,7 @@ public class DescribeDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteJobRequest  extends AbstractModel{
+public class DeleteJobRequest extends AbstractModel{
 
     /**
     * 作业ID
@@ -30,7 +30,7 @@ public class DeleteJobRequest  extends AbstractModel{
     private String JobId;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -38,7 +38,7 @@ public class DeleteJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -46,7 +46,7 @@ public class DeleteJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

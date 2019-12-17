@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListAttachedRolePoliciesRequest  extends AbstractModel{
+public class ListAttachedRolePoliciesRequest extends AbstractModel{
 
     /**
     * 页码，从 1 开始
@@ -58,7 +58,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     private String PolicyType;
 
     /**
-     * 获取页码，从 1 开始
+     * Get 页码，从 1 开始 
      * @return Page 页码，从 1 开始
      */
     public Long getPage() {
@@ -66,7 +66,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码，从 1 开始
+     * Set 页码，从 1 开始
      * @param Page 页码，从 1 开始
      */
     public void setPage(Long Page) {
@@ -74,7 +74,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页行数，不能大于200
+     * Get 每页行数，不能大于200 
      * @return Rp 每页行数，不能大于200
      */
     public Long getRp() {
@@ -82,7 +82,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页行数，不能大于200
+     * Set 每页行数，不能大于200
      * @param Rp 每页行数，不能大于200
      */
     public void setRp(Long Rp) {
@@ -90,7 +90,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleId 角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleId() {
@@ -98,7 +98,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleId 角色 ID。用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleId(String RoleId) {
@@ -106,7 +106,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色名。用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleName 角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleName() {
@@ -114,7 +114,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleName 角色名。用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleName(String RoleName) {
@@ -122,7 +122,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
+     * Get 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略 
      * @return PolicyType 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
      */
     public String getPolicyType() {
@@ -130,7 +130,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
+     * Set 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
      * @param PolicyType 按策略类型过滤，User表示仅查询自定义策略，QCS表示仅查询预设策略
      */
     public void setPolicyType(String PolicyType) {
@@ -138,7 +138,7 @@ public class ListAttachedRolePoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);

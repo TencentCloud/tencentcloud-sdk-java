@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ArrivedMallInfo  extends AbstractModel{
+public class ArrivedMallInfo extends AbstractModel{
 
     /**
     * 到场时间
@@ -65,7 +65,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     private String TraceId;
 
     /**
-     * 获取到场时间
+     * Get 到场时间 
      * @return ArrivedTime 到场时间
      */
     public String getArrivedTime() {
@@ -73,7 +73,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到场时间
+     * Set 到场时间
      * @param ArrivedTime 到场时间
      */
     public void setArrivedTime(String ArrivedTime) {
@@ -81,7 +81,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 获取出场时间
+     * Get 出场时间 
      * @return LeaveTime 出场时间
      */
     public String getLeaveTime() {
@@ -89,7 +89,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置出场时间
+     * Set 出场时间
      * @param LeaveTime 出场时间
      */
     public void setLeaveTime(String LeaveTime) {
@@ -97,7 +97,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 获取停留时间，秒
+     * Get 停留时间，秒 
      * @return StaySecond 停留时间，秒
      */
     public Integer getStaySecond() {
@@ -105,7 +105,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置停留时间，秒
+     * Set 停留时间，秒
      * @param StaySecond 停留时间，秒
      */
     public void setStaySecond(Integer StaySecond) {
@@ -113,7 +113,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到场抓拍图片
+     * Get 到场抓拍图片 
      * @return InCapPic 到场抓拍图片
      */
     public String getInCapPic() {
@@ -121,7 +121,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到场抓拍图片
+     * Set 到场抓拍图片
      * @param InCapPic 到场抓拍图片
      */
     public void setInCapPic(String InCapPic) {
@@ -129,7 +129,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 获取出场抓拍图片
+     * Get 出场抓拍图片 
      * @return OutCapPic 出场抓拍图片
      */
     public String getOutCapPic() {
@@ -137,7 +137,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置出场抓拍图片
+     * Set 出场抓拍图片
      * @param OutCapPic 出场抓拍图片
      */
     public void setOutCapPic(String OutCapPic) {
@@ -145,7 +145,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹编码
+     * Get 轨迹编码 
      * @return TraceId 轨迹编码
      */
     public String getTraceId() {
@@ -153,7 +153,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹编码
+     * Set 轨迹编码
      * @param TraceId 轨迹编码
      */
     public void setTraceId(String TraceId) {
@@ -161,7 +161,7 @@ public class ArrivedMallInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ArrivedTime", this.ArrivedTime);

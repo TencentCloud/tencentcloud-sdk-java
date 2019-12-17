@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulsRequest  extends AbstractModel{
+public class DescribeVulsRequest extends AbstractModel{
 
     /**
     * 站点ID
@@ -58,7 +58,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取站点ID
+     * Get 站点ID 
      * @return SiteId 站点ID
      */
     public Integer getSiteId() {
@@ -66,7 +66,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点ID
+     * Set 站点ID
      * @param SiteId 站点ID
      */
     public void setSiteId(Integer SiteId) {
@@ -74,7 +74,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务ID
+     * Get 监控任务ID 
      * @return MonitorId 监控任务ID
      */
     public Integer getMonitorId() {
@@ -82,7 +82,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务ID
+     * Set 监控任务ID
      * @param MonitorId 监控任务ID
      */
     public void setMonitorId(Integer MonitorId) {
@@ -90,7 +90,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
+     * Get 过滤条件 
      * @return Filters 过滤条件
      */
     public Filter [] getFilters() {
@@ -98,7 +98,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
      * @param Filters 过滤条件
      */
     public void setFilters(Filter [] Filters) {
@@ -106,7 +106,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为10，最大值为100
+     * Get 返回数量，默认为10，最大值为100 
      * @return Limit 返回数量，默认为10，最大值为100
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为10，最大值为100
+     * Set 返回数量，默认为10，最大值为100
      * @param Limit 返回数量，默认为10，最大值为100
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeVulsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SiteId", this.SiteId);

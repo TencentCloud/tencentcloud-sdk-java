@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxyGroupDomainRequest  extends AbstractModel{
+public class CreateProxyGroupDomainRequest extends AbstractModel{
 
     /**
     * 需要开启域名的通道组ID。
@@ -30,7 +30,7 @@ public class CreateProxyGroupDomainRequest  extends AbstractModel{
     private String GroupId;
 
     /**
-     * 获取需要开启域名的通道组ID。
+     * Get 需要开启域名的通道组ID。 
      * @return GroupId 需要开启域名的通道组ID。
      */
     public String getGroupId() {
@@ -38,7 +38,7 @@ public class CreateProxyGroupDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要开启域名的通道组ID。
+     * Set 需要开启域名的通道组ID。
      * @param GroupId 需要开启域名的通道组ID。
      */
     public void setGroupId(String GroupId) {
@@ -46,7 +46,7 @@ public class CreateProxyGroupDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

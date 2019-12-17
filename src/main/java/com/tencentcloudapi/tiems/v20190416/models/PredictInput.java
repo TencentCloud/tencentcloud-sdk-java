@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PredictInput  extends AbstractModel{
+public class PredictInput extends AbstractModel{
 
     /**
     * 输入路径，支持 cos 格式路径文件夹或文件
@@ -66,7 +66,7 @@ public class PredictInput  extends AbstractModel{
     private String SignatureName;
 
     /**
-     * 获取输入路径，支持 cos 格式路径文件夹或文件
+     * Get 输入路径，支持 cos 格式路径文件夹或文件 
      * @return InputPath 输入路径，支持 cos 格式路径文件夹或文件
      */
     public String getInputPath() {
@@ -74,7 +74,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入路径，支持 cos 格式路径文件夹或文件
+     * Set 输入路径，支持 cos 格式路径文件夹或文件
      * @param InputPath 输入路径，支持 cos 格式路径文件夹或文件
      */
     public void setInputPath(String InputPath) {
@@ -82,7 +82,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 获取输出路径，支持 cos 格式路径
+     * Get 输出路径，支持 cos 格式路径 
      * @return OutputPath 输出路径，支持 cos 格式路径
      */
     public String getOutputPath() {
@@ -90,7 +90,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置输出路径，支持 cos 格式路径
+     * Set 输出路径，支持 cos 格式路径
      * @param OutputPath 输出路径，支持 cos 格式路径
      */
     public void setOutputPath(String OutputPath) {
@@ -98,7 +98,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 获取输入数据格式，目前支持：JSON
+     * Get 输入数据格式，目前支持：JSON 
      * @return InputDataFormat 输入数据格式，目前支持：JSON
      */
     public String getInputDataFormat() {
@@ -106,7 +106,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入数据格式，目前支持：JSON
+     * Set 输入数据格式，目前支持：JSON
      * @param InputDataFormat 输入数据格式，目前支持：JSON
      */
     public void setInputDataFormat(String InputDataFormat) {
@@ -114,7 +114,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 获取输出数据格式，目前支持：JSON
+     * Get 输出数据格式，目前支持：JSON 
      * @return OutputDataFormat 输出数据格式，目前支持：JSON
      */
     public String getOutputDataFormat() {
@@ -122,7 +122,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置输出数据格式，目前支持：JSON
+     * Set 输出数据格式，目前支持：JSON
      * @param OutputDataFormat 输出数据格式，目前支持：JSON
      */
     public void setOutputDataFormat(String OutputDataFormat) {
@@ -130,7 +130,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 获取预测批大小，默认为 64
+     * Get 预测批大小，默认为 64 
      * @return BatchSize 预测批大小，默认为 64
      */
     public Long getBatchSize() {
@@ -138,7 +138,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置预测批大小，默认为 64
+     * Set 预测批大小，默认为 64
      * @param BatchSize 预测批大小，默认为 64
      */
     public void setBatchSize(Long BatchSize) {
@@ -146,8 +146,8 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 获取模型签名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 模型签名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SignatureName 模型签名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -156,7 +156,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 设置模型签名
+     * Set 模型签名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SignatureName 模型签名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,7 +166,7 @@ public class PredictInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputPath", this.InputPath);

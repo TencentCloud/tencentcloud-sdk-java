@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SummarizedData  extends AbstractModel{
+public class SummarizedData extends AbstractModel{
 
     /**
     * 汇总方式，存在以下几种：
@@ -40,10 +40,10 @@ avg：平均值
     private Float Value;
 
     /**
-     * 获取汇总方式，存在以下几种：
+     * Get 汇总方式，存在以下几种：
 sum：累加求和
 max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
-avg：平均值
+avg：平均值 
      * @return Name 汇总方式，存在以下几种：
 sum：累加求和
 max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
@@ -54,7 +54,7 @@ avg：平均值
     }
 
     /**
-     * 设置汇总方式，存在以下几种：
+     * Set 汇总方式，存在以下几种：
 sum：累加求和
 max：最大值，带宽模式下，采用 5 分钟粒度汇总数据，计算峰值带宽
 avg：平均值
@@ -68,7 +68,7 @@ avg：平均值
     }
 
     /**
-     * 获取汇总后的数据值
+     * Get 汇总后的数据值 
      * @return Value 汇总后的数据值
      */
     public Float getValue() {
@@ -76,7 +76,7 @@ avg：平均值
     }
 
     /**
-     * 设置汇总后的数据值
+     * Set 汇总后的数据值
      * @param Value 汇总后的数据值
      */
     public void setValue(Float Value) {
@@ -84,7 +84,7 @@ avg：平均值
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

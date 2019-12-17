@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Task  extends AbstractModel{
+public class Task extends AbstractModel{
 
     /**
     * 应用程序信息
@@ -149,7 +149,7 @@ public class Task  extends AbstractModel{
     private Integer ResourceMaxRetryCount;
 
     /**
-     * 获取应用程序信息
+     * Get 应用程序信息 
      * @return Application 应用程序信息
      */
     public Application getApplication() {
@@ -157,7 +157,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置应用程序信息
+     * Set 应用程序信息
      * @param Application 应用程序信息
      */
     public void setApplication(Application Application) {
@@ -165,7 +165,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称，在一个作业内部唯一
+     * Get 任务名称，在一个作业内部唯一 
      * @return TaskName 任务名称，在一个作业内部唯一
      */
     public String getTaskName() {
@@ -173,7 +173,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称，在一个作业内部唯一
+     * Set 任务名称，在一个作业内部唯一
      * @param TaskName 任务名称，在一个作业内部唯一
      */
     public void setTaskName(String TaskName) {
@@ -181,7 +181,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例运行个数
+     * Get 任务实例运行个数 
      * @return TaskInstanceNum 任务实例运行个数
      */
     public Integer getTaskInstanceNum() {
@@ -189,7 +189,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例运行个数
+     * Set 任务实例运行个数
      * @param TaskInstanceNum 任务实例运行个数
      */
     public void setTaskInstanceNum(Integer TaskInstanceNum) {
@@ -197,7 +197,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * Get 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。 
      * @return ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public AnonymousComputeEnv getComputeEnv() {
@@ -205,7 +205,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * Set 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @param ComputeEnv 运行环境信息，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public void setComputeEnv(AnonymousComputeEnv ComputeEnv) {
@@ -213,7 +213,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * Get 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。 
      * @return EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public String getEnvId() {
@@ -221,7 +221,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
+     * Set 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      * @param EnvId 计算环境ID，ComputeEnv 和 EnvId 必须指定一个（且只有一个）参数。
      */
     public void setEnvId(String EnvId) {
@@ -229,7 +229,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取重定向信息
+     * Get 重定向信息 
      * @return RedirectInfo 重定向信息
      */
     public RedirectInfo getRedirectInfo() {
@@ -237,7 +237,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置重定向信息
+     * Set 重定向信息
      * @param RedirectInfo 重定向信息
      */
     public void setRedirectInfo(RedirectInfo RedirectInfo) {
@@ -245,7 +245,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取重定向本地信息
+     * Get 重定向本地信息 
      * @return RedirectLocalInfo 重定向本地信息
      */
     public RedirectLocalInfo getRedirectLocalInfo() {
@@ -253,7 +253,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置重定向本地信息
+     * Set 重定向本地信息
      * @param RedirectLocalInfo 重定向本地信息
      */
     public void setRedirectLocalInfo(RedirectLocalInfo RedirectLocalInfo) {
@@ -261,7 +261,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取输入映射
+     * Get 输入映射 
      * @return InputMappings 输入映射
      */
     public InputMapping [] getInputMappings() {
@@ -269,7 +269,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置输入映射
+     * Set 输入映射
      * @param InputMappings 输入映射
      */
     public void setInputMappings(InputMapping [] InputMappings) {
@@ -277,7 +277,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取输出映射
+     * Get 输出映射 
      * @return OutputMappings 输出映射
      */
     public OutputMapping [] getOutputMappings() {
@@ -285,7 +285,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置输出映射
+     * Set 输出映射
      * @param OutputMappings 输出映射
      */
     public void setOutputMappings(OutputMapping [] OutputMappings) {
@@ -293,7 +293,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取输出映射配置
+     * Get 输出映射配置 
      * @return OutputMappingConfigs 输出映射配置
      */
     public OutputMappingConfig [] getOutputMappingConfigs() {
@@ -301,7 +301,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置输出映射配置
+     * Set 输出映射配置
      * @param OutputMappingConfigs 输出映射配置
      */
     public void setOutputMappingConfigs(OutputMappingConfig [] OutputMappingConfigs) {
@@ -309,7 +309,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取自定义环境变量
+     * Get 自定义环境变量 
      * @return EnvVars 自定义环境变量
      */
     public EnvVar [] getEnvVars() {
@@ -317,7 +317,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置自定义环境变量
+     * Set 自定义环境变量
      * @param EnvVars 自定义环境变量
      */
     public void setEnvVars(EnvVar [] EnvVars) {
@@ -325,7 +325,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取授权信息
+     * Get 授权信息 
      * @return Authentications 授权信息
      */
     public Authentication [] getAuthentications() {
@@ -333,7 +333,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置授权信息
+     * Set 授权信息
      * @param Authentications 授权信息
      */
     public void setAuthentications(Authentication [] Authentications) {
@@ -341,7 +341,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * Get TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。 
      * @return FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      */
     public String getFailedAction() {
@@ -349,7 +349,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * Set TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      * @param FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
      */
     public void setFailedAction(String FailedAction) {
@@ -357,7 +357,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务失败后的最大重试次数，默认为0
+     * Get 任务失败后的最大重试次数，默认为0 
      * @return MaxRetryCount 任务失败后的最大重试次数，默认为0
      */
     public Integer getMaxRetryCount() {
@@ -365,7 +365,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务失败后的最大重试次数，默认为0
+     * Set 任务失败后的最大重试次数，默认为0
      * @param MaxRetryCount 任务失败后的最大重试次数，默认为0
      */
     public void setMaxRetryCount(Integer MaxRetryCount) {
@@ -373,7 +373,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动后的超时时间，单位秒，默认为86400秒
+     * Get 任务启动后的超时时间，单位秒，默认为86400秒 
      * @return Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public Integer getTimeout() {
@@ -381,7 +381,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务启动后的超时时间，单位秒，默认为86400秒
+     * Set 任务启动后的超时时间，单位秒，默认为86400秒
      * @param Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      */
     public void setTimeout(Integer Timeout) {
@@ -389,7 +389,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务最大并发数限制，默认没有限制。
+     * Get 任务最大并发数限制，默认没有限制。 
      * @return MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      */
     public Integer getMaxConcurrentNum() {
@@ -397,7 +397,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务最大并发数限制，默认没有限制。
+     * Set 任务最大并发数限制，默认没有限制。
      * @param MaxConcurrentNum 任务最大并发数限制，默认没有限制。
      */
     public void setMaxConcurrentNum(Integer MaxConcurrentNum) {
@@ -405,7 +405,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     * Get 任务完成后，重启计算节点。适用于指定计算环境执行任务。 
      * @return RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
      */
     public Boolean getRestartComputeNode() {
@@ -413,7 +413,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务完成后，重启计算节点。适用于指定计算环境执行任务。
+     * Set 任务完成后，重启计算节点。适用于指定计算环境执行任务。
      * @param RestartComputeNode 任务完成后，重启计算节点。适用于指定计算环境执行任务。
      */
     public void setRestartComputeNode(Boolean RestartComputeNode) {
@@ -421,7 +421,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * Get 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。 
      * @return ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      */
     public Integer getResourceMaxRetryCount() {
@@ -429,7 +429,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
+     * Set 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      * @param ResourceMaxRetryCount 启动任务过程中，创建计算资源如CVM失败后的最大重试次数，默认为0。
      */
     public void setResourceMaxRetryCount(Integer ResourceMaxRetryCount) {
@@ -437,7 +437,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Application.", this.Application);

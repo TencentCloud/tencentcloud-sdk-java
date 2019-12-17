@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountRequest  extends AbstractModel{
+public class CreateAccountRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -72,7 +72,7 @@ public class CreateAccountRequest  extends AbstractModel{
     private Integer DelayThresh;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * Get 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。 
      * @return UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      */
     public String getUserName() {
@@ -96,7 +96,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
+     * Set 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      * @param UserName 登录用户名，由字母、数字、下划线和连字符组成，长度为1~32位。
      */
     public void setUserName(String UserName) {
@@ -104,7 +104,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
+     * Get 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。 
      * @return Host 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
      */
     public String getHost() {
@@ -112,7 +112,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
+     * Set 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
      * @param Host 可以登录的主机，与mysql 账号的 host 格式一致，可以支持通配符，例如 %，10.%，10.20.%。
      */
     public void setHost(String Host) {
@@ -120,7 +120,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Get 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。 
      * @return Password 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      */
     public String getPassword() {
@@ -128,7 +128,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Set 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      * @param Password 账号密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      */
     public void setPassword(String Password) {
@@ -136,7 +136,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+     * Get 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。 
      * @return ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
     public Integer getReadOnly() {
@@ -144,7 +144,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+     * Set 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param ReadOnly 是否创建为只读账号，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
     public void setReadOnly(Integer ReadOnly) {
@@ -152,7 +152,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+     * Get 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符 
      * @return Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      */
     public String getDescription() {
@@ -160,7 +160,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
+     * Set 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      * @param Description 账号备注，可以包含中文、英文字符、常见符号和数字，长度为0~256字符
      */
     public void setDescription(String Description) {
@@ -168,7 +168,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据传入时间判断备机不可用
+     * Get 根据传入时间判断备机不可用 
      * @return DelayThresh 根据传入时间判断备机不可用
      */
     public Integer getDelayThresh() {
@@ -176,7 +176,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据传入时间判断备机不可用
+     * Set 根据传入时间判断备机不可用
      * @param DelayThresh 根据传入时间判断备机不可用
      */
     public void setDelayThresh(Integer DelayThresh) {
@@ -184,7 +184,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

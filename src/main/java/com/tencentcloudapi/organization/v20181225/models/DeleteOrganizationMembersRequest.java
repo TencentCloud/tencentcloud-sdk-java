@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteOrganizationMembersRequest  extends AbstractModel{
+public class DeleteOrganizationMembersRequest extends AbstractModel{
 
     /**
     * 被删除成员的UIN列表
@@ -30,7 +30,7 @@ public class DeleteOrganizationMembersRequest  extends AbstractModel{
     private Long [] Uins;
 
     /**
-     * 获取被删除成员的UIN列表
+     * Get 被删除成员的UIN列表 
      * @return Uins 被删除成员的UIN列表
      */
     public Long [] getUins() {
@@ -38,7 +38,7 @@ public class DeleteOrganizationMembersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被删除成员的UIN列表
+     * Set 被删除成员的UIN列表
      * @param Uins 被删除成员的UIN列表
      */
     public void setUins(Long [] Uins) {
@@ -46,7 +46,7 @@ public class DeleteOrganizationMembersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Uins.", this.Uins);

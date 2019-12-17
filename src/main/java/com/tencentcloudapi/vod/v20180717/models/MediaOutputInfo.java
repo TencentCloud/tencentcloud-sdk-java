@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaOutputInfo  extends AbstractModel{
+public class MediaOutputInfo extends AbstractModel{
 
     /**
     * 输出文件 Bucket 所属地域，如 ap-guangzhou  。
@@ -44,7 +44,7 @@ public class MediaOutputInfo  extends AbstractModel{
     private String Dir;
 
     /**
-     * 获取输出文件 Bucket 所属地域，如 ap-guangzhou  。
+     * Get 输出文件 Bucket 所属地域，如 ap-guangzhou  。 
      * @return Region 输出文件 Bucket 所属地域，如 ap-guangzhou  。
      */
     public String getRegion() {
@@ -52,7 +52,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件 Bucket 所属地域，如 ap-guangzhou  。
+     * Set 输出文件 Bucket 所属地域，如 ap-guangzhou  。
      * @param Region 输出文件 Bucket 所属地域，如 ap-guangzhou  。
      */
     public void setRegion(String Region) {
@@ -60,7 +60,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件 Bucket 。
+     * Get 输出文件 Bucket 。 
      * @return Bucket 输出文件 Bucket 。
      */
     public String getBucket() {
@@ -68,7 +68,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件 Bucket 。
+     * Set 输出文件 Bucket 。
      * @param Bucket 输出文件 Bucket 。
      */
     public void setBucket(String Bucket) {
@@ -76,7 +76,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件目录，目录名必须以 "/" 结尾。
+     * Get 输出文件目录，目录名必须以 "/" 结尾。 
      * @return Dir 输出文件目录，目录名必须以 "/" 结尾。
      */
     public String getDir() {
@@ -84,7 +84,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件目录，目录名必须以 "/" 结尾。
+     * Set 输出文件目录，目录名必须以 "/" 结尾。
      * @param Dir 输出文件目录，目录名必须以 "/" 结尾。
      */
     public void setDir(String Dir) {
@@ -92,7 +92,7 @@ public class MediaOutputInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

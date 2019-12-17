@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFacesResponse  extends AbstractModel{
+public class SearchFacesResponse extends AbstractModel{
 
     /**
     * 识别结果。
@@ -51,7 +51,7 @@ public class SearchFacesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别结果。
+     * Get 识别结果。 
      * @return Results 识别结果。
      */
     public Result [] getResults() {
@@ -59,7 +59,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果。
+     * Set 识别结果。
      * @param Results 识别结果。
      */
     public void setResults(Result [] Results) {
@@ -67,7 +67,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取搜索的人员库中包含的人脸数。
+     * Get 搜索的人员库中包含的人脸数。 
      * @return FaceNum 搜索的人员库中包含的人脸数。
      */
     public Long getFaceNum() {
@@ -75,7 +75,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置搜索的人员库中包含的人脸数。
+     * Set 搜索的人员库中包含的人脸数。
      * @param FaceNum 搜索的人员库中包含的人脸数。
      */
     public void setFaceNum(Long FaceNum) {
@@ -83,7 +83,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -91,7 +91,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -99,7 +99,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class SearchFacesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Results.", this.Results);

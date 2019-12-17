@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetachClassicLinkVpcRequest  extends AbstractModel{
+public class DetachClassicLinkVpcRequest extends AbstractModel{
 
     /**
     * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -37,7 +37,7 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例ID查询。形如：ins-r8hr2upy。
+     * Get CVM实例ID查询。形如：ins-r8hr2upy。 
      * @return InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例ID查询。形如：ins-r8hr2upy。
+     * Set CVM实例ID查询。形如：ins-r8hr2upy。
      * @param InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class DetachClassicLinkVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatisticsRequest  extends AbstractModel{
+public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
     * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
@@ -45,7 +45,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
      * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public String getSmsSdkAppid() {
@@ -53,7 +53,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
@@ -61,7 +61,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大上限(需要拉取的套餐包个数)
+     * Get 最大上限(需要拉取的套餐包个数) 
      * @return Limit 最大上限(需要拉取的套餐包个数)
      */
     public Long getLimit() {
@@ -69,7 +69,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大上限(需要拉取的套餐包个数)
+     * Set 最大上限(需要拉取的套餐包个数)
      * @param Limit 最大上限(需要拉取的套餐包个数)
      */
     public void setLimit(Long Limit) {
@@ -77,8 +77,8 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
-注：目前固定设置为0
+     * Get 偏移量
+注：目前固定设置为0 
      * @return Offset 偏移量
 注：目前固定设置为0
      */
@@ -87,7 +87,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
 注：目前固定设置为0
      * @param Offset 偏移量
 注：目前固定设置为0
@@ -97,7 +97,7 @@ public class SmsPackagesStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);

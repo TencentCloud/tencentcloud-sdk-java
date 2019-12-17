@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupAssociationStatistics  extends AbstractModel{
+public class SecurityGroupAssociationStatistics extends AbstractModel{
 
     /**
     * 安全组实例ID。
@@ -72,7 +72,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     private InstanceStatistic [] InstanceStatistics;
 
     /**
-     * 获取安全组实例ID。
+     * Get 安全组实例ID。 
      * @return SecurityGroupId 安全组实例ID。
      */
     public String getSecurityGroupId() {
@@ -80,7 +80,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID。
+     * Set 安全组实例ID。
      * @param SecurityGroupId 安全组实例ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -88,7 +88,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取云主机实例数。
+     * Get 云主机实例数。 
      * @return CVM 云主机实例数。
      */
     public Integer getCVM() {
@@ -96,7 +96,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置云主机实例数。
+     * Set 云主机实例数。
      * @param CVM 云主机实例数。
      */
     public void setCVM(Integer CVM) {
@@ -104,7 +104,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取数据库实例数。
+     * Get 数据库实例数。 
      * @return CDB 数据库实例数。
      */
     public Integer getCDB() {
@@ -112,7 +112,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置数据库实例数。
+     * Set 数据库实例数。
      * @param CDB 数据库实例数。
      */
     public void setCDB(Integer CDB) {
@@ -120,7 +120,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡实例数。
+     * Get 弹性网卡实例数。 
      * @return ENI 弹性网卡实例数。
      */
     public Integer getENI() {
@@ -128,7 +128,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例数。
+     * Set 弹性网卡实例数。
      * @param ENI 弹性网卡实例数。
      */
     public void setENI(Integer ENI) {
@@ -136,7 +136,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取被安全组引用数。
+     * Get 被安全组引用数。 
      * @return SG 被安全组引用数。
      */
     public Integer getSG() {
@@ -144,7 +144,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置被安全组引用数。
+     * Set 被安全组引用数。
      * @param SG 被安全组引用数。
      */
     public void setSG(Integer SG) {
@@ -152,7 +152,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡实例数。
+     * Get 负载均衡实例数。 
      * @return CLB 负载均衡实例数。
      */
     public Integer getCLB() {
@@ -160,7 +160,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例数。
+     * Set 负载均衡实例数。
      * @param CLB 负载均衡实例数。
      */
     public void setCLB(Integer CLB) {
@@ -168,7 +168,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取全量实例的绑定统计。
+     * Get 全量实例的绑定统计。 
      * @return InstanceStatistics 全量实例的绑定统计。
      */
     public InstanceStatistic [] getInstanceStatistics() {
@@ -176,7 +176,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置全量实例的绑定统计。
+     * Set 全量实例的绑定统计。
      * @param InstanceStatistics 全量实例的绑定统计。
      */
     public void setInstanceStatistics(InstanceStatistic [] InstanceStatistics) {
@@ -184,7 +184,7 @@ public class SecurityGroupAssociationStatistics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

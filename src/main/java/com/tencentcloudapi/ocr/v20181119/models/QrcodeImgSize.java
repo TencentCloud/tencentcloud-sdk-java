@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QrcodeImgSize  extends AbstractModel{
+public class QrcodeImgSize extends AbstractModel{
 
     /**
     * 宽
@@ -37,7 +37,7 @@ public class QrcodeImgSize  extends AbstractModel{
     private Integer High;
 
     /**
-     * 获取宽
+     * Get 宽 
      * @return Wide 宽
      */
     public Integer getWide() {
@@ -45,7 +45,7 @@ public class QrcodeImgSize  extends AbstractModel{
     }
 
     /**
-     * 设置宽
+     * Set 宽
      * @param Wide 宽
      */
     public void setWide(Integer Wide) {
@@ -53,7 +53,7 @@ public class QrcodeImgSize  extends AbstractModel{
     }
 
     /**
-     * 获取高
+     * Get 高 
      * @return High 高
      */
     public Integer getHigh() {
@@ -61,7 +61,7 @@ public class QrcodeImgSize  extends AbstractModel{
     }
 
     /**
-     * 设置高
+     * Set 高
      * @param High 高
      */
     public void setHigh(Integer High) {
@@ -69,7 +69,7 @@ public class QrcodeImgSize  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Wide", this.Wide);

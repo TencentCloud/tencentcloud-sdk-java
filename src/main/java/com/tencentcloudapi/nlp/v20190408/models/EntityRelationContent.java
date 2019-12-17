@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EntityRelationContent  extends AbstractModel{
+public class EntityRelationContent extends AbstractModel{
 
     /**
     * 实体关系查询返回关系的object
@@ -44,7 +44,7 @@ public class EntityRelationContent  extends AbstractModel{
     private String Relation;
 
     /**
-     * 获取实体关系查询返回关系的object
+     * Get 实体关系查询返回关系的object 
      * @return Object 实体关系查询返回关系的object
      */
     public EntityRelationObject [] getObject() {
@@ -52,7 +52,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体关系查询返回关系的object
+     * Set 实体关系查询返回关系的object
      * @param Object 实体关系查询返回关系的object
      */
     public void setObject(EntityRelationObject [] Object) {
@@ -60,7 +60,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 获取实体关系查询返回关系的subject
+     * Get 实体关系查询返回关系的subject 
      * @return Subject 实体关系查询返回关系的subject
      */
     public EntityRelationSubject [] getSubject() {
@@ -68,7 +68,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体关系查询返回关系的subject
+     * Set 实体关系查询返回关系的subject
      * @param Subject 实体关系查询返回关系的subject
      */
     public void setSubject(EntityRelationSubject [] Subject) {
@@ -76,7 +76,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 获取实体关系查询返回的关系名称
+     * Get 实体关系查询返回的关系名称 
      * @return Relation 实体关系查询返回的关系名称
      */
     public String getRelation() {
@@ -84,7 +84,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 设置实体关系查询返回的关系名称
+     * Set 实体关系查询返回的关系名称
      * @param Relation 实体关系查询返回的关系名称
      */
     public void setRelation(String Relation) {
@@ -92,7 +92,7 @@ public class EntityRelationContent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Object.", this.Object);

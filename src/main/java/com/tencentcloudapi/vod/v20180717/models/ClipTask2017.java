@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClipTask2017  extends AbstractModel{
+public class ClipTask2017 extends AbstractModel{
 
     /**
     * 视频剪辑任务 ID。
@@ -44,7 +44,7 @@ public class ClipTask2017  extends AbstractModel{
     private ClipFileInfo2017 FileInfo;
 
     /**
-     * 获取视频剪辑任务 ID。
+     * Get 视频剪辑任务 ID。 
      * @return TaskId 视频剪辑任务 ID。
      */
     public String getTaskId() {
@@ -52,7 +52,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑任务 ID。
+     * Set 视频剪辑任务 ID。
      * @param TaskId 视频剪辑任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -60,7 +60,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频剪辑任务源文件 ID。
+     * Get 视频剪辑任务源文件 ID。 
      * @return SrcFileId 视频剪辑任务源文件 ID。
      */
     public String getSrcFileId() {
@@ -68,7 +68,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑任务源文件 ID。
+     * Set 视频剪辑任务源文件 ID。
      * @param SrcFileId 视频剪辑任务源文件 ID。
      */
     public void setSrcFileId(String SrcFileId) {
@@ -76,7 +76,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频剪辑输出的文件信息。
+     * Get 视频剪辑输出的文件信息。 
      * @return FileInfo 视频剪辑输出的文件信息。
      */
     public ClipFileInfo2017 getFileInfo() {
@@ -84,7 +84,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑输出的文件信息。
+     * Set 视频剪辑输出的文件信息。
      * @param FileInfo 视频剪辑输出的文件信息。
      */
     public void setFileInfo(ClipFileInfo2017 FileInfo) {
@@ -92,7 +92,7 @@ public class ClipTask2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterSecurityRequest  extends AbstractModel{
+public class DescribeClusterSecurityRequest extends AbstractModel{
 
     /**
     * 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
@@ -30,7 +30,7 @@ public class DescribeClusterSecurityRequest  extends AbstractModel{
     private String ClusterId;
 
     /**
-     * 获取集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
+     * Get 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段 
      * @return ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
     public String getClusterId() {
@@ -38,7 +38,7 @@ public class DescribeClusterSecurityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
+     * Set 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      * @param ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
     public void setClusterId(String ClusterId) {
@@ -46,7 +46,7 @@ public class DescribeClusterSecurityRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

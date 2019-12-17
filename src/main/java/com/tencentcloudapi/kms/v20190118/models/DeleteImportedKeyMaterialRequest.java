@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteImportedKeyMaterialRequest  extends AbstractModel{
+public class DeleteImportedKeyMaterialRequest extends AbstractModel{
 
     /**
     * 指定需要删除密钥材料的EXTERNAL CMK。
@@ -30,7 +30,7 @@ public class DeleteImportedKeyMaterialRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取指定需要删除密钥材料的EXTERNAL CMK。
+     * Get 指定需要删除密钥材料的EXTERNAL CMK。 
      * @return KeyId 指定需要删除密钥材料的EXTERNAL CMK。
      */
     public String getKeyId() {
@@ -38,7 +38,7 @@ public class DeleteImportedKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定需要删除密钥材料的EXTERNAL CMK。
+     * Set 指定需要删除密钥材料的EXTERNAL CMK。
      * @param KeyId 指定需要删除密钥材料的EXTERNAL CMK。
      */
     public void setKeyId(String KeyId) {
@@ -46,7 +46,7 @@ public class DeleteImportedKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

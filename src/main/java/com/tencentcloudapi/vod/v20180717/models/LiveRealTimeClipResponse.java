@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveRealTimeClipResponse  extends AbstractModel{
+public class LiveRealTimeClipResponse extends AbstractModel{
 
     /**
     * 剪辑后的视频播放 URL。
@@ -61,7 +61,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取剪辑后的视频播放 URL。
+     * Get 剪辑后的视频播放 URL。 
      * @return Url 剪辑后的视频播放 URL。
      */
     public String getUrl() {
@@ -69,7 +69,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑后的视频播放 URL。
+     * Set 剪辑后的视频播放 URL。
      * @param Url 剪辑后的视频播放 URL。
      */
     public void setUrl(String Url) {
@@ -77,8 +77,8 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剪辑固化后的视频的媒体文件的唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 剪辑固化后的视频的媒体文件的唯一标识。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 剪辑固化后的视频的媒体文件的唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑固化后的视频的媒体文件的唯一标识。
+     * Set 剪辑固化后的视频的媒体文件的唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 剪辑固化后的视频的媒体文件的唯一标识。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,8 +97,8 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剪辑固化后的视频任务流 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 剪辑固化后的视频任务流 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VodTaskId 剪辑固化后的视频任务流 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -107,7 +107,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑固化后的视频任务流 ID。
+     * Set 剪辑固化后的视频任务流 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VodTaskId 剪辑固化后的视频任务流 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -117,8 +117,8 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剪辑后的视频元信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 剪辑后的视频元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -127,7 +127,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑后的视频元信息。
+     * Set 剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 剪辑后的视频元信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,7 +137,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -145,7 +145,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -153,7 +153,7 @@ public class LiveRealTimeClipResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

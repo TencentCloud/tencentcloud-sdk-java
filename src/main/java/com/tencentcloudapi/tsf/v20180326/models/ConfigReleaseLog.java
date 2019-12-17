@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConfigReleaseLog  extends AbstractModel{
+public class ConfigReleaseLog extends AbstractModel{
 
     /**
     * 配置项发布日志ID
@@ -159,8 +159,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     private Boolean RollbackFlag;
 
     /**
-     * 获取配置项发布日志ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项发布日志ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseLogId 配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置配置项发布日志ID
+     * Set 配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigReleaseLogId 配置项发布日志ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID
+     * Set 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称
+     * Set 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,8 +219,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -229,7 +229,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本
+     * Set 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,8 +239,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -249,7 +249,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,8 +259,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,7 +269,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置部署组名称
+     * Set 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,8 +279,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -289,7 +289,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,8 +299,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -309,7 +309,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,8 +319,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -329,7 +329,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -339,8 +339,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -349,7 +349,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,8 +359,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取发布时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseTime 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -369,7 +369,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置发布时间
+     * Set 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseTime 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -379,8 +379,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取发布描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseDesc 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -389,7 +389,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置发布描述
+     * Set 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseDesc 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -399,8 +399,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取发布状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseStatus 发布状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -409,7 +409,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置发布状态
+     * Set 发布状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseStatus 发布状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -419,8 +419,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取上次发布的配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上次发布的配置项ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastConfigId 上次发布的配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -429,7 +429,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置上次发布的配置项ID
+     * Set 上次发布的配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastConfigId 上次发布的配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -439,8 +439,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取上次发布的配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上次发布的配置项名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastConfigName 上次发布的配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -449,7 +449,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置上次发布的配置项名称
+     * Set 上次发布的配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastConfigName 上次发布的配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -459,8 +459,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取上次发布的配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上次发布的配置项版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastConfigVersion 上次发布的配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -469,7 +469,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置上次发布的配置项版本
+     * Set 上次发布的配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastConfigVersion 上次发布的配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -479,8 +479,8 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 获取回滚标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 回滚标识
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RollbackFlag 回滚标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -489,7 +489,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 设置回滚标识
+     * Set 回滚标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RollbackFlag 回滚标识
 注意：此字段可能返回 null，表示取不到有效值。
@@ -499,7 +499,7 @@ public class ConfigReleaseLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigReleaseLogId", this.ConfigReleaseLogId);

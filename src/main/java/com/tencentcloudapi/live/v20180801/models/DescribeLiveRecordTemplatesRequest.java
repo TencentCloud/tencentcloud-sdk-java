@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveRecordTemplatesRequest  extends AbstractModel{
+public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
 
     /**
     * 是否属于慢直播模板
@@ -30,7 +30,7 @@ public class DescribeLiveRecordTemplatesRequest  extends AbstractModel{
     private Integer IsDelayLive;
 
     /**
-     * 获取是否属于慢直播模板
+     * Get 是否属于慢直播模板 
      * @return IsDelayLive 是否属于慢直播模板
      */
     public Integer getIsDelayLive() {
@@ -38,7 +38,7 @@ public class DescribeLiveRecordTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否属于慢直播模板
+     * Set 是否属于慢直播模板
      * @param IsDelayLive 是否属于慢直播模板
      */
     public void setIsDelayLive(Integer IsDelayLive) {
@@ -46,7 +46,7 @@ public class DescribeLiveRecordTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);

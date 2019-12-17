@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChatBotRequest  extends AbstractModel{
+public class ChatBotRequest extends AbstractModel{
 
     /**
     * 用户请求的query
@@ -44,7 +44,7 @@ public class ChatBotRequest  extends AbstractModel{
     private String OpenId;
 
     /**
-     * 获取用户请求的query
+     * Get 用户请求的query 
      * @return Query 用户请求的query
      */
     public String getQuery() {
@@ -52,7 +52,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户请求的query
+     * Set 用户请求的query
      * @param Query 用户请求的query
      */
     public void setQuery(String Query) {
@@ -60,7 +60,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     * Get 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊 
      * @return Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
      */
     public Long getFlag() {
@@ -68,7 +68,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+     * Set 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
      * @param Flag 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
      */
     public void setFlag(Long Flag) {
@@ -76,7 +76,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务的id,  主要用于儿童闲聊接口，比如手Q的openid
+     * Get 服务的id,  主要用于儿童闲聊接口，比如手Q的openid 
      * @return OpenId 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
      */
     public String getOpenId() {
@@ -84,7 +84,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务的id,  主要用于儿童闲聊接口，比如手Q的openid
+     * Set 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
      * @param OpenId 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
      */
     public void setOpenId(String OpenId) {
@@ -92,7 +92,7 @@ public class ChatBotRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);

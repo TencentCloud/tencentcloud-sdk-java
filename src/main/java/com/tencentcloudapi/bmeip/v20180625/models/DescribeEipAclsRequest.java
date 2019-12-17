@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipAclsRequest  extends AbstractModel{
+public class DescribeEipAclsRequest extends AbstractModel{
 
     /**
     * ACL 名称，支持模糊查找
@@ -51,7 +51,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取ACL 名称，支持模糊查找
+     * Get ACL 名称，支持模糊查找 
      * @return AclName ACL 名称，支持模糊查找
      */
     public String getAclName() {
@@ -59,7 +59,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 名称，支持模糊查找
+     * Set ACL 名称，支持模糊查找
      * @param AclName ACL 名称，支持模糊查找
      */
     public void setAclName(String AclName) {
@@ -67,7 +67,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例 ID 列表，数组下标从 0 开始
+     * Get ACL 实例 ID 列表，数组下标从 0 开始 
      * @return AclIds ACL 实例 ID 列表，数组下标从 0 开始
      */
     public String [] getAclIds() {
@@ -75,7 +75,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例 ID 列表，数组下标从 0 开始
+     * Set ACL 实例 ID 列表，数组下标从 0 开始
      * @param AclIds ACL 实例 ID 列表，数组下标从 0 开始
      */
     public void setAclIds(String [] AclIds) {
@@ -83,7 +83,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数。偏移量，默认为 0
+     * Get 分页参数。偏移量，默认为 0 
      * @return Offset 分页参数。偏移量，默认为 0
      */
     public Integer getOffset() {
@@ -91,7 +91,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数。偏移量，默认为 0
+     * Set 分页参数。偏移量，默认为 0
      * @param Offset 分页参数。偏移量，默认为 0
      */
     public void setOffset(Integer Offset) {
@@ -99,7 +99,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数。每一页的 EIPACL 列表数目
+     * Get 分页参数。每一页的 EIPACL 列表数目 
      * @return Limit 分页参数。每一页的 EIPACL 列表数目
      */
     public Integer getLimit() {
@@ -107,7 +107,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数。每一页的 EIPACL 列表数目
+     * Set 分页参数。每一页的 EIPACL 列表数目
      * @param Limit 分页参数。每一页的 EIPACL 列表数目
      */
     public void setLimit(Integer Limit) {
@@ -115,7 +115,7 @@ public class DescribeEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclName", this.AclName);

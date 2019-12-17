@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceRequest  extends AbstractModel{
+public class CreateDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -110,7 +110,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     private String DbVersionId;
 
     /**
-     * 获取实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Get 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
      * @return Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      */
     public String [] getZones() {
@@ -118,7 +118,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Set 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param Zones 实例节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      */
     public void setZones(String [] Zones) {
@@ -126,8 +126,8 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点个数大小，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得。
+     * Get 节点个数大小，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得。 
      * @return NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
@@ -136,7 +136,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点个数大小，可以通过 DescribeDBInstanceSpecs
+     * Set 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -146,8 +146,8 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得。
+     * Get 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得。 
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
@@ -156,7 +156,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -166,8 +166,8 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * Get 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。 
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
@@ -176,7 +176,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
@@ -186,7 +186,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的时长，单位：月。
+     * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
     public Integer getPeriod() {
@@ -194,7 +194,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的时长，单位：月。
+     * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
     public void setPeriod(Integer Period) {
@@ -202,7 +202,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的数量，默认查询购买1个实例的价格。
+     * Get 欲购买的数量，默认查询购买1个实例的价格。 
      * @return Count 欲购买的数量，默认查询购买1个实例的价格。
      */
     public Integer getCount() {
@@ -210,7 +210,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的数量，默认查询购买1个实例的价格。
+     * Set 欲购买的数量，默认查询购买1个实例的价格。
      * @param Count 欲购买的数量，默认查询购买1个实例的价格。
      */
     public void setCount(Integer Count) {
@@ -218,7 +218,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券进行支付，默认不使用。
+     * Get 是否自动使用代金券进行支付，默认不使用。 
      * @return AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public Boolean getAutoVoucher() {
@@ -226,7 +226,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券进行支付，默认不使用。
+     * Set 是否自动使用代金券进行支付，默认不使用。
      * @param AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
@@ -234,7 +234,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表，目前仅支持指定一张代金券。
+     * Get 代金券ID列表，目前仅支持指定一张代金券。 
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public String [] getVoucherIds() {
@@ -242,7 +242,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表，目前仅支持指定一张代金券。
+     * Set 代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -250,7 +250,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟私有网络 ID，不传表示创建为基础网络
+     * Get 虚拟私有网络 ID，不传表示创建为基础网络 
      * @return VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      */
     public String getVpcId() {
@@ -258,7 +258,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟私有网络 ID，不传表示创建为基础网络
+     * Set 虚拟私有网络 ID，不传表示创建为基础网络
      * @param VpcId 虚拟私有网络 ID，不传表示创建为基础网络
      */
     public void setVpcId(String VpcId) {
@@ -266,7 +266,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟私有网络子网 ID，VpcId 不为空时必填
+     * Get 虚拟私有网络子网 ID，VpcId 不为空时必填 
      * @return SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      */
     public String getSubnetId() {
@@ -274,7 +274,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟私有网络子网 ID，VpcId 不为空时必填
+     * Set 虚拟私有网络子网 ID，VpcId 不为空时必填
      * @param SubnetId 虚拟私有网络子网 ID，VpcId 不为空时必填
      */
     public void setSubnetId(String SubnetId) {
@@ -282,7 +282,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * Get 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目 
      * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
     public Integer getProjectId() {
@@ -290,7 +290,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * Set 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
     public void setProjectId(Integer ProjectId) {
@@ -298,7 +298,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * Get 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。 
      * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public String getDbVersionId() {
@@ -306,7 +306,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+     * Set 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      * @param DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
      */
     public void setDbVersionId(String DbVersionId) {
@@ -314,7 +314,7 @@ public class CreateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CopyFunctionRequest  extends AbstractModel{
+public class CopyFunctionRequest extends AbstractModel{
 
     /**
     * 要复制的函数的名称
@@ -84,7 +84,7 @@ FALSE：不复制函数配置
     private Boolean CopyConfiguration;
 
     /**
-     * 获取要复制的函数的名称
+     * Get 要复制的函数的名称 
      * @return FunctionName 要复制的函数的名称
      */
     public String getFunctionName() {
@@ -92,7 +92,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置要复制的函数的名称
+     * Set 要复制的函数的名称
      * @param FunctionName 要复制的函数的名称
      */
     public void setFunctionName(String FunctionName) {
@@ -100,7 +100,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取新函数的名称
+     * Get 新函数的名称 
      * @return NewFunctionName 新函数的名称
      */
     public String getNewFunctionName() {
@@ -108,7 +108,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置新函数的名称
+     * Set 新函数的名称
      * @param NewFunctionName 新函数的名称
      */
     public void setNewFunctionName(String NewFunctionName) {
@@ -116,7 +116,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取要复制的函数所在的命名空间，默认为default
+     * Get 要复制的函数所在的命名空间，默认为default 
      * @return Namespace 要复制的函数所在的命名空间，默认为default
      */
     public String getNamespace() {
@@ -124,7 +124,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置要复制的函数所在的命名空间，默认为default
+     * Set 要复制的函数所在的命名空间，默认为default
      * @param Namespace 要复制的函数所在的命名空间，默认为default
      */
     public void setNamespace(String Namespace) {
@@ -132,7 +132,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取将函数复制到的命名空间，默认为default
+     * Get 将函数复制到的命名空间，默认为default 
      * @return TargetNamespace 将函数复制到的命名空间，默认为default
      */
     public String getTargetNamespace() {
@@ -140,7 +140,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置将函数复制到的命名空间，默认为default
+     * Set 将函数复制到的命名空间，默认为default
      * @param TargetNamespace 将函数复制到的命名空间，默认为default
      */
     public void setTargetNamespace(String TargetNamespace) {
@@ -148,7 +148,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取新函数的描述
+     * Get 新函数的描述 
      * @return Description 新函数的描述
      */
     public String getDescription() {
@@ -156,7 +156,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置新函数的描述
+     * Set 新函数的描述
      * @param Description 新函数的描述
      */
     public void setDescription(String Description) {
@@ -164,7 +164,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取要将函数复制到的地域，不填则默认为当前地域
+     * Get 要将函数复制到的地域，不填则默认为当前地域 
      * @return TargetRegion 要将函数复制到的地域，不填则默认为当前地域
      */
     public String getTargetRegion() {
@@ -172,7 +172,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置要将函数复制到的地域，不填则默认为当前地域
+     * Set 要将函数复制到的地域，不填则默认为当前地域
      * @param TargetRegion 要将函数复制到的地域，不填则默认为当前地域
      */
     public void setTargetRegion(String TargetRegion) {
@@ -180,10 +180,10 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 获取如果目标Namespace下已有同名函数，是否覆盖，默认为否
+     * Get 如果目标Namespace下已有同名函数，是否覆盖，默认为否
 （注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
 TRUE：覆盖同名函数
-FALSE：不覆盖同名函数
+FALSE：不覆盖同名函数 
      * @return Override 如果目标Namespace下已有同名函数，是否覆盖，默认为否
 （注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
 TRUE：覆盖同名函数
@@ -194,7 +194,7 @@ FALSE：不覆盖同名函数
     }
 
     /**
-     * 设置如果目标Namespace下已有同名函数，是否覆盖，默认为否
+     * Set 如果目标Namespace下已有同名函数，是否覆盖，默认为否
 （注意：如果选择覆盖，会导致同名函数被删除，请慎重操作）
 TRUE：覆盖同名函数
 FALSE：不覆盖同名函数
@@ -208,9 +208,9 @@ FALSE：不覆盖同名函数
     }
 
     /**
-     * 获取是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+     * Get 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
 TRUE：复制函数配置
-FALSE：不复制函数配置
+FALSE：不复制函数配置 
      * @return CopyConfiguration 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
 TRUE：复制函数配置
 FALSE：不复制函数配置
@@ -220,7 +220,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 设置是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
+     * Set 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
 TRUE：复制函数配置
 FALSE：不复制函数配置
      * @param CopyConfiguration 是否复制函数的属性，包括环境变量、内存、超时、函数描述、标签、VPC等，默认为是。
@@ -232,7 +232,7 @@ FALSE：不复制函数配置
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveTranscodeTemplateRequest  extends AbstractModel{
+public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * 模板名称，例：900 900p 仅支持字母和数字的组合。
@@ -158,7 +158,7 @@ baseline/main/high。默认baseline
     private Float AdaptBitratePercent;
 
     /**
-     * 获取模板名称，例：900 900p 仅支持字母和数字的组合。
+     * Get 模板名称，例：900 900p 仅支持字母和数字的组合。 
      * @return TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
      */
     public String getTemplateName() {
@@ -166,7 +166,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置模板名称，例：900 900p 仅支持字母和数字的组合。
+     * Set 模板名称，例：900 900p 仅支持字母和数字的组合。
      * @param TemplateName 模板名称，例：900 900p 仅支持字母和数字的组合。
      */
     public void setTemplateName(String TemplateName) {
@@ -174,7 +174,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取视频码率。范围：100-8000。
+     * Get 视频码率。范围：100-8000。 
      * @return VideoBitrate 视频码率。范围：100-8000。
      */
     public Integer getVideoBitrate() {
@@ -182,7 +182,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置视频码率。范围：100-8000。
+     * Set 视频码率。范围：100-8000。
      * @param VideoBitrate 视频码率。范围：100-8000。
      */
     public void setVideoBitrate(Integer VideoBitrate) {
@@ -190,7 +190,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取视频编码：h264/h265，默认h264。
+     * Get 视频编码：h264/h265，默认h264。 
      * @return Vcodec 视频编码：h264/h265，默认h264。
      */
     public String getVcodec() {
@@ -198,7 +198,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置视频编码：h264/h265，默认h264。
+     * Set 视频编码：h264/h265，默认h264。
      * @param Vcodec 视频编码：h264/h265，默认h264。
      */
     public void setVcodec(String Vcodec) {
@@ -206,8 +206,8 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取音频编码：aac，默认原始音频格式。
-注意：当前该参数未生效，待后续支持！
+     * Get 音频编码：aac，默认原始音频格式。
+注意：当前该参数未生效，待后续支持！ 
      * @return Acodec 音频编码：aac，默认原始音频格式。
 注意：当前该参数未生效，待后续支持！
      */
@@ -216,7 +216,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置音频编码：aac，默认原始音频格式。
+     * Set 音频编码：aac，默认原始音频格式。
 注意：当前该参数未生效，待后续支持！
      * @param Acodec 音频编码：aac，默认原始音频格式。
 注意：当前该参数未生效，待后续支持！
@@ -226,7 +226,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取音频码率：默认0。0-500。
+     * Get 音频码率：默认0。0-500。 
      * @return AudioBitrate 音频码率：默认0。0-500。
      */
     public Integer getAudioBitrate() {
@@ -234,7 +234,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置音频码率：默认0。0-500。
+     * Set 音频码率：默认0。0-500。
      * @param AudioBitrate 音频码率：默认0。0-500。
      */
     public void setAudioBitrate(Integer AudioBitrate) {
@@ -242,7 +242,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取模板描述。
+     * Get 模板描述。 
      * @return Description 模板描述。
      */
     public String getDescription() {
@@ -250,7 +250,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置模板描述。
+     * Set 模板描述。
      * @param Description 模板描述。
      */
     public void setDescription(String Description) {
@@ -258,7 +258,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取宽，默认0。
+     * Get 宽，默认0。 
      * @return Width 宽，默认0。
      */
     public Integer getWidth() {
@@ -266,7 +266,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置宽，默认0。
+     * Set 宽，默认0。
      * @param Width 宽，默认0。
      */
     public void setWidth(Integer Width) {
@@ -274,7 +274,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否保留视频，0：否，1：是。默认1。
+     * Get 是否保留视频，0：否，1：是。默认1。 
      * @return NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
     public Integer getNeedVideo() {
@@ -282,7 +282,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否保留视频，0：否，1：是。默认1。
+     * Set 是否保留视频，0：否，1：是。默认1。
      * @param NeedVideo 是否保留视频，0：否，1：是。默认1。
      */
     public void setNeedVideo(Integer NeedVideo) {
@@ -290,7 +290,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否保留音频，0：否，1：是。默认1。
+     * Get 是否保留音频，0：否，1：是。默认1。 
      * @return NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
     public Integer getNeedAudio() {
@@ -298,7 +298,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否保留音频，0：否，1：是。默认1。
+     * Set 是否保留音频，0：否，1：是。默认1。
      * @param NeedAudio 是否保留音频，0：否，1：是。默认1。
      */
     public void setNeedAudio(Integer NeedAudio) {
@@ -306,7 +306,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取高，默认0。
+     * Get 高，默认0。 
      * @return Height 高，默认0。
      */
     public Integer getHeight() {
@@ -314,7 +314,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置高，默认0。
+     * Set 高，默认0。
      * @param Height 高，默认0。
      */
     public void setHeight(Integer Height) {
@@ -322,7 +322,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取帧率，默认0。
+     * Get 帧率，默认0。 
      * @return Fps 帧率，默认0。
      */
     public Integer getFps() {
@@ -330,7 +330,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置帧率，默认0。
+     * Set 帧率，默认0。
      * @param Fps 帧率，默认0。
      */
     public void setFps(Integer Fps) {
@@ -338,7 +338,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取关键帧间隔，单位：秒。默认原始的间隔
+     * Get 关键帧间隔，单位：秒。默认原始的间隔 
      * @return Gop 关键帧间隔，单位：秒。默认原始的间隔
      */
     public Integer getGop() {
@@ -346,7 +346,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置关键帧间隔，单位：秒。默认原始的间隔
+     * Set 关键帧间隔，单位：秒。默认原始的间隔
      * @param Gop 关键帧间隔，单位：秒。默认原始的间隔
      */
     public void setGop(Integer Gop) {
@@ -354,7 +354,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否旋转，0：否，1：是。默认0。
+     * Get 是否旋转，0：否，1：是。默认0。 
      * @return Rotate 是否旋转，0：否，1：是。默认0。
      */
     public Integer getRotate() {
@@ -362,7 +362,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否旋转，0：否，1：是。默认0。
+     * Set 是否旋转，0：否，1：是。默认0。
      * @param Rotate 是否旋转，0：否，1：是。默认0。
      */
     public void setRotate(Integer Rotate) {
@@ -370,8 +370,8 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取编码质量：
-baseline/main/high。默认baseline
+     * Get 编码质量：
+baseline/main/high。默认baseline 
      * @return Profile 编码质量：
 baseline/main/high。默认baseline
      */
@@ -380,7 +380,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置编码质量：
+     * Set 编码质量：
 baseline/main/high。默认baseline
      * @param Profile 编码质量：
 baseline/main/high。默认baseline
@@ -390,7 +390,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否不超过原始码率，0：否，1：是。默认0。
+     * Get 是否不超过原始码率，0：否，1：是。默认0。 
      * @return BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
      */
     public Integer getBitrateToOrig() {
@@ -398,7 +398,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否不超过原始码率，0：否，1：是。默认0。
+     * Set 是否不超过原始码率，0：否，1：是。默认0。
      * @param BitrateToOrig 是否不超过原始码率，0：否，1：是。默认0。
      */
     public void setBitrateToOrig(Integer BitrateToOrig) {
@@ -406,7 +406,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否不超过原始高，0：否，1：是。默认0。
+     * Get 是否不超过原始高，0：否，1：是。默认0。 
      * @return HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      */
     public Integer getHeightToOrig() {
@@ -414,7 +414,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否不超过原始高，0：否，1：是。默认0。
+     * Set 是否不超过原始高，0：否，1：是。默认0。
      * @param HeightToOrig 是否不超过原始高，0：否，1：是。默认0。
      */
     public void setHeightToOrig(Integer HeightToOrig) {
@@ -422,7 +422,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否不超过原始帧率，0：否，1：是。默认0。
+     * Get 是否不超过原始帧率，0：否，1：是。默认0。 
      * @return FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
      */
     public Integer getFpsToOrig() {
@@ -430,7 +430,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否不超过原始帧率，0：否，1：是。默认0。
+     * Set 是否不超过原始帧率，0：否，1：是。默认0。
      * @param FpsToOrig 是否不超过原始帧率，0：否，1：是。默认0。
      */
     public void setFpsToOrig(Integer FpsToOrig) {
@@ -438,7 +438,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取是否是急速高清模板，0：否，1：是。默认0。
+     * Get 是否是急速高清模板，0：否，1：是。默认0。 
      * @return AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
      */
     public Integer getAiTransCode() {
@@ -446,7 +446,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置是否是急速高清模板，0：否，1：是。默认0。
+     * Set 是否是急速高清模板，0：否，1：是。默认0。
      * @param AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
      */
     public void setAiTransCode(Integer AiTransCode) {
@@ -454,7 +454,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 急速高清相比VideoBitrate少多少码率，0.1到0.5 
      * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public Float getAdaptBitratePercent() {
@@ -462,7 +462,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 急速高清相比VideoBitrate少多少码率，0.1到0.5
      * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
@@ -470,7 +470,7 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);

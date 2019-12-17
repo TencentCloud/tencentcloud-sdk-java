@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachCamRoleRequest  extends AbstractModel{
+public class AttachCamRoleRequest extends AbstractModel{
 
     /**
     * 服务器ID
@@ -37,7 +37,7 @@ public class AttachCamRoleRequest  extends AbstractModel{
     private String RoleName;
 
     /**
-     * 获取服务器ID
+     * Get 服务器ID 
      * @return InstanceId 服务器ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class AttachCamRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务器ID
+     * Set 服务器ID
      * @param InstanceId 服务器ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class AttachCamRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称。
+     * Get 角色名称。 
      * @return RoleName 角色名称。
      */
     public String getRoleName() {
@@ -61,7 +61,7 @@ public class AttachCamRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称。
+     * Set 角色名称。
      * @param RoleName 角色名称。
      */
     public void setRoleName(String RoleName) {
@@ -69,7 +69,7 @@ public class AttachCamRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

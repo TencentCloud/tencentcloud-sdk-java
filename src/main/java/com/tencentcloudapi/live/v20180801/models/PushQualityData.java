@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushQualityData  extends AbstractModel{
+public class PushQualityData extends AbstractModel{
 
     /**
     * 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
@@ -135,7 +135,7 @@ public class PushQualityData  extends AbstractModel{
     private Integer AudioTs;
 
     /**
-     * 获取数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Get 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public String getTime() {
@@ -143,7 +143,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Set 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param Time 数据时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public void setTime(String Time) {
@@ -151,7 +151,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return PushDomain 推流域名。
      */
     public String getPushDomain() {
@@ -159,7 +159,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param PushDomain 推流域名。
      */
     public void setPushDomain(String PushDomain) {
@@ -167,7 +167,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径。
+     * Get 推流路径。 
      * @return AppName 推流路径。
      */
     public String getAppName() {
@@ -175,7 +175,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径。
+     * Set 推流路径。
      * @param AppName 推流路径。
      */
     public void setAppName(String AppName) {
@@ -183,7 +183,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取推流客户端ip。
+     * Get 推流客户端ip。 
      * @return ClientIp 推流客户端ip。
      */
     public String getClientIp() {
@@ -191,7 +191,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置推流客户端ip。
+     * Set 推流客户端ip。
      * @param ClientIp 推流客户端ip。
      */
     public void setClientIp(String ClientIp) {
@@ -199,7 +199,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Get 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。 
      * @return BeginPushTime 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public String getBeginPushTime() {
@@ -207,7 +207,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
+     * Set 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      * @param BeginPushTime 开始推流时间，格式是%Y-%m-%d %H:%M:%S.%ms，精确到毫秒级。
      */
     public void setBeginPushTime(String BeginPushTime) {
@@ -215,7 +215,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取分辨率信息。
+     * Get 分辨率信息。 
      * @return Resolution 分辨率信息。
      */
     public String getResolution() {
@@ -223,7 +223,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置分辨率信息。
+     * Set 分辨率信息。
      * @param Resolution 分辨率信息。
      */
     public void setResolution(String Resolution) {
@@ -231,7 +231,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取视频编码格式。
+     * Get 视频编码格式。 
      * @return VCodec 视频编码格式。
      */
     public String getVCodec() {
@@ -239,7 +239,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置视频编码格式。
+     * Set 视频编码格式。
      * @param VCodec 视频编码格式。
      */
     public void setVCodec(String VCodec) {
@@ -247,7 +247,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取音频编码格式。
+     * Get 音频编码格式。 
      * @return ACodec 音频编码格式。
      */
     public String getACodec() {
@@ -255,7 +255,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置音频编码格式。
+     * Set 音频编码格式。
      * @param ACodec 音频编码格式。
      */
     public void setACodec(String ACodec) {
@@ -263,7 +263,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取推流序列号，用来唯一的标志一次推流。
+     * Get 推流序列号，用来唯一的标志一次推流。 
      * @return Sequence 推流序列号，用来唯一的标志一次推流。
      */
     public String getSequence() {
@@ -271,7 +271,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置推流序列号，用来唯一的标志一次推流。
+     * Set 推流序列号，用来唯一的标志一次推流。
      * @param Sequence 推流序列号，用来唯一的标志一次推流。
      */
     public void setSequence(String Sequence) {
@@ -279,7 +279,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取视频帧率。
+     * Get 视频帧率。 
      * @return VideoFps 视频帧率。
      */
     public Integer getVideoFps() {
@@ -287,7 +287,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置视频帧率。
+     * Set 视频帧率。
      * @param VideoFps 视频帧率。
      */
     public void setVideoFps(Integer VideoFps) {
@@ -295,7 +295,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取视频码率，单位是bps。
+     * Get 视频码率，单位是bps。 
      * @return VideoRate 视频码率，单位是bps。
      */
     public Integer getVideoRate() {
@@ -303,7 +303,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置视频码率，单位是bps。
+     * Set 视频码率，单位是bps。
      * @param VideoRate 视频码率，单位是bps。
      */
     public void setVideoRate(Integer VideoRate) {
@@ -311,7 +311,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取音频帧率。
+     * Get 音频帧率。 
      * @return AudioFps 音频帧率。
      */
     public Integer getAudioFps() {
@@ -319,7 +319,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置音频帧率。
+     * Set 音频帧率。
      * @param AudioFps 音频帧率。
      */
     public void setAudioFps(Integer AudioFps) {
@@ -327,7 +327,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取音频码率，单位是bps。
+     * Get 音频码率，单位是bps。 
      * @return AudioRate 音频码率，单位是bps。
      */
     public Integer getAudioRate() {
@@ -335,7 +335,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置音频码率，单位是bps。
+     * Set 音频码率，单位是bps。
      * @param AudioRate 音频码率，单位是bps。
      */
     public void setAudioRate(Integer AudioRate) {
@@ -343,7 +343,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+     * Get 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。 
      * @return LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      */
     public Integer getLocalTs() {
@@ -351,7 +351,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
+     * Set 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      * @param LocalTs 本地流逝时间，单位是ms，音视频流逝时间与本地流逝时间的差距越大表示推流质量越差，上行卡顿越严重。
      */
     public void setLocalTs(Integer LocalTs) {
@@ -359,7 +359,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取视频流逝时间，单位是ms。
+     * Get 视频流逝时间，单位是ms。 
      * @return VideoTs 视频流逝时间，单位是ms。
      */
     public Integer getVideoTs() {
@@ -367,7 +367,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置视频流逝时间，单位是ms。
+     * Set 视频流逝时间，单位是ms。
      * @param VideoTs 视频流逝时间，单位是ms。
      */
     public void setVideoTs(Integer VideoTs) {
@@ -375,7 +375,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 获取音频流逝时间，单位是ms。
+     * Get 音频流逝时间，单位是ms。 
      * @return AudioTs 音频流逝时间，单位是ms。
      */
     public Integer getAudioTs() {
@@ -383,7 +383,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 设置音频流逝时间，单位是ms。
+     * Set 音频流逝时间，单位是ms。
      * @param AudioTs 音频流逝时间，单位是ms。
      */
     public void setAudioTs(Integer AudioTs) {
@@ -391,7 +391,7 @@ public class PushQualityData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

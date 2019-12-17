@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleOutInstanceRequest  extends AbstractModel{
+public class ScaleOutInstanceRequest extends AbstractModel{
 
     /**
     * 时间单位
@@ -86,7 +86,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     private Integer [] UnNecessaryNodeList;
 
     /**
-     * 获取时间单位
+     * Get 时间单位 
      * @return TimeUnit 时间单位
      */
     public String getTimeUnit() {
@@ -94,7 +94,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位
+     * Set 时间单位
      * @param TimeUnit 时间单位
      */
     public void setTimeUnit(String TimeUnit) {
@@ -102,7 +102,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间长度
+     * Get 时间长度 
      * @return TimeSpan 时间长度
      */
     public Integer getTimeSpan() {
@@ -110,7 +110,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间长度
+     * Set 时间长度
      * @param TimeSpan 时间长度
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -118,7 +118,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容实例ID
+     * Get 扩容实例ID 
      * @return InstanceId 扩容实例ID
      */
     public String getInstanceId() {
@@ -126,7 +126,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容实例ID
+     * Set 扩容实例ID
      * @param InstanceId 扩容实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -134,7 +134,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型
+     * Get 付费类型 
      * @return PayMode 付费类型
      */
     public Integer getPayMode() {
@@ -142,7 +142,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型
+     * Set 付费类型
      * @param PayMode 付费类型
      */
     public void setPayMode(Integer PayMode) {
@@ -150,7 +150,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Token
+     * Get Token 
      * @return ClientToken Token
      */
     public String getClientToken() {
@@ -158,7 +158,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Token
+     * Set Token
      * @param ClientToken Token
      */
     public void setClientToken(String ClientToken) {
@@ -166,7 +166,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预执行脚本设置
+     * Get 预执行脚本设置 
      * @return PreExecutedFileSettings 预执行脚本设置
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
@@ -174,7 +174,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预执行脚本设置
+     * Set 预执行脚本设置
      * @param PreExecutedFileSettings 预执行脚本设置
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
@@ -182,7 +182,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容Task节点数量
+     * Get 扩容Task节点数量 
      * @return TaskCount 扩容Task节点数量
      */
     public Integer getTaskCount() {
@@ -190,7 +190,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容Task节点数量
+     * Set 扩容Task节点数量
      * @param TaskCount 扩容Task节点数量
      */
     public void setTaskCount(Integer TaskCount) {
@@ -198,7 +198,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容Core节点数量
+     * Get 扩容Core节点数量 
      * @return CoreCount 扩容Core节点数量
      */
     public Integer getCoreCount() {
@@ -206,7 +206,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容Core节点数量
+     * Set 扩容Core节点数量
      * @param CoreCount 扩容Core节点数量
      */
     public void setCoreCount(Integer CoreCount) {
@@ -214,7 +214,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容时不需要安装的进程
+     * Get 扩容时不需要安装的进程 
      * @return UnNecessaryNodeList 扩容时不需要安装的进程
      */
     public Integer [] getUnNecessaryNodeList() {
@@ -222,7 +222,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容时不需要安装的进程
+     * Set 扩容时不需要安装的进程
      * @param UnNecessaryNodeList 扩容时不需要安装的进程
      */
     public void setUnNecessaryNodeList(Integer [] UnNecessaryNodeList) {
@@ -230,7 +230,7 @@ public class ScaleOutInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);

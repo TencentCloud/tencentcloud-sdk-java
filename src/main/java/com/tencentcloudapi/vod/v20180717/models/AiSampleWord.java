@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleWord  extends AbstractModel{
+public class AiSampleWord extends AbstractModel{
 
     /**
     * 关键词。
@@ -58,7 +58,7 @@ public class AiSampleWord  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取关键词。
+     * Get 关键词。 
      * @return Keyword 关键词。
      */
     public String getKeyword() {
@@ -66,7 +66,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 设置关键词。
+     * Set 关键词。
      * @param Keyword 关键词。
      */
     public void setKeyword(String Keyword) {
@@ -74,7 +74,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 获取关键词标签。
+     * Get 关键词标签。 
      * @return TagSet 关键词标签。
      */
     public String [] getTagSet() {
@@ -82,7 +82,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 设置关键词标签。
+     * Set 关键词标签。
      * @param TagSet 关键词标签。
      */
     public void setTagSet(String [] TagSet) {
@@ -90,7 +90,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 获取关键词应用场景。
+     * Get 关键词应用场景。 
      * @return UsageSet 关键词应用场景。
      */
     public String [] getUsageSet() {
@@ -98,7 +98,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 设置关键词应用场景。
+     * Set 关键词应用场景。
      * @param UsageSet 关键词应用场景。
      */
     public void setUsageSet(String [] UsageSet) {
@@ -106,7 +106,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -114,7 +114,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -122,7 +122,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 获取最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -130,7 +130,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 设置最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -138,7 +138,7 @@ public class AiSampleWord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);

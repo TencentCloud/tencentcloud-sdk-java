@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceAttrResult  extends AbstractModel{
+public class FaceAttrResult extends AbstractModel{
 
     /**
     * 年龄
@@ -37,7 +37,7 @@ public class FaceAttrResult  extends AbstractModel{
     private String Sex;
 
     /**
-     * 获取年龄
+     * Get 年龄 
      * @return Age 年龄
      */
     public Long getAge() {
@@ -45,7 +45,7 @@ public class FaceAttrResult  extends AbstractModel{
     }
 
     /**
-     * 设置年龄
+     * Set 年龄
      * @param Age 年龄
      */
     public void setAge(Long Age) {
@@ -53,7 +53,7 @@ public class FaceAttrResult  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -61,7 +61,7 @@ public class FaceAttrResult  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -69,7 +69,7 @@ public class FaceAttrResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Age", this.Age);

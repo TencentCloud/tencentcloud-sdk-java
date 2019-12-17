@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6AddressesRequest  extends AbstractModel{
+public class AssignIpv6AddressesRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
@@ -44,7 +44,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     private Integer Ipv6AddressCount;
 
     /**
-     * 获取弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Get 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。 
      * @return NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
      */
     public String getNetworkInterfaceId() {
@@ -52,7 +52,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Set 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
      * @param NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -60,7 +60,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+     * Get 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。 
      * @return Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
      */
     public Ipv6Address [] getIpv6Addresses() {
@@ -68,7 +68,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+     * Set 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
      * @param Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
      */
     public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
@@ -76,7 +76,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+     * Get 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。 
      * @return Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      */
     public Integer getIpv6AddressCount() {
@@ -84,7 +84,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+     * Set 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      * @param Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
      */
     public void setIpv6AddressCount(Integer Ipv6AddressCount) {
@@ -92,7 +92,7 @@ public class AssignIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

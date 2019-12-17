@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DirectConnectTunnel  extends AbstractModel{
+public class DirectConnectTunnel extends AbstractModel{
 
     /**
     * 专线通道ID
@@ -159,7 +159,7 @@ REJECTED:拒绝
     private Integer Bandwidth;
 
     /**
-     * 获取专线通道ID
+     * Get 专线通道ID 
      * @return DirectConnectTunnelId 专线通道ID
      */
     public String getDirectConnectTunnelId() {
@@ -167,7 +167,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道ID
+     * Set 专线通道ID
      * @param DirectConnectTunnelId 专线通道ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
@@ -175,7 +175,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取物理专线ID
+     * Get 物理专线ID 
      * @return DirectConnectId 物理专线ID
      */
     public String getDirectConnectId() {
@@ -183,7 +183,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置物理专线ID
+     * Set 物理专线ID
      * @param DirectConnectId 物理专线ID
      */
     public void setDirectConnectId(String DirectConnectId) {
@@ -191,7 +191,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道状态
+     * Get 专线通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -200,7 +200,7 @@ ALTERING:修改中
 DELETING:删除中
 DELETED:删除完成
 COMFIRMING:待接受
-REJECTED:拒绝
+REJECTED:拒绝 
      * @return State 专线通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
@@ -217,7 +217,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道状态
+     * Set 专线通道状态
 AVAILABLE:就绪或者已连接
 PENDING:申请中
 ALLOCATING:配置中
@@ -243,7 +243,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取物理专线的拥有者，开发商账号 ID
+     * Get 物理专线的拥有者，开发商账号 ID 
      * @return DirectConnectOwnerAccount 物理专线的拥有者，开发商账号 ID
      */
     public String getDirectConnectOwnerAccount() {
@@ -251,7 +251,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置物理专线的拥有者，开发商账号 ID
+     * Set 物理专线的拥有者，开发商账号 ID
      * @param DirectConnectOwnerAccount 物理专线的拥有者，开发商账号 ID
      */
     public void setDirectConnectOwnerAccount(String DirectConnectOwnerAccount) {
@@ -259,7 +259,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道的拥有者，开发商账号 ID
+     * Get 专线通道的拥有者，开发商账号 ID 
      * @return OwnerAccount 专线通道的拥有者，开发商账号 ID
      */
     public String getOwnerAccount() {
@@ -267,7 +267,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道的拥有者，开发商账号 ID
+     * Set 专线通道的拥有者，开发商账号 ID
      * @param OwnerAccount 专线通道的拥有者，开发商账号 ID
      */
     public void setOwnerAccount(String OwnerAccount) {
@@ -275,8 +275,8 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取网络类型，分别为VPC、BMVPC、CCN
- VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
+     * Get 网络类型，分别为VPC、BMVPC、CCN
+ VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网 
      * @return NetworkType 网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      */
@@ -285,7 +285,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置网络类型，分别为VPC、BMVPC、CCN
+     * Set 网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
      * @param NetworkType 网络类型，分别为VPC、BMVPC、CCN
  VPC：私有网络 ，BMVPC：黑石网络，CCN：云联网
@@ -295,7 +295,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取VPC地域
+     * Get VPC地域 
      * @return NetworkRegion VPC地域
      */
     public String getNetworkRegion() {
@@ -303,7 +303,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置VPC地域
+     * Set VPC地域
      * @param NetworkRegion VPC地域
      */
     public void setNetworkRegion(String NetworkRegion) {
@@ -311,7 +311,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取私有网络统一 ID 或者黑石网络统一 ID
+     * Get 私有网络统一 ID 或者黑石网络统一 ID 
      * @return VpcId 私有网络统一 ID 或者黑石网络统一 ID
      */
     public String getVpcId() {
@@ -319,7 +319,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置私有网络统一 ID 或者黑石网络统一 ID
+     * Set 私有网络统一 ID 或者黑石网络统一 ID
      * @param VpcId 私有网络统一 ID 或者黑石网络统一 ID
      */
     public void setVpcId(String VpcId) {
@@ -327,7 +327,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线网关 ID
+     * Get 专线网关 ID 
      * @return DirectConnectGatewayId 专线网关 ID
      */
     public String getDirectConnectGatewayId() {
@@ -335,7 +335,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线网关 ID
+     * Set 专线网关 ID
      * @param DirectConnectGatewayId 专线网关 ID
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -343,7 +343,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
+     * Get BGP ：BGP路由 STATIC：静态 默认为 BGP 路由 
      * @return RouteType BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
      */
     public String getRouteType() {
@@ -351,7 +351,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
+     * Set BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
      * @param RouteType BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
      */
     public void setRouteType(String RouteType) {
@@ -359,7 +359,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取用户侧BGP，Asn，AuthKey
+     * Get 用户侧BGP，Asn，AuthKey 
      * @return BgpPeer 用户侧BGP，Asn，AuthKey
      */
     public BgpPeer getBgpPeer() {
@@ -367,7 +367,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置用户侧BGP，Asn，AuthKey
+     * Set 用户侧BGP，Asn，AuthKey
      * @param BgpPeer 用户侧BGP，Asn，AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
@@ -375,7 +375,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取用户侧网段地址
+     * Get 用户侧网段地址 
      * @return RouteFilterPrefixes 用户侧网段地址
      */
     public RouteFilterPrefix [] getRouteFilterPrefixes() {
@@ -383,7 +383,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置用户侧网段地址
+     * Set 用户侧网段地址
      * @param RouteFilterPrefixes 用户侧网段地址
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix [] RouteFilterPrefixes) {
@@ -391,7 +391,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道的Vlan
+     * Get 专线通道的Vlan 
      * @return Vlan 专线通道的Vlan
      */
     public Integer getVlan() {
@@ -399,7 +399,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道的Vlan
+     * Set 专线通道的Vlan
      * @param Vlan 专线通道的Vlan
      */
     public void setVlan(Integer Vlan) {
@@ -407,7 +407,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取TencentAddress，腾讯侧互联 IP
+     * Get TencentAddress，腾讯侧互联 IP 
      * @return TencentAddress TencentAddress，腾讯侧互联 IP
      */
     public String getTencentAddress() {
@@ -415,7 +415,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置TencentAddress，腾讯侧互联 IP
+     * Set TencentAddress，腾讯侧互联 IP
      * @param TencentAddress TencentAddress，腾讯侧互联 IP
      */
     public void setTencentAddress(String TencentAddress) {
@@ -423,7 +423,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取CustomerAddress，用户侧互联 IP
+     * Get CustomerAddress，用户侧互联 IP 
      * @return CustomerAddress CustomerAddress，用户侧互联 IP
      */
     public String getCustomerAddress() {
@@ -431,7 +431,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置CustomerAddress，用户侧互联 IP
+     * Set CustomerAddress，用户侧互联 IP
      * @param CustomerAddress CustomerAddress，用户侧互联 IP
      */
     public void setCustomerAddress(String CustomerAddress) {
@@ -439,7 +439,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道名称
+     * Get 专线通道名称 
      * @return DirectConnectTunnelName 专线通道名称
      */
     public String getDirectConnectTunnelName() {
@@ -447,7 +447,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道名称
+     * Set 专线通道名称
      * @param DirectConnectTunnelName 专线通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
@@ -455,7 +455,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道创建时间
+     * Get 专线通道创建时间 
      * @return CreatedTime 专线通道创建时间
      */
     public String getCreatedTime() {
@@ -463,7 +463,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道创建时间
+     * Set 专线通道创建时间
      * @param CreatedTime 专线通道创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -471,7 +471,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 获取专线通道带宽值
+     * Get 专线通道带宽值 
      * @return Bandwidth 专线通道带宽值
      */
     public Integer getBandwidth() {
@@ -479,7 +479,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 设置专线通道带宽值
+     * Set 专线通道带宽值
      * @param Bandwidth 专线通道带宽值
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -487,7 +487,7 @@ REJECTED:拒绝
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectTunnelId", this.DirectConnectTunnelId);

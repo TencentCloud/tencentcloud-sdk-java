@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckDomainRequest  extends AbstractModel{
+public class CheckDomainRequest extends AbstractModel{
 
     /**
     * 所查询域名名称
@@ -30,7 +30,7 @@ public class CheckDomainRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-     * 获取所查询域名名称
+     * Get 所查询域名名称 
      * @return DomainName 所查询域名名称
      */
     public String getDomainName() {
@@ -38,7 +38,7 @@ public class CheckDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置所查询域名名称
+     * Set 所查询域名名称
      * @param DomainName 所查询域名名称
      */
     public void setDomainName(String DomainName) {
@@ -46,7 +46,7 @@ public class CheckDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

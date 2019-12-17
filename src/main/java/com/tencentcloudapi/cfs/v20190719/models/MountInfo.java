@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MountInfo  extends AbstractModel{
+public class MountInfo extends AbstractModel{
 
     /**
     * 文件系统 ID
@@ -93,7 +93,7 @@ public class MountInfo  extends AbstractModel{
     private String SubnetName;
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -101,7 +101,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -109,7 +109,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点 ID
+     * Get 挂载点 ID 
      * @return MountTargetId 挂载点 ID
      */
     public String getMountTargetId() {
@@ -117,7 +117,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点 ID
+     * Set 挂载点 ID
      * @param MountTargetId 挂载点 ID
      */
     public void setMountTargetId(String MountTargetId) {
@@ -125,7 +125,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点 IP
+     * Get 挂载点 IP 
      * @return IpAddress 挂载点 IP
      */
     public String getIpAddress() {
@@ -133,7 +133,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点 IP
+     * Set 挂载点 IP
      * @param IpAddress 挂载点 IP
      */
     public void setIpAddress(String IpAddress) {
@@ -141,7 +141,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取挂载根目录
+     * Get 挂载根目录 
      * @return FSID 挂载根目录
      */
     public String getFSID() {
@@ -149,7 +149,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置挂载根目录
+     * Set 挂载根目录
      * @param FSID 挂载根目录
      */
     public void setFSID(String FSID) {
@@ -157,7 +157,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点状态
+     * Get 挂载点状态 
      * @return LifeCycleState 挂载点状态
      */
     public String getLifeCycleState() {
@@ -165,7 +165,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点状态
+     * Set 挂载点状态
      * @param LifeCycleState 挂载点状态
      */
     public void setLifeCycleState(String LifeCycleState) {
@@ -173,7 +173,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型
+     * Get 网络类型 
      * @return NetworkInterface 网络类型
      */
     public String getNetworkInterface() {
@@ -181,7 +181,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型
+     * Set 网络类型
      * @param NetworkInterface 网络类型
      */
     public void setNetworkInterface(String NetworkInterface) {
@@ -189,7 +189,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络 ID
+     * Get 私有网络 ID 
      * @return VpcId 私有网络 ID
      */
     public String getVpcId() {
@@ -197,7 +197,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络 ID
+     * Set 私有网络 ID
      * @param VpcId 私有网络 ID
      */
     public void setVpcId(String VpcId) {
@@ -205,7 +205,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -213,7 +213,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -221,7 +221,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网 Id
+     * Get 子网 Id 
      * @return SubnetId 子网 Id
      */
     public String getSubnetId() {
@@ -229,7 +229,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网 Id
+     * Set 子网 Id
      * @param SubnetId 子网 Id
      */
     public void setSubnetId(String SubnetId) {
@@ -237,7 +237,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称
+     * Get 子网名称 
      * @return SubnetName 子网名称
      */
     public String getSubnetName() {
@@ -245,7 +245,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称
+     * Set 子网名称
      * @param SubnetName 子网名称
      */
     public void setSubnetName(String SubnetName) {
@@ -253,7 +253,7 @@ public class MountInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OsVersion  extends AbstractModel{
+public class OsVersion extends AbstractModel{
 
     /**
     * 操作系统类型
@@ -44,7 +44,7 @@ public class OsVersion  extends AbstractModel{
     private String [] Architecture;
 
     /**
-     * 获取操作系统类型
+     * Get 操作系统类型 
      * @return OsName 操作系统类型
      */
     public String getOsName() {
@@ -52,7 +52,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统类型
+     * Set 操作系统类型
      * @param OsName 操作系统类型
      */
     public void setOsName(String OsName) {
@@ -60,7 +60,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 获取支持的操作系统版本
+     * Get 支持的操作系统版本 
      * @return OsVersions 支持的操作系统版本
      */
     public String [] getOsVersions() {
@@ -68,7 +68,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 设置支持的操作系统版本
+     * Set 支持的操作系统版本
      * @param OsVersions 支持的操作系统版本
      */
     public void setOsVersions(String [] OsVersions) {
@@ -76,7 +76,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 获取支持的操作系统架构
+     * Get 支持的操作系统架构 
      * @return Architecture 支持的操作系统架构
      */
     public String [] getArchitecture() {
@@ -84,7 +84,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 设置支持的操作系统架构
+     * Set 支持的操作系统架构
      * @param Architecture 支持的操作系统架构
      */
     public void setArchitecture(String [] Architecture) {
@@ -92,7 +92,7 @@ public class OsVersion  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OsName", this.OsName);

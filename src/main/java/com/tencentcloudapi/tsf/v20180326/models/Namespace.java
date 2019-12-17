@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Namespace  extends AbstractModel{
+public class Namespace extends AbstractModel{
 
     /**
     * 命名空间ID
@@ -111,8 +111,8 @@ public class Namespace  extends AbstractModel{
     private String ClusterId;
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间编码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间编码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceCode 命名空间编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间编码
+     * Set 命名空间编码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceCode 命名空间编码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceDesc 命名空间描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间描述
+     * Set 命名空间描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceDesc 命名空间描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,8 +191,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取默认命名空间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 默认命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsDefault 默认命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,7 +201,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置默认命名空间
+     * Set 默认命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 默认命名空间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,8 +211,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceStatus 命名空间状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -221,7 +221,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间状态
+     * Set 命名空间状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceStatus 命名空间状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,8 +231,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取删除标识
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 删除标识
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteFlag 删除标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -241,7 +241,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置删除标识
+     * Set 删除标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteFlag 删除标识
 注意：此字段可能返回 null，表示取不到有效值。
@@ -251,8 +251,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -261,7 +261,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,8 +271,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
+     * Set 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterList 集群数组，仅携带集群ID，集群名称，集群类型等基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,7 +331,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClassicalLBTargetsRequest  extends AbstractModel{
+public class DescribeClassicalLBTargetsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -30,7 +30,7 @@ public class DescribeClassicalLBTargetsRequest  extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -38,7 +38,7 @@ public class DescribeClassicalLBTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -46,7 +46,7 @@ public class DescribeClassicalLBTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

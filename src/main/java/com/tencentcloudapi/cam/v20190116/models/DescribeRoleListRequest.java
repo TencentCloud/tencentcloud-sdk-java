@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRoleListRequest  extends AbstractModel{
+public class DescribeRoleListRequest extends AbstractModel{
 
     /**
     * 页码，从1开始
@@ -37,7 +37,7 @@ public class DescribeRoleListRequest  extends AbstractModel{
     private Long Rp;
 
     /**
-     * 获取页码，从1开始
+     * Get 页码，从1开始 
      * @return Page 页码，从1开始
      */
     public Long getPage() {
@@ -45,7 +45,7 @@ public class DescribeRoleListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码，从1开始
+     * Set 页码，从1开始
      * @param Page 页码，从1开始
      */
     public void setPage(Long Page) {
@@ -53,7 +53,7 @@ public class DescribeRoleListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页行数，不能大于200
+     * Get 每页行数，不能大于200 
      * @return Rp 每页行数，不能大于200
      */
     public Long getRp() {
@@ -61,7 +61,7 @@ public class DescribeRoleListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页行数，不能大于200
+     * Set 每页行数，不能大于200
      * @param Rp 每页行数，不能大于200
      */
     public void setRp(Long Rp) {
@@ -69,7 +69,7 @@ public class DescribeRoleListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);

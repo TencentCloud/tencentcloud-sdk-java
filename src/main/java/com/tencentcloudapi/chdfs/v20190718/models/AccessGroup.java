@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessGroup  extends AbstractModel{
+public class AccessGroup extends AbstractModel{
 
     /**
     * 权限组ID
@@ -51,7 +51,7 @@ public class AccessGroup  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -59,7 +59,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -67,7 +67,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取权限组名称
+     * Get 权限组名称 
      * @return AccessGroupName 权限组名称
      */
     public String getAccessGroupName() {
@@ -75,7 +75,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称
+     * Set 权限组名称
      * @param AccessGroupName 权限组名称
      */
     public void setAccessGroupName(String AccessGroupName) {
@@ -83,7 +83,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取权限组描述
+     * Get 权限组描述 
      * @return Description 权限组描述
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权限组描述
+     * Set 权限组描述
      * @param Description 权限组描述
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -107,7 +107,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -115,7 +115,7 @@ public class AccessGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);

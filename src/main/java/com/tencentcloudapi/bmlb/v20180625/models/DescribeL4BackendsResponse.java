@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4BackendsResponse  extends AbstractModel{
+public class DescribeL4BackendsResponse extends AbstractModel{
 
     /**
     * 返回的绑定关系列表。
@@ -37,7 +37,7 @@ public class DescribeL4BackendsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的绑定关系列表。
+     * Get 返回的绑定关系列表。 
      * @return BackendSet 返回的绑定关系列表。
      */
     public L4Backend [] getBackendSet() {
@@ -45,7 +45,7 @@ public class DescribeL4BackendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的绑定关系列表。
+     * Set 返回的绑定关系列表。
      * @param BackendSet 返回的绑定关系列表。
      */
     public void setBackendSet(L4Backend [] BackendSet) {
@@ -53,7 +53,7 @@ public class DescribeL4BackendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeL4BackendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeL4BackendsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BackendSet.", this.BackendSet);

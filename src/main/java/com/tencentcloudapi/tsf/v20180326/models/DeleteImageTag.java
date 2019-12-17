@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteImageTag  extends AbstractModel{
+public class DeleteImageTag extends AbstractModel{
 
     /**
     * 仓库名，如/tsf/nginx
@@ -37,7 +37,7 @@ public class DeleteImageTag  extends AbstractModel{
     private String TagName;
 
     /**
-     * 获取仓库名，如/tsf/nginx
+     * Get 仓库名，如/tsf/nginx 
      * @return RepoName 仓库名，如/tsf/nginx
      */
     public String getRepoName() {
@@ -45,7 +45,7 @@ public class DeleteImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置仓库名，如/tsf/nginx
+     * Set 仓库名，如/tsf/nginx
      * @param RepoName 仓库名，如/tsf/nginx
      */
     public void setRepoName(String RepoName) {
@@ -53,7 +53,7 @@ public class DeleteImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取版本号:如V1
+     * Get 版本号:如V1 
      * @return TagName 版本号:如V1
      */
     public String getTagName() {
@@ -61,7 +61,7 @@ public class DeleteImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置版本号:如V1
+     * Set 版本号:如V1
      * @param TagName 版本号:如V1
      */
     public void setTagName(String TagName) {
@@ -69,7 +69,7 @@ public class DeleteImageTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RepoName", this.RepoName);

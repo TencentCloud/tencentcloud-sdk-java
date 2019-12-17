@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCfsFileSystemsRequest  extends AbstractModel{
+public class DescribeCfsFileSystemsRequest extends AbstractModel{
 
     /**
     * 文件系统 ID
@@ -44,7 +44,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -52,7 +52,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -60,7 +60,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络（VPC） ID
+     * Get 私有网络（VPC） ID 
      * @return VpcId 私有网络（VPC） ID
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络（VPC） ID
+     * Set 私有网络（VPC） ID
      * @param VpcId 私有网络（VPC） ID
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网 ID
+     * Get 子网 ID 
      * @return SubnetId 子网 ID
      */
     public String getSubnetId() {
@@ -84,7 +84,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网 ID
+     * Set 子网 ID
      * @param SubnetId 子网 ID
      */
     public void setSubnetId(String SubnetId) {
@@ -92,7 +92,7 @@ public class DescribeCfsFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

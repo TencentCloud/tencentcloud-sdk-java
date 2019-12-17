@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
+public class SubmitCheckAttendanceTaskResponse extends AbstractModel{
 
     /**
     * 任务标识符
@@ -44,7 +44,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务标识符
+     * Get 任务标识符 
      * @return JobId 任务标识符
      */
     public Long getJobId() {
@@ -52,7 +52,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务标识符
+     * Set 任务标识符
      * @param JobId 任务标识符
      */
     public void setJobId(Long JobId) {
@@ -60,7 +60,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取没有注册的人的ID列表
+     * Get 没有注册的人的ID列表 
      * @return NotRegisteredSet 没有注册的人的ID列表
      */
     public String [] getNotRegisteredSet() {
@@ -68,7 +68,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置没有注册的人的ID列表
+     * Set 没有注册的人的ID列表
      * @param NotRegisteredSet 没有注册的人的ID列表
      */
     public void setNotRegisteredSet(String [] NotRegisteredSet) {
@@ -76,7 +76,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class SubmitCheckAttendanceTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealServerBindSetReq  extends AbstractModel{
+public class RealServerBindSetReq extends AbstractModel{
 
     /**
     * 源站id
@@ -51,7 +51,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     private Long RealServerWeight;
 
     /**
-     * 获取源站id
+     * Get 源站id 
      * @return RealServerId 源站id
      */
     public String getRealServerId() {
@@ -59,7 +59,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 设置源站id
+     * Set 源站id
      * @param RealServerId 源站id
      */
     public void setRealServerId(String RealServerId) {
@@ -67,7 +67,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 获取源站端口
+     * Get 源站端口 
      * @return RealServerPort 源站端口
      */
     public Long getRealServerPort() {
@@ -75,7 +75,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 设置源站端口
+     * Set 源站端口
      * @param RealServerPort 源站端口
      */
     public void setRealServerPort(Long RealServerPort) {
@@ -83,7 +83,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 获取源站IP
+     * Get 源站IP 
      * @return RealServerIP 源站IP
      */
     public String getRealServerIP() {
@@ -91,7 +91,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 设置源站IP
+     * Set 源站IP
      * @param RealServerIP 源站IP
      */
     public void setRealServerIP(String RealServerIP) {
@@ -99,7 +99,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 获取源站权重
+     * Get 源站权重 
      * @return RealServerWeight 源站权重
      */
     public Long getRealServerWeight() {
@@ -107,7 +107,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 设置源站权重
+     * Set 源站权重
      * @param RealServerWeight 源站权重
      */
     public void setRealServerWeight(Long RealServerWeight) {
@@ -115,7 +115,7 @@ public class RealServerBindSetReq  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);

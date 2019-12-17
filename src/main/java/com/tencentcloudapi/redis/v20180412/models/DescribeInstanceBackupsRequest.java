@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceBackupsRequest  extends AbstractModel{
+public class DescribeInstanceBackupsRequest extends AbstractModel{
 
     /**
     * 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
@@ -65,7 +65,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     private Integer [] Status;
 
     /**
-     * 获取待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+     * Get 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。 
      * @return InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
+     * Set 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
      * @param InstanceId 待操作的实例ID，可通过 DescribeInstance 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例列表大小，默认大小20
+     * Get 实例列表大小，默认大小20 
      * @return Limit 实例列表大小，默认大小20
      */
     public Integer getLimit() {
@@ -89,7 +89,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例列表大小，默认大小20
+     * Set 实例列表大小，默认大小20
      * @param Limit 实例列表大小，默认大小20
      */
     public void setLimit(Integer Limit) {
@@ -97,7 +97,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * Get 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。 
      * @return BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      */
     public String getBeginTime() {
@@ -121,7 +121,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * Set 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      * @param BeginTime 开始时间，格式如：2017-02-08 16:46:34。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      */
     public void setBeginTime(String BeginTime) {
@@ -129,7 +129,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * Get 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。 
      * @return EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      */
     public String getEndTime() {
@@ -137,7 +137,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
+     * Set 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      * @param EndTime 结束时间，格式如：2017-02-08 19:09:26。查询实例在 [beginTime, endTime] 时间段内开始备份的备份列表。
      */
     public void setEndTime(String EndTime) {
@@ -145,7 +145,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
+     * Get 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。 
      * @return Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
     public Integer [] getStatus() {
@@ -153,7 +153,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
+     * Set 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      * @param Status 1：备份在流程中，2：备份正常，3：备份转RDB文件处理中，4：已完成RDB转换，-1：备份已过期，-2：备份已删除。
      */
     public void setStatus(Integer [] Status) {
@@ -161,7 +161,7 @@ public class DescribeInstanceBackupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

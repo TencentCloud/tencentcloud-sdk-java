@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindVpcIpRequest  extends AbstractModel{
+public class UnbindVpcIpRequest extends AbstractModel{
 
     /**
     * Eip实例ID
@@ -44,7 +44,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     private String VpcIp;
 
     /**
-     * 获取Eip实例ID
+     * Get Eip实例ID 
      * @return EipId Eip实例ID
      */
     public String getEipId() {
@@ -52,7 +52,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID
+     * Set Eip实例ID
      * @param EipId Eip实例ID
      */
     public void setEipId(String EipId) {
@@ -60,7 +60,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP归属VpcId，例如vpc-k7j1t2x1
+     * Get EIP归属VpcId，例如vpc-k7j1t2x1 
      * @return VpcId EIP归属VpcId，例如vpc-k7j1t2x1
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP归属VpcId，例如vpc-k7j1t2x1
+     * Set EIP归属VpcId，例如vpc-k7j1t2x1
      * @param VpcId EIP归属VpcId，例如vpc-k7j1t2x1
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的VPC内IP地址
+     * Get 绑定的VPC内IP地址 
      * @return VpcIp 绑定的VPC内IP地址
      */
     public String getVpcIp() {
@@ -84,7 +84,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的VPC内IP地址
+     * Set 绑定的VPC内IP地址
      * @param VpcIp 绑定的VPC内IP地址
      */
     public void setVpcIp(String VpcIp) {
@@ -92,7 +92,7 @@ public class UnbindVpcIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

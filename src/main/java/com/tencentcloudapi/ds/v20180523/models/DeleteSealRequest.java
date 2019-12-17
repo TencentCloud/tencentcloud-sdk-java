@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSealRequest  extends AbstractModel{
+public class DeleteSealRequest extends AbstractModel{
 
     /**
     * 模块名SealMng
@@ -51,7 +51,7 @@ public class DeleteSealRequest  extends AbstractModel{
     private String SealResId;
 
     /**
-     * 获取模块名SealMng
+     * Get 模块名SealMng 
      * @return Module 模块名SealMng
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名SealMng
+     * Set 模块名SealMng
      * @param Module 模块名SealMng
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名DeleteSeal
+     * Get 操作名DeleteSeal 
      * @return Operation 操作名DeleteSeal
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名DeleteSeal
+     * Set 操作名DeleteSeal
      * @param Operation 操作名DeleteSeal
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐号ID
+     * Get 帐号ID 
      * @return AccountResId 帐号ID
      */
     public String getAccountResId() {
@@ -91,7 +91,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帐号ID
+     * Set 帐号ID
      * @param AccountResId 帐号ID
      */
     public void setAccountResId(String AccountResId) {
@@ -99,7 +99,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签章ID
+     * Get 签章ID 
      * @return SealResId 签章ID
      */
     public String getSealResId() {
@@ -107,7 +107,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签章ID
+     * Set 签章ID
      * @param SealResId 签章ID
      */
     public void setSealResId(String SealResId) {
@@ -115,7 +115,7 @@ public class DeleteSealRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

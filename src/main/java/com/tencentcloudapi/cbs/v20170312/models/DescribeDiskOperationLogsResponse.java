@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskOperationLogsResponse  extends AbstractModel{
+public class DescribeDiskOperationLogsResponse extends AbstractModel{
 
     /**
     * 云盘的操作日志列表。
@@ -37,7 +37,7 @@ public class DescribeDiskOperationLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取云盘的操作日志列表。
+     * Get 云盘的操作日志列表。 
      * @return DiskOperationLogSet 云盘的操作日志列表。
      */
     public DiskOperationLog [] getDiskOperationLogSet() {
@@ -45,7 +45,7 @@ public class DescribeDiskOperationLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置云盘的操作日志列表。
+     * Set 云盘的操作日志列表。
      * @param DiskOperationLogSet 云盘的操作日志列表。
      */
     public void setDiskOperationLogSet(DiskOperationLog [] DiskOperationLogSet) {
@@ -53,7 +53,7 @@ public class DescribeDiskOperationLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeDiskOperationLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeDiskOperationLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DiskOperationLogSet.", this.DiskOperationLogSet);

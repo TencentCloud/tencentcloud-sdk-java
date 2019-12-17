@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelKeyDeletionRequest  extends AbstractModel{
+public class CancelKeyDeletionRequest extends AbstractModel{
 
     /**
     * 需要被取消删除的CMK的唯一标志
@@ -30,7 +30,7 @@ public class CancelKeyDeletionRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取需要被取消删除的CMK的唯一标志
+     * Get 需要被取消删除的CMK的唯一标志 
      * @return KeyId 需要被取消删除的CMK的唯一标志
      */
     public String getKeyId() {
@@ -38,7 +38,7 @@ public class CancelKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要被取消删除的CMK的唯一标志
+     * Set 需要被取消删除的CMK的唯一标志
      * @param KeyId 需要被取消删除的CMK的唯一标志
      */
     public void setKeyId(String KeyId) {
@@ -46,7 +46,7 @@ public class CancelKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

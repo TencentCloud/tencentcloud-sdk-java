@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IPSECOptionsSpecification  extends AbstractModel{
+public class IPSECOptionsSpecification extends AbstractModel{
 
     /**
     * PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
@@ -65,7 +65,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     private String SecurityProto;
 
     /**
-     * 获取PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
+     * Get PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL 
      * @return PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      */
     public String getPfsDhGroup() {
@@ -73,7 +73,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
+     * Set PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      * @param PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
      */
     public void setPfsDhGroup(String PfsDhGroup) {
@@ -81,7 +81,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
+     * Get IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800 
      * @return IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      */
     public Long getIPSECSaLifetimeTraffic() {
@@ -89,7 +89,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
+     * Set IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      * @param IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
      */
     public void setIPSECSaLifetimeTraffic(Long IPSECSaLifetimeTraffic) {
@@ -97,7 +97,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128 
      * @return EncryptAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
      */
     public String getEncryptAlgorithm() {
@@ -105,7 +105,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
+     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
      * @param EncryptAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
@@ -113,7 +113,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取认证算法：可选值：'MD5', 'SHA1'，默认为
+     * Get 认证算法：可选值：'MD5', 'SHA1'，默认为 
      * @return IntegrityAlgorith 认证算法：可选值：'MD5', 'SHA1'，默认为
      */
     public String getIntegrityAlgorith() {
@@ -121,7 +121,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置认证算法：可选值：'MD5', 'SHA1'，默认为
+     * Set 认证算法：可选值：'MD5', 'SHA1'，默认为
      * @param IntegrityAlgorith 认证算法：可选值：'MD5', 'SHA1'，默认为
      */
     public void setIntegrityAlgorith(String IntegrityAlgorith) {
@@ -129,7 +129,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取IPsec SA lifetime(s)：单位秒，取值范围：180-604800
+     * Get IPsec SA lifetime(s)：单位秒，取值范围：180-604800 
      * @return IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      */
     public Long getIPSECSaLifetimeSeconds() {
@@ -137,7 +137,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置IPsec SA lifetime(s)：单位秒，取值范围：180-604800
+     * Set IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      * @param IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
      */
     public void setIPSECSaLifetimeSeconds(Long IPSECSaLifetimeSeconds) {
@@ -145,7 +145,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取安全协议，默认为ESP
+     * Get 安全协议，默认为ESP 
      * @return SecurityProto 安全协议，默认为ESP
      */
     public String getSecurityProto() {
@@ -153,7 +153,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置安全协议，默认为ESP
+     * Set 安全协议，默认为ESP
      * @param SecurityProto 安全协议，默认为ESP
      */
     public void setSecurityProto(String SecurityProto) {
@@ -161,7 +161,7 @@ public class IPSECOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PfsDhGroup", this.PfsDhGroup);

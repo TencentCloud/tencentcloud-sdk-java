@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CertificateOutput  extends AbstractModel{
+public class CertificateOutput extends AbstractModel{
 
     /**
     * 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
@@ -45,7 +45,7 @@ public class CertificateOutput  extends AbstractModel{
     private String CertCaId;
 
     /**
-     * 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证 
      * @return SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public String getSSLMode() {
@@ -53,7 +53,7 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * Set 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      */
     public void setSSLMode(String SSLMode) {
@@ -61,7 +61,7 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书的 ID。
+     * Get 服务端证书的 ID。 
      * @return CertId 服务端证书的 ID。
      */
     public String getCertId() {
@@ -69,7 +69,7 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书的 ID。
+     * Set 服务端证书的 ID。
      * @param CertId 服务端证书的 ID。
      */
     public void setCertId(String CertId) {
@@ -77,8 +77,8 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户端证书的 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertCaId 客户端证书的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书的 ID。
+     * Set 客户端证书的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertCaId 客户端证书的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,7 +97,7 @@ public class CertificateOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag  extends AbstractModel{
+public class Tag extends AbstractModel{
 
     /**
     * 标签键
@@ -45,7 +45,7 @@ public class Tag  extends AbstractModel{
     private String ResourceType;
 
     /**
-     * 获取标签键
+     * Get 标签键 
      * @return Key 标签键
      */
     public String getKey() {
@@ -53,7 +53,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 设置标签键
+     * Set 标签键
      * @param Key 标签键
      */
     public void setKey(String Key) {
@@ -61,7 +61,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 获取标签值
+     * Get 标签值 
      * @return Value 标签值
      */
     public String getValue() {
@@ -69,7 +69,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
      * @param Value 标签值
      */
     public void setValue(String Value) {
@@ -77,8 +77,8 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 获取标签绑定的资源类型，当前支持类型："auto-scaling-group
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签绑定的资源类型，当前支持类型："auto-scaling-group
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 设置标签绑定的资源类型，当前支持类型："auto-scaling-group
+     * Set 标签绑定的资源类型，当前支持类型："auto-scaling-group
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,7 +97,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

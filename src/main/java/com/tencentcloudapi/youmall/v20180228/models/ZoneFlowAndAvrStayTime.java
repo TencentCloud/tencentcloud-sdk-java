@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneFlowAndAvrStayTime  extends AbstractModel{
+public class ZoneFlowAndAvrStayTime extends AbstractModel{
 
     /**
     * 区域id
@@ -51,7 +51,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     private Integer AvrStayTime;
 
     /**
-     * 获取区域id
+     * Get 区域id 
      * @return ZoneId 区域id
      */
     public Integer getZoneId() {
@@ -59,7 +59,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置区域id
+     * Set 区域id
      * @param ZoneId 区域id
      */
     public void setZoneId(Integer ZoneId) {
@@ -67,7 +67,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return ZoneName 区域名称
      */
     public String getZoneName() {
@@ -75,7 +75,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param ZoneName 区域名称
      */
     public void setZoneName(String ZoneName) {
@@ -83,7 +83,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 获取人流量
+     * Get 人流量 
      * @return FlowCount 人流量
      */
     public Integer getFlowCount() {
@@ -91,7 +91,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置人流量
+     * Set 人流量
      * @param FlowCount 人流量
      */
     public void setFlowCount(Integer FlowCount) {
@@ -99,7 +99,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 获取平均停留时长
+     * Get 平均停留时长 
      * @return AvrStayTime 平均停留时长
      */
     public Integer getAvrStayTime() {
@@ -107,7 +107,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置平均停留时长
+     * Set 平均停留时长
      * @param AvrStayTime 平均停留时长
      */
     public void setAvrStayTime(Integer AvrStayTime) {
@@ -115,7 +115,7 @@ public class ZoneFlowAndAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

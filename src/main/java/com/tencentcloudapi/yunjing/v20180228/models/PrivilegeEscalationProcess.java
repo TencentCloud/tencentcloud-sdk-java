@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrivilegeEscalationProcess  extends AbstractModel{
+public class PrivilegeEscalationProcess extends AbstractModel{
 
     /**
     * 数据ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜ID
@@ -132,7 +132,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 发生时间
@@ -149,23 +149,23 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     private String MachineName;
 
     /**
-     * 获取数据ID
+     * Get 数据ID 
      * @return Id 数据ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置数据ID
+     * Set 数据ID
      * @param Id 数据ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜ID
+     * Get 云镜ID 
      * @return Uuid 云镜ID
      */
     public String getUuid() {
@@ -173,7 +173,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置云镜ID
+     * Set 云镜ID
      * @param Uuid 云镜ID
      */
     public void setUuid(String Uuid) {
@@ -181,7 +181,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID
+     * Get 主机ID 
      * @return Quuid 主机ID
      */
     public String getQuuid() {
@@ -189,7 +189,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID
+     * Set 主机ID
      * @param Quuid 主机ID
      */
     public void setQuuid(String Quuid) {
@@ -197,7 +197,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP
+     * Get 主机内网IP 
      * @return Hostip 主机内网IP
      */
     public String getHostip() {
@@ -205,7 +205,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP
+     * Set 主机内网IP
      * @param Hostip 主机内网IP
      */
     public void setHostip(String Hostip) {
@@ -213,7 +213,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取进程名
+     * Get 进程名 
      * @return ProcessName 进程名
      */
     public String getProcessName() {
@@ -221,7 +221,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置进程名
+     * Set 进程名
      * @param ProcessName 进程名
      */
     public void setProcessName(String ProcessName) {
@@ -229,7 +229,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取进程路径
+     * Get 进程路径 
      * @return FullPath 进程路径
      */
     public String getFullPath() {
@@ -237,7 +237,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置进程路径
+     * Set 进程路径
      * @param FullPath 进程路径
      */
     public void setFullPath(String FullPath) {
@@ -245,7 +245,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取执行命令
+     * Get 执行命令 
      * @return CmdLine 执行命令
      */
     public String getCmdLine() {
@@ -253,7 +253,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置执行命令
+     * Set 执行命令
      * @param CmdLine 执行命令
      */
     public void setCmdLine(String CmdLine) {
@@ -261,7 +261,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -269,7 +269,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -277,7 +277,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取用户组
+     * Get 用户组 
      * @return UserGroup 用户组
      */
     public String getUserGroup() {
@@ -285,7 +285,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置用户组
+     * Set 用户组
      * @param UserGroup 用户组
      */
     public void setUserGroup(String UserGroup) {
@@ -293,7 +293,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取进程文件权限
+     * Get 进程文件权限 
      * @return ProcFilePrivilege 进程文件权限
      */
     public String getProcFilePrivilege() {
@@ -301,7 +301,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置进程文件权限
+     * Set 进程文件权限
      * @param ProcFilePrivilege 进程文件权限
      */
     public void setProcFilePrivilege(String ProcFilePrivilege) {
@@ -309,7 +309,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取父进程名
+     * Get 父进程名 
      * @return ParentProcName 父进程名
      */
     public String getParentProcName() {
@@ -317,7 +317,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置父进程名
+     * Set 父进程名
      * @param ParentProcName 父进程名
      */
     public void setParentProcName(String ParentProcName) {
@@ -325,7 +325,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取父进程用户名
+     * Get 父进程用户名 
      * @return ParentProcUser 父进程用户名
      */
     public String getParentProcUser() {
@@ -333,7 +333,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置父进程用户名
+     * Set 父进程用户名
      * @param ParentProcUser 父进程用户名
      */
     public void setParentProcUser(String ParentProcUser) {
@@ -341,7 +341,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取父进程用户组
+     * Get 父进程用户组 
      * @return ParentProcGroup 父进程用户组
      */
     public String getParentProcGroup() {
@@ -349,7 +349,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置父进程用户组
+     * Set 父进程用户组
      * @param ParentProcGroup 父进程用户组
      */
     public void setParentProcGroup(String ParentProcGroup) {
@@ -357,7 +357,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取父进程路径
+     * Get 父进程路径 
      * @return ParentProcPath 父进程路径
      */
     public String getParentProcPath() {
@@ -365,7 +365,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置父进程路径
+     * Set 父进程路径
      * @param ParentProcPath 父进程路径
      */
     public void setParentProcPath(String ParentProcPath) {
@@ -373,7 +373,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取进程树
+     * Get 进程树 
      * @return ProcTree 进程树
      */
     public String getProcTree() {
@@ -381,7 +381,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置进程树
+     * Set 进程树
      * @param ProcTree 进程树
      */
     public void setProcTree(String ProcTree) {
@@ -389,23 +389,23 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取处理状态
+     * Get 处理状态 
      * @return Status 处理状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置处理状态
+     * Set 处理状态
      * @param Status 处理状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取发生时间
+     * Get 发生时间 
      * @return CreateTime 发生时间
      */
     public String getCreateTime() {
@@ -413,7 +413,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置发生时间
+     * Set 发生时间
      * @param CreateTime 发生时间
      */
     public void setCreateTime(String CreateTime) {
@@ -421,7 +421,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 获取机器名
+     * Get 机器名 
      * @return MachineName 机器名
      */
     public String getMachineName() {
@@ -429,7 +429,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 设置机器名
+     * Set 机器名
      * @param MachineName 机器名
      */
     public void setMachineName(String MachineName) {
@@ -437,7 +437,7 @@ public class PrivilegeEscalationProcess  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

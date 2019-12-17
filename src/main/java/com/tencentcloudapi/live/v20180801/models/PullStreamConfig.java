@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullStreamConfig  extends AbstractModel{
+public class PullStreamConfig extends AbstractModel{
 
     /**
     * 拉流配置Id。
@@ -86,7 +86,7 @@ UTC格式时间，
     private String Status;
 
     /**
-     * 获取拉流配置Id。
+     * Get 拉流配置Id。 
      * @return ConfigId 拉流配置Id。
      */
     public String getConfigId() {
@@ -94,7 +94,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置拉流配置Id。
+     * Set 拉流配置Id。
      * @param ConfigId 拉流配置Id。
      */
     public void setConfigId(String ConfigId) {
@@ -102,7 +102,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取源Url。
+     * Get 源Url。 
      * @return FromUrl 源Url。
      */
     public String getFromUrl() {
@@ -110,7 +110,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置源Url。
+     * Set 源Url。
      * @param FromUrl 源Url。
      */
     public void setFromUrl(String FromUrl) {
@@ -118,7 +118,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取目的Url。
+     * Get 目的Url。 
      * @return ToUrl 目的Url。
      */
     public String getToUrl() {
@@ -126,7 +126,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置目的Url。
+     * Set 目的Url。
      * @param ToUrl 目的Url。
      */
     public void setToUrl(String ToUrl) {
@@ -134,7 +134,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取区域名。
+     * Get 区域名。 
      * @return AreaName 区域名。
      */
     public String getAreaName() {
@@ -142,7 +142,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置区域名。
+     * Set 区域名。
      * @param AreaName 区域名。
      */
     public void setAreaName(String AreaName) {
@@ -150,7 +150,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取运营商名。
+     * Get 运营商名。 
      * @return IspName 运营商名。
      */
     public String getIspName() {
@@ -158,7 +158,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置运营商名。
+     * Set 运营商名。
      * @param IspName 运营商名。
      */
     public void setIspName(String IspName) {
@@ -166,10 +166,10 @@ UTC格式时间，
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。
 UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return StartTime 开始时间。
 UTC格式时间，
 例如：2019-01-08T10:00:00Z。
@@ -180,7 +180,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
 UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -194,11 +194,11 @@ UTC格式时间，
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。
 
 UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return EndTime 结束时间。
 
 UTC格式时间，
@@ -210,7 +210,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
 
 UTC格式时间，
 例如：2019-01-08T10:00:00Z。
@@ -226,7 +226,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * Get 0无效，1初始状态，2正在运行，3拉起失败，4暂停。 
      * @return Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
      */
     public String getStatus() {
@@ -234,7 +234,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置0无效，1初始状态，2正在运行，3拉起失败，4暂停。
+     * Set 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
      * @param Status 0无效，1初始状态，2正在运行，3拉起失败，4暂停。
      */
     public void setStatus(String Status) {
@@ -242,7 +242,7 @@ UTC格式时间，
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSimilarPersonResultRequest  extends AbstractModel{
+public class GetSimilarPersonResultRequest extends AbstractModel{
 
     /**
     * 查重任务ID，用于查询、获取查重的进度和结果。
@@ -30,7 +30,7 @@ public class GetSimilarPersonResultRequest  extends AbstractModel{
     private String JobId;
 
     /**
-     * 获取查重任务ID，用于查询、获取查重的进度和结果。
+     * Get 查重任务ID，用于查询、获取查重的进度和结果。 
      * @return JobId 查重任务ID，用于查询、获取查重的进度和结果。
      */
     public String getJobId() {
@@ -38,7 +38,7 @@ public class GetSimilarPersonResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查重任务ID，用于查询、获取查重的进度和结果。
+     * Set 查重任务ID，用于查询、获取查重的进度和结果。
      * @param JobId 查重任务ID，用于查询、获取查重的进度和结果。
      */
     public void setJobId(String JobId) {
@@ -46,7 +46,7 @@ public class GetSimilarPersonResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

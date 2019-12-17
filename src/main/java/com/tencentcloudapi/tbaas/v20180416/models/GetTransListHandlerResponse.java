@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransListHandlerResponse  extends AbstractModel{
+public class GetTransListHandlerResponse extends AbstractModel{
 
     /**
     * 总记录数
@@ -51,7 +51,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return TotalCount 总记录数
      */
     public Integer getTotalCount() {
@@ -59,7 +59,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param TotalCount 总记录数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -67,7 +67,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前群组编号
+     * Get 当前群组编号 
      * @return GroupPk 当前群组编号
      */
     public String getGroupPk() {
@@ -75,7 +75,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前群组编号
+     * Set 当前群组编号
      * @param GroupPk 当前群组编号
      */
     public void setGroupPk(String GroupPk) {
@@ -83,7 +83,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回数据列表
+     * Get 返回数据列表 
      * @return List 返回数据列表
      */
     public BcosTransInfo [] getList() {
@@ -91,7 +91,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回数据列表
+     * Set 返回数据列表
      * @param List 返回数据列表
      */
     public void setList(BcosTransInfo [] List) {
@@ -99,7 +99,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class GetTransListHandlerResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

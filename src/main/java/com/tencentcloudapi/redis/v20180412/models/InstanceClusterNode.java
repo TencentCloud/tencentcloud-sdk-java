@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceClusterNode  extends AbstractModel{
+public class InstanceClusterNode extends AbstractModel{
 
     /**
     * 节点名称
@@ -114,7 +114,7 @@ public class InstanceClusterNode  extends AbstractModel{
     private Float StorageSlope;
 
     /**
-     * 获取节点名称
+     * Get 节点名称 
      * @return Name 节点名称
      */
     public String getName() {
@@ -122,7 +122,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点名称
+     * Set 节点名称
      * @param Name 节点名称
      */
     public void setName(String Name) {
@@ -130,7 +130,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取实例运行时节点Id
+     * Get 实例运行时节点Id 
      * @return RunId 实例运行时节点Id
      */
     public String getRunId() {
@@ -138,7 +138,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置实例运行时节点Id
+     * Set 实例运行时节点Id
      * @param RunId 实例运行时节点Id
      */
     public void setRunId(String RunId) {
@@ -146,7 +146,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取集群角色：0-master；1-slave
+     * Get 集群角色：0-master；1-slave 
      * @return Role 集群角色：0-master；1-slave
      */
     public Integer getRole() {
@@ -154,7 +154,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置集群角色：0-master；1-slave
+     * Set 集群角色：0-master；1-slave
      * @param Role 集群角色：0-master；1-slave
      */
     public void setRole(Integer Role) {
@@ -162,7 +162,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点状态：0-readwrite, 1-read, 2-backup
+     * Get 节点状态：0-readwrite, 1-read, 2-backup 
      * @return Status 节点状态：0-readwrite, 1-read, 2-backup
      */
     public Integer getStatus() {
@@ -170,7 +170,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点状态：0-readwrite, 1-read, 2-backup
+     * Set 节点状态：0-readwrite, 1-read, 2-backup
      * @param Status 节点状态：0-readwrite, 1-read, 2-backup
      */
     public void setStatus(Integer Status) {
@@ -178,7 +178,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取服务状态：0-down；1-on
+     * Get 服务状态：0-down；1-on 
      * @return Connected 服务状态：0-down；1-on
      */
     public Integer getConnected() {
@@ -186,7 +186,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置服务状态：0-down；1-on
+     * Set 服务状态：0-down；1-on
      * @param Connected 服务状态：0-down；1-on
      */
     public void setConnected(Integer Connected) {
@@ -194,7 +194,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点创建时间
+     * Get 节点创建时间 
      * @return CreateTime 节点创建时间
      */
     public String getCreateTime() {
@@ -202,7 +202,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点创建时间
+     * Set 节点创建时间
      * @param CreateTime 节点创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -210,7 +210,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点下线时间
+     * Get 节点下线时间 
      * @return DownTime 节点下线时间
      */
     public String getDownTime() {
@@ -218,7 +218,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点下线时间
+     * Set 节点下线时间
      * @param DownTime 节点下线时间
      */
     public void setDownTime(String DownTime) {
@@ -226,7 +226,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点slot分布
+     * Get 节点slot分布 
      * @return Slots 节点slot分布
      */
     public String getSlots() {
@@ -234,7 +234,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点slot分布
+     * Set 节点slot分布
      * @param Slots 节点slot分布
      */
     public void setSlots(String Slots) {
@@ -242,7 +242,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点key分布
+     * Get 节点key分布 
      * @return Keys 节点key分布
      */
     public Integer getKeys() {
@@ -250,7 +250,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点key分布
+     * Set 节点key分布
      * @param Keys 节点key分布
      */
     public void setKeys(Integer Keys) {
@@ -258,7 +258,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点qps
+     * Get 节点qps 
      * @return Qps 节点qps
      */
     public Integer getQps() {
@@ -266,7 +266,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点qps
+     * Set 节点qps
      * @param Qps 节点qps
      */
     public void setQps(Integer Qps) {
@@ -274,7 +274,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点qps倾斜度
+     * Get 节点qps倾斜度 
      * @return QpsSlope 节点qps倾斜度
      */
     public Float getQpsSlope() {
@@ -282,7 +282,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点qps倾斜度
+     * Set 节点qps倾斜度
      * @param QpsSlope 节点qps倾斜度
      */
     public void setQpsSlope(Float QpsSlope) {
@@ -290,7 +290,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点存储
+     * Get 节点存储 
      * @return Storage 节点存储
      */
     public Integer getStorage() {
@@ -298,7 +298,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点存储
+     * Set 节点存储
      * @param Storage 节点存储
      */
     public void setStorage(Integer Storage) {
@@ -306,7 +306,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点存储倾斜度
+     * Get 节点存储倾斜度 
      * @return StorageSlope 节点存储倾斜度
      */
     public Float getStorageSlope() {
@@ -314,7 +314,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点存储倾斜度
+     * Set 节点存储倾斜度
      * @param StorageSlope 节点存储倾斜度
      */
     public void setStorageSlope(Float StorageSlope) {
@@ -322,7 +322,7 @@ public class InstanceClusterNode  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TemplateInfo  extends AbstractModel{
+public class TemplateInfo extends AbstractModel{
 
     /**
     * 视频编码：
@@ -166,8 +166,8 @@ baseline/main/high。
     private Float AdaptBitratePercent;
 
     /**
-     * 获取视频编码：
-h264/h265。
+     * Get 视频编码：
+h264/h265。 
      * @return Vcodec 视频编码：
 h264/h265。
      */
@@ -176,7 +176,7 @@ h264/h265。
     }
 
     /**
-     * 设置视频编码：
+     * Set 视频编码：
 h264/h265。
      * @param Vcodec 视频编码：
 h264/h265。
@@ -186,7 +186,7 @@ h264/h265。
     }
 
     /**
-     * 获取视频码率。100-8000kbps
+     * Get 视频码率。100-8000kbps 
      * @return VideoBitrate 视频码率。100-8000kbps
      */
     public Integer getVideoBitrate() {
@@ -194,7 +194,7 @@ h264/h265。
     }
 
     /**
-     * 设置视频码率。100-8000kbps
+     * Set 视频码率。100-8000kbps
      * @param VideoBitrate 视频码率。100-8000kbps
      */
     public void setVideoBitrate(Integer VideoBitrate) {
@@ -202,8 +202,8 @@ h264/h265。
     }
 
     /**
-     * 获取音频编码：aac/mp3
-aac/mp3。
+     * Get 音频编码：aac/mp3
+aac/mp3。 
      * @return Acodec 音频编码：aac/mp3
 aac/mp3。
      */
@@ -212,7 +212,7 @@ aac/mp3。
     }
 
     /**
-     * 设置音频编码：aac/mp3
+     * Set 音频编码：aac/mp3
 aac/mp3。
      * @param Acodec 音频编码：aac/mp3
 aac/mp3。
@@ -222,7 +222,7 @@ aac/mp3。
     }
 
     /**
-     * 获取音频码率。0-500
+     * Get 音频码率。0-500 
      * @return AudioBitrate 音频码率。0-500
      */
     public Integer getAudioBitrate() {
@@ -230,7 +230,7 @@ aac/mp3。
     }
 
     /**
-     * 设置音频码率。0-500
+     * Set 音频码率。0-500
      * @param AudioBitrate 音频码率。0-500
      */
     public void setAudioBitrate(Integer AudioBitrate) {
@@ -238,7 +238,7 @@ aac/mp3。
     }
 
     /**
-     * 获取宽。0-3000
+     * Get 宽。0-3000 
      * @return Width 宽。0-3000
      */
     public Integer getWidth() {
@@ -246,7 +246,7 @@ aac/mp3。
     }
 
     /**
-     * 设置宽。0-3000
+     * Set 宽。0-3000
      * @param Width 宽。0-3000
      */
     public void setWidth(Integer Width) {
@@ -254,7 +254,7 @@ aac/mp3。
     }
 
     /**
-     * 获取高。0-3000
+     * Get 高。0-3000 
      * @return Height 高。0-3000
      */
     public Integer getHeight() {
@@ -262,7 +262,7 @@ aac/mp3。
     }
 
     /**
-     * 设置高。0-3000
+     * Set 高。0-3000
      * @param Height 高。0-3000
      */
     public void setHeight(Integer Height) {
@@ -270,7 +270,7 @@ aac/mp3。
     }
 
     /**
-     * 获取帧率。0-200
+     * Get 帧率。0-200 
      * @return Fps 帧率。0-200
      */
     public Integer getFps() {
@@ -278,7 +278,7 @@ aac/mp3。
     }
 
     /**
-     * 设置帧率。0-200
+     * Set 帧率。0-200
      * @param Fps 帧率。0-200
      */
     public void setFps(Integer Fps) {
@@ -286,7 +286,7 @@ aac/mp3。
     }
 
     /**
-     * 获取关键帧间隔，单位：秒。1-50
+     * Get 关键帧间隔，单位：秒。1-50 
      * @return Gop 关键帧间隔，单位：秒。1-50
      */
     public Integer getGop() {
@@ -294,7 +294,7 @@ aac/mp3。
     }
 
     /**
-     * 设置关键帧间隔，单位：秒。1-50
+     * Set 关键帧间隔，单位：秒。1-50
      * @param Gop 关键帧间隔，单位：秒。1-50
      */
     public void setGop(Integer Gop) {
@@ -302,7 +302,7 @@ aac/mp3。
     }
 
     /**
-     * 获取旋转角度。0 90 180 270
+     * Get 旋转角度。0 90 180 270 
      * @return Rotate 旋转角度。0 90 180 270
      */
     public Integer getRotate() {
@@ -310,7 +310,7 @@ aac/mp3。
     }
 
     /**
-     * 设置旋转角度。0 90 180 270
+     * Set 旋转角度。0 90 180 270
      * @param Rotate 旋转角度。0 90 180 270
      */
     public void setRotate(Integer Rotate) {
@@ -318,8 +318,8 @@ aac/mp3。
     }
 
     /**
-     * 获取编码质量：
-baseline/main/high。
+     * Get 编码质量：
+baseline/main/high。 
      * @return Profile 编码质量：
 baseline/main/high。
      */
@@ -328,7 +328,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置编码质量：
+     * Set 编码质量：
 baseline/main/high。
      * @param Profile 编码质量：
 baseline/main/high。
@@ -338,7 +338,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否不超过原始码率。0：否，1：是。
+     * Get 是否不超过原始码率。0：否，1：是。 
      * @return BitrateToOrig 是否不超过原始码率。0：否，1：是。
      */
     public Integer getBitrateToOrig() {
@@ -346,7 +346,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否不超过原始码率。0：否，1：是。
+     * Set 是否不超过原始码率。0：否，1：是。
      * @param BitrateToOrig 是否不超过原始码率。0：否，1：是。
      */
     public void setBitrateToOrig(Integer BitrateToOrig) {
@@ -354,7 +354,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否不超过原始高度。0：否，1：是。
+     * Get 是否不超过原始高度。0：否，1：是。 
      * @return HeightToOrig 是否不超过原始高度。0：否，1：是。
      */
     public Integer getHeightToOrig() {
@@ -362,7 +362,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否不超过原始高度。0：否，1：是。
+     * Set 是否不超过原始高度。0：否，1：是。
      * @param HeightToOrig 是否不超过原始高度。0：否，1：是。
      */
     public void setHeightToOrig(Integer HeightToOrig) {
@@ -370,7 +370,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否不超过原始帧率。0：否，1：是。
+     * Get 是否不超过原始帧率。0：否，1：是。 
      * @return FpsToOrig 是否不超过原始帧率。0：否，1：是。
      */
     public Integer getFpsToOrig() {
@@ -378,7 +378,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否不超过原始帧率。0：否，1：是。
+     * Set 是否不超过原始帧率。0：否，1：是。
      * @param FpsToOrig 是否不超过原始帧率。0：否，1：是。
      */
     public void setFpsToOrig(Integer FpsToOrig) {
@@ -386,7 +386,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否保留视频。0：否，1：是。
+     * Get 是否保留视频。0：否，1：是。 
      * @return NeedVideo 是否保留视频。0：否，1：是。
      */
     public Integer getNeedVideo() {
@@ -394,7 +394,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否保留视频。0：否，1：是。
+     * Set 是否保留视频。0：否，1：是。
      * @param NeedVideo 是否保留视频。0：否，1：是。
      */
     public void setNeedVideo(Integer NeedVideo) {
@@ -402,7 +402,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否保留音频。0：否，1：是。
+     * Get 是否保留音频。0：否，1：是。 
      * @return NeedAudio 是否保留音频。0：否，1：是。
      */
     public Integer getNeedAudio() {
@@ -410,7 +410,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否保留音频。0：否，1：是。
+     * Set 是否保留音频。0：否，1：是。
      * @param NeedAudio 是否保留音频。0：否，1：是。
      */
     public void setNeedAudio(Integer NeedAudio) {
@@ -418,7 +418,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取模板Id。
+     * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
     public Integer getTemplateId() {
@@ -426,7 +426,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置模板Id。
+     * Set 模板Id。
      * @param TemplateId 模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -434,7 +434,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取模板名称
+     * Get 模板名称 
      * @return TemplateName 模板名称
      */
     public String getTemplateName() {
@@ -442,7 +442,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置模板名称
+     * Set 模板名称
      * @param TemplateName 模板名称
      */
     public void setTemplateName(String TemplateName) {
@@ -450,7 +450,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取模板描述
+     * Get 模板描述 
      * @return Description 模板描述
      */
     public String getDescription() {
@@ -458,7 +458,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置模板描述
+     * Set 模板描述
      * @param Description 模板描述
      */
     public void setDescription(String Description) {
@@ -466,7 +466,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取是否是急速高清模板，0：否，1：是。默认0。
+     * Get 是否是急速高清模板，0：否，1：是。默认0。 
      * @return AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
      */
     public Integer getAiTransCode() {
@@ -474,7 +474,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置是否是急速高清模板，0：否，1：是。默认0。
+     * Set 是否是急速高清模板，0：否，1：是。默认0。
      * @param AiTransCode 是否是急速高清模板，0：否，1：是。默认0。
      */
     public void setAiTransCode(Integer AiTransCode) {
@@ -482,7 +482,7 @@ baseline/main/high。
     }
 
     /**
-     * 获取急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Get 急速高清相比VideoBitrate少多少码率，0.1到0.5 
      * @return AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public Float getAdaptBitratePercent() {
@@ -490,7 +490,7 @@ baseline/main/high。
     }
 
     /**
-     * 设置急速高清相比VideoBitrate少多少码率，0.1到0.5
+     * Set 急速高清相比VideoBitrate少多少码率，0.1到0.5
      * @param AdaptBitratePercent 急速高清相比VideoBitrate少多少码率，0.1到0.5
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
@@ -498,7 +498,7 @@ baseline/main/high。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);

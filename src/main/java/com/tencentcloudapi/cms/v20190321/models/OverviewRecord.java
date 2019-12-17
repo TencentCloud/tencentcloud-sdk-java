@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OverviewRecord  extends AbstractModel{
+public class OverviewRecord extends AbstractModel{
 
     /**
     * 调用恶意量
@@ -51,7 +51,7 @@ public class OverviewRecord  extends AbstractModel{
     private String Yoy;
 
     /**
-     * 获取调用恶意量
+     * Get 调用恶意量 
      * @return EvilCount 调用恶意量
      */
     public Long getEvilCount() {
@@ -59,7 +59,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 设置调用恶意量
+     * Set 调用恶意量
      * @param EvilCount 调用恶意量
      */
     public void setEvilCount(Long EvilCount) {
@@ -67,7 +67,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 获取Text表示文本，Image表示图片，Audio表示音频，Video表示视频
+     * Get Text表示文本，Image表示图片，Audio表示音频，Video表示视频 
      * @return ServiceType Text表示文本，Image表示图片，Audio表示音频，Video表示视频
      */
     public String getServiceType() {
@@ -75,7 +75,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 设置Text表示文本，Image表示图片，Audio表示音频，Video表示视频
+     * Set Text表示文本，Image表示图片，Audio表示音频，Video表示视频
      * @param ServiceType Text表示文本，Image表示图片，Audio表示音频，Video表示视频
      */
     public void setServiceType(String ServiceType) {
@@ -83,7 +83,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 获取调用总量
+     * Get 调用总量 
      * @return TotalCount 调用总量
      */
     public Long getTotalCount() {
@@ -91,7 +91,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 设置调用总量
+     * Set 调用总量
      * @param TotalCount 调用总量
      */
     public void setTotalCount(Long TotalCount) {
@@ -99,7 +99,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 获取恶意量同比增长率
+     * Get 恶意量同比增长率 
      * @return Yoy 恶意量同比增长率
      */
     public String getYoy() {
@@ -107,7 +107,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 设置恶意量同比增长率
+     * Set 恶意量同比增长率
      * @param Yoy 恶意量同比增长率
      */
     public void setYoy(String Yoy) {
@@ -115,7 +115,7 @@ public class OverviewRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilCount", this.EvilCount);

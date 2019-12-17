@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteConflict  extends AbstractModel{
+public class RouteConflict extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -44,7 +44,7 @@ public class RouteConflict  extends AbstractModel{
     private Route [] ConflictSet;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -52,7 +52,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -60,7 +60,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 获取要检查的与之冲突的目的端
+     * Get 要检查的与之冲突的目的端 
      * @return DestinationCidrBlock 要检查的与之冲突的目的端
      */
     public String getDestinationCidrBlock() {
@@ -68,7 +68,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 设置要检查的与之冲突的目的端
+     * Set 要检查的与之冲突的目的端
      * @param DestinationCidrBlock 要检查的与之冲突的目的端
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -76,7 +76,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 获取冲突的路由策略列表
+     * Get 冲突的路由策略列表 
      * @return ConflictSet 冲突的路由策略列表
      */
     public Route [] getConflictSet() {
@@ -84,7 +84,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 设置冲突的路由策略列表
+     * Set 冲突的路由策略列表
      * @param ConflictSet 冲突的路由策略列表
      */
     public void setConflictSet(Route [] ConflictSet) {
@@ -92,7 +92,7 @@ public class RouteConflict  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

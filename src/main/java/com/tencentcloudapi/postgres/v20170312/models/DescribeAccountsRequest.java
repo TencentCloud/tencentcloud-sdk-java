@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsRequest  extends AbstractModel{
+public class DescribeAccountsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-6fego161
@@ -58,7 +58,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     private String OrderByType;
 
     /**
-     * 获取实例ID，形如postgres-6fego161
+     * Get 实例ID，形如postgres-6fego161 
      * @return DBInstanceId 实例ID，形如postgres-6fego161
      */
     public String getDBInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-6fego161
+     * Set 实例ID，形如postgres-6fego161
      * @param DBInstanceId 实例ID，形如postgres-6fego161
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -74,7 +74,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，每页最大返回数目，默认20，取值范围为1-100
+     * Get 分页返回，每页最大返回数目，默认20，取值范围为1-100 
      * @return Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
     public Integer getLimit() {
@@ -82,7 +82,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回，每页最大返回数目，默认20，取值范围为1-100
+     * Set 分页返回，每页最大返回数目，默认20，取值范围为1-100
      * @param Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
     public void setLimit(Integer Limit) {
@@ -90,7 +90,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，返回第几页的用户数据。页码从0开始计数
+     * Get 分页返回，返回第几页的用户数据。页码从0开始计数 
      * @return Offset 分页返回，返回第几页的用户数据。页码从0开始计数
      */
     public Integer getOffset() {
@@ -98,7 +98,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回，返回第几页的用户数据。页码从0开始计数
+     * Set 分页返回，返回第几页的用户数据。页码从0开始计数
      * @param Offset 分页返回，返回第几页的用户数据。页码从0开始计数
      */
     public void setOffset(Integer Offset) {
@@ -106,7 +106,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * Get 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序 
      * @return OrderBy 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
      */
     public String getOrderBy() {
@@ -114,7 +114,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * Set 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
      * @param OrderBy 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
      */
     public void setOrderBy(String OrderBy) {
@@ -122,7 +122,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+     * Get 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序 
      * @return OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
      */
     public String getOrderByType() {
@@ -130,7 +130,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
+     * Set 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
      * @param OrderByType 返回结果是升序还是降序。取值只能为desc或者asc。desc-降序；asc-升序
      */
     public void setOrderByType(String OrderByType) {
@@ -138,7 +138,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

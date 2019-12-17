@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RewriteLocationMap  extends AbstractModel{
+public class RewriteLocationMap extends AbstractModel{
 
     /**
     * 源转发规则ID
@@ -37,7 +37,7 @@ public class RewriteLocationMap  extends AbstractModel{
     private String TargetLocationId;
 
     /**
-     * 获取源转发规则ID
+     * Get 源转发规则ID 
      * @return SourceLocationId 源转发规则ID
      */
     public String getSourceLocationId() {
@@ -45,7 +45,7 @@ public class RewriteLocationMap  extends AbstractModel{
     }
 
     /**
-     * 设置源转发规则ID
+     * Set 源转发规则ID
      * @param SourceLocationId 源转发规则ID
      */
     public void setSourceLocationId(String SourceLocationId) {
@@ -53,7 +53,7 @@ public class RewriteLocationMap  extends AbstractModel{
     }
 
     /**
-     * 获取重定向至的目标转发规则ID
+     * Get 重定向至的目标转发规则ID 
      * @return TargetLocationId 重定向至的目标转发规则ID
      */
     public String getTargetLocationId() {
@@ -61,7 +61,7 @@ public class RewriteLocationMap  extends AbstractModel{
     }
 
     /**
-     * 设置重定向至的目标转发规则ID
+     * Set 重定向至的目标转发规则ID
      * @param TargetLocationId 重定向至的目标转发规则ID
      */
     public void setTargetLocationId(String TargetLocationId) {
@@ -69,7 +69,7 @@ public class RewriteLocationMap  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceLocationId", this.SourceLocationId);

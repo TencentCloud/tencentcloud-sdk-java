@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneChooseInfo  extends AbstractModel{
+public class ZoneChooseInfo extends AbstractModel{
 
     /**
     * 主可用区
@@ -37,7 +37,7 @@ public class ZoneChooseInfo  extends AbstractModel{
     private ZonesInfo [] SlaveZones;
 
     /**
-     * 获取主可用区
+     * Get 主可用区 
      * @return MasterZone 主可用区
      */
     public ZonesInfo getMasterZone() {
@@ -45,7 +45,7 @@ public class ZoneChooseInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主可用区
+     * Set 主可用区
      * @param MasterZone 主可用区
      */
     public void setMasterZone(ZonesInfo MasterZone) {
@@ -53,7 +53,7 @@ public class ZoneChooseInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可选的从可用区
+     * Get 可选的从可用区 
      * @return SlaveZones 可选的从可用区
      */
     public ZonesInfo [] getSlaveZones() {
@@ -61,7 +61,7 @@ public class ZoneChooseInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可选的从可用区
+     * Set 可选的从可用区
      * @param SlaveZones 可选的从可用区
      */
     public void setSlaveZones(ZonesInfo [] SlaveZones) {
@@ -69,7 +69,7 @@ public class ZoneChooseInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "MasterZone.", this.MasterZone);

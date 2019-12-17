@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateStepDetailInfo  extends AbstractModel{
+public class MigrateStepDetailInfo extends AbstractModel{
 
     /**
     * 步骤序列
@@ -51,7 +51,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取步骤序列
+     * Get 步骤序列 
      * @return StepNo 步骤序列
      */
     public Integer getStepNo() {
@@ -59,7 +59,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤序列
+     * Set 步骤序列
      * @param StepNo 步骤序列
      */
     public void setStepNo(Integer StepNo) {
@@ -67,7 +67,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤展现名称
+     * Get 步骤展现名称 
      * @return StepName 步骤展现名称
      */
     public String getStepName() {
@@ -75,7 +75,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤展现名称
+     * Set 步骤展现名称
      * @param StepName 步骤展现名称
      */
     public void setStepName(String StepName) {
@@ -83,7 +83,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤英文标识
+     * Get 步骤英文标识 
      * @return StepId 步骤英文标识
      */
     public String getStepId() {
@@ -91,7 +91,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤英文标识
+     * Set 步骤英文标识
      * @param StepId 步骤英文标识
      */
     public void setStepId(String StepId) {
@@ -99,7 +99,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
+     * Get 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行 
      * @return Status 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      */
     public Integer getStatus() {
@@ -107,7 +107,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
+     * Set 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      * @param Status 步骤状态:0-默认值,1-成功,2-失败,3-执行中,4-未执行
      */
     public void setStatus(Integer Status) {
@@ -115,7 +115,7 @@ public class MigrateStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepNo", this.StepNo);

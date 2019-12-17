@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonVisitInfoRequest  extends AbstractModel{
+public class DescribePersonVisitInfoRequest extends AbstractModel{
 
     /**
     * 公司ID
@@ -86,7 +86,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     private String EndDateTime;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -94,7 +94,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -102,7 +102,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -110,7 +110,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -118,7 +118,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public Integer getOffset() {
@@ -126,7 +126,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public void setOffset(Integer Offset) {
@@ -134,7 +134,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public Integer getLimit() {
@@ -142,7 +142,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public void setLimit(Integer Limit) {
@@ -150,7 +150,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     * Get 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime 
      * @return StartDate 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
      */
     public String getStartDate() {
@@ -158,7 +158,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
+     * Set 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
      * @param StartDate 开始日期，格式yyyy-MM-dd，已废弃，请使用StartDateTime
      */
     public void setStartDate(String StartDate) {
@@ -166,7 +166,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     * Get 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime 
      * @return EndDate 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
      */
     public String getEndDate() {
@@ -174,7 +174,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
+     * Set 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
      * @param EndDate 结束日期，格式yyyy-MM-dd，已废弃，请使用EndDateTime
      */
     public void setEndDate(String EndDate) {
@@ -182,7 +182,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Get 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天） 
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public Integer getPictureExpires() {
@@ -190,7 +190,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Set 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public void setPictureExpires(Integer PictureExpires) {
@@ -198,7 +198,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+     * Get 开始时间，格式yyyy-MM-dd HH:mm:ss 
      * @return StartDateTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getStartDateTime() {
@@ -206,7 +206,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+     * Set 开始时间，格式yyyy-MM-dd HH:mm:ss
      * @param StartDateTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setStartDateTime(String StartDateTime) {
@@ -214,7 +214,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+     * Get 结束时间，格式yyyy-MM-dd HH:mm:ss 
      * @return EndDateTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public String getEndDateTime() {
@@ -222,7 +222,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，格式yyyy-MM-dd HH:mm:ss
+     * Set 结束时间，格式yyyy-MM-dd HH:mm:ss
      * @param EndDateTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public void setEndDateTime(String EndDateTime) {
@@ -230,7 +230,7 @@ public class DescribePersonVisitInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

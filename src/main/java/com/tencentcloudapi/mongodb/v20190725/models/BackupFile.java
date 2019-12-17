@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupFile  extends AbstractModel{
+public class BackupFile extends AbstractModel{
 
     /**
     * 备份文件所属的副本集/分片id
@@ -37,7 +37,7 @@ public class BackupFile  extends AbstractModel{
     private String File;
 
     /**
-     * 获取备份文件所属的副本集/分片id
+     * Get 备份文件所属的副本集/分片id 
      * @return ReplicateSetId 备份文件所属的副本集/分片id
      */
     public String getReplicateSetId() {
@@ -45,7 +45,7 @@ public class BackupFile  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件所属的副本集/分片id
+     * Set 备份文件所属的副本集/分片id
      * @param ReplicateSetId 备份文件所属的副本集/分片id
      */
     public void setReplicateSetId(String ReplicateSetId) {
@@ -53,7 +53,7 @@ public class BackupFile  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件保存路径
+     * Get 备份文件保存路径 
      * @return File 备份文件保存路径
      */
     public String getFile() {
@@ -61,7 +61,7 @@ public class BackupFile  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件保存路径
+     * Set 备份文件保存路径
      * @param File 备份文件保存路径
      */
     public void setFile(String File) {
@@ -69,7 +69,7 @@ public class BackupFile  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplicateSetId", this.ReplicateSetId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ip6Translator  extends AbstractModel{
+public class Ip6Translator extends AbstractModel{
 
     /**
     * IPV6转换实例唯一ID，形如ip6-xxxxxxxx
@@ -79,7 +79,7 @@ public class Ip6Translator  extends AbstractModel{
     private Ip6Rule [] IP6RuleSet;
 
     /**
-     * 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxx
+     * Get IPV6转换实例唯一ID，形如ip6-xxxxxxxx 
      * @return Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public String getIp6TranslatorId() {
@@ -87,7 +87,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxx
+     * Set IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      * @param Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public void setIp6TranslatorId(String Ip6TranslatorId) {
@@ -95,7 +95,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换实例名称
+     * Get IPV6转换实例名称 
      * @return Ip6TranslatorName IPV6转换实例名称
      */
     public String getIp6TranslatorName() {
@@ -103,7 +103,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例名称
+     * Set IPV6转换实例名称
      * @param Ip6TranslatorName IPV6转换实例名称
      */
     public void setIp6TranslatorName(String Ip6TranslatorName) {
@@ -111,7 +111,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6地址
+     * Get IPV6地址 
      * @return Vip6 IPV6地址
      */
     public String getVip6() {
@@ -119,7 +119,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址
+     * Set IPV6地址
      * @param Vip6 IPV6地址
      */
     public void setVip6(String Vip6) {
@@ -127,7 +127,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换地址所属运营商
+     * Get IPV6转换地址所属运营商 
      * @return IspName IPV6转换地址所属运营商
      */
     public String getIspName() {
@@ -135,7 +135,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换地址所属运营商
+     * Set IPV6转换地址所属运营商
      * @param IspName IPV6转换地址所属运营商
      */
     public void setIspName(String IspName) {
@@ -143,7 +143,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING
+     * Get 转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING 
      * @return TranslatorStatus 转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING
      */
     public String getTranslatorStatus() {
@@ -151,7 +151,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING
+     * Set 转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING
      * @param TranslatorStatus 转换实例状态，限于CREATING,RUNNING,DELETING,MODIFYING
      */
     public void setTranslatorStatus(String TranslatorStatus) {
@@ -159,7 +159,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换实例创建时间
+     * Get IPV6转换实例创建时间 
      * @return CreatedTime IPV6转换实例创建时间
      */
     public String getCreatedTime() {
@@ -167,7 +167,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例创建时间
+     * Set IPV6转换实例创建时间
      * @param CreatedTime IPV6转换实例创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -175,7 +175,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的IPV6转换规则数量
+     * Get 绑定的IPV6转换规则数量 
      * @return Ip6RuleCount 绑定的IPV6转换规则数量
      */
     public Integer getIp6RuleCount() {
@@ -183,7 +183,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的IPV6转换规则数量
+     * Set 绑定的IPV6转换规则数量
      * @param Ip6RuleCount 绑定的IPV6转换规则数量
      */
     public void setIp6RuleCount(Integer Ip6RuleCount) {
@@ -191,7 +191,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则信息
+     * Get IPV6转换规则信息 
      * @return IP6RuleSet IPV6转换规则信息
      */
     public Ip6Rule [] getIP6RuleSet() {
@@ -199,7 +199,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则信息
+     * Set IPV6转换规则信息
      * @param IP6RuleSet IPV6转换规则信息
      */
     public void setIP6RuleSet(Ip6Rule [] IP6RuleSet) {
@@ -207,7 +207,7 @@ public class Ip6Translator  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6TranslatorId", this.Ip6TranslatorId);

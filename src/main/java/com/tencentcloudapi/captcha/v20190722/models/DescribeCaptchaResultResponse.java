@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCaptchaResultResponse  extends AbstractModel{
+public class DescribeCaptchaResultResponse extends AbstractModel{
 
     /**
     * 1	OK	验证通过
@@ -74,7 +74,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取1	OK	验证通过
+     * Get 1	OK	验证通过
 6	user code len error	验证码长度不匹配
 7	captcha no match	验证码答案不匹配/Randstr参数不匹配
 8	verify timeout	验证码签名超时
@@ -95,7 +95,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
 24	invalid pkg	非法请求包
 25	bad visitor	策略拦截
 26	system busy	系统内部错误
-100	param err	appsecretkey 参数校验错误
+100	param err	appsecretkey 参数校验错误 
      * @return CaptchaCode 1	OK	验证通过
 6	user code len error	验证码长度不匹配
 7	captcha no match	验证码答案不匹配/Randstr参数不匹配
@@ -124,7 +124,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置1	OK	验证通过
+     * Set 1	OK	验证通过
 6	user code len error	验证码长度不匹配
 7	captcha no match	验证码答案不匹配/Randstr参数不匹配
 8	verify timeout	验证码签名超时
@@ -174,8 +174,8 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态描述及验证错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -184,7 +184,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述及验证错误信息
+     * Set 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CaptchaMsg 状态描述及验证错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,8 +194,8 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取[0,100]，恶意等级
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get [0,100]，恶意等级
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EvilLevel [0,100]，恶意等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -204,7 +204,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置[0,100]，恶意等级
+     * Set [0,100]，恶意等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilLevel [0,100]，恶意等级
 注意：此字段可能返回 null，表示取不到有效值。
@@ -214,7 +214,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class DescribeCaptchaResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);

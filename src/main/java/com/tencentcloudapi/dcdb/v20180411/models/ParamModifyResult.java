@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParamModifyResult  extends AbstractModel{
+public class ParamModifyResult extends AbstractModel{
 
     /**
     * 修改参数名字
@@ -37,7 +37,7 @@ public class ParamModifyResult  extends AbstractModel{
     private Integer Code;
 
     /**
-     * 获取修改参数名字
+     * Get 修改参数名字 
      * @return Param 修改参数名字
      */
     public String getParam() {
@@ -45,7 +45,7 @@ public class ParamModifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置修改参数名字
+     * Set 修改参数名字
      * @param Param 修改参数名字
      */
     public void setParam(String Param) {
@@ -53,7 +53,7 @@ public class ParamModifyResult  extends AbstractModel{
     }
 
     /**
-     * 获取参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
+     * Get 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法 
      * @return Code 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      */
     public Integer getCode() {
@@ -61,7 +61,7 @@ public class ParamModifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
+     * Set 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      * @param Code 参数修改结果。0表示修改成功；-1表示修改失败；-2表示该参数值非法
      */
     public void setCode(Integer Code) {
@@ -69,7 +69,7 @@ public class ParamModifyResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Param", this.Param);

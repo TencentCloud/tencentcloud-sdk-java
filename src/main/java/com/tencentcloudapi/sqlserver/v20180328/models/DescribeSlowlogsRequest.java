@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowlogsRequest  extends AbstractModel{
+public class DescribeSlowlogsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-k8voqdlz
@@ -48,17 +48,17 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 从第几页开始返回，起始页，从0开始，默认为0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
-     * 获取实例ID，形如mssql-k8voqdlz
+     * Get 实例ID，形如mssql-k8voqdlz 
      * @return InstanceId 实例ID，形如mssql-k8voqdlz
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-k8voqdlz
+     * Set 实例ID，形如mssql-k8voqdlz
      * @param InstanceId 实例ID，形如mssql-k8voqdlz
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始时间
+     * Get 查询开始时间 
      * @return StartTime 查询开始时间
      */
     public String getStartTime() {
@@ -82,7 +82,7 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始时间
+     * Set 查询开始时间
      * @param StartTime 查询开始时间
      */
     public void setStartTime(String StartTime) {
@@ -90,7 +90,7 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间
+     * Get 查询结束时间 
      * @return EndTime 查询结束时间
      */
     public String getEndTime() {
@@ -98,7 +98,7 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间
+     * Set 查询结束时间
      * @param EndTime 查询结束时间
      */
     public void setEndTime(String EndTime) {
@@ -106,39 +106,39 @@ public class DescribeSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回结果，分页大小，默认20，不超过100
+     * Get 分页返回结果，分页大小，默认20，不超过100 
      * @return Limit 分页返回结果，分页大小，默认20，不超过100
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页返回结果，分页大小，默认20，不超过100
+     * Set 分页返回结果，分页大小，默认20，不超过100
      * @param Limit 分页返回结果，分页大小，默认20，不超过100
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取从第几页开始返回，起始页，从0开始，默认为0
+     * Get 从第几页开始返回，起始页，从0开始，默认为0 
      * @return Offset 从第几页开始返回，起始页，从0开始，默认为0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置从第几页开始返回，起始页，从0开始，默认为0
+     * Set 从第几页开始返回，起始页，从0开始，默认为0
      * @param Offset 从第几页开始返回，起始页，从0开始，默认为0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

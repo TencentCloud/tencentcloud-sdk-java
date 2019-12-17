@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceResponse  extends AbstractModel{
+public class DescribeDeviceResponse extends AbstractModel{
 
     /**
     * 设备名
@@ -183,7 +183,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设备名
+     * Get 设备名 
      * @return DeviceName 设备名
      */
     public String getDeviceName() {
@@ -191,7 +191,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备名
+     * Set 设备名
      * @param DeviceName 设备名
      */
     public void setDeviceName(String DeviceName) {
@@ -199,7 +199,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备是否在线，0不在线，1在线
+     * Get 设备是否在线，0不在线，1在线 
      * @return Online 设备是否在线，0不在线，1在线
      */
     public Integer getOnline() {
@@ -207,7 +207,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备是否在线，0不在线，1在线
+     * Set 设备是否在线，0不在线，1在线
      * @param Online 设备是否在线，0不在线，1在线
      */
     public void setOnline(Integer Online) {
@@ -215,7 +215,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备登录时间
+     * Get 设备登录时间 
      * @return LoginTime 设备登录时间
      */
     public Integer getLoginTime() {
@@ -223,7 +223,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备登录时间
+     * Set 设备登录时间
      * @param LoginTime 设备登录时间
      */
     public void setLoginTime(Integer LoginTime) {
@@ -231,7 +231,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备固件版本
+     * Get 设备固件版本 
      * @return Version 设备固件版本
      */
     public String getVersion() {
@@ -239,7 +239,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备固件版本
+     * Set 设备固件版本
      * @param Version 设备固件版本
      */
     public void setVersion(String Version) {
@@ -247,7 +247,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备最后更新时间
+     * Get 设备最后更新时间 
      * @return LastUpdateTime 设备最后更新时间
      */
     public Integer getLastUpdateTime() {
@@ -255,7 +255,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备最后更新时间
+     * Set 设备最后更新时间
      * @param LastUpdateTime 设备最后更新时间
      */
     public void setLastUpdateTime(Integer LastUpdateTime) {
@@ -263,7 +263,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备证书
+     * Get 设备证书 
      * @return DeviceCert 设备证书
      */
     public String getDeviceCert() {
@@ -271,7 +271,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书
+     * Set 设备证书
      * @param DeviceCert 设备证书
      */
     public void setDeviceCert(String DeviceCert) {
@@ -279,7 +279,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备密钥
+     * Get 设备密钥 
      * @return DevicePsk 设备密钥
      */
     public String getDevicePsk() {
@@ -287,7 +287,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备密钥
+     * Set 设备密钥
      * @param DevicePsk 设备密钥
      */
     public void setDevicePsk(String DevicePsk) {
@@ -295,7 +295,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备属性
+     * Get 设备属性 
      * @return Tags 设备属性
      */
     public DeviceTag [] getTags() {
@@ -303,7 +303,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备属性
+     * Set 设备属性
      * @param Tags 设备属性
      */
     public void setTags(DeviceTag [] Tags) {
@@ -311,7 +311,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型
+     * Get 设备类型 
      * @return DeviceType 设备类型
      */
     public Integer getDeviceType() {
@@ -319,7 +319,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型
+     * Set 设备类型
      * @param DeviceType 设备类型
      */
     public void setDeviceType(Integer DeviceType) {
@@ -327,7 +327,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取IMEI
+     * Get IMEI 
      * @return Imei IMEI
      */
     public String getImei() {
@@ -335,7 +335,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置IMEI
+     * Set IMEI
      * @param Imei IMEI
      */
     public void setImei(String Imei) {
@@ -343,7 +343,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取运营商类型
+     * Get 运营商类型 
      * @return Isp 运营商类型
      */
     public Integer getIsp() {
@@ -351,7 +351,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置运营商类型
+     * Set 运营商类型
      * @param Isp 运营商类型
      */
     public void setIsp(Integer Isp) {
@@ -359,7 +359,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址
+     * Get IP地址 
      * @return ConnIP IP地址
      */
     public Long getConnIP() {
@@ -367,7 +367,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址
+     * Set IP地址
      * @param ConnIP IP地址
      */
     public void setConnIP(Long ConnIP) {
@@ -375,7 +375,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取NB IoT运营商处的DeviceID
+     * Get NB IoT运营商处的DeviceID 
      * @return NbiotDeviceID NB IoT运营商处的DeviceID
      */
     public String getNbiotDeviceID() {
@@ -383,7 +383,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置NB IoT运营商处的DeviceID
+     * Set NB IoT运营商处的DeviceID
      * @param NbiotDeviceID NB IoT运营商处的DeviceID
      */
     public void setNbiotDeviceID(String NbiotDeviceID) {
@@ -391,7 +391,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Lora设备的dev eui
+     * Get Lora设备的dev eui 
      * @return LoraDevEui Lora设备的dev eui
      */
     public String getLoraDevEui() {
@@ -399,7 +399,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Lora设备的dev eui
+     * Set Lora设备的dev eui
      * @param LoraDevEui Lora设备的dev eui
      */
     public void setLoraDevEui(String LoraDevEui) {
@@ -407,7 +407,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Lora设备的mote type
+     * Get Lora设备的mote type 
      * @return LoraMoteType Lora设备的mote type
      */
     public Integer getLoraMoteType() {
@@ -415,7 +415,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Lora设备的mote type
+     * Set Lora设备的mote type
      * @param LoraMoteType Lora设备的mote type
      */
     public void setLoraMoteType(Integer LoraMoteType) {
@@ -423,8 +423,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备的sdk日志等级
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备的sdk日志等级
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogLevel 设备的sdk日志等级
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -433,7 +433,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备的sdk日志等级
+     * Set 设备的sdk日志等级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LogLevel 设备的sdk日志等级
 注意：此字段可能返回 null，表示取不到有效值。
@@ -443,8 +443,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取首次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 首次上线时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstOnlineTime 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -453,7 +453,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置首次上线时间
+     * Set 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstOnlineTime 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -463,8 +463,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最近下线时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最近下线时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LastOfflineTime 最近下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -473,7 +473,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最近下线时间
+     * Set 最近下线时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LastOfflineTime 最近下线时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -483,8 +483,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -493,7 +493,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备创建时间
+     * Set 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -503,8 +503,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -513,7 +513,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
+     * Set 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertState 设备证书获取状态，0 未获取过设备密钥, 1 已获取过设备密钥
 注意：此字段可能返回 null，表示取不到有效值。
@@ -523,8 +523,8 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备启用状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备启用状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableState 设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -533,7 +533,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备启用状态
+     * Set 设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableState 设备启用状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -543,7 +543,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -551,7 +551,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -559,7 +559,7 @@ public class DescribeDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

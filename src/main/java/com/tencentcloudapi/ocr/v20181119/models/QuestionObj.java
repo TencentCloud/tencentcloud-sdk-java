@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuestionObj  extends AbstractModel{
+public class QuestionObj extends AbstractModel{
 
     /**
     * 题号
@@ -61,7 +61,7 @@ public class QuestionObj  extends AbstractModel{
     private String QuestionSubquestion;
 
     /**
-     * 获取题号
+     * Get 题号 
      * @return QuestionTextNo 题号
      */
     public String getQuestionTextNo() {
@@ -69,7 +69,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 设置题号
+     * Set 题号
      * @param QuestionTextNo 题号
      */
     public void setQuestionTextNo(String QuestionTextNo) {
@@ -77,10 +77,10 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 获取题型：
+     * Get 题型：
 1: "选择题"
 2: "填空题"
-3: "解答题"
+3: "解答题" 
      * @return QuestionTextType 题型：
 1: "选择题"
 2: "填空题"
@@ -91,7 +91,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 设置题型：
+     * Set 题型：
 1: "选择题"
 2: "填空题"
 3: "解答题"
@@ -105,7 +105,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 获取题干
+     * Get 题干 
      * @return QuestionText 题干
      */
     public String getQuestionText() {
@@ -113,7 +113,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 设置题干
+     * Set 题干
      * @param QuestionText 题干
      */
     public void setQuestionText(String QuestionText) {
@@ -121,7 +121,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 获取选择题选项，包含1个或多个option
+     * Get 选择题选项，包含1个或多个option 
      * @return QuestionOptions 选择题选项，包含1个或多个option
      */
     public String getQuestionOptions() {
@@ -129,7 +129,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 设置选择题选项，包含1个或多个option
+     * Set 选择题选项，包含1个或多个option
      * @param QuestionOptions 选择题选项，包含1个或多个option
      */
     public void setQuestionOptions(String QuestionOptions) {
@@ -137,7 +137,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 获取所有子题的question属性
+     * Get 所有子题的question属性 
      * @return QuestionSubquestion 所有子题的question属性
      */
     public String getQuestionSubquestion() {
@@ -145,7 +145,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 设置所有子题的question属性
+     * Set 所有子题的question属性
      * @param QuestionSubquestion 所有子题的question属性
      */
     public void setQuestionSubquestion(String QuestionSubquestion) {
@@ -153,7 +153,7 @@ public class QuestionObj  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QuestionTextNo", this.QuestionTextNo);

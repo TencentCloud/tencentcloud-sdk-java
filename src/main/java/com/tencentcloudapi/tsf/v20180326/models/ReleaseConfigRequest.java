@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReleaseConfigRequest  extends AbstractModel{
+public class ReleaseConfigRequest extends AbstractModel{
 
     /**
     * 配置ID
@@ -44,7 +44,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     private String ReleaseDesc;
 
     /**
-     * 获取配置ID
+     * Get 配置ID 
      * @return ConfigId 配置ID
      */
     public String getConfigId() {
@@ -52,7 +52,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置ID
+     * Set 配置ID
      * @param ConfigId 配置ID
      */
     public void setConfigId(String ConfigId) {
@@ -60,7 +60,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -68,7 +68,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -76,7 +76,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取发布描述
+     * Get 发布描述 
      * @return ReleaseDesc 发布描述
      */
     public String getReleaseDesc() {
@@ -84,7 +84,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置发布描述
+     * Set 发布描述
      * @param ReleaseDesc 发布描述
      */
     public void setReleaseDesc(String ReleaseDesc) {
@@ -92,7 +92,7 @@ public class ReleaseConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

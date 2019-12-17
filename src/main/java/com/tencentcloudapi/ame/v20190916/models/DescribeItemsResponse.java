@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeItemsResponse  extends AbstractModel{
+public class DescribeItemsResponse extends AbstractModel{
 
     /**
     * 分页偏移量
@@ -67,7 +67,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取分页偏移量
+     * Get 分页偏移量 
      * @return Offset 分页偏移量
      */
     public Long getOffset() {
@@ -75,7 +75,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量
+     * Set 分页偏移量
      * @param Offset 分页偏移量
      */
     public void setOffset(Long Offset) {
@@ -83,7 +83,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前页歌曲数量
+     * Get 当前页歌曲数量 
      * @return Size 当前页歌曲数量
      */
     public Long getSize() {
@@ -91,7 +91,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前页歌曲数量
+     * Set 当前页歌曲数量
      * @param Size 当前页歌曲数量
      */
     public void setSize(Long Size) {
@@ -99,7 +99,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总数据条数
+     * Get 总数据条数 
      * @return Total 总数据条数
      */
     public Long getTotal() {
@@ -107,7 +107,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数据条数
+     * Set 总数据条数
      * @param Total 总数据条数
      */
     public void setTotal(Long Total) {
@@ -115,8 +115,8 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剩余数量（total-offset-size），通过这个值判断是否
-还有下一页
+     * Get 剩余数量（total-offset-size），通过这个值判断是否
+还有下一页 
      * @return HaveMore 剩余数量（total-offset-size），通过这个值判断是否
 还有下一页
      */
@@ -125,7 +125,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剩余数量（total-offset-size），通过这个值判断是否
+     * Set 剩余数量（total-offset-size），通过这个值判断是否
 还有下一页
      * @param HaveMore 剩余数量（total-offset-size），通过这个值判断是否
 还有下一页
@@ -135,8 +135,8 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Items 歌曲列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Items 歌曲列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items Items 歌曲列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Items 歌曲列表
+     * Set Items 歌曲列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Items Items 歌曲列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,7 +155,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -163,7 +163,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -171,7 +171,7 @@ public class DescribeItemsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightStandard  extends AbstractModel{
+public class LightStandard extends AbstractModel{
 
     /**
     * 光照名称
@@ -37,7 +37,7 @@ public class LightStandard  extends AbstractModel{
     private Float [] Range;
 
     /**
-     * 获取光照名称
+     * Get 光照名称 
      * @return Name 光照名称
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class LightStandard  extends AbstractModel{
     }
 
     /**
-     * 设置光照名称
+     * Set 光照名称
      * @param Name 光照名称
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class LightStandard  extends AbstractModel{
     }
 
     /**
-     * 获取范围
+     * Get 范围 
      * @return Range 范围
      */
     public Float [] getRange() {
@@ -61,7 +61,7 @@ public class LightStandard  extends AbstractModel{
     }
 
     /**
-     * 设置范围
+     * Set 范围
      * @param Range 范围
      */
     public void setRange(Float [] Range) {
@@ -69,7 +69,7 @@ public class LightStandard  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

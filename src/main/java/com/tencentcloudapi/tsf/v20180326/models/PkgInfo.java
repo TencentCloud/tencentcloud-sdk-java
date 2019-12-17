@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PkgInfo  extends AbstractModel{
+public class PkgInfo extends AbstractModel{
 
     /**
     * 程序包ID
@@ -87,8 +87,8 @@ public class PkgInfo  extends AbstractModel{
     private Long PkgPubStatus;
 
     /**
-     * 获取程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,8 +107,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgName 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包名
+     * Set 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgName 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,8 +127,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgType 程序包类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包类型
+     * Set 程序包类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgType 程序包类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgVersion 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包版本
+     * Set 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgVersion 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgDesc 程序包描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包描述
+     * Set 程序包描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgDesc 程序包描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上传时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上传时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UploadTime 上传时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传时间
+     * Set 上传时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UploadTime 上传时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包MD5
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5 程序包MD5
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包MD5
+     * Set 程序包MD5
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 程序包MD5
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 获取程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgPubStatus 程序包状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包状态
+     * Set 程序包状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgPubStatus 程序包状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,7 +247,7 @@ public class PkgInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);

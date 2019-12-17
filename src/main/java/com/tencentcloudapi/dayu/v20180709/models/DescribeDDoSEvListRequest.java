@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSEvListRequest  extends AbstractModel{
+public class DescribeDDoSEvListRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
@@ -79,7 +79,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -87,7 +87,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -95,7 +95,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -103,7 +103,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -111,7 +111,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -119,7 +119,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -127,7 +127,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+     * Get 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例） 
      * @return Id 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      */
     public String getId() {
@@ -135,7 +135,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+     * Set 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      * @param Id 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      */
     public void setId(String Id) {
@@ -143,7 +143,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP
+     * Get 资源的IP 
      * @return IpList 资源的IP
      */
     public String [] getIpList() {
@@ -151,7 +151,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP
+     * Set 资源的IP
      * @param IpList 资源的IP
      */
     public void setIpList(String [] IpList) {
@@ -159,7 +159,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤
+     * Get 是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤 
      * @return OverLoad 是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤
      */
     public String getOverLoad() {
@@ -167,7 +167,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤
+     * Set 是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤
      * @param OverLoad 是否超过弹性防护峰值，取值[yes(是)，no(否)]，填写空字符串时表示不进行过滤
      */
     public void setOverLoad(String OverLoad) {
@@ -175,7 +175,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页条数，填0表示不分页
+     * Get 一页条数，填0表示不分页 
      * @return Limit 一页条数，填0表示不分页
      */
     public Long getLimit() {
@@ -183,7 +183,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页条数，填0表示不分页
+     * Set 一页条数，填0表示不分页
      * @param Limit 一页条数，填0表示不分页
      */
     public void setLimit(Long Limit) {
@@ -191,7 +191,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页起始偏移，取值为(页码-1)*一页条数
+     * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
@@ -199,7 +199,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页起始偏移，取值为(页码-1)*一页条数
+     * Set 页起始偏移，取值为(页码-1)*一页条数
      * @param Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
@@ -207,7 +207,7 @@ public class DescribeDDoSEvListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

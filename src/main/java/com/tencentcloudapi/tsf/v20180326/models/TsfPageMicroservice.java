@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TsfPageMicroservice  extends AbstractModel{
+public class TsfPageMicroservice extends AbstractModel{
 
     /**
     * 微服务总数目
@@ -39,8 +39,8 @@ public class TsfPageMicroservice  extends AbstractModel{
     private Microservice [] Content;
 
     /**
-     * 获取微服务总数目
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务总数目
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 微服务总数目
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class TsfPageMicroservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务总数目
+     * Set 微服务总数目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 微服务总数目
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class TsfPageMicroservice  extends AbstractModel{
     }
 
     /**
-     * 获取微服务列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务列表信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 微服务列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class TsfPageMicroservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务列表信息
+     * Set 微服务列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 微服务列表信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class TsfPageMicroservice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

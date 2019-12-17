@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDomainErrorPageInfoRequest  extends AbstractModel{
+public class DeleteDomainErrorPageInfoRequest extends AbstractModel{
 
     /**
     * 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
@@ -30,7 +30,7 @@ public class DeleteDomainErrorPageInfoRequest  extends AbstractModel{
     private String ErrorPageId;
 
     /**
-     * 获取定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
+     * Get 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应 
      * @return ErrorPageId 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
      */
     public String getErrorPageId() {
@@ -38,7 +38,7 @@ public class DeleteDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
+     * Set 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
      * @param ErrorPageId 定制错误响应页的唯一ID，请参考CreateDomainErrorPageInfo的响应
      */
     public void setErrorPageId(String ErrorPageId) {
@@ -46,7 +46,7 @@ public class DeleteDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorPageId", this.ErrorPageId);

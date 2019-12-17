@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpUnBlockListRequest  extends AbstractModel{
+public class DescribeIpUnBlockListRequest extends AbstractModel{
 
     /**
     * 开始时间
@@ -65,7 +65,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return BeginTime 开始时间
      */
     public String getBeginTime() {
@@ -73,7 +73,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param BeginTime 开始时间
      */
     public void setBeginTime(String BeginTime) {
@@ -81,7 +81,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -89,7 +89,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -97,7 +97,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP（不为空时，进行IP过滤）
+     * Get IP（不为空时，进行IP过滤） 
      * @return Ip IP（不为空时，进行IP过滤）
      */
     public String getIp() {
@@ -105,7 +105,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP（不为空时，进行IP过滤）
+     * Set IP（不为空时，进行IP过滤）
      * @param Ip IP（不为空时，进行IP过滤）
      */
     public void setIp(String Ip) {
@@ -113,7 +113,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替；
+     * Get 分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替； 
      * @return Paging 分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替；
      */
     public Paging getPaging() {
@@ -121,7 +121,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替；
+     * Set 分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替；
      * @param Paging 分页参数（不为空时，进行分页查询），此字段后面会弃用，请用Limit和Offset字段代替；
      */
     public void setPaging(Paging Paging) {
@@ -129,7 +129,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页条数，填0表示不分页
+     * Get 一页条数，填0表示不分页 
      * @return Limit 一页条数，填0表示不分页
      */
     public Long getLimit() {
@@ -137,7 +137,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页条数，填0表示不分页
+     * Set 一页条数，填0表示不分页
      * @param Limit 一页条数，填0表示不分页
      */
     public void setLimit(Long Limit) {
@@ -145,7 +145,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页起始偏移，取值为(页码-1)*一页条数
+     * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
@@ -153,7 +153,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页起始偏移，取值为(页码-1)*一页条数
+     * Set 页起始偏移，取值为(页码-1)*一页条数
      * @param Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
@@ -161,7 +161,7 @@ public class DescribeIpUnBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);

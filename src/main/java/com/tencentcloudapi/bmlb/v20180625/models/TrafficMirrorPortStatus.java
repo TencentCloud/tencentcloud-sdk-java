@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrafficMirrorPortStatus  extends AbstractModel{
+public class TrafficMirrorPortStatus extends AbstractModel{
 
     /**
     * 接收机端口。
@@ -37,7 +37,7 @@ public class TrafficMirrorPortStatus  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取接收机端口。
+     * Get 接收机端口。 
      * @return Port 接收机端口。
      */
     public Integer getPort() {
@@ -45,7 +45,7 @@ public class TrafficMirrorPortStatus  extends AbstractModel{
     }
 
     /**
-     * 设置接收机端口。
+     * Set 接收机端口。
      * @param Port 接收机端口。
      */
     public void setPort(Integer Port) {
@@ -53,7 +53,7 @@ public class TrafficMirrorPortStatus  extends AbstractModel{
     }
 
     /**
-     * 获取状态。
+     * Get 状态。 
      * @return Status 状态。
      */
     public String getStatus() {
@@ -61,7 +61,7 @@ public class TrafficMirrorPortStatus  extends AbstractModel{
     }
 
     /**
-     * 设置状态。
+     * Set 状态。
      * @param Status 状态。
      */
     public void setStatus(String Status) {
@@ -69,7 +69,7 @@ public class TrafficMirrorPortStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogDownloadListResponse  extends AbstractModel{
+public class DescribeLogDownloadListResponse extends AbstractModel{
 
     /**
     * 日志信息列表。
@@ -44,7 +44,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日志信息列表。
+     * Get 日志信息列表。 
      * @return LogInfoList 日志信息列表。
      */
     public LogInfo [] getLogInfoList() {
@@ -52,7 +52,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志信息列表。
+     * Set 日志信息列表。
      * @param LogInfoList 日志信息列表。
      */
     public void setLogInfoList(LogInfo [] LogInfoList) {
@@ -60,7 +60,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总条数。
+     * Get 总条数。 
      * @return TotalNum 总条数。
      */
     public Integer getTotalNum() {
@@ -68,7 +68,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总条数。
+     * Set 总条数。
      * @param TotalNum 总条数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -76,7 +76,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLogDownloadListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LogInfoList.", this.LogInfoList);

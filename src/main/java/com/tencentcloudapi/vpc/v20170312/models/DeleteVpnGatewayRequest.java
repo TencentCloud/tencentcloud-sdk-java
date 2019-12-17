@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteVpnGatewayRequest  extends AbstractModel{
+public class DeleteVpnGatewayRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。
@@ -30,7 +30,7 @@ public class DeleteVpnGatewayRequest  extends AbstractModel{
     private String VpnGatewayId;
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -38,7 +38,7 @@ public class DeleteVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -46,7 +46,7 @@ public class DeleteVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

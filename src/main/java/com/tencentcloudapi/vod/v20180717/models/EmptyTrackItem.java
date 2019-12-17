@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EmptyTrackItem  extends AbstractModel{
+public class EmptyTrackItem extends AbstractModel{
 
     /**
     * 持续时间，单位为秒。
@@ -30,7 +30,7 @@ public class EmptyTrackItem  extends AbstractModel{
     private Float Duration;
 
     /**
-     * 获取持续时间，单位为秒。
+     * Get 持续时间，单位为秒。 
      * @return Duration 持续时间，单位为秒。
      */
     public Float getDuration() {
@@ -38,7 +38,7 @@ public class EmptyTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置持续时间，单位为秒。
+     * Set 持续时间，单位为秒。
      * @param Duration 持续时间，单位为秒。
      */
     public void setDuration(Float Duration) {
@@ -46,7 +46,7 @@ public class EmptyTrackItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

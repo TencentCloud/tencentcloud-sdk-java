@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecInfo  extends AbstractModel{
+public class SpecInfo extends AbstractModel{
 
     /**
     * 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
     */
     @SerializedName("SpecId")
     @Expose
-    private Integer SpecId;
+    private Long SpecId;
 
     /**
     * 机型ID
@@ -62,35 +62,35 @@ public class SpecInfo  extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * CPU核数
     */
     @SerializedName("CPU")
     @Expose
-    private Integer CPU;
+    private Long CPU;
 
     /**
     * 此规格下最小的磁盘大小，单位GB
     */
     @SerializedName("MinStorage")
     @Expose
-    private Integer MinStorage;
+    private Long MinStorage;
 
     /**
     * 此规格下最大的磁盘大小，单位GB
     */
     @SerializedName("MaxStorage")
     @Expose
-    private Integer MaxStorage;
+    private Long MaxStorage;
 
     /**
     * 此规格对应的QPS大小
     */
     @SerializedName("QPS")
     @Expose
-    private Integer QPS;
+    private Long QPS;
 
     /**
     * 此规格的中文描述信息
@@ -104,7 +104,7 @@ public class SpecInfo  extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 此规格对应的按量计费Pid列表
@@ -112,7 +112,7 @@ public class SpecInfo  extends AbstractModel{
     */
     @SerializedName("PostPid")
     @Expose
-    private Integer [] PostPid;
+    private Long [] PostPid;
 
     /**
     * 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
@@ -122,23 +122,23 @@ public class SpecInfo  extends AbstractModel{
     private String PayModeStatus;
 
     /**
-     * 获取实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
+     * Get 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例 
      * @return SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      */
-    public Integer getSpecId() {
+    public Long getSpecId() {
         return this.SpecId;
     }
 
     /**
-     * 设置实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
+     * Set 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      * @param SpecId 实例规格ID，利用DescribeZones返回的SpecId，结合DescribeProductConfig返回的可售卖规格信息，可获悉某个可用区下可购买什么规格的实例
      */
-    public void setSpecId(Integer SpecId) {
+    public void setSpecId(Long SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * 获取机型ID
+     * Get 机型ID 
      * @return MachineType 机型ID
      */
     public String getMachineType() {
@@ -146,7 +146,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机型ID
+     * Set 机型ID
      * @param MachineType 机型ID
      */
     public void setMachineType(String MachineType) {
@@ -154,7 +154,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取机型中文名称
+     * Get 机型中文名称 
      * @return MachineTypeName 机型中文名称
      */
     public String getMachineTypeName() {
@@ -162,7 +162,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机型中文名称
+     * Set 机型中文名称
      * @param MachineTypeName 机型中文名称
      */
     public void setMachineTypeName(String MachineTypeName) {
@@ -170,7 +170,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
+     * Get 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1） 
      * @return Version 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      */
     public String getVersion() {
@@ -178,7 +178,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
+     * Set 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      * @param Version 数据库版本信息。取值为2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      */
     public void setVersion(String Version) {
@@ -186,7 +186,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Version字段对应的版本名称
+     * Get Version字段对应的版本名称 
      * @return VersionName Version字段对应的版本名称
      */
     public String getVersionName() {
@@ -194,7 +194,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Version字段对应的版本名称
+     * Set Version字段对应的版本名称
      * @param VersionName Version字段对应的版本名称
      */
     public void setVersionName(String VersionName) {
@@ -202,87 +202,87 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位GB
+     * Get 内存大小，单位GB 
      * @return Memory 内存大小，单位GB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置内存大小，单位GB
+     * Set 内存大小，单位GB
      * @param Memory 内存大小，单位GB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取CPU核数
+     * Get CPU核数 
      * @return CPU CPU核数
      */
-    public Integer getCPU() {
+    public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * 设置CPU核数
+     * Set CPU核数
      * @param CPU CPU核数
      */
-    public void setCPU(Integer CPU) {
+    public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * 获取此规格下最小的磁盘大小，单位GB
+     * Get 此规格下最小的磁盘大小，单位GB 
      * @return MinStorage 此规格下最小的磁盘大小，单位GB
      */
-    public Integer getMinStorage() {
+    public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * 设置此规格下最小的磁盘大小，单位GB
+     * Set 此规格下最小的磁盘大小，单位GB
      * @param MinStorage 此规格下最小的磁盘大小，单位GB
      */
-    public void setMinStorage(Integer MinStorage) {
+    public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * 获取此规格下最大的磁盘大小，单位GB
+     * Get 此规格下最大的磁盘大小，单位GB 
      * @return MaxStorage 此规格下最大的磁盘大小，单位GB
      */
-    public Integer getMaxStorage() {
+    public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * 设置此规格下最大的磁盘大小，单位GB
+     * Set 此规格下最大的磁盘大小，单位GB
      * @param MaxStorage 此规格下最大的磁盘大小，单位GB
      */
-    public void setMaxStorage(Integer MaxStorage) {
+    public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * 获取此规格对应的QPS大小
+     * Get 此规格对应的QPS大小 
      * @return QPS 此规格对应的QPS大小
      */
-    public Integer getQPS() {
+    public Long getQPS() {
         return this.QPS;
     }
 
     /**
-     * 设置此规格对应的QPS大小
+     * Set 此规格对应的QPS大小
      * @param QPS 此规格对应的QPS大小
      */
-    public void setQPS(Integer QPS) {
+    public void setQPS(Long QPS) {
         this.QPS = QPS;
     }
 
     /**
-     * 获取此规格的中文描述信息
+     * Get 此规格的中文描述信息 
      * @return SuitInfo 此规格的中文描述信息
      */
     public String getSuitInfo() {
@@ -290,7 +290,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置此规格的中文描述信息
+     * Set 此规格的中文描述信息
      * @param SuitInfo 此规格的中文描述信息
      */
     public void setSuitInfo(String SuitInfo) {
@@ -298,43 +298,43 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取此规格对应的包年包月Pid
+     * Get 此规格对应的包年包月Pid 
      * @return Pid 此规格对应的包年包月Pid
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置此规格对应的包年包月Pid
+     * Set 此规格对应的包年包月Pid
      * @param Pid 此规格对应的包年包月Pid
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * 获取此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 此规格对应的按量计费Pid列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PostPid 此规格对应的按量计费Pid列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer [] getPostPid() {
+    public Long [] getPostPid() {
         return this.PostPid;
     }
 
     /**
-     * 设置此规格对应的按量计费Pid列表
+     * Set 此规格对应的按量计费Pid列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PostPid 此规格对应的按量计费Pid列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPostPid(Integer [] PostPid) {
+    public void setPostPid(Long [] PostPid) {
         this.PostPid = PostPid;
     }
 
     /**
-     * 获取此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * Get 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有 
      * @return PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
      */
     public String getPayModeStatus() {
@@ -342,7 +342,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
+     * Set 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
      * @param PayModeStatus 此规格下支持的付费模式，POST-仅支持按量计费 PRE-仅支持包年包月 ALL-支持所有
      */
     public void setPayModeStatus(String PayModeStatus) {
@@ -350,7 +350,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);

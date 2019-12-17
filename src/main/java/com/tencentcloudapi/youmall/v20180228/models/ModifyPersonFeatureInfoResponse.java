@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
+public class ModifyPersonFeatureInfoResponse extends AbstractModel{
 
     /**
     * 集团ID
@@ -72,7 +72,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -80,7 +80,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -88,7 +88,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID，如果不填表示操作集团身份库
+     * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public Integer getShopId() {
@@ -96,7 +96,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID，如果不填表示操作集团身份库
+     * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public void setShopId(Integer ShopId) {
@@ -104,7 +104,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求的顾客id
+     * Get 请求的顾客id 
      * @return PersonId 请求的顾客id
      */
     public Integer getPersonId() {
@@ -112,7 +112,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求的顾客id
+     * Set 请求的顾客id
      * @param PersonId 请求的顾客id
      */
     public void setPersonId(Integer PersonId) {
@@ -120,7 +120,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片实际绑定person_id，可能与请求的person_id不同，以此id为准
+     * Get 图片实际绑定person_id，可能与请求的person_id不同，以此id为准 
      * @return PersonIdBind 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      */
     public Integer getPersonIdBind() {
@@ -128,7 +128,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片实际绑定person_id，可能与请求的person_id不同，以此id为准
+     * Set 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      * @param PersonIdBind 图片实际绑定person_id，可能与请求的person_id不同，以此id为准
      */
     public void setPersonIdBind(Integer PersonIdBind) {
@@ -136,7 +136,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求的顾客类型
+     * Get 请求的顾客类型 
      * @return PersonType 请求的顾客类型
      */
     public Integer getPersonType() {
@@ -144,7 +144,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求的顾客类型
+     * Set 请求的顾客类型
      * @param PersonType 请求的顾客类型
      */
     public void setPersonType(Integer PersonType) {
@@ -152,7 +152,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
+     * Get 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人 
      * @return SimilarPersonIds 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      */
     public Integer [] getSimilarPersonIds() {
@@ -160,7 +160,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
+     * Set 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      * @param SimilarPersonIds 与请求的person_id类型相同、与请求图片特征相似的一个或多个person_id，需要额外确认这些id是否是同一个人
      */
     public void setSimilarPersonIds(Integer [] SimilarPersonIds) {
@@ -168,7 +168,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class ModifyPersonFeatureInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

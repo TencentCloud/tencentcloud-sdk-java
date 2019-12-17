@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessSummaryTotal  extends AbstractModel{
+public class BusinessSummaryTotal extends AbstractModel{
 
     /**
     * 总花费
@@ -51,7 +51,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     private String CashPayAmount;
 
     /**
-     * 获取总花费
+     * Get 总花费 
      * @return RealTotalCost 总花费
      */
     public String getRealTotalCost() {
@@ -59,7 +59,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 设置总花费
+     * Set 总花费
      * @param RealTotalCost 总花费
      */
     public void setRealTotalCost(String RealTotalCost) {
@@ -67,7 +67,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 获取代金券金额
+     * Get 代金券金额 
      * @return VoucherPayAmount 代金券金额
      */
     public String getVoucherPayAmount() {
@@ -75,7 +75,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 设置代金券金额
+     * Set 代金券金额
      * @param VoucherPayAmount 代金券金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
@@ -83,7 +83,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 获取赠送金金额
+     * Get 赠送金金额 
      * @return IncentivePayAmount 赠送金金额
      */
     public String getIncentivePayAmount() {
@@ -91,7 +91,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 设置赠送金金额
+     * Set 赠送金金额
      * @param IncentivePayAmount 赠送金金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
@@ -99,7 +99,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 获取现金金额
+     * Get 现金金额 
      * @return CashPayAmount 现金金额
      */
     public String getCashPayAmount() {
@@ -107,7 +107,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 设置现金金额
+     * Set 现金金额
      * @param CashPayAmount 现金金额
      */
     public void setCashPayAmount(String CashPayAmount) {
@@ -115,7 +115,7 @@ public class BusinessSummaryTotal  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);

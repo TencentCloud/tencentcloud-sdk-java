@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 可用区名称，例如，ap-guangzhou-3
@@ -88,7 +88,7 @@ public class ZoneInfo  extends AbstractModel{
     private String ZoneState;
 
     /**
-     * 获取可用区名称，例如，ap-guangzhou-3
+     * Get 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -125,7 +125,7 @@ public class ZoneInfo  extends AbstractModel{
 <li> eu-frankfurt-1 </li>
 <li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
-<li> na-ashburn-2 </li>
+<li> na-ashburn-2 </li> 
      * @return Zone 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -170,7 +170,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称，例如，ap-guangzhou-3
+     * Set 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
@@ -252,7 +252,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区描述，例如，广州三区
+     * Get 可用区描述，例如，广州三区 
      * @return ZoneName 可用区描述，例如，广州三区
      */
     public String getZoneName() {
@@ -260,7 +260,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区描述，例如，广州三区
+     * Set 可用区描述，例如，广州三区
      * @param ZoneName 可用区描述，例如，广州三区
      */
     public void setZoneName(String ZoneName) {
@@ -268,7 +268,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
      */
     public String getZoneId() {
@@ -276,7 +276,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
      * @param ZoneId 可用区ID
      */
     public void setZoneId(String ZoneId) {
@@ -284,7 +284,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+     * Get 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。 
      * @return ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public String getZoneState() {
@@ -292,7 +292,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
+     * Set 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      * @param ZoneState 可用区状态，包含AVAILABLE和UNAVAILABLE。AVAILABLE代表可用，UNAVAILABLE代表不可用。
      */
     public void setZoneState(String ZoneState) {
@@ -300,7 +300,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

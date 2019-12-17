@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
+public class DescribeStreamPlayInfoListRequest extends AbstractModel{
 
     /**
     * 结束时间，北京时间，
@@ -54,8 +54,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取结束时间，北京时间，
-结束时间 和 开始时间  必须在同一天内。
+     * Get 结束时间，北京时间，
+结束时间 和 开始时间  必须在同一天内。 
      * @return EndTime 结束时间，北京时间，
 结束时间 和 开始时间  必须在同一天内。
      */
@@ -64,7 +64,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * Set 结束时间，北京时间，
 结束时间 和 开始时间  必须在同一天内。
      * @param EndTime 结束时间，北京时间，
 结束时间 和 开始时间  必须在同一天内。
@@ -74,7 +74,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名。
+     * Get 播放域名。 
      * @return PlayDomain 播放域名。
      */
     public String getPlayDomain() {
@@ -82,7 +82,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名。
+     * Set 播放域名。
      * @param PlayDomain 播放域名。
      */
     public void setPlayDomain(String PlayDomain) {
@@ -90,8 +90,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，北京时间，
-当前时间 和 开始时间 间隔不超过30天。
+     * Get 开始时间，北京时间，
+当前时间 和 开始时间 间隔不超过30天。 
      * @return StartTime 开始时间，北京时间，
 当前时间 和 开始时间 间隔不超过30天。
      */
@@ -100,7 +100,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，北京时间，
+     * Set 开始时间，北京时间，
 当前时间 和 开始时间 间隔不超过30天。
      * @param StartTime 开始时间，北京时间，
 当前时间 和 开始时间 间隔不超过30天。
@@ -110,8 +110,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称，精确匹配。
-若不填，则为查询总体播放数据。
+     * Get 流名称，精确匹配。
+若不填，则为查询总体播放数据。 
      * @return StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。
      */
@@ -120,7 +120,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称，精确匹配。
+     * Set 流名称，精确匹配。
 若不填，则为查询总体播放数据。
      * @param StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。
@@ -130,7 +130,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);

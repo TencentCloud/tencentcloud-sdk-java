@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7RuleHealth  extends AbstractModel{
+public class L7RuleHealth extends AbstractModel{
 
     /**
     * 规则ID
@@ -86,7 +86,7 @@ public class L7RuleHealth  extends AbstractModel{
     private Long Status;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -94,7 +94,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -102,7 +102,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取=1表示开启；=0表示关闭
+     * Get =1表示开启；=0表示关闭 
      * @return Enable =1表示开启；=0表示关闭
      */
     public Long getEnable() {
@@ -110,7 +110,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置=1表示开启；=0表示关闭
+     * Set =1表示开启；=0表示关闭
      * @param Enable =1表示开启；=0表示关闭
      */
     public void setEnable(Long Enable) {
@@ -118,7 +118,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取检测间隔时间，单位秒
+     * Get 检测间隔时间，单位秒 
      * @return Interval 检测间隔时间，单位秒
      */
     public Long getInterval() {
@@ -126,7 +126,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置检测间隔时间，单位秒
+     * Set 检测间隔时间，单位秒
      * @param Interval 检测间隔时间，单位秒
      */
     public void setInterval(Long Interval) {
@@ -134,7 +134,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阈值，单位次
+     * Get 不健康阈值，单位次 
      * @return KickNum 不健康阈值，单位次
      */
     public Long getKickNum() {
@@ -142,7 +142,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置不健康阈值，单位次
+     * Set 不健康阈值，单位次
      * @param KickNum 不健康阈值，单位次
      */
     public void setKickNum(Long KickNum) {
@@ -150,7 +150,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取健康阈值，单位次
+     * Get 健康阈值，单位次 
      * @return AliveNum 健康阈值，单位次
      */
     public Long getAliveNum() {
@@ -158,7 +158,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置健康阈值，单位次
+     * Set 健康阈值，单位次
      * @param AliveNum 健康阈值，单位次
      */
     public void setAliveNum(Long AliveNum) {
@@ -166,7 +166,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取HTTP请求方式，取值[HEAD,GET]
+     * Get HTTP请求方式，取值[HEAD,GET] 
      * @return Method HTTP请求方式，取值[HEAD,GET]
      */
     public String getMethod() {
@@ -174,7 +174,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置HTTP请求方式，取值[HEAD,GET]
+     * Set HTTP请求方式，取值[HEAD,GET]
      * @param Method HTTP请求方式，取值[HEAD,GET]
      */
     public void setMethod(String Method) {
@@ -182,7 +182,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * Get 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和 
      * @return StatusCode 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      */
     public Long getStatusCode() {
@@ -190,7 +190,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * Set 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      * @param StatusCode 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      */
     public void setStatusCode(Long StatusCode) {
@@ -198,7 +198,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取检查目录的URL，默认为/
+     * Get 检查目录的URL，默认为/ 
      * @return Url 检查目录的URL，默认为/
      */
     public String getUrl() {
@@ -206,7 +206,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置检查目录的URL，默认为/
+     * Set 检查目录的URL，默认为/
      * @param Url 检查目录的URL，默认为/
      */
     public void setUrl(String Url) {
@@ -214,7 +214,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取配置状态，0： 正常，1：配置中，2：配置失败
+     * Get 配置状态，0： 正常，1：配置中，2：配置失败 
      * @return Status 配置状态，0： 正常，1：配置中，2：配置失败
      */
     public Long getStatus() {
@@ -222,7 +222,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置配置状态，0： 正常，1：配置中，2：配置失败
+     * Set 配置状态，0： 正常，1：配置中，2：配置失败
      * @param Status 配置状态，0： 正常，1：配置中，2：配置失败
      */
     public void setStatus(Long Status) {
@@ -230,7 +230,7 @@ public class L7RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

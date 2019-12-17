@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClusterNetworkSettings  extends AbstractModel{
+public class ClusterNetworkSettings extends AbstractModel{
 
     /**
     * 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
@@ -72,7 +72,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     private Boolean Cni;
 
     /**
-     * 获取用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+     * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
     public String getClusterCIDR() {
@@ -80,7 +80,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+     * Set 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
     public void setClusterCIDR(String ClusterCIDR) {
@@ -88,7 +88,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取是否忽略 ClusterCIDR 冲突错误, 默认不忽略
+     * Get 是否忽略 ClusterCIDR 冲突错误, 默认不忽略 
      * @return IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      */
     public Boolean getIgnoreClusterCIDRConflict() {
@@ -96,7 +96,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置是否忽略 ClusterCIDR 冲突错误, 默认不忽略
+     * Set 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      */
     public void setIgnoreClusterCIDRConflict(Boolean IgnoreClusterCIDRConflict) {
@@ -104,7 +104,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群中每个Node上最大的Pod数量(默认为256)
+     * Get 集群中每个Node上最大的Pod数量(默认为256) 
      * @return MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
      */
     public Integer getMaxNodePodNum() {
@@ -112,7 +112,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群中每个Node上最大的Pod数量(默认为256)
+     * Set 集群中每个Node上最大的Pod数量(默认为256)
      * @param MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
      */
     public void setMaxNodePodNum(Integer MaxNodePodNum) {
@@ -120,7 +120,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群最大的service数量(默认为256)
+     * Get 集群最大的service数量(默认为256) 
      * @return MaxClusterServiceNum 集群最大的service数量(默认为256)
      */
     public Integer getMaxClusterServiceNum() {
@@ -128,7 +128,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群最大的service数量(默认为256)
+     * Set 集群最大的service数量(默认为256)
      * @param MaxClusterServiceNum 集群最大的service数量(默认为256)
      */
     public void setMaxClusterServiceNum(Integer MaxClusterServiceNum) {
@@ -136,7 +136,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用IPVS(默认不开启)
+     * Get 是否启用IPVS(默认不开启) 
      * @return Ipvs 是否启用IPVS(默认不开启)
      */
     public Boolean getIpvs() {
@@ -144,7 +144,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用IPVS(默认不开启)
+     * Set 是否启用IPVS(默认不开启)
      * @param Ipvs 是否启用IPVS(默认不开启)
      */
     public void setIpvs(Boolean Ipvs) {
@@ -152,7 +152,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
+     * Get 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致） 
      * @return VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      */
     public String getVpcId() {
@@ -160,7 +160,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
+     * Set 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      * @param VpcId 集群的VPCID（如果创建空集群，为必传值，否则自动设置为和集群的节点保持一致）
      */
     public void setVpcId(String VpcId) {
@@ -168,7 +168,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 获取网络插件是否启用CNI(默认开启)
+     * Get 网络插件是否启用CNI(默认开启) 
      * @return Cni 网络插件是否启用CNI(默认开启)
      */
     public Boolean getCni() {
@@ -176,7 +176,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 设置网络插件是否启用CNI(默认开启)
+     * Set 网络插件是否启用CNI(默认开启)
      * @param Cni 网络插件是否启用CNI(默认开启)
      */
     public void setCni(Boolean Cni) {
@@ -184,7 +184,7 @@ public class ClusterNetworkSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterCIDR", this.ClusterCIDR);

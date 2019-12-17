@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTaskResult  extends AbstractModel{
+public class ImageTaskResult extends AbstractModel{
 
     /**
     * 大教室场景学生肢体动作识别信息
@@ -114,7 +114,7 @@ public class ImageTaskResult  extends AbstractModel{
     private TimeInfoResult TimeInfo;
 
     /**
-     * 获取大教室场景学生肢体动作识别信息
+     * Get 大教室场景学生肢体动作识别信息 
      * @return ActionInfo 大教室场景学生肢体动作识别信息
      */
     public ActionInfo getActionInfo() {
@@ -122,7 +122,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置大教室场景学生肢体动作识别信息
+     * Set 大教室场景学生肢体动作识别信息
      * @param ActionInfo 大教室场景学生肢体动作识别信息
      */
     public void setActionInfo(ActionInfo ActionInfo) {
@@ -130,7 +130,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取属性识别结果
+     * Get 属性识别结果 
      * @return FaceAttr 属性识别结果
      */
     public FaceAttrResult getFaceAttr() {
@@ -138,7 +138,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置属性识别结果
+     * Set 属性识别结果
      * @param FaceAttr 属性识别结果
      */
     public void setFaceAttr(FaceAttrResult FaceAttr) {
@@ -146,7 +146,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取表情识别结果
+     * Get 表情识别结果 
      * @return FaceExpression 表情识别结果
      */
     public FaceExpressionResult getFaceExpression() {
@@ -154,7 +154,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置表情识别结果
+     * Set 表情识别结果
      * @param FaceExpression 表情识别结果
      */
     public void setFaceExpression(FaceExpressionResult FaceExpression) {
@@ -162,7 +162,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检索结果
+     * Get 人脸检索结果 
      * @return FaceIdentify 人脸检索结果
      */
     public FaceIdentifyResult getFaceIdentify() {
@@ -170,7 +170,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检索结果
+     * Set 人脸检索结果
      * @param FaceIdentify 人脸检索结果
      */
     public void setFaceIdentify(FaceIdentifyResult FaceIdentify) {
@@ -178,7 +178,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检测结果
+     * Get 人脸检测结果 
      * @return FaceInfo 人脸检测结果
      */
     public FaceInfoResult getFaceInfo() {
@@ -186,7 +186,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检测结果
+     * Set 人脸检测结果
      * @param FaceInfo 人脸检测结果
      */
     public void setFaceInfo(FaceInfoResult FaceInfo) {
@@ -194,7 +194,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取姿势识别结果
+     * Get 姿势识别结果 
      * @return FacePose 姿势识别结果
      */
     public FacePoseResult getFacePose() {
@@ -202,7 +202,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置姿势识别结果
+     * Set 姿势识别结果
      * @param FacePose 姿势识别结果
      */
     public void setFacePose(FacePoseResult FacePose) {
@@ -210,7 +210,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取动作分类结果
+     * Get 动作分类结果 
      * @return Gesture 动作分类结果
      */
     public GestureResult getGesture() {
@@ -218,7 +218,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置动作分类结果
+     * Set 动作分类结果
      * @param Gesture 动作分类结果
      */
     public void setGesture(GestureResult Gesture) {
@@ -226,7 +226,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取手势分类结果
+     * Get 手势分类结果 
      * @return HandTracking 手势分类结果
      */
     public HandTrackingResult getHandTracking() {
@@ -234,7 +234,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置手势分类结果
+     * Set 手势分类结果
      * @param HandTracking 手势分类结果
      */
     public void setHandTracking(HandTrackingResult HandTracking) {
@@ -242,7 +242,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取光照识别结果
+     * Get 光照识别结果 
      * @return Light 光照识别结果
      */
     public LightResult getLight() {
@@ -250,7 +250,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置光照识别结果
+     * Set 光照识别结果
      * @param Light 光照识别结果
      */
     public void setLight(LightResult Light) {
@@ -258,7 +258,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取学生肢体动作识别结果
+     * Get 学生肢体动作识别结果 
      * @return StudentBodyMovement 学生肢体动作识别结果
      */
     public StudentBodyMovementResult getStudentBodyMovement() {
@@ -266,7 +266,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置学生肢体动作识别结果
+     * Set 学生肢体动作识别结果
      * @param StudentBodyMovement 学生肢体动作识别结果
      */
     public void setStudentBodyMovement(StudentBodyMovementResult StudentBodyMovement) {
@@ -274,7 +274,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取老师肢体动作识别结果
+     * Get 老师肢体动作识别结果 
      * @return TeacherBodyMovement 老师肢体动作识别结果
      */
     public BodyMovementResult getTeacherBodyMovement() {
@@ -282,7 +282,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置老师肢体动作识别结果
+     * Set 老师肢体动作识别结果
      * @param TeacherBodyMovement 老师肢体动作识别结果
      */
     public void setTeacherBodyMovement(BodyMovementResult TeacherBodyMovement) {
@@ -290,7 +290,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取教师是否在屏幕内判断结果
+     * Get 教师是否在屏幕内判断结果 
      * @return TeacherOutScreen 教师是否在屏幕内判断结果
      */
     public TeacherOutScreenResult getTeacherOutScreen() {
@@ -298,7 +298,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置教师是否在屏幕内判断结果
+     * Set 教师是否在屏幕内判断结果
      * @param TeacherOutScreen 教师是否在屏幕内判断结果
      */
     public void setTeacherOutScreen(TeacherOutScreenResult TeacherOutScreen) {
@@ -306,7 +306,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取时间统计结果
+     * Get 时间统计结果 
      * @return TimeInfo 时间统计结果
      */
     public TimeInfoResult getTimeInfo() {
@@ -314,7 +314,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置时间统计结果
+     * Set 时间统计结果
      * @param TimeInfo 时间统计结果
      */
     public void setTimeInfo(TimeInfoResult TimeInfo) {
@@ -322,7 +322,7 @@ public class ImageTaskResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ActionInfo.", this.ActionInfo);

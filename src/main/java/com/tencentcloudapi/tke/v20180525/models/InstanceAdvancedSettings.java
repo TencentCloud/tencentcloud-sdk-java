@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceAdvancedSettings  extends AbstractModel{
+public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
@@ -65,7 +65,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     private DataDisk [] DataDisks;
 
     /**
-     * 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+     * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。 
      * @return MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      */
     public String getMountTarget() {
@@ -73,7 +73,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
+     * Set 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      * @param MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
      */
     public void setMountTarget(String MountTarget) {
@@ -81,7 +81,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取dockerd --graph 指定值, 默认为 /var/lib/docker
+     * Get dockerd --graph 指定值, 默认为 /var/lib/docker 
      * @return DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
      */
     public String getDockerGraphPath() {
@@ -89,7 +89,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置dockerd --graph 指定值, 默认为 /var/lib/docker
+     * Set dockerd --graph 指定值, 默认为 /var/lib/docker
      * @param DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
      */
     public void setDockerGraphPath(String DockerGraphPath) {
@@ -97,7 +97,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度 
      * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
      */
     public String getUserScript() {
@@ -105,7 +105,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
+     * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
      * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
      */
     public void setUserScript(String UserScript) {
@@ -113,7 +113,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Get 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度. 
      * @return Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      */
     public Integer getUnschedulable() {
@@ -121,7 +121,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
+     * Set 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      * @param Unschedulable 设置加入的节点是否参与调度，默认值为0，表示参与调度；非0表示不参与调度, 待节点初始化完成之后, 可执行kubectl uncordon nodename使node加入调度.
      */
     public void setUnschedulable(Integer Unschedulable) {
@@ -129,7 +129,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取节点Label数组
+     * Get 节点Label数组 
      * @return Labels 节点Label数组
      */
     public Label [] getLabels() {
@@ -137,7 +137,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置节点Label数组
+     * Set 节点Label数组
      * @param Labels 节点Label数组
      */
     public void setLabels(Label [] Labels) {
@@ -145,7 +145,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘相关信息
+     * Get 数据盘相关信息 
      * @return DataDisks 数据盘相关信息
      */
     public DataDisk [] getDataDisks() {
@@ -153,7 +153,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘相关信息
+     * Set 数据盘相关信息
      * @param DataDisks 数据盘相关信息
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -161,7 +161,7 @@ public class InstanceAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HighlightsInfomation  extends AbstractModel{
+public class HighlightsInfomation extends AbstractModel{
 
     /**
     * 专注的起始与终止时间信息。
@@ -51,7 +51,7 @@ public class HighlightsInfomation  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取专注的起始与终止时间信息。
+     * Get 专注的起始与终止时间信息。 
      * @return Concentration 专注的起始与终止时间信息。
      */
     public TimeType [] getConcentration() {
@@ -59,7 +59,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置专注的起始与终止时间信息。
+     * Set 专注的起始与终止时间信息。
      * @param Concentration 专注的起始与终止时间信息。
      */
     public void setConcentration(TimeType [] Concentration) {
@@ -67,7 +67,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 获取微笑的起始与终止时间信息。
+     * Get 微笑的起始与终止时间信息。 
      * @return Smile 微笑的起始与终止时间信息。
      */
     public TimeType [] getSmile() {
@@ -75,7 +75,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置微笑的起始与终止时间信息。
+     * Set 微笑的起始与终止时间信息。
      * @param Smile 微笑的起始与终止时间信息。
      */
     public void setSmile(TimeType [] Smile) {
@@ -83,7 +83,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 获取高光集锦视频地址，保存剪辑好的视频地址。
+     * Get 高光集锦视频地址，保存剪辑好的视频地址。 
      * @return HighlightsUrl 高光集锦视频地址，保存剪辑好的视频地址。
      */
     public String getHighlightsUrl() {
@@ -91,7 +91,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置高光集锦视频地址，保存剪辑好的视频地址。
+     * Set 高光集锦视频地址，保存剪辑好的视频地址。
      * @param HighlightsUrl 高光集锦视频地址，保存剪辑好的视频地址。
      */
     public void setHighlightsUrl(String HighlightsUrl) {
@@ -99,7 +99,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 获取片段中识别出来的人脸ID。
+     * Get 片段中识别出来的人脸ID。 
      * @return PersonId 片段中识别出来的人脸ID。
      */
     public String getPersonId() {
@@ -107,7 +107,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置片段中识别出来的人脸ID。
+     * Set 片段中识别出来的人脸ID。
      * @param PersonId 片段中识别出来的人脸ID。
      */
     public void setPersonId(String PersonId) {
@@ -115,7 +115,7 @@ public class HighlightsInfomation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Concentration.", this.Concentration);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
+public class DescribeDirectConnectGatewaysResponse extends AbstractModel{
 
     /**
     * 符合条件的对象数。
@@ -44,7 +44,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的对象数。
+     * Get 符合条件的对象数。 
      * @return TotalCount 符合条件的对象数。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的对象数。
+     * Set 符合条件的对象数。
      * @param TotalCount 符合条件的对象数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 获取专线网关对象数组。
+     * Get 专线网关对象数组。 
      * @return DirectConnectGatewaySet 专线网关对象数组。
      */
     public DirectConnectGateway [] getDirectConnectGatewaySet() {
@@ -68,7 +68,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关对象数组。
+     * Set 专线网关对象数组。
      * @param DirectConnectGatewaySet 专线网关对象数组。
      */
     public void setDirectConnectGatewaySet(DirectConnectGateway [] DirectConnectGatewaySet) {
@@ -76,7 +76,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDirectConnectGatewaysResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

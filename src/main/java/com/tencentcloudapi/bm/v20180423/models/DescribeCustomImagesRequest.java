@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomImagesRequest  extends AbstractModel{
+public class DescribeCustomImagesRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -78,7 +78,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     private Integer [] ImageStatus;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -86,7 +86,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -94,7 +94,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制
+     * Get 数量限制 
      * @return Limit 数量限制
      */
     public Integer getLimit() {
@@ -102,7 +102,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制
+     * Set 数量限制
      * @param Limit 数量限制
      */
     public void setLimit(Integer Limit) {
@@ -110,7 +110,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，仅支持CreateTime
+     * Get 排序字段，仅支持CreateTime 
      * @return OrderField 排序字段，仅支持CreateTime
      */
     public String getOrderField() {
@@ -118,7 +118,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，仅支持CreateTime
+     * Set 排序字段，仅支持CreateTime
      * @param OrderField 排序字段，仅支持CreateTime
      */
     public void setOrderField(String OrderField) {
@@ -126,7 +126,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式 0:递增(默认) 1:递减
+     * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
     public Integer getOrder() {
@@ -134,7 +134,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式 0:递增(默认) 1:递减
+     * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
     public void setOrder(Integer Order) {
@@ -142,7 +142,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
+     * Get 按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效 
      * @return ImageId 按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
      */
     public String getImageId() {
@@ -150,7 +150,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
+     * Set 按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
      * @param ImageId 按ImageId查找指定镜像信息，ImageId字段存在时其他字段失效
      */
     public void setImageId(String ImageId) {
@@ -158,7 +158,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模糊查询过滤，可以查询镜像ID或镜像名
+     * Get 模糊查询过滤，可以查询镜像ID或镜像名 
      * @return SearchKey 模糊查询过滤，可以查询镜像ID或镜像名
      */
     public String getSearchKey() {
@@ -166,7 +166,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模糊查询过滤，可以查询镜像ID或镜像名
+     * Set 模糊查询过滤，可以查询镜像ID或镜像名
      * @param SearchKey 模糊查询过滤，可以查询镜像ID或镜像名
      */
     public void setSearchKey(String SearchKey) {
@@ -174,13 +174,13 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<ul>
+     * Get <ul>
 镜像状态过滤列表，有效取值为：
 <li>1：制作中</li>
 <li>2：制作失败</li>
 <li>3：正常</li>
 <li>4：删除中</li>
-</ul>
+</ul> 
      * @return ImageStatus <ul>
 镜像状态过滤列表，有效取值为：
 <li>1：制作中</li>
@@ -194,7 +194,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<ul>
+     * Set <ul>
 镜像状态过滤列表，有效取值为：
 <li>1：制作中</li>
 <li>2：制作失败</li>
@@ -214,7 +214,7 @@ public class DescribeCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

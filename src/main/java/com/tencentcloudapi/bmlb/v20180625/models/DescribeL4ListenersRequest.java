@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4ListenersRequest  extends AbstractModel{
+public class DescribeL4ListenersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -37,7 +37,7 @@ public class DescribeL4ListenersRequest  extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class DescribeL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class DescribeL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。
+     * Get 四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。 
      * @return ListenerIds 四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。
      */
     public String [] getListenerIds() {
@@ -61,7 +61,7 @@ public class DescribeL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。
+     * Set 四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。
      * @param ListenerIds 四层监听器实例ID数组，可通过接口DescribeL4Listeners查询。
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -69,7 +69,7 @@ public class DescribeL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

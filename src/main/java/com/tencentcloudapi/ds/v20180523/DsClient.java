@@ -29,21 +29,10 @@ public class DsClient extends AbstractClient{
     private static String endpoint = "ds.tencentcloudapi.com";
     private static String version = "2018-05-23";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public DsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public DsClient(Credential credential, String region, ClientProfile profile) {
         super(DsClient.endpoint, DsClient.version, credential, region, profile);
     }

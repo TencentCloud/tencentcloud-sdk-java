@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTaskTemplateRequest  extends AbstractModel{
+public class ModifyTaskTemplateRequest extends AbstractModel{
 
     /**
     * 任务模板ID
@@ -51,7 +51,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     private Task TaskTemplateInfo;
 
     /**
-     * 获取任务模板ID
+     * Get 任务模板ID 
      * @return TaskTemplateId 任务模板ID
      */
     public String getTaskTemplateId() {
@@ -59,7 +59,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板ID
+     * Set 任务模板ID
      * @param TaskTemplateId 任务模板ID
      */
     public void setTaskTemplateId(String TaskTemplateId) {
@@ -67,7 +67,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板名称
+     * Get 任务模板名称 
      * @return TaskTemplateName 任务模板名称
      */
     public String getTaskTemplateName() {
@@ -75,7 +75,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板名称
+     * Set 任务模板名称
      * @param TaskTemplateName 任务模板名称
      */
     public void setTaskTemplateName(String TaskTemplateName) {
@@ -83,7 +83,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板描述
+     * Get 任务模板描述 
      * @return TaskTemplateDescription 任务模板描述
      */
     public String getTaskTemplateDescription() {
@@ -91,7 +91,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板描述
+     * Set 任务模板描述
      * @param TaskTemplateDescription 任务模板描述
      */
     public void setTaskTemplateDescription(String TaskTemplateDescription) {
@@ -99,7 +99,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板信息
+     * Get 任务模板信息 
      * @return TaskTemplateInfo 任务模板信息
      */
     public Task getTaskTemplateInfo() {
@@ -107,7 +107,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板信息
+     * Set 任务模板信息
      * @param TaskTemplateInfo 任务模板信息
      */
     public void setTaskTemplateInfo(Task TaskTemplateInfo) {
@@ -115,7 +115,7 @@ public class ModifyTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskTemplateId", this.TaskTemplateId);

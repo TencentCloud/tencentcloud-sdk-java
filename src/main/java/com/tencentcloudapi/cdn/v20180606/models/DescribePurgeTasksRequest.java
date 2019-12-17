@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePurgeTasksRequest  extends AbstractModel{
+public class DescribePurgeTasksRequest extends AbstractModel{
 
     /**
     * 指定刷新类型查询
@@ -95,9 +95,9 @@ global：全球
     private String Area;
 
     /**
-     * 获取指定刷新类型查询
+     * Get 指定刷新类型查询
 url：url 刷新记录
-path：目录刷新记录
+path：目录刷新记录 
      * @return PurgeType 指定刷新类型查询
 url：url 刷新记录
 path：目录刷新记录
@@ -107,7 +107,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置指定刷新类型查询
+     * Set 指定刷新类型查询
 url：url 刷新记录
 path：目录刷新记录
      * @param PurgeType 指定刷新类型查询
@@ -119,7 +119,7 @@ path：目录刷新记录
     }
 
     /**
-     * 获取根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+     * Get 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00 
      * @return StartTime 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
      */
     public String getStartTime() {
@@ -127,7 +127,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
+     * Set 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
      * @param StartTime 根据时间区间查询时，填充开始时间，如 2018-08-08 00:00:00
      */
     public void setStartTime(String StartTime) {
@@ -135,7 +135,7 @@ path：目录刷新记录
     }
 
     /**
-     * 获取根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+     * Get 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59 
      * @return EndTime 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
      */
     public String getEndTime() {
@@ -143,7 +143,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
+     * Set 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
      * @param EndTime 根据时间区间查询时，填充结束时间，如 2018-08-08 23:59:59
      */
     public void setEndTime(String EndTime) {
@@ -151,8 +151,8 @@ path：目录刷新记录
     }
 
     /**
-     * 获取根据任务 ID 查询时，填充任务 ID
-查询时任务 ID 与起始时间必须填充一项
+     * Get 根据任务 ID 查询时，填充任务 ID
+查询时任务 ID 与起始时间必须填充一项 
      * @return TaskId 根据任务 ID 查询时，填充任务 ID
 查询时任务 ID 与起始时间必须填充一项
      */
@@ -161,7 +161,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置根据任务 ID 查询时，填充任务 ID
+     * Set 根据任务 ID 查询时，填充任务 ID
 查询时任务 ID 与起始时间必须填充一项
      * @param TaskId 根据任务 ID 查询时，填充任务 ID
 查询时任务 ID 与起始时间必须填充一项
@@ -171,7 +171,7 @@ path：目录刷新记录
     }
 
     /**
-     * 获取分页查询偏移量，默认为 0 （第一页）
+     * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public Integer getOffset() {
@@ -179,7 +179,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置分页查询偏移量，默认为 0 （第一页）
+     * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public void setOffset(Integer Offset) {
@@ -187,7 +187,7 @@ path：目录刷新记录
     }
 
     /**
-     * 获取分页查询限制数目，默认为 20
+     * Get 分页查询限制数目，默认为 20 
      * @return Limit 分页查询限制数目，默认为 20
      */
     public Integer getLimit() {
@@ -195,7 +195,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置分页查询限制数目，默认为 20
+     * Set 分页查询限制数目，默认为 20
      * @param Limit 分页查询限制数目，默认为 20
      */
     public void setLimit(Integer Limit) {
@@ -203,7 +203,7 @@ path：目录刷新记录
     }
 
     /**
-     * 获取支持域名过滤，或 http(s):// 开头完整 URL 过滤
+     * Get 支持域名过滤，或 http(s):// 开头完整 URL 过滤 
      * @return Keyword 支持域名过滤，或 http(s):// 开头完整 URL 过滤
      */
     public String getKeyword() {
@@ -211,7 +211,7 @@ path：目录刷新记录
     }
 
     /**
-     * 设置支持域名过滤，或 http(s):// 开头完整 URL 过滤
+     * Set 支持域名过滤，或 http(s):// 开头完整 URL 过滤
      * @param Keyword 支持域名过滤，或 http(s):// 开头完整 URL 过滤
      */
     public void setKeyword(String Keyword) {
@@ -219,10 +219,10 @@ path：目录刷新记录
     }
 
     /**
-     * 获取指定任务状态查询
+     * Get 指定任务状态查询
 fail：刷新失败
 done：刷新成功
-process：刷新中
+process：刷新中 
      * @return Status 指定任务状态查询
 fail：刷新失败
 done：刷新成功
@@ -233,7 +233,7 @@ process：刷新中
     }
 
     /**
-     * 设置指定任务状态查询
+     * Set 指定任务状态查询
 fail：刷新失败
 done：刷新成功
 process：刷新中
@@ -247,10 +247,10 @@ process：刷新中
     }
 
     /**
-     * 获取指定刷新地域查询
+     * Get 指定刷新地域查询
 mainland：境内
 overseas：境外
-global：全球
+global：全球 
      * @return Area 指定刷新地域查询
 mainland：境内
 overseas：境外
@@ -261,7 +261,7 @@ global：全球
     }
 
     /**
-     * 设置指定刷新地域查询
+     * Set 指定刷新地域查询
 mainland：境内
 overseas：境外
 global：全球
@@ -275,7 +275,7 @@ global：全球
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PurgeType", this.PurgeType);

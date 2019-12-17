@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServerlessGroupRequest  extends AbstractModel{
+public class CreateServerlessGroupRequest extends AbstractModel{
 
     /**
     * 分组所属应用ID
@@ -51,7 +51,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     private VpcConfig VpcConfig;
 
     /**
-     * 获取分组所属应用ID
+     * Get 分组所属应用ID 
      * @return ApplicationId 分组所属应用ID
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组所属应用ID
+     * Set 分组所属应用ID
      * @param ApplicationId 分组所属应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+     * Get 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线 
      * @return GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      */
     public String getGroupName() {
@@ -75,7 +75,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+     * Set 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      * @param GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      */
     public void setGroupName(String GroupName) {
@@ -83,7 +83,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包Id
+     * Get 程序包Id 
      * @return PkgId 程序包Id
      */
     public String getPkgId() {
@@ -91,7 +91,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包Id
+     * Set 程序包Id
      * @param PkgId 程序包Id
      */
     public void setPkgId(String PkgId) {
@@ -99,7 +99,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VpcConfig对象
+     * Get VpcConfig对象 
      * @return VpcConfig VpcConfig对象
      */
     public VpcConfig getVpcConfig() {
@@ -107,7 +107,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VpcConfig对象
+     * Set VpcConfig对象
      * @param VpcConfig VpcConfig对象
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
@@ -115,7 +115,7 @@ public class CreateServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

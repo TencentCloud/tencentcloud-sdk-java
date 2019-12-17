@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
+public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 语音全文识别任务开关，可选值：
@@ -40,9 +40,9 @@ public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
     private String SubtitleFormat;
 
     /**
-     * 获取语音全文识别任务开关，可选值：
+     * Get 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
-<li>OFF：关闭智能语音全文识别任务。</li>
+<li>OFF：关闭智能语音全文识别任务。</li> 
      * @return Switch 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
@@ -52,7 +52,7 @@ public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别任务开关，可选值：
+     * Set 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li>
      * @param Switch 语音全文识别任务开关，可选值：
@@ -64,8 +64,8 @@ public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
-<li>vtt：生成 WebVTT 字幕文件。</li>
+     * Get 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li> 
      * @return SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
      */
@@ -74,7 +74,7 @@ public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+     * Set 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
      * @param SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
 <li>vtt：生成 WebVTT 字幕文件。</li>
@@ -84,7 +84,7 @@ public class AsrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

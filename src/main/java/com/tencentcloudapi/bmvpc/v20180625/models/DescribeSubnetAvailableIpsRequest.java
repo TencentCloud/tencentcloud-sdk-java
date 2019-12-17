@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
+public class DescribeSubnetAvailableIpsRequest extends AbstractModel{
 
     /**
     * 私有网络子网ID
@@ -37,7 +37,7 @@ public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
     private String Cidr;
 
     /**
-     * 获取私有网络子网ID
+     * Get 私有网络子网ID 
      * @return SubnetId 私有网络子网ID
      */
     public String getSubnetId() {
@@ -45,7 +45,7 @@ public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络子网ID
+     * Set 私有网络子网ID
      * @param SubnetId 私有网络子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -53,7 +53,7 @@ public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CIDR前缀，例如10.0.1
+     * Get CIDR前缀，例如10.0.1 
      * @return Cidr CIDR前缀，例如10.0.1
      */
     public String getCidr() {
@@ -61,7 +61,7 @@ public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CIDR前缀，例如10.0.1
+     * Set CIDR前缀，例如10.0.1
      * @param Cidr CIDR前缀，例如10.0.1
      */
     public void setCidr(String Cidr) {
@@ -69,7 +69,7 @@ public class DescribeSubnetAvailableIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupProIspDataInfo  extends AbstractModel{
+public class GroupProIspDataInfo extends AbstractModel{
 
     /**
     * 省份。
@@ -44,7 +44,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     private CdnPlayStatData [] DetailInfoList;
 
     /**
-     * 获取省份。
+     * Get 省份。 
      * @return ProvinceName 省份。
      */
     public String getProvinceName() {
@@ -52,7 +52,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置省份。
+     * Set 省份。
      * @param ProvinceName 省份。
      */
     public void setProvinceName(String ProvinceName) {
@@ -60,7 +60,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取运营商。
+     * Get 运营商。 
      * @return IspName 运营商。
      */
     public String getIspName() {
@@ -68,7 +68,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运营商。
+     * Set 运营商。
      * @param IspName 运营商。
      */
     public void setIspName(String IspName) {
@@ -76,7 +76,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分钟维度的明细数据。
+     * Get 分钟维度的明细数据。 
      * @return DetailInfoList 分钟维度的明细数据。
      */
     public CdnPlayStatData [] getDetailInfoList() {
@@ -84,7 +84,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分钟维度的明细数据。
+     * Set 分钟维度的明细数据。
      * @param DetailInfoList 分钟维度的明细数据。
      */
     public void setDetailInfoList(CdnPlayStatData [] DetailInfoList) {
@@ -92,7 +92,7 @@ public class GroupProIspDataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProvinceName", this.ProvinceName);

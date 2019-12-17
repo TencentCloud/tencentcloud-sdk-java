@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcViewRequest  extends AbstractModel{
+public class DescribeVpcViewRequest extends AbstractModel{
 
     /**
     * 私有网络唯一ID
@@ -30,7 +30,7 @@ public class DescribeVpcViewRequest  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取私有网络唯一ID
+     * Get 私有网络唯一ID 
      * @return VpcId 私有网络唯一ID
      */
     public String getVpcId() {
@@ -38,7 +38,7 @@ public class DescribeVpcViewRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络唯一ID
+     * Set 私有网络唯一ID
      * @param VpcId 私有网络唯一ID
      */
     public void setVpcId(String VpcId) {
@@ -46,7 +46,7 @@ public class DescribeVpcViewRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

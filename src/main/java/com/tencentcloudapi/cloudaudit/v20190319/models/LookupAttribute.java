@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LookupAttribute  extends AbstractModel{
+public class LookupAttribute extends AbstractModel{
 
     /**
     * AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
@@ -37,7 +37,7 @@ public class LookupAttribute  extends AbstractModel{
     private String AttributeValue;
 
     /**
-     * 获取AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
+     * Get AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId 
      * @return AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
      */
     public String getAttributeKey() {
@@ -45,7 +45,7 @@ public class LookupAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
+     * Set AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
      * @param AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
      */
     public void setAttributeKey(String AttributeKey) {
@@ -53,7 +53,7 @@ public class LookupAttribute  extends AbstractModel{
     }
 
     /**
-     * 获取AttributeValue
+     * Get AttributeValue 
      * @return AttributeValue AttributeValue
      */
     public String getAttributeValue() {
@@ -61,7 +61,7 @@ public class LookupAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置AttributeValue
+     * Set AttributeValue
      * @param AttributeValue AttributeValue
      */
     public void setAttributeValue(String AttributeValue) {
@@ -69,7 +69,7 @@ public class LookupAttribute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AttributeKey", this.AttributeKey);

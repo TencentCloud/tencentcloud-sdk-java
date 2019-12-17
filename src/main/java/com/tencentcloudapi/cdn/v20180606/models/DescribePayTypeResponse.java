@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePayTypeResponse  extends AbstractModel{
+public class DescribePayTypeResponse extends AbstractModel{
 
     /**
     * 计费类型：
@@ -79,10 +79,10 @@ bandwidth：带宽计费
     private String RequestId;
 
     /**
-     * 获取计费类型：
+     * Get 计费类型：
 flux：流量计费
 bandwidth：带宽计费
-日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
+日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。 
      * @return PayType 计费类型：
 flux：流量计费
 bandwidth：带宽计费
@@ -93,7 +93,7 @@ bandwidth：带宽计费
     }
 
     /**
-     * 设置计费类型：
+     * Set 计费类型：
 flux：流量计费
 bandwidth：带宽计费
 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
@@ -107,9 +107,9 @@ bandwidth：带宽计费
     }
 
     /**
-     * 获取计费周期：
+     * Get 计费周期：
 day：日结计费
-month：月结计费
+month：月结计费 
      * @return BillingCycle 计费周期：
 day：日结计费
 month：月结计费
@@ -119,7 +119,7 @@ month：月结计费
     }
 
     /**
-     * 设置计费周期：
+     * Set 计费周期：
 day：日结计费
 month：月结计费
      * @param BillingCycle 计费周期：
@@ -131,12 +131,12 @@ month：月结计费
     }
 
     /**
-     * 获取计费方式：
+     * Get 计费方式：
 monthMax：日峰值月平均计费，月结模式
 day95：日 95 带宽计费，月结模式
 month95：月95带宽计费，月结模式
 sum：总流量计费，日结与月结均有流量计费模式
-max：峰值带宽计费，日结模式
+max：峰值带宽计费，日结模式 
      * @return StatType 计费方式：
 monthMax：日峰值月平均计费，月结模式
 day95：日 95 带宽计费，月结模式
@@ -149,7 +149,7 @@ max：峰值带宽计费，日结模式
     }
 
     /**
-     * 设置计费方式：
+     * Set 计费方式：
 monthMax：日峰值月平均计费，月结模式
 day95：日 95 带宽计费，月结模式
 month95：月95带宽计费，月结模式
@@ -167,9 +167,9 @@ max：峰值带宽计费，日结模式
     }
 
     /**
-     * 获取境外计费类型：
+     * Get 境外计费类型：
 all：全地区统一计费
-multiple：分地区计费
+multiple：分地区计费 
      * @return RegionType 境外计费类型：
 all：全地区统一计费
 multiple：分地区计费
@@ -179,7 +179,7 @@ multiple：分地区计费
     }
 
     /**
-     * 设置境外计费类型：
+     * Set 境外计费类型：
 all：全地区统一计费
 multiple：分地区计费
      * @param RegionType 境外计费类型：
@@ -191,9 +191,9 @@ multiple：分地区计费
     }
 
     /**
-     * 获取当前生效计费类型：
+     * Get 当前生效计费类型：
 flux：流量计费
-bandwidth：带宽计费
+bandwidth：带宽计费 
      * @return CurrentPayType 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
@@ -203,7 +203,7 @@ bandwidth：带宽计费
     }
 
     /**
-     * 设置当前生效计费类型：
+     * Set 当前生效计费类型：
 flux：流量计费
 bandwidth：带宽计费
      * @param CurrentPayType 当前生效计费类型：
@@ -215,7 +215,7 @@ bandwidth：带宽计费
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -223,7 +223,7 @@ bandwidth：带宽计费
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -231,7 +231,7 @@ bandwidth：带宽计费
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayType", this.PayType);

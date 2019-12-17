@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFileSystemRequest  extends AbstractModel{
+public class DeleteFileSystemRequest extends AbstractModel{
 
     /**
     * 文件系统ID
@@ -30,7 +30,7 @@ public class DeleteFileSystemRequest  extends AbstractModel{
     private String FileSystemId;
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -38,7 +38,7 @@ public class DeleteFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -46,7 +46,7 @@ public class DeleteFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

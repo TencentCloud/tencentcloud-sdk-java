@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageWatermarkTemplate  extends AbstractModel{
+public class ImageWatermarkTemplate extends AbstractModel{
 
     /**
     * 水印图片地址。
@@ -49,7 +49,7 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     private String Height;
 
     /**
-     * 获取水印图片地址。
+     * Get 水印图片地址。 
      * @return ImageUrl 水印图片地址。
      */
     public String getImageUrl() {
@@ -57,7 +57,7 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片地址。
+     * Set 水印图片地址。
      * @param ImageUrl 水印图片地址。
      */
     public void setImageUrl(String ImageUrl) {
@@ -65,9 +65,9 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印的宽度。支持 %、px 两种格式：
+     * Get 水印的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
-<li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
+<li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li> 
      * @return Width 水印的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
@@ -77,7 +77,7 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印的宽度。支持 %、px 两种格式：
+     * Set 水印的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Width 为视频宽度的百分比大小，如 10% 表示 Width 为视频宽度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
      * @param Width 水印的宽度。支持 %、px 两种格式：
@@ -89,10 +89,10 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取水印的高度。支持 %、px 两种格式：
+     * Get 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；</li>
-0px：表示 Height 按照 Width 对视频宽度的比例缩放。
+0px：表示 Height 按照 Width 对视频宽度的比例缩放。 
      * @return Height 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；</li>
@@ -103,7 +103,7 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置水印的高度。支持 %、px 两种格式：
+     * Set 水印的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 Height 为视频高度的百分比大小，如 10% 表示 Height 为视频高度的 10%；</li>
 <li>当字符串以 px 结尾，表示水印 Width 单位为像素，如 100px 表示 Width 为 100 像素；</li>
 0px：表示 Height 按照 Width 对视频宽度的比例缩放。
@@ -117,7 +117,7 @@ public class ImageWatermarkTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);

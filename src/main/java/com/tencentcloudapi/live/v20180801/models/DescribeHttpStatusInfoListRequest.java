@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHttpStatusInfoListRequest  extends AbstractModel{
+public class DescribeHttpStatusInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间，北京时间，
@@ -48,9 +48,9 @@ StartTime不能为3个月前。
     private String [] PlayDomains;
 
     /**
-     * 获取起始时间，北京时间，
+     * Get 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-StartTime不能为3个月前。
+StartTime不能为3个月前。 
      * @return StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 StartTime不能为3个月前。
@@ -60,7 +60,7 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 设置起始时间，北京时间，
+     * Set 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 StartTime不能为3个月前。
      * @param StartTime 起始时间，北京时间，
@@ -72,9 +72,9 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 获取结束时间，北京时间，
+     * Get 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支持最近1天的数据查询。 
      * @return EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
@@ -84,7 +84,7 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * Set 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      * @param EndTime 结束时间，北京时间，
@@ -96,7 +96,7 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 获取播放域名列表。
+     * Get 播放域名列表。 
      * @return PlayDomains 播放域名列表。
      */
     public String [] getPlayDomains() {
@@ -104,7 +104,7 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 设置播放域名列表。
+     * Set 播放域名列表。
      * @param PlayDomains 播放域名列表。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -112,7 +112,7 @@ StartTime不能为3个月前。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

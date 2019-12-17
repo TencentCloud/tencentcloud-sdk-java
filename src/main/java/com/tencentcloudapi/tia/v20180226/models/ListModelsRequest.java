@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListModelsRequest  extends AbstractModel{
+public class ListModelsRequest extends AbstractModel{
 
     /**
     * 部署模型的集群， `集群模式` 必填
@@ -51,7 +51,7 @@ public class ListModelsRequest  extends AbstractModel{
     private String ServType;
 
     /**
-     * 获取部署模型的集群， `集群模式` 必填
+     * Get 部署模型的集群， `集群模式` 必填 
      * @return Cluster 部署模型的集群， `集群模式` 必填
      */
     public String getCluster() {
@@ -59,7 +59,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署模型的集群， `集群模式` 必填
+     * Set 部署模型的集群， `集群模式` 必填
      * @param Cluster 部署模型的集群， `集群模式` 必填
      */
     public void setCluster(String Cluster) {
@@ -67,7 +67,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，返回数量上限
+     * Get 分页参数，返回数量上限 
      * @return Limit 分页参数，返回数量上限
      */
     public Integer getLimit() {
@@ -75,7 +75,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，返回数量上限
+     * Set 分页参数，返回数量上限
      * @param Limit 分页参数，返回数量上限
      */
     public void setLimit(Integer Limit) {
@@ -83,7 +83,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，分页起始位置
+     * Get 分页参数，分页起始位置 
      * @return Offset 分页参数，分页起始位置
      */
     public Integer getOffset() {
@@ -91,7 +91,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，分页起始位置
+     * Set 分页参数，分页起始位置
      * @param Offset 分页参数，分页起始位置
      */
     public void setOffset(Integer Offset) {
@@ -99,7 +99,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
+     * Get 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。 
      * @return ServType 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      */
     public String getServType() {
@@ -107,7 +107,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
+     * Set 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      * @param ServType 部署类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`。
      */
     public void setServType(String ServType) {
@@ -115,7 +115,7 @@ public class ListModelsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);

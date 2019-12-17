@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndustryNewsResponse  extends AbstractModel{
+public class DescribeIndustryNewsResponse extends AbstractModel{
 
     /**
     * 总计文章数量
@@ -65,7 +65,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总计文章数量
+     * Get 总计文章数量 
      * @return NewsCount 总计文章数量
      */
     public Integer getNewsCount() {
@@ -73,7 +73,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总计文章数量
+     * Set 总计文章数量
      * @param NewsCount 总计文章数量
      */
     public void setNewsCount(Integer NewsCount) {
@@ -81,7 +81,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总计来源数量
+     * Get 总计来源数量 
      * @return FromCount 总计来源数量
      */
     public Integer getFromCount() {
@@ -89,7 +89,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总计来源数量
+     * Set 总计来源数量
      * @param FromCount 总计来源数量
      */
     public void setFromCount(Integer FromCount) {
@@ -97,7 +97,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总计疑似负面数量
+     * Get 总计疑似负面数量 
      * @return AdverseCount 总计疑似负面数量
      */
     public Integer getAdverseCount() {
@@ -105,7 +105,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总计疑似负面数量
+     * Set 总计疑似负面数量
      * @param AdverseCount 总计疑似负面数量
      */
     public void setAdverseCount(Integer AdverseCount) {
@@ -113,7 +113,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文章列表
+     * Get 文章列表 
      * @return NewsSet 文章列表
      */
     public IndustryNews [] getNewsSet() {
@@ -121,7 +121,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文章列表
+     * Set 文章列表
      * @param NewsSet 文章列表
      */
     public void setNewsSet(IndustryNews [] NewsSet) {
@@ -129,7 +129,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取按天统计的数量列表
+     * Get 按天统计的数量列表 
      * @return DateCountSet 按天统计的数量列表
      */
     public DateCount [] getDateCountSet() {
@@ -137,7 +137,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置按天统计的数量列表
+     * Set 按天统计的数量列表
      * @param DateCountSet 按天统计的数量列表
      */
     public void setDateCountSet(DateCount [] DateCountSet) {
@@ -145,7 +145,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeIndustryNewsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NewsCount", this.NewsCount);

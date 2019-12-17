@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSimpleNamespacesRequest  extends AbstractModel{
+public class DescribeSimpleNamespacesRequest extends AbstractModel{
 
     /**
     * 命名空间ID列表，不传入时查询全量
@@ -79,7 +79,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     private String [] NamespaceTypeList;
 
     /**
-     * 获取命名空间ID列表，不传入时查询全量
+     * Get 命名空间ID列表，不传入时查询全量 
      * @return NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
     public String [] getNamespaceIdList() {
@@ -87,7 +87,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID列表，不传入时查询全量
+     * Set 命名空间ID列表，不传入时查询全量
      * @param NamespaceIdList 命名空间ID列表，不传入时查询全量
      */
     public void setNamespaceIdList(String [] NamespaceIdList) {
@@ -95,7 +95,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID，不传入时查询全量
+     * Get 集群ID，不传入时查询全量 
      * @return ClusterId 集群ID，不传入时查询全量
      */
     public String getClusterId() {
@@ -103,7 +103,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID，不传入时查询全量
+     * Set 集群ID，不传入时查询全量
      * @param ClusterId 集群ID，不传入时查询全量
      */
     public void setClusterId(String ClusterId) {
@@ -111,7 +111,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数
+     * Get 每页条数 
      * @return Limit 每页条数
      */
     public Long getLimit() {
@@ -119,7 +119,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数
+     * Set 每页条数
      * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
@@ -127,7 +127,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始偏移量
+     * Get 起始偏移量 
      * @return Offset 起始偏移量
      */
     public Long getOffset() {
@@ -135,7 +135,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始偏移量
+     * Set 起始偏移量
      * @param Offset 起始偏移量
      */
     public void setOffset(Long Offset) {
@@ -143,7 +143,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量 
      * @return NamespaceId 命名空间ID，不传入时查询全量
      */
     public String getNamespaceId() {
@@ -151,7 +151,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量
      * @param NamespaceId 命名空间ID，不传入时查询全量
      */
     public void setNamespaceId(String NamespaceId) {
@@ -159,7 +159,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询资源类型列表
+     * Get 查询资源类型列表 
      * @return NamespaceResourceTypeList 查询资源类型列表
      */
     public String [] getNamespaceResourceTypeList() {
@@ -167,7 +167,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询资源类型列表
+     * Set 查询资源类型列表
      * @param NamespaceResourceTypeList 查询资源类型列表
      */
     public void setNamespaceResourceTypeList(String [] NamespaceResourceTypeList) {
@@ -175,7 +175,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通过id和name进行过滤
+     * Get 通过id和name进行过滤 
      * @return SearchWord 通过id和name进行过滤
      */
     public String getSearchWord() {
@@ -183,7 +183,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通过id和name进行过滤
+     * Set 通过id和name进行过滤
      * @param SearchWord 通过id和name进行过滤
      */
     public void setSearchWord(String SearchWord) {
@@ -191,7 +191,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的命名空间类型列表
+     * Get 查询的命名空间类型列表 
      * @return NamespaceTypeList 查询的命名空间类型列表
      */
     public String [] getNamespaceTypeList() {
@@ -199,7 +199,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的命名空间类型列表
+     * Set 查询的命名空间类型列表
      * @param NamespaceTypeList 查询的命名空间类型列表
      */
     public void setNamespaceTypeList(String [] NamespaceTypeList) {
@@ -207,7 +207,7 @@ public class DescribeSimpleNamespacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);

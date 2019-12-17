@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListenerInfo  extends AbstractModel{
+public class ListenerInfo extends AbstractModel{
 
     /**
     * 监听器ID
@@ -51,7 +51,7 @@ public class ListenerInfo  extends AbstractModel{
     private String Protocol;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -59,7 +59,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -67,7 +67,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -75,7 +75,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -83,7 +83,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器监听端口
+     * Get 监听器监听端口 
      * @return Port 监听器监听端口
      */
     public Long getPort() {
@@ -91,7 +91,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器监听端口
+     * Set 监听器监听端口
      * @param Port 监听器监听端口
      */
     public void setPort(Long Port) {
@@ -99,7 +99,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议类型
+     * Get 监听器协议类型 
      * @return Protocol 监听器协议类型
      */
     public String getProtocol() {
@@ -107,7 +107,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议类型
+     * Set 监听器协议类型
      * @param Protocol 监听器协议类型
      */
     public void setProtocol(String Protocol) {
@@ -115,7 +115,7 @@ public class ListenerInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

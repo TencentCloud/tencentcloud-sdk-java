@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateSource  extends AbstractModel{
+public class MigrateSource extends AbstractModel{
 
     /**
     * 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
@@ -76,7 +76,7 @@ public class MigrateSource  extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
@@ -93,7 +93,7 @@ public class MigrateSource  extends AbstractModel{
     private String UrlPassword;
 
     /**
-     * 获取迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * Get 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl 
      * @return InstanceId 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
      */
     public String getInstanceId() {
@@ -101,7 +101,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
+     * Set 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
      * @param InstanceId 迁移源实例的ID，MigrateType=1(CDB for SQLServers)时使用，格式如：mssql-si2823jyl
      */
     public void setInstanceId(String InstanceId) {
@@ -109,7 +109,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Get 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用 
      * @return CvmId 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
     public String getCvmId() {
@@ -117,7 +117,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Set 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
      * @param CvmId 迁移源Cvm的ID，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
     public void setCvmId(String CvmId) {
@@ -125,7 +125,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
+     * Get 迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9 
      * @return VpcId 迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
      */
     public String getVpcId() {
@@ -133,7 +133,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
+     * Set 迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
      * @param VpcId 迁移源Cvm的Vpc网络标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：vpc-6ys9ont9
      */
     public void setVpcId(String VpcId) {
@@ -141,7 +141,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi
+     * Get 迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi 
      * @return SubnetId 迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi
      */
     public String getSubnetId() {
@@ -149,7 +149,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi
+     * Set 迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi
      * @param SubnetId 迁移源Cvm的Vpc下的子网标识，MigrateType=2(云服务器自建SQLServer数据库)时使用，格式如：subnet-h9extioi
      */
     public void setSubnetId(String SubnetId) {
@@ -157,7 +157,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取用户名，MigrateType=1或MigrateType=2使用
+     * Get 用户名，MigrateType=1或MigrateType=2使用 
      * @return UserName 用户名，MigrateType=1或MigrateType=2使用
      */
     public String getUserName() {
@@ -165,7 +165,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置用户名，MigrateType=1或MigrateType=2使用
+     * Set 用户名，MigrateType=1或MigrateType=2使用
      * @param UserName 用户名，MigrateType=1或MigrateType=2使用
      */
     public void setUserName(String UserName) {
@@ -173,7 +173,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取密码，MigrateType=1或MigrateType=2使用
+     * Get 密码，MigrateType=1或MigrateType=2使用 
      * @return Password 密码，MigrateType=1或MigrateType=2使用
      */
     public String getPassword() {
@@ -181,7 +181,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置密码，MigrateType=1或MigrateType=2使用
+     * Set 密码，MigrateType=1或MigrateType=2使用
      * @param Password 密码，MigrateType=1或MigrateType=2使用
      */
     public void setPassword(String Password) {
@@ -189,7 +189,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Get 迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用 
      * @return Ip 迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
     public String getIp() {
@@ -197,7 +197,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Set 迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用
      * @param Ip 迁移源Cvm自建库的内网IP，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
     public void setIp(String Ip) {
@@ -205,23 +205,23 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Get 迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用 
      * @return Port 迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
     /**
-     * 设置迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用
+     * Set 迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用
      * @param Port 迁移源Cvm自建库的端口号，MigrateType=2(云服务器自建SQLServer数据库)时使用
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
+     * Get 离线迁移的源备份地址，MigrateType=4或MigrateType=5使用 
      * @return Url 离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
      */
     public String [] getUrl() {
@@ -229,7 +229,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
+     * Set 离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
      * @param Url 离线迁移的源备份地址，MigrateType=4或MigrateType=5使用
      */
     public void setUrl(String [] Url) {
@@ -237,7 +237,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 获取离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
+     * Get 离线迁移的源备份密码，MigrateType=4或MigrateType=5使用 
      * @return UrlPassword 离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
      */
     public String getUrlPassword() {
@@ -245,7 +245,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 设置离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
+     * Set 离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
      * @param UrlPassword 离线迁移的源备份密码，MigrateType=4或MigrateType=5使用
      */
     public void setUrlPassword(String UrlPassword) {
@@ -253,7 +253,7 @@ public class MigrateSource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateTask  extends AbstractModel{
+public class MigrateTask extends AbstractModel{
 
     /**
     * 迁移任务ID
     */
     @SerializedName("MigrateId")
     @Expose
-    private Integer MigrateId;
+    private Long MigrateId;
 
     /**
     * 迁移任务名称
@@ -41,7 +41,7 @@ public class MigrateTask  extends AbstractModel{
     */
     @SerializedName("AppId")
     @Expose
-    private Integer AppId;
+    private Long AppId;
 
     /**
     * 迁移任务所属的地域
@@ -55,7 +55,7 @@ public class MigrateTask  extends AbstractModel{
     */
     @SerializedName("SourceType")
     @Expose
-    private Integer SourceType;
+    private Long SourceType;
 
     /**
     * 迁移任务的创建时间
@@ -83,7 +83,7 @@ public class MigrateTask  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 信息
@@ -97,14 +97,14 @@ public class MigrateTask  extends AbstractModel{
     */
     @SerializedName("CheckFlag")
     @Expose
-    private Integer CheckFlag;
+    private Long CheckFlag;
 
     /**
     * 迁移任务当前进度（单位%）
     */
     @SerializedName("Progress")
     @Expose
-    private Integer Progress;
+    private Long Progress;
 
     /**
     * 迁移任务进度细节
@@ -114,23 +114,23 @@ public class MigrateTask  extends AbstractModel{
     private MigrateDetail MigrateDetail;
 
     /**
-     * 获取迁移任务ID
+     * Get 迁移任务ID 
      * @return MigrateId 迁移任务ID
      */
-    public Integer getMigrateId() {
+    public Long getMigrateId() {
         return this.MigrateId;
     }
 
     /**
-     * 设置迁移任务ID
+     * Set 迁移任务ID
      * @param MigrateId 迁移任务ID
      */
-    public void setMigrateId(Integer MigrateId) {
+    public void setMigrateId(Long MigrateId) {
         this.MigrateId = MigrateId;
     }
 
     /**
-     * 获取迁移任务名称
+     * Get 迁移任务名称 
      * @return MigrateName 迁移任务名称
      */
     public String getMigrateName() {
@@ -138,7 +138,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务名称
+     * Set 迁移任务名称
      * @param MigrateName 迁移任务名称
      */
     public void setMigrateName(String MigrateName) {
@@ -146,23 +146,23 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务所属的用户ID
+     * Get 迁移任务所属的用户ID 
      * @return AppId 迁移任务所属的用户ID
      */
-    public Integer getAppId() {
+    public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * 设置迁移任务所属的用户ID
+     * Set 迁移任务所属的用户ID
      * @param AppId 迁移任务所属的用户ID
      */
-    public void setAppId(Integer AppId) {
+    public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * 获取迁移任务所属的地域
+     * Get 迁移任务所属的地域 
      * @return Region 迁移任务所属的地域
      */
     public String getRegion() {
@@ -170,7 +170,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务所属的地域
+     * Set 迁移任务所属的地域
      * @param Region 迁移任务所属的地域
      */
     public void setRegion(String Region) {
@@ -178,23 +178,23 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * Get 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式） 
      * @return SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
-    public Integer getSourceType() {
+    public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * Set 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      * @param SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
-    public void setSourceType(Integer SourceType) {
+    public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * 获取迁移任务的创建时间
+     * Get 迁移任务的创建时间 
      * @return CreateTime 迁移任务的创建时间
      */
     public String getCreateTime() {
@@ -202,7 +202,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务的创建时间
+     * Set 迁移任务的创建时间
      * @param CreateTime 迁移任务的创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -210,7 +210,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务的开始时间
+     * Get 迁移任务的开始时间 
      * @return StartTime 迁移任务的开始时间
      */
     public String getStartTime() {
@@ -218,7 +218,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务的开始时间
+     * Set 迁移任务的开始时间
      * @param StartTime 迁移任务的开始时间
      */
     public void setStartTime(String StartTime) {
@@ -226,7 +226,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务的结束时间
+     * Get 迁移任务的结束时间 
      * @return EndTime 迁移任务的结束时间
      */
     public String getEndTime() {
@@ -234,7 +234,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务的结束时间
+     * Set 迁移任务的结束时间
      * @param EndTime 迁移任务的结束时间
      */
     public void setEndTime(String EndTime) {
@@ -242,23 +242,23 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * Get 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功） 
      * @return Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
+     * Set 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
      * @param Status 迁移任务的状态（1:初始化,4:迁移中,5.迁移失败,6.迁移成功）
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取信息
+     * Get 信息 
      * @return Message 信息
      */
     public String getMessage() {
@@ -266,7 +266,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置信息
+     * Set 信息
      * @param Message 信息
      */
     public void setMessage(String Message) {
@@ -274,39 +274,39 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 获取是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
+     * Get 是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中） 
      * @return CheckFlag 是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
      */
-    public Integer getCheckFlag() {
+    public Long getCheckFlag() {
         return this.CheckFlag;
     }
 
     /**
-     * 设置是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
+     * Set 是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
      * @param CheckFlag 是否迁移任务经过检查（0:未校验,1:校验成功,2:校验失败,3:校验中）
      */
-    public void setCheckFlag(Integer CheckFlag) {
+    public void setCheckFlag(Long CheckFlag) {
         this.CheckFlag = CheckFlag;
     }
 
     /**
-     * 获取迁移任务当前进度（单位%）
+     * Get 迁移任务当前进度（单位%） 
      * @return Progress 迁移任务当前进度（单位%）
      */
-    public Integer getProgress() {
+    public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * 设置迁移任务当前进度（单位%）
+     * Set 迁移任务当前进度（单位%）
      * @param Progress 迁移任务当前进度（单位%）
      */
-    public void setProgress(Integer Progress) {
+    public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * 获取迁移任务进度细节
+     * Get 迁移任务进度细节 
      * @return MigrateDetail 迁移任务进度细节
      */
     public MigrateDetail getMigrateDetail() {
@@ -314,7 +314,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务进度细节
+     * Set 迁移任务进度细节
      * @param MigrateDetail 迁移任务进度细节
      */
     public void setMigrateDetail(MigrateDetail MigrateDetail) {
@@ -322,7 +322,7 @@ public class MigrateTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MigrateId", this.MigrateId);

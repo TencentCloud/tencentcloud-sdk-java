@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HaVipAssociateAddressIpRequest  extends AbstractModel{
+public class HaVipAssociateAddressIpRequest extends AbstractModel{
 
     /**
     * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
@@ -37,7 +37,7 @@ public class HaVipAssociateAddressIpRequest  extends AbstractModel{
     private String AddressIp;
 
     /**
-     * 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP` 
      * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
      */
     public String getHaVipId() {
@@ -45,7 +45,7 @@ public class HaVipAssociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
      * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
      */
     public void setHaVipId(String HaVipId) {
@@ -53,7 +53,7 @@ public class HaVipAssociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Get 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP` 
      * @return AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
      */
     public String getAddressIp() {
@@ -61,7 +61,7 @@ public class HaVipAssociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Set 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
      * @param AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
      */
     public void setAddressIp(String AddressIp) {
@@ -69,7 +69,7 @@ public class HaVipAssociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);

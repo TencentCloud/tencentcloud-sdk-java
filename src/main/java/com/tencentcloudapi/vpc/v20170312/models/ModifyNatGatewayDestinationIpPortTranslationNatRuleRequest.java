@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends AbstractModel{
+public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel{
 
     /**
     * NAT网关的ID，形如：`nat-df45454`。
@@ -44,7 +44,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     private DestinationIpPortTranslationNatRule DestinationNatRule;
 
     /**
-     * 获取NAT网关的ID，形如：`nat-df45454`。
+     * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public String getNatGatewayId() {
@@ -52,7 +52,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 设置NAT网关的ID，形如：`nat-df45454`。
+     * Set NAT网关的ID，形如：`nat-df45454`。
      * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -60,7 +60,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 获取源NAT网关的端口转换规则。
+     * Get 源NAT网关的端口转换规则。 
      * @return SourceNatRule 源NAT网关的端口转换规则。
      */
     public DestinationIpPortTranslationNatRule getSourceNatRule() {
@@ -68,7 +68,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 设置源NAT网关的端口转换规则。
+     * Set 源NAT网关的端口转换规则。
      * @param SourceNatRule 源NAT网关的端口转换规则。
      */
     public void setSourceNatRule(DestinationIpPortTranslationNatRule SourceNatRule) {
@@ -76,7 +76,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 获取目的NAT网关的端口转换规则。
+     * Get 目的NAT网关的端口转换规则。 
      * @return DestinationNatRule 目的NAT网关的端口转换规则。
      */
     public DestinationIpPortTranslationNatRule getDestinationNatRule() {
@@ -84,7 +84,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 设置目的NAT网关的端口转换规则。
+     * Set 目的NAT网关的端口转换规则。
      * @param DestinationNatRule 目的NAT网关的端口转换规则。
      */
     public void setDestinationNatRule(DestinationIpPortTranslationNatRule DestinationNatRule) {
@@ -92,7 +92,7 @@ public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest  extends
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

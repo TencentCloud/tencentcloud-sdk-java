@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7HealthConfig  extends AbstractModel{
+public class L7HealthConfig extends AbstractModel{
 
     /**
     * 转发协议，取值[http, https, http/https]
@@ -86,7 +86,7 @@ public class L7HealthConfig  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取转发协议，取值[http, https, http/https]
+     * Get 转发协议，取值[http, https, http/https] 
      * @return Protocol 转发协议，取值[http, https, http/https]
      */
     public String getProtocol() {
@@ -94,7 +94,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议，取值[http, https, http/https]
+     * Set 转发协议，取值[http, https, http/https]
      * @param Protocol 转发协议，取值[http, https, http/https]
      */
     public void setProtocol(String Protocol) {
@@ -102,7 +102,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名
+     * Get 转发域名 
      * @return Domain 转发域名
      */
     public String getDomain() {
@@ -110,7 +110,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名
+     * Set 转发域名
      * @param Domain 转发域名
      */
     public void setDomain(String Domain) {
@@ -118,7 +118,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取=1表示开启；=0表示关闭
+     * Get =1表示开启；=0表示关闭 
      * @return Enable =1表示开启；=0表示关闭
      */
     public Long getEnable() {
@@ -126,7 +126,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置=1表示开启；=0表示关闭
+     * Set =1表示开启；=0表示关闭
      * @param Enable =1表示开启；=0表示关闭
      */
     public void setEnable(Long Enable) {
@@ -134,7 +134,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取检测间隔时间，单位秒
+     * Get 检测间隔时间，单位秒 
      * @return Interval 检测间隔时间，单位秒
      */
     public Long getInterval() {
@@ -142,7 +142,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置检测间隔时间，单位秒
+     * Set 检测间隔时间，单位秒
      * @param Interval 检测间隔时间，单位秒
      */
     public void setInterval(Long Interval) {
@@ -150,7 +150,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取异常判定次数，单位次
+     * Get 异常判定次数，单位次 
      * @return KickNum 异常判定次数，单位次
      */
     public Long getKickNum() {
@@ -158,7 +158,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置异常判定次数，单位次
+     * Set 异常判定次数，单位次
      * @param KickNum 异常判定次数，单位次
      */
     public void setKickNum(Long KickNum) {
@@ -166,7 +166,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取健康判定次数，单位次
+     * Get 健康判定次数，单位次 
      * @return AliveNum 健康判定次数，单位次
      */
     public Long getAliveNum() {
@@ -174,7 +174,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置健康判定次数，单位次
+     * Set 健康判定次数，单位次
      * @param AliveNum 健康判定次数，单位次
      */
     public void setAliveNum(Long AliveNum) {
@@ -182,7 +182,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查探测方法，可选HEAD或GET，默认为HEAD
+     * Get 健康检查探测方法，可选HEAD或GET，默认为HEAD 
      * @return Method 健康检查探测方法，可选HEAD或GET，默认为HEAD
      */
     public String getMethod() {
@@ -190,7 +190,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查探测方法，可选HEAD或GET，默认为HEAD
+     * Set 健康检查探测方法，可选HEAD或GET，默认为HEAD
      * @param Method 健康检查探测方法，可选HEAD或GET，默认为HEAD
      */
     public void setMethod(String Method) {
@@ -198,7 +198,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * Get 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和 
      * @return StatusCode 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      */
     public Long getStatusCode() {
@@ -206,7 +206,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+     * Set 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      * @param StatusCode 健康检查判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
      */
     public void setStatusCode(Long StatusCode) {
@@ -214,7 +214,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取检查目录的URL，默认为/
+     * Get 检查目录的URL，默认为/ 
      * @return Url 检查目录的URL，默认为/
      */
     public String getUrl() {
@@ -222,7 +222,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置检查目录的URL，默认为/
+     * Set 检查目录的URL，默认为/
      * @param Url 检查目录的URL，默认为/
      */
     public void setUrl(String Url) {
@@ -230,7 +230,7 @@ public class L7HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

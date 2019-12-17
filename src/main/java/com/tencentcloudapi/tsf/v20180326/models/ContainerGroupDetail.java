@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainerGroupDetail  extends AbstractModel{
+public class ContainerGroupDetail extends AbstractModel{
 
     /**
     * 部署组ID
@@ -263,8 +263,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     private String MemRequest;
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置分组名称
+     * Set 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,8 +303,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例总数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceNum 实例总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -313,7 +313,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例总数
+     * Set 实例总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNum 实例总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,8 +323,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 已启动实例总数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CurrentNum 已启动实例总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,7 +333,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置已启动实例总数
+     * Set 已启动实例总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentNum 已启动实例总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,8 +343,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,7 +353,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -363,8 +363,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取镜像server
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像server
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Server 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -373,7 +373,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置镜像server
+     * Set 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Server 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,8 +383,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像名，如/tsf/nginx
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Reponame 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -393,7 +393,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置镜像名，如/tsf/nginx
+     * Set 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Reponame 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
@@ -403,8 +403,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像版本名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagName 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -413,7 +413,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置镜像版本名称
+     * Set 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagName 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -423,8 +423,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -433,7 +433,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -443,8 +443,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -453,7 +453,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -463,8 +463,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -473,7 +473,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -483,8 +483,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -493,7 +493,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -503,8 +503,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -513,7 +513,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -523,8 +523,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 负载均衡ip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LbIp 负载均衡ip
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -533,7 +533,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡ip
+     * Set 负载均衡ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LbIp 负载均衡ip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -543,8 +543,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -553,7 +553,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -563,8 +563,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取Service ip
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Service ip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterIp Service ip
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -573,7 +573,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置Service ip
+     * Set Service ip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterIp Service ip
 注意：此字段可能返回 null，表示取不到有效值。
@@ -583,8 +583,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取NodePort端口，只有公网和NodePort访问方式才有值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get NodePort端口，只有公网和NodePort访问方式才有值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NodePort NodePort端口，只有公网和NodePort访问方式才有值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -593,7 +593,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置NodePort端口，只有公网和NodePort访问方式才有值
+     * Set NodePort端口，只有公网和NodePort访问方式才有值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NodePort NodePort端口，只有公网和NodePort访问方式才有值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -603,8 +603,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最大分配的 CPU 核数，对应 K8S limit
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CpuLimit 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -613,7 +613,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配的 CPU 核数，对应 K8S limit
+     * Set 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLimit 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
@@ -623,8 +623,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最大分配的内存 MiB 数，对应 K8S limit
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemLimit 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -633,7 +633,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配的内存 MiB 数，对应 K8S limit
+     * Set 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemLimit 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
@@ -643,8 +643,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取0:公网 1:集群内访问 2：NodePort
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0:公网 1:集群内访问 2：NodePort
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessType 0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -653,7 +653,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置0:公网 1:集群内访问 2：NodePort
+     * Set 0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessType 0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
@@ -663,8 +663,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取更新方式：0:快速更新 1:滚动更新
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新方式：0:快速更新 1:滚动更新
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateType 更新方式：0:快速更新 1:滚动更新
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -673,7 +673,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置更新方式：0:快速更新 1:滚动更新
+     * Set 更新方式：0:快速更新 1:滚动更新
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateType 更新方式：0:快速更新 1:滚动更新
 注意：此字段可能返回 null，表示取不到有效值。
@@ -683,8 +683,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取更新间隔,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新间隔,单位秒
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateIvl 更新间隔,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -693,7 +693,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置更新间隔,单位秒
+     * Set 更新间隔,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateIvl 更新间隔,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -703,8 +703,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取端口数组对象
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 端口数组对象
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProtocolPorts 端口数组对象
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -713,7 +713,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置端口数组对象
+     * Set 端口数组对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolPorts 端口数组对象
 注意：此字段可能返回 null，表示取不到有效值。
@@ -723,8 +723,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取环境变量数组对象
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 环境变量数组对象
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Envs 环境变量数组对象
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -733,7 +733,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置环境变量数组对象
+     * Set 环境变量数组对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Envs 环境变量数组对象
 注意：此字段可能返回 null，表示取不到有效值。
@@ -743,8 +743,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -753,7 +753,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -763,8 +763,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取pod错误信息描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get pod错误信息描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message pod错误信息描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -773,7 +773,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置pod错误信息描述
+     * Set pod错误信息描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message pod错误信息描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -783,8 +783,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 部署组状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -793,7 +793,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置部署组状态
+     * Set 部署组状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 部署组状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -803,8 +803,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceType 服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -813,7 +813,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置服务类型
+     * Set 服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 服务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -823,8 +823,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 初始分配的 CPU 核数，对应 K8S request
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CpuRequest 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -833,7 +833,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的 CPU 核数，对应 K8S request
+     * Set 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuRequest 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
@@ -843,8 +843,8 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 初始分配的内存 MiB 数，对应 K8S request
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -853,7 +853,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的内存 MiB 数，对应 K8S request
+     * Set 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
@@ -863,7 +863,7 @@ public class ContainerGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

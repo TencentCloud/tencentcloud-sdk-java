@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatGatewayRequest  extends AbstractModel{
+public class CreateNatGatewayRequest extends AbstractModel{
 
     /**
     * 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
@@ -86,7 +86,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     private Long Exclusive;
 
     /**
-     * 获取转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
+     * Get 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关 
      * @return ForwardMode 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
      */
     public String getForwardMode() {
@@ -94,7 +94,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
+     * Set 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
      * @param ForwardMode 转发模式，其中0表示IP方式，1表示网段方式；通过cidr方式可支持更多的IP接入到NAT网关
      */
     public void setForwardMode(String ForwardMode) {
@@ -102,7 +102,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：vpc-kd7d06of
+     * Get 私有网络ID，例如：vpc-kd7d06of 
      * @return VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public String getVpcId() {
@@ -110,7 +110,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：vpc-kd7d06of
+     * Set 私有网络ID，例如：vpc-kd7d06of
      * @param VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public void setVpcId(String VpcId) {
@@ -118,7 +118,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT名称
+     * Get NAT名称 
      * @return NatName NAT名称
      */
     public String getNatName() {
@@ -126,7 +126,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT名称
+     * Set NAT名称
      * @param NatName NAT名称
      */
     public void setNatName(String NatName) {
@@ -134,7 +134,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
+     * Get 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关 
      * @return MaxConcurrent 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      */
     public Long getMaxConcurrent() {
@@ -142,7 +142,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
+     * Set 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      * @param MaxConcurrent 并发连接数规格；取值为1000000、3000000、10000000，分别对应小型、中型、大型NAT网关
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
@@ -150,7 +150,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式
+     * Get 子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式 
      * @return SubnetIds 子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式
      */
     public String [] getSubnetIds() {
@@ -158,7 +158,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式
+     * Set 子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式
      * @param SubnetIds 子网ID列表，子网下全部IP将加入NAT，不区分网关转发方式
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -166,7 +166,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在
+     * Get 部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在 
      * @return IpInfoSet 部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在
      */
     public IpInfo [] getIpInfoSet() {
@@ -174,7 +174,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在
+     * Set 部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在
      * @param IpInfoSet 部分IP信息，子网下只有该部分IP将加入NAT，仅当网关转发模式为IP方式有效；IpInfoSet和SubnetIds中的子网ID不能同时存在
      */
     public void setIpInfoSet(IpInfo [] IpInfoSet) {
@@ -182,7 +182,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个
+     * Get 已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个 
      * @return AssignedEips 已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个
      */
     public String [] getAssignedEips() {
@@ -190,7 +190,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个
+     * Set 已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个
      * @param AssignedEips 已分配的EIP列表, AssignedEips和AutoAllocEipNum至少输入一个
      */
     public void setAssignedEips(String [] AssignedEips) {
@@ -198,7 +198,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
+     * Get 新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个 
      * @return AutoAllocEipNum 新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
      */
     public Long getAutoAllocEipNum() {
@@ -206,7 +206,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
+     * Set 新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
      * @param AutoAllocEipNum 新建EIP数目，系统将会按您的要求生产该数目个数EIP, AssignedEips和AutoAllocEipNum至少输入一个
      */
     public void setAutoAllocEipNum(Long AutoAllocEipNum) {
@@ -214,7 +214,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
+     * Get 独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。 
      * @return Exclusive 独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
      */
     public Long getExclusive() {
@@ -222,7 +222,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
+     * Set 独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
      * @param Exclusive 独占标识，取值为0和1，默认值为0；0和1分别表示创建共享型NAT网关和独占NAT型网关；由于同一个VPC网络内，指向NAT集群的默认路由只有一条，因此VPC内只能创建一种类型NAT网关；创建独占型NAT网关时，需联系对应架构师进行独占NAT集群搭建，否则无法创建独占型NAT网关。
      */
     public void setExclusive(Long Exclusive) {
@@ -230,7 +230,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ForwardMode", this.ForwardMode);

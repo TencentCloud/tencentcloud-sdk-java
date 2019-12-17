@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEipNameRequest  extends AbstractModel{
+public class ModifyEipNameRequest extends AbstractModel{
 
     /**
     * Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
@@ -37,7 +37,7 @@ public class ModifyEipNameRequest  extends AbstractModel{
     private String EipName;
 
     /**
-     * 获取Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
+     * Get Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取 
      * @return EipId Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
      */
     public String getEipId() {
@@ -45,7 +45,7 @@ public class ModifyEipNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
+     * Set Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
      * @param EipId Eip实例ID，可通过/v2/DescribeEip 接口返回字段中的 eipId获取
      */
     public void setEipId(String EipId) {
@@ -53,7 +53,7 @@ public class ModifyEipNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP 实例别名
+     * Get EIP 实例别名 
      * @return EipName EIP 实例别名
      */
     public String getEipName() {
@@ -61,7 +61,7 @@ public class ModifyEipNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP 实例别名
+     * Set EIP 实例别名
      * @param EipName EIP 实例别名
      */
     public void setEipName(String EipName) {
@@ -69,7 +69,7 @@ public class ModifyEipNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

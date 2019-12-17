@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogsRequest  extends AbstractModel{
+public class DescribeFlowLogsRequest extends AbstractModel{
 
     /**
     * 私用网络ID或者统一ID，建议使用统一ID
@@ -107,7 +107,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public String getVpcId() {
@@ -115,7 +115,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID
      * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public void setVpcId(String VpcId) {
@@ -123,7 +123,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志唯一ID
+     * Get 流日志唯一ID 
      * @return FlowLogId 流日志唯一ID
      */
     public String getFlowLogId() {
@@ -131,7 +131,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志唯一ID
+     * Set 流日志唯一ID
      * @param FlowLogId 流日志唯一ID
      */
     public void setFlowLogId(String FlowLogId) {
@@ -139,7 +139,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志实例名字
+     * Get 流日志实例名字 
      * @return FlowLogName 流日志实例名字
      */
     public String getFlowLogName() {
@@ -147,7 +147,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例名字
+     * Set 流日志实例名字
      * @param FlowLogName 流日志实例名字
      */
     public void setFlowLogName(String FlowLogName) {
@@ -155,7 +155,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE 
      * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      */
     public String getResourceType() {
@@ -163,7 +163,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      */
     public void setResourceType(String ResourceType) {
@@ -171,7 +171,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源唯一ID
+     * Get 资源唯一ID 
      * @return ResourceId 资源唯一ID
      */
     public String getResourceId() {
@@ -179,7 +179,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源唯一ID
+     * Set 资源唯一ID
      * @param ResourceId 资源唯一ID
      */
     public void setResourceId(String ResourceId) {
@@ -187,7 +187,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志采集类型，ACCEPT|REJECT|ALL
+     * Get 流日志采集类型，ACCEPT|REJECT|ALL 
      * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      */
     public String getTrafficType() {
@@ -195,7 +195,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志采集类型，ACCEPT|REJECT|ALL
+     * Set 流日志采集类型，ACCEPT|REJECT|ALL
      * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      */
     public void setTrafficType(String TrafficType) {
@@ -203,7 +203,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志存储ID
+     * Get 流日志存储ID 
      * @return CloudLogId 流日志存储ID
      */
     public String getCloudLogId() {
@@ -211,7 +211,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志存储ID
+     * Set 流日志存储ID
      * @param CloudLogId 流日志存储ID
      */
     public void setCloudLogId(String CloudLogId) {
@@ -219,7 +219,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志存储ID状态
+     * Get 流日志存储ID状态 
      * @return CloudLogState 流日志存储ID状态
      */
     public String getCloudLogState() {
@@ -227,7 +227,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志存储ID状态
+     * Set 流日志存储ID状态
      * @param CloudLogState 流日志存储ID状态
      */
     public void setCloudLogState(String CloudLogState) {
@@ -235,7 +235,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+     * Get 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime 
      * @return OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
      */
     public String getOrderField() {
@@ -243,7 +243,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+     * Set 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
      * @param OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
      */
     public void setOrderField(String OrderField) {
@@ -251,7 +251,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升序（asc）还是降序（desc）,默认：desc
+     * Get 升序（asc）还是降序（desc）,默认：desc 
      * @return OrderDirection 升序（asc）还是降序（desc）,默认：desc
      */
     public String getOrderDirection() {
@@ -259,7 +259,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升序（asc）还是降序（desc）,默认：desc
+     * Set 升序（asc）还是降序（desc）,默认：desc
      * @param OrderDirection 升序（asc）还是降序（desc）,默认：desc
      */
     public void setOrderDirection(String OrderDirection) {
@@ -267,7 +267,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -275,7 +275,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -283,7 +283,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页行数，默认为10
+     * Get 每页行数，默认为10 
      * @return Limit 每页行数，默认为10
      */
     public Integer getLimit() {
@@ -291,7 +291,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页行数，默认为10
+     * Set 每页行数，默认为10
      * @param Limit 每页行数，默认为10
      */
     public void setLimit(Integer Limit) {
@@ -299,7 +299,7 @@ public class DescribeFlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

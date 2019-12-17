@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBNameRequest  extends AbstractModel{
+public class ModifyDBNameRequest extends AbstractModel{
 
     /**
     * 实例id
@@ -44,7 +44,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     private String NewDBName;
 
     /**
-     * 获取实例id
+     * Get 实例id 
      * @return InstanceId 实例id
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例id
+     * Set 实例id
      * @param InstanceId 实例id
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取旧数据库名
+     * Get 旧数据库名 
      * @return OldDBName 旧数据库名
      */
     public String getOldDBName() {
@@ -68,7 +68,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置旧数据库名
+     * Set 旧数据库名
      * @param OldDBName 旧数据库名
      */
     public void setOldDBName(String OldDBName) {
@@ -76,7 +76,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新数据库名
+     * Get 新数据库名 
      * @return NewDBName 新数据库名
      */
     public String getNewDBName() {
@@ -84,7 +84,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新数据库名
+     * Set 新数据库名
      * @param NewDBName 新数据库名
      */
     public void setNewDBName(String NewDBName) {
@@ -92,7 +92,7 @@ public class ModifyDBNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

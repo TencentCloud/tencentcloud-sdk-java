@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConfirmEventsRequest  extends AbstractModel{
+public class ConfirmEventsRequest extends AbstractModel{
 
     /**
     * 事件句柄，数组长度限制：16。
@@ -37,7 +37,7 @@ public class ConfirmEventsRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取事件句柄，数组长度限制：16。
+     * Get 事件句柄，数组长度限制：16。 
      * @return EventHandles 事件句柄，数组长度限制：16。
      */
     public String [] getEventHandles() {
@@ -45,7 +45,7 @@ public class ConfirmEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置事件句柄，数组长度限制：16。
+     * Set 事件句柄，数组长度限制：16。
      * @param EventHandles 事件句柄，数组长度限制：16。
      */
     public void setEventHandles(String [] EventHandles) {
@@ -53,7 +53,7 @@ public class ConfirmEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -61,7 +61,7 @@ public class ConfirmEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -69,7 +69,7 @@ public class ConfirmEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EventHandles.", this.EventHandles);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMultiDevicesResponse  extends AbstractModel{
+public class DescribeMultiDevicesResponse extends AbstractModel{
 
     /**
     * 任务 ID，由批量创建设备接口返回
@@ -51,7 +51,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务 ID，由批量创建设备接口返回
+     * Get 任务 ID，由批量创建设备接口返回 
      * @return TaskId 任务 ID，由批量创建设备接口返回
      */
     public String getTaskId() {
@@ -59,7 +59,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID，由批量创建设备接口返回
+     * Set 任务 ID，由批量创建设备接口返回
      * @param TaskId 任务 ID，由批量创建设备接口返回
      */
     public void setTaskId(String TaskId) {
@@ -67,7 +67,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备详细信息列表
+     * Get 设备详细信息列表 
      * @return DevicesInfo 设备详细信息列表
      */
     public MultiDevicesInfo [] getDevicesInfo() {
@@ -75,7 +75,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备详细信息列表
+     * Set 设备详细信息列表
      * @param DevicesInfo 设备详细信息列表
      */
     public void setDevicesInfo(MultiDevicesInfo [] DevicesInfo) {
@@ -83,7 +83,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该任务创建设备的总数
+     * Get 该任务创建设备的总数 
      * @return TotalDevNum 该任务创建设备的总数
      */
     public Integer getTotalDevNum() {
@@ -91,7 +91,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该任务创建设备的总数
+     * Set 该任务创建设备的总数
      * @param TotalDevNum 该任务创建设备的总数
      */
     public void setTotalDevNum(Integer TotalDevNum) {
@@ -99,7 +99,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeMultiDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

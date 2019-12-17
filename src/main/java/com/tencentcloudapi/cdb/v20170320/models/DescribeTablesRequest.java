@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTablesRequest  extends AbstractModel{
+public class DescribeTablesRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -58,7 +58,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     private String TableRegexp;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库的名称。
+     * Get 数据库的名称。 
      * @return Database 数据库的名称。
      */
     public String getDatabase() {
@@ -82,7 +82,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库的名称。
+     * Set 数据库的名称。
      * @param Database 数据库的名称。
      */
     public void setDatabase(String Database) {
@@ -90,7 +90,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量，默认值为0。
+     * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
     public Integer getOffset() {
@@ -98,7 +98,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录偏移量，默认值为0。
+     * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -106,7 +106,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20，最大值为2000。
+     * Get 单次请求返回的数量，默认值为20，最大值为2000。 
      * @return Limit 单次请求返回的数量，默认值为20，最大值为2000。
      */
     public Integer getLimit() {
@@ -114,7 +114,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20，最大值为2000。
+     * Set 单次请求返回的数量，默认值为20，最大值为2000。
      * @param Limit 单次请求返回的数量，默认值为20，最大值为2000。
      */
     public void setLimit(Integer Limit) {
@@ -122,7 +122,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取匹配数据库表名的正则表达式，规则同 MySQL 官网
+     * Get 匹配数据库表名的正则表达式，规则同 MySQL 官网 
      * @return TableRegexp 匹配数据库表名的正则表达式，规则同 MySQL 官网
      */
     public String getTableRegexp() {
@@ -130,7 +130,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置匹配数据库表名的正则表达式，规则同 MySQL 官网
+     * Set 匹配数据库表名的正则表达式，规则同 MySQL 官网
      * @param TableRegexp 匹配数据库表名的正则表达式，规则同 MySQL 官网
      */
     public void setTableRegexp(String TableRegexp) {
@@ -138,7 +138,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

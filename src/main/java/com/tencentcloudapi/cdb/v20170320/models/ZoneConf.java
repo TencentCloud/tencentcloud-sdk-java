@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneConf  extends AbstractModel{
+public class ZoneConf extends AbstractModel{
 
     /**
     * 可用区部署方式，可能的值为：0-单可用区；1-多可用区
@@ -51,7 +51,7 @@ public class ZoneConf  extends AbstractModel{
     private String [] BackupZone;
 
     /**
-     * 获取可用区部署方式，可能的值为：0-单可用区；1-多可用区
+     * Get 可用区部署方式，可能的值为：0-单可用区；1-多可用区 
      * @return DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      */
     public Integer [] getDeployMode() {
@@ -59,7 +59,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区部署方式，可能的值为：0-单可用区；1-多可用区
+     * Set 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      * @param DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
      */
     public void setDeployMode(Integer [] DeployMode) {
@@ -67,7 +67,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 获取主实例所在的可用区
+     * Get 主实例所在的可用区 
      * @return MasterZone 主实例所在的可用区
      */
     public String [] getMasterZone() {
@@ -75,7 +75,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 设置主实例所在的可用区
+     * Set 主实例所在的可用区
      * @param MasterZone 主实例所在的可用区
      */
     public void setMasterZone(String [] MasterZone) {
@@ -83,7 +83,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 获取实例为多可用区部署时，备库1所在的可用区
+     * Get 实例为多可用区部署时，备库1所在的可用区 
      * @return SlaveZone 实例为多可用区部署时，备库1所在的可用区
      */
     public String [] getSlaveZone() {
@@ -91,7 +91,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 设置实例为多可用区部署时，备库1所在的可用区
+     * Set 实例为多可用区部署时，备库1所在的可用区
      * @param SlaveZone 实例为多可用区部署时，备库1所在的可用区
      */
     public void setSlaveZone(String [] SlaveZone) {
@@ -99,7 +99,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 获取实例为多可用区部署时，备库2所在的可用区
+     * Get 实例为多可用区部署时，备库2所在的可用区 
      * @return BackupZone 实例为多可用区部署时，备库2所在的可用区
      */
     public String [] getBackupZone() {
@@ -107,7 +107,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 设置实例为多可用区部署时，备库2所在的可用区
+     * Set 实例为多可用区部署时，备库2所在的可用区
      * @param BackupZone 实例为多可用区部署时，备库2所在的可用区
      */
     public void setBackupZone(String [] BackupZone) {
@@ -115,7 +115,7 @@ public class ZoneConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DeployMode.", this.DeployMode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleQuery  extends AbstractModel{
+public class RuleQuery extends AbstractModel{
 
     /**
     * 字段
@@ -51,7 +51,7 @@ public class RuleQuery  extends AbstractModel{
     private String ProductId;
 
     /**
-     * 获取字段
+     * Get 字段 
      * @return Field 字段
      */
     public String getField() {
@@ -59,7 +59,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 设置字段
+     * Set 字段
      * @param Field 字段
      */
     public void setField(String Field) {
@@ -67,7 +67,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 获取过滤规则
+     * Get 过滤规则 
      * @return Condition 过滤规则
      */
     public String getCondition() {
@@ -75,7 +75,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 设置过滤规则
+     * Set 过滤规则
      * @param Condition 过滤规则
      */
     public void setCondition(String Condition) {
@@ -83,7 +83,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 获取Topic
+     * Get Topic 
      * @return Topic Topic
      */
     public String getTopic() {
@@ -91,7 +91,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 设置Topic
+     * Set Topic
      * @param Topic Topic
      */
     public void setTopic(String Topic) {
@@ -99,7 +99,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -107,7 +107,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -115,7 +115,7 @@ public class RuleQuery  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Field", this.Field);

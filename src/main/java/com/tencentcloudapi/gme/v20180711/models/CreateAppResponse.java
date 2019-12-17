@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAppResponse  extends AbstractModel{
+public class CreateAppResponse extends AbstractModel{
 
     /**
     * 应用ID，由后台自动生成。
@@ -79,7 +79,7 @@ public class CreateAppResponse  extends AbstractModel{
     private VoiceFilterConf VoiceFilterConf;
 
     /**
-     * 获取应用ID，由后台自动生成。
+     * Get 应用ID，由后台自动生成。 
      * @return BizId 应用ID，由后台自动生成。
      */
     public Long getBizId() {
@@ -87,7 +87,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，由后台自动生成。
+     * Set 应用ID，由后台自动生成。
      * @param BizId 应用ID，由后台自动生成。
      */
     public void setBizId(Long BizId) {
@@ -95,7 +95,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称，透传输入参数的AppName
+     * Get 应用名称，透传输入参数的AppName 
      * @return AppName 应用名称，透传输入参数的AppName
      */
     public String getAppName() {
@@ -103,7 +103,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称，透传输入参数的AppName
+     * Set 应用名称，透传输入参数的AppName
      * @param AppName 应用名称，透传输入参数的AppName
      */
     public void setAppName(String AppName) {
@@ -111,7 +111,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，透传输入的ProjectId
+     * Get 项目ID，透传输入的ProjectId 
      * @return ProjectId 项目ID，透传输入的ProjectId
      */
     public Long getProjectId() {
@@ -119,7 +119,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，透传输入的ProjectId
+     * Set 项目ID，透传输入的ProjectId
      * @param ProjectId 项目ID，透传输入的ProjectId
      */
     public void setProjectId(Long ProjectId) {
@@ -127,7 +127,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取应用密钥，GME SDK初始化时使用
+     * Get 应用密钥，GME SDK初始化时使用 
      * @return SecretKey 应用密钥，GME SDK初始化时使用
      */
     public String getSecretKey() {
@@ -135,7 +135,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置应用密钥，GME SDK初始化时使用
+     * Set 应用密钥，GME SDK初始化时使用
      * @param SecretKey 应用密钥，GME SDK初始化时使用
      */
     public void setSecretKey(String SecretKey) {
@@ -143,7 +143,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务创建时间戳
+     * Get 服务创建时间戳 
      * @return CreateTime 服务创建时间戳
      */
     public Long getCreateTime() {
@@ -151,7 +151,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务创建时间戳
+     * Set 服务创建时间戳
      * @param CreateTime 服务创建时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -159,7 +159,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实时语音服务配置数据
+     * Get 实时语音服务配置数据 
      * @return RealtimeSpeechConf 实时语音服务配置数据
      */
     public RealtimeSpeechConf getRealtimeSpeechConf() {
@@ -167,7 +167,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实时语音服务配置数据
+     * Set 实时语音服务配置数据
      * @param RealtimeSpeechConf 实时语音服务配置数据
      */
     public void setRealtimeSpeechConf(RealtimeSpeechConf RealtimeSpeechConf) {
@@ -175,7 +175,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语音消息及转文本服务配置数据
+     * Get 语音消息及转文本服务配置数据 
      * @return VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
@@ -183,7 +183,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语音消息及转文本服务配置数据
+     * Set 语音消息及转文本服务配置数据
      * @param VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
@@ -191,7 +191,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语音分析服务配置数据
+     * Get 语音分析服务配置数据 
      * @return VoiceFilterConf 语音分析服务配置数据
      */
     public VoiceFilterConf getVoiceFilterConf() {
@@ -199,7 +199,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语音分析服务配置数据
+     * Set 语音分析服务配置数据
      * @param VoiceFilterConf 语音分析服务配置数据
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
@@ -207,7 +207,7 @@ public class CreateAppResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

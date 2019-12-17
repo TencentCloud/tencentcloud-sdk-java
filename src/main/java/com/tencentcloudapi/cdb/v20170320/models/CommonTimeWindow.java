@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommonTimeWindow  extends AbstractModel{
+public class CommonTimeWindow extends AbstractModel{
 
     /**
     * 周一的时间窗，格式如： 02:00-06:00
@@ -72,7 +72,7 @@ public class CommonTimeWindow  extends AbstractModel{
     private String Sunday;
 
     /**
-     * 获取周一的时间窗，格式如： 02:00-06:00
+     * Get 周一的时间窗，格式如： 02:00-06:00 
      * @return Monday 周一的时间窗，格式如： 02:00-06:00
      */
     public String getMonday() {
@@ -80,7 +80,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周一的时间窗，格式如： 02:00-06:00
+     * Set 周一的时间窗，格式如： 02:00-06:00
      * @param Monday 周一的时间窗，格式如： 02:00-06:00
      */
     public void setMonday(String Monday) {
@@ -88,7 +88,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周二的时间窗，格式如： 02:00-06:00
+     * Get 周二的时间窗，格式如： 02:00-06:00 
      * @return Tuesday 周二的时间窗，格式如： 02:00-06:00
      */
     public String getTuesday() {
@@ -96,7 +96,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周二的时间窗，格式如： 02:00-06:00
+     * Set 周二的时间窗，格式如： 02:00-06:00
      * @param Tuesday 周二的时间窗，格式如： 02:00-06:00
      */
     public void setTuesday(String Tuesday) {
@@ -104,7 +104,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周三的时间窗，格式如： 02:00-06:00
+     * Get 周三的时间窗，格式如： 02:00-06:00 
      * @return Wednesday 周三的时间窗，格式如： 02:00-06:00
      */
     public String getWednesday() {
@@ -112,7 +112,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周三的时间窗，格式如： 02:00-06:00
+     * Set 周三的时间窗，格式如： 02:00-06:00
      * @param Wednesday 周三的时间窗，格式如： 02:00-06:00
      */
     public void setWednesday(String Wednesday) {
@@ -120,7 +120,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周四的时间窗，格式如： 02:00-06:00
+     * Get 周四的时间窗，格式如： 02:00-06:00 
      * @return Thursday 周四的时间窗，格式如： 02:00-06:00
      */
     public String getThursday() {
@@ -128,7 +128,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周四的时间窗，格式如： 02:00-06:00
+     * Set 周四的时间窗，格式如： 02:00-06:00
      * @param Thursday 周四的时间窗，格式如： 02:00-06:00
      */
     public void setThursday(String Thursday) {
@@ -136,7 +136,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周五的时间窗，格式如： 02:00-06:00
+     * Get 周五的时间窗，格式如： 02:00-06:00 
      * @return Friday 周五的时间窗，格式如： 02:00-06:00
      */
     public String getFriday() {
@@ -144,7 +144,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周五的时间窗，格式如： 02:00-06:00
+     * Set 周五的时间窗，格式如： 02:00-06:00
      * @param Friday 周五的时间窗，格式如： 02:00-06:00
      */
     public void setFriday(String Friday) {
@@ -152,7 +152,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周六的时间窗，格式如： 02:00-06:00
+     * Get 周六的时间窗，格式如： 02:00-06:00 
      * @return Saturday 周六的时间窗，格式如： 02:00-06:00
      */
     public String getSaturday() {
@@ -160,7 +160,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周六的时间窗，格式如： 02:00-06:00
+     * Set 周六的时间窗，格式如： 02:00-06:00
      * @param Saturday 周六的时间窗，格式如： 02:00-06:00
      */
     public void setSaturday(String Saturday) {
@@ -168,7 +168,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 获取周日的时间窗，格式如： 02:00-06:00
+     * Get 周日的时间窗，格式如： 02:00-06:00 
      * @return Sunday 周日的时间窗，格式如： 02:00-06:00
      */
     public String getSunday() {
@@ -176,7 +176,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 设置周日的时间窗，格式如： 02:00-06:00
+     * Set 周日的时间窗，格式如： 02:00-06:00
      * @param Sunday 周日的时间窗，格式如： 02:00-06:00
      */
     public void setSunday(String Sunday) {
@@ -184,7 +184,7 @@ public class CommonTimeWindow  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Monday", this.Monday);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDomainRequest  extends AbstractModel{
+public class CreateDomainRequest extends AbstractModel{
 
     /**
     * 监听器ID。
@@ -60,7 +60,7 @@ public class CreateDomainRequest  extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
-     * 获取监听器ID。
+     * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID。
+     * Set 监听器ID。
      * @param ListenerId 监听器ID。
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要创建的域名，一个监听器下最大支持100个域名。
+     * Get 需要创建的域名，一个监听器下最大支持100个域名。 
      * @return Domain 需要创建的域名，一个监听器下最大支持100个域名。
      */
     public String getDomain() {
@@ -84,7 +84,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要创建的域名，一个监听器下最大支持100个域名。
+     * Set 需要创建的域名，一个监听器下最大支持100个域名。
      * @param Domain 需要创建的域名，一个监听器下最大支持100个域名。
      */
     public void setDomain(String Domain) {
@@ -92,7 +92,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务器证书，用于客户端与GAAP的HTTPS的交互。
+     * Get 服务器证书，用于客户端与GAAP的HTTPS的交互。 
      * @return CertificateId 服务器证书，用于客户端与GAAP的HTTPS的交互。
      */
     public String getCertificateId() {
@@ -100,7 +100,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务器证书，用于客户端与GAAP的HTTPS的交互。
+     * Set 服务器证书，用于客户端与GAAP的HTTPS的交互。
      * @param CertificateId 服务器证书，用于客户端与GAAP的HTTPS的交互。
      */
     public void setCertificateId(String CertificateId) {
@@ -108,8 +108,8 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
+     * Get 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。 
      * @return ClientCertificateId 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      */
@@ -118,7 +118,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+     * Set 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
      * @param ClientCertificateId 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或PolyClientCertificateIds字段。
@@ -128,8 +128,8 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书，用于客户端与GAAP的HTTPS的交互。
-仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
+     * Get 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。 
      * @return PolyClientCertificateIds 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
      */
@@ -138,7 +138,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA证书，用于客户端与GAAP的HTTPS的交互。
+     * Set 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
      * @param PolyClientCertificateIds 客户端CA证书，用于客户端与GAAP的HTTPS的交互。
 仅当采用双向认证的方式时，需要设置该字段或ClientCertificateId字段。
@@ -148,7 +148,7 @@ public class CreateDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

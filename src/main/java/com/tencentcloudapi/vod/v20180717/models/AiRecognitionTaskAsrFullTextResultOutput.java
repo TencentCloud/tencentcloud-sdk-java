@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
+public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
 
     /**
     * 语音全文识别片段列表。
@@ -37,7 +37,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     private String SubtitleUrl;
 
     /**
-     * 获取语音全文识别片段列表。
+     * Get 语音全文识别片段列表。 
      * @return SegmentSet 语音全文识别片段列表。
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
@@ -45,7 +45,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别片段列表。
+     * Set 语音全文识别片段列表。
      * @param SegmentSet 语音全文识别片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
@@ -53,7 +53,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取字幕文件 Url。
+     * Get 字幕文件 Url。 
      * @return SubtitleUrl 字幕文件 Url。
      */
     public String getSubtitleUrl() {
@@ -61,7 +61,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置字幕文件 Url。
+     * Set 字幕文件 Url。
      * @param SubtitleUrl 字幕文件 Url。
      */
     public void setSubtitleUrl(String SubtitleUrl) {
@@ -69,7 +69,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);

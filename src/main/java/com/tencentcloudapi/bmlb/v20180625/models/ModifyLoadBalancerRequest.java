@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerRequest  extends AbstractModel{
+public class ModifyLoadBalancerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -44,7 +44,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     private String DomainPrefix;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
+     * Get 负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。 
      * @return LoadBalancerName 负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
      */
     public String getLoadBalancerName() {
@@ -68,7 +68,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
+     * Set 负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
      * @param LoadBalancerName 负载均衡器名称，规则：1-20个英文、汉字、数字、连接线“-”或下划线“_”。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -76,7 +76,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
+     * Get 域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。 
      * @return DomainPrefix 域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
      */
     public String getDomainPrefix() {
@@ -84,7 +84,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
+     * Set 域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
      * @param DomainPrefix 域名前缀，负载均衡的域名由用户输入的域名前缀与配置文件中的域名后缀一起组合而成，保证是唯一的域名。规则：1-20个小写英文字母、数字或连接线“-”。内网类型的负载均衡不能配置该字段。
      */
     public void setDomainPrefix(String DomainPrefix) {
@@ -92,7 +92,7 @@ public class ModifyLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

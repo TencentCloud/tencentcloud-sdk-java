@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDBRequest  extends AbstractModel{
+public class DeleteDBRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-rljoi3bf
@@ -37,7 +37,7 @@ public class DeleteDBRequest  extends AbstractModel{
     private String [] Names;
 
     /**
-     * 获取实例ID，形如mssql-rljoi3bf
+     * Get 实例ID，形如mssql-rljoi3bf 
      * @return InstanceId 实例ID，形如mssql-rljoi3bf
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DeleteDBRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-rljoi3bf
+     * Set 实例ID，形如mssql-rljoi3bf
      * @param InstanceId 实例ID，形如mssql-rljoi3bf
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DeleteDBRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名数组
+     * Get 数据库名数组 
      * @return Names 数据库名数组
      */
     public String [] getNames() {
@@ -61,7 +61,7 @@ public class DeleteDBRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名数组
+     * Set 数据库名数组
      * @param Names 数据库名数组
      */
     public void setNames(String [] Names) {
@@ -69,7 +69,7 @@ public class DeleteDBRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

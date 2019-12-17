@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstitutionOCRResponse  extends AbstractModel{
+public class InstitutionOCRResponse extends AbstractModel{
 
     /**
     * 注册号
@@ -65,7 +65,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取注册号
+     * Get 注册号 
      * @return RegId 注册号
      */
     public String getRegId() {
@@ -73,7 +73,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置注册号
+     * Set 注册号
      * @param RegId 注册号
      */
     public void setRegId(String RegId) {
@@ -81,7 +81,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期
+     * Get 有效期 
      * @return ValidDate 有效期
      */
     public String getValidDate() {
@@ -89,7 +89,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期
+     * Set 有效期
      * @param ValidDate 有效期
      */
     public void setValidDate(String ValidDate) {
@@ -97,7 +97,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取住所
+     * Get 住所 
      * @return Location 住所
      */
     public String getLocation() {
@@ -105,7 +105,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置住所
+     * Set 住所
      * @param Location 住所
      */
     public void setLocation(String Location) {
@@ -113,7 +113,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -121,7 +121,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -129,7 +129,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取法定代表人
+     * Get 法定代表人 
      * @return LegalPerson 法定代表人
      */
     public String getLegalPerson() {
@@ -137,7 +137,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置法定代表人
+     * Set 法定代表人
      * @param LegalPerson 法定代表人
      */
     public void setLegalPerson(String LegalPerson) {
@@ -145,7 +145,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class InstitutionOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegId", this.RegId);

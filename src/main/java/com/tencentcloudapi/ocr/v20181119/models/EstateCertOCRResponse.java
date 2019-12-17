@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EstateCertOCRResponse  extends AbstractModel{
+public class EstateCertOCRResponse extends AbstractModel{
 
     /**
     * 权利人
@@ -114,7 +114,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取权利人
+     * Get 权利人 
      * @return Obligee 权利人
      */
     public String getObligee() {
@@ -122,7 +122,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权利人
+     * Set 权利人
      * @param Obligee 权利人
      */
     public void setObligee(String Obligee) {
@@ -130,7 +130,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取共有情况
+     * Get 共有情况 
      * @return Ownership 共有情况
      */
     public String getOwnership() {
@@ -138,7 +138,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置共有情况
+     * Set 共有情况
      * @param Ownership 共有情况
      */
     public void setOwnership(String Ownership) {
@@ -146,7 +146,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取坐落
+     * Get 坐落 
      * @return Location 坐落
      */
     public String getLocation() {
@@ -154,7 +154,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置坐落
+     * Set 坐落
      * @param Location 坐落
      */
     public void setLocation(String Location) {
@@ -162,7 +162,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取不动产单元号
+     * Get 不动产单元号 
      * @return Unit 不动产单元号
      */
     public String getUnit() {
@@ -170,7 +170,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置不动产单元号
+     * Set 不动产单元号
      * @param Unit 不动产单元号
      */
     public void setUnit(String Unit) {
@@ -178,7 +178,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权利类型
+     * Get 权利类型 
      * @return Type 权利类型
      */
     public String getType() {
@@ -186,7 +186,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权利类型
+     * Set 权利类型
      * @param Type 权利类型
      */
     public void setType(String Type) {
@@ -194,7 +194,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权利性质
+     * Get 权利性质 
      * @return Property 权利性质
      */
     public String getProperty() {
@@ -202,7 +202,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权利性质
+     * Set 权利性质
      * @param Property 权利性质
      */
     public void setProperty(String Property) {
@@ -210,7 +210,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用途
+     * Get 用途 
      * @return Usage 用途
      */
     public String getUsage() {
@@ -218,7 +218,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用途
+     * Set 用途
      * @param Usage 用途
      */
     public void setUsage(String Usage) {
@@ -226,7 +226,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取面积
+     * Get 面积 
      * @return Area 面积
      */
     public String getArea() {
@@ -234,7 +234,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置面积
+     * Set 面积
      * @param Area 面积
      */
     public void setArea(String Area) {
@@ -242,7 +242,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取使用期限
+     * Get 使用期限 
      * @return Term 使用期限
      */
     public String getTerm() {
@@ -250,7 +250,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置使用期限
+     * Set 使用期限
      * @param Term 使用期限
      */
     public void setTerm(String Term) {
@@ -258,7 +258,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权利其他状况，多行会用换行符\n连接。
+     * Get 权利其他状况，多行会用换行符\n连接。 
      * @return Other 权利其他状况，多行会用换行符\n连接。
      */
     public String getOther() {
@@ -266,7 +266,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权利其他状况，多行会用换行符\n连接。
+     * Set 权利其他状况，多行会用换行符\n连接。
      * @param Other 权利其他状况，多行会用换行符\n连接。
      */
     public void setOther(String Other) {
@@ -274,7 +274,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片旋转角度
+     * Get 图片旋转角度 
      * @return Angle 图片旋转角度
      */
     public Float getAngle() {
@@ -282,7 +282,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片旋转角度
+     * Set 图片旋转角度
      * @param Angle 图片旋转角度
      */
     public void setAngle(Float Angle) {
@@ -290,7 +290,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取不动产权号
+     * Get 不动产权号 
      * @return Number 不动产权号
      */
     public String getNumber() {
@@ -298,7 +298,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置不动产权号
+     * Set 不动产权号
      * @param Number 不动产权号
      */
     public void setNumber(String Number) {
@@ -306,7 +306,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -314,7 +314,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -322,7 +322,7 @@ public class EstateCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Obligee", this.Obligee);

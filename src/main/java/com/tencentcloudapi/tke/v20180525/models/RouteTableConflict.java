@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteTableConflict  extends AbstractModel{
+public class RouteTableConflict extends AbstractModel{
 
     /**
     * 路由表类型。
@@ -54,7 +54,7 @@ public class RouteTableConflict  extends AbstractModel{
     private String RouteTableId;
 
     /**
-     * 获取路由表类型。
+     * Get 路由表类型。 
      * @return RouteTableType 路由表类型。
      */
     public String getRouteTableType() {
@@ -62,7 +62,7 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 设置路由表类型。
+     * Set 路由表类型。
      * @param RouteTableType 路由表类型。
      */
     public void setRouteTableType(String RouteTableType) {
@@ -70,8 +70,8 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 获取路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 路由表CIDR。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RouteTableCidrBlock 路由表CIDR。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -80,7 +80,7 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 设置路由表CIDR。
+     * Set 路由表CIDR。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableCidrBlock 路由表CIDR。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,8 +90,8 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 获取路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 路由表名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RouteTableName 路由表名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,7 +100,7 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableName 路由表名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,8 +110,8 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 获取路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 路由表ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RouteTableId 路由表ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 设置路由表ID。
+     * Set 路由表ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableId 路由表ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ public class RouteTableConflict  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableType", this.RouteTableType);

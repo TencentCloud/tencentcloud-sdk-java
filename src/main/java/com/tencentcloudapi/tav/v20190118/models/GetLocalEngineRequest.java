@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetLocalEngineRequest  extends AbstractModel{
+public class GetLocalEngineRequest extends AbstractModel{
 
     /**
     * 购买服务后获得的授权信息，用于保证请求有效性
@@ -30,7 +30,7 @@ public class GetLocalEngineRequest  extends AbstractModel{
     private String Key;
 
     /**
-     * 获取购买服务后获得的授权信息，用于保证请求有效性
+     * Get 购买服务后获得的授权信息，用于保证请求有效性 
      * @return Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public String getKey() {
@@ -38,7 +38,7 @@ public class GetLocalEngineRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买服务后获得的授权信息，用于保证请求有效性
+     * Set 购买服务后获得的授权信息，用于保证请求有效性
      * @param Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public void setKey(String Key) {
@@ -46,7 +46,7 @@ public class GetLocalEngineRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

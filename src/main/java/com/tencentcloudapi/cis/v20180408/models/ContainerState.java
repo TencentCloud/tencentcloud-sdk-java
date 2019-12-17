@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainerState  extends AbstractModel{
+public class ContainerState extends AbstractModel{
 
     /**
     * 容器运行开始时间
@@ -58,7 +58,7 @@ public class ContainerState  extends AbstractModel{
     private Integer ExitCode;
 
     /**
-     * 获取容器运行开始时间
+     * Get 容器运行开始时间 
      * @return StartTime 容器运行开始时间
      */
     public String getStartTime() {
@@ -66,7 +66,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 设置容器运行开始时间
+     * Set 容器运行开始时间
      * @param StartTime 容器运行开始时间
      */
     public void setStartTime(String StartTime) {
@@ -74,7 +74,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 获取容器状态
+     * Get 容器状态 
      * @return State 容器状态
      */
     public String getState() {
@@ -82,7 +82,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 设置容器状态
+     * Set 容器状态
      * @param State 容器状态
      */
     public void setState(String State) {
@@ -90,7 +90,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 获取状态详情
+     * Get 状态详情 
      * @return Reason 状态详情
      */
     public String getReason() {
@@ -98,7 +98,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 设置状态详情
+     * Set 状态详情
      * @param Reason 状态详情
      */
     public void setReason(String Reason) {
@@ -106,7 +106,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 获取容器运行结束时间
+     * Get 容器运行结束时间 
      * @return FinishTime 容器运行结束时间
      */
     public String getFinishTime() {
@@ -114,7 +114,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 设置容器运行结束时间
+     * Set 容器运行结束时间
      * @param FinishTime 容器运行结束时间
      */
     public void setFinishTime(String FinishTime) {
@@ -122,7 +122,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 获取容器运行退出码
+     * Get 容器运行退出码 
      * @return ExitCode 容器运行退出码
      */
     public Integer getExitCode() {
@@ -130,7 +130,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 设置容器运行退出码
+     * Set 容器运行退出码
      * @param ExitCode 容器运行退出码
      */
     public void setExitCode(Integer ExitCode) {
@@ -138,7 +138,7 @@ public class ContainerState  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

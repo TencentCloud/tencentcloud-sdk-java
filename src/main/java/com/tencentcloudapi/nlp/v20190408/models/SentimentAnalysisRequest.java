@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentimentAnalysisRequest  extends AbstractModel{
+public class SentimentAnalysisRequest extends AbstractModel{
 
     /**
     * 待分析的文本（仅支持UTF-8格式，不超过200字）
@@ -41,7 +41,7 @@ public class SentimentAnalysisRequest  extends AbstractModel{
     private Long Flag;
 
     /**
-     * 获取待分析的文本（仅支持UTF-8格式，不超过200字）
+     * Get 待分析的文本（仅支持UTF-8格式，不超过200字） 
      * @return Text 待分析的文本（仅支持UTF-8格式，不超过200字）
      */
     public String getText() {
@@ -49,7 +49,7 @@ public class SentimentAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待分析的文本（仅支持UTF-8格式，不超过200字）
+     * Set 待分析的文本（仅支持UTF-8格式，不超过200字）
      * @param Text 待分析的文本（仅支持UTF-8格式，不超过200字）
      */
     public void setText(String Text) {
@@ -57,11 +57,11 @@ public class SentimentAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文本所属类型（默认取4值）：
+     * Get 文本所属类型（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
-4、通用领域类
+4、通用领域类 
      * @return Flag 文本所属类型（默认取4值）：
 1、商品评论类
 2、社交类
@@ -73,7 +73,7 @@ public class SentimentAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文本所属类型（默认取4值）：
+     * Set 文本所属类型（默认取4值）：
 1、商品评论类
 2、社交类
 3、美食酒店类
@@ -89,7 +89,7 @@ public class SentimentAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBRemarkRequest  extends AbstractModel{
+public class ModifyDBRemarkRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-rljoi3bf
@@ -37,7 +37,7 @@ public class ModifyDBRemarkRequest  extends AbstractModel{
     private DBRemark [] DBRemarks;
 
     /**
-     * 获取实例ID，形如mssql-rljoi3bf
+     * Get 实例ID，形如mssql-rljoi3bf 
      * @return InstanceId 实例ID，形如mssql-rljoi3bf
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyDBRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-rljoi3bf
+     * Set 实例ID，形如mssql-rljoi3bf
      * @param InstanceId 实例ID，形如mssql-rljoi3bf
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyDBRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称及备注数组，每个元素包含数据库名和对应的备注
+     * Get 数据库名称及备注数组，每个元素包含数据库名和对应的备注 
      * @return DBRemarks 数据库名称及备注数组，每个元素包含数据库名和对应的备注
      */
     public DBRemark [] getDBRemarks() {
@@ -61,7 +61,7 @@ public class ModifyDBRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称及备注数组，每个元素包含数据库名和对应的备注
+     * Set 数据库名称及备注数组，每个元素包含数据库名和对应的备注
      * @param DBRemarks 数据库名称及备注数组，每个元素包含数据库名和对应的备注
      */
     public void setDBRemarks(DBRemark [] DBRemarks) {
@@ -69,7 +69,7 @@ public class ModifyDBRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

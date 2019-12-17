@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentClientsRequest  extends AbstractModel{
+public class DescribeAgentClientsRequest extends AbstractModel{
 
     /**
     * 客户账号ID
@@ -65,7 +65,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -73,7 +73,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -81,7 +81,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+     * Get 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索 
      * @return ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      */
     public String getClientName() {
@@ -89,7 +89,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
+     * Set 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      * @param ClientName 客户名称。由于涉及隐私，名称打码显示，故名称仅支持打码后的模糊搜索
      */
     public void setClientName(String ClientName) {
@@ -97,7 +97,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户类型，a/b，类型定义参考代理商相关政策文档
+     * Get 客户类型，a/b，类型定义参考代理商相关政策文档 
      * @return ClientFlag 客户类型，a/b，类型定义参考代理商相关政策文档
      */
     public String getClientFlag() {
@@ -105,7 +105,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户类型，a/b，类型定义参考代理商相关政策文档
+     * Set 客户类型，a/b，类型定义参考代理商相关政策文档
      * @param ClientFlag 客户类型，a/b，类型定义参考代理商相关政策文档
      */
     public void setClientFlag(String ClientFlag) {
@@ -113,7 +113,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ASC/DESC， 不区分大小写，按申请时间排序
+     * Get ASC/DESC， 不区分大小写，按申请时间排序 
      * @return OrderDirection ASC/DESC， 不区分大小写，按申请时间排序
      */
     public String getOrderDirection() {
@@ -121,7 +121,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ASC/DESC， 不区分大小写，按申请时间排序
+     * Set ASC/DESC， 不区分大小写，按申请时间排序
      * @param OrderDirection ASC/DESC， 不区分大小写，按申请时间排序
      */
     public void setOrderDirection(String OrderDirection) {
@@ -129,7 +129,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeAgentClientsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);

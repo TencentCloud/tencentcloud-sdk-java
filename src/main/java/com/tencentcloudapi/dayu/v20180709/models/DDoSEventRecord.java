@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSEventRecord  extends AbstractModel{
+public class DDoSEventRecord extends AbstractModel{
 
     /**
     * 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
@@ -108,7 +108,7 @@ public class DDoSEventRecord  extends AbstractModel{
     private String ResourceName;
 
     /**
-     * 获取大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Get 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -116,7 +116,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Set 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（shield表示棋牌；bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -124,7 +124,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -132,7 +132,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -140,7 +140,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP
+     * Get 资源的IP 
      * @return Vip 资源的IP
      */
     public String getVip() {
@@ -148,7 +148,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP
+     * Set 资源的IP
      * @param Vip 资源的IP
      */
     public void setVip(String Vip) {
@@ -156,7 +156,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击开始时间
+     * Get 攻击开始时间 
      * @return StartTime 攻击开始时间
      */
     public String getStartTime() {
@@ -164,7 +164,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击开始时间
+     * Set 攻击开始时间
      * @param StartTime 攻击开始时间
      */
     public void setStartTime(String StartTime) {
@@ -172,7 +172,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击结束时间
+     * Get 攻击结束时间 
      * @return EndTime 攻击结束时间
      */
     public String getEndTime() {
@@ -180,7 +180,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击结束时间
+     * Set 攻击结束时间
      * @param EndTime 攻击结束时间
      */
     public void setEndTime(String EndTime) {
@@ -188,7 +188,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击最大带宽
+     * Get 攻击最大带宽 
      * @return Mbps 攻击最大带宽
      */
     public Long getMbps() {
@@ -196,7 +196,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击最大带宽
+     * Set 攻击最大带宽
      * @param Mbps 攻击最大带宽
      */
     public void setMbps(Long Mbps) {
@@ -204,7 +204,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击最大包速率
+     * Get 攻击最大包速率 
      * @return Pps 攻击最大包速率
      */
     public Long getPps() {
@@ -212,7 +212,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击最大包速率
+     * Set 攻击最大包速率
      * @param Pps 攻击最大包速率
      */
     public void setPps(Long Pps) {
@@ -220,7 +220,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击类型
+     * Get 攻击类型 
      * @return AttackType 攻击类型
      */
     public String getAttackType() {
@@ -228,7 +228,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击类型
+     * Set 攻击类型
      * @param AttackType 攻击类型
      */
     public void setAttackType(String AttackType) {
@@ -236,7 +236,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取是否被封堵，取值[1（是），0（否），2（无效值）]
+     * Get 是否被封堵，取值[1（是），0（否），2（无效值）] 
      * @return BlockFlag 是否被封堵，取值[1（是），0（否），2（无效值）]
      */
     public Long getBlockFlag() {
@@ -244,7 +244,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置是否被封堵，取值[1（是），0（否），2（无效值）]
+     * Set 是否被封堵，取值[1（是），0（否），2（无效值）]
      * @param BlockFlag 是否被封堵，取值[1（是），0（否），2（无效值）]
      */
     public void setBlockFlag(Long BlockFlag) {
@@ -252,7 +252,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
+     * Get 是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）] 
      * @return OverLoad 是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
      */
     public String getOverLoad() {
@@ -260,7 +260,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
+     * Set 是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
      * @param OverLoad 是否超过弹性防护峰值，取值取值[yes(是)，no(否)，空字符串（未知值）]
      */
     public void setOverLoad(String OverLoad) {
@@ -268,7 +268,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取攻击状态，取值[0（攻击中）, 1（攻击结束）]
+     * Get 攻击状态，取值[0（攻击中）, 1（攻击结束）] 
      * @return AttackStatus 攻击状态，取值[0（攻击中）, 1（攻击结束）]
      */
     public Long getAttackStatus() {
@@ -276,7 +276,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置攻击状态，取值[0（攻击中）, 1（攻击结束）]
+     * Set 攻击状态，取值[0（攻击中）, 1（攻击结束）]
      * @param AttackStatus 攻击状态，取值[0（攻击中）, 1（攻击结束）]
      */
     public void setAttackStatus(Long AttackStatus) {
@@ -284,8 +284,8 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceName 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -294,7 +294,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 设置资源名称
+     * Set 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -304,7 +304,7 @@ public class DDoSEventRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTableQuotasRequest  extends AbstractModel{
+public class ModifyTableQuotasRequest extends AbstractModel{
 
     /**
     * 带扩缩容表所属应用实例ID
@@ -37,7 +37,7 @@ public class ModifyTableQuotasRequest  extends AbstractModel{
     private SelectedTableInfo [] TableQuotas;
 
     /**
-     * 获取带扩缩容表所属应用实例ID
+     * Get 带扩缩容表所属应用实例ID 
      * @return ApplicationId 带扩缩容表所属应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class ModifyTableQuotasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带扩缩容表所属应用实例ID
+     * Set 带扩缩容表所属应用实例ID
      * @param ApplicationId 带扩缩容表所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class ModifyTableQuotasRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已选中待修改的表配额列表
+     * Get 已选中待修改的表配额列表 
      * @return TableQuotas 已选中待修改的表配额列表
      */
     public SelectedTableInfo [] getTableQuotas() {
@@ -61,7 +61,7 @@ public class ModifyTableQuotasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已选中待修改的表配额列表
+     * Set 已选中待修改的表配额列表
      * @param TableQuotas 已选中待修改的表配额列表
      */
     public void setTableQuotas(SelectedTableInfo [] TableQuotas) {
@@ -69,7 +69,7 @@ public class ModifyTableQuotasRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

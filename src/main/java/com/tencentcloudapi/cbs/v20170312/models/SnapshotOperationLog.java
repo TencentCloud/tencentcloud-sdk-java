@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotOperationLog  extends AbstractModel{
+public class SnapshotOperationLog extends AbstractModel{
 
     /**
     * 操作者的UIN。
@@ -76,8 +76,8 @@ PROCESSING :表示操作中。
     private String EndTime;
 
     /**
-     * 获取操作者的UIN。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Operator 操作者的UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -86,7 +86,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置操作者的UIN。
+     * Set 操作者的UIN。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作者的UIN。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,14 +96,14 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取操作类型。取值范围：
+     * Get 操作类型。取值范围：
 SNAP_OPERATION_DELETE：删除快照
 SNAP_OPERATION_ROLLBACK：回滚快照
 SNAP_OPERATION_MODIFY：修改快照属性
 SNAP_OPERATION_CREATE：创建快照
 SNAP_OPERATION_COPY：跨地域复制快照
 ASP_OPERATION_CREATE_SNAP：由定期快照策略创建快照
-ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
+ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照 
      * @return Operation 操作类型。取值范围：
 SNAP_OPERATION_DELETE：删除快照
 SNAP_OPERATION_ROLLBACK：回滚快照
@@ -118,7 +118,7 @@ ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
     }
 
     /**
-     * 设置操作类型。取值范围：
+     * Set 操作类型。取值范围：
 SNAP_OPERATION_DELETE：删除快照
 SNAP_OPERATION_ROLLBACK：回滚快照
 SNAP_OPERATION_MODIFY：修改快照属性
@@ -140,7 +140,7 @@ ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
     }
 
     /**
-     * 获取操作的快照ID。
+     * Get 操作的快照ID。 
      * @return SnapshotId 操作的快照ID。
      */
     public String getSnapshotId() {
@@ -148,7 +148,7 @@ ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
     }
 
     /**
-     * 设置操作的快照ID。
+     * Set 操作的快照ID。
      * @param SnapshotId 操作的快照ID。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -156,10 +156,10 @@ ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
     }
 
     /**
-     * 获取操作的状态。取值范围：
+     * Get 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
-PROCESSING :表示操作中。
+PROCESSING :表示操作中。 
      * @return OperationState 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
@@ -170,7 +170,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置操作的状态。取值范围：
+     * Set 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
 PROCESSING :表示操作中。
@@ -184,7 +184,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return StartTime 开始时间。
      */
     public String getStartTime() {
@@ -192,7 +192,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -200,7 +200,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndTime 结束时间。
      */
     public String getEndTime() {
@@ -208,7 +208,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -216,7 +216,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operator", this.Operator);

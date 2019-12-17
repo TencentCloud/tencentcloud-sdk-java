@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOperationResultResponse  extends AbstractModel{
+public class DescribeOperationResultResponse extends AbstractModel{
 
     /**
     * 任务的整体状态，取值如下：<br>
@@ -51,14 +51,14 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务的整体状态，取值如下：<br>
+     * Get 任务的整体状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
 3：部分成功，部分失败<br>
 4：未完成<br>
 5：部分成功，部分未完成<br>
 6：部分未完成，部分失败<br>
-7：部分未完成，部分失败，部分成功
+7：部分未完成，部分失败，部分成功 
      * @return TaskStatus 任务的整体状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
@@ -73,7 +73,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的整体状态，取值如下：<br>
+     * Set 任务的整体状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
 3：部分成功，部分失败<br>
@@ -95,7 +95,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各实例对应任务的状态ID
+     * Get 各实例对应任务的状态ID 
      * @return SubtaskStatusSet 各实例对应任务的状态ID
      */
     public SubtaskStatus [] getSubtaskStatusSet() {
@@ -103,7 +103,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各实例对应任务的状态ID
+     * Set 各实例对应任务的状态ID
      * @param SubtaskStatusSet 各实例对应任务的状态ID
      */
     public void setSubtaskStatusSet(SubtaskStatus [] SubtaskStatusSet) {
@@ -111,7 +111,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -119,7 +119,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -127,7 +127,7 @@ public class DescribeOperationResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);

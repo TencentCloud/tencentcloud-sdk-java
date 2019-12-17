@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Image  extends AbstractModel{
+public class Image extends AbstractModel{
 
     /**
     * 镜像ID
@@ -131,7 +131,7 @@ public class Image  extends AbstractModel{
     private Snapshot [] SnapshotSet;
 
     /**
-     * 获取镜像ID
+     * Get 镜像ID 
      * @return ImageId 镜像ID
      */
     public String getImageId() {
@@ -139,7 +139,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID
+     * Set 镜像ID
      * @param ImageId 镜像ID
      */
     public void setImageId(String ImageId) {
@@ -147,7 +147,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像操作系统
+     * Get 镜像操作系统 
      * @return OsName 镜像操作系统
      */
     public String getOsName() {
@@ -155,7 +155,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像操作系统
+     * Set 镜像操作系统
      * @param OsName 镜像操作系统
      */
     public void setOsName(String OsName) {
@@ -163,7 +163,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像类型
+     * Get 镜像类型 
      * @return ImageType 镜像类型
      */
     public String getImageType() {
@@ -171,7 +171,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像类型
+     * Set 镜像类型
      * @param ImageType 镜像类型
      */
     public void setImageType(String ImageType) {
@@ -179,7 +179,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像创建时间
+     * Get 镜像创建时间 
      * @return CreatedTime 镜像创建时间
      */
     public String getCreatedTime() {
@@ -187,7 +187,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像创建时间
+     * Set 镜像创建时间
      * @param CreatedTime 镜像创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -195,7 +195,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像名称
+     * Get 镜像名称 
      * @return ImageName 镜像名称
      */
     public String getImageName() {
@@ -203,7 +203,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像名称
+     * Set 镜像名称
      * @param ImageName 镜像名称
      */
     public void setImageName(String ImageName) {
@@ -211,7 +211,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像描述
+     * Get 镜像描述 
      * @return ImageDescription 镜像描述
      */
     public String getImageDescription() {
@@ -219,7 +219,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像描述
+     * Set 镜像描述
      * @param ImageDescription 镜像描述
      */
     public void setImageDescription(String ImageDescription) {
@@ -227,7 +227,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像大小
+     * Get 镜像大小 
      * @return ImageSize 镜像大小
      */
     public Integer getImageSize() {
@@ -235,7 +235,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像大小
+     * Set 镜像大小
      * @param ImageSize 镜像大小
      */
     public void setImageSize(Integer ImageSize) {
@@ -243,7 +243,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像架构
+     * Get 镜像架构 
      * @return Architecture 镜像架构
      */
     public String getArchitecture() {
@@ -251,7 +251,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像架构
+     * Set 镜像架构
      * @param Architecture 镜像架构
      */
     public void setArchitecture(String Architecture) {
@@ -259,7 +259,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像状态
+     * Get 镜像状态 
      * @return ImageState 镜像状态
      */
     public String getImageState() {
@@ -267,7 +267,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像状态
+     * Set 镜像状态
      * @param ImageState 镜像状态
      */
     public void setImageState(String ImageState) {
@@ -275,7 +275,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像来源平台
+     * Get 镜像来源平台 
      * @return Platform 镜像来源平台
      */
     public String getPlatform() {
@@ -283,7 +283,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像来源平台
+     * Set 镜像来源平台
      * @param Platform 镜像来源平台
      */
     public void setPlatform(String Platform) {
@@ -291,7 +291,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像创建者
+     * Get 镜像创建者 
      * @return ImageCreator 镜像创建者
      */
     public String getImageCreator() {
@@ -299,7 +299,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像创建者
+     * Set 镜像创建者
      * @param ImageCreator 镜像创建者
      */
     public void setImageCreator(String ImageCreator) {
@@ -307,7 +307,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像来源
+     * Get 镜像来源 
      * @return ImageSource 镜像来源
      */
     public String getImageSource() {
@@ -315,7 +315,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像来源
+     * Set 镜像来源
      * @param ImageSource 镜像来源
      */
     public void setImageSource(String ImageSource) {
@@ -323,8 +323,8 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取同步百分比
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 同步百分比
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,7 +333,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置同步百分比
+     * Set 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncPercent 同步百分比
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,8 +343,8 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像是否支持cloud-init
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像是否支持cloud-init
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsSupportCloudinit 镜像是否支持cloud-init
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,7 +353,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像是否支持cloud-init
+     * Set 镜像是否支持cloud-init
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportCloudinit 镜像是否支持cloud-init
 注意：此字段可能返回 null，表示取不到有效值。
@@ -363,8 +363,8 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 获取镜像关联的快照信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像关联的快照信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotSet 镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -373,7 +373,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 设置镜像关联的快照信息
+     * Set 镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotSet 镜像关联的快照信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,7 +383,7 @@ public class Image  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

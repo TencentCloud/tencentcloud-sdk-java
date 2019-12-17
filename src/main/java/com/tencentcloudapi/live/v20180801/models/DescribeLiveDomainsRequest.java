@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainsRequest  extends AbstractModel{
+public class DescribeLiveDomainsRequest extends AbstractModel{
 
     /**
     * 域名状态过滤。0-停用，1-启用
@@ -65,7 +65,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     private String DomainPrefix;
 
     /**
-     * 获取域名状态过滤。0-停用，1-启用
+     * Get 域名状态过滤。0-停用，1-启用 
      * @return DomainStatus 域名状态过滤。0-停用，1-启用
      */
     public Integer getDomainStatus() {
@@ -73,7 +73,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名状态过滤。0-停用，1-启用
+     * Set 域名状态过滤。0-停用，1-启用
      * @param DomainStatus 域名状态过滤。0-停用，1-启用
      */
     public void setDomainStatus(Integer DomainStatus) {
@@ -81,7 +81,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名类型过滤。0-推流，1-播放
+     * Get 域名类型过滤。0-推流，1-播放 
      * @return DomainType 域名类型过滤。0-推流，1-播放
      */
     public Integer getDomainType() {
@@ -89,7 +89,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名类型过滤。0-推流，1-播放
+     * Set 域名类型过滤。0-推流，1-播放
      * @param DomainType 域名类型过滤。0-推流，1-播放
      */
     public void setDomainType(Integer DomainType) {
@@ -97,7 +97,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，范围：10~100。默认10
+     * Get 分页大小，范围：10~100。默认10 
      * @return PageSize 分页大小，范围：10~100。默认10
      */
     public Integer getPageSize() {
@@ -105,7 +105,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，范围：10~100。默认10
+     * Set 分页大小，范围：10~100。默认10
      * @param PageSize 分页大小，范围：10~100。默认10
      */
     public void setPageSize(Integer PageSize) {
@@ -113,7 +113,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取取第几页，范围：1~100000。默认1
+     * Get 取第几页，范围：1~100000。默认1 
      * @return PageNum 取第几页，范围：1~100000。默认1
      */
     public Integer getPageNum() {
@@ -121,7 +121,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置取第几页，范围：1~100000。默认1
+     * Set 取第几页，范围：1~100000。默认1
      * @param PageNum 取第几页，范围：1~100000。默认1
      */
     public void setPageNum(Integer PageNum) {
@@ -129,7 +129,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0 普通直播 1慢直播 默认0
+     * Get 0 普通直播 1慢直播 默认0 
      * @return IsDelayLive 0 普通直播 1慢直播 默认0
      */
     public Integer getIsDelayLive() {
@@ -137,7 +137,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0 普通直播 1慢直播 默认0
+     * Set 0 普通直播 1慢直播 默认0
      * @param IsDelayLive 0 普通直播 1慢直播 默认0
      */
     public void setIsDelayLive(Integer IsDelayLive) {
@@ -145,7 +145,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名前缀
+     * Get 域名前缀 
      * @return DomainPrefix 域名前缀
      */
     public String getDomainPrefix() {
@@ -153,7 +153,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名前缀
+     * Set 域名前缀
      * @param DomainPrefix 域名前缀
      */
     public void setDomainPrefix(String DomainPrefix) {
@@ -161,7 +161,7 @@ public class DescribeLiveDomainsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);

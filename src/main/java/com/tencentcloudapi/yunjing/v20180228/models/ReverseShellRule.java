@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReverseShellRule  extends AbstractModel{
+public class ReverseShellRule extends AbstractModel{
 
     /**
     * 规则ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 客户端ID
@@ -69,14 +69,14 @@ public class ReverseShellRule  extends AbstractModel{
     */
     @SerializedName("IsGlobal")
     @Expose
-    private Integer IsGlobal;
+    private Long IsGlobal;
 
     /**
     * 状态 (0: 有效 1: 无效)
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 创建时间
@@ -100,23 +100,23 @@ public class ReverseShellRule  extends AbstractModel{
     private String Hostip;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return Id 规则ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param Id 规则ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取客户端ID
+     * Get 客户端ID 
      * @return Uuid 客户端ID
      */
     public String getUuid() {
@@ -124,7 +124,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置客户端ID
+     * Set 客户端ID
      * @param Uuid 客户端ID
      */
     public void setUuid(String Uuid) {
@@ -132,7 +132,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取进程名称
+     * Get 进程名称 
      * @return ProcessName 进程名称
      */
     public String getProcessName() {
@@ -140,7 +140,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置进程名称
+     * Set 进程名称
      * @param ProcessName 进程名称
      */
     public void setProcessName(String ProcessName) {
@@ -148,7 +148,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取目标IP
+     * Get 目标IP 
      * @return DestIp 目标IP
      */
     public String getDestIp() {
@@ -156,7 +156,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置目标IP
+     * Set 目标IP
      * @param DestIp 目标IP
      */
     public void setDestIp(String DestIp) {
@@ -164,7 +164,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口
+     * Get 目标端口 
      * @return DestPort 目标端口
      */
     public String getDestPort() {
@@ -172,7 +172,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口
+     * Set 目标端口
      * @param DestPort 目标端口
      */
     public void setDestPort(String DestPort) {
@@ -180,7 +180,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取操作人
+     * Get 操作人 
      * @return Operator 操作人
      */
     public String getOperator() {
@@ -188,7 +188,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置操作人
+     * Set 操作人
      * @param Operator 操作人
      */
     public void setOperator(String Operator) {
@@ -196,39 +196,39 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取是否全局规则
+     * Get 是否全局规则 
      * @return IsGlobal 是否全局规则
      */
-    public Integer getIsGlobal() {
+    public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * 设置是否全局规则
+     * Set 是否全局规则
      * @param IsGlobal 是否全局规则
      */
-    public void setIsGlobal(Integer IsGlobal) {
+    public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * 获取状态 (0: 有效 1: 无效)
+     * Get 状态 (0: 有效 1: 无效) 
      * @return Status 状态 (0: 有效 1: 无效)
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置状态 (0: 有效 1: 无效)
+     * Set 状态 (0: 有效 1: 无效)
      * @param Status 状态 (0: 有效 1: 无效)
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -236,7 +236,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -244,7 +244,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
@@ -252,7 +252,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -260,7 +260,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 获取主机IP
+     * Get 主机IP 
      * @return Hostip 主机IP
      */
     public String getHostip() {
@@ -268,7 +268,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP
+     * Set 主机IP
      * @param Hostip 主机IP
      */
     public void setHostip(String Hostip) {
@@ -276,7 +276,7 @@ public class ReverseShellRule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

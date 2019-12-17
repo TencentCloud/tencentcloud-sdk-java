@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksRequest  extends AbstractModel{
+public class DescribeTasksRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
@@ -99,7 +99,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public String getInstanceId() {
@@ -107,7 +107,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public void setInstanceId(String InstanceId) {
@@ -115,7 +115,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
+     * Get 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。 
      * @return AsyncRequestId 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
      */
     public String getAsyncRequestId() {
@@ -123,7 +123,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
+     * Set 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
      * @param AsyncRequestId 异步任务请求 ID，执行云数据库相关操作返回的 AsyncRequestId。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
@@ -131,7 +131,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，不传值则查询所有任务类型，支持的值包括：
+     * Get 任务类型，不传值则查询所有任务类型，支持的值包括：
 1 - 数据库回档；
 2 - SQL操作；
 3 - 数据导入；
@@ -143,7 +143,7 @@ public class DescribeTasksRequest  extends AbstractModel{
 10 - 数据库批量回档；
 11 - 主实例升级；
 12 - 删除云数据库库表；
-13 - 灾备实例提升为主。
+13 - 灾备实例提升为主。 
      * @return TaskTypes 任务类型，不传值则查询所有任务类型，支持的值包括：
 1 - 数据库回档；
 2 - SQL操作；
@@ -163,7 +163,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，不传值则查询所有任务类型，支持的值包括：
+     * Set 任务类型，不传值则查询所有任务类型，支持的值包括：
 1 - 数据库回档；
 2 - SQL操作；
 3 - 数据导入；
@@ -195,7 +195,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态，不传值则查询所有任务状态，支持的值包括：
+     * Get 任务状态，不传值则查询所有任务状态，支持的值包括：
 -1 - 未定义；
 0 - 初始化；
 1 - 运行中；
@@ -203,7 +203,7 @@ public class DescribeTasksRequest  extends AbstractModel{
 3 - 执行失败；
 4 - 已终止；
 5 - 已删除；
-6 - 已暂停。
+6 - 已暂停。 
      * @return TaskStatus 任务状态，不传值则查询所有任务状态，支持的值包括：
 -1 - 未定义；
 0 - 初始化；
@@ -219,7 +219,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，不传值则查询所有任务状态，支持的值包括：
+     * Set 任务状态，不传值则查询所有任务状态，支持的值包括：
 -1 - 未定义；
 0 - 初始化；
 1 - 运行中；
@@ -243,7 +243,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * Get 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。 
      * @return StartTimeBegin 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public String getStartTimeBegin() {
@@ -251,7 +251,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * Set 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      * @param StartTimeBegin 第一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public void setStartTimeBegin(String StartTimeBegin) {
@@ -259,7 +259,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * Get 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。 
      * @return StartTimeEnd 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public String getStartTimeEnd() {
@@ -267,7 +267,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
+     * Set 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      * @param StartTimeEnd 最后一个任务的开始时间，用于范围查询，时间格式如：2017-12-31 10:40:01。
      */
     public void setStartTimeEnd(String StartTimeEnd) {
@@ -275,7 +275,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量，默认值为0。
+     * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
     public Integer getOffset() {
@@ -283,7 +283,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录偏移量，默认值为0。
+     * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -291,7 +291,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20，最大值为100。
+     * Get 单次请求返回的数量，默认值为20，最大值为100。 
      * @return Limit 单次请求返回的数量，默认值为20，最大值为100。
      */
     public Integer getLimit() {
@@ -299,7 +299,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20，最大值为100。
+     * Set 单次请求返回的数量，默认值为20，最大值为100。
      * @param Limit 单次请求返回的数量，默认值为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -307,7 +307,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

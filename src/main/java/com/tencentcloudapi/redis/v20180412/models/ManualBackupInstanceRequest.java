@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManualBackupInstanceRequest  extends AbstractModel{
+public class ManualBackupInstanceRequest extends AbstractModel{
 
     /**
     * 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
@@ -37,7 +37,7 @@ public class ManualBackupInstanceRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+     * Get 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。 
      * @return InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ManualBackupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+     * Set 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      * @param InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ManualBackupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份的备注信息
+     * Get 备份的备注信息 
      * @return Remark 备份的备注信息
      */
     public String getRemark() {
@@ -61,7 +61,7 @@ public class ManualBackupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备份的备注信息
+     * Set 备份的备注信息
      * @param Remark 备份的备注信息
      */
     public void setRemark(String Remark) {
@@ -69,7 +69,7 @@ public class ManualBackupInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

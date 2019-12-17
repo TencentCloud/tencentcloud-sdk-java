@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpStatusInfo  extends AbstractModel{
+public class HttpStatusInfo extends AbstractModel{
 
     /**
     * 播放HTTP状态码。
@@ -37,7 +37,7 @@ public class HttpStatusInfo  extends AbstractModel{
     private Integer Num;
 
     /**
-     * 获取播放HTTP状态码。
+     * Get 播放HTTP状态码。 
      * @return HttpStatus 播放HTTP状态码。
      */
     public String getHttpStatus() {
@@ -45,7 +45,7 @@ public class HttpStatusInfo  extends AbstractModel{
     }
 
     /**
-     * 设置播放HTTP状态码。
+     * Set 播放HTTP状态码。
      * @param HttpStatus 播放HTTP状态码。
      */
     public void setHttpStatus(String HttpStatus) {
@@ -53,7 +53,7 @@ public class HttpStatusInfo  extends AbstractModel{
     }
 
     /**
-     * 获取个数。
+     * Get 个数。 
      * @return Num 个数。
      */
     public Integer getNum() {
@@ -61,7 +61,7 @@ public class HttpStatusInfo  extends AbstractModel{
     }
 
     /**
-     * 设置个数。
+     * Set 个数。
      * @param Num 个数。
      */
     public void setNum(Integer Num) {
@@ -69,7 +69,7 @@ public class HttpStatusInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HttpStatus", this.HttpStatus);

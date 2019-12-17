@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Conditions  extends AbstractModel{
+public class Conditions extends AbstractModel{
 
     /**
     * 原因
@@ -37,7 +37,7 @@ public class Conditions  extends AbstractModel{
     private Long Count;
 
     /**
-     * 获取原因
+     * Get 原因 
      * @return Reason 原因
      */
     public String getReason() {
@@ -45,7 +45,7 @@ public class Conditions  extends AbstractModel{
     }
 
     /**
-     * 设置原因
+     * Set 原因
      * @param Reason 原因
      */
     public void setReason(String Reason) {
@@ -53,7 +53,7 @@ public class Conditions  extends AbstractModel{
     }
 
     /**
-     * 获取具有相同原因的副本个数
+     * Get 具有相同原因的副本个数 
      * @return Count 具有相同原因的副本个数
      */
     public Long getCount() {
@@ -61,7 +61,7 @@ public class Conditions  extends AbstractModel{
     }
 
     /**
-     * 设置具有相同原因的副本个数
+     * Set 具有相同原因的副本个数
      * @param Count 具有相同原因的副本个数
      */
     public void setCount(Long Count) {
@@ -69,7 +69,7 @@ public class Conditions  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Reason", this.Reason);

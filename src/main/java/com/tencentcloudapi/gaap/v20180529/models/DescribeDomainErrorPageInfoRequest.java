@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
+public class DescribeDomainErrorPageInfoRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -37,7 +37,7 @@ public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
     private String Domain;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -45,7 +45,7 @@ public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -53,7 +53,7 @@ public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return Domain 域名
      */
     public String getDomain() {
@@ -61,7 +61,7 @@ public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param Domain 域名
      */
     public void setDomain(String Domain) {
@@ -69,7 +69,7 @@ public class DescribeDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

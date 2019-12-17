@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SwitchInstanceVipRequest  extends AbstractModel{
+public class SwitchInstanceVipRequest extends AbstractModel{
 
     /**
     * 源实例ID
@@ -58,7 +58,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     private String SwitchTime;
 
     /**
-     * 获取源实例ID
+     * Get 源实例ID 
      * @return SrcInstanceId 源实例ID
      */
     public String getSrcInstanceId() {
@@ -66,7 +66,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例ID
+     * Set 源实例ID
      * @param SrcInstanceId 源实例ID
      */
     public void setSrcInstanceId(String SrcInstanceId) {
@@ -74,7 +74,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例ID
+     * Get 目标实例ID 
      * @return DstInstanceId 目标实例ID
      */
     public String getDstInstanceId() {
@@ -82,7 +82,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例ID
+     * Set 目标实例ID
      * @param DstInstanceId 目标实例ID
      */
     public void setDstInstanceId(String DstInstanceId) {
@@ -90,7 +90,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * Get 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。 
      * @return TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
     public Integer getTimeDelay() {
@@ -98,7 +98,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * Set 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      * @param TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
     public void setTimeDelay(Integer TimeDelay) {
@@ -106,7 +106,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * Get 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换 
      * @return ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      */
     public Integer getForceSwitch() {
@@ -114,7 +114,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * Set 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      * @param ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
      */
     public void setForceSwitch(Integer ForceSwitch) {
@@ -122,7 +122,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取now: 立即切换，syncComplete：等待同步完成后切换
+     * Get now: 立即切换，syncComplete：等待同步完成后切换 
      * @return SwitchTime now: 立即切换，syncComplete：等待同步完成后切换
      */
     public String getSwitchTime() {
@@ -130,7 +130,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置now: 立即切换，syncComplete：等待同步完成后切换
+     * Set now: 立即切换，syncComplete：等待同步完成后切换
      * @param SwitchTime now: 立即切换，syncComplete：等待同步完成后切换
      */
     public void setSwitchTime(String SwitchTime) {
@@ -138,7 +138,7 @@ public class SwitchInstanceVipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SrcInstanceId", this.SrcInstanceId);

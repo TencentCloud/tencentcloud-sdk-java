@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHostedInterfacesRequest  extends AbstractModel{
+public class DeleteHostedInterfacesRequest extends AbstractModel{
 
     /**
     * 物理机ID
@@ -37,7 +37,7 @@ public class DeleteHostedInterfacesRequest  extends AbstractModel{
     private String [] SubnetIds;
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return InstanceId 物理机ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DeleteHostedInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param InstanceId 物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DeleteHostedInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return SubnetIds 物理机ID
      */
     public String [] getSubnetIds() {
@@ -61,7 +61,7 @@ public class DeleteHostedInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param SubnetIds 物理机ID
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -69,7 +69,7 @@ public class DeleteHostedInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

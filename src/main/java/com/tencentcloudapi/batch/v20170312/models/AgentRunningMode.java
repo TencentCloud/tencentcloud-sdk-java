@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentRunningMode  extends AbstractModel{
+public class AgentRunningMode extends AbstractModel{
 
     /**
     * 场景类型，支持WINDOWS
@@ -44,7 +44,7 @@ public class AgentRunningMode  extends AbstractModel{
     private String Session;
 
     /**
-     * 获取场景类型，支持WINDOWS
+     * Get 场景类型，支持WINDOWS 
      * @return Scene 场景类型，支持WINDOWS
      */
     public String getScene() {
@@ -52,7 +52,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 设置场景类型，支持WINDOWS
+     * Set 场景类型，支持WINDOWS
      * @param Scene 场景类型，支持WINDOWS
      */
     public void setScene(String Scene) {
@@ -60,7 +60,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 获取运行Agent的User
+     * Get 运行Agent的User 
      * @return User 运行Agent的User
      */
     public String getUser() {
@@ -68,7 +68,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 设置运行Agent的User
+     * Set 运行Agent的User
      * @param User 运行Agent的User
      */
     public void setUser(String User) {
@@ -76,7 +76,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 获取运行Agent的Session
+     * Get 运行Agent的Session 
      * @return Session 运行Agent的Session
      */
     public String getSession() {
@@ -84,7 +84,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 设置运行Agent的Session
+     * Set 运行Agent的Session
      * @param Session 运行Agent的Session
      */
     public void setSession(String Session) {
@@ -92,7 +92,7 @@ public class AgentRunningMode  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Scene", this.Scene);

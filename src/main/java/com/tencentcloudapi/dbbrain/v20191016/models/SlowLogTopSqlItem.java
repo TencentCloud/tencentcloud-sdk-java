@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlowLogTopSqlItem  extends AbstractModel{
+public class SlowLogTopSqlItem extends AbstractModel{
 
     /**
     * sql总锁等待时间
@@ -163,7 +163,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     private Float RowsSentRatio;
 
     /**
-     * 获取sql总锁等待时间
+     * Get sql总锁等待时间 
      * @return LockTime sql总锁等待时间
      */
     public Float getLockTime() {
@@ -171,7 +171,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置sql总锁等待时间
+     * Set sql总锁等待时间
      * @param LockTime sql总锁等待时间
      */
     public void setLockTime(Float LockTime) {
@@ -179,7 +179,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大锁等待时间
+     * Get 最大锁等待时间 
      * @return LockTimeMax 最大锁等待时间
      */
     public Float getLockTimeMax() {
@@ -187,7 +187,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大锁等待时间
+     * Set 最大锁等待时间
      * @param LockTimeMax 最大锁等待时间
      */
     public void setLockTimeMax(Float LockTimeMax) {
@@ -195,7 +195,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小锁等待时间
+     * Get 最小锁等待时间 
      * @return LockTimeMin 最小锁等待时间
      */
     public Float getLockTimeMin() {
@@ -203,7 +203,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小锁等待时间
+     * Set 最小锁等待时间
      * @param LockTimeMin 最小锁等待时间
      */
     public void setLockTimeMin(Float LockTimeMin) {
@@ -211,7 +211,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总扫描行数
+     * Get 总扫描行数 
      * @return RowsExamined 总扫描行数
      */
     public Long getRowsExamined() {
@@ -219,7 +219,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总扫描行数
+     * Set 总扫描行数
      * @param RowsExamined 总扫描行数
      */
     public void setRowsExamined(Long RowsExamined) {
@@ -227,7 +227,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大扫描行数
+     * Get 最大扫描行数 
      * @return RowsExaminedMax 最大扫描行数
      */
     public Long getRowsExaminedMax() {
@@ -235,7 +235,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大扫描行数
+     * Set 最大扫描行数
      * @param RowsExaminedMax 最大扫描行数
      */
     public void setRowsExaminedMax(Long RowsExaminedMax) {
@@ -243,7 +243,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小扫描行数
+     * Get 最小扫描行数 
      * @return RowsExaminedMin 最小扫描行数
      */
     public Long getRowsExaminedMin() {
@@ -251,7 +251,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小扫描行数
+     * Set 最小扫描行数
      * @param RowsExaminedMin 最小扫描行数
      */
     public void setRowsExaminedMin(Long RowsExaminedMin) {
@@ -259,7 +259,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总耗时
+     * Get 总耗时 
      * @return QueryTime 总耗时
      */
     public Float getQueryTime() {
@@ -267,7 +267,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总耗时
+     * Set 总耗时
      * @param QueryTime 总耗时
      */
     public void setQueryTime(Float QueryTime) {
@@ -275,7 +275,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大执行时间
+     * Get 最大执行时间 
      * @return QueryTimeMax 最大执行时间
      */
     public Float getQueryTimeMax() {
@@ -283,7 +283,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大执行时间
+     * Set 最大执行时间
      * @param QueryTimeMax 最大执行时间
      */
     public void setQueryTimeMax(Float QueryTimeMax) {
@@ -291,7 +291,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小执行时间
+     * Get 最小执行时间 
      * @return QueryTimeMin 最小执行时间
      */
     public Float getQueryTimeMin() {
@@ -299,7 +299,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小执行时间
+     * Set 最小执行时间
      * @param QueryTimeMin 最小执行时间
      */
     public void setQueryTimeMin(Float QueryTimeMin) {
@@ -307,7 +307,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总返回行数
+     * Get 总返回行数 
      * @return RowsSent 总返回行数
      */
     public Long getRowsSent() {
@@ -315,7 +315,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总返回行数
+     * Set 总返回行数
      * @param RowsSent 总返回行数
      */
     public void setRowsSent(Long RowsSent) {
@@ -323,7 +323,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大返回行数
+     * Get 最大返回行数 
      * @return RowsSentMax 最大返回行数
      */
     public Long getRowsSentMax() {
@@ -331,7 +331,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大返回行数
+     * Set 最大返回行数
      * @param RowsSentMax 最大返回行数
      */
     public void setRowsSentMax(Long RowsSentMax) {
@@ -339,7 +339,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小返回行数
+     * Get 最小返回行数 
      * @return RowsSentMin 最小返回行数
      */
     public Long getRowsSentMin() {
@@ -347,7 +347,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小返回行数
+     * Set 最小返回行数
      * @param RowsSentMin 最小返回行数
      */
     public void setRowsSentMin(Long RowsSentMin) {
@@ -355,7 +355,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取执行次数
+     * Get 执行次数 
      * @return ExecTimes 执行次数
      */
     public Long getExecTimes() {
@@ -363,7 +363,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置执行次数
+     * Set 执行次数
      * @param ExecTimes 执行次数
      */
     public void setExecTimes(Long ExecTimes) {
@@ -371,7 +371,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取sql模板
+     * Get sql模板 
      * @return SqlTemplate sql模板
      */
     public String getSqlTemplate() {
@@ -379,7 +379,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置sql模板
+     * Set sql模板
      * @param SqlTemplate sql模板
      */
     public void setSqlTemplate(String SqlTemplate) {
@@ -387,7 +387,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取带参数SQL（随机）
+     * Get 带参数SQL（随机） 
      * @return SqlText 带参数SQL（随机）
      */
     public String getSqlText() {
@@ -395,7 +395,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置带参数SQL（随机）
+     * Set 带参数SQL（随机）
      * @param SqlText 带参数SQL（随机）
      */
     public void setSqlText(String SqlText) {
@@ -403,7 +403,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取schema
+     * Get schema 
      * @return Schema schema
      */
     public String getSchema() {
@@ -411,7 +411,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置schema
+     * Set schema
      * @param Schema schema
      */
     public void setSchema(String Schema) {
@@ -419,7 +419,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总耗时占比
+     * Get 总耗时占比 
      * @return QueryTimeRatio 总耗时占比
      */
     public Float getQueryTimeRatio() {
@@ -427,7 +427,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总耗时占比
+     * Set 总耗时占比
      * @param QueryTimeRatio 总耗时占比
      */
     public void setQueryTimeRatio(Float QueryTimeRatio) {
@@ -435,7 +435,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取sql总锁等待时间占比
+     * Get sql总锁等待时间占比 
      * @return LockTimeRatio sql总锁等待时间占比
      */
     public Float getLockTimeRatio() {
@@ -443,7 +443,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置sql总锁等待时间占比
+     * Set sql总锁等待时间占比
      * @param LockTimeRatio sql总锁等待时间占比
      */
     public void setLockTimeRatio(Float LockTimeRatio) {
@@ -451,7 +451,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总扫描行数占比
+     * Get 总扫描行数占比 
      * @return RowsExaminedRatio 总扫描行数占比
      */
     public Float getRowsExaminedRatio() {
@@ -459,7 +459,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总扫描行数占比
+     * Set 总扫描行数占比
      * @param RowsExaminedRatio 总扫描行数占比
      */
     public void setRowsExaminedRatio(Float RowsExaminedRatio) {
@@ -467,7 +467,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 获取总返回行数占比
+     * Get 总返回行数占比 
      * @return RowsSentRatio 总返回行数占比
      */
     public Float getRowsSentRatio() {
@@ -475,7 +475,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 设置总返回行数占比
+     * Set 总返回行数占比
      * @param RowsSentRatio 总返回行数占比
      */
     public void setRowsSentRatio(Float RowsSentRatio) {
@@ -483,7 +483,7 @@ public class SlowLogTopSqlItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);

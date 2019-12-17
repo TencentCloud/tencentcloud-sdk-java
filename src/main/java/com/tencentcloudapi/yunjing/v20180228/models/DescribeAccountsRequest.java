@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsRequest  extends AbstractModel{
+public class DescribeAccountsRequest extends AbstractModel{
 
     /**
     * 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
@@ -41,14 +41,14 @@ public class DescribeAccountsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 过滤条件。
@@ -61,7 +61,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
+     * Get 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。 
      * @return Uuid 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
      */
     public String getUuid() {
@@ -69,7 +69,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
+     * Set 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
      * @param Uuid 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
      */
     public void setUuid(String Uuid) {
@@ -77,7 +77,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
+     * Get 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。 
      * @return Username 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
      */
     public String getUsername() {
@@ -85,7 +85,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
+     * Set 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
      * @param Username 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
      */
     public void setUsername(String Username) {
@@ -93,42 +93,42 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为10，最大值为100。
+     * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为10，最大值为100。
+     * Set 返回数量，默认为10，最大值为100。
      * @param Limit 返回数量，默认为10，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li>Username - String - 是否必填：否 - 帐号名</li>
 <li>Privilege - String - 是否必填：否 - 帐号类型（ORDINARY: 普通帐号 | SUPPER: 超级管理员帐号）</li>
-<li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
+<li>MachineIp - String - 是否必填：否 - 主机内网IP</li> 
      * @return Filters 过滤条件。
 <li>Username - String - 是否必填：否 - 帐号名</li>
 <li>Privilege - String - 是否必填：否 - 帐号类型（ORDINARY: 普通帐号 | SUPPER: 超级管理员帐号）</li>
@@ -139,7 +139,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li>Username - String - 是否必填：否 - 帐号名</li>
 <li>Privilege - String - 是否必填：否 - 帐号类型（ORDINARY: 普通帐号 | SUPPER: 超级管理员帐号）</li>
 <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
@@ -153,7 +153,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

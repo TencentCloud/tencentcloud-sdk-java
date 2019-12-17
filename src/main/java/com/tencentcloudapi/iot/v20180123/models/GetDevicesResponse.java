@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDevicesResponse  extends AbstractModel{
+public class GetDevicesResponse extends AbstractModel{
 
     /**
     * 设备列表
@@ -44,7 +44,7 @@ public class GetDevicesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设备列表
+     * Get 设备列表 
      * @return Devices 设备列表
      */
     public DeviceEntry [] getDevices() {
@@ -52,7 +52,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备列表
+     * Set 设备列表
      * @param Devices 设备列表
      */
     public void setDevices(DeviceEntry [] Devices) {
@@ -60,7 +60,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备总数
+     * Get 设备总数 
      * @return Total 设备总数
      */
     public Integer getTotal() {
@@ -68,7 +68,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备总数
+     * Set 设备总数
      * @param Total 设备总数
      */
     public void setTotal(Integer Total) {
@@ -76,7 +76,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class GetDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);

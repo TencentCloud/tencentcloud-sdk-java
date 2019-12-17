@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7Listener  extends AbstractModel{
+public class L7Listener extends AbstractModel{
 
     /**
     * 七层监听器实例ID。
@@ -107,7 +107,7 @@ public class L7Listener  extends AbstractModel{
     private Integer ForwardProtocol;
 
     /**
-     * 获取七层监听器实例ID。
+     * Get 七层监听器实例ID。 
      * @return ListenerId 七层监听器实例ID。
      */
     public String getListenerId() {
@@ -115,7 +115,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID。
+     * Set 七层监听器实例ID。
      * @param ListenerId 七层监听器实例ID。
      */
     public void setListenerId(String ListenerId) {
@@ -123,7 +123,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器名称。
+     * Get 七层监听器名称。 
      * @return ListenerName 七层监听器名称。
      */
     public String getListenerName() {
@@ -131,7 +131,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器名称。
+     * Set 七层监听器名称。
      * @param ListenerName 七层监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -139,7 +139,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器协议类型，可选值：http,https。
+     * Get 七层监听器协议类型，可选值：http,https。 
      * @return Protocol 七层监听器协议类型，可选值：http,https。
      */
     public String getProtocol() {
@@ -147,7 +147,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器协议类型，可选值：http,https。
+     * Set 七层监听器协议类型，可选值：http,https。
      * @param Protocol 七层监听器协议类型，可选值：http,https。
      */
     public void setProtocol(String Protocol) {
@@ -155,7 +155,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器的监听端口。
+     * Get 七层监听器的监听端口。 
      * @return LoadBalancerPort 七层监听器的监听端口。
      */
     public Integer getLoadBalancerPort() {
@@ -163,7 +163,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器的监听端口。
+     * Set 七层监听器的监听端口。
      * @param LoadBalancerPort 七层监听器的监听端口。
      */
     public void setLoadBalancerPort(Integer LoadBalancerPort) {
@@ -171,7 +171,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
+     * Get 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
     public Integer getBandwidth() {
@@ -179,7 +179,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
+     * Set 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -187,7 +187,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
+     * Get 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。 
      * @return ListenerType 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      */
     public String getListenerType() {
@@ -195,7 +195,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
+     * Set 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      * @param ListenerType 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      */
     public void setListenerType(String ListenerType) {
@@ -203,7 +203,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Get 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public Integer getSslMode() {
@@ -211,7 +211,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Set 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 七层监听器的认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public void setSslMode(Integer SslMode) {
@@ -219,7 +219,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器关联的服务端证书ID。
+     * Get 七层监听器关联的服务端证书ID。 
      * @return CertId 七层监听器关联的服务端证书ID。
      */
     public String getCertId() {
@@ -227,7 +227,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器关联的服务端证书ID。
+     * Set 七层监听器关联的服务端证书ID。
      * @param CertId 七层监听器关联的服务端证书ID。
      */
     public void setCertId(String CertId) {
@@ -235,7 +235,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器关联的客户端证书ID。
+     * Get 七层监听器关联的客户端证书ID。 
      * @return CertCaId 七层监听器关联的客户端证书ID。
      */
     public String getCertCaId() {
@@ -243,7 +243,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器关联的客户端证书ID。
+     * Set 七层监听器关联的客户端证书ID。
      * @param CertCaId 七层监听器关联的客户端证书ID。
      */
     public void setCertCaId(String CertCaId) {
@@ -251,7 +251,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public Integer getStatus() {
@@ -259,7 +259,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public void setStatus(Integer Status) {
@@ -267,7 +267,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间戳。
+     * Get 创建时间戳。 
      * @return AddTimestamp 创建时间戳。
      */
     public String getAddTimestamp() {
@@ -275,7 +275,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳。
+     * Set 创建时间戳。
      * @param AddTimestamp 创建时间戳。
      */
     public void setAddTimestamp(String AddTimestamp) {
@@ -283,7 +283,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * Get https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。 
      * @return ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      */
     public Integer getForwardProtocol() {
@@ -291,7 +291,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
+     * Set https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      * @param ForwardProtocol https转发类型。0：关闭。1：spdy。2：http2。3：spdy+http2。
      */
     public void setForwardProtocol(Integer ForwardProtocol) {
@@ -299,7 +299,7 @@ public class L7Listener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

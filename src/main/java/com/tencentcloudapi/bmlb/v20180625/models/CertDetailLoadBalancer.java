@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CertDetailLoadBalancer  extends AbstractModel{
+public class CertDetailLoadBalancer extends AbstractModel{
 
     /**
     * 黑石负载均衡实例ID。
@@ -51,7 +51,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     private Integer RegionId;
 
     /**
-     * 获取黑石负载均衡实例ID。
+     * Get 黑石负载均衡实例ID。 
      * @return LoadBalancerId 黑石负载均衡实例ID。
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置黑石负载均衡实例ID。
+     * Set 黑石负载均衡实例ID。
      * @param LoadBalancerId 黑石负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取黑石负载均衡实例名称。
+     * Get 黑石负载均衡实例名称。 
      * @return LoadBalancerName 黑石负载均衡实例名称。
      */
     public String getLoadBalancerName() {
@@ -75,7 +75,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置黑石负载均衡实例名称。
+     * Set 黑石负载均衡实例名称。
      * @param LoadBalancerName 黑石负载均衡实例名称。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -83,7 +83,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取该黑石负载均衡所在的VpcId。
+     * Get 该黑石负载均衡所在的VpcId。 
      * @return VpcId 该黑石负载均衡所在的VpcId。
      */
     public String getVpcId() {
@@ -91,7 +91,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置该黑石负载均衡所在的VpcId。
+     * Set 该黑石负载均衡所在的VpcId。
      * @param VpcId 该黑石负载均衡所在的VpcId。
      */
     public void setVpcId(String VpcId) {
@@ -99,7 +99,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取该黑石负载均衡所在的regionId。
+     * Get 该黑石负载均衡所在的regionId。 
      * @return RegionId 该黑石负载均衡所在的regionId。
      */
     public Integer getRegionId() {
@@ -107,7 +107,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置该黑石负载均衡所在的regionId。
+     * Set 该黑石负载均衡所在的regionId。
      * @param RegionId 该黑石负载均衡所在的regionId。
      */
     public void setRegionId(Integer RegionId) {
@@ -115,7 +115,7 @@ public class CertDetailLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,56 +20,56 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenPortStatistics  extends AbstractModel{
+public class OpenPortStatistics extends AbstractModel{
 
     /**
     * 端口号
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 主机数量
     */
     @SerializedName("MachineNum")
     @Expose
-    private Integer MachineNum;
+    private Long MachineNum;
 
     /**
-     * 获取端口号
+     * Get 端口号 
      * @return Port 端口号
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
     /**
-     * 设置端口号
+     * Set 端口号
      * @param Port 端口号
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取主机数量
+     * Get 主机数量 
      * @return MachineNum 主机数量
      */
-    public Integer getMachineNum() {
+    public Long getMachineNum() {
         return this.MachineNum;
     }
 
     /**
-     * 设置主机数量
+     * Set 主机数量
      * @param MachineNum 主机数量
      */
-    public void setMachineNum(Integer MachineNum) {
+    public void setMachineNum(Long MachineNum) {
         this.MachineNum = MachineNum;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

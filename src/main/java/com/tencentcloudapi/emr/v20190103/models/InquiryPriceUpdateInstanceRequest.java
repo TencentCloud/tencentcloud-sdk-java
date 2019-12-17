@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
+public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
 
     /**
     * 时间单位。s:按量用例单位。m:包年包月用例单位
@@ -65,7 +65,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     private String Currency;
 
     /**
-     * 获取时间单位。s:按量用例单位。m:包年包月用例单位
+     * Get 时间单位。s:按量用例单位。m:包年包月用例单位 
      * @return TimeUnit 时间单位。s:按量用例单位。m:包年包月用例单位
      */
     public String getTimeUnit() {
@@ -73,7 +73,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位。s:按量用例单位。m:包年包月用例单位
+     * Set 时间单位。s:按量用例单位。m:包年包月用例单位
      * @param TimeUnit 时间单位。s:按量用例单位。m:包年包月用例单位
      */
     public void setTimeUnit(String TimeUnit) {
@@ -81,7 +81,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间长度。按量用例长度为3600。
+     * Get 时间长度。按量用例长度为3600。 
      * @return TimeSpan 时间长度。按量用例长度为3600。
      */
     public Integer getTimeSpan() {
@@ -89,7 +89,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间长度。按量用例长度为3600。
+     * Set 时间长度。按量用例长度为3600。
      * @param TimeSpan 时间长度。按量用例长度为3600。
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -97,7 +97,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取变配参数
+     * Get 变配参数 
      * @return UpdateSpec 变配参数
      */
     public UpdateInstanceSettings getUpdateSpec() {
@@ -105,7 +105,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置变配参数
+     * Set 变配参数
      * @param UpdateSpec 变配参数
      */
     public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
@@ -113,7 +113,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费类型
+     * Get 计费类型 
      * @return PayMode 计费类型
      */
     public Integer getPayMode() {
@@ -121,7 +121,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费类型
+     * Set 计费类型
      * @param PayMode 计费类型
      */
     public void setPayMode(Integer PayMode) {
@@ -129,7 +129,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -137,7 +137,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -145,7 +145,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取货币种类
+     * Get 货币种类 
      * @return Currency 货币种类
      */
     public String getCurrency() {
@@ -153,7 +153,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置货币种类
+     * Set 货币种类
      * @param Currency 货币种类
      */
     public void setCurrency(String Currency) {
@@ -161,7 +161,7 @@ public class InquiryPriceUpdateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);

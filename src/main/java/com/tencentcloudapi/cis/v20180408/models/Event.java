@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Event  extends AbstractModel{
+public class Event extends AbstractModel{
 
     /**
     * 事件首次出现时间
@@ -65,7 +65,7 @@ public class Event  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取事件首次出现时间
+     * Get 事件首次出现时间 
      * @return FirstSeen 事件首次出现时间
      */
     public String getFirstSeen() {
@@ -73,7 +73,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件首次出现时间
+     * Set 事件首次出现时间
      * @param FirstSeen 事件首次出现时间
      */
     public void setFirstSeen(String FirstSeen) {
@@ -81,7 +81,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件上次出现时间
+     * Get 事件上次出现时间 
      * @return LastSeen 事件上次出现时间
      */
     public String getLastSeen() {
@@ -89,7 +89,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件上次出现时间
+     * Set 事件上次出现时间
      * @param LastSeen 事件上次出现时间
      */
     public void setLastSeen(String LastSeen) {
@@ -97,7 +97,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件等级
+     * Get 事件等级 
      * @return Level 事件等级
      */
     public String getLevel() {
@@ -105,7 +105,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件等级
+     * Set 事件等级
      * @param Level 事件等级
      */
     public void setLevel(String Level) {
@@ -113,7 +113,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件出现次数
+     * Get 事件出现次数 
      * @return Count 事件出现次数
      */
     public String getCount() {
@@ -121,7 +121,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件出现次数
+     * Set 事件出现次数
      * @param Count 事件出现次数
      */
     public void setCount(String Count) {
@@ -129,7 +129,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件出现原因
+     * Get 事件出现原因 
      * @return Reason 事件出现原因
      */
     public String getReason() {
@@ -137,7 +137,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件出现原因
+     * Set 事件出现原因
      * @param Reason 事件出现原因
      */
     public void setReason(String Reason) {
@@ -145,7 +145,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件消息
+     * Get 事件消息 
      * @return Message 事件消息
      */
     public String getMessage() {
@@ -153,7 +153,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件消息
+     * Set 事件消息
      * @param Message 事件消息
      */
     public void setMessage(String Message) {
@@ -161,7 +161,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FirstSeen", this.FirstSeen);

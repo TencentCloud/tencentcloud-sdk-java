@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDownloadInfoRequest  extends AbstractModel{
+public class DescribeDownloadInfoRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -37,7 +37,7 @@ public class DescribeDownloadInfoRequest  extends AbstractModel{
     private String PkgId;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class DescribeDownloadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class DescribeDownloadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包ID
+     * Get 程序包ID 
      * @return PkgId 程序包ID
      */
     public String getPkgId() {
@@ -61,7 +61,7 @@ public class DescribeDownloadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
      * @param PkgId 程序包ID
      */
     public void setPkgId(String PkgId) {
@@ -69,7 +69,7 @@ public class DescribeDownloadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

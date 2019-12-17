@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachEntityOfPolicy  extends AbstractModel{
+public class AttachEntityOfPolicy extends AbstractModel{
 
     /**
     * 实体ID
@@ -53,7 +53,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     private Long RelatedType;
 
     /**
-     * 获取实体ID
+     * Get 实体ID 
      * @return Id 实体ID
      */
     public String getId() {
@@ -61,7 +61,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置实体ID
+     * Set 实体ID
      * @param Id 实体ID
      */
     public void setId(String Id) {
@@ -69,8 +69,8 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取实体名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实体名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 实体名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -79,7 +79,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置实体名称
+     * Set 实体名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 实体名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,8 +89,8 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实体Uin
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uin 实体Uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -99,7 +99,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置实体Uin
+     * Set 实体Uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 实体Uin
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,7 +109,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取关联类型。1 用户关联 ； 2 用户组关联
+     * Get 关联类型。1 用户关联 ； 2 用户组关联 
      * @return RelatedType 关联类型。1 用户关联 ； 2 用户组关联
      */
     public Long getRelatedType() {
@@ -117,7 +117,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置关联类型。1 用户关联 ； 2 用户组关联
+     * Set 关联类型。1 用户关联 ； 2 用户组关联
      * @param RelatedType 关联类型。1 用户关联 ； 2 用户组关联
      */
     public void setRelatedType(Long RelatedType) {
@@ -125,7 +125,7 @@ public class AttachEntityOfPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

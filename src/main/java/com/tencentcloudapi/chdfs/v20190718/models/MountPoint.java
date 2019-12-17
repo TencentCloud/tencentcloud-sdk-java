@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MountPoint  extends AbstractModel{
+public class MountPoint extends AbstractModel{
 
     /**
     * 挂载点ID
@@ -79,7 +79,7 @@ public class MountPoint  extends AbstractModel{
     private Long VpcType;
 
     /**
-     * 获取挂载点ID
+     * Get 挂载点ID 
      * @return MountPointId 挂载点ID
      */
     public String getMountPointId() {
@@ -87,7 +87,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点ID
+     * Set 挂载点ID
      * @param MountPointId 挂载点ID
      */
     public void setMountPointId(String MountPointId) {
@@ -95,7 +95,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点名称
+     * Get 挂载点名称 
      * @return MountPointName 挂载点名称
      */
     public String getMountPointName() {
@@ -103,7 +103,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点名称
+     * Set 挂载点名称
      * @param MountPointName 挂载点名称
      */
     public void setMountPointName(String MountPointName) {
@@ -111,7 +111,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -119,7 +119,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -127,7 +127,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -135,7 +135,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -143,7 +143,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取VPC网络ID
+     * Get VPC网络ID 
      * @return VpcId VPC网络ID
      */
     public String getVpcId() {
@@ -151,7 +151,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置VPC网络ID
+     * Set VPC网络ID
      * @param VpcId VPC网络ID
      */
     public void setVpcId(String VpcId) {
@@ -159,7 +159,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点状态（1：打开；2：关闭）
+     * Get 挂载点状态（1：打开；2：关闭） 
      * @return Status 挂载点状态（1：打开；2：关闭）
      */
     public Long getStatus() {
@@ -167,7 +167,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点状态（1：打开；2：关闭）
+     * Set 挂载点状态（1：打开；2：关闭）
      * @param Status 挂载点状态（1：打开；2：关闭）
      */
     public void setStatus(Long Status) {
@@ -175,7 +175,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -183,7 +183,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -191,7 +191,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 获取VPC网络类型
+     * Get VPC网络类型 
      * @return VpcType VPC网络类型
      */
     public Long getVpcType() {
@@ -199,7 +199,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 设置VPC网络类型
+     * Set VPC网络类型
      * @param VpcType VPC网络类型
      */
     public void setVpcType(Long VpcType) {
@@ -207,7 +207,7 @@ public class MountPoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MountPointId", this.MountPointId);

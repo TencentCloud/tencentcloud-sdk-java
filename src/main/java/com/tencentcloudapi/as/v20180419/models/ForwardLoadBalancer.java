@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ForwardLoadBalancer  extends AbstractModel{
+public class ForwardLoadBalancer extends AbstractModel{
 
     /**
     * 负载均衡器ID
@@ -51,7 +51,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     private String LocationId;
 
     /**
-     * 获取负载均衡器ID
+     * Get 负载均衡器ID 
      * @return LoadBalancerId 负载均衡器ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡器ID
+     * Set 负载均衡器ID
      * @param LoadBalancerId 负载均衡器ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取应用型负载均衡监听器 ID
+     * Get 应用型负载均衡监听器 ID 
      * @return ListenerId 应用型负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -75,7 +75,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置应用型负载均衡监听器 ID
+     * Set 应用型负载均衡监听器 ID
      * @param ListenerId 应用型负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -83,7 +83,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取目标规则属性列表
+     * Get 目标规则属性列表 
      * @return TargetAttributes 目标规则属性列表
      */
     public TargetAttribute [] getTargetAttributes() {
@@ -91,7 +91,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置目标规则属性列表
+     * Set 目标规则属性列表
      * @param TargetAttributes 目标规则属性列表
      */
     public void setTargetAttributes(TargetAttribute [] TargetAttributes) {
@@ -99,7 +99,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则ID，注意：针对七层监听器此参数必填
+     * Get 转发规则ID，注意：针对七层监听器此参数必填 
      * @return LocationId 转发规则ID，注意：针对七层监听器此参数必填
      */
     public String getLocationId() {
@@ -107,7 +107,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则ID，注意：针对七层监听器此参数必填
+     * Set 转发规则ID，注意：针对七层监听器此参数必填
      * @param LocationId 转发规则ID，注意：针对七层监听器此参数必填
      */
     public void setLocationId(String LocationId) {
@@ -115,7 +115,7 @@ public class ForwardLoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

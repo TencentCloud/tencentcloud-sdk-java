@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnimatedGraphicTaskInput  extends AbstractModel{
+public class AnimatedGraphicTaskInput extends AbstractModel{
 
     /**
     * 视频转动图模板 ID。
@@ -59,7 +59,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     private String OutputObjectPath;
 
     /**
-     * 获取视频转动图模板 ID。
+     * Get 视频转动图模板 ID。 
      * @return Definition 视频转动图模板 ID。
      */
     public Long getDefinition() {
@@ -67,7 +67,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转动图模板 ID。
+     * Set 视频转动图模板 ID。
      * @param Definition 视频转动图模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -75,7 +75,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的开始时间，单位为秒。
+     * Get 动图在视频中的开始时间，单位为秒。 
      * @return StartTimeOffset 动图在视频中的开始时间，单位为秒。
      */
     public Float getStartTimeOffset() {
@@ -83,7 +83,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的开始时间，单位为秒。
+     * Set 动图在视频中的开始时间，单位为秒。
      * @param StartTimeOffset 动图在视频中的开始时间，单位为秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -91,7 +91,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的结束时间，单位为秒。
+     * Get 动图在视频中的结束时间，单位为秒。 
      * @return EndTimeOffset 动图在视频中的结束时间，单位为秒。
      */
     public Float getEndTimeOffset() {
@@ -99,7 +99,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的结束时间，单位为秒。
+     * Set 动图在视频中的结束时间，单位为秒。
      * @param EndTimeOffset 动图在视频中的结束时间，单位为秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -107,8 +107,8 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 转动图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,7 +127,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * Get 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。 
      * @return OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      */
     public String getOutputObjectPath() {
@@ -135,7 +135,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
+     * Set 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      * @param OutputObjectPath 转动图后文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_animatedGraphic_{definition}.{format}`。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
@@ -143,7 +143,7 @@ public class AnimatedGraphicTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

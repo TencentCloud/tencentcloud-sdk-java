@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Word  extends AbstractModel{
+public class Word extends AbstractModel{
 
     /**
     * 当前词的置信度
@@ -58,7 +58,7 @@ public class Word  extends AbstractModel{
     private Long Wsize;
 
     /**
-     * 获取当前词的置信度
+     * Get 当前词的置信度 
      * @return Confidence 当前词的置信度
      */
     public Float getConfidence() {
@@ -66,7 +66,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 设置当前词的置信度
+     * Set 当前词的置信度
      * @param Confidence 当前词的置信度
      */
     public void setConfidence(Float Confidence) {
@@ -74,7 +74,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 获取当前单词语音的起始时间点，单位为ms
+     * Get 当前单词语音的起始时间点，单位为ms 
      * @return Mbtm 当前单词语音的起始时间点，单位为ms
      */
     public Long getMbtm() {
@@ -82,7 +82,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 设置当前单词语音的起始时间点，单位为ms
+     * Set 当前单词语音的起始时间点，单位为ms
      * @param Mbtm 当前单词语音的起始时间点，单位为ms
      */
     public void setMbtm(Long Mbtm) {
@@ -90,7 +90,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 获取当前单词语音的终止时间点，单位为ms
+     * Get 当前单词语音的终止时间点，单位为ms 
      * @return Metm 当前单词语音的终止时间点，单位为ms
      */
     public Long getMetm() {
@@ -98,7 +98,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 设置当前单词语音的终止时间点，单位为ms
+     * Set 当前单词语音的终止时间点，单位为ms
      * @param Metm 当前单词语音的终止时间点，单位为ms
      */
     public void setMetm(Long Metm) {
@@ -106,7 +106,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 获取当前词
+     * Get 当前词 
      * @return Text 当前词
      */
     public String getText() {
@@ -114,7 +114,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 设置当前词
+     * Set 当前词
      * @param Text 当前词
      */
     public void setText(String Text) {
@@ -122,7 +122,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 获取当前词的字节数
+     * Get 当前词的字节数 
      * @return Wsize 当前词的字节数
      */
     public Long getWsize() {
@@ -130,7 +130,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 设置当前词的字节数
+     * Set 当前词的字节数
      * @param Wsize 当前词的字节数
      */
     public void setWsize(Long Wsize) {
@@ -138,7 +138,7 @@ public class Word  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

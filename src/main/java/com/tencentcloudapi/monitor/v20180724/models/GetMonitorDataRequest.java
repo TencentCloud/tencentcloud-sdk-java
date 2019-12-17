@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetMonitorDataRequest  extends AbstractModel{
+public class GetMonitorDataRequest extends AbstractModel{
 
     /**
     * 命名空间，每个云产品会有一个命名空间
@@ -65,7 +65,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取命名空间，每个云产品会有一个命名空间
+     * Get 命名空间，每个云产品会有一个命名空间 
      * @return Namespace 命名空间，每个云产品会有一个命名空间
      */
     public String getNamespace() {
@@ -73,7 +73,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间，每个云产品会有一个命名空间
+     * Set 命名空间，每个云产品会有一个命名空间
      * @param Namespace 命名空间，每个云产品会有一个命名空间
      */
     public void setNamespace(String Namespace) {
@@ -81,7 +81,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+     * Get 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档 
      * @return MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
      */
     public String getMetricName() {
@@ -89,7 +89,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
+     * Set 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
      * @param MetricName 指标名称，各个云产品的详细指标说明请参阅各个产品[监控接口](https://cloud.tencent.com/document/product/248/30384)文档
      */
     public void setMetricName(String MetricName) {
@@ -97,7 +97,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例对象的维度组合
+     * Get 实例对象的维度组合 
      * @return Instances 实例对象的维度组合
      */
     public Instance [] getInstances() {
@@ -105,7 +105,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例对象的维度组合
+     * Set 实例对象的维度组合
      * @param Instances 实例对象的维度组合
      */
     public void setInstances(Instance [] Instances) {
@@ -113,7 +113,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监控统计周期。默认为取值为300，单位为s
+     * Get 监控统计周期。默认为取值为300，单位为s 
      * @return Period 监控统计周期。默认为取值为300，单位为s
      */
     public Integer getPeriod() {
@@ -121,7 +121,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监控统计周期。默认为取值为300，单位为s
+     * Set 监控统计周期。默认为取值为300，单位为s
      * @param Period 监控统计周期。默认为取值为300，单位为s
      */
     public void setPeriod(Integer Period) {
@@ -129,7 +129,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间，如2018-09-22T19:51:23+08:00
+     * Get 起始时间，如2018-09-22T19:51:23+08:00 
      * @return StartTime 起始时间，如2018-09-22T19:51:23+08:00
      */
     public String getStartTime() {
@@ -137,7 +137,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间，如2018-09-22T19:51:23+08:00
+     * Set 起始时间，如2018-09-22T19:51:23+08:00
      * @param StartTime 起始时间，如2018-09-22T19:51:23+08:00
      */
     public void setStartTime(String StartTime) {
@@ -145,7 +145,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，默认为当前时间。 EndTime不能小于StartTime
+     * Get 结束时间，默认为当前时间。 EndTime不能小于StartTime 
      * @return EndTime 结束时间，默认为当前时间。 EndTime不能小于StartTime
      */
     public String getEndTime() {
@@ -153,7 +153,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，默认为当前时间。 EndTime不能小于StartTime
+     * Set 结束时间，默认为当前时间。 EndTime不能小于StartTime
      * @param EndTime 结束时间，默认为当前时间。 EndTime不能小于StartTime
      */
     public void setEndTime(String EndTime) {
@@ -161,7 +161,7 @@ public class GetMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);

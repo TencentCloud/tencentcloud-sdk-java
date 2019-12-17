@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteParamTemplateRequest  extends AbstractModel{
+public class DeleteParamTemplateRequest extends AbstractModel{
 
     /**
     * 参数模板ID。
@@ -30,7 +30,7 @@ public class DeleteParamTemplateRequest  extends AbstractModel{
     private Integer TemplateId;
 
     /**
-     * 获取参数模板ID。
+     * Get 参数模板ID。 
      * @return TemplateId 参数模板ID。
      */
     public Integer getTemplateId() {
@@ -38,7 +38,7 @@ public class DeleteParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板ID。
+     * Set 参数模板ID。
      * @param TemplateId 参数模板ID。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -46,7 +46,7 @@ public class DeleteParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

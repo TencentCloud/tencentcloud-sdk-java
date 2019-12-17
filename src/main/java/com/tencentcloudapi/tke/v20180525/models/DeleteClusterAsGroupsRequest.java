@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClusterAsGroupsRequest  extends AbstractModel{
+public class DeleteClusterAsGroupsRequest extends AbstractModel{
 
     /**
     * 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
@@ -44,7 +44,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     private Boolean KeepInstance;
 
     /**
-     * 获取集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
+     * Get 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。 
      * @return ClusterId 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
      */
     public String getClusterId() {
@@ -52,7 +52,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
+     * Set 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
      * @param ClusterId 集群ID，通过[DescribeClusters](https://cloud.tencent.com/document/api/457/31862)接口获取。
      */
     public void setClusterId(String ClusterId) {
@@ -60,7 +60,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群伸缩组ID的列表
+     * Get 集群伸缩组ID的列表 
      * @return AutoScalingGroupIds 集群伸缩组ID的列表
      */
     public String [] getAutoScalingGroupIds() {
@@ -68,7 +68,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群伸缩组ID的列表
+     * Set 集群伸缩组ID的列表
      * @param AutoScalingGroupIds 集群伸缩组ID的列表
      */
     public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
@@ -76,7 +76,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否保留伸缩组中的节点(默认值： false(不保留))
+     * Get 是否保留伸缩组中的节点(默认值： false(不保留)) 
      * @return KeepInstance 是否保留伸缩组中的节点(默认值： false(不保留))
      */
     public Boolean getKeepInstance() {
@@ -84,7 +84,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否保留伸缩组中的节点(默认值： false(不保留))
+     * Set 是否保留伸缩组中的节点(默认值： false(不保留))
      * @param KeepInstance 是否保留伸缩组中的节点(默认值： false(不保留))
      */
     public void setKeepInstance(Boolean KeepInstance) {
@@ -92,7 +92,7 @@ public class DeleteClusterAsGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

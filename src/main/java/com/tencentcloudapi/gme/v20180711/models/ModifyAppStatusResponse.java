@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAppStatusResponse  extends AbstractModel{
+public class ModifyAppStatusResponse extends AbstractModel{
 
     /**
     * GME应用ID
@@ -37,7 +37,7 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取GME应用ID
+     * Get GME应用ID 
      * @return BizId GME应用ID
      */
     public Long getBizId() {
@@ -45,7 +45,7 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置GME应用ID
+     * Set GME应用ID
      * @param BizId GME应用ID
      */
     public void setBizId(Long BizId) {
@@ -53,7 +53,7 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取应用状态，取值：open/close
+     * Get 应用状态，取值：open/close 
      * @return Status 应用状态，取值：open/close
      */
     public String getStatus() {
@@ -61,7 +61,7 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置应用状态，取值：open/close
+     * Set 应用状态，取值：open/close
      * @param Status 应用状态，取值：open/close
      */
     public void setStatus(String Status) {
@@ -69,7 +69,7 @@ public class ModifyAppStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

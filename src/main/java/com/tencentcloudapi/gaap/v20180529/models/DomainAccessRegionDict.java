@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainAccessRegionDict  extends AbstractModel{
+public class DomainAccessRegionDict extends AbstractModel{
 
     /**
     * 就近接入区域
@@ -65,7 +65,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     private String RegionName;
 
     /**
-     * 获取就近接入区域
+     * Get 就近接入区域 
      * @return NationCountryInnerList 就近接入区域
      */
     public NationCountryInnerInfo [] getNationCountryInnerList() {
@@ -73,7 +73,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置就近接入区域
+     * Set 就近接入区域
      * @param NationCountryInnerList 就近接入区域
      */
     public void setNationCountryInnerList(NationCountryInnerInfo [] NationCountryInnerList) {
@@ -81,7 +81,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 获取加速区域通道列表
+     * Get 加速区域通道列表 
      * @return ProxyList 加速区域通道列表
      */
     public ProxyIdDict [] getProxyList() {
@@ -89,7 +89,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域通道列表
+     * Set 加速区域通道列表
      * @param ProxyList 加速区域通道列表
      */
     public void setProxyList(ProxyIdDict [] ProxyList) {
@@ -97,7 +97,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 获取加速区域ID
+     * Get 加速区域ID 
      * @return RegionId 加速区域ID
      */
     public String getRegionId() {
@@ -105,7 +105,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域ID
+     * Set 加速区域ID
      * @param RegionId 加速区域ID
      */
     public void setRegionId(String RegionId) {
@@ -113,7 +113,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 获取加速区域内部编码
+     * Get 加速区域内部编码 
      * @return GeographicalZoneInnerCode 加速区域内部编码
      */
     public String getGeographicalZoneInnerCode() {
@@ -121,7 +121,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域内部编码
+     * Set 加速区域内部编码
      * @param GeographicalZoneInnerCode 加速区域内部编码
      */
     public void setGeographicalZoneInnerCode(String GeographicalZoneInnerCode) {
@@ -129,7 +129,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 获取加速区域所属大洲内部编码
+     * Get 加速区域所属大洲内部编码 
      * @return ContinentInnerCode 加速区域所属大洲内部编码
      */
     public String getContinentInnerCode() {
@@ -137,7 +137,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域所属大洲内部编码
+     * Set 加速区域所属大洲内部编码
      * @param ContinentInnerCode 加速区域所属大洲内部编码
      */
     public void setContinentInnerCode(String ContinentInnerCode) {
@@ -145,7 +145,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 获取加速区域别名
+     * Get 加速区域别名 
      * @return RegionName 加速区域别名
      */
     public String getRegionName() {
@@ -153,7 +153,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 设置加速区域别名
+     * Set 加速区域别名
      * @param RegionName 加速区域别名
      */
     public void setRegionName(String RegionName) {
@@ -161,7 +161,7 @@ public class DomainAccessRegionDict  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NationCountryInnerList.", this.NationCountryInnerList);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateAddressesRequest  extends AbstractModel{
+public class AllocateAddressesRequest extends AbstractModel{
 
     /**
     * EIP数量。默认值：1。
@@ -87,7 +87,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     private Boolean ApplicableForCLB;
 
     /**
-     * 获取EIP数量。默认值：1。
+     * Get EIP数量。默认值：1。 
      * @return AddressCount EIP数量。默认值：1。
      */
     public Integer getAddressCount() {
@@ -95,7 +95,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP数量。默认值：1。
+     * Set EIP数量。默认值：1。
      * @param AddressCount EIP数量。默认值：1。
      */
     public void setAddressCount(Integer AddressCount) {
@@ -103,10 +103,10 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP线路类型。默认值：BGP。
+     * Get EIP线路类型。默认值：BGP。
 <ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
 <li>CTCC：中国电信</li>
-<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
+<li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul> 
      * @return InternetServiceProvider EIP线路类型。默认值：BGP。
 <ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
 <li>CTCC：中国电信</li>
@@ -117,7 +117,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP线路类型。默认值：BGP。
+     * Set EIP线路类型。默认值：BGP。
 <ul style="margin:0"><li>已开通静态单线IP白名单的用户，可选值：<ul><li>CMCC：中国移动</li>
 <li>CTCC：中国电信</li>
 <li>CUCC：中国联通</li></ul>注意：仅部分地域支持静态单线IP。</li></ul>
@@ -131,11 +131,11 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP计费方式。
+     * Get EIP计费方式。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
-<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul>
+<li>未开通带宽上移白名单的用户，EIP计费方式与其绑定的实例的计费方式一致，无需传递此参数。</li></ul> 
      * @return InternetChargeType EIP计费方式。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
@@ -147,7 +147,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP计费方式。
+     * Set EIP计费方式。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值：<ul><li>BANDWIDTH_PACKAGE：[共享带宽包](https://cloud.tencent.com/document/product/684/15255)付费（需额外开通共享带宽包白名单）</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：带宽按小时后付费</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li></ul>默认值：TRAFFIC_POSTPAID_BY_HOUR。</li>
@@ -163,11 +163,11 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP出带宽上限，单位：Mbps。
+     * Get EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
-<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul>
+<li>未开通带宽上移白名单的用户，EIP出带宽上限取决于与其绑定的实例的公网出带宽上限，无需传递此参数。</li></ul> 
      * @return InternetMaxBandwidthOut EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -179,7 +179,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP出带宽上限，单位：Mbps。
+     * Set EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>已开通带宽上移白名单的用户，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 1000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
 <li>TRAFFIC_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li></ul>默认值：1 Mbps。</li>
@@ -195,8 +195,8 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP类型。默认值：EIP。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+     * Get EIP类型。默认值：EIP。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul> 
      * @return AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
      */
@@ -205,7 +205,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP类型。默认值：EIP。
+     * Set EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
      * @param AddressType EIP类型。默认值：EIP。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
@@ -215,8 +215,8 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Anycast发布域。
-<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
+     * Get Anycast发布域。
+<ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul> 
      * @return AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      */
@@ -225,7 +225,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Anycast发布域。
+     * Set Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      * @param AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
@@ -235,9 +235,9 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取AnycastEIP是否用于绑定负载均衡。
+     * Get AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
-<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
+<li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul> 
      * @return ApplicableForCLB AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
 <li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
@@ -247,7 +247,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置AnycastEIP是否用于绑定负载均衡。
+     * Set AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
 <li>FALSE：AnycastEIP可绑定对象为云服务器、NAT网关、高可用虚拟IP等</li></ul>默认值：FALSE。</li></ul>
      * @param ApplicableForCLB AnycastEIP是否用于绑定负载均衡。
@@ -259,7 +259,7 @@ public class AllocateAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressCount", this.AddressCount);

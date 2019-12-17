@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
+public class UnassignPrivateIpAddressesRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -37,7 +37,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-     * 获取弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public String getNetworkInterfaceId() {
@@ -45,7 +45,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -53,7 +53,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP信息，单次最多指定10个。
+     * Get 指定的内网IP信息，单次最多指定10个。 
      * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
@@ -61,7 +61,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定的内网IP信息，单次最多指定10个。
+     * Set 指定的内网IP信息，单次最多指定10个。
      * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
@@ -69,7 +69,7 @@ public class UnassignPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

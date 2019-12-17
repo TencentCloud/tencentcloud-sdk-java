@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassicalLoadBalancerInfo  extends AbstractModel{
+public class ClassicalLoadBalancerInfo extends AbstractModel{
 
     /**
     * 后端实例ID
@@ -38,7 +38,7 @@ public class ClassicalLoadBalancerInfo  extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-     * 获取后端实例ID
+     * Get 后端实例ID 
      * @return InstanceId 后端实例ID
      */
     public String getInstanceId() {
@@ -46,7 +46,7 @@ public class ClassicalLoadBalancerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置后端实例ID
+     * Set 后端实例ID
      * @param InstanceId 后端实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -54,8 +54,8 @@ public class ClassicalLoadBalancerInfo  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 负载均衡实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadBalancerIds 负载均衡实例ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class ClassicalLoadBalancerInfo  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID列表
+     * Set 负载均衡实例ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerIds 负载均衡实例ID列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class ClassicalLoadBalancerInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

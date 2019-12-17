@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesDiskNumRequest  extends AbstractModel{
+public class DescribeInstancesDiskNumRequest extends AbstractModel{
 
     /**
     * 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
@@ -30,7 +30,7 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * Get 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。 
      * @return InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
+     * Set 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      * @param InstanceIds 云服务器实例ID，通过[DescribeInstances](/document/product/213/15728)接口查询。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class DescribeInstancesDiskNumRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

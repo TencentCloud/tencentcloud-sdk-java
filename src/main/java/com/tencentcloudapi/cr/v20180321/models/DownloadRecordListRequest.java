@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadRecordListRequest  extends AbstractModel{
+public class DownloadRecordListRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Record
@@ -51,7 +51,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Record
+     * Get 模块名，本接口取值：Record 
      * @return Module 模块名，本接口取值：Record
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Record
+     * Set 模块名，本接口取值：Record
      * @param Module 模块名，本接口取值：Record
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：DownloadList
+     * Get 操作名，本接口取值：DownloadList 
      * @return Operation 操作名，本接口取值：DownloadList
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：DownloadList
+     * Set 操作名，本接口取值：DownloadList
      * @param Operation 操作名，本接口取值：DownloadList
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取录音日期，格式为YYYY-MM-DD
+     * Get 录音日期，格式为YYYY-MM-DD 
      * @return BizDate 录音日期，格式为YYYY-MM-DD
      */
     public String getBizDate() {
@@ -91,7 +91,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置录音日期，格式为YYYY-MM-DD
+     * Set 录音日期，格式为YYYY-MM-DD
      * @param BizDate 录音日期，格式为YYYY-MM-DD
      */
     public void setBizDate(String BizDate) {
@@ -99,7 +99,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstId 实例ID
      */
     public String getInstId() {
@@ -107,7 +107,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstId 实例ID
      */
     public void setInstId(String InstId) {
@@ -115,7 +115,7 @@ public class DownloadRecordListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

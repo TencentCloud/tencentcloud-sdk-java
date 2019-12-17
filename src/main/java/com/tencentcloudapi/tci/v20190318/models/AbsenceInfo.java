@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AbsenceInfo  extends AbstractModel{
+public class AbsenceInfo extends AbstractModel{
 
     /**
     * 识别到的人员所在的库id
@@ -37,7 +37,7 @@ public class AbsenceInfo  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取识别到的人员所在的库id
+     * Get 识别到的人员所在的库id 
      * @return LibraryIds 识别到的人员所在的库id
      */
     public String getLibraryIds() {
@@ -45,7 +45,7 @@ public class AbsenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的人员所在的库id
+     * Set 识别到的人员所在的库id
      * @param LibraryIds 识别到的人员所在的库id
      */
     public void setLibraryIds(String LibraryIds) {
@@ -53,7 +53,7 @@ public class AbsenceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别到的人员id
+     * Get 识别到的人员id 
      * @return PersonId 识别到的人员id
      */
     public String getPersonId() {
@@ -61,7 +61,7 @@ public class AbsenceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的人员id
+     * Set 识别到的人员id
      * @param PersonId 识别到的人员id
      */
     public void setPersonId(String PersonId) {
@@ -69,7 +69,7 @@ public class AbsenceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryIds", this.LibraryIds);

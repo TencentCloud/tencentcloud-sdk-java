@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterAsGroupResponse  extends AbstractModel{
+public class CreateClusterAsGroupResponse extends AbstractModel{
 
     /**
     * 启动配置ID
@@ -44,7 +44,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取启动配置ID
+     * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
     public String getLaunchConfigurationId() {
@@ -52,7 +52,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置ID
+     * Set 启动配置ID
      * @param LaunchConfigurationId 启动配置ID
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -60,7 +60,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -68,7 +68,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -76,7 +76,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateClusterAsGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);

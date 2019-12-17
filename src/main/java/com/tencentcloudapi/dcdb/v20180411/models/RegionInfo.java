@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInfo  extends AbstractModel{
+public class RegionInfo extends AbstractModel{
 
     /**
     * 地域英文ID
@@ -58,7 +58,7 @@ public class RegionInfo  extends AbstractModel{
     private ShardZoneChooseInfo [] AvailableChoice;
 
     /**
-     * 获取地域英文ID
+     * Get 地域英文ID 
      * @return Region 地域英文ID
      */
     public String getRegion() {
@@ -66,7 +66,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域英文ID
+     * Set 地域英文ID
      * @param Region 地域英文ID
      */
     public void setRegion(String Region) {
@@ -74,7 +74,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域数字ID
+     * Get 地域数字ID 
      * @return RegionId 地域数字ID
      */
     public Integer getRegionId() {
@@ -82,7 +82,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域数字ID
+     * Set 地域数字ID
      * @param RegionId 地域数字ID
      */
     public void setRegionId(Integer RegionId) {
@@ -90,7 +90,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域中文名
+     * Get 地域中文名 
      * @return RegionName 地域中文名
      */
     public String getRegionName() {
@@ -98,7 +98,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域中文名
+     * Set 地域中文名
      * @param RegionName 地域中文名
      */
     public void setRegionName(String RegionName) {
@@ -106,7 +106,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表
+     * Get 可用区列表 
      * @return ZoneList 可用区列表
      */
     public ZonesInfo [] getZoneList() {
@@ -114,7 +114,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表
+     * Set 可用区列表
      * @param ZoneList 可用区列表
      */
     public void setZoneList(ZonesInfo [] ZoneList) {
@@ -122,7 +122,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可选择的主可用区和从可用区
+     * Get 可选择的主可用区和从可用区 
      * @return AvailableChoice 可选择的主可用区和从可用区
      */
     public ShardZoneChooseInfo [] getAvailableChoice() {
@@ -130,7 +130,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可选择的主可用区和从可用区
+     * Set 可选择的主可用区和从可用区
      * @param AvailableChoice 可选择的主可用区和从可用区
      */
     public void setAvailableChoice(ShardZoneChooseInfo [] AvailableChoice) {
@@ -138,7 +138,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

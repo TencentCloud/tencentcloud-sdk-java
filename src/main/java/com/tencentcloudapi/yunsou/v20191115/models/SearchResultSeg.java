@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchResultSeg  extends AbstractModel{
+public class SearchResultSeg extends AbstractModel{
 
     /**
     * 分词
@@ -30,7 +30,7 @@ public class SearchResultSeg  extends AbstractModel{
     private String SegStr;
 
     /**
-     * 获取分词
+     * Get 分词 
      * @return SegStr 分词
      */
     public String getSegStr() {
@@ -38,7 +38,7 @@ public class SearchResultSeg  extends AbstractModel{
     }
 
     /**
-     * 设置分词
+     * Set 分词
      * @param SegStr 分词
      */
     public void setSegStr(String SegStr) {
@@ -46,7 +46,7 @@ public class SearchResultSeg  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SegStr", this.SegStr);

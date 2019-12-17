@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL4BackendProbePortRequest  extends AbstractModel{
+public class ModifyL4BackendProbePortRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -65,7 +65,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     private Integer BindType;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -73,7 +73,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -81,7 +81,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。
+     * Get 负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -89,7 +89,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。
+     * Set 负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 负载均衡四层监听器ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -97,7 +97,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Get 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。 
      * @return InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public String getInstanceId() {
@@ -105,7 +105,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Set 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      * @param InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -113,7 +113,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定的主机端口。
+     * Get 已绑定的主机端口。 
      * @return Port 已绑定的主机端口。
      */
     public Integer getPort() {
@@ -121,7 +121,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定的主机端口。
+     * Set 已绑定的主机端口。
      * @param Port 已绑定的主机端口。
      */
     public void setPort(Integer Port) {
@@ -129,7 +129,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的探测端口，可选值1~65535。
+     * Get 新的探测端口，可选值1~65535。 
      * @return ProbePort 新的探测端口，可选值1~65535。
      */
     public Integer getProbePort() {
@@ -137,7 +137,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的探测端口，可选值1~65535。
+     * Set 新的探测端口，可选值1~65535。
      * @param ProbePort 新的探测端口，可选值1~65535。
      */
     public void setProbePort(Integer ProbePort) {
@@ -145,7 +145,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
+     * Get 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      */
     public Integer getBindType() {
@@ -153,7 +153,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
+     * Set 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机IP 2：半托管机器
      */
     public void setBindType(Integer BindType) {
@@ -161,7 +161,7 @@ public class ModifyL4BackendProbePortRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

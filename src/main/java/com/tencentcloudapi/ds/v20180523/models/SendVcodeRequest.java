@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendVcodeRequest  extends AbstractModel{
+public class SendVcodeRequest extends AbstractModel{
 
     /**
     * 模块名VerifyCode
@@ -51,7 +51,7 @@ public class SendVcodeRequest  extends AbstractModel{
     private String AccountResId;
 
     /**
-     * 获取模块名VerifyCode
+     * Get 模块名VerifyCode 
      * @return Module 模块名VerifyCode
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名VerifyCode
+     * Set 模块名VerifyCode
      * @param Module 模块名VerifyCode
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名SendVcode
+     * Get 操作名SendVcode 
      * @return Operation 操作名SendVcode
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名SendVcode
+     * Set 操作名SendVcode
      * @param Operation 操作名SendVcode
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同ID
+     * Get 合同ID 
      * @return ContractResId 合同ID
      */
     public String getContractResId() {
@@ -91,7 +91,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同ID
+     * Set 合同ID
      * @param ContractResId 合同ID
      */
     public void setContractResId(String ContractResId) {
@@ -99,7 +99,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐号ID
+     * Get 帐号ID 
      * @return AccountResId 帐号ID
      */
     public String getAccountResId() {
@@ -107,7 +107,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帐号ID
+     * Set 帐号ID
      * @param AccountResId 帐号ID
      */
     public void setAccountResId(String AccountResId) {
@@ -115,7 +115,7 @@ public class SendVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

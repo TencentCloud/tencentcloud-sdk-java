@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeyPair  extends AbstractModel{
+public class KeyPair extends AbstractModel{
 
     /**
     * 密钥对的`ID`，是密钥对的唯一标识。
@@ -79,7 +79,7 @@ public class KeyPair  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取密钥对的`ID`，是密钥对的唯一标识。
+     * Get 密钥对的`ID`，是密钥对的唯一标识。 
      * @return KeyId 密钥对的`ID`，是密钥对的唯一标识。
      */
     public String getKeyId() {
@@ -87,7 +87,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对的`ID`，是密钥对的唯一标识。
+     * Set 密钥对的`ID`，是密钥对的唯一标识。
      * @param KeyId 密钥对的`ID`，是密钥对的唯一标识。
      */
     public void setKeyId(String KeyId) {
@@ -95,7 +95,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥对名称。
+     * Get 密钥对名称。 
      * @return KeyName 密钥对名称。
      */
     public String getKeyName() {
@@ -103,7 +103,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对名称。
+     * Set 密钥对名称。
      * @param KeyName 密钥对名称。
      */
     public void setKeyName(String KeyName) {
@@ -111,7 +111,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥对所属的项目`ID`。
+     * Get 密钥对所属的项目`ID`。 
      * @return ProjectId 密钥对所属的项目`ID`。
      */
     public Integer getProjectId() {
@@ -119,7 +119,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对所属的项目`ID`。
+     * Set 密钥对所属的项目`ID`。
      * @param ProjectId 密钥对所属的项目`ID`。
      */
     public void setProjectId(Integer ProjectId) {
@@ -127,7 +127,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥对描述信息。
+     * Get 密钥对描述信息。 
      * @return Description 密钥对描述信息。
      */
     public String getDescription() {
@@ -135,7 +135,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对描述信息。
+     * Set 密钥对描述信息。
      * @param Description 密钥对描述信息。
      */
     public void setDescription(String Description) {
@@ -143,7 +143,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥对的纯文本公钥。
+     * Get 密钥对的纯文本公钥。 
      * @return PublicKey 密钥对的纯文本公钥。
      */
     public String getPublicKey() {
@@ -151,7 +151,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对的纯文本公钥。
+     * Set 密钥对的纯文本公钥。
      * @param PublicKey 密钥对的纯文本公钥。
      */
     public void setPublicKey(String PublicKey) {
@@ -159,7 +159,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
+     * Get 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。 
      * @return PrivateKey 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
      */
     public String getPrivateKey() {
@@ -167,7 +167,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
+     * Set 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
      * @param PrivateKey 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。
      */
     public void setPrivateKey(String PrivateKey) {
@@ -175,7 +175,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取密钥关联的实例`ID`列表。
+     * Get 密钥关联的实例`ID`列表。 
      * @return AssociatedInstanceIds 密钥关联的实例`ID`列表。
      */
     public String [] getAssociatedInstanceIds() {
@@ -183,7 +183,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置密钥关联的实例`ID`列表。
+     * Set 密钥关联的实例`ID`列表。
      * @param AssociatedInstanceIds 密钥关联的实例`ID`列表。
      */
     public void setAssociatedInstanceIds(String [] AssociatedInstanceIds) {
@@ -191,7 +191,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreatedTime() {
@@ -199,7 +199,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -207,7 +207,7 @@ public class KeyPair  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

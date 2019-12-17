@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupsResponse  extends AbstractModel{
+public class DescribeBackupsResponse extends AbstractModel{
 
     /**
     * 备份总数量
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 备份列表详情
@@ -44,23 +44,23 @@ public class DescribeBackupsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取备份总数量
+     * Get 备份总数量 
      * @return TotalCount 备份总数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置备份总数量
+     * Set 备份总数量
      * @param TotalCount 备份总数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取备份列表详情
+     * Get 备份列表详情 
      * @return Backups 备份列表详情
      */
     public Backup [] getBackups() {
@@ -68,7 +68,7 @@ public class DescribeBackupsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置备份列表详情
+     * Set 备份列表详情
      * @param Backups 备份列表详情
      */
     public void setBackups(Backup [] Backups) {
@@ -76,7 +76,7 @@ public class DescribeBackupsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeBackupsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeBackupsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

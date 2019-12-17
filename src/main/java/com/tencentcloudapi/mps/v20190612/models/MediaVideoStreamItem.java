@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaVideoStreamItem  extends AbstractModel{
+public class MediaVideoStreamItem extends AbstractModel{
 
     /**
     * 视频流的码率，单位：bps。
@@ -58,7 +58,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     private Long Fps;
 
     /**
-     * 获取视频流的码率，单位：bps。
+     * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
     public Long getBitrate() {
@@ -66,7 +66,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的码率，单位：bps。
+     * Set 视频流的码率，单位：bps。
      * @param Bitrate 视频流的码率，单位：bps。
      */
     public void setBitrate(Long Bitrate) {
@@ -74,7 +74,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的高度，单位：px。
+     * Get 视频流的高度，单位：px。 
      * @return Height 视频流的高度，单位：px。
      */
     public Long getHeight() {
@@ -82,7 +82,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的高度，单位：px。
+     * Set 视频流的高度，单位：px。
      * @param Height 视频流的高度，单位：px。
      */
     public void setHeight(Long Height) {
@@ -90,7 +90,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的宽度，单位：px。
+     * Get 视频流的宽度，单位：px。 
      * @return Width 视频流的宽度，单位：px。
      */
     public Long getWidth() {
@@ -98,7 +98,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的宽度，单位：px。
+     * Set 视频流的宽度，单位：px。
      * @param Width 视频流的宽度，单位：px。
      */
     public void setWidth(Long Width) {
@@ -106,7 +106,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的编码格式，例如 h264。
+     * Get 视频流的编码格式，例如 h264。 
      * @return Codec 视频流的编码格式，例如 h264。
      */
     public String getCodec() {
@@ -114,7 +114,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的编码格式，例如 h264。
+     * Set 视频流的编码格式，例如 h264。
      * @param Codec 视频流的编码格式，例如 h264。
      */
     public void setCodec(String Codec) {
@@ -122,7 +122,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取帧率，单位：hz。
+     * Get 帧率，单位：hz。 
      * @return Fps 帧率，单位：hz。
      */
     public Long getFps() {
@@ -130,7 +130,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置帧率，单位：hz。
+     * Set 帧率，单位：hz。
      * @param Fps 帧率，单位：hz。
      */
     public void setFps(Long Fps) {
@@ -138,7 +138,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);

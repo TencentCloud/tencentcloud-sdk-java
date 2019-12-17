@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaTask  extends AbstractModel{
+public class ComposeMediaTask extends AbstractModel{
 
     /**
     * 任务 ID。
@@ -74,7 +74,7 @@ public class ComposeMediaTask  extends AbstractModel{
     private ComposeMediaTaskOutput Output;
 
     /**
-     * 获取任务 ID。
+     * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
     public String getTaskId() {
@@ -82,7 +82,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID。
+     * Set 任务 ID。
      * @param TaskId 任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -90,10 +90,10 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态，取值：
+     * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -104,7 +104,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态，取值：
+     * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,10 +118,10 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -132,7 +132,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,8 +146,8 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -156,7 +156,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,8 +166,8 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 获取制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 制作媒体文件任务的输入。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Input 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -176,7 +176,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置制作媒体文件任务的输入。
+     * Set 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 制作媒体文件任务的输入。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,8 +186,8 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 获取制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 制作媒体文件任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -196,7 +196,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 设置制作媒体文件任务的输出。
+     * Set 制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 制作媒体文件任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -206,7 +206,7 @@ public class ComposeMediaTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

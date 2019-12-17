@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorMetricSeriesData  extends AbstractModel{
+public class MonitorMetricSeriesData extends AbstractModel{
 
     /**
     * 监控指标。
@@ -37,7 +37,7 @@ public class MonitorMetricSeriesData  extends AbstractModel{
     private Long [] Timestamp;
 
     /**
-     * 获取监控指标。
+     * Get 监控指标。 
      * @return Series 监控指标。
      */
     public MonitorMetric [] getSeries() {
@@ -45,7 +45,7 @@ public class MonitorMetricSeriesData  extends AbstractModel{
     }
 
     /**
-     * 设置监控指标。
+     * Set 监控指标。
      * @param Series 监控指标。
      */
     public void setSeries(MonitorMetric [] Series) {
@@ -53,7 +53,7 @@ public class MonitorMetricSeriesData  extends AbstractModel{
     }
 
     /**
-     * 获取监控指标对应的时间戳。
+     * Get 监控指标对应的时间戳。 
      * @return Timestamp 监控指标对应的时间戳。
      */
     public Long [] getTimestamp() {
@@ -61,7 +61,7 @@ public class MonitorMetricSeriesData  extends AbstractModel{
     }
 
     /**
-     * 设置监控指标对应的时间戳。
+     * Set 监控指标对应的时间戳。
      * @param Timestamp 监控指标对应的时间戳。
      */
     public void setTimestamp(Long [] Timestamp) {
@@ -69,7 +69,7 @@ public class MonitorMetricSeriesData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Series.", this.Series);

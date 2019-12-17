@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceStatData  extends AbstractModel{
+public class DeviceStatData extends AbstractModel{
 
     /**
     * 时间点
@@ -51,7 +51,7 @@ public class DeviceStatData  extends AbstractModel{
     private Integer DeviceTotal;
 
     /**
-     * 获取时间点
+     * Get 时间点 
      * @return Datetime 时间点
      */
     public String getDatetime() {
@@ -59,7 +59,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 设置时间点
+     * Set 时间点
      * @param Datetime 时间点
      */
     public void setDatetime(String Datetime) {
@@ -67,7 +67,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 获取在线设备数
+     * Get 在线设备数 
      * @return DeviceOnline 在线设备数
      */
     public Integer getDeviceOnline() {
@@ -75,7 +75,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 设置在线设备数
+     * Set 在线设备数
      * @param DeviceOnline 在线设备数
      */
     public void setDeviceOnline(Integer DeviceOnline) {
@@ -83,7 +83,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 获取激活设备数
+     * Get 激活设备数 
      * @return DeviceActive 激活设备数
      */
     public Integer getDeviceActive() {
@@ -91,7 +91,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 设置激活设备数
+     * Set 激活设备数
      * @param DeviceActive 激活设备数
      */
     public void setDeviceActive(Integer DeviceActive) {
@@ -99,7 +99,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 获取设备总数
+     * Get 设备总数 
      * @return DeviceTotal 设备总数
      */
     public Integer getDeviceTotal() {
@@ -107,7 +107,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 设置设备总数
+     * Set 设备总数
      * @param DeviceTotal 设备总数
      */
     public void setDeviceTotal(Integer DeviceTotal) {
@@ -115,7 +115,7 @@ public class DeviceStatData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Datetime", this.Datetime);

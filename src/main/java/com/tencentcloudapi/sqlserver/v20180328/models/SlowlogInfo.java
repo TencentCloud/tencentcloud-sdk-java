@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlowlogInfo  extends AbstractModel{
+public class SlowlogInfo extends AbstractModel{
 
     /**
     * 慢查询日志文件唯一标识
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 文件生成的开始时间
@@ -48,14 +48,14 @@ public class SlowlogInfo  extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 文件中log条数
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 内网下载地址
@@ -77,26 +77,26 @@ public class SlowlogInfo  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
-     * 获取慢查询日志文件唯一标识
+     * Get 慢查询日志文件唯一标识 
      * @return Id 慢查询日志文件唯一标识
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置慢查询日志文件唯一标识
+     * Set 慢查询日志文件唯一标识
      * @param Id 慢查询日志文件唯一标识
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取文件生成的开始时间
+     * Get 文件生成的开始时间 
      * @return StartTime 文件生成的开始时间
      */
     public String getStartTime() {
@@ -104,7 +104,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件生成的开始时间
+     * Set 文件生成的开始时间
      * @param StartTime 文件生成的开始时间
      */
     public void setStartTime(String StartTime) {
@@ -112,7 +112,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件生成的结束时间
+     * Get 文件生成的结束时间 
      * @return EndTime 文件生成的结束时间
      */
     public String getEndTime() {
@@ -120,7 +120,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件生成的结束时间
+     * Set 文件生成的结束时间
      * @param EndTime 文件生成的结束时间
      */
     public void setEndTime(String EndTime) {
@@ -128,39 +128,39 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小（KB）
+     * Get 文件大小（KB） 
      * @return Size 文件大小（KB）
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
     /**
-     * 设置文件大小（KB）
+     * Set 文件大小（KB）
      * @param Size 文件大小（KB）
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * 获取文件中log条数
+     * Get 文件中log条数 
      * @return Count 文件中log条数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置文件中log条数
+     * Set 文件中log条数
      * @param Count 文件中log条数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取内网下载地址
+     * Get 内网下载地址 
      * @return InternalAddr 内网下载地址
      */
     public String getInternalAddr() {
@@ -168,7 +168,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网下载地址
+     * Set 内网下载地址
      * @param InternalAddr 内网下载地址
      */
     public void setInternalAddr(String InternalAddr) {
@@ -176,7 +176,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网下载地址
+     * Get 外网下载地址 
      * @return ExternalAddr 外网下载地址
      */
     public String getExternalAddr() {
@@ -184,7 +184,7 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网下载地址
+     * Set 外网下载地址
      * @param ExternalAddr 外网下载地址
      */
     public void setExternalAddr(String ExternalAddr) {
@@ -192,27 +192,27 @@ public class SlowlogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态（1成功 2失败）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态（1成功 2失败）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态（1成功 2失败）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置状态（1成功 2失败）
+     * Set 状态（1成功 2失败）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态（1成功 2失败）
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

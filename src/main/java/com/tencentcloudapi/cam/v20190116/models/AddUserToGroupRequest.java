@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserToGroupRequest  extends AbstractModel{
+public class AddUserToGroupRequest extends AbstractModel{
 
     /**
     * 添加的子用户 UID 和用户组 ID 关联关系
@@ -30,7 +30,7 @@ public class AddUserToGroupRequest  extends AbstractModel{
     private GroupIdOfUidInfo [] Info;
 
     /**
-     * 获取添加的子用户 UID 和用户组 ID 关联关系
+     * Get 添加的子用户 UID 和用户组 ID 关联关系 
      * @return Info 添加的子用户 UID 和用户组 ID 关联关系
      */
     public GroupIdOfUidInfo [] getInfo() {
@@ -38,7 +38,7 @@ public class AddUserToGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置添加的子用户 UID 和用户组 ID 关联关系
+     * Set 添加的子用户 UID 和用户组 ID 关联关系
      * @param Info 添加的子用户 UID 和用户组 ID 关联关系
      */
     public void setInfo(GroupIdOfUidInfo [] Info) {
@@ -46,7 +46,7 @@ public class AddUserToGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Info.", this.Info);

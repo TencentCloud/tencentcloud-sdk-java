@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LookUpEventsRequest  extends AbstractModel{
+public class LookUpEventsRequest extends AbstractModel{
 
     /**
     * 结束时间
@@ -58,7 +58,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     private String NextToken;
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public Long getEndTime() {
@@ -66,7 +66,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(Long EndTime) {
@@ -74,7 +74,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public Long getStartTime() {
@@ -82,7 +82,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(Long StartTime) {
@@ -90,7 +90,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检索条件
+     * Get 检索条件 
      * @return LookupAttributes 检索条件
      */
     public LookupAttribute [] getLookupAttributes() {
@@ -98,7 +98,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检索条件
+     * Set 检索条件
      * @param LookupAttributes 检索条件
      */
     public void setLookupAttributes(LookupAttribute [] LookupAttributes) {
@@ -106,7 +106,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回日志的最大条数
+     * Get 返回日志的最大条数 
      * @return MaxResults 返回日志的最大条数
      */
     public Long getMaxResults() {
@@ -114,7 +114,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回日志的最大条数
+     * Set 返回日志的最大条数
      * @param MaxResults 返回日志的最大条数
      */
     public void setMaxResults(Long MaxResults) {
@@ -122,7 +122,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查看更多日志的凭证
+     * Get 查看更多日志的凭证 
      * @return NextToken 查看更多日志的凭证
      */
     public String getNextToken() {
@@ -130,7 +130,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查看更多日志的凭证
+     * Set 查看更多日志的凭证
      * @param NextToken 查看更多日志的凭证
      */
     public void setNextToken(String NextToken) {
@@ -138,7 +138,7 @@ public class LookUpEventsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);

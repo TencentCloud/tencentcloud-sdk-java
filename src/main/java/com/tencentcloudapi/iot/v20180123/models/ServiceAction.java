@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceAction  extends AbstractModel{
+public class ServiceAction extends AbstractModel{
 
     /**
     * 服务url地址
@@ -30,7 +30,7 @@ public class ServiceAction  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取服务url地址
+     * Get 服务url地址 
      * @return Url 服务url地址
      */
     public String getUrl() {
@@ -38,7 +38,7 @@ public class ServiceAction  extends AbstractModel{
     }
 
     /**
-     * 设置服务url地址
+     * Set 服务url地址
      * @param Url 服务url地址
      */
     public void setUrl(String Url) {
@@ -46,7 +46,7 @@ public class ServiceAction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

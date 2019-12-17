@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceInfo  extends AbstractModel{
+public class InstanceInfo extends AbstractModel{
 
     /**
     * 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
@@ -302,7 +302,7 @@ public class InstanceInfo  extends AbstractModel{
     private String DeviceClass;
 
     /**
-     * 获取外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
     public Integer getWanStatus() {
@@ -310,7 +310,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
+     * Set 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
     public void setWanStatus(Integer WanStatus) {
@@ -318,7 +318,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -326,7 +326,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -334,7 +334,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * Get 初始化标志，可能的返回值为：0-未初始化；1-已初始化 
      * @return InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      */
     public Integer getInitFlag() {
@@ -342,7 +342,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置初始化标志，可能的返回值为：0-未初始化；1-已初始化
+     * Set 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      * @param InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
      */
     public void setInitFlag(Integer InitFlag) {
@@ -350,8 +350,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 只读vip信息。单独开通只读实例访问的只读实例才有该字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -360,7 +360,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip信息。单独开通只读实例访问的只读实例才有该字段
+     * Set 只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -370,7 +370,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存容量，单位为MB
+     * Get 内存容量，单位为MB 
      * @return Memory 内存容量，单位为MB
      */
     public Integer getMemory() {
@@ -378,7 +378,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量，单位为MB
+     * Set 内存容量，单位为MB
      * @param Memory 内存容量，单位为MB
      */
     public void setMemory(Integer Memory) {
@@ -386,7 +386,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+     * Get 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离 
      * @return Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      */
     public Integer getStatus() {
@@ -394,7 +394,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
+     * Set 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      * @param Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
      */
     public void setStatus(Integer Status) {
@@ -402,7 +402,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：51102
+     * Get 私有网络ID，例如：51102 
      * @return VpcId 私有网络ID，例如：51102
      */
     public Integer getVpcId() {
@@ -410,7 +410,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：51102
+     * Set 私有网络ID，例如：51102
      * @param VpcId 私有网络ID，例如：51102
      */
     public void setVpcId(Integer VpcId) {
@@ -418,8 +418,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备机信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备机信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlaveInfo 备机信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -428,7 +428,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备机信息
+     * Set 备机信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveInfo 备机信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -438,7 +438,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -446,7 +446,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -454,7 +454,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘容量，单位为GB
+     * Get 硬盘容量，单位为GB 
      * @return Volume 硬盘容量，单位为GB
      */
     public Integer getVolume() {
@@ -462,7 +462,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘容量，单位为GB
+     * Set 硬盘容量，单位为GB
      * @param Volume 硬盘容量，单位为GB
      */
     public void setVolume(Integer Volume) {
@@ -470,7 +470,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+     * Get 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费 
      * @return AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      */
     public Integer getAutoRenew() {
@@ -478,7 +478,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
+     * Set 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      * @param AutoRenew 自动续费标志，可能的返回值：0-未开通自动续费；1-已开通自动续费；2-已关闭自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -486,7 +486,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据复制方式
+     * Get 数据复制方式 
      * @return ProtectMode 数据复制方式
      */
     public Integer getProtectMode() {
@@ -494,7 +494,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据复制方式
+     * Set 数据复制方式
      * @param ProtectMode 数据复制方式
      */
     public void setProtectMode(Integer ProtectMode) {
@@ -502,8 +502,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 只读组详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoGroups 只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -512,7 +512,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读组详细信息
+     * Set 只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoGroups 只读组详细信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -522,7 +522,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID，例如：2333
+     * Get 子网ID，例如：2333 
      * @return SubnetId 子网ID，例如：2333
      */
     public Integer getSubnetId() {
@@ -530,7 +530,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID，例如：2333
+     * Set 子网ID，例如：2333
      * @param SubnetId 子网ID，例如：2333
      */
     public void setSubnetId(Integer SubnetId) {
@@ -538,7 +538,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+     * Get 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例 
      * @return InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      */
     public Integer getInstanceType() {
@@ -546,7 +546,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
+     * Set 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      * @param InstanceType 实例类型，可能的返回值：1-主实例；2-灾备实例；3-只读实例
      */
     public void setInstanceType(Integer InstanceType) {
@@ -554,7 +554,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -562,7 +562,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -570,7 +570,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -578,7 +578,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -586,7 +586,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间
+     * Get 实例到期时间 
      * @return DeadlineTime 实例到期时间
      */
     public String getDeadlineTime() {
@@ -594,7 +594,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间
+     * Set 实例到期时间
      * @param DeadlineTime 实例到期时间
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -602,7 +602,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区部署方式
+     * Get 可用区部署方式 
      * @return DeployMode 可用区部署方式
      */
     public Integer getDeployMode() {
@@ -610,7 +610,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区部署方式
+     * Set 可用区部署方式
      * @param DeployMode 可用区部署方式
      */
     public void setDeployMode(Integer DeployMode) {
@@ -618,7 +618,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+     * Get 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成 
      * @return TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      */
     public Integer getTaskStatus() {
@@ -626,7 +626,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
+     * Set 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      * @param TaskStatus 实例任务状态。0 - 没有任务 ,1 - 升级中,2 - 数据导入中,3 - 开放Slave中,4 - 外网访问开通中,5 - 批量操作执行中,6 - 回档中,7 - 外网访问关闭中,8 - 密码修改中,9 - 实例名修改中,10 - 重启中,12 - 自建迁移中,13 - 删除库表中,14 - 灾备实例创建同步中,15 - 升级待切换,16 - 升级切换中,17 - 升级切换完成
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -634,8 +634,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MasterInfo 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -644,7 +644,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主实例详细信息
+     * Set 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterInfo 主实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -654,7 +654,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+     * Get 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版 
      * @return DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      */
     public String getDeviceType() {
@@ -662,7 +662,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
+     * Set 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      * @param DeviceType 实例类型，可能的返回值：“HA”-高可用版；“BASIC”-基础版
      */
     public void setDeviceType(String DeviceType) {
@@ -670,7 +670,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内核版本
+     * Get 内核版本 
      * @return EngineVersion 内核版本
      */
     public String getEngineVersion() {
@@ -678,7 +678,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内核版本
+     * Set 内核版本
      * @param EngineVersion 内核版本
      */
     public void setEngineVersion(String EngineVersion) {
@@ -686,7 +686,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -694,7 +694,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -702,8 +702,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 灾备实例详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DrInfo 灾备实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -712,7 +712,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备实例详细信息
+     * Set 灾备实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DrInfo 灾备实例详细信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -722,7 +722,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网域名
+     * Get 外网域名 
      * @return WanDomain 外网域名
      */
     public String getWanDomain() {
@@ -730,7 +730,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网域名
+     * Set 外网域名
      * @param WanDomain 外网域名
      */
     public void setWanDomain(String WanDomain) {
@@ -738,7 +738,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网端口号
+     * Get 外网端口号 
      * @return WanPort 外网端口号
      */
     public Integer getWanPort() {
@@ -746,7 +746,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网端口号
+     * Set 外网端口号
      * @param WanPort 外网端口号
      */
     public void setWanPort(Integer WanPort) {
@@ -754,7 +754,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型，可能的返回值：0-包年包月；1-按量计费
+     * Get 付费类型，可能的返回值：0-包年包月；1-按量计费 
      * @return PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
      */
     public Integer getPayType() {
@@ -762,7 +762,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型，可能的返回值：0-包年包月；1-按量计费
+     * Set 付费类型，可能的返回值：0-包年包月；1-按量计费
      * @param PayType 付费类型，可能的返回值：0-包年包月；1-按量计费
      */
     public void setPayType(Integer PayType) {
@@ -770,7 +770,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
      */
     public String getCreateTime() {
@@ -778,7 +778,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param CreateTime 实例创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -786,7 +786,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例IP
+     * Get 实例IP 
      * @return Vip 实例IP
      */
     public String getVip() {
@@ -794,7 +794,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例IP
+     * Set 实例IP
      * @param Vip 实例IP
      */
     public void setVip(String Vip) {
@@ -802,7 +802,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取端口号
+     * Get 端口号 
      * @return Vport 端口号
      */
     public Integer getVport() {
@@ -810,7 +810,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置端口号
+     * Set 端口号
      * @param Vport 端口号
      */
     public void setVport(Integer Vport) {
@@ -818,7 +818,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否锁定标记
+     * Get 是否锁定标记 
      * @return CdbError 是否锁定标记
      */
     public Integer getCdbError() {
@@ -826,7 +826,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否锁定标记
+     * Set 是否锁定标记
      * @param CdbError 是否锁定标记
      */
     public void setCdbError(Integer CdbError) {
@@ -834,7 +834,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络描述符，例如：“vpc-5v8wn9mg”
+     * Get 私有网络描述符，例如：“vpc-5v8wn9mg” 
      * @return UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      */
     public String getUniqVpcId() {
@@ -842,7 +842,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络描述符，例如：“vpc-5v8wn9mg”
+     * Set 私有网络描述符，例如：“vpc-5v8wn9mg”
      * @param UniqVpcId 私有网络描述符，例如：“vpc-5v8wn9mg”
      */
     public void setUniqVpcId(String UniqVpcId) {
@@ -850,7 +850,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网描述符，例如：“subnet-1typ0s7d”
+     * Get 子网描述符，例如：“subnet-1typ0s7d” 
      * @return UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      */
     public String getUniqSubnetId() {
@@ -858,7 +858,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网描述符，例如：“subnet-1typ0s7d”
+     * Set 子网描述符，例如：“subnet-1typ0s7d”
      * @param UniqSubnetId 子网描述符，例如：“subnet-1typ0s7d”
      */
     public void setUniqSubnetId(String UniqSubnetId) {
@@ -866,7 +866,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取物理ID
+     * Get 物理ID 
      * @return PhysicalId 物理ID
      */
     public String getPhysicalId() {
@@ -874,7 +874,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置物理ID
+     * Set 物理ID
      * @param PhysicalId 物理ID
      */
     public void setPhysicalId(String PhysicalId) {
@@ -882,7 +882,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取核心数
+     * Get 核心数 
      * @return Cpu 核心数
      */
     public Integer getCpu() {
@@ -890,7 +890,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置核心数
+     * Set 核心数
      * @param Cpu 核心数
      */
     public void setCpu(Integer Cpu) {
@@ -898,7 +898,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取每秒查询数量
+     * Get 每秒查询数量 
      * @return Qps 每秒查询数量
      */
     public Integer getQps() {
@@ -906,7 +906,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置每秒查询数量
+     * Set 每秒查询数量
      * @param Qps 每秒查询数量
      */
     public void setQps(Integer Qps) {
@@ -914,7 +914,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区中文名称
+     * Get 可用区中文名称 
      * @return ZoneName 可用区中文名称
      */
     public String getZoneName() {
@@ -922,7 +922,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区中文名称
+     * Set 可用区中文名称
      * @param ZoneName 可用区中文名称
      */
     public void setZoneName(String ZoneName) {
@@ -930,8 +930,8 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取物理机型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物理机型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceClass 物理机型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -940,7 +940,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置物理机型
+     * Set 物理机型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceClass 物理机型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -950,7 +950,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);

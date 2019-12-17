@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowRequest  extends AbstractModel{
+public class DescribeFlowRequest extends AbstractModel{
 
     /**
     * 异步请求接口返回的任务流程号。
@@ -30,7 +30,7 @@ public class DescribeFlowRequest  extends AbstractModel{
     private Integer FlowId;
 
     /**
-     * 获取异步请求接口返回的任务流程号。
+     * Get 异步请求接口返回的任务流程号。 
      * @return FlowId 异步请求接口返回的任务流程号。
      */
     public Integer getFlowId() {
@@ -38,7 +38,7 @@ public class DescribeFlowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步请求接口返回的任务流程号。
+     * Set 异步请求接口返回的任务流程号。
      * @param FlowId 异步请求接口返回的任务流程号。
      */
     public void setFlowId(Integer FlowId) {
@@ -46,7 +46,7 @@ public class DescribeFlowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);

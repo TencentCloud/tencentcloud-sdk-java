@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeRequest  extends AbstractModel{
+public class DescribeTranscodeRequest extends AbstractModel{
 
     /**
     * 客户的SdkAppId
@@ -37,7 +37,7 @@ public class DescribeTranscodeRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取客户的SdkAppId
+     * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
     public Long getSdkAppId() {
@@ -45,7 +45,7 @@ public class DescribeTranscodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户的SdkAppId
+     * Set 客户的SdkAppId
      * @param SdkAppId 客户的SdkAppId
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -53,7 +53,7 @@ public class DescribeTranscodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文档转码任务的唯一标识Id
+     * Get 文档转码任务的唯一标识Id 
      * @return TaskId 文档转码任务的唯一标识Id
      */
     public String getTaskId() {
@@ -61,7 +61,7 @@ public class DescribeTranscodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文档转码任务的唯一标识Id
+     * Set 文档转码任务的唯一标识Id
      * @param TaskId 文档转码任务的唯一标识Id
      */
     public void setTaskId(String TaskId) {
@@ -69,7 +69,7 @@ public class DescribeTranscodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

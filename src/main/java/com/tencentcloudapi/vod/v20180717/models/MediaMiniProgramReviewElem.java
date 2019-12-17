@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewElem  extends AbstractModel{
+public class MediaMiniProgramReviewElem extends AbstractModel{
 
     /**
     * 审核类型。 
@@ -54,14 +54,14 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取审核类型。 
+     * Get 审核类型。 
 <li>Porn：画面涉黄，</li>
 <li>Porn.Ocr：文字涉黄，</li>
 <li>Porn.Asr：声音涉黄，</li>
 <li>Terrorism：画面涉暴恐，</li>
 <li>Political：画面涉政，</li>
 <li>Political.Ocr：文字涉政，</li>
-<li>Political.Asr：声音涉政。</li>
+<li>Political.Asr：声音涉政。</li> 
      * @return Type 审核类型。 
 <li>Porn：画面涉黄，</li>
 <li>Porn.Ocr：文字涉黄，</li>
@@ -76,7 +76,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 设置审核类型。 
+     * Set 审核类型。 
 <li>Porn：画面涉黄，</li>
 <li>Porn.Ocr：文字涉黄，</li>
 <li>Porn.Asr：声音涉黄，</li>
@@ -98,10 +98,10 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 获取审核意见。
+     * Get 审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
-<li>review：疑似违规。</li>
+<li>review：疑似违规。</li> 
      * @return Suggestion 审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
@@ -112,7 +112,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 设置审核意见。
+     * Set 审核意见。
 <li>pass：确认正常，</li>
 <li>block：确认违规，</li>
 <li>review：疑似违规。</li>
@@ -126,7 +126,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 获取审核结果置信度。取值 0~100。
+     * Get 审核结果置信度。取值 0~100。 
      * @return Confidence 审核结果置信度。取值 0~100。
      */
     public Float getConfidence() {
@@ -134,7 +134,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 设置审核结果置信度。取值 0~100。
+     * Set 审核结果置信度。取值 0~100。
      * @param Confidence 审核结果置信度。取值 0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -142,7 +142,7 @@ public class MediaMiniProgramReviewElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

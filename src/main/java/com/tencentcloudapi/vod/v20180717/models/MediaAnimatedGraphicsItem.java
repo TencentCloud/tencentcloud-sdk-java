@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAnimatedGraphicsItem  extends AbstractModel{
+public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 转动图的文件地址。
@@ -103,8 +103,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取转动图的文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转动图的文件地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 转动图的文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置转动图的文件地址。
+     * Set 转动图的文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转动图的文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图格式，如 gif。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图格式，如 gif。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Container 动图格式，如 gif。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图格式，如 gif。
+     * Set 动图格式，如 gif。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 动图格式，如 gif。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,8 +163,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 动图的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,7 +173,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的高度，单位：px。
+     * Set 动图的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 动图的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,8 +183,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 动图的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的宽度，单位：px。
+     * Set 动图的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 动图的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,8 +203,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 动图码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图码率，单位：bps。
+     * Set 动图码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 动图码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图大小，单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图大小，单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Size 动图大小，单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图大小，单位：字节。
+     * Set 动图大小，单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 动图大小，单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图的md5值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5 动图的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的md5值。
+     * Set 动图的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 动图的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的起始时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图在视频中的起始时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的起始时间偏移，单位：秒。
+     * Set 动图在视频中的起始时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 动图在视频中的结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的结束时间偏移，单位：秒。
+     * Set 动图在视频中的结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,7 +303,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

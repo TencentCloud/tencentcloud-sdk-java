@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NonLocalLoginPlace  extends AbstractModel{
+public class NonLocalLoginPlace extends AbstractModel{
 
     /**
     * 事件ID。
@@ -57,21 +57,21 @@ public class NonLocalLoginPlace  extends AbstractModel{
     */
     @SerializedName("City")
     @Expose
-    private Integer City;
+    private Long City;
 
     /**
     * 国家ID。
     */
     @SerializedName("Country")
     @Expose
-    private Integer Country;
+    private Long Country;
 
     /**
     * 省份ID。
     */
     @SerializedName("Province")
     @Expose
-    private Integer Province;
+    private Long Province;
 
     /**
     * 登录IP。
@@ -102,7 +102,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     private String Uuid;
 
     /**
-     * 获取事件ID。
+     * Get 事件ID。 
      * @return Id 事件ID。
      */
     public Long getId() {
@@ -110,7 +110,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置事件ID。
+     * Set 事件ID。
      * @param Id 事件ID。
      */
     public void setId(Long Id) {
@@ -118,7 +118,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -126,7 +126,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -134,9 +134,9 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取登录状态
+     * Get 登录状态
 <li>NON_LOCAL_LOGIN：异地登录</li>
-<li>NORMAL_LOGIN：正常登录</li>
+<li>NORMAL_LOGIN：正常登录</li> 
      * @return Status 登录状态
 <li>NON_LOCAL_LOGIN：异地登录</li>
 <li>NORMAL_LOGIN：正常登录</li>
@@ -146,7 +146,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置登录状态
+     * Set 登录状态
 <li>NON_LOCAL_LOGIN：异地登录</li>
 <li>NORMAL_LOGIN：正常登录</li>
      * @param Status 登录状态
@@ -158,7 +158,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取用户名。
+     * Get 用户名。 
      * @return UserName 用户名。
      */
     public String getUserName() {
@@ -166,7 +166,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置用户名。
+     * Set 用户名。
      * @param UserName 用户名。
      */
     public void setUserName(String UserName) {
@@ -174,55 +174,55 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取城市ID。
+     * Get 城市ID。 
      * @return City 城市ID。
      */
-    public Integer getCity() {
+    public Long getCity() {
         return this.City;
     }
 
     /**
-     * 设置城市ID。
+     * Set 城市ID。
      * @param City 城市ID。
      */
-    public void setCity(Integer City) {
+    public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * 获取国家ID。
+     * Get 国家ID。 
      * @return Country 国家ID。
      */
-    public Integer getCountry() {
+    public Long getCountry() {
         return this.Country;
     }
 
     /**
-     * 设置国家ID。
+     * Set 国家ID。
      * @param Country 国家ID。
      */
-    public void setCountry(Integer Country) {
+    public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * 获取省份ID。
+     * Get 省份ID。 
      * @return Province 省份ID。
      */
-    public Integer getProvince() {
+    public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * 设置省份ID。
+     * Set 省份ID。
      * @param Province 省份ID。
      */
-    public void setProvince(Integer Province) {
+    public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * 获取登录IP。
+     * Get 登录IP。 
      * @return SrcIp 登录IP。
      */
     public String getSrcIp() {
@@ -230,7 +230,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置登录IP。
+     * Set 登录IP。
      * @param SrcIp 登录IP。
      */
     public void setSrcIp(String SrcIp) {
@@ -238,7 +238,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取机器名称。
+     * Get 机器名称。 
      * @return MachineName 机器名称。
      */
     public String getMachineName() {
@@ -246,7 +246,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置机器名称。
+     * Set 机器名称。
      * @param MachineName 机器名称。
      */
     public void setMachineName(String MachineName) {
@@ -254,7 +254,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取登录时间。
+     * Get 登录时间。 
      * @return LoginTime 登录时间。
      */
     public String getLoginTime() {
@@ -262,7 +262,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置登录时间。
+     * Set 登录时间。
      * @param LoginTime 登录时间。
      */
     public void setLoginTime(String LoginTime) {
@@ -270,7 +270,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一标识Uuid。
+     * Get 云镜客户端唯一标识Uuid。 
      * @return Uuid 云镜客户端唯一标识Uuid。
      */
     public String getUuid() {
@@ -278,7 +278,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一标识Uuid。
+     * Set 云镜客户端唯一标识Uuid。
      * @param Uuid 云镜客户端唯一标识Uuid。
      */
     public void setUuid(String Uuid) {
@@ -286,7 +286,7 @@ public class NonLocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

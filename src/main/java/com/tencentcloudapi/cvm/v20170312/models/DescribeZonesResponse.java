@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZonesResponse  extends AbstractModel{
+public class DescribeZonesResponse extends AbstractModel{
 
     /**
     * 可用区数量。
@@ -44,7 +44,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可用区数量。
+     * Get 可用区数量。 
      * @return TotalCount 可用区数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可用区数量。
+     * Set 可用区数量。
      * @param TotalCount 可用区数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表信息。
+     * Get 可用区列表信息。 
      * @return ZoneSet 可用区列表信息。
      */
     public ZoneInfo [] getZoneSet() {
@@ -68,7 +68,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表信息。
+     * Set 可用区列表信息。
      * @param ZoneSet 可用区列表信息。
      */
     public void setZoneSet(ZoneInfo [] ZoneSet) {
@@ -76,7 +76,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeZonesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

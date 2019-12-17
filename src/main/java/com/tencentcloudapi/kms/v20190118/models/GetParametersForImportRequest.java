@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetParametersForImportRequest  extends AbstractModel{
+public class GetParametersForImportRequest extends AbstractModel{
 
     /**
     * CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
@@ -44,7 +44,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     private String WrappingKeySpec;
 
     /**
-     * 获取CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
+     * Get CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。 
      * @return KeyId CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
      */
     public String getKeyId() {
@@ -52,7 +52,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
+     * Set CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
      * @param KeyId CMK的唯一标识，获取密钥参数的CMK必须是EXTERNAL类型，即在CreateKey时指定Type=2 类型的CMK。
      */
     public void setKeyId(String KeyId) {
@@ -60,7 +60,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
+     * Get 指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256 
      * @return WrappingAlgorithm 指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
      */
     public String getWrappingAlgorithm() {
@@ -68,7 +68,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
+     * Set 指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
      * @param WrappingAlgorithm 指定加密密钥材料的算法，目前支持RSAES_PKCS1_V1_5、RSAES_OAEP_SHA_1、RSAES_OAEP_SHA_256
      */
     public void setWrappingAlgorithm(String WrappingAlgorithm) {
@@ -76,7 +76,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定加密密钥材料的类型，目前只支持RSA_2048
+     * Get 指定加密密钥材料的类型，目前只支持RSA_2048 
      * @return WrappingKeySpec 指定加密密钥材料的类型，目前只支持RSA_2048
      */
     public String getWrappingKeySpec() {
@@ -84,7 +84,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定加密密钥材料的类型，目前只支持RSA_2048
+     * Set 指定加密密钥材料的类型，目前只支持RSA_2048
      * @param WrappingKeySpec 指定加密密钥材料的类型，目前只支持RSA_2048
      */
     public void setWrappingKeySpec(String WrappingKeySpec) {
@@ -92,7 +92,7 @@ public class GetParametersForImportRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

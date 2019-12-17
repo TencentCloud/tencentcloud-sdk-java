@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Docker  extends AbstractModel{
+public class Docker extends AbstractModel{
 
     /**
     * Docker Hub 用户名或 Tencent Registry 用户名
@@ -51,7 +51,7 @@ public class Docker  extends AbstractModel{
     private String Server;
 
     /**
-     * 获取Docker Hub 用户名或 Tencent Registry 用户名
+     * Get Docker Hub 用户名或 Tencent Registry 用户名 
      * @return User Docker Hub 用户名或 Tencent Registry 用户名
      */
     public String getUser() {
@@ -59,7 +59,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 设置Docker Hub 用户名或 Tencent Registry 用户名
+     * Set Docker Hub 用户名或 Tencent Registry 用户名
      * @param User Docker Hub 用户名或 Tencent Registry 用户名
      */
     public void setUser(String User) {
@@ -67,7 +67,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 获取Docker Hub 密码或 Tencent Registry 密码
+     * Get Docker Hub 密码或 Tencent Registry 密码 
      * @return Password Docker Hub 密码或 Tencent Registry 密码
      */
     public String getPassword() {
@@ -75,7 +75,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 设置Docker Hub 密码或 Tencent Registry 密码
+     * Set Docker Hub 密码或 Tencent Registry 密码
      * @param Password Docker Hub 密码或 Tencent Registry 密码
      */
     public void setPassword(String Password) {
@@ -83,7 +83,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 获取Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
+     * Get Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]” 
      * @return Image Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      */
     public String getImage() {
@@ -91,7 +91,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 设置Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
+     * Set Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      * @param Image Docker Hub填写“[user/repo]:[tag]”，Tencent Registry填写“ccr.ccs.tencentyun.com/[namespace/repo]:[tag]”
      */
     public void setImage(String Image) {
@@ -99,7 +99,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 获取Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     * Get Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com” 
      * @return Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
      */
     public String getServer() {
@@ -107,7 +107,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 设置Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
+     * Set Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
      * @param Server Docker Hub 可以不填，但确保具有公网访问能力。或者是 Tencent Registry 服务地址“ccr.ccs.tencentyun.com”
      */
     public void setServer(String Server) {
@@ -115,7 +115,7 @@ public class Docker  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "User", this.User);

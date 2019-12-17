@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskResultRequest  extends AbstractModel{
+public class DescribeTaskResultRequest extends AbstractModel{
 
     /**
     * 异步任务ID
@@ -37,7 +37,7 @@ public class DescribeTaskResultRequest  extends AbstractModel{
     private String DealName;
 
     /**
-     * 获取异步任务ID
+     * Get 异步任务ID 
      * @return TaskId 异步任务ID
      */
     public Integer getTaskId() {
@@ -45,7 +45,7 @@ public class DescribeTaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务ID
+     * Set 异步任务ID
      * @param TaskId 异步任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -53,7 +53,7 @@ public class DescribeTaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费订单号
+     * Get 计费订单号 
      * @return DealName 计费订单号
      */
     public String getDealName() {
@@ -61,7 +61,7 @@ public class DescribeTaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费订单号
+     * Set 计费订单号
      * @param DealName 计费订单号
      */
     public void setDealName(String DealName) {
@@ -69,7 +69,7 @@ public class DescribeTaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

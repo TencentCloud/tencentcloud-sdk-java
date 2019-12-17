@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Namespace  extends AbstractModel{
+public class Namespace extends AbstractModel{
 
     /**
     * 命名空间创建时间
@@ -58,7 +58,7 @@ public class Namespace  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取命名空间创建时间
+     * Get 命名空间创建时间 
      * @return ModTime 命名空间创建时间
      */
     public String getModTime() {
@@ -66,7 +66,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间创建时间
+     * Set 命名空间创建时间
      * @param ModTime 命名空间创建时间
      */
     public void setModTime(String ModTime) {
@@ -74,7 +74,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间修改时间
+     * Get 命名空间修改时间 
      * @return AddTime 命名空间修改时间
      */
     public String getAddTime() {
@@ -82,7 +82,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间修改时间
+     * Set 命名空间修改时间
      * @param AddTime 命名空间修改时间
      */
     public void setAddTime(String AddTime) {
@@ -90,7 +90,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间描述
+     * Get 命名空间描述 
      * @return Description 命名空间描述
      */
     public String getDescription() {
@@ -98,7 +98,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间描述
+     * Set 命名空间描述
      * @param Description 命名空间描述
      */
     public void setDescription(String Description) {
@@ -106,7 +106,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
+     * Get 命名空间名称 
      * @return Name 命名空间名称
      */
     public String getName() {
@@ -114,7 +114,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
      * @param Name 命名空间名称
      */
     public void setName(String Name) {
@@ -122,7 +122,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 获取默认default，TCB表示是小程序云开发创建的
+     * Get 默认default，TCB表示是小程序云开发创建的 
      * @return Type 默认default，TCB表示是小程序云开发创建的
      */
     public String getType() {
@@ -130,7 +130,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 设置默认default，TCB表示是小程序云开发创建的
+     * Set 默认default，TCB表示是小程序云开发创建的
      * @param Type 默认default，TCB表示是小程序云开发创建的
      */
     public void setType(String Type) {
@@ -138,7 +138,7 @@ public class Namespace  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);

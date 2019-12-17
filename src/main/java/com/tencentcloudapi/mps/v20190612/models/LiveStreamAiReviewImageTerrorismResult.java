@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiReviewImageTerrorismResult  extends AbstractModel{
+public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel{
 
     /**
     * 嫌疑片段起始的 PTS 时间，单位：秒。
@@ -84,7 +84,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     private String PicUrlExpireTime;
 
     /**
-     * 获取嫌疑片段起始的 PTS 时间，单位：秒。
+     * Get 嫌疑片段起始的 PTS 时间，单位：秒。 
      * @return StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      */
     public Float getStartPtsTime() {
@@ -92,7 +92,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段起始的 PTS 时间，单位：秒。
+     * Set 嫌疑片段起始的 PTS 时间，单位：秒。
      * @param StartPtsTime 嫌疑片段起始的 PTS 时间，单位：秒。
      */
     public void setStartPtsTime(Float StartPtsTime) {
@@ -100,7 +100,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段结束的 PTS 时间，单位：秒。
+     * Get 嫌疑片段结束的 PTS 时间，单位：秒。 
      * @return EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
      */
     public Float getEndPtsTime() {
@@ -108,7 +108,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段结束的 PTS 时间，单位：秒。
+     * Set 嫌疑片段结束的 PTS 时间，单位：秒。
      * @param EndPtsTime 嫌疑片段结束的 PTS 时间，单位：秒。
      */
     public void setEndPtsTime(Float EndPtsTime) {
@@ -116,7 +116,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段涉恐分数。
+     * Get 嫌疑片段涉恐分数。 
      * @return Confidence 嫌疑片段涉恐分数。
      */
     public Float getConfidence() {
@@ -124,7 +124,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段涉恐分数。
+     * Set 嫌疑片段涉恐分数。
      * @param Confidence 嫌疑片段涉恐分数。
      */
     public void setConfidence(Float Confidence) {
@@ -132,10 +132,10 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段鉴恐结果建议，取值范围：
+     * Get 嫌疑片段鉴恐结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
-<li>block</li>
+<li>block</li> 
      * @return Suggestion 嫌疑片段鉴恐结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
@@ -146,7 +146,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段鉴恐结果建议，取值范围：
+     * Set 嫌疑片段鉴恐结果建议，取值范围：
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -160,7 +160,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取视频暴恐结果标签，取值范围：
+     * Get 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
@@ -168,7 +168,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
 <li>banners：暴恐旗帜。</li>
 <li>militant：武装分子。</li>
 <li>explosion：爆炸火灾。</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物。</li> 
      * @return Label 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
@@ -184,7 +184,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置视频暴恐结果标签，取值范围：
+     * Set 视频暴恐结果标签，取值范围：
 <li>guns：武器枪支。</li>
 <li>crowd：人群聚集。</li>
 <li>police：警察部队。</li>
@@ -208,8 +208,8 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑图片 URL （图片不会永久存储，到达
-PicUrlExpireTime 时间点后图片将被删除）。
+     * Get 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。 
      * @return Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      */
@@ -218,7 +218,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑图片 URL （图片不会永久存储，到达
+     * Set 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      * @param Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
@@ -228,7 +228,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getPicUrlExpireTime() {
@@ -236,7 +236,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
@@ -244,7 +244,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);

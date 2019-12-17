@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WeeklyReport  extends AbstractModel{
+public class WeeklyReport extends AbstractModel{
 
     /**
     * 周报开始时间。
@@ -37,7 +37,7 @@ public class WeeklyReport  extends AbstractModel{
     private String EndDate;
 
     /**
-     * 获取周报开始时间。
+     * Get 周报开始时间。 
      * @return BeginDate 周报开始时间。
      */
     public String getBeginDate() {
@@ -45,7 +45,7 @@ public class WeeklyReport  extends AbstractModel{
     }
 
     /**
-     * 设置周报开始时间。
+     * Set 周报开始时间。
      * @param BeginDate 周报开始时间。
      */
     public void setBeginDate(String BeginDate) {
@@ -53,7 +53,7 @@ public class WeeklyReport  extends AbstractModel{
     }
 
     /**
-     * 获取周报结束时间。
+     * Get 周报结束时间。 
      * @return EndDate 周报结束时间。
      */
     public String getEndDate() {
@@ -61,7 +61,7 @@ public class WeeklyReport  extends AbstractModel{
     }
 
     /**
-     * 设置周报结束时间。
+     * Set 周报结束时间。
      * @param EndDate 周报结束时间。
      */
     public void setEndDate(String EndDate) {
@@ -69,7 +69,7 @@ public class WeeklyReport  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginDate", this.BeginDate);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDCDBInstanceRequest  extends AbstractModel{
+public class CreateDCDBInstanceRequest extends AbstractModel{
 
     /**
     * 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
@@ -121,7 +121,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Get 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。 
      * @return Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      */
     public String [] getZones() {
@@ -129,7 +129,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
+     * Set 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      * @param Zones 分片节点可用区分布，最多可填两个可用区。当分片规格为一主两从时，其中两个节点在第一个可用区。
      */
     public void setZones(String [] Zones) {
@@ -137,7 +137,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买的时长，单位：月。
+     * Get 欲购买的时长，单位：月。 
      * @return Period 欲购买的时长，单位：月。
      */
     public Integer getPeriod() {
@@ -145,7 +145,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买的时长，单位：月。
+     * Set 欲购买的时长，单位：月。
      * @param Period 欲购买的时长，单位：月。
      */
     public void setPeriod(Integer Period) {
@@ -153,8 +153,8 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片内存大小，单位：GB，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 分片内存大小，单位：GB，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -163,7 +163,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片内存大小，单位：GB，可以通过 DescribeShardSpec
+     * Set 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -173,8 +173,8 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -183,7 +183,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
+     * Set 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -193,8 +193,8 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单个分片节点个数，可以通过 DescribeShardSpec
- 查询实例规格获得。
+     * Get 单个分片节点个数，可以通过 DescribeShardSpec
+ 查询实例规格获得。 
      * @return ShardNodeCount 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
      */
@@ -203,7 +203,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单个分片节点个数，可以通过 DescribeShardSpec
+     * Set 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param ShardNodeCount 单个分片节点个数，可以通过 DescribeShardSpec
  查询实例规格获得。
@@ -213,7 +213,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+     * Get 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。 
      * @return ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
     public Integer getShardCount() {
@@ -221,7 +221,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
+     * Set 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      * @param ShardCount 实例分片个数，可选范围2-8，可以通过升级实例进行新增分片到最多64个分片。
      */
     public void setShardCount(Integer ShardCount) {
@@ -229,7 +229,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取欲购买实例的数量，目前只支持购买1个实例
+     * Get 欲购买实例的数量，目前只支持购买1个实例 
      * @return Count 欲购买实例的数量，目前只支持购买1个实例
      */
     public Integer getCount() {
@@ -237,7 +237,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置欲购买实例的数量，目前只支持购买1个实例
+     * Set 欲购买实例的数量，目前只支持购买1个实例
      * @param Count 欲购买实例的数量，目前只支持购买1个实例
      */
     public void setCount(Integer Count) {
@@ -245,7 +245,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * Get 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目 
      * @return ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
     public Integer getProjectId() {
@@ -253,7 +253,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
+     * Set 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      * @param ProjectId 项目 ID，可以通过查看项目列表获取，不传则关联到默认项目
      */
     public void setProjectId(Integer ProjectId) {
@@ -261,7 +261,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟私有网络 ID，不传或传空表示创建为基础网络
+     * Get 虚拟私有网络 ID，不传或传空表示创建为基础网络 
      * @return VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
      */
     public String getVpcId() {
@@ -269,7 +269,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟私有网络 ID，不传或传空表示创建为基础网络
+     * Set 虚拟私有网络 ID，不传或传空表示创建为基础网络
      * @param VpcId 虚拟私有网络 ID，不传或传空表示创建为基础网络
      */
     public void setVpcId(String VpcId) {
@@ -277,7 +277,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟私有网络子网 ID，VpcId不为空时必填
+     * Get 虚拟私有网络子网 ID，VpcId不为空时必填 
      * @return SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
      */
     public String getSubnetId() {
@@ -285,7 +285,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟私有网络子网 ID，VpcId不为空时必填
+     * Set 虚拟私有网络子网 ID，VpcId不为空时必填
      * @param SubnetId 虚拟私有网络子网 ID，VpcId不为空时必填
      */
     public void setSubnetId(String SubnetId) {
@@ -293,11 +293,11 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+     * Get 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
 10.0.10 - Mariadb 10.0.10；
 10.1.9 - Mariadb 10.1.9；
 5.7.17 - Percona 5.7.17。
-如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。
+如果不填的话，默认为10.1.9，表示Mariadb 10.1.9。 
      * @return DbVersionId 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
 10.0.10 - Mariadb 10.0.10；
 10.1.9 - Mariadb 10.1.9；
@@ -309,7 +309,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
+     * Set 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。
 10.0.10 - Mariadb 10.0.10；
 10.1.9 - Mariadb 10.1.9；
 5.7.17 - Percona 5.7.17。
@@ -325,7 +325,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券进行支付，默认不使用。
+     * Get 是否自动使用代金券进行支付，默认不使用。 
      * @return AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public Boolean getAutoVoucher() {
@@ -333,7 +333,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券进行支付，默认不使用。
+     * Set 是否自动使用代金券进行支付，默认不使用。
      * @param AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
@@ -341,7 +341,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表，目前仅支持指定一张代金券。
+     * Get 代金券ID列表，目前仅支持指定一张代金券。 
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public String [] getVoucherIds() {
@@ -349,7 +349,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表，目前仅支持指定一张代金券。
+     * Set 代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -357,7 +357,7 @@ public class CreateDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);

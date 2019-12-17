@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagResourceInfo  extends AbstractModel{
+public class TagResourceInfo extends AbstractModel{
 
     /**
     * 资源类型，其中：
@@ -40,10 +40,10 @@ RealServer表示源站
     private String ResourceId;
 
     /**
-     * 获取资源类型，其中：
+     * Get 资源类型，其中：
 Proxy表示通道，
 ProxyGroup表示通道组，
-RealServer表示源站
+RealServer表示源站 
      * @return ResourceType 资源类型，其中：
 Proxy表示通道，
 ProxyGroup表示通道组，
@@ -54,7 +54,7 @@ RealServer表示源站
     }
 
     /**
-     * 设置资源类型，其中：
+     * Set 资源类型，其中：
 Proxy表示通道，
 ProxyGroup表示通道组，
 RealServer表示源站
@@ -68,7 +68,7 @@ RealServer表示源站
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return ResourceId 资源ID
      */
     public String getResourceId() {
@@ -76,7 +76,7 @@ RealServer表示源站
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param ResourceId 资源ID
      */
     public void setResourceId(String ResourceId) {
@@ -84,7 +84,7 @@ RealServer表示源站
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);

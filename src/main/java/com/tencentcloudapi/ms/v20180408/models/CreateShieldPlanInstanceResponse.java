@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateShieldPlanInstanceResponse  extends AbstractModel{
+public class CreateShieldPlanInstanceResponse extends AbstractModel{
 
     /**
     * 策略id
@@ -44,7 +44,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取策略id
+     * Get 策略id 
      * @return PlanId 策略id
      */
     public Integer getPlanId() {
@@ -52,7 +52,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置策略id
+     * Set 策略id
      * @param PlanId 策略id
      */
     public void setPlanId(Integer PlanId) {
@@ -60,7 +60,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Integer getProgress() {
@@ -68,7 +68,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param Progress 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setProgress(Integer Progress) {
@@ -76,7 +76,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);

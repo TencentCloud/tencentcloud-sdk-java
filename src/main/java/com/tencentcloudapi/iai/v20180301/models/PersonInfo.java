@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonInfo  extends AbstractModel{
+public class PersonInfo extends AbstractModel{
 
     /**
     * 人员名称
@@ -66,7 +66,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private Long CreationTimestamp;
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -74,7 +74,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -82,7 +82,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员Id
+     * Get 人员Id 
      * @return PersonId 人员Id
      */
     public String getPersonId() {
@@ -90,7 +90,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员Id
+     * Set 人员Id
      * @param PersonId 人员Id
      */
     public void setPersonId(String PersonId) {
@@ -98,7 +98,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员性别
+     * Get 人员性别 
      * @return Gender 人员性别
      */
     public Long getGender() {
@@ -106,7 +106,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员性别
+     * Set 人员性别
      * @param Gender 人员性别
      */
     public void setGender(Long Gender) {
@@ -114,7 +114,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取人员描述字段内容
+     * Get 人员描述字段内容 
      * @return PersonExDescriptions 人员描述字段内容
      */
     public String [] getPersonExDescriptions() {
@@ -122,7 +122,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置人员描述字段内容
+     * Set 人员描述字段内容
      * @param PersonExDescriptions 人员描述字段内容
      */
     public void setPersonExDescriptions(String [] PersonExDescriptions) {
@@ -130,7 +130,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取包含的人脸照片列表
+     * Get 包含的人脸照片列表 
      * @return FaceIds 包含的人脸照片列表
      */
     public String [] getFaceIds() {
@@ -138,7 +138,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置包含的人脸照片列表
+     * Set 包含的人脸照片列表
      * @param FaceIds 包含的人脸照片列表
      */
     public void setFaceIds(String [] FaceIds) {
@@ -146,8 +146,8 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 获取Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * Get Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。 
      * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
      */
@@ -156,7 +156,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 设置Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+     * Set Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
      * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
 Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
@@ -166,7 +166,7 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonName", this.PersonName);

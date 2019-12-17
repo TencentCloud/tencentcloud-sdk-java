@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCfsPGroupResponse  extends AbstractModel{
+public class DeleteCfsPGroupResponse extends AbstractModel{
 
     /**
     * 权限组 ID
@@ -44,7 +44,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -52,7 +52,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -60,7 +60,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户 ID
+     * Get 用户 ID 
      * @return AppId 用户 ID
      */
     public Long getAppId() {
@@ -68,7 +68,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户 ID
+     * Set 用户 ID
      * @param AppId 用户 ID
      */
     public void setAppId(Long AppId) {
@@ -76,7 +76,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DeleteCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

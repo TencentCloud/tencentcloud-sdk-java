@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceParamHistory  extends AbstractModel{
+public class InstanceParamHistory extends AbstractModel{
 
     /**
     * 参数名称
@@ -58,7 +58,7 @@ public class InstanceParamHistory  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取参数名称
+     * Get 参数名称 
      * @return ParamName 参数名称
      */
     public String getParamName() {
@@ -66,7 +66,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 设置参数名称
+     * Set 参数名称
      * @param ParamName 参数名称
      */
     public void setParamName(String ParamName) {
@@ -74,7 +74,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 获取修改前值
+     * Get 修改前值 
      * @return PreValue 修改前值
      */
     public String getPreValue() {
@@ -82,7 +82,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 设置修改前值
+     * Set 修改前值
      * @param PreValue 修改前值
      */
     public void setPreValue(String PreValue) {
@@ -90,7 +90,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 获取修改后值
+     * Get 修改后值 
      * @return NewValue 修改后值
      */
     public String getNewValue() {
@@ -98,7 +98,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 设置修改后值
+     * Set 修改后值
      * @param NewValue 修改后值
      */
     public void setNewValue(String NewValue) {
@@ -106,7 +106,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 获取状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+     * Get 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败 
      * @return Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      */
     public Integer getStatus() {
@@ -114,7 +114,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 设置状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+     * Set 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      * @param Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
      */
     public void setStatus(Integer Status) {
@@ -122,7 +122,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
@@ -130,7 +130,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -138,7 +138,7 @@ public class InstanceParamHistory  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);

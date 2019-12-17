@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MergeInfo  extends AbstractModel{
+public class MergeInfo extends AbstractModel{
 
     /**
     * 输入图片base64
@@ -51,7 +51,7 @@ public class MergeInfo  extends AbstractModel{
     private String TemplateFaceID;
 
     /**
-     * 获取输入图片base64
+     * Get 输入图片base64 
      * @return Image 输入图片base64
      */
     public String getImage() {
@@ -59,7 +59,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输入图片base64
+     * Set 输入图片base64
      * @param Image 输入图片base64
      */
     public void setImage(String Image) {
@@ -67,7 +67,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取输入图片url
+     * Get 输入图片url 
      * @return Url 输入图片url
      */
     public String getUrl() {
@@ -75,7 +75,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输入图片url
+     * Set 输入图片url
      * @param Url 输入图片url
      */
     public void setUrl(String Url) {
@@ -83,7 +83,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上传的图片人脸位置信息（人脸框）
+     * Get 上传的图片人脸位置信息（人脸框） 
      * @return InputImageFaceRect 上传的图片人脸位置信息（人脸框）
      */
     public FaceRect getInputImageFaceRect() {
@@ -91,7 +91,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传的图片人脸位置信息（人脸框）
+     * Set 上传的图片人脸位置信息（人脸框）
      * @param InputImageFaceRect 上传的图片人脸位置信息（人脸框）
      */
     public void setInputImageFaceRect(FaceRect InputImageFaceRect) {
@@ -99,7 +99,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取控制台上传的素材人脸ID
+     * Get 控制台上传的素材人脸ID 
      * @return TemplateFaceID 控制台上传的素材人脸ID
      */
     public String getTemplateFaceID() {
@@ -107,7 +107,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置控制台上传的素材人脸ID
+     * Set 控制台上传的素材人脸ID
      * @param TemplateFaceID 控制台上传的素材人脸ID
      */
     public void setTemplateFaceID(String TemplateFaceID) {
@@ -115,7 +115,7 @@ public class MergeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);

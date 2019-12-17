@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateApplicationRequest  extends AbstractModel{
+public class CreateApplicationRequest extends AbstractModel{
 
     /**
     * 应用名称
@@ -65,7 +65,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     private String ApplicationResourceType;
 
     /**
-     * 获取应用名称
+     * Get 应用名称 
      * @return ApplicationName 应用名称
      */
     public String getApplicationName() {
@@ -73,7 +73,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
      * @param ApplicationName 应用名称
      */
     public void setApplicationName(String ApplicationName) {
@@ -81,7 +81,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
+     * Get 应用类型 
      * @return ApplicationType 应用类型
      */
     public String getApplicationType() {
@@ -89,7 +89,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
      * @param ApplicationType 应用类型
      */
     public void setApplicationType(String ApplicationType) {
@@ -97,7 +97,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用描述
+     * Get 应用描述 
      * @return ApplicationDesc 应用描述
      */
     public String getApplicationDesc() {
@@ -105,7 +105,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用描述
+     * Set 应用描述
      * @param ApplicationDesc 应用描述
      */
     public void setApplicationDesc(String ApplicationDesc) {
@@ -113,7 +113,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用日志配置项，废弃参数
+     * Get 应用日志配置项，废弃参数 
      * @return ApplicationLogConfig 应用日志配置项，废弃参数
      */
     public String getApplicationLogConfig() {
@@ -121,7 +121,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用日志配置项，废弃参数
+     * Set 应用日志配置项，废弃参数
      * @param ApplicationLogConfig 应用日志配置项，废弃参数
      */
     public void setApplicationLogConfig(String ApplicationLogConfig) {
@@ -129,7 +129,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用微服务类型
+     * Get 应用微服务类型 
      * @return MicroserviceType 应用微服务类型
      */
     public String getMicroserviceType() {
@@ -137,7 +137,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用微服务类型
+     * Set 应用微服务类型
      * @param MicroserviceType 应用微服务类型
      */
     public void setMicroserviceType(String MicroserviceType) {
@@ -145,7 +145,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应有资源类型
+     * Get 应有资源类型 
      * @return ApplicationResourceType 应有资源类型
      */
     public String getApplicationResourceType() {
@@ -153,7 +153,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应有资源类型
+     * Set 应有资源类型
      * @param ApplicationResourceType 应有资源类型
      */
     public void setApplicationResourceType(String ApplicationResourceType) {
@@ -161,7 +161,7 @@ public class CreateApplicationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);

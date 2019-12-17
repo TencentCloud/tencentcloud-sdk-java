@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNonlocalLoginPlacesRequest  extends AbstractModel{
+public class DeleteNonlocalLoginPlacesRequest extends AbstractModel{
 
     /**
     * 异地登录事件Id数组。
     */
     @SerializedName("Ids")
     @Expose
-    private Integer [] Ids;
+    private Long [] Ids;
 
     /**
-     * 获取异地登录事件Id数组。
+     * Get 异地登录事件Id数组。 
      * @return Ids 异地登录事件Id数组。
      */
-    public Integer [] getIds() {
+    public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * 设置异地登录事件Id数组。
+     * Set 异地登录事件Id数组。
      * @param Ids 异地登录事件Id数组。
      */
-    public void setIds(Integer [] Ids) {
+    public void setIds(Long [] Ids) {
         this.Ids = Ids;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

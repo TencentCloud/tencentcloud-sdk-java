@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetailSet  extends AbstractModel{
+public class DetailSet extends AbstractModel{
 
     /**
     * 域名
@@ -45,7 +45,7 @@ public class DetailSet  extends AbstractModel{
     private String InstanceID;
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return Domain 域名
      */
     public String getDomain() {
@@ -53,7 +53,7 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param Domain 域名
      */
     public void setDomain(String Domain) {
@@ -61,7 +61,7 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 获取使用数据明细
+     * Get 使用数据明细 
      * @return DetailPoints 使用数据明细
      */
     public DetailPoint [] getDetailPoints() {
@@ -69,7 +69,7 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 设置使用数据明细
+     * Set 使用数据明细
      * @param DetailPoints 使用数据明细
      */
     public void setDetailPoints(DetailPoint [] DetailPoints) {
@@ -77,8 +77,8 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceID 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -87,7 +87,7 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,7 +97,7 @@ public class DetailSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttendanceInfo  extends AbstractModel{
+public class AttendanceInfo extends AbstractModel{
 
     /**
     * 识别到的人员信息
@@ -37,7 +37,7 @@ public class AttendanceInfo  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取识别到的人员信息
+     * Get 识别到的人员信息 
      * @return Face 识别到的人员信息
      */
     public FrameInfo getFace() {
@@ -45,7 +45,7 @@ public class AttendanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的人员信息
+     * Set 识别到的人员信息
      * @param Face 识别到的人员信息
      */
     public void setFace(FrameInfo Face) {
@@ -53,7 +53,7 @@ public class AttendanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别到的人员id
+     * Get 识别到的人员id 
      * @return PersonId 识别到的人员id
      */
     public String getPersonId() {
@@ -61,7 +61,7 @@ public class AttendanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的人员id
+     * Set 识别到的人员id
      * @param PersonId 识别到的人员id
      */
     public void setPersonId(String PersonId) {
@@ -69,7 +69,7 @@ public class AttendanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Face.", this.Face);

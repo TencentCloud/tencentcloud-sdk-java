@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IDCardOCRResponse  extends AbstractModel{
+public class IDCardOCRResponse extends AbstractModel{
 
     /**
     * 姓名（人像面）
@@ -107,7 +107,7 @@ Code 告警码列表和释义：
     private String RequestId;
 
     /**
-     * 获取姓名（人像面）
+     * Get 姓名（人像面） 
      * @return Name 姓名（人像面）
      */
     public String getName() {
@@ -115,7 +115,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置姓名（人像面）
+     * Set 姓名（人像面）
      * @param Name 姓名（人像面）
      */
     public void setName(String Name) {
@@ -123,7 +123,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取性别（人像面）
+     * Get 性别（人像面） 
      * @return Sex 性别（人像面）
      */
     public String getSex() {
@@ -131,7 +131,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置性别（人像面）
+     * Set 性别（人像面）
      * @param Sex 性别（人像面）
      */
     public void setSex(String Sex) {
@@ -139,7 +139,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取民族（人像面）
+     * Get 民族（人像面） 
      * @return Nation 民族（人像面）
      */
     public String getNation() {
@@ -147,7 +147,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置民族（人像面）
+     * Set 民族（人像面）
      * @param Nation 民族（人像面）
      */
     public void setNation(String Nation) {
@@ -155,7 +155,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取出生日期（人像面）
+     * Get 出生日期（人像面） 
      * @return Birth 出生日期（人像面）
      */
     public String getBirth() {
@@ -163,7 +163,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置出生日期（人像面）
+     * Set 出生日期（人像面）
      * @param Birth 出生日期（人像面）
      */
     public void setBirth(String Birth) {
@@ -171,7 +171,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取地址（人像面）
+     * Get 地址（人像面） 
      * @return Address 地址（人像面）
      */
     public String getAddress() {
@@ -179,7 +179,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置地址（人像面）
+     * Set 地址（人像面）
      * @param Address 地址（人像面）
      */
     public void setAddress(String Address) {
@@ -187,7 +187,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取身份证号（人像面）
+     * Get 身份证号（人像面） 
      * @return IdNum 身份证号（人像面）
      */
     public String getIdNum() {
@@ -195,7 +195,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置身份证号（人像面）
+     * Set 身份证号（人像面）
      * @param IdNum 身份证号（人像面）
      */
     public void setIdNum(String IdNum) {
@@ -203,7 +203,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取发证机关（国徽面）
+     * Get 发证机关（国徽面） 
      * @return Authority 发证机关（国徽面）
      */
     public String getAuthority() {
@@ -211,7 +211,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置发证机关（国徽面）
+     * Set 发证机关（国徽面）
      * @param Authority 发证机关（国徽面）
      */
     public void setAuthority(String Authority) {
@@ -219,7 +219,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取证件有效期（国徽面）
+     * Get 证件有效期（国徽面） 
      * @return ValidDate 证件有效期（国徽面）
      */
     public String getValidDate() {
@@ -227,7 +227,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置证件有效期（国徽面）
+     * Set 证件有效期（国徽面）
      * @param ValidDate 证件有效期（国徽面）
      */
     public void setValidDate(String ValidDate) {
@@ -235,7 +235,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
+     * Get 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
 
 目前支持的扩展字段为：
 IdCard，身份证照片，请求 CropIdCard 时返回；
@@ -249,7 +249,7 @@ Code 告警码列表和释义：
 -9103	身份证翻拍告警，
 -9105	身份证框内遮挡告警，
 -9104	临时身份证告警，
--9106	身份证 PS 告警。
+-9106	身份证 PS 告警。 
      * @return AdvancedInfo 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
 
 目前支持的扩展字段为：
@@ -271,7 +271,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
+     * Set 扩展信息，根据请求的可选字段返回对应内容，不请求则不返回，具体输入参考示例3和示例4。
 
 目前支持的扩展字段为：
 IdCard，身份证照片，请求 CropIdCard 时返回；
@@ -307,7 +307,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -315,7 +315,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -323,7 +323,7 @@ Code 告警码列表和释义：
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionConf  extends AbstractModel{
+public class RegionConf extends AbstractModel{
 
     /**
     * 地域ID
@@ -58,7 +58,7 @@ public class RegionConf  extends AbstractModel{
     private ZoneCapacityConf [] ZoneSet;
 
     /**
-     * 获取地域ID
+     * Get 地域ID 
      * @return RegionId 地域ID
      */
     public String getRegionId() {
@@ -66,7 +66,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
      * @param RegionId 地域ID
      */
     public void setRegionId(String RegionId) {
@@ -74,7 +74,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 获取地域名称
+     * Get 地域名称 
      * @return RegionName 地域名称
      */
     public String getRegionName() {
@@ -82,7 +82,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域名称
+     * Set 地域名称
      * @param RegionName 地域名称
      */
     public void setRegionName(String RegionName) {
@@ -90,7 +90,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 获取地域简称
+     * Get 地域简称 
      * @return RegionShortName 地域简称
      */
     public String getRegionShortName() {
@@ -98,7 +98,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域简称
+     * Set 地域简称
      * @param RegionShortName 地域简称
      */
     public void setRegionShortName(String RegionShortName) {
@@ -106,7 +106,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 获取地域所在大区名称
+     * Get 地域所在大区名称 
      * @return Area 地域所在大区名称
      */
     public String getArea() {
@@ -114,7 +114,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域所在大区名称
+     * Set 地域所在大区名称
      * @param Area 地域所在大区名称
      */
     public void setArea(String Area) {
@@ -122,7 +122,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return ZoneSet 可用区信息
      */
     public ZoneCapacityConf [] getZoneSet() {
@@ -130,7 +130,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param ZoneSet 可用区信息
      */
     public void setZoneSet(ZoneCapacityConf [] ZoneSet) {
@@ -138,7 +138,7 @@ public class RegionConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

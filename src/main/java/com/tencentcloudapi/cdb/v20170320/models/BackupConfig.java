@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupConfig  extends AbstractModel{
+public class BackupConfig extends AbstractModel{
 
     /**
     * 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
@@ -51,7 +51,7 @@ public class BackupConfig  extends AbstractModel{
     private Integer Vport;
 
     /**
-     * 获取第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
+     * Get 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步 
      * @return ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      */
     public String getReplicationMode() {
@@ -59,7 +59,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 设置第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
+     * Set 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      * @param ReplicationMode 第二个从库复制方式，可能的返回值：async-异步，semisync-半同步
      */
     public void setReplicationMode(String ReplicationMode) {
@@ -67,7 +67,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 获取第二个从库可用区的正式名称，如ap-shanghai-1
+     * Get 第二个从库可用区的正式名称，如ap-shanghai-1 
      * @return Zone 第二个从库可用区的正式名称，如ap-shanghai-1
      */
     public String getZone() {
@@ -75,7 +75,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 设置第二个从库可用区的正式名称，如ap-shanghai-1
+     * Set 第二个从库可用区的正式名称，如ap-shanghai-1
      * @param Zone 第二个从库可用区的正式名称，如ap-shanghai-1
      */
     public void setZone(String Zone) {
@@ -83,7 +83,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 获取第二个从库内网IP地址
+     * Get 第二个从库内网IP地址 
      * @return Vip 第二个从库内网IP地址
      */
     public String getVip() {
@@ -91,7 +91,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 设置第二个从库内网IP地址
+     * Set 第二个从库内网IP地址
      * @param Vip 第二个从库内网IP地址
      */
     public void setVip(String Vip) {
@@ -99,7 +99,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 获取第二个从库访问端口
+     * Get 第二个从库访问端口 
      * @return Vport 第二个从库访问端口
      */
     public Integer getVport() {
@@ -107,7 +107,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 设置第二个从库访问端口
+     * Set 第二个从库访问端口
      * @param Vport 第二个从库访问端口
      */
     public void setVport(Integer Vport) {
@@ -115,7 +115,7 @@ public class BackupConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplicationMode", this.ReplicationMode);

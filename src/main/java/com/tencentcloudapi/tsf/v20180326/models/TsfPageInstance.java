@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TsfPageInstance  extends AbstractModel{
+public class TsfPageInstance extends AbstractModel{
 
     /**
     * 机器实例总数目
@@ -39,8 +39,8 @@ public class TsfPageInstance  extends AbstractModel{
     private Instance [] Content;
 
     /**
-     * 获取机器实例总数目
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例总数目
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 机器实例总数目
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class TsfPageInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例总数目
+     * Set 机器实例总数目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 机器实例总数目
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class TsfPageInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 机器实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class TsfPageInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例列表
+     * Set 机器实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 机器实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class TsfPageInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

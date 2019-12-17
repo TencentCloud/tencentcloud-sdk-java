@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigratePrivateIpAddressRequest  extends AbstractModel{
+public class MigratePrivateIpAddressRequest extends AbstractModel{
 
     /**
     * 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -44,7 +44,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     private String PrivateIpAddress;
 
     /**
-     * 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public String getSourceNetworkInterfaceId() {
@@ -52,7 +52,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public void setSourceNetworkInterfaceId(String SourceNetworkInterfaceId) {
@@ -60,7 +60,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待迁移的目的弹性网卡实例ID。
+     * Get 待迁移的目的弹性网卡实例ID。 
      * @return DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
      */
     public String getDestinationNetworkInterfaceId() {
@@ -68,7 +68,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待迁移的目的弹性网卡实例ID。
+     * Set 待迁移的目的弹性网卡实例ID。
      * @param DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
      */
     public void setDestinationNetworkInterfaceId(String DestinationNetworkInterfaceId) {
@@ -76,7 +76,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移的内网IP地址，例如：10.0.0.6。
+     * Get 迁移的内网IP地址，例如：10.0.0.6。 
      * @return PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
      */
     public String getPrivateIpAddress() {
@@ -84,7 +84,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移的内网IP地址，例如：10.0.0.6。
+     * Set 迁移的内网IP地址，例如：10.0.0.6。
      * @param PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
@@ -92,7 +92,7 @@ public class MigratePrivateIpAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceNetworkInterfaceId", this.SourceNetworkInterfaceId);

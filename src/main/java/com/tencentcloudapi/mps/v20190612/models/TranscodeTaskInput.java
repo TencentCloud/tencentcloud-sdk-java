@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodeTaskInput  extends AbstractModel{
+public class TranscodeTaskInput extends AbstractModel{
 
     /**
     * 视频转码模板 ID。
@@ -68,7 +68,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * 获取视频转码模板 ID。
+     * Get 视频转码模板 ID。 
      * @return Definition 视频转码模板 ID。
      */
     public Long getDefinition() {
@@ -76,7 +76,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码模板 ID。
+     * Set 视频转码模板 ID。
      * @param Definition 视频转码模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -84,8 +84,8 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,7 +94,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,8 +104,8 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -114,7 +114,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 转码后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,7 +124,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+     * Get 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。 
      * @return OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
      */
     public String getOutputObjectPath() {
@@ -132,7 +132,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
+     * Set 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
      * @param OutputObjectPath 转码后主文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_transcode_{definition}.{format}`。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
@@ -140,7 +140,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
+     * Get 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。 
      * @return SegmentObjectName 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
      */
     public String getSegmentObjectName() {
@@ -148,7 +148,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
+     * Set 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
      * @param SegmentObjectName 转码后分片文件的输出路径（转码 HLS 时 ts 的路径），只能为相对路径。如果不填，则默认为：`{inputName}_transcode_{definition}_{number}.{format}`。
      */
     public void setSegmentObjectName(String SegmentObjectName) {
@@ -156,8 +156,8 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取转码后输出路径中的`{number}`变量的规则。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转码后输出路径中的`{number}`变量的规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ObjectNumberFormat 转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -166,7 +166,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置转码后输出路径中的`{number}`变量的规则。
+     * Set 转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectNumberFormat 转码后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,7 +176,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

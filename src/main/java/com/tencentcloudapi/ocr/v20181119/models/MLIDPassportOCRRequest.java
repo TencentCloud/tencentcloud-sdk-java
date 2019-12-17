@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MLIDPassportOCRRequest  extends AbstractModel{
+public class MLIDPassportOCRRequest extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -39,9 +39,9 @@ public class MLIDPassportOCRRequest  extends AbstractModel{
     private Boolean RetImage;
 
     /**
-     * 获取图片的 Base64 值。
+     * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -51,7 +51,7 @@ public class MLIDPassportOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片的 Base64 值。
+     * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
      * @param ImageBase64 图片的 Base64 值。
@@ -63,7 +63,7 @@ public class MLIDPassportOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否返回图片
+     * Get 是否返回图片 
      * @return RetImage 是否返回图片
      */
     public Boolean getRetImage() {
@@ -71,7 +71,7 @@ public class MLIDPassportOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否返回图片
+     * Set 是否返回图片
      * @param RetImage 是否返回图片
      */
     public void setRetImage(Boolean RetImage) {
@@ -79,7 +79,7 @@ public class MLIDPassportOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

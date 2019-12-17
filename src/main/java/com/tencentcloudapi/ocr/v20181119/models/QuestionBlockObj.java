@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuestionBlockObj  extends AbstractModel{
+public class QuestionBlockObj extends AbstractModel{
 
     /**
     * 数学试题识别结构化信息数组
@@ -30,7 +30,7 @@ public class QuestionBlockObj  extends AbstractModel{
     private QuestionObj [] QuestionArr;
 
     /**
-     * 获取数学试题识别结构化信息数组
+     * Get 数学试题识别结构化信息数组 
      * @return QuestionArr 数学试题识别结构化信息数组
      */
     public QuestionObj [] getQuestionArr() {
@@ -38,7 +38,7 @@ public class QuestionBlockObj  extends AbstractModel{
     }
 
     /**
-     * 设置数学试题识别结构化信息数组
+     * Set 数学试题识别结构化信息数组
      * @param QuestionArr 数学试题识别结构化信息数组
      */
     public void setQuestionArr(QuestionObj [] QuestionArr) {
@@ -46,7 +46,7 @@ public class QuestionBlockObj  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "QuestionArr.", this.QuestionArr);

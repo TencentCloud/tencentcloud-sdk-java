@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsSid  extends AbstractModel{
+public class SmsSid extends AbstractModel{
 
     /**
     * 卡片id
@@ -38,8 +38,8 @@ public class SmsSid  extends AbstractModel{
     private String Sid;
 
     /**
-     * 获取卡片id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 卡片id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Iccid 卡片id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -48,7 +48,7 @@ public class SmsSid  extends AbstractModel{
     }
 
     /**
-     * 设置卡片id
+     * Set 卡片id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Iccid 卡片id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ public class SmsSid  extends AbstractModel{
     }
 
     /**
-     * 获取信息流水id
+     * Get 信息流水id 
      * @return Sid 信息流水id
      */
     public String getSid() {
@@ -66,7 +66,7 @@ public class SmsSid  extends AbstractModel{
     }
 
     /**
-     * 设置信息流水id
+     * Set 信息流水id
      * @param Sid 信息流水id
      */
     public void setSid(String Sid) {
@@ -74,7 +74,7 @@ public class SmsSid  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Iccid", this.Iccid);

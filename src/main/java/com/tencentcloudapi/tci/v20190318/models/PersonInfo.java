@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonInfo  extends AbstractModel{
+public class PersonInfo extends AbstractModel{
 
     /**
     * 需要匹配的人员的ID列表。
@@ -44,7 +44,7 @@ public class PersonInfo  extends AbstractModel{
     private String CoverEndUrl;
 
     /**
-     * 获取需要匹配的人员的ID列表。
+     * Get 需要匹配的人员的ID列表。 
      * @return PersonId 需要匹配的人员的ID列表。
      */
     public String getPersonId() {
@@ -52,7 +52,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置需要匹配的人员的ID列表。
+     * Set 需要匹配的人员的ID列表。
      * @param PersonId 需要匹配的人员的ID列表。
      */
     public void setPersonId(String PersonId) {
@@ -60,7 +60,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频集锦开始封面照片。
+     * Get 视频集锦开始封面照片。 
      * @return CoverBeginUrl 视频集锦开始封面照片。
      */
     public String getCoverBeginUrl() {
@@ -68,7 +68,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频集锦开始封面照片。
+     * Set 视频集锦开始封面照片。
      * @param CoverBeginUrl 视频集锦开始封面照片。
      */
     public void setCoverBeginUrl(String CoverBeginUrl) {
@@ -76,7 +76,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频集锦结束封面照片。
+     * Get 视频集锦结束封面照片。 
      * @return CoverEndUrl 视频集锦结束封面照片。
      */
     public String getCoverEndUrl() {
@@ -84,7 +84,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频集锦结束封面照片。
+     * Set 视频集锦结束封面照片。
      * @param CoverEndUrl 视频集锦结束封面照片。
      */
     public void setCoverEndUrl(String CoverEndUrl) {
@@ -92,7 +92,7 @@ public class PersonInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnData  extends AbstractModel{
+public class CdnData extends AbstractModel{
 
     /**
     * 查询指定的指标名称：
@@ -54,7 +54,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     private SummarizedData SummarizedData;
 
     /**
-     * 获取查询指定的指标名称：
+     * Get 查询指定的指标名称：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
@@ -64,7 +64,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
 3XX：返回 3XX 状态码汇总及各 3 开头状态码数据，单位为 个
 4XX：返回 4XX 状态码汇总及各 4 开头状态码数据，单位为 个
 5XX：返回 5XX 状态码汇总及各 5 开头状态码数据，单位为 个
-或指定查询的某一具体状态码
+或指定查询的某一具体状态码 
      * @return Metric 查询指定的指标名称：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
@@ -82,7 +82,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 设置查询指定的指标名称：
+     * Set 查询指定的指标名称：
 flux：流量，单位为 byte
 bandwidth：带宽，单位为 bps
 request：请求数，单位为 次
@@ -110,7 +110,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 获取明细数据组合
+     * Get 明细数据组合 
      * @return DetailData 明细数据组合
      */
     public TimestampData [] getDetailData() {
@@ -118,7 +118,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 设置明细数据组合
+     * Set 明细数据组合
      * @param DetailData 明细数据组合
      */
     public void setDetailData(TimestampData [] DetailData) {
@@ -126,7 +126,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 获取汇总数据组合
+     * Get 汇总数据组合 
      * @return SummarizedData 汇总数据组合
      */
     public SummarizedData getSummarizedData() {
@@ -134,7 +134,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 设置汇总数据组合
+     * Set 汇总数据组合
      * @param SummarizedData 汇总数据组合
      */
     public void setSummarizedData(SummarizedData SummarizedData) {
@@ -142,7 +142,7 @@ statusCode：状态码，返回 2XX、3XX、4XX、5XX 汇总数据，单位为 �
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Metric", this.Metric);

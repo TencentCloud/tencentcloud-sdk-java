@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindTrafficMirrorReceiver  extends AbstractModel{
+public class BindTrafficMirrorReceiver extends AbstractModel{
 
     /**
     * 待绑定的主机端口，可选值1~65535。
@@ -44,7 +44,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取待绑定的主机端口，可选值1~65535。
+     * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
     public Integer getPort() {
@@ -52,7 +52,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机端口，可选值1~65535。
+     * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
     public void setPort(Integer Port) {
@@ -60,7 +60,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机实例ID。
+     * Get 待绑定的主机实例ID。 
      * @return InstanceId 待绑定的主机实例ID。
      */
     public String getInstanceId() {
@@ -68,7 +68,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机实例ID。
+     * Set 待绑定的主机实例ID。
      * @param InstanceId 待绑定的主机实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -76,7 +76,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机权重，可选值0~100。
+     * Get 待绑定的主机权重，可选值0~100。 
      * @return Weight 待绑定的主机权重，可选值0~100。
      */
     public Integer getWeight() {
@@ -84,7 +84,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机权重，可选值0~100。
+     * Set 待绑定的主机权重，可选值0~100。
      * @param Weight 待绑定的主机权重，可选值0~100。
      */
     public void setWeight(Integer Weight) {
@@ -92,7 +92,7 @@ public class BindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NotificationTarget  extends AbstractModel{
+public class NotificationTarget extends AbstractModel{
 
     /**
     * 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
@@ -46,9 +46,9 @@ public class NotificationTarget  extends AbstractModel{
     private String TopicName;
 
     /**
-     * 获取目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+     * Get 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
-<li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+<li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li> 
      * @return TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
@@ -58,7 +58,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 设置目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+     * Set 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
 <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
 <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
      * @param TargetType 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
@@ -70,7 +70,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 获取队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+     * Get 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。 
      * @return QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
      */
     public String getQueueName() {
@@ -78,7 +78,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 设置队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+     * Set 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
      * @param QueueName 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
      */
     public void setQueueName(String QueueName) {
@@ -86,7 +86,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 获取主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+     * Get 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。 
      * @return TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
      */
     public String getTopicName() {
@@ -94,7 +94,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 设置主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+     * Set 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
      * @param TopicName 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
      */
     public void setTopicName(String TopicName) {
@@ -102,7 +102,7 @@ public class NotificationTarget  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);

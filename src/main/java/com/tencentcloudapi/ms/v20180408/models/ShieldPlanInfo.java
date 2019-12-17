@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShieldPlanInfo  extends AbstractModel{
+public class ShieldPlanInfo extends AbstractModel{
 
     /**
     * 加固策略数量
@@ -37,7 +37,7 @@ public class ShieldPlanInfo  extends AbstractModel{
     private PlanDetailInfo [] PlanSet;
 
     /**
-     * 获取加固策略数量
+     * Get 加固策略数量 
      * @return TotalCount 加固策略数量
      */
     public Integer getTotalCount() {
@@ -45,7 +45,7 @@ public class ShieldPlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固策略数量
+     * Set 加固策略数量
      * @param TotalCount 加固策略数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -53,7 +53,7 @@ public class ShieldPlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固策略具体信息数组
+     * Get 加固策略具体信息数组 
      * @return PlanSet 加固策略具体信息数组
      */
     public PlanDetailInfo [] getPlanSet() {
@@ -61,7 +61,7 @@ public class ShieldPlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固策略具体信息数组
+     * Set 加固策略具体信息数组
      * @param PlanSet 加固策略具体信息数组
      */
     public void setPlanSet(PlanDetailInfo [] PlanSet) {
@@ -69,7 +69,7 @@ public class ShieldPlanInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

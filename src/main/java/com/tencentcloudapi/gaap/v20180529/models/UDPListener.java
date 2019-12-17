@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UDPListener  extends AbstractModel{
+public class UDPListener extends AbstractModel{
 
     /**
     * 监听器ID
@@ -106,7 +106,7 @@ public class UDPListener  extends AbstractModel{
     private Long CreateTime;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -114,7 +114,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -122,7 +122,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -130,7 +130,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -138,7 +138,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Long getPort() {
@@ -146,7 +146,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Long Port) {
@@ -154,8 +154,8 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器转发源站端口，仅V1版本通道或通道组监听器有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerPort 监听器转发源站端口，仅V1版本通道或通道组监听器有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,7 +164,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器转发源站端口，仅V1版本通道或通道组监听器有效
+     * Set 监听器转发源站端口，仅V1版本通道或通道组监听器有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerPort 监听器转发源站端口，仅V1版本通道或通道组监听器有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,7 +174,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器绑定源站类型
+     * Get 监听器绑定源站类型 
      * @return RealServerType 监听器绑定源站类型
      */
     public String getRealServerType() {
@@ -182,7 +182,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器绑定源站类型
+     * Set 监听器绑定源站类型
      * @param RealServerType 监听器绑定源站类型
      */
     public void setRealServerType(String RealServerType) {
@@ -190,7 +190,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议， UDP
+     * Get 监听器协议， UDP 
      * @return Protocol 监听器协议， UDP
      */
     public String getProtocol() {
@@ -198,7 +198,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议， UDP
+     * Set 监听器协议， UDP
      * @param Protocol 监听器协议， UDP
      */
     public void setProtocol(String Protocol) {
@@ -206,12 +206,12 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器状态，其中：
+     * Get 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
 3，源站调整中；
-4，配置变更中。
+4，配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
 0， 运行中；
 1， 创建中；
@@ -224,7 +224,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器状态，其中：
+     * Set 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
@@ -242,7 +242,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器源站访问策略
+     * Get 监听器源站访问策略 
      * @return Scheduler 监听器源站访问策略
      */
     public String getScheduler() {
@@ -250,7 +250,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器源站访问策略
+     * Set 监听器源站访问策略
      * @param Scheduler 监听器源站访问策略
      */
     public void setScheduler(String Scheduler) {
@@ -258,7 +258,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+     * Get 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常 
      * @return BindStatus 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
      */
     public Long getBindStatus() {
@@ -266,7 +266,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
+     * Set 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
      * @param BindStatus 监听器绑定源站状态， 0正常，1IP异常，2域名解析异常
      */
     public void setBindStatus(Long BindStatus) {
@@ -274,7 +274,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器绑定的源站信息
+     * Get 监听器绑定的源站信息 
      * @return RealServerSet 监听器绑定的源站信息
      */
     public BindRealServer [] getRealServerSet() {
@@ -282,7 +282,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器绑定的源站信息
+     * Set 监听器绑定的源站信息
      * @param RealServerSet 监听器绑定的源站信息
      */
     public void setRealServerSet(BindRealServer [] RealServerSet) {
@@ -290,7 +290,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器创建时间，Unix时间戳
+     * Get 监听器创建时间，Unix时间戳 
      * @return CreateTime 监听器创建时间，Unix时间戳
      */
     public Long getCreateTime() {
@@ -298,7 +298,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器创建时间，Unix时间戳
+     * Set 监听器创建时间，Unix时间戳
      * @param CreateTime 监听器创建时间，Unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -306,7 +306,7 @@ public class UDPListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

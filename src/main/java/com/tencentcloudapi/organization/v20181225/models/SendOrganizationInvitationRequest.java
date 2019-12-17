@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendOrganizationInvitationRequest  extends AbstractModel{
+public class SendOrganizationInvitationRequest extends AbstractModel{
 
     /**
     * 被邀请账户UIN
@@ -44,7 +44,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取被邀请账户UIN
+     * Get 被邀请账户UIN 
      * @return InviteUin 被邀请账户UIN
      */
     public Long getInviteUin() {
@@ -52,7 +52,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被邀请账户UIN
+     * Set 被邀请账户UIN
      * @param InviteUin 被邀请账户UIN
      */
     public void setInviteUin(Long InviteUin) {
@@ -60,7 +60,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -76,7 +76,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -84,7 +84,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -92,7 +92,7 @@ public class SendOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InviteUin", this.InviteUin);

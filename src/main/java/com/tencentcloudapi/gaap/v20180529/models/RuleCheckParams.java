@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleCheckParams  extends AbstractModel{
+public class RuleCheckParams extends AbstractModel{
 
     /**
     * 健康检查的时间间隔
@@ -66,7 +66,7 @@ public class RuleCheckParams  extends AbstractModel{
     private String Domain;
 
     /**
-     * 获取健康检查的时间间隔
+     * Get 健康检查的时间间隔 
      * @return DelayLoop 健康检查的时间间隔
      */
     public Long getDelayLoop() {
@@ -74,7 +74,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查的时间间隔
+     * Set 健康检查的时间间隔
      * @param DelayLoop 健康检查的时间间隔
      */
     public void setDelayLoop(Long DelayLoop) {
@@ -82,7 +82,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查的响应超时时间
+     * Get 健康检查的响应超时时间 
      * @return ConnectTimeout 健康检查的响应超时时间
      */
     public Long getConnectTimeout() {
@@ -90,7 +90,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查的响应超时时间
+     * Set 健康检查的响应超时时间
      * @param ConnectTimeout 健康检查的响应超时时间
      */
     public void setConnectTimeout(Long ConnectTimeout) {
@@ -98,7 +98,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查的检查路径
+     * Get 健康检查的检查路径 
      * @return Path 健康检查的检查路径
      */
     public String getPath() {
@@ -106,7 +106,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查的检查路径
+     * Set 健康检查的检查路径
      * @param Path 健康检查的检查路径
      */
     public void setPath(String Path) {
@@ -114,7 +114,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查的方法，GET/HEAD
+     * Get 健康检查的方法，GET/HEAD 
      * @return Method 健康检查的方法，GET/HEAD
      */
     public String getMethod() {
@@ -122,7 +122,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查的方法，GET/HEAD
+     * Set 健康检查的方法，GET/HEAD
      * @param Method 健康检查的方法，GET/HEAD
      */
     public void setMethod(String Method) {
@@ -130,7 +130,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 获取确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
+     * Get 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500] 
      * @return StatusCode 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
      */
     public Long [] getStatusCode() {
@@ -138,7 +138,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
+     * Set 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
      * @param StatusCode 确认源站正常的返回码，可选范围[100, 200, 300, 400, 500]
      */
     public void setStatusCode(Long [] StatusCode) {
@@ -146,8 +146,8 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查的检查域名。
-当调用ModifyRuleAttribute时，不支持修改该参数。
+     * Get 健康检查的检查域名。
+当调用ModifyRuleAttribute时，不支持修改该参数。 
      * @return Domain 健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
      */
@@ -156,7 +156,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查的检查域名。
+     * Set 健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
      * @param Domain 健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
@@ -166,7 +166,7 @@ public class RuleCheckParams  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);

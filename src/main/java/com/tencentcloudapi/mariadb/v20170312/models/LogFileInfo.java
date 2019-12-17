@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogFileInfo  extends AbstractModel{
+public class LogFileInfo extends AbstractModel{
 
     /**
     * Log最后修改时间
@@ -51,7 +51,7 @@ public class LogFileInfo  extends AbstractModel{
     private String FileName;
 
     /**
-     * 获取Log最后修改时间
+     * Get Log最后修改时间 
      * @return Mtime Log最后修改时间
      */
     public Integer getMtime() {
@@ -59,7 +59,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Log最后修改时间
+     * Set Log最后修改时间
      * @param Mtime Log最后修改时间
      */
     public void setMtime(Integer Mtime) {
@@ -67,7 +67,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件长度
+     * Get 文件长度 
      * @return Length 文件长度
      */
     public Integer getLength() {
@@ -75,7 +75,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件长度
+     * Set 文件长度
      * @param Length 文件长度
      */
     public void setLength(Integer Length) {
@@ -83,7 +83,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取下载Log时用到的统一资源标识符
+     * Get 下载Log时用到的统一资源标识符 
      * @return Uri 下载Log时用到的统一资源标识符
      */
     public String getUri() {
@@ -91,7 +91,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置下载Log时用到的统一资源标识符
+     * Set 下载Log时用到的统一资源标识符
      * @param Uri 下载Log时用到的统一资源标识符
      */
     public void setUri(String Uri) {
@@ -99,7 +99,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件名
+     * Get 文件名 
      * @return FileName 文件名
      */
     public String getFileName() {
@@ -107,7 +107,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
      * @param FileName 文件名
      */
     public void setFileName(String FileName) {
@@ -115,7 +115,7 @@ public class LogFileInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mtime", this.Mtime);

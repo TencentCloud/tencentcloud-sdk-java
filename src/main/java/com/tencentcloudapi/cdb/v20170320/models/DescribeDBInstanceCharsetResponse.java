@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
+public class DescribeDBInstanceCharsetResponse extends AbstractModel{
 
     /**
     * 实例的默认字符集，如 "latin1"，"utf8" 等。
@@ -37,7 +37,7 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例的默认字符集，如 "latin1"，"utf8" 等。
+     * Get 实例的默认字符集，如 "latin1"，"utf8" 等。 
      * @return Charset 实例的默认字符集，如 "latin1"，"utf8" 等。
      */
     public String getCharset() {
@@ -45,7 +45,7 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例的默认字符集，如 "latin1"，"utf8" 等。
+     * Set 实例的默认字符集，如 "latin1"，"utf8" 等。
      * @param Charset 实例的默认字符集，如 "latin1"，"utf8" 等。
      */
     public void setCharset(String Charset) {
@@ -53,7 +53,7 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeDBInstanceCharsetResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Charset", this.Charset);

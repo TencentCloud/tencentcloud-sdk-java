@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateWatermarkTemplateResponse  extends AbstractModel{
+public class CreateWatermarkTemplateResponse extends AbstractModel{
 
     /**
     * 水印模板唯一标识。
@@ -44,7 +44,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取水印模板唯一标识。
+     * Get 水印模板唯一标识。 
      * @return Definition 水印模板唯一标识。
      */
     public Long getDefinition() {
@@ -52,7 +52,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板唯一标识。
+     * Set 水印模板唯一标识。
      * @param Definition 水印模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -60,7 +60,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 获取水印图片地址，仅当 Type 为 image，该字段有效。
+     * Get 水印图片地址，仅当 Type 为 image，该字段有效。 
      * @return ImageUrl 水印图片地址，仅当 Type 为 image，该字段有效。
      */
     public String getImageUrl() {
@@ -68,7 +68,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片地址，仅当 Type 为 image，该字段有效。
+     * Set 水印图片地址，仅当 Type 为 image，该字段有效。
      * @param ImageUrl 水印图片地址，仅当 Type 为 image，该字段有效。
      */
     public void setImageUrl(String ImageUrl) {
@@ -76,7 +76,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateWatermarkTemplateResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

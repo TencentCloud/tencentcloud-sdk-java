@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTag  extends AbstractModel{
+public class ImageTag extends AbstractModel{
 
     /**
     * 仓库名
@@ -114,7 +114,7 @@ public class ImageTag  extends AbstractModel{
     private Long SizeByte;
 
     /**
-     * 获取仓库名
+     * Get 仓库名 
      * @return RepoName 仓库名
      */
     public String getRepoName() {
@@ -122,7 +122,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置仓库名
+     * Set 仓库名
      * @param RepoName 仓库名
      */
     public void setRepoName(String RepoName) {
@@ -130,7 +130,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取版本名称
+     * Get 版本名称 
      * @return TagName 版本名称
      */
     public String getTagName() {
@@ -138,7 +138,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置版本名称
+     * Set 版本名称
      * @param TagName 版本名称
      */
     public void setTagName(String TagName) {
@@ -146,7 +146,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取版本ID
+     * Get 版本ID 
      * @return TagId 版本ID
      */
     public String getTagId() {
@@ -154,7 +154,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置版本ID
+     * Set 版本ID
      * @param TagId 版本ID
      */
     public void setTagId(String TagId) {
@@ -162,7 +162,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取镜像ID
+     * Get 镜像ID 
      * @return ImageId 镜像ID
      */
     public String getImageId() {
@@ -170,7 +170,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID
+     * Set 镜像ID
      * @param ImageId 镜像ID
      */
     public void setImageId(String ImageId) {
@@ -178,7 +178,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取大小
+     * Get 大小 
      * @return Size 大小
      */
     public String getSize() {
@@ -186,7 +186,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置大小
+     * Set 大小
      * @param Size 大小
      */
     public void setSize(String Size) {
@@ -194,7 +194,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreationTime 创建时间
      */
     public String getCreationTime() {
@@ -202,7 +202,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreationTime 创建时间
      */
     public void setCreationTime(String CreationTime) {
@@ -210,7 +210,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -218,7 +218,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -226,7 +226,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取镜像制作者
+     * Get 镜像制作者 
      * @return Author 镜像制作者
      */
     public String getAuthor() {
@@ -234,7 +234,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置镜像制作者
+     * Set 镜像制作者
      * @param Author 镜像制作者
      */
     public void setAuthor(String Author) {
@@ -242,7 +242,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取CPU架构
+     * Get CPU架构 
      * @return Architecture CPU架构
      */
     public String getArchitecture() {
@@ -250,7 +250,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置CPU架构
+     * Set CPU架构
      * @param Architecture CPU架构
      */
     public void setArchitecture(String Architecture) {
@@ -258,7 +258,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取Docker客户端版本
+     * Get Docker客户端版本 
      * @return DockerVersion Docker客户端版本
      */
     public String getDockerVersion() {
@@ -266,7 +266,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置Docker客户端版本
+     * Set Docker客户端版本
      * @param DockerVersion Docker客户端版本
      */
     public void setDockerVersion(String DockerVersion) {
@@ -274,7 +274,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统
+     * Get 操作系统 
      * @return Os 操作系统
      */
     public String getOs() {
@@ -282,7 +282,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统
+     * Set 操作系统
      * @param Os 操作系统
      */
     public void setOs(String Os) {
@@ -290,7 +290,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取push时间
+     * Get push时间 
      * @return PushTime push时间
      */
     public String getPushTime() {
@@ -298,7 +298,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置push时间
+     * Set push时间
      * @param PushTime push时间
      */
     public void setPushTime(String PushTime) {
@@ -306,7 +306,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 获取单位为字节
+     * Get 单位为字节 
      * @return SizeByte 单位为字节
      */
     public Long getSizeByte() {
@@ -314,7 +314,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 设置单位为字节
+     * Set 单位为字节
      * @param SizeByte 单位为字节
      */
     public void setSizeByte(Long SizeByte) {
@@ -322,7 +322,7 @@ public class ImageTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RepoName", this.RepoName);

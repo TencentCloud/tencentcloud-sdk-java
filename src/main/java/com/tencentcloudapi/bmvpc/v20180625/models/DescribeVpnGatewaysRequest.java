@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpnGatewaysRequest  extends AbstractModel{
+public class DescribeVpnGatewaysRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
@@ -55,7 +55,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
+     * Get VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。 
      * @return VpnGatewayIds VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      */
     public String [] getVpnGatewayIds() {
@@ -63,7 +63,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
+     * Set VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      * @param VpnGatewayIds VPN网关实例ID。形如：bmvpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
      */
     public void setVpnGatewayIds(String [] VpnGatewayIds) {
@@ -71,11 +71,11 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+     * Get 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
-<li>vpngw-name - String - （过滤条件）vpn网关名称。</li>
+<li>vpngw-name - String - （过滤条件）vpn网关名称。</li> 
      * @return Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
@@ -87,7 +87,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
+     * Set 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
@@ -103,7 +103,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -111,7 +111,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -119,7 +119,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求对象个数
+     * Get 请求对象个数 
      * @return Limit 请求对象个数
      */
     public Long getLimit() {
@@ -127,7 +127,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求对象个数
+     * Set 请求对象个数
      * @param Limit 请求对象个数
      */
     public void setLimit(Long Limit) {
@@ -135,7 +135,7 @@ public class DescribeVpnGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpnGatewayIds.", this.VpnGatewayIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserCmd  extends AbstractModel{
+public class UserCmd extends AbstractModel{
 
     /**
     * 用户自定义脚本名
@@ -79,7 +79,7 @@ public class UserCmd  extends AbstractModel{
     private String OsType;
 
     /**
-     * 获取用户自定义脚本名
+     * Get 用户自定义脚本名 
      * @return Alias 用户自定义脚本名
      */
     public String getAlias() {
@@ -87,7 +87,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义脚本名
+     * Set 用户自定义脚本名
      * @param Alias 用户自定义脚本名
      */
     public void setAlias(String Alias) {
@@ -95,7 +95,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取AppId
+     * Get AppId 
      * @return AppId AppId
      */
     public Integer getAppId() {
@@ -103,7 +103,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置AppId
+     * Set AppId
      * @param AppId AppId
      */
     public void setAppId(Integer AppId) {
@@ -111,7 +111,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取脚本自增ID
+     * Get 脚本自增ID 
      * @return AutoId 脚本自增ID
      */
     public Integer getAutoId() {
@@ -119,7 +119,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置脚本自增ID
+     * Set 脚本自增ID
      * @param AutoId 脚本自增ID
      */
     public void setAutoId(Integer AutoId) {
@@ -127,7 +127,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取脚本ID
+     * Get 脚本ID 
      * @return CmdId 脚本ID
      */
     public String getCmdId() {
@@ -135,7 +135,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置脚本ID
+     * Set 脚本ID
      * @param CmdId 脚本ID
      */
     public void setCmdId(String CmdId) {
@@ -143,7 +143,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取脚本内容
+     * Get 脚本内容 
      * @return Content 脚本内容
      */
     public String getContent() {
@@ -151,7 +151,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置脚本内容
+     * Set 脚本内容
      * @param Content 脚本内容
      */
     public void setContent(String Content) {
@@ -159,7 +159,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -167,7 +167,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -175,7 +175,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
@@ -183,7 +183,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -191,7 +191,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 获取命令适用的操作系统类型
+     * Get 命令适用的操作系统类型 
      * @return OsType 命令适用的操作系统类型
      */
     public String getOsType() {
@@ -199,7 +199,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 设置命令适用的操作系统类型
+     * Set 命令适用的操作系统类型
      * @param OsType 命令适用的操作系统类型
      */
     public void setOsType(String OsType) {
@@ -207,7 +207,7 @@ public class UserCmd  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Alias", this.Alias);

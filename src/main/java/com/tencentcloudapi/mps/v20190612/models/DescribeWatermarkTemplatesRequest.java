@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
+public class DescribeWatermarkTemplatesRequest extends AbstractModel{
 
     /**
     * 水印模板唯一标识过滤条件，数组长度限制：100。
@@ -55,7 +55,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取水印模板唯一标识过滤条件，数组长度限制：100。
+     * Get 水印模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
@@ -63,7 +63,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印模板唯一标识过滤条件，数组长度限制：100。
+     * Set 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
@@ -71,9 +71,9 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印类型过滤条件，可选值：
+     * Get 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印。</li> 
      * @return Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
@@ -83,7 +83,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印类型过滤条件，可选值：
+     * Set 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
 <li>text：文字水印。</li>
      * @param Type 水印类型过滤条件，可选值：
@@ -95,7 +95,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -103,7 +103,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -111,9 +111,9 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数
+     * Get 返回记录条数
 <li>默认值：10；</li>
-<li>最大值：100。</li>
+<li>最大值：100。</li> 
      * @return Limit 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
@@ -123,7 +123,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数
+     * Set 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
      * @param Limit 返回记录条数
@@ -135,7 +135,7 @@ public class DescribeWatermarkTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);

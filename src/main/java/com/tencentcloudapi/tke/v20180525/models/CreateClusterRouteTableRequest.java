@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRouteTableRequest  extends AbstractModel{
+public class CreateClusterRouteTableRequest extends AbstractModel{
 
     /**
     * 路由表名称
@@ -51,7 +51,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     private Integer IgnoreClusterCidrConflict;
 
     /**
-     * 获取路由表名称
+     * Get 路由表名称 
      * @return RouteTableName 路由表名称
      */
     public String getRouteTableName() {
@@ -59,7 +59,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称
+     * Set 路由表名称
      * @param RouteTableName 路由表名称
      */
     public void setRouteTableName(String RouteTableName) {
@@ -67,7 +67,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表CIDR
+     * Get 路由表CIDR 
      * @return RouteTableCidrBlock 路由表CIDR
      */
     public String getRouteTableCidrBlock() {
@@ -75,7 +75,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表CIDR
+     * Set 路由表CIDR
      * @param RouteTableCidrBlock 路由表CIDR
      */
     public void setRouteTableCidrBlock(String RouteTableCidrBlock) {
@@ -83,7 +83,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表绑定的VPC
+     * Get 路由表绑定的VPC 
      * @return VpcId 路由表绑定的VPC
      */
     public String getVpcId() {
@@ -91,7 +91,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表绑定的VPC
+     * Set 路由表绑定的VPC
      * @param VpcId 路由表绑定的VPC
      */
     public void setVpcId(String VpcId) {
@@ -99,7 +99,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否忽略CIDR冲突
+     * Get 是否忽略CIDR冲突 
      * @return IgnoreClusterCidrConflict 是否忽略CIDR冲突
      */
     public Integer getIgnoreClusterCidrConflict() {
@@ -107,7 +107,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否忽略CIDR冲突
+     * Set 是否忽略CIDR冲突
      * @param IgnoreClusterCidrConflict 是否忽略CIDR冲突
      */
     public void setIgnoreClusterCidrConflict(Integer IgnoreClusterCidrConflict) {
@@ -115,7 +115,7 @@ public class CreateClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);

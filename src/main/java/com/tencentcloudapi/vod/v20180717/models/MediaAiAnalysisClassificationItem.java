@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisClassificationItem  extends AbstractModel{
+public class MediaAiAnalysisClassificationItem extends AbstractModel{
 
     /**
     * 智能分类的类别名称。
@@ -37,7 +37,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取智能分类的类别名称。
+     * Get 智能分类的类别名称。 
      * @return Classification 智能分类的类别名称。
      */
     public String getClassification() {
@@ -45,7 +45,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分类的类别名称。
+     * Set 智能分类的类别名称。
      * @param Classification 智能分类的类别名称。
      */
     public void setClassification(String Classification) {
@@ -53,7 +53,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能分类的可信度，取值范围是 0 到 100。
+     * Get 智能分类的可信度，取值范围是 0 到 100。 
      * @return Confidence 智能分类的可信度，取值范围是 0 到 100。
      */
     public Float getConfidence() {
@@ -61,7 +61,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分类的可信度，取值范围是 0 到 100。
+     * Set 智能分类的可信度，取值范围是 0 到 100。
      * @param Confidence 智能分类的可信度，取值范围是 0 到 100。
      */
     public void setConfidence(Float Confidence) {
@@ -69,7 +69,7 @@ public class MediaAiAnalysisClassificationItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Classification", this.Classification);

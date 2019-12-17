@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Snapshot  extends AbstractModel{
+public class Snapshot extends AbstractModel{
 
     /**
     * 快照ID。
@@ -149,7 +149,7 @@ public class Snapshot  extends AbstractModel{
     private Integer ShareReference;
 
     /**
-     * 获取快照ID。
+     * Get 快照ID。 
      * @return SnapshotId 快照ID。
      */
     public String getSnapshotId() {
@@ -157,7 +157,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照ID。
+     * Set 快照ID。
      * @param SnapshotId 快照ID。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -165,7 +165,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照所在的位置。
+     * Get 快照所在的位置。 
      * @return Placement 快照所在的位置。
      */
     public Placement getPlacement() {
@@ -173,7 +173,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照所在的位置。
+     * Set 快照所在的位置。
      * @param Placement 快照所在的位置。
      */
     public void setPlacement(Placement Placement) {
@@ -181,7 +181,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Get 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。 
      * @return DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      */
     public String getDiskUsage() {
@@ -189,7 +189,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Set 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      * @param DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
      */
     public void setDiskUsage(String DiskUsage) {
@@ -197,7 +197,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取创建此快照的云硬盘ID。
+     * Get 创建此快照的云硬盘ID。 
      * @return DiskId 创建此快照的云硬盘ID。
      */
     public String getDiskId() {
@@ -205,7 +205,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置创建此快照的云硬盘ID。
+     * Set 创建此快照的云硬盘ID。
      * @param DiskId 创建此快照的云硬盘ID。
      */
     public void setDiskId(String DiskId) {
@@ -213,7 +213,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取创建此快照的云硬盘大小，单位GB。
+     * Get 创建此快照的云硬盘大小，单位GB。 
      * @return DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public Integer getDiskSize() {
@@ -221,7 +221,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置创建此快照的云硬盘大小，单位GB。
+     * Set 创建此快照的云硬盘大小，单位GB。
      * @param DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public void setDiskSize(Integer DiskSize) {
@@ -229,7 +229,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
+     * Get 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。 
      * @return SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
      */
     public String getSnapshotState() {
@@ -237,7 +237,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
+     * Set 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
      * @param SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制快照拷贝中。
      */
     public void setSnapshotState(String SnapshotState) {
@@ -245,7 +245,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
+     * Get 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。 
      * @return SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
      */
     public String getSnapshotName() {
@@ -253,7 +253,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
+     * Set 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
      * @param SnapshotName 快照名称，用户自定义的快照别名。调用[ModifySnapshotAttribute](/document/product/362/15650)可修改此字段。
      */
     public void setSnapshotName(String SnapshotName) {
@@ -261,7 +261,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照创建进度百分比，快照创建成功后此字段恒为100。
+     * Get 快照创建进度百分比，快照创建成功后此字段恒为100。 
      * @return Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      */
     public Integer getPercent() {
@@ -269,7 +269,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照创建进度百分比，快照创建成功后此字段恒为100。
+     * Set 快照创建进度百分比，快照创建成功后此字段恒为100。
      * @param Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      */
     public void setPercent(Integer Percent) {
@@ -277,7 +277,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照的创建时间。
+     * Get 快照的创建时间。 
      * @return CreateTime 快照的创建时间。
      */
     public String getCreateTime() {
@@ -285,7 +285,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照的创建时间。
+     * Set 快照的创建时间。
      * @param CreateTime 快照的创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -293,7 +293,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照到期时间。如果快照为永久保留，此字段为空。
+     * Get 快照到期时间。如果快照为永久保留，此字段为空。 
      * @return DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
      */
     public String getDeadlineTime() {
@@ -301,7 +301,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照到期时间。如果快照为永久保留，此字段为空。
+     * Set 快照到期时间。如果快照为永久保留，此字段为空。
      * @param DeadlineTime 快照到期时间。如果快照为永久保留，此字段为空。
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -309,7 +309,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * Get 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。 
      * @return Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
      */
     public Boolean getEncrypt() {
@@ -317,7 +317,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * Set 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
      * @param Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
      */
     public void setEncrypt(Boolean Encrypt) {
@@ -325,7 +325,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * Get 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。 
      * @return IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
      */
     public Boolean getIsPermanent() {
@@ -333,7 +333,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * Set 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
      * @param IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
      */
     public void setIsPermanent(Boolean IsPermanent) {
@@ -341,7 +341,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照正在跨地域复制的目的地域，默认取值为[]。
+     * Get 快照正在跨地域复制的目的地域，默认取值为[]。 
      * @return CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
      */
     public String [] getCopyingToRegions() {
@@ -349,7 +349,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照正在跨地域复制的目的地域，默认取值为[]。
+     * Set 快照正在跨地域复制的目的地域，默认取值为[]。
      * @param CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
      */
     public void setCopyingToRegions(String [] CopyingToRegions) {
@@ -357,7 +357,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * Get 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。 
      * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      */
     public Boolean getCopyFromRemote() {
@@ -365,7 +365,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * Set 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
      */
     public void setCopyFromRemote(Boolean CopyFromRemote) {
@@ -373,7 +373,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照关联的镜像列表。
+     * Get 快照关联的镜像列表。 
      * @return Images 快照关联的镜像列表。
      */
     public Image [] getImages() {
@@ -381,7 +381,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照关联的镜像列表。
+     * Set 快照关联的镜像列表。
      * @param Images 快照关联的镜像列表。
      */
     public void setImages(Image [] Images) {
@@ -389,7 +389,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照关联的镜像个数。
+     * Get 快照关联的镜像个数。 
      * @return ImageCount 快照关联的镜像个数。
      */
     public Integer getImageCount() {
@@ -397,7 +397,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照关联的镜像个数。
+     * Set 快照关联的镜像个数。
      * @param ImageCount 快照关联的镜像个数。
      */
     public void setImageCount(Integer ImageCount) {
@@ -405,7 +405,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * Get 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT 
      * @return SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
      */
     public String getSnapshotType() {
@@ -413,7 +413,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * Set 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
      * @param SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
      */
     public void setSnapshotType(String SnapshotType) {
@@ -421,7 +421,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 获取快照当前被共享数
+     * Get 快照当前被共享数 
      * @return ShareReference 快照当前被共享数
      */
     public Integer getShareReference() {
@@ -429,7 +429,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 设置快照当前被共享数
+     * Set 快照当前被共享数
      * @param ShareReference 快照当前被共享数
      */
     public void setShareReference(Integer ShareReference) {
@@ -437,7 +437,7 @@ public class Snapshot  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);

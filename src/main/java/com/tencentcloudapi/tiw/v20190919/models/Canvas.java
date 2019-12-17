@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Canvas  extends AbstractModel{
+public class Canvas extends AbstractModel{
 
     /**
     * 混流画布宽高配置
@@ -37,7 +37,7 @@ public class Canvas  extends AbstractModel{
     private String BackgroundColor;
 
     /**
-     * 获取混流画布宽高配置
+     * Get 混流画布宽高配置 
      * @return LayoutParams 混流画布宽高配置
      */
     public LayoutParams getLayoutParams() {
@@ -45,7 +45,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 设置混流画布宽高配置
+     * Set 混流画布宽高配置
      * @param LayoutParams 混流画布宽高配置
      */
     public void setLayoutParams(LayoutParams LayoutParams) {
@@ -53,7 +53,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 获取背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+     * Get 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000" 
      * @return BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public String getBackgroundColor() {
@@ -61,7 +61,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 设置背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+     * Set 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      * @param BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public void setBackgroundColor(String BackgroundColor) {
@@ -69,7 +69,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
+public class ModifyVpcPeerConnectionRequest extends AbstractModel{
 
     /**
     * 黑石对等连接唯一ID
@@ -44,7 +44,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     private String VpcPeerConnectionName;
 
     /**
-     * 获取黑石对等连接唯一ID
+     * Get 黑石对等连接唯一ID 
      * @return VpcPeerConnectionId 黑石对等连接唯一ID
      */
     public String getVpcPeerConnectionId() {
@@ -52,7 +52,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑石对等连接唯一ID
+     * Set 黑石对等连接唯一ID
      * @param VpcPeerConnectionId 黑石对等连接唯一ID
      */
     public void setVpcPeerConnectionId(String VpcPeerConnectionId) {
@@ -60,7 +60,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接带宽
+     * Get 对等连接带宽 
      * @return Bandwidth 对等连接带宽
      */
     public Long getBandwidth() {
@@ -68,7 +68,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接带宽
+     * Set 对等连接带宽
      * @param Bandwidth 对等连接带宽
      */
     public void setBandwidth(Long Bandwidth) {
@@ -76,7 +76,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接名称
+     * Get 对等连接名称 
      * @return VpcPeerConnectionName 对等连接名称
      */
     public String getVpcPeerConnectionName() {
@@ -84,7 +84,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接名称
+     * Set 对等连接名称
      * @param VpcPeerConnectionName 对等连接名称
      */
     public void setVpcPeerConnectionName(String VpcPeerConnectionName) {
@@ -92,7 +92,7 @@ public class ModifyVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcPeerConnectionId", this.VpcPeerConnectionId);

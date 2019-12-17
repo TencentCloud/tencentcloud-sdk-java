@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FinanBillSliceOCRResponse  extends AbstractModel{
+public class FinanBillSliceOCRResponse extends AbstractModel{
 
     /**
     * 金融票据切片识别结果，具体内容请点击左侧链接。
@@ -37,7 +37,7 @@ public class FinanBillSliceOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取金融票据切片识别结果，具体内容请点击左侧链接。
+     * Get 金融票据切片识别结果，具体内容请点击左侧链接。 
      * @return FinanBillSliceInfos 金融票据切片识别结果，具体内容请点击左侧链接。
      */
     public FinanBillSliceInfo [] getFinanBillSliceInfos() {
@@ -45,7 +45,7 @@ public class FinanBillSliceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置金融票据切片识别结果，具体内容请点击左侧链接。
+     * Set 金融票据切片识别结果，具体内容请点击左侧链接。
      * @param FinanBillSliceInfos 金融票据切片识别结果，具体内容请点击左侧链接。
      */
     public void setFinanBillSliceInfos(FinanBillSliceInfo [] FinanBillSliceInfos) {
@@ -53,7 +53,7 @@ public class FinanBillSliceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class FinanBillSliceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class FinanBillSliceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FinanBillSliceInfos.", this.FinanBillSliceInfos);

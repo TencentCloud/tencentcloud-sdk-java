@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyScalingPolicyRequest  extends AbstractModel{
+public class ModifyScalingPolicyRequest extends AbstractModel{
 
     /**
     * 告警策略ID。
@@ -73,7 +73,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-     * 获取告警策略ID。
+     * Get 告警策略ID。 
      * @return AutoScalingPolicyId 告警策略ID。
      */
     public String getAutoScalingPolicyId() {
@@ -81,7 +81,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警策略ID。
+     * Set 告警策略ID。
      * @param AutoScalingPolicyId 告警策略ID。
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
@@ -89,7 +89,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取告警策略名称。
+     * Get 告警策略名称。 
      * @return ScalingPolicyName 告警策略名称。
      */
     public String getScalingPolicyName() {
@@ -97,7 +97,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警策略名称。
+     * Set 告警策略名称。
      * @param ScalingPolicyName 告警策略名称。
      */
     public void setScalingPolicyName(String ScalingPolicyName) {
@@ -105,7 +105,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Get 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li> 
      * @return AdjustmentType 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public String getAdjustmentType() {
@@ -113,7 +113,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Set 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      * @param AdjustmentType 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public void setAdjustmentType(String AdjustmentType) {
@@ -121,7 +121,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+     * Get 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。 
      * @return AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
     public Integer getAdjustmentValue() {
@@ -129,7 +129,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+     * Set 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      * @param AdjustmentValue 告警触发后，期望实例数的调整值。取值：<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
      */
     public void setAdjustmentValue(Integer AdjustmentValue) {
@@ -137,7 +137,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取冷却时间，单位为秒。
+     * Get 冷却时间，单位为秒。 
      * @return Cooldown 冷却时间，单位为秒。
      */
     public Integer getCooldown() {
@@ -145,7 +145,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置冷却时间，单位为秒。
+     * Set 冷却时间，单位为秒。
      * @param Cooldown 冷却时间，单位为秒。
      */
     public void setCooldown(Integer Cooldown) {
@@ -153,7 +153,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取告警监控指标。
+     * Get 告警监控指标。 
      * @return MetricAlarm 告警监控指标。
      */
     public MetricAlarm getMetricAlarm() {
@@ -161,7 +161,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警监控指标。
+     * Set 告警监控指标。
      * @param MetricAlarm 告警监控指标。
      */
     public void setMetricAlarm(MetricAlarm MetricAlarm) {
@@ -169,8 +169,8 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。 
      * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
      */
@@ -179,7 +179,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
      * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
 如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
@@ -189,7 +189,7 @@ public class ModifyScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);

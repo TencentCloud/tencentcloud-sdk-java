@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMountPointRequest  extends AbstractModel{
+public class ModifyMountPointRequest extends AbstractModel{
 
     /**
     * 挂载点ID
@@ -51,7 +51,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     private String AccessGroupId;
 
     /**
-     * 获取挂载点ID
+     * Get 挂载点ID 
      * @return MountPointId 挂载点ID
      */
     public String getMountPointId() {
@@ -59,7 +59,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点ID
+     * Set 挂载点ID
      * @param MountPointId 挂载点ID
      */
     public void setMountPointId(String MountPointId) {
@@ -67,7 +67,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点名称
+     * Get 挂载点名称 
      * @return MountPointName 挂载点名称
      */
     public String getMountPointName() {
@@ -75,7 +75,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点名称
+     * Set 挂载点名称
      * @param MountPointName 挂载点名称
      */
     public void setMountPointName(String MountPointName) {
@@ -83,7 +83,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 获取挂载点状态
+     * Get 挂载点状态 
      * @return MountPointStatus 挂载点状态
      */
     public Long getMountPointStatus() {
@@ -91,7 +91,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点状态
+     * Set 挂载点状态
      * @param MountPointStatus 挂载点状态
      */
     public void setMountPointStatus(Long MountPointStatus) {
@@ -99,7 +99,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -107,7 +107,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -115,7 +115,7 @@ public class ModifyMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MountPointId", this.MountPointId);

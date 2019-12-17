@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTablesRequest  extends AbstractModel{
+public class CreateTablesRequest extends AbstractModel{
 
     /**
     * 待创建表所属应用实例ID
@@ -44,7 +44,7 @@ public class CreateTablesRequest  extends AbstractModel{
     private SelectedTableInfo [] SelectedTables;
 
     /**
-     * 获取待创建表所属应用实例ID
+     * Get 待创建表所属应用实例ID 
      * @return ApplicationId 待创建表所属应用实例ID
      */
     public String getApplicationId() {
@@ -52,7 +52,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待创建表所属应用实例ID
+     * Set 待创建表所属应用实例ID
      * @param ApplicationId 待创建表所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -60,7 +60,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户选定的建表IDL文件列表
+     * Get 用户选定的建表IDL文件列表 
      * @return IdlFiles 用户选定的建表IDL文件列表
      */
     public IdlFileInfo [] getIdlFiles() {
@@ -68,7 +68,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户选定的建表IDL文件列表
+     * Set 用户选定的建表IDL文件列表
      * @param IdlFiles 用户选定的建表IDL文件列表
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
@@ -76,7 +76,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待创建表信息列表
+     * Get 待创建表信息列表 
      * @return SelectedTables 待创建表信息列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -84,7 +84,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待创建表信息列表
+     * Set 待创建表信息列表
      * @param SelectedTables 待创建表信息列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -92,7 +92,7 @@ public class CreateTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

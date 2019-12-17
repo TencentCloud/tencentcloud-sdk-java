@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupPolicy  extends AbstractModel{
+public class SecurityGroupPolicy extends AbstractModel{
 
     /**
     * 安全组规则索引号。
@@ -100,7 +100,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取安全组规则索引号。
+     * Get 安全组规则索引号。 
      * @return PolicyIndex 安全组规则索引号。
      */
     public Integer getPolicyIndex() {
@@ -108,7 +108,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置安全组规则索引号。
+     * Set 安全组规则索引号。
      * @param PolicyIndex 安全组规则索引号。
      */
     public void setPolicyIndex(Integer PolicyIndex) {
@@ -116,7 +116,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取协议, 取值: TCP,UDP, ICMP。
+     * Get 协议, 取值: TCP,UDP, ICMP。 
      * @return Protocol 协议, 取值: TCP,UDP, ICMP。
      */
     public String getProtocol() {
@@ -124,7 +124,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置协议, 取值: TCP,UDP, ICMP。
+     * Set 协议, 取值: TCP,UDP, ICMP。
      * @param Protocol 协议, 取值: TCP,UDP, ICMP。
      */
     public void setProtocol(String Protocol) {
@@ -132,7 +132,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取端口(all, 离散port,  range)。
+     * Get 端口(all, 离散port,  range)。 
      * @return Port 端口(all, 离散port,  range)。
      */
     public String getPort() {
@@ -140,7 +140,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置端口(all, 离散port,  range)。
+     * Set 端口(all, 离散port,  range)。
      * @param Port 端口(all, 离散port,  range)。
      */
     public void setPort(String Port) {
@@ -148,7 +148,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Get 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。 
      * @return ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      */
     public ServiceTemplateSpecification getServiceTemplate() {
@@ -156,7 +156,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Set 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      * @param ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
      */
     public void setServiceTemplate(ServiceTemplateSpecification ServiceTemplate) {
@@ -164,7 +164,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取网段或IP(互斥)。
+     * Get 网段或IP(互斥)。 
      * @return CidrBlock 网段或IP(互斥)。
      */
     public String getCidrBlock() {
@@ -172,7 +172,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置网段或IP(互斥)。
+     * Set 网段或IP(互斥)。
      * @param CidrBlock 网段或IP(互斥)。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -180,7 +180,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取网段或IPv6(互斥)。
+     * Get 网段或IPv6(互斥)。 
      * @return Ipv6CidrBlock 网段或IPv6(互斥)。
      */
     public String getIpv6CidrBlock() {
@@ -188,7 +188,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置网段或IPv6(互斥)。
+     * Set 网段或IPv6(互斥)。
      * @param Ipv6CidrBlock 网段或IPv6(互斥)。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -196,7 +196,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取安全组实例ID，例如：sg-ohuuioma。
+     * Get 安全组实例ID，例如：sg-ohuuioma。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public String getSecurityGroupId() {
@@ -204,7 +204,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如：sg-ohuuioma。
+     * Set 安全组实例ID，例如：sg-ohuuioma。
      * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -212,7 +212,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址ID或者ID地址组ID。
+     * Get IP地址ID或者ID地址组ID。 
      * @return AddressTemplate IP地址ID或者ID地址组ID。
      */
     public AddressTemplateSpecification getAddressTemplate() {
@@ -220,7 +220,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址ID或者ID地址组ID。
+     * Set IP地址ID或者ID地址组ID。
      * @param AddressTemplate IP地址ID或者ID地址组ID。
      */
     public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
@@ -228,7 +228,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取ACCEPT 或 DROP。
+     * Get ACCEPT 或 DROP。 
      * @return Action ACCEPT 或 DROP。
      */
     public String getAction() {
@@ -236,7 +236,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置ACCEPT 或 DROP。
+     * Set ACCEPT 或 DROP。
      * @param Action ACCEPT 或 DROP。
      */
     public void setAction(String Action) {
@@ -244,7 +244,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取安全组规则描述。
+     * Get 安全组规则描述。 
      * @return PolicyDescription 安全组规则描述。
      */
     public String getPolicyDescription() {
@@ -252,7 +252,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置安全组规则描述。
+     * Set 安全组规则描述。
      * @param PolicyDescription 安全组规则描述。
      */
     public void setPolicyDescription(String PolicyDescription) {
@@ -260,7 +260,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取安全组最近修改时间。
+     * Get 安全组最近修改时间。 
      * @return ModifyTime 安全组最近修改时间。
      */
     public String getModifyTime() {
@@ -268,7 +268,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置安全组最近修改时间。
+     * Set 安全组最近修改时间。
      * @param ModifyTime 安全组最近修改时间。
      */
     public void setModifyTime(String ModifyTime) {
@@ -276,7 +276,7 @@ public class SecurityGroupPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);

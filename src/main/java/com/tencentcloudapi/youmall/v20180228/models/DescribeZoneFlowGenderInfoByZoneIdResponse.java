@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
+public class DescribeZoneFlowGenderInfoByZoneIdResponse extends AbstractModel{
 
     /**
     * 集团ID
@@ -72,7 +72,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -80,7 +80,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -88,7 +88,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -96,7 +96,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -104,7 +104,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域ID
+     * Get 区域ID 
      * @return ZoneId 区域ID
      */
     public Integer getZoneId() {
@@ -112,7 +112,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID
+     * Set 区域ID
      * @param ZoneId 区域ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -120,7 +120,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return ZoneName 区域名称
      */
     public String getZoneName() {
@@ -128,7 +128,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param ZoneName 区域名称
      */
     public void setZoneName(String ZoneName) {
@@ -136,7 +136,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取男性占比
+     * Get 男性占比 
      * @return MalePercent 男性占比
      */
     public Float getMalePercent() {
@@ -144,7 +144,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置男性占比
+     * Set 男性占比
      * @param MalePercent 男性占比
      */
     public void setMalePercent(Float MalePercent) {
@@ -152,7 +152,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取女性占比
+     * Get 女性占比 
      * @return FemalePercent 女性占比
      */
     public Float getFemalePercent() {
@@ -160,7 +160,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置女性占比
+     * Set 女性占比
      * @param FemalePercent 女性占比
      */
     public void setFemalePercent(Float FemalePercent) {
@@ -168,7 +168,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeZoneFlowGenderInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

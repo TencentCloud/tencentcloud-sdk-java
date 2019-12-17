@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageModerationRequest  extends AbstractModel{
+public class ImageModerationRequest extends AbstractModel{
 
     /**
     * 文件内容 Base64,与FileUrl必须二填一
@@ -44,7 +44,7 @@ public class ImageModerationRequest  extends AbstractModel{
     private String FileUrl;
 
     /**
-     * 获取文件内容 Base64,与FileUrl必须二填一
+     * Get 文件内容 Base64,与FileUrl必须二填一 
      * @return FileContent 文件内容 Base64,与FileUrl必须二填一
      */
     public String getFileContent() {
@@ -52,7 +52,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件内容 Base64,与FileUrl必须二填一
+     * Set 文件内容 Base64,与FileUrl必须二填一
      * @param FileContent 文件内容 Base64,与FileUrl必须二填一
      */
     public void setFileContent(String FileContent) {
@@ -60,7 +60,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件MD5值
+     * Get 文件MD5值 
      * @return FileMD5 文件MD5值
      */
     public String getFileMD5() {
@@ -68,7 +68,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件MD5值
+     * Set 文件MD5值
      * @param FileMD5 文件MD5值
      */
     public void setFileMD5(String FileMD5) {
@@ -76,7 +76,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件地址
+     * Get 文件地址 
      * @return FileUrl 文件地址
      */
     public String getFileUrl() {
@@ -84,7 +84,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件地址
+     * Set 文件地址
      * @param FileUrl 文件地址
      */
     public void setFileUrl(String FileUrl) {
@@ -92,7 +92,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

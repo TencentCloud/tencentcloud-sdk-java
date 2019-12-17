@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
+public class SetOutBandVpnAuthPasswordRequest extends AbstractModel{
 
     /**
     * 设置的Vpn认证密码
@@ -37,7 +37,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     private String Operate;
 
     /**
-     * 获取设置的Vpn认证密码
+     * Get 设置的Vpn认证密码 
      * @return Password 设置的Vpn认证密码
      */
     public String getPassword() {
@@ -45,7 +45,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置的Vpn认证密码
+     * Set 设置的Vpn认证密码
      * @param Password 设置的Vpn认证密码
      */
     public void setPassword(String Password) {
@@ -53,7 +53,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作字段，取值为：Create（创建）或Update（修改）
+     * Get 操作字段，取值为：Create（创建）或Update（修改） 
      * @return Operate 操作字段，取值为：Create（创建）或Update（修改）
      */
     public String getOperate() {
@@ -61,7 +61,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作字段，取值为：Create（创建）或Update（修改）
+     * Set 操作字段，取值为：Create（创建）或Update（修改）
      * @param Operate 操作字段，取值为：Create（创建）或Update（修改）
      */
     public void setOperate(String Operate) {
@@ -69,7 +69,7 @@ public class SetOutBandVpnAuthPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Password", this.Password);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRuleRequest  extends AbstractModel{
+public class CreateRuleRequest extends AbstractModel{
 
     /**
     * 7层监听器ID
@@ -87,7 +87,7 @@ public class CreateRuleRequest  extends AbstractModel{
     private String ForwardHost;
 
     /**
-     * 获取7层监听器ID
+     * Get 7层监听器ID 
      * @return ListenerId 7层监听器ID
      */
     public String getListenerId() {
@@ -95,7 +95,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置7层监听器ID
+     * Set 7层监听器ID
      * @param ListenerId 7层监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -103,7 +103,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的域名
+     * Get 转发规则的域名 
      * @return Domain 转发规则的域名
      */
     public String getDomain() {
@@ -111,7 +111,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的域名
+     * Set 转发规则的域名
      * @param Domain 转发规则的域名
      */
     public void setDomain(String Domain) {
@@ -119,7 +119,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的路径
+     * Get 转发规则的路径 
      * @return Path 转发规则的路径
      */
     public String getPath() {
@@ -127,7 +127,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的路径
+     * Set 转发规则的路径
      * @param Path 转发规则的路径
      */
     public void setPath(String Path) {
@@ -135,7 +135,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则对应源站的类型，支持IP和DOMAIN类型。
+     * Get 转发规则对应源站的类型，支持IP和DOMAIN类型。 
      * @return RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
      */
     public String getRealServerType() {
@@ -143,7 +143,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则对应源站的类型，支持IP和DOMAIN类型。
+     * Set 转发规则对应源站的类型，支持IP和DOMAIN类型。
      * @param RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
      */
     public void setRealServerType(String RealServerType) {
@@ -151,7 +151,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Get 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。 
      * @return Scheduler 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public String getScheduler() {
@@ -159,7 +159,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Set 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      * @param Scheduler 规则转发源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public void setScheduler(String Scheduler) {
@@ -167,7 +167,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则是否开启健康检查，1开启，0关闭。
+     * Get 规则是否开启健康检查，1开启，0关闭。 
      * @return HealthCheck 规则是否开启健康检查，1开启，0关闭。
      */
     public Long getHealthCheck() {
@@ -175,7 +175,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则是否开启健康检查，1开启，0关闭。
+     * Set 规则是否开启健康检查，1开启，0关闭。
      * @param HealthCheck 规则是否开启健康检查，1开启，0关闭。
      */
     public void setHealthCheck(Long HealthCheck) {
@@ -183,7 +183,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查相关参数
+     * Get 源站健康检查相关参数 
      * @return CheckParams 源站健康检查相关参数
      */
     public RuleCheckParams getCheckParams() {
@@ -191,7 +191,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查相关参数
+     * Set 源站健康检查相关参数
      * @param CheckParams 源站健康检查相关参数
      */
     public void setCheckParams(RuleCheckParams CheckParams) {
@@ -199,8 +199,8 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
+     * Get 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
+不传递该字段时表示使用对应监听器的ForwardProtocol。 
      * @return ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
      */
@@ -209,7 +209,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加速通道转发到源站的协议类型：支持HTTP或HTTPS。
+     * Set 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
      * @param ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
 不传递该字段时表示使用对应监听器的ForwardProtocol。
@@ -219,7 +219,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * Get 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。 
      * @return ForwardHost 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      */
     public String getForwardHost() {
@@ -227,7 +227,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * Set 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      * @param ForwardHost 加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
      */
     public void setForwardHost(String ForwardHost) {
@@ -235,7 +235,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

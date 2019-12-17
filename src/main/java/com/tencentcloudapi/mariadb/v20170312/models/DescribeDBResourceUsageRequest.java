@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBResourceUsageRequest  extends AbstractModel{
+public class DescribeDBResourceUsageRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc。
@@ -51,7 +51,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     private String MetricName;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
+     * Get 实例 ID，形如：tdsql-ow728lmc。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
+     * Set 实例 ID，形如：tdsql-ow728lmc。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期，格式yyyy-mm-dd
+     * Get 开始日期，格式yyyy-mm-dd 
      * @return StartTime 开始日期，格式yyyy-mm-dd
      */
     public String getStartTime() {
@@ -75,7 +75,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期，格式yyyy-mm-dd
+     * Set 开始日期，格式yyyy-mm-dd
      * @param StartTime 开始日期，格式yyyy-mm-dd
      */
     public void setStartTime(String StartTime) {
@@ -83,7 +83,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期，格式yyyy-mm-dd
+     * Get 结束日期，格式yyyy-mm-dd 
      * @return EndTime 结束日期，格式yyyy-mm-dd
      */
     public String getEndTime() {
@@ -91,7 +91,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期，格式yyyy-mm-dd
+     * Set 结束日期，格式yyyy-mm-dd
      * @param EndTime 结束日期，格式yyyy-mm-dd
      */
     public void setEndTime(String EndTime) {
@@ -99,7 +99,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+     * Get 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate 
      * @return MetricName 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
      */
     public String getMetricName() {
@@ -107,7 +107,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
+     * Set 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
      * @param MetricName 拉取的指标名称，支持的值为：data_disk_available,binlog_disk_available,mem_available,cpu_usage_rate
      */
     public void setMetricName(String MetricName) {
@@ -115,7 +115,7 @@ public class DescribeDBResourceUsageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

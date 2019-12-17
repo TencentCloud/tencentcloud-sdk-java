@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancersResponse  extends AbstractModel{
+public class DescribeLoadBalancersResponse extends AbstractModel{
 
     /**
     * 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
@@ -44,7 +44,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * Get 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。 
      * @return TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * Set 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      * @param TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的负载均衡实例数组。
+     * Get 返回的负载均衡实例数组。 
      * @return LoadBalancerSet 返回的负载均衡实例数组。
      */
     public LoadBalancer [] getLoadBalancerSet() {
@@ -68,7 +68,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的负载均衡实例数组。
+     * Set 返回的负载均衡实例数组。
      * @param LoadBalancerSet 返回的负载均衡实例数组。
      */
     public void setLoadBalancerSet(LoadBalancer [] LoadBalancerSet) {
@@ -76,7 +76,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

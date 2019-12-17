@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LocalDiskType  extends AbstractModel{
+public class LocalDiskType extends AbstractModel{
 
     /**
     * 本地磁盘类型。
@@ -58,7 +58,7 @@ public class LocalDiskType  extends AbstractModel{
     private String Required;
 
     /**
-     * 获取本地磁盘类型。
+     * Get 本地磁盘类型。 
      * @return Type 本地磁盘类型。
      */
     public String getType() {
@@ -66,7 +66,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 设置本地磁盘类型。
+     * Set 本地磁盘类型。
      * @param Type 本地磁盘类型。
      */
     public void setType(String Type) {
@@ -74,7 +74,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 获取本地磁盘属性。
+     * Get 本地磁盘属性。 
      * @return PartitionType 本地磁盘属性。
      */
     public String getPartitionType() {
@@ -82,7 +82,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 设置本地磁盘属性。
+     * Set 本地磁盘属性。
      * @param PartitionType 本地磁盘属性。
      */
     public void setPartitionType(String PartitionType) {
@@ -90,7 +90,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 获取本地磁盘最小值。
+     * Get 本地磁盘最小值。 
      * @return MinSize 本地磁盘最小值。
      */
     public Integer getMinSize() {
@@ -98,7 +98,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 设置本地磁盘最小值。
+     * Set 本地磁盘最小值。
      * @param MinSize 本地磁盘最小值。
      */
     public void setMinSize(Integer MinSize) {
@@ -106,7 +106,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 获取本地磁盘最大值。
+     * Get 本地磁盘最大值。 
      * @return MaxSize 本地磁盘最大值。
      */
     public Integer getMaxSize() {
@@ -114,7 +114,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 设置本地磁盘最大值。
+     * Set 本地磁盘最大值。
      * @param MaxSize 本地磁盘最大值。
      */
     public void setMaxSize(Integer MaxSize) {
@@ -122,7 +122,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 获取购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     * Get 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。 
      * @return Required 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
      */
     public String getRequired() {
@@ -130,7 +130,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 设置购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
+     * Set 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
      * @param Required 购买时本地盘是否为必选。取值范围：<br><li>REQUIRED：表示必选<br><li>OPTIONAL：表示可选。
      */
     public void setRequired(String Required) {
@@ -138,7 +138,7 @@ public class LocalDiskType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

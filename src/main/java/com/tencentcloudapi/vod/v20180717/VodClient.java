@@ -29,21 +29,10 @@ public class VodClient extends AbstractClient{
     private static String endpoint = "vod.tencentcloudapi.com";
     private static String version = "2018-07-17";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public VodClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public VodClient(Credential credential, String region, ClientProfile profile) {
         super(VodClient.endpoint, VodClient.version, credential, region, profile);
     }

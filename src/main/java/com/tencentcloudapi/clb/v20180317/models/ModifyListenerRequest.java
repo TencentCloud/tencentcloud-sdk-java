@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyListenerRequest  extends AbstractModel{
+public class ModifyListenerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -80,7 +80,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     private Integer SniSwitch;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -88,7 +88,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -96,7 +96,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -104,7 +104,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -112,7 +112,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的监听器名称
+     * Get 新的监听器名称 
      * @return ListenerName 新的监听器名称
      */
     public String getListenerName() {
@@ -120,7 +120,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的监听器名称
+     * Set 新的监听器名称
      * @param ListenerName 新的监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -128,7 +128,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。 
      * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
     public Integer getSessionExpireTime() {
@@ -136,7 +136,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
@@ -144,7 +144,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器 
      * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      */
     public HealthCheck getHealthCheck() {
@@ -152,7 +152,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
@@ -160,7 +160,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器 
      * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      */
     public CertificateInput getCertificate() {
@@ -168,7 +168,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      */
     public void setCertificate(CertificateInput Certificate) {
@@ -176,8 +176,8 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。
+     * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
+分别表示按权重轮询、最小连接数， 默认为 WRR。 
      * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      */
@@ -186,7 +186,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器转发的方式。可选值：WRR、LEAST_CONN
+     * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
      * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。
@@ -196,7 +196,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI 
      * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      */
     public Integer getSniSwitch() {
@@ -204,7 +204,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
      */
     public void setSniSwitch(Integer SniSwitch) {
@@ -212,7 +212,7 @@ public class ModifyListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFunctionResponse  extends AbstractModel{
+public class GetFunctionResponse extends AbstractModel{
 
     /**
     * 函数的最后修改时间
@@ -240,7 +240,7 @@ public class GetFunctionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取函数的最后修改时间
+     * Get 函数的最后修改时间 
      * @return ModTime 函数的最后修改时间
      */
     public String getModTime() {
@@ -248,7 +248,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的最后修改时间
+     * Set 函数的最后修改时间
      * @param ModTime 函数的最后修改时间
      */
     public void setModTime(String ModTime) {
@@ -256,7 +256,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的代码
+     * Get 函数的代码 
      * @return CodeInfo 函数的代码
      */
     public String getCodeInfo() {
@@ -264,7 +264,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的代码
+     * Set 函数的代码
      * @param CodeInfo 函数的代码
      */
     public void setCodeInfo(String CodeInfo) {
@@ -272,7 +272,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的描述信息
+     * Get 函数的描述信息 
      * @return Description 函数的描述信息
      */
     public String getDescription() {
@@ -280,7 +280,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的描述信息
+     * Set 函数的描述信息
      * @param Description 函数的描述信息
      */
     public void setDescription(String Description) {
@@ -288,7 +288,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的触发器列表
+     * Get 函数的触发器列表 
      * @return Triggers 函数的触发器列表
      */
     public Trigger [] getTriggers() {
@@ -296,7 +296,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的触发器列表
+     * Set 函数的触发器列表
      * @param Triggers 函数的触发器列表
      */
     public void setTriggers(Trigger [] Triggers) {
@@ -304,7 +304,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的入口
+     * Get 函数的入口 
      * @return Handler 函数的入口
      */
     public String getHandler() {
@@ -312,7 +312,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的入口
+     * Set 函数的入口
      * @param Handler 函数的入口
      */
     public void setHandler(String Handler) {
@@ -320,7 +320,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数代码大小
+     * Get 函数代码大小 
      * @return CodeSize 函数代码大小
      */
     public Integer getCodeSize() {
@@ -328,7 +328,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数代码大小
+     * Set 函数代码大小
      * @param CodeSize 函数代码大小
      */
     public void setCodeSize(Integer CodeSize) {
@@ -336,7 +336,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的超时时间
+     * Get 函数的超时时间 
      * @return Timeout 函数的超时时间
      */
     public Integer getTimeout() {
@@ -344,7 +344,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的超时时间
+     * Set 函数的超时时间
      * @param Timeout 函数的超时时间
      */
     public void setTimeout(Integer Timeout) {
@@ -352,7 +352,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的版本
+     * Get 函数的版本 
      * @return FunctionVersion 函数的版本
      */
     public String getFunctionVersion() {
@@ -360,7 +360,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本
+     * Set 函数的版本
      * @param FunctionVersion 函数的版本
      */
     public void setFunctionVersion(String FunctionVersion) {
@@ -368,7 +368,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的最大可用内存
+     * Get 函数的最大可用内存 
      * @return MemorySize 函数的最大可用内存
      */
     public Integer getMemorySize() {
@@ -376,7 +376,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的最大可用内存
+     * Set 函数的最大可用内存
      * @param MemorySize 函数的最大可用内存
      */
     public void setMemorySize(Integer MemorySize) {
@@ -384,7 +384,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的运行环境
+     * Get 函数的运行环境 
      * @return Runtime 函数的运行环境
      */
     public String getRuntime() {
@@ -392,7 +392,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的运行环境
+     * Set 函数的运行环境
      * @param Runtime 函数的运行环境
      */
     public void setRuntime(String Runtime) {
@@ -400,7 +400,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的名称
+     * Get 函数的名称 
      * @return FunctionName 函数的名称
      */
     public String getFunctionName() {
@@ -408,7 +408,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的名称
+     * Set 函数的名称
      * @param FunctionName 函数的名称
      */
     public void setFunctionName(String FunctionName) {
@@ -416,7 +416,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的私有网络
+     * Get 函数的私有网络 
      * @return VpcConfig 函数的私有网络
      */
     public VpcConfig getVpcConfig() {
@@ -424,7 +424,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的私有网络
+     * Set 函数的私有网络
      * @param VpcConfig 函数的私有网络
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
@@ -432,7 +432,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否使用GPU
+     * Get 是否使用GPU 
      * @return UseGpu 是否使用GPU
      */
     public String getUseGpu() {
@@ -440,7 +440,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否使用GPU
+     * Set 是否使用GPU
      * @param UseGpu 是否使用GPU
      */
     public void setUseGpu(String UseGpu) {
@@ -448,7 +448,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的环境变量
+     * Get 函数的环境变量 
      * @return Environment 函数的环境变量
      */
     public Environment getEnvironment() {
@@ -456,7 +456,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的环境变量
+     * Set 函数的环境变量
      * @param Environment 函数的环境变量
      */
     public void setEnvironment(Environment Environment) {
@@ -464,7 +464,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取代码是否正确
+     * Get 代码是否正确 
      * @return CodeResult 代码是否正确
      */
     public String getCodeResult() {
@@ -472,7 +472,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代码是否正确
+     * Set 代码是否正确
      * @param CodeResult 代码是否正确
      */
     public void setCodeResult(String CodeResult) {
@@ -480,7 +480,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取代码错误信息
+     * Get 代码错误信息 
      * @return CodeError 代码错误信息
      */
     public String getCodeError() {
@@ -488,7 +488,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代码错误信息
+     * Set 代码错误信息
      * @param CodeError 代码错误信息
      */
     public void setCodeError(String CodeError) {
@@ -496,7 +496,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取代码错误码
+     * Get 代码错误码 
      * @return ErrNo 代码错误码
      */
     public Integer getErrNo() {
@@ -504,7 +504,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代码错误码
+     * Set 代码错误码
      * @param ErrNo 代码错误码
      */
     public void setErrNo(Integer ErrNo) {
@@ -512,7 +512,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的命名空间
+     * Get 函数的命名空间 
      * @return Namespace 函数的命名空间
      */
     public String getNamespace() {
@@ -520,7 +520,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的命名空间
+     * Set 函数的命名空间
      * @param Namespace 函数的命名空间
      */
     public void setNamespace(String Namespace) {
@@ -528,7 +528,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数绑定的角色
+     * Get 函数绑定的角色 
      * @return Role 函数绑定的角色
      */
     public String getRole() {
@@ -536,7 +536,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数绑定的角色
+     * Set 函数绑定的角色
      * @param Role 函数绑定的角色
      */
     public void setRole(String Role) {
@@ -544,7 +544,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动安装依赖
+     * Get 是否自动安装依赖 
      * @return InstallDependency 是否自动安装依赖
      */
     public String getInstallDependency() {
@@ -552,7 +552,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动安装依赖
+     * Set 是否自动安装依赖
      * @param InstallDependency 是否自动安装依赖
      */
     public void setInstallDependency(String InstallDependency) {
@@ -560,7 +560,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数状态
+     * Get 函数状态 
      * @return Status 函数状态
      */
     public String getStatus() {
@@ -568,7 +568,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数状态
+     * Set 函数状态
      * @param Status 函数状态
      */
     public void setStatus(String Status) {
@@ -576,7 +576,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
+     * Get 状态描述 
      * @return StatusDesc 状态描述
      */
     public String getStatusDesc() {
@@ -584,7 +584,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
      * @param StatusDesc 状态描述
      */
     public void setStatusDesc(String StatusDesc) {
@@ -592,7 +592,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志投递到的Cls日志集
+     * Get 日志投递到的Cls日志集 
      * @return ClsLogsetId 日志投递到的Cls日志集
      */
     public String getClsLogsetId() {
@@ -600,7 +600,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志投递到的Cls日志集
+     * Set 日志投递到的Cls日志集
      * @param ClsLogsetId 日志投递到的Cls日志集
      */
     public void setClsLogsetId(String ClsLogsetId) {
@@ -608,7 +608,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志投递到的Cls Topic
+     * Get 日志投递到的Cls Topic 
      * @return ClsTopicId 日志投递到的Cls Topic
      */
     public String getClsTopicId() {
@@ -616,7 +616,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志投递到的Cls Topic
+     * Set 日志投递到的Cls Topic
      * @param ClsTopicId 日志投递到的Cls Topic
      */
     public void setClsTopicId(String ClsTopicId) {
@@ -624,7 +624,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数ID
+     * Get 函数ID 
      * @return FunctionId 函数ID
      */
     public String getFunctionId() {
@@ -632,7 +632,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数ID
+     * Set 函数ID
      * @param FunctionId 函数ID
      */
     public void setFunctionId(String FunctionId) {
@@ -640,7 +640,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的标签列表
+     * Get 函数的标签列表 
      * @return Tags 函数的标签列表
      */
     public Tag [] getTags() {
@@ -648,7 +648,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的标签列表
+     * Set 函数的标签列表
      * @param Tags 函数的标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -656,7 +656,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取EipConfig配置
+     * Get EipConfig配置 
      * @return EipConfig EipConfig配置
      */
     public EipOutConfig getEipConfig() {
@@ -664,7 +664,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置EipConfig配置
+     * Set EipConfig配置
      * @param EipConfig EipConfig配置
      */
     public void setEipConfig(EipOutConfig EipConfig) {
@@ -672,7 +672,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取域名信息
+     * Get 域名信息 
      * @return AccessInfo 域名信息
      */
     public AccessInfo getAccessInfo() {
@@ -680,7 +680,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置域名信息
+     * Set 域名信息
      * @param AccessInfo 域名信息
      */
     public void setAccessInfo(AccessInfo AccessInfo) {
@@ -688,7 +688,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数类型，取值为HTTP或者Event
+     * Get 函数类型，取值为HTTP或者Event 
      * @return Type 函数类型，取值为HTTP或者Event
      */
     public String getType() {
@@ -696,7 +696,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数类型，取值为HTTP或者Event
+     * Set 函数类型，取值为HTTP或者Event
      * @param Type 函数类型，取值为HTTP或者Event
      */
     public void setType(String Type) {
@@ -704,7 +704,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用L5
+     * Get 是否启用L5 
      * @return L5Enable 是否启用L5
      */
     public String getL5Enable() {
@@ -712,7 +712,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用L5
+     * Set 是否启用L5
      * @param L5Enable 是否启用L5
      */
     public void setL5Enable(String L5Enable) {
@@ -720,7 +720,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -728,7 +728,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -736,7 +736,7 @@ public class GetFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);

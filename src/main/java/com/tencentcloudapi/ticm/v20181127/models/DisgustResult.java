@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisgustResult  extends AbstractModel{
+public class DisgustResult extends AbstractModel{
 
     /**
     * 该识别场景的错误码：
@@ -57,10 +57,10 @@ BLOCK：违规
     private Long Confidence;
 
     /**
-     * 获取该识别场景的错误码：
+     * Get 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
--2表示引擎错误。
+-2表示引擎错误。 
      * @return Code 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -71,7 +71,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置该识别场景的错误码：
+     * Set 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误。
@@ -85,7 +85,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取错误码描述信息。
+     * Get 错误码描述信息。 
      * @return Msg 错误码描述信息。
      */
     public String getMsg() {
@@ -93,7 +93,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置错误码描述信息。
+     * Set 错误码描述信息。
      * @param Msg 错误码描述信息。
      */
     public void setMsg(String Msg) {
@@ -101,10 +101,10 @@ BLOCK：违规
     }
 
     /**
-     * 获取识别场景的审核结论：
+     * Get 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：违规 
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -115,7 +115,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置识别场景的审核结论：
+     * Set 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -129,7 +129,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取图像恶心的分数，0-100之间，分数越高恶心几率越大。
+     * Get 图像恶心的分数，0-100之间，分数越高恶心几率越大。 
      * @return Confidence 图像恶心的分数，0-100之间，分数越高恶心几率越大。
      */
     public Long getConfidence() {
@@ -137,7 +137,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置图像恶心的分数，0-100之间，分数越高恶心几率越大。
+     * Set 图像恶心的分数，0-100之间，分数越高恶心几率越大。
      * @param Confidence 图像恶心的分数，0-100之间，分数越高恶心几率越大。
      */
     public void setConfidence(Long Confidence) {
@@ -145,7 +145,7 @@ BLOCK：违规
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

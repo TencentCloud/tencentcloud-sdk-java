@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnonymousComputeEnv  extends AbstractModel{
+public class AnonymousComputeEnv extends AbstractModel{
 
     /**
     * 计算环境管理类型
@@ -51,7 +51,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     private AgentRunningMode AgentRunningMode;
 
     /**
-     * 获取计算环境管理类型
+     * Get 计算环境管理类型 
      * @return EnvType 计算环境管理类型
      */
     public String getEnvType() {
@@ -59,7 +59,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境管理类型
+     * Set 计算环境管理类型
      * @param EnvType 计算环境管理类型
      */
     public void setEnvType(String EnvType) {
@@ -67,7 +67,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境具体参数
+     * Get 计算环境具体参数 
      * @return EnvData 计算环境具体参数
      */
     public EnvData getEnvData() {
@@ -75,7 +75,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境具体参数
+     * Set 计算环境具体参数
      * @param EnvData 计算环境具体参数
      */
     public void setEnvData(EnvData EnvData) {
@@ -83,7 +83,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘挂载选项
+     * Get 数据盘挂载选项 
      * @return MountDataDisks 数据盘挂载选项
      */
     public MountDataDisk [] getMountDataDisks() {
@@ -91,7 +91,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘挂载选项
+     * Set 数据盘挂载选项
      * @param MountDataDisks 数据盘挂载选项
      */
     public void setMountDataDisks(MountDataDisk [] MountDataDisks) {
@@ -99,7 +99,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取agent运行模式，适用于Windows系统
+     * Get agent运行模式，适用于Windows系统 
      * @return AgentRunningMode agent运行模式，适用于Windows系统
      */
     public AgentRunningMode getAgentRunningMode() {
@@ -107,7 +107,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置agent运行模式，适用于Windows系统
+     * Set agent运行模式，适用于Windows系统
      * @param AgentRunningMode agent运行模式，适用于Windows系统
      */
     public void setAgentRunningMode(AgentRunningMode AgentRunningMode) {
@@ -115,7 +115,7 @@ public class AnonymousComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);

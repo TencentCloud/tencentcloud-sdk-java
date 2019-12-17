@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUpgradePriceRequest  extends AbstractModel{
+public class DescribeUpgradePriceRequest extends AbstractModel{
 
     /**
     * 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -46,7 +46,7 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     private Integer Storage;
 
     /**
-     * 获取待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -54,7 +54,7 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 待升级的实例ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -62,8 +62,8 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得。
+     * Get 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得。 
      * @return Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      */
@@ -72,7 +72,7 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
      * @param Memory 内存大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -82,8 +82,8 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
- 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
+     * Get 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+ 查询实例规格获得不同内存大小对应的磁盘规格下限和上限。 
      * @return Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      */
@@ -92,7 +92,7 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
+     * Set 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
      * @param Storage 存储空间大小，单位：GB，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得不同内存大小对应的磁盘规格下限和上限。
@@ -102,7 +102,7 @@ public class DescribeUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

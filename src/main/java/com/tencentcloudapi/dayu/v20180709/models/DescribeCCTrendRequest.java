@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCCTrendRequest  extends AbstractModel{
+public class DescribeCCTrendRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
@@ -72,7 +72,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     private String Id;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -80,7 +80,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -88,7 +88,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP
+     * Get 资源的IP 
      * @return Ip 资源的IP
      */
     public String getIp() {
@@ -96,7 +96,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP
+     * Set 资源的IP
      * @param Ip 资源的IP
      */
     public void setIp(String Ip) {
@@ -104,7 +104,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * Get 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))] 
      * @return MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
      */
     public String getMetricName() {
@@ -112,7 +112,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+     * Set 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
      * @param MetricName 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
      */
     public void setMetricName(String MetricName) {
@@ -120,7 +120,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
+     * Get 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)] 
      * @return Period 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      */
     public Long getPeriod() {
@@ -128,7 +128,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
+     * Set 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      * @param Period 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      */
     public void setPeriod(Long Period) {
@@ -136,7 +136,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计开始时间
+     * Get 统计开始时间 
      * @return StartTime 统计开始时间
      */
     public String getStartTime() {
@@ -144,7 +144,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计开始时间
+     * Set 统计开始时间
      * @param StartTime 统计开始时间
      */
     public void setStartTime(String StartTime) {
@@ -152,7 +152,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计结束时间
+     * Get 统计结束时间 
      * @return EndTime 统计结束时间
      */
     public String getEndTime() {
@@ -160,7 +160,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计结束时间
+     * Set 统计结束时间
      * @param EndTime 统计结束时间
      */
     public void setEndTime(String EndTime) {
@@ -168,7 +168,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+     * Get 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例） 
      * @return Id 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      */
     public String getId() {
@@ -176,7 +176,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
+     * Set 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      * @param Id 资源实例ID，当Business为basic时，此字段不用填写（因为基础防护没有资源实例）
      */
     public void setId(String Id) {
@@ -184,7 +184,7 @@ public class DescribeCCTrendRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

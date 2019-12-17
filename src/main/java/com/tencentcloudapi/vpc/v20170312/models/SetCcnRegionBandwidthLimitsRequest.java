@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
+public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -37,7 +37,7 @@ public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -45,7 +45,7 @@ public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -53,7 +53,7 @@ public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云联网（CCN）各地域出带宽上限。
+     * Get 云联网（CCN）各地域出带宽上限。 
      * @return CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
      */
     public CcnRegionBandwidthLimit [] getCcnRegionBandwidthLimits() {
@@ -61,7 +61,7 @@ public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云联网（CCN）各地域出带宽上限。
+     * Set 云联网（CCN）各地域出带宽上限。
      * @param CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
      */
     public void setCcnRegionBandwidthLimits(CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits) {
@@ -69,7 +69,7 @@ public class SetCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

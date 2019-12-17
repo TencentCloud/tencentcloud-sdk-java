@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectAuthRequest  extends AbstractModel{
+public class DetectAuthRequest extends AbstractModel{
 
     /**
     * 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
@@ -74,7 +74,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     private String ImageBase64;
 
     /**
-     * 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+     * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。 
      * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      */
     public String getRuleId() {
@@ -82,7 +82,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+     * Set 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      * @param RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      */
     public void setRuleId(String RuleId) {
@@ -90,7 +90,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取本接口不需要传递此参数。
+     * Get 本接口不需要传递此参数。 
      * @return TerminalType 本接口不需要传递此参数。
      */
     public String getTerminalType() {
@@ -98,7 +98,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置本接口不需要传递此参数。
+     * Set 本接口不需要传递此参数。
      * @param TerminalType 本接口不需要传递此参数。
      */
     public void setTerminalType(String TerminalType) {
@@ -106,8 +106,8 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取身份标识（与公安权威库比对时必须是身份证号）。
-规则：a-zA-Z0-9组合。最长长度32位。
+     * Get 身份标识（与公安权威库比对时必须是身份证号）。
+规则：a-zA-Z0-9组合。最长长度32位。 
      * @return IdCard 身份标识（与公安权威库比对时必须是身份证号）。
 规则：a-zA-Z0-9组合。最长长度32位。
      */
@@ -116,7 +116,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置身份标识（与公安权威库比对时必须是身份证号）。
+     * Set 身份标识（与公安权威库比对时必须是身份证号）。
 规则：a-zA-Z0-9组合。最长长度32位。
      * @param IdCard 身份标识（与公安权威库比对时必须是身份证号）。
 规则：a-zA-Z0-9组合。最长长度32位。
@@ -126,7 +126,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取姓名。最长长度32位。中文请使用UTF-8编码。
+     * Get 姓名。最长长度32位。中文请使用UTF-8编码。 
      * @return Name 姓名。最长长度32位。中文请使用UTF-8编码。
      */
     public String getName() {
@@ -134,7 +134,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置姓名。最长长度32位。中文请使用UTF-8编码。
+     * Set 姓名。最长长度32位。中文请使用UTF-8编码。
      * @param Name 姓名。最长长度32位。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
@@ -142,7 +142,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取认证结束后重定向的回调链接地址。最长长度1024位。
+     * Get 认证结束后重定向的回调链接地址。最长长度1024位。 
      * @return RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      */
     public String getRedirectUrl() {
@@ -150,7 +150,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置认证结束后重定向的回调链接地址。最长长度1024位。
+     * Set 认证结束后重定向的回调链接地址。最长长度1024位。
      * @param RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
      */
     public void setRedirectUrl(String RedirectUrl) {
@@ -158,7 +158,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取透传字段，在获取验证结果时返回。
+     * Get 透传字段，在获取验证结果时返回。 
      * @return Extra 透传字段，在获取验证结果时返回。
      */
     public String getExtra() {
@@ -166,7 +166,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置透传字段，在获取验证结果时返回。
+     * Set 透传字段，在获取验证结果时返回。
      * @param Extra 透传字段，在获取验证结果时返回。
      */
     public void setExtra(String Extra) {
@@ -174,8 +174,8 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * Get 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。 
      * @return ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
@@ -184,7 +184,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置用于人脸比对的照片，图片的BASE64值；
+     * Set 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
@@ -194,7 +194,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Action  extends AbstractModel{
+public class Action extends AbstractModel{
 
     /**
     * 转发至topic
@@ -44,7 +44,7 @@ public class Action  extends AbstractModel{
     private CkafkaAction Ckafka;
 
     /**
-     * 获取转发至topic
+     * Get 转发至topic 
      * @return Topic 转发至topic
      */
     public TopicAction getTopic() {
@@ -52,7 +52,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 设置转发至topic
+     * Set 转发至topic
      * @param Topic 转发至topic
      */
     public void setTopic(TopicAction Topic) {
@@ -60,7 +60,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 获取转发至第三发
+     * Get 转发至第三发 
      * @return Service 转发至第三发
      */
     public ServiceAction getService() {
@@ -68,7 +68,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 设置转发至第三发
+     * Set 转发至第三发
      * @param Service 转发至第三发
      */
     public void setService(ServiceAction Service) {
@@ -76,7 +76,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 获取转发至第三发Ckafka
+     * Get 转发至第三发Ckafka 
      * @return Ckafka 转发至第三发Ckafka
      */
     public CkafkaAction getCkafka() {
@@ -84,7 +84,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 设置转发至第三发Ckafka
+     * Set 转发至第三发Ckafka
      * @param Ckafka 转发至第三发Ckafka
      */
     public void setCkafka(CkafkaAction Ckafka) {
@@ -92,7 +92,7 @@ public class Action  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Topic.", this.Topic);

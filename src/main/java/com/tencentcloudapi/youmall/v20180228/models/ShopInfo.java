@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShopInfo  extends AbstractModel{
+public class ShopInfo extends AbstractModel{
 
     /**
     * 公司ID
@@ -72,7 +72,7 @@ public class ShopInfo  extends AbstractModel{
     private String CompanyName;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -80,7 +80,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -88,7 +88,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -96,7 +96,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -104,7 +104,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取门店名称
+     * Get 门店名称 
      * @return ShopName 门店名称
      */
     public String getShopName() {
@@ -112,7 +112,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置门店名称
+     * Set 门店名称
      * @param ShopName 门店名称
      */
     public void setShopName(String ShopName) {
@@ -120,7 +120,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取客户门店编码
+     * Get 客户门店编码 
      * @return ShopCode 客户门店编码
      */
     public String getShopCode() {
@@ -128,7 +128,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客户门店编码
+     * Set 客户门店编码
      * @param ShopCode 客户门店编码
      */
     public void setShopCode(String ShopCode) {
@@ -136,7 +136,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取省
+     * Get 省 
      * @return Province 省
      */
     public String getProvince() {
@@ -144,7 +144,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置省
+     * Set 省
      * @param Province 省
      */
     public void setProvince(String Province) {
@@ -152,7 +152,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取市
+     * Get 市 
      * @return City 市
      */
     public String getCity() {
@@ -160,7 +160,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置市
+     * Set 市
      * @param City 市
      */
     public void setCity(String City) {
@@ -168,7 +168,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 获取公司名称
+     * Get 公司名称 
      * @return CompanyName 公司名称
      */
     public String getCompanyName() {
@@ -176,7 +176,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 设置公司名称
+     * Set 公司名称
      * @param CompanyName 公司名称
      */
     public void setCompanyName(String CompanyName) {
@@ -184,7 +184,7 @@ public class ShopInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

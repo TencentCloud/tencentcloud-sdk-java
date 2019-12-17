@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipTaskRequest  extends AbstractModel{
+public class DescribeEipTaskRequest extends AbstractModel{
 
     /**
     * EIP查询任务ID
@@ -30,7 +30,7 @@ public class DescribeEipTaskRequest  extends AbstractModel{
     private Integer TaskId;
 
     /**
-     * 获取EIP查询任务ID
+     * Get EIP查询任务ID 
      * @return TaskId EIP查询任务ID
      */
     public Integer getTaskId() {
@@ -38,7 +38,7 @@ public class DescribeEipTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP查询任务ID
+     * Set EIP查询任务ID
      * @param TaskId EIP查询任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -46,7 +46,7 @@ public class DescribeEipTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

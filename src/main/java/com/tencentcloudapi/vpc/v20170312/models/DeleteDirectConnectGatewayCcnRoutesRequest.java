@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
+public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
     * 专线网关ID，形如：dcg-prpqlmg1
@@ -37,7 +37,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     private String [] RouteIds;
 
     /**
-     * 获取专线网关ID，形如：dcg-prpqlmg1
+     * Get 专线网关ID，形如：dcg-prpqlmg1 
      * @return DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      */
     public String getDirectConnectGatewayId() {
@@ -45,7 +45,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关ID，形如：dcg-prpqlmg1
+     * Set 专线网关ID，形如：dcg-prpqlmg1
      * @param DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -53,7 +53,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由ID。形如：ccnr-f49l6u0z。
+     * Get 路由ID。形如：ccnr-f49l6u0z。 
      * @return RouteIds 路由ID。形如：ccnr-f49l6u0z。
      */
     public String [] getRouteIds() {
@@ -61,7 +61,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由ID。形如：ccnr-f49l6u0z。
+     * Set 路由ID。形如：ccnr-f49l6u0z。
      * @param RouteIds 路由ID。形如：ccnr-f49l6u0z。
      */
     public void setRouteIds(String [] RouteIds) {
@@ -69,7 +69,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerrorismResult  extends AbstractModel{
+public class TerrorismResult extends AbstractModel{
 
     /**
     * 该识别场景的错误码：
@@ -87,11 +87,11 @@ Type为FACE时：
     private String Type;
 
     /**
-     * 获取该识别场景的错误码：
+     * Get 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
--1400表示图片解码失败。
+-1400表示图片解码失败。 
      * @return Code 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -103,7 +103,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置该识别场景的错误码：
+     * Set 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
@@ -119,7 +119,7 @@ Type为FACE时：
     }
 
     /**
-     * 获取错误码描述信息。
+     * Get 错误码描述信息。 
      * @return Msg 错误码描述信息。
      */
     public String getMsg() {
@@ -127,7 +127,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置错误码描述信息。
+     * Set 错误码描述信息。
      * @param Msg 错误码描述信息。
      */
     public void setMsg(String Msg) {
@@ -135,10 +135,10 @@ Type为FACE时：
     }
 
     /**
-     * 获取识别场景的审核结论：
+     * Get 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：违规 
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -149,7 +149,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置识别场景的审核结论：
+     * Set 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -163,7 +163,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
+     * Get 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
 86到91，Suggestion建议为REVIEW
@@ -171,7 +171,7 @@ Type为LABEL时：
 Type为FACE时：
 0到70，Suggestion建议为PASS
 70到80，Suggestion建议为REVIEW
-80到100，Suggestion建议为BLOCK
+80到100，Suggestion建议为BLOCK 
      * @return Confidence 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
@@ -187,7 +187,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
+     * Set 图像涉恐的分数，0-100之间，分数越高涉恐几率越大。
 Type为LABEL时：
 0到86，Suggestion建议为PASS
 86到91，Suggestion建议为REVIEW
@@ -211,7 +211,7 @@ Type为FACE时：
     }
 
     /**
-     * 获取Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+     * Get Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。 
      * @return FaceResults Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
      */
     public FaceResult [] getFaceResults() {
@@ -219,7 +219,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
+     * Set Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
      * @param FaceResults Type取值为‘FACE’时，人脸识别的结果列表。基于图片中实际检测到的人脸数，返回数组最大值不超过5个。
      */
     public void setFaceResults(FaceResult [] FaceResults) {
@@ -227,7 +227,7 @@ Type为FACE时：
     }
 
     /**
-     * 获取暴恐识别返回的详细标签后期开放。
+     * Get 暴恐识别返回的详细标签后期开放。 
      * @return AdvancedInfo 暴恐识别返回的详细标签后期开放。
      */
     public String getAdvancedInfo() {
@@ -235,7 +235,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置暴恐识别返回的详细标签后期开放。
+     * Set 暴恐识别返回的详细标签后期开放。
      * @param AdvancedInfo 暴恐识别返回的详细标签后期开放。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -243,7 +243,7 @@ Type为FACE时：
     }
 
     /**
-     * 获取取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
+     * Get 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。 
      * @return Type 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
      */
     public String getType() {
@@ -251,7 +251,7 @@ Type为FACE时：
     }
 
     /**
-     * 设置取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
+     * Set 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
      * @param Type 取值'LABEL' 或‘FACE’，LABEL表示结论和置信度来自标签分类，FACE表示结论和置信度来自人脸识别。
      */
     public void setType(String Type) {
@@ -259,7 +259,7 @@ Type为FACE时：
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

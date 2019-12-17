@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySiteAttributeRequest  extends AbstractModel{
+public class ModifySiteAttributeRequest extends AbstractModel{
 
     /**
     * 站点ID
@@ -72,7 +72,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     private String ScanDisallow;
 
     /**
-     * 获取站点ID
+     * Get 站点ID 
      * @return SiteId 站点ID
      */
     public Integer getSiteId() {
@@ -80,7 +80,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点ID
+     * Set 站点ID
      * @param SiteId 站点ID
      */
     public void setSiteId(Integer SiteId) {
@@ -88,7 +88,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取站点名称
+     * Get 站点名称 
      * @return Name 站点名称
      */
     public String getName() {
@@ -96,7 +96,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点名称
+     * Set 站点名称
      * @param Name 站点名称
      */
     public void setName(String Name) {
@@ -104,7 +104,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+     * Get 网站是否需要登录扫描：0-未知；-1-不需要；1-需要 
      * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      */
     public Integer getNeedLogin() {
@@ -112,7 +112,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要
+     * Set 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要
      */
     public void setNeedLogin(Integer NeedLogin) {
@@ -120,7 +120,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录后的cookie
+     * Get 登录后的cookie 
      * @return LoginCookie 登录后的cookie
      */
     public String getLoginCookie() {
@@ -128,7 +128,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录后的cookie
+     * Set 登录后的cookie
      * @param LoginCookie 登录后的cookie
      */
     public void setLoginCookie(String LoginCookie) {
@@ -136,7 +136,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于测试cookie是否有效的URL
+     * Get 用于测试cookie是否有效的URL 
      * @return LoginCheckUrl 用于测试cookie是否有效的URL
      */
     public String getLoginCheckUrl() {
@@ -144,7 +144,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于测试cookie是否有效的URL
+     * Set 用于测试cookie是否有效的URL
      * @param LoginCheckUrl 用于测试cookie是否有效的URL
      */
     public void setLoginCheckUrl(String LoginCheckUrl) {
@@ -152,7 +152,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于测试cookie是否有效的关键字
+     * Get 用于测试cookie是否有效的关键字 
      * @return LoginCheckKw 用于测试cookie是否有效的关键字
      */
     public String getLoginCheckKw() {
@@ -160,7 +160,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于测试cookie是否有效的关键字
+     * Set 用于测试cookie是否有效的关键字
      * @param LoginCheckKw 用于测试cookie是否有效的关键字
      */
     public void setLoginCheckKw(String LoginCheckKw) {
@@ -168,7 +168,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取禁止扫描器扫描的目录关键字
+     * Get 禁止扫描器扫描的目录关键字 
      * @return ScanDisallow 禁止扫描器扫描的目录关键字
      */
     public String getScanDisallow() {
@@ -176,7 +176,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置禁止扫描器扫描的目录关键字
+     * Set 禁止扫描器扫描的目录关键字
      * @param ScanDisallow 禁止扫描器扫描的目录关键字
      */
     public void setScanDisallow(String ScanDisallow) {
@@ -184,7 +184,7 @@ public class ModifySiteAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SiteId", this.SiteId);

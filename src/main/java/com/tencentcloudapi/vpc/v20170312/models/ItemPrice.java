@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ItemPrice  extends AbstractModel{
+public class ItemPrice extends AbstractModel{
 
     /**
     * 按量计费后付费单价，单位：元。
@@ -51,7 +51,7 @@ public class ItemPrice  extends AbstractModel{
     private Float DiscountPrice;
 
     /**
-     * 获取按量计费后付费单价，单位：元。
+     * Get 按量计费后付费单价，单位：元。 
      * @return UnitPrice 按量计费后付费单价，单位：元。
      */
     public Float getUnitPrice() {
@@ -59,7 +59,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 设置按量计费后付费单价，单位：元。
+     * Set 按量计费后付费单价，单位：元。
      * @param UnitPrice 按量计费后付费单价，单位：元。
      */
     public void setUnitPrice(Float UnitPrice) {
@@ -67,7 +67,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 获取按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+     * Get 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。 
      * @return ChargeUnit 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
      */
     public String getChargeUnit() {
@@ -75,7 +75,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 设置按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+     * Set 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
      * @param ChargeUnit 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
      */
     public void setChargeUnit(String ChargeUnit) {
@@ -83,7 +83,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 获取预付费商品的原价，单位：元。
+     * Get 预付费商品的原价，单位：元。 
      * @return OriginalPrice 预付费商品的原价，单位：元。
      */
     public Float getOriginalPrice() {
@@ -91,7 +91,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 设置预付费商品的原价，单位：元。
+     * Set 预付费商品的原价，单位：元。
      * @param OriginalPrice 预付费商品的原价，单位：元。
      */
     public void setOriginalPrice(Float OriginalPrice) {
@@ -99,7 +99,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 获取预付费商品的折扣价，单位：元。
+     * Get 预付费商品的折扣价，单位：元。 
      * @return DiscountPrice 预付费商品的折扣价，单位：元。
      */
     public Float getDiscountPrice() {
@@ -107,7 +107,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 设置预付费商品的折扣价，单位：元。
+     * Set 预付费商品的折扣价，单位：元。
      * @param DiscountPrice 预付费商品的折扣价，单位：元。
      */
     public void setDiscountPrice(Float DiscountPrice) {
@@ -115,7 +115,7 @@ public class ItemPrice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeSlice  extends AbstractModel{
+public class TimeSlice extends AbstractModel{
 
     /**
     * 总数
@@ -37,7 +37,7 @@ public class TimeSlice  extends AbstractModel{
     private Long Timestamp;
 
     /**
-     * 获取总数
+     * Get 总数 
      * @return Count 总数
      */
     public Long getCount() {
@@ -45,7 +45,7 @@ public class TimeSlice  extends AbstractModel{
     }
 
     /**
-     * 设置总数
+     * Set 总数
      * @param Count 总数
      */
     public void setCount(Long Count) {
@@ -53,7 +53,7 @@ public class TimeSlice  extends AbstractModel{
     }
 
     /**
-     * 获取统计开始时间
+     * Get 统计开始时间 
      * @return Timestamp 统计开始时间
      */
     public Long getTimestamp() {
@@ -61,7 +61,7 @@ public class TimeSlice  extends AbstractModel{
     }
 
     /**
-     * 设置统计开始时间
+     * Set 统计开始时间
      * @param Timestamp 统计开始时间
      */
     public void setTimestamp(Long Timestamp) {
@@ -69,7 +69,7 @@ public class TimeSlice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

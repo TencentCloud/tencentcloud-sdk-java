@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceConfigsResponse  extends AbstractModel{
+public class DescribeServiceConfigsResponse extends AbstractModel{
 
     /**
     * 服务配置
@@ -44,7 +44,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取服务配置
+     * Get 服务配置 
      * @return ServiceConfigs 服务配置
      */
     public Config [] getServiceConfigs() {
@@ -52,7 +52,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置
+     * Set 服务配置
      * @param ServiceConfigs 服务配置
      */
     public void setServiceConfigs(Config [] ServiceConfigs) {
@@ -60,7 +60,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置总数
+     * Get 服务配置总数 
      * @return TotalCount 服务配置总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置总数
+     * Set 服务配置总数
      * @param TotalCount 服务配置总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeServiceConfigsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ServiceConfigs.", this.ServiceConfigs);

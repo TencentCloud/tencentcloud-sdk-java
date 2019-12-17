@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
+public class UnbindSubnetsFromNatGatewayRequest extends AbstractModel{
 
     /**
     * NAT网关ID，例如：nat-kdm476mp
@@ -44,7 +44,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     private String [] SubnetIds;
 
     /**
-     * 获取NAT网关ID，例如：nat-kdm476mp
+     * Get NAT网关ID，例如：nat-kdm476mp 
      * @return NatId NAT网关ID，例如：nat-kdm476mp
      */
     public String getNatId() {
@@ -52,7 +52,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID，例如：nat-kdm476mp
+     * Set NAT网关ID，例如：nat-kdm476mp
      * @param NatId NAT网关ID，例如：nat-kdm476mp
      */
     public void setNatId(String NatId) {
@@ -60,7 +60,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：vpc-kd7d06of
+     * Get 私有网络ID，例如：vpc-kd7d06of 
      * @return VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：vpc-kd7d06of
+     * Set 私有网络ID，例如：vpc-kd7d06of
      * @param VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID列表，子网不区分加入NAT网关的转发方式
+     * Get 子网ID列表，子网不区分加入NAT网关的转发方式 
      * @return SubnetIds 子网ID列表，子网不区分加入NAT网关的转发方式
      */
     public String [] getSubnetIds() {
@@ -84,7 +84,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID列表，子网不区分加入NAT网关的转发方式
+     * Set 子网ID列表，子网不区分加入NAT网关的转发方式
      * @param SubnetIds 子网ID列表，子网不区分加入NAT网关的转发方式
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -92,7 +92,7 @@ public class UnbindSubnetsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatId", this.NatId);

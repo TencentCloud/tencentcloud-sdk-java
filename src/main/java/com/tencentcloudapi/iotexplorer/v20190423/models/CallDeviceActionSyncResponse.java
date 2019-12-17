@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallDeviceActionSyncResponse  extends AbstractModel{
+public class CallDeviceActionSyncResponse extends AbstractModel{
 
     /**
     * 调用Id
@@ -52,7 +52,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取调用Id
+     * Get 调用Id 
      * @return ClientToken 调用Id
      */
     public String getClientToken() {
@@ -60,7 +60,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 设置调用Id
+     * Set 调用Id
      * @param ClientToken 调用Id
      */
     public void setClientToken(String ClientToken) {
@@ -68,8 +68,8 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 获取输出参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输出参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputParams 输出参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -78,7 +78,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 设置输出参数
+     * Set 输出参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputParams 输出参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,7 +88,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回状态
+     * Get 返回状态 
      * @return Status 返回状态
      */
     public String getStatus() {
@@ -96,7 +96,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回状态
+     * Set 返回状态
      * @param Status 返回状态
      */
     public void setStatus(String Status) {
@@ -104,7 +104,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -112,7 +112,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -120,7 +120,7 @@ public class CallDeviceActionSyncResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);

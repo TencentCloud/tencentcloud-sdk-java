@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HaVipDisassociateAddressIpRequest  extends AbstractModel{
+public class HaVipDisassociateAddressIpRequest extends AbstractModel{
 
     /**
     * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
@@ -30,7 +30,7 @@ public class HaVipDisassociateAddressIpRequest  extends AbstractModel{
     private String HaVipId;
 
     /**
-     * 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。 
      * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
      */
     public String getHaVipId() {
@@ -38,7 +38,7 @@ public class HaVipDisassociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
      * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是已绑定`EIP`的`HAVIP`。
      */
     public void setHaVipId(String HaVipId) {
@@ -46,7 +46,7 @@ public class HaVipDisassociateAddressIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);

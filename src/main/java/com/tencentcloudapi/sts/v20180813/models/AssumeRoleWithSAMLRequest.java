@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssumeRoleWithSAMLRequest  extends AbstractModel{
+public class AssumeRoleWithSAMLRequest extends AbstractModel{
 
     /**
     * base64 编码的 SAML 断言信息
@@ -58,7 +58,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     private Integer DurationSeconds;
 
     /**
-     * 获取base64 编码的 SAML 断言信息
+     * Get base64 编码的 SAML 断言信息 
      * @return SAMLAssertion base64 编码的 SAML 断言信息
      */
     public String getSAMLAssertion() {
@@ -66,7 +66,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置base64 编码的 SAML 断言信息
+     * Set base64 编码的 SAML 断言信息
      * @param SAMLAssertion base64 编码的 SAML 断言信息
      */
     public void setSAMLAssertion(String SAMLAssertion) {
@@ -74,7 +74,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扮演者访问描述名
+     * Get 扮演者访问描述名 
      * @return PrincipalArn 扮演者访问描述名
      */
     public String getPrincipalArn() {
@@ -82,7 +82,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扮演者访问描述名
+     * Set 扮演者访问描述名
      * @param PrincipalArn 扮演者访问描述名
      */
     public void setPrincipalArn(String PrincipalArn) {
@@ -90,7 +90,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色访问描述名
+     * Get 角色访问描述名 
      * @return RoleArn 角色访问描述名
      */
     public String getRoleArn() {
@@ -98,7 +98,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色访问描述名
+     * Set 角色访问描述名
      * @param RoleArn 角色访问描述名
      */
     public void setRoleArn(String RoleArn) {
@@ -106,7 +106,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话名称
+     * Get 会话名称 
      * @return RoleSessionName 会话名称
      */
     public String getRoleSessionName() {
@@ -114,7 +114,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话名称
+     * Set 会话名称
      * @param RoleSessionName 会话名称
      */
     public void setRoleSessionName(String RoleSessionName) {
@@ -122,7 +122,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
+     * Get 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒 
      * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      */
     public Integer getDurationSeconds() {
@@ -130,7 +130,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
+     * Set 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 7200 秒
      */
     public void setDurationSeconds(Integer DurationSeconds) {
@@ -138,7 +138,7 @@ public class AssumeRoleWithSAMLRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SAMLAssertion", this.SAMLAssertion);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BigKeyTypeInfo  extends AbstractModel{
+public class BigKeyTypeInfo extends AbstractModel{
 
     /**
     * 类型
@@ -51,7 +51,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     private Integer Updatetime;
 
     /**
-     * 获取类型
+     * Get 类型 
      * @return Type 类型
      */
     public String getType() {
@@ -59,7 +59,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置类型
+     * Set 类型
      * @param Type 类型
      */
     public void setType(String Type) {
@@ -67,7 +67,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数量
+     * Get 数量 
      * @return Count 数量
      */
     public Integer getCount() {
@@ -75,7 +75,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数量
+     * Set 数量
      * @param Count 数量
      */
     public void setCount(Integer Count) {
@@ -83,7 +83,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大小
+     * Get 大小 
      * @return Size 大小
      */
     public Integer getSize() {
@@ -91,7 +91,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大小
+     * Set 大小
      * @param Size 大小
      */
     public void setSize(Integer Size) {
@@ -99,7 +99,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取时间戳
+     * Get 时间戳 
      * @return Updatetime 时间戳
      */
     public Integer getUpdatetime() {
@@ -107,7 +107,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置时间戳
+     * Set 时间戳
      * @param Updatetime 时间戳
      */
     public void setUpdatetime(Integer Updatetime) {
@@ -115,7 +115,7 @@ public class BigKeyTypeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

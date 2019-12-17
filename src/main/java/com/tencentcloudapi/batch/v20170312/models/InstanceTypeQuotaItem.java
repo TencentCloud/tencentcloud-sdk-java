@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTypeQuotaItem  extends AbstractModel{
+public class InstanceTypeQuotaItem extends AbstractModel{
 
     /**
     * 可用区。
@@ -108,7 +108,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     private ItemPrice Price;
 
     /**
-     * 获取可用区。
+     * Get 可用区。 
      * @return Zone 可用区。
      */
     public String getZone() {
@@ -116,7 +116,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置可用区。
+     * Set 可用区。
      * @param Zone 可用区。
      */
     public void setZone(String Zone) {
@@ -124,7 +124,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型。
+     * Get 实例机型。 
      * @return InstanceType 实例机型。
      */
     public String getInstanceType() {
@@ -132,7 +132,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
      * @param InstanceType 实例机型。
      */
     public void setInstanceType(String InstanceType) {
@@ -140,7 +140,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * Get 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。 
      * @return InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      */
     public String getInstanceChargeType() {
@@ -148,7 +148,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * Set 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      * @param InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[CDH](https://cloud.tencent.com/document/product/416)付费，即只对CDH计费，不对CDH上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -156,7 +156,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取网卡类型，例如：25代表25G网卡
+     * Get 网卡类型，例如：25代表25G网卡 
      * @return NetworkCard 网卡类型，例如：25代表25G网卡
      */
     public Integer getNetworkCard() {
@@ -164,7 +164,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置网卡类型，例如：25代表25G网卡
+     * Set 网卡类型，例如：25代表25G网卡
      * @param NetworkCard 网卡类型，例如：25代表25G网卡
      */
     public void setNetworkCard(Integer NetworkCard) {
@@ -172,8 +172,8 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取扩展属性。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 扩展属性。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Externals 扩展属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -182,7 +182,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置扩展属性。
+     * Set 扩展属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Externals 扩展属性。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,7 +192,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例的CPU核数，单位：核。
+     * Get 实例的CPU核数，单位：核。 
      * @return Cpu 实例的CPU核数，单位：核。
      */
     public Integer getCpu() {
@@ -200,7 +200,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例的CPU核数，单位：核。
+     * Set 实例的CPU核数，单位：核。
      * @param Cpu 实例的CPU核数，单位：核。
      */
     public void setCpu(Integer Cpu) {
@@ -208,7 +208,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存容量，单位：`GB`。
+     * Get 实例内存容量，单位：`GB`。 
      * @return Memory 实例内存容量，单位：`GB`。
      */
     public Integer getMemory() {
@@ -216,7 +216,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存容量，单位：`GB`。
+     * Set 实例内存容量，单位：`GB`。
      * @param Memory 实例内存容量，单位：`GB`。
      */
     public void setMemory(Integer Memory) {
@@ -224,7 +224,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型系列。
+     * Get 实例机型系列。 
      * @return InstanceFamily 实例机型系列。
      */
     public String getInstanceFamily() {
@@ -232,7 +232,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型系列。
+     * Set 实例机型系列。
      * @param InstanceFamily 实例机型系列。
      */
     public void setInstanceFamily(String InstanceFamily) {
@@ -240,7 +240,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取机型名称。
+     * Get 机型名称。 
      * @return TypeName 机型名称。
      */
     public String getTypeName() {
@@ -248,7 +248,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置机型名称。
+     * Set 机型名称。
      * @param TypeName 机型名称。
      */
     public void setTypeName(String TypeName) {
@@ -256,7 +256,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+     * Get 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。 
      * @return LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      */
     public LocalDiskType [] getLocalDiskTypeList() {
@@ -264,7 +264,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
+     * Set 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      * @param LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
      */
     public void setLocalDiskTypeList(LocalDiskType [] LocalDiskTypeList) {
@@ -272,7 +272,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * Get 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。 
      * @return Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      */
     public String getStatus() {
@@ -280,7 +280,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
+     * Set 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      * @param Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br><li>SOLD_OUT：表示实例已售罄。
      */
     public void setStatus(String Status) {
@@ -288,7 +288,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例的售卖价格。
+     * Get 实例的售卖价格。 
      * @return Price 实例的售卖价格。
      */
     public ItemPrice getPrice() {
@@ -296,7 +296,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例的售卖价格。
+     * Set 实例的售卖价格。
      * @param Price 实例的售卖价格。
      */
     public void setPrice(ItemPrice Price) {
@@ -304,7 +304,7 @@ public class InstanceTypeQuotaItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

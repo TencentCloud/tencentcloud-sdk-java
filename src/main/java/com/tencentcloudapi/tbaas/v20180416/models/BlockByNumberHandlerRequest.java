@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BlockByNumberHandlerRequest  extends AbstractModel{
+public class BlockByNumberHandlerRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：block
@@ -51,7 +51,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     private Integer BlockNumber;
 
     /**
-     * 获取模块名，固定字段：block
+     * Get 模块名，固定字段：block 
      * @return Module 模块名，固定字段：block
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：block
+     * Set 模块名，固定字段：block
      * @param Module 模块名，固定字段：block
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：block_by_number
+     * Get 操作名，固定字段：block_by_number 
      * @return Operation 操作名，固定字段：block_by_number
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：block_by_number
+     * Set 操作名，固定字段：block_by_number
      * @param Operation 操作名，固定字段：block_by_number
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前群组编号
+     * Get 当前群组编号 
      * @return GroupPk 当前群组编号
      */
     public String getGroupPk() {
@@ -91,7 +91,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前群组编号
+     * Set 当前群组编号
      * @param GroupPk 当前群组编号
      */
     public void setGroupPk(String GroupPk) {
@@ -99,7 +99,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块高度
+     * Get 区块高度 
      * @return BlockNumber 区块高度
      */
     public Integer getBlockNumber() {
@@ -107,7 +107,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块高度
+     * Set 区块高度
      * @param BlockNumber 区块高度
      */
     public void setBlockNumber(Integer BlockNumber) {
@@ -115,7 +115,7 @@ public class BlockByNumberHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

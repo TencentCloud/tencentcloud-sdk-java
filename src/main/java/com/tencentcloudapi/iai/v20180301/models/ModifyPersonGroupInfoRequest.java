@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonGroupInfoRequest  extends AbstractModel{
+public class ModifyPersonGroupInfoRequest extends AbstractModel{
 
     /**
     * 人员库ID
@@ -44,7 +44,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     private PersonExDescriptionInfo [] PersonExDescriptionInfos;
 
     /**
-     * 获取人员库ID
+     * Get 人员库ID 
      * @return GroupId 人员库ID
      */
     public String getGroupId() {
@@ -52,7 +52,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库ID
+     * Set 人员库ID
      * @param GroupId 人员库ID
      */
     public void setGroupId(String GroupId) {
@@ -60,7 +60,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员ID
+     * Get 人员ID 
      * @return PersonId 人员ID
      */
     public String getPersonId() {
@@ -68,7 +68,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员ID
+     * Set 人员ID
      * @param PersonId 人员ID
      */
     public void setPersonId(String PersonId) {
@@ -76,7 +76,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的人员描述字段内容，key-value
+     * Get 需要修改的人员描述字段内容，key-value 
      * @return PersonExDescriptionInfos 需要修改的人员描述字段内容，key-value
      */
     public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
@@ -84,7 +84,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的人员描述字段内容，key-value
+     * Set 需要修改的人员描述字段内容，key-value
      * @param PersonExDescriptionInfos 需要修改的人员描述字段内容，key-value
      */
     public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
@@ -92,7 +92,7 @@ public class ModifyPersonGroupInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

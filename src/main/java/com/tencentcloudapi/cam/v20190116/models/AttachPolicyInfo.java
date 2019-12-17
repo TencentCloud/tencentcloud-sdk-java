@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachPolicyInfo  extends AbstractModel{
+public class AttachPolicyInfo extends AbstractModel{
 
     /**
     * 策略id
@@ -94,7 +94,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     private Long OperateUinType;
 
     /**
-     * 获取策略id
+     * Get 策略id 
      * @return PolicyId 策略id
      */
     public Long getPolicyId() {
@@ -102,7 +102,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略id
+     * Set 策略id
      * @param PolicyId 策略id
      */
     public void setPolicyId(Long PolicyId) {
@@ -110,8 +110,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyName 策略名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,8 +130,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -140,7 +140,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,8 +150,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建来源，1 通过控制台创建, 2 通过策略语法创建。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -160,7 +160,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,8 +170,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取取值为user和QCS
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 取值为user和QCS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyType 取值为user和QCS
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -180,7 +180,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置取值为user和QCS
+     * Set 取值为user和QCS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 取值为user和QCS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,8 +190,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -200,7 +200,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略备注
+     * Set 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 策略备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,8 +210,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略关联操作者主张号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略关联操作者主张号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperateOwnerUin 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -220,7 +220,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略关联操作者主张号
+     * Set 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateOwnerUin 策略关联操作者主张号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -230,8 +230,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -240,7 +240,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
+     * Set 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUin 策略关联操作者ID，如果UinType为0表示子帐号Uin，如果UinType为1表示角色ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -250,8 +250,8 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -260,7 +260,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * Set UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateUinType UinType为0表示OperateUin字段是子帐号Uin，如果UinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -270,7 +270,7 @@ public class AttachPolicyInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

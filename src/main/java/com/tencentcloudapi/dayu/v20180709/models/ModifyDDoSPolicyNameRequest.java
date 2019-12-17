@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
+public class ModifyDDoSPolicyNameRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -44,7 +44,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -52,7 +52,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -60,7 +60,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -68,7 +68,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -76,7 +76,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return Name 策略名称
      */
     public String getName() {
@@ -84,7 +84,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param Name 策略名称
      */
     public void setName(String Name) {
@@ -92,7 +92,7 @@ public class ModifyDDoSPolicyNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

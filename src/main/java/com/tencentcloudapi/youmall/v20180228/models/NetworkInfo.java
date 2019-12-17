@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkInfo  extends AbstractModel{
+public class NetworkInfo extends AbstractModel{
 
     /**
     * 上传带宽，单位Mb/s，-1：未知
@@ -86,7 +86,7 @@ public class NetworkInfo  extends AbstractModel{
     private String Mac;
 
     /**
-     * 获取上传带宽，单位Mb/s，-1：未知
+     * Get 上传带宽，单位Mb/s，-1：未知 
      * @return Upload 上传带宽，单位Mb/s，-1：未知
      */
     public Float getUpload() {
@@ -94,7 +94,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传带宽，单位Mb/s，-1：未知
+     * Set 上传带宽，单位Mb/s，-1：未知
      * @param Upload 上传带宽，单位Mb/s，-1：未知
      */
     public void setUpload(Float Upload) {
@@ -102,7 +102,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取下载带宽，单位Mb/s，-1：未知
+     * Get 下载带宽，单位Mb/s，-1：未知 
      * @return Download 下载带宽，单位Mb/s，-1：未知
      */
     public Float getDownload() {
@@ -110,7 +110,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置下载带宽，单位Mb/s，-1：未知
+     * Set 下载带宽，单位Mb/s，-1：未知
      * @param Download 下载带宽，单位Mb/s，-1：未知
      */
     public void setDownload(Float Download) {
@@ -118,7 +118,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最小延迟，单位ms，-1：未知
+     * Get 最小延迟，单位ms，-1：未知 
      * @return MinRtt 最小延迟，单位ms，-1：未知
      */
     public Float getMinRtt() {
@@ -126,7 +126,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最小延迟，单位ms，-1：未知
+     * Set 最小延迟，单位ms，-1：未知
      * @param MinRtt 最小延迟，单位ms，-1：未知
      */
     public void setMinRtt(Float MinRtt) {
@@ -134,7 +134,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均延迟，单位ms，-1：未知
+     * Get 平均延迟，单位ms，-1：未知 
      * @return AvgRtt 平均延迟，单位ms，-1：未知
      */
     public Float getAvgRtt() {
@@ -142,7 +142,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均延迟，单位ms，-1：未知
+     * Set 平均延迟，单位ms，-1：未知
      * @param AvgRtt 平均延迟，单位ms，-1：未知
      */
     public void setAvgRtt(Float AvgRtt) {
@@ -150,7 +150,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大延迟，单位ms，-1：未知
+     * Get 最大延迟，单位ms，-1：未知 
      * @return MaxRtt 最大延迟，单位ms，-1：未知
      */
     public Float getMaxRtt() {
@@ -158,7 +158,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大延迟，单位ms，-1：未知
+     * Set 最大延迟，单位ms，-1：未知
      * @param MaxRtt 最大延迟，单位ms，-1：未知
      */
     public void setMaxRtt(Float MaxRtt) {
@@ -166,7 +166,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均偏差延迟，单位ms，-1：未知
+     * Get 平均偏差延迟，单位ms，-1：未知 
      * @return MdevRtt 平均偏差延迟，单位ms，-1：未知
      */
     public Float getMdevRtt() {
@@ -174,7 +174,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均偏差延迟，单位ms，-1：未知
+     * Set 平均偏差延迟，单位ms，-1：未知
      * @param MdevRtt 平均偏差延迟，单位ms，-1：未知
      */
     public void setMdevRtt(Float MdevRtt) {
@@ -182,7 +182,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取丢包率百分比，-1：未知
+     * Get 丢包率百分比，-1：未知 
      * @return Loss 丢包率百分比，-1：未知
      */
     public Float getLoss() {
@@ -190,7 +190,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置丢包率百分比，-1：未知
+     * Set 丢包率百分比，-1：未知
      * @param Loss 丢包率百分比，-1：未知
      */
     public void setLoss(Float Loss) {
@@ -198,7 +198,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间戳
+     * Get 更新时间戳 
      * @return UpdateTime 更新时间戳
      */
     public Integer getUpdateTime() {
@@ -206,7 +206,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间戳
+     * Set 更新时间戳
      * @param UpdateTime 更新时间戳
      */
     public void setUpdateTime(Integer UpdateTime) {
@@ -214,7 +214,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上报网络状态设备
+     * Get 上报网络状态设备 
      * @return Mac 上报网络状态设备
      */
     public String getMac() {
@@ -222,7 +222,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上报网络状态设备
+     * Set 上报网络状态设备
      * @param Mac 上报网络状态设备
      */
     public void setMac(String Mac) {
@@ -230,7 +230,7 @@ public class NetworkInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Upload", this.Upload);

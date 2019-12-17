@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRulesResponse  extends AbstractModel{
+public class DescribeRulesResponse extends AbstractModel{
 
     /**
     * 按照域名分类的规则信息列表
@@ -44,7 +44,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取按照域名分类的规则信息列表
+     * Get 按照域名分类的规则信息列表 
      * @return DomainRuleSet 按照域名分类的规则信息列表
      */
     public DomainRuleSet [] getDomainRuleSet() {
@@ -52,7 +52,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置按照域名分类的规则信息列表
+     * Set 按照域名分类的规则信息列表
      * @param DomainRuleSet 按照域名分类的规则信息列表
      */
     public void setDomainRuleSet(DomainRuleSet [] DomainRuleSet) {
@@ -60,7 +60,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该监听器下的域名总数
+     * Get 该监听器下的域名总数 
      * @return TotalCount 该监听器下的域名总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该监听器下的域名总数
+     * Set 该监听器下的域名总数
      * @param TotalCount 该监听器下的域名总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DomainRuleSet.", this.DomainRuleSet);

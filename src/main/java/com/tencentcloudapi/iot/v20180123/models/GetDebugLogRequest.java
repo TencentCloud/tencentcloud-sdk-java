@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDebugLogRequest  extends AbstractModel{
+public class GetDebugLogRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -79,7 +79,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -87,7 +87,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -95,7 +95,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称列表，最大支持100台
+     * Get 设备名称列表，最大支持100台 
      * @return DeviceNames 设备名称列表，最大支持100台
      */
     public String [] getDeviceNames() {
@@ -103,7 +103,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称列表，最大支持100台
+     * Set 设备名称列表，最大支持100台
      * @param DeviceNames 设备名称列表，最大支持100台
      */
     public void setDeviceNames(String [] DeviceNames) {
@@ -111,7 +111,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始时间
+     * Get 查询开始时间 
      * @return StartTime 查询开始时间
      */
     public String getStartTime() {
@@ -119,7 +119,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始时间
+     * Set 查询开始时间
      * @param StartTime 查询开始时间
      */
     public void setStartTime(String StartTime) {
@@ -127,7 +127,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间
+     * Get 查询结束时间 
      * @return EndTime 查询结束时间
      */
     public String getEndTime() {
@@ -135,7 +135,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间
+     * Set 查询结束时间
      * @param EndTime 查询结束时间
      */
     public void setEndTime(String EndTime) {
@@ -143,7 +143,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询数据量
+     * Get 查询数据量 
      * @return Size 查询数据量
      */
     public Integer getSize() {
@@ -151,7 +151,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询数据量
+     * Set 查询数据量
      * @param Size 查询数据量
      */
     public void setSize(Integer Size) {
@@ -159,7 +159,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间排序（desc/asc）
+     * Get 时间排序（desc/asc） 
      * @return Order 时间排序（desc/asc）
      */
     public String getOrder() {
@@ -167,7 +167,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间排序（desc/asc）
+     * Set 时间排序（desc/asc）
      * @param Order 时间排序（desc/asc）
      */
     public void setOrder(String Order) {
@@ -175,7 +175,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询游标
+     * Get 查询游标 
      * @return ScrollId 查询游标
      */
     public String getScrollId() {
@@ -183,7 +183,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询游标
+     * Set 查询游标
      * @param ScrollId 查询游标
      */
     public void setScrollId(String ScrollId) {
@@ -191,7 +191,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志类型（shadow/action/mqtt）
+     * Get 日志类型（shadow/action/mqtt） 
      * @return Type 日志类型（shadow/action/mqtt）
      */
     public String getType() {
@@ -199,7 +199,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志类型（shadow/action/mqtt）
+     * Set 日志类型（shadow/action/mqtt）
      * @param Type 日志类型（shadow/action/mqtt）
      */
     public void setType(String Type) {
@@ -207,7 +207,7 @@ public class GetDebugLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

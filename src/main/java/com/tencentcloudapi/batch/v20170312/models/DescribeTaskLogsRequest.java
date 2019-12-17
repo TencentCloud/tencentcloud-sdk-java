@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskLogsRequest  extends AbstractModel{
+public class DescribeTaskLogsRequest extends AbstractModel{
 
     /**
     * 作业ID
@@ -58,7 +58,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -66,7 +66,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -74,7 +74,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -82,7 +82,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -90,7 +90,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例集合
+     * Get 任务实例集合 
      * @return TaskInstanceIndexes 任务实例集合
      */
     public Integer [] getTaskInstanceIndexes() {
@@ -98,7 +98,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例集合
+     * Set 任务实例集合
      * @param TaskInstanceIndexes 任务实例集合
      */
     public void setTaskInstanceIndexes(Integer [] TaskInstanceIndexes) {
@@ -106,7 +106,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始任务实例
+     * Get 起始任务实例 
      * @return Offset 起始任务实例
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始任务实例
+     * Set 起始任务实例
      * @param Offset 起始任务实例
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大任务实例数
+     * Get 最大任务实例数 
      * @return Limit 最大任务实例数
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大任务实例数
+     * Set 最大任务实例数
      * @param Limit 最大任务实例数
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeTaskLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

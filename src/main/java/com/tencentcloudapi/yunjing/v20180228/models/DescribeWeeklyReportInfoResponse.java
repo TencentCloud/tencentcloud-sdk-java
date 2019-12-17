@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
+public class DescribeWeeklyReportInfoResponse extends AbstractModel{
 
     /**
     * 账号所属公司或个人名称。
@@ -34,28 +34,28 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     */
     @SerializedName("MachineNum")
     @Expose
-    private Integer MachineNum;
+    private Long MachineNum;
 
     /**
     * 云镜客户端在线数。
     */
     @SerializedName("OnlineMachineNum")
     @Expose
-    private Integer OnlineMachineNum;
+    private Long OnlineMachineNum;
 
     /**
     * 云镜客户端离线数。
     */
     @SerializedName("OfflineMachineNum")
     @Expose
-    private Integer OfflineMachineNum;
+    private Long OfflineMachineNum;
 
     /**
     * 开通云镜专业版数量。
     */
     @SerializedName("ProVersionMachineNum")
     @Expose
-    private Integer ProVersionMachineNum;
+    private Long ProVersionMachineNum;
 
     /**
     * 周报开始时间。
@@ -86,28 +86,28 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     */
     @SerializedName("MalwareNum")
     @Expose
-    private Integer MalwareNum;
+    private Long MalwareNum;
 
     /**
     * 异地登录数。
     */
     @SerializedName("NonlocalLoginNum")
     @Expose
-    private Integer NonlocalLoginNum;
+    private Long NonlocalLoginNum;
 
     /**
     * 密码破解成功数。
     */
     @SerializedName("BruteAttackSuccessNum")
     @Expose
-    private Integer BruteAttackSuccessNum;
+    private Long BruteAttackSuccessNum;
 
     /**
     * 漏洞数。
     */
     @SerializedName("VulNum")
     @Expose
-    private Integer VulNum;
+    private Long VulNum;
 
     /**
     * 导出文件下载地址。
@@ -124,7 +124,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取账号所属公司或个人名称。
+     * Get 账号所属公司或个人名称。 
      * @return CompanyName 账号所属公司或个人名称。
      */
     public String getCompanyName() {
@@ -132,7 +132,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置账号所属公司或个人名称。
+     * Set 账号所属公司或个人名称。
      * @param CompanyName 账号所属公司或个人名称。
      */
     public void setCompanyName(String CompanyName) {
@@ -140,71 +140,71 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器总数。
+     * Get 机器总数。 
      * @return MachineNum 机器总数。
      */
-    public Integer getMachineNum() {
+    public Long getMachineNum() {
         return this.MachineNum;
     }
 
     /**
-     * 设置机器总数。
+     * Set 机器总数。
      * @param MachineNum 机器总数。
      */
-    public void setMachineNum(Integer MachineNum) {
+    public void setMachineNum(Long MachineNum) {
         this.MachineNum = MachineNum;
     }
 
     /**
-     * 获取云镜客户端在线数。
+     * Get 云镜客户端在线数。 
      * @return OnlineMachineNum 云镜客户端在线数。
      */
-    public Integer getOnlineMachineNum() {
+    public Long getOnlineMachineNum() {
         return this.OnlineMachineNum;
     }
 
     /**
-     * 设置云镜客户端在线数。
+     * Set 云镜客户端在线数。
      * @param OnlineMachineNum 云镜客户端在线数。
      */
-    public void setOnlineMachineNum(Integer OnlineMachineNum) {
+    public void setOnlineMachineNum(Long OnlineMachineNum) {
         this.OnlineMachineNum = OnlineMachineNum;
     }
 
     /**
-     * 获取云镜客户端离线数。
+     * Get 云镜客户端离线数。 
      * @return OfflineMachineNum 云镜客户端离线数。
      */
-    public Integer getOfflineMachineNum() {
+    public Long getOfflineMachineNum() {
         return this.OfflineMachineNum;
     }
 
     /**
-     * 设置云镜客户端离线数。
+     * Set 云镜客户端离线数。
      * @param OfflineMachineNum 云镜客户端离线数。
      */
-    public void setOfflineMachineNum(Integer OfflineMachineNum) {
+    public void setOfflineMachineNum(Long OfflineMachineNum) {
         this.OfflineMachineNum = OfflineMachineNum;
     }
 
     /**
-     * 获取开通云镜专业版数量。
+     * Get 开通云镜专业版数量。 
      * @return ProVersionMachineNum 开通云镜专业版数量。
      */
-    public Integer getProVersionMachineNum() {
+    public Long getProVersionMachineNum() {
         return this.ProVersionMachineNum;
     }
 
     /**
-     * 设置开通云镜专业版数量。
+     * Set 开通云镜专业版数量。
      * @param ProVersionMachineNum 开通云镜专业版数量。
      */
-    public void setProVersionMachineNum(Integer ProVersionMachineNum) {
+    public void setProVersionMachineNum(Long ProVersionMachineNum) {
         this.ProVersionMachineNum = ProVersionMachineNum;
     }
 
     /**
-     * 获取周报开始时间。
+     * Get 周报开始时间。 
      * @return BeginDate 周报开始时间。
      */
     public String getBeginDate() {
@@ -212,7 +212,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置周报开始时间。
+     * Set 周报开始时间。
      * @param BeginDate 周报开始时间。
      */
     public void setBeginDate(String BeginDate) {
@@ -220,7 +220,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取周报结束时间。
+     * Get 周报结束时间。 
      * @return EndDate 周报结束时间。
      */
     public String getEndDate() {
@@ -228,7 +228,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置周报结束时间。
+     * Set 周报结束时间。
      * @param EndDate 周报结束时间。
      */
     public void setEndDate(String EndDate) {
@@ -236,10 +236,10 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取安全等级。
+     * Get 安全等级。
 <li>HIGH：高</li>
 <li>MIDDLE：中</li>
-<li>LOW：低</li>
+<li>LOW：低</li> 
      * @return Level 安全等级。
 <li>HIGH：高</li>
 <li>MIDDLE：中</li>
@@ -250,7 +250,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置安全等级。
+     * Set 安全等级。
 <li>HIGH：高</li>
 <li>MIDDLE：中</li>
 <li>LOW：低</li>
@@ -264,71 +264,71 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取木马记录数。
+     * Get 木马记录数。 
      * @return MalwareNum 木马记录数。
      */
-    public Integer getMalwareNum() {
+    public Long getMalwareNum() {
         return this.MalwareNum;
     }
 
     /**
-     * 设置木马记录数。
+     * Set 木马记录数。
      * @param MalwareNum 木马记录数。
      */
-    public void setMalwareNum(Integer MalwareNum) {
+    public void setMalwareNum(Long MalwareNum) {
         this.MalwareNum = MalwareNum;
     }
 
     /**
-     * 获取异地登录数。
+     * Get 异地登录数。 
      * @return NonlocalLoginNum 异地登录数。
      */
-    public Integer getNonlocalLoginNum() {
+    public Long getNonlocalLoginNum() {
         return this.NonlocalLoginNum;
     }
 
     /**
-     * 设置异地登录数。
+     * Set 异地登录数。
      * @param NonlocalLoginNum 异地登录数。
      */
-    public void setNonlocalLoginNum(Integer NonlocalLoginNum) {
+    public void setNonlocalLoginNum(Long NonlocalLoginNum) {
         this.NonlocalLoginNum = NonlocalLoginNum;
     }
 
     /**
-     * 获取密码破解成功数。
+     * Get 密码破解成功数。 
      * @return BruteAttackSuccessNum 密码破解成功数。
      */
-    public Integer getBruteAttackSuccessNum() {
+    public Long getBruteAttackSuccessNum() {
         return this.BruteAttackSuccessNum;
     }
 
     /**
-     * 设置密码破解成功数。
+     * Set 密码破解成功数。
      * @param BruteAttackSuccessNum 密码破解成功数。
      */
-    public void setBruteAttackSuccessNum(Integer BruteAttackSuccessNum) {
+    public void setBruteAttackSuccessNum(Long BruteAttackSuccessNum) {
         this.BruteAttackSuccessNum = BruteAttackSuccessNum;
     }
 
     /**
-     * 获取漏洞数。
+     * Get 漏洞数。 
      * @return VulNum 漏洞数。
      */
-    public Integer getVulNum() {
+    public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * 设置漏洞数。
+     * Set 漏洞数。
      * @param VulNum 漏洞数。
      */
-    public void setVulNum(Integer VulNum) {
+    public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * 获取导出文件下载地址。
+     * Get 导出文件下载地址。 
      * @return DownloadUrl 导出文件下载地址。
      */
     public String getDownloadUrl() {
@@ -336,7 +336,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置导出文件下载地址。
+     * Set 导出文件下载地址。
      * @param DownloadUrl 导出文件下载地址。
      */
     public void setDownloadUrl(String DownloadUrl) {
@@ -344,7 +344,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -352,7 +352,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -360,7 +360,7 @@ public class DescribeWeeklyReportInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyName", this.CompanyName);

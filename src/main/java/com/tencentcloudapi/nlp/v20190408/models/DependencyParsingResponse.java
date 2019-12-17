@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DependencyParsingResponse  extends AbstractModel{
+public class DependencyParsingResponse extends AbstractModel{
 
     /**
     * 句法依存分析结果，其中句法依存关系的类型包括：
@@ -52,7 +52,7 @@ public class DependencyParsingResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取句法依存分析结果，其中句法依存关系的类型包括：
+     * Get 句法依存分析结果，其中句法依存关系的类型包括：
 <li>主谓关系，eg: 我送她一束花 (我 <-- 送)
 <li>动宾关系，eg: 我送她一束花 (送 --> 花)
 <li>间宾关系，eg: 我送她一束花 (送 --> 她)
@@ -67,7 +67,7 @@ public class DependencyParsingResponse  extends AbstractModel{
 <li>右附加关系，eg: 孩子们 (孩子 --> 们)
 <li>独立结构，eg: 两个单句在结构上彼此独立
 <li>标点符号，eg: 。
-<li>核心关系，eg: 整个句子的核心
+<li>核心关系，eg: 整个句子的核心 
      * @return DpTokens 句法依存分析结果，其中句法依存关系的类型包括：
 <li>主谓关系，eg: 我送她一束花 (我 <-- 送)
 <li>动宾关系，eg: 我送她一束花 (送 --> 花)
@@ -90,7 +90,7 @@ public class DependencyParsingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置句法依存分析结果，其中句法依存关系的类型包括：
+     * Set 句法依存分析结果，其中句法依存关系的类型包括：
 <li>主谓关系，eg: 我送她一束花 (我 <-- 送)
 <li>动宾关系，eg: 我送她一束花 (送 --> 花)
 <li>间宾关系，eg: 我送她一束花 (送 --> 她)
@@ -128,7 +128,7 @@ public class DependencyParsingResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -136,7 +136,7 @@ public class DependencyParsingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -144,7 +144,7 @@ public class DependencyParsingResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DpTokens.", this.DpTokens);

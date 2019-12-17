@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopLiveRecordRequest  extends AbstractModel{
+public class StopLiveRecordRequest extends AbstractModel{
 
     /**
     * 流名称。
@@ -37,7 +37,7 @@ public class StopLiveRecordRequest  extends AbstractModel{
     private Integer TaskId;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -45,7 +45,7 @@ public class StopLiveRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -53,7 +53,7 @@ public class StopLiveRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID，全局唯一标识录制任务。
+     * Get 任务ID，全局唯一标识录制任务。 
      * @return TaskId 任务ID，全局唯一标识录制任务。
      */
     public Integer getTaskId() {
@@ -61,7 +61,7 @@ public class StopLiveRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，全局唯一标识录制任务。
+     * Set 任务ID，全局唯一标识录制任务。
      * @param TaskId 任务ID，全局唯一标识录制任务。
      */
     public void setTaskId(Integer TaskId) {
@@ -69,7 +69,7 @@ public class StopLiveRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

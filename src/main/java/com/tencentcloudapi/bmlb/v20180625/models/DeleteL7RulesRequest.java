@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteL7RulesRequest  extends AbstractModel{
+public class DeleteL7RulesRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -51,7 +51,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     private String [] LocationIds;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -75,7 +75,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -83,7 +83,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Get 转发域名实例ID，可通过接口DescribeL7Rules查询。 
      * @return DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public String getDomainId() {
@@ -91,7 +91,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Set 转发域名实例ID，可通过接口DescribeL7Rules查询。
      * @param DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public void setDomainId(String DomainId) {
@@ -99,7 +99,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径实例ID列表，可通过接口DescribeL7Rules查询。
+     * Get 转发路径实例ID列表，可通过接口DescribeL7Rules查询。 
      * @return LocationIds 转发路径实例ID列表，可通过接口DescribeL7Rules查询。
      */
     public String [] getLocationIds() {
@@ -107,7 +107,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径实例ID列表，可通过接口DescribeL7Rules查询。
+     * Set 转发路径实例ID列表，可通过接口DescribeL7Rules查询。
      * @param LocationIds 转发路径实例ID列表，可通过接口DescribeL7Rules查询。
      */
     public void setLocationIds(String [] LocationIds) {
@@ -115,7 +115,7 @@ public class DeleteL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

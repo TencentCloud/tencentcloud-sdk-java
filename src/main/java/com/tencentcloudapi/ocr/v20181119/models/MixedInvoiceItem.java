@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixedInvoiceItem  extends AbstractModel{
+public class MixedInvoiceItem extends AbstractModel{
 
     /**
     * 识别结果。
@@ -73,10 +73,10 @@ FailedOperation.UnKnowError：表示识别失败；
     private SingleInvoiceInfo [] SingleInvoiceInfos;
 
     /**
-     * 获取识别结果。
+     * Get 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
-其它错误码见各个票据接口的定义。
+其它错误码见各个票据接口的定义。 
      * @return Code 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
@@ -87,7 +87,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 设置识别结果。
+     * Set 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
@@ -101,7 +101,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 获取识别出的图片所属的票据类型。
+     * Get 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
@@ -113,7 +113,7 @@ FailedOperation.UnKnowError：表示识别失败；
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
-13：过路过桥费发票
+13：过路过桥费发票 
      * @return Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
@@ -133,7 +133,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 设置识别出的图片所属的票据类型。
+     * Set 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
@@ -165,7 +165,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 获取识别出的图片在混贴票据图片中的位置信息。
+     * Get 识别出的图片在混贴票据图片中的位置信息。 
      * @return Rect 识别出的图片在混贴票据图片中的位置信息。
      */
     public Rect getRect() {
@@ -173,7 +173,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 设置识别出的图片在混贴票据图片中的位置信息。
+     * Set 识别出的图片在混贴票据图片中的位置信息。
      * @param Rect 识别出的图片在混贴票据图片中的位置信息。
      */
     public void setRect(Rect Rect) {
@@ -181,7 +181,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 获取识别出的图片在混贴票据图片中的旋转角度。
+     * Get 识别出的图片在混贴票据图片中的旋转角度。 
      * @return Angle 识别出的图片在混贴票据图片中的旋转角度。
      */
     public Float getAngle() {
@@ -189,7 +189,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 设置识别出的图片在混贴票据图片中的旋转角度。
+     * Set 识别出的图片在混贴票据图片中的旋转角度。
      * @param Angle 识别出的图片在混贴票据图片中的旋转角度。
      */
     public void setAngle(Float Angle) {
@@ -197,7 +197,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 获取识别到的内容。
+     * Get 识别到的内容。 
      * @return SingleInvoiceInfos 识别到的内容。
      */
     public SingleInvoiceInfo [] getSingleInvoiceInfos() {
@@ -205,7 +205,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 设置识别到的内容。
+     * Set 识别到的内容。
      * @param SingleInvoiceInfos 识别到的内容。
      */
     public void setSingleInvoiceInfos(SingleInvoiceInfo [] SingleInvoiceInfos) {
@@ -213,7 +213,7 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

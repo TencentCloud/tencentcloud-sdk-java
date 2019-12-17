@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProjectResponse  extends AbstractModel{
+public class ModifyProjectResponse extends AbstractModel{
 
     /**
     * 项目详情
@@ -37,7 +37,7 @@ public class ModifyProjectResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取项目详情
+     * Get 项目详情 
      * @return Project 项目详情
      */
     public ProjectEntry getProject() {
@@ -45,7 +45,7 @@ public class ModifyProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置项目详情
+     * Set 项目详情
      * @param Project 项目详情
      */
     public void setProject(ProjectEntry Project) {
@@ -53,7 +53,7 @@ public class ModifyProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class ModifyProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class ModifyProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Project.", this.Project);

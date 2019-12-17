@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VmGroupSimple  extends AbstractModel{
+public class VmGroupSimple extends AbstractModel{
 
     /**
     * 部署组ID
@@ -135,8 +135,8 @@ public class VmGroupSimple  extends AbstractModel{
     private String MicroserviceType;
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,8 +155,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -165,7 +165,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组名称
+     * Set 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,8 +175,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,7 +185,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -195,8 +195,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取部署组描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupDesc 部署组描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -205,7 +205,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组描述
+     * Set 部署组描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupDesc 部署组描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,8 +215,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 部署组更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组更新时间
+     * Set 部署组更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 部署组更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取部署组启动参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组启动参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartupParameters 部署组启动参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组启动参数
+     * Set 部署组启动参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartupParameters 部署组启动参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,8 +275,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -285,7 +285,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -295,8 +295,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 部署组创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -305,7 +305,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置部署组创建时间
+     * Set 部署组创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 部署组创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -315,8 +315,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -325,7 +325,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -335,8 +335,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -345,7 +345,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -355,8 +355,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -365,7 +365,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -375,8 +375,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -385,7 +385,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -395,8 +395,8 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 获取应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceType 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -405,7 +405,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 设置应用微服务类型
+     * Set 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -415,7 +415,7 @@ public class VmGroupSimple  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

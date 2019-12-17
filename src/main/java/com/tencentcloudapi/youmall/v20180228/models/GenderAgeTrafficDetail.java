@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenderAgeTrafficDetail  extends AbstractModel{
+public class GenderAgeTrafficDetail extends AbstractModel{
 
     /**
     * 性别: 0男1女
@@ -44,7 +44,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     private Integer TrafficCount;
 
     /**
-     * 获取性别: 0男1女
+     * Get 性别: 0男1女 
      * @return Gender 性别: 0男1女
      */
     public Integer getGender() {
@@ -52,7 +52,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 设置性别: 0男1女
+     * Set 性别: 0男1女
      * @param Gender 性别: 0男1女
      */
     public void setGender(Integer Gender) {
@@ -60,7 +60,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 获取年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
+     * Get 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60 
      * @return AgeGap 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
      */
     public String getAgeGap() {
@@ -68,7 +68,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 设置年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
+     * Set 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
      * @param AgeGap 年龄区间，枚举值：0-17、18-23、24-30、31-40、41-50、51-60、>60
      */
     public void setAgeGap(String AgeGap) {
@@ -76,7 +76,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 获取客流量
+     * Get 客流量 
      * @return TrafficCount 客流量
      */
     public Integer getTrafficCount() {
@@ -84,7 +84,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 设置客流量
+     * Set 客流量
      * @param TrafficCount 客流量
      */
     public void setTrafficCount(Integer TrafficCount) {
@@ -92,7 +92,7 @@ public class GenderAgeTrafficDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Gender", this.Gender);

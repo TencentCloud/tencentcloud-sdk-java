@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShopInfoResponse  extends AbstractModel{
+public class DescribeShopInfoResponse extends AbstractModel{
 
     /**
     * 门店总数
@@ -44,7 +44,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取门店总数
+     * Get 门店总数 
      * @return TotalCount 门店总数
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置门店总数
+     * Set 门店总数
      * @param TotalCount 门店总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取门店列表信息
+     * Get 门店列表信息 
      * @return ShopInfoSet 门店列表信息
      */
     public ShopInfo [] getShopInfoSet() {
@@ -68,7 +68,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置门店列表信息
+     * Set 门店列表信息
      * @param ShopInfoSet 门店列表信息
      */
     public void setShopInfoSet(ShopInfo [] ShopInfoSet) {
@@ -76,7 +76,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeShopInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

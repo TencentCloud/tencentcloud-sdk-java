@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTagsResult  extends AbstractModel{
+public class ImageTagsResult extends AbstractModel{
 
     /**
     * 总记录数
@@ -51,7 +51,7 @@ public class ImageTagsResult  extends AbstractModel{
     private ImageTag [] Content;
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return TotalCount 总记录数
      */
     public Long getTotalCount() {
@@ -59,7 +59,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param TotalCount 总记录数
      */
     public void setTotalCount(Long TotalCount) {
@@ -67,7 +67,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 获取仓库名,含命名空间,如tsf/ngin
+     * Get 仓库名,含命名空间,如tsf/ngin 
      * @return RepoName 仓库名,含命名空间,如tsf/ngin
      */
     public String getRepoName() {
@@ -75,7 +75,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 设置仓库名,含命名空间,如tsf/ngin
+     * Set 仓库名,含命名空间,如tsf/ngin
      * @param RepoName 仓库名,含命名空间,如tsf/ngin
      */
     public void setRepoName(String RepoName) {
@@ -83,7 +83,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 获取镜像服务器地址
+     * Get 镜像服务器地址 
      * @return Server 镜像服务器地址
      */
     public String getServer() {
@@ -91,7 +91,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 设置镜像服务器地址
+     * Set 镜像服务器地址
      * @param Server 镜像服务器地址
      */
     public void setServer(String Server) {
@@ -99,7 +99,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 获取列表信息
+     * Get 列表信息 
      * @return Content 列表信息
      */
     public ImageTag [] getContent() {
@@ -107,7 +107,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 设置列表信息
+     * Set 列表信息
      * @param Content 列表信息
      */
     public void setContent(ImageTag [] Content) {
@@ -115,7 +115,7 @@ public class ImageTagsResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

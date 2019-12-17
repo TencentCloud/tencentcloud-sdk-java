@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  extends AbstractModel{
+public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends AbstractModel{
 
     /**
     * NAT网关ID。
@@ -59,7 +59,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     private Integer Limit;
 
     /**
-     * 获取NAT网关ID。
+     * Get NAT网关ID。 
      * @return NatGatewayIds NAT网关ID。
      */
     public String [] getNatGatewayIds() {
@@ -67,7 +67,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 设置NAT网关ID。
+     * Set NAT网关ID。
      * @param NatGatewayIds NAT网关ID。
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
@@ -75,7 +75,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 获取过滤条件:
+     * Get 过滤条件:
 参数不支持同时指定NatGatewayIds和Filters。
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
@@ -83,7 +83,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
 <li>public-port， 公网端口。</li>
 <li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
 <li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
+<li>description，规则描述。</li> 
      * @return Filters 过滤条件:
 参数不支持同时指定NatGatewayIds和Filters。
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
@@ -99,7 +99,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 设置过滤条件:
+     * Set 过滤条件:
 参数不支持同时指定NatGatewayIds和Filters。
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
@@ -123,7 +123,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -131,7 +131,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -139,7 +139,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -147,7 +147,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -155,7 +155,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest  exte
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NatGatewayIds.", this.NatGatewayIds);

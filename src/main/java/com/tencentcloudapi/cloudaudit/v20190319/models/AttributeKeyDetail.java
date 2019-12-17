@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttributeKeyDetail  extends AbstractModel{
+public class AttributeKeyDetail extends AbstractModel{
 
     /**
     * 中文标签
@@ -58,7 +58,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取中文标签
+     * Get 中文标签 
      * @return Label 中文标签
      */
     public String getLabel() {
@@ -66,7 +66,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 设置中文标签
+     * Set 中文标签
      * @param Label 中文标签
      */
     public void setLabel(String Label) {
@@ -74,7 +74,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 获取输入框类型
+     * Get 输入框类型 
      * @return LabelType 输入框类型
      */
     public String getLabelType() {
@@ -82,7 +82,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 设置输入框类型
+     * Set 输入框类型
      * @param LabelType 输入框类型
      */
     public void setLabelType(String LabelType) {
@@ -90,7 +90,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 获取展示排序
+     * Get 展示排序 
      * @return Order 展示排序
      */
     public Long getOrder() {
@@ -98,7 +98,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 设置展示排序
+     * Set 展示排序
      * @param Order 展示排序
      */
     public void setOrder(Long Order) {
@@ -106,7 +106,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 获取初始化展示
+     * Get 初始化展示 
      * @return Starter 初始化展示
      */
     public String getStarter() {
@@ -114,7 +114,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 设置初始化展示
+     * Set 初始化展示
      * @param Starter 初始化展示
      */
     public void setStarter(String Starter) {
@@ -122,7 +122,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 获取AttributeKey值
+     * Get AttributeKey值 
      * @return Value AttributeKey值
      */
     public String getValue() {
@@ -130,7 +130,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 设置AttributeKey值
+     * Set AttributeKey值
      * @param Value AttributeKey值
      */
     public void setValue(String Value) {
@@ -138,7 +138,7 @@ public class AttributeKeyDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Label", this.Label);

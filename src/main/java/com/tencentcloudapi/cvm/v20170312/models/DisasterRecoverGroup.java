@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisasterRecoverGroup  extends AbstractModel{
+public class DisasterRecoverGroup extends AbstractModel{
 
     /**
     * 分散置放群组id。
@@ -74,7 +74,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取分散置放群组id。
+     * Get 分散置放群组id。 
      * @return DisasterRecoverGroupId 分散置放群组id。
      */
     public String getDisasterRecoverGroupId() {
@@ -82,7 +82,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组id。
+     * Set 分散置放群组id。
      * @param DisasterRecoverGroupId 分散置放群组id。
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
@@ -90,7 +90,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组名称，长度1-60个字符。
+     * Get 分散置放群组名称，长度1-60个字符。 
      * @return Name 分散置放群组名称，长度1-60个字符。
      */
     public String getName() {
@@ -98,7 +98,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组名称，长度1-60个字符。
+     * Set 分散置放群组名称，长度1-60个字符。
      * @param Name 分散置放群组名称，长度1-60个字符。
      */
     public void setName(String Name) {
@@ -106,7 +106,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * Get 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架 
      * @return Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      */
     public String getType() {
@@ -114,7 +114,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * Set 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      * @param Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      */
     public void setType(String Type) {
@@ -122,7 +122,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组内最大容纳云服务器数量。
+     * Get 分散置放群组内最大容纳云服务器数量。 
      * @return CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
     public Integer getCvmQuotaTotal() {
@@ -130,7 +130,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组内最大容纳云服务器数量。
+     * Set 分散置放群组内最大容纳云服务器数量。
      * @param CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      */
     public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
@@ -138,7 +138,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组内云服务器当前数量。
+     * Get 分散置放群组内云服务器当前数量。 
      * @return CurrentNum 分散置放群组内云服务器当前数量。
      */
     public Integer getCurrentNum() {
@@ -146,7 +146,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组内云服务器当前数量。
+     * Set 分散置放群组内云服务器当前数量。
      * @param CurrentNum 分散置放群组内云服务器当前数量。
      */
     public void setCurrentNum(Integer CurrentNum) {
@@ -154,8 +154,8 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组内，云服务器id列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分散置放群组内，云服务器id列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceIds 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,7 +164,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组内，云服务器id列表。
+     * Set 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 分散置放群组内，云服务器id列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,8 +174,8 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分散置放群组创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 分散置放群组创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -184,7 +184,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组创建时间。
+     * Set 分散置放群组创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 分散置放群组创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,7 +194,7 @@ public class DisasterRecoverGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);

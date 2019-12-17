@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskDetailRequest  extends AbstractModel{
+public class DescribeTaskDetailRequest extends AbstractModel{
 
     /**
     * 视频处理任务的任务 ID。
@@ -30,7 +30,7 @@ public class DescribeTaskDetailRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取视频处理任务的任务 ID。
+     * Get 视频处理任务的任务 ID。 
      * @return TaskId 视频处理任务的任务 ID。
      */
     public String getTaskId() {
@@ -38,7 +38,7 @@ public class DescribeTaskDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务的任务 ID。
+     * Set 视频处理任务的任务 ID。
      * @param TaskId 视频处理任务的任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -46,7 +46,7 @@ public class DescribeTaskDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

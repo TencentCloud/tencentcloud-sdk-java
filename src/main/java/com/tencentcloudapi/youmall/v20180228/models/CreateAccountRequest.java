@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountRequest  extends AbstractModel{
+public class CreateAccountRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -58,7 +58,7 @@ public class CreateAccountRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -66,7 +66,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -74,7 +74,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账号名；需要是手机号
+     * Get 账号名；需要是手机号 
      * @return Name 账号名；需要是手机号
      */
     public String getName() {
@@ -82,7 +82,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账号名；需要是手机号
+     * Set 账号名；需要是手机号
      * @param Name 账号名；需要是手机号
      */
     public void setName(String Name) {
@@ -90,7 +90,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
+     * Get 密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上 
      * @return Password 密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
      */
     public String getPassword() {
@@ -98,7 +98,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
+     * Set 密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
      * @param Password 密码；需要是(`~!@#$%^&*()_+=-）中的至少两种且八位以上
      */
     public void setPassword(String Password) {
@@ -106,7 +106,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户门店编码
+     * Get 客户门店编码 
      * @return ShopCode 客户门店编码
      */
     public String getShopCode() {
@@ -114,7 +114,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户门店编码
+     * Set 客户门店编码
      * @param ShopCode 客户门店编码
      */
     public void setShopCode(String ShopCode) {
@@ -122,7 +122,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注说明; 30个字符以内
+     * Get 备注说明; 30个字符以内 
      * @return Remark 备注说明; 30个字符以内
      */
     public String getRemark() {
@@ -130,7 +130,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注说明; 30个字符以内
+     * Set 备注说明; 30个字符以内
      * @param Remark 备注说明; 30个字符以内
      */
     public void setRemark(String Remark) {
@@ -138,7 +138,7 @@ public class CreateAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

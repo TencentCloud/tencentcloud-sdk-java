@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAudioTaskResponse  extends AbstractModel{
+public class DescribeAudioTaskResponse extends AbstractModel{
 
     /**
     * 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
@@ -93,7 +93,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     * Get 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。 
      * @return AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
      */
     public AllMuteSlice getAllMuteSlice() {
@@ -101,7 +101,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
+     * Set 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
      * @param AllMuteSlice 如果请求中开启了静音检测开关，则会返回所有的静音片段（静音时长超过阈值的片段）。
      */
     public void setAllMuteSlice(AllMuteSlice AllMuteSlice) {
@@ -109,7 +109,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的当前音频的统计信息。当进度为100时返回。
+     * Get 返回的当前音频的统计信息。当进度为100时返回。 
      * @return AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      */
     public ASRStat getAsrStat() {
@@ -117,7 +117,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的当前音频的统计信息。当进度为100时返回。
+     * Set 返回的当前音频的统计信息。当进度为100时返回。
      * @param AsrStat 返回的当前音频的统计信息。当进度为100时返回。
      */
     public void setAsrStat(ASRStat AsrStat) {
@@ -125,7 +125,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+     * Get 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。 
      * @return Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      */
     public WholeTextItem [] getTexts() {
@@ -133,7 +133,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
+     * Set 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      * @param Texts 返回当前音频流的详细信息，如果是流模式，返回的是对应流的详细信息，如果是 URL模式，返回的是查询的那一段seq对应的音频的详细信息。
      */
     public void setTexts(WholeTextItem [] Texts) {
@@ -141,7 +141,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回词汇库中的单词出现的详细时间信息。
+     * Get 返回词汇库中的单词出现的详细时间信息。 
      * @return VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      */
     public VocabDetailInfomation [] getVocabAnalysisDetailInfo() {
@@ -149,7 +149,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回词汇库中的单词出现的详细时间信息。
+     * Set 返回词汇库中的单词出现的详细时间信息。
      * @param VocabAnalysisDetailInfo 返回词汇库中的单词出现的详细时间信息。
      */
     public void setVocabAnalysisDetailInfo(VocabDetailInfomation [] VocabAnalysisDetailInfo) {
@@ -157,7 +157,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回词汇库中的单词出现的次数信息。
+     * Get 返回词汇库中的单词出现的次数信息。 
      * @return VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
      */
     public VocabStatInfomation [] getVocabAnalysisStatInfo() {
@@ -165,7 +165,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回词汇库中的单词出现的次数信息。
+     * Set 返回词汇库中的单词出现的次数信息。
      * @param VocabAnalysisStatInfo 返回词汇库中的单词出现的次数信息。
      */
     public void setVocabAnalysisStatInfo(VocabStatInfomation [] VocabAnalysisStatInfo) {
@@ -173,7 +173,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回音频全部文本。
+     * Get 返回音频全部文本。 
      * @return AllTexts 返回音频全部文本。
      */
     public String getAllTexts() {
@@ -181,7 +181,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回音频全部文本。
+     * Set 返回音频全部文本。
      * @param AllTexts 返回音频全部文本。
      */
     public void setAllTexts(String AllTexts) {
@@ -189,7 +189,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Get 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。 
      * @return JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public Long getJobId() {
@@ -197,7 +197,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Set 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public void setJobId(Long JobId) {
@@ -205,7 +205,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的当前处理进度。
+     * Get 返回的当前处理进度。 
      * @return Progress 返回的当前处理进度。
      */
     public Float getProgress() {
@@ -213,7 +213,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的当前处理进度。
+     * Set 返回的当前处理进度。
      * @param Progress 返回的当前处理进度。
      */
     public void setProgress(Float Progress) {
@@ -221,7 +221,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结果总数
+     * Get 结果总数 
      * @return TotalCount 结果总数
      */
     public Long getTotalCount() {
@@ -229,7 +229,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结果总数
+     * Set 结果总数
      * @param TotalCount 结果总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -237,7 +237,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class DescribeAudioTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AllMuteSlice.", this.AllMuteSlice);

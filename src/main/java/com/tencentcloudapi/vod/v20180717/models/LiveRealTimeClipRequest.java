@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveRealTimeClipRequest  extends AbstractModel{
+public class LiveRealTimeClipRequest extends AbstractModel{
 
     /**
     * 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
@@ -79,7 +79,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * Get 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。 
      * @return StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public String getStreamId() {
@@ -87,7 +87,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+     * Set 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      * @param StreamId 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
      */
     public void setStreamId(String StreamId) {
@@ -95,7 +95,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return StartTime 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getStartTime() {
@@ -103,7 +103,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param StartTime 流剪辑的开始时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setStartTime(String StartTime) {
@@ -111,7 +111,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return EndTime 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getEndTime() {
@@ -119,7 +119,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param EndTime 流剪辑的结束时间，格式参照 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setEndTime(String EndTime) {
@@ -127,7 +127,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否固化。0 不固化，1 固化。默认不固化。
+     * Get 是否固化。0 不固化，1 固化。默认不固化。 
      * @return IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
      */
     public Long getIsPersistence() {
@@ -135,7 +135,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否固化。0 不固化，1 固化。默认不固化。
+     * Set 是否固化。0 不固化，1 固化。默认不固化。
      * @param IsPersistence 是否固化。0 不固化，1 固化。默认不固化。
      */
     public void setIsPersistence(Long IsPersistence) {
@@ -143,7 +143,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
+     * Get 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。 
      * @return ExpireTime 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
      */
     public String getExpireTime() {
@@ -151,7 +151,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
+     * Set 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
      * @param ExpireTime 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
      */
     public void setExpireTime(String ExpireTime) {
@@ -159,7 +159,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+     * Get 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。 
      * @return Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
      */
     public String getProcedure() {
@@ -167,7 +167,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+     * Set 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
      * @param Procedure 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
      */
     public void setProcedure(String Procedure) {
@@ -175,7 +175,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     * Get 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。 
      * @return MetaDataRequired 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
      */
     public Long getMetaDataRequired() {
@@ -183,7 +183,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
+     * Set 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
      * @param MetaDataRequired 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
      */
     public void setMetaDataRequired(Long MetaDataRequired) {
@@ -191,7 +191,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -199,7 +199,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -207,7 +207,7 @@ public class LiveRealTimeClipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);

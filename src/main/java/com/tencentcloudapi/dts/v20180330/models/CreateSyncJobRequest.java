@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSyncJobRequest  extends AbstractModel{
+public class CreateSyncJobRequest extends AbstractModel{
 
     /**
     * 灾备同步任务名
@@ -88,7 +88,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     private String DatabaseInfo;
 
     /**
-     * 获取灾备同步任务名
+     * Get 灾备同步任务名 
      * @return JobName 灾备同步任务名
      */
     public String getJobName() {
@@ -96,7 +96,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务名
+     * Set 灾备同步任务名
      * @param JobName 灾备同步任务名
      */
     public void setJobName(String JobName) {
@@ -104,7 +104,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取灾备同步任务配置选项
+     * Get 灾备同步任务配置选项 
      * @return SyncOption 灾备同步任务配置选项
      */
     public SyncOption getSyncOption() {
@@ -112,7 +112,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务配置选项
+     * Set 灾备同步任务配置选项
      * @param SyncOption 灾备同步任务配置选项
      */
     public void setSyncOption(SyncOption SyncOption) {
@@ -120,7 +120,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例数据库类型，目前仅包括：mysql
+     * Get 源实例数据库类型，目前仅包括：mysql 
      * @return SrcDatabaseType 源实例数据库类型，目前仅包括：mysql
      */
     public String getSrcDatabaseType() {
@@ -128,7 +128,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例数据库类型，目前仅包括：mysql
+     * Set 源实例数据库类型，目前仅包括：mysql
      * @param SrcDatabaseType 源实例数据库类型，目前仅包括：mysql
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -136,7 +136,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * Get 源实例接入类型，目前仅包括：cdb(云上cdb实例) 
      * @return SrcAccessType 源实例接入类型，目前仅包括：cdb(云上cdb实例)
      */
     public String getSrcAccessType() {
@@ -144,7 +144,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * Set 源实例接入类型，目前仅包括：cdb(云上cdb实例)
      * @param SrcAccessType 源实例接入类型，目前仅包括：cdb(云上cdb实例)
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -152,7 +152,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例信息
+     * Get 源实例信息 
      * @return SrcInfo 源实例信息
      */
     public SyncInstanceInfo getSrcInfo() {
@@ -160,7 +160,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例信息
+     * Set 源实例信息
      * @param SrcInfo 源实例信息
      */
     public void setSrcInfo(SyncInstanceInfo SrcInfo) {
@@ -168,7 +168,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例数据库类型，目前仅包括：mysql
+     * Get 目标实例数据库类型，目前仅包括：mysql 
      * @return DstDatabaseType 目标实例数据库类型，目前仅包括：mysql
      */
     public String getDstDatabaseType() {
@@ -176,7 +176,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例数据库类型，目前仅包括：mysql
+     * Set 目标实例数据库类型，目前仅包括：mysql
      * @param DstDatabaseType 目标实例数据库类型，目前仅包括：mysql
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -184,7 +184,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * Get 目标实例接入类型，目前仅包括：cdb(云上cdb实例) 
      * @return DstAccessType 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
      */
     public String getDstAccessType() {
@@ -192,7 +192,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例接入类型，目前仅包括：cdb(云上cdb实例)
+     * Set 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
      * @param DstAccessType 目标实例接入类型，目前仅包括：cdb(云上cdb实例)
      */
     public void setDstAccessType(String DstAccessType) {
@@ -200,7 +200,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例信息
+     * Get 目标实例信息 
      * @return DstInfo 目标实例信息
      */
     public SyncInstanceInfo getDstInfo() {
@@ -208,7 +208,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例信息
+     * Set 目标实例信息
      * @param DstInfo 目标实例信息
      */
     public void setDstInfo(SyncInstanceInfo DstInfo) {
@@ -216,9 +216,9 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要同步的源数据库表信息，用json格式的字符串描述。
+     * Get 需要同步的源数据库表信息，用json格式的字符串描述。
 对于database-table两级结构的数据库：
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{Database:db1,Table:[table1,table2]},{Database:db2}] 
      * @return DatabaseInfo 需要同步的源数据库表信息，用json格式的字符串描述。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
@@ -228,7 +228,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要同步的源数据库表信息，用json格式的字符串描述。
+     * Set 需要同步的源数据库表信息，用json格式的字符串描述。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
      * @param DatabaseInfo 需要同步的源数据库表信息，用json格式的字符串描述。
@@ -240,7 +240,7 @@ public class CreateSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobName", this.JobName);

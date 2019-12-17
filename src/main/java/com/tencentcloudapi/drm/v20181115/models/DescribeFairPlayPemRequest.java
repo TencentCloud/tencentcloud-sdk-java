@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFairPlayPemRequest  extends AbstractModel{
+public class DescribeFairPlayPemRequest extends AbstractModel{
 
     /**
     * 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
@@ -38,7 +38,7 @@ public class DescribeFairPlayPemRequest  extends AbstractModel{
     private Integer FairPlayPemId;
 
     /**
-     * 获取委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Get 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。 
      * @return BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public Integer getBailorId() {
@@ -46,7 +46,7 @@ public class DescribeFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Set 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public void setBailorId(Integer BailorId) {
@@ -54,8 +54,8 @@ public class DescribeFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的pem id。
-当该值未填入时，将返回所有的私钥信息。
+     * Get 需要查询的pem id。
+当该值未填入时，将返回所有的私钥信息。 
      * @return FairPlayPemId 需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
      */
@@ -64,7 +64,7 @@ public class DescribeFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的pem id。
+     * Set 需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
      * @param FairPlayPemId 需要查询的pem id。
 当该值未填入时，将返回所有的私钥信息。
@@ -74,7 +74,7 @@ public class DescribeFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BailorId", this.BailorId);

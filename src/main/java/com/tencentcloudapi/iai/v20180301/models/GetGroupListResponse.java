@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetGroupListResponse  extends AbstractModel{
+public class GetGroupListResponse extends AbstractModel{
 
     /**
     * 返回的人员库信息
@@ -45,7 +45,7 @@ public class GetGroupListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的人员库信息
+     * Get 返回的人员库信息 
      * @return GroupInfos 返回的人员库信息
      */
     public GroupInfo [] getGroupInfos() {
@@ -53,7 +53,7 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的人员库信息
+     * Set 返回的人员库信息
      * @param GroupInfos 返回的人员库信息
      */
     public void setGroupInfos(GroupInfo [] GroupInfos) {
@@ -61,8 +61,8 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员库总数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人员库总数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员库总数量
+     * Set 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupNum 人员库总数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class GetGroupListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "GroupInfos.", this.GroupInfos);

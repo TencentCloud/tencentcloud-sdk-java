@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskSimpleInfo  extends AbstractModel{
+public class TaskSimpleInfo extends AbstractModel{
 
     /**
     * 任务 ID。
@@ -60,7 +60,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     private String FinishTime;
 
     /**
-     * 获取任务 ID。
+     * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
     public String getTaskId() {
@@ -68,7 +68,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID。
+     * Set 任务 ID。
      * @param TaskId 任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -76,9 +76,9 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，包含：
+     * Get 任务类型，包含：
 <li> WorkflowTask：工作流处理任务；</li>
-<li> LiveProcessTask：直播处理任务。</li>
+<li> LiveProcessTask：直播处理任务。</li> 
      * @return TaskType 任务类型，包含：
 <li> WorkflowTask：工作流处理任务；</li>
 <li> LiveProcessTask：直播处理任务。</li>
@@ -88,7 +88,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，包含：
+     * Set 任务类型，包含：
 <li> WorkflowTask：工作流处理任务；</li>
 <li> LiveProcessTask：直播处理任务。</li>
      * @param TaskType 任务类型，包含：
@@ -100,7 +100,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -108,7 +108,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 任务创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -116,7 +116,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
+     * Get 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。 
      * @return BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
      */
     public String getBeginProcessTime() {
@@ -124,7 +124,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
+     * Set 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
      * @param BeginProcessTime 任务开始执行时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未开始，该字段为：0000-00-00T00:00:00Z。
      */
     public void setBeginProcessTime(String BeginProcessTime) {
@@ -132,7 +132,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
+     * Get 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。 
      * @return FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
      */
     public String getFinishTime() {
@@ -140,7 +140,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
+     * Set 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
      * @param FinishTime 任务结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。若任务尚未完成，该字段为：0000-00-00T00:00:00Z。
      */
     public void setFinishTime(String FinishTime) {
@@ -148,7 +148,7 @@ public class TaskSimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputMappingConfig  extends AbstractModel{
+public class OutputMappingConfig extends AbstractModel{
 
     /**
     * 存储类型，仅支持COS
@@ -44,7 +44,7 @@ public class OutputMappingConfig  extends AbstractModel{
     private Integer WorkerPartSize;
 
     /**
-     * 获取存储类型，仅支持COS
+     * Get 存储类型，仅支持COS 
      * @return Scene 存储类型，仅支持COS
      */
     public String getScene() {
@@ -52,7 +52,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 设置存储类型，仅支持COS
+     * Set 存储类型，仅支持COS
      * @param Scene 存储类型，仅支持COS
      */
     public void setScene(String Scene) {
@@ -60,7 +60,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 获取并行worker数量
+     * Get 并行worker数量 
      * @return WorkerNum 并行worker数量
      */
     public Integer getWorkerNum() {
@@ -68,7 +68,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 设置并行worker数量
+     * Set 并行worker数量
      * @param WorkerNum 并行worker数量
      */
     public void setWorkerNum(Integer WorkerNum) {
@@ -76,7 +76,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 获取worker分块大小，单位MB
+     * Get worker分块大小，单位MB 
      * @return WorkerPartSize worker分块大小，单位MB
      */
     public Integer getWorkerPartSize() {
@@ -84,7 +84,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 设置worker分块大小，单位MB
+     * Set worker分块大小，单位MB
      * @param WorkerPartSize worker分块大小，单位MB
      */
     public void setWorkerPartSize(Integer WorkerPartSize) {
@@ -92,7 +92,7 @@ public class OutputMappingConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Scene", this.Scene);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInstance  extends AbstractModel{
+public class DBInstance extends AbstractModel{
 
     /**
     * 实例 Id，唯一标识一个 TDSQL 实例
@@ -292,7 +292,7 @@ public class DBInstance  extends AbstractModel{
     private Integer IsEncryptSupported;
 
     /**
-     * 获取实例 Id，唯一标识一个 TDSQL 实例
+     * Get 实例 Id，唯一标识一个 TDSQL 实例 
      * @return InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      */
     public String getInstanceId() {
@@ -300,7 +300,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例 Id，唯一标识一个 TDSQL 实例
+     * Set 实例 Id，唯一标识一个 TDSQL 实例
      * @param InstanceId 实例 Id，唯一标识一个 TDSQL 实例
      */
     public void setInstanceId(String InstanceId) {
@@ -308,7 +308,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称，用户可修改
+     * Get 实例名称，用户可修改 
      * @return InstanceName 实例名称，用户可修改
      */
     public String getInstanceName() {
@@ -316,7 +316,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称，用户可修改
+     * Set 实例名称，用户可修改
      * @param InstanceName 实例名称，用户可修改
      */
     public void setInstanceName(String InstanceName) {
@@ -324,7 +324,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属应用 Id
+     * Get 实例所属应用 Id 
      * @return AppId 实例所属应用 Id
      */
     public Integer getAppId() {
@@ -332,7 +332,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属应用 Id
+     * Set 实例所属应用 Id
      * @param AppId 实例所属应用 Id
      */
     public void setAppId(Integer AppId) {
@@ -340,7 +340,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属项目 Id
+     * Get 实例所属项目 Id 
      * @return ProjectId 实例所属项目 Id
      */
     public Integer getProjectId() {
@@ -348,7 +348,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属项目 Id
+     * Set 实例所属项目 Id
      * @param ProjectId 实例所属项目 Id
      */
     public void setProjectId(Integer ProjectId) {
@@ -356,7 +356,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在地域名称，如 ap-shanghai
+     * Get 实例所在地域名称，如 ap-shanghai 
      * @return Region 实例所在地域名称，如 ap-shanghai
      */
     public String getRegion() {
@@ -364,7 +364,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在地域名称，如 ap-shanghai
+     * Set 实例所在地域名称，如 ap-shanghai
      * @param Region 实例所在地域名称，如 ap-shanghai
      */
     public void setRegion(String Region) {
@@ -372,7 +372,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在可用区名称，如 ap-shanghai-1
+     * Get 实例所在可用区名称，如 ap-shanghai-1 
      * @return Zone 实例所在可用区名称，如 ap-shanghai-1
      */
     public String getZone() {
@@ -380,7 +380,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在可用区名称，如 ap-shanghai-1
+     * Set 实例所在可用区名称，如 ap-shanghai-1
      * @param Zone 实例所在可用区名称，如 ap-shanghai-1
      */
     public void setZone(String Zone) {
@@ -388,7 +388,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络 Id，基础网络时为 0
+     * Get 私有网络 Id，基础网络时为 0 
      * @return VpcId 私有网络 Id，基础网络时为 0
      */
     public Integer getVpcId() {
@@ -396,7 +396,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络 Id，基础网络时为 0
+     * Set 私有网络 Id，基础网络时为 0
      * @param VpcId 私有网络 Id，基础网络时为 0
      */
     public void setVpcId(Integer VpcId) {
@@ -404,7 +404,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取子网 Id，基础网络时为 0
+     * Get 子网 Id，基础网络时为 0 
      * @return SubnetId 子网 Id，基础网络时为 0
      */
     public Integer getSubnetId() {
@@ -412,7 +412,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置子网 Id，基础网络时为 0
+     * Set 子网 Id，基础网络时为 0
      * @param SubnetId 子网 Id，基础网络时为 0
      */
     public void setSubnetId(Integer SubnetId) {
@@ -420,7 +420,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
+     * Get 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除 
      * @return Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      */
     public Integer getStatus() {
@@ -428,7 +428,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
+     * Set 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      * @param Status 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除
      */
     public void setStatus(Integer Status) {
@@ -436,7 +436,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取内网 IP 地址
+     * Get 内网 IP 地址 
      * @return Vip 内网 IP 地址
      */
     public String getVip() {
@@ -444,7 +444,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置内网 IP 地址
+     * Set 内网 IP 地址
      * @param Vip 内网 IP 地址
      */
     public void setVip(String Vip) {
@@ -452,7 +452,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取内网端口
+     * Get 内网端口 
      * @return Vport 内网端口
      */
     public Integer getVport() {
@@ -460,7 +460,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置内网端口
+     * Set 内网端口
      * @param Vport 内网端口
      */
     public void setVport(Integer Vport) {
@@ -468,7 +468,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取外网访问的域名，公网可解析
+     * Get 外网访问的域名，公网可解析 
      * @return WanDomain 外网访问的域名，公网可解析
      */
     public String getWanDomain() {
@@ -476,7 +476,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置外网访问的域名，公网可解析
+     * Set 外网访问的域名，公网可解析
      * @param WanDomain 外网访问的域名，公网可解析
      */
     public void setWanDomain(String WanDomain) {
@@ -484,7 +484,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取外网 IP 地址，公网可访问
+     * Get 外网 IP 地址，公网可访问 
      * @return WanVip 外网 IP 地址，公网可访问
      */
     public String getWanVip() {
@@ -492,7 +492,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置外网 IP 地址，公网可访问
+     * Set 外网 IP 地址，公网可访问
      * @param WanVip 外网 IP 地址，公网可访问
      */
     public void setWanVip(String WanVip) {
@@ -500,7 +500,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取外网端口
+     * Get 外网端口 
      * @return WanPort 外网端口
      */
     public Integer getWanPort() {
@@ -508,7 +508,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置外网端口
+     * Set 外网端口
      * @param WanPort 外网端口
      */
     public void setWanPort(Integer WanPort) {
@@ -516,7 +516,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间，格式为 2006-01-02 15:04:05
+     * Get 实例创建时间，格式为 2006-01-02 15:04:05 
      * @return CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
      */
     public String getCreateTime() {
@@ -524,7 +524,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间，格式为 2006-01-02 15:04:05
+     * Set 实例创建时间，格式为 2006-01-02 15:04:05
      * @param CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
      */
     public void setCreateTime(String CreateTime) {
@@ -532,7 +532,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例最后更新时间，格式为 2006-01-02 15:04:05
+     * Get 实例最后更新时间，格式为 2006-01-02 15:04:05 
      * @return UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      */
     public String getUpdateTime() {
@@ -540,7 +540,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例最后更新时间，格式为 2006-01-02 15:04:05
+     * Set 实例最后更新时间，格式为 2006-01-02 15:04:05
      * @param UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      */
     public void setUpdateTime(String UpdateTime) {
@@ -548,7 +548,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志：0 否，1 是
+     * Get 自动续费标志：0 否，1 是 
      * @return AutoRenewFlag 自动续费标志：0 否，1 是
      */
     public Integer getAutoRenewFlag() {
@@ -556,7 +556,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志：0 否，1 是
+     * Set 自动续费标志：0 否，1 是
      * @param AutoRenewFlag 自动续费标志：0 否，1 是
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -564,7 +564,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间，格式为 2006-01-02 15:04:05
+     * Get 实例到期时间，格式为 2006-01-02 15:04:05 
      * @return PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
      */
     public String getPeriodEndTime() {
@@ -572,7 +572,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间，格式为 2006-01-02 15:04:05
+     * Set 实例到期时间，格式为 2006-01-02 15:04:05
      * @param PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
      */
     public void setPeriodEndTime(String PeriodEndTime) {
@@ -580,7 +580,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属账号
+     * Get 实例所属账号 
      * @return Uin 实例所属账号
      */
     public String getUin() {
@@ -588,7 +588,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属账号
+     * Set 实例所属账号
      * @param Uin 实例所属账号
      */
     public void setUin(String Uin) {
@@ -596,7 +596,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取TDSQL 版本信息
+     * Get TDSQL 版本信息 
      * @return TdsqlVersion TDSQL 版本信息
      */
     public String getTdsqlVersion() {
@@ -604,7 +604,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置TDSQL 版本信息
+     * Set TDSQL 版本信息
      * @param TdsqlVersion TDSQL 版本信息
      */
     public void setTdsqlVersion(String TdsqlVersion) {
@@ -612,7 +612,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位 GB
+     * Get 实例内存大小，单位 GB 
      * @return Memory 实例内存大小，单位 GB
      */
     public Integer getMemory() {
@@ -620,7 +620,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存大小，单位 GB
+     * Set 实例内存大小，单位 GB
      * @param Memory 实例内存大小，单位 GB
      */
     public void setMemory(Integer Memory) {
@@ -628,7 +628,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例存储大小，单位 GB
+     * Get 实例存储大小，单位 GB 
      * @return Storage 实例存储大小，单位 GB
      */
     public Integer getStorage() {
@@ -636,7 +636,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例存储大小，单位 GB
+     * Set 实例存储大小，单位 GB
      * @param Storage 实例存储大小，单位 GB
      */
     public void setStorage(Integer Storage) {
@@ -644,7 +644,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取字符串型的私有网络Id
+     * Get 字符串型的私有网络Id 
      * @return UniqueVpcId 字符串型的私有网络Id
      */
     public String getUniqueVpcId() {
@@ -652,7 +652,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置字符串型的私有网络Id
+     * Set 字符串型的私有网络Id
      * @param UniqueVpcId 字符串型的私有网络Id
      */
     public void setUniqueVpcId(String UniqueVpcId) {
@@ -660,7 +660,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取字符串型的私有网络子网Id
+     * Get 字符串型的私有网络子网Id 
      * @return UniqueSubnetId 字符串型的私有网络子网Id
      */
     public String getUniqueSubnetId() {
@@ -668,7 +668,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置字符串型的私有网络子网Id
+     * Set 字符串型的私有网络子网Id
      * @param UniqueSubnetId 字符串型的私有网络子网Id
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
@@ -676,7 +676,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取原始实例ID（过时字段，请勿依赖该值）
+     * Get 原始实例ID（过时字段，请勿依赖该值） 
      * @return OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
      */
     public String getOriginSerialId() {
@@ -684,7 +684,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置原始实例ID（过时字段，请勿依赖该值）
+     * Set 原始实例ID（过时字段，请勿依赖该值）
      * @param OriginSerialId 原始实例ID（过时字段，请勿依赖该值）
      */
     public void setOriginSerialId(String OriginSerialId) {
@@ -692,7 +692,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取节点数，2为一主一从，3为一主二从
+     * Get 节点数，2为一主一从，3为一主二从 
      * @return NodeCount 节点数，2为一主一从，3为一主二从
      */
     public Integer getNodeCount() {
@@ -700,7 +700,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置节点数，2为一主一从，3为一主二从
+     * Set 节点数，2为一主一从，3为一主二从
      * @param NodeCount 节点数，2为一主一从，3为一主二从
      */
     public void setNodeCount(Integer NodeCount) {
@@ -708,7 +708,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取是否临时实例，0为否，非0为是
+     * Get 是否临时实例，0为否，非0为是 
      * @return IsTmp 是否临时实例，0为否，非0为是
      */
     public Integer getIsTmp() {
@@ -716,7 +716,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置是否临时实例，0为否，非0为是
+     * Set 是否临时实例，0为否，非0为是
      * @param IsTmp 是否临时实例，0为否，非0为是
      */
     public void setIsTmp(Integer IsTmp) {
@@ -724,7 +724,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群Id，为空表示为普通实例
+     * Get 独享集群Id，为空表示为普通实例 
      * @return ExclusterId 独享集群Id，为空表示为普通实例
      */
     public String getExclusterId() {
@@ -732,7 +732,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群Id，为空表示为普通实例
+     * Set 独享集群Id，为空表示为普通实例
      * @param ExclusterId 独享集群Id，为空表示为普通实例
      */
     public void setExclusterId(String ExclusterId) {
@@ -740,7 +740,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取数字实例Id（过时字段，请勿依赖该值）
+     * Get 数字实例Id（过时字段，请勿依赖该值） 
      * @return Id 数字实例Id（过时字段，请勿依赖该值）
      */
     public Integer getId() {
@@ -748,7 +748,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置数字实例Id（过时字段，请勿依赖该值）
+     * Set 数字实例Id（过时字段，请勿依赖该值）
      * @param Id 数字实例Id（过时字段，请勿依赖该值）
      */
     public void setId(Integer Id) {
@@ -756,7 +756,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 Id
+     * Get 产品类型 Id 
      * @return Pid 产品类型 Id
      */
     public Integer getPid() {
@@ -764,7 +764,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型 Id
+     * Set 产品类型 Id
      * @param Pid 产品类型 Id
      */
     public void setPid(Integer Pid) {
@@ -772,7 +772,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取最大 Qps 值
+     * Get 最大 Qps 值 
      * @return Qps 最大 Qps 值
      */
     public Integer getQps() {
@@ -780,7 +780,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置最大 Qps 值
+     * Set 最大 Qps 值
      * @param Qps 最大 Qps 值
      */
     public void setQps(Integer Qps) {
@@ -788,8 +788,8 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 付费模式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Paymode 付费模式
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -798,7 +798,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式
+     * Set 付费模式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Paymode 付费模式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -808,8 +808,8 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例处于异步任务时的异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例处于异步任务时的异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Locker 实例处于异步任务时的异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -818,7 +818,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例处于异步任务时的异步任务流程ID
+     * Set 实例处于异步任务时的异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Locker 实例处于异步任务时的异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -828,8 +828,8 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例目前运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例目前运行状态描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StatusDesc 实例目前运行状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -838,7 +838,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例目前运行状态描述
+     * Set 实例目前运行状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 实例目前运行状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -848,7 +848,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中 
      * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     public Integer getWanStatus() {
@@ -856,7 +856,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     public void setWanStatus(Integer WanStatus) {
@@ -864,7 +864,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取该实例是否支持审计。1-支持；0-不支持
+     * Get 该实例是否支持审计。1-支持；0-不支持 
      * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
     public Integer getIsAuditSupported() {
@@ -872,7 +872,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置该实例是否支持审计。1-支持；0-不支持
+     * Set 该实例是否支持审计。1-支持；0-不支持
      * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
     public void setIsAuditSupported(Integer IsAuditSupported) {
@@ -880,7 +880,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器型号
+     * Get 机器型号 
      * @return Machine 机器型号
      */
     public String getMachine() {
@@ -888,7 +888,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器型号
+     * Set 机器型号
      * @param Machine 机器型号
      */
     public void setMachine(String Machine) {
@@ -896,7 +896,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持数据加密。1-支持；0-不支持
+     * Get 是否支持数据加密。1-支持；0-不支持 
      * @return IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      */
     public Integer getIsEncryptSupported() {
@@ -904,7 +904,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持数据加密。1-支持；0-不支持
+     * Set 是否支持数据加密。1-支持；0-不支持
      * @param IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      */
     public void setIsEncryptSupported(Integer IsEncryptSupported) {
@@ -912,7 +912,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

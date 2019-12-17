@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 可用区英文ID，形如ap-guangzhou-1，表示广州一区
@@ -41,14 +41,14 @@ public class ZoneInfo  extends AbstractModel{
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
     */
     @SerializedName("SpecId")
     @Expose
-    private Integer SpecId;
+    private Long SpecId;
 
     /**
     * 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
@@ -58,7 +58,7 @@ public class ZoneInfo  extends AbstractModel{
     private String Version;
 
     /**
-     * 获取可用区英文ID，形如ap-guangzhou-1，表示广州一区
+     * Get 可用区英文ID，形如ap-guangzhou-1，表示广州一区 
      * @return Zone 可用区英文ID，形如ap-guangzhou-1，表示广州一区
      */
     public String getZone() {
@@ -66,7 +66,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区英文ID，形如ap-guangzhou-1，表示广州一区
+     * Set 可用区英文ID，形如ap-guangzhou-1，表示广州一区
      * @param Zone 可用区英文ID，形如ap-guangzhou-1，表示广州一区
      */
     public void setZone(String Zone) {
@@ -74,7 +74,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区中文名称
+     * Get 可用区中文名称 
      * @return ZoneName 可用区中文名称
      */
     public String getZoneName() {
@@ -82,7 +82,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区中文名称
+     * Set 可用区中文名称
      * @param ZoneName 可用区中文名称
      */
     public void setZoneName(String ZoneName) {
@@ -90,39 +90,39 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区数字ID
+     * Get 可用区数字ID 
      * @return ZoneId 可用区数字ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * 设置可用区数字ID
+     * Set 可用区数字ID
      * @param ZoneId 可用区数字ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * 获取该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
+     * Get 该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小 
      * @return SpecId 该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
      */
-    public Integer getSpecId() {
+    public Long getSpecId() {
         return this.SpecId;
     }
 
     /**
-     * 设置该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
+     * Set 该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
      * @param SpecId 该可用区目前可售卖的规格ID，利用SpecId，结合接口DescribeProductConfig返回的数据，可获悉该可用区目前可售卖的规格大小
      */
-    public void setSpecId(Integer SpecId) {
+    public void setSpecId(Long SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * 获取当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
+     * Get 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1） 
      * @return Version 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      */
     public String getVersion() {
@@ -130,7 +130,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
+     * Set 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      * @param Version 当前可用区与规格下，可售卖的数据库版本，形如2008R2（表示SQL Server 2008 R2）。其可选值有2008R2（表示SQL Server 2008 R2），2012SP3（表示SQL Server 2012），2016SP1（表示SQL Server 2016 SP1）
      */
     public void setVersion(String Version) {
@@ -138,7 +138,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

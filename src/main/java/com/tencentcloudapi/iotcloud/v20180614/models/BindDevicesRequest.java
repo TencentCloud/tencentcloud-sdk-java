@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindDevicesRequest  extends AbstractModel{
+public class BindDevicesRequest extends AbstractModel{
 
     /**
     * 网关设备的产品ID
@@ -58,7 +58,7 @@ public class BindDevicesRequest  extends AbstractModel{
     private String Skey;
 
     /**
-     * 获取网关设备的产品ID
+     * Get 网关设备的产品ID 
      * @return GatewayProductId 网关设备的产品ID
      */
     public String getGatewayProductId() {
@@ -66,7 +66,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网关设备的产品ID
+     * Set 网关设备的产品ID
      * @param GatewayProductId 网关设备的产品ID
      */
     public void setGatewayProductId(String GatewayProductId) {
@@ -74,7 +74,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网关设备的设备名
+     * Get 网关设备的设备名 
      * @return GatewayDeviceName 网关设备的设备名
      */
     public String getGatewayDeviceName() {
@@ -82,7 +82,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网关设备的设备名
+     * Set 网关设备的设备名
      * @param GatewayDeviceName 网关设备的设备名
      */
     public void setGatewayDeviceName(String GatewayDeviceName) {
@@ -90,7 +90,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被绑定设备的产品ID
+     * Get 被绑定设备的产品ID 
      * @return ProductId 被绑定设备的产品ID
      */
     public String getProductId() {
@@ -98,7 +98,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被绑定设备的产品ID
+     * Set 被绑定设备的产品ID
      * @param ProductId 被绑定设备的产品ID
      */
     public void setProductId(String ProductId) {
@@ -106,7 +106,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被绑定的多个设备名
+     * Get 被绑定的多个设备名 
      * @return DeviceNames 被绑定的多个设备名
      */
     public String [] getDeviceNames() {
@@ -114,7 +114,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被绑定的多个设备名
+     * Set 被绑定的多个设备名
      * @param DeviceNames 被绑定的多个设备名
      */
     public void setDeviceNames(String [] DeviceNames) {
@@ -122,7 +122,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取中兴CLAA设备的绑定需要skey，普通的设备不需要
+     * Get 中兴CLAA设备的绑定需要skey，普通的设备不需要 
      * @return Skey 中兴CLAA设备的绑定需要skey，普通的设备不需要
      */
     public String getSkey() {
@@ -130,7 +130,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置中兴CLAA设备的绑定需要skey，普通的设备不需要
+     * Set 中兴CLAA设备的绑定需要skey，普通的设备不需要
      * @param Skey 中兴CLAA设备的绑定需要skey，普通的设备不需要
      */
     public void setSkey(String Skey) {
@@ -138,7 +138,7 @@ public class BindDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxiesResponse  extends AbstractModel{
+public class DescribeProxiesResponse extends AbstractModel{
 
     /**
     * 通道个数。
@@ -51,7 +51,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取通道个数。
+     * Get 通道个数。 
      * @return TotalCount 通道个数。
      */
     public Long getTotalCount() {
@@ -59,7 +59,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道个数。
+     * Set 通道个数。
      * @param TotalCount 通道个数。
      */
     public void setTotalCount(Long TotalCount) {
@@ -67,7 +67,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取（旧参数，请切换到ProxySet）通道实例信息列表。
+     * Get （旧参数，请切换到ProxySet）通道实例信息列表。 
      * @return InstanceSet （旧参数，请切换到ProxySet）通道实例信息列表。
      */
     public ProxyInfo [] getInstanceSet() {
@@ -75,7 +75,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到ProxySet）通道实例信息列表。
+     * Set （旧参数，请切换到ProxySet）通道实例信息列表。
      * @param InstanceSet （旧参数，请切换到ProxySet）通道实例信息列表。
      */
     public void setInstanceSet(ProxyInfo [] InstanceSet) {
@@ -83,7 +83,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）通道实例信息列表。
+     * Get （新参数）通道实例信息列表。 
      * @return ProxySet （新参数）通道实例信息列表。
      */
     public ProxyInfo [] getProxySet() {
@@ -91,7 +91,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）通道实例信息列表。
+     * Set （新参数）通道实例信息列表。
      * @param ProxySet （新参数）通道实例信息列表。
      */
     public void setProxySet(ProxyInfo [] ProxySet) {
@@ -99,7 +99,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

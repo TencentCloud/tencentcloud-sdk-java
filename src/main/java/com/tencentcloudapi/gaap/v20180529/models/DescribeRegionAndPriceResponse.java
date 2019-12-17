@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionAndPriceResponse  extends AbstractModel{
+public class DescribeRegionAndPriceResponse extends AbstractModel{
 
     /**
     * 源站区域总数
@@ -60,7 +60,7 @@ USD 美元
     private String RequestId;
 
     /**
-     * 获取源站区域总数
+     * Get 源站区域总数 
      * @return TotalCount 源站区域总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ USD 美元
     }
 
     /**
-     * 设置源站区域总数
+     * Set 源站区域总数
      * @param TotalCount 源站区域总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ USD 美元
     }
 
     /**
-     * 获取源站区域详情列表
+     * Get 源站区域详情列表 
      * @return DestRegionSet 源站区域详情列表
      */
     public RegionDetail [] getDestRegionSet() {
@@ -84,7 +84,7 @@ USD 美元
     }
 
     /**
-     * 设置源站区域详情列表
+     * Set 源站区域详情列表
      * @param DestRegionSet 源站区域详情列表
      */
     public void setDestRegionSet(RegionDetail [] DestRegionSet) {
@@ -92,7 +92,7 @@ USD 美元
     }
 
     /**
-     * 获取通道带宽费用梯度价格
+     * Get 通道带宽费用梯度价格 
      * @return BandwidthUnitPrice 通道带宽费用梯度价格
      */
     public BandwidthPriceGradient [] getBandwidthUnitPrice() {
@@ -100,7 +100,7 @@ USD 美元
     }
 
     /**
-     * 设置通道带宽费用梯度价格
+     * Set 通道带宽费用梯度价格
      * @param BandwidthUnitPrice 通道带宽费用梯度价格
      */
     public void setBandwidthUnitPrice(BandwidthPriceGradient [] BandwidthUnitPrice) {
@@ -108,9 +108,9 @@ USD 美元
     }
 
     /**
-     * 获取带宽价格货币类型：
+     * Get 带宽价格货币类型：
 CNY 人民币
-USD 美元
+USD 美元 
      * @return Currency 带宽价格货币类型：
 CNY 人民币
 USD 美元
@@ -120,7 +120,7 @@ USD 美元
     }
 
     /**
-     * 设置带宽价格货币类型：
+     * Set 带宽价格货币类型：
 CNY 人民币
 USD 美元
      * @param Currency 带宽价格货币类型：
@@ -132,7 +132,7 @@ USD 美元
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -140,7 +140,7 @@ USD 美元
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -148,7 +148,7 @@ USD 美元
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

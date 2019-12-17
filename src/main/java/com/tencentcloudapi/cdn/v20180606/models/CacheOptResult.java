@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CacheOptResult  extends AbstractModel{
+public class CacheOptResult extends AbstractModel{
 
     /**
     * 成功的url列表
@@ -39,8 +39,8 @@ public class CacheOptResult  extends AbstractModel{
     private String [] FailUrls;
 
     /**
-     * 获取成功的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 成功的url列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuccessUrls 成功的url列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class CacheOptResult  extends AbstractModel{
     }
 
     /**
-     * 设置成功的url列表
+     * Set 成功的url列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessUrls 成功的url列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class CacheOptResult  extends AbstractModel{
     }
 
     /**
-     * 获取失败的url列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 失败的url列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FailUrls 失败的url列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class CacheOptResult  extends AbstractModel{
     }
 
     /**
-     * 设置失败的url列表
+     * Set 失败的url列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FailUrls 失败的url列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class CacheOptResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SuccessUrls.", this.SuccessUrls);

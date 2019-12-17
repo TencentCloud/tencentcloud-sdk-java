@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentDealsCacheRequest  extends AbstractModel{
+public class DescribeAgentDealsCacheRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -86,7 +86,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     private Integer PayerMode;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -94,7 +94,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -102,7 +102,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -110,7 +110,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -118,7 +118,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下单时间范围起始点
+     * Get 下单时间范围起始点 
      * @return CreatTimeRangeStart 下单时间范围起始点
      */
     public String getCreatTimeRangeStart() {
@@ -126,7 +126,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下单时间范围起始点
+     * Set 下单时间范围起始点
      * @param CreatTimeRangeStart 下单时间范围起始点
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
@@ -134,7 +134,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下单时间范围终止点
+     * Get 下单时间范围终止点 
      * @return CreatTimeRangeEnd 下单时间范围终止点
      */
     public String getCreatTimeRangeEnd() {
@@ -142,7 +142,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下单时间范围终止点
+     * Set 下单时间范围终止点
      * @param CreatTimeRangeEnd 下单时间范围终止点
      */
     public void setCreatTimeRangeEnd(String CreatTimeRangeEnd) {
@@ -150,7 +150,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0:下单时间降序；其他：下单时间升序
+     * Get 0:下单时间降序；其他：下单时间升序 
      * @return Order 0:下单时间降序；其他：下单时间升序
      */
     public Integer getOrder() {
@@ -158,7 +158,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0:下单时间降序；其他：下单时间升序
+     * Set 0:下单时间降序；其他：下单时间升序
      * @param Order 0:下单时间降序；其他：下单时间升序
      */
     public void setOrder(Integer Order) {
@@ -166,7 +166,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中) 
      * @return Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
     public Integer getStatus() {
@@ -174,7 +174,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * Set 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      * @param Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      */
     public void setStatus(Integer Status) {
@@ -182,7 +182,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下单人账号ID列表
+     * Get 下单人账号ID列表 
      * @return OwnerUins 下单人账号ID列表
      */
     public String [] getOwnerUins() {
@@ -190,7 +190,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下单人账号ID列表
+     * Set 下单人账号ID列表
      * @param OwnerUins 下单人账号ID列表
      */
     public void setOwnerUins(String [] OwnerUins) {
@@ -198,7 +198,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取订单号列表
+     * Get 订单号列表 
      * @return DealNames 订单号列表
      */
     public String [] getDealNames() {
@@ -206,7 +206,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单号列表
+     * Set 订单号列表
      * @param DealNames 订单号列表
      */
     public void setDealNames(String [] DealNames) {
@@ -214,7 +214,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支付方式，0：自付；1：代付
+     * Get 支付方式，0：自付；1：代付 
      * @return PayerMode 支付方式，0：自付；1：代付
      */
     public Integer getPayerMode() {
@@ -222,7 +222,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支付方式，0：自付；1：代付
+     * Set 支付方式，0：自付；1：代付
      * @param PayerMode 支付方式，0：自付；1：代付
      */
     public void setPayerMode(Integer PayerMode) {
@@ -230,7 +230,7 @@ public class DescribeAgentDealsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

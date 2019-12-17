@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpUnBlockListResponse  extends AbstractModel{
+public class DescribeIpUnBlockListResponse extends AbstractModel{
 
     /**
     * 开始时间
@@ -58,7 +58,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return BeginTime 开始时间
      */
     public String getBeginTime() {
@@ -66,7 +66,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param BeginTime 开始时间
      */
     public void setBeginTime(String BeginTime) {
@@ -74,7 +74,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -82,7 +82,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -90,7 +90,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取IP解封记录
+     * Get IP解封记录 
      * @return List IP解封记录
      */
     public IpUnBlockData [] getList() {
@@ -98,7 +98,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置IP解封记录
+     * Set IP解封记录
      * @param List IP解封记录
      */
     public void setList(IpUnBlockData [] List) {
@@ -106,7 +106,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return Total 总记录数
      */
     public Long getTotal() {
@@ -114,7 +114,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param Total 总记录数
      */
     public void setTotal(Long Total) {
@@ -122,7 +122,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeIpUnBlockListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);

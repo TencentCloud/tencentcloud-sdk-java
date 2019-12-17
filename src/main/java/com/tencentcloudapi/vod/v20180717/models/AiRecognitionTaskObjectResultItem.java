@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
+public class AiRecognitionTaskObjectResultItem extends AbstractModel{
 
     /**
     * 识别的物体名称。
@@ -37,7 +37,7 @@ public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
     private AiRecognitionTaskObjectSeqmentItem [] SegmentSet;
 
     /**
-     * 获取识别的物体名称。
+     * Get 识别的物体名称。 
      * @return Name 识别的物体名称。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别的物体名称。
+     * Set 识别的物体名称。
      * @param Name 识别的物体名称。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取物体出现的片段列表。
+     * Get 物体出现的片段列表。 
      * @return SegmentSet 物体出现的片段列表。
      */
     public AiRecognitionTaskObjectSeqmentItem [] getSegmentSet() {
@@ -61,7 +61,7 @@ public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置物体出现的片段列表。
+     * Set 物体出现的片段列表。
      * @param SegmentSet 物体出现的片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskObjectSeqmentItem [] SegmentSet) {
@@ -69,7 +69,7 @@ public class AiRecognitionTaskObjectResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

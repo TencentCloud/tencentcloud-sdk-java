@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTablesRequest  extends AbstractModel{
+public class DescribeTablesRequest extends AbstractModel{
 
     /**
     * 待查询表所属应用实例ID
@@ -65,7 +65,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取待查询表所属应用实例ID
+     * Get 待查询表所属应用实例ID 
      * @return ApplicationId 待查询表所属应用实例ID
      */
     public String getApplicationId() {
@@ -73,7 +73,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待查询表所属应用实例ID
+     * Set 待查询表所属应用实例ID
      * @param ApplicationId 待查询表所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -81,7 +81,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待查询表所属大区列表
+     * Get 待查询表所属大区列表 
      * @return LogicZoneIds 待查询表所属大区列表
      */
     public String [] getLogicZoneIds() {
@@ -89,7 +89,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待查询表所属大区列表
+     * Set 待查询表所属大区列表
      * @param LogicZoneIds 待查询表所属大区列表
      */
     public void setLogicZoneIds(String [] LogicZoneIds) {
@@ -97,7 +97,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待查询表信息列表
+     * Get 待查询表信息列表 
      * @return SelectedTables 待查询表信息列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -105,7 +105,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待查询表信息列表
+     * Set 待查询表信息列表
      * @param SelectedTables 待查询表信息列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -113,7 +113,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，本接口支持：TableName，TableInstanceId
+     * Get 过滤条件，本接口支持：TableName，TableInstanceId 
      * @return Filters 过滤条件，本接口支持：TableName，TableInstanceId
      */
     public Filter [] getFilters() {
@@ -121,7 +121,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，本接口支持：TableName，TableInstanceId
+     * Set 过滤条件，本接口支持：TableName，TableInstanceId
      * @param Filters 过滤条件，本接口支持：TableName，TableInstanceId
      */
     public void setFilters(Filter [] Filters) {
@@ -129,7 +129,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -137,7 +137,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -145,7 +145,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结果列表数量
+     * Get 结果列表数量 
      * @return Limit 结果列表数量
      */
     public Long getLimit() {
@@ -153,7 +153,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结果列表数量
+     * Set 结果列表数量
      * @param Limit 结果列表数量
      */
     public void setLimit(Long Limit) {
@@ -161,7 +161,7 @@ public class DescribeTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

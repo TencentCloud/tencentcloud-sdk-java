@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricObjectMeaning  extends AbstractModel{
+public class MetricObjectMeaning extends AbstractModel{
 
     /**
     * 指标英文解释
@@ -37,7 +37,7 @@ public class MetricObjectMeaning  extends AbstractModel{
     private String Zh;
 
     /**
-     * 获取指标英文解释
+     * Get 指标英文解释 
      * @return En 指标英文解释
      */
     public String getEn() {
@@ -45,7 +45,7 @@ public class MetricObjectMeaning  extends AbstractModel{
     }
 
     /**
-     * 设置指标英文解释
+     * Set 指标英文解释
      * @param En 指标英文解释
      */
     public void setEn(String En) {
@@ -53,7 +53,7 @@ public class MetricObjectMeaning  extends AbstractModel{
     }
 
     /**
-     * 获取指标中文解释
+     * Get 指标中文解释 
      * @return Zh 指标中文解释
      */
     public String getZh() {
@@ -61,7 +61,7 @@ public class MetricObjectMeaning  extends AbstractModel{
     }
 
     /**
-     * 设置指标中文解释
+     * Set 指标中文解释
      * @param Zh 指标中文解释
      */
     public void setZh(String Zh) {
@@ -69,7 +69,7 @@ public class MetricObjectMeaning  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "En", this.En);

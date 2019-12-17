@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
+public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间，北京时间，
@@ -69,8 +69,8 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     private String MainlandOrOversea;
 
     /**
-     * 获取起始时间，北京时间，
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间，北京时间，
+格式：yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      */
@@ -79,7 +79,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间，北京时间，
+     * Set 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -89,9 +89,9 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，北京时间，
+     * Get 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支持最近1天的数据查询。 
      * @return EndTime 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
@@ -101,7 +101,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间，
+     * Set 结束时间，北京时间，
 格式：yyyy-mm-dd HH:MM:SS。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      * @param EndTime 结束时间，北京时间，
@@ -113,8 +113,8 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询粒度：
-1-1分钟粒度。
+     * Get 查询粒度：
+1-1分钟粒度。 
      * @return Granularity 查询粒度：
 1-1分钟粒度。
      */
@@ -123,7 +123,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询粒度：
+     * Set 查询粒度：
 1-1分钟粒度。
      * @param Granularity 查询粒度：
 1-1分钟粒度。
@@ -133,7 +133,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
+     * Get 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。 
      * @return StatType 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
      */
     public String getStatType() {
@@ -141,7 +141,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
+     * Set 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
      * @param StatType 是，可选值包括”4xx”,”5xx”，支持”4xx,5xx”等这种混合模式。
      */
     public void setStatType(String StatType) {
@@ -149,7 +149,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名列表。
+     * Get 播放域名列表。 
      * @return PlayDomains 播放域名列表。
      */
     public String [] getPlayDomains() {
@@ -157,7 +157,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名列表。
+     * Set 播放域名列表。
      * @param PlayDomains 播放域名列表。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -165,7 +165,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Get 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。 
      * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public String getMainlandOrOversea() {
@@ -173,7 +173,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Set 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -181,7 +181,7 @@ public class DescribePlayErrorCodeDetailInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

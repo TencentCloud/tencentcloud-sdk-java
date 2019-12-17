@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomLayout  extends AbstractModel{
+public class CustomLayout extends AbstractModel{
 
     /**
     * 混流画布参数
@@ -37,7 +37,7 @@ public class CustomLayout  extends AbstractModel{
     private StreamLayout InputStreamList;
 
     /**
-     * 获取混流画布参数
+     * Get 混流画布参数 
      * @return Canvas 混流画布参数
      */
     public Canvas getCanvas() {
@@ -45,7 +45,7 @@ public class CustomLayout  extends AbstractModel{
     }
 
     /**
-     * 设置混流画布参数
+     * Set 混流画布参数
      * @param Canvas 混流画布参数
      */
     public void setCanvas(Canvas Canvas) {
@@ -53,7 +53,7 @@ public class CustomLayout  extends AbstractModel{
     }
 
     /**
-     * 获取流布局参数
+     * Get 流布局参数 
      * @return InputStreamList 流布局参数
      */
     public StreamLayout getInputStreamList() {
@@ -61,7 +61,7 @@ public class CustomLayout  extends AbstractModel{
     }
 
     /**
-     * 设置流布局参数
+     * Set 流布局参数
      * @param InputStreamList 流布局参数
      */
     public void setInputStreamList(StreamLayout InputStreamList) {
@@ -69,7 +69,7 @@ public class CustomLayout  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Canvas.", this.Canvas);

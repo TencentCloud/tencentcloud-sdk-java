@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppRequest  extends AbstractModel{
+public class DescribeAppRequest extends AbstractModel{
 
     /**
     * 物联卡应用ID
@@ -30,7 +30,7 @@ public class DescribeAppRequest  extends AbstractModel{
     private Integer Sdkappid;
 
     /**
-     * 获取物联卡应用ID
+     * Get 物联卡应用ID 
      * @return Sdkappid 物联卡应用ID
      */
     public Integer getSdkappid() {
@@ -38,7 +38,7 @@ public class DescribeAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物联卡应用ID
+     * Set 物联卡应用ID
      * @param Sdkappid 物联卡应用ID
      */
     public void setSdkappid(Integer Sdkappid) {
@@ -46,7 +46,7 @@ public class DescribeAppRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

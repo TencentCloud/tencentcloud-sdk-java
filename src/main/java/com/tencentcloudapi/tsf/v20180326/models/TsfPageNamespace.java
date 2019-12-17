@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TsfPageNamespace  extends AbstractModel{
+public class TsfPageNamespace extends AbstractModel{
 
     /**
     * 命名空间总条数
@@ -39,8 +39,8 @@ public class TsfPageNamespace  extends AbstractModel{
     private Namespace [] Content;
 
     /**
-     * 获取命名空间总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间总条数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 命名空间总条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class TsfPageNamespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间总条数
+     * Set 命名空间总条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 命名空间总条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class TsfPageNamespace  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 命名空间列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class TsfPageNamespace  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间列表
+     * Set 命名空间列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 命名空间列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class TsfPageNamespace  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

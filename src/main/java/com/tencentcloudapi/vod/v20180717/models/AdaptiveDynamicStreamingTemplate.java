@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
+public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
 
     /**
     * 转自适应码流模板唯一标识。
@@ -119,7 +119,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取转自适应码流模板唯一标识。
+     * Get 转自适应码流模板唯一标识。 
      * @return Definition 转自适应码流模板唯一标识。
      */
     public Long getDefinition() {
@@ -127,7 +127,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流模板唯一标识。
+     * Set 转自适应码流模板唯一标识。
      * @param Definition 转自适应码流模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -135,9 +135,9 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，取值范围：
+     * Get 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -147,7 +147,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，取值范围：
+     * Set 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，取值范围：
@@ -159,7 +159,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取转自适应码流模板名称。
+     * Get 转自适应码流模板名称。 
      * @return Name 转自适应码流模板名称。
      */
     public String getName() {
@@ -167,7 +167,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流模板名称。
+     * Set 转自适应码流模板名称。
      * @param Name 转自适应码流模板名称。
      */
     public void setName(String Name) {
@@ -175,7 +175,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取转自适应码流模板描述信息。
+     * Get 转自适应码流模板描述信息。 
      * @return Comment 转自适应码流模板描述信息。
      */
     public String getComment() {
@@ -183,7 +183,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流模板描述信息。
+     * Set 转自适应码流模板描述信息。
      * @param Comment 转自适应码流模板描述信息。
      */
     public void setComment(String Comment) {
@@ -191,9 +191,9 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取打包类型，取值范围：
+     * Get 打包类型，取值范围：
 <li>hls；</li>
-<li>dash。</li>
+<li>dash。</li> 
      * @return PackageType 打包类型，取值范围：
 <li>hls；</li>
 <li>dash。</li>
@@ -203,7 +203,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置打包类型，取值范围：
+     * Set 打包类型，取值范围：
 <li>hls；</li>
 <li>dash。</li>
      * @param PackageType 打包类型，取值范围：
@@ -215,11 +215,11 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取DRM 类型，取值范围：
+     * Get DRM 类型，取值范围：
 <li>FairPlay；</li>
 <li>SimpleAES；</li>
 <li>Widevine。</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+如果取值为空字符串，代表不对视频做 DRM 保护。 
      * @return DrmType DRM 类型，取值范围：
 <li>FairPlay；</li>
 <li>SimpleAES；</li>
@@ -231,7 +231,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置DRM 类型，取值范围：
+     * Set DRM 类型，取值范围：
 <li>FairPlay；</li>
 <li>SimpleAES；</li>
 <li>Widevine。</li>
@@ -247,7 +247,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取视频轨模板列表。
+     * Get 视频轨模板列表。 
      * @return VideoTrackTemplateSet 视频轨模板列表。
      */
     public VideoTrackTemplateInfo [] getVideoTrackTemplateSet() {
@@ -255,7 +255,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置视频轨模板列表。
+     * Set 视频轨模板列表。
      * @param VideoTrackTemplateSet 视频轨模板列表。
      */
     public void setVideoTrackTemplateSet(VideoTrackTemplateInfo [] VideoTrackTemplateSet) {
@@ -263,7 +263,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取音频轨模板列表。
+     * Get 音频轨模板列表。 
      * @return AudioTrackTemplateSet 音频轨模板列表。
      */
     public AudioTrackTemplateInfo [] getAudioTrackTemplateSet() {
@@ -271,7 +271,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置音频轨模板列表。
+     * Set 音频轨模板列表。
      * @param AudioTrackTemplateSet 音频轨模板列表。
      */
     public void setAudioTrackTemplateSet(AudioTrackTemplateInfo [] AudioTrackTemplateSet) {
@@ -279,9 +279,9 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取是否禁止视频低码率转高码率，取值范围：
+     * Get 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
-<li>1：是。</li>
+<li>1：是。</li> 
      * @return DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -291,7 +291,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置是否禁止视频低码率转高码率，取值范围：
+     * Set 是否禁止视频低码率转高码率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
      * @param DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
@@ -303,9 +303,9 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取是否禁止视频分辨率转高分辨率，取值范围：
+     * Get 是否禁止视频分辨率转高分辨率，取值范围：
 <li>0：否，</li>
-<li>1：是。</li>
+<li>1：是。</li> 
      * @return DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
@@ -315,7 +315,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置是否禁止视频分辨率转高分辨率，取值范围：
+     * Set 是否禁止视频分辨率转高分辨率，取值范围：
 <li>0：否，</li>
 <li>1：是。</li>
      * @param DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
@@ -327,7 +327,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -335,7 +335,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -343,7 +343,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -351,7 +351,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -359,7 +359,7 @@ public class AdaptiveDynamicStreamingTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInterfacesRequest  extends AbstractModel{
+public class CreateInterfacesRequest extends AbstractModel{
 
     /**
     * 物理机实例ID列表
@@ -44,7 +44,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取物理机实例ID列表
+     * Get 物理机实例ID列表 
      * @return InstanceIds 物理机实例ID列表
      */
     public String [] getInstanceIds() {
@@ -52,7 +52,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机实例ID列表
+     * Set 物理机实例ID列表
      * @param InstanceIds 物理机实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -60,7 +60,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -84,7 +84,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -92,7 +92,7 @@ public class CreateInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

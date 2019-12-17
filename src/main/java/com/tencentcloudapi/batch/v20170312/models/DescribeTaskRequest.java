@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskRequest  extends AbstractModel{
+public class DescribeTaskRequest extends AbstractModel{
 
     /**
     * 作业ID
@@ -59,7 +59,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -67,7 +67,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -75,7 +75,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -83,7 +83,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -91,7 +91,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -99,7 +99,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -107,7 +107,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量。默认取值100，最大取值1000。
+     * Get 返回数量。默认取值100，最大取值1000。 
      * @return Limit 返回数量。默认取值100，最大取值1000。
      */
     public Integer getLimit() {
@@ -115,7 +115,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量。默认取值100，最大取值1000。
+     * Set 返回数量。默认取值100，最大取值1000。
      * @param Limit 返回数量。默认取值100，最大取值1000。
      */
     public void setLimit(Integer Limit) {
@@ -123,8 +123,8 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+     * Get 过滤条件，详情如下：
+<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li> 
      * @return Filters 过滤条件，详情如下：
 <li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
      */
@@ -133,7 +133,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，详情如下：
+     * Set 过滤条件，详情如下：
 <li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
      * @param Filters 过滤条件，详情如下：
 <li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
@@ -143,7 +143,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

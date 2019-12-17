@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRewriteRequest  extends AbstractModel{
+public class DescribeRewriteRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID
@@ -44,7 +44,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     private String [] SourceLocationIds;
 
     /**
-     * 获取负载均衡实例ID
+     * Get 负载均衡实例ID 
      * @return LoadBalancerId 负载均衡实例ID
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID
+     * Set 负载均衡实例ID
      * @param LoadBalancerId 负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器ID数组
+     * Get 负载均衡监听器ID数组 
      * @return SourceListenerIds 负载均衡监听器ID数组
      */
     public String [] getSourceListenerIds() {
@@ -68,7 +68,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器ID数组
+     * Set 负载均衡监听器ID数组
      * @param SourceListenerIds 负载均衡监听器ID数组
      */
     public void setSourceListenerIds(String [] SourceListenerIds) {
@@ -76,7 +76,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡转发规则的ID数组
+     * Get 负载均衡转发规则的ID数组 
      * @return SourceLocationIds 负载均衡转发规则的ID数组
      */
     public String [] getSourceLocationIds() {
@@ -84,7 +84,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡转发规则的ID数组
+     * Set 负载均衡转发规则的ID数组
      * @param SourceLocationIds 负载均衡转发规则的ID数组
      */
     public void setSourceLocationIds(String [] SourceLocationIds) {
@@ -92,7 +92,7 @@ public class DescribeRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoVipInfo  extends AbstractModel{
+public class RoVipInfo extends AbstractModel{
 
     /**
     * 只读vip状态
@@ -58,7 +58,7 @@ public class RoVipInfo  extends AbstractModel{
     private String RoVip;
 
     /**
-     * 获取只读vip状态
+     * Get 只读vip状态 
      * @return RoVipStatus 只读vip状态
      */
     public Integer getRoVipStatus() {
@@ -66,7 +66,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip状态
+     * Set 只读vip状态
      * @param RoVipStatus 只读vip状态
      */
     public void setRoVipStatus(Integer RoVipStatus) {
@@ -74,7 +74,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读vip的子网
+     * Get 只读vip的子网 
      * @return RoSubnetId 只读vip的子网
      */
     public Integer getRoSubnetId() {
@@ -82,7 +82,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip的子网
+     * Set 只读vip的子网
      * @param RoSubnetId 只读vip的子网
      */
     public void setRoSubnetId(Integer RoSubnetId) {
@@ -90,7 +90,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读vip的私有网络
+     * Get 只读vip的私有网络 
      * @return RoVpcId 只读vip的私有网络
      */
     public Integer getRoVpcId() {
@@ -98,7 +98,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip的私有网络
+     * Set 只读vip的私有网络
      * @param RoVpcId 只读vip的私有网络
      */
     public void setRoVpcId(Integer RoVpcId) {
@@ -106,7 +106,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读vip的端口号
+     * Get 只读vip的端口号 
      * @return RoVport 只读vip的端口号
      */
     public Integer getRoVport() {
@@ -114,7 +114,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip的端口号
+     * Set 只读vip的端口号
      * @param RoVport 只读vip的端口号
      */
     public void setRoVport(Integer RoVport) {
@@ -122,7 +122,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取只读vip
+     * Get 只读vip 
      * @return RoVip 只读vip
      */
     public String getRoVip() {
@@ -130,7 +130,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只读vip
+     * Set 只读vip
      * @param RoVip 只读vip
      */
     public void setRoVip(String RoVip) {
@@ -138,7 +138,7 @@ public class RoVipInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoVipStatus", this.RoVipStatus);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceData  extends AbstractModel{
+public class DeviceData extends AbstractModel{
 
     /**
     * 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
@@ -55,8 +55,8 @@ public class DeviceData  extends AbstractModel{
     private String DevicePsk;
 
     /**
-     * 获取设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -65,7 +65,7 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
+     * Set 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,8 +75,8 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceName 设备名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -85,7 +85,7 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称。
+     * Set 设备名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 设备名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,8 +95,8 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 获取设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 设置设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
+     * Set 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 获取对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对称加密密钥，base64编码。采用对称加密时返回该参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 设置对称加密密钥，base64编码。采用对称加密时返回该参数。
+     * Set 对称加密密钥，base64编码。采用对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ public class DeviceData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceCert", this.DeviceCert);

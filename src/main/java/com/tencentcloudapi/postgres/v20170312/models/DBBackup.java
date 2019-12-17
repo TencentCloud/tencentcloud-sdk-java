@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBBackup  extends AbstractModel{
+public class DBBackup extends AbstractModel{
 
     /**
     * 备份文件唯一标识
@@ -100,7 +100,7 @@ public class DBBackup  extends AbstractModel{
     private String ExternalAddr;
 
     /**
-     * 获取备份文件唯一标识
+     * Get 备份文件唯一标识 
      * @return Id 备份文件唯一标识
      */
     public Integer getId() {
@@ -108,7 +108,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件唯一标识
+     * Set 备份文件唯一标识
      * @param Id 备份文件唯一标识
      */
     public void setId(Integer Id) {
@@ -116,7 +116,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取文件生成的开始时间
+     * Get 文件生成的开始时间 
      * @return StartTime 文件生成的开始时间
      */
     public String getStartTime() {
@@ -124,7 +124,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置文件生成的开始时间
+     * Set 文件生成的开始时间
      * @param StartTime 文件生成的开始时间
      */
     public void setStartTime(String StartTime) {
@@ -132,7 +132,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取文件生成的结束时间
+     * Get 文件生成的结束时间 
      * @return EndTime 文件生成的结束时间
      */
     public String getEndTime() {
@@ -140,7 +140,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置文件生成的结束时间
+     * Set 文件生成的结束时间
      * @param EndTime 文件生成的结束时间
      */
     public void setEndTime(String EndTime) {
@@ -148,7 +148,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小(K)
+     * Get 文件大小(K) 
      * @return Size 文件大小(K)
      */
     public Integer getSize() {
@@ -156,7 +156,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小(K)
+     * Set 文件大小(K)
      * @param Size 文件大小(K)
      */
     public void setSize(Integer Size) {
@@ -164,7 +164,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取策略（0-实例备份；1-多库备份）
+     * Get 策略（0-实例备份；1-多库备份） 
      * @return Strategy 策略（0-实例备份；1-多库备份）
      */
     public Integer getStrategy() {
@@ -172,7 +172,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置策略（0-实例备份；1-多库备份）
+     * Set 策略（0-实例备份；1-多库备份）
      * @param Strategy 策略（0-实例备份；1-多库备份）
      */
     public void setStrategy(Integer Strategy) {
@@ -180,7 +180,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取类型（0-定时）
+     * Get 类型（0-定时） 
      * @return Way 类型（0-定时）
      */
     public Integer getWay() {
@@ -188,7 +188,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置类型（0-定时）
+     * Set 类型（0-定时）
      * @param Way 类型（0-定时）
      */
     public void setWay(Integer Way) {
@@ -196,7 +196,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取备份方式（1-完整）
+     * Get 备份方式（1-完整） 
      * @return Type 备份方式（1-完整）
      */
     public Integer getType() {
@@ -204,7 +204,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置备份方式（1-完整）
+     * Set 备份方式（1-完整）
      * @param Type 备份方式（1-完整）
      */
     public void setType(Integer Type) {
@@ -212,7 +212,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取状态（1-创建中；2-成功；3-失败）
+     * Get 状态（1-创建中；2-成功；3-失败） 
      * @return Status 状态（1-创建中；2-成功；3-失败）
      */
     public Integer getStatus() {
@@ -220,7 +220,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置状态（1-创建中；2-成功；3-失败）
+     * Set 状态（1-创建中；2-成功；3-失败）
      * @param Status 状态（1-创建中；2-成功；3-失败）
      */
     public void setStatus(Integer Status) {
@@ -228,7 +228,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取DB列表
+     * Get DB列表 
      * @return DbList DB列表
      */
     public String [] getDbList() {
@@ -236,7 +236,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置DB列表
+     * Set DB列表
      * @param DbList DB列表
      */
     public void setDbList(String [] DbList) {
@@ -244,7 +244,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取内网下载地址
+     * Get 内网下载地址 
      * @return InternalAddr 内网下载地址
      */
     public String getInternalAddr() {
@@ -252,7 +252,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置内网下载地址
+     * Set 内网下载地址
      * @param InternalAddr 内网下载地址
      */
     public void setInternalAddr(String InternalAddr) {
@@ -260,7 +260,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 获取外网下载地址
+     * Get 外网下载地址 
      * @return ExternalAddr 外网下载地址
      */
     public String getExternalAddr() {
@@ -268,7 +268,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 设置外网下载地址
+     * Set 外网下载地址
      * @param ExternalAddr 外网下载地址
      */
     public void setExternalAddr(String ExternalAddr) {
@@ -276,7 +276,7 @@ public class DBBackup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

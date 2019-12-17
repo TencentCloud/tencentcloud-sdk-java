@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTerrorDetect  extends AbstractModel{
+public class ImageTerrorDetect extends AbstractModel{
 
     /**
     * 恶意类型
@@ -60,9 +60,9 @@ public class ImageTerrorDetect  extends AbstractModel{
     private Long Score;
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
-24001：暴恐
+24001：暴恐 
      * @return EvilType 恶意类型
 100：正常
 24001：暴恐
@@ -72,7 +72,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 24001：暴恐
      * @param EvilType 恶意类型
@@ -84,7 +84,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 获取处置判定 0：正常 1：可疑
+     * Get 处置判定 0：正常 1：可疑 
      * @return HitFlag 处置判定 0：正常 1：可疑
      */
     public Long getHitFlag() {
@@ -92,7 +92,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 设置处置判定 0：正常 1：可疑
+     * Set 处置判定 0：正常 1：可疑
      * @param HitFlag 处置判定 0：正常 1：可疑
      */
     public void setHitFlag(Long HitFlag) {
@@ -100,7 +100,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 获取关键词明细
+     * Get 关键词明细 
      * @return Keywords 关键词明细
      */
     public String [] getKeywords() {
@@ -108,7 +108,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 设置关键词明细
+     * Set 关键词明细
      * @param Keywords 关键词明细
      */
     public void setKeywords(String [] Keywords) {
@@ -116,7 +116,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 获取暴恐标签：返回暴恐特征中文描述
+     * Get 暴恐标签：返回暴恐特征中文描述 
      * @return Labels 暴恐标签：返回暴恐特征中文描述
      */
     public String [] getLabels() {
@@ -124,7 +124,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 设置暴恐标签：返回暴恐特征中文描述
+     * Set 暴恐标签：返回暴恐特征中文描述
      * @param Labels 暴恐标签：返回暴恐特征中文描述
      */
     public void setLabels(String [] Labels) {
@@ -132,7 +132,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 获取暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+     * Get 暴恐分：分值范围0--100，分数越高暴恐倾向越明显 
      * @return Score 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
      */
     public Long getScore() {
@@ -140,7 +140,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 设置暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+     * Set 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
      * @param Score 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
      */
     public void setScore(Long Score) {
@@ -148,7 +148,7 @@ public class ImageTerrorDetect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);

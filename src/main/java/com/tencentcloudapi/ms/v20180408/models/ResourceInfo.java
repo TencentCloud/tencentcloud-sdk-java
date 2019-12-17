@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceInfo  extends AbstractModel{
+public class ResourceInfo extends AbstractModel{
 
     /**
     * 用户购买的资源id，全局唯一
@@ -72,7 +72,7 @@ public class ResourceInfo  extends AbstractModel{
     private String ResourceName;
 
     /**
-     * 获取用户购买的资源id，全局唯一
+     * Get 用户购买的资源id，全局唯一 
      * @return ResourceId 用户购买的资源id，全局唯一
      */
     public String getResourceId() {
@@ -80,7 +80,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户购买的资源id，全局唯一
+     * Set 用户购买的资源id，全局唯一
      * @param ResourceId 用户购买的资源id，全局唯一
      */
     public void setResourceId(String ResourceId) {
@@ -88,7 +88,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
+     * Get 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736 
      * @return Pid 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      */
     public Integer getPid() {
@@ -96,7 +96,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
+     * Set 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      * @param Pid 资源的pid，MTP加固-12767，应用加固-12750 MTP反作弊-12766 源代码混淆-12736
      */
     public void setPid(Integer Pid) {
@@ -104,7 +104,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取购买时间戳
+     * Get 购买时间戳 
      * @return CreateTime 购买时间戳
      */
     public Integer getCreateTime() {
@@ -112,7 +112,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置购买时间戳
+     * Set 购买时间戳
      * @param CreateTime 购买时间戳
      */
     public void setCreateTime(Integer CreateTime) {
@@ -120,7 +120,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间戳
+     * Get 到期时间戳 
      * @return ExpireTime 到期时间戳
      */
     public Integer getExpireTime() {
@@ -128,7 +128,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间戳
+     * Set 到期时间戳
      * @param ExpireTime 到期时间戳
      */
     public void setExpireTime(Integer ExpireTime) {
@@ -136,7 +136,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0-未绑定，1-已绑定
+     * Get 0-未绑定，1-已绑定 
      * @return IsBind 0-未绑定，1-已绑定
      */
     public Integer getIsBind() {
@@ -144,7 +144,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0-未绑定，1-已绑定
+     * Set 0-未绑定，1-已绑定
      * @param IsBind 0-未绑定，1-已绑定
      */
     public void setIsBind(Integer IsBind) {
@@ -152,7 +152,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户绑定app的基本信息
+     * Get 用户绑定app的基本信息 
      * @return BindInfo 用户绑定app的基本信息
      */
     public BindInfo getBindInfo() {
@@ -160,7 +160,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户绑定app的基本信息
+     * Set 用户绑定app的基本信息
      * @param BindInfo 用户绑定app的基本信息
      */
     public void setBindInfo(BindInfo BindInfo) {
@@ -168,7 +168,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源名称，如应用加固，漏洞扫描
+     * Get 资源名称，如应用加固，漏洞扫描 
      * @return ResourceName 资源名称，如应用加固，漏洞扫描
      */
     public String getResourceName() {
@@ -176,7 +176,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源名称，如应用加固，漏洞扫描
+     * Set 资源名称，如应用加固，漏洞扫描
      * @param ResourceName 资源名称，如应用加固，漏洞扫描
      */
     public void setResourceName(String ResourceName) {
@@ -184,7 +184,7 @@ public class ResourceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

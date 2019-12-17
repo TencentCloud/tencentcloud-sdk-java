@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteListenerRequest  extends AbstractModel{
+public class DeleteListenerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -37,7 +37,7 @@ public class DeleteListenerRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class DeleteListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class DeleteListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的监听器 ID
+     * Get 要删除的监听器 ID 
      * @return ListenerId 要删除的监听器 ID
      */
     public String getListenerId() {
@@ -61,7 +61,7 @@ public class DeleteListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的监听器 ID
+     * Set 要删除的监听器 ID
      * @param ListenerId 要删除的监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -69,7 +69,7 @@ public class DeleteListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

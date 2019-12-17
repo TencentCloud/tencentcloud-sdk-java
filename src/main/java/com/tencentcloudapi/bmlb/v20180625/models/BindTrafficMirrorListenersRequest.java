@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindTrafficMirrorListenersRequest  extends AbstractModel{
+public class BindTrafficMirrorListenersRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -37,7 +37,7 @@ public class BindTrafficMirrorListenersRequest  extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -45,7 +45,7 @@ public class BindTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -53,7 +53,7 @@ public class BindTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。 
      * @return ListenerIds 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
      */
     public String [] getListenerIds() {
@@ -61,7 +61,7 @@ public class BindTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
      * @param ListenerIds 七层监听器实例ID数组，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -69,7 +69,7 @@ public class BindTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

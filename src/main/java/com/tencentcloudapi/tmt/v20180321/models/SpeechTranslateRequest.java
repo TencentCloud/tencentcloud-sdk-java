@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpeechTranslateRequest  extends AbstractModel{
+public class SpeechTranslateRequest extends AbstractModel{
 
     /**
     * 一段完整的语音对应一个SessionUuid
@@ -86,7 +86,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     private String Mode;
 
     /**
-     * 获取一段完整的语音对应一个SessionUuid
+     * Get 一段完整的语音对应一个SessionUuid 
      * @return SessionUuid 一段完整的语音对应一个SessionUuid
      */
     public String getSessionUuid() {
@@ -94,7 +94,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一段完整的语音对应一个SessionUuid
+     * Set 一段完整的语音对应一个SessionUuid
      * @param SessionUuid 一段完整的语音对应一个SessionUuid
      */
     public void setSessionUuid(String SessionUuid) {
@@ -102,7 +102,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
      * @return Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getSource() {
@@ -110,7 +110,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setSource(String Source) {
@@ -118,7 +118,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
      * @return Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getTarget() {
@@ -126,7 +126,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param Target 翻译目标语⾔言类型 ，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setTarget(String Target) {
@@ -134,7 +134,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取pcm : 146   amr : 33554432   mp3 : 83886080
+     * Get pcm : 146   amr : 33554432   mp3 : 83886080 
      * @return AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
      */
     public Integer getAudioFormat() {
@@ -142,7 +142,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置pcm : 146   amr : 33554432   mp3 : 83886080
+     * Set pcm : 146   amr : 33554432   mp3 : 83886080
      * @param AudioFormat pcm : 146   amr : 33554432   mp3 : 83886080
      */
     public void setAudioFormat(Integer AudioFormat) {
@@ -150,7 +150,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音分片的序号，从0开始
+     * Get 语音分片的序号，从0开始 
      * @return Seq 语音分片的序号，从0开始
      */
     public Integer getSeq() {
@@ -158,7 +158,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音分片的序号，从0开始
+     * Set 语音分片的序号，从0开始
      * @param Seq 语音分片的序号，从0开始
      */
     public void setSeq(Integer Seq) {
@@ -166,7 +166,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否最后一片语音分片，0-否，1-是
+     * Get 是否最后一片语音分片，0-否，1-是 
      * @return IsEnd 是否最后一片语音分片，0-否，1-是
      */
     public Integer getIsEnd() {
@@ -174,7 +174,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否最后一片语音分片，0-否，1-是
+     * Set 是否最后一片语音分片，0-否，1-是
      * @param IsEnd 是否最后一片语音分片，0-否，1-是
      */
     public void setIsEnd(Integer IsEnd) {
@@ -182,7 +182,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * Get 语音分片内容的base64字符串，音频内容应含有效并可识别的文本 
      * @return Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      */
     public String getData() {
@@ -190,7 +190,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音分片内容的base64字符串，音频内容应含有效并可识别的文本
+     * Set 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      * @param Data 语音分片内容的base64字符串，音频内容应含有效并可识别的文本
      */
     public void setData(String Data) {
@@ -198,7 +198,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * Get 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0 
      * @return ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public Integer getProjectId() {
@@ -206,7 +206,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * Set 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public void setProjectId(Integer ProjectId) {
@@ -214,7 +214,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别模式，该参数已废弃
+     * Get 识别模式，该参数已废弃 
      * @return Mode 识别模式，该参数已废弃
      */
     public String getMode() {
@@ -222,7 +222,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别模式，该参数已废弃
+     * Set 识别模式，该参数已废弃
      * @param Mode 识别模式，该参数已废弃
      */
     public void setMode(String Mode) {
@@ -230,7 +230,7 @@ public class SpeechTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionUuid", this.SessionUuid);

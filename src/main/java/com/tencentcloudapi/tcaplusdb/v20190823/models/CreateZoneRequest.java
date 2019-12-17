@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateZoneRequest  extends AbstractModel{
+public class CreateZoneRequest extends AbstractModel{
 
     /**
     * 大区所属应用实例ID
@@ -44,7 +44,7 @@ public class CreateZoneRequest  extends AbstractModel{
     private String LogicZoneId;
 
     /**
-     * 获取大区所属应用实例ID
+     * Get 大区所属应用实例ID 
      * @return ApplicationId 大区所属应用实例ID
      */
     public String getApplicationId() {
@@ -52,7 +52,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区所属应用实例ID
+     * Set 大区所属应用实例ID
      * @param ApplicationId 大区所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -60,7 +60,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大区名称，可以采用中文、英文或数字字符，长度不能超过30
+     * Get 大区名称，可以采用中文、英文或数字字符，长度不能超过30 
      * @return ZoneName 大区名称，可以采用中文、英文或数字字符，长度不能超过30
      */
     public String getZoneName() {
@@ -68,7 +68,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区名称，可以采用中文、英文或数字字符，长度不能超过30
+     * Set 大区名称，可以采用中文、英文或数字字符，长度不能超过30
      * @param ZoneName 大区名称，可以采用中文、英文或数字字符，长度不能超过30
      */
     public void setZoneName(String ZoneName) {
@@ -76,7 +76,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式
+     * Get 大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式 
      * @return LogicZoneId 大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式
      */
     public String getLogicZoneId() {
@@ -84,7 +84,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式
+     * Set 大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式
      * @param LogicZoneId 大区ID，可以由用户指定，但在同一个App内不能重复，如果不指定则采用自增的模式
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -92,7 +92,7 @@ public class CreateZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

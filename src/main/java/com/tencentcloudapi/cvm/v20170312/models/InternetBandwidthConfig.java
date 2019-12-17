@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InternetBandwidthConfig  extends AbstractModel{
+public class InternetBandwidthConfig extends AbstractModel{
 
     /**
     * 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
@@ -44,7 +44,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     private InternetAccessible InternetAccessible;
 
     /**
-     * 获取开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return StartTime 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getStartTime() {
@@ -52,7 +52,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param StartTime 开始时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setStartTime(String StartTime) {
@@ -60,7 +60,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return EndTime 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getEndTime() {
@@ -68,7 +68,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param EndTime 结束时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setEndTime(String EndTime) {
@@ -76,7 +76,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例带宽信息。
+     * Get 实例带宽信息。 
      * @return InternetAccessible 实例带宽信息。
      */
     public InternetAccessible getInternetAccessible() {
@@ -84,7 +84,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例带宽信息。
+     * Set 实例带宽信息。
      * @param InternetAccessible 实例带宽信息。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -92,7 +92,7 @@ public class InternetBandwidthConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

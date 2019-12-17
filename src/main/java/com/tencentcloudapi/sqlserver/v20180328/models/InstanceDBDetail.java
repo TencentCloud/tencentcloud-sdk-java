@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceDBDetail  extends AbstractModel{
+public class InstanceDBDetail extends AbstractModel{
 
     /**
     * 实例id
@@ -37,7 +37,7 @@ public class InstanceDBDetail  extends AbstractModel{
     private DBDetail [] DBDetails;
 
     /**
-     * 获取实例id
+     * Get 实例id 
      * @return InstanceId 实例id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class InstanceDBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例id
+     * Set 实例id
      * @param InstanceId 实例id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class InstanceDBDetail  extends AbstractModel{
     }
 
     /**
-     * 获取数据库信息列表
+     * Get 数据库信息列表 
      * @return DBDetails 数据库信息列表
      */
     public DBDetail [] getDBDetails() {
@@ -61,7 +61,7 @@ public class InstanceDBDetail  extends AbstractModel{
     }
 
     /**
-     * 设置数据库信息列表
+     * Set 数据库信息列表
      * @param DBDetails 数据库信息列表
      */
     public void setDBDetails(DBDetail [] DBDetails) {
@@ -69,7 +69,7 @@ public class InstanceDBDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

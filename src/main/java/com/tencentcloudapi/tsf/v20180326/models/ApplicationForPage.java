@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplicationForPage  extends AbstractModel{
+public class ApplicationForPage extends AbstractModel{
 
     /**
     * 应用ID
@@ -103,8 +103,8 @@ public class ApplicationForPage  extends AbstractModel{
     private String ApplicationRuntimeType;
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取应用描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationDesc 应用描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用描述
+     * Set 应用描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationDesc 应用描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,8 +163,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,7 +173,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,8 +183,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceType 微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置微服务类型
+     * Set 微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,8 +203,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取编程语言
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 编程语言
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProgLang 编程语言
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置编程语言
+     * Set 编程语言
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgLang 编程语言
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取应用资源类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationResourceType 应用资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用资源类型
+     * Set 应用资源类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationResourceType 应用资源类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 获取应用runtime类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用runtime类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationRuntimeType 应用runtime类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 设置应用runtime类型
+     * Set 应用runtime类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationRuntimeType 应用runtime类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,7 +303,7 @@ public class ApplicationForPage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

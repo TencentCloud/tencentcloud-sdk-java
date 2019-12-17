@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabaseFunction  extends AbstractModel{
+public class DatabaseFunction extends AbstractModel{
 
     /**
     * 函数名称
@@ -30,7 +30,7 @@ public class DatabaseFunction  extends AbstractModel{
     private String Func;
 
     /**
-     * 获取函数名称
+     * Get 函数名称 
      * @return Func 函数名称
      */
     public String getFunc() {
@@ -38,7 +38,7 @@ public class DatabaseFunction  extends AbstractModel{
     }
 
     /**
-     * 设置函数名称
+     * Set 函数名称
      * @param Func 函数名称
      */
     public void setFunc(String Func) {
@@ -46,7 +46,7 @@ public class DatabaseFunction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Func", this.Func);

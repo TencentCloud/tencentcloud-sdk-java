@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySyncJobRequest  extends AbstractModel{
+public class ModifySyncJobRequest extends AbstractModel{
 
     /**
     * 待修改的灾备同步任务ID
@@ -53,7 +53,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     private String DatabaseInfo;
 
     /**
-     * 获取待修改的灾备同步任务ID
+     * Get 待修改的灾备同步任务ID 
      * @return JobId 待修改的灾备同步任务ID
      */
     public String getJobId() {
@@ -61,7 +61,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的灾备同步任务ID
+     * Set 待修改的灾备同步任务ID
      * @param JobId 待修改的灾备同步任务ID
      */
     public void setJobId(String JobId) {
@@ -69,7 +69,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取灾备同步任务名称
+     * Get 灾备同步任务名称 
      * @return JobName 灾备同步任务名称
      */
     public String getJobName() {
@@ -77,7 +77,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务名称
+     * Set 灾备同步任务名称
      * @param JobName 灾备同步任务名称
      */
     public void setJobName(String JobName) {
@@ -85,7 +85,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取灾备同步任务配置选项
+     * Get 灾备同步任务配置选项 
      * @return SyncOption 灾备同步任务配置选项
      */
     public SyncOption getSyncOption() {
@@ -93,7 +93,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务配置选项
+     * Set 灾备同步任务配置选项
      * @param SyncOption 灾备同步任务配置选项
      */
     public void setSyncOption(SyncOption SyncOption) {
@@ -101,9 +101,9 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+     * Get 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 对于database-table两级结构的数据库：
-[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}] 
      * @return DatabaseInfo 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 对于database-table两级结构的数据库：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
@@ -113,7 +113,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
+     * Set 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
 对于database-table两级结构的数据库：
 [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
      * @param DatabaseInfo 当选择'指定库表'灾备同步的时候, 需要设置待同步的源数据库表信息,用符合json数组格式的字符串描述, 如下所例。
@@ -125,7 +125,7 @@ public class ModifySyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

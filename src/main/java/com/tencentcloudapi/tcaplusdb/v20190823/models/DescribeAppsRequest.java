@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppsRequest  extends AbstractModel{
+public class DescribeAppsRequest extends AbstractModel{
 
     /**
     * 指定查询的应用ID
@@ -51,7 +51,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取指定查询的应用ID
+     * Get 指定查询的应用ID 
      * @return ApplicationIds 指定查询的应用ID
      */
     public String [] getApplicationIds() {
@@ -59,7 +59,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定查询的应用ID
+     * Set 指定查询的应用ID
      * @param ApplicationIds 指定查询的应用ID
      */
     public void setApplicationIds(String [] ApplicationIds) {
@@ -67,7 +67,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询过滤条件
+     * Get 查询过滤条件 
      * @return Filters 查询过滤条件
      */
     public Filter [] getFilters() {
@@ -75,7 +75,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询过滤条件
+     * Set 查询过滤条件
      * @param Filters 查询过滤条件
      */
     public void setFilters(Filter [] Filters) {
@@ -83,7 +83,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -91,7 +91,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -99,7 +99,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用列表的大小，默认值20
+     * Get 应用列表的大小，默认值20 
      * @return Limit 应用列表的大小，默认值20
      */
     public Long getLimit() {
@@ -107,7 +107,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用列表的大小，默认值20
+     * Set 应用列表的大小，默认值20
      * @param Limit 应用列表的大小，默认值20
      */
     public void setLimit(Long Limit) {
@@ -115,7 +115,7 @@ public class DescribeAppsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);

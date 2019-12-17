@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunMigrationResponse  extends AbstractModel{
+public class RunMigrationResponse extends AbstractModel{
 
     /**
     * 迁移流程启动后，返回流程ID
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,23 +37,23 @@ public class RunMigrationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取迁移流程启动后，返回流程ID
+     * Get 迁移流程启动后，返回流程ID 
      * @return FlowId 迁移流程启动后，返回流程ID
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * 设置迁移流程启动后，返回流程ID
+     * Set 迁移流程启动后，返回流程ID
      * @param FlowId 迁移流程启动后，返回流程ID
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class RunMigrationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class RunMigrationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);

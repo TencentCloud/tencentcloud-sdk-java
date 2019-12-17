@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePushTasksRequest  extends AbstractModel{
+public class DescribePushTasksRequest extends AbstractModel{
 
     /**
     * 开始时间，如2018-08-08 00:00:00。
@@ -86,7 +86,7 @@ process：预热中
     private String Status;
 
     /**
-     * 获取开始时间，如2018-08-08 00:00:00。
+     * Get 开始时间，如2018-08-08 00:00:00。 
      * @return StartTime 开始时间，如2018-08-08 00:00:00。
      */
     public String getStartTime() {
@@ -94,7 +94,7 @@ process：预热中
     }
 
     /**
-     * 设置开始时间，如2018-08-08 00:00:00。
+     * Set 开始时间，如2018-08-08 00:00:00。
      * @param StartTime 开始时间，如2018-08-08 00:00:00。
      */
     public void setStartTime(String StartTime) {
@@ -102,7 +102,7 @@ process：预热中
     }
 
     /**
-     * 获取结束时间，如2018-08-08 23:59:59。
+     * Get 结束时间，如2018-08-08 23:59:59。 
      * @return EndTime 结束时间，如2018-08-08 23:59:59。
      */
     public String getEndTime() {
@@ -110,7 +110,7 @@ process：预热中
     }
 
     /**
-     * 设置结束时间，如2018-08-08 23:59:59。
+     * Set 结束时间，如2018-08-08 23:59:59。
      * @param EndTime 结束时间，如2018-08-08 23:59:59。
      */
     public void setEndTime(String EndTime) {
@@ -118,8 +118,8 @@ process：预热中
     }
 
     /**
-     * 获取指定任务 ID 查询
-TaskId 和起始时间必须指定一项
+     * Get 指定任务 ID 查询
+TaskId 和起始时间必须指定一项 
      * @return TaskId 指定任务 ID 查询
 TaskId 和起始时间必须指定一项
      */
@@ -128,7 +128,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 设置指定任务 ID 查询
+     * Set 指定任务 ID 查询
 TaskId 和起始时间必须指定一项
      * @param TaskId 指定任务 ID 查询
 TaskId 和起始时间必须指定一项
@@ -138,7 +138,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 获取查询关键字，请输入域名或 http(s):// 开头完整 URL
+     * Get 查询关键字，请输入域名或 http(s):// 开头完整 URL 
      * @return Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
      */
     public String getKeyword() {
@@ -146,7 +146,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 设置查询关键字，请输入域名或 http(s):// 开头完整 URL
+     * Set 查询关键字，请输入域名或 http(s):// 开头完整 URL
      * @param Keyword 查询关键字，请输入域名或 http(s):// 开头完整 URL
      */
     public void setKeyword(String Keyword) {
@@ -154,7 +154,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 获取分页查询偏移量，默认为 0 （第一页）
+     * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public Integer getOffset() {
@@ -162,7 +162,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 设置分页查询偏移量，默认为 0 （第一页）
+     * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public void setOffset(Integer Offset) {
@@ -170,7 +170,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 获取分页查询限制数目，默认为 20
+     * Get 分页查询限制数目，默认为 20 
      * @return Limit 分页查询限制数目，默认为 20
      */
     public Integer getLimit() {
@@ -178,7 +178,7 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 设置分页查询限制数目，默认为 20
+     * Set 分页查询限制数目，默认为 20
      * @param Limit 分页查询限制数目，默认为 20
      */
     public void setLimit(Integer Limit) {
@@ -186,10 +186,10 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * 获取指定地区查询预热纪录
+     * Get 指定地区查询预热纪录
 mainland：境内
 overseas：境外
-global：全球
+global：全球 
      * @return Area 指定地区查询预热纪录
 mainland：境内
 overseas：境外
@@ -200,7 +200,7 @@ global：全球
     }
 
     /**
-     * 设置指定地区查询预热纪录
+     * Set 指定地区查询预热纪录
 mainland：境内
 overseas：境外
 global：全球
@@ -214,10 +214,10 @@ global：全球
     }
 
     /**
-     * 获取指定任务状态查询
+     * Get 指定任务状态查询
 fail：预热失败
 done：预热成功
-process：预热中
+process：预热中 
      * @return Status 指定任务状态查询
 fail：预热失败
 done：预热成功
@@ -228,7 +228,7 @@ process：预热中
     }
 
     /**
-     * 设置指定任务状态查询
+     * Set 指定任务状态查询
 fail：预热失败
 done：预热成功
 process：预热中
@@ -242,7 +242,7 @@ process：预热中
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

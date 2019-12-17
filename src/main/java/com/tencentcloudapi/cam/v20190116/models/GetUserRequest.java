@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUserRequest  extends AbstractModel{
+public class GetUserRequest extends AbstractModel{
 
     /**
     * 子用户用户名
@@ -30,7 +30,7 @@ public class GetUserRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取子用户用户名
+     * Get 子用户用户名 
      * @return Name 子用户用户名
      */
     public String getName() {
@@ -38,7 +38,7 @@ public class GetUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户用户名
+     * Set 子用户用户名
      * @param Name 子用户用户名
      */
     public void setName(String Name) {
@@ -46,7 +46,7 @@ public class GetUserRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

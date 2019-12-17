@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoTrackTemplateInfo  extends AbstractModel{
+public class VideoTrackTemplateInfo extends AbstractModel{
 
     /**
     * 视频轨模板唯一标识。
@@ -137,7 +137,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取视频轨模板唯一标识。
+     * Get 视频轨模板唯一标识。 
      * @return Definition 视频轨模板唯一标识。
      */
     public Long getDefinition() {
@@ -145,7 +145,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频轨模板唯一标识。
+     * Set 视频轨模板唯一标识。
      * @param Definition 视频轨模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -153,10 +153,10 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取编码格式，可选值：
+     * Get 编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
-目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。 
      * @return Codec 编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
@@ -167,7 +167,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置编码格式，可选值：
+     * Set 编码格式，可选值：
 <li>libx264：H.264 编码</li>
 <li>libx265：H.265 编码</li>
 目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
@@ -181,8 +181,8 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频帧率，取值范围：[0, 60]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+     * Get 视频帧率，取值范围：[0, 60]，单位：Hz。
+当取值为 0，表示帧率和原始视频保持一致。 
      * @return Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
@@ -191,7 +191,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频帧率，取值范围：[0, 60]，单位：Hz。
+     * Set 视频帧率，取值范围：[0, 60]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      * @param Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
@@ -201,8 +201,8 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+当取值为 0，表示视频码率和原始视频保持一致。 
      * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
@@ -211,7 +211,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
@@ -221,7 +221,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称，长度限制：64 个字符。
+     * Get 模板名称，长度限制：64 个字符。 
      * @return Name 模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -229,7 +229,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称，长度限制：64 个字符。
+     * Set 模板名称，长度限制：64 个字符。
      * @param Name 模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -237,7 +237,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -245,7 +245,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -253,9 +253,9 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，可选值：
+     * Get 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -265,7 +265,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，可选值：
+     * Set 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，可选值：
@@ -277,10 +277,10 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分辨率自适应，可选值：
+     * Get 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
-默认值：open。
+默认值：open。 
      * @return ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -291,7 +291,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分辨率自适应，可选值：
+     * Set 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
@@ -305,12 +305,12 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -323,7 +323,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -341,12 +341,12 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -359,7 +359,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -377,10 +377,10 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+     * Get 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+默认值：black 。 
      * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -391,7 +391,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+     * Set 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
@@ -405,7 +405,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -413,7 +413,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -421,7 +421,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -429,7 +429,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -437,7 +437,7 @@ public class VideoTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAudioStreamItem  extends AbstractModel{
+public class MediaAudioStreamItem extends AbstractModel{
 
     /**
     * 音频流的码率，单位：bps。
@@ -47,8 +47,8 @@ public class MediaAudioStreamItem  extends AbstractModel{
     private String Codec;
 
     /**
-     * 获取音频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的码率，单位：bps。
+     * Set 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 音频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的采样率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频流的采样率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SamplingRate 音频流的采样率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的采样率，单位：hz。
+     * Set 音频流的采样率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SamplingRate 音频流的采样率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的编码格式，例如 aac。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频流的编码格式，例如 aac。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 音频流的编码格式，例如 aac。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的编码格式，例如 aac。
+     * Set 音频流的编码格式，例如 aac。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 音频流的编码格式，例如 aac。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class MediaAudioStreamItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);

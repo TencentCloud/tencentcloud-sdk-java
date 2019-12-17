@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
+public class PullSmsReplyStatusByPhoneNumberRequest extends AbstractModel{
 
     /**
     * 拉取起始时间，UNIX 时间戳（时间：秒）
@@ -59,7 +59,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     private String SmsSdkAppid;
 
     /**
-     * 获取拉取起始时间，UNIX 时间戳（时间：秒）
+     * Get 拉取起始时间，UNIX 时间戳（时间：秒） 
      * @return SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
      */
     public Long getSendDateTime() {
@@ -67,7 +67,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取起始时间，UNIX 时间戳（时间：秒）
+     * Set 拉取起始时间，UNIX 时间戳（时间：秒）
      * @param SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
      */
     public void setSendDateTime(Long SendDateTime) {
@@ -75,8 +75,8 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
-注：目前固定设置为0
+     * Get 偏移量
+注：目前固定设置为0 
      * @return Offset 偏移量
 注：目前固定设置为0
      */
@@ -85,7 +85,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
 注：目前固定设置为0
      * @param Offset 偏移量
 注：目前固定设置为0
@@ -95,7 +95,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取最大条数，最多 100
+     * Get 拉取最大条数，最多 100 
      * @return Limit 拉取最大条数，最多 100
      */
     public Long getLimit() {
@@ -103,7 +103,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取最大条数，最多 100
+     * Set 拉取最大条数，最多 100
      * @param Limit 拉取最大条数，最多 100
      */
     public void setLimit(Long Limit) {
@@ -111,7 +111,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Get 下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
      * @return PhoneNumber 下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public String getPhoneNumber() {
@@ -119,7 +119,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Set 下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      * @param PhoneNumber 下发目的手机号码，依据 e.164 标准为：+[国家（或地区）码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -127,7 +127,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
      * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public String getSmsSdkAppid() {
@@ -135,7 +135,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
@@ -143,7 +143,7 @@ public class PullSmsReplyStatusByPhoneNumberRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SendDateTime", this.SendDateTime);

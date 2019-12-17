@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleHealth  extends AbstractModel{
+public class RuleHealth extends AbstractModel{
 
     /**
     * 转发规则ID
@@ -54,7 +54,7 @@ public class RuleHealth  extends AbstractModel{
     private TargetHealth [] Targets;
 
     /**
-     * 获取转发规则ID
+     * Get 转发规则ID 
      * @return LocationId 转发规则ID
      */
     public String getLocationId() {
@@ -62,7 +62,7 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则ID
+     * Set 转发规则ID
      * @param LocationId 转发规则ID
      */
     public void setLocationId(String LocationId) {
@@ -70,8 +70,8 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转发规则的域名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 转发规则的域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -80,7 +80,7 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的域名
+     * Set 转发规则的域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 转发规则的域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,8 +90,8 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的Url
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转发规则的Url
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,7 +100,7 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的Url
+     * Set 转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转发规则的Url
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,8 +110,8 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取本规则上绑定的后端的健康检查状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 本规则上绑定的后端的健康检查状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Targets 本规则上绑定的后端的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置本规则上绑定的后端的健康检查状态
+     * Set 本规则上绑定的后端的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 本规则上绑定的后端的健康检查状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ public class RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);

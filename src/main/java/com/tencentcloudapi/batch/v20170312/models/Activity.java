@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Activity  extends AbstractModel{
+public class Activity extends AbstractModel{
 
     /**
     * 活动ID
@@ -95,7 +95,7 @@ public class Activity  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取活动ID
+     * Get 活动ID 
      * @return ActivityId 活动ID
      */
     public String getActivityId() {
@@ -103,7 +103,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置活动ID
+     * Set 活动ID
      * @param ActivityId 活动ID
      */
     public void setActivityId(String ActivityId) {
@@ -111,7 +111,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点ID
+     * Get 计算节点ID 
      * @return ComputeNodeId 计算节点ID
      */
     public String getComputeNodeId() {
@@ -119,7 +119,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点ID
+     * Set 计算节点ID
      * @param ComputeNodeId 计算节点ID
      */
     public void setComputeNodeId(String ComputeNodeId) {
@@ -127,7 +127,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点活动类型，创建或者销毁
+     * Get 计算节点活动类型，创建或者销毁 
      * @return ComputeNodeActivityType 计算节点活动类型，创建或者销毁
      */
     public String getComputeNodeActivityType() {
@@ -135,7 +135,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点活动类型，创建或者销毁
+     * Set 计算节点活动类型，创建或者销毁
      * @param ComputeNodeActivityType 计算节点活动类型，创建或者销毁
      */
     public void setComputeNodeActivityType(String ComputeNodeActivityType) {
@@ -143,7 +143,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -151,7 +151,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -159,7 +159,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取起因
+     * Get 起因 
      * @return Cause 起因
      */
     public String getCause() {
@@ -167,7 +167,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置起因
+     * Set 起因
      * @param Cause 起因
      */
     public void setCause(String Cause) {
@@ -175,7 +175,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取活动状态
+     * Get 活动状态 
      * @return ActivityState 活动状态
      */
     public String getActivityState() {
@@ -183,7 +183,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置活动状态
+     * Set 活动状态
      * @param ActivityState 活动状态
      */
     public void setActivityState(String ActivityState) {
@@ -191,7 +191,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取状态原因
+     * Get 状态原因 
      * @return StateReason 状态原因
      */
     public String getStateReason() {
@@ -199,7 +199,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置状态原因
+     * Set 状态原因
      * @param StateReason 状态原因
      */
     public void setStateReason(String StateReason) {
@@ -207,7 +207,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取活动开始时间
+     * Get 活动开始时间 
      * @return StartTime 活动开始时间
      */
     public String getStartTime() {
@@ -215,7 +215,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置活动开始时间
+     * Set 活动开始时间
      * @param StartTime 活动开始时间
      */
     public void setStartTime(String StartTime) {
@@ -223,8 +223,8 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 活动结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 活动结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置活动结束时间
+     * Set 活动结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 活动结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 云服务器实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 云服务器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器实例ID
+     * Set 云服务器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云服务器实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,7 +263,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);

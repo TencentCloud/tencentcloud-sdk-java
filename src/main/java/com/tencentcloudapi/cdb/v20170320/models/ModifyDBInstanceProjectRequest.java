@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceProjectRequest  extends AbstractModel{
+public class ModifyDBInstanceProjectRequest extends AbstractModel{
 
     /**
     * 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
@@ -37,7 +37,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     private Integer NewProjectId;
 
     /**
-     * 获取实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Get 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Set 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目的 ID。
+     * Get 项目的 ID。 
      * @return NewProjectId 项目的 ID。
      */
     public Integer getNewProjectId() {
@@ -61,7 +61,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目的 ID。
+     * Set 项目的 ID。
      * @param NewProjectId 项目的 ID。
      */
     public void setNewProjectId(Integer NewProjectId) {
@@ -69,7 +69,7 @@ public class ModifyDBInstanceProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

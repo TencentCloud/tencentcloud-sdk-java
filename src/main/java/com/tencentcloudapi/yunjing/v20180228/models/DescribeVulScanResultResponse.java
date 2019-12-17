@@ -20,42 +20,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulScanResultResponse  extends AbstractModel{
+public class DescribeVulScanResultResponse extends AbstractModel{
 
     /**
     * 漏洞数量。
     */
     @SerializedName("VulNum")
     @Expose
-    private Integer VulNum;
+    private Long VulNum;
 
     /**
     * 专业版机器数。
     */
     @SerializedName("ProVersionNum")
     @Expose
-    private Integer ProVersionNum;
+    private Long ProVersionNum;
 
     /**
     * 受影响的专业版主机数。
     */
     @SerializedName("ImpactedHostNum")
     @Expose
-    private Integer ImpactedHostNum;
+    private Long ImpactedHostNum;
 
     /**
     * 主机总数。
     */
     @SerializedName("HostNum")
     @Expose
-    private Integer HostNum;
+    private Long HostNum;
 
     /**
     * 基础版机器数。
     */
     @SerializedName("BasicVersionNum")
     @Expose
-    private Integer BasicVersionNum;
+    private Long BasicVersionNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -65,87 +65,87 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取漏洞数量。
+     * Get 漏洞数量。 
      * @return VulNum 漏洞数量。
      */
-    public Integer getVulNum() {
+    public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * 设置漏洞数量。
+     * Set 漏洞数量。
      * @param VulNum 漏洞数量。
      */
-    public void setVulNum(Integer VulNum) {
+    public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * 获取专业版机器数。
+     * Get 专业版机器数。 
      * @return ProVersionNum 专业版机器数。
      */
-    public Integer getProVersionNum() {
+    public Long getProVersionNum() {
         return this.ProVersionNum;
     }
 
     /**
-     * 设置专业版机器数。
+     * Set 专业版机器数。
      * @param ProVersionNum 专业版机器数。
      */
-    public void setProVersionNum(Integer ProVersionNum) {
+    public void setProVersionNum(Long ProVersionNum) {
         this.ProVersionNum = ProVersionNum;
     }
 
     /**
-     * 获取受影响的专业版主机数。
+     * Get 受影响的专业版主机数。 
      * @return ImpactedHostNum 受影响的专业版主机数。
      */
-    public Integer getImpactedHostNum() {
+    public Long getImpactedHostNum() {
         return this.ImpactedHostNum;
     }
 
     /**
-     * 设置受影响的专业版主机数。
+     * Set 受影响的专业版主机数。
      * @param ImpactedHostNum 受影响的专业版主机数。
      */
-    public void setImpactedHostNum(Integer ImpactedHostNum) {
+    public void setImpactedHostNum(Long ImpactedHostNum) {
         this.ImpactedHostNum = ImpactedHostNum;
     }
 
     /**
-     * 获取主机总数。
+     * Get 主机总数。 
      * @return HostNum 主机总数。
      */
-    public Integer getHostNum() {
+    public Long getHostNum() {
         return this.HostNum;
     }
 
     /**
-     * 设置主机总数。
+     * Set 主机总数。
      * @param HostNum 主机总数。
      */
-    public void setHostNum(Integer HostNum) {
+    public void setHostNum(Long HostNum) {
         this.HostNum = HostNum;
     }
 
     /**
-     * 获取基础版机器数。
+     * Get 基础版机器数。 
      * @return BasicVersionNum 基础版机器数。
      */
-    public Integer getBasicVersionNum() {
+    public Long getBasicVersionNum() {
         return this.BasicVersionNum;
     }
 
     /**
-     * 设置基础版机器数。
+     * Set 基础版机器数。
      * @param BasicVersionNum 基础版机器数。
      */
-    public void setBasicVersionNum(Integer BasicVersionNum) {
+    public void setBasicVersionNum(Long BasicVersionNum) {
         this.BasicVersionNum = BasicVersionNum;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeVulScanResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);

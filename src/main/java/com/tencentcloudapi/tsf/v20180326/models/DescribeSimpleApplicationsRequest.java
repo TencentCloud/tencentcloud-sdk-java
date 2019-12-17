@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSimpleApplicationsRequest  extends AbstractModel{
+public class DescribeSimpleApplicationsRequest extends AbstractModel{
 
     /**
     * 应用ID列表
@@ -72,7 +72,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     private String SearchWord;
 
     /**
-     * 获取应用ID列表
+     * Get 应用ID列表 
      * @return ApplicationIdList 应用ID列表
      */
     public String [] getApplicationIdList() {
@@ -80,7 +80,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID列表
+     * Set 应用ID列表
      * @param ApplicationIdList 应用ID列表
      */
     public void setApplicationIdList(String [] ApplicationIdList) {
@@ -88,7 +88,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
+     * Get 应用类型 
      * @return ApplicationType 应用类型
      */
     public String getApplicationType() {
@@ -96,7 +96,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
      * @param ApplicationType 应用类型
      */
     public void setApplicationType(String ApplicationType) {
@@ -104,7 +104,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数
+     * Get 每页条数 
      * @return Limit 每页条数
      */
     public Long getLimit() {
@@ -112,7 +112,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数
+     * Set 每页条数
      * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
@@ -120,7 +120,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始偏移量
+     * Get 起始偏移量 
      * @return Offset 起始偏移量
      */
     public Long getOffset() {
@@ -128,7 +128,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始偏移量
+     * Set 起始偏移量
      * @param Offset 起始偏移量
      */
     public void setOffset(Long Offset) {
@@ -136,7 +136,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取微服务类型
+     * Get 微服务类型 
      * @return MicroserviceType 微服务类型
      */
     public String getMicroserviceType() {
@@ -144,7 +144,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置微服务类型
+     * Set 微服务类型
      * @param MicroserviceType 微服务类型
      */
     public void setMicroserviceType(String MicroserviceType) {
@@ -152,7 +152,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源类型数组
+     * Get 资源类型数组 
      * @return ApplicationResourceTypeList 资源类型数组
      */
     public String [] getApplicationResourceTypeList() {
@@ -160,7 +160,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型数组
+     * Set 资源类型数组
      * @param ApplicationResourceTypeList 资源类型数组
      */
     public void setApplicationResourceTypeList(String [] ApplicationResourceTypeList) {
@@ -168,7 +168,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通过id和name进行关键词过滤
+     * Get 通过id和name进行关键词过滤 
      * @return SearchWord 通过id和name进行关键词过滤
      */
     public String getSearchWord() {
@@ -176,7 +176,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通过id和name进行关键词过滤
+     * Set 通过id和name进行关键词过滤
      * @param SearchWord 通过id和name进行关键词过滤
      */
     public void setSearchWord(String SearchWord) {
@@ -184,7 +184,7 @@ public class DescribeSimpleApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ApplicationIdList.", this.ApplicationIdList);

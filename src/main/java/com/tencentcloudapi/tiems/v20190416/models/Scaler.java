@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Scaler  extends AbstractModel{
+public class Scaler extends AbstractModel{
 
     /**
     * 最大副本数
@@ -51,7 +51,7 @@ public class Scaler  extends AbstractModel{
     private Option [] HpaMetrics;
 
     /**
-     * 获取最大副本数
+     * Get 最大副本数 
      * @return MaxReplicas 最大副本数
      */
     public Long getMaxReplicas() {
@@ -59,7 +59,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 设置最大副本数
+     * Set 最大副本数
      * @param MaxReplicas 最大副本数
      */
     public void setMaxReplicas(Long MaxReplicas) {
@@ -67,7 +67,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 获取最小副本数
+     * Get 最小副本数 
      * @return MinReplicas 最小副本数
      */
     public Long getMinReplicas() {
@@ -75,7 +75,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 设置最小副本数
+     * Set 最小副本数
      * @param MinReplicas 最小副本数
      */
     public void setMinReplicas(Long MinReplicas) {
@@ -83,7 +83,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 获取起始副本数
+     * Get 起始副本数 
      * @return StartReplicas 起始副本数
      */
     public Long getStartReplicas() {
@@ -91,7 +91,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 设置起始副本数
+     * Set 起始副本数
      * @param StartReplicas 起始副本数
      */
     public void setStartReplicas(Long StartReplicas) {
@@ -99,7 +99,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 获取扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
+     * Get 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL 
      * @return HpaMetrics 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
      */
     public Option [] getHpaMetrics() {
@@ -107,7 +107,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 设置扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
+     * Set 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
      * @param HpaMetrics 扩缩容指标，选择自动扩缩容时至少需要选择一个指标，支持CPU-UTIL、MEMORY-UTIL
      */
     public void setHpaMetrics(Option [] HpaMetrics) {
@@ -115,7 +115,7 @@ public class Scaler  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);

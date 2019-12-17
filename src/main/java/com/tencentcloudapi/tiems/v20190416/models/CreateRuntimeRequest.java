@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRuntimeRequest  extends AbstractModel{
+public class CreateRuntimeRequest extends AbstractModel{
 
     /**
     * 全局唯一的运行环境名称
@@ -58,7 +58,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     private Boolean HealthCheckOn;
 
     /**
-     * 获取全局唯一的运行环境名称
+     * Get 全局唯一的运行环境名称 
      * @return Name 全局唯一的运行环境名称
      */
     public String getName() {
@@ -66,7 +66,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置全局唯一的运行环境名称
+     * Set 全局唯一的运行环境名称
      * @param Name 全局唯一的运行环境名称
      */
     public void setName(String Name) {
@@ -74,7 +74,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境镜像地址
+     * Get 运行环境镜像地址 
      * @return Image 运行环境镜像地址
      */
     public String getImage() {
@@ -82,7 +82,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境镜像地址
+     * Set 运行环境镜像地址
      * @param Image 运行环境镜像地址
      */
     public void setImage(String Image) {
@@ -90,7 +90,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境框架
+     * Get 运行环境框架 
      * @return Framework 运行环境框架
      */
     public String getFramework() {
@@ -98,7 +98,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境框架
+     * Set 运行环境框架
      * @param Framework 运行环境框架
      */
     public void setFramework(String Framework) {
@@ -106,7 +106,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境描述
+     * Get 运行环境描述 
      * @return Description 运行环境描述
      */
     public String getDescription() {
@@ -114,7 +114,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境描述
+     * Set 运行环境描述
      * @param Description 运行环境描述
      */
     public void setDescription(String Description) {
@@ -122,7 +122,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持健康检查，默认为False
+     * Get 是否支持健康检查，默认为False 
      * @return HealthCheckOn 是否支持健康检查，默认为False
      */
     public Boolean getHealthCheckOn() {
@@ -130,7 +130,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持健康检查，默认为False
+     * Set 是否支持健康检查，默认为False
      * @param HealthCheckOn 是否支持健康检查，默认为False
      */
     public void setHealthCheckOn(Boolean HealthCheckOn) {
@@ -138,7 +138,7 @@ public class CreateRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

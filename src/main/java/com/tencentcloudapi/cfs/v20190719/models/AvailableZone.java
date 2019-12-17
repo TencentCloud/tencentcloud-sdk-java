@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableZone  extends AbstractModel{
+public class AvailableZone extends AbstractModel{
 
     /**
     * 可用区名称
@@ -51,7 +51,7 @@ public class AvailableZone  extends AbstractModel{
     private AvailableType [] Types;
 
     /**
-     * 获取可用区名称
+     * Get 可用区名称 
      * @return Zone 可用区名称
      */
     public String getZone() {
@@ -59,7 +59,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称
+     * Set 可用区名称
      * @param Zone 可用区名称
      */
     public void setZone(String Zone) {
@@ -67,7 +67,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID
+     * Get 可用区ID 
      * @return ZoneId 可用区ID
      */
     public Long getZoneId() {
@@ -75,7 +75,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
      * @param ZoneId 可用区ID
      */
     public void setZoneId(Long ZoneId) {
@@ -83,7 +83,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 获取可用区中文名称
+     * Get 可用区中文名称 
      * @return ZoneCnName 可用区中文名称
      */
     public String getZoneCnName() {
@@ -91,7 +91,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 设置可用区中文名称
+     * Set 可用区中文名称
      * @param ZoneCnName 可用区中文名称
      */
     public void setZoneCnName(String ZoneCnName) {
@@ -99,7 +99,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 获取Type数组
+     * Get Type数组 
      * @return Types Type数组
      */
     public AvailableType [] getTypes() {
@@ -107,7 +107,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 设置Type数组
+     * Set Type数组
      * @param Types Type数组
      */
     public void setTypes(AvailableType [] Types) {
@@ -115,7 +115,7 @@ public class AvailableZone  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

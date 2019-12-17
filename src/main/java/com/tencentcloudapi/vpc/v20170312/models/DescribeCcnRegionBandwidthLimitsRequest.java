@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnRegionBandwidthLimitsRequest  extends AbstractModel{
+public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -30,7 +30,7 @@ public class DescribeCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     private String CcnId;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -38,7 +38,7 @@ public class DescribeCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -46,7 +46,7 @@ public class DescribeCcnRegionBandwidthLimitsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

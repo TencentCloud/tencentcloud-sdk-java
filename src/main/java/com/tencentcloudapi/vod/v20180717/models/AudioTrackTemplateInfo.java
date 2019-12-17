@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioTrackTemplateInfo  extends AbstractModel{
+public class AudioTrackTemplateInfo extends AbstractModel{
 
     /**
     * 模板唯一标识。
@@ -119,7 +119,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取模板唯一标识。
+     * Get 模板唯一标识。 
      * @return Definition 模板唯一标识。
      */
     public Long getDefinition() {
@@ -127,7 +127,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板唯一标识。
+     * Set 模板唯一标识。
      * @param Definition 模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -135,7 +135,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频轨编码格式。
+     * Get 音频轨编码格式。
 当 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当 Container 为 ogg 或 flac 时，可选值为：
@@ -150,7 +150,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
 <li>mp2。</li>
 当视频轨 Container 为  hls 时，可选值为：
 <li>libfdk_aac；</li>
-<li>libmp3lame。</li>
+<li>libmp3lame。</li> 
      * @return Codec 音频轨编码格式。
 当 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -173,7 +173,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频轨编码格式。
+     * Set 音频轨编码格式。
 当 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
 当 Container 为 ogg 或 flac 时，可选值为：
@@ -211,8 +211,8 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
-当取值为 0，表示音频码率和原始音频保持一致。
+     * Get 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+当取值为 0，表示音频码率和原始音频保持一致。 
      * @return Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      */
@@ -221,7 +221,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
+     * Set 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
      * @param Bitrate 音频流的码率，取值范围：0 和 [26, 256]，单位：kbps。
 当取值为 0，表示音频码率和原始音频保持一致。
@@ -231,11 +231,11 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的采样率，可选值：
+     * Get 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
-单位：Hz。
+单位：Hz。 
      * @return SampleRate 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
@@ -247,7 +247,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的采样率，可选值：
+     * Set 音频流的采样率，可选值：
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -263,9 +263,9 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，可选值：
+     * Get 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -275,7 +275,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，可选值：
+     * Set 模板类型，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，可选值：
@@ -287,7 +287,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称，长度限制：64 个字符。
+     * Get 模板名称，长度限制：64 个字符。 
      * @return Name 模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -295,7 +295,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称，长度限制：64 个字符。
+     * Set 模板名称，长度限制：64 个字符。
      * @param Name 模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -303,7 +303,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -311,7 +311,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -319,11 +319,11 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频通道方式，可选值：
+     * Get 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
-默认值：2。
+默认值：2。 
      * @return AudioChannel 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
@@ -335,7 +335,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频通道方式，可选值：
+     * Set 音频通道方式，可选值：
 <li>1：单通道</li>
 <li>2：双通道</li>
 <li>6：立体声</li>
@@ -351,7 +351,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -359,7 +359,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -367,7 +367,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -375,7 +375,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -383,7 +383,7 @@ public class AudioTrackTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

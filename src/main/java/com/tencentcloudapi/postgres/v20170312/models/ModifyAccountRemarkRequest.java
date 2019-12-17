@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountRemarkRequest  extends AbstractModel{
+public class ModifyAccountRemarkRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-4wdeb0zv
@@ -44,7 +44,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取实例ID，形如postgres-4wdeb0zv
+     * Get 实例ID，形如postgres-4wdeb0zv 
      * @return DBInstanceId 实例ID，形如postgres-4wdeb0zv
      */
     public String getDBInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-4wdeb0zv
+     * Set 实例ID，形如postgres-4wdeb0zv
      * @param DBInstanceId 实例ID，形如postgres-4wdeb0zv
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -60,7 +60,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例用户名
+     * Get 实例用户名 
      * @return UserName 实例用户名
      */
     public String getUserName() {
@@ -68,7 +68,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例用户名
+     * Set 实例用户名
      * @param UserName 实例用户名
      */
     public void setUserName(String UserName) {
@@ -76,7 +76,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户UserName对应的新备注
+     * Get 用户UserName对应的新备注 
      * @return Remark 用户UserName对应的新备注
      */
     public String getRemark() {
@@ -84,7 +84,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户UserName对应的新备注
+     * Set 用户UserName对应的新备注
      * @param Remark 用户UserName对应的新备注
      */
     public void setRemark(String Remark) {
@@ -92,7 +92,7 @@ public class ModifyAccountRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

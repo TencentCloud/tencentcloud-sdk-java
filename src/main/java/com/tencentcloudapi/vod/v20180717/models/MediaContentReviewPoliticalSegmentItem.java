@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
+public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
@@ -97,7 +97,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     private String PicUrlExpireTime;
 
     /**
-     * 获取嫌疑片段起始的偏移时间，单位：秒。
+     * Get 嫌疑片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -105,7 +105,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段起始的偏移时间，单位：秒。
+     * Set 嫌疑片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -113,7 +113,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段结束的偏移时间，单位：秒。
+     * Get 嫌疑片段结束的偏移时间，单位：秒。 
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -121,7 +121,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段结束的偏移时间，单位：秒。
+     * Set 嫌疑片段结束的偏移时间，单位：秒。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -129,7 +129,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段涉政分数。
+     * Get 嫌疑片段涉政分数。 
      * @return Confidence 嫌疑片段涉政分数。
      */
     public Float getConfidence() {
@@ -137,7 +137,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段涉政分数。
+     * Set 嫌疑片段涉政分数。
      * @param Confidence 嫌疑片段涉政分数。
      */
     public void setConfidence(Float Confidence) {
@@ -145,10 +145,10 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段鉴政结果建议，取值范围：
+     * Get 嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion 嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -159,7 +159,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段鉴政结果建议，取值范围：
+     * Set 嫌疑片段鉴政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -173,7 +173,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取涉政人物、违规图标名字。
+     * Get 涉政人物、违规图标名字。 
      * @return Name 涉政人物、违规图标名字。
      */
     public String getName() {
@@ -181,7 +181,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置涉政人物、违规图标名字。
+     * Set 涉政人物、违规图标名字。
      * @param Name 涉政人物、违规图标名字。
      */
     public void setName(String Name) {
@@ -189,7 +189,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段鉴政结果标签。
+     * Get 嫌疑片段鉴政结果标签。 
      * @return Label 嫌疑片段鉴政结果标签。
      */
     public String getLabel() {
@@ -197,7 +197,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段鉴政结果标签。
+     * Set 嫌疑片段鉴政结果标签。
      * @param Label 嫌疑片段鉴政结果标签。
      */
     public void setLabel(String Label) {
@@ -205,8 +205,8 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑图片 URL （图片不会永久存储，到达
- PicUrlExpireTime 时间点后图片将被删除）。
+     * Get 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。 
      * @return Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
      */
@@ -215,7 +215,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑图片 URL （图片不会永久存储，到达
+     * Set 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
      * @param Url 嫌疑图片 URL （图片不会永久存储，到达
  PicUrlExpireTime 时间点后图片将被删除）。
@@ -225,7 +225,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
      * @return AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public Long [] getAreaCoordSet() {
@@ -233,7 +233,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      * @param AreaCoordSet 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
@@ -241,7 +241,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取该字段已废弃，请使用 PicUrlExpireTime。
+     * Get 该字段已废弃，请使用 PicUrlExpireTime。 
      * @return PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
      */
     public Long getPicUrlExpireTimeStamp() {
@@ -249,7 +249,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置该字段已废弃，请使用 PicUrlExpireTime。
+     * Set 该字段已废弃，请使用 PicUrlExpireTime。
      * @param PicUrlExpireTimeStamp 该字段已废弃，请使用 PicUrlExpireTime。
      */
     public void setPicUrlExpireTimeStamp(Long PicUrlExpireTimeStamp) {
@@ -257,7 +257,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getPicUrlExpireTime() {
@@ -265,7 +265,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
@@ -273,7 +273,7 @@ public class MediaContentReviewPoliticalSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

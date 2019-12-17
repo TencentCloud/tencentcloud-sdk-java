@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
+public class DescribeDCDBRenewalPriceRequest extends AbstractModel{
 
     /**
     * 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
@@ -37,7 +37,7 @@ public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
     private Integer Period;
 
     /**
-     * 获取待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Get 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Set 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取续费时长，单位：月。不传则默认为1个月。
+     * Get 续费时长，单位：月。不传则默认为1个月。 
      * @return Period 续费时长，单位：月。不传则默认为1个月。
      */
     public Integer getPeriod() {
@@ -61,7 +61,7 @@ public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置续费时长，单位：月。不传则默认为1个月。
+     * Set 续费时长，单位：月。不传则默认为1个月。
      * @param Period 续费时长，单位：月。不传则默认为1个月。
      */
     public void setPeriod(Integer Period) {
@@ -69,7 +69,7 @@ public class DescribeDCDBRenewalPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

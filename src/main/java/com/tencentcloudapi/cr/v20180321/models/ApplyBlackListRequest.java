@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyBlackListRequest  extends AbstractModel{
+public class ApplyBlackListRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：account
@@ -51,7 +51,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：account
+     * Get 模块名，本接口取值：account 
      * @return Module 模块名，本接口取值：account
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：account
+     * Set 模块名，本接口取值：account
      * @param Module 模块名，本接口取值：account
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：ApplyBlackList
+     * Get 操作名，本接口取值：ApplyBlackList 
      * @return Operation 操作名，本接口取值：ApplyBlackList
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：ApplyBlackList
+     * Set 操作名，本接口取值：ApplyBlackList
      * @param Operation 操作名，本接口取值：ApplyBlackList
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取黑名单列表
+     * Get 黑名单列表 
      * @return BlackList 黑名单列表
      */
     public SingleBlackApply [] getBlackList() {
@@ -91,7 +91,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑名单列表
+     * Set 黑名单列表
      * @param BlackList 黑名单列表
      */
     public void setBlackList(SingleBlackApply [] BlackList) {
@@ -99,7 +99,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，不传默认为系统分配的初始实例
+     * Get 实例ID，不传默认为系统分配的初始实例 
      * @return InstId 实例ID，不传默认为系统分配的初始实例
      */
     public String getInstId() {
@@ -107,7 +107,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，不传默认为系统分配的初始实例
+     * Set 实例ID，不传默认为系统分配的初始实例
      * @param InstId 实例ID，不传默认为系统分配的初始实例
      */
     public void setInstId(String InstId) {
@@ -115,7 +115,7 @@ public class ApplyBlackListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

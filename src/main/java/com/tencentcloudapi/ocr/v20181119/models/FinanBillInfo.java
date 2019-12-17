@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FinanBillInfo  extends AbstractModel{
+public class FinanBillInfo extends AbstractModel{
 
     /**
     * 识别出的字段名称。
@@ -37,7 +37,7 @@ public class FinanBillInfo  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取识别出的字段名称。
+     * Get 识别出的字段名称。 
      * @return Name 识别出的字段名称。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class FinanBillInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称。
+     * Set 识别出的字段名称。
      * @param Name 识别出的字段名称。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class FinanBillInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+     * Get 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。 
      * @return Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class FinanBillInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+     * Set 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      * @param Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class FinanBillInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

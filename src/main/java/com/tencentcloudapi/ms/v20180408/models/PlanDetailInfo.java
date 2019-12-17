@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlanDetailInfo  extends AbstractModel{
+public class PlanDetailInfo extends AbstractModel{
 
     /**
     * 默认策略，1为默认，0为非默认
@@ -51,7 +51,7 @@ public class PlanDetailInfo  extends AbstractModel{
     private PlanInfo PlanInfo;
 
     /**
-     * 获取默认策略，1为默认，0为非默认
+     * Get 默认策略，1为默认，0为非默认 
      * @return IsDefault 默认策略，1为默认，0为非默认
      */
     public Integer getIsDefault() {
@@ -59,7 +59,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置默认策略，1为默认，0为非默认
+     * Set 默认策略，1为默认，0为非默认
      * @param IsDefault 默认策略，1为默认，0为非默认
      */
     public void setIsDefault(Integer IsDefault) {
@@ -67,7 +67,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略id
+     * Get 策略id 
      * @return PlanId 策略id
      */
     public Integer getPlanId() {
@@ -75,7 +75,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略id
+     * Set 策略id
      * @param PlanId 策略id
      */
     public void setPlanId(Integer PlanId) {
@@ -83,7 +83,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return PlanName 策略名称
      */
     public String getPlanName() {
@@ -91,7 +91,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param PlanName 策略名称
      */
     public void setPlanName(String PlanName) {
@@ -99,7 +99,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取策略信息
+     * Get 策略信息 
      * @return PlanInfo 策略信息
      */
     public PlanInfo getPlanInfo() {
@@ -107,7 +107,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置策略信息
+     * Set 策略信息
      * @param PlanInfo 策略信息
      */
     public void setPlanInfo(PlanInfo PlanInfo) {
@@ -115,7 +115,7 @@ public class PlanDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);

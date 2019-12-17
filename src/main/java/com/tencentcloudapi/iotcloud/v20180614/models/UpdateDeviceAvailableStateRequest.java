@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
+public class UpdateDeviceAvailableStateRequest extends AbstractModel{
 
     /**
     * 设备所属产品id
@@ -44,7 +44,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     private Integer EnableState;
 
     /**
-     * 获取设备所属产品id
+     * Get 设备所属产品id 
      * @return ProductId 设备所属产品id
      */
     public String getProductId() {
@@ -52,7 +52,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备所属产品id
+     * Set 设备所属产品id
      * @param ProductId 设备所属产品id
      */
     public void setProductId(String ProductId) {
@@ -60,7 +60,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -68,7 +68,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -76,7 +76,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要设置的设备状态，1为启用，0为禁用
+     * Get 要设置的设备状态，1为启用，0为禁用 
      * @return EnableState 要设置的设备状态，1为启用，0为禁用
      */
     public Integer getEnableState() {
@@ -84,7 +84,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要设置的设备状态，1为启用，0为禁用
+     * Set 要设置的设备状态，1为启用，0为禁用
      * @param EnableState 要设置的设备状态，1为启用，0为禁用
      */
     public void setEnableState(Integer EnableState) {
@@ -92,7 +92,7 @@ public class UpdateDeviceAvailableStateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

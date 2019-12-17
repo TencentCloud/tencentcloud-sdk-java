@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEntitiesForPolicyRequest  extends AbstractModel{
+public class ListEntitiesForPolicyRequest extends AbstractModel{
 
     /**
     * 策略 id
@@ -51,7 +51,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     private String EntityFilter;
 
     /**
-     * 获取策略 id
+     * Get 策略 id 
      * @return PolicyId 策略 id
      */
     public Long getPolicyId() {
@@ -59,7 +59,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略 id
+     * Set 策略 id
      * @param PolicyId 策略 id
      */
     public void setPolicyId(Long PolicyId) {
@@ -67,7 +67,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页码，默认值是 1，从 1 开始
+     * Get 页码，默认值是 1，从 1 开始 
      * @return Page 页码，默认值是 1，从 1 开始
      */
     public Long getPage() {
@@ -75,7 +75,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码，默认值是 1，从 1 开始
+     * Set 页码，默认值是 1，从 1 开始
      * @param Page 页码，默认值是 1，从 1 开始
      */
     public void setPage(Long Page) {
@@ -83,7 +83,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，默认值是 20
+     * Get 每页大小，默认值是 20 
      * @return Rp 每页大小，默认值是 20
      */
     public Long getRp() {
@@ -91,7 +91,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，默认值是 20
+     * Set 每页大小，默认值是 20
      * @param Rp 每页大小，默认值是 20
      */
     public void setRp(Long Rp) {
@@ -99,7 +99,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
+     * Get 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All' 
      * @return EntityFilter 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
      */
     public String getEntityFilter() {
@@ -107,7 +107,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
+     * Set 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
      * @param EntityFilter 可取值 'All'、'User'、'Group' 和 'Role'，'All' 表示获取所有实体类型，'User' 表示只获取子账号，'Group' 表示只获取用户组，'Role' 表示只获取角色，默认取 'All'
      */
     public void setEntityFilter(String EntityFilter) {
@@ -115,7 +115,7 @@ public class ListEntitiesForPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

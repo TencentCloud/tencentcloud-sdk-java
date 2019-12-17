@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVoiceRequest  extends AbstractModel{
+public class ScanVoiceRequest extends AbstractModel{
 
     /**
     * 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
@@ -60,7 +60,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     private String Callback;
 
     /**
-     * 获取应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Get 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
      * @return BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public Long getBizId() {
@@ -68,7 +68,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Set 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      * @param BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
      */
     public void setBizId(Long BizId) {
@@ -76,7 +76,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Get 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a> 
      * @return Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      */
     public String [] getScenes() {
@@ -84,7 +84,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Set 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      * @param Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
      */
     public void setScenes(String [] Scenes) {
@@ -92,7 +92,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+     * Get 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。 
      * @return Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
      */
     public Boolean getLive() {
@@ -100,7 +100,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+     * Set 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
      * @param Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
      */
     public void setLive(Boolean Live) {
@@ -108,9 +108,9 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
+     * Get 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
 <li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li> 
      * @return Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
 <li>DataId：数据的唯一ID</li>
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
@@ -120,7 +120,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
+     * Set 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
 <li>DataId：数据的唯一ID</li>
 <li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
      * @param Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
@@ -132,7 +132,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+     * Get 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。 
      * @return Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
      */
     public String getCallback() {
@@ -140,7 +140,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+     * Set 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
      * @param Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
      */
     public void setCallback(String Callback) {
@@ -148,7 +148,7 @@ public class ScanVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

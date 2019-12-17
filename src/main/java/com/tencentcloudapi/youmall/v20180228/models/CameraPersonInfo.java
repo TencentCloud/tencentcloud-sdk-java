@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CameraPersonInfo  extends AbstractModel{
+public class CameraPersonInfo extends AbstractModel{
 
     /**
     * 临时id，还未生成face id时返回
@@ -65,7 +65,7 @@ public class CameraPersonInfo  extends AbstractModel{
     private PersonInfo PersonInfo;
 
     /**
-     * 获取临时id，还未生成face id时返回
+     * Get 临时id，还未生成face id时返回 
      * @return TempId 临时id，还未生成face id时返回
      */
     public String getTempId() {
@@ -73,7 +73,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置临时id，还未生成face id时返回
+     * Set 临时id，还未生成face id时返回
      * @param TempId 临时id，还未生成face id时返回
      */
     public void setTempId(String TempId) {
@@ -81,7 +81,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸face id
+     * Get 人脸face id 
      * @return FaceId 人脸face id
      */
     public Integer getFaceId() {
@@ -89,7 +89,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸face id
+     * Set 人脸face id
      * @param FaceId 人脸face id
      */
     public void setFaceId(Integer FaceId) {
@@ -97,7 +97,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取确定当次返回的哪个id有效，1-FaceId，2-TempId
+     * Get 确定当次返回的哪个id有效，1-FaceId，2-TempId 
      * @return IdType 确定当次返回的哪个id有效，1-FaceId，2-TempId
      */
     public Integer getIdType() {
@@ -105,7 +105,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置确定当次返回的哪个id有效，1-FaceId，2-TempId
+     * Set 确定当次返回的哪个id有效，1-FaceId，2-TempId
      * @param IdType 确定当次返回的哪个id有效，1-FaceId，2-TempId
      */
     public void setIdType(Integer IdType) {
@@ -113,7 +113,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当次抓拍到的人脸图片base编码
+     * Get 当次抓拍到的人脸图片base编码 
      * @return FacePic 当次抓拍到的人脸图片base编码
      */
     public String getFacePic() {
@@ -121,7 +121,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当次抓拍到的人脸图片base编码
+     * Set 当次抓拍到的人脸图片base编码
      * @param FacePic 当次抓拍到的人脸图片base编码
      */
     public void setFacePic(String FacePic) {
@@ -129,7 +129,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当次抓拍时间戳
+     * Get 当次抓拍时间戳 
      * @return Time 当次抓拍时间戳
      */
     public Integer getTime() {
@@ -137,7 +137,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当次抓拍时间戳
+     * Set 当次抓拍时间戳
      * @param Time 当次抓拍时间戳
      */
     public void setTime(Integer Time) {
@@ -145,7 +145,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前的person基本信息，图片以FacePic为准，结构体内未填
+     * Get 当前的person基本信息，图片以FacePic为准，结构体内未填 
      * @return PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
      */
     public PersonInfo getPersonInfo() {
@@ -153,7 +153,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前的person基本信息，图片以FacePic为准，结构体内未填
+     * Set 当前的person基本信息，图片以FacePic为准，结构体内未填
      * @param PersonInfo 当前的person基本信息，图片以FacePic为准，结构体内未填
      */
     public void setPersonInfo(PersonInfo PersonInfo) {
@@ -161,7 +161,7 @@ public class CameraPersonInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TempId", this.TempId);

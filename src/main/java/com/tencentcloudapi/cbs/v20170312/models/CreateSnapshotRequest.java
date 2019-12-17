@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSnapshotRequest  extends AbstractModel{
+public class CreateSnapshotRequest extends AbstractModel{
 
     /**
     * 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
@@ -37,7 +37,7 @@ public class CreateSnapshotRequest  extends AbstractModel{
     private String SnapshotName;
 
     /**
-     * 获取需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public String getDiskId() {
@@ -45,7 +45,7 @@ public class CreateSnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public void setDiskId(String DiskId) {
@@ -53,7 +53,7 @@ public class CreateSnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 获取快照名称，不传则新快照名称默认为“未命名”。
+     * Get 快照名称，不传则新快照名称默认为“未命名”。 
      * @return SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
      */
     public String getSnapshotName() {
@@ -61,7 +61,7 @@ public class CreateSnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 设置快照名称，不传则新快照名称默认为“未命名”。
+     * Set 快照名称，不传则新快照名称默认为“未命名”。
      * @param SnapshotName 快照名称，不传则新快照名称默认为“未命名”。
      */
     public void setSnapshotName(String SnapshotName) {
@@ -69,7 +69,7 @@ public class CreateSnapshotRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);

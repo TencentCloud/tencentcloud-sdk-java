@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvsResponse  extends AbstractModel{
+public class DescribeComputeEnvsResponse extends AbstractModel{
 
     /**
     * 计算环境列表
@@ -44,7 +44,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取计算环境列表
+     * Get 计算环境列表 
      * @return ComputeEnvSet 计算环境列表
      */
     public ComputeEnvView [] getComputeEnvSet() {
@@ -52,7 +52,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境列表
+     * Set 计算环境列表
      * @param ComputeEnvSet 计算环境列表
      */
     public void setComputeEnvSet(ComputeEnvView [] ComputeEnvSet) {
@@ -60,7 +60,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境数量
+     * Get 计算环境数量 
      * @return TotalCount 计算环境数量
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境数量
+     * Set 计算环境数量
      * @param TotalCount 计算环境数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeComputeEnvsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ComputeEnvSet.", this.ComputeEnvSet);

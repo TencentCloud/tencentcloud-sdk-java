@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StickerTrackItem  extends AbstractModel{
+public class StickerTrackItem extends AbstractModel{
 
     /**
     * 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
@@ -104,7 +104,7 @@ public class StickerTrackItem  extends AbstractModel{
     private ImageTransform [] ImageOperations;
 
     /**
-     * 获取贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * Get 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。 
      * @return SourceMedia 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      */
     public String getSourceMedia() {
@@ -112,7 +112,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * Set 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      * @param SourceMedia 贴图素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      */
     public void setSourceMedia(String SourceMedia) {
@@ -120,7 +120,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图的持续时间，单位为秒。
+     * Get 贴图的持续时间，单位为秒。 
      * @return Duration 贴图的持续时间，单位为秒。
      */
     public Float getDuration() {
@@ -128,7 +128,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图的持续时间，单位为秒。
+     * Set 贴图的持续时间，单位为秒。
      * @param Duration 贴图的持续时间，单位为秒。
      */
     public void setDuration(Float Duration) {
@@ -136,7 +136,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图在轨道上的起始时间，单位为秒。
+     * Get 贴图在轨道上的起始时间，单位为秒。 
      * @return StartTime 贴图在轨道上的起始时间，单位为秒。
      */
     public Float getStartTime() {
@@ -144,7 +144,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图在轨道上的起始时间，单位为秒。
+     * Set 贴图在轨道上的起始时间，单位为秒。
      * @param StartTime 贴图在轨道上的起始时间，单位为秒。
      */
     public void setStartTime(Float StartTime) {
@@ -152,9 +152,9 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取原点位置，取值有：
+     * Get 原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
-默认值：Center。
+默认值：Center。 
      * @return CoordinateOrigin 原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值：Center。
@@ -164,7 +164,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置原点位置，取值有：
+     * Set 原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值：Center。
      * @param CoordinateOrigin 原点位置，取值有：
@@ -176,9 +176,9 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
+     * Get 贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布宽度的 10%。</li><li>当字符串以 px 结尾，表示贴图 XPos 单位为像素，如 100px 表示 XPos 为 100 像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return XPos 贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布宽度的 10%。</li><li>当字符串以 px 结尾，表示贴图 XPos 单位为像素，如 100px 表示 XPos 为 100 像素。</li>
 默认值：0px。
@@ -188,7 +188,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
+     * Set 贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布宽度的 10%。</li><li>当字符串以 px 结尾，表示贴图 XPos 单位为像素，如 100px 表示 XPos 为 100 像素。</li>
 默认值：0px。
      * @param XPos 贴图原点距离画布原点的水平位置。支持 %、px 两种格式：
@@ -200,10 +200,10 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图原点距离画布原点的垂直位置。支持 %、px 两种格式：
+     * Get 贴图原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 YPos 单位为像素，如 100px 表示 YPos 为 100 像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return YPos 贴图原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 YPos 单位为像素，如 100px 表示 YPos 为 100 像素。</li>
@@ -214,7 +214,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图原点距离画布原点的垂直位置。支持 %、px 两种格式：
+     * Set 贴图原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 YPos 单位为像素，如 100px 表示 YPos 为 100 像素。</li>
 默认值：0px。
@@ -228,12 +228,12 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图的宽度。支持 %、px 两种格式：
+     * Get 贴图的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取贴图素材本身的 Width、Height。</li>
 <li>当 Width 为空0，Height 非空，则 Width 按比例缩放</li>
-<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
+<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li> 
      * @return Width 贴图的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
@@ -246,7 +246,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图的宽度。支持 %、px 两种格式：
+     * Set 贴图的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Width 单位为像素，如 100px 表示 Width 为 100 像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取贴图素材本身的 Width、Height。</li>
@@ -264,12 +264,12 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图的高度。支持 %、px 两种格式：
+     * Get 贴图的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Height 单位为像素，如 100px 表示 Hieght 为 100 像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取贴图素材本身的 Width、Height。</li>
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
-<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
+<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li> 
      * @return Height 贴图的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Height 单位为像素，如 100px 表示 Hieght 为 100 像素。</li>
@@ -282,7 +282,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图的高度。支持 %、px 两种格式：
+     * Set 贴图的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示贴图 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示贴图 Height 单位为像素，如 100px 表示 Hieght 为 100 像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取贴图素材本身的 Width、Height。</li>
@@ -300,8 +300,8 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取对贴图进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对贴图进行的操作，如图像旋转等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageOperations 对贴图进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -310,7 +310,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置对贴图进行的操作，如图像旋转等。
+     * Set 对贴图进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOperations 对贴图进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -320,7 +320,7 @@ public class StickerTrackItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);

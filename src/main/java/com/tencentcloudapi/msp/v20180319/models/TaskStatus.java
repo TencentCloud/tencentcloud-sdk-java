@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskStatus  extends AbstractModel{
+public class TaskStatus extends AbstractModel{
 
     /**
     * 迁移状态
@@ -44,7 +44,7 @@ public class TaskStatus  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取迁移状态
+     * Get 迁移状态 
      * @return Status 迁移状态
      */
     public String getStatus() {
@@ -52,7 +52,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置迁移状态
+     * Set 迁移状态
      * @param Status 迁移状态
      */
     public void setStatus(String Status) {
@@ -60,7 +60,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取迁移进度
+     * Get 迁移进度 
      * @return Progress 迁移进度
      */
     public String getProgress() {
@@ -68,7 +68,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置迁移进度
+     * Set 迁移进度
      * @param Progress 迁移进度
      */
     public void setProgress(String Progress) {
@@ -76,7 +76,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取迁移日期
+     * Get 迁移日期 
      * @return UpdateTime 迁移日期
      */
     public String getUpdateTime() {
@@ -84,7 +84,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置迁移日期
+     * Set 迁移日期
      * @param UpdateTime 迁移日期
      */
     public void setUpdateTime(String UpdateTime) {
@@ -92,7 +92,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

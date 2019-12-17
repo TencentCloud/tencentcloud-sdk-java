@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceExpressionResult  extends AbstractModel{
+public class FaceExpressionResult extends AbstractModel{
 
     /**
     * 表情置信度
@@ -37,7 +37,7 @@ public class FaceExpressionResult  extends AbstractModel{
     private String Expression;
 
     /**
-     * 获取表情置信度
+     * Get 表情置信度 
      * @return Confidence 表情置信度
      */
     public Float getConfidence() {
@@ -45,7 +45,7 @@ public class FaceExpressionResult  extends AbstractModel{
     }
 
     /**
-     * 设置表情置信度
+     * Set 表情置信度
      * @param Confidence 表情置信度
      */
     public void setConfidence(Float Confidence) {
@@ -53,7 +53,7 @@ public class FaceExpressionResult  extends AbstractModel{
     }
 
     /**
-     * 获取表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+     * Get 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视" 
      * @return Expression 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     public String getExpression() {
@@ -61,7 +61,7 @@ public class FaceExpressionResult  extends AbstractModel{
     }
 
     /**
-     * 设置表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
+     * Set 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      * @param Expression 表情识别结果，包括"neutral":中性,"happiness":开心，"angry":"生气"，"disgust":厌恶，"fear":"恐惧"，"sadness":"悲伤"，"surprise":"惊讶"，"contempt":"蔑视"
      */
     public void setExpression(String Expression) {
@@ -69,7 +69,7 @@ public class FaceExpressionResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

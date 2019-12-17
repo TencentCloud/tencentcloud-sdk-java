@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateScheduledActionRequest  extends AbstractModel{
+public class CreateScheduledActionRequest extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -79,7 +79,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     private String Recurrence;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -87,7 +87,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -95,7 +95,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
+     * Get 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。 
      * @return ScheduledActionName 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
      */
     public String getScheduledActionName() {
@@ -103,7 +103,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
+     * Set 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
      * @param ScheduledActionName 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
      */
     public void setScheduledActionName(String ScheduledActionName) {
@@ -111,7 +111,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当定时任务触发时，设置的伸缩组最大实例数。
+     * Get 当定时任务触发时，设置的伸缩组最大实例数。 
      * @return MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
     public Integer getMaxSize() {
@@ -119,7 +119,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当定时任务触发时，设置的伸缩组最大实例数。
+     * Set 当定时任务触发时，设置的伸缩组最大实例数。
      * @param MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
     public void setMaxSize(Integer MaxSize) {
@@ -127,7 +127,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当定时任务触发时，设置的伸缩组最小实例数。
+     * Get 当定时任务触发时，设置的伸缩组最小实例数。 
      * @return MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      */
     public Integer getMinSize() {
@@ -135,7 +135,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当定时任务触发时，设置的伸缩组最小实例数。
+     * Set 当定时任务触发时，设置的伸缩组最小实例数。
      * @param MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      */
     public void setMinSize(Integer MinSize) {
@@ -143,7 +143,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当定时任务触发时，设置的伸缩组期望实例数。
+     * Get 当定时任务触发时，设置的伸缩组期望实例数。 
      * @return DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      */
     public Integer getDesiredCapacity() {
@@ -151,7 +151,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当定时任务触发时，设置的伸缩组期望实例数。
+     * Set 当定时任务触发时，设置的伸缩组期望实例数。
      * @param DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -159,7 +159,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Get 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。 
      * @return StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public String getStartTime() {
@@ -167,7 +167,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Set 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public void setStartTime(String StartTime) {
@@ -175,7 +175,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
+     * Get 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。 
      * @return EndTime 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
      */
     public String getEndTime() {
@@ -183,7 +183,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
+     * Set 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
      * @param EndTime 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
      */
     public void setEndTime(String EndTime) {
@@ -191,7 +191,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * Get 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。 
      * @return Recurrence 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      */
     public String getRecurrence() {
@@ -199,7 +199,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * Set 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      * @param Recurrence 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
      */
     public void setRecurrence(String Recurrence) {
@@ -207,7 +207,7 @@ public class CreateScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

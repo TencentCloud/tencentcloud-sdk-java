@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccessRulesRequest  extends AbstractModel{
+public class ModifyAccessRulesRequest extends AbstractModel{
 
     /**
     * 多个权限规则，上限为10
@@ -30,7 +30,7 @@ public class ModifyAccessRulesRequest  extends AbstractModel{
     private AccessRule [] AccessRules;
 
     /**
-     * 获取多个权限规则，上限为10
+     * Get 多个权限规则，上限为10 
      * @return AccessRules 多个权限规则，上限为10
      */
     public AccessRule [] getAccessRules() {
@@ -38,7 +38,7 @@ public class ModifyAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置多个权限规则，上限为10
+     * Set 多个权限规则，上限为10
      * @param AccessRules 多个权限规则，上限为10
      */
     public void setAccessRules(AccessRule [] AccessRules) {
@@ -46,7 +46,7 @@ public class ModifyAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AccessRules.", this.AccessRules);

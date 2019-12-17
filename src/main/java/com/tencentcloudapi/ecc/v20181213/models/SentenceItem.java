@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceItem  extends AbstractModel{
+public class SentenceItem extends AbstractModel{
 
     /**
     * 英语句子
@@ -44,7 +44,7 @@ public class SentenceItem  extends AbstractModel{
     private Long SentenceID;
 
     /**
-     * 获取英语句子
+     * Get 英语句子 
      * @return Sentence 英语句子
      */
     public String getSentence() {
@@ -52,7 +52,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 设置英语句子
+     * Set 英语句子
      * @param Sentence 英语句子
      */
     public void setSentence(String Sentence) {
@@ -60,7 +60,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 获取段落id
+     * Get 段落id 
      * @return ParaID 段落id
      */
     public Long getParaID() {
@@ -68,7 +68,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 设置段落id
+     * Set 段落id
      * @param ParaID 段落id
      */
     public void setParaID(Long ParaID) {
@@ -76,7 +76,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 获取句子id
+     * Get 句子id 
      * @return SentenceID 句子id
      */
     public Long getSentenceID() {
@@ -84,7 +84,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 设置句子id
+     * Set 句子id
      * @param SentenceID 句子id
      */
     public void setSentenceID(Long SentenceID) {
@@ -92,7 +92,7 @@ public class SentenceItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sentence", this.Sentence);

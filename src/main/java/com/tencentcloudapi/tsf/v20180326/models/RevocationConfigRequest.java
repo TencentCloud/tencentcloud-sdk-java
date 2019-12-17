@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RevocationConfigRequest  extends AbstractModel{
+public class RevocationConfigRequest extends AbstractModel{
 
     /**
     * 配置项发布ID
@@ -30,7 +30,7 @@ public class RevocationConfigRequest  extends AbstractModel{
     private String ConfigReleaseId;
 
     /**
-     * 获取配置项发布ID
+     * Get 配置项发布ID 
      * @return ConfigReleaseId 配置项发布ID
      */
     public String getConfigReleaseId() {
@@ -38,7 +38,7 @@ public class RevocationConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项发布ID
+     * Set 配置项发布ID
      * @param ConfigReleaseId 配置项发布ID
      */
     public void setConfigReleaseId(String ConfigReleaseId) {
@@ -46,7 +46,7 @@ public class RevocationConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigReleaseId", this.ConfigReleaseId);

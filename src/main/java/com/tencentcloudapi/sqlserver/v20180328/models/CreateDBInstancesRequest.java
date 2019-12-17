@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest  extends AbstractModel{
+public class CreateDBInstancesRequest extends AbstractModel{
 
     /**
     * 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
@@ -34,14 +34,14 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例磁盘大小，单位GB
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
@@ -55,14 +55,14 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 本次购买几个实例，默认值为1。取值不超过10
     */
     @SerializedName("GoodsNum")
     @Expose
-    private Integer GoodsNum;
+    private Long GoodsNum;
 
     /**
     * VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
@@ -83,14 +83,14 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 是否自动使用代金券；1 - 是，0 - 否，默认不使用
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID数组，目前单个订单只能使用一张
@@ -107,7 +107,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     private String DBVersion;
 
     /**
-     * 获取实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
+     * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
     public String getZone() {
@@ -115,7 +115,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
+     * Set 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
     public void setZone(String Zone) {
@@ -123,39 +123,39 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位GB
+     * Get 实例内存大小，单位GB 
      * @return Memory 实例内存大小，单位GB
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置实例内存大小，单位GB
+     * Set 实例内存大小，单位GB
      * @param Memory 实例内存大小，单位GB
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取实例磁盘大小，单位GB
+     * Get 实例磁盘大小，单位GB 
      * @return Storage 实例磁盘大小，单位GB
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * 设置实例磁盘大小，单位GB
+     * Set 实例磁盘大小，单位GB
      * @param Storage 实例磁盘大小，单位GB
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+     * Get 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。 
      * @return InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      */
     public String getInstanceChargeType() {
@@ -163,7 +163,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
+     * Set 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      * @param InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -171,39 +171,39 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取本次购买几个实例，默认值为1。取值不超过10
+     * Get 本次购买几个实例，默认值为1。取值不超过10 
      * @return GoodsNum 本次购买几个实例，默认值为1。取值不超过10
      */
-    public Integer getGoodsNum() {
+    public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * 设置本次购买几个实例，默认值为1。取值不超过10
+     * Set 本次购买几个实例，默认值为1。取值不超过10
      * @param GoodsNum 本次购买几个实例，默认值为1。取值不超过10
      */
-    public void setGoodsNum(Integer GoodsNum) {
+    public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * 获取VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
+     * Get VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置 
      * @return SubnetId VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
      */
     public String getSubnetId() {
@@ -211,7 +211,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
+     * Set VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
      * @param SubnetId VPC子网ID，形如subnet-bdoe83fa；SubnetId和VpcId需同时设置或者同时不设置
      */
     public void setSubnetId(String SubnetId) {
@@ -219,7 +219,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
+     * Get VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置 
      * @return VpcId VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
      */
     public String getVpcId() {
@@ -227,7 +227,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
+     * Set VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
      * @param VpcId VPC网络ID，形如vpc-dsp338hz；SubnetId和VpcId需同时设置或者同时不设置
      */
     public void setVpcId(String VpcId) {
@@ -235,39 +235,39 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买实例周期，默认取值为1，表示一个月。取值不超过48
+     * Get 购买实例周期，默认取值为1，表示一个月。取值不超过48 
      * @return Period 购买实例周期，默认取值为1，表示一个月。取值不超过48
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * 设置购买实例周期，默认取值为1，表示一个月。取值不超过48
+     * Set 购买实例周期，默认取值为1，表示一个月。取值不超过48
      * @param Period 购买实例周期，默认取值为1，表示一个月。取值不超过48
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * 获取是否自动使用代金券；1 - 是，0 - 否，默认不使用
+     * Get 是否自动使用代金券；1 - 是，0 - 否，默认不使用 
      * @return AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * 设置是否自动使用代金券；1 - 是，0 - 否，默认不使用
+     * Set 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      * @param AutoVoucher 是否自动使用代金券；1 - 是，0 - 否，默认不使用
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * 获取代金券ID数组，目前单个订单只能使用一张
+     * Get 代金券ID数组，目前单个订单只能使用一张 
      * @return VoucherIds 代金券ID数组，目前单个订单只能使用一张
      */
     public String [] getVoucherIds() {
@@ -275,7 +275,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID数组，目前单个订单只能使用一张
+     * Set 代金券ID数组，目前单个订单只能使用一张
      * @param VoucherIds 代金券ID数组，目前单个订单只能使用一张
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -283,7 +283,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
+     * Get sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。 
      * @return DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      */
     public String getDBVersion() {
@@ -291,7 +291,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
+     * Set sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      * @param DBVersion sqlserver版本，目前只支持：2008R2（SQL Server 2008 Enterprise），2012SP3（SQL Server 2012 Enterprise），2016SP1（SQL Server 2016 Enterprise），201602（SQL Server 2016 Standard）2017（SQL Server 2017 Enterprise）版本。每个地域支持售卖的版本不同，可通过DescribeProductConfig接口来拉取每个地域可售卖的版本信息。不填，默认为版本2008R2。
      */
     public void setDBVersion(String DBVersion) {
@@ -299,7 +299,7 @@ public class CreateDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

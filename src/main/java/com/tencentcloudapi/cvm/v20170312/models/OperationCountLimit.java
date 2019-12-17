@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperationCountLimit  extends AbstractModel{
+public class OperationCountLimit extends AbstractModel{
 
     /**
     * 实例操作。
@@ -51,7 +51,7 @@ public class OperationCountLimit  extends AbstractModel{
     private Integer LimitCount;
 
     /**
-     * 获取实例操作。
+     * Get 实例操作。 
      * @return Operation 实例操作。
      */
     public String getOperation() {
@@ -59,7 +59,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 设置实例操作。
+     * Set 实例操作。
      * @param Operation 实例操作。
      */
     public void setOperation(String Operation) {
@@ -67,7 +67,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID。
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
@@ -75,7 +75,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID。
+     * Set 实例ID。
      * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -83,7 +83,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 获取当前已使用次数，如果返回值为-1表示该操作无次数限制。
+     * Get 当前已使用次数，如果返回值为-1表示该操作无次数限制。 
      * @return CurrentCount 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      */
     public Integer getCurrentCount() {
@@ -91,7 +91,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 设置当前已使用次数，如果返回值为-1表示该操作无次数限制。
+     * Set 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      * @param CurrentCount 当前已使用次数，如果返回值为-1表示该操作无次数限制。
      */
     public void setCurrentCount(Integer CurrentCount) {
@@ -99,7 +99,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 获取操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
+     * Get 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。 
      * @return LimitCount 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      */
     public Integer getLimitCount() {
@@ -107,7 +107,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 设置操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
+     * Set 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      * @param LimitCount 操作次数最高额度，如果返回值为-1表示该操作无次数限制，如果返回值为0表示不支持调整配置。
      */
     public void setLimitCount(Integer LimitCount) {
@@ -115,7 +115,7 @@ public class OperationCountLimit  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operation", this.Operation);

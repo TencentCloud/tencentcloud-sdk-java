@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WatermarkCycleConfigForUpdate  extends AbstractModel{
+public class WatermarkCycleConfigForUpdate extends AbstractModel{
 
     /**
     * 水印在视频里第一次出现的播放时间点，单位：秒。
@@ -45,7 +45,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     private Float CycleDuration;
 
     /**
-     * 获取水印在视频里第一次出现的播放时间点，单位：秒。
+     * Get 水印在视频里第一次出现的播放时间点，单位：秒。 
      * @return StartTime 水印在视频里第一次出现的播放时间点，单位：秒。
      */
     public Float getStartTime() {
@@ -53,7 +53,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置水印在视频里第一次出现的播放时间点，单位：秒。
+     * Set 水印在视频里第一次出现的播放时间点，单位：秒。
      * @param StartTime 水印在视频里第一次出现的播放时间点，单位：秒。
      */
     public void setStartTime(Float StartTime) {
@@ -61,7 +61,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取在一个水印周期内，水印显示的持续时间，单位：秒。
+     * Get 在一个水印周期内，水印显示的持续时间，单位：秒。 
      * @return DisplayDuration 在一个水印周期内，水印显示的持续时间，单位：秒。
      */
     public Float getDisplayDuration() {
@@ -69,7 +69,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置在一个水印周期内，水印显示的持续时间，单位：秒。
+     * Set 在一个水印周期内，水印显示的持续时间，单位：秒。
      * @param DisplayDuration 在一个水印周期内，水印显示的持续时间，单位：秒。
      */
     public void setDisplayDuration(Float DisplayDuration) {
@@ -77,8 +77,8 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取一个水印周期的持续时间，单位：秒。
-填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
+     * Get 一个水印周期的持续时间，单位：秒。
+填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。 
      * @return CycleDuration 一个水印周期的持续时间，单位：秒。
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
      */
@@ -87,7 +87,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置一个水印周期的持续时间，单位：秒。
+     * Set 一个水印周期的持续时间，单位：秒。
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
      * @param CycleDuration 一个水印周期的持续时间，单位：秒。
 填 0 表示水印只持续一个水印周期（即在整个视频里只显示 DisplayDuration 秒）。
@@ -97,7 +97,7 @@ public class WatermarkCycleConfigForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

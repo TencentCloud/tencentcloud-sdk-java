@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetClusterSummaryResponse  extends AbstractModel{
+public class GetClusterSummaryResponse extends AbstractModel{
 
     /**
     * 网络通道总数量
@@ -135,7 +135,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取网络通道总数量
+     * Get 网络通道总数量 
      * @return TotalChannelCount 网络通道总数量
      */
     public Integer getTotalChannelCount() {
@@ -143,7 +143,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网络通道总数量
+     * Set 网络通道总数量
      * @param TotalChannelCount 网络通道总数量
      */
     public void setTotalChannelCount(Integer TotalChannelCount) {
@@ -151,7 +151,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织创建的通道数量
+     * Get 当前组织创建的通道数量 
      * @return MyChannelCount 当前组织创建的通道数量
      */
     public Integer getMyChannelCount() {
@@ -159,7 +159,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织创建的通道数量
+     * Set 当前组织创建的通道数量
      * @param MyChannelCount 当前组织创建的通道数量
      */
     public void setMyChannelCount(Integer MyChannelCount) {
@@ -167,7 +167,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织加入的通道数量
+     * Get 当前组织加入的通道数量 
      * @return JoinChannelCount 当前组织加入的通道数量
      */
     public Integer getJoinChannelCount() {
@@ -175,7 +175,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织加入的通道数量
+     * Set 当前组织加入的通道数量
      * @param JoinChannelCount 当前组织加入的通道数量
      */
     public void setJoinChannelCount(Integer JoinChannelCount) {
@@ -183,7 +183,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网络节点总数量
+     * Get 网络节点总数量 
      * @return TotalPeerCount 网络节点总数量
      */
     public Integer getTotalPeerCount() {
@@ -191,7 +191,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网络节点总数量
+     * Set 网络节点总数量
      * @param TotalPeerCount 网络节点总数量
      */
     public void setTotalPeerCount(Integer TotalPeerCount) {
@@ -199,7 +199,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织创建的节点数量
+     * Get 当前组织创建的节点数量 
      * @return MyPeerCount 当前组织创建的节点数量
      */
     public Integer getMyPeerCount() {
@@ -207,7 +207,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织创建的节点数量
+     * Set 当前组织创建的节点数量
      * @param MyPeerCount 当前组织创建的节点数量
      */
     public void setMyPeerCount(Integer MyPeerCount) {
@@ -215,7 +215,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取其他组织创建的节点数量
+     * Get 其他组织创建的节点数量 
      * @return OrderCount 其他组织创建的节点数量
      */
     public Integer getOrderCount() {
@@ -223,7 +223,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置其他组织创建的节点数量
+     * Set 其他组织创建的节点数量
      * @param OrderCount 其他组织创建的节点数量
      */
     public void setOrderCount(Integer OrderCount) {
@@ -231,7 +231,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网络组织总数量
+     * Get 网络组织总数量 
      * @return TotalGroupCount 网络组织总数量
      */
     public Integer getTotalGroupCount() {
@@ -239,7 +239,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网络组织总数量
+     * Set 网络组织总数量
      * @param TotalGroupCount 网络组织总数量
      */
     public void setTotalGroupCount(Integer TotalGroupCount) {
@@ -247,7 +247,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织创建的组织数量
+     * Get 当前组织创建的组织数量 
      * @return MyGroupCount 当前组织创建的组织数量
      */
     public Integer getMyGroupCount() {
@@ -255,7 +255,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织创建的组织数量
+     * Set 当前组织创建的组织数量
      * @param MyGroupCount 当前组织创建的组织数量
      */
     public void setMyGroupCount(Integer MyGroupCount) {
@@ -263,7 +263,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网络智能合约总数量
+     * Get 网络智能合约总数量 
      * @return TotalChaincodeCount 网络智能合约总数量
      */
     public Integer getTotalChaincodeCount() {
@@ -271,7 +271,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网络智能合约总数量
+     * Set 网络智能合约总数量
      * @param TotalChaincodeCount 网络智能合约总数量
      */
     public void setTotalChaincodeCount(Integer TotalChaincodeCount) {
@@ -279,7 +279,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最近7天发起的智能合约数量
+     * Get 最近7天发起的智能合约数量 
      * @return RecentChaincodeCount 最近7天发起的智能合约数量
      */
     public Integer getRecentChaincodeCount() {
@@ -287,7 +287,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最近7天发起的智能合约数量
+     * Set 最近7天发起的智能合约数量
      * @param RecentChaincodeCount 最近7天发起的智能合约数量
      */
     public void setRecentChaincodeCount(Integer RecentChaincodeCount) {
@@ -295,7 +295,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织发起的智能合约数量
+     * Get 当前组织发起的智能合约数量 
      * @return MyChaincodeCount 当前组织发起的智能合约数量
      */
     public Integer getMyChaincodeCount() {
@@ -303,7 +303,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织发起的智能合约数量
+     * Set 当前组织发起的智能合约数量
      * @param MyChaincodeCount 当前组织发起的智能合约数量
      */
     public void setMyChaincodeCount(Integer MyChaincodeCount) {
@@ -311,7 +311,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织的证书总数量
+     * Get 当前组织的证书总数量 
      * @return TotalCertCount 当前组织的证书总数量
      */
     public Integer getTotalCertCount() {
@@ -319,7 +319,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织的证书总数量
+     * Set 当前组织的证书总数量
      * @param TotalCertCount 当前组织的证书总数量
      */
     public void setTotalCertCount(Integer TotalCertCount) {
@@ -327,7 +327,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取颁发给当前组织的证书数量
+     * Get 颁发给当前组织的证书数量 
      * @return TlsCertCount 颁发给当前组织的证书数量
      */
     public Integer getTlsCertCount() {
@@ -335,7 +335,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置颁发给当前组织的证书数量
+     * Set 颁发给当前组织的证书数量
      * @param TlsCertCount 颁发给当前组织的证书数量
      */
     public void setTlsCertCount(Integer TlsCertCount) {
@@ -343,7 +343,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网络背书节点证书数量
+     * Get 网络背书节点证书数量 
      * @return PeerCertCount 网络背书节点证书数量
      */
     public Integer getPeerCertCount() {
@@ -351,7 +351,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网络背书节点证书数量
+     * Set 网络背书节点证书数量
      * @param PeerCertCount 网络背书节点证书数量
      */
     public void setPeerCertCount(Integer PeerCertCount) {
@@ -359,7 +359,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前组织业务证书数量
+     * Get 当前组织业务证书数量 
      * @return ClientCertCount 当前组织业务证书数量
      */
     public Integer getClientCertCount() {
@@ -367,7 +367,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前组织业务证书数量
+     * Set 当前组织业务证书数量
      * @param ClientCertCount 当前组织业务证书数量
      */
     public void setClientCertCount(Integer ClientCertCount) {
@@ -375,7 +375,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -383,7 +383,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -391,7 +391,7 @@ public class GetClusterSummaryResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalChannelCount", this.TotalChannelCount);

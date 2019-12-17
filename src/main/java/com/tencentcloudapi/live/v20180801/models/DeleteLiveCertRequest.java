@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveCertRequest  extends AbstractModel{
+public class DeleteLiveCertRequest extends AbstractModel{
 
     /**
     * 证书Id。
@@ -30,7 +30,7 @@ public class DeleteLiveCertRequest  extends AbstractModel{
     private Integer CertId;
 
     /**
-     * 获取证书Id。
+     * Get 证书Id。 
      * @return CertId 证书Id。
      */
     public Integer getCertId() {
@@ -38,7 +38,7 @@ public class DeleteLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书Id。
+     * Set 证书Id。
      * @param CertId 证书Id。
      */
     public void setCertId(Integer CertId) {
@@ -46,7 +46,7 @@ public class DeleteLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

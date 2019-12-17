@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StatInfo  extends AbstractModel{
+public class StatInfo extends AbstractModel{
 
     /**
     * 词汇库中的单词
@@ -37,7 +37,7 @@ public class StatInfo  extends AbstractModel{
     private Long Value;
 
     /**
-     * 获取词汇库中的单词
+     * Get 词汇库中的单词 
      * @return Keyword 词汇库中的单词
      */
     public String getKeyword() {
@@ -45,7 +45,7 @@ public class StatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库中的单词
+     * Set 词汇库中的单词
      * @param Keyword 词汇库中的单词
      */
     public void setKeyword(String Keyword) {
@@ -53,7 +53,7 @@ public class StatInfo  extends AbstractModel{
     }
 
     /**
-     * 获取单词出现在该音频中总次数
+     * Get 单词出现在该音频中总次数 
      * @return Value 单词出现在该音频中总次数
      */
     public Long getValue() {
@@ -61,7 +61,7 @@ public class StatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置单词出现在该音频中总次数
+     * Set 单词出现在该音频中总次数
      * @param Value 单词出现在该音频中总次数
      */
     public void setValue(Long Value) {
@@ -69,7 +69,7 @@ public class StatInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);

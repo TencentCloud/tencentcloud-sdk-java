@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
+public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -76,7 +76,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     private String OrderParam;
 
     /**
-     * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getStartTime() {
@@ -84,7 +84,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setStartTime(String StartTime) {
@@ -92,8 +92,8 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+时间跨度在[0,4小时]，支持最近1天数据查询。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在[0,4小时]，支持最近1天数据查询。
      */
@@ -102,7 +102,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在[0,4小时]，支持最近1天数据查询。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在[0,4小时]，支持最近1天数据查询。
@@ -112,7 +112,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取峰值指标，可选值包括”Domain”，”StreamId”。
+     * Get 峰值指标，可选值包括”Domain”，”StreamId”。 
      * @return TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
      */
     public String getTopIndex() {
@@ -120,7 +120,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置峰值指标，可选值包括”Domain”，”StreamId”。
+     * Set 峰值指标，可选值包括”Domain”，”StreamId”。
      * @param TopIndex 峰值指标，可选值包括”Domain”，”StreamId”。
      */
     public void setTopIndex(String TopIndex) {
@@ -128,7 +128,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名，默认为不填，表示求总体数据。
+     * Get 播放域名，默认为不填，表示求总体数据。 
      * @return PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public String [] getPlayDomains() {
@@ -136,7 +136,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名，默认为不填，表示求总体数据。
+     * Set 播放域名，默认为不填，表示求总体数据。
      * @param PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -144,9 +144,9 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页号，
+     * Get 页号，
 范围是[1,1000]，
-默认值是1。
+默认值是1。 
      * @return PageNum 页号，
 范围是[1,1000]，
 默认值是1。
@@ -156,7 +156,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页号，
+     * Set 页号，
 范围是[1,1000]，
 默认值是1。
      * @param PageNum 页号，
@@ -168,8 +168,8 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，
-默认值是20。
+     * Get 每页个数，范围是[1,1000]，
+默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，
 默认值是20。
      */
@@ -178,7 +178,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，
+     * Set 每页个数，范围是[1,1000]，
 默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，
 默认值是20。
@@ -188,7 +188,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * Get 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。 
      * @return OrderParam 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      */
     public String getOrderParam() {
@@ -196,7 +196,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
+     * Set 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      * @param OrderParam 排序指标，可选值包括” AvgFluxPerSecond”，”TotalRequest”（默认）,“TotalFlux”。
      */
     public void setOrderParam(String OrderParam) {
@@ -204,7 +204,7 @@ public class DescribeVisitTopSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

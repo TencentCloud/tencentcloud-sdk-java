@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AcceptDirectConnectTunnelRequest  extends AbstractModel{
+public class AcceptDirectConnectTunnelRequest extends AbstractModel{
 
     /**
     * 物理专线拥有者接受共享专用通道申请
@@ -30,7 +30,7 @@ public class AcceptDirectConnectTunnelRequest  extends AbstractModel{
     private String DirectConnectTunnelId;
 
     /**
-     * 获取物理专线拥有者接受共享专用通道申请
+     * Get 物理专线拥有者接受共享专用通道申请 
      * @return DirectConnectTunnelId 物理专线拥有者接受共享专用通道申请
      */
     public String getDirectConnectTunnelId() {
@@ -38,7 +38,7 @@ public class AcceptDirectConnectTunnelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线拥有者接受共享专用通道申请
+     * Set 物理专线拥有者接受共享专用通道申请
      * @param DirectConnectTunnelId 物理专线拥有者接受共享专用通道申请
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
@@ -46,7 +46,7 @@ public class AcceptDirectConnectTunnelRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectTunnelId", this.DirectConnectTunnelId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoInstanceInfo  extends AbstractModel{
+public class RoInstanceInfo extends AbstractModel{
 
     /**
     * RO组对应的主实例的ID
@@ -184,7 +184,7 @@ public class RoInstanceInfo  extends AbstractModel{
     private Integer PayType;
 
     /**
-     * 获取RO组对应的主实例的ID
+     * Get RO组对应的主实例的ID 
      * @return MasterInstanceId RO组对应的主实例的ID
      */
     public String getMasterInstanceId() {
@@ -192,7 +192,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO组对应的主实例的ID
+     * Set RO组对应的主实例的ID
      * @param MasterInstanceId RO组对应的主实例的ID
      */
     public void setMasterInstanceId(String MasterInstanceId) {
@@ -200,7 +200,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例在RO组内的状态，可能的值：online-在线，offline-下线
+     * Get RO实例在RO组内的状态，可能的值：online-在线，offline-下线 
      * @return RoStatus RO实例在RO组内的状态，可能的值：online-在线，offline-下线
      */
     public String getRoStatus() {
@@ -208,7 +208,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例在RO组内的状态，可能的值：online-在线，offline-下线
+     * Set RO实例在RO组内的状态，可能的值：online-在线，offline-下线
      * @param RoStatus RO实例在RO组内的状态，可能的值：online-在线，offline-下线
      */
     public void setRoStatus(String RoStatus) {
@@ -216,7 +216,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例在RO组内上一次下线的时间
+     * Get RO实例在RO组内上一次下线的时间 
      * @return OfflineTime RO实例在RO组内上一次下线的时间
      */
     public String getOfflineTime() {
@@ -224,7 +224,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例在RO组内上一次下线的时间
+     * Set RO实例在RO组内上一次下线的时间
      * @param OfflineTime RO实例在RO组内上一次下线的时间
      */
     public void setOfflineTime(String OfflineTime) {
@@ -232,7 +232,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例在RO组内的权重
+     * Get RO实例在RO组内的权重 
      * @return Weight RO实例在RO组内的权重
      */
     public Integer getWeight() {
@@ -240,7 +240,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例在RO组内的权重
+     * Set RO实例在RO组内的权重
      * @param Weight RO实例在RO组内的权重
      */
     public void setWeight(Integer Weight) {
@@ -248,7 +248,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例所在区域名称，如ap-shanghai
+     * Get RO实例所在区域名称，如ap-shanghai 
      * @return Region RO实例所在区域名称，如ap-shanghai
      */
     public String getRegion() {
@@ -256,7 +256,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例所在区域名称，如ap-shanghai
+     * Set RO实例所在区域名称，如ap-shanghai
      * @param Region RO实例所在区域名称，如ap-shanghai
      */
     public void setRegion(String Region) {
@@ -264,7 +264,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO可用区的正式名称，如ap-shanghai-1
+     * Get RO可用区的正式名称，如ap-shanghai-1 
      * @return Zone RO可用区的正式名称，如ap-shanghai-1
      */
     public String getZone() {
@@ -272,7 +272,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO可用区的正式名称，如ap-shanghai-1
+     * Set RO可用区的正式名称，如ap-shanghai-1
      * @param Zone RO可用区的正式名称，如ap-shanghai-1
      */
     public void setZone(String Zone) {
@@ -280,7 +280,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例ID，格式如：cdbro-c1nl9rpv
+     * Get RO实例ID，格式如：cdbro-c1nl9rpv 
      * @return InstanceId RO实例ID，格式如：cdbro-c1nl9rpv
      */
     public String getInstanceId() {
@@ -288,7 +288,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例ID，格式如：cdbro-c1nl9rpv
+     * Set RO实例ID，格式如：cdbro-c1nl9rpv
      * @param InstanceId RO实例ID，格式如：cdbro-c1nl9rpv
      */
     public void setInstanceId(String InstanceId) {
@@ -296,7 +296,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
+     * Get RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中 
      * @return Status RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      */
     public Integer getStatus() {
@@ -304,7 +304,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
+     * Set RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      * @param Status RO实例状态，可能返回值：0-创建中，1-运行中，4-删除中
      */
     public void setStatus(Integer Status) {
@@ -312,7 +312,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
+     * Get 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例 
      * @return InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      */
     public Integer getInstanceType() {
@@ -320,7 +320,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
+     * Set 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      * @param InstanceType 实例类型，可能返回值：1-主实例，2-灾备实例，3-只读实例
      */
     public void setInstanceType(Integer InstanceType) {
@@ -328,7 +328,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例名称
+     * Get RO实例名称 
      * @return InstanceName RO实例名称
      */
     public String getInstanceName() {
@@ -336,7 +336,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例名称
+     * Set RO实例名称
      * @param InstanceName RO实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -344,7 +344,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取按量计费状态，可能的取值：1-正常，2-欠费
+     * Get 按量计费状态，可能的取值：1-正常，2-欠费 
      * @return HourFeeStatus 按量计费状态，可能的取值：1-正常，2-欠费
      */
     public Integer getHourFeeStatus() {
@@ -352,7 +352,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置按量计费状态，可能的取值：1-正常，2-欠费
+     * Set 按量计费状态，可能的取值：1-正常，2-欠费
      * @param HourFeeStatus 按量计费状态，可能的取值：1-正常，2-欠费
      */
     public void setHourFeeStatus(Integer HourFeeStatus) {
@@ -360,7 +360,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
+     * Get RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中 
      * @return TaskStatus RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      */
     public Integer getTaskStatus() {
@@ -368,7 +368,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
+     * Set RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      * @param TaskStatus RO实例任务状态，可能返回值：<br>0-没有任务<br>1-升级中<br>2-数据导入中<br>3-开放Slave中<br>4-外网访问开通中<br>5-批量操作执行中<br>6-回档中<br>7-外网访问关闭中<br>8-密码修改中<br>9-实例名修改中<br>10-重启中<br>12-自建迁移中<br>13-删除库表中<br>14-灾备实例创建同步中
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -376,7 +376,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例内存大小，单位：MB
+     * Get RO实例内存大小，单位：MB 
      * @return Memory RO实例内存大小，单位：MB
      */
     public Integer getMemory() {
@@ -384,7 +384,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例内存大小，单位：MB
+     * Set RO实例内存大小，单位：MB
      * @param Memory RO实例内存大小，单位：MB
      */
     public void setMemory(Integer Memory) {
@@ -392,7 +392,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例硬盘大小，单位：GB
+     * Get RO实例硬盘大小，单位：GB 
      * @return Volume RO实例硬盘大小，单位：GB
      */
     public Integer getVolume() {
@@ -400,7 +400,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例硬盘大小，单位：GB
+     * Set RO实例硬盘大小，单位：GB
      * @param Volume RO实例硬盘大小，单位：GB
      */
     public void setVolume(Integer Volume) {
@@ -408,7 +408,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取每次查询数量
+     * Get 每次查询数量 
      * @return Qps 每次查询数量
      */
     public Integer getQps() {
@@ -416,7 +416,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置每次查询数量
+     * Set 每次查询数量
      * @param Qps 每次查询数量
      */
     public void setQps(Integer Qps) {
@@ -424,7 +424,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例的内网IP地址
+     * Get RO实例的内网IP地址 
      * @return Vip RO实例的内网IP地址
      */
     public String getVip() {
@@ -432,7 +432,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例的内网IP地址
+     * Set RO实例的内网IP地址
      * @param Vip RO实例的内网IP地址
      */
     public void setVip(String Vip) {
@@ -440,7 +440,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例访问端口
+     * Get RO实例访问端口 
      * @return Vport RO实例访问端口
      */
     public Integer getVport() {
@@ -448,7 +448,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例访问端口
+     * Set RO实例访问端口
      * @param Vport RO实例访问端口
      */
     public void setVport(Integer Vport) {
@@ -456,7 +456,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例所在私有网络ID
+     * Get RO实例所在私有网络ID 
      * @return VpcId RO实例所在私有网络ID
      */
     public Integer getVpcId() {
@@ -464,7 +464,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例所在私有网络ID
+     * Set RO实例所在私有网络ID
      * @param VpcId RO实例所在私有网络ID
      */
     public void setVpcId(Integer VpcId) {
@@ -472,7 +472,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例所在私有网络子网ID
+     * Get RO实例所在私有网络子网ID 
      * @return SubnetId RO实例所在私有网络子网ID
      */
     public Integer getSubnetId() {
@@ -480,7 +480,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例所在私有网络子网ID
+     * Set RO实例所在私有网络子网ID
      * @param SubnetId RO实例所在私有网络子网ID
      */
     public void setSubnetId(Integer SubnetId) {
@@ -488,7 +488,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例规格描述，目前可取值 CUSTOM
+     * Get RO实例规格描述，目前可取值 CUSTOM 
      * @return DeviceType RO实例规格描述，目前可取值 CUSTOM
      */
     public String getDeviceType() {
@@ -496,7 +496,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例规格描述，目前可取值 CUSTOM
+     * Set RO实例规格描述，目前可取值 CUSTOM
      * @param DeviceType RO实例规格描述，目前可取值 CUSTOM
      */
     public void setDeviceType(String DeviceType) {
@@ -504,7 +504,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * Get RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7 
      * @return EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
      */
     public String getEngineVersion() {
@@ -512,7 +512,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
+     * Set RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
      * @param EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6和5.7
      */
     public void setEngineVersion(String EngineVersion) {
@@ -520,7 +520,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
+     * Get RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00 
      * @return DeadlineTime RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
      */
     public String getDeadlineTime() {
@@ -528,7 +528,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
+     * Set RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
      * @param DeadlineTime RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
      */
     public void setDeadlineTime(String DeadlineTime) {
@@ -536,7 +536,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
+     * Get RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结 
      * @return PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */
     public Integer getPayType() {
@@ -544,7 +544,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
+     * Set RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      * @param PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
      */
     public void setPayType(Integer PayType) {
@@ -552,7 +552,7 @@ public class RoInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);

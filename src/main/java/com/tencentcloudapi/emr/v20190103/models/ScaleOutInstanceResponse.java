@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleOutInstanceResponse  extends AbstractModel{
+public class ScaleOutInstanceResponse extends AbstractModel{
 
     /**
     * 实例ID
@@ -53,7 +53,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -69,8 +69,8 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 订单号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DealNames 订单号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -79,7 +79,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订单号
+     * Set 订单号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DealNames 订单号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,8 +89,8 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取token
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get token
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientToken token
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -99,7 +99,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置token
+     * Set token
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientToken token
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,7 +109,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -117,7 +117,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -125,7 +125,7 @@ public class ScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

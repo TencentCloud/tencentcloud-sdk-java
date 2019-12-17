@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FairPlayPemDigestInfo  extends AbstractModel{
+public class FairPlayPemDigestInfo extends AbstractModel{
 
     /**
     * fairplay 私钥pem id。
@@ -63,8 +63,8 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     private String Md5PemDecryptKey;
 
     /**
-     * 获取fairplay 私钥pem id。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get fairplay 私钥pem id。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FairPlayPemId fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -73,7 +73,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 设置fairplay 私钥pem id。
+     * Set fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FairPlayPemId fairplay 私钥pem id。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,8 +83,8 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私钥的优先级。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 私钥的优先级。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Priority 私钥的优先级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,7 +93,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私钥的优先级。
+     * Set 私钥的优先级。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 私钥的优先级。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,8 +103,8 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私钥的md5 信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 私钥的md5 信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5Pem 私钥的md5 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私钥的md5 信息。
+     * Set 私钥的md5 信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5Pem 私钥的md5 信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ASK的md5信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ASK的md5信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5Ask ASK的md5信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ASK的md5信息。
+     * Set ASK的md5信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5Ask ASK的md5信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私钥解密密钥的md5值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 私钥解密密钥的md5值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Md5PemDecryptKey 私钥解密密钥的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私钥解密密钥的md5值。
+     * Set 私钥解密密钥的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5PemDecryptKey 私钥解密密钥的md5值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,7 +163,7 @@ public class FairPlayPemDigestInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FairPlayPemId", this.FairPlayPemId);

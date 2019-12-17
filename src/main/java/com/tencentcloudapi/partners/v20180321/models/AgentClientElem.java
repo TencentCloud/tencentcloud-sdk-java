@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentClientElem  extends AbstractModel{
+public class AgentClientElem extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -79,7 +79,7 @@ public class AgentClientElem  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -87,7 +87,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -95,7 +95,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客账号ID
+     * Get 代客账号ID 
      * @return ClientUin 代客账号ID
      */
     public String getClientUin() {
@@ -103,7 +103,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客账号ID
+     * Set 代客账号ID
      * @param ClientUin 代客账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -111,7 +111,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客申请时间戳
+     * Get 代客申请时间戳 
      * @return ApplyTime 代客申请时间戳
      */
     public Integer getApplyTime() {
@@ -119,7 +119,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客申请时间戳
+     * Set 代客申请时间戳
      * @param ApplyTime 代客申请时间戳
      */
     public void setApplyTime(Integer ApplyTime) {
@@ -127,7 +127,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客类型，可能值为a/b/c
+     * Get 代客类型，可能值为a/b/c 
      * @return ClientFlag 代客类型，可能值为a/b/c
      */
     public String getClientFlag() {
@@ -135,7 +135,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客类型，可能值为a/b/c
+     * Set 代客类型，可能值为a/b/c
      * @param ClientFlag 代客类型，可能值为a/b/c
      */
     public void setClientFlag(String ClientFlag) {
@@ -143,7 +143,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客邮箱，打码显示
+     * Get 代客邮箱，打码显示 
      * @return Mail 代客邮箱，打码显示
      */
     public String getMail() {
@@ -151,7 +151,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客邮箱，打码显示
+     * Set 代客邮箱，打码显示
      * @param Mail 代客邮箱，打码显示
      */
     public void setMail(String Mail) {
@@ -159,7 +159,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取代客手机，打码显示
+     * Get 代客手机，打码显示 
      * @return Phone 代客手机，打码显示
      */
     public String getPhone() {
@@ -167,7 +167,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置代客手机，打码显示
+     * Set 代客手机，打码显示
      * @param Phone 代客手机，打码显示
      */
     public void setPhone(String Phone) {
@@ -175,7 +175,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取0表示不欠费，1表示欠费
+     * Get 0表示不欠费，1表示欠费 
      * @return HasOverdueBill 0表示不欠费，1表示欠费
      */
     public Integer getHasOverdueBill() {
@@ -183,7 +183,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置0表示不欠费，1表示欠费
+     * Set 0表示不欠费，1表示欠费
      * @param HasOverdueBill 0表示不欠费，1表示欠费
      */
     public void setHasOverdueBill(Integer HasOverdueBill) {
@@ -191,7 +191,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 获取1:待代理商审核;2:待腾讯云审核
+     * Get 1:待代理商审核;2:待腾讯云审核 
      * @return Status 1:待代理商审核;2:待腾讯云审核
      */
     public Integer getStatus() {
@@ -199,7 +199,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 设置1:待代理商审核;2:待腾讯云审核
+     * Set 1:待代理商审核;2:待腾讯云审核
      * @param Status 1:待代理商审核;2:待腾讯云审核
      */
     public void setStatus(Integer Status) {
@@ -207,7 +207,7 @@ public class AgentClientElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

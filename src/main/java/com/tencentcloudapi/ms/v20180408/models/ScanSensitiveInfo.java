@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanSensitiveInfo  extends AbstractModel{
+public class ScanSensitiveInfo extends AbstractModel{
 
     /**
     * 敏感词
@@ -44,7 +44,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     private String FileSha;
 
     /**
-     * 获取敏感词
+     * Get 敏感词 
      * @return WordList 敏感词
      */
     public String [] getWordList() {
@@ -52,7 +52,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 设置敏感词
+     * Set 敏感词
      * @param WordList 敏感词
      */
     public void setWordList(String [] WordList) {
@@ -60,7 +60,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 获取敏感词对应的文件信息
+     * Get 敏感词对应的文件信息 
      * @return FilePath 敏感词对应的文件信息
      */
     public String getFilePath() {
@@ -68,7 +68,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 设置敏感词对应的文件信息
+     * Set 敏感词对应的文件信息
      * @param FilePath 敏感词对应的文件信息
      */
     public void setFilePath(String FilePath) {
@@ -76,7 +76,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件sha1值
+     * Get 文件sha1值 
      * @return FileSha 文件sha1值
      */
     public String getFileSha() {
@@ -84,7 +84,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件sha1值
+     * Set 文件sha1值
      * @param FileSha 文件sha1值
      */
     public void setFileSha(String FileSha) {
@@ -92,7 +92,7 @@ public class ScanSensitiveInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "WordList.", this.WordList);

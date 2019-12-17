@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAuditResponse  extends AbstractModel{
+public class DescribeAuditResponse extends AbstractModel{
 
     /**
     * 跟踪集名称。
@@ -93,7 +93,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取跟踪集名称。
+     * Get 跟踪集名称。 
      * @return AuditName 跟踪集名称。
      */
     public String getAuditName() {
@@ -101,7 +101,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置跟踪集名称。
+     * Set 跟踪集名称。
      * @param AuditName 跟踪集名称。
      */
     public void setAuditName(String AuditName) {
@@ -109,7 +109,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取跟踪集状态，1：开启，0：停止。
+     * Get 跟踪集状态，1：开启，0：停止。 
      * @return AuditStatus 跟踪集状态，1：开启，0：停止。
      */
     public Long getAuditStatus() {
@@ -117,7 +117,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置跟踪集状态，1：开启，0：停止。
+     * Set 跟踪集状态，1：开启，0：停止。
      * @param AuditStatus 跟踪集状态，1：开启，0：停止。
      */
     public void setAuditStatus(Long AuditStatus) {
@@ -125,7 +125,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取队列名称。
+     * Get 队列名称。 
      * @return CmqQueueName 队列名称。
      */
     public String getCmqQueueName() {
@@ -133,7 +133,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置队列名称。
+     * Set 队列名称。
      * @param CmqQueueName 队列名称。
      */
     public void setCmqQueueName(String CmqQueueName) {
@@ -141,7 +141,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取队列所在地域。
+     * Get 队列所在地域。 
      * @return CmqRegion 队列所在地域。
      */
     public String getCmqRegion() {
@@ -149,7 +149,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置队列所在地域。
+     * Set 队列所在地域。
      * @param CmqRegion 队列所在地域。
      */
     public void setCmqRegion(String CmqRegion) {
@@ -157,7 +157,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取cos存储桶名称。
+     * Get cos存储桶名称。 
      * @return CosBucketName cos存储桶名称。
      */
     public String getCosBucketName() {
@@ -165,7 +165,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置cos存储桶名称。
+     * Set cos存储桶名称。
      * @param CosBucketName cos存储桶名称。
      */
     public void setCosBucketName(String CosBucketName) {
@@ -173,7 +173,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取cos存储桶所在地域。
+     * Get cos存储桶所在地域。 
      * @return CosRegion cos存储桶所在地域。
      */
     public String getCosRegion() {
@@ -181,7 +181,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置cos存储桶所在地域。
+     * Set cos存储桶所在地域。
      * @param CosRegion cos存储桶所在地域。
      */
     public void setCosRegion(String CosRegion) {
@@ -189,7 +189,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启cmq消息通知。1：是，0：否。
+     * Get 是否开启cmq消息通知。1：是，0：否。 
      * @return IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
      */
     public Long getIsEnableCmqNotify() {
@@ -197,7 +197,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启cmq消息通知。1：是，0：否。
+     * Set 是否开启cmq消息通知。1：是，0：否。
      * @param IsEnableCmqNotify 是否开启cmq消息通知。1：是，0：否。
      */
     public void setIsEnableCmqNotify(Long IsEnableCmqNotify) {
@@ -205,7 +205,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志前缀。
+     * Get 日志前缀。 
      * @return LogFilePrefix 日志前缀。
      */
     public String getLogFilePrefix() {
@@ -213,7 +213,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志前缀。
+     * Set 日志前缀。
      * @param LogFilePrefix 日志前缀。
      */
     public void setLogFilePrefix(String LogFilePrefix) {
@@ -221,7 +221,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取管理事件读写属性，1：只读，2：只写，3：全部
+     * Get 管理事件读写属性，1：只读，2：只写，3：全部 
      * @return ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
      */
     public Long getReadWriteAttribute() {
@@ -229,7 +229,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置管理事件读写属性，1：只读，2：只写，3：全部
+     * Set 管理事件读写属性，1：只读，2：只写，3：全部
      * @param ReadWriteAttribute 管理事件读写属性，1：只读，2：只写，3：全部
      */
     public void setReadWriteAttribute(Long ReadWriteAttribute) {
@@ -237,7 +237,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class DescribeAuditResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuditName", this.AuditName);

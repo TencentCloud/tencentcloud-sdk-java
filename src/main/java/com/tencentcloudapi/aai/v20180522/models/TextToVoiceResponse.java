@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceResponse  extends AbstractModel{
+public class TextToVoiceResponse extends AbstractModel{
 
     /**
     * base64编码的wav/mp3音频数据
@@ -44,7 +44,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取base64编码的wav/mp3音频数据
+     * Get base64编码的wav/mp3音频数据 
      * @return Audio base64编码的wav/mp3音频数据
      */
     public String getAudio() {
@@ -52,7 +52,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置base64编码的wav/mp3音频数据
+     * Set base64编码的wav/mp3音频数据
      * @param Audio base64编码的wav/mp3音频数据
      */
     public void setAudio(String Audio) {
@@ -60,7 +60,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取一次请求对应一个SessionId
+     * Get 一次请求对应一个SessionId 
      * @return SessionId 一次请求对应一个SessionId
      */
     public String getSessionId() {
@@ -68,7 +68,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置一次请求对应一个SessionId
+     * Set 一次请求对应一个SessionId
      * @param SessionId 一次请求对应一个SessionId
      */
     public void setSessionId(String SessionId) {
@@ -76,7 +76,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class TextToVoiceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Audio", this.Audio);

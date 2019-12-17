@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMediaRequest  extends AbstractModel{
+public class DeleteMediaRequest extends AbstractModel{
 
     /**
     * 媒体文件的唯一标识。
@@ -44,7 +44,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取媒体文件的唯一标识。
+     * Get 媒体文件的唯一标识。 
      * @return FileId 媒体文件的唯一标识。
      */
     public String getFileId() {
@@ -52,7 +52,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件的唯一标识。
+     * Set 媒体文件的唯一标识。
      * @param FileId 媒体文件的唯一标识。
      */
     public void setFileId(String FileId) {
@@ -60,7 +60,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
+     * Get 指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。 
      * @return DeleteParts 指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
      */
     public MediaDeleteItem [] getDeleteParts() {
@@ -68,7 +68,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
+     * Set 指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
      * @param DeleteParts 指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
@@ -76,7 +76,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -84,7 +84,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -92,7 +92,7 @@ public class DeleteMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

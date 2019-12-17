@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerlessGroupPage  extends AbstractModel{
+public class ServerlessGroupPage extends AbstractModel{
 
     /**
     * 总记录数
@@ -39,8 +39,8 @@ public class ServerlessGroupPage  extends AbstractModel{
     private ServerlessGroup [] Content;
 
     /**
-     * 获取总记录数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总记录数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class ServerlessGroupPage  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总记录数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class ServerlessGroupPage  extends AbstractModel{
     }
 
     /**
-     * 获取列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 列表信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class ServerlessGroupPage  extends AbstractModel{
     }
 
     /**
-     * 设置列表信息
+     * Set 列表信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 列表信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class ServerlessGroupPage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagsInfoOfInstance  extends AbstractModel{
+public class TagsInfoOfInstance extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class TagsInfoOfInstance  extends AbstractModel{
     private TagInfoUnit [] Tags;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class TagsInfoOfInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class TagsInfoOfInstance  extends AbstractModel{
     }
 
     /**
-     * 获取标签信息
+     * Get 标签信息 
      * @return Tags 标签信息
      */
     public TagInfoUnit [] getTags() {
@@ -61,7 +61,7 @@ public class TagsInfoOfInstance  extends AbstractModel{
     }
 
     /**
-     * 设置标签信息
+     * Set 标签信息
      * @param Tags 标签信息
      */
     public void setTags(TagInfoUnit [] Tags) {
@@ -69,7 +69,7 @@ public class TagsInfoOfInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

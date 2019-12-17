@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogDownloadListRequest  extends AbstractModel{
+public class DescribeLogDownloadListRequest extends AbstractModel{
 
     /**
     * 开始时间，北京时间。
@@ -47,8 +47,8 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
-     * 获取开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 开始时间，北京时间。
+格式：yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
      */
@@ -57,7 +57,7 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，北京时间。
+     * Set 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
      * @param StartTime 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
@@ -67,9 +67,9 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，北京时间。
+     * Get 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
-注意：结束时间 - 开始时间 <=7天。
+注意：结束时间 - 开始时间 <=7天。 
      * @return EndTime 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
@@ -79,7 +79,7 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间。
+     * Set 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
      * @param EndTime 结束时间，北京时间。
@@ -91,7 +91,7 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名列表。
+     * Get 域名列表。 
      * @return PlayDomains 域名列表。
      */
     public String [] getPlayDomains() {
@@ -99,7 +99,7 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名列表。
+     * Set 域名列表。
      * @param PlayDomains 域名列表。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -107,7 +107,7 @@ public class DescribeLogDownloadListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

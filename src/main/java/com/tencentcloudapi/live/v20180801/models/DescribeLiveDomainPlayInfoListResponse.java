@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
+public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
 
     /**
     * 数据时间，格式为yyyy-mm-dd HH:MM:SS。
@@ -72,7 +72,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据时间，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 数据时间，格式为yyyy-mm-dd HH:MM:SS。 
      * @return Time 数据时间，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
@@ -80,7 +80,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 数据时间，格式为yyyy-mm-dd HH:MM:SS。
      * @param Time 数据时间，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
@@ -88,7 +88,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实时总带宽。
+     * Get 实时总带宽。 
      * @return TotalBandwidth 实时总带宽。
      */
     public Float getTotalBandwidth() {
@@ -96,7 +96,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实时总带宽。
+     * Set 实时总带宽。
      * @param TotalBandwidth 实时总带宽。
      */
     public void setTotalBandwidth(Float TotalBandwidth) {
@@ -104,7 +104,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实时总流量。
+     * Get 实时总流量。 
      * @return TotalFlux 实时总流量。
      */
     public Float getTotalFlux() {
@@ -112,7 +112,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实时总流量。
+     * Set 实时总流量。
      * @param TotalFlux 实时总流量。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -120,7 +120,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总请求数。
+     * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
@@ -128,7 +128,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总请求数。
+     * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
@@ -136,7 +136,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实时总连接数。
+     * Get 实时总连接数。 
      * @return TotalOnline 实时总连接数。
      */
     public Integer getTotalOnline() {
@@ -144,7 +144,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实时总连接数。
+     * Set 实时总连接数。
      * @param TotalOnline 实时总连接数。
      */
     public void setTotalOnline(Integer TotalOnline) {
@@ -152,7 +152,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分域名的数据情况。
+     * Get 分域名的数据情况。 
      * @return DomainInfoList 分域名的数据情况。
      */
     public DomainInfoList [] getDomainInfoList() {
@@ -160,7 +160,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分域名的数据情况。
+     * Set 分域名的数据情况。
      * @param DomainInfoList 分域名的数据情况。
      */
     public void setDomainInfoList(DomainInfoList [] DomainInfoList) {
@@ -168,7 +168,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeLiveDomainPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

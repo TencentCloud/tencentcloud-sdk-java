@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaRequest  extends AbstractModel{
+public class ComposeMediaRequest extends AbstractModel{
 
     /**
     * 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
@@ -51,7 +51,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
+     * Get 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。 
      * @return Tracks 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
      */
     public MediaTrack [] getTracks() {
@@ -59,7 +59,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
+     * Set 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
      * @param Tracks 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。输入的多个轨道在时间轴上和输出媒体文件的时间轴对齐，时间轴上相同时间点的各个轨道的素材进行重叠，视频或者图片按轨道顺序进行图像的叠加，轨道顺序高的素材叠加在上面；音频素材进行混音。
      */
     public void setTracks(MediaTrack [] Tracks) {
@@ -67,7 +67,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出的媒体文件信息。
+     * Get 输出的媒体文件信息。 
      * @return Output 输出的媒体文件信息。
      */
     public ComposeMediaOutput getOutput() {
@@ -75,7 +75,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出的媒体文件信息。
+     * Set 输出的媒体文件信息。
      * @param Output 输出的媒体文件信息。
      */
     public void setOutput(ComposeMediaOutput Output) {
@@ -83,7 +83,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取制作视频文件时使用的画布。
+     * Get 制作视频文件时使用的画布。 
      * @return Canvas 制作视频文件时使用的画布。
      */
     public Canvas getCanvas() {
@@ -91,7 +91,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置制作视频文件时使用的画布。
+     * Set 制作视频文件时使用的画布。
      * @param Canvas 制作视频文件时使用的画布。
      */
     public void setCanvas(Canvas Canvas) {
@@ -99,7 +99,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -107,7 +107,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -115,7 +115,7 @@ public class ComposeMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);

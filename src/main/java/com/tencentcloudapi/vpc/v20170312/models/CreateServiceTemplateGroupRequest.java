@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceTemplateGroupRequest  extends AbstractModel{
+public class CreateServiceTemplateGroupRequest extends AbstractModel{
 
     /**
     * 协议端口模板集合名称
@@ -37,7 +37,7 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     private String [] ServiceTemplateIds;
 
     /**
-     * 获取协议端口模板集合名称
+     * Get 协议端口模板集合名称 
      * @return ServiceTemplateGroupName 协议端口模板集合名称
      */
     public String getServiceTemplateGroupName() {
@@ -45,7 +45,7 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板集合名称
+     * Set 协议端口模板集合名称
      * @param ServiceTemplateGroupName 协议端口模板集合名称
      */
     public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
@@ -53,7 +53,7 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Get 协议端口模板实例ID，例如：ppm-4dw6agho。 
      * @return ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
      */
     public String [] getServiceTemplateIds() {
@@ -61,7 +61,7 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Set 协议端口模板实例ID，例如：ppm-4dw6agho。
      * @param ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
      */
     public void setServiceTemplateIds(String [] ServiceTemplateIds) {
@@ -69,7 +69,7 @@ public class CreateServiceTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);

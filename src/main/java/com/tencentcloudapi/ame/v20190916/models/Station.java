@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Station  extends AbstractModel{
+public class Station extends AbstractModel{
 
     /**
     * StationID
@@ -62,7 +62,7 @@ public class Station  extends AbstractModel{
     private ImagePath [] ImagePathMap;
 
     /**
-     * 获取StationID
+     * Get StationID 
      * @return CategoryID StationID
      */
     public String getCategoryID() {
@@ -70,7 +70,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 设置StationID
+     * Set StationID
      * @param CategoryID StationID
      */
     public void setCategoryID(String CategoryID) {
@@ -78,8 +78,8 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 获取Station MCCode
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Station MCCode
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CategoryCode Station MCCode
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,7 +88,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 设置Station MCCode
+     * Set Station MCCode
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryCode Station MCCode
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,8 +98,8 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 获取Category Name
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Category Name
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name Category Name
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,7 +108,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 设置Category Name
+     * Set Category Name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name Category Name
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,8 +118,8 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 获取Station的排序值，供参考（返回结果已按其升序）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Station的排序值，供参考（返回结果已按其升序）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rank Station的排序值，供参考（返回结果已按其升序）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -128,7 +128,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 设置Station的排序值，供参考（返回结果已按其升序）
+     * Set Station的排序值，供参考（返回结果已按其升序）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Rank Station的排序值，供参考（返回结果已按其升序）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,8 +138,8 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 获取station图片集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get station图片集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImagePathMap station图片集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 设置station图片集合
+     * Set station图片集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImagePathMap station图片集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ public class Station  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CategoryID", this.CategoryID);

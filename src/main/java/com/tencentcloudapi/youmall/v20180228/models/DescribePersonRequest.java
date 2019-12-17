@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonRequest  extends AbstractModel{
+public class DescribePersonRequest extends AbstractModel{
 
     /**
     * 卖场编码
@@ -44,7 +44,7 @@ public class DescribePersonRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取卖场编码
+     * Get 卖场编码 
      * @return MallId 卖场编码
      */
     public String getMallId() {
@@ -52,7 +52,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卖场编码
+     * Set 卖场编码
      * @param MallId 卖场编码
      */
     public void setMallId(String MallId) {
@@ -60,7 +60,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询偏移
+     * Get 查询偏移 
      * @return Offset 查询偏移
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询偏移
+     * Set 查询偏移
      * @param Offset 查询偏移
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询数量，默认20，最大查询数量100
+     * Get 查询数量，默认20，最大查询数量100 
      * @return Limit 查询数量，默认20，最大查询数量100
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询数量，默认20，最大查询数量100
+     * Set 查询数量，默认20，最大查询数量100
      * @param Limit 查询数量，默认20，最大查询数量100
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallId", this.MallId);

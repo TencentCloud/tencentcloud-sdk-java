@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRuleRealServersResponse  extends AbstractModel{
+public class DescribeRuleRealServersResponse extends AbstractModel{
 
     /**
     * 可绑定的源站个数
@@ -58,7 +58,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可绑定的源站个数
+     * Get 可绑定的源站个数 
      * @return TotalCount 可绑定的源站个数
      */
     public Long getTotalCount() {
@@ -66,7 +66,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可绑定的源站个数
+     * Set 可绑定的源站个数
      * @param TotalCount 可绑定的源站个数
      */
     public void setTotalCount(Long TotalCount) {
@@ -74,7 +74,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取可绑定的源站信息列表
+     * Get 可绑定的源站信息列表 
      * @return RealServerSet 可绑定的源站信息列表
      */
     public RealServer [] getRealServerSet() {
@@ -82,7 +82,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可绑定的源站信息列表
+     * Set 可绑定的源站信息列表
      * @param RealServerSet 可绑定的源站信息列表
      */
     public void setRealServerSet(RealServer [] RealServerSet) {
@@ -90,7 +90,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定的源站个数
+     * Get 已绑定的源站个数 
      * @return BindRealServerTotalCount 已绑定的源站个数
      */
     public Long getBindRealServerTotalCount() {
@@ -98,7 +98,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定的源站个数
+     * Set 已绑定的源站个数
      * @param BindRealServerTotalCount 已绑定的源站个数
      */
     public void setBindRealServerTotalCount(Long BindRealServerTotalCount) {
@@ -106,7 +106,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定的源站信息列表
+     * Get 已绑定的源站信息列表 
      * @return BindRealServerSet 已绑定的源站信息列表
      */
     public BindRealServer [] getBindRealServerSet() {
@@ -114,7 +114,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定的源站信息列表
+     * Set 已绑定的源站信息列表
      * @param BindRealServerSet 已绑定的源站信息列表
      */
     public void setBindRealServerSet(BindRealServer [] BindRealServerSet) {
@@ -122,7 +122,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeRuleRealServersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

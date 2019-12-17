@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
+public class DescribeAddressTemplateGroupsRequest extends AbstractModel{
 
     /**
     * 过滤条件。
@@ -46,9 +46,9 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
-<li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
+<li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li> 
      * @return Filters 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
@@ -58,7 +58,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
      * @param Filters 过滤条件。
@@ -70,7 +70,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public String getOffset() {
@@ -78,7 +78,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(String Offset) {
@@ -86,7 +86,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public String getLimit() {
@@ -94,7 +94,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(String Limit) {
@@ -102,7 +102,7 @@ public class DescribeAddressTemplateGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityTrendsRequest  extends AbstractModel{
+public class DescribeSecurityTrendsRequest extends AbstractModel{
 
     /**
     * 开始时间。
@@ -37,7 +37,7 @@ public class DescribeSecurityTrendsRequest  extends AbstractModel{
     private String EndDate;
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return BeginDate 开始时间。
      */
     public String getBeginDate() {
@@ -45,7 +45,7 @@ public class DescribeSecurityTrendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param BeginDate 开始时间。
      */
     public void setBeginDate(String BeginDate) {
@@ -53,7 +53,7 @@ public class DescribeSecurityTrendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndDate 结束时间。
      */
     public String getEndDate() {
@@ -61,7 +61,7 @@ public class DescribeSecurityTrendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndDate 结束时间。
      */
     public void setEndDate(String EndDate) {
@@ -69,7 +69,7 @@ public class DescribeSecurityTrendsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginDate", this.BeginDate);

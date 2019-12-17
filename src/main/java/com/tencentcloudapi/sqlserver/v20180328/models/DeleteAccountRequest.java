@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountRequest  extends AbstractModel{
+public class DeleteAccountRequest extends AbstractModel{
 
     /**
     * 数据库实例ID，形如mssql-njj2mtpl
@@ -37,7 +37,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     private String [] UserNames;
 
     /**
-     * 获取数据库实例ID，形如mssql-njj2mtpl
+     * Get 数据库实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库实例ID，形如mssql-njj2mtpl
+     * Set 数据库实例ID，形如mssql-njj2mtpl
      * @param InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例用户名数组
+     * Get 实例用户名数组 
      * @return UserNames 实例用户名数组
      */
     public String [] getUserNames() {
@@ -61,7 +61,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例用户名数组
+     * Set 实例用户名数组
      * @param UserNames 实例用户名数组
      */
     public void setUserNames(String [] UserNames) {
@@ -69,7 +69,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

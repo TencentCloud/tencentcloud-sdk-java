@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeListenersRequest  extends AbstractModel{
+public class DescribeListenersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -51,7 +51,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     private Integer Port;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的负载均衡监听器 ID数组
+     * Get 要查询的负载均衡监听器 ID数组 
      * @return ListenerIds 要查询的负载均衡监听器 ID数组
      */
     public String [] getListenerIds() {
@@ -75,7 +75,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的负载均衡监听器 ID数组
+     * Set 要查询的负载均衡监听器 ID数组
      * @param ListenerIds 要查询的负载均衡监听器 ID数组
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -83,7 +83,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+     * Get 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL 
      * @return Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
      */
     public String getProtocol() {
@@ -91,7 +91,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+     * Set 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
      * @param Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
      */
     public void setProtocol(String Protocol) {
@@ -99,7 +99,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的监听器的端口
+     * Get 要查询的监听器的端口 
      * @return Port 要查询的监听器的端口
      */
     public Integer getPort() {
@@ -107,7 +107,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的监听器的端口
+     * Set 要查询的监听器的端口
      * @param Port 要查询的监听器的端口
      */
     public void setPort(Integer Port) {
@@ -115,7 +115,7 @@ public class DescribeListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

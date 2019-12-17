@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
+public class LiveStreamOcrWordsRecognitionResult extends AbstractModel{
 
     /**
     * 文本关键词。
@@ -58,7 +58,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     private Long [] AreaCoords;
 
     /**
-     * 获取文本关键词。
+     * Get 文本关键词。 
      * @return Word 文本关键词。
      */
     public String getWord() {
@@ -66,7 +66,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置文本关键词。
+     * Set 文本关键词。
      * @param Word 文本关键词。
      */
     public void setWord(String Word) {
@@ -74,7 +74,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段起始的 PTS 时间，单位：秒。
+     * Get 识别片段起始的 PTS 时间，单位：秒。 
      * @return StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public Float getStartPtsTime() {
@@ -82,7 +82,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的 PTS 时间，单位：秒。
+     * Set 识别片段起始的 PTS 时间，单位：秒。
      * @param StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public void setStartPtsTime(Float StartPtsTime) {
@@ -90,7 +90,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的 PTS 时间，单位：秒。
+     * Get 识别片段终止的 PTS 时间，单位：秒。 
      * @return EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public Float getEndPtsTime() {
@@ -98,7 +98,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的 PTS 时间，单位：秒。
+     * Set 识别片段终止的 PTS 时间，单位：秒。
      * @param EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public void setEndPtsTime(Float EndPtsTime) {
@@ -106,7 +106,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -114,7 +114,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -122,7 +122,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
      * @return AreaCoords 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public Long [] getAreaCoords() {
@@ -130,7 +130,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      * @param AreaCoords 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public void setAreaCoords(Long [] AreaCoords) {
@@ -138,7 +138,7 @@ public class LiveStreamOcrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Word", this.Word);

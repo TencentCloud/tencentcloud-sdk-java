@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
+public class MediaSnapshotByTimeOffsetItem extends AbstractModel{
 
     /**
     * 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -44,7 +44,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     private TaskOutputStorage Storage;
 
     /**
-     * 获取指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -52,7 +52,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 指定时间点截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -60,7 +60,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 获取同一规格的截图信息集合，每个元素代表一张截图。
+     * Get 同一规格的截图信息集合，每个元素代表一张截图。 
      * @return PicInfoSet 同一规格的截图信息集合，每个元素代表一张截图。
      */
     public MediaSnapshotByTimePicInfoItem [] getPicInfoSet() {
@@ -68,7 +68,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 设置同一规格的截图信息集合，每个元素代表一张截图。
+     * Set 同一规格的截图信息集合，每个元素代表一张截图。
      * @param PicInfoSet 同一规格的截图信息集合，每个元素代表一张截图。
      */
     public void setPicInfoSet(MediaSnapshotByTimePicInfoItem [] PicInfoSet) {
@@ -76,7 +76,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 获取指定时间点截图文件的存储位置。
+     * Get 指定时间点截图文件的存储位置。 
      * @return Storage 指定时间点截图文件的存储位置。
      */
     public TaskOutputStorage getStorage() {
@@ -84,7 +84,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图文件的存储位置。
+     * Set 指定时间点截图文件的存储位置。
      * @param Storage 指定时间点截图文件的存储位置。
      */
     public void setStorage(TaskOutputStorage Storage) {
@@ -92,7 +92,7 @@ public class MediaSnapshotByTimeOffsetItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

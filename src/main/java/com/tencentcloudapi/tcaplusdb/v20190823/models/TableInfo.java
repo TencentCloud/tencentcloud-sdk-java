@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableInfo  extends AbstractModel{
+public class TableInfo extends AbstractModel{
 
     /**
     * 表名称
@@ -215,8 +215,8 @@ public class TableInfo  extends AbstractModel{
     private String ApiAccessId;
 
     /**
-     * 获取表名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表名称
+     * Set 表名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableInstanceId 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表实例ID
+     * Set 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表数据结构类型，如：`GENERIC`或`LIST`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableType 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表数据结构类型，如：`GENERIC`或`LIST`
+     * Set 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,8 +275,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -285,7 +285,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
+     * Set 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -295,8 +295,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表所属应用实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所属应用实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 表所属应用实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -305,7 +305,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所属应用实例ID
+     * Set 表所属应用实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 表所属应用实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -315,8 +315,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表所属应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所属应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppName 表所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -325,7 +325,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所属应用名称
+     * Set 表所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppName 表所属应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -335,8 +335,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表所属大区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所属大区ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogicZoneId 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -345,7 +345,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所属大区ID
+     * Set 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicZoneId 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -355,8 +355,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表所属大区名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所属大区名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneName 表所属大区名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -365,7 +365,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所属大区名称
+     * Set 表所属大区名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 表所属大区名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -375,8 +375,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表主键结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表主键结构json字符串
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyStruct 表主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -385,7 +385,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表主键结构json字符串
+     * Set 表主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyStruct 表主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
@@ -395,8 +395,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表非主键结构json字符串
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表非主键结构json字符串
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ValueStruct 表非主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -405,7 +405,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表非主键结构json字符串
+     * Set 表非主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueStruct 表非主键结构json字符串
 注意：此字段可能返回 null，表示取不到有效值。
@@ -415,8 +415,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表分表因子集合，PROTO表有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表分表因子集合，PROTO表有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ShardingKeySet 表分表因子集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -425,7 +425,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表分表因子集合，PROTO表有效
+     * Set 表分表因子集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardingKeySet 表分表因子集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -435,8 +435,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表索引键集合，PROTO表有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表索引键集合，PROTO表有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IndexStruct 表索引键集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -445,7 +445,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表索引键集合，PROTO表有效
+     * Set 表索引键集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexStruct 表索引键集合，PROTO表有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -455,8 +455,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取LIST表元素个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get LIST表元素个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListElementNum LIST表元素个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -465,7 +465,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置LIST表元素个数
+     * Set LIST表元素个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ListElementNum LIST表元素个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -475,8 +475,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表所关联IDL文件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所关联IDL文件信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IdlFiles 表所关联IDL文件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -485,7 +485,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所关联IDL文件信息列表
+     * Set 表所关联IDL文件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IdlFiles 表所关联IDL文件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -495,8 +495,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留容量（GB）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表预留容量（GB）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReservedVolume 表预留容量（GB）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -505,7 +505,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留容量（GB）
+     * Set 表预留容量（GB）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedVolume 表预留容量（GB）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -515,8 +515,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留读QPS
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表预留读QPS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReservedReadQps 表预留读QPS
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -525,7 +525,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留读QPS
+     * Set 表预留读QPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedReadQps 表预留读QPS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -535,8 +535,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留写QPS
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表预留写QPS
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReservedWriteQps 表预留写QPS
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -545,7 +545,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留写QPS
+     * Set 表预留写QPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReservedWriteQps 表预留写QPS
 注意：此字段可能返回 null，表示取不到有效值。
@@ -555,8 +555,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表实际数据量大小（MB）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表实际数据量大小（MB）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableSize 表实际数据量大小（MB）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -565,7 +565,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表实际数据量大小（MB）
+     * Set 表实际数据量大小（MB）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableSize 表实际数据量大小（MB）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -575,8 +575,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 表状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -585,7 +585,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表状态
+     * Set 表状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 表状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -595,8 +595,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 表创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -605,7 +605,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表创建时间
+     * Set 表创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 表创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -615,8 +615,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最后一次更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最后一次更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdatedTime 最后一次更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -625,7 +625,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最后一次更新时间
+     * Set 最后一次更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 最后一次更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -635,8 +635,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表备注信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Memo 表备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -645,7 +645,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表备注信息
+     * Set 表备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Memo 表备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -655,8 +655,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -665,7 +665,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -675,8 +675,8 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Api接入ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Api接入ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiAccessId Api接入ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -685,7 +685,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Api接入ID
+     * Set Api接入ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiAccessId Api接入ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -695,7 +695,7 @@ public class TableInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);

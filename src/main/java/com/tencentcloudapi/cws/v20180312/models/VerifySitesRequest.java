@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifySitesRequest  extends AbstractModel{
+public class VerifySitesRequest extends AbstractModel{
 
     /**
     * 站点的url列表
@@ -30,7 +30,7 @@ public class VerifySitesRequest  extends AbstractModel{
     private String [] Urls;
 
     /**
-     * 获取站点的url列表
+     * Get 站点的url列表 
      * @return Urls 站点的url列表
      */
     public String [] getUrls() {
@@ -38,7 +38,7 @@ public class VerifySitesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点的url列表
+     * Set 站点的url列表
      * @param Urls 站点的url列表
      */
     public void setUrls(String [] Urls) {
@@ -46,7 +46,7 @@ public class VerifySitesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

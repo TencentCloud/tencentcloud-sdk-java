@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRuleSetsResponse  extends AbstractModel{
+public class DescribeRuleSetsResponse extends AbstractModel{
 
     /**
     * 规则记录数数组，取值说明:
@@ -52,11 +52,11 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     private String RequestId;
 
     /**
-     * 获取规则记录数数组，取值说明:
+     * Get 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
 Key值为"RuleNameList"时，Value值表示资源的规则名，多个规则名用","分割
-Key值为"RuleNum"时，Value值表示资源的规则数
+Key值为"RuleNum"时，Value值表示资源的规则数 
      * @return L4RuleSets 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
@@ -68,7 +68,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 设置规则记录数数组，取值说明:
+     * Set 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
 Key值为"RuleNameList"时，Value值表示资源的规则名，多个规则名用","分割
@@ -84,11 +84,11 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 获取规则记录数数组，取值说明:
+     * Get 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
 Key值为"RuleNameList"时，Value值表示资源的规则名，多个规则名用","分割
-Key值为"RuleNum"时，Value值表示资源的规则数
+Key值为"RuleNum"时，Value值表示资源的规则数 
      * @return L7RuleSets 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
@@ -100,7 +100,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 设置规则记录数数组，取值说明:
+     * Set 规则记录数数组，取值说明:
 Key值为"Id"时，Value表示资源ID
 Key值为"RuleIdList"时，Value值表示资源的规则ID，多个规则ID用","分割
 Key值为"RuleNameList"时，Value值表示资源的规则名，多个规则名用","分割
@@ -116,7 +116,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -124,7 +124,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -132,7 +132,7 @@ Key值为"RuleNum"时，Value值表示资源的规则数
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "L4RuleSets.", this.L4RuleSets);

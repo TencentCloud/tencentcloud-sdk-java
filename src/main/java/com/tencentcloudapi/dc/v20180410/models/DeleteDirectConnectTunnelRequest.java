@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDirectConnectTunnelRequest  extends AbstractModel{
+public class DeleteDirectConnectTunnelRequest extends AbstractModel{
 
     /**
     * 专用通道ID
@@ -30,7 +30,7 @@ public class DeleteDirectConnectTunnelRequest  extends AbstractModel{
     private String DirectConnectTunnelId;
 
     /**
-     * 获取专用通道ID
+     * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
     public String getDirectConnectTunnelId() {
@@ -38,7 +38,7 @@ public class DeleteDirectConnectTunnelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用通道ID
+     * Set 专用通道ID
      * @param DirectConnectTunnelId 专用通道ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
@@ -46,7 +46,7 @@ public class DeleteDirectConnectTunnelRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectTunnelId", this.DirectConnectTunnelId);

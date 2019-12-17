@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileDeleteTask  extends AbstractModel{
+public class FileDeleteTask extends AbstractModel{
 
     /**
     * 删除文件 ID 列表。
@@ -30,7 +30,7 @@ public class FileDeleteTask  extends AbstractModel{
     private String [] FileIdSet;
 
     /**
-     * 获取删除文件 ID 列表。
+     * Get 删除文件 ID 列表。 
      * @return FileIdSet 删除文件 ID 列表。
      */
     public String [] getFileIdSet() {
@@ -38,7 +38,7 @@ public class FileDeleteTask  extends AbstractModel{
     }
 
     /**
-     * 设置删除文件 ID 列表。
+     * Set 删除文件 ID 列表。
      * @param FileIdSet 删除文件 ID 列表。
      */
     public void setFileIdSet(String [] FileIdSet) {
@@ -46,7 +46,7 @@ public class FileDeleteTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);

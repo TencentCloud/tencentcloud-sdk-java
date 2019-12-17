@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlotInfo  extends AbstractModel{
+public class SlotInfo extends AbstractModel{
 
     /**
     * 槽位名称
@@ -39,8 +39,8 @@ public class SlotInfo  extends AbstractModel{
     private String SlotValue;
 
     /**
-     * 获取槽位名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 槽位名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlotName 槽位名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class SlotInfo  extends AbstractModel{
     }
 
     /**
-     * 设置槽位名称
+     * Set 槽位名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlotName 槽位名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class SlotInfo  extends AbstractModel{
     }
 
     /**
-     * 获取槽位值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 槽位值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlotValue 槽位值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class SlotInfo  extends AbstractModel{
     }
 
     /**
-     * 设置槽位值
+     * Set 槽位值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlotValue 槽位值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class SlotInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SlotName", this.SlotName);

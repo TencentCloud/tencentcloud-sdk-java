@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankCardOCRResponse  extends AbstractModel{
+public class BankCardOCRResponse extends AbstractModel{
 
     /**
     * 卡号
@@ -51,7 +51,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取卡号
+     * Get 卡号 
      * @return CardNo 卡号
      */
     public String getCardNo() {
@@ -59,7 +59,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置卡号
+     * Set 卡号
      * @param CardNo 卡号
      */
     public void setCardNo(String CardNo) {
@@ -67,7 +67,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取银行信息
+     * Get 银行信息 
      * @return BankInfo 银行信息
      */
     public String getBankInfo() {
@@ -75,7 +75,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置银行信息
+     * Set 银行信息
      * @param BankInfo 银行信息
      */
     public void setBankInfo(String BankInfo) {
@@ -83,7 +83,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期
+     * Get 有效期 
      * @return ValidDate 有效期
      */
     public String getValidDate() {
@@ -91,7 +91,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期
+     * Set 有效期
      * @param ValidDate 有效期
      */
     public void setValidDate(String ValidDate) {
@@ -99,7 +99,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class BankCardOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CardNo", this.CardNo);

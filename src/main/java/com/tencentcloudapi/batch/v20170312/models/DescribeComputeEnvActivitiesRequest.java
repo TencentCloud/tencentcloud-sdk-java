@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
+public class DescribeComputeEnvActivitiesRequest extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -52,7 +52,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     private Filter Filters;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -60,7 +60,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -68,7 +68,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -76,7 +76,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -84,7 +84,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -92,7 +92,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -100,8 +100,8 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+     * Get 过滤条件
+<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li> 
      * @return Filters 过滤条件
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      */
@@ -110,7 +110,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
      * @param Filters 过滤条件
 <li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
@@ -120,7 +120,7 @@ public class DescribeComputeEnvActivitiesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

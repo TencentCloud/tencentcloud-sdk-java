@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBParamValue  extends AbstractModel{
+public class DBParamValue extends AbstractModel{
 
     /**
     * 参数名称
@@ -37,7 +37,7 @@ public class DBParamValue  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取参数名称
+     * Get 参数名称 
      * @return Param 参数名称
      */
     public String getParam() {
@@ -45,7 +45,7 @@ public class DBParamValue  extends AbstractModel{
     }
 
     /**
-     * 设置参数名称
+     * Set 参数名称
      * @param Param 参数名称
      */
     public void setParam(String Param) {
@@ -53,7 +53,7 @@ public class DBParamValue  extends AbstractModel{
     }
 
     /**
-     * 获取参数值
+     * Get 参数值 
      * @return Value 参数值
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class DBParamValue  extends AbstractModel{
     }
 
     /**
-     * 设置参数值
+     * Set 参数值
      * @param Value 参数值
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class DBParamValue  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Param", this.Param);

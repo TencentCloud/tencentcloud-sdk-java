@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlanInfo  extends AbstractModel{
+public class PlanInfo extends AbstractModel{
 
     /**
     * apk大小优化，0关闭，1开启
@@ -135,7 +135,7 @@ public class PlanInfo  extends AbstractModel{
     private Integer AntiSSL;
 
     /**
-     * 获取apk大小优化，0关闭，1开启
+     * Get apk大小优化，0关闭，1开启 
      * @return ApkSizeOpt apk大小优化，0关闭，1开启
      */
     public Integer getApkSizeOpt() {
@@ -143,7 +143,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置apk大小优化，0关闭，1开启
+     * Set apk大小优化，0关闭，1开启
      * @param ApkSizeOpt apk大小优化，0关闭，1开启
      */
     public void setApkSizeOpt(Integer ApkSizeOpt) {
@@ -151,7 +151,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Dex加固，0关闭，1开启
+     * Get Dex加固，0关闭，1开启 
      * @return Dex Dex加固，0关闭，1开启
      */
     public Integer getDex() {
@@ -159,7 +159,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Dex加固，0关闭，1开启
+     * Set Dex加固，0关闭，1开启
      * @param Dex Dex加固，0关闭，1开启
      */
     public void setDex(Integer Dex) {
@@ -167,7 +167,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取So加固，0关闭，1开启
+     * Get So加固，0关闭，1开启 
      * @return So So加固，0关闭，1开启
      */
     public Integer getSo() {
@@ -175,7 +175,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置So加固，0关闭，1开启
+     * Set So加固，0关闭，1开启
      * @param So So加固，0关闭，1开启
      */
     public void setSo(Integer So) {
@@ -183,7 +183,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据收集，0关闭，1开启
+     * Get 数据收集，0关闭，1开启 
      * @return Bugly 数据收集，0关闭，1开启
      */
     public Integer getBugly() {
@@ -191,7 +191,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据收集，0关闭，1开启
+     * Set 数据收集，0关闭，1开启
      * @param Bugly 数据收集，0关闭，1开启
      */
     public void setBugly(Integer Bugly) {
@@ -199,7 +199,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取防止重打包，0关闭，1开启
+     * Get 防止重打包，0关闭，1开启 
      * @return AntiRepack 防止重打包，0关闭，1开启
      */
     public Integer getAntiRepack() {
@@ -207,7 +207,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置防止重打包，0关闭，1开启
+     * Set 防止重打包，0关闭，1开启
      * @param AntiRepack 防止重打包，0关闭，1开启
      */
     public void setAntiRepack(Integer AntiRepack) {
@@ -215,7 +215,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Dex分离，0关闭，1开启
+     * Get Dex分离，0关闭，1开启 
      * @return SeperateDex Dex分离，0关闭，1开启
      */
     public Integer getSeperateDex() {
@@ -223,7 +223,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Dex分离，0关闭，1开启
+     * Set Dex分离，0关闭，1开启
      * @param SeperateDex Dex分离，0关闭，1开启
      */
     public void setSeperateDex(Integer SeperateDex) {
@@ -231,7 +231,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存保护，0关闭，1开启
+     * Get 内存保护，0关闭，1开启 
      * @return Db 内存保护，0关闭，1开启
      */
     public Integer getDb() {
@@ -239,7 +239,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存保护，0关闭，1开启
+     * Set 内存保护，0关闭，1开启
      * @param Db 内存保护，0关闭，1开启
      */
     public void setDb(Integer Db) {
@@ -247,7 +247,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Dex签名校验，0关闭，1开启
+     * Get Dex签名校验，0关闭，1开启 
      * @return DexSig Dex签名校验，0关闭，1开启
      */
     public Integer getDexSig() {
@@ -255,7 +255,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Dex签名校验，0关闭，1开启
+     * Set Dex签名校验，0关闭，1开启
      * @param DexSig Dex签名校验，0关闭，1开启
      */
     public void setDexSig(Integer DexSig) {
@@ -263,7 +263,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取So文件信息
+     * Get So文件信息 
      * @return SoInfo So文件信息
      */
     public SoInfo getSoInfo() {
@@ -271,7 +271,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置So文件信息
+     * Set So文件信息
      * @param SoInfo So文件信息
      */
     public void setSoInfo(SoInfo SoInfo) {
@@ -279,7 +279,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取vmp，0关闭，1开启
+     * Get vmp，0关闭，1开启 
      * @return AntiVMP vmp，0关闭，1开启
      */
     public Integer getAntiVMP() {
@@ -287,7 +287,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置vmp，0关闭，1开启
+     * Set vmp，0关闭，1开启
      * @param AntiVMP vmp，0关闭，1开启
      */
     public void setAntiVMP(Integer AntiVMP) {
@@ -295,7 +295,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取保护so的强度，
+     * Get 保护so的强度， 
      * @return SoType 保护so的强度，
      */
     public String [] getSoType() {
@@ -303,7 +303,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置保护so的强度，
+     * Set 保护so的强度，
      * @param SoType 保护so的强度，
      */
     public void setSoType(String [] SoType) {
@@ -311,7 +311,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取防日志泄漏，0关闭，1开启
+     * Get 防日志泄漏，0关闭，1开启 
      * @return AntiLogLeak 防日志泄漏，0关闭，1开启
      */
     public Integer getAntiLogLeak() {
@@ -319,7 +319,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置防日志泄漏，0关闭，1开启
+     * Set 防日志泄漏，0关闭，1开启
      * @param AntiLogLeak 防日志泄漏，0关闭，1开启
      */
     public void setAntiLogLeak(Integer AntiLogLeak) {
@@ -327,7 +327,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取root检测，0关闭，1开启
+     * Get root检测，0关闭，1开启 
      * @return AntiQemuRoot root检测，0关闭，1开启
      */
     public Integer getAntiQemuRoot() {
@@ -335,7 +335,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置root检测，0关闭，1开启
+     * Set root检测，0关闭，1开启
      * @param AntiQemuRoot root检测，0关闭，1开启
      */
     public void setAntiQemuRoot(Integer AntiQemuRoot) {
@@ -343,7 +343,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源防篡改，0关闭，1开启
+     * Get 资源防篡改，0关闭，1开启 
      * @return AntiAssets 资源防篡改，0关闭，1开启
      */
     public Integer getAntiAssets() {
@@ -351,7 +351,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源防篡改，0关闭，1开启
+     * Set 资源防篡改，0关闭，1开启
      * @param AntiAssets 资源防篡改，0关闭，1开启
      */
     public void setAntiAssets(Integer AntiAssets) {
@@ -359,7 +359,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取防止截屏，0关闭，1开启
+     * Get 防止截屏，0关闭，1开启 
      * @return AntiScreenshot 防止截屏，0关闭，1开启
      */
     public Integer getAntiScreenshot() {
@@ -367,7 +367,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置防止截屏，0关闭，1开启
+     * Set 防止截屏，0关闭，1开启
      * @param AntiScreenshot 防止截屏，0关闭，1开启
      */
     public void setAntiScreenshot(Integer AntiScreenshot) {
@@ -375,7 +375,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 获取SSL证书防窃取，0关闭，1开启
+     * Get SSL证书防窃取，0关闭，1开启 
      * @return AntiSSL SSL证书防窃取，0关闭，1开启
      */
     public Integer getAntiSSL() {
@@ -383,7 +383,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SSL证书防窃取，0关闭，1开启
+     * Set SSL证书防窃取，0关闭，1开启
      * @param AntiSSL SSL证书防窃取，0关闭，1开启
      */
     public void setAntiSSL(Integer AntiSSL) {
@@ -391,7 +391,7 @@ public class PlanInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApkSizeOpt", this.ApkSizeOpt);

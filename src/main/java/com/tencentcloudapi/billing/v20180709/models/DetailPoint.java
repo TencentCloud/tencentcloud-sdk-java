@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetailPoint  extends AbstractModel{
+public class DetailPoint extends AbstractModel{
 
     /**
     * 时间
@@ -37,7 +37,7 @@ public class DetailPoint  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取时间
+     * Get 时间 
      * @return Time 时间
      */
     public String getTime() {
@@ -45,7 +45,7 @@ public class DetailPoint  extends AbstractModel{
     }
 
     /**
-     * 设置时间
+     * Set 时间
      * @param Time 时间
      */
     public void setTime(String Time) {
@@ -53,7 +53,7 @@ public class DetailPoint  extends AbstractModel{
     }
 
     /**
-     * 获取值
+     * Get 值 
      * @return Value 值
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class DetailPoint  extends AbstractModel{
     }
 
     /**
-     * 设置值
+     * Set 值
      * @param Value 值
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class DetailPoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

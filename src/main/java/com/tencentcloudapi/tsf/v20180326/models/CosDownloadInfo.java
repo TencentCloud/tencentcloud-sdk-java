@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosDownloadInfo  extends AbstractModel{
+public class CosDownloadInfo extends AbstractModel{
 
     /**
     * 桶名称
@@ -55,8 +55,8 @@ public class CosDownloadInfo  extends AbstractModel{
     private CosCredentials Credentials;
 
     /**
-     * 获取桶名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 桶名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bucket 桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -65,7 +65,7 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置桶名称
+     * Set 桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 桶名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -75,8 +75,8 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -85,7 +85,7 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -95,8 +95,8 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置路径
+     * Set 路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 鉴权信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Credentials 鉴权信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权信息
+     * Set 鉴权信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Credentials 鉴权信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ public class CosDownloadInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);

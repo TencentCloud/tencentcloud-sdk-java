@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotTemplateInfo  extends AbstractModel{
+public class SnapshotTemplateInfo extends AbstractModel{
 
     /**
     * 模板Id。
@@ -93,7 +93,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取模板Id。
+     * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
     public Integer getTemplateId() {
@@ -101,7 +101,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板Id。
+     * Set 模板Id。
      * @param TemplateId 模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -109,7 +109,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称。
+     * Get 模板名称。 
      * @return TemplateName 模板名称。
      */
     public String getTemplateName() {
@@ -117,7 +117,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称。
+     * Set 模板名称。
      * @param TemplateName 模板名称。
      */
     public void setTemplateName(String TemplateName) {
@@ -125,7 +125,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间间隔。5-300秒。
+     * Get 截图时间间隔。5-300秒。 
      * @return SnapshotInterval 截图时间间隔。5-300秒。
      */
     public Integer getSnapshotInterval() {
@@ -133,7 +133,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置截图时间间隔。5-300秒。
+     * Set 截图时间间隔。5-300秒。
      * @param SnapshotInterval 截图时间间隔。5-300秒。
      */
     public void setSnapshotInterval(Integer SnapshotInterval) {
@@ -141,7 +141,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截图宽度。0-3000 0原始宽度并适配原始比例
+     * Get 截图宽度。0-3000 0原始宽度并适配原始比例 
      * @return Width 截图宽度。0-3000 0原始宽度并适配原始比例
      */
     public Integer getWidth() {
@@ -149,7 +149,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置截图宽度。0-3000 0原始宽度并适配原始比例
+     * Set 截图宽度。0-3000 0原始宽度并适配原始比例
      * @param Width 截图宽度。0-3000 0原始宽度并适配原始比例
      */
     public void setWidth(Integer Width) {
@@ -157,7 +157,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截图高度。0-2000 0原始高度并适配原始比例
+     * Get 截图高度。0-2000 0原始高度并适配原始比例 
      * @return Height 截图高度。0-2000 0原始高度并适配原始比例
      */
     public Integer getHeight() {
@@ -165,7 +165,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置截图高度。0-2000 0原始高度并适配原始比例
+     * Set 截图高度。0-2000 0原始高度并适配原始比例
      * @param Height 截图高度。0-2000 0原始高度并适配原始比例
      */
     public void setHeight(Integer Height) {
@@ -173,7 +173,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启鉴黄，0：不开启，1：开启。
+     * Get 是否开启鉴黄，0：不开启，1：开启。 
      * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
     public Integer getPornFlag() {
@@ -181,7 +181,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启鉴黄，0：不开启，1：开启。
+     * Set 是否开启鉴黄，0：不开启，1：开启。
      * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。
      */
     public void setPornFlag(Integer PornFlag) {
@@ -189,7 +189,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Cos AppId。
+     * Get Cos AppId。 
      * @return CosAppId Cos AppId。
      */
     public Integer getCosAppId() {
@@ -197,7 +197,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cos AppId。
+     * Set Cos AppId。
      * @param CosAppId Cos AppId。
      */
     public void setCosAppId(Integer CosAppId) {
@@ -205,7 +205,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Cos Bucket名称。
+     * Get Cos Bucket名称。 
      * @return CosBucket Cos Bucket名称。
      */
     public String getCosBucket() {
@@ -213,7 +213,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cos Bucket名称。
+     * Set Cos Bucket名称。
      * @param CosBucket Cos Bucket名称。
      */
     public void setCosBucket(String CosBucket) {
@@ -221,7 +221,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Cos 地域。
+     * Get Cos 地域。 
      * @return CosRegion Cos 地域。
      */
     public String getCosRegion() {
@@ -229,7 +229,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cos 地域。
+     * Set Cos 地域。
      * @param CosRegion Cos 地域。
      */
     public void setCosRegion(String CosRegion) {
@@ -237,7 +237,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述
+     * Get 模板描述 
      * @return Description 模板描述
      */
     public String getDescription() {
@@ -245,7 +245,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述
+     * Set 模板描述
      * @param Description 模板描述
      */
     public void setDescription(String Description) {
@@ -253,7 +253,7 @@ public class SnapshotTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

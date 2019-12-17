@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessPoint  extends AbstractModel{
+public class AccessPoint extends AbstractModel{
 
     /**
     * 接入点的名称。
@@ -65,7 +65,7 @@ public class AccessPoint  extends AbstractModel{
     private String RegionId;
 
     /**
-     * 获取接入点的名称。
+     * Get 接入点的名称。 
      * @return AccessPointName 接入点的名称。
      */
     public String getAccessPointName() {
@@ -73,7 +73,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点的名称。
+     * Set 接入点的名称。
      * @param AccessPointName 接入点的名称。
      */
     public void setAccessPointName(String AccessPointName) {
@@ -81,7 +81,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 获取接入点唯一ID。
+     * Get 接入点唯一ID。 
      * @return AccessPointId 接入点唯一ID。
      */
     public String getAccessPointId() {
@@ -89,7 +89,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点唯一ID。
+     * Set 接入点唯一ID。
      * @param AccessPointId 接入点唯一ID。
      */
     public void setAccessPointId(String AccessPointId) {
@@ -97,7 +97,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 获取接入点的状态。可用，不可用。
+     * Get 接入点的状态。可用，不可用。 
      * @return State 接入点的状态。可用，不可用。
      */
     public String getState() {
@@ -105,7 +105,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点的状态。可用，不可用。
+     * Set 接入点的状态。可用，不可用。
      * @param State 接入点的状态。可用，不可用。
      */
     public void setState(String State) {
@@ -113,7 +113,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 获取接入点的位置。
+     * Get 接入点的位置。 
      * @return Location 接入点的位置。
      */
     public String getLocation() {
@@ -121,7 +121,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点的位置。
+     * Set 接入点的位置。
      * @param Location 接入点的位置。
      */
     public void setLocation(String Location) {
@@ -129,7 +129,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 获取接入点支持的运营商列表。
+     * Get 接入点支持的运营商列表。 
      * @return LineOperator 接入点支持的运营商列表。
      */
     public String [] getLineOperator() {
@@ -137,7 +137,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点支持的运营商列表。
+     * Set 接入点支持的运营商列表。
      * @param LineOperator 接入点支持的运营商列表。
      */
     public void setLineOperator(String [] LineOperator) {
@@ -145,7 +145,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 获取接入点管理的大区ID。
+     * Get 接入点管理的大区ID。 
      * @return RegionId 接入点管理的大区ID。
      */
     public String getRegionId() {
@@ -153,7 +153,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 设置接入点管理的大区ID。
+     * Set 接入点管理的大区ID。
      * @param RegionId 接入点管理的大区ID。
      */
     public void setRegionId(String RegionId) {
@@ -161,7 +161,7 @@ public class AccessPoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessPointName", this.AccessPointName);

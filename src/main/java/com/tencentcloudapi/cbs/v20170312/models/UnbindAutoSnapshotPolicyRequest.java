@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
+public class UnbindAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
     * 要解绑定期快照策略的云盘ID列表。
@@ -37,7 +37,7 @@ public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
     private String AutoSnapshotPolicyId;
 
     /**
-     * 获取要解绑定期快照策略的云盘ID列表。
+     * Get 要解绑定期快照策略的云盘ID列表。 
      * @return DiskIds 要解绑定期快照策略的云盘ID列表。
      */
     public String [] getDiskIds() {
@@ -45,7 +45,7 @@ public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要解绑定期快照策略的云盘ID列表。
+     * Set 要解绑定期快照策略的云盘ID列表。
      * @param DiskIds 要解绑定期快照策略的云盘ID列表。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -53,7 +53,7 @@ public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要解绑的定期快照策略ID。
+     * Get 要解绑的定期快照策略ID。 
      * @return AutoSnapshotPolicyId 要解绑的定期快照策略ID。
      */
     public String getAutoSnapshotPolicyId() {
@@ -61,7 +61,7 @@ public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要解绑的定期快照策略ID。
+     * Set 要解绑的定期快照策略ID。
      * @param AutoSnapshotPolicyId 要解绑的定期快照策略ID。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
@@ -69,7 +69,7 @@ public class UnbindAutoSnapshotPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

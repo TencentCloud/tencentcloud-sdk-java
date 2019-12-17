@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HaVip  extends AbstractModel{
+public class HaVip extends AbstractModel{
 
     /**
     * `HAVIP`的`ID`，是`HAVIP`的唯一标识。
@@ -95,7 +95,7 @@ public class HaVip  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取`HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
      * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      */
     public String getHaVipId() {
@@ -103,7 +103,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Set `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      * @param HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      */
     public void setHaVipId(String HaVipId) {
@@ -111,7 +111,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`名称。
+     * Get `HAVIP`名称。 
      * @return HaVipName `HAVIP`名称。
      */
     public String getHaVipName() {
@@ -119,7 +119,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`名称。
+     * Set `HAVIP`名称。
      * @param HaVipName `HAVIP`名称。
      */
     public void setHaVipName(String HaVipName) {
@@ -127,7 +127,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取虚拟IP地址。
+     * Get 虚拟IP地址。 
      * @return Vip 虚拟IP地址。
      */
     public String getVip() {
@@ -135,7 +135,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置虚拟IP地址。
+     * Set 虚拟IP地址。
      * @param Vip 虚拟IP地址。
      */
     public void setVip(String Vip) {
@@ -143,7 +143,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`所在私有网络`ID`。
+     * Get `HAVIP`所在私有网络`ID`。 
      * @return VpcId `HAVIP`所在私有网络`ID`。
      */
     public String getVpcId() {
@@ -151,7 +151,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`所在私有网络`ID`。
+     * Set `HAVIP`所在私有网络`ID`。
      * @param VpcId `HAVIP`所在私有网络`ID`。
      */
     public void setVpcId(String VpcId) {
@@ -159,7 +159,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`所在子网`ID`。
+     * Get `HAVIP`所在子网`ID`。 
      * @return SubnetId `HAVIP`所在子网`ID`。
      */
     public String getSubnetId() {
@@ -167,7 +167,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`所在子网`ID`。
+     * Set `HAVIP`所在子网`ID`。
      * @param SubnetId `HAVIP`所在子网`ID`。
      */
     public void setSubnetId(String SubnetId) {
@@ -175,7 +175,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`关联弹性网卡`ID`。
+     * Get `HAVIP`关联弹性网卡`ID`。 
      * @return NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
      */
     public String getNetworkInterfaceId() {
@@ -183,7 +183,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`关联弹性网卡`ID`。
+     * Set `HAVIP`关联弹性网卡`ID`。
      * @param NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -191,7 +191,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取被绑定的实例`ID`。
+     * Get 被绑定的实例`ID`。 
      * @return InstanceId 被绑定的实例`ID`。
      */
     public String getInstanceId() {
@@ -199,7 +199,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置被绑定的实例`ID`。
+     * Set 被绑定的实例`ID`。
      * @param InstanceId 被绑定的实例`ID`。
      */
     public void setInstanceId(String InstanceId) {
@@ -207,7 +207,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取绑定`EIP`。
+     * Get 绑定`EIP`。 
      * @return AddressIp 绑定`EIP`。
      */
     public String getAddressIp() {
@@ -215,7 +215,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置绑定`EIP`。
+     * Set 绑定`EIP`。
      * @param AddressIp 绑定`EIP`。
      */
     public void setAddressIp(String AddressIp) {
@@ -223,9 +223,9 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取状态：
+     * Get 状态：
 <li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+<li>`UNBIND`：未绑定</li> 
      * @return State 状态：
 <li>`AVAILABLE`：运行中</li>
 <li>`UNBIND`：未绑定</li>
@@ -235,7 +235,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置状态：
+     * Set 状态：
 <li>`AVAILABLE`：运行中</li>
 <li>`UNBIND`：未绑定</li>
      * @param State 状态：
@@ -247,7 +247,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -255,7 +255,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -263,7 +263,7 @@ public class HaVip  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);

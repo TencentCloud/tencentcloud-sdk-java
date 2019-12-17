@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanSetInfo  extends AbstractModel{
+public class ScanSetInfo extends AbstractModel{
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -100,7 +100,7 @@ public class ScanSetInfo  extends AbstractModel{
     private ScanSensitiveList SensitiveInfo;
 
     /**
-     * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Integer getTaskStatus() {
@@ -108,7 +108,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -116,7 +116,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app信息
+     * Get app信息 
      * @return AppDetailInfo app信息
      */
     public AppDetailInfo getAppDetailInfo() {
@@ -124,7 +124,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app信息
+     * Set app信息
      * @param AppDetailInfo app信息
      */
     public void setAppDetailInfo(AppDetailInfo AppDetailInfo) {
@@ -132,7 +132,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取病毒信息
+     * Get 病毒信息 
      * @return VirusInfo 病毒信息
      */
     public VirusInfo getVirusInfo() {
@@ -140,7 +140,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置病毒信息
+     * Set 病毒信息
      * @param VirusInfo 病毒信息
      */
     public void setVirusInfo(VirusInfo VirusInfo) {
@@ -148,7 +148,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞信息
+     * Get 漏洞信息 
      * @return VulInfo 漏洞信息
      */
     public VulInfo getVulInfo() {
@@ -156,7 +156,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞信息
+     * Set 漏洞信息
      * @param VulInfo 漏洞信息
      */
     public void setVulInfo(VulInfo VulInfo) {
@@ -164,7 +164,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取广告插件信息
+     * Get 广告插件信息 
      * @return AdInfo 广告插件信息
      */
     public AdInfo getAdInfo() {
@@ -172,7 +172,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置广告插件信息
+     * Set 广告插件信息
      * @param AdInfo 广告插件信息
      */
     public void setAdInfo(AdInfo AdInfo) {
@@ -180,7 +180,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取提交扫描的时间
+     * Get 提交扫描的时间 
      * @return TaskTime 提交扫描的时间
      */
     public Integer getTaskTime() {
@@ -188,7 +188,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置提交扫描的时间
+     * Set 提交扫描的时间
      * @param TaskTime 提交扫描的时间
      */
     public void setTaskTime(Integer TaskTime) {
@@ -196,7 +196,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态码，成功返回0，失败返回错误码
+     * Get 状态码，成功返回0，失败返回错误码 
      * @return StatusCode 状态码，成功返回0，失败返回错误码
      */
     public Integer getStatusCode() {
@@ -204,7 +204,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态码，成功返回0，失败返回错误码
+     * Set 状态码，成功返回0，失败返回错误码
      * @param StatusCode 状态码，成功返回0，失败返回错误码
      */
     public void setStatusCode(Integer StatusCode) {
@@ -212,7 +212,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
+     * Get 状态描述 
      * @return StatusDesc 状态描述
      */
     public String getStatusDesc() {
@@ -220,7 +220,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
      * @param StatusDesc 状态描述
      */
     public void setStatusDesc(String StatusDesc) {
@@ -228,7 +228,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态操作指引
+     * Get 状态操作指引 
      * @return StatusRef 状态操作指引
      */
     public String getStatusRef() {
@@ -236,7 +236,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态操作指引
+     * Set 状态操作指引
      * @param StatusRef 状态操作指引
      */
     public void setStatusRef(String StatusRef) {
@@ -244,7 +244,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取系统权限信息
+     * Get 系统权限信息 
      * @return PermissionInfo 系统权限信息
      */
     public ScanPermissionList getPermissionInfo() {
@@ -252,7 +252,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统权限信息
+     * Set 系统权限信息
      * @param PermissionInfo 系统权限信息
      */
     public void setPermissionInfo(ScanPermissionList PermissionInfo) {
@@ -260,7 +260,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取敏感词列表
+     * Get 敏感词列表 
      * @return SensitiveInfo 敏感词列表
      */
     public ScanSensitiveList getSensitiveInfo() {
@@ -268,7 +268,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置敏感词列表
+     * Set 敏感词列表
      * @param SensitiveInfo 敏感词列表
      */
     public void setSensitiveInfo(ScanSensitiveList SensitiveInfo) {
@@ -276,7 +276,7 @@ public class ScanSetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);

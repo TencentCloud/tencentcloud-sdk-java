@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
+public class CreateDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
     * 专线网关ID，形如：dcg-prpqlmg1
@@ -37,7 +37,7 @@ public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     private DirectConnectGatewayCcnRoute [] Routes;
 
     /**
-     * 获取专线网关ID，形如：dcg-prpqlmg1
+     * Get 专线网关ID，形如：dcg-prpqlmg1 
      * @return DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      */
     public String getDirectConnectGatewayId() {
@@ -45,7 +45,7 @@ public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关ID，形如：dcg-prpqlmg1
+     * Set 专线网关ID，形如：dcg-prpqlmg1
      * @param DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -53,7 +53,7 @@ public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要连通的IDC网段列表
+     * Get 需要连通的IDC网段列表 
      * @return Routes 需要连通的IDC网段列表
      */
     public DirectConnectGatewayCcnRoute [] getRoutes() {
@@ -61,7 +61,7 @@ public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要连通的IDC网段列表
+     * Set 需要连通的IDC网段列表
      * @param Routes 需要连通的IDC网段列表
      */
     public void setRoutes(DirectConnectGatewayCcnRoute [] Routes) {
@@ -69,7 +69,7 @@ public class CreateDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

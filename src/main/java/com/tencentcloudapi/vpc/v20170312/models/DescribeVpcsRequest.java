@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcsRequest  extends AbstractModel{
+public class DescribeVpcsRequest extends AbstractModel{
 
     /**
     * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
@@ -57,7 +57,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
      * @return VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public String [] getVpcIds() {
@@ -65,7 +65,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Set VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public void setVpcIds(String [] VpcIds) {
@@ -73,13 +73,13 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定VpcIds和Filters。
+     * Get 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
 <li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）vpc的cidr。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li> 
      * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
 <li>is-default - String - （过滤条件）是否默认VPC。</li>
@@ -93,7 +93,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定VpcIds和Filters。
+     * Set 过滤条件，参数不支持同时指定VpcIds和Filters。
 <li>vpc-name - String - （过滤条件）VPC实例名称。</li>
 <li>is-default - String - （过滤条件）是否默认VPC。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
@@ -113,7 +113,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public String getOffset() {
@@ -121,7 +121,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(String Offset) {
@@ -129,7 +129,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public String getLimit() {
@@ -137,7 +137,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(String Limit) {
@@ -145,7 +145,7 @@ public class DescribeVpcsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);

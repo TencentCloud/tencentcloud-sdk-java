@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHTTPSListenerRequest  extends AbstractModel{
+public class CreateHTTPSListenerRequest extends AbstractModel{
 
     /**
     * 监听器名称
@@ -82,7 +82,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -90,7 +90,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -98,7 +98,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Get 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复 
      * @return Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      */
     public Long getPort() {
@@ -106,7 +106,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Set 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      * @param Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      */
     public void setPort(Long Port) {
@@ -114,7 +114,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务器证书ID
+     * Get 服务器证书ID 
      * @return CertificateId 服务器证书ID
      */
     public String getCertificateId() {
@@ -122,7 +122,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务器证书ID
+     * Set 服务器证书ID
      * @param CertificateId 服务器证书ID
      */
     public void setCertificateId(String CertificateId) {
@@ -130,7 +130,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加速通道转发到源站的协议类型：HTTP | HTTPS
+     * Get 加速通道转发到源站的协议类型：HTTP | HTTPS 
      * @return ForwardProtocol 加速通道转发到源站的协议类型：HTTP | HTTPS
      */
     public String getForwardProtocol() {
@@ -138,7 +138,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加速通道转发到源站的协议类型：HTTP | HTTPS
+     * Set 加速通道转发到源站的协议类型：HTTP | HTTPS
      * @param ForwardProtocol 加速通道转发到源站的协议类型：HTTP | HTTPS
      */
     public void setForwardProtocol(String ForwardProtocol) {
@@ -146,7 +146,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -154,7 +154,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -162,10 +162,10 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取认证类型，其中：
+     * Get 认证类型，其中：
 0，单向认证；
 1，双向认证。
-默认使用单向认证。
+默认使用单向认证。 
      * @return AuthType 认证类型，其中：
 0，单向认证；
 1，双向认证。
@@ -176,7 +176,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置认证类型，其中：
+     * Set 认证类型，其中：
 0，单向认证；
 1，双向认证。
 默认使用单向认证。
@@ -190,7 +190,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+     * Get 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数 
      * @return ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      */
     public String getClientCertificateId() {
@@ -198,7 +198,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
+     * Set 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      * @param ClientCertificateId 客户端CA单证书ID，仅当双向认证时设置该参数或PolyClientCertificateIds参数
      */
     public void setClientCertificateId(String ClientCertificateId) {
@@ -206,7 +206,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     * Get 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数 
      * @return PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      */
     public String [] getPolyClientCertificateIds() {
@@ -214,7 +214,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
+     * Set 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      * @param PolyClientCertificateIds 新的客户端多CA证书ID，仅当双向认证时设置该参数或设置ClientCertificateId参数
      */
     public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
@@ -222,7 +222,7 @@ public class CreateHTTPSListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);

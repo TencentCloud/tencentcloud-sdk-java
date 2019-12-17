@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseProVersionRequest  extends AbstractModel{
+public class CloseProVersionRequest extends AbstractModel{
 
     /**
     * 主机唯一标识Uuid。
@@ -31,8 +31,8 @@ public class CloseProVersionRequest  extends AbstractModel{
     private String Quuid;
 
     /**
-     * 获取主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * Get 主机唯一标识Uuid。
+黑石的InstanceId，CVM的Uuid 
      * @return Quuid 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
      */
@@ -41,7 +41,7 @@ public class CloseProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机唯一标识Uuid。
+     * Set 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
      * @param Quuid 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
@@ -51,7 +51,7 @@ public class CloseProVersionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);

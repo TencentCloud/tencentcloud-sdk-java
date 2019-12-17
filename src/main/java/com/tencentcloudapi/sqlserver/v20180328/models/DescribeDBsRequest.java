@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBsRequest  extends AbstractModel{
+public class DescribeDBsRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -34,17 +34,17 @@ public class DescribeDBsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 页编号，从第0页开始
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceIdSet 实例ID
      */
     public String [] getInstanceIdSet() {
@@ -52,7 +52,7 @@ public class DescribeDBsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceIdSet 实例ID
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
@@ -60,39 +60,39 @@ public class DescribeDBsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页记录数，最大为100，默认20
+     * Get 每页记录数，最大为100，默认20 
      * @return Limit 每页记录数，最大为100，默认20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置每页记录数，最大为100，默认20
+     * Set 每页记录数，最大为100，默认20
      * @param Limit 每页记录数，最大为100，默认20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取页编号，从第0页开始
+     * Get 页编号，从第0页开始 
      * @return Offset 页编号，从第0页开始
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置页编号，从第0页开始
+     * Set 页编号，从第0页开始
      * @param Offset 页编号，从第0页开始
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);

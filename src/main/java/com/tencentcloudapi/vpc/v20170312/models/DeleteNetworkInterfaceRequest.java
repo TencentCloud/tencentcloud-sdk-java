@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNetworkInterfaceRequest  extends AbstractModel{
+public class DeleteNetworkInterfaceRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -30,7 +30,7 @@ public class DeleteNetworkInterfaceRequest  extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-     * 获取弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public String getNetworkInterfaceId() {
@@ -38,7 +38,7 @@ public class DeleteNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -46,7 +46,7 @@ public class DeleteNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

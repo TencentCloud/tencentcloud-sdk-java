@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmOutputObject  extends AbstractModel{
+public class DrmOutputObject extends AbstractModel{
 
     /**
     * 输出的桶名称。
@@ -44,7 +44,7 @@ public class DrmOutputObject  extends AbstractModel{
     private DrmOutputPara Para;
 
     /**
-     * 获取输出的桶名称。
+     * Get 输出的桶名称。 
      * @return BucketName 输出的桶名称。
      */
     public String getBucketName() {
@@ -52,7 +52,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 设置输出的桶名称。
+     * Set 输出的桶名称。
      * @param BucketName 输出的桶名称。
      */
     public void setBucketName(String BucketName) {
@@ -60,7 +60,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 获取输出的对象名称。
+     * Get 输出的对象名称。 
      * @return ObjectName 输出的对象名称。
      */
     public String getObjectName() {
@@ -68,7 +68,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 设置输出的对象名称。
+     * Set 输出的对象名称。
      * @param ObjectName 输出的对象名称。
      */
     public void setObjectName(String ObjectName) {
@@ -76,7 +76,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 获取输出对象参数。
+     * Get 输出对象参数。 
      * @return Para 输出对象参数。
      */
     public DrmOutputPara getPara() {
@@ -84,7 +84,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 设置输出对象参数。
+     * Set 输出对象参数。
      * @param Para 输出对象参数。
      */
     public void setPara(DrmOutputPara Para) {
@@ -92,7 +92,7 @@ public class DrmOutputObject  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);

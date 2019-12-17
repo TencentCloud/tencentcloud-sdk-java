@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicesRequest  extends AbstractModel{
+public class DescribeDevicesRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -149,7 +149,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     private Integer Order;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -157,7 +157,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -165,7 +165,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -173,7 +173,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -181,7 +181,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
+     * Get 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询 
      * @return DeviceClassCode 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
      */
     public String getDeviceClassCode() {
@@ -189,7 +189,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
+     * Set 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
      * @param DeviceClassCode 机型ID，通过接口[查询设备型号(DescribeDeviceClass)](https://cloud.tencent.com/document/api/386/32911)查询
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -197,7 +197,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备ID数组
+     * Get 设备ID数组 
      * @return InstanceIds 设备ID数组
      */
     public String [] getInstanceIds() {
@@ -205,7 +205,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备ID数组
+     * Set 设备ID数组
      * @param InstanceIds 设备ID数组
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -213,7 +213,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取外网IP数组
+     * Get 外网IP数组 
      * @return WanIps 外网IP数组
      */
     public String [] getWanIps() {
@@ -221,7 +221,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置外网IP数组
+     * Set 外网IP数组
      * @param WanIps 外网IP数组
      */
     public void setWanIps(String [] WanIps) {
@@ -229,7 +229,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP数组
+     * Get 内网IP数组 
      * @return LanIps 内网IP数组
      */
     public String [] getLanIps() {
@@ -237,7 +237,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP数组
+     * Set 内网IP数组
      * @param LanIps 内网IP数组
      */
     public void setLanIps(String [] LanIps) {
@@ -245,7 +245,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return Alias 设备名称
      */
     public String getAlias() {
@@ -253,7 +253,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param Alias 设备名称
      */
     public void setAlias(String Alias) {
@@ -261,7 +261,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模糊IP查询
+     * Get 模糊IP查询 
      * @return VagueIp 模糊IP查询
      */
     public String getVagueIp() {
@@ -269,7 +269,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模糊IP查询
+     * Set 模糊IP查询
      * @param VagueIp 模糊IP查询
      */
     public void setVagueIp(String VagueIp) {
@@ -277,7 +277,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备到期时间查询的起始时间
+     * Get 设备到期时间查询的起始时间 
      * @return DeadlineStartTime 设备到期时间查询的起始时间
      */
     public String getDeadlineStartTime() {
@@ -285,7 +285,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备到期时间查询的起始时间
+     * Set 设备到期时间查询的起始时间
      * @param DeadlineStartTime 设备到期时间查询的起始时间
      */
     public void setDeadlineStartTime(String DeadlineStartTime) {
@@ -293,7 +293,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备到期时间查询的结束时间
+     * Get 设备到期时间查询的结束时间 
      * @return DeadlineEndTime 设备到期时间查询的结束时间
      */
     public String getDeadlineEndTime() {
@@ -301,7 +301,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备到期时间查询的结束时间
+     * Set 设备到期时间查询的结束时间
      * @param DeadlineEndTime 设备到期时间查询的结束时间
      */
     public void setDeadlineEndTime(String DeadlineEndTime) {
@@ -309,7 +309,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志 0:不自动续费，1:自动续费
+     * Get 自动续费标志 0:不自动续费，1:自动续费 
      * @return AutoRenewFlag 自动续费标志 0:不自动续费，1:自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -317,7 +317,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志 0:不自动续费，1:自动续费
+     * Set 自动续费标志 0:不自动续费，1:自动续费
      * @param AutoRenewFlag 自动续费标志 0:不自动续费，1:自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -325,7 +325,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络唯一ID
+     * Get 私有网络唯一ID 
      * @return VpcId 私有网络唯一ID
      */
     public String getVpcId() {
@@ -333,7 +333,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络唯一ID
+     * Set 私有网络唯一ID
      * @param VpcId 私有网络唯一ID
      */
     public void setVpcId(String VpcId) {
@@ -341,7 +341,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网唯一ID
+     * Get 子网唯一ID 
      * @return SubnetId 子网唯一ID
      */
     public String getSubnetId() {
@@ -349,7 +349,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网唯一ID
+     * Set 子网唯一ID
      * @param SubnetId 子网唯一ID
      */
     public void setSubnetId(String SubnetId) {
@@ -357,7 +357,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
+     * Get 标签列表 
      * @return Tags 标签列表
      */
     public Tag [] getTags() {
@@ -365,7 +365,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
      * @param Tags 标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -373,7 +373,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等
+     * Get 设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等 
      * @return DeviceType 设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等
      */
     public String getDeviceType() {
@@ -381,7 +381,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等
+     * Set 设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等
      * @param DeviceType 设备类型，取值有: compute(计算型), standard(标准型), storage(存储型) 等
      */
     public void setDeviceType(String DeviceType) {
@@ -389,7 +389,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
+     * Get 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。 
      * @return IsLuckyDevice 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      */
     public Integer getIsLuckyDevice() {
@@ -397,7 +397,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
+     * Set 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      * @param IsLuckyDevice 竞价实例机器的过滤。如果未指定此参数，则不做过滤。0: 查询非竞价实例的机器; 1: 查询竞价实例的机器。
      */
     public void setIsLuckyDevice(Integer IsLuckyDevice) {
@@ -405,7 +405,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段
+     * Get 排序字段 
      * @return OrderField 排序字段
      */
     public String getOrderField() {
@@ -413,7 +413,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段
+     * Set 排序字段
      * @param OrderField 排序字段
      */
     public void setOrderField(String OrderField) {
@@ -421,7 +421,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，取值：0:增序(默认)，1:降序
+     * Get 排序方式，取值：0:增序(默认)，1:降序 
      * @return Order 排序方式，取值：0:增序(默认)，1:降序
      */
     public Integer getOrder() {
@@ -429,7 +429,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，取值：0:增序(默认)，1:降序
+     * Set 排序方式，取值：0:增序(默认)，1:降序
      * @param Order 排序方式，取值：0:增序(默认)，1:降序
      */
     public void setOrder(Integer Order) {
@@ -437,7 +437,7 @@ public class DescribeDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

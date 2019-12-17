@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
+public class AiRecognitionTaskOcrWordsSegmentItem extends AbstractModel{
 
     /**
     * 识别片段起始的偏移时间，单位：秒。
@@ -51,7 +51,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     private Long [] AreaCoordSet;
 
     /**
-     * 获取识别片段起始的偏移时间，单位：秒。
+     * Get 识别片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -59,7 +59,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的偏移时间，单位：秒。
+     * Set 识别片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -67,7 +67,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的偏移时间，单位：秒。
+     * Get 识别片段终止的偏移时间，单位：秒。 
      * @return EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -75,7 +75,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的偏移时间，单位：秒。
+     * Set 识别片段终止的偏移时间，单位：秒。
      * @param EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -83,7 +83,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -91,7 +91,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -99,7 +99,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
      * @return AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public Long [] getAreaCoordSet() {
@@ -107,7 +107,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      * @param AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
@@ -115,7 +115,7 @@ public class AiRecognitionTaskOcrWordsSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

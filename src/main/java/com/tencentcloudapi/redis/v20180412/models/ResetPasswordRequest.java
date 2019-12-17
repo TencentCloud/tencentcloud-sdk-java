@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetPasswordRequest  extends AbstractModel{
+public class ResetPasswordRequest extends AbstractModel{
 
     /**
     * Redis实例ID
@@ -44,7 +44,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * 获取Redis实例ID
+     * Get Redis实例ID 
      * @return InstanceId Redis实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Redis实例ID
+     * Set Redis实例ID
      * @param InstanceId Redis实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * Get 重置的密码（切换为免密实例时，可不传；其他情况必传） 
      * @return Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
      */
     public String getPassword() {
@@ -68,7 +68,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * Set 重置的密码（切换为免密实例时，可不传；其他情况必传）
      * @param Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
      */
     public void setPassword(String Password) {
@@ -76,7 +76,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * Get 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false 
      * @return NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      */
     public Boolean getNoAuth() {
@@ -84,7 +84,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * Set 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      * @param NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
      */
     public void setNoAuth(Boolean NoAuth) {
@@ -92,7 +92,7 @@ public class ResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

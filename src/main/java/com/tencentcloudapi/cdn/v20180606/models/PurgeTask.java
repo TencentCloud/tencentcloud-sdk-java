@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgeTask  extends AbstractModel{
+public class PurgeTask extends AbstractModel{
 
     /**
     * 刷新任务 ID
@@ -72,7 +72,7 @@ delete：刷新全部资源
     private String CreateTime;
 
     /**
-     * 获取刷新任务 ID
+     * Get 刷新任务 ID 
      * @return TaskId 刷新任务 ID
      */
     public String getTaskId() {
@@ -80,7 +80,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置刷新任务 ID
+     * Set 刷新任务 ID
      * @param TaskId 刷新任务 ID
      */
     public void setTaskId(String TaskId) {
@@ -88,7 +88,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 获取刷新 URL
+     * Get 刷新 URL 
      * @return Url 刷新 URL
      */
     public String getUrl() {
@@ -96,7 +96,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置刷新 URL
+     * Set 刷新 URL
      * @param Url 刷新 URL
      */
     public void setUrl(String Url) {
@@ -104,10 +104,10 @@ delete：刷新全部资源
     }
 
     /**
-     * 获取刷新任务状态
+     * Get 刷新任务状态
 fail：刷新失败
 done：刷新成功
-process：刷新中
+process：刷新中 
      * @return Status 刷新任务状态
 fail：刷新失败
 done：刷新成功
@@ -118,7 +118,7 @@ process：刷新中
     }
 
     /**
-     * 设置刷新任务状态
+     * Set 刷新任务状态
 fail：刷新失败
 done：刷新成功
 process：刷新中
@@ -132,9 +132,9 @@ process：刷新中
     }
 
     /**
-     * 获取刷新类型
+     * Get 刷新类型
 url：URL 刷新
-path：目录刷新
+path：目录刷新 
      * @return PurgeType 刷新类型
 url：URL 刷新
 path：目录刷新
@@ -144,7 +144,7 @@ path：目录刷新
     }
 
     /**
-     * 设置刷新类型
+     * Set 刷新类型
 url：URL 刷新
 path：目录刷新
      * @param PurgeType 刷新类型
@@ -156,9 +156,9 @@ path：目录刷新
     }
 
     /**
-     * 获取刷新方式
+     * Get 刷新方式
 flush：刷新更新资源（仅目录刷新时有此类型）
-delete：刷新全部资源
+delete：刷新全部资源 
      * @return FlushType 刷新方式
 flush：刷新更新资源（仅目录刷新时有此类型）
 delete：刷新全部资源
@@ -168,7 +168,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置刷新方式
+     * Set 刷新方式
 flush：刷新更新资源（仅目录刷新时有此类型）
 delete：刷新全部资源
      * @param FlushType 刷新方式
@@ -180,7 +180,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 获取刷新任务提交时间
+     * Get 刷新任务提交时间 
      * @return CreateTime 刷新任务提交时间
      */
     public String getCreateTime() {
@@ -188,7 +188,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置刷新任务提交时间
+     * Set 刷新任务提交时间
      * @param CreateTime 刷新任务提交时间
      */
     public void setCreateTime(String CreateTime) {
@@ -196,7 +196,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddRealServersRequest  extends AbstractModel{
+public class AddRealServersRequest extends AbstractModel{
 
     /**
     * 源站对应的项目ID
@@ -51,7 +51,7 @@ public class AddRealServersRequest  extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
-     * 获取源站对应的项目ID
+     * Get 源站对应的项目ID 
      * @return ProjectId 源站对应的项目ID
      */
     public Long getProjectId() {
@@ -59,7 +59,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站对应的项目ID
+     * Set 源站对应的项目ID
      * @param ProjectId 源站对应的项目ID
      */
     public void setProjectId(Long ProjectId) {
@@ -67,7 +67,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站对应的IP或域名
+     * Get 源站对应的IP或域名 
      * @return RealServerIP 源站对应的IP或域名
      */
     public String [] getRealServerIP() {
@@ -75,7 +75,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站对应的IP或域名
+     * Set 源站对应的IP或域名
      * @param RealServerIP 源站对应的IP或域名
      */
     public void setRealServerIP(String [] RealServerIP) {
@@ -83,7 +83,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站名称
+     * Get 源站名称 
      * @return RealServerName 源站名称
      */
     public String getRealServerName() {
@@ -91,7 +91,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站名称
+     * Set 源站名称
      * @param RealServerName 源站名称
      */
     public void setRealServerName(String RealServerName) {
@@ -99,7 +99,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
+     * Get 标签列表 
      * @return TagSet 标签列表
      */
     public TagPair [] getTagSet() {
@@ -107,7 +107,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
      * @param TagSet 标签列表
      */
     public void setTagSet(TagPair [] TagSet) {
@@ -115,7 +115,7 @@ public class AddRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

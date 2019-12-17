@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectEntry  extends AbstractModel{
+public class ProjectEntry extends AbstractModel{
 
     /**
     * 项目ID
@@ -58,7 +58,7 @@ public class ProjectEntry  extends AbstractModel{
     private Long UpdateTime;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -66,7 +66,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -74,7 +74,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -82,7 +82,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -90,7 +90,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 获取项目描述
+     * Get 项目描述 
      * @return ProjectDesc 项目描述
      */
     public String getProjectDesc() {
@@ -98,7 +98,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 设置项目描述
+     * Set 项目描述
      * @param ProjectDesc 项目描述
      */
     public void setProjectDesc(String ProjectDesc) {
@@ -106,7 +106,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，unix时间戳
+     * Get 创建时间，unix时间戳 
      * @return CreateTime 创建时间，unix时间戳
      */
     public Long getCreateTime() {
@@ -114,7 +114,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，unix时间戳
+     * Set 创建时间，unix时间戳
      * @param CreateTime 创建时间，unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -122,7 +122,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间，unix时间戳
+     * Get 更新时间，unix时间戳 
      * @return UpdateTime 更新时间，unix时间戳
      */
     public Long getUpdateTime() {
@@ -130,7 +130,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间，unix时间戳
+     * Set 更新时间，unix时间戳
      * @param UpdateTime 更新时间，unix时间戳
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -138,7 +138,7 @@ public class ProjectEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

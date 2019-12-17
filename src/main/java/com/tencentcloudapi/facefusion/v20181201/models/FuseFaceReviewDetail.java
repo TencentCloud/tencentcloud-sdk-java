@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FuseFaceReviewDetail  extends AbstractModel{
+public class FuseFaceReviewDetail extends AbstractModel{
 
     /**
     * 保留字段
@@ -57,7 +57,7 @@ BLOCK：违规
     private String Suggestion;
 
     /**
-     * 获取保留字段
+     * Get 保留字段 
      * @return Field 保留字段
      */
     public String getField() {
@@ -65,7 +65,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
      * @param Field 保留字段
      */
     public void setField(String Field) {
@@ -73,7 +73,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return Label 人员名称
      */
     public String getLabel() {
@@ -81,7 +81,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param Label 人员名称
      */
     public void setLabel(String Label) {
@@ -89,10 +89,10 @@ BLOCK：违规
     }
 
     /**
-     * 获取对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * Get 对应识别label的置信度，分数越高意味涉政可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
-80到100，Suggestion建议为BLOCK。
+80到100，Suggestion建议为BLOCK。 
      * @return Confidence 对应识别label的置信度，分数越高意味涉政可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
@@ -103,7 +103,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置对应识别label的置信度，分数越高意味涉政可能性越大。 
+     * Set 对应识别label的置信度，分数越高意味涉政可能性越大。 
 0到70，Suggestion建议为PASS； 
 70到80，Suggestion建议为REVIEW； 
 80到100，Suggestion建议为BLOCK。
@@ -117,10 +117,10 @@ BLOCK：违规
     }
 
     /**
-     * 获取识别场景的审核结论：  
+     * Get 识别场景的审核结论：  
 PASS：正常 
 REVIEW：疑似  
-BLOCK：违规
+BLOCK：违规 
      * @return Suggestion 识别场景的审核结论：  
 PASS：正常 
 REVIEW：疑似  
@@ -131,7 +131,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置识别场景的审核结论：  
+     * Set 识别场景的审核结论：  
 PASS：正常 
 REVIEW：疑似  
 BLOCK：违规
@@ -145,7 +145,7 @@ BLOCK：违规
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Field", this.Field);

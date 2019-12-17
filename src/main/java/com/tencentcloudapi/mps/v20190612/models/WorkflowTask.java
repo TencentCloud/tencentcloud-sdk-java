@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkflowTask  extends AbstractModel{
+public class WorkflowTask extends AbstractModel{
 
     /**
     * 视频处理任务 ID。
@@ -97,7 +97,7 @@ public class WorkflowTask  extends AbstractModel{
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-     * 获取视频处理任务 ID。
+     * Get 视频处理任务 ID。 
      * @return TaskId 视频处理任务 ID。
      */
     public String getTaskId() {
@@ -105,7 +105,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务 ID。
+     * Set 视频处理任务 ID。
      * @param TaskId 视频处理任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -113,9 +113,9 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态，取值：
+     * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成。</li> 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -125,7 +125,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态，取值：
+     * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
      * @param Status 任务流状态，取值：
@@ -137,7 +137,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取已弃用，请使用各个具体任务的 ErrCode。
+     * Get 已弃用，请使用各个具体任务的 ErrCode。 
      * @return ErrCode 已弃用，请使用各个具体任务的 ErrCode。
      */
     public Long getErrCode() {
@@ -145,7 +145,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置已弃用，请使用各个具体任务的 ErrCode。
+     * Set 已弃用，请使用各个具体任务的 ErrCode。
      * @param ErrCode 已弃用，请使用各个具体任务的 ErrCode。
      */
     public void setErrCode(Long ErrCode) {
@@ -153,7 +153,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取已弃用，请使用各个具体任务的 Message。
+     * Get 已弃用，请使用各个具体任务的 Message。 
      * @return Message 已弃用，请使用各个具体任务的 Message。
      */
     public String getMessage() {
@@ -161,7 +161,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置已弃用，请使用各个具体任务的 Message。
+     * Set 已弃用，请使用各个具体任务的 Message。
      * @param Message 已弃用，请使用各个具体任务的 Message。
      */
     public void setMessage(String Message) {
@@ -169,8 +169,8 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理的目标文件信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频处理的目标文件信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InputInfo 视频处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -179,7 +179,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的目标文件信息。
+     * Set 视频处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InputInfo 视频处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -189,8 +189,8 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 原始视频的元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -199,7 +199,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置原始视频的元信息。
+     * Set 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 原始视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -209,7 +209,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理任务的执行状态与结果。
+     * Get 视频处理任务的执行状态与结果。 
      * @return MediaProcessResultSet 视频处理任务的执行状态与结果。
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
@@ -217,7 +217,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务的执行状态与结果。
+     * Set 视频处理任务的执行状态与结果。
      * @param MediaProcessResultSet 视频处理任务的执行状态与结果。
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
@@ -225,7 +225,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核任务的执行状态与结果。
+     * Get 视频内容审核任务的执行状态与结果。 
      * @return AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
@@ -233,7 +233,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核任务的执行状态与结果。
+     * Set 视频内容审核任务的执行状态与结果。
      * @param AiContentReviewResultSet 视频内容审核任务的执行状态与结果。
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
@@ -241,7 +241,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析任务的执行状态与结果。
+     * Get 视频内容分析任务的执行状态与结果。 
      * @return AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
@@ -249,7 +249,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析任务的执行状态与结果。
+     * Set 视频内容分析任务的执行状态与结果。
      * @param AiAnalysisResultSet 视频内容分析任务的执行状态与结果。
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
@@ -257,7 +257,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别任务的执行状态与结果。
+     * Get 视频内容识别任务的执行状态与结果。 
      * @return AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      */
     public AiRecognitionResult [] getAiRecognitionResultSet() {
@@ -265,7 +265,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别任务的执行状态与结果。
+     * Set 视频内容识别任务的执行状态与结果。
      * @param AiRecognitionResultSet 视频内容识别任务的执行状态与结果。
      */
     public void setAiRecognitionResultSet(AiRecognitionResult [] AiRecognitionResultSet) {
@@ -273,7 +273,7 @@ public class WorkflowTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

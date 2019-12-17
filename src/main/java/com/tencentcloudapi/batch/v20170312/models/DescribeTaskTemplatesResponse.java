@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskTemplatesResponse  extends AbstractModel{
+public class DescribeTaskTemplatesResponse extends AbstractModel{
 
     /**
     * 任务模板列表
@@ -44,7 +44,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务模板列表
+     * Get 任务模板列表 
      * @return TaskTemplateSet 任务模板列表
      */
     public TaskTemplateView [] getTaskTemplateSet() {
@@ -52,7 +52,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板列表
+     * Set 任务模板列表
      * @param TaskTemplateSet 任务模板列表
      */
     public void setTaskTemplateSet(TaskTemplateView [] TaskTemplateSet) {
@@ -60,7 +60,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板数量
+     * Get 任务模板数量 
      * @return TotalCount 任务模板数量
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板数量
+     * Set 任务模板数量
      * @param TotalCount 任务模板数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeTaskTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskTemplateSet.", this.TaskTemplateSet);

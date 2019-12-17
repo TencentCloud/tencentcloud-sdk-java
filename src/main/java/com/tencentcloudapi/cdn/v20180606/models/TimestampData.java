@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimestampData  extends AbstractModel{
+public class TimestampData extends AbstractModel{
 
     /**
     * 数据统计时间点，采用向前汇总模式
@@ -38,8 +38,8 @@ public class TimestampData  extends AbstractModel{
     private Float Value;
 
     /**
-     * 获取数据统计时间点，采用向前汇总模式
-以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
+     * Get 数据统计时间点，采用向前汇总模式
+以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59 
      * @return Time 数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
      */
@@ -48,7 +48,7 @@ public class TimestampData  extends AbstractModel{
     }
 
     /**
-     * 设置数据统计时间点，采用向前汇总模式
+     * Set 数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
      * @param Time 数据统计时间点，采用向前汇总模式
 以 5 分钟粒度为例，13:35:00 时间点代表的统计数据区间为 13:35:00 至 13:39:59
@@ -58,7 +58,7 @@ public class TimestampData  extends AbstractModel{
     }
 
     /**
-     * 获取数据值
+     * Get 数据值 
      * @return Value 数据值
      */
     public Float getValue() {
@@ -66,7 +66,7 @@ public class TimestampData  extends AbstractModel{
     }
 
     /**
-     * 设置数据值
+     * Set 数据值
      * @param Value 数据值
      */
     public void setValue(Float Value) {
@@ -74,7 +74,7 @@ public class TimestampData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

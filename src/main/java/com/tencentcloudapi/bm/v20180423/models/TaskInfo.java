@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInfo  extends AbstractModel{
+public class TaskInfo extends AbstractModel{
 
     /**
     * 任务id
@@ -177,7 +177,7 @@ public class TaskInfo  extends AbstractModel{
     private String MgtIp;
 
     /**
-     * 获取任务id
+     * Get 任务id 
      * @return TaskId 任务id
      */
     public String getTaskId() {
@@ -185,7 +185,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务id
+     * Set 任务id
      * @param TaskId 任务id
      */
     public void setTaskId(String TaskId) {
@@ -193,7 +193,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主机id
+     * Get 主机id 
      * @return InstanceId 主机id
      */
     public String getInstanceId() {
@@ -201,7 +201,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主机id
+     * Set 主机id
      * @param InstanceId 主机id
      */
     public void setInstanceId(String InstanceId) {
@@ -209,7 +209,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主机别名
+     * Get 主机别名 
      * @return Alias 主机别名
      */
     public String getAlias() {
@@ -217,7 +217,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主机别名
+     * Set 主机别名
      * @param Alias 主机别名
      */
     public void setAlias(String Alias) {
@@ -225,7 +225,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取故障类型id
+     * Get 故障类型id 
      * @return TaskTypeId 故障类型id
      */
     public Integer getTaskTypeId() {
@@ -233,7 +233,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置故障类型id
+     * Set 故障类型id
      * @param TaskTypeId 故障类型id
      */
     public void setTaskTypeId(Integer TaskTypeId) {
@@ -241,7 +241,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态id
+     * Get 任务状态id 
      * @return TaskStatus 任务状态id
      */
     public Integer getTaskStatus() {
@@ -249,7 +249,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态id
+     * Set 任务状态id
      * @param TaskStatus 任务状态id
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -257,7 +257,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -265,7 +265,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -273,7 +273,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取授权时间
+     * Get 授权时间 
      * @return AuthTime 授权时间
      */
     public String getAuthTime() {
@@ -281,7 +281,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置授权时间
+     * Set 授权时间
      * @param AuthTime 授权时间
      */
     public void setAuthTime(String AuthTime) {
@@ -289,7 +289,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -297,7 +297,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -305,7 +305,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务详情
+     * Get 任务详情 
      * @return TaskDetail 任务详情
      */
     public String getTaskDetail() {
@@ -313,7 +313,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务详情
+     * Set 任务详情
      * @param TaskDetail 任务详情
      */
     public void setTaskDetail(String TaskDetail) {
@@ -321,7 +321,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备状态
+     * Get 设备状态 
      * @return DeviceStatus 设备状态
      */
     public Integer getDeviceStatus() {
@@ -329,7 +329,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备状态
+     * Set 设备状态
      * @param DeviceStatus 设备状态
      */
     public void setDeviceStatus(Integer DeviceStatus) {
@@ -337,7 +337,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备操作状态
+     * Get 设备操作状态 
      * @return OperateStatus 设备操作状态
      */
     public Integer getOperateStatus() {
@@ -345,7 +345,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备操作状态
+     * Set 设备操作状态
      * @param OperateStatus 设备操作状态
      */
     public void setOperateStatus(Integer OperateStatus) {
@@ -353,7 +353,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -361,7 +361,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -369,7 +369,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -377,7 +377,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -385,7 +385,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所属网络
+     * Get 所属网络 
      * @return VpcId 所属网络
      */
     public String getVpcId() {
@@ -393,7 +393,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属网络
+     * Set 所属网络
      * @param VpcId 所属网络
      */
     public void setVpcId(String VpcId) {
@@ -401,7 +401,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在子网
+     * Get 所在子网 
      * @return SubnetId 所在子网
      */
     public String getSubnetId() {
@@ -409,7 +409,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在子网
+     * Set 所在子网
      * @param SubnetId 所在子网
      */
     public void setSubnetId(String SubnetId) {
@@ -417,7 +417,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网名
+     * Get 子网名 
      * @return SubnetName 子网名
      */
     public String getSubnetName() {
@@ -425,7 +425,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名
+     * Set 子网名
      * @param SubnetName 子网名
      */
     public void setSubnetName(String SubnetName) {
@@ -433,7 +433,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC名
+     * Get VPC名 
      * @return VpcName VPC名
      */
     public String getVpcName() {
@@ -441,7 +441,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC名
+     * Set VPC名
      * @param VpcName VPC名
      */
     public void setVpcName(String VpcName) {
@@ -449,7 +449,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VpcCidrBlock
+     * Get VpcCidrBlock 
      * @return VpcCidrBlock VpcCidrBlock
      */
     public String getVpcCidrBlock() {
@@ -457,7 +457,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VpcCidrBlock
+     * Set VpcCidrBlock
      * @param VpcCidrBlock VpcCidrBlock
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -465,7 +465,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取SubnetCidrBlock
+     * Get SubnetCidrBlock 
      * @return SubnetCidrBlock SubnetCidrBlock
      */
     public String getSubnetCidrBlock() {
@@ -473,7 +473,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SubnetCidrBlock
+     * Set SubnetCidrBlock
      * @param SubnetCidrBlock SubnetCidrBlock
      */
     public void setSubnetCidrBlock(String SubnetCidrBlock) {
@@ -481,7 +481,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取公网ip
+     * Get 公网ip 
      * @return WanIp 公网ip
      */
     public String getWanIp() {
@@ -489,7 +489,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置公网ip
+     * Set 公网ip
      * @param WanIp 公网ip
      */
     public void setWanIp(String WanIp) {
@@ -497,7 +497,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP
+     * Get 内网IP 
      * @return LanIp 内网IP
      */
     public String getLanIp() {
@@ -505,7 +505,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP
+     * Set 内网IP
      * @param LanIp 内网IP
      */
     public void setLanIp(String LanIp) {
@@ -513,7 +513,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取管理IP
+     * Get 管理IP 
      * @return MgtIp 管理IP
      */
     public String getMgtIp() {
@@ -521,7 +521,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置管理IP
+     * Set 管理IP
      * @param MgtIp 管理IP
      */
     public void setMgtIp(String MgtIp) {
@@ -529,7 +529,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

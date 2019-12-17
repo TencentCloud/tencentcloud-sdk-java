@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransByHashHandlerRequest  extends AbstractModel{
+public class GetTransByHashHandlerRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -51,7 +51,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     private String TransHash;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：get_trans_by_hash
+     * Get 操作名，固定字段：get_trans_by_hash 
      * @return Operation 操作名，固定字段：get_trans_by_hash
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：get_trans_by_hash
+     * Set 操作名，固定字段：get_trans_by_hash
      * @param Operation 操作名，固定字段：get_trans_by_hash
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取群组编号
+     * Get 群组编号 
      * @return GroupPk 群组编号
      */
     public String getGroupPk() {
@@ -91,7 +91,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置群组编号
+     * Set 群组编号
      * @param GroupPk 群组编号
      */
     public void setGroupPk(String GroupPk) {
@@ -99,7 +99,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取交易哈希
+     * Get 交易哈希 
      * @return TransHash 交易哈希
      */
     public String getTransHash() {
@@ -107,7 +107,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置交易哈希
+     * Set 交易哈希
      * @param TransHash 交易哈希
      */
     public void setTransHash(String TransHash) {
@@ -115,7 +115,7 @@ public class GetTransByHashHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

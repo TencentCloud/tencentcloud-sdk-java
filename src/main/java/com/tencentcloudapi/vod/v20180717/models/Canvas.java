@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Canvas  extends AbstractModel{
+public class Canvas extends AbstractModel{
 
     /**
     * 背景颜色，取值有：
@@ -49,10 +49,10 @@ public class Canvas  extends AbstractModel{
     private Long Height;
 
     /**
-     * 获取背景颜色，取值有：
+     * Get 背景颜色，取值有：
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
-默认值：Black。
+默认值：Black。 
      * @return Color 背景颜色，取值有：
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
@@ -63,7 +63,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 设置背景颜色，取值有：
+     * Set 背景颜色，取值有：
 <li>Black：黑色背景</li>
 <li>White：白色背景</li>
 默认值：Black。
@@ -77,8 +77,8 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 获取画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
-默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
+     * Get 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。 
      * @return Width 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
      */
@@ -87,7 +87,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 设置画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * Set 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
      * @param Width 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
@@ -97,8 +97,8 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 获取画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
-默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
+     * Get 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。 
      * @return Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
@@ -107,7 +107,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 设置画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * Set 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      * @param Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
@@ -117,7 +117,7 @@ public class Canvas  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Color", this.Color);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachNetworkInterfaceRequest  extends AbstractModel{
+public class AttachNetworkInterfaceRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-m6dyj72l。
@@ -37,7 +37,7 @@ public class AttachNetworkInterfaceRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public String getNetworkInterfaceId() {
@@ -45,7 +45,7 @@ public class AttachNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
      * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -53,7 +53,7 @@ public class AttachNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例ID。形如：ins-r8hr2upy。
+     * Get CVM实例ID。形如：ins-r8hr2upy。 
      * @return InstanceId CVM实例ID。形如：ins-r8hr2upy。
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class AttachNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例ID。形如：ins-r8hr2upy。
+     * Set CVM实例ID。形如：ins-r8hr2upy。
      * @param InstanceId CVM实例ID。形如：ins-r8hr2upy。
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class AttachNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

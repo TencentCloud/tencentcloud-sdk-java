@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesRequest  extends AbstractModel{
+public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
     * 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -100,7 +100,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     private String OrderByType;
 
     /**
-     * 获取实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String [] getInstanceIds() {
@@ -108,7 +108,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -116,7 +116,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+     * Get 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例 
      * @return InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      */
     public Integer getInstanceType() {
@@ -124,7 +124,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+     * Set 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      * @param InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
      */
     public void setInstanceType(Integer InstanceType) {
@@ -132,7 +132,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+     * Get 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例 
      * @return ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      */
     public Integer getClusterType() {
@@ -140,7 +140,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+     * Set 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      * @param ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
      */
     public void setClusterType(Integer ClusterType) {
@@ -148,7 +148,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * Get 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期 
      * @return Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      */
     public Integer [] getStatus() {
@@ -156,7 +156,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
+     * Set 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      * @param Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-实例已过期
      */
     public void setStatus(Integer [] Status) {
@@ -164,7 +164,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的ID，基础网络则不传该参数
+     * Get 私有网络的ID，基础网络则不传该参数 
      * @return VpcId 私有网络的ID，基础网络则不传该参数
      */
     public String getVpcId() {
@@ -172,7 +172,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的ID，基础网络则不传该参数
+     * Set 私有网络的ID，基础网络则不传该参数
      * @param VpcId 私有网络的ID，基础网络则不传该参数
      */
     public void setVpcId(String VpcId) {
@@ -180,7 +180,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+     * Get 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId 
      * @return SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
      */
     public String getSubnetId() {
@@ -188,7 +188,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+     * Set 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
      * @param SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
      */
     public void setSubnetId(String SubnetId) {
@@ -196,7 +196,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+     * Get 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月 
      * @return PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      */
     public Integer getPayMode() {
@@ -204,7 +204,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+     * Set 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      * @param PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
      */
     public void setPayMode(Integer PayMode) {
@@ -212,7 +212,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，最小值为1，最大值为100，默认值为20
+     * Get 单次请求返回的数量，最小值为1，最大值为100，默认值为20 
      * @return Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      */
     public Integer getLimit() {
@@ -220,7 +220,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求返回的数量，最小值为1，最大值为100，默认值为20
+     * Set 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      * @param Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
      */
     public void setLimit(Integer Limit) {
@@ -228,7 +228,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认值为0
+     * Get 偏移量，默认值为0 
      * @return Offset 偏移量，默认值为0
      */
     public Integer getOffset() {
@@ -236,7 +236,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认值为0
+     * Set 偏移量，默认值为0
      * @param Offset 偏移量，默认值为0
      */
     public void setOffset(Integer Offset) {
@@ -244,7 +244,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+     * Get 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序 
      * @return OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
      */
     public String getOrderBy() {
@@ -252,7 +252,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+     * Set 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
      * @param OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
      */
     public void setOrderBy(String OrderBy) {
@@ -260,7 +260,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * Get 返回结果集排序方式，目前支持："ASC"或者"DESC" 
      * @return OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
      */
     public String getOrderByType() {
@@ -268,7 +268,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * Set 返回结果集排序方式，目前支持："ASC"或者"DESC"
      * @param OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
      */
     public void setOrderByType(String OrderByType) {
@@ -276,7 +276,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

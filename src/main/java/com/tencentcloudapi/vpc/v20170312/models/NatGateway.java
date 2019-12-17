@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NatGateway  extends AbstractModel{
+public class NatGateway extends AbstractModel{
 
     /**
     * NAT网关的ID。
@@ -102,7 +102,7 @@ public class NatGateway  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取NAT网关的ID。
+     * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
     public String getNatGatewayId() {
@@ -110,7 +110,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的ID。
+     * Set NAT网关的ID。
      * @param NatGatewayId NAT网关的ID。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -118,7 +118,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关的名称。
+     * Get NAT网关的名称。 
      * @return NatGatewayName NAT网关的名称。
      */
     public String getNatGatewayName() {
@@ -126,7 +126,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的名称。
+     * Set NAT网关的名称。
      * @param NatGatewayName NAT网关的名称。
      */
     public void setNatGatewayName(String NatGatewayName) {
@@ -134,7 +134,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关创建的时间。
+     * Get NAT网关创建的时间。 
      * @return CreatedTime NAT网关创建的时间。
      */
     public String getCreatedTime() {
@@ -142,7 +142,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关创建的时间。
+     * Set NAT网关创建的时间。
      * @param CreatedTime NAT网关创建的时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -150,9 +150,9 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关的状态。
+     * Get NAT网关的状态。
  'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+‘FAILED’：失败。 
      * @return State NAT网关的状态。
  'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
 ‘FAILED’：失败。
@@ -162,7 +162,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的状态。
+     * Set NAT网关的状态。
  'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
 ‘FAILED’：失败。
      * @param State NAT网关的状态。
@@ -174,7 +174,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关最大外网出带宽(单位:Mbps)。
+     * Get 网关最大外网出带宽(单位:Mbps)。 
      * @return InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -182,7 +182,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关最大外网出带宽(单位:Mbps)。
+     * Set 网关最大外网出带宽(单位:Mbps)。
      * @param InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -190,7 +190,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关并发连接上限。
+     * Get 网关并发连接上限。 
      * @return MaxConcurrentConnection 网关并发连接上限。
      */
     public Integer getMaxConcurrentConnection() {
@@ -198,7 +198,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关并发连接上限。
+     * Set 网关并发连接上限。
      * @param MaxConcurrentConnection 网关并发连接上限。
      */
     public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
@@ -206,7 +206,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取绑定NAT网关的公网IP对象数组。
+     * Get 绑定NAT网关的公网IP对象数组。 
      * @return PublicIpAddressSet 绑定NAT网关的公网IP对象数组。
      */
     public NatGatewayAddress [] getPublicIpAddressSet() {
@@ -214,7 +214,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置绑定NAT网关的公网IP对象数组。
+     * Set 绑定NAT网关的公网IP对象数组。
      * @param PublicIpAddressSet 绑定NAT网关的公网IP对象数组。
      */
     public void setPublicIpAddressSet(NatGatewayAddress [] PublicIpAddressSet) {
@@ -222,7 +222,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+     * Get NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。 
      * @return NetworkState NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
      */
     public String getNetworkState() {
@@ -230,7 +230,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+     * Set NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
      * @param NetworkState NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
      */
     public void setNetworkState(String NetworkState) {
@@ -238,7 +238,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关的端口转发规则。
+     * Get NAT网关的端口转发规则。 
      * @return DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
      */
     public DestinationIpPortTranslationNatRule [] getDestinationIpPortTranslationNatRuleSet() {
@@ -246,7 +246,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的端口转发规则。
+     * Set NAT网关的端口转发规则。
      * @param DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
      */
     public void setDestinationIpPortTranslationNatRuleSet(DestinationIpPortTranslationNatRule [] DestinationIpPortTranslationNatRuleSet) {
@@ -254,7 +254,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -262,7 +262,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -270,7 +270,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关所在的可用区。
+     * Get NAT网关所在的可用区。 
      * @return Zone NAT网关所在的可用区。
      */
     public String getZone() {
@@ -278,7 +278,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关所在的可用区。
+     * Set NAT网关所在的可用区。
      * @param Zone NAT网关所在的可用区。
      */
     public void setZone(String Zone) {
@@ -286,7 +286,7 @@ public class NatGateway  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

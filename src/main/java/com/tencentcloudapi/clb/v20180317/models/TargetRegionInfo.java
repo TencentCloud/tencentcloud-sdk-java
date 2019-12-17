@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TargetRegionInfo  extends AbstractModel{
+public class TargetRegionInfo extends AbstractModel{
 
     /**
     * Target所属地域，如 ap-guangzhou
@@ -37,7 +37,7 @@ public class TargetRegionInfo  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取Target所属地域，如 ap-guangzhou
+     * Get Target所属地域，如 ap-guangzhou 
      * @return Region Target所属地域，如 ap-guangzhou
      */
     public String getRegion() {
@@ -45,7 +45,7 @@ public class TargetRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Target所属地域，如 ap-guangzhou
+     * Set Target所属地域，如 ap-guangzhou
      * @param Region Target所属地域，如 ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -53,7 +53,7 @@ public class TargetRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * Get Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0" 
      * @return VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     public String getVpcId() {
@@ -61,7 +61,7 @@ public class TargetRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * Set Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      * @param VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
      */
     public void setVpcId(String VpcId) {
@@ -69,7 +69,7 @@ public class TargetRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

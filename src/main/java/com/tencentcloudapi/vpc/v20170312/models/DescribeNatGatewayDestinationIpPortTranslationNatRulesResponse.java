@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  extends AbstractModel{
+public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel{
 
     /**
     * NAT网关端口转发规则对象数组。
@@ -44,7 +44,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     private String RequestId;
 
     /**
-     * 获取NAT网关端口转发规则对象数组。
+     * Get NAT网关端口转发规则对象数组。 
      * @return NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
      */
     public NatGatewayDestinationIpPortTranslationNatRule [] getNatGatewayDestinationIpPortTranslationNatRuleSet() {
@@ -52,7 +52,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 设置NAT网关端口转发规则对象数组。
+     * Set NAT网关端口转发规则对象数组。
      * @param NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
      */
     public void setNatGatewayDestinationIpPortTranslationNatRuleSet(NatGatewayDestinationIpPortTranslationNatRule [] NatGatewayDestinationIpPortTranslationNatRuleSet) {
@@ -60,7 +60,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 获取符合条件的NAT网关端口转发规则对象数目。
+     * Get 符合条件的NAT网关端口转发规则对象数目。 
      * @return TotalCount 符合条件的NAT网关端口转发规则对象数目。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 设置符合条件的NAT网关端口转发规则对象数目。
+     * Set 符合条件的NAT网关端口转发规则对象数目。
      * @param TotalCount 符合条件的NAT网关端口转发规则对象数目。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse  ext
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NatGatewayDestinationIpPortTranslationNatRuleSet.", this.NatGatewayDestinationIpPortTranslationNatRuleSet);

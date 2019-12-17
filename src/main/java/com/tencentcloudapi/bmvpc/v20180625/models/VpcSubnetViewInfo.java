@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcSubnetViewInfo  extends AbstractModel{
+public class VpcSubnetViewInfo extends AbstractModel{
 
     /**
     * 子网ID
@@ -65,7 +65,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -73,7 +73,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -81,7 +81,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称
+     * Get 子网名称 
      * @return SubnetName 子网名称
      */
     public String getSubnetName() {
@@ -89,7 +89,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称
+     * Set 子网名称
      * @param SubnetName 子网名称
      */
     public void setSubnetName(String SubnetName) {
@@ -97,7 +97,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网CIDR
+     * Get 子网CIDR 
      * @return CidrBlock 子网CIDR
      */
     public String getCidrBlock() {
@@ -105,7 +105,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网CIDR
+     * Set 子网CIDR
      * @param CidrBlock 子网CIDR
      */
     public void setCidrBlock(String CidrBlock) {
@@ -113,7 +113,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网下设备个数
+     * Get 子网下设备个数 
      * @return CpmNum 子网下设备个数
      */
     public Long getCpmNum() {
@@ -121,7 +121,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网下设备个数
+     * Set 子网下设备个数
      * @param CpmNum 子网下设备个数
      */
     public void setCpmNum(Long CpmNum) {
@@ -129,7 +129,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网负载均衡个数
+     * Get 内网负载均衡个数 
      * @return LbNum 内网负载均衡个数
      */
     public Long getLbNum() {
@@ -137,7 +137,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网负载均衡个数
+     * Set 内网负载均衡个数
      * @param LbNum 内网负载均衡个数
      */
     public void setLbNum(Long LbNum) {
@@ -145,7 +145,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网所在可用区
+     * Get 子网所在可用区 
      * @return Zone 子网所在可用区
      */
     public String getZone() {
@@ -153,7 +153,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网所在可用区
+     * Set 子网所在可用区
      * @param Zone 子网所在可用区
      */
     public void setZone(String Zone) {
@@ -161,7 +161,7 @@ public class VpcSubnetViewInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

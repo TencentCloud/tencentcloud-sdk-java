@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddressTemplateGroup  extends AbstractModel{
+public class AddressTemplateGroup extends AbstractModel{
 
     /**
     * IP地址模板集合名称。
@@ -51,7 +51,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取IP地址模板集合名称。
+     * Get IP地址模板集合名称。 
      * @return AddressTemplateGroupName IP地址模板集合名称。
      */
     public String getAddressTemplateGroupName() {
@@ -59,7 +59,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板集合名称。
+     * Set IP地址模板集合名称。
      * @param AddressTemplateGroupName IP地址模板集合名称。
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
@@ -67,7 +67,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+     * Get IP地址模板集合实例ID，例如：ipmg-dih8xdbq。 
      * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
      */
     public String getAddressTemplateGroupId() {
@@ -75,7 +75,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+     * Set IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
      * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
@@ -83,7 +83,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模板ID。
+     * Get IP地址模板ID。 
      * @return AddressTemplateIdSet IP地址模板ID。
      */
     public String [] getAddressTemplateIdSet() {
@@ -91,7 +91,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板ID。
+     * Set IP地址模板ID。
      * @param AddressTemplateIdSet IP地址模板ID。
      */
     public void setAddressTemplateIdSet(String [] AddressTemplateIdSet) {
@@ -99,7 +99,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class AddressTemplateGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateGroupName", this.AddressTemplateGroupName);

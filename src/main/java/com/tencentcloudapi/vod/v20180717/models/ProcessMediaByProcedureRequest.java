@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessMediaByProcedureRequest  extends AbstractModel{
+public class ProcessMediaByProcedureRequest extends AbstractModel{
 
     /**
     * 媒体文件 ID。
@@ -72,7 +72,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取媒体文件 ID。
+     * Get 媒体文件 ID。 
      * @return FileId 媒体文件 ID。
      */
     public String getFileId() {
@@ -80,7 +80,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件 ID。
+     * Set 媒体文件 ID。
      * @param FileId 媒体文件 ID。
      */
     public void setFileId(String FileId) {
@@ -88,7 +88,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
+     * Get [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。 
      * @return ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
      */
     public String getProcedureName() {
@@ -96,7 +96,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
+     * Set [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
      * @param ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字。
      */
     public void setProcedureName(String ProcedureName) {
@@ -104,7 +104,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
+     * Get 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。 
      * @return TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
      */
     public Long getTasksPriority() {
@@ -112,7 +112,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
+     * Set 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
      * @param TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到10，不填代表0。
      */
     public void setTasksPriority(Long TasksPriority) {
@@ -120,7 +120,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
+     * Get 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。 
      * @return TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      */
     public String getTasksNotifyMode() {
@@ -128,7 +128,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
+     * Set 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      * @param TasksNotifyMode 任务流状态变更通知模式，可取值有 Finish，Change 和 None，不填代表 Finish。
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
@@ -136,7 +136,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -144,7 +144,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -152,7 +152,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -160,7 +160,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果一天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -168,7 +168,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -176,7 +176,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -184,7 +184,7 @@ public class ProcessMediaByProcedureRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

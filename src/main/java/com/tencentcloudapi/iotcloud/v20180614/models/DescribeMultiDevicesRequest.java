@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMultiDevicesRequest  extends AbstractModel{
+public class DescribeMultiDevicesRequest extends AbstractModel{
 
     /**
     * 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
@@ -51,7 +51,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID 
      * @return ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      * @param ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务 ID，由批量创建设备接口返回
+     * Get 任务 ID，由批量创建设备接口返回 
      * @return TaskId 任务 ID，由批量创建设备接口返回
      */
     public String getTaskId() {
@@ -75,7 +75,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID，由批量创建设备接口返回
+     * Set 任务 ID，由批量创建设备接口返回
      * @param TaskId 任务 ID，由批量创建设备接口返回
      */
     public void setTaskId(String TaskId) {
@@ -83,7 +83,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移
+     * Get 分页偏移 
      * @return Offset 分页偏移
      */
     public Integer getOffset() {
@@ -91,7 +91,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移
+     * Set 分页偏移
      * @param Offset 分页偏移
      */
     public void setOffset(Integer Offset) {
@@ -99,7 +99,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，每页返回的设备个数
+     * Get 分页大小，每页返回的设备个数 
      * @return Limit 分页大小，每页返回的设备个数
      */
     public Integer getLimit() {
@@ -107,7 +107,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，每页返回的设备个数
+     * Set 分页大小，每页返回的设备个数
      * @param Limit 分页大小，每页返回的设备个数
      */
     public void setLimit(Integer Limit) {
@@ -115,7 +115,7 @@ public class DescribeMultiDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

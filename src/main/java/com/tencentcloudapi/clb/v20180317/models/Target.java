@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Target  extends AbstractModel{
+public class Target extends AbstractModel{
 
     /**
     * 后端服务的监听端口
@@ -63,8 +63,8 @@ public class Target  extends AbstractModel{
     private String EniIp;
 
     /**
-     * 获取后端服务的监听端口
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的监听端口
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -73,7 +73,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的监听端口
+     * Set 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 后端服务的监听端口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,8 +83,8 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,7 +93,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
+     * Set 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 后端服务的类型，可取：CVM（云服务器）、ENI（弹性网卡）；作为入参时，目前本参数暂不生效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,9 +103,9 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 获取绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+     * Get 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
 注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
 注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,7 +115,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 设置绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
+     * Set 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
 注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 绑定CVM时需要传入此参数，代表CVM的唯一 ID，可通过 DescribeInstances 接口返回字段中的 InstanceId 字段获取。
@@ -127,7 +127,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
      * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public Integer getWeight() {
@@ -135,7 +135,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public void setWeight(Integer Weight) {
@@ -143,8 +143,8 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 获取绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EniIp 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 设置绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
+     * Set 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EniIp 绑定弹性网卡时需要传入此参数，代表弹性网卡的IP，弹性网卡必须先绑定至CVM，然后才能绑定到负载均衡实例。注意：参数 InstanceId 和 EniIp 只能传入一个且必须传入一个。注意：绑定弹性网卡需要先提交工单开白名单使用。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,7 +163,7 @@ public class Target  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

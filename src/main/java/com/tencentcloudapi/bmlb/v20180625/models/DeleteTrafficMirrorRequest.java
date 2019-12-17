@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTrafficMirrorRequest  extends AbstractModel{
+public class DeleteTrafficMirrorRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID数组，可以批量删除，每次删除上限为20
@@ -30,7 +30,7 @@ public class DeleteTrafficMirrorRequest  extends AbstractModel{
     private String [] TrafficMirrorIds;
 
     /**
-     * 获取流量镜像实例ID数组，可以批量删除，每次删除上限为20
+     * Get 流量镜像实例ID数组，可以批量删除，每次删除上限为20 
      * @return TrafficMirrorIds 流量镜像实例ID数组，可以批量删除，每次删除上限为20
      */
     public String [] getTrafficMirrorIds() {
@@ -38,7 +38,7 @@ public class DeleteTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID数组，可以批量删除，每次删除上限为20
+     * Set 流量镜像实例ID数组，可以批量删除，每次删除上限为20
      * @param TrafficMirrorIds 流量镜像实例ID数组，可以批量删除，每次删除上限为20
      */
     public void setTrafficMirrorIds(String [] TrafficMirrorIds) {
@@ -46,7 +46,7 @@ public class DeleteTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TrafficMirrorIds.", this.TrafficMirrorIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ECCRequest  extends AbstractModel{
+public class ECCRequest extends AbstractModel{
 
     /**
     * 作文文本，必填
@@ -86,7 +86,7 @@ public class ECCRequest  extends AbstractModel{
     private String SessionId;
 
     /**
-     * 获取作文文本，必填
+     * Get 作文文本，必填 
      * @return Content 作文文本，必填
      */
     public String getContent() {
@@ -94,7 +94,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作文文本，必填
+     * Set 作文文本，必填
      * @param Content 作文文本，必填
      */
     public void setContent(String Content) {
@@ -102,7 +102,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取作文题目，可选参数
+     * Get 作文题目，可选参数 
      * @return Title 作文题目，可选参数
      */
     public String getTitle() {
@@ -110,7 +110,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作文题目，可选参数
+     * Set 作文题目，可选参数
      * @param Title 作文题目，可选参数
      */
     public void setTitle(String Title) {
@@ -118,7 +118,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
+     * Get 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。 
      * @return Grade 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
      */
     public String getGrade() {
@@ -126,7 +126,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
+     * Set 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
      * @param Grade 年级标准， 默认以cet4为标准，取值与意义如下：elementary 小学，grade7 grade8 grade9分别对应初一，初二，初三。 grade10 grade11 grade12 分别对应高一，高二，高三，以及cet4和cet6 分别表示 英语4级和6级。
      */
     public void setGrade(String Grade) {
@@ -134,7 +134,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取作文提纲，可选参数，作文的写作要求。
+     * Get 作文提纲，可选参数，作文的写作要求。 
      * @return Requirement 作文提纲，可选参数，作文的写作要求。
      */
     public String getRequirement() {
@@ -142,7 +142,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作文提纲，可选参数，作文的写作要求。
+     * Set 作文提纲，可选参数，作文的写作要求。
      * @param Requirement 作文提纲，可选参数，作文的写作要求。
      */
     public void setRequirement(String Requirement) {
@@ -150,7 +150,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     * Get 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。 
      * @return ModelTitle 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
      */
     public String getModelTitle() {
@@ -158,7 +158,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
+     * Set 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
      * @param ModelTitle 范文标题，可选参数，本接口可以依据提供的范文对作文进行评分。
      */
     public void setModelTitle(String ModelTitle) {
@@ -166,7 +166,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取范文内容，可选参数，同上，范文的正文部分。
+     * Get 范文内容，可选参数，同上，范文的正文部分。 
      * @return ModelContent 范文内容，可选参数，同上，范文的正文部分。
      */
     public String getModelContent() {
@@ -174,7 +174,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置范文内容，可选参数，同上，范文的正文部分。
+     * Set 范文内容，可选参数，同上，范文的正文部分。
      * @param ModelContent 范文内容，可选参数，同上，范文的正文部分。
      */
     public void setModelContent(String ModelContent) {
@@ -182,7 +182,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     * Get 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。 
      * @return EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
      */
     public String getEccAppid() {
@@ -190,7 +190,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
+     * Set 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
      * @param EccAppid 业务应用ID，与账号应用APPID无关，是用来方便客户管理服务的参数（暂时无需传入）。
      */
     public void setEccAppid(String EccAppid) {
@@ -198,7 +198,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+     * Get 异步模式标识，0：同步模式，1：异步模式，默认为同步模式 
      * @return IsAsync 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
      */
     public Long getIsAsync() {
@@ -206,7 +206,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步模式标识，0：同步模式，1：异步模式，默认为同步模式
+     * Set 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
      * @param IsAsync 异步模式标识，0：同步模式，1：异步模式，默认为同步模式
      */
     public void setIsAsync(Long IsAsync) {
@@ -214,7 +214,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
+     * Get 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用 
      * @return SessionId 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
      */
     public String getSessionId() {
@@ -222,7 +222,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
+     * Set 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
      * @param SessionId 图像识别唯一标识，一次识别一个 SessionId。当传入此前识别接口使用过的 SessionId，则本次批改按图像批改价格收费；如使用了识别接口且本次没有传入 SessionId，则需要加取文本批改的费用；如果直接使用文本批改接口，则只收取文本批改的费用
      */
     public void setSessionId(String SessionId) {
@@ -230,7 +230,7 @@ public class ECCRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

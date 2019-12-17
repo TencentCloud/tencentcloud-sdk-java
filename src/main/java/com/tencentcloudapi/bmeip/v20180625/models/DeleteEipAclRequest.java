@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteEipAclRequest  extends AbstractModel{
+public class DeleteEipAclRequest extends AbstractModel{
 
     /**
     * 待删除的 ACL 实例 ID
@@ -30,7 +30,7 @@ public class DeleteEipAclRequest  extends AbstractModel{
     private String AclId;
 
     /**
-     * 获取待删除的 ACL 实例 ID
+     * Get 待删除的 ACL 实例 ID 
      * @return AclId 待删除的 ACL 实例 ID
      */
     public String getAclId() {
@@ -38,7 +38,7 @@ public class DeleteEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的 ACL 实例 ID
+     * Set 待删除的 ACL 实例 ID
      * @param AclId 待删除的 ACL 实例 ID
      */
     public void setAclId(String AclId) {
@@ -46,7 +46,7 @@ public class DeleteEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclId", this.AclId);

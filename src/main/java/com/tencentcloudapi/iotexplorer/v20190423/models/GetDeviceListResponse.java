@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDeviceListResponse  extends AbstractModel{
+public class GetDeviceListResponse extends AbstractModel{
 
     /**
     * 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
@@ -46,8 +46,8 @@ public class GetDeviceListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
+     * Set 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Devices 返回的设备列表, 注意列表设备的 DevicePsk 为空, 要获取设备的 DevicePsk 请使用 DescribeDevice
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品下的设备总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 产品下的设备总数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Total 产品下的设备总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品下的设备总数
+     * Set 产品下的设备总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 产品下的设备总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class GetDeviceListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);

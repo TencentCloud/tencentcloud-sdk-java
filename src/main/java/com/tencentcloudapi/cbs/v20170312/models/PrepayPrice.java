@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PrepayPrice  extends AbstractModel{
+public class PrepayPrice extends AbstractModel{
 
     /**
     * 预付费云盘或快照预支费用的原价，单位：元。
@@ -37,7 +37,7 @@ public class PrepayPrice  extends AbstractModel{
     private Float DiscountPrice;
 
     /**
-     * 获取预付费云盘或快照预支费用的原价，单位：元。
+     * Get 预付费云盘或快照预支费用的原价，单位：元。 
      * @return OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
      */
     public Float getOriginalPrice() {
@@ -45,7 +45,7 @@ public class PrepayPrice  extends AbstractModel{
     }
 
     /**
-     * 设置预付费云盘或快照预支费用的原价，单位：元。
+     * Set 预付费云盘或快照预支费用的原价，单位：元。
      * @param OriginalPrice 预付费云盘或快照预支费用的原价，单位：元。
      */
     public void setOriginalPrice(Float OriginalPrice) {
@@ -53,7 +53,7 @@ public class PrepayPrice  extends AbstractModel{
     }
 
     /**
-     * 获取预付费云盘或快照预支费用的折扣价，单位：元。
+     * Get 预付费云盘或快照预支费用的折扣价，单位：元。 
      * @return DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
      */
     public Float getDiscountPrice() {
@@ -61,7 +61,7 @@ public class PrepayPrice  extends AbstractModel{
     }
 
     /**
-     * 设置预付费云盘或快照预支费用的折扣价，单位：元。
+     * Set 预付费云盘或快照预支费用的折扣价，单位：元。
      * @param DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
      */
     public void setDiscountPrice(Float DiscountPrice) {
@@ -69,7 +69,7 @@ public class PrepayPrice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);

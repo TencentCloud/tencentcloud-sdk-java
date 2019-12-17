@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
+public class DescribeNonlocalLoginPlacesRequest extends AbstractModel{
 
     /**
     * 客户端唯一Uuid。
@@ -34,14 +34,14 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 过滤条件。
@@ -53,7 +53,7 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取客户端唯一Uuid。
+     * Get 客户端唯一Uuid。 
      * @return Uuid 客户端唯一Uuid。
      */
     public String getUuid() {
@@ -61,7 +61,7 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端唯一Uuid。
+     * Set 客户端唯一Uuid。
      * @param Uuid 客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
@@ -69,41 +69,41 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为10，最大值为100。
+     * Get 返回数量，默认为10，最大值为100。 
      * @return Limit 返回数量，默认为10，最大值为100。
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置返回数量，默认为10，最大值为100。
+     * Set 返回数量，默认为10，最大值为100。
      * @param Limit 返回数量，默认为10，最大值为100。
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li>Keywords - String - 是否必填：否 -  查询关键字</li>
-<li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li>
+<li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li> 
      * @return Filters 过滤条件。
 <li>Keywords - String - 是否必填：否 -  查询关键字</li>
 <li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li>
@@ -113,7 +113,7 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li>Keywords - String - 是否必填：否 -  查询关键字</li>
 <li>Status - String - 是否必填：否 -  登录状态（NON_LOCAL_LOGIN: 异地登录 | NORMAL_LOGIN : 正常登录）</li>
      * @param Filters 过滤条件。
@@ -125,7 +125,7 @@ public class DescribeNonlocalLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShopHourTrafficInfo  extends AbstractModel{
+public class ShopHourTrafficInfo extends AbstractModel{
 
     /**
     * 日期，格式yyyy-MM-dd
@@ -37,7 +37,7 @@ public class ShopHourTrafficInfo  extends AbstractModel{
     private HourTrafficInfoDetail [] HourTrafficInfoDetailSet;
 
     /**
-     * 获取日期，格式yyyy-MM-dd
+     * Get 日期，格式yyyy-MM-dd 
      * @return Date 日期，格式yyyy-MM-dd
      */
     public String getDate() {
@@ -45,7 +45,7 @@ public class ShopHourTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日期，格式yyyy-MM-dd
+     * Set 日期，格式yyyy-MM-dd
      * @param Date 日期，格式yyyy-MM-dd
      */
     public void setDate(String Date) {
@@ -53,7 +53,7 @@ public class ShopHourTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分时客流详细信息
+     * Get 分时客流详细信息 
      * @return HourTrafficInfoDetailSet 分时客流详细信息
      */
     public HourTrafficInfoDetail [] getHourTrafficInfoDetailSet() {
@@ -61,7 +61,7 @@ public class ShopHourTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分时客流详细信息
+     * Set 分时客流详细信息
      * @param HourTrafficInfoDetailSet 分时客流详细信息
      */
     public void setHourTrafficInfoDetailSet(HourTrafficInfoDetail [] HourTrafficInfoDetailSet) {
@@ -69,7 +69,7 @@ public class ShopHourTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

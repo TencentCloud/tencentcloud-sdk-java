@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterInstancesRequest  extends AbstractModel{
+public class DescribeClusterInstancesRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -58,7 +58,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     private String InstanceRole;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -66,7 +66,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -74,7 +74,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getOffset() {
@@ -82,7 +82,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setOffset(Integer Offset) {
@@ -90,7 +90,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getLimit() {
@@ -98,7 +98,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setLimit(Integer Limit) {
@@ -106,7 +106,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * Get 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。 
      * @return InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      */
     public String [] getInstanceIds() {
@@ -114,7 +114,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
+     * Set 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      * @param InstanceIds 需要获取的节点实例Id列表。如果为空，表示拉取集群下所有节点实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -122,7 +122,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * Get 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。 
      * @return InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
      */
     public String getInstanceRole() {
@@ -130,7 +130,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
+     * Set 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
      * @param InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER。默认为WORKER类型。
      */
     public void setInstanceRole(String InstanceRole) {
@@ -138,7 +138,7 @@ public class DescribeClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

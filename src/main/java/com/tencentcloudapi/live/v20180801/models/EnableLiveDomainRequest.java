@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableLiveDomainRequest  extends AbstractModel{
+public class EnableLiveDomainRequest extends AbstractModel{
 
     /**
     * 待启用的直播域名
@@ -30,7 +30,7 @@ public class EnableLiveDomainRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-     * 获取待启用的直播域名
+     * Get 待启用的直播域名 
      * @return DomainName 待启用的直播域名
      */
     public String getDomainName() {
@@ -38,7 +38,7 @@ public class EnableLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待启用的直播域名
+     * Set 待启用的直播域名
      * @param DomainName 待启用的直播域名
      */
     public void setDomainName(String DomainName) {
@@ -46,7 +46,7 @@ public class EnableLiveDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

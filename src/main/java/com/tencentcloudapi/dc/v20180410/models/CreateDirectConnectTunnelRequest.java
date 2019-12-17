@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDirectConnectTunnelRequest  extends AbstractModel{
+public class CreateDirectConnectTunnelRequest extends AbstractModel{
 
     /**
     * 专线 ID，例如：dc-kd7d06of
@@ -130,7 +130,7 @@ STATIC：静态
     private String CustomerAddress;
 
     /**
-     * 获取专线 ID，例如：dc-kd7d06of
+     * Get 专线 ID，例如：dc-kd7d06of 
      * @return DirectConnectId 专线 ID，例如：dc-kd7d06of
      */
     public String getDirectConnectId() {
@@ -138,7 +138,7 @@ STATIC：静态
     }
 
     /**
-     * 设置专线 ID，例如：dc-kd7d06of
+     * Set 专线 ID，例如：dc-kd7d06of
      * @param DirectConnectId 专线 ID，例如：dc-kd7d06of
      */
     public void setDirectConnectId(String DirectConnectId) {
@@ -146,7 +146,7 @@ STATIC：静态
     }
 
     /**
-     * 获取专用通道名称
+     * Get 专用通道名称 
      * @return DirectConnectTunnelName 专用通道名称
      */
     public String getDirectConnectTunnelName() {
@@ -154,7 +154,7 @@ STATIC：静态
     }
 
     /**
-     * 设置专用通道名称
+     * Set 专用通道名称
      * @param DirectConnectTunnelName 专用通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
@@ -162,8 +162,8 @@ STATIC：静态
     }
 
     /**
-     * 获取物理专线 owner，缺省为当前客户（物理专线 owner）
-共享专线时这里需要填写共享专线的开发商账号 ID
+     * Get 物理专线 owner，缺省为当前客户（物理专线 owner）
+共享专线时这里需要填写共享专线的开发商账号 ID 
      * @return DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
      */
@@ -172,7 +172,7 @@ STATIC：静态
     }
 
     /**
-     * 设置物理专线 owner，缺省为当前客户（物理专线 owner）
+     * Set 物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
      * @param DirectConnectOwnerAccount 物理专线 owner，缺省为当前客户（物理专线 owner）
 共享专线时这里需要填写共享专线的开发商账号 ID
@@ -182,10 +182,10 @@ STATIC：静态
     }
 
     /**
-     * 获取网络类型，分别为VPC、BMVPC，CCN，默认是VPC
+     * Get 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
-CCN：云联网
+CCN：云联网 
      * @return NetworkType 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
@@ -196,7 +196,7 @@ CCN：云联网
     }
 
     /**
-     * 设置网络类型，分别为VPC、BMVPC，CCN，默认是VPC
+     * Set 网络类型，分别为VPC、BMVPC，CCN，默认是VPC
 VPC：私有网络
 BMVPC：黑石网络
 CCN：云联网
@@ -210,7 +210,7 @@ CCN：云联网
     }
 
     /**
-     * 获取网络地域
+     * Get 网络地域 
      * @return NetworkRegion 网络地域
      */
     public String getNetworkRegion() {
@@ -218,7 +218,7 @@ CCN：云联网
     }
 
     /**
-     * 设置网络地域
+     * Set 网络地域
      * @param NetworkRegion 网络地域
      */
     public void setNetworkRegion(String NetworkRegion) {
@@ -226,7 +226,7 @@ CCN：云联网
     }
 
     /**
-     * 获取私有网络统一 ID 或者黑石网络统一 ID
+     * Get 私有网络统一 ID 或者黑石网络统一 ID 
      * @return VpcId 私有网络统一 ID 或者黑石网络统一 ID
      */
     public String getVpcId() {
@@ -234,7 +234,7 @@ CCN：云联网
     }
 
     /**
-     * 设置私有网络统一 ID 或者黑石网络统一 ID
+     * Set 私有网络统一 ID 或者黑石网络统一 ID
      * @param VpcId 私有网络统一 ID 或者黑石网络统一 ID
      */
     public void setVpcId(String VpcId) {
@@ -242,7 +242,7 @@ CCN：云联网
     }
 
     /**
-     * 获取专线网关 ID，例如 dcg-d545ddf
+     * Get 专线网关 ID，例如 dcg-d545ddf 
      * @return DirectConnectGatewayId 专线网关 ID，例如 dcg-d545ddf
      */
     public String getDirectConnectGatewayId() {
@@ -250,7 +250,7 @@ CCN：云联网
     }
 
     /**
-     * 设置专线网关 ID，例如 dcg-d545ddf
+     * Set 专线网关 ID，例如 dcg-d545ddf
      * @param DirectConnectGatewayId 专线网关 ID，例如 dcg-d545ddf
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -258,8 +258,8 @@ CCN：云联网
     }
 
     /**
-     * 获取专线带宽，单位：Mbps
-默认是物理专线带宽值
+     * Get 专线带宽，单位：Mbps
+默认是物理专线带宽值 
      * @return Bandwidth 专线带宽，单位：Mbps
 默认是物理专线带宽值
      */
@@ -268,7 +268,7 @@ CCN：云联网
     }
 
     /**
-     * 设置专线带宽，单位：Mbps
+     * Set 专线带宽，单位：Mbps
 默认是物理专线带宽值
      * @param Bandwidth 专线带宽，单位：Mbps
 默认是物理专线带宽值
@@ -278,9 +278,9 @@ CCN：云联网
     }
 
     /**
-     * 获取BGP ：BGP路由
+     * Get BGP ：BGP路由
 STATIC：静态
-默认为 BGP 路由
+默认为 BGP 路由 
      * @return RouteType BGP ：BGP路由
 STATIC：静态
 默认为 BGP 路由
@@ -290,7 +290,7 @@ STATIC：静态
     }
 
     /**
-     * 设置BGP ：BGP路由
+     * Set BGP ：BGP路由
 STATIC：静态
 默认为 BGP 路由
      * @param RouteType BGP ：BGP路由
@@ -302,7 +302,7 @@ STATIC：静态
     }
 
     /**
-     * 获取BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * Get BgpPeer，用户侧bgp信息，包括Asn和AuthKey 
      * @return BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      */
     public BgpPeer getBgpPeer() {
@@ -310,7 +310,7 @@ STATIC：静态
     }
 
     /**
-     * 设置BgpPeer，用户侧bgp信息，包括Asn和AuthKey
+     * Set BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      * @param BgpPeer BgpPeer，用户侧bgp信息，包括Asn和AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
@@ -318,7 +318,7 @@ STATIC：静态
     }
 
     /**
-     * 获取静态路由，用户IDC的网段地址
+     * Get 静态路由，用户IDC的网段地址 
      * @return RouteFilterPrefixes 静态路由，用户IDC的网段地址
      */
     public RouteFilterPrefix [] getRouteFilterPrefixes() {
@@ -326,7 +326,7 @@ STATIC：静态
     }
 
     /**
-     * 设置静态路由，用户IDC的网段地址
+     * Set 静态路由，用户IDC的网段地址
      * @param RouteFilterPrefixes 静态路由，用户IDC的网段地址
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix [] RouteFilterPrefixes) {
@@ -334,9 +334,9 @@ STATIC：静态
     }
 
     /**
-     * 获取vlan，范围：0 ~ 3000
+     * Get vlan，范围：0 ~ 3000
 0：不开启子接口
-默认值是非0
+默认值是非0 
      * @return Vlan vlan，范围：0 ~ 3000
 0：不开启子接口
 默认值是非0
@@ -346,7 +346,7 @@ STATIC：静态
     }
 
     /**
-     * 设置vlan，范围：0 ~ 3000
+     * Set vlan，范围：0 ~ 3000
 0：不开启子接口
 默认值是非0
      * @param Vlan vlan，范围：0 ~ 3000
@@ -358,7 +358,7 @@ STATIC：静态
     }
 
     /**
-     * 获取TencentAddress，腾讯侧互联 IP
+     * Get TencentAddress，腾讯侧互联 IP 
      * @return TencentAddress TencentAddress，腾讯侧互联 IP
      */
     public String getTencentAddress() {
@@ -366,7 +366,7 @@ STATIC：静态
     }
 
     /**
-     * 设置TencentAddress，腾讯侧互联 IP
+     * Set TencentAddress，腾讯侧互联 IP
      * @param TencentAddress TencentAddress，腾讯侧互联 IP
      */
     public void setTencentAddress(String TencentAddress) {
@@ -374,7 +374,7 @@ STATIC：静态
     }
 
     /**
-     * 获取CustomerAddress，用户侧互联 IP
+     * Get CustomerAddress，用户侧互联 IP 
      * @return CustomerAddress CustomerAddress，用户侧互联 IP
      */
     public String getCustomerAddress() {
@@ -382,7 +382,7 @@ STATIC：静态
     }
 
     /**
-     * 设置CustomerAddress，用户侧互联 IP
+     * Set CustomerAddress，用户侧互联 IP
      * @param CustomerAddress CustomerAddress，用户侧互联 IP
      */
     public void setCustomerAddress(String CustomerAddress) {
@@ -390,7 +390,7 @@ STATIC：静态
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);

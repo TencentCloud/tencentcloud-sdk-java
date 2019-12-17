@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Similar  extends AbstractModel{
+public class Similar extends AbstractModel{
 
     /**
     * 恶意类型
@@ -51,14 +51,14 @@ public class Similar  extends AbstractModel{
     private String SeedUrl;
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常 
 20001：政治
 20002：色情 
 20006：涉毒违法
 20007：谩骂 
 24001：暴恐
-21000：综合
+21000：综合 
      * @return EvilType 恶意类型
 100：正常 
 20001：政治
@@ -73,7 +73,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常 
 20001：政治
 20002：色情 
@@ -95,7 +95,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 获取处置判定 0：未匹配到 1：恶意 2：白样本
+     * Get 处置判定 0：未匹配到 1：恶意 2：白样本 
      * @return HitFlag 处置判定 0：未匹配到 1：恶意 2：白样本
      */
     public Long getHitFlag() {
@@ -103,7 +103,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 设置处置判定 0：未匹配到 1：恶意 2：白样本
+     * Set 处置判定 0：未匹配到 1：恶意 2：白样本
      * @param HitFlag 处置判定 0：未匹配到 1：恶意 2：白样本
      */
     public void setHitFlag(Long HitFlag) {
@@ -111,7 +111,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 获取返回的种子url
+     * Get 返回的种子url 
      * @return SeedUrl 返回的种子url
      */
     public String getSeedUrl() {
@@ -119,7 +119,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 设置返回的种子url
+     * Set 返回的种子url
      * @param SeedUrl 返回的种子url
      */
     public void setSeedUrl(String SeedUrl) {
@@ -127,7 +127,7 @@ public class Similar  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyParamTemplateRequest  extends AbstractModel{
+public class ModifyParamTemplateRequest extends AbstractModel{
 
     /**
     * 模板 ID。
@@ -51,7 +51,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
-     * 获取模板 ID。
+     * Get 模板 ID。 
      * @return TemplateId 模板 ID。
      */
     public Integer getTemplateId() {
@@ -59,7 +59,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板 ID。
+     * Set 模板 ID。
      * @param TemplateId 模板 ID。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -67,7 +67,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称。
+     * Get 模板名称。 
      * @return Name 模板名称。
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称。
+     * Set 模板名称。
      * @param Name 模板名称。
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述。
+     * Get 模板描述。 
      * @return Description 模板描述。
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述。
+     * Set 模板描述。
      * @param Description 模板描述。
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参数列表。
+     * Get 参数列表。 
      * @return ParamList 参数列表。
      */
     public Parameter [] getParamList() {
@@ -107,7 +107,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参数列表。
+     * Set 参数列表。
      * @param ParamList 参数列表。
      */
     public void setParamList(Parameter [] ParamList) {
@@ -115,7 +115,7 @@ public class ModifyParamTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

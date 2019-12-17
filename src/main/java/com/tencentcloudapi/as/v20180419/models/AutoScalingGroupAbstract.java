@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoScalingGroupAbstract  extends AbstractModel{
+public class AutoScalingGroupAbstract extends AbstractModel{
 
     /**
     * 伸缩组ID。
@@ -37,7 +37,7 @@ public class AutoScalingGroupAbstract  extends AbstractModel{
     private String AutoScalingGroupName;
 
     /**
-     * 获取伸缩组ID。
+     * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -45,7 +45,7 @@ public class AutoScalingGroupAbstract  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID。
+     * Set 伸缩组ID。
      * @param AutoScalingGroupId 伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -53,7 +53,7 @@ public class AutoScalingGroupAbstract  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组名称。
+     * Get 伸缩组名称。 
      * @return AutoScalingGroupName 伸缩组名称。
      */
     public String getAutoScalingGroupName() {
@@ -61,7 +61,7 @@ public class AutoScalingGroupAbstract  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组名称。
+     * Set 伸缩组名称。
      * @param AutoScalingGroupName 伸缩组名称。
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
@@ -69,7 +69,7 @@ public class AutoScalingGroupAbstract  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

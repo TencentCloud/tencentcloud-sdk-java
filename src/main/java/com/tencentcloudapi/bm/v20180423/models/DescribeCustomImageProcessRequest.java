@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomImageProcessRequest  extends AbstractModel{
+public class DescribeCustomImageProcessRequest extends AbstractModel{
 
     /**
     * 镜像ID
@@ -30,7 +30,7 @@ public class DescribeCustomImageProcessRequest  extends AbstractModel{
     private String ImageId;
 
     /**
-     * 获取镜像ID
+     * Get 镜像ID 
      * @return ImageId 镜像ID
      */
     public String getImageId() {
@@ -38,7 +38,7 @@ public class DescribeCustomImageProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID
+     * Set 镜像ID
      * @param ImageId 镜像ID
      */
     public void setImageId(String ImageId) {
@@ -46,7 +46,7 @@ public class DescribeCustomImageProcessRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoModerationRequest  extends AbstractModel{
+public class VideoModerationRequest extends AbstractModel{
 
     /**
     * 回调URL，音频识别结果将以POST请求方式发送到此地址
@@ -51,7 +51,7 @@ public class VideoModerationRequest  extends AbstractModel{
     private String FileUrl;
 
     /**
-     * 获取回调URL，音频识别结果将以POST请求方式发送到此地址
+     * Get 回调URL，音频识别结果将以POST请求方式发送到此地址 
      * @return CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public String getCallbackUrl() {
@@ -59,7 +59,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回调URL，音频识别结果将以POST请求方式发送到此地址
+     * Set 回调URL，音频识别结果将以POST请求方式发送到此地址
      * @param CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public void setCallbackUrl(String CallbackUrl) {
@@ -67,7 +67,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频文件MD5
+     * Get 视频文件MD5 
      * @return FileMD5 视频文件MD5
      */
     public String getFileMD5() {
@@ -75,7 +75,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频文件MD5
+     * Set 视频文件MD5
      * @param FileMD5 视频文件MD5
      */
     public void setFileMD5(String FileMD5) {
@@ -83,7 +83,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容base64
+     * Get 视频内容base64 
      * @return FileContent 视频内容base64
      */
     public String getFileContent() {
@@ -91,7 +91,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容base64
+     * Set 视频内容base64
      * @param FileContent 视频内容base64
      */
     public void setFileContent(String FileContent) {
@@ -99,7 +99,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容Url,其中FileUrl与FileContent二选一
+     * Get 视频内容Url,其中FileUrl与FileContent二选一 
      * @return FileUrl 视频内容Url,其中FileUrl与FileContent二选一
      */
     public String getFileUrl() {
@@ -107,7 +107,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容Url,其中FileUrl与FileContent二选一
+     * Set 视频内容Url,其中FileUrl与FileContent二选一
      * @param FileUrl 视频内容Url,其中FileUrl与FileContent二选一
      */
     public void setFileUrl(String FileUrl) {
@@ -115,7 +115,7 @@ public class VideoModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateSecurityGroupsRequest  extends AbstractModel{
+public class AssociateSecurityGroupsRequest extends AbstractModel{
 
     /**
     * 安全组 ID。
@@ -37,7 +37,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取安全组 ID。
+     * Get 安全组 ID。 
      * @return SecurityGroupId 安全组 ID。
      */
     public String getSecurityGroupId() {
@@ -45,7 +45,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组 ID。
+     * Set 安全组 ID。
      * @param SecurityGroupId 安全组 ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -53,7 +53,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例 ID 列表，一个或者多个实例 ID 组成的数组。
+     * Get 实例 ID 列表，一个或者多个实例 ID 组成的数组。 
      * @return InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 列表，一个或者多个实例 ID 组成的数组。
+     * Set 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      * @param InstanceIds 实例 ID 列表，一个或者多个实例 ID 组成的数组。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

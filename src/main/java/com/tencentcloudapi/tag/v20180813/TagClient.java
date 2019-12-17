@@ -29,21 +29,10 @@ public class TagClient extends AbstractClient{
     private static String endpoint = "tag.tencentcloudapi.com";
     private static String version = "2018-08-13";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TagClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TagClient(Credential credential, String region, ClientProfile profile) {
         super(TagClient.endpoint, TagClient.version, credential, region, profile);
     }

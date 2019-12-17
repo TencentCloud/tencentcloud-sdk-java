@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInfoDetail  extends AbstractModel{
+public class TaskInfoDetail extends AbstractModel{
 
     /**
     * 任务Id
@@ -95,8 +95,8 @@ public class TaskInfoDetail  extends AbstractModel{
     private Integer Result;
 
     /**
-     * 获取任务Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务Id
+     * Set 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,8 +135,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskType 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型
+     * Set 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskType 任务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,8 +155,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -165,7 +165,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,8 +175,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,7 +185,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -195,8 +195,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -205,7 +205,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,8 +215,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务进度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务进度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Progress 任务进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务进度
+     * Set 任务进度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 任务进度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,7 +275,7 @@ public class TaskInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

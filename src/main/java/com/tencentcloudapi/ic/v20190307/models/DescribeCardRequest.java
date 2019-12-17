@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCardRequest  extends AbstractModel{
+public class DescribeCardRequest extends AbstractModel{
 
     /**
     * 应用id
@@ -37,7 +37,7 @@ public class DescribeCardRequest  extends AbstractModel{
     private String Iccid;
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public Integer getSdkappid() {
@@ -45,7 +45,7 @@ public class DescribeCardRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(Integer Sdkappid) {
@@ -53,7 +53,7 @@ public class DescribeCardRequest  extends AbstractModel{
     }
 
     /**
-     * 获取卡片id
+     * Get 卡片id 
      * @return Iccid 卡片id
      */
     public String getIccid() {
@@ -61,7 +61,7 @@ public class DescribeCardRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卡片id
+     * Set 卡片id
      * @param Iccid 卡片id
      */
     public void setIccid(String Iccid) {
@@ -69,7 +69,7 @@ public class DescribeCardRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

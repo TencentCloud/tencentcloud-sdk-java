@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSealRequest  extends AbstractModel{
+public class CreateSealRequest extends AbstractModel{
 
     /**
     * 模块名SealMng
@@ -58,7 +58,7 @@ public class CreateSealRequest  extends AbstractModel{
     private String ImgData;
 
     /**
-     * 获取模块名SealMng
+     * Get 模块名SealMng 
      * @return Module 模块名SealMng
      */
     public String getModule() {
@@ -66,7 +66,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名SealMng
+     * Set 模块名SealMng
      * @param Module 模块名SealMng
      */
     public void setModule(String Module) {
@@ -74,7 +74,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名CreateSeal
+     * Get 操作名CreateSeal 
      * @return Operation 操作名CreateSeal
      */
     public String getOperation() {
@@ -82,7 +82,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名CreateSeal
+     * Set 操作名CreateSeal
      * @param Operation 操作名CreateSeal
      */
     public void setOperation(String Operation) {
@@ -90,7 +90,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐号ID
+     * Get 帐号ID 
      * @return AccountResId 帐号ID
      */
     public String getAccountResId() {
@@ -98,7 +98,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帐号ID
+     * Set 帐号ID
      * @param AccountResId 帐号ID
      */
     public void setAccountResId(String AccountResId) {
@@ -106,7 +106,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签章链接，图片必须为png格式
+     * Get 签章链接，图片必须为png格式 
      * @return ImgUrl 签章链接，图片必须为png格式
      */
     public String getImgUrl() {
@@ -114,7 +114,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签章链接，图片必须为png格式
+     * Set 签章链接，图片必须为png格式
      * @param ImgUrl 签章链接，图片必须为png格式
      */
     public void setImgUrl(String ImgUrl) {
@@ -122,7 +122,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据，base64编码
+     * Get 图片数据，base64编码 
      * @return ImgData 图片数据，base64编码
      */
     public String getImgData() {
@@ -130,7 +130,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片数据，base64编码
+     * Set 图片数据，base64编码
      * @param ImgData 图片数据，base64编码
      */
     public void setImgData(String ImgData) {
@@ -138,7 +138,7 @@ public class CreateSealRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

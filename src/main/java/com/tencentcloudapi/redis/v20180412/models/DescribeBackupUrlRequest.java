@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupUrlRequest  extends AbstractModel{
+public class DescribeBackupUrlRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class DescribeBackupUrlRequest  extends AbstractModel{
     private String BackupId;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeBackupUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeBackupUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份Id，通过DescribeInstanceBackups接口可查
+     * Get 备份Id，通过DescribeInstanceBackups接口可查 
      * @return BackupId 备份Id，通过DescribeInstanceBackups接口可查
      */
     public String getBackupId() {
@@ -61,7 +61,7 @@ public class DescribeBackupUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备份Id，通过DescribeInstanceBackups接口可查
+     * Set 备份Id，通过DescribeInstanceBackups接口可查
      * @param BackupId 备份Id，通过DescribeInstanceBackups接口可查
      */
     public void setBackupId(String BackupId) {
@@ -69,7 +69,7 @@ public class DescribeBackupUrlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

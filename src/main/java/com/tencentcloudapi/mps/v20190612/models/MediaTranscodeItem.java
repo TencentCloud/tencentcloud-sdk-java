@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTranscodeItem  extends AbstractModel{
+public class MediaTranscodeItem extends AbstractModel{
 
     /**
     * 转码后文件的目标存储。
@@ -107,7 +107,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     private MediaVideoStreamItem [] VideoStreamSet;
 
     /**
-     * 获取转码后文件的目标存储。
+     * Get 转码后文件的目标存储。 
      * @return OutputStorage 转码后文件的目标存储。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -115,7 +115,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置转码后文件的目标存储。
+     * Set 转码后文件的目标存储。
      * @param OutputStorage 转码后文件的目标存储。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -123,7 +123,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取转码后的视频文件路径。
+     * Get 转码后的视频文件路径。 
      * @return Path 转码后的视频文件路径。
      */
     public String getPath() {
@@ -131,7 +131,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置转码后的视频文件路径。
+     * Set 转码后的视频文件路径。
      * @param Path 转码后的视频文件路径。
      */
     public void setPath(String Path) {
@@ -139,7 +139,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -147,7 +147,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -155,7 +155,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Get 视频流码率平均值与音频流码率平均值之和， 单位：bps。 
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
     public Long getBitrate() {
@@ -163,7 +163,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Set 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
     public void setBitrate(Long Bitrate) {
@@ -171,7 +171,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流高度的最大值，单位：px。
+     * Get 视频流高度的最大值，单位：px。 
      * @return Height 视频流高度的最大值，单位：px。
      */
     public Long getHeight() {
@@ -179,7 +179,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流高度的最大值，单位：px。
+     * Set 视频流高度的最大值，单位：px。
      * @param Height 视频流高度的最大值，单位：px。
      */
     public void setHeight(Long Height) {
@@ -187,7 +187,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流宽度的最大值，单位：px。
+     * Get 视频流宽度的最大值，单位：px。 
      * @return Width 视频流宽度的最大值，单位：px。
      */
     public Long getWidth() {
@@ -195,7 +195,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流宽度的最大值，单位：px。
+     * Set 视频流宽度的最大值，单位：px。
      * @param Width 视频流宽度的最大值，单位：px。
      */
     public void setWidth(Long Width) {
@@ -203,7 +203,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Get 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。 
      * @return Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      */
     public Long getSize() {
@@ -211,7 +211,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Set 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      * @param Size 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      */
     public void setSize(Long Size) {
@@ -219,7 +219,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频时长，单位：秒。
+     * Get 视频时长，单位：秒。 
      * @return Duration 视频时长，单位：秒。
      */
     public Float getDuration() {
@@ -227,7 +227,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频时长，单位：秒。
+     * Set 视频时长，单位：秒。
      * @param Duration 视频时长，单位：秒。
      */
     public void setDuration(Float Duration) {
@@ -235,7 +235,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取容器类型，例如 m4a，mp4 等。
+     * Get 容器类型，例如 m4a，mp4 等。 
      * @return Container 容器类型，例如 m4a，mp4 等。
      */
     public String getContainer() {
@@ -243,7 +243,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置容器类型，例如 m4a，mp4 等。
+     * Set 容器类型，例如 m4a，mp4 等。
      * @param Container 容器类型，例如 m4a，mp4 等。
      */
     public void setContainer(String Container) {
@@ -251,7 +251,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频的 md5 值。
+     * Get 视频的 md5 值。 
      * @return Md5 视频的 md5 值。
      */
     public String getMd5() {
@@ -259,7 +259,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频的 md5 值。
+     * Set 视频的 md5 值。
      * @param Md5 视频的 md5 值。
      */
     public void setMd5(String Md5) {
@@ -267,7 +267,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频流信息。
+     * Get 音频流信息。 
      * @return AudioStreamSet 音频流信息。
      */
     public MediaAudioStreamItem [] getAudioStreamSet() {
@@ -275,7 +275,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频流信息。
+     * Set 音频流信息。
      * @param AudioStreamSet 音频流信息。
      */
     public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
@@ -283,7 +283,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流信息。
+     * Get 视频流信息。 
      * @return VideoStreamSet 视频流信息。
      */
     public MediaVideoStreamItem [] getVideoStreamSet() {
@@ -291,7 +291,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流信息。
+     * Set 视频流信息。
      * @param VideoStreamSet 视频流信息。
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
@@ -299,7 +299,7 @@ public class MediaTranscodeItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

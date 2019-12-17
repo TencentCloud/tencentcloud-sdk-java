@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
+public class DescribeReservedInstancesOfferingsRequest extends AbstractModel{
 
     /**
     * 试运行, 默认为 false。
@@ -81,7 +81,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取试运行, 默认为 false。
+     * Get 试运行, 默认为 false。 
      * @return DryRun 试运行, 默认为 false。
      */
     public Boolean getDryRun() {
@@ -89,7 +89,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置试运行, 默认为 false。
+     * Set 试运行, 默认为 false。
      * @param DryRun 试运行, 默认为 false。
      */
     public void setDryRun(Boolean DryRun) {
@@ -97,7 +97,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public Integer getLimit() {
@@ -121,7 +121,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public void setLimit(Integer Limit) {
@@ -129,9 +129,9 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取以最大有效期作为过滤参数。
+     * Get 以最大有效期作为过滤参数。
 计量单位: 秒
-默认为 94608000。
+默认为 94608000。 
      * @return MaxDuration 以最大有效期作为过滤参数。
 计量单位: 秒
 默认为 94608000。
@@ -141,7 +141,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置以最大有效期作为过滤参数。
+     * Set 以最大有效期作为过滤参数。
 计量单位: 秒
 默认为 94608000。
      * @param MaxDuration 以最大有效期作为过滤参数。
@@ -153,9 +153,9 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取以最小有效期作为过滤参数。
+     * Get 以最小有效期作为过滤参数。
 计量单位: 秒
-默认为 2592000。
+默认为 2592000。 
      * @return MinDuration 以最小有效期作为过滤参数。
 计量单位: 秒
 默认为 2592000。
@@ -165,7 +165,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置以最小有效期作为过滤参数。
+     * Set 以最小有效期作为过滤参数。
 计量单位: 秒
 默认为 2592000。
      * @param MinDuration 以最小有效期作为过滤参数。
@@ -177,7 +177,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<li><strong>zone</strong></li>
+     * Get <li><strong>zone</strong></li>
 <p style="padding-left: 30px;">按照预留实例计费可购买的【<strong>可用区</strong>】进行过滤。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a></p>
 <li><strong>duration</strong></li>
 <p style="padding-left: 30px;">按照预留实例计费【<strong>有效期</strong>】即预留实例计费购买时长进行过滤。形如：31536000。</p><p style="padding-left: 30px;">类型：Integer</p><p style="padding-left: 30px;">计量单位：秒</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：31536000 (1年) | 94608000（3年）</p>
@@ -189,7 +189,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
 <p style="padding-left: 30px;">按照预留实例计费的【<strong>平台描述</strong>】（即操作系统）进行过滤。形如：linux。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：linux</p>
 <li><strong>reserved-instances-offering-id</strong></li>
 <p style="padding-left: 30px;">按照【<strong>预留实例计费配置ID</strong>】进行过滤。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p>
-每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。
+每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。 
      * @return Filters <li><strong>zone</strong></li>
 <p style="padding-left: 30px;">按照预留实例计费可购买的【<strong>可用区</strong>】进行过滤。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a></p>
 <li><strong>duration</strong></li>
@@ -209,7 +209,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<li><strong>zone</strong></li>
+     * Set <li><strong>zone</strong></li>
 <p style="padding-left: 30px;">按照预留实例计费可购买的【<strong>可用区</strong>】进行过滤。形如：ap-guangzhou-1。</p><p style="padding-left: 30px;">类型：String</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a></p>
 <li><strong>duration</strong></li>
 <p style="padding-left: 30px;">按照预留实例计费【<strong>有效期</strong>】即预留实例计费购买时长进行过滤。形如：31536000。</p><p style="padding-left: 30px;">类型：Integer</p><p style="padding-left: 30px;">计量单位：秒</p><p style="padding-left: 30px;">必选：否</p><p style="padding-left: 30px;">可选项：31536000 (1年) | 94608000（3年）</p>
@@ -241,7 +241,7 @@ public class DescribeReservedInstancesOfferingsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);

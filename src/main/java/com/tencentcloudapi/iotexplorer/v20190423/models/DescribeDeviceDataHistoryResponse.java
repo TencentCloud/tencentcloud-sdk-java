@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
+public class DescribeDeviceDataHistoryResponse extends AbstractModel{
 
     /**
     * 属性字段名称
@@ -62,8 +62,8 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取属性字段名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 属性字段名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FieldName 属性字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置属性字段名称
+     * Set 属性字段名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldName 属性字段名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
+     * Set 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Listover 数据是否已全部返回，true 表示数据全部返回，false 表示还有数据待返回，可将 Context 作为入参，继续查询返回结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Context 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
+     * Set 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Context 检索上下文，当 ListOver 为false时，可以用此上下文，继续读取后续数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取历史数据结果数组，返回对应时间点及取值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 历史数据结果数组，返回对应时间点及取值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Results 历史数据结果数组，返回对应时间点及取值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置历史数据结果数组，返回对应时间点及取值。
+     * Set 历史数据结果数组，返回对应时间点及取值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 历史数据结果数组，返回对应时间点及取值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -150,7 +150,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -158,7 +158,7 @@ public class DescribeDeviceDataHistoryResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FieldName", this.FieldName);

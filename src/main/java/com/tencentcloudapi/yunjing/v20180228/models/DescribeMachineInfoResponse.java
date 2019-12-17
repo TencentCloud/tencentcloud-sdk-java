@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMachineInfoResponse  extends AbstractModel{
+public class DescribeMachineInfoResponse extends AbstractModel{
 
     /**
     * 机器ip。
@@ -34,7 +34,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     */
     @SerializedName("ProtectDays")
     @Expose
-    private Integer ProtectDays;
+    private Long ProtectDays;
 
     /**
     * 操作系统。
@@ -133,14 +133,14 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     */
     @SerializedName("FreeMalwaresLeft")
     @Expose
-    private Integer FreeMalwaresLeft;
+    private Long FreeMalwaresLeft;
 
     /**
     * 免费漏洞剩余检测数量。
     */
     @SerializedName("FreeVulsLeft")
     @Expose
-    private Integer FreeVulsLeft;
+    private Long FreeVulsLeft;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -150,7 +150,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取机器ip。
+     * Get 机器ip。 
      * @return MachineIp 机器ip。
      */
     public String getMachineIp() {
@@ -158,7 +158,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机器ip。
+     * Set 机器ip。
      * @param MachineIp 机器ip。
      */
     public void setMachineIp(String MachineIp) {
@@ -166,23 +166,23 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取受云镜保护天数。
+     * Get 受云镜保护天数。 
      * @return ProtectDays 受云镜保护天数。
      */
-    public Integer getProtectDays() {
+    public Long getProtectDays() {
         return this.ProtectDays;
     }
 
     /**
-     * 设置受云镜保护天数。
+     * Set 受云镜保护天数。
      * @param ProtectDays 受云镜保护天数。
      */
-    public void setProtectDays(Integer ProtectDays) {
+    public void setProtectDays(Long ProtectDays) {
         this.ProtectDays = ProtectDays;
     }
 
     /**
-     * 获取操作系统。
+     * Get 操作系统。 
      * @return MachineOs 操作系统。
      */
     public String getMachineOs() {
@@ -190,7 +190,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统。
+     * Set 操作系统。
      * @param MachineOs 操作系统。
      */
     public void setMachineOs(String MachineOs) {
@@ -198,7 +198,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主机名称。
+     * Get 主机名称。 
      * @return MachineName 主机名称。
      */
     public String getMachineName() {
@@ -206,7 +206,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称。
+     * Set 主机名称。
      * @param MachineName 主机名称。
      */
     public void setMachineName(String MachineName) {
@@ -214,9 +214,9 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取在线状态。
+     * Get 在线状态。
 <li>ONLINE： 在线</li>
-<li>OFFLINE：离线</li>
+<li>OFFLINE：离线</li> 
      * @return MachineStatus 在线状态。
 <li>ONLINE： 在线</li>
 <li>OFFLINE：离线</li>
@@ -226,7 +226,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置在线状态。
+     * Set 在线状态。
 <li>ONLINE： 在线</li>
 <li>OFFLINE：离线</li>
      * @param MachineStatus 在线状态。
@@ -238,7 +238,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CVM或BM主机唯一标识。
+     * Get CVM或BM主机唯一标识。 
      * @return InstanceId CVM或BM主机唯一标识。
      */
     public String getInstanceId() {
@@ -246,7 +246,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CVM或BM主机唯一标识。
+     * Set CVM或BM主机唯一标识。
      * @param InstanceId CVM或BM主机唯一标识。
      */
     public void setInstanceId(String InstanceId) {
@@ -254,7 +254,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主机外网IP。
+     * Get 主机外网IP。 
      * @return MachineWanIp 主机外网IP。
      */
     public String getMachineWanIp() {
@@ -262,7 +262,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主机外网IP。
+     * Set 主机外网IP。
      * @param MachineWanIp 主机外网IP。
      */
     public void setMachineWanIp(String MachineWanIp) {
@@ -270,7 +270,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CVM或BM主机唯一Uuid。
+     * Get CVM或BM主机唯一Uuid。 
      * @return Quuid CVM或BM主机唯一Uuid。
      */
     public String getQuuid() {
@@ -278,7 +278,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CVM或BM主机唯一Uuid。
+     * Set CVM或BM主机唯一Uuid。
      * @param Quuid CVM或BM主机唯一Uuid。
      */
     public void setQuuid(String Quuid) {
@@ -286,7 +286,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一Uuid。
+     * Get 云镜客户端唯一Uuid。 
      * @return Uuid 云镜客户端唯一Uuid。
      */
     public String getUuid() {
@@ -294,7 +294,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。
+     * Set 云镜客户端唯一Uuid。
      * @param Uuid 云镜客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
@@ -302,9 +302,9 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否开通专业版。
+     * Get 是否开通专业版。
 <li>true：是</li>
-<li>false：否</li>
+<li>false：否</li> 
      * @return IsProVersion 是否开通专业版。
 <li>true：是</li>
 <li>false：否</li>
@@ -314,7 +314,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否开通专业版。
+     * Set 是否开通专业版。
 <li>true：是</li>
 <li>false：否</li>
      * @param IsProVersion 是否开通专业版。
@@ -326,7 +326,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取专业版开通时间。
+     * Get 专业版开通时间。 
      * @return ProVersionOpenDate 专业版开通时间。
      */
     public String getProVersionOpenDate() {
@@ -334,7 +334,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置专业版开通时间。
+     * Set 专业版开通时间。
      * @param ProVersionOpenDate 专业版开通时间。
      */
     public void setProVersionOpenDate(String ProVersionOpenDate) {
@@ -342,9 +342,9 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取云主机类型。
+     * Get 云主机类型。
 <li>CVM: 虚拟主机</li>
-<li>BM: 黑石物理机</li>
+<li>BM: 黑石物理机</li> 
      * @return MachineType 云主机类型。
 <li>CVM: 虚拟主机</li>
 <li>BM: 黑石物理机</li>
@@ -354,7 +354,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置云主机类型。
+     * Set 云主机类型。
 <li>CVM: 虚拟主机</li>
 <li>BM: 黑石物理机</li>
      * @param MachineType 云主机类型。
@@ -366,7 +366,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Get 机器所属地域。如：ap-guangzhou，ap-shanghai 
      * @return MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      */
     public String getMachineRegion() {
@@ -374,7 +374,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Set 机器所属地域。如：ap-guangzhou，ap-shanghai
      * @param MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
      */
     public void setMachineRegion(String MachineRegion) {
@@ -382,9 +382,9 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主机状态。
+     * Get 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
-<li>PREPAY: 表示预付费，即包年包月</li>
+<li>PREPAY: 表示预付费，即包年包月</li> 
      * @return PayMode 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
@@ -394,7 +394,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主机状态。
+     * Set 主机状态。
 <li>POSTPAY: 表示后付费，即按量计费  </li>
 <li>PREPAY: 表示预付费，即包年包月</li>
      * @param PayMode 主机状态。
@@ -406,39 +406,39 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取免费木马剩余检测数量。
+     * Get 免费木马剩余检测数量。 
      * @return FreeMalwaresLeft 免费木马剩余检测数量。
      */
-    public Integer getFreeMalwaresLeft() {
+    public Long getFreeMalwaresLeft() {
         return this.FreeMalwaresLeft;
     }
 
     /**
-     * 设置免费木马剩余检测数量。
+     * Set 免费木马剩余检测数量。
      * @param FreeMalwaresLeft 免费木马剩余检测数量。
      */
-    public void setFreeMalwaresLeft(Integer FreeMalwaresLeft) {
+    public void setFreeMalwaresLeft(Long FreeMalwaresLeft) {
         this.FreeMalwaresLeft = FreeMalwaresLeft;
     }
 
     /**
-     * 获取免费漏洞剩余检测数量。
+     * Get 免费漏洞剩余检测数量。 
      * @return FreeVulsLeft 免费漏洞剩余检测数量。
      */
-    public Integer getFreeVulsLeft() {
+    public Long getFreeVulsLeft() {
         return this.FreeVulsLeft;
     }
 
     /**
-     * 设置免费漏洞剩余检测数量。
+     * Set 免费漏洞剩余检测数量。
      * @param FreeVulsLeft 免费漏洞剩余检测数量。
      */
-    public void setFreeVulsLeft(Integer FreeVulsLeft) {
+    public void setFreeVulsLeft(Long FreeVulsLeft) {
         this.FreeVulsLeft = FreeVulsLeft;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -446,7 +446,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -454,7 +454,7 @@ public class DescribeMachineInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineIp", this.MachineIp);

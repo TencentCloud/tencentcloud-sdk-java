@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTrack  extends AbstractModel{
+public class MediaTrack extends AbstractModel{
 
     /**
     * 轨道类型，取值有：
@@ -43,12 +43,12 @@ public class MediaTrack  extends AbstractModel{
     private MediaTrackItem [] TrackItems;
 
     /**
-     * 获取轨道类型，取值有：
+     * Get 轨道类型，取值有：
 <ul>
 <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio ：音频轨道。音频轨道由以下 Item 组成：<ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
 <li>Sticker ：贴图轨道。贴图轨道以下 Item 组成：<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
+</ul> 
      * @return Type 轨道类型，取值有：
 <ul>
 <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
@@ -61,7 +61,7 @@ public class MediaTrack  extends AbstractModel{
     }
 
     /**
-     * 设置轨道类型，取值有：
+     * Set 轨道类型，取值有：
 <ul>
 <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
 <li>Audio ：音频轨道。音频轨道由以下 Item 组成：<ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
@@ -79,8 +79,8 @@ public class MediaTrack  extends AbstractModel{
     }
 
     /**
-     * 获取轨道上的媒体片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 轨道上的媒体片段列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TrackItems 轨道上的媒体片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -89,7 +89,7 @@ public class MediaTrack  extends AbstractModel{
     }
 
     /**
-     * 设置轨道上的媒体片段列表。
+     * Set 轨道上的媒体片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TrackItems 轨道上的媒体片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,7 +99,7 @@ public class MediaTrack  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

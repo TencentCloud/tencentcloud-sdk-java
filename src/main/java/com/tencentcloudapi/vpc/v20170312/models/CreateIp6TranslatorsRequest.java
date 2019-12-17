@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateIp6TranslatorsRequest  extends AbstractModel{
+public class CreateIp6TranslatorsRequest extends AbstractModel{
 
     /**
     * 转换实例名称
@@ -44,7 +44,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     private String Ip6InternetServiceProvider;
 
     /**
-     * 获取转换实例名称
+     * Get 转换实例名称 
      * @return Ip6TranslatorName 转换实例名称
      */
     public String getIp6TranslatorName() {
@@ -52,7 +52,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转换实例名称
+     * Set 转换实例名称
      * @param Ip6TranslatorName 转换实例名称
      */
     public void setIp6TranslatorName(String Ip6TranslatorName) {
@@ -60,7 +60,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建转换实例数量，默认是1个
+     * Get 创建转换实例数量，默认是1个 
      * @return Ip6TranslatorCount 创建转换实例数量，默认是1个
      */
     public Integer getIp6TranslatorCount() {
@@ -68,7 +68,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建转换实例数量，默认是1个
+     * Set 创建转换实例数量，默认是1个
      * @param Ip6TranslatorCount 创建转换实例数量，默认是1个
      */
     public void setIp6TranslatorCount(Integer Ip6TranslatorCount) {
@@ -76,7 +76,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
+     * Get 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP" 
      * @return Ip6InternetServiceProvider 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
      */
     public String getIp6InternetServiceProvider() {
@@ -84,7 +84,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
+     * Set 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
      * @param Ip6InternetServiceProvider 转换实例运营商属性，可取"CMCC","CTCC","CUCC","BGP"
      */
     public void setIp6InternetServiceProvider(String Ip6InternetServiceProvider) {
@@ -92,7 +92,7 @@ public class CreateIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6TranslatorName", this.Ip6TranslatorName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateDisksRequest  extends AbstractModel{
+public class TerminateDisksRequest extends AbstractModel{
 
     /**
     * 需退还的云盘ID列表。
@@ -30,7 +30,7 @@ public class TerminateDisksRequest  extends AbstractModel{
     private String [] DiskIds;
 
     /**
-     * 获取需退还的云盘ID列表。
+     * Get 需退还的云盘ID列表。 
      * @return DiskIds 需退还的云盘ID列表。
      */
     public String [] getDiskIds() {
@@ -38,7 +38,7 @@ public class TerminateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需退还的云盘ID列表。
+     * Set 需退还的云盘ID列表。
      * @param DiskIds 需退还的云盘ID列表。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -46,7 +46,7 @@ public class TerminateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

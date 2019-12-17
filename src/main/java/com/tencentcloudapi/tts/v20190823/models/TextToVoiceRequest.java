@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToVoiceRequest  extends AbstractModel{
+public class TextToVoiceRequest extends AbstractModel{
 
     /**
     * 合成语音的源文本，按UTF-8编码统一计算。
@@ -95,8 +95,8 @@ public class TextToVoiceRequest  extends AbstractModel{
     private String Codec;
 
     /**
-     * 获取合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
+     * Get 合成语音的源文本，按UTF-8编码统一计算。
+中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
      */
@@ -105,7 +105,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合成语音的源文本，按UTF-8编码统一计算。
+     * Set 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
      * @param Text 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持100个汉字（全角标点符号算一个汉字）；英文最大支持400个字母（半角标点符号算一个字母）。包含空格等字符时需要url encode再传输。
@@ -115,7 +115,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+     * Get 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。 
      * @return SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
      */
     public String getSessionId() {
@@ -123,7 +123,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+     * Set 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
      * @param SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
      */
     public void setSessionId(String SessionId) {
@@ -131,7 +131,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模型类型，1-默认模型。
+     * Get 模型类型，1-默认模型。 
      * @return ModelType 模型类型，1-默认模型。
      */
     public Long getModelType() {
@@ -139,7 +139,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型类型，1-默认模型。
+     * Set 模型类型，1-默认模型。
      * @param ModelType 模型类型，1-默认模型。
      */
     public void setModelType(Long ModelType) {
@@ -147,8 +147,8 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-输入除以上整数之外的其他参数不生效，按默认值处理。
+     * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+输入除以上整数之外的其他参数不生效，按默认值处理。 
      * @return Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
 输入除以上整数之外的其他参数不生效，按默认值处理。
      */
@@ -157,7 +157,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * Set 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
 输入除以上整数之外的其他参数不生效，按默认值处理。
      * @param Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
 输入除以上整数之外的其他参数不生效，按默认值处理。
@@ -167,7 +167,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
+     * Get 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br> 
      * @return Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      */
     public Float getSpeed() {
@@ -175,7 +175,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
+     * Set 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      * @param Speed 语速，范围：[-2，2]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li>如果需要更细化的语速，可以保留小数点后一位，例如0.5 1.1 1.8等。<br>
      */
     public void setSpeed(Float Speed) {
@@ -183,7 +183,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id，用户自定义，默认为0。
+     * Get 项目id，用户自定义，默认为0。 
      * @return ProjectId 项目id，用户自定义，默认为0。
      */
     public Long getProjectId() {
@@ -191,7 +191,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目id，用户自定义，默认为0。
+     * Set 项目id，用户自定义，默认为0。
      * @param ProjectId 项目id，用户自定义，默认为0。
      */
     public void setProjectId(Long ProjectId) {
@@ -199,7 +199,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * Get 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li> 
      * @return VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public Long getVoiceType() {
@@ -207,7 +207,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
+     * Set 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      * @param VoiceType 音色<li>0-亲和女声(默认)</li><li>1-亲和男声</li><li>2-成熟男声</li><li>4-温暖女声</li><li>5-情感女声</li><li>6-情感男声</li>
      */
     public void setVoiceType(Long VoiceType) {
@@ -215,7 +215,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Get 主语言类型：<li>1-中文（默认）</li><li>2-英文</li> 
      * @return PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      */
     public Long getPrimaryLanguage() {
@@ -223,7 +223,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Set 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      * @param PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
      */
     public void setPrimaryLanguage(Long PrimaryLanguage) {
@@ -231,7 +231,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * Get 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li> 
      * @return SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      */
     public Long getSampleRate() {
@@ -239,7 +239,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * Set 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      * @param SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
      */
     public void setSampleRate(Long SampleRate) {
@@ -247,7 +247,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回音频格式，可取值：wav（默认），mp3
+     * Get 返回音频格式，可取值：wav（默认），mp3 
      * @return Codec 返回音频格式，可取值：wav（默认），mp3
      */
     public String getCodec() {
@@ -255,7 +255,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回音频格式，可取值：wav（默认），mp3
+     * Set 返回音频格式，可取值：wav（默认），mp3
      * @param Codec 返回音频格式，可取值：wav（默认），mp3
      */
     public void setCodec(String Codec) {
@@ -263,7 +263,7 @@ public class TextToVoiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppStatisticsResponse  extends AbstractModel{
+public class DescribeAppStatisticsResponse extends AbstractModel{
 
     /**
     * 应用用量统计数据
@@ -30,7 +30,7 @@ public class DescribeAppStatisticsResponse  extends AbstractModel{
     private AppStatisticsItem [] AppStatistics;
 
     /**
-     * 获取应用用量统计数据
+     * Get 应用用量统计数据 
      * @return AppStatistics 应用用量统计数据
      */
     public AppStatisticsItem [] getAppStatistics() {
@@ -38,7 +38,7 @@ public class DescribeAppStatisticsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置应用用量统计数据
+     * Set 应用用量统计数据
      * @param AppStatistics 应用用量统计数据
      */
     public void setAppStatistics(AppStatisticsItem [] AppStatistics) {
@@ -46,7 +46,7 @@ public class DescribeAppStatisticsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AppStatistics.", this.AppStatistics);

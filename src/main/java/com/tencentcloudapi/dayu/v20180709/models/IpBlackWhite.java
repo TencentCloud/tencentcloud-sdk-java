@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IpBlackWhite  extends AbstractModel{
+public class IpBlackWhite extends AbstractModel{
 
     /**
     * IP地址
@@ -37,7 +37,7 @@ public class IpBlackWhite  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取IP地址
+     * Get IP地址 
      * @return Ip IP地址
      */
     public String getIp() {
@@ -45,7 +45,7 @@ public class IpBlackWhite  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址
+     * Set IP地址
      * @param Ip IP地址
      */
     public void setIp(String Ip) {
@@ -53,7 +53,7 @@ public class IpBlackWhite  extends AbstractModel{
     }
 
     /**
-     * 获取黑白类型，取值范围[black，white]
+     * Get 黑白类型，取值范围[black，white] 
      * @return Type 黑白类型，取值范围[black，white]
      */
     public String getType() {
@@ -61,7 +61,7 @@ public class IpBlackWhite  extends AbstractModel{
     }
 
     /**
-     * 设置黑白类型，取值范围[black，white]
+     * Set 黑白类型，取值范围[black，white]
      * @param Type 黑白类型，取值范围[black，white]
      */
     public void setType(String Type) {
@@ -69,7 +69,7 @@ public class IpBlackWhite  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

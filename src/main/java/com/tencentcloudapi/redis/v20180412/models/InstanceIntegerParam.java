@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceIntegerParam  extends AbstractModel{
+public class InstanceIntegerParam extends AbstractModel{
 
     /**
     * 参数名
@@ -86,7 +86,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取参数名
+     * Get 参数名 
      * @return ParamName 参数名
      */
     public String getParamName() {
@@ -94,7 +94,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数名
+     * Set 参数名
      * @param ParamName 参数名
      */
     public void setParamName(String ParamName) {
@@ -102,7 +102,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数类型：integer
+     * Get 参数类型：integer 
      * @return ValueType 参数类型：integer
      */
     public String getValueType() {
@@ -110,7 +110,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数类型：integer
+     * Set 参数类型：integer
      * @param ValueType 参数类型：integer
      */
     public void setValueType(String ValueType) {
@@ -118,7 +118,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取修改后是否需要重启：true，false
+     * Get 修改后是否需要重启：true，false 
      * @return NeedRestart 修改后是否需要重启：true，false
      */
     public String getNeedRestart() {
@@ -126,7 +126,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置修改后是否需要重启：true，false
+     * Set 修改后是否需要重启：true，false
      * @param NeedRestart 修改后是否需要重启：true，false
      */
     public void setNeedRestart(String NeedRestart) {
@@ -134,7 +134,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数默认值
+     * Get 参数默认值 
      * @return DefaultValue 参数默认值
      */
     public String getDefaultValue() {
@@ -142,7 +142,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数默认值
+     * Set 参数默认值
      * @param DefaultValue 参数默认值
      */
     public void setDefaultValue(String DefaultValue) {
@@ -150,7 +150,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取当前运行参数值
+     * Get 当前运行参数值 
      * @return CurrentValue 当前运行参数值
      */
     public String getCurrentValue() {
@@ -158,7 +158,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置当前运行参数值
+     * Set 当前运行参数值
      * @param CurrentValue 当前运行参数值
      */
     public void setCurrentValue(String CurrentValue) {
@@ -166,7 +166,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数说明
+     * Get 参数说明 
      * @return Tips 参数说明
      */
     public String getTips() {
@@ -174,7 +174,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数说明
+     * Set 参数说明
      * @param Tips 参数说明
      */
     public void setTips(String Tips) {
@@ -182,7 +182,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数最小值
+     * Get 参数最小值 
      * @return Min 参数最小值
      */
     public String getMin() {
@@ -190,7 +190,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数最小值
+     * Set 参数最小值
      * @param Min 参数最小值
      */
     public void setMin(String Min) {
@@ -198,7 +198,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数最大值
+     * Get 参数最大值 
      * @return Max 参数最大值
      */
     public String getMax() {
@@ -206,7 +206,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数最大值
+     * Set 参数最大值
      * @param Max 参数最大值
      */
     public void setMax(String Max) {
@@ -214,7 +214,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 获取参数状态, 1: 修改中， 2：修改完成
+     * Get 参数状态, 1: 修改中， 2：修改完成 
      * @return Status 参数状态, 1: 修改中， 2：修改完成
      */
     public Integer getStatus() {
@@ -222,7 +222,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 设置参数状态, 1: 修改中， 2：修改完成
+     * Set 参数状态, 1: 修改中， 2：修改完成
      * @param Status 参数状态, 1: 修改中， 2：修改完成
      */
     public void setStatus(Integer Status) {
@@ -230,7 +230,7 @@ public class InstanceIntegerParam  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);

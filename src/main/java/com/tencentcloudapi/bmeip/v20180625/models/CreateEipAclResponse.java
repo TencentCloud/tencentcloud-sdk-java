@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEipAclResponse  extends AbstractModel{
+public class CreateEipAclResponse extends AbstractModel{
 
     /**
     * ACL 实例 ID
@@ -58,7 +58,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取ACL 实例 ID
+     * Get ACL 实例 ID 
      * @return AclId ACL 实例 ID
      */
     public String getAclId() {
@@ -66,7 +66,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例 ID
+     * Set ACL 实例 ID
      * @param AclId ACL 实例 ID
      */
     public void setAclId(String AclId) {
@@ -74,7 +74,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例状态
+     * Get ACL 实例状态 
      * @return Status ACL 实例状态
      */
     public Integer getStatus() {
@@ -82,7 +82,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例状态
+     * Set ACL 实例状态
      * @param Status ACL 实例状态
      */
     public void setStatus(Integer Status) {
@@ -90,7 +90,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例名称
+     * Get ACL 实例名称 
      * @return AclName ACL 实例名称
      */
     public String getAclName() {
@@ -98,7 +98,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例名称
+     * Set ACL 实例名称
      * @param AclName ACL 实例名称
      */
     public void setAclName(String AclName) {
@@ -106,7 +106,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例创建时间
+     * Get ACL 实例创建时间 
      * @return CreatedAt ACL 实例创建时间
      */
     public String getCreatedAt() {
@@ -114,7 +114,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例创建时间
+     * Set ACL 实例创建时间
      * @param CreatedAt ACL 实例创建时间
      */
     public void setCreatedAt(String CreatedAt) {
@@ -122,7 +122,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class CreateEipAclResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclId", this.AclId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRequest  extends AbstractModel{
+public class CreateClusterRequest extends AbstractModel{
 
     /**
     * 集群容器网络配置信息
@@ -72,7 +72,7 @@ public class CreateClusterRequest  extends AbstractModel{
     private ExistedInstancesForNode [] ExistedInstancesForNode;
 
     /**
-     * 获取集群容器网络配置信息
+     * Get 集群容器网络配置信息 
      * @return ClusterCIDRSettings 集群容器网络配置信息
      */
     public ClusterCIDRSettings getClusterCIDRSettings() {
@@ -80,7 +80,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群容器网络配置信息
+     * Set 集群容器网络配置信息
      * @param ClusterCIDRSettings 集群容器网络配置信息
      */
     public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
@@ -88,7 +88,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
      * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
     public String getClusterType() {
@@ -96,7 +96,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Set 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      * @param ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
     public void setClusterType(String ClusterType) {
@@ -104,7 +104,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * Get CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。 
      * @return RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      */
     public RunInstancesForNode [] getRunInstancesForNode() {
@@ -112,7 +112,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
+     * Set CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      * @param RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
      */
     public void setRunInstancesForNode(RunInstancesForNode [] RunInstancesForNode) {
@@ -120,7 +120,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群的基本配置信息
+     * Get 集群的基本配置信息 
      * @return ClusterBasicSettings 集群的基本配置信息
      */
     public ClusterBasicSettings getClusterBasicSettings() {
@@ -128,7 +128,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群的基本配置信息
+     * Set 集群的基本配置信息
      * @param ClusterBasicSettings 集群的基本配置信息
      */
     public void setClusterBasicSettings(ClusterBasicSettings ClusterBasicSettings) {
@@ -136,7 +136,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群高级配置信息
+     * Get 集群高级配置信息 
      * @return ClusterAdvancedSettings 集群高级配置信息
      */
     public ClusterAdvancedSettings getClusterAdvancedSettings() {
@@ -144,7 +144,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群高级配置信息
+     * Set 集群高级配置信息
      * @param ClusterAdvancedSettings 集群高级配置信息
      */
     public void setClusterAdvancedSettings(ClusterAdvancedSettings ClusterAdvancedSettings) {
@@ -152,7 +152,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点高级配置信息
+     * Get 节点高级配置信息 
      * @return InstanceAdvancedSettings 节点高级配置信息
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -160,7 +160,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点高级配置信息
+     * Set 节点高级配置信息
      * @param InstanceAdvancedSettings 节点高级配置信息
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
@@ -168,7 +168,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * Get 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。 
      * @return ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public ExistedInstancesForNode [] getExistedInstancesForNode() {
@@ -176,7 +176,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+     * Set 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      * @param ExistedInstancesForNode 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
      */
     public void setExistedInstancesForNode(ExistedInstancesForNode [] ExistedInstancesForNode) {
@@ -184,7 +184,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);

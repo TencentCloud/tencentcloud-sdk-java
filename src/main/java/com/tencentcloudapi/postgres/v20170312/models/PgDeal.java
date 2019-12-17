@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PgDeal  extends AbstractModel{
+public class PgDeal extends AbstractModel{
 
     /**
     * 订单名
@@ -65,7 +65,7 @@ public class PgDeal  extends AbstractModel{
     private String [] DBInstanceIdSet;
 
     /**
-     * 获取订单名
+     * Get 订单名 
      * @return DealName 订单名
      */
     public String getDealName() {
@@ -73,7 +73,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置订单名
+     * Set 订单名
      * @param DealName 订单名
      */
     public void setDealName(String DealName) {
@@ -81,7 +81,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 获取所属用户
+     * Get 所属用户 
      * @return OwnerUin 所属用户
      */
     public String getOwnerUin() {
@@ -89,7 +89,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置所属用户
+     * Set 所属用户
      * @param OwnerUin 所属用户
      */
     public void setOwnerUin(String OwnerUin) {
@@ -97,7 +97,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 获取订单涉及多少个实例
+     * Get 订单涉及多少个实例 
      * @return Count 订单涉及多少个实例
      */
     public Integer getCount() {
@@ -105,7 +105,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置订单涉及多少个实例
+     * Set 订单涉及多少个实例
      * @param Count 订单涉及多少个实例
      */
     public void setCount(Integer Count) {
@@ -113,7 +113,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式。1-预付费；0-后付费
+     * Get 付费模式。1-预付费；0-后付费 
      * @return PayMode 付费模式。1-预付费；0-后付费
      */
     public Integer getPayMode() {
@@ -121,7 +121,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式。1-预付费；0-后付费
+     * Set 付费模式。1-预付费；0-后付费
      * @param PayMode 付费模式。1-预付费；0-后付费
      */
     public void setPayMode(Integer PayMode) {
@@ -129,7 +129,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 获取异步任务流程ID
+     * Get 异步任务流程ID 
      * @return FlowId 异步任务流程ID
      */
     public Integer getFlowId() {
@@ -137,7 +137,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务流程ID
+     * Set 异步任务流程ID
      * @param FlowId 异步任务流程ID
      */
     public void setFlowId(Integer FlowId) {
@@ -145,7 +145,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID数组
+     * Get 实例ID数组 
      * @return DBInstanceIdSet 实例ID数组
      */
     public String [] getDBInstanceIdSet() {
@@ -153,7 +153,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID数组
+     * Set 实例ID数组
      * @param DBInstanceIdSet 实例ID数组
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
@@ -161,7 +161,7 @@ public class PgDeal  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);

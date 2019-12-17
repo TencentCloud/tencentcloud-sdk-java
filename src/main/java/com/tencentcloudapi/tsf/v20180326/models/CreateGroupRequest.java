@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGroupRequest  extends AbstractModel{
+public class CreateGroupRequest extends AbstractModel{
 
     /**
     * 部署组所属的应用ID
@@ -58,7 +58,7 @@ public class CreateGroupRequest  extends AbstractModel{
     private String GroupDesc;
 
     /**
-     * 获取部署组所属的应用ID
+     * Get 部署组所属的应用ID 
      * @return ApplicationId 部署组所属的应用ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组所属的应用ID
+     * Set 部署组所属的应用ID
      * @param ApplicationId 部署组所属的应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组所属命名空间ID
+     * Get 部署组所属命名空间ID 
      * @return NamespaceId 部署组所属命名空间ID
      */
     public String getNamespaceId() {
@@ -82,7 +82,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组所属命名空间ID
+     * Set 部署组所属命名空间ID
      * @param NamespaceId 部署组所属命名空间ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -90,7 +90,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组名称
+     * Get 部署组名称 
      * @return GroupName 部署组名称
      */
     public String getGroupName() {
@@ -98,7 +98,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组名称
+     * Set 部署组名称
      * @param GroupName 部署组名称
      */
     public void setGroupName(String GroupName) {
@@ -106,7 +106,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -114,7 +114,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -122,7 +122,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组描述
+     * Get 部署组描述 
      * @return GroupDesc 部署组描述
      */
     public String getGroupDesc() {
@@ -130,7 +130,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组描述
+     * Set 部署组描述
      * @param GroupDesc 部署组描述
      */
     public void setGroupDesc(String GroupDesc) {
@@ -138,7 +138,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

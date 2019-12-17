@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
+public class ModifySecurityGroupAttributeRequest extends AbstractModel{
 
     /**
     * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
@@ -44,7 +44,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     private String GroupDescription;
 
     /**
-     * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public String getSecurityGroupId() {
@@ -52,7 +52,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -60,7 +60,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组名称，可任意命名，但不得超过60个字符。
+     * Get 安全组名称，可任意命名，但不得超过60个字符。 
      * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public String getGroupName() {
@@ -68,7 +68,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组名称，可任意命名，但不得超过60个字符。
+     * Set 安全组名称，可任意命名，但不得超过60个字符。
      * @param GroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public void setGroupName(String GroupName) {
@@ -76,7 +76,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组备注，最多100个字符。
+     * Get 安全组备注，最多100个字符。 
      * @return GroupDescription 安全组备注，最多100个字符。
      */
     public String getGroupDescription() {
@@ -84,7 +84,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组备注，最多100个字符。
+     * Set 安全组备注，最多100个字符。
      * @param GroupDescription 安全组备注，最多100个字符。
      */
     public void setGroupDescription(String GroupDescription) {
@@ -92,7 +92,7 @@ public class ModifySecurityGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

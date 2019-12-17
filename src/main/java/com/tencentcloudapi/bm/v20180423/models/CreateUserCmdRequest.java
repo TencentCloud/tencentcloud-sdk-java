@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUserCmdRequest  extends AbstractModel{
+public class CreateUserCmdRequest extends AbstractModel{
 
     /**
     * 用户自定义脚本的名称
@@ -44,7 +44,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取用户自定义脚本的名称
+     * Get 用户自定义脚本的名称 
      * @return Alias 用户自定义脚本的名称
      */
     public String getAlias() {
@@ -52,7 +52,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义脚本的名称
+     * Set 用户自定义脚本的名称
      * @param Alias 用户自定义脚本的名称
      */
     public void setAlias(String Alias) {
@@ -60,7 +60,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命令适用的操作系统类型，取值linux或xserver
+     * Get 命令适用的操作系统类型，取值linux或xserver 
      * @return OsType 命令适用的操作系统类型，取值linux或xserver
      */
     public String getOsType() {
@@ -68,7 +68,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命令适用的操作系统类型，取值linux或xserver
+     * Set 命令适用的操作系统类型，取值linux或xserver
      * @param OsType 命令适用的操作系统类型，取值linux或xserver
      */
     public void setOsType(String OsType) {
@@ -76,7 +76,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取脚本内容，必须经过base64编码
+     * Get 脚本内容，必须经过base64编码 
      * @return Content 脚本内容，必须经过base64编码
      */
     public String getContent() {
@@ -84,7 +84,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置脚本内容，必须经过base64编码
+     * Set 脚本内容，必须经过base64编码
      * @param Content 脚本内容，必须经过base64编码
      */
     public void setContent(String Content) {
@@ -92,7 +92,7 @@ public class CreateUserCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Alias", this.Alias);

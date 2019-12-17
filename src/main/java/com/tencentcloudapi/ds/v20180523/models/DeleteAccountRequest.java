@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountRequest  extends AbstractModel{
+public class DeleteAccountRequest extends AbstractModel{
 
     /**
     * 模块名AccountMng
@@ -44,7 +44,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     private String [] AccountList;
 
     /**
-     * 获取模块名AccountMng
+     * Get 模块名AccountMng 
      * @return Module 模块名AccountMng
      */
     public String getModule() {
@@ -52,7 +52,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名AccountMng
+     * Set 模块名AccountMng
      * @param Module 模块名AccountMng
      */
     public void setModule(String Module) {
@@ -60,7 +60,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名DeleteAccount
+     * Get 操作名DeleteAccount 
      * @return Operation 操作名DeleteAccount
      */
     public String getOperation() {
@@ -68,7 +68,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名DeleteAccount
+     * Set 操作名DeleteAccount
      * @param Operation 操作名DeleteAccount
      */
     public void setOperation(String Operation) {
@@ -76,7 +76,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐号ID列表
+     * Get 帐号ID列表 
      * @return AccountList 帐号ID列表
      */
     public String [] getAccountList() {
@@ -84,7 +84,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帐号ID列表
+     * Set 帐号ID列表
      * @param AccountList 帐号ID列表
      */
     public void setAccountList(String [] AccountList) {
@@ -92,7 +92,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

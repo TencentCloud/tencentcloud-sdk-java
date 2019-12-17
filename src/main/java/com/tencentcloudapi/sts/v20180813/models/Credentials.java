@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Credentials  extends AbstractModel{
+public class Credentials extends AbstractModel{
 
     /**
     * token
@@ -44,7 +44,7 @@ public class Credentials  extends AbstractModel{
     private String TmpSecretKey;
 
     /**
-     * 获取token
+     * Get token 
      * @return Token token
      */
     public String getToken() {
@@ -52,7 +52,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 设置token
+     * Set token
      * @param Token token
      */
     public void setToken(String Token) {
@@ -60,7 +60,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时证书密钥ID
+     * Get 临时证书密钥ID 
      * @return TmpSecretId 临时证书密钥ID
      */
     public String getTmpSecretId() {
@@ -68,7 +68,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 设置临时证书密钥ID
+     * Set 临时证书密钥ID
      * @param TmpSecretId 临时证书密钥ID
      */
     public void setTmpSecretId(String TmpSecretId) {
@@ -76,7 +76,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时证书密钥Key
+     * Get 临时证书密钥Key 
      * @return TmpSecretKey 临时证书密钥Key
      */
     public String getTmpSecretKey() {
@@ -84,7 +84,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 设置临时证书密钥Key
+     * Set 临时证书密钥Key
      * @param TmpSecretKey 临时证书密钥Key
      */
     public void setTmpSecretKey(String TmpSecretKey) {
@@ -92,7 +92,7 @@ public class Credentials  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Token", this.Token);

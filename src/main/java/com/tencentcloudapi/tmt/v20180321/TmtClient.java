@@ -29,21 +29,10 @@ public class TmtClient extends AbstractClient{
     private static String endpoint = "tmt.tencentcloudapi.com";
     private static String version = "2018-03-21";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TmtClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TmtClient(Credential credential, String region, ClientProfile profile) {
         super(TmtClient.endpoint, TmtClient.version, credential, region, profile);
     }

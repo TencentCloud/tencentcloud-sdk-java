@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Operation  extends AbstractModel{
+public class Operation extends AbstractModel{
 
     /**
     * 操作唯一id
@@ -72,7 +72,7 @@ public class Operation  extends AbstractModel{
     private Float Progress;
 
     /**
-     * 获取操作唯一id
+     * Get 操作唯一id 
      * @return Id 操作唯一id
      */
     public Integer getId() {
@@ -80,7 +80,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作唯一id
+     * Set 操作唯一id
      * @param Id 操作唯一id
      */
     public void setId(Integer Id) {
@@ -88,7 +88,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取操作开始时间
+     * Get 操作开始时间 
      * @return StartTime 操作开始时间
      */
     public String getStartTime() {
@@ -96,7 +96,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作开始时间
+     * Set 操作开始时间
      * @param StartTime 操作开始时间
      */
     public void setStartTime(String StartTime) {
@@ -104,7 +104,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取操作类型
+     * Get 操作类型 
      * @return Type 操作类型
      */
     public String getType() {
@@ -112,7 +112,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型
+     * Set 操作类型
      * @param Type 操作类型
      */
     public void setType(String Type) {
@@ -120,7 +120,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取操作详情
+     * Get 操作详情 
      * @return Detail 操作详情
      */
     public OperationDetail getDetail() {
@@ -128,7 +128,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作详情
+     * Set 操作详情
      * @param Detail 操作详情
      */
     public void setDetail(OperationDetail Detail) {
@@ -136,7 +136,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取操作结果
+     * Get 操作结果 
      * @return Result 操作结果
      */
     public String getResult() {
@@ -144,7 +144,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作结果
+     * Set 操作结果
      * @param Result 操作结果
      */
     public void setResult(String Result) {
@@ -152,7 +152,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取流程任务信息
+     * Get 流程任务信息 
      * @return Tasks 流程任务信息
      */
     public TaskDetail [] getTasks() {
@@ -160,7 +160,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置流程任务信息
+     * Set 流程任务信息
      * @param Tasks 流程任务信息
      */
     public void setTasks(TaskDetail [] Tasks) {
@@ -168,7 +168,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 获取操作进度
+     * Get 操作进度 
      * @return Progress 操作进度
      */
     public Float getProgress() {
@@ -176,7 +176,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 设置操作进度
+     * Set 操作进度
      * @param Progress 操作进度
      */
     public void setProgress(Float Progress) {
@@ -184,7 +184,7 @@ public class Operation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

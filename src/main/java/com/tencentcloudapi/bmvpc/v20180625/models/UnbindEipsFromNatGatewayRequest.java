@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
+public class UnbindEipsFromNatGatewayRequest extends AbstractModel{
 
     /**
     * NAT网关ID，例如：nat-kdm476mp
@@ -44,7 +44,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     private String [] AssignedEips;
 
     /**
-     * 获取NAT网关ID，例如：nat-kdm476mp
+     * Get NAT网关ID，例如：nat-kdm476mp 
      * @return NatId NAT网关ID，例如：nat-kdm476mp
      */
     public String getNatId() {
@@ -52,7 +52,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID，例如：nat-kdm476mp
+     * Set NAT网关ID，例如：nat-kdm476mp
      * @param NatId NAT网关ID，例如：nat-kdm476mp
      */
     public void setNatId(String NatId) {
@@ -60,7 +60,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：vpc-kd7d06of
+     * Get 私有网络ID，例如：vpc-kd7d06of 
      * @return VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：vpc-kd7d06of
+     * Set 私有网络ID，例如：vpc-kd7d06of
      * @param VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已分配的EIP列表
+     * Get 已分配的EIP列表 
      * @return AssignedEips 已分配的EIP列表
      */
     public String [] getAssignedEips() {
@@ -84,7 +84,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已分配的EIP列表
+     * Set 已分配的EIP列表
      * @param AssignedEips 已分配的EIP列表
      */
     public void setAssignedEips(String [] AssignedEips) {
@@ -92,7 +92,7 @@ public class UnbindEipsFromNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatId", this.NatId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateListenerRequest  extends AbstractModel{
+public class CreateListenerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -87,7 +87,7 @@ public class CreateListenerRequest  extends AbstractModel{
     private Integer SniSwitch;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -95,7 +95,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -103,7 +103,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要将监听器创建到哪些端口，每个端口对应一个新的监听器
+     * Get 要将监听器创建到哪些端口，每个端口对应一个新的监听器 
      * @return Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      */
     public Integer [] getPorts() {
@@ -111,7 +111,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要将监听器创建到哪些端口，每个端口对应一个新的监听器
+     * Set 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      * @param Ports 要将监听器创建到哪些端口，每个端口对应一个新的监听器
      */
     public void setPorts(Integer [] Ports) {
@@ -119,7 +119,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+     * Get 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请） 
      * @return Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      */
     public String getProtocol() {
@@ -127,7 +127,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+     * Set 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      * @param Protocol 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
      */
     public void setProtocol(String Protocol) {
@@ -135,7 +135,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
+     * Get 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数 
      * @return ListenerNames 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
      */
     public String [] getListenerNames() {
@@ -143,7 +143,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
+     * Set 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
      * @param ListenerNames 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
      */
     public void setListenerNames(String [] ListenerNames) {
@@ -151,7 +151,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器 
      * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      */
     public HealthCheck getHealthCheck() {
@@ -159,7 +159,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
@@ -167,7 +167,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器 
      * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      */
     public CertificateInput getCertificate() {
@@ -175,7 +175,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
      */
     public void setCertificate(CertificateInput Certificate) {
@@ -183,7 +183,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。 
      * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
     public Integer getSessionExpireTime() {
@@ -191,7 +191,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
+     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。此参数仅适用于TCP/UDP监听器。
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
@@ -199,8 +199,8 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。 
      * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
      */
@@ -209,7 +209,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器转发的方式。可选值：WRR、LEAST_CONN
+     * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
      * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
 分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
@@ -219,7 +219,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。
+     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。 
      * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      */
     public Integer getSniSwitch() {
@@ -227,7 +227,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。
+     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。
      */
     public void setSniSwitch(Integer SniSwitch) {
@@ -235,7 +235,7 @@ public class CreateListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

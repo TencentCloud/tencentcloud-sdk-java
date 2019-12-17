@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetInvokeTxRequest  extends AbstractModel{
+public class GetInvokeTxRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -79,7 +79,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     private String GroupName;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -87,7 +87,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -95,7 +95,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：query_txid
+     * Get 操作名，固定字段：query_txid 
      * @return Operation 操作名，固定字段：query_txid
      */
     public String getOperation() {
@@ -103,7 +103,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：query_txid
+     * Set 操作名，固定字段：query_txid
      * @param Operation 操作名，固定字段：query_txid
      */
     public void setOperation(String Operation) {
@@ -111,7 +111,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -119,7 +119,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -127,7 +127,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务所属通道名称，可在通道详情或列表中获取
+     * Get 业务所属通道名称，可在通道详情或列表中获取 
      * @return ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
@@ -135,7 +135,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务所属通道名称，可在通道详情或列表中获取
+     * Set 业务所属通道名称，可在通道详情或列表中获取
      * @param ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
@@ -143,7 +143,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Get 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称 
      * @return PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public String getPeerName() {
@@ -151,7 +151,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Set 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeerName(String PeerName) {
@@ -159,7 +159,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Get 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称 
      * @return PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public String getPeerGroup() {
@@ -167,7 +167,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Set 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeerGroup(String PeerGroup) {
@@ -175,7 +175,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取交易ID
+     * Get 交易ID 
      * @return TxId 交易ID
      */
     public String getTxId() {
@@ -183,7 +183,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID
+     * Set 交易ID
      * @param TxId 交易ID
      */
     public void setTxId(String TxId) {
@@ -191,7 +191,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -199,7 +199,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -207,7 +207,7 @@ public class GetInvokeTxRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

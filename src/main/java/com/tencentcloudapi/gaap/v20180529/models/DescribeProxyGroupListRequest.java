@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxyGroupListRequest  extends AbstractModel{
+public class DescribeProxyGroupListRequest extends AbstractModel{
 
     /**
     * 偏移量，默认值为0。
@@ -64,7 +64,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     private Filter [] Filters;
 
     /**
-     * 获取偏移量，默认值为0。
+     * Get 偏移量，默认值为0。 
      * @return Offset 偏移量，默认值为0。
      */
     public Long getOffset() {
@@ -72,7 +72,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 设置偏移量，默认值为0。
+     * Set 偏移量，默认值为0。
      * @param Offset 偏移量，默认值为0。
      */
     public void setOffset(Long Offset) {
@@ -80,7 +80,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 获取返回数量，默认值为20，最大值为100。
+     * Get 返回数量，默认值为20，最大值为100。 
      * @return Limit 返回数量，默认值为20，最大值为100。
      */
     public Long getLimit() {
@@ -88,7 +88,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 设置返回数量，默认值为20，最大值为100。
+     * Set 返回数量，默认值为20，最大值为100。
      * @param Limit 返回数量，默认值为20，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -96,10 +96,10 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 获取项目ID。取值范围：
+     * Get 项目ID。取值范围：
 -1，该用户下所有项目
 0，默认项目
-其他值，指定的项目
+其他值，指定的项目 
      * @return ProjectId 项目ID。取值范围：
 -1，该用户下所有项目
 0，默认项目
@@ -110,7 +110,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 设置项目ID。取值范围：
+     * Set 项目ID。取值范围：
 -1，该用户下所有项目
 0，默认项目
 其他值，指定的项目
@@ -124,8 +124,8 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
+     * Get 标签列表，当存在该字段时，拉取对应标签下的资源列表。
+最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。 
      * @return TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
      */
@@ -134,7 +134,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
+     * Set 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
      * @param TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
@@ -144,9 +144,9 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 获取过滤条件。   
+     * Get 过滤条件。   
 每次请求的Filter.Values的上限为5。
-RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。 
      * @return Filters 过滤条件。   
 每次请求的Filter.Values的上限为5。
 RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
@@ -156,7 +156,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 设置过滤条件。   
+     * Set 过滤条件。   
 每次请求的Filter.Values的上限为5。
 RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
      * @param Filters 过滤条件。   
@@ -168,7 +168,7 @@ RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

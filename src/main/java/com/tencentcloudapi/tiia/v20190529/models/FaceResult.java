@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceResult  extends AbstractModel{
+public class FaceResult extends AbstractModel{
 
     /**
     * 检测出的人脸框位置。
@@ -37,7 +37,7 @@ public class FaceResult  extends AbstractModel{
     private Candidate [] Candidates;
 
     /**
-     * 获取检测出的人脸框位置。
+     * Get 检测出的人脸框位置。 
      * @return FaceRect 检测出的人脸框位置。
      */
     public FaceRect getFaceRect() {
@@ -45,7 +45,7 @@ public class FaceResult  extends AbstractModel{
     }
 
     /**
-     * 设置检测出的人脸框位置。
+     * Set 检测出的人脸框位置。
      * @param FaceRect 检测出的人脸框位置。
      */
     public void setFaceRect(FaceRect FaceRect) {
@@ -53,7 +53,7 @@ public class FaceResult  extends AbstractModel{
     }
 
     /**
-     * 获取候选人列表。当前返回相似度最高的候选人。
+     * Get 候选人列表。当前返回相似度最高的候选人。 
      * @return Candidates 候选人列表。当前返回相似度最高的候选人。
      */
     public Candidate [] getCandidates() {
@@ -61,7 +61,7 @@ public class FaceResult  extends AbstractModel{
     }
 
     /**
-     * 设置候选人列表。当前返回相似度最高的候选人。
+     * Set 候选人列表。当前返回相似度最高的候选人。
      * @param Candidates 候选人列表。当前返回相似度最高的候选人。
      */
     public void setCandidates(Candidate [] Candidates) {
@@ -69,7 +69,7 @@ public class FaceResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FaceRect.", this.FaceRect);

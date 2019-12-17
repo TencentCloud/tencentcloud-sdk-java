@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
+public class SubmitPartialBodyClassTaskResponse extends AbstractModel{
 
     /**
     * 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
@@ -44,7 +44,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
+     * Get 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo 
      * @return ImageResults 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
      */
     public ImageTaskResult [] getImageResults() {
@@ -52,7 +52,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
+     * Set 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
      * @param ImageResults 图像任务直接返回结果，包括： FaceAttr、 FaceExpression、 FaceIdentify、 FaceInfo、 FacePose、 Gesture 、 Light、 TimeInfo
      */
     public void setImageResults(ImageTaskResult [] ImageResults) {
@@ -60,7 +60,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public Long getTaskId() {
@@ -68,7 +68,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(Long TaskId) {
@@ -76,7 +76,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class SubmitPartialBodyClassTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageResults.", this.ImageResults);

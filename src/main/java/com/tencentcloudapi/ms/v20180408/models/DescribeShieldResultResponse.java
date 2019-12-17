@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldResultResponse  extends AbstractModel{
+public class DescribeShieldResultResponse extends AbstractModel{
 
     /**
     * 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
@@ -65,7 +65,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Integer getTaskStatus() {
@@ -73,7 +73,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -81,7 +81,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取app加固前的详细信息
+     * Get app加固前的详细信息 
      * @return AppDetailInfo app加固前的详细信息
      */
     public AppDetailInfo getAppDetailInfo() {
@@ -89,7 +89,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置app加固前的详细信息
+     * Set app加固前的详细信息
      * @param AppDetailInfo app加固前的详细信息
      */
     public void setAppDetailInfo(AppDetailInfo AppDetailInfo) {
@@ -97,7 +97,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取app加固后的详细信息
+     * Get app加固后的详细信息 
      * @return ShieldInfo app加固后的详细信息
      */
     public ShieldInfo getShieldInfo() {
@@ -105,7 +105,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置app加固后的详细信息
+     * Set app加固后的详细信息
      * @param ShieldInfo app加固后的详细信息
      */
     public void setShieldInfo(ShieldInfo ShieldInfo) {
@@ -113,7 +113,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
+     * Get 状态描述 
      * @return StatusDesc 状态描述
      */
     public String getStatusDesc() {
@@ -121,7 +121,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
      * @param StatusDesc 状态描述
      */
     public void setStatusDesc(String StatusDesc) {
@@ -129,7 +129,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态指引
+     * Get 状态指引 
      * @return StatusRef 状态指引
      */
     public String getStatusRef() {
@@ -137,7 +137,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态指引
+     * Set 状态指引
      * @param StatusRef 状态指引
      */
     public void setStatusRef(String StatusRef) {
@@ -145,7 +145,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeShieldResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);

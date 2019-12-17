@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiskConfig  extends AbstractModel{
+public class DiskConfig extends AbstractModel{
 
     /**
     * 配置是否可用。
@@ -88,7 +88,7 @@ public class DiskConfig  extends AbstractModel{
     private String InstanceFamily;
 
     /**
-     * 获取配置是否可用。
+     * Get 配置是否可用。 
      * @return Available 配置是否可用。
      */
     public Boolean getAvailable() {
@@ -96,7 +96,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置配置是否可用。
+     * Set 配置是否可用。
      * @param Available 配置是否可用。
      */
     public void setAvailable(Boolean Available) {
@@ -104,7 +104,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Get 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。 
      * @return DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      */
     public String getDiskType() {
@@ -112,7 +112,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * Set 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      * @param DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
      */
     public void setDiskType(String DiskType) {
@@ -120,7 +120,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Get 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。 
      * @return DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
     public String getDiskUsage() {
@@ -128,7 +128,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Set 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
     public void setDiskUsage(String DiskUsage) {
@@ -136,7 +136,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * Get 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。 
      * @return DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
      */
     public String getDiskChargeType() {
@@ -144,7 +144,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * Set 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
      * @param DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
      */
     public void setDiskChargeType(String DiskChargeType) {
@@ -152,7 +152,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取最大可配置云盘大小，单位GB。
+     * Get 最大可配置云盘大小，单位GB。 
      * @return MaxDiskSize 最大可配置云盘大小，单位GB。
      */
     public Integer getMaxDiskSize() {
@@ -160,7 +160,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置最大可配置云盘大小，单位GB。
+     * Set 最大可配置云盘大小，单位GB。
      * @param MaxDiskSize 最大可配置云盘大小，单位GB。
      */
     public void setMaxDiskSize(Integer MaxDiskSize) {
@@ -168,7 +168,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取最小可配置云盘大小，单位GB。
+     * Get 最小可配置云盘大小，单位GB。 
      * @return MinDiskSize 最小可配置云盘大小，单位GB。
      */
     public Integer getMinDiskSize() {
@@ -176,7 +176,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置最小可配置云盘大小，单位GB。
+     * Set 最小可配置云盘大小，单位GB。
      * @param MinDiskSize 最小可配置云盘大小，单位GB。
      */
     public void setMinDiskSize(Integer MinDiskSize) {
@@ -184,7 +184,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
+     * Get 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。 
      * @return Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
     public String getZone() {
@@ -192,7 +192,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
+     * Set 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      * @param Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      */
     public void setZone(String Zone) {
@@ -200,8 +200,8 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceClass 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -210,7 +210,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceClass 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -220,8 +220,8 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -230,7 +230,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     * Set 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -240,7 +240,7 @@ public class DiskConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Available", this.Available);

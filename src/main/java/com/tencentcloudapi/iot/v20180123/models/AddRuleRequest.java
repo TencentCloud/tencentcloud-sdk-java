@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddRuleRequest  extends AbstractModel{
+public class AddRuleRequest extends AbstractModel{
 
     /**
     * 名称
@@ -58,7 +58,7 @@ public class AddRuleRequest  extends AbstractModel{
     private Integer DataType;
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -66,7 +66,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -74,7 +74,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述
+     * Get 描述 
      * @return Description 描述
      */
     public String getDescription() {
@@ -82,7 +82,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述
+     * Set 描述
      * @param Description 描述
      */
     public void setDescription(String Description) {
@@ -90,7 +90,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询
+     * Get 查询 
      * @return Query 查询
      */
     public RuleQuery getQuery() {
@@ -98,7 +98,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询
+     * Set 查询
      * @param Query 查询
      */
     public void setQuery(RuleQuery Query) {
@@ -106,7 +106,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发动作列表
+     * Get 转发动作列表 
      * @return Actions 转发动作列表
      */
     public Action [] getActions() {
@@ -114,7 +114,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发动作列表
+     * Set 转发动作列表
      * @param Actions 转发动作列表
      */
     public void setActions(Action [] Actions) {
@@ -122,7 +122,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据类型（0：文本，1：二进制）
+     * Get 数据类型（0：文本，1：二进制） 
      * @return DataType 数据类型（0：文本，1：二进制）
      */
     public Integer getDataType() {
@@ -130,7 +130,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据类型（0：文本，1：二进制）
+     * Set 数据类型（0：文本，1：二进制）
      * @param DataType 数据类型（0：文本，1：二进制）
      */
     public void setDataType(Integer DataType) {
@@ -138,7 +138,7 @@ public class AddRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMultiDevTaskRequest  extends AbstractModel{
+public class DescribeMultiDevTaskRequest extends AbstractModel{
 
     /**
     * 任务 ID，由批量创建设备接口返回
@@ -37,7 +37,7 @@ public class DescribeMultiDevTaskRequest  extends AbstractModel{
     private String ProductId;
 
     /**
-     * 获取任务 ID，由批量创建设备接口返回
+     * Get 任务 ID，由批量创建设备接口返回 
      * @return TaskId 任务 ID，由批量创建设备接口返回
      */
     public String getTaskId() {
@@ -45,7 +45,7 @@ public class DescribeMultiDevTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID，由批量创建设备接口返回
+     * Set 任务 ID，由批量创建设备接口返回
      * @param TaskId 任务 ID，由批量创建设备接口返回
      */
     public void setTaskId(String TaskId) {
@@ -53,7 +53,7 @@ public class DescribeMultiDevTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID 
      * @return ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public String getProductId() {
@@ -61,7 +61,7 @@ public class DescribeMultiDevTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      * @param ProductId 产品 ID，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public void setProductId(String ProductId) {
@@ -69,7 +69,7 @@ public class DescribeMultiDevTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

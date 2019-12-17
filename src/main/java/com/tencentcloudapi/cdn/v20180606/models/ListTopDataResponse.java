@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListTopDataResponse  extends AbstractModel{
+public class ListTopDataResponse extends AbstractModel{
 
     /**
     * 各个资源的Top 访问数据详情。
@@ -37,7 +37,7 @@ public class ListTopDataResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取各个资源的Top 访问数据详情。
+     * Get 各个资源的Top 访问数据详情。 
      * @return Data 各个资源的Top 访问数据详情。
      */
     public TopData [] getData() {
@@ -45,7 +45,7 @@ public class ListTopDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各个资源的Top 访问数据详情。
+     * Set 各个资源的Top 访问数据详情。
      * @param Data 各个资源的Top 访问数据详情。
      */
     public void setData(TopData [] Data) {
@@ -53,7 +53,7 @@ public class ListTopDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class ListTopDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class ListTopDataResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountInfo  extends AbstractModel{
+public class AccountInfo extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-lnp6j617
@@ -65,7 +65,7 @@ public class AccountInfo  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取实例ID，形如postgres-lnp6j617
+     * Get 实例ID，形如postgres-lnp6j617 
      * @return DBInstanceId 实例ID，形如postgres-lnp6j617
      */
     public String getDBInstanceId() {
@@ -73,7 +73,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-lnp6j617
+     * Set 实例ID，形如postgres-lnp6j617
      * @param DBInstanceId 实例ID，形如postgres-lnp6j617
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -81,7 +81,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取帐号
+     * Get 帐号 
      * @return UserName 帐号
      */
     public String getUserName() {
@@ -89,7 +89,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置帐号
+     * Set 帐号
      * @param UserName 帐号
      */
     public void setUserName(String UserName) {
@@ -97,7 +97,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取帐号备注
+     * Get 帐号备注 
      * @return Remark 帐号备注
      */
     public String getRemark() {
@@ -105,7 +105,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置帐号备注
+     * Set 帐号备注
      * @param Remark 帐号备注
      */
     public void setRemark(String Remark) {
@@ -113,7 +113,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Get 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中 
      * @return Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
     public Integer getStatus() {
@@ -121,7 +121,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Set 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      * @param Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
      */
     public void setStatus(Integer Status) {
@@ -129,7 +129,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取帐号创建时间
+     * Get 帐号创建时间 
      * @return CreateTime 帐号创建时间
      */
     public String getCreateTime() {
@@ -137,7 +137,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置帐号创建时间
+     * Set 帐号创建时间
      * @param CreateTime 帐号创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -145,7 +145,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 获取帐号最后一次更新时间
+     * Get 帐号最后一次更新时间 
      * @return UpdateTime 帐号最后一次更新时间
      */
     public String getUpdateTime() {
@@ -153,7 +153,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 设置帐号最后一次更新时间
+     * Set 帐号最后一次更新时间
      * @param UpdateTime 帐号最后一次更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -161,7 +161,7 @@ public class AccountInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

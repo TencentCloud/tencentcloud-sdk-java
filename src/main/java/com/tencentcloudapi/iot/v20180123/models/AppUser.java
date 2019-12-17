@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppUser  extends AbstractModel{
+public class AppUser extends AbstractModel{
 
     /**
     * 应用Id
@@ -58,7 +58,7 @@ public class AppUser  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取应用Id
+     * Get 应用Id 
      * @return ApplicationId 应用Id
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 设置应用Id
+     * Set 应用Id
      * @param ApplicationId 应用Id
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -82,7 +82,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -90,7 +90,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 获取昵称
+     * Get 昵称 
      * @return NickName 昵称
      */
     public String getNickName() {
@@ -98,7 +98,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 设置昵称
+     * Set 昵称
      * @param NickName 昵称
      */
     public void setNickName(String NickName) {
@@ -106,7 +106,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -114,7 +114,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -122,7 +122,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return UpdateTime 修改时间
      */
     public String getUpdateTime() {
@@ -130,7 +130,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param UpdateTime 修改时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -138,7 +138,7 @@ public class AppUser  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

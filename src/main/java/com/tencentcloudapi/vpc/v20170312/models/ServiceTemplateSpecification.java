@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceTemplateSpecification  extends AbstractModel{
+public class ServiceTemplateSpecification extends AbstractModel{
 
     /**
     * 协议端口ID，例如：ppm-f5n1f8da。
@@ -37,7 +37,7 @@ public class ServiceTemplateSpecification  extends AbstractModel{
     private String ServiceGroupId;
 
     /**
-     * 获取协议端口ID，例如：ppm-f5n1f8da。
+     * Get 协议端口ID，例如：ppm-f5n1f8da。 
      * @return ServiceId 协议端口ID，例如：ppm-f5n1f8da。
      */
     public String getServiceId() {
@@ -45,7 +45,7 @@ public class ServiceTemplateSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口ID，例如：ppm-f5n1f8da。
+     * Set 协议端口ID，例如：ppm-f5n1f8da。
      * @param ServiceId 协议端口ID，例如：ppm-f5n1f8da。
      */
     public void setServiceId(String ServiceId) {
@@ -53,7 +53,7 @@ public class ServiceTemplateSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口组ID，例如：ppmg-f5n1f8da。
+     * Get 协议端口组ID，例如：ppmg-f5n1f8da。 
      * @return ServiceGroupId 协议端口组ID，例如：ppmg-f5n1f8da。
      */
     public String getServiceGroupId() {
@@ -61,7 +61,7 @@ public class ServiceTemplateSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口组ID，例如：ppmg-f5n1f8da。
+     * Set 协议端口组ID，例如：ppmg-f5n1f8da。
      * @param ServiceGroupId 协议端口组ID，例如：ppmg-f5n1f8da。
      */
     public void setServiceGroupId(String ServiceGroupId) {
@@ -69,7 +69,7 @@ public class ServiceTemplateSpecification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);

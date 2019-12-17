@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewVpnGatewayRequest  extends AbstractModel{
+public class RenewVpnGatewayRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。
@@ -37,7 +37,7 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -45,7 +45,7 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -53,7 +53,7 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费计费模式。
+     * Get 预付费计费模式。 
      * @return InstanceChargePrepaid 预付费计费模式。
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
@@ -61,7 +61,7 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费计费模式。
+     * Set 预付费计费模式。
      * @param InstanceChargePrepaid 预付费计费模式。
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
@@ -69,7 +69,7 @@ public class RenewVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

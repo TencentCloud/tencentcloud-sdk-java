@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4HealthConfig  extends AbstractModel{
+public class L4HealthConfig extends AbstractModel{
 
     /**
     * 转发协议，取值[TCP, UDP]
@@ -79,7 +79,7 @@ public class L4HealthConfig  extends AbstractModel{
     private Long KeepTime;
 
     /**
-     * 获取转发协议，取值[TCP, UDP]
+     * Get 转发协议，取值[TCP, UDP] 
      * @return Protocol 转发协议，取值[TCP, UDP]
      */
     public String getProtocol() {
@@ -87,7 +87,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议，取值[TCP, UDP]
+     * Set 转发协议，取值[TCP, UDP]
      * @param Protocol 转发协议，取值[TCP, UDP]
      */
     public void setProtocol(String Protocol) {
@@ -95,7 +95,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取转发端口
+     * Get 转发端口 
      * @return VirtualPort 转发端口
      */
     public Long getVirtualPort() {
@@ -103,7 +103,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置转发端口
+     * Set 转发端口
      * @param VirtualPort 转发端口
      */
     public void setVirtualPort(Long VirtualPort) {
@@ -111,7 +111,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取=1表示开启；=0表示关闭
+     * Get =1表示开启；=0表示关闭 
      * @return Enable =1表示开启；=0表示关闭
      */
     public Long getEnable() {
@@ -119,7 +119,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置=1表示开启；=0表示关闭
+     * Set =1表示开启；=0表示关闭
      * @param Enable =1表示开启；=0表示关闭
      */
     public void setEnable(Long Enable) {
@@ -127,7 +127,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取响应超时时间，单位秒
+     * Get 响应超时时间，单位秒 
      * @return TimeOut 响应超时时间，单位秒
      */
     public Long getTimeOut() {
@@ -135,7 +135,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置响应超时时间，单位秒
+     * Set 响应超时时间，单位秒
      * @param TimeOut 响应超时时间，单位秒
      */
     public void setTimeOut(Long TimeOut) {
@@ -143,7 +143,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取检测间隔时间，单位秒
+     * Get 检测间隔时间，单位秒 
      * @return Interval 检测间隔时间，单位秒
      */
     public Long getInterval() {
@@ -151,7 +151,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置检测间隔时间，单位秒
+     * Set 检测间隔时间，单位秒
      * @param Interval 检测间隔时间，单位秒
      */
     public void setInterval(Long Interval) {
@@ -159,7 +159,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阈值，单位次
+     * Get 不健康阈值，单位次 
      * @return KickNum 不健康阈值，单位次
      */
     public Long getKickNum() {
@@ -167,7 +167,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置不健康阈值，单位次
+     * Set 不健康阈值，单位次
      * @param KickNum 不健康阈值，单位次
      */
     public void setKickNum(Long KickNum) {
@@ -175,7 +175,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取健康阈值，单位次
+     * Get 健康阈值，单位次 
      * @return AliveNum 健康阈值，单位次
      */
     public Long getAliveNum() {
@@ -183,7 +183,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置健康阈值，单位次
+     * Set 健康阈值，单位次
      * @param AliveNum 健康阈值，单位次
      */
     public void setAliveNum(Long AliveNum) {
@@ -191,7 +191,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位秒
+     * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
     public Long getKeepTime() {
@@ -199,7 +199,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位秒
+     * Set 会话保持时间，单位秒
      * @param KeepTime 会话保持时间，单位秒
      */
     public void setKeepTime(Long KeepTime) {
@@ -207,7 +207,7 @@ public class L4HealthConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListenerHealth  extends AbstractModel{
+public class ListenerHealth extends AbstractModel{
 
     /**
     * 监听器ID
@@ -60,7 +60,7 @@ public class ListenerHealth  extends AbstractModel{
     private RuleHealth [] Rules;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -76,8 +76,8 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerName 监听器名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -86,7 +86,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerName 监听器名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,7 +96,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的协议
+     * Get 监听器的协议 
      * @return Protocol 监听器的协议
      */
     public String getProtocol() {
@@ -104,7 +104,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的协议
+     * Set 监听器的协议
      * @param Protocol 监听器的协议
      */
     public void setProtocol(String Protocol) {
@@ -112,7 +112,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的端口
+     * Get 监听器的端口 
      * @return Port 监听器的端口
      */
     public Integer getPort() {
@@ -120,7 +120,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的端口
+     * Set 监听器的端口
      * @param Port 监听器的端口
      */
     public void setPort(Integer Port) {
@@ -128,8 +128,8 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的转发规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器的转发规则列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rules 监听器的转发规则列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的转发规则列表
+     * Set 监听器的转发规则列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器的转发规则列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class ListenerHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskTagOutput  extends AbstractModel{
+public class AiAnalysisTaskTagOutput extends AbstractModel{
 
     /**
     * 视频智能标签列表。
@@ -30,7 +30,7 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
     private MediaAiAnalysisTagItem [] TagSet;
 
     /**
-     * 获取视频智能标签列表。
+     * Get 视频智能标签列表。 
      * @return TagSet 视频智能标签列表。
      */
     public MediaAiAnalysisTagItem [] getTagSet() {
@@ -38,7 +38,7 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频智能标签列表。
+     * Set 视频智能标签列表。
      * @param TagSet 视频智能标签列表。
      */
     public void setTagSet(MediaAiAnalysisTagItem [] TagSet) {
@@ -46,7 +46,7 @@ public class AiAnalysisTaskTagOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);

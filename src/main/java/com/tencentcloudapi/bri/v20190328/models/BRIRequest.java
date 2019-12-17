@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BRIRequest  extends AbstractModel{
+public class BRIRequest extends AbstractModel{
 
     /**
     * 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
@@ -86,7 +86,7 @@ public class BRIRequest  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+     * Get 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url) 
      * @return Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
      */
     public String getService() {
@@ -94,7 +94,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
+     * Set 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
      * @param Service 业务名, 必须是以下五个业务名之一(bri_num,bri_dev,bri_ip_bri_apk,bri_url)
      */
     public void setService(String Service) {
@@ -102,7 +102,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+     * Get Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5) 
      * @return CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public String getCertMd5() {
@@ -110,7 +110,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
+     * Set Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
      * @param CertMd5 Apk证书Md5  (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public void setCertMd5(String CertMd5) {
@@ -118,7 +118,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+     * Get Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize) 
      * @return FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
      */
     public String getFileMd5() {
@@ -126,7 +126,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
+     * Set Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
      * @param FileMd5 Apk文件Md5 (业务名为bri_apk时必填，除非已填PackageName,CertMd5,FileSize)
      */
     public void setFileMd5(String FileMd5) {
@@ -134,7 +134,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+     * Get Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5) 
      * @return FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public Long getFileSize() {
@@ -142,7 +142,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
+     * Set Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
      * @param FileSize Apk文件大小  (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public void setFileSize(Long FileSize) {
@@ -150,7 +150,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安卓设备的Imei (业务名为bri_dev时必填)
+     * Get 安卓设备的Imei (业务名为bri_dev时必填) 
      * @return Imei 安卓设备的Imei (业务名为bri_dev时必填)
      */
     public String getImei() {
@@ -158,7 +158,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安卓设备的Imei (业务名为bri_dev时必填)
+     * Set 安卓设备的Imei (业务名为bri_dev时必填)
      * @param Imei 安卓设备的Imei (业务名为bri_dev时必填)
      */
     public void setImei(String Imei) {
@@ -166,7 +166,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点分格式的IP (业务名为bri_ip时必填)
+     * Get 点分格式的IP (业务名为bri_ip时必填) 
      * @return Ip 点分格式的IP (业务名为bri_ip时必填)
      */
     public String getIp() {
@@ -174,7 +174,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点分格式的IP (业务名为bri_ip时必填)
+     * Set 点分格式的IP (业务名为bri_ip时必填)
      * @param Ip 点分格式的IP (业务名为bri_ip时必填)
      */
     public void setIp(String Ip) {
@@ -182,7 +182,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+     * Get Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5) 
      * @return PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public String getPackageName() {
@@ -190,7 +190,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
+     * Set Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
      * @param PackageName Apk安装包名 (业务名为bri_apk时必填，除非已填FileMd5)
      */
     public void setPackageName(String PackageName) {
@@ -198,7 +198,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取电话号码 (业务名为bri_num时必填)
+     * Get 电话号码 (业务名为bri_num时必填) 
      * @return PhoneNumber 电话号码 (业务名为bri_num时必填)
      */
     public String getPhoneNumber() {
@@ -206,7 +206,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置电话号码 (业务名为bri_num时必填)
+     * Set 电话号码 (业务名为bri_num时必填)
      * @param PhoneNumber 电话号码 (业务名为bri_num时必填)
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -214,7 +214,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网址 (业务名为bri_url时必填)
+     * Get 网址 (业务名为bri_url时必填) 
      * @return Url 网址 (业务名为bri_url时必填)
      */
     public String getUrl() {
@@ -222,7 +222,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网址 (业务名为bri_url时必填)
+     * Set 网址 (业务名为bri_url时必填)
      * @param Url 网址 (业务名为bri_url时必填)
      */
     public void setUrl(String Url) {
@@ -230,7 +230,7 @@ public class BRIRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);

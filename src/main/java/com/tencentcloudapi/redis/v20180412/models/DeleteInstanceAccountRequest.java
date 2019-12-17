@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteInstanceAccountRequest  extends AbstractModel{
+public class DeleteInstanceAccountRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -37,7 +37,7 @@ public class DeleteInstanceAccountRequest  extends AbstractModel{
     private String AccountName;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DeleteInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DeleteInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号名称
+     * Get 子账号名称 
      * @return AccountName 子账号名称
      */
     public String getAccountName() {
@@ -61,7 +61,7 @@ public class DeleteInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号名称
+     * Set 子账号名称
      * @param AccountName 子账号名称
      */
     public void setAccountName(String AccountName) {
@@ -69,7 +69,7 @@ public class DeleteInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DpToken  extends AbstractModel{
+public class DpToken extends AbstractModel{
 
     /**
     * 当前词父节点的序号
@@ -51,7 +51,7 @@ public class DpToken  extends AbstractModel{
     private String Word;
 
     /**
-     * 获取当前词父节点的序号
+     * Get 当前词父节点的序号 
      * @return HeadId 当前词父节点的序号
      */
     public Long getHeadId() {
@@ -59,7 +59,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 设置当前词父节点的序号
+     * Set 当前词父节点的序号
      * @param HeadId 当前词父节点的序号
      */
     public void setHeadId(Long HeadId) {
@@ -67,7 +67,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 获取基础词的序号
+     * Get 基础词的序号 
      * @return Id 基础词的序号
      */
     public Long getId() {
@@ -75,7 +75,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 设置基础词的序号
+     * Set 基础词的序号
      * @param Id 基础词的序号
      */
     public void setId(Long Id) {
@@ -83,7 +83,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 获取句法依存关系的类型
+     * Get 句法依存关系的类型 
      * @return Relation 句法依存关系的类型
      */
     public String getRelation() {
@@ -91,7 +91,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 设置句法依存关系的类型
+     * Set 句法依存关系的类型
      * @param Relation 句法依存关系的类型
      */
     public void setRelation(String Relation) {
@@ -99,7 +99,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 获取基础词
+     * Get 基础词 
      * @return Word 基础词
      */
     public String getWord() {
@@ -107,7 +107,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 设置基础词
+     * Set 基础词
      * @param Word 基础词
      */
     public void setWord(String Word) {
@@ -115,7 +115,7 @@ public class DpToken  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HeadId", this.HeadId);

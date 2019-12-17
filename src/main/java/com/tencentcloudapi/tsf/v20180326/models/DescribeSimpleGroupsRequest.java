@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSimpleGroupsRequest  extends AbstractModel{
+public class DescribeSimpleGroupsRequest extends AbstractModel{
 
     /**
     * 部署组ID列表，不填写时查询全量
@@ -79,7 +79,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     private String SearchWord;
 
     /**
-     * 获取部署组ID列表，不填写时查询全量
+     * Get 部署组ID列表，不填写时查询全量 
      * @return GroupIdList 部署组ID列表，不填写时查询全量
      */
     public String [] getGroupIdList() {
@@ -87,7 +87,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID列表，不填写时查询全量
+     * Set 部署组ID列表，不填写时查询全量
      * @param GroupIdList 部署组ID列表，不填写时查询全量
      */
     public void setGroupIdList(String [] GroupIdList) {
@@ -95,7 +95,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID，不填写时查询全量
+     * Get 应用ID，不填写时查询全量 
      * @return ApplicationId 应用ID，不填写时查询全量
      */
     public String getApplicationId() {
@@ -103,7 +103,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，不填写时查询全量
+     * Set 应用ID，不填写时查询全量
      * @param ApplicationId 应用ID，不填写时查询全量
      */
     public void setApplicationId(String ApplicationId) {
@@ -111,7 +111,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID，不填写时查询全量
+     * Get 集群ID，不填写时查询全量 
      * @return ClusterId 集群ID，不填写时查询全量
      */
     public String getClusterId() {
@@ -119,7 +119,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID，不填写时查询全量
+     * Set 集群ID，不填写时查询全量
      * @param ClusterId 集群ID，不填写时查询全量
      */
     public void setClusterId(String ClusterId) {
@@ -127,7 +127,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID，不填写时查询全量
+     * Get 命名空间ID，不填写时查询全量 
      * @return NamespaceId 命名空间ID，不填写时查询全量
      */
     public String getNamespaceId() {
@@ -135,7 +135,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID，不填写时查询全量
+     * Set 命名空间ID，不填写时查询全量
      * @param NamespaceId 命名空间ID，不填写时查询全量
      */
     public void setNamespaceId(String NamespaceId) {
@@ -143,7 +143,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数
+     * Get 每页条数 
      * @return Limit 每页条数
      */
     public Long getLimit() {
@@ -151,7 +151,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数
+     * Set 每页条数
      * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
@@ -159,7 +159,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始偏移量
+     * Get 起始偏移量 
      * @return Offset 起始偏移量
      */
     public Long getOffset() {
@@ -167,7 +167,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始偏移量
+     * Set 起始偏移量
      * @param Offset 起始偏移量
      */
     public void setOffset(Long Offset) {
@@ -175,7 +175,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组ID，不填写时查询全量
+     * Get 部署组ID，不填写时查询全量 
      * @return GroupId 部署组ID，不填写时查询全量
      */
     public String getGroupId() {
@@ -183,7 +183,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID，不填写时查询全量
+     * Set 部署组ID，不填写时查询全量
      * @param GroupId 部署组ID，不填写时查询全量
      */
     public void setGroupId(String GroupId) {
@@ -191,7 +191,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模糊查询，部署组名称，不填写时查询全量
+     * Get 模糊查询，部署组名称，不填写时查询全量 
      * @return SearchWord 模糊查询，部署组名称，不填写时查询全量
      */
     public String getSearchWord() {
@@ -199,7 +199,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模糊查询，部署组名称，不填写时查询全量
+     * Set 模糊查询，部署组名称，不填写时查询全量
      * @param SearchWord 模糊查询，部署组名称，不填写时查询全量
      */
     public void setSearchWord(String SearchWord) {
@@ -207,7 +207,7 @@ public class DescribeSimpleGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);

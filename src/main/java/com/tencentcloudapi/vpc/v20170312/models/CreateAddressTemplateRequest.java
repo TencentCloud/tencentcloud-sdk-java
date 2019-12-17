@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAddressTemplateRequest  extends AbstractModel{
+public class CreateAddressTemplateRequest extends AbstractModel{
 
     /**
     * IP地址模版名称
@@ -37,7 +37,7 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     private String [] Addresses;
 
     /**
-     * 获取IP地址模版名称
+     * Get IP地址模版名称 
      * @return AddressTemplateName IP地址模版名称
      */
     public String getAddressTemplateName() {
@@ -45,7 +45,7 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模版名称
+     * Set IP地址模版名称
      * @param AddressTemplateName IP地址模版名称
      */
     public void setAddressTemplateName(String AddressTemplateName) {
@@ -53,7 +53,7 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地址信息，支持 IP、CIDR、IP 范围。
+     * Get 地址信息，支持 IP、CIDR、IP 范围。 
      * @return Addresses 地址信息，支持 IP、CIDR、IP 范围。
      */
     public String [] getAddresses() {
@@ -61,7 +61,7 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地址信息，支持 IP、CIDR、IP 范围。
+     * Set 地址信息，支持 IP、CIDR、IP 范围。
      * @param Addresses 地址信息，支持 IP、CIDR、IP 范围。
      */
     public void setAddresses(String [] Addresses) {
@@ -69,7 +69,7 @@ public class CreateAddressTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);

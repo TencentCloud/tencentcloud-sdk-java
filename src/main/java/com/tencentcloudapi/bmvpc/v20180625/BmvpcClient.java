@@ -29,21 +29,10 @@ public class BmvpcClient extends AbstractClient{
     private static String endpoint = "bmvpc.tencentcloudapi.com";
     private static String version = "2018-06-25";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public BmvpcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public BmvpcClient(Credential credential, String region, ClientProfile profile) {
         super(BmvpcClient.endpoint, BmvpcClient.version, credential, region, profile);
     }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceMemInfo  extends AbstractModel{
+public class DeviceMemInfo extends AbstractModel{
 
     /**
     * 总内存大小。free命令中Mem:一行total的值,单位：KB
@@ -37,7 +37,7 @@ public class DeviceMemInfo  extends AbstractModel{
     private Integer [] Used;
 
     /**
-     * 获取总内存大小。free命令中Mem:一行total的值,单位：KB
+     * Get 总内存大小。free命令中Mem:一行total的值,单位：KB 
      * @return Total 总内存大小。free命令中Mem:一行total的值,单位：KB
      */
     public Integer [] getTotal() {
@@ -45,7 +45,7 @@ public class DeviceMemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总内存大小。free命令中Mem:一行total的值,单位：KB
+     * Set 总内存大小。free命令中Mem:一行total的值,单位：KB
      * @param Total 总内存大小。free命令中Mem:一行total的值,单位：KB
      */
     public void setTotal(Integer [] Total) {
@@ -53,7 +53,7 @@ public class DeviceMemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取已使用内存。free命令中Mem:一行used的值,单位：KB
+     * Get 已使用内存。free命令中Mem:一行used的值,单位：KB 
      * @return Used 已使用内存。free命令中Mem:一行used的值,单位：KB
      */
     public Integer [] getUsed() {
@@ -61,7 +61,7 @@ public class DeviceMemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置已使用内存。free命令中Mem:一行used的值,单位：KB
+     * Set 已使用内存。free命令中Mem:一行used的值,单位：KB
      * @param Used 已使用内存。free命令中Mem:一行used的值,单位：KB
      */
     public void setUsed(Integer [] Used) {
@@ -69,7 +69,7 @@ public class DeviceMemInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Total.", this.Total);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDeviceStatisticsRequest  extends AbstractModel{
+public class GetDeviceStatisticsRequest extends AbstractModel{
 
     /**
     * 产品Id列表
@@ -44,7 +44,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     private String EndDate;
 
     /**
-     * 获取产品Id列表
+     * Get 产品Id列表 
      * @return Products 产品Id列表
      */
     public String [] getProducts() {
@@ -52,7 +52,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id列表
+     * Set 产品Id列表
      * @param Products 产品Id列表
      */
     public void setProducts(String [] Products) {
@@ -60,7 +60,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期
+     * Get 开始日期 
      * @return StartDate 开始日期
      */
     public String getStartDate() {
@@ -68,7 +68,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期
+     * Set 开始日期
      * @param StartDate 开始日期
      */
     public void setStartDate(String StartDate) {
@@ -76,7 +76,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期
+     * Get 结束日期 
      * @return EndDate 结束日期
      */
     public String getEndDate() {
@@ -84,7 +84,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期
+     * Set 结束日期
      * @param EndDate 结束日期
      */
     public void setEndDate(String EndDate) {
@@ -92,7 +92,7 @@ public class GetDeviceStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Products.", this.Products);

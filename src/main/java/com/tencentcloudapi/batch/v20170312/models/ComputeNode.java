@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeNode  extends AbstractModel{
+public class ComputeNode extends AbstractModel{
 
     /**
     * 计算节点ID
@@ -93,7 +93,7 @@ public class ComputeNode  extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
-     * 获取计算节点ID
+     * Get 计算节点ID 
      * @return ComputeNodeId 计算节点ID
      */
     public String getComputeNodeId() {
@@ -101,7 +101,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点ID
+     * Set 计算节点ID
      * @param ComputeNodeId 计算节点ID
      */
     public void setComputeNodeId(String ComputeNodeId) {
@@ -109,7 +109,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点实例ID，对于CVM场景，即为CVM的InstanceId
+     * Get 计算节点实例ID，对于CVM场景，即为CVM的InstanceId 
      * @return ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
      */
     public String getComputeNodeInstanceId() {
@@ -117,7 +117,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点实例ID，对于CVM场景，即为CVM的InstanceId
+     * Set 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
      * @param ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
      */
     public void setComputeNodeInstanceId(String ComputeNodeInstanceId) {
@@ -125,7 +125,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点状态
+     * Get 计算节点状态 
      * @return ComputeNodeState 计算节点状态
      */
     public String getComputeNodeState() {
@@ -133,7 +133,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点状态
+     * Set 计算节点状态
      * @param ComputeNodeState 计算节点状态
      */
     public void setComputeNodeState(String ComputeNodeState) {
@@ -141,7 +141,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核数
+     * Get CPU核数 
      * @return Cpu CPU核数
      */
     public Integer getCpu() {
@@ -149,7 +149,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数
+     * Set CPU核数
      * @param Cpu CPU核数
      */
     public void setCpu(Integer Cpu) {
@@ -157,7 +157,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取内存容量，单位GiB
+     * Get 内存容量，单位GiB 
      * @return Mem 内存容量，单位GiB
      */
     public Integer getMem() {
@@ -165,7 +165,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量，单位GiB
+     * Set 内存容量，单位GiB
      * @param Mem 内存容量，单位GiB
      */
     public void setMem(Integer Mem) {
@@ -173,7 +173,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取资源创建完成时间
+     * Get 资源创建完成时间 
      * @return ResourceCreatedTime 资源创建完成时间
      */
     public String getResourceCreatedTime() {
@@ -181,7 +181,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置资源创建完成时间
+     * Set 资源创建完成时间
      * @param ResourceCreatedTime 资源创建完成时间
      */
     public void setResourceCreatedTime(String ResourceCreatedTime) {
@@ -189,7 +189,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
+     * Get 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。 
      * @return TaskInstanceNumAvailable 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      */
     public Integer getTaskInstanceNumAvailable() {
@@ -197,7 +197,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
+     * Set 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      * @param TaskInstanceNumAvailable 计算节点运行  TaskInstance 可用容量。0表示计算节点忙碌。
      */
     public void setTaskInstanceNumAvailable(Integer TaskInstanceNumAvailable) {
@@ -205,7 +205,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取Batch Agent 版本
+     * Get Batch Agent 版本 
      * @return AgentVersion Batch Agent 版本
      */
     public String getAgentVersion() {
@@ -213,7 +213,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置Batch Agent 版本
+     * Set Batch Agent 版本
      * @param AgentVersion Batch Agent 版本
      */
     public void setAgentVersion(String AgentVersion) {
@@ -221,7 +221,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取实例内网IP
+     * Get 实例内网IP 
      * @return PrivateIpAddresses 实例内网IP
      */
     public String [] getPrivateIpAddresses() {
@@ -229,7 +229,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置实例内网IP
+     * Set 实例内网IP
      * @param PrivateIpAddresses 实例内网IP
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
@@ -237,7 +237,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 获取实例公网IP
+     * Get 实例公网IP 
      * @return PublicIpAddresses 实例公网IP
      */
     public String [] getPublicIpAddresses() {
@@ -245,7 +245,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 设置实例公网IP
+     * Set 实例公网IP
      * @param PublicIpAddresses 实例公网IP
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -253,7 +253,7 @@ public class ComputeNode  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ComputeNodeId", this.ComputeNodeId);

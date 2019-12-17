@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BrandReportArticle  extends AbstractModel{
+public class BrandReportArticle extends AbstractModel{
 
     /**
     * 文章标题
@@ -86,7 +86,7 @@ public class BrandReportArticle  extends AbstractModel{
     private String ArticleId;
 
     /**
-     * 获取文章标题
+     * Get 文章标题 
      * @return Title 文章标题
      */
     public String getTitle() {
@@ -94,7 +94,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章标题
+     * Set 文章标题
      * @param Title 文章标题
      */
     public void setTitle(String Title) {
@@ -102,7 +102,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章url地址
+     * Get 文章url地址 
      * @return Url 文章url地址
      */
     public String getUrl() {
@@ -110,7 +110,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章url地址
+     * Set 文章url地址
      * @param Url 文章url地址
      */
     public void setUrl(String Url) {
@@ -118,7 +118,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章来源
+     * Get 文章来源 
      * @return FromSite 文章来源
      */
     public String getFromSite() {
@@ -126,7 +126,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章来源
+     * Set 文章来源
      * @param FromSite 文章来源
      */
     public void setFromSite(String FromSite) {
@@ -134,7 +134,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章发表日期
+     * Get 文章发表日期 
      * @return PubTime 文章发表日期
      */
     public String getPubTime() {
@@ -142,7 +142,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章发表日期
+     * Set 文章发表日期
      * @param PubTime 文章发表日期
      */
     public void setPubTime(String PubTime) {
@@ -150,7 +150,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章标识
+     * Get 文章标识 
      * @return Flag 文章标识
      */
     public Integer getFlag() {
@@ -158,7 +158,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章标识
+     * Set 文章标识
      * @param Flag 文章标识
      */
     public void setFlag(Integer Flag) {
@@ -166,7 +166,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章热度值
+     * Get 文章热度值 
      * @return Hot 文章热度值
      */
     public Integer getHot() {
@@ -174,7 +174,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章热度值
+     * Set 文章热度值
      * @param Hot 文章热度值
      */
     public void setHot(Integer Hot) {
@@ -182,7 +182,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章来源等级
+     * Get 文章来源等级 
      * @return Level 文章来源等级
      */
     public Integer getLevel() {
@@ -190,7 +190,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章来源等级
+     * Set 文章来源等级
      * @param Level 文章来源等级
      */
     public void setLevel(Integer Level) {
@@ -198,7 +198,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章摘要
+     * Get 文章摘要 
      * @return Abstract 文章摘要
      */
     public String getAbstract() {
@@ -206,7 +206,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章摘要
+     * Set 文章摘要
      * @param Abstract 文章摘要
      */
     public void setAbstract(String Abstract) {
@@ -214,7 +214,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 获取文章ID
+     * Get 文章ID 
      * @return ArticleId 文章ID
      */
     public String getArticleId() {
@@ -222,7 +222,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 设置文章ID
+     * Set 文章ID
      * @param ArticleId 文章ID
      */
     public void setArticleId(String ArticleId) {
@@ -230,7 +230,7 @@ public class BrandReportArticle  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Title", this.Title);

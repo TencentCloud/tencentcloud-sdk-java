@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EncryptRequest  extends AbstractModel{
+public class EncryptRequest extends AbstractModel{
 
     /**
     * 调用CreateKey生成的CMK全局唯一标识符
@@ -44,7 +44,7 @@ public class EncryptRequest  extends AbstractModel{
     private String EncryptionContext;
 
     /**
-     * 获取调用CreateKey生成的CMK全局唯一标识符
+     * Get 调用CreateKey生成的CMK全局唯一标识符 
      * @return KeyId 调用CreateKey生成的CMK全局唯一标识符
      */
     public String getKeyId() {
@@ -52,7 +52,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用CreateKey生成的CMK全局唯一标识符
+     * Set 调用CreateKey生成的CMK全局唯一标识符
      * @param KeyId 调用CreateKey生成的CMK全局唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -60,7 +60,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
+     * Get 被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K 
      * @return Plaintext 被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
      */
     public String getPlaintext() {
@@ -68,7 +68,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
+     * Set 被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
      * @param Plaintext 被加密的明文数据，该字段必须使用base64编码，原文最大长度支持4K
      */
     public void setPlaintext(String Plaintext) {
@@ -76,7 +76,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
+     * Get key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符 
      * @return EncryptionContext key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
      */
     public String getEncryptionContext() {
@@ -84,7 +84,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
+     * Set key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
      * @param EncryptionContext key/value对的json字符串，如果指定了该参数，则在调用Decrypt API时需要提供同样的参数，最大支持1024个字符
      */
     public void setEncryptionContext(String EncryptionContext) {
@@ -92,7 +92,7 @@ public class EncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

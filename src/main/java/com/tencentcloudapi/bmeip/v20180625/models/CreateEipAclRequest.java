@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEipAclRequest  extends AbstractModel{
+public class CreateEipAclRequest extends AbstractModel{
 
     /**
     * ACL 名称
@@ -37,7 +37,7 @@ public class CreateEipAclRequest  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取ACL 名称
+     * Get ACL 名称 
      * @return AclName ACL 名称
      */
     public String getAclName() {
@@ -45,7 +45,7 @@ public class CreateEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 名称
+     * Set ACL 名称
      * @param AclName ACL 名称
      */
     public void setAclName(String AclName) {
@@ -53,7 +53,7 @@ public class CreateEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 状态 0：无状态，1：有状态
+     * Get ACL 状态 0：无状态，1：有状态 
      * @return Status ACL 状态 0：无状态，1：有状态
      */
     public Integer getStatus() {
@@ -61,7 +61,7 @@ public class CreateEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 状态 0：无状态，1：有状态
+     * Set ACL 状态 0：无状态，1：有状态
      * @param Status ACL 状态 0：无状态，1：有状态
      */
     public void setStatus(Integer Status) {
@@ -69,7 +69,7 @@ public class CreateEipAclRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclName", this.AclName);

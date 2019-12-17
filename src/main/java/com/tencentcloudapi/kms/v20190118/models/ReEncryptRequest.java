@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReEncryptRequest  extends AbstractModel{
+public class ReEncryptRequest extends AbstractModel{
 
     /**
     * 需要重新加密的密文
@@ -51,7 +51,7 @@ public class ReEncryptRequest  extends AbstractModel{
     private String DestinationEncryptionContext;
 
     /**
-     * 获取需要重新加密的密文
+     * Get 需要重新加密的密文 
      * @return CiphertextBlob 需要重新加密的密文
      */
     public String getCiphertextBlob() {
@@ -59,7 +59,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要重新加密的密文
+     * Set 需要重新加密的密文
      * @param CiphertextBlob 需要重新加密的密文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
@@ -67,7 +67,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
+     * Get 重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新） 
      * @return DestinationKeyId 重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
      */
     public String getDestinationKeyId() {
@@ -75,7 +75,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
+     * Set 重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
      * @param DestinationKeyId 重新加密使用的CMK，如果为空，则使用密文原有的CMK重新加密（若密钥没有轮换则密文不会刷新）
      */
     public void setDestinationKeyId(String DestinationKeyId) {
@@ -83,7 +83,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
+     * Get CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空 
      * @return SourceEncryptionContext CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
      */
     public String getSourceEncryptionContext() {
@@ -91,7 +91,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
+     * Set CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
      * @param SourceEncryptionContext CiphertextBlob 密文加密时使用的key/value对的json字符串。如果加密时未使用，则为空
      */
     public void setSourceEncryptionContext(String SourceEncryptionContext) {
@@ -99,7 +99,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
+     * Get 重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串 
      * @return DestinationEncryptionContext 重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
      */
     public String getDestinationEncryptionContext() {
@@ -107,7 +107,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
+     * Set 重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
      * @param DestinationEncryptionContext 重新加密使用的key/value对的json字符串，如果使用该字段，则返回的新密文在解密时需要填入相同的字符串
      */
     public void setDestinationEncryptionContext(String DestinationEncryptionContext) {
@@ -115,7 +115,7 @@ public class ReEncryptRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HighlightSegmentItem  extends AbstractModel{
+public class HighlightSegmentItem extends AbstractModel{
 
     /**
     * 置信度。
@@ -44,7 +44,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取置信度。
+     * Get 置信度。 
      * @return Confidence 置信度。
      */
     public Float getConfidence() {
@@ -52,7 +52,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置置信度。
+     * Set 置信度。
      * @param Confidence 置信度。
      */
     public void setConfidence(Float Confidence) {
@@ -60,7 +60,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取片段起始时间偏移。
+     * Get 片段起始时间偏移。 
      * @return StartTimeOffset 片段起始时间偏移。
      */
     public Float getStartTimeOffset() {
@@ -68,7 +68,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置片段起始时间偏移。
+     * Set 片段起始时间偏移。
      * @param StartTimeOffset 片段起始时间偏移。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -76,7 +76,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取片段结束时间偏移。
+     * Get 片段结束时间偏移。 
      * @return EndTimeOffset 片段结束时间偏移。
      */
     public Float getEndTimeOffset() {
@@ -84,7 +84,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置片段结束时间偏移。
+     * Set 片段结束时间偏移。
      * @param EndTimeOffset 片段结束时间偏移。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -92,7 +92,7 @@ public class HighlightSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

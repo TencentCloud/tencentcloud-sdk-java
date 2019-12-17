@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubAppIdStatusRequest  extends AbstractModel{
+public class ModifySubAppIdStatusRequest extends AbstractModel{
 
     /**
     * 子应用 ID。
@@ -39,7 +39,7 @@ public class ModifySubAppIdStatusRequest  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取子应用 ID。
+     * Get 子应用 ID。 
      * @return SubAppId 子应用 ID。
      */
     public Long getSubAppId() {
@@ -47,7 +47,7 @@ public class ModifySubAppIdStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子应用 ID。
+     * Set 子应用 ID。
      * @param SubAppId 子应用 ID。
      */
     public void setSubAppId(Long SubAppId) {
@@ -55,9 +55,9 @@ public class ModifySubAppIdStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子应用状态，取值范围：
+     * Get 子应用状态，取值范围：
 <li>On：启用</li>
-<li>Off：停用</li>
+<li>Off：停用</li> 
      * @return Status 子应用状态，取值范围：
 <li>On：启用</li>
 <li>Off：停用</li>
@@ -67,7 +67,7 @@ public class ModifySubAppIdStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子应用状态，取值范围：
+     * Set 子应用状态，取值范围：
 <li>On：启用</li>
 <li>Off：停用</li>
      * @param Status 子应用状态，取值范围：
@@ -79,7 +79,7 @@ public class ModifySubAppIdStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

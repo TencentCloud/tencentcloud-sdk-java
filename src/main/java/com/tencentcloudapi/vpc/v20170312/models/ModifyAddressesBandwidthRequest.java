@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAddressesBandwidthRequest  extends AbstractModel{
+public class ModifyAddressesBandwidthRequest extends AbstractModel{
 
     /**
     * EIP唯一标识ID，形如'eip-xxxx'
@@ -51,7 +51,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取EIP唯一标识ID，形如'eip-xxxx'
+     * Get EIP唯一标识ID，形如'eip-xxxx' 
      * @return AddressIds EIP唯一标识ID，形如'eip-xxxx'
      */
     public String [] getAddressIds() {
@@ -59,7 +59,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP唯一标识ID，形如'eip-xxxx'
+     * Set EIP唯一标识ID，形如'eip-xxxx'
      * @param AddressIds EIP唯一标识ID，形如'eip-xxxx'
      */
     public void setAddressIds(String [] AddressIds) {
@@ -67,7 +67,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调整带宽目标值
+     * Get 调整带宽目标值 
      * @return InternetMaxBandwidthOut 调整带宽目标值
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -75,7 +75,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调整带宽目标值
+     * Set 调整带宽目标值
      * @param InternetMaxBandwidthOut 调整带宽目标值
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -83,7 +83,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取包月带宽起始时间
+     * Get 包月带宽起始时间 
      * @return StartTime 包月带宽起始时间
      */
     public String getStartTime() {
@@ -91,7 +91,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置包月带宽起始时间
+     * Set 包月带宽起始时间
      * @param StartTime 包月带宽起始时间
      */
     public void setStartTime(String StartTime) {
@@ -99,7 +99,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取包月带宽结束时间
+     * Get 包月带宽结束时间 
      * @return EndTime 包月带宽结束时间
      */
     public String getEndTime() {
@@ -107,7 +107,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置包月带宽结束时间
+     * Set 包月带宽结束时间
      * @param EndTime 包月带宽结束时间
      */
     public void setEndTime(String EndTime) {
@@ -115,7 +115,7 @@ public class ModifyAddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AddressIds.", this.AddressIds);

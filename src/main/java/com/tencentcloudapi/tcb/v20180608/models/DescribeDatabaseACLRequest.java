@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabaseACLRequest  extends AbstractModel{
+public class DescribeDatabaseACLRequest extends AbstractModel{
 
     /**
     * 环境ID
@@ -37,7 +37,7 @@ public class DescribeDatabaseACLRequest  extends AbstractModel{
     private String CollectionName;
 
     /**
-     * 获取环境ID
+     * Get 环境ID 
      * @return EnvId 环境ID
      */
     public String getEnvId() {
@@ -45,7 +45,7 @@ public class DescribeDatabaseACLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置环境ID
+     * Set 环境ID
      * @param EnvId 环境ID
      */
     public void setEnvId(String EnvId) {
@@ -53,7 +53,7 @@ public class DescribeDatabaseACLRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集合名称
+     * Get 集合名称 
      * @return CollectionName 集合名称
      */
     public String getCollectionName() {
@@ -61,7 +61,7 @@ public class DescribeDatabaseACLRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集合名称
+     * Set 集合名称
      * @param CollectionName 集合名称
      */
     public void setCollectionName(String CollectionName) {
@@ -69,7 +69,7 @@ public class DescribeDatabaseACLRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInstanceCount  extends AbstractModel{
+public class RegionInstanceCount extends AbstractModel{
 
     /**
     * 地域码
@@ -44,7 +44,7 @@ public class RegionInstanceCount  extends AbstractModel{
     private Long Count;
 
     /**
-     * 获取地域码
+     * Get 地域码 
      * @return Region 地域码
      */
     public String getRegion() {
@@ -52,7 +52,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 设置地域码
+     * Set 地域码
      * @param Region 地域码
      */
     public void setRegion(String Region) {
@@ -60,7 +60,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 获取地域码（新规范）
+     * Get 地域码（新规范） 
      * @return RegionV3 地域码（新规范）
      */
     public String getRegionV3() {
@@ -68,7 +68,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 设置地域码（新规范）
+     * Set 地域码（新规范）
      * @param RegionV3 地域码（新规范）
      */
     public void setRegionV3(String RegionV3) {
@@ -76,7 +76,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例数
+     * Get 资源实例数 
      * @return Count 资源实例数
      */
     public Long getCount() {
@@ -84,7 +84,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例数
+     * Set 资源实例数
      * @param Count 资源实例数
      */
     public void setCount(Long Count) {
@@ -92,7 +92,7 @@ public class RegionInstanceCount  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

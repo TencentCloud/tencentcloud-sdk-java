@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppStatisticsRequest  extends AbstractModel{
+public class DescribeAppStatisticsRequest extends AbstractModel{
 
     /**
     * GME应用ID
@@ -51,7 +51,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     private String [] Services;
 
     /**
-     * 获取GME应用ID
+     * Get GME应用ID 
      * @return BizId GME应用ID
      */
     public Long getBizId() {
@@ -59,7 +59,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GME应用ID
+     * Set GME应用ID
      * @param BizId GME应用ID
      */
     public void setBizId(Long BizId) {
@@ -67,7 +67,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Get 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13 
      * @return StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      */
     public String getStartDate() {
@@ -75,7 +75,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Set 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      * @param StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      */
     public void setStartDate(String StartDate) {
@@ -83,7 +83,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Get 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13 
      * @return EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      */
     public String getEndDate() {
@@ -91,7 +91,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Set 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      * @param EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
      */
     public void setEndDate(String EndDate) {
@@ -99,7 +99,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * Get 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter 
      * @return Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
      */
     public String [] getServices() {
@@ -107,7 +107,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
+     * Set 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
      * @param Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter
      */
     public void setServices(String [] Services) {
@@ -115,7 +115,7 @@ public class DescribeAppStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

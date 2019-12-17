@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskOperationLogRequest  extends AbstractModel{
+public class DescribeTaskOperationLogRequest extends AbstractModel{
 
     /**
     * 维修任务ID
@@ -44,7 +44,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     private Integer Order;
 
     /**
-     * 获取维修任务ID
+     * Get 维修任务ID 
      * @return TaskId 维修任务ID
      */
     public String getTaskId() {
@@ -52,7 +52,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置维修任务ID
+     * Set 维修任务ID
      * @param TaskId 维修任务ID
      */
     public void setTaskId(String TaskId) {
@@ -60,7 +60,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，目前支持：OperationTime
+     * Get 排序字段，目前支持：OperationTime 
      * @return OrderField 排序字段，目前支持：OperationTime
      */
     public String getOrderField() {
@@ -68,7 +68,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，目前支持：OperationTime
+     * Set 排序字段，目前支持：OperationTime
      * @param OrderField 排序字段，目前支持：OperationTime
      */
     public void setOrderField(String OrderField) {
@@ -76,7 +76,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式 0:递增(默认) 1:递减
+     * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
     public Integer getOrder() {
@@ -84,7 +84,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式 0:递增(默认) 1:递减
+     * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
     public void setOrder(Integer Order) {
@@ -92,7 +92,7 @@ public class DescribeTaskOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NumberFormat  extends AbstractModel{
+public class NumberFormat extends AbstractModel{
 
     /**
     * `{number}`变量的起始值，默认为0。
@@ -51,7 +51,7 @@ public class NumberFormat  extends AbstractModel{
     private String PlaceHolder;
 
     /**
-     * 获取`{number}`变量的起始值，默认为0。
+     * Get `{number}`变量的起始值，默认为0。 
      * @return InitialValue `{number}`变量的起始值，默认为0。
      */
     public Long getInitialValue() {
@@ -59,7 +59,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 设置`{number}`变量的起始值，默认为0。
+     * Set `{number}`变量的起始值，默认为0。
      * @param InitialValue `{number}`变量的起始值，默认为0。
      */
     public void setInitialValue(Long InitialValue) {
@@ -67,7 +67,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 获取`{number}`变量的增长步长，默认为1。
+     * Get `{number}`变量的增长步长，默认为1。 
      * @return Increment `{number}`变量的增长步长，默认为1。
      */
     public Long getIncrement() {
@@ -75,7 +75,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 设置`{number}`变量的增长步长，默认为1。
+     * Set `{number}`变量的增长步长，默认为1。
      * @param Increment `{number}`变量的增长步长，默认为1。
      */
     public void setIncrement(Long Increment) {
@@ -83,7 +83,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 获取`{number}`变量的最小长度，不足时补占位符。默认为1。
+     * Get `{number}`变量的最小长度，不足时补占位符。默认为1。 
      * @return MinLength `{number}`变量的最小长度，不足时补占位符。默认为1。
      */
     public Long getMinLength() {
@@ -91,7 +91,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 设置`{number}`变量的最小长度，不足时补占位符。默认为1。
+     * Set `{number}`变量的最小长度，不足时补占位符。默认为1。
      * @param MinLength `{number}`变量的最小长度，不足时补占位符。默认为1。
      */
     public void setMinLength(Long MinLength) {
@@ -99,7 +99,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 获取`{number}`变量的长度不足时，补充的占位符。默认为"0"。
+     * Get `{number}`变量的长度不足时，补充的占位符。默认为"0"。 
      * @return PlaceHolder `{number}`变量的长度不足时，补充的占位符。默认为"0"。
      */
     public String getPlaceHolder() {
@@ -107,7 +107,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 设置`{number}`变量的长度不足时，补充的占位符。默认为"0"。
+     * Set `{number}`变量的长度不足时，补充的占位符。默认为"0"。
      * @param PlaceHolder `{number}`变量的长度不足时，补充的占位符。默认为"0"。
      */
     public void setPlaceHolder(String PlaceHolder) {
@@ -115,7 +115,7 @@ public class NumberFormat  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InitialValue", this.InitialValue);

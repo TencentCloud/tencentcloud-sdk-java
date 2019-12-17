@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4HealthConfigRequest  extends AbstractModel{
+public class DescribeL4HealthConfigRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -44,7 +44,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     private String [] RuleIdList;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -52,7 +52,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -60,7 +60,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -68,7 +68,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -76,7 +76,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
+     * Get 规则ID数组，当导出所有规则的健康检查配置则不填或填空数组； 
      * @return RuleIdList 规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
      */
     public String [] getRuleIdList() {
@@ -84,7 +84,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
+     * Set 规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
      * @param RuleIdList 规则ID数组，当导出所有规则的健康检查配置则不填或填空数组；
      */
     public void setRuleIdList(String [] RuleIdList) {
@@ -92,7 +92,7 @@ public class DescribeL4HealthConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

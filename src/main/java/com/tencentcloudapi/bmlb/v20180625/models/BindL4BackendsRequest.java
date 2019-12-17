@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindL4BackendsRequest  extends AbstractModel{
+public class BindL4BackendsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -51,7 +51,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     private Integer BindType;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取四层监听器实例ID，可通过接口DescribeL4Listeners查询。
+     * Get 四层监听器实例ID，可通过接口DescribeL4Listeners查询。 
      * @return ListenerId 四层监听器实例ID，可通过接口DescribeL4Listeners查询。
      */
     public String getListenerId() {
@@ -75,7 +75,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置四层监听器实例ID，可通过接口DescribeL4Listeners查询。
+     * Set 四层监听器实例ID，可通过接口DescribeL4Listeners查询。
      * @param ListenerId 四层监听器实例ID，可通过接口DescribeL4Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -83,7 +83,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。
+     * Get 待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。 
      * @return BackendSet 待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。
      */
     public BindL4Backend [] getBackendSet() {
@@ -91,7 +91,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。
+     * Set 待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。
      * @param BackendSet 待绑定的主机信息。可以绑定多个主机端口。目前一个四层监听器下面最多允许绑定255个主机端口。
      */
     public void setBackendSet(BindL4Backend [] BackendSet) {
@@ -99,7 +99,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定类型。0：物理机 1：虚拟机 2：半托管机器
+     * Get 绑定类型。0：物理机 1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
     public Integer getBindType() {
@@ -107,7 +107,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类型。0：物理机 1：虚拟机 2：半托管机器
+     * Set 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机 1：虚拟机 2：半托管机器
      */
     public void setBindType(Integer BindType) {
@@ -115,7 +115,7 @@ public class BindL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFaceResponse  extends AbstractModel{
+public class CreateFaceResponse extends AbstractModel{
 
     /**
     * 加入成功的人脸数量
@@ -77,7 +77,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     private String RequestId;
 
     /**
-     * 获取加入成功的人脸数量
+     * Get 加入成功的人脸数量 
      * @return SucFaceNum 加入成功的人脸数量
      */
     public Long getSucFaceNum() {
@@ -85,7 +85,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置加入成功的人脸数量
+     * Set 加入成功的人脸数量
      * @param SucFaceNum 加入成功的人脸数量
      */
     public void setSucFaceNum(Long SucFaceNum) {
@@ -93,7 +93,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取加入成功的人脸ID列表
+     * Get 加入成功的人脸ID列表 
      * @return SucFaceIds 加入成功的人脸ID列表
      */
     public String [] getSucFaceIds() {
@@ -101,7 +101,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置加入成功的人脸ID列表
+     * Set 加入成功的人脸ID列表
      * @param SucFaceIds 加入成功的人脸ID列表
      */
     public void setSucFaceIds(String [] SucFaceIds) {
@@ -109,11 +109,11 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+     * Get 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
 -1601代表不符合图片质量控制要求, 
 -1603 代表已有相似度超过99%的人脸存在，-1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
-RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
+RetCode的顺序和入参中 Images 或 Urls 的顺序一致。 
      * @return RetCode 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
 -1601代表不符合图片质量控制要求, 
 -1603 代表已有相似度超过99%的人脸存在，-1604 代表人脸相似度没有超过FaceMatchThreshold。 
@@ -125,7 +125,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
+     * Set 每张人脸图片添加结果，-1101 代表未检测到人脸，-1102 代表图片解码失败， 
 -1601代表不符合图片质量控制要求, 
 -1603 代表已有相似度超过99%的人脸存在，-1604 代表人脸相似度没有超过FaceMatchThreshold。 
 其他非 0 值代表算法服务异常。 
@@ -141,8 +141,8 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+     * Get 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
+例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。 
      * @return SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
@@ -151,7 +151,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
+     * Set 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      * @param SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
 例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
@@ -161,7 +161,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
+     * Get 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。 
      * @return SucFaceRects 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
      */
     public FaceRect [] getSucFaceRects() {
@@ -169,7 +169,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
+     * Set 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
      * @param SucFaceRects 加入成功的人脸框位置。顺序和入参中 Images 或 Urls 的顺序一致。
      */
     public void setSucFaceRects(FaceRect [] SucFaceRects) {
@@ -177,7 +177,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -185,7 +185,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -193,7 +193,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -201,7 +201,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -209,7 +209,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SucFaceNum", this.SucFaceNum);

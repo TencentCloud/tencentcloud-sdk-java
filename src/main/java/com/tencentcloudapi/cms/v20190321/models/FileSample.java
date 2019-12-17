@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileSample  extends AbstractModel{
+public class FileSample extends AbstractModel{
 
     /**
     * 文件md5
@@ -44,7 +44,7 @@ public class FileSample  extends AbstractModel{
     private String FileUrl;
 
     /**
-     * 获取文件md5
+     * Get 文件md5 
      * @return FileMd5 文件md5
      */
     public String getFileMd5() {
@@ -52,7 +52,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 设置文件md5
+     * Set 文件md5
      * @param FileMd5 文件md5
      */
     public void setFileMd5(String FileMd5) {
@@ -60,7 +60,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 获取文件名称
+     * Get 文件名称 
      * @return FileName 文件名称
      */
     public String getFileName() {
@@ -68,7 +68,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 设置文件名称
+     * Set 文件名称
      * @param FileName 文件名称
      */
     public void setFileName(String FileName) {
@@ -76,7 +76,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 获取文件url
+     * Get 文件url 
      * @return FileUrl 文件url
      */
     public String getFileUrl() {
@@ -84,7 +84,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 设置文件url
+     * Set 文件url
      * @param FileUrl 文件url
      */
     public void setFileUrl(String FileUrl) {
@@ -92,7 +92,7 @@ public class FileSample  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImpactedHost  extends AbstractModel{
+public class ImpactedHost extends AbstractModel{
 
     /**
     * 漏洞ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机IP。
@@ -79,7 +79,7 @@ public class ImpactedHost  extends AbstractModel{
     */
     @SerializedName("VulId")
     @Expose
-    private Integer VulId;
+    private Long VulId;
 
     /**
     * 是否为专业版。
@@ -89,23 +89,23 @@ public class ImpactedHost  extends AbstractModel{
     private Boolean IsProVersion;
 
     /**
-     * 获取漏洞ID。
+     * Get 漏洞ID。 
      * @return Id 漏洞ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置漏洞ID。
+     * Set 漏洞ID。
      * @param Id 漏洞ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -113,7 +113,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -121,7 +121,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取主机名称。
+     * Get 主机名称。 
      * @return MachineName 主机名称。
      */
     public String getMachineName() {
@@ -129,7 +129,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称。
+     * Set 主机名称。
      * @param MachineName 主机名称。
      */
     public void setMachineName(String MachineName) {
@@ -137,7 +137,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取最后检测时间。
+     * Get 最后检测时间。 
      * @return LastScanTime 最后检测时间。
      */
     public String getLastScanTime() {
@@ -145,7 +145,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置最后检测时间。
+     * Set 最后检测时间。
      * @param LastScanTime 最后检测时间。
      */
     public void setLastScanTime(String LastScanTime) {
@@ -153,10 +153,10 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞状态。
+     * Get 漏洞状态。
 <li>UN_OPERATED ：待处理</li>
 <li>SCANING : 扫描中</li>
-<li>FIXED : 已修复</li>
+<li>FIXED : 已修复</li> 
      * @return VulStatus 漏洞状态。
 <li>UN_OPERATED ：待处理</li>
 <li>SCANING : 扫描中</li>
@@ -167,7 +167,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞状态。
+     * Set 漏洞状态。
 <li>UN_OPERATED ：待处理</li>
 <li>SCANING : 扫描中</li>
 <li>FIXED : 已修复</li>
@@ -181,7 +181,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一标识UUID。
+     * Get 云镜客户端唯一标识UUID。 
      * @return Uuid 云镜客户端唯一标识UUID。
      */
     public String getUuid() {
@@ -189,7 +189,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一标识UUID。
+     * Set 云镜客户端唯一标识UUID。
      * @param Uuid 云镜客户端唯一标识UUID。
      */
     public void setUuid(String Uuid) {
@@ -197,7 +197,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述。
+     * Get 漏洞描述。 
      * @return Description 漏洞描述。
      */
     public String getDescription() {
@@ -205,7 +205,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述。
+     * Set 漏洞描述。
      * @param Description 漏洞描述。
      */
     public void setDescription(String Description) {
@@ -213,23 +213,23 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞种类ID。
+     * Get 漏洞种类ID。 
      * @return VulId 漏洞种类ID。
      */
-    public Integer getVulId() {
+    public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * 设置漏洞种类ID。
+     * Set 漏洞种类ID。
      * @param VulId 漏洞种类ID。
      */
-    public void setVulId(Integer VulId) {
+    public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * 获取是否为专业版。
+     * Get 是否为专业版。 
      * @return IsProVersion 是否为专业版。
      */
     public Boolean getIsProVersion() {
@@ -237,7 +237,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 设置是否为专业版。
+     * Set 是否为专业版。
      * @param IsProVersion 是否为专业版。
      */
     public void setIsProVersion(Boolean IsProVersion) {
@@ -245,7 +245,7 @@ public class ImpactedHost  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

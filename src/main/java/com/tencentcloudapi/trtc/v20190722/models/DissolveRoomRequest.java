@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DissolveRoomRequest  extends AbstractModel{
+public class DissolveRoomRequest extends AbstractModel{
 
     /**
     * TRTC的SDKAppId。
@@ -37,7 +37,7 @@ public class DissolveRoomRequest  extends AbstractModel{
     private Long RoomId;
 
     /**
-     * 获取TRTC的SDKAppId。
+     * Get TRTC的SDKAppId。 
      * @return SdkAppId TRTC的SDKAppId。
      */
     public Long getSdkAppId() {
@@ -45,7 +45,7 @@ public class DissolveRoomRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TRTC的SDKAppId。
+     * Set TRTC的SDKAppId。
      * @param SdkAppId TRTC的SDKAppId。
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -53,7 +53,7 @@ public class DissolveRoomRequest  extends AbstractModel{
     }
 
     /**
-     * 获取房间号。
+     * Get 房间号。 
      * @return RoomId 房间号。
      */
     public Long getRoomId() {
@@ -61,7 +61,7 @@ public class DissolveRoomRequest  extends AbstractModel{
     }
 
     /**
-     * 设置房间号。
+     * Set 房间号。
      * @param RoomId 房间号。
      */
     public void setRoomId(Long RoomId) {
@@ -69,7 +69,7 @@ public class DissolveRoomRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

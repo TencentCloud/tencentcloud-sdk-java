@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTCPListenersRequest  extends AbstractModel{
+public class CreateTCPListenersRequest extends AbstractModel{
 
     /**
     * 监听器名称。
@@ -93,7 +93,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     private Long [] RealServerPorts;
 
     /**
-     * 获取监听器名称。
+     * Get 监听器名称。 
      * @return ListenerName 监听器名称。
      */
     public String getListenerName() {
@@ -101,7 +101,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称。
+     * Set 监听器名称。
      * @param ListenerName 监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -109,7 +109,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口列表。
+     * Get 监听器端口列表。 
      * @return Ports 监听器端口列表。
      */
     public Long [] getPorts() {
@@ -117,7 +117,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口列表。
+     * Set 监听器端口列表。
      * @param Ports 监听器端口列表。
      */
     public void setPorts(Long [] Ports) {
@@ -125,7 +125,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Get 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。 
      * @return Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public String getScheduler() {
@@ -133,7 +133,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Set 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      * @param Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public void setScheduler(String Scheduler) {
@@ -141,7 +141,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
+     * Get 源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查 
      * @return HealthCheck 源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
      */
     public Long getHealthCheck() {
@@ -149,7 +149,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
+     * Set 源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
      * @param HealthCheck 源站是否开启健康检查：1开启，0关闭，UDP监听器不支持健康检查
      */
     public void setHealthCheck(Long HealthCheck) {
@@ -157,7 +157,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+     * Get 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。 
      * @return RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
      */
     public String getRealServerType() {
@@ -165,7 +165,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+     * Set 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
      * @param RealServerType 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
      */
     public void setRealServerType(String RealServerType) {
@@ -173,7 +173,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getProxyId() {
@@ -181,7 +181,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -189,7 +189,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
@@ -197,7 +197,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -205,7 +205,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。 
      * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      */
     public Long getDelayLoop() {
@@ -213,7 +213,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      */
     public void setDelayLoop(Long DelayLoop) {
@@ -221,7 +221,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。 
      * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      */
     public Long getConnectTimeout() {
@@ -229,7 +229,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      */
     public void setConnectTimeout(Long ConnectTimeout) {
@@ -237,7 +237,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
+     * Get 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。 
      * @return RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      */
     public Long [] getRealServerPorts() {
@@ -245,7 +245,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
+     * Set 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      * @param RealServerPorts 源站端口列表，该参数仅支持v1版本监听器和通道组监听器。
      */
     public void setRealServerPorts(Long [] RealServerPorts) {
@@ -253,7 +253,7 @@ public class CreateTCPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);

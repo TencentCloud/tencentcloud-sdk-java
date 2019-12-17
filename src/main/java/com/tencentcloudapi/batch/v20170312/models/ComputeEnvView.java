@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeEnvView  extends AbstractModel{
+public class ComputeEnvView extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -72,7 +72,7 @@ public class ComputeEnvView  extends AbstractModel{
     private Integer DesiredComputeNodeCount;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -80,7 +80,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -88,7 +88,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境名称
+     * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
     public String getEnvName() {
@@ -96,7 +96,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
      * @param EnvName 计算环境名称
      */
     public void setEnvName(String EnvName) {
@@ -104,7 +104,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -112,7 +112,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -120,7 +120,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -128,7 +128,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -136,7 +136,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点统计指标
+     * Get 计算节点统计指标 
      * @return ComputeNodeMetrics 计算节点统计指标
      */
     public ComputeNodeMetrics getComputeNodeMetrics() {
@@ -144,7 +144,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点统计指标
+     * Set 计算节点统计指标
      * @param ComputeNodeMetrics 计算节点统计指标
      */
     public void setComputeNodeMetrics(ComputeNodeMetrics ComputeNodeMetrics) {
@@ -152,7 +152,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境类型
+     * Get 计算环境类型 
      * @return EnvType 计算环境类型
      */
     public String getEnvType() {
@@ -160,7 +160,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境类型
+     * Set 计算环境类型
      * @param EnvType 计算环境类型
      */
     public void setEnvType(String EnvType) {
@@ -168,7 +168,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -176,7 +176,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -184,7 +184,7 @@ public class ComputeEnvView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

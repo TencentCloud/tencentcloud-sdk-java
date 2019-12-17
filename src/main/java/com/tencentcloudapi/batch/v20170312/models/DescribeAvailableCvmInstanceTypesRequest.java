@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
+public class DescribeAvailableCvmInstanceTypesRequest extends AbstractModel{
 
     /**
     * 过滤条件。
@@ -32,9 +32,9 @@ public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
-<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
+<li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li> 
      * @return Filters 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
@@ -44,7 +44,7 @@ public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> instance-family String - 是否必填：否 -（过滤条件）按照机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
      * @param Filters 过滤条件。
@@ -56,7 +56,7 @@ public class DescribeAvailableCvmInstanceTypesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

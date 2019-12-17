@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaInputInfo  extends AbstractModel{
+public class MediaInputInfo extends AbstractModel{
 
     /**
     * 视频处理对象的类型，现在仅支持 COS。
@@ -37,7 +37,7 @@ public class MediaInputInfo  extends AbstractModel{
     private CosInputInfo CosInputInfo;
 
     /**
-     * 获取视频处理对象的类型，现在仅支持 COS。
+     * Get 视频处理对象的类型，现在仅支持 COS。 
      * @return Type 视频处理对象的类型，现在仅支持 COS。
      */
     public String getType() {
@@ -45,7 +45,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理对象的类型，现在仅支持 COS。
+     * Set 视频处理对象的类型，现在仅支持 COS。
      * @param Type 视频处理对象的类型，现在仅支持 COS。
      */
     public void setType(String Type) {
@@ -53,7 +53,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+     * Get 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。 
      * @return CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
      */
     public CosInputInfo getCosInputInfo() {
@@ -61,7 +61,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+     * Set 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
      * @param CosInputInfo 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
      */
     public void setCosInputInfo(CosInputInfo CosInputInfo) {
@@ -69,7 +69,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

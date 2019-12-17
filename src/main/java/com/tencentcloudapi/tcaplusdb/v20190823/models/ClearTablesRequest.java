@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClearTablesRequest  extends AbstractModel{
+public class ClearTablesRequest extends AbstractModel{
 
     /**
     * 表所属应用实例ID
@@ -37,7 +37,7 @@ public class ClearTablesRequest  extends AbstractModel{
     private SelectedTableInfo [] SelectedTables;
 
     /**
-     * 获取表所属应用实例ID
+     * Get 表所属应用实例ID 
      * @return ApplicationId 表所属应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class ClearTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表所属应用实例ID
+     * Set 表所属应用实例ID
      * @param ApplicationId 表所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class ClearTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待清理表信息列表
+     * Get 待清理表信息列表 
      * @return SelectedTables 待清理表信息列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -61,7 +61,7 @@ public class ClearTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待清理表信息列表
+     * Set 待清理表信息列表
      * @param SelectedTables 待清理表信息列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -69,7 +69,7 @@ public class ClearTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyChipBurnInfoResponse  extends AbstractModel{
+public class VerifyChipBurnInfoResponse extends AbstractModel{
 
     /**
     * 验证结果
@@ -51,7 +51,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取验证结果
+     * Get 验证结果 
      * @return Pass 验证结果
      */
     public Boolean getPass() {
@@ -59,7 +59,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置验证结果
+     * Set 验证结果
      * @param Pass 验证结果
      */
     public void setPass(Boolean Pass) {
@@ -67,7 +67,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已验证次数
+     * Get 已验证次数 
      * @return VerifiedTimes 已验证次数
      */
     public Long getVerifiedTimes() {
@@ -75,7 +75,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已验证次数
+     * Set 已验证次数
      * @param VerifiedTimes 已验证次数
      */
     public void setVerifiedTimes(Long VerifiedTimes) {
@@ -83,7 +83,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剩余验证次数
+     * Get 剩余验证次数 
      * @return LeftTimes 剩余验证次数
      */
     public Long getLeftTimes() {
@@ -91,7 +91,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剩余验证次数
+     * Set 剩余验证次数
      * @param LeftTimes 剩余验证次数
      */
     public void setLeftTimes(Long LeftTimes) {
@@ -99,7 +99,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class VerifyChipBurnInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pass", this.Pass);

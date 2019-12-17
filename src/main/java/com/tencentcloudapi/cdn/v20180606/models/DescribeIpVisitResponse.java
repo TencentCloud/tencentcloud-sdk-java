@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpVisitResponse  extends AbstractModel{
+public class DescribeIpVisitResponse extends AbstractModel{
 
     /**
     * 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
@@ -44,7 +44,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+     * Get 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。 
      * @return Interval 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
      */
     public String getInterval() {
@@ -52,7 +52,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
+     * Set 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
      * @param Interval 数据统计的时间粒度，支持5min,  day，分别表示5分钟，1天的时间粒度。
      */
     public void setInterval(String Interval) {
@@ -60,7 +60,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各个资源的回源数据详情。
+     * Get 各个资源的回源数据详情。 
      * @return Data 各个资源的回源数据详情。
      */
     public ResourceData [] getData() {
@@ -68,7 +68,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各个资源的回源数据详情。
+     * Set 各个资源的回源数据详情。
      * @param Data 各个资源的回源数据详情。
      */
     public void setData(ResourceData [] Data) {
@@ -76,7 +76,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeIpVisitResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Interval", this.Interval);

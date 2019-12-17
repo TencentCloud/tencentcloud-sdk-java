@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBashRulesResponse  extends AbstractModel{
+public class DescribeBashRulesResponse extends AbstractModel{
 
     /**
     * 列表内容
@@ -34,7 +34,7 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取列表内容
+     * Get 列表内容 
      * @return List 列表内容
      */
     public BashRule [] getList() {
@@ -52,7 +52,7 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置列表内容
+     * Set 列表内容
      * @param List 列表内容
      */
     public void setList(BashRule [] List) {
@@ -60,23 +60,23 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总条数
+     * Get 总条数 
      * @return TotalCount 总条数
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置总条数
+     * Set 总条数
      * @param TotalCount 总条数
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeBashRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "List.", this.List);

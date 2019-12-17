@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentimentAnalysisResponse  extends AbstractModel{
+public class SentimentAnalysisResponse extends AbstractModel{
 
     /**
     * 负面情感概率
@@ -51,7 +51,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取负面情感概率
+     * Get 负面情感概率 
      * @return Negative 负面情感概率
      */
     public Float getNegative() {
@@ -59,7 +59,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置负面情感概率
+     * Set 负面情感概率
      * @param Negative 负面情感概率
      */
     public void setNegative(Float Negative) {
@@ -67,7 +67,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取正面情感概率
+     * Get 正面情感概率 
      * @return Positive 正面情感概率
      */
     public Float getPositive() {
@@ -75,7 +75,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置正面情感概率
+     * Set 正面情感概率
      * @param Positive 正面情感概率
      */
     public void setPositive(Float Positive) {
@@ -83,7 +83,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取情感属性
+     * Get 情感属性 
      * @return Sentiment 情感属性
      */
     public String getSentiment() {
@@ -91,7 +91,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置情感属性
+     * Set 情感属性
      * @param Sentiment 情感属性
      */
     public void setSentiment(String Sentiment) {
@@ -99,7 +99,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class SentimentAnalysisResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Negative", this.Negative);

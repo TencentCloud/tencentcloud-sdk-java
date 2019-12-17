@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportKeyMaterialRequest  extends AbstractModel{
+public class ImportKeyMaterialRequest extends AbstractModel{
 
     /**
     * 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
@@ -51,7 +51,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     private Long ValidTo;
 
     /**
-     * 获取使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+     * Get 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。 
      * @return EncryptedKeyMaterial 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
      */
     public String getEncryptedKeyMaterial() {
@@ -59,7 +59,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 设置使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
+     * Set 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
      * @param EncryptedKeyMaterial 使用GetParametersForImport 返回的PublicKey加密后的密钥材料base64编码。对于国密版本region的KMS，导入的密钥材料长度要求为 128 bit，FIPS版本region的KMS， 导入的密钥材料长度要求为 256 bit。
      */
     public void setEncryptedKeyMaterial(String EncryptedKeyMaterial) {
@@ -67,7 +67,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通过调用GetParametersForImport获得的导入令牌。
+     * Get 通过调用GetParametersForImport获得的导入令牌。 
      * @return ImportToken 通过调用GetParametersForImport获得的导入令牌。
      */
     public String getImportToken() {
@@ -75,7 +75,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通过调用GetParametersForImport获得的导入令牌。
+     * Set 通过调用GetParametersForImport获得的导入令牌。
      * @param ImportToken 通过调用GetParametersForImport获得的导入令牌。
      */
     public void setImportToken(String ImportToken) {
@@ -83,7 +83,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+     * Get 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。 
      * @return KeyId 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
      */
     public String getKeyId() {
@@ -91,7 +91,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
+     * Set 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
      * @param KeyId 指定导入密钥材料的CMK，需要和GetParametersForImport 指定的CMK相同。
      */
     public void setKeyId(String KeyId) {
@@ -99,7 +99,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * Get 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。 
      * @return ValidTo 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
      */
     public Long getValidTo() {
@@ -107,7 +107,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
+     * Set 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
      * @param ValidTo 密钥材料过期时间 unix 时间戳，不指定或者 0 表示密钥材料不会过期，若指定过期时间，需要大于当前时间点，最大支持 2147443200。
      */
     public void setValidTo(Long ValidTo) {
@@ -115,7 +115,7 @@ public class ImportKeyMaterialRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EncryptedKeyMaterial", this.EncryptedKeyMaterial);

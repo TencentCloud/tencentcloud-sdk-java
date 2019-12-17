@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentPayDealsRequest  extends AbstractModel{
+public class AgentPayDealsRequest extends AbstractModel{
 
     /**
     * 订单所有者uin
@@ -44,7 +44,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     private String [] DealNames;
 
     /**
-     * 获取订单所有者uin
+     * Get 订单所有者uin 
      * @return OwnerUin 订单所有者uin
      */
     public String getOwnerUin() {
@@ -52,7 +52,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单所有者uin
+     * Set 订单所有者uin
      * @param OwnerUin 订单所有者uin
      */
     public void setOwnerUin(String OwnerUin) {
@@ -60,7 +60,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代付标志，1：代付；0：自付
+     * Get 代付标志，1：代付；0：自付 
      * @return AgentPay 代付标志，1：代付；0：自付
      */
     public Integer getAgentPay() {
@@ -68,7 +68,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代付标志，1：代付；0：自付
+     * Set 代付标志，1：代付；0：自付
      * @param AgentPay 代付标志，1：代付；0：自付
      */
     public void setAgentPay(Integer AgentPay) {
@@ -76,7 +76,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取订单号数组
+     * Get 订单号数组 
      * @return DealNames 订单号数组
      */
     public String [] getDealNames() {
@@ -84,7 +84,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单号数组
+     * Set 订单号数组
      * @param DealNames 订单号数组
      */
     public void setDealNames(String [] DealNames) {
@@ -92,7 +92,7 @@ public class AgentPayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);

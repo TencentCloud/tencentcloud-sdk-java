@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisHighlightItem  extends AbstractModel{
+public class MediaAiAnalysisHighlightItem extends AbstractModel{
 
     /**
     * 智能精彩集锦地址。
@@ -58,7 +58,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     private HighlightSegmentItem [] SegmentSet;
 
     /**
-     * 获取智能精彩集锦地址。
+     * Get 智能精彩集锦地址。 
      * @return HighlightUrl 智能精彩集锦地址。
      */
     public String getHighlightUrl() {
@@ -66,7 +66,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦地址。
+     * Set 智能精彩集锦地址。
      * @param HighlightUrl 智能精彩集锦地址。
      */
     public void setHighlightUrl(String HighlightUrl) {
@@ -74,7 +74,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能精彩集锦封面地址。
+     * Get 智能精彩集锦封面地址。 
      * @return CovImgUrl 智能精彩集锦封面地址。
      */
     public String getCovImgUrl() {
@@ -82,7 +82,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦封面地址。
+     * Set 智能精彩集锦封面地址。
      * @param CovImgUrl 智能精彩集锦封面地址。
      */
     public void setCovImgUrl(String CovImgUrl) {
@@ -90,7 +90,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能精彩集锦的可信度，取值范围是 0 到 100。
+     * Get 智能精彩集锦的可信度，取值范围是 0 到 100。 
      * @return Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
      */
     public Float getConfidence() {
@@ -98,7 +98,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦的可信度，取值范围是 0 到 100。
+     * Set 智能精彩集锦的可信度，取值范围是 0 到 100。
      * @param Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
      */
     public void setConfidence(Float Confidence) {
@@ -106,7 +106,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能精彩集锦持续时间。
+     * Get 智能精彩集锦持续时间。 
      * @return Duration 智能精彩集锦持续时间。
      */
     public Float getDuration() {
@@ -114,7 +114,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦持续时间。
+     * Set 智能精彩集锦持续时间。
      * @param Duration 智能精彩集锦持续时间。
      */
     public void setDuration(Float Duration) {
@@ -122,7 +122,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * Get 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。 
      * @return SegmentSet 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
      */
     public HighlightSegmentItem [] getSegmentSet() {
@@ -130,7 +130,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * Set 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
      * @param SegmentSet 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
      */
     public void setSegmentSet(HighlightSegmentItem [] SegmentSet) {
@@ -138,7 +138,7 @@ public class MediaAiAnalysisHighlightItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HighlightUrl", this.HighlightUrl);

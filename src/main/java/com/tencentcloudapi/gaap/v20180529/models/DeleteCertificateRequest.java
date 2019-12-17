@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCertificateRequest  extends AbstractModel{
+public class DeleteCertificateRequest extends AbstractModel{
 
     /**
     * 需要删除的证书ID。
@@ -30,7 +30,7 @@ public class DeleteCertificateRequest  extends AbstractModel{
     private String CertificateId;
 
     /**
-     * 获取需要删除的证书ID。
+     * Get 需要删除的证书ID。 
      * @return CertificateId 需要删除的证书ID。
      */
     public String getCertificateId() {
@@ -38,7 +38,7 @@ public class DeleteCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的证书ID。
+     * Set 需要删除的证书ID。
      * @param CertificateId 需要删除的证书ID。
      */
     public void setCertificateId(String CertificateId) {
@@ -46,7 +46,7 @@ public class DeleteCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);

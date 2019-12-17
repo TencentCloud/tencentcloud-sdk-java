@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoL7Listener  extends AbstractModel{
+public class DevicesBindInfoL7Listener extends AbstractModel{
 
     /**
     * 七层监听器实例ID。
@@ -51,7 +51,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     private DevicesBindInfoRule [] RuleSet;
 
     /**
-     * 获取七层监听器实例ID。
+     * Get 七层监听器实例ID。 
      * @return ListenerId 七层监听器实例ID。
      */
     public String getListenerId() {
@@ -59,7 +59,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID。
+     * Set 七层监听器实例ID。
      * @param ListenerId 七层监听器实例ID。
      */
     public void setListenerId(String ListenerId) {
@@ -67,7 +67,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器协议类型，可选值：http,https。
+     * Get 七层监听器协议类型，可选值：http,https。 
      * @return Protocol 七层监听器协议类型，可选值：http,https。
      */
     public String getProtocol() {
@@ -75,7 +75,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器协议类型，可选值：http,https。
+     * Set 七层监听器协议类型，可选值：http,https。
      * @param Protocol 七层监听器协议类型，可选值：http,https。
      */
     public void setProtocol(String Protocol) {
@@ -83,7 +83,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器的监听端口。
+     * Get 七层监听器的监听端口。 
      * @return LoadBalancerPort 七层监听器的监听端口。
      */
     public Integer getLoadBalancerPort() {
@@ -91,7 +91,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器的监听端口。
+     * Set 七层监听器的监听端口。
      * @param LoadBalancerPort 七层监听器的监听端口。
      */
     public void setLoadBalancerPort(Integer LoadBalancerPort) {
@@ -99,7 +99,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 获取返回的转发规则列表。
+     * Get 返回的转发规则列表。 
      * @return RuleSet 返回的转发规则列表。
      */
     public DevicesBindInfoRule [] getRuleSet() {
@@ -107,7 +107,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 设置返回的转发规则列表。
+     * Set 返回的转发规则列表。
      * @param RuleSet 返回的转发规则列表。
      */
     public void setRuleSet(DevicesBindInfoRule [] RuleSet) {
@@ -115,7 +115,7 @@ public class DevicesBindInfoL7Listener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

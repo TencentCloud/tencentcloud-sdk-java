@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvResponse  extends AbstractModel{
+public class DescribeComputeEnvResponse extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -86,7 +86,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -94,7 +94,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -102,7 +102,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境名称
+     * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
     public String getEnvName() {
@@ -110,7 +110,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
      * @param EnvName 计算环境名称
      */
     public void setEnvName(String EnvName) {
@@ -118,7 +118,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -126,7 +126,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -134,7 +134,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境创建时间
+     * Get 计算环境创建时间 
      * @return CreateTime 计算环境创建时间
      */
     public String getCreateTime() {
@@ -142,7 +142,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境创建时间
+     * Set 计算环境创建时间
      * @param CreateTime 计算环境创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -150,7 +150,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点列表信息
+     * Get 计算节点列表信息 
      * @return ComputeNodeSet 计算节点列表信息
      */
     public ComputeNode [] getComputeNodeSet() {
@@ -158,7 +158,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点列表信息
+     * Set 计算节点列表信息
      * @param ComputeNodeSet 计算节点列表信息
      */
     public void setComputeNodeSet(ComputeNode [] ComputeNodeSet) {
@@ -166,7 +166,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点统计指标
+     * Get 计算节点统计指标 
      * @return ComputeNodeMetrics 计算节点统计指标
      */
     public ComputeNodeMetrics getComputeNodeMetrics() {
@@ -174,7 +174,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点统计指标
+     * Set 计算节点统计指标
      * @param ComputeNodeMetrics 计算节点统计指标
      */
     public void setComputeNodeMetrics(ComputeNodeMetrics ComputeNodeMetrics) {
@@ -182,7 +182,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -190,7 +190,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -198,7 +198,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境类型
+     * Get 计算环境类型 
      * @return EnvType 计算环境类型
      */
     public String getEnvType() {
@@ -206,7 +206,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境类型
+     * Set 计算环境类型
      * @param EnvType 计算环境类型
      */
     public void setEnvType(String EnvType) {
@@ -214,7 +214,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class DescribeComputeEnvResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

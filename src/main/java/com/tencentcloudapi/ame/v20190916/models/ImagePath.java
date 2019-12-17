@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImagePath  extends AbstractModel{
+public class ImagePath extends AbstractModel{
 
     /**
     * station图片大小及类别
@@ -39,8 +39,8 @@ public class ImagePath  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取station图片大小及类别
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get station图片大小及类别
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Key station图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class ImagePath  extends AbstractModel{
     }
 
     /**
-     * 设置station图片大小及类别
+     * Set station图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Key station图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class ImagePath  extends AbstractModel{
     }
 
     /**
-     * 获取station图片地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get station图片地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Value station图片地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class ImagePath  extends AbstractModel{
     }
 
     /**
-     * 设置station图片地址
+     * Set station图片地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Value station图片地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class ImagePath  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

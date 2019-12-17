@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputVideoStream  extends AbstractModel{
+public class OutputVideoStream extends AbstractModel{
 
     /**
     * 视频流的编码格式，可选值：
@@ -40,9 +40,9 @@ public class OutputVideoStream  extends AbstractModel{
     private Long Fps;
 
     /**
-     * 获取视频流的编码格式，可选值：
+     * Get 视频流的编码格式，可选值：
 <li>libx264：H.264 编码 </li>
-默认值：libx264。
+默认值：libx264。 
      * @return Codec 视频流的编码格式，可选值：
 <li>libx264：H.264 编码 </li>
 默认值：libx264。
@@ -52,7 +52,7 @@ public class OutputVideoStream  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的编码格式，可选值：
+     * Set 视频流的编码格式，可选值：
 <li>libx264：H.264 编码 </li>
 默认值：libx264。
      * @param Codec 视频流的编码格式，可选值：
@@ -64,8 +64,8 @@ public class OutputVideoStream  extends AbstractModel{
     }
 
     /**
-     * 获取视频帧率，取值范围：[0, 60]，单位：Hz。
-默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
+     * Get 视频帧率，取值范围：[0, 60]，单位：Hz。
+默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。 
      * @return Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
      */
@@ -74,7 +74,7 @@ public class OutputVideoStream  extends AbstractModel{
     }
 
     /**
-     * 设置视频帧率，取值范围：[0, 60]，单位：Hz。
+     * Set 视频帧率，取值范围：[0, 60]，单位：Hz。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
      * @param Fps 视频帧率，取值范围：[0, 60]，单位：Hz。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频帧率一致。
@@ -84,7 +84,7 @@ public class OutputVideoStream  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Codec", this.Codec);

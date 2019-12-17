@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetNatGatewayConnectionRequest  extends AbstractModel{
+public class ResetNatGatewayConnectionRequest extends AbstractModel{
 
     /**
     * NAT网关ID。
@@ -37,7 +37,7 @@ public class ResetNatGatewayConnectionRequest  extends AbstractModel{
     private Integer MaxConcurrentConnection;
 
     /**
-     * 获取NAT网关ID。
+     * Get NAT网关ID。 
      * @return NatGatewayId NAT网关ID。
      */
     public String getNatGatewayId() {
@@ -45,7 +45,7 @@ public class ResetNatGatewayConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID。
+     * Set NAT网关ID。
      * @param NatGatewayId NAT网关ID。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -53,7 +53,7 @@ public class ResetNatGatewayConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * Get NAT网关并发连接上限，形如：1000000、3000000、10000000。 
      * @return MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
      */
     public Integer getMaxConcurrentConnection() {
@@ -61,7 +61,7 @@ public class ResetNatGatewayConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * Set NAT网关并发连接上限，形如：1000000、3000000、10000000。
      * @param MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
      */
     public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
@@ -69,7 +69,7 @@ public class ResetNatGatewayConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

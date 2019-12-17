@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInstance  extends AbstractModel{
+public class DBInstance extends AbstractModel{
 
     /**
     * 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
@@ -184,7 +184,7 @@ public class DBInstance  extends AbstractModel{
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
-     * 获取实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
+     * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段 
      * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
     public String getRegion() {
@@ -192,7 +192,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
+     * Set 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      * @param Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段
      */
     public void setRegion(String Region) {
@@ -200,7 +200,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
+     * Get 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段 
      * @return Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      */
     public String getZone() {
@@ -208,7 +208,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
+     * Set 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      * @param Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段
      */
     public void setZone(String Zone) {
@@ -216,7 +216,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -224,7 +224,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -232,7 +232,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -240,7 +240,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -248,7 +248,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取SubnetId
+     * Get SubnetId 
      * @return SubnetId SubnetId
      */
     public String getSubnetId() {
@@ -256,7 +256,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置SubnetId
+     * Set SubnetId
      * @param SubnetId SubnetId
      */
     public void setSubnetId(String SubnetId) {
@@ -264,7 +264,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return DBInstanceId 实例ID
      */
     public String getDBInstanceId() {
@@ -272,7 +272,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param DBInstanceId 实例ID
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -280,7 +280,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return DBInstanceName 实例名称
      */
     public String getDBInstanceName() {
@@ -288,7 +288,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param DBInstanceName 实例名称
      */
     public void setDBInstanceName(String DBInstanceName) {
@@ -296,7 +296,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态
+     * Get 实例状态 
      * @return DBInstanceStatus 实例状态
      */
     public String getDBInstanceStatus() {
@@ -304,7 +304,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态
+     * Set 实例状态
      * @param DBInstanceStatus 实例状态
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
@@ -312,7 +312,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例分配的内存大小，单位：GB
+     * Get 实例分配的内存大小，单位：GB 
      * @return DBInstanceMemory 实例分配的内存大小，单位：GB
      */
     public Integer getDBInstanceMemory() {
@@ -320,7 +320,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例分配的内存大小，单位：GB
+     * Set 实例分配的内存大小，单位：GB
      * @param DBInstanceMemory 实例分配的内存大小，单位：GB
      */
     public void setDBInstanceMemory(Integer DBInstanceMemory) {
@@ -328,7 +328,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例分配的存储空间大小，单位：GB
+     * Get 实例分配的存储空间大小，单位：GB 
      * @return DBInstanceStorage 实例分配的存储空间大小，单位：GB
      */
     public Integer getDBInstanceStorage() {
@@ -336,7 +336,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例分配的存储空间大小，单位：GB
+     * Set 实例分配的存储空间大小，单位：GB
      * @param DBInstanceStorage 实例分配的存储空间大小，单位：GB
      */
     public void setDBInstanceStorage(Integer DBInstanceStorage) {
@@ -344,7 +344,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例分配的CPU数量，单位：个
+     * Get 实例分配的CPU数量，单位：个 
      * @return DBInstanceCpu 实例分配的CPU数量，单位：个
      */
     public Integer getDBInstanceCpu() {
@@ -352,7 +352,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例分配的CPU数量，单位：个
+     * Set 实例分配的CPU数量，单位：个
      * @param DBInstanceCpu 实例分配的CPU数量，单位：个
      */
     public void setDBInstanceCpu(Integer DBInstanceCpu) {
@@ -360,7 +360,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取售卖规格ID
+     * Get 售卖规格ID 
      * @return DBInstanceClass 售卖规格ID
      */
     public String getDBInstanceClass() {
@@ -368,7 +368,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置售卖规格ID
+     * Set 售卖规格ID
      * @param DBInstanceClass 售卖规格ID
      */
     public void setDBInstanceClass(String DBInstanceClass) {
@@ -376,7 +376,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
+     * Get 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例） 
      * @return DBInstanceType 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
      */
     public String getDBInstanceType() {
@@ -384,7 +384,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
+     * Set 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
      * @param DBInstanceType 实例类型，类型有：1、primary（主实例）；2、readonly（只读实例）；3、guard（灾备实例）；4、temp（临时实例）
      */
     public void setDBInstanceType(String DBInstanceType) {
@@ -392,7 +392,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例版本，目前只支持standard（双机高可用版, 一主一从）
+     * Get 实例版本，目前只支持standard（双机高可用版, 一主一从） 
      * @return DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）
      */
     public String getDBInstanceVersion() {
@@ -400,7 +400,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本，目前只支持standard（双机高可用版, 一主一从）
+     * Set 实例版本，目前只支持standard（双机高可用版, 一主一从）
      * @param DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）
      */
     public void setDBInstanceVersion(String DBInstanceVersion) {
@@ -408,7 +408,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例DB字符集
+     * Get 实例DB字符集 
      * @return DBCharset 实例DB字符集
      */
     public String getDBCharset() {
@@ -416,7 +416,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例DB字符集
+     * Set 实例DB字符集
      * @param DBCharset 实例DB字符集
      */
     public void setDBCharset(String DBCharset) {
@@ -424,7 +424,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取PostgreSQL内核版本
+     * Get PostgreSQL内核版本 
      * @return DBVersion PostgreSQL内核版本
      */
     public String getDBVersion() {
@@ -432,7 +432,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置PostgreSQL内核版本
+     * Set PostgreSQL内核版本
      * @param DBVersion PostgreSQL内核版本
      */
     public void setDBVersion(String DBVersion) {
@@ -440,7 +440,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
      */
     public String getCreateTime() {
@@ -448,7 +448,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param CreateTime 实例创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -456,7 +456,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例执行最后一次更新的时间
+     * Get 实例执行最后一次更新的时间 
      * @return UpdateTime 实例执行最后一次更新的时间
      */
     public String getUpdateTime() {
@@ -464,7 +464,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例执行最后一次更新的时间
+     * Set 实例执行最后一次更新的时间
      * @param UpdateTime 实例执行最后一次更新的时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -472,7 +472,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间
+     * Get 实例到期时间 
      * @return ExpireTime 实例到期时间
      */
     public String getExpireTime() {
@@ -480,7 +480,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间
+     * Set 实例到期时间
      * @param ExpireTime 实例到期时间
      */
     public void setExpireTime(String ExpireTime) {
@@ -488,7 +488,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例隔离时间
+     * Get 实例隔离时间 
      * @return IsolatedTime 实例隔离时间
      */
     public String getIsolatedTime() {
@@ -496,7 +496,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例隔离时间
+     * Set 实例隔离时间
      * @param IsolatedTime 实例隔离时间
      */
     public void setIsolatedTime(String IsolatedTime) {
@@ -504,7 +504,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
+     * Get 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费） 
      * @return PayType 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
      */
     public String getPayType() {
@@ -512,7 +512,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
+     * Set 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
      * @param PayType 计费模式，1、prepaid（包年包月,预付费）；2、postpaid（按量计费，后付费）
      */
     public void setPayType(String PayType) {
@@ -520,7 +520,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动续费，1：自动续费，0：不自动续费
+     * Get 是否自动续费，1：自动续费，0：不自动续费 
      * @return AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      */
     public Integer getAutoRenew() {
@@ -528,7 +528,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动续费，1：自动续费，0：不自动续费
+     * Set 是否自动续费，1：自动续费，0：不自动续费
      * @param AutoRenew 是否自动续费，1：自动续费，0：不自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -536,7 +536,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例网络连接信息
+     * Get 实例网络连接信息 
      * @return DBInstanceNetInfo 实例网络连接信息
      */
     public DBInstanceNetInfo [] getDBInstanceNetInfo() {
@@ -544,7 +544,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例网络连接信息
+     * Set 实例网络连接信息
      * @param DBInstanceNetInfo 实例网络连接信息
      */
     public void setDBInstanceNetInfo(DBInstanceNetInfo [] DBInstanceNetInfo) {
@@ -552,7 +552,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNetworkConfigRequest  extends AbstractModel{
+public class ModifyNetworkConfigRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -58,7 +58,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+     * Get 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络 
      * @return Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
      */
     public String getOperation() {
@@ -82,7 +82,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+     * Set 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
      * @param Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
      */
     public void setOperation(String Operation) {
@@ -90,7 +90,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VIP地址，changeVip的时候填写，不填则默认分配
+     * Get VIP地址，changeVip的时候填写，不填则默认分配 
      * @return Vip VIP地址，changeVip的时候填写，不填则默认分配
      */
     public String getVip() {
@@ -98,7 +98,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VIP地址，changeVip的时候填写，不填则默认分配
+     * Set VIP地址，changeVip的时候填写，不填则默认分配
      * @param Vip VIP地址，changeVip的时候填写，不填则默认分配
      */
     public void setVip(String Vip) {
@@ -106,7 +106,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Get 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供 
      * @return VpcId 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
      */
     public String getVpcId() {
@@ -114,7 +114,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Set 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
      * @param VpcId 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
      */
     public void setVpcId(String VpcId) {
@@ -122,7 +122,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Get 子网ID，changeVpc、changeBaseToVpc的时候需要提供 
      * @return SubnetId 子网ID，changeVpc、changeBaseToVpc的时候需要提供
      */
     public String getSubnetId() {
@@ -130,7 +130,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Set 子网ID，changeVpc、changeBaseToVpc的时候需要提供
      * @param SubnetId 子网ID，changeVpc、changeBaseToVpc的时候需要提供
      */
     public void setSubnetId(String SubnetId) {
@@ -138,7 +138,7 @@ public class ModifyNetworkConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

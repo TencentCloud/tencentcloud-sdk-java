@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteGroupResponse  extends AbstractModel{
+public class DeleteGroupResponse extends AbstractModel{
 
     /**
     * 删除部署组操作是否成功。
@@ -40,10 +40,10 @@ false：操作失败。
     private String RequestId;
 
     /**
-     * 获取删除部署组操作是否成功。
+     * Get 删除部署组操作是否成功。
 true：操作成功。
 false：操作失败。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 删除部署组操作是否成功。
 true：操作成功。
 false：操作失败。
@@ -54,7 +54,7 @@ false：操作失败。
     }
 
     /**
-     * 设置删除部署组操作是否成功。
+     * Set 删除部署组操作是否成功。
 true：操作成功。
 false：操作失败。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ false：操作失败。
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -76,7 +76,7 @@ false：操作失败。
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -84,7 +84,7 @@ false：操作失败。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

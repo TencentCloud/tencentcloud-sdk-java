@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetAuthenticationRequest  extends AbstractModel{
+public class SetAuthenticationRequest extends AbstractModel{
 
     /**
     * 监听器ID。
@@ -102,7 +102,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     private String [] PolyRealServerCertificateIds;
 
     /**
-     * 获取监听器ID。
+     * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
     public String getListenerId() {
@@ -110,7 +110,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID。
+     * Set 监听器ID。
      * @param ListenerId 监听器ID。
      */
     public void setListenerId(String ListenerId) {
@@ -118,7 +118,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
+     * Get 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。 
      * @return Domain 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
      */
     public String getDomain() {
@@ -126,7 +126,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
+     * Set 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
      * @param Domain 需要进行高级配置的域名，该域名为监听器下的转发规则的域名。
      */
     public void setDomain(String Domain) {
@@ -134,10 +134,10 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取基础认证开关，其中：
+     * Get 基础认证开关，其中：
 0，关闭基础认证；
 1，开启基础认证。
-默认为0。
+默认为0。 
      * @return BasicAuth 基础认证开关，其中：
 0，关闭基础认证；
 1，开启基础认证。
@@ -148,7 +148,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置基础认证开关，其中：
+     * Set 基础认证开关，其中：
 0，关闭基础认证；
 1，开启基础认证。
 默认为0。
@@ -162,10 +162,10 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道认证开关，用于源站对Gaap的认证，其中：
+     * Get 通道认证开关，用于源站对Gaap的认证，其中：
 0，关闭通道认证；
 1，开启通道认证。
-默认为0。
+默认为0。 
      * @return GaapAuth 通道认证开关，用于源站对Gaap的认证，其中：
 0，关闭通道认证；
 1，开启通道认证。
@@ -176,7 +176,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道认证开关，用于源站对Gaap的认证，其中：
+     * Set 通道认证开关，用于源站对Gaap的认证，其中：
 0，关闭通道认证；
 1，开启通道认证。
 默认为0。
@@ -190,10 +190,10 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站认证开关，用于Gaap对服务器的认证，其中：
+     * Get 源站认证开关，用于Gaap对服务器的认证，其中：
 0，关闭源站认证；
 1，开启源站认证。
-默认为0。
+默认为0。 
      * @return RealServerAuth 源站认证开关，用于Gaap对服务器的认证，其中：
 0，关闭源站认证；
 1，开启源站认证。
@@ -204,7 +204,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站认证开关，用于Gaap对服务器的认证，其中：
+     * Set 源站认证开关，用于Gaap对服务器的认证，其中：
 0，关闭源站认证；
 1，开启源站认证。
 默认为0。
@@ -218,7 +218,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取基础认证配置ID，从证书管理页获取。
+     * Get 基础认证配置ID，从证书管理页获取。 
      * @return BasicAuthConfId 基础认证配置ID，从证书管理页获取。
      */
     public String getBasicAuthConfId() {
@@ -226,7 +226,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置基础认证配置ID，从证书管理页获取。
+     * Set 基础认证配置ID，从证书管理页获取。
      * @param BasicAuthConfId 基础认证配置ID，从证书管理页获取。
      */
     public void setBasicAuthConfId(String BasicAuthConfId) {
@@ -234,7 +234,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道SSL证书ID，从证书管理页获取。
+     * Get 通道SSL证书ID，从证书管理页获取。 
      * @return GaapCertificateId 通道SSL证书ID，从证书管理页获取。
      */
     public String getGaapCertificateId() {
@@ -242,7 +242,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道SSL证书ID，从证书管理页获取。
+     * Set 通道SSL证书ID，从证书管理页获取。
      * @param GaapCertificateId 通道SSL证书ID，从证书管理页获取。
      */
     public void setGaapCertificateId(String GaapCertificateId) {
@@ -250,7 +250,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * Get 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数 
      * @return RealServerCertificateId 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public String getRealServerCertificateId() {
@@ -258,7 +258,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * Set 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      * @param RealServerCertificateId 源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public void setRealServerCertificateId(String RealServerCertificateId) {
@@ -266,7 +266,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站证书域名。
+     * Get 源站证书域名。 
      * @return RealServerCertificateDomain 源站证书域名。
      */
     public String getRealServerCertificateDomain() {
@@ -274,7 +274,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站证书域名。
+     * Set 源站证书域名。
      * @param RealServerCertificateDomain 源站证书域名。
      */
     public void setRealServerCertificateDomain(String RealServerCertificateDomain) {
@@ -282,7 +282,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * Get 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数 
      * @return PolyRealServerCertificateIds 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public String [] getPolyRealServerCertificateIds() {
@@ -290,7 +290,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
+     * Set 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      * @param PolyRealServerCertificateIds 多源站CA证书ID，从证书管理页获取。源站认证时，填写该参数或RealServerCertificateId参数
      */
     public void setPolyRealServerCertificateIds(String [] PolyRealServerCertificateIds) {
@@ -298,7 +298,7 @@ public class SetAuthenticationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

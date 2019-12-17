@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePolicyCaseRequest  extends AbstractModel{
+public class DescribePolicyCaseRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -37,7 +37,7 @@ public class DescribePolicyCaseRequest  extends AbstractModel{
     private String SceneId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -45,7 +45,7 @@ public class DescribePolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -53,7 +53,7 @@ public class DescribePolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略场景ID
+     * Get 策略场景ID 
      * @return SceneId 策略场景ID
      */
     public String getSceneId() {
@@ -61,7 +61,7 @@ public class DescribePolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略场景ID
+     * Set 策略场景ID
      * @param SceneId 策略场景ID
      */
     public void setSceneId(String SceneId) {
@@ -69,7 +69,7 @@ public class DescribePolicyCaseRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

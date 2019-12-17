@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePsaRegulationRequest  extends AbstractModel{
+public class DeletePsaRegulationRequest extends AbstractModel{
 
     /**
     * 预授权规则ID
@@ -30,7 +30,7 @@ public class DeletePsaRegulationRequest  extends AbstractModel{
     private String PsaId;
 
     /**
-     * 获取预授权规则ID
+     * Get 预授权规则ID 
      * @return PsaId 预授权规则ID
      */
     public String getPsaId() {
@@ -38,7 +38,7 @@ public class DeletePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则ID
+     * Set 预授权规则ID
      * @param PsaId 预授权规则ID
      */
     public void setPsaId(String PsaId) {
@@ -46,7 +46,7 @@ public class DeletePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PsaId", this.PsaId);

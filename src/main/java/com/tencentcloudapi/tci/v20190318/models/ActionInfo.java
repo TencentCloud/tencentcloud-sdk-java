@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionInfo  extends AbstractModel{
+public class ActionInfo extends AbstractModel{
 
     /**
     * 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
@@ -79,7 +79,7 @@ public class ActionInfo  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+     * Get 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep） 
      * @return BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      */
     public ActionType getBodyPosture() {
@@ -87,7 +87,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
+     * Set 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      * @param BodyPosture 躯体动作识别结果，包含坐着（sit）、站立（stand）和趴睡（sleep）
      */
     public void setBodyPosture(ActionType BodyPosture) {
@@ -95,7 +95,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取举手识别结果，包含举手（hand）和未检测到举手（nothand）
+     * Get 举手识别结果，包含举手（hand）和未检测到举手（nothand） 
      * @return Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      */
     public ActionType getHandup() {
@@ -103,7 +103,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置举手识别结果，包含举手（hand）和未检测到举手（nothand）
+     * Set 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      * @param Handup 举手识别结果，包含举手（hand）和未检测到举手（nothand）
      */
     public void setHandup(ActionType Handup) {
@@ -111,7 +111,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+     * Get 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead） 
      * @return LookHead 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      */
     public ActionType getLookHead() {
@@ -119,7 +119,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
+     * Set 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      * @param LookHead 是否低头识别结果，包含抬头（lookingahead）和未检测到抬头（notlookingahead）
      */
     public void setLookHead(ActionType LookHead) {
@@ -127,7 +127,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+     * Get 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead） 
      * @return Writing 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      */
     public ActionType getWriting() {
@@ -135,7 +135,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
+     * Set 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      * @param Writing 是否写字识别结果，包含写字（write）和未检测到写字（notlookingahead）
      */
     public void setWriting(ActionType Writing) {
@@ -143,7 +143,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取动作图像高度
+     * Get 动作图像高度 
      * @return Height 动作图像高度
      */
     public Long getHeight() {
@@ -151,7 +151,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置动作图像高度
+     * Set 动作图像高度
      * @param Height 动作图像高度
      */
     public void setHeight(Long Height) {
@@ -159,7 +159,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取动作出现图像的左侧起始坐标位置
+     * Get 动作出现图像的左侧起始坐标位置 
      * @return Left 动作出现图像的左侧起始坐标位置
      */
     public Long getLeft() {
@@ -167,7 +167,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置动作出现图像的左侧起始坐标位置
+     * Set 动作出现图像的左侧起始坐标位置
      * @param Left 动作出现图像的左侧起始坐标位置
      */
     public void setLeft(Long Left) {
@@ -175,7 +175,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取动作出现图像的上侧起始侧坐标位置
+     * Get 动作出现图像的上侧起始侧坐标位置 
      * @return Top 动作出现图像的上侧起始侧坐标位置
      */
     public Long getTop() {
@@ -183,7 +183,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置动作出现图像的上侧起始侧坐标位置
+     * Set 动作出现图像的上侧起始侧坐标位置
      * @param Top 动作出现图像的上侧起始侧坐标位置
      */
     public void setTop(Long Top) {
@@ -191,7 +191,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取动作图像宽度
+     * Get 动作图像宽度 
      * @return Width 动作图像宽度
      */
     public Long getWidth() {
@@ -199,7 +199,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置动作图像宽度
+     * Set 动作图像宽度
      * @param Width 动作图像宽度
      */
     public void setWidth(Long Width) {
@@ -207,7 +207,7 @@ public class ActionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BodyPosture.", this.BodyPosture);

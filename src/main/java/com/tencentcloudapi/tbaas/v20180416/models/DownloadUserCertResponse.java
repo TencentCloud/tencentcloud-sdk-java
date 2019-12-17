@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadUserCertResponse  extends AbstractModel{
+public class DownloadUserCertResponse extends AbstractModel{
 
     /**
     * 证书名称
@@ -44,7 +44,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取证书名称
+     * Get 证书名称 
      * @return CertName 证书名称
      */
     public String getCertName() {
@@ -52,7 +52,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称
+     * Set 证书名称
      * @param CertName 证书名称
      */
     public void setCertName(String CertName) {
@@ -60,7 +60,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容
+     * Get 证书内容 
      * @return CertCtx 证书内容
      */
     public String getCertCtx() {
@@ -68,7 +68,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容
+     * Set 证书内容
      * @param CertCtx 证书内容
      */
     public void setCertCtx(String CertCtx) {
@@ -76,7 +76,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DownloadUserCertResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertName", this.CertName);

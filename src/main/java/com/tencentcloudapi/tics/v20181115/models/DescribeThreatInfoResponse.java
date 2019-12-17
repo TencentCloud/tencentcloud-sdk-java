@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeThreatInfoResponse  extends AbstractModel{
+public class DescribeThreatInfoResponse extends AbstractModel{
 
     /**
     * 是否有数据，0代表有数据，1代表没有数据
@@ -101,7 +101,7 @@ expired = 过期
     private String RequestId;
 
     /**
-     * 获取是否有数据，0代表有数据，1代表没有数据
+     * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public Integer getReturnCode() {
@@ -109,7 +109,7 @@ expired = 过期
     }
 
     /**
-     * 设置是否有数据，0代表有数据，1代表没有数据
+     * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public void setReturnCode(Integer ReturnCode) {
@@ -117,7 +117,7 @@ expired = 过期
     }
 
     /**
-     * 获取判定结果，如：black、white、grey
+     * Get 判定结果，如：black、white、grey 
      * @return Result 判定结果，如：black、white、grey
      */
     public String getResult() {
@@ -125,7 +125,7 @@ expired = 过期
     }
 
     /**
-     * 设置判定结果，如：black、white、grey
+     * Set 判定结果，如：black、white、grey
      * @param Result 判定结果，如：black、white、grey
      */
     public void setResult(String Result) {
@@ -133,7 +133,7 @@ expired = 过期
     }
 
     /**
-     * 获取置信度，取值0-100
+     * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
     public Integer getConfidence() {
@@ -141,7 +141,7 @@ expired = 过期
     }
 
     /**
-     * 设置置信度，取值0-100
+     * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
     public void setConfidence(Integer Confidence) {
@@ -149,7 +149,7 @@ expired = 过期
     }
 
     /**
-     * 获取威胁类型。
+     * Get 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
 ransomware = 勒索软件
@@ -165,7 +165,7 @@ tor = 暗网
 miner = 挖矿
 maleware site = 恶意站点
 malware IP = 恶意IP
-等等
+等等 
      * @return ThreatTypes 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
@@ -189,7 +189,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置威胁类型。
+     * Set 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
 ransomware = 勒索软件
@@ -229,7 +229,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取恶意标签，对应的团伙，家族等信息。
+     * Get 恶意标签，对应的团伙，家族等信息。 
      * @return Tags 恶意标签，对应的团伙，家族等信息。
      */
     public String [] getTags() {
@@ -237,7 +237,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置恶意标签，对应的团伙，家族等信息。
+     * Set 恶意标签，对应的团伙，家族等信息。
      * @param Tags 恶意标签，对应的团伙，家族等信息。
      */
     public void setTags(String [] Tags) {
@@ -245,12 +245,12 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取当前状态
+     * Get 当前状态
 active = 活跃
 sinkholed = sinkholed
 inactive = 不活跃
 unknown = 未知
-expired = 过期
+expired = 过期 
      * @return Status 当前状态
 active = 活跃
 sinkholed = sinkholed
@@ -263,7 +263,7 @@ expired = 过期
     }
 
     /**
-     * 设置当前状态
+     * Set 当前状态
 active = 活跃
 sinkholed = sinkholed
 inactive = 不活跃
@@ -281,8 +281,8 @@ expired = 过期
     }
 
     /**
-     * 获取情报相关的上下文，参数option=1 的时候提供
-每个数据默认为3 条
+     * Get 情报相关的上下文，参数option=1 的时候提供
+每个数据默认为3 条 
      * @return Context 情报相关的上下文，参数option=1 的时候提供
 每个数据默认为3 条
      */
@@ -291,7 +291,7 @@ expired = 过期
     }
 
     /**
-     * 设置情报相关的上下文，参数option=1 的时候提供
+     * Set 情报相关的上下文，参数option=1 的时候提供
 每个数据默认为3 条
      * @param Context 情报相关的上下文，参数option=1 的时候提供
 每个数据默认为3 条
@@ -301,7 +301,7 @@ expired = 过期
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -309,7 +309,7 @@ expired = 过期
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -317,7 +317,7 @@ expired = 过期
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeliverTidsRequest  extends AbstractModel{
+public class DeliverTidsRequest extends AbstractModel{
 
     /**
     * 订单ID
@@ -37,7 +37,7 @@ public class DeliverTidsRequest  extends AbstractModel{
     private Long Quantity;
 
     /**
-     * 获取订单ID
+     * Get 订单ID 
      * @return OrderId 订单ID
      */
     public String getOrderId() {
@@ -45,7 +45,7 @@ public class DeliverTidsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单ID
+     * Set 订单ID
      * @param OrderId 订单ID
      */
     public void setOrderId(String OrderId) {
@@ -53,7 +53,7 @@ public class DeliverTidsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量，1~100
+     * Get 数量，1~100 
      * @return Quantity 数量，1~100
      */
     public Long getQuantity() {
@@ -61,7 +61,7 @@ public class DeliverTidsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量，1~100
+     * Set 数量，1~100
      * @param Quantity 数量，1~100
      */
     public void setQuantity(Long Quantity) {
@@ -69,7 +69,7 @@ public class DeliverTidsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);

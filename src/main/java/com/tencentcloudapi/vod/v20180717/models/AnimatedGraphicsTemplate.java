@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnimatedGraphicsTemplate  extends AbstractModel{
+public class AnimatedGraphicsTemplate extends AbstractModel{
 
     /**
     * 转动图模板唯一标识。
@@ -122,7 +122,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取转动图模板唯一标识。
+     * Get 转动图模板唯一标识。 
      * @return Definition 转动图模板唯一标识。
      */
     public Long getDefinition() {
@@ -130,7 +130,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板唯一标识。
+     * Set 转动图模板唯一标识。
      * @param Definition 转动图模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -138,9 +138,9 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，取值范围：
+     * Get 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -150,7 +150,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，取值范围：
+     * Set 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，取值范围：
@@ -162,7 +162,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取转动图模板名称。
+     * Get 转动图模板名称。 
      * @return Name 转动图模板名称。
      */
     public String getName() {
@@ -170,7 +170,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板名称。
+     * Set 转动图模板名称。
      * @param Name 转动图模板名称。
      */
     public void setName(String Name) {
@@ -178,7 +178,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取转动图模板描述信息。
+     * Get 转动图模板描述信息。 
      * @return Comment 转动图模板描述信息。
      */
     public String getComment() {
@@ -186,7 +186,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板描述信息。
+     * Set 转动图模板描述信息。
      * @param Comment 转动图模板描述信息。
      */
     public void setComment(String Comment) {
@@ -194,12 +194,12 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Width 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -212,7 +212,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -230,12 +230,12 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Height 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -248,7 +248,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 动图高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -266,10 +266,10 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取分辨率自适应，可选值：
+     * Get 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
-默认值：open。
+默认值：open。 
      * @return ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -280,7 +280,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置分辨率自适应，可选值：
+     * Set 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
 默认值：open。
@@ -294,7 +294,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取动图格式。
+     * Get 动图格式。 
      * @return Format 动图格式。
      */
     public String getFormat() {
@@ -302,7 +302,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置动图格式。
+     * Set 动图格式。
      * @param Format 动图格式。
      */
     public void setFormat(String Format) {
@@ -310,7 +310,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取帧率。
+     * Get 帧率。 
      * @return Fps 帧率。
      */
     public Long getFps() {
@@ -318,7 +318,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置帧率。
+     * Set 帧率。
      * @param Fps 帧率。
      */
     public void setFps(Long Fps) {
@@ -326,7 +326,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取图片质量。
+     * Get 图片质量。 
      * @return Quality 图片质量。
      */
     public Float getQuality() {
@@ -334,7 +334,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置图片质量。
+     * Set 图片质量。
      * @param Quality 图片质量。
      */
     public void setQuality(Float Quality) {
@@ -342,7 +342,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -350,7 +350,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -358,7 +358,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -366,7 +366,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -374,7 +374,7 @@ public class AnimatedGraphicsTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

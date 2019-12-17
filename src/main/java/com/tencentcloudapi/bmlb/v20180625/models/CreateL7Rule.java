@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7Rule  extends AbstractModel{
+public class CreateL7Rule extends AbstractModel{
 
     /**
     * 七层转发规则的转发域名。
@@ -100,7 +100,7 @@ public class CreateL7Rule  extends AbstractModel{
     private String BalanceMode;
 
     /**
-     * 获取七层转发规则的转发域名。
+     * Get 七层转发规则的转发域名。 
      * @return Domain 七层转发规则的转发域名。
      */
     public String getDomain() {
@@ -108,7 +108,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置七层转发规则的转发域名。
+     * Set 七层转发规则的转发域名。
      * @param Domain 七层转发规则的转发域名。
      */
     public void setDomain(String Domain) {
@@ -116,7 +116,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取七层转发规则的转发路径。
+     * Get 七层转发规则的转发路径。 
      * @return Url 七层转发规则的转发路径。
      */
     public String getUrl() {
@@ -124,7 +124,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置七层转发规则的转发路径。
+     * Set 七层转发规则的转发路径。
      * @param Url 七层转发规则的转发路径。
      */
     public void setUrl(String Url) {
@@ -132,7 +132,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
+     * Get 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。 
      * @return SessionExpire 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      */
     public Integer getSessionExpire() {
@@ -140,7 +140,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
+     * Set 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      * @param SessionExpire 会话保持时间，单位：秒。可选值：30~3600。默认值0，表示不开启会话保持。
      */
     public void setSessionExpire(Integer SessionExpire) {
@@ -148,7 +148,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
+     * Get 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。 
      * @return HealthSwitch 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      */
     public Integer getHealthSwitch() {
@@ -156,7 +156,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
+     * Set 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      * @param HealthSwitch 健康检查开关：1（开启）、0（关闭）。默认值0，表示关闭。
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -164,7 +164,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
+     * Get 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。 
      * @return IntervalTime 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      */
     public Integer getIntervalTime() {
@@ -172,7 +172,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
+     * Set 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      * @param IntervalTime 健康检查检查间隔时间，默认值：5，可选值：5-300，单位：秒。
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -180,7 +180,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
+     * Get 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。 
      * @return HealthNum 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
     public Integer getHealthNum() {
@@ -188,7 +188,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
+     * Set 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      * @param HealthNum 健康检查健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
     public void setHealthNum(Integer HealthNum) {
@@ -196,7 +196,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
+     * Get 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。 
      * @return UnhealthNum 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
     public Integer getUnhealthNum() {
@@ -204,7 +204,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
+     * Set 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      * @param UnhealthNum 健康检查不健康阈值，默认值：5，表示当连续探测五次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -212,7 +212,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public Integer [] getHttpCodes() {
@@ -220,7 +220,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public void setHttpCodes(Integer [] HttpCodes) {
@@ -228,7 +228,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查路径。
+     * Get 健康检查检查路径。 
      * @return HttpCheckPath 健康检查检查路径。
      */
     public String getHttpCheckPath() {
@@ -236,7 +236,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查路径。
+     * Set 健康检查检查路径。
      * @param HttpCheckPath 健康检查检查路径。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -244,7 +244,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
+     * Get 健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。 
      * @return HttpCheckDomain 健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
      */
     public String getHttpCheckDomain() {
@@ -252,7 +252,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
+     * Set 健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
      * @param HttpCheckDomain 健康检查检查域名。如果创建规则的域名使用通配符或正则表达式，则健康检查检查域名可自定义，否则必须跟健康检查检查域名一样。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
@@ -260,7 +260,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取均衡方式：ip_hash、wrr。默认值wrr。
+     * Get 均衡方式：ip_hash、wrr。默认值wrr。 
      * @return BalanceMode 均衡方式：ip_hash、wrr。默认值wrr。
      */
     public String getBalanceMode() {
@@ -268,7 +268,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置均衡方式：ip_hash、wrr。默认值wrr。
+     * Set 均衡方式：ip_hash、wrr。默认值wrr。
      * @param BalanceMode 均衡方式：ip_hash、wrr。默认值wrr。
      */
     public void setBalanceMode(String BalanceMode) {
@@ -276,7 +276,7 @@ public class CreateL7Rule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

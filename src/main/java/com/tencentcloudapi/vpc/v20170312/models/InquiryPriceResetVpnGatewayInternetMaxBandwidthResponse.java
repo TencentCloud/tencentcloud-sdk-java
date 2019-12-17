@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends AbstractModel{
+public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse extends AbstractModel{
 
     /**
     * 商品价格。
@@ -37,7 +37,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends Ab
     private String RequestId;
 
     /**
-     * 获取商品价格。
+     * Get 商品价格。 
      * @return Price 商品价格。
      */
     public Price getPrice() {
@@ -45,7 +45,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends Ab
     }
 
     /**
-     * 设置商品价格。
+     * Set 商品价格。
      * @param Price 商品价格。
      */
     public void setPrice(Price Price) {
@@ -53,7 +53,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends Ab
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends Ab
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse  extends Ab
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Price.", this.Price);

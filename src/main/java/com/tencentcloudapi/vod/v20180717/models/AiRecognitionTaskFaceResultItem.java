@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
+public class AiRecognitionTaskFaceResultItem extends AbstractModel{
 
     /**
     * 人物唯一标识 ID。
@@ -53,7 +53,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     private AiRecognitionTaskFaceSegmentItem [] SegmentSet;
 
     /**
-     * 获取人物唯一标识 ID。
+     * Get 人物唯一标识 ID。 
      * @return Id 人物唯一标识 ID。
      */
     public String getId() {
@@ -61,7 +61,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置人物唯一标识 ID。
+     * Set 人物唯一标识 ID。
      * @param Id 人物唯一标识 ID。
      */
     public void setId(String Id) {
@@ -69,9 +69,9 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取人物库类型，表示识别出的人物来自哪个人物库：
+     * Get 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li>
-<li>UserDefine：用户自定义人物库。</li>
+<li>UserDefine：用户自定义人物库。</li> 
      * @return Type 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li>
 <li>UserDefine：用户自定义人物库。</li>
@@ -81,7 +81,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置人物库类型，表示识别出的人物来自哪个人物库：
+     * Set 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li>
 <li>UserDefine：用户自定义人物库。</li>
      * @param Type 人物库类型，表示识别出的人物来自哪个人物库：
@@ -93,7 +93,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取人物名称。
+     * Get 人物名称。 
      * @return Name 人物名称。
      */
     public String getName() {
@@ -101,7 +101,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置人物名称。
+     * Set 人物名称。
      * @param Name 人物名称。
      */
     public void setName(String Name) {
@@ -109,7 +109,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取人物出现的片段结果集。
+     * Get 人物出现的片段结果集。 
      * @return SegmentSet 人物出现的片段结果集。
      */
     public AiRecognitionTaskFaceSegmentItem [] getSegmentSet() {
@@ -117,7 +117,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置人物出现的片段结果集。
+     * Set 人物出现的片段结果集。
      * @param SegmentSet 人物出现的片段结果集。
      */
     public void setSegmentSet(AiRecognitionTaskFaceSegmentItem [] SegmentSet) {
@@ -125,7 +125,7 @@ public class AiRecognitionTaskFaceResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnIpRequest  extends AbstractModel{
+public class DescribeCdnIpRequest extends AbstractModel{
 
     /**
     * 需要查询的 IP 列表
@@ -30,7 +30,7 @@ public class DescribeCdnIpRequest  extends AbstractModel{
     private String [] Ips;
 
     /**
-     * 获取需要查询的 IP 列表
+     * Get 需要查询的 IP 列表 
      * @return Ips 需要查询的 IP 列表
      */
     public String [] getIps() {
@@ -38,7 +38,7 @@ public class DescribeCdnIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的 IP 列表
+     * Set 需要查询的 IP 列表
      * @param Ips 需要查询的 IP 列表
      */
     public void setIps(String [] Ips) {
@@ -46,7 +46,7 @@ public class DescribeCdnIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ips.", this.Ips);

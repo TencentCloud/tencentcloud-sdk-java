@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
+public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * 模板名称，非空的字符串。
@@ -89,8 +89,8 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     private Integer PornFlag;
 
     /**
-     * 获取模板名称，非空的字符串。
-长度上限：255字节。
+     * Get 模板名称，非空的字符串。
+长度上限：255字节。 
      * @return TemplateName 模板名称，非空的字符串。
 长度上限：255字节。
      */
@@ -99,7 +99,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称，非空的字符串。
+     * Set 模板名称，非空的字符串。
 长度上限：255字节。
      * @param TemplateName 模板名称，非空的字符串。
 长度上限：255字节。
@@ -109,7 +109,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Cos AppId。
+     * Get Cos AppId。 
      * @return CosAppId Cos AppId。
      */
     public Integer getCosAppId() {
@@ -117,7 +117,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Cos AppId。
+     * Set Cos AppId。
      * @param CosAppId Cos AppId。
      */
     public void setCosAppId(Integer CosAppId) {
@@ -125,7 +125,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Cos Bucket名称。
+     * Get Cos Bucket名称。 
      * @return CosBucket Cos Bucket名称。
      */
     public String getCosBucket() {
@@ -133,7 +133,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Cos Bucket名称。
+     * Set Cos Bucket名称。
      * @param CosBucket Cos Bucket名称。
      */
     public void setCosBucket(String CosBucket) {
@@ -141,7 +141,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Cos地区。
+     * Get Cos地区。 
      * @return CosRegion Cos地区。
      */
     public String getCosRegion() {
@@ -149,7 +149,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Cos地区。
+     * Set Cos地区。
      * @param CosRegion Cos地区。
      */
     public void setCosRegion(String CosRegion) {
@@ -157,8 +157,8 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
-长度上限：1024字节。
+     * Get 描述信息。
+长度上限：1024字节。 
      * @return Description 描述信息。
 长度上限：1024字节。
      */
@@ -167,7 +167,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
 长度上限：1024字节。
      * @param Description 描述信息。
 长度上限：1024字节。
@@ -177,8 +177,8 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截图间隔，单位s，默认10s。
-范围： 5s ~ 600s。
+     * Get 截图间隔，单位s，默认10s。
+范围： 5s ~ 600s。 
      * @return SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      */
@@ -187,7 +187,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截图间隔，单位s，默认10s。
+     * Set 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
      * @param SnapshotInterval 截图间隔，单位s，默认10s。
 范围： 5s ~ 600s。
@@ -197,7 +197,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截图宽度。默认：0（原始宽）。
+     * Get 截图宽度。默认：0（原始宽）。 
      * @return Width 截图宽度。默认：0（原始宽）。
      */
     public Integer getWidth() {
@@ -205,7 +205,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截图宽度。默认：0（原始宽）。
+     * Set 截图宽度。默认：0（原始宽）。
      * @param Width 截图宽度。默认：0（原始宽）。
      */
     public void setWidth(Integer Width) {
@@ -213,7 +213,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截图高度。默认：0（原始高）。
+     * Get 截图高度。默认：0（原始高）。 
      * @return Height 截图高度。默认：0（原始高）。
      */
     public Integer getHeight() {
@@ -221,7 +221,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截图高度。默认：0（原始高）。
+     * Set 截图高度。默认：0（原始高）。
      * @param Height 截图高度。默认：0（原始高）。
      */
     public void setHeight(Integer Height) {
@@ -229,7 +229,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * Get 是否开启鉴黄，0：不开启，1：开启。默认：0。 
      * @return PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public Integer getPornFlag() {
@@ -237,7 +237,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启鉴黄，0：不开启，1：开启。默认：0。
+     * Set 是否开启鉴黄，0：不开启，1：开启。默认：0。
      * @param PornFlag 是否开启鉴黄，0：不开启，1：开启。默认：0。
      */
     public void setPornFlag(Integer PornFlag) {
@@ -245,7 +245,7 @@ public class CreateLiveSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);

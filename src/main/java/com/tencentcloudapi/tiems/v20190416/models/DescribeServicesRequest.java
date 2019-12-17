@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServicesRequest  extends AbstractModel{
+public class DescribeServicesRequest extends AbstractModel{
 
     /**
     * 筛选选项，支持按照name等字段进行筛选
@@ -58,7 +58,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     private String OrderField;
 
     /**
-     * 获取筛选选项，支持按照name等字段进行筛选
+     * Get 筛选选项，支持按照name等字段进行筛选 
      * @return Filters 筛选选项，支持按照name等字段进行筛选
      */
     public Filter [] getFilters() {
@@ -66,7 +66,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置筛选选项，支持按照name等字段进行筛选
+     * Set 筛选选项，支持按照name等字段进行筛选
      * @param Filters 筛选选项，支持按照name等字段进行筛选
      */
     public void setFilters(Filter [] Filters) {
@@ -74,7 +74,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -82,7 +82,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -90,7 +90,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100
+     * Get 返回数量，默认为20，最大值为100 
      * @return Limit 返回数量，默认为20，最大值为100
      */
     public Long getLimit() {
@@ -98,7 +98,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100
+     * Set 返回数量，默认为20，最大值为100
      * @param Limit 返回数量，默认为20，最大值为100
      */
     public void setLimit(Long Limit) {
@@ -106,7 +106,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Get 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列 
      * @return Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public String getOrder() {
@@ -114,7 +114,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Set 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      * @param Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public void setOrder(String Order) {
@@ -122,7 +122,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
+     * Get 排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME" 
      * @return OrderField 排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
      */
     public String getOrderField() {
@@ -130,7 +130,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
+     * Set 排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
      * @param OrderField 排序的依据字段， 取值范围 "CREATE_TIME" "UPDATE_TIME"
      */
     public void setOrderField(String OrderField) {
@@ -138,7 +138,7 @@ public class DescribeServicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

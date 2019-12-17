@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetsRequest  extends AbstractModel{
+public class DescribeSubnetsRequest extends AbstractModel{
 
     /**
     * 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
@@ -60,7 +60,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。 
      * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
      */
     public String [] getSubnetIds() {
@@ -68,7 +68,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Set 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
      * @param SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -76,7 +76,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Get 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
@@ -85,7 +85,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
 <li>subnet-name - String - （过滤条件）子网名称。</li>
 <li>zone - String - （过滤条件）可用区。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li> 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
@@ -102,7 +102,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Set 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
@@ -128,7 +128,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public String getOffset() {
@@ -136,7 +136,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(String Offset) {
@@ -144,7 +144,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public String getLimit() {
@@ -152,7 +152,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(String Limit) {
@@ -160,7 +160,7 @@ public class DescribeSubnetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);

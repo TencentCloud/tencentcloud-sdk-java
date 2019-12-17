@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusRequest  extends AbstractModel{
+public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
@@ -30,7 +30,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private Long TaskId;
 
     /**
-     * 获取从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+     * Get 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。 
      * @return TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
      */
     public Long getTaskId() {
@@ -38,7 +38,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+     * Set 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
      * @param TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
      */
     public void setTaskId(Long TaskId) {
@@ -46,7 +46,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

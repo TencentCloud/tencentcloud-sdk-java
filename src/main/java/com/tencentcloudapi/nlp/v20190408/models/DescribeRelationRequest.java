@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRelationRequest  extends AbstractModel{
+public class DescribeRelationRequest extends AbstractModel{
 
     /**
     * 输入第一个实体
@@ -37,7 +37,7 @@ public class DescribeRelationRequest  extends AbstractModel{
     private String RightEntityName;
 
     /**
-     * 获取输入第一个实体
+     * Get 输入第一个实体 
      * @return LeftEntityName 输入第一个实体
      */
     public String getLeftEntityName() {
@@ -45,7 +45,7 @@ public class DescribeRelationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入第一个实体
+     * Set 输入第一个实体
      * @param LeftEntityName 输入第一个实体
      */
     public void setLeftEntityName(String LeftEntityName) {
@@ -53,7 +53,7 @@ public class DescribeRelationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入第二个实体
+     * Get 输入第二个实体 
      * @return RightEntityName 输入第二个实体
      */
     public String getRightEntityName() {
@@ -61,7 +61,7 @@ public class DescribeRelationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入第二个实体
+     * Set 输入第二个实体
      * @param RightEntityName 输入第二个实体
      */
     public void setRightEntityName(String RightEntityName) {
@@ -69,7 +69,7 @@ public class DescribeRelationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LeftEntityName", this.LeftEntityName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskDetailResponse  extends AbstractModel{
+public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
     * 任务类型，目前取值有：
@@ -115,9 +115,9 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务类型，目前取值有：
+     * Get 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
+<li>LiveStreamProcessTask：直播流处理任务。</li> 
      * @return TaskType 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
@@ -127,7 +127,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，目前取值有：
+     * Set 任务类型，目前取值有：
 <li>WorkflowTask：视频工作流处理任务。</li>
 <li>LiveStreamProcessTask：直播流处理任务。</li>
      * @param TaskType 任务类型，目前取值有：
@@ -139,10 +139,10 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态，取值：
+     * Get 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成。</li> 
      * @return Status 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
@@ -153,7 +153,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，取值：
+     * Set 任务状态，取值：
 <li>WAITING：等待中；</li>
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -167,7 +167,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -175,7 +175,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -183,7 +183,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getBeginProcessTime() {
@@ -191,7 +191,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setBeginProcessTime(String BeginProcessTime) {
@@ -199,7 +199,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getFinishTime() {
@@ -207,7 +207,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setFinishTime(String FinishTime) {
@@ -215,8 +215,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
+     * Set 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkflowTask 视频处理任务信息，仅当 TaskType 为 WorkflowTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
+     * Set 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的事件通知信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务的事件通知信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的事件通知信息。
+     * Set 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,7 +275,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，取值范围为 [-10, 10]。
+     * Get 任务流的优先级，取值范围为 [-10, 10]。 
      * @return TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
      */
     public Long getTasksPriority() {
@@ -283,7 +283,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务流的优先级，取值范围为 [-10, 10]。
+     * Set 任务流的优先级，取值范围为 [-10, 10]。
      * @param TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
      */
     public void setTasksPriority(Long TasksPriority) {
@@ -291,7 +291,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -299,7 +299,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -307,7 +307,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      */
     public String getSessionContext() {
@@ -315,7 +315,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -323,7 +323,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -331,7 +331,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -339,7 +339,7 @@ public class DescribeTaskDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullUploadRequest  extends AbstractModel{
+public class PullUploadRequest extends AbstractModel{
 
     /**
     * 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
@@ -101,8 +101,8 @@ public class PullUploadRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
-支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
+     * Get 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。 
      * @return MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
 支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      */
@@ -111,7 +111,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
+     * Set 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
 支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      * @param MediaUrl 要拉取的媒体 URL，暂不支持拉取 HLS 和 Dash 格式。
 支持的扩展名详见[文件类型](https://cloud.tencent.com/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
@@ -121,7 +121,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取媒体名称。
+     * Get 媒体名称。 
      * @return MediaName 媒体名称。
      */
     public String getMediaName() {
@@ -129,7 +129,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体名称。
+     * Set 媒体名称。
      * @param MediaName 媒体名称。
      */
     public void setMediaName(String MediaName) {
@@ -137,7 +137,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * Get 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。 
      * @return CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      */
     public String getCoverUrl() {
@@ -145,7 +145,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
+     * Set 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      * @param CoverUrl 要拉取的视频封面 URL。仅支持 gif、jpeg、png 三种图片格式。
      */
     public void setCoverUrl(String CoverUrl) {
@@ -153,7 +153,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
+     * Get 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。 
      * @return Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
      */
     public String getProcedure() {
@@ -161,7 +161,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
+     * Set 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
      * @param Procedure 媒体后续任务操作，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。
      */
     public void setProcedure(String Procedure) {
@@ -169,7 +169,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return ExpireTime 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getExpireTime() {
@@ -177,7 +177,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param ExpireTime 媒体文件过期时间，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setExpireTime(String ExpireTime) {
@@ -185,7 +185,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
+     * Get 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。 
      * @return StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
      */
     public String getStorageRegion() {
@@ -193,7 +193,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
+     * Set 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
      * @param StorageRegion 指定上传园区，仅适用于对上传地域有特殊需求的用户（目前仅支持北京、上海和重庆园区）。
      */
     public void setStorageRegion(String StorageRegion) {
@@ -201,7 +201,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
+     * Get 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。 
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
      */
     public Long getClassId() {
@@ -209,7 +209,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
+     * Set 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过[创建分类](https://cloud.tencent.com/document/product/266/7812)接口，创建分类，获得分类 ID。
      */
     public void setClassId(Long ClassId) {
@@ -217,7 +217,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -225,7 +225,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，当指定 Procedure 任务后，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -233,7 +233,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -241,7 +241,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -249,7 +249,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段，特殊用途时使用。
+     * Get 保留字段，特殊用途时使用。 
      * @return ExtInfo 保留字段，特殊用途时使用。
      */
     public String getExtInfo() {
@@ -257,7 +257,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段，特殊用途时使用。
+     * Set 保留字段，特殊用途时使用。
      * @param ExtInfo 保留字段，特殊用途时使用。
      */
     public void setExtInfo(String ExtInfo) {
@@ -265,7 +265,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -273,7 +273,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -281,7 +281,7 @@ public class PullUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);

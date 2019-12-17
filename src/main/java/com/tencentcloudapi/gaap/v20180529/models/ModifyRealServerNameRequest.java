@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRealServerNameRequest  extends AbstractModel{
+public class ModifyRealServerNameRequest extends AbstractModel{
 
     /**
     * 源站名称
@@ -37,7 +37,7 @@ public class ModifyRealServerNameRequest  extends AbstractModel{
     private String RealServerId;
 
     /**
-     * 获取源站名称
+     * Get 源站名称 
      * @return RealServerName 源站名称
      */
     public String getRealServerName() {
@@ -45,7 +45,7 @@ public class ModifyRealServerNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站名称
+     * Set 源站名称
      * @param RealServerName 源站名称
      */
     public void setRealServerName(String RealServerName) {
@@ -53,7 +53,7 @@ public class ModifyRealServerNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站ID
+     * Get 源站ID 
      * @return RealServerId 源站ID
      */
     public String getRealServerId() {
@@ -61,7 +61,7 @@ public class ModifyRealServerNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站ID
+     * Set 源站ID
      * @param RealServerId 源站ID
      */
     public void setRealServerId(String RealServerId) {
@@ -69,7 +69,7 @@ public class ModifyRealServerNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerName", this.RealServerName);

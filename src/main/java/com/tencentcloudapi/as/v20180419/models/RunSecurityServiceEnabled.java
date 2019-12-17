@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunSecurityServiceEnabled  extends AbstractModel{
+public class RunSecurityServiceEnabled extends AbstractModel{
 
     /**
     * 是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
@@ -31,8 +31,8 @@ public class RunSecurityServiceEnabled  extends AbstractModel{
     private Boolean Enabled;
 
     /**
-     * 获取是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enabled 是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class RunSecurityServiceEnabled  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
+     * Set 是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启[云安全](https://cloud.tencent.com/document/product/296)服务。取值范围：<br><li>TRUE：表示开启云安全服务<br><li>FALSE：表示不开启云安全服务<br><br>默认取值：TRUE。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class RunSecurityServiceEnabled  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportImageRequest  extends AbstractModel{
+public class ImportImageRequest extends AbstractModel{
 
     /**
     * 导入镜像的操作系统架构，`x86_64` 或 `i386`
@@ -79,7 +79,7 @@ public class ImportImageRequest  extends AbstractModel{
     private Boolean Force;
 
     /**
-     * 获取导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
     public String getArchitecture() {
@@ -87,7 +87,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * Set 导入镜像的操作系统架构，`x86_64` 或 `i386`
      * @param Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
     public void setArchitecture(String Architecture) {
@@ -95,7 +95,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * Get 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取 
      * @return OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      */
     public String getOsType() {
@@ -103,7 +103,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * Set 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      * @param OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
      */
     public void setOsType(String OsType) {
@@ -111,7 +111,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * Get 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取 
      * @return OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
      */
     public String getOsVersion() {
@@ -119,7 +119,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * Set 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
      * @param OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
      */
     public void setOsVersion(String OsVersion) {
@@ -127,7 +127,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取导入镜像存放的cos地址
+     * Get 导入镜像存放的cos地址 
      * @return ImageUrl 导入镜像存放的cos地址
      */
     public String getImageUrl() {
@@ -135,7 +135,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置导入镜像存放的cos地址
+     * Set 导入镜像存放的cos地址
      * @param ImageUrl 导入镜像存放的cos地址
      */
     public void setImageUrl(String ImageUrl) {
@@ -143,7 +143,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像名称
+     * Get 镜像名称 
      * @return ImageName 镜像名称
      */
     public String getImageName() {
@@ -151,7 +151,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像名称
+     * Set 镜像名称
      * @param ImageName 镜像名称
      */
     public void setImageName(String ImageName) {
@@ -159,7 +159,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像描述
+     * Get 镜像描述 
      * @return ImageDescription 镜像描述
      */
     public String getImageDescription() {
@@ -167,7 +167,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像描述
+     * Set 镜像描述
      * @param ImageDescription 镜像描述
      */
     public void setImageDescription(String ImageDescription) {
@@ -175,7 +175,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取只检查参数，不执行任务
+     * Get 只检查参数，不执行任务 
      * @return DryRun 只检查参数，不执行任务
      */
     public Boolean getDryRun() {
@@ -183,7 +183,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置只检查参数，不执行任务
+     * Set 只检查参数，不执行任务
      * @param DryRun 只检查参数，不执行任务
      */
     public void setDryRun(Boolean DryRun) {
@@ -191,7 +191,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     * Get 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849) 
      * @return Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
      */
     public Boolean getForce() {
@@ -199,7 +199,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+     * Set 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
      * @param Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
      */
     public void setForce(Boolean Force) {
@@ -207,7 +207,7 @@ public class ImportImageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);

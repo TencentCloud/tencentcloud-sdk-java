@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductProperties  extends AbstractModel{
+public class ProductProperties extends AbstractModel{
 
     /**
     * 产品描述
@@ -115,7 +115,7 @@ public class ProductProperties  extends AbstractModel{
     private Integer RegisterLimit;
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return ProductDescription 产品描述
      */
     public String getProductDescription() {
@@ -123,7 +123,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param ProductDescription 产品描述
      */
     public void setProductDescription(String ProductDescription) {
@@ -131,7 +131,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
+     * Get 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1 
      * @return EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      */
     public String getEncryptionType() {
@@ -139,7 +139,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
+     * Set 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      * @param EncryptionType 加密类型，1表示证书认证，2表示签名认证。如不填写，默认值是1
      */
     public void setEncryptionType(String EncryptionType) {
@@ -147,7 +147,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品所属区域，目前只支持广州（gz）
+     * Get 产品所属区域，目前只支持广州（gz） 
      * @return Region 产品所属区域，目前只支持广州（gz）
      */
     public String getRegion() {
@@ -155,7 +155,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品所属区域，目前只支持广州（gz）
+     * Set 产品所属区域，目前只支持广州（gz）
      * @param Region 产品所属区域，目前只支持广州（gz）
      */
     public void setRegion(String Region) {
@@ -163,8 +163,8 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型，各个类型值代表的节点-类型如下：
-0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
+     * Get 产品类型，各个类型值代表的节点-类型如下：
+0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0 
      * @return ProductType 产品类型，各个类型值代表的节点-类型如下：
 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      */
@@ -173,7 +173,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型，各个类型值代表的节点-类型如下：
+     * Set 产品类型，各个类型值代表的节点-类型如下：
 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
      * @param ProductType 产品类型，各个类型值代表的节点-类型如下：
 0 普通产品，2 NB-IoT产品，4 LoRa产品，3 LoRa网关产品，5 普通网关产品   默认值是0
@@ -183,7 +183,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取数据格式，取值为json或者custom，默认值是json
+     * Get 数据格式，取值为json或者custom，默认值是json 
      * @return Format 数据格式，取值为json或者custom，默认值是json
      */
     public String getFormat() {
@@ -191,7 +191,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置数据格式，取值为json或者custom，默认值是json
+     * Set 数据格式，取值为json或者custom，默认值是json
      * @param Format 数据格式，取值为json或者custom，默认值是json
      */
     public void setFormat(String Format) {
@@ -199,7 +199,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品所属平台，默认值是0
+     * Get 产品所属平台，默认值是0 
      * @return Platform 产品所属平台，默认值是0
      */
     public String getPlatform() {
@@ -207,7 +207,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品所属平台，默认值是0
+     * Set 产品所属平台，默认值是0
      * @param Platform 产品所属平台，默认值是0
      */
     public void setPlatform(String Platform) {
@@ -215,7 +215,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * Get LoRa产品运营侧APPEUI，只有LoRa产品需要填写 
      * @return Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      */
     public String getAppeui() {
@@ -223,7 +223,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa产品运营侧APPEUI，只有LoRa产品需要填写
+     * Set LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      * @param Appeui LoRa产品运营侧APPEUI，只有LoRa产品需要填写
      */
     public void setAppeui(String Appeui) {
@@ -231,7 +231,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品绑定的物模型ID，-1表示不绑定
+     * Get 产品绑定的物模型ID，-1表示不绑定 
      * @return ModelId 产品绑定的物模型ID，-1表示不绑定
      */
     public String getModelId() {
@@ -239,7 +239,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品绑定的物模型ID，-1表示不绑定
+     * Set 产品绑定的物模型ID，-1表示不绑定
      * @param ModelId 产品绑定的物模型ID，-1表示不绑定
      */
     public void setModelId(String ModelId) {
@@ -247,7 +247,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品绑定的物模型名称
+     * Get 产品绑定的物模型名称 
      * @return ModelName 产品绑定的物模型名称
      */
     public String getModelName() {
@@ -255,7 +255,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品绑定的物模型名称
+     * Set 产品绑定的物模型名称
      * @param ModelName 产品绑定的物模型名称
      */
     public void setModelName(String ModelName) {
@@ -263,7 +263,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取产品密钥，suite产品才会有
+     * Get 产品密钥，suite产品才会有 
      * @return ProductKey 产品密钥，suite产品才会有
      */
     public String getProductKey() {
@@ -271,7 +271,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置产品密钥，suite产品才会有
+     * Set 产品密钥，suite产品才会有
      * @param ProductKey 产品密钥，suite产品才会有
      */
     public void setProductKey(String ProductKey) {
@@ -279,7 +279,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     * Get 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名 
      * @return RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      */
     public Integer getRegisterType() {
@@ -287,7 +287,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
+     * Set 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      * @param RegisterType 动态注册类型 0-关闭, 1-预定义设备名 2-动态定义设备名
      */
     public void setRegisterType(Integer RegisterType) {
@@ -295,7 +295,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取动态注册产品秘钥
+     * Get 动态注册产品秘钥 
      * @return ProductSecret 动态注册产品秘钥
      */
     public String getProductSecret() {
@@ -303,7 +303,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置动态注册产品秘钥
+     * Set 动态注册产品秘钥
      * @param ProductSecret 动态注册产品秘钥
      */
     public void setProductSecret(String ProductSecret) {
@@ -311,7 +311,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 获取RegisterType为2时，设备动态创建的限制数量
+     * Get RegisterType为2时，设备动态创建的限制数量 
      * @return RegisterLimit RegisterType为2时，设备动态创建的限制数量
      */
     public Integer getRegisterLimit() {
@@ -319,7 +319,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 设置RegisterType为2时，设备动态创建的限制数量
+     * Set RegisterType为2时，设备动态创建的限制数量
      * @param RegisterLimit RegisterType为2时，设备动态创建的限制数量
      */
     public void setRegisterLimit(Integer RegisterLimit) {
@@ -327,7 +327,7 @@ public class ProductProperties  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);

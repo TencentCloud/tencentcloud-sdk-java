@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HTTPSListener  extends AbstractModel{
+public class HTTPSListener extends AbstractModel{
 
     /**
     * 监听器ID
@@ -126,7 +126,7 @@ public class HTTPSListener  extends AbstractModel{
     private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -134,7 +134,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -142,7 +142,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -150,7 +150,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -158,7 +158,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Long getPort() {
@@ -166,7 +166,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Long Port) {
@@ -174,7 +174,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议， 值为：HTTP
+     * Get 监听器协议， 值为：HTTP 
      * @return Protocol 监听器协议， 值为：HTTP
      */
     public String getProtocol() {
@@ -182,7 +182,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议， 值为：HTTP
+     * Set 监听器协议， 值为：HTTP
      * @param Protocol 监听器协议， 值为：HTTP
      */
     public void setProtocol(String Protocol) {
@@ -190,12 +190,12 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器状态，其中：
+     * Get 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
 3，源站调整中；
-4，配置变更中。
+4，配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
 0， 运行中；
 1， 创建中；
@@ -208,7 +208,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器状态，其中：
+     * Set 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
@@ -226,7 +226,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器服务器SSL证书ID
+     * Get 监听器服务器SSL证书ID 
      * @return CertificateId 监听器服务器SSL证书ID
      */
     public String getCertificateId() {
@@ -234,7 +234,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器服务器SSL证书ID
+     * Set 监听器服务器SSL证书ID
      * @param CertificateId 监听器服务器SSL证书ID
      */
     public void setCertificateId(String CertificateId) {
@@ -242,7 +242,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器后端转发源站协议
+     * Get 监听器后端转发源站协议 
      * @return ForwardProtocol 监听器后端转发源站协议
      */
     public String getForwardProtocol() {
@@ -250,7 +250,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器后端转发源站协议
+     * Set 监听器后端转发源站协议
      * @param ForwardProtocol 监听器后端转发源站协议
      */
     public void setForwardProtocol(String ForwardProtocol) {
@@ -258,7 +258,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器创建时间，Unix时间戳
+     * Get 监听器创建时间，Unix时间戳 
      * @return CreateTime 监听器创建时间，Unix时间戳
      */
     public Long getCreateTime() {
@@ -266,7 +266,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器创建时间，Unix时间戳
+     * Set 监听器创建时间，Unix时间戳
      * @param CreateTime 监听器创建时间，Unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -274,8 +274,8 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取服务器SSL证书的别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务器SSL证书的别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertificateAlias 服务器SSL证书的别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -284,7 +284,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置服务器SSL证书的别名
+     * Set 服务器SSL证书的别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateAlias 服务器SSL证书的别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -294,8 +294,8 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器客户端CA证书ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器客户端CA证书ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientCertificateId 监听器客户端CA证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -304,7 +304,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器客户端CA证书ID
+     * Set 监听器客户端CA证书ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateId 监听器客户端CA证书ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -314,10 +314,10 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器认证方式。其中，
+     * Get 监听器认证方式。其中，
 0，单向认证；
 1，双向认证。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuthType 监听器认证方式。其中，
 0，单向认证；
 1，双向认证。
@@ -328,7 +328,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器认证方式。其中，
+     * Set 监听器认证方式。其中，
 0，单向认证；
 1，双向认证。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -342,8 +342,8 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户端CA证书别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientCertificateAlias 客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -352,7 +352,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA证书别名
+     * Set 客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateAlias 客户端CA证书别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -362,8 +362,8 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 获取多客户端CA证书别名信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 多客户端CA证书别名信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolyClientCertificateAliasInfo 多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -372,7 +372,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 设置多客户端CA证书别名信息
+     * Set 多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolyClientCertificateAliasInfo 多客户端CA证书别名信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -382,7 +382,7 @@ public class HTTPSListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

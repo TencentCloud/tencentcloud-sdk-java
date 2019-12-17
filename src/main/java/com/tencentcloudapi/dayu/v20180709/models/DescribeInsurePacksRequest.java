@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInsurePacksRequest  extends AbstractModel{
+public class DescribeInsurePacksRequest extends AbstractModel{
 
     /**
     * 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
@@ -30,7 +30,7 @@ public class DescribeInsurePacksRequest  extends AbstractModel{
     private String [] IdList;
 
     /**
-     * 获取可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
+     * Get 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段； 
      * @return IdList 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
      */
     public String [] getIdList() {
@@ -38,7 +38,7 @@ public class DescribeInsurePacksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
+     * Set 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
      * @param IdList 可选字段，保险包套餐ID，当要获取指定ID（例如insure-000000xe）的保险包套餐时请填写此字段；
      */
     public void setIdList(String [] IdList) {
@@ -46,7 +46,7 @@ public class DescribeInsurePacksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IdList.", this.IdList);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenProVersionPrepaidRequest  extends AbstractModel{
+public class OpenProVersionPrepaidRequest extends AbstractModel{
 
     /**
     * 购买相关参数。
@@ -37,7 +37,7 @@ public class OpenProVersionPrepaidRequest  extends AbstractModel{
     private ProVersionMachine [] Machines;
 
     /**
-     * 获取购买相关参数。
+     * Get 购买相关参数。 
      * @return ChargePrepaid 购买相关参数。
      */
     public ChargePrepaid getChargePrepaid() {
@@ -45,7 +45,7 @@ public class OpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买相关参数。
+     * Set 购买相关参数。
      * @param ChargePrepaid 购买相关参数。
      */
     public void setChargePrepaid(ChargePrepaid ChargePrepaid) {
@@ -53,7 +53,7 @@ public class OpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要开通专业版主机信息数组。
+     * Get 需要开通专业版主机信息数组。 
      * @return Machines 需要开通专业版主机信息数组。
      */
     public ProVersionMachine [] getMachines() {
@@ -61,7 +61,7 @@ public class OpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要开通专业版主机信息数组。
+     * Set 需要开通专业版主机信息数组。
      * @param Machines 需要开通专业版主机信息数组。
      */
     public void setMachines(ProVersionMachine [] Machines) {
@@ -69,7 +69,7 @@ public class OpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);

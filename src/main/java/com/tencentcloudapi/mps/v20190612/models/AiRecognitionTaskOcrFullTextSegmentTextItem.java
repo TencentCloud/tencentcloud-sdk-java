@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
+public class AiRecognitionTaskOcrFullTextSegmentTextItem extends AbstractModel{
 
     /**
     * 识别片段置信度。取值：0~100。
@@ -44,7 +44,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     private String Text;
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -52,7 +52,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -60,7 +60,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
      * @return AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public Long [] getAreaCoordSet() {
@@ -68,7 +68,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      * @param AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
@@ -76,7 +76,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别文本。
+     * Get 识别文本。 
      * @return Text 识别文本。
      */
     public String getText() {
@@ -84,7 +84,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别文本。
+     * Set 识别文本。
      * @param Text 识别文本。
      */
     public void setText(String Text) {
@@ -92,7 +92,7 @@ public class AiRecognitionTaskOcrFullTextSegmentTextItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

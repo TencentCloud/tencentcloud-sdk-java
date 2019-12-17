@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetAccountPasswordRequest  extends AbstractModel{
+public class ResetAccountPasswordRequest extends AbstractModel{
 
     /**
     * 数据库实例ID，形如mssql-njj2mtpl
@@ -37,7 +37,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     private AccountPassword [] Accounts;
 
     /**
-     * 获取数据库实例ID，形如mssql-njj2mtpl
+     * Get 数据库实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库实例ID，形如mssql-njj2mtpl
+     * Set 数据库实例ID，形如mssql-njj2mtpl
      * @param InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新后的账户密码信息数组
+     * Get 更新后的账户密码信息数组 
      * @return Accounts 更新后的账户密码信息数组
      */
     public AccountPassword [] getAccounts() {
@@ -61,7 +61,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新后的账户密码信息数组
+     * Set 更新后的账户密码信息数组
      * @param Accounts 更新后的账户密码信息数组
      */
     public void setAccounts(AccountPassword [] Accounts) {
@@ -69,7 +69,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

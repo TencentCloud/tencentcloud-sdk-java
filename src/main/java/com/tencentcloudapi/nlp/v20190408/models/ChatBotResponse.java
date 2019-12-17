@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChatBotResponse  extends AbstractModel{
+public class ChatBotResponse extends AbstractModel{
 
     /**
     * 对于当前输出回复的自信度
@@ -44,7 +44,7 @@ public class ChatBotResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取对于当前输出回复的自信度
+     * Get 对于当前输出回复的自信度 
      * @return Confidence 对于当前输出回复的自信度
      */
     public Float getConfidence() {
@@ -52,7 +52,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 设置对于当前输出回复的自信度
+     * Set 对于当前输出回复的自信度
      * @param Confidence 对于当前输出回复的自信度
      */
     public void setConfidence(Float Confidence) {
@@ -60,7 +60,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 获取闲聊回复
+     * Get 闲聊回复 
      * @return Reply 闲聊回复
      */
     public String getReply() {
@@ -68,7 +68,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 设置闲聊回复
+     * Set 闲聊回复
      * @param Reply 闲聊回复
      */
     public void setReply(String Reply) {
@@ -76,7 +76,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ChatBotResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

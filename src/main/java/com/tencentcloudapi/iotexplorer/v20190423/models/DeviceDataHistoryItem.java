@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceDataHistoryItem  extends AbstractModel{
+public class DeviceDataHistoryItem extends AbstractModel{
 
     /**
     * 时间点，毫秒时间戳
@@ -37,7 +37,7 @@ public class DeviceDataHistoryItem  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取时间点，毫秒时间戳
+     * Get 时间点，毫秒时间戳 
      * @return Time 时间点，毫秒时间戳
      */
     public String getTime() {
@@ -45,7 +45,7 @@ public class DeviceDataHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置时间点，毫秒时间戳
+     * Set 时间点，毫秒时间戳
      * @param Time 时间点，毫秒时间戳
      */
     public void setTime(String Time) {
@@ -53,7 +53,7 @@ public class DeviceDataHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取字段取值
+     * Get 字段取值 
      * @return Value 字段取值
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class DeviceDataHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置字段取值
+     * Set 字段取值
      * @param Value 字段取值
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class DeviceDataHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

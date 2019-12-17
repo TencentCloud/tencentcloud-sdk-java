@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUDPListenersRequest  extends AbstractModel{
+public class DescribeUDPListenersRequest extends AbstractModel{
 
     /**
     * 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
@@ -81,7 +81,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     private String SearchValue;
 
     /**
-     * 获取过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * Get 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。 
      * @return ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public String getProxyId() {
@@ -89,7 +89,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * Set 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      * @param ProxyId 过滤条件，根据通道ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -97,9 +97,9 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器ID精确查询。
+     * Get 过滤条件，根据监听器ID精确查询。
 当设置了ProxyId时，会检查该监听器是否归属于该通道。
-当设置了GroupId时，会检查该监听器是否归属于该通道组。
+当设置了GroupId时，会检查该监听器是否归属于该通道组。 
      * @return ListenerId 过滤条件，根据监听器ID精确查询。
 当设置了ProxyId时，会检查该监听器是否归属于该通道。
 当设置了GroupId时，会检查该监听器是否归属于该通道组。
@@ -109,7 +109,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器ID精确查询。
+     * Set 过滤条件，根据监听器ID精确查询。
 当设置了ProxyId时，会检查该监听器是否归属于该通道。
 当设置了GroupId时，会检查该监听器是否归属于该通道组。
      * @param ListenerId 过滤条件，根据监听器ID精确查询。
@@ -121,7 +121,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器名称精确查询
+     * Get 过滤条件，根据监听器名称精确查询 
      * @return ListenerName 过滤条件，根据监听器名称精确查询
      */
     public String getListenerName() {
@@ -129,7 +129,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器名称精确查询
+     * Set 过滤条件，根据监听器名称精确查询
      * @param ListenerName 过滤条件，根据监听器名称精确查询
      */
     public void setListenerName(String ListenerName) {
@@ -137,7 +137,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据监听器端口精确查询
+     * Get 过滤条件，根据监听器端口精确查询 
      * @return Port 过滤条件，根据监听器端口精确查询
      */
     public Long getPort() {
@@ -145,7 +145,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据监听器端口精确查询
+     * Set 过滤条件，根据监听器端口精确查询
      * @param Port 过滤条件，根据监听器端口精确查询
      */
     public void setPort(Long Port) {
@@ -153,7 +153,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -161,7 +161,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -169,7 +169,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数量，默认为20
+     * Get 限制数量，默认为20 
      * @return Limit 限制数量，默认为20
      */
     public Long getLimit() {
@@ -177,7 +177,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数量，默认为20
+     * Set 限制数量，默认为20
      * @param Limit 限制数量，默认为20
      */
     public void setLimit(Long Limit) {
@@ -185,7 +185,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * Get 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。 
      * @return GroupId 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public String getGroupId() {
@@ -193,7 +193,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
+     * Set 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      * @param GroupId 过滤条件，根据通道组ID进行拉取，ProxyId/GroupId/ListenerId必须设置一个，但ProxyId和GroupId不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -201,7 +201,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+     * Get 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用 
      * @return SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
      */
     public String getSearchValue() {
@@ -209,7 +209,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+     * Set 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
      * @param SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
      */
     public void setSearchValue(String SearchValue) {
@@ -217,7 +217,7 @@ public class DescribeUDPListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

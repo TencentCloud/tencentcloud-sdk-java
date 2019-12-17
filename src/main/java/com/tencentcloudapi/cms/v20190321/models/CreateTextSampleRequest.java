@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTextSampleRequest  extends AbstractModel{
+public class CreateTextSampleRequest extends AbstractModel{
 
     /**
     * 关键词数组
@@ -54,7 +54,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     private Long Label;
 
     /**
-     * 获取关键词数组
+     * Get 关键词数组 
      * @return Contents 关键词数组
      */
     public String [] getContents() {
@@ -62,7 +62,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词数组
+     * Set 关键词数组
      * @param Contents 关键词数组
      */
     public void setContents(String [] Contents) {
@@ -70,7 +70,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -78,7 +78,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
 20007：谩骂 
 24001：暴恐
 21000：综合
-20105：广告引流
+20105：广告引流 
      * @return EvilType 恶意类型
 100：正常
 20001：政治
@@ -94,7 +94,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -118,9 +118,9 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取样本类型
+     * Get 样本类型
 1：黑库
-2：白库
+2：白库 
      * @return Label 样本类型
 1：黑库
 2：白库
@@ -130,7 +130,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置样本类型
+     * Set 样本类型
 1：黑库
 2：白库
      * @param Label 样本类型
@@ -142,7 +142,7 @@ public class CreateTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Contents.", this.Contents);

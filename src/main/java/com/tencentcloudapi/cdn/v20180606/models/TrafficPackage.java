@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrafficPackage  extends AbstractModel{
+public class TrafficPackage extends AbstractModel{
 
     /**
     * 流量包 Id
@@ -103,7 +103,7 @@ disabled：未启用
     private String Channel;
 
     /**
-     * 获取流量包 Id
+     * Get 流量包 Id 
      * @return Id 流量包 Id
      */
     public Integer getId() {
@@ -111,7 +111,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包 Id
+     * Set 流量包 Id
      * @param Id 流量包 Id
      */
     public void setId(Integer Id) {
@@ -119,7 +119,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包类型
+     * Get 流量包类型 
      * @return Type 流量包类型
      */
     public String getType() {
@@ -127,7 +127,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包类型
+     * Set 流量包类型
      * @param Type 流量包类型
      */
     public void setType(String Type) {
@@ -135,7 +135,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包大小（单位为 Byte）
+     * Get 流量包大小（单位为 Byte） 
      * @return Bytes 流量包大小（单位为 Byte）
      */
     public Integer getBytes() {
@@ -143,7 +143,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包大小（单位为 Byte）
+     * Set 流量包大小（单位为 Byte）
      * @param Bytes 流量包大小（单位为 Byte）
      */
     public void setBytes(Integer Bytes) {
@@ -151,7 +151,7 @@ disabled：未启用
     }
 
     /**
-     * 获取已消耗流量（单位为 Byte）
+     * Get 已消耗流量（单位为 Byte） 
      * @return BytesUsed 已消耗流量（单位为 Byte）
      */
     public Integer getBytesUsed() {
@@ -159,7 +159,7 @@ disabled：未启用
     }
 
     /**
-     * 设置已消耗流量（单位为 Byte）
+     * Set 已消耗流量（单位为 Byte）
      * @param BytesUsed 已消耗流量（单位为 Byte）
      */
     public void setBytesUsed(Integer BytesUsed) {
@@ -167,10 +167,10 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包状态
+     * Get 流量包状态
 enabled：已启用
 expired：已过期
-disabled：未启用
+disabled：未启用 
      * @return Status 流量包状态
 enabled：已启用
 expired：已过期
@@ -181,7 +181,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包状态
+     * Set 流量包状态
 enabled：已启用
 expired：已过期
 disabled：未启用
@@ -195,7 +195,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包发放时间
+     * Get 流量包发放时间 
      * @return CreateTime 流量包发放时间
      */
     public String getCreateTime() {
@@ -203,7 +203,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包发放时间
+     * Set 流量包发放时间
      * @param CreateTime 流量包发放时间
      */
     public void setCreateTime(String CreateTime) {
@@ -211,7 +211,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包生效时间
+     * Get 流量包生效时间 
      * @return EnableTime 流量包生效时间
      */
     public String getEnableTime() {
@@ -219,7 +219,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包生效时间
+     * Set 流量包生效时间
      * @param EnableTime 流量包生效时间
      */
     public void setEnableTime(String EnableTime) {
@@ -227,7 +227,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包过期时间
+     * Get 流量包过期时间 
      * @return ExpireTime 流量包过期时间
      */
     public String getExpireTime() {
@@ -235,7 +235,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包过期时间
+     * Set 流量包过期时间
      * @param ExpireTime 流量包过期时间
      */
     public void setExpireTime(String ExpireTime) {
@@ -243,7 +243,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包是否续订
+     * Get 流量包是否续订 
      * @return ContractExtension 流量包是否续订
      */
     public Boolean getContractExtension() {
@@ -251,7 +251,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包是否续订
+     * Set 流量包是否续订
      * @param ContractExtension 流量包是否续订
      */
     public void setContractExtension(Boolean ContractExtension) {
@@ -259,7 +259,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包是否自动续订
+     * Get 流量包是否自动续订 
      * @return AutoExtension 流量包是否自动续订
      */
     public Boolean getAutoExtension() {
@@ -267,7 +267,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包是否自动续订
+     * Set 流量包是否自动续订
      * @param AutoExtension 流量包是否自动续订
      */
     public void setAutoExtension(Boolean AutoExtension) {
@@ -275,7 +275,7 @@ disabled：未启用
     }
 
     /**
-     * 获取流量包来源
+     * Get 流量包来源 
      * @return Channel 流量包来源
      */
     public String getChannel() {
@@ -283,7 +283,7 @@ disabled：未启用
     }
 
     /**
-     * 设置流量包来源
+     * Set 流量包来源
      * @param Channel 流量包来源
      */
     public void setChannel(String Channel) {
@@ -291,7 +291,7 @@ disabled：未启用
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

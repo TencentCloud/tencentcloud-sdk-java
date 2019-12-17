@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDetectInfoRequest  extends AbstractModel{
+public class GetDetectInfoRequest extends AbstractModel{
 
     /**
     * 人脸核身流程的标识，调用DetectAuth接口时生成。
@@ -46,7 +46,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     private String InfoType;
 
     /**
-     * 获取人脸核身流程的标识，调用DetectAuth接口时生成。
+     * Get 人脸核身流程的标识，调用DetectAuth接口时生成。 
      * @return BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
     public String getBizToken() {
@@ -54,7 +54,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸核身流程的标识，调用DetectAuth接口时生成。
+     * Set 人脸核身流程的标识，调用DetectAuth接口时生成。
      * @param BizToken 人脸核身流程的标识，调用DetectAuth接口时生成。
      */
     public void setBizToken(String BizToken) {
@@ -62,7 +62,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+     * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。 
      * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      */
     public String getRuleId() {
@@ -70,7 +70,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
+     * Set 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      * @param RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请加慧眼小助手微信（faceid001）进行咨询。
      */
     public void setRuleId(String RuleId) {
@@ -78,9 +78,9 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+     * Get 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
-默认值：0
+默认值：0 
      * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
 默认值：0
@@ -90,7 +90,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
+     * Set 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
 如 134表示拉取文本类、视频最佳截图照片、视频。
 默认值：0
      * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证正反面；3：视频最佳截图照片；4：视频）。
@@ -102,7 +102,7 @@ public class GetDetectInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizToken", this.BizToken);

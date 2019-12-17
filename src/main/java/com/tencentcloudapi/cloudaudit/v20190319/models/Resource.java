@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Resource  extends AbstractModel{
+public class Resource extends AbstractModel{
 
     /**
     * 资源名称
@@ -37,7 +37,7 @@ public class Resource  extends AbstractModel{
     private String ResourceType;
 
     /**
-     * 获取资源名称
+     * Get 资源名称 
      * @return ResourceName 资源名称
      */
     public String getResourceName() {
@@ -45,7 +45,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置资源名称
+     * Set 资源名称
      * @param ResourceName 资源名称
      */
     public void setResourceName(String ResourceName) {
@@ -53,7 +53,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 获取资源类型
+     * Get 资源类型 
      * @return ResourceType 资源类型
      */
     public String getResourceType() {
@@ -61,7 +61,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型
+     * Set 资源类型
      * @param ResourceType 资源类型
      */
     public void setResourceType(String ResourceType) {
@@ -69,7 +69,7 @@ public class Resource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);

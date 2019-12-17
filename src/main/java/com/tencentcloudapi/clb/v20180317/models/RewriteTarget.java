@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RewriteTarget  extends AbstractModel{
+public class RewriteTarget extends AbstractModel{
 
     /**
     * 重定向目标的监听器ID
@@ -41,9 +41,9 @@ public class RewriteTarget  extends AbstractModel{
     private String TargetLocationId;
 
     /**
-     * 获取重定向目标的监听器ID
+     * Get 重定向目标的监听器ID
 注意：此字段可能返回 null，表示无重定向。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TargetListenerId 重定向目标的监听器ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -53,7 +53,7 @@ public class RewriteTarget  extends AbstractModel{
     }
 
     /**
-     * 设置重定向目标的监听器ID
+     * Set 重定向目标的监听器ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetListenerId 重定向目标的监听器ID
@@ -65,9 +65,9 @@ public class RewriteTarget  extends AbstractModel{
     }
 
     /**
-     * 获取重定向目标的转发规则ID
+     * Get 重定向目标的转发规则ID
 注意：此字段可能返回 null，表示无重定向。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TargetLocationId 重定向目标的转发规则ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -77,7 +77,7 @@ public class RewriteTarget  extends AbstractModel{
     }
 
     /**
-     * 设置重定向目标的转发规则ID
+     * Set 重定向目标的转发规则ID
 注意：此字段可能返回 null，表示无重定向。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetLocationId 重定向目标的转发规则ID
@@ -89,7 +89,7 @@ public class RewriteTarget  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetListenerId", this.TargetListenerId);

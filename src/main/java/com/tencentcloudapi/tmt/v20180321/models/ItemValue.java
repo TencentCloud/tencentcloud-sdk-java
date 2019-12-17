@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ItemValue  extends AbstractModel{
+public class ItemValue extends AbstractModel{
 
     /**
     * 识别出的源文
@@ -65,7 +65,7 @@ public class ItemValue  extends AbstractModel{
     private Integer H;
 
     /**
-     * 获取识别出的源文
+     * Get 识别出的源文 
      * @return SourceText 识别出的源文
      */
     public String getSourceText() {
@@ -73,7 +73,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的源文
+     * Set 识别出的源文
      * @param SourceText 识别出的源文
      */
     public void setSourceText(String SourceText) {
@@ -81,7 +81,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 获取翻译后的译文
+     * Get 翻译后的译文 
      * @return TargetText 翻译后的译文
      */
     public String getTargetText() {
@@ -89,7 +89,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置翻译后的译文
+     * Set 翻译后的译文
      * @param TargetText 翻译后的译文
      */
     public void setTargetText(String TargetText) {
@@ -97,7 +97,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 获取X坐标
+     * Get X坐标 
      * @return X X坐标
      */
     public Integer getX() {
@@ -105,7 +105,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置X坐标
+     * Set X坐标
      * @param X X坐标
      */
     public void setX(Integer X) {
@@ -113,7 +113,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 获取Y坐标
+     * Get Y坐标 
      * @return Y Y坐标
      */
     public Integer getY() {
@@ -121,7 +121,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置Y坐标
+     * Set Y坐标
      * @param Y Y坐标
      */
     public void setY(Integer Y) {
@@ -129,7 +129,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 获取宽度
+     * Get 宽度 
      * @return W 宽度
      */
     public Integer getW() {
@@ -137,7 +137,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置宽度
+     * Set 宽度
      * @param W 宽度
      */
     public void setW(Integer W) {
@@ -145,7 +145,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 获取高度
+     * Get 高度 
      * @return H 高度
      */
     public Integer getH() {
@@ -153,7 +153,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 设置高度
+     * Set 高度
      * @param H 高度
      */
     public void setH(Integer H) {
@@ -161,7 +161,7 @@ public class ItemValue  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceText", this.SourceText);

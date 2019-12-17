@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Paging  extends AbstractModel{
+public class Paging extends AbstractModel{
 
     /**
     * 起始位置
@@ -37,7 +37,7 @@ public class Paging  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取起始位置
+     * Get 起始位置 
      * @return Offset 起始位置
      */
     public Long getOffset() {
@@ -45,7 +45,7 @@ public class Paging  extends AbstractModel{
     }
 
     /**
-     * 设置起始位置
+     * Set 起始位置
      * @param Offset 起始位置
      */
     public void setOffset(Long Offset) {
@@ -53,7 +53,7 @@ public class Paging  extends AbstractModel{
     }
 
     /**
-     * 获取数量
+     * Get 数量 
      * @return Limit 数量
      */
     public Long getLimit() {
@@ -61,7 +61,7 @@ public class Paging  extends AbstractModel{
     }
 
     /**
-     * 设置数量
+     * Set 数量
      * @param Limit 数量
      */
     public void setLimit(Long Limit) {
@@ -69,7 +69,7 @@ public class Paging  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

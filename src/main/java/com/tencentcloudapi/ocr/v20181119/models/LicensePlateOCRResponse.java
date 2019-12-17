@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LicensePlateOCRResponse  extends AbstractModel{
+public class LicensePlateOCRResponse extends AbstractModel{
 
     /**
     * 识别出的车牌号码。
@@ -44,7 +44,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别出的车牌号码。
+     * Get 识别出的车牌号码。 
      * @return Number 识别出的车牌号码。
      */
     public String getNumber() {
@@ -52,7 +52,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的车牌号码。
+     * Set 识别出的车牌号码。
      * @param Number 识别出的车牌号码。
      */
     public void setNumber(String Number) {
@@ -60,7 +60,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置信度，0 - 100 之间。
+     * Get 置信度，0 - 100 之间。 
      * @return Confidence 置信度，0 - 100 之间。
      */
     public Integer getConfidence() {
@@ -68,7 +68,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置置信度，0 - 100 之间。
+     * Set 置信度，0 - 100 之间。
      * @param Confidence 置信度，0 - 100 之间。
      */
     public void setConfidence(Integer Confidence) {
@@ -76,7 +76,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class LicensePlateOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Number", this.Number);

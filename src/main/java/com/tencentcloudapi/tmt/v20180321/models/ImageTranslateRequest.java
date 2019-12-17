@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTranslateRequest  extends AbstractModel{
+public class ImageTranslateRequest extends AbstractModel{
 
     /**
     * 唯一id，返回时原样返回
@@ -65,7 +65,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取唯一id，返回时原样返回
+     * Get 唯一id，返回时原样返回 
      * @return SessionUuid 唯一id，返回时原样返回
      */
     public String getSessionUuid() {
@@ -73,7 +73,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置唯一id，返回时原样返回
+     * Set 唯一id，返回时原样返回
      * @param SessionUuid 唯一id，返回时原样返回
      */
     public void setSessionUuid(String SessionUuid) {
@@ -81,7 +81,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取doc:文档扫描
+     * Get doc:文档扫描 
      * @return Scene doc:文档扫描
      */
     public String getScene() {
@@ -89,7 +89,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置doc:文档扫描
+     * Set doc:文档扫描
      * @param Scene doc:文档扫描
      */
     public void setScene(String Scene) {
@@ -97,7 +97,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
+     * Get 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩 
      * @return Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      */
     public String getData() {
@@ -105,7 +105,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
+     * Set 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      * @param Data 图片数据的Base64字符串，图片大小上限为4M，建议对源图片进行一定程度压缩
      */
     public void setData(String Data) {
@@ -113,7 +113,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
      * @return Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getSource() {
@@ -121,7 +121,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param Source 源语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setSource(String Source) {
@@ -129,7 +129,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
      * @return Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public String getTarget() {
@@ -137,7 +137,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      * @param Target 目标语言，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
      */
     public void setTarget(String Target) {
@@ -145,7 +145,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * Get 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0 
      * @return ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public Integer getProjectId() {
@@ -153,7 +153,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
+     * Set 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      * @param ProjectId 项目ID，可以根据控制台-账号中心-项目管理中的配置填写，如无配置请填写默认项目ID:0
      */
     public void setProjectId(Integer ProjectId) {
@@ -161,7 +161,7 @@ public class ImageTranslateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionUuid", this.SessionUuid);

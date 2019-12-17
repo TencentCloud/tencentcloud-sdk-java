@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicePositionRequest  extends AbstractModel{
+public class DescribeDevicePositionRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -65,7 +65,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     private String Alias;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -73,7 +73,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -81,7 +81,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制
+     * Get 数量限制 
      * @return Limit 数量限制
      */
     public Integer getLimit() {
@@ -89,7 +89,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制
+     * Set 数量限制
      * @param Limit 数量限制
      */
     public void setLimit(Integer Limit) {
@@ -97,7 +97,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -105,7 +105,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -113,7 +113,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -121,7 +121,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -129,7 +129,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID列表
+     * Get 实例ID列表 
      * @return InstanceIds 实例ID列表
      */
     public String [] getInstanceIds() {
@@ -137,7 +137,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID列表
+     * Set 实例ID列表
      * @param InstanceIds 实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -145,7 +145,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例别名
+     * Get 实例别名 
      * @return Alias 实例别名
      */
     public String getAlias() {
@@ -153,7 +153,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例别名
+     * Set 实例别名
      * @param Alias 实例别名
      */
     public void setAlias(String Alias) {
@@ -161,7 +161,7 @@ public class DescribeDevicePositionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpcRequest  extends AbstractModel{
+public class CreateVpcRequest extends AbstractModel{
 
     /**
     * 私有网络的名称
@@ -58,7 +58,7 @@ public class CreateVpcRequest  extends AbstractModel{
     private Boolean EnableMonitoring;
 
     /**
-     * 获取私有网络的名称
+     * Get 私有网络的名称 
      * @return VpcName 私有网络的名称
      */
     public String getVpcName() {
@@ -66,7 +66,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的名称
+     * Set 私有网络的名称
      * @param VpcName 私有网络的名称
      */
     public void setVpcName(String VpcName) {
@@ -74,7 +74,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的CIDR
+     * Get 私有网络的CIDR 
      * @return CidrBlock 私有网络的CIDR
      */
     public String getCidrBlock() {
@@ -82,7 +82,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的CIDR
+     * Set 私有网络的CIDR
      * @param CidrBlock 私有网络的CIDR
      */
     public void setCidrBlock(String CidrBlock) {
@@ -90,7 +90,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的可用区
+     * Get 私有网络的可用区 
      * @return Zone 私有网络的可用区
      */
     public String getZone() {
@@ -98,7 +98,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的可用区
+     * Set 私有网络的可用区
      * @param Zone 私有网络的可用区
      */
     public void setZone(String Zone) {
@@ -106,7 +106,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网信息
+     * Get 子网信息 
      * @return SubnetSet 子网信息
      */
     public VpcSubnetCreateInfo [] getSubnetSet() {
@@ -114,7 +114,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网信息
+     * Set 子网信息
      * @param SubnetSet 子网信息
      */
     public void setSubnetSet(VpcSubnetCreateInfo [] SubnetSet) {
@@ -122,7 +122,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用内网监控
+     * Get 是否启用内网监控 
      * @return EnableMonitoring 是否启用内网监控
      */
     public Boolean getEnableMonitoring() {
@@ -130,7 +130,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用内网监控
+     * Set 是否启用内网监控
      * @param EnableMonitoring 是否启用内网监控
      */
     public void setEnableMonitoring(Boolean EnableMonitoring) {
@@ -138,7 +138,7 @@ public class CreateVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);

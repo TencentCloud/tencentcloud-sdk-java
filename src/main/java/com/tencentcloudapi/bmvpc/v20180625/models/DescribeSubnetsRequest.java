@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetsRequest  extends AbstractModel{
+public class DescribeSubnetsRequest extends AbstractModel{
 
     /**
     * 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
@@ -56,7 +56,7 @@ zone - String - （过滤条件）可用区。
     private Long Limit;
 
     /**
-     * 获取子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
+     * Get 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。 
      * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      */
     public String [] getSubnetIds() {
@@ -64,7 +64,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
+     * Set 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      * @param SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。参数不支持同时指定SubnetIds和Filters。
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -72,12 +72,12 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Get 过滤条件，参数不支持同时指定SubnetIds和Filters。
 subnet-id - String - （过滤条件）Subnet实例名称。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
 cidr-block - String - （过滤条件）vpc的cidr。
 subnet-name - String - （过滤条件）子网名称。
-zone - String - （过滤条件）可用区。
+zone - String - （过滤条件）可用区。 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 subnet-id - String - （过滤条件）Subnet实例名称。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
@@ -90,7 +90,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Set 过滤条件，参数不支持同时指定SubnetIds和Filters。
 subnet-id - String - （过滤条件）Subnet实例名称。
 vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。
 cidr-block - String - （过滤条件）vpc的cidr。
@@ -108,7 +108,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -116,7 +116,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -124,7 +124,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Long getLimit() {
@@ -132,7 +132,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Long Limit) {
@@ -140,7 +140,7 @@ zone - String - （过滤条件）可用区。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);

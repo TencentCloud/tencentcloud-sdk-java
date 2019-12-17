@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetDetectStatesResponse  extends AbstractModel{
+public class DescribeNetDetectStatesResponse extends AbstractModel{
 
     /**
     * 符合条件的网络探测验证结果对象数组。
@@ -46,8 +46,8 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的网络探测验证结果对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合条件的网络探测验证结果对象数组。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NetDetectStateSet 符合条件的网络探测验证结果对象数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的网络探测验证结果对象数组。
+     * Set 符合条件的网络探测验证结果对象数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetectStateSet 符合条件的网络探测验证结果对象数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合条件的网络探测验证结果对象数量。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合条件的网络探测验证结果对象数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 符合条件的网络探测验证结果对象数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的网络探测验证结果对象数量。
+     * Set 符合条件的网络探测验证结果对象数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的网络探测验证结果对象数量。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class DescribeNetDetectStatesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NetDetectStateSet.", this.NetDetectStateSet);

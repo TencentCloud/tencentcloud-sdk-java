@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInfo  extends AbstractModel{
+public class RegionInfo extends AbstractModel{
 
     /**
     * 地域ID
@@ -51,7 +51,7 @@ public class RegionInfo  extends AbstractModel{
     private ZoneInfo [] ZoneInfoSet;
 
     /**
-     * 获取地域ID
+     * Get 地域ID 
      * @return Region 地域ID
      */
     public String getRegion() {
@@ -59,7 +59,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
      * @param Region 地域ID
      */
     public void setRegion(String Region) {
@@ -67,7 +67,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域整型ID
+     * Get 地域整型ID 
      * @return RegionId 地域整型ID
      */
     public Integer getRegionId() {
@@ -75,7 +75,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域整型ID
+     * Set 地域整型ID
      * @param RegionId 地域整型ID
      */
     public void setRegionId(Integer RegionId) {
@@ -83,7 +83,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域描述
+     * Get 地域描述 
      * @return RegionDescription 地域描述
      */
     public String getRegionDescription() {
@@ -91,7 +91,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域描述
+     * Set 地域描述
      * @param RegionDescription 地域描述
      */
     public void setRegionDescription(String RegionDescription) {
@@ -99,7 +99,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该地域下的可用区信息
+     * Get 该地域下的可用区信息 
      * @return ZoneInfoSet 该地域下的可用区信息
      */
     public ZoneInfo [] getZoneInfoSet() {
@@ -107,7 +107,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该地域下的可用区信息
+     * Set 该地域下的可用区信息
      * @param ZoneInfoSet 该地域下的可用区信息
      */
     public void setZoneInfoSet(ZoneInfo [] ZoneInfoSet) {
@@ -115,7 +115,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

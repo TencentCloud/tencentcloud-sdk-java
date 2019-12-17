@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccessGroupRequest  extends AbstractModel{
+public class DeleteAccessGroupRequest extends AbstractModel{
 
     /**
     * 权限组ID
@@ -30,7 +30,7 @@ public class DeleteAccessGroupRequest  extends AbstractModel{
     private String AccessGroupId;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -38,7 +38,7 @@ public class DeleteAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -46,7 +46,7 @@ public class DeleteAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);

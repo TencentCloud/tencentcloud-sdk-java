@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicePositionInfo  extends AbstractModel{
+public class DevicePositionInfo extends AbstractModel{
 
     /**
     * 设备ID
@@ -100,7 +100,7 @@ public class DevicePositionInfo  extends AbstractModel{
     private String Deadline;
 
     /**
-     * 获取设备ID
+     * Get 设备ID 
      * @return InstanceId 设备ID
      */
     public String getInstanceId() {
@@ -108,7 +108,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备ID
+     * Set 设备ID
      * @param InstanceId 设备ID
      */
     public void setInstanceId(String InstanceId) {
@@ -116,7 +116,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在可用区
+     * Get 所在可用区 
      * @return Zone 所在可用区
      */
     public String getZone() {
@@ -124,7 +124,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在可用区
+     * Set 所在可用区
      * @param Zone 所在可用区
      */
     public void setZone(String Zone) {
@@ -132,7 +132,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -140,7 +140,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -148,7 +148,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -156,7 +156,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -164,7 +164,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取业务IP
+     * Get 业务IP 
      * @return LanIp 业务IP
      */
     public String getLanIp() {
@@ -172,7 +172,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置业务IP
+     * Set 业务IP
      * @param LanIp 业务IP
      */
     public void setLanIp(String LanIp) {
@@ -180,7 +180,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例别名
+     * Get 实例别名 
      * @return Alias 实例别名
      */
     public String getAlias() {
@@ -188,7 +188,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例别名
+     * Set 实例别名
      * @param Alias 实例别名
      */
     public void setAlias(String Alias) {
@@ -196,7 +196,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取机架名称
+     * Get 机架名称 
      * @return RckName 机架名称
      */
     public String getRckName() {
@@ -204,7 +204,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机架名称
+     * Set 机架名称
      * @param RckName 机架名称
      */
     public void setRckName(String RckName) {
@@ -212,7 +212,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取机位
+     * Get 机位 
      * @return PosCode 机位
      */
     public Integer getPosCode() {
@@ -220,7 +220,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机位
+     * Set 机位
      * @param PosCode 机位
      */
     public void setPosCode(Integer PosCode) {
@@ -228,7 +228,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取交换机名称
+     * Get 交换机名称 
      * @return SwitchName 交换机名称
      */
     public String getSwitchName() {
@@ -236,7 +236,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置交换机名称
+     * Set 交换机名称
      * @param SwitchName 交换机名称
      */
     public void setSwitchName(String SwitchName) {
@@ -244,7 +244,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备交付时间
+     * Get 设备交付时间 
      * @return DeliverTime 设备交付时间
      */
     public String getDeliverTime() {
@@ -252,7 +252,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备交付时间
+     * Set 设备交付时间
      * @param DeliverTime 设备交付时间
      */
     public void setDeliverTime(String DeliverTime) {
@@ -260,7 +260,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间
+     * Get 过期时间 
      * @return Deadline 过期时间
      */
     public String getDeadline() {
@@ -268,7 +268,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置过期时间
+     * Set 过期时间
      * @param Deadline 过期时间
      */
     public void setDeadline(String Deadline) {
@@ -276,7 +276,7 @@ public class DevicePositionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadDataFileRequest  extends AbstractModel{
+public class UploadDataFileRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Data
@@ -72,7 +72,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Data
+     * Get 模块名，本接口取值：Data 
      * @return Module 模块名，本接口取值：Data
      */
     public String getModule() {
@@ -80,7 +80,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Data
+     * Set 模块名，本接口取值：Data
      * @param Module 模块名，本接口取值：Data
      */
     public void setModule(String Module) {
@@ -88,7 +88,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：Upload
+     * Get 操作名，本接口取值：Upload 
      * @return Operation 操作名，本接口取值：Upload
      */
     public String getOperation() {
@@ -96,7 +96,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：Upload
+     * Set 操作名，本接口取值：Upload
      * @param Operation 操作名，本接口取值：Upload
      */
     public void setOperation(String Operation) {
@@ -104,7 +104,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件名
+     * Get 文件名 
      * @return FileName 文件名
      */
     public String getFileName() {
@@ -112,7 +112,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
      * @param FileName 文件名
      */
     public void setFileName(String FileName) {
@@ -120,7 +120,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+     * Get <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul> 
      * @return UploadModel <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      */
     public String getUploadModel() {
@@ -128,7 +128,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
+     * Set <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      * @param UploadModel <p>上传类型，不填默认到期/逾期提醒文件，取值范围：</p><ul style="margin-bottom:0px;"><li>data：到期/逾期提醒文件</li><li>repay：到期/逾期提醒停拨文件</li><li>callback：回访文件</li><li>callstop：回访停拨文件</li></ul>
      */
     public void setUploadModel(String UploadModel) {
@@ -136,7 +136,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
+     * Get 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。 
      * @return File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
     public byte [] getFile() {
@@ -144,7 +144,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
+     * Set 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      * @param File 文件，文件与文件地址上传只可选用一种，必须使用multipart/form-data协议来上传二进制流文件，建议使用xlsx格式，大小不超过5MB。
      */
     public void setFile(byte [] File) {
@@ -152,7 +152,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+     * Get 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。 
      * @return FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      */
     public String getFileUrl() {
@@ -160,7 +160,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
+     * Set 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      * @param FileUrl 文件上传地址，文件与文件地址上传只可选用一种，大小不超过50MB。
      */
     public void setFileUrl(String FileUrl) {
@@ -168,7 +168,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，不传默认为系统分配的初始实例。
+     * Get 实例ID，不传默认为系统分配的初始实例。 
      * @return InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public String getInstId() {
@@ -176,7 +176,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，不传默认为系统分配的初始实例。
+     * Set 实例ID，不传默认为系统分配的初始实例。
      * @param InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public void setInstId(String InstId) {
@@ -184,7 +184,7 @@ public class UploadDataFileRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Route  extends AbstractModel{
+public class Route extends AbstractModel{
 
     /**
     * 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
@@ -86,7 +86,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteType;
 
     /**
-     * 获取目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
     public String getDestinationCidrBlock() {
@@ -94,7 +94,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 设置目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * Set 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      * @param DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -102,7 +102,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 获取下一跳类型，目前我们支持的类型有：
+     * Get 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云主机；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -111,7 +111,7 @@ SSLVPN：sslvpn网关；
 NAT：NAT网关; 
 NORMAL_CVM：普通云主机；
 EIP：云主机的公网IP；
-CCN：云联网。
+CCN：云联网。 
      * @return GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云主机；
 VPN：VPN网关；
@@ -128,7 +128,7 @@ CCN：云联网。
     }
 
     /**
-     * 设置下一跳类型，目前我们支持的类型有：
+     * Set 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云主机；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -154,8 +154,8 @@ CCN：云联网。
     }
 
     /**
-     * 获取下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
+     * Get 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0' 
      * @return GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      */
@@ -164,7 +164,7 @@ CCN：云联网。
     }
 
     /**
-     * 设置下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
+     * Set 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
      * @param GatewayId 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
@@ -174,7 +174,7 @@ CCN：云联网。
     }
 
     /**
-     * 获取路由策略ID。
+     * Get 路由策略ID。 
      * @return RouteId 路由策略ID。
      */
     public Integer getRouteId() {
@@ -182,7 +182,7 @@ CCN：云联网。
     }
 
     /**
-     * 设置路由策略ID。
+     * Set 路由策略ID。
      * @param RouteId 路由策略ID。
      */
     public void setRouteId(Integer RouteId) {
@@ -190,7 +190,7 @@ CCN：云联网。
     }
 
     /**
-     * 获取路由策略描述。
+     * Get 路由策略描述。 
      * @return RouteDescription 路由策略描述。
      */
     public String getRouteDescription() {
@@ -198,7 +198,7 @@ CCN：云联网。
     }
 
     /**
-     * 设置路由策略描述。
+     * Set 路由策略描述。
      * @param RouteDescription 路由策略描述。
      */
     public void setRouteDescription(String RouteDescription) {
@@ -206,7 +206,7 @@ CCN：云联网。
     }
 
     /**
-     * 获取是否启用
+     * Get 是否启用 
      * @return Enabled 是否启用
      */
     public Boolean getEnabled() {
@@ -214,7 +214,7 @@ CCN：云联网。
     }
 
     /**
-     * 设置是否启用
+     * Set 是否启用
      * @param Enabled 是否启用
      */
     public void setEnabled(Boolean Enabled) {
@@ -222,11 +222,11 @@ CCN：云联网。
     }
 
     /**
-     * 获取路由类型，目前我们支持的类型有：
+     * Get 路由类型，目前我们支持的类型有：
 USER：用户路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
-用户只能添加和操作 USER 类型的路由。
+用户只能添加和操作 USER 类型的路由。 
      * @return RouteType 路由类型，目前我们支持的类型有：
 USER：用户路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
@@ -238,7 +238,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 设置路由类型，目前我们支持的类型有：
+     * Set 路由类型，目前我们支持的类型有：
 USER：用户路由；
 NETD：网络探测路由，创建网络探测实例时，系统默认下发，不可编辑与删除；
 CCN：云联网路由，系统默认下发，不可编辑与删除。
@@ -254,7 +254,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);

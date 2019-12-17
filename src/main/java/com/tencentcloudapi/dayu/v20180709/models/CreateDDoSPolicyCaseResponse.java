@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
+public class CreateDDoSPolicyCaseResponse extends AbstractModel{
 
     /**
     * 策略场景ID
@@ -37,7 +37,7 @@ public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取策略场景ID
+     * Get 策略场景ID 
      * @return SceneId 策略场景ID
      */
     public String getSceneId() {
@@ -45,7 +45,7 @@ public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
     }
 
     /**
-     * 设置策略场景ID
+     * Set 策略场景ID
      * @param SceneId 策略场景ID
      */
     public void setSceneId(String SceneId) {
@@ -53,7 +53,7 @@ public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateDDoSPolicyCaseResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SceneId", this.SceneId);

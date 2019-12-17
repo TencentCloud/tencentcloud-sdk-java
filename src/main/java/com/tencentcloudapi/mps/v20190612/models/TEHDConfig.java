@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TEHDConfig  extends AbstractModel{
+public class TEHDConfig extends AbstractModel{
 
     /**
     * 极速高清类型，可选值：
@@ -40,9 +40,9 @@ public class TEHDConfig  extends AbstractModel{
     private Long MaxVideoBitrate;
 
     /**
-     * 获取极速高清类型，可选值：
+     * Get 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
-不填代表不启用极速高清。
+不填代表不启用极速高清。 
      * @return Type 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
 不填代表不启用极速高清。
@@ -52,7 +52,7 @@ public class TEHDConfig  extends AbstractModel{
     }
 
     /**
-     * 设置极速高清类型，可选值：
+     * Set 极速高清类型，可选值：
 <li>TEHD-100：极速高清-100。</li>
 不填代表不启用极速高清。
      * @param Type 极速高清类型，可选值：
@@ -64,8 +64,8 @@ public class TEHDConfig  extends AbstractModel{
     }
 
     /**
-     * 获取视频码率上限，当 Type 指定了极速高清类型时有效。
-不填或填0表示不设视频码率上限。
+     * Get 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。 
      * @return MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
      */
@@ -74,7 +74,7 @@ public class TEHDConfig  extends AbstractModel{
     }
 
     /**
-     * 设置视频码率上限，当 Type 指定了极速高清类型时有效。
+     * Set 视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
      * @param MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
 不填或填0表示不设视频码率上限。
@@ -84,7 +84,7 @@ public class TEHDConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

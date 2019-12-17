@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableKeysRequest  extends AbstractModel{
+public class EnableKeysRequest extends AbstractModel{
 
     /**
     * 需要批量启用的CMK Id 列表， CMK数量最大支持100
@@ -30,7 +30,7 @@ public class EnableKeysRequest  extends AbstractModel{
     private String [] KeyIds;
 
     /**
-     * 获取需要批量启用的CMK Id 列表， CMK数量最大支持100
+     * Get 需要批量启用的CMK Id 列表， CMK数量最大支持100 
      * @return KeyIds 需要批量启用的CMK Id 列表， CMK数量最大支持100
      */
     public String [] getKeyIds() {
@@ -38,7 +38,7 @@ public class EnableKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要批量启用的CMK Id 列表， CMK数量最大支持100
+     * Set 需要批量启用的CMK Id 列表， CMK数量最大支持100
      * @param KeyIds 需要批量启用的CMK Id 列表， CMK数量最大支持100
      */
     public void setKeyIds(String [] KeyIds) {
@@ -46,7 +46,7 @@ public class EnableKeysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);

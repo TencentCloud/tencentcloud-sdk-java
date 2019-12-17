@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchModifyTargetWeightRequest  extends AbstractModel{
+public class BatchModifyTargetWeightRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -37,7 +37,7 @@ public class BatchModifyTargetWeightRequest  extends AbstractModel{
     private RsWeightRule [] ModifyList;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class BatchModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class BatchModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要批量修改权重的列表
+     * Get 要批量修改权重的列表 
      * @return ModifyList 要批量修改权重的列表
      */
     public RsWeightRule [] getModifyList() {
@@ -61,7 +61,7 @@ public class BatchModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要批量修改权重的列表
+     * Set 要批量修改权重的列表
      * @param ModifyList 要批量修改权重的列表
      */
     public void setModifyList(RsWeightRule [] ModifyList) {
@@ -69,7 +69,7 @@ public class BatchModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

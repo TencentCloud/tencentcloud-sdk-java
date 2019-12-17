@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPoliticalTaskOutput  extends AbstractModel{
+public class AiReviewPoliticalTaskOutput extends AbstractModel{
 
     /**
     * 视频涉政评分，分值为0到100。
@@ -56,7 +56,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     private MediaContentReviewPoliticalSegmentItem [] SegmentSet;
 
     /**
-     * 获取视频涉政评分，分值为0到100。
+     * Get 视频涉政评分，分值为0到100。 
      * @return Confidence 视频涉政评分，分值为0到100。
      */
     public Float getConfidence() {
@@ -64,7 +64,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频涉政评分，分值为0到100。
+     * Set 视频涉政评分，分值为0到100。
      * @param Confidence 视频涉政评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
@@ -72,10 +72,10 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取涉政结果建议，取值范围：
+     * Get 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -86,7 +86,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置涉政结果建议，取值范围：
+     * Set 涉政结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -100,9 +100,9 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取视频鉴政结果标签，取值范围：
+     * Get 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
-<li>violation_photo：违规图标。</li>
+<li>violation_photo：违规图标。</li> 
      * @return Label 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
@@ -112,7 +112,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频鉴政结果标签，取值范围：
+     * Set 视频鉴政结果标签，取值范围：
 <li>politician：政治人物。</li>
 <li>violation_photo：违规图标。</li>
      * @param Label 视频鉴政结果标签，取值范围：
@@ -124,7 +124,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取有涉政嫌疑的视频片段列表。
+     * Get 有涉政嫌疑的视频片段列表。 
      * @return SegmentSet 有涉政嫌疑的视频片段列表。
      */
     public MediaContentReviewPoliticalSegmentItem [] getSegmentSet() {
@@ -132,7 +132,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置有涉政嫌疑的视频片段列表。
+     * Set 有涉政嫌疑的视频片段列表。
      * @param SegmentSet 有涉政嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewPoliticalSegmentItem [] SegmentSet) {
@@ -140,7 +140,7 @@ public class AiReviewPoliticalTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

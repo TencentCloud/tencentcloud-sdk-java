@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest  extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel{
 
     /**
     * 集群实例所属可用区，不传则默认所有可用区
@@ -72,7 +72,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private Integer OrderByType;
 
     /**
-     * 获取集群实例所属可用区，不传则默认所有可用区
+     * Get 集群实例所属可用区，不传则默认所有可用区 
      * @return Zone 集群实例所属可用区，不传则默认所有可用区
      */
     public String getZone() {
@@ -80,7 +80,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例所属可用区，不传则默认所有可用区
+     * Set 集群实例所属可用区，不传则默认所有可用区
      * @param Zone 集群实例所属可用区，不传则默认所有可用区
      */
     public void setZone(String Zone) {
@@ -88,7 +88,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群实例ID列表
+     * Get 集群实例ID列表 
      * @return InstanceIds 集群实例ID列表
      */
     public String [] getInstanceIds() {
@@ -96,7 +96,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例ID列表
+     * Set 集群实例ID列表
      * @param InstanceIds 集群实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -104,7 +104,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群实例名称列表
+     * Get 集群实例名称列表 
      * @return InstanceNames 集群实例名称列表
      */
     public String [] getInstanceNames() {
@@ -112,7 +112,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例名称列表
+     * Set 集群实例名称列表
      * @param InstanceNames 集群实例名称列表
      */
     public void setInstanceNames(String [] InstanceNames) {
@@ -120,7 +120,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页起始值, 默认值0
+     * Get 分页起始值, 默认值0 
      * @return Offset 分页起始值, 默认值0
      */
     public Integer getOffset() {
@@ -128,7 +128,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页起始值, 默认值0
+     * Set 分页起始值, 默认值0
      * @param Offset 分页起始值, 默认值0
      */
     public void setOffset(Integer Offset) {
@@ -136,7 +136,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，默认值20
+     * Get 分页大小，默认值20 
      * @return Limit 分页大小，默认值20
      */
     public Integer getLimit() {
@@ -144,7 +144,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，默认值20
+     * Set 分页大小，默认值20
      * @param Limit 分页大小，默认值20
      */
     public void setLimit(Integer Limit) {
@@ -152,7 +152,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * Get 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序 
      * @return OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
     public Integer getOrderByKey() {
@@ -160,7 +160,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * Set 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      * @param OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
      */
     public void setOrderByKey(Integer OrderByKey) {
@@ -168,7 +168,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * Get 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序 
      * @return OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public Integer getOrderByType() {
@@ -176,7 +176,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
+     * Set 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      * @param OrderByType 排序方式<li>0：升序</li><li>1：降序</li>若传递了orderByKey未传递orderByType, 则默认升序
      */
     public void setOrderByType(Integer OrderByType) {
@@ -184,7 +184,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

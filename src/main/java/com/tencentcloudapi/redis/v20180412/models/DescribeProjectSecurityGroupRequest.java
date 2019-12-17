@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
+public class DescribeProjectSecurityGroupRequest extends AbstractModel{
 
     /**
     * 0:默认项目；-1 所有项目; >0: 特定项目
@@ -37,7 +37,7 @@ public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
     private String SecurityGroupId;
 
     /**
-     * 获取0:默认项目；-1 所有项目; >0: 特定项目
+     * Get 0:默认项目；-1 所有项目; >0: 特定项目 
      * @return ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
      */
     public Integer getProjectId() {
@@ -45,7 +45,7 @@ public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0:默认项目；-1 所有项目; >0: 特定项目
+     * Set 0:默认项目；-1 所有项目; >0: 特定项目
      * @param ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
      */
     public void setProjectId(Integer ProjectId) {
@@ -53,7 +53,7 @@ public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组Id
+     * Get 安全组Id 
      * @return SecurityGroupId 安全组Id
      */
     public String getSecurityGroupId() {
@@ -61,7 +61,7 @@ public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组Id
+     * Set 安全组Id
      * @param SecurityGroupId 安全组Id
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -69,7 +69,7 @@ public class DescribeProjectSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

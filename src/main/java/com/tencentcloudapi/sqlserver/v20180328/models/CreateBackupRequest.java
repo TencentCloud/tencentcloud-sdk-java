@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupRequest  extends AbstractModel{
+public class CreateBackupRequest extends AbstractModel{
 
     /**
     * 备份策略(0-实例备份 1-多库备份)
     */
     @SerializedName("Strategy")
     @Expose
-    private Integer Strategy;
+    private Long Strategy;
 
     /**
     * 需要备份库名的列表(多库备份才填写)
@@ -44,23 +44,23 @@ public class CreateBackupRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取备份策略(0-实例备份 1-多库备份)
+     * Get 备份策略(0-实例备份 1-多库备份) 
      * @return Strategy 备份策略(0-实例备份 1-多库备份)
      */
-    public Integer getStrategy() {
+    public Long getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * 设置备份策略(0-实例备份 1-多库备份)
+     * Set 备份策略(0-实例备份 1-多库备份)
      * @param Strategy 备份策略(0-实例备份 1-多库备份)
      */
-    public void setStrategy(Integer Strategy) {
+    public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * 获取需要备份库名的列表(多库备份才填写)
+     * Get 需要备份库名的列表(多库备份才填写) 
      * @return DBNames 需要备份库名的列表(多库备份才填写)
      */
     public String [] getDBNames() {
@@ -68,7 +68,7 @@ public class CreateBackupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要备份库名的列表(多库备份才填写)
+     * Set 需要备份库名的列表(多库备份才填写)
      * @param DBNames 需要备份库名的列表(多库备份才填写)
      */
     public void setDBNames(String [] DBNames) {
@@ -76,7 +76,7 @@ public class CreateBackupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，形如mssql-i1z41iwd
+     * Get 实例ID，形如mssql-i1z41iwd 
      * @return InstanceId 实例ID，形如mssql-i1z41iwd
      */
     public String getInstanceId() {
@@ -84,7 +84,7 @@ public class CreateBackupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-i1z41iwd
+     * Set 实例ID，形如mssql-i1z41iwd
      * @param InstanceId 实例ID，形如mssql-i1z41iwd
      */
     public void setInstanceId(String InstanceId) {
@@ -92,7 +92,7 @@ public class CreateBackupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);

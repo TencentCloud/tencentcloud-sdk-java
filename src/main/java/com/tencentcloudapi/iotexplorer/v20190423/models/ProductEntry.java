@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductEntry  extends AbstractModel{
+public class ProductEntry extends AbstractModel{
 
     /**
     * 产品ID
@@ -121,7 +121,7 @@ public class ProductEntry  extends AbstractModel{
     private Long ModuleId;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -129,7 +129,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -137,7 +137,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return ProductName 产品名称
      */
     public String getProductName() {
@@ -145,7 +145,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param ProductName 产品名称
      */
     public void setProductName(String ProductName) {
@@ -153,7 +153,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品分组模板ID
+     * Get 产品分组模板ID 
      * @return CategoryId 产品分组模板ID
      */
     public Long getCategoryId() {
@@ -161,7 +161,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品分组模板ID
+     * Set 产品分组模板ID
      * @param CategoryId 产品分组模板ID
      */
     public void setCategoryId(Long CategoryId) {
@@ -169,7 +169,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取加密类型
+     * Get 加密类型 
      * @return EncryptionType 加密类型
      */
     public String getEncryptionType() {
@@ -177,7 +177,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置加密类型
+     * Set 加密类型
      * @param EncryptionType 加密类型
      */
     public void setEncryptionType(String EncryptionType) {
@@ -185,7 +185,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取连接类型
+     * Get 连接类型 
      * @return NetType 连接类型
      */
     public String getNetType() {
@@ -193,7 +193,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置连接类型
+     * Set 连接类型
      * @param NetType 连接类型
      */
     public void setNetType(String NetType) {
@@ -201,7 +201,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取数据协议
+     * Get 数据协议 
      * @return DataProtocol 数据协议
      */
     public Long getDataProtocol() {
@@ -209,7 +209,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置数据协议
+     * Set 数据协议
      * @param DataProtocol 数据协议
      */
     public void setDataProtocol(Long DataProtocol) {
@@ -217,7 +217,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return ProductDesc 产品描述
      */
     public String getProductDesc() {
@@ -225,7 +225,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param ProductDesc 产品描述
      */
     public void setProductDesc(String ProductDesc) {
@@ -233,7 +233,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取状态
+     * Get 状态 
      * @return DevStatus 状态
      */
     public String getDevStatus() {
@@ -241,7 +241,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置状态
+     * Set 状态
      * @param DevStatus 状态
      */
     public void setDevStatus(String DevStatus) {
@@ -249,7 +249,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public Long getCreateTime() {
@@ -257,7 +257,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(Long CreateTime) {
@@ -265,7 +265,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public Long getUpdateTime() {
@@ -273,7 +273,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -281,7 +281,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取区域
+     * Get 区域 
      * @return Region 区域
      */
     public String getRegion() {
@@ -289,7 +289,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置区域
+     * Set 区域
      * @param Region 区域
      */
     public void setRegion(String Region) {
@@ -297,7 +297,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型
+     * Get 产品类型 
      * @return ProductType 产品类型
      */
     public Long getProductType() {
@@ -305,7 +305,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型
+     * Set 产品类型
      * @param ProductType 产品类型
      */
     public void setProductType(Long ProductType) {
@@ -313,7 +313,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -321,7 +321,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -329,7 +329,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 获取产品ModuleId
+     * Get 产品ModuleId 
      * @return ModuleId 产品ModuleId
      */
     public Long getModuleId() {
@@ -337,7 +337,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 设置产品ModuleId
+     * Set 产品ModuleId
      * @param ModuleId 产品ModuleId
      */
     public void setModuleId(Long ModuleId) {
@@ -345,7 +345,7 @@ public class ProductEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

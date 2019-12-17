@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetsResponse  extends AbstractModel{
+public class DescribeSubnetsResponse extends AbstractModel{
 
     /**
     * 子网列表信息
@@ -44,7 +44,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子网列表信息
+     * Get 子网列表信息 
      * @return SubnetSet 子网列表信息
      */
     public SubnetInfo [] getSubnetSet() {
@@ -52,7 +52,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子网列表信息
+     * Set 子网列表信息
      * @param SubnetSet 子网列表信息
      */
     public void setSubnetSet(SubnetInfo [] SubnetSet) {
@@ -60,7 +60,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的子网总数
+     * Get 返回的子网总数 
      * @return TotalCount 返回的子网总数
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的子网总数
+     * Set 返回的子网总数
      * @param TotalCount 返回的子网总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeSubnetsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);

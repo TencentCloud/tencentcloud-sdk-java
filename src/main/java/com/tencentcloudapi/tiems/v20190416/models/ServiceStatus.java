@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceStatus  extends AbstractModel{
+public class ServiceStatus extends AbstractModel{
 
     /**
     * 预期副本数
@@ -68,7 +68,7 @@ public class ServiceStatus  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取预期副本数
+     * Get 预期副本数 
      * @return DesiredReplicas 预期副本数
      */
     public Long getDesiredReplicas() {
@@ -76,7 +76,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置预期副本数
+     * Set 预期副本数
      * @param DesiredReplicas 预期副本数
      */
     public void setDesiredReplicas(Long DesiredReplicas) {
@@ -84,7 +84,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取当前副本数
+     * Get 当前副本数 
      * @return CurrentReplicas 当前副本数
      */
     public Long getCurrentReplicas() {
@@ -92,7 +92,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置当前副本数
+     * Set 当前副本数
      * @param CurrentReplicas 当前副本数
      */
     public void setCurrentReplicas(Long CurrentReplicas) {
@@ -100,7 +100,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
+     * Get Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中 
      * @return Status Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
      */
     public String getStatus() {
@@ -108,7 +108,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
+     * Set Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
      * @param Status Normal：正常运行中；Abnormal：服务异常，例如容器启动失败等；Waiting：服务等待中，例如容器下载镜像过程等；Stopped：已停止 Stopping 停止中；Resuming：重启中；Updating：服务更新中
      */
     public void setStatus(String Status) {
@@ -116,8 +116,8 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取服务处于当前状态的原因集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务处于当前状态的原因集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Conditions 服务处于当前状态的原因集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -126,7 +126,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置服务处于当前状态的原因集合
+     * Set 服务处于当前状态的原因集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Conditions 服务处于当前状态的原因集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -136,8 +136,8 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取副本名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 副本名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Replicas 副本名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -146,7 +146,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置副本名称
+     * Set 副本名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Replicas 副本名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,8 +156,8 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取运行状态对额外信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 运行状态对额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 运行状态对额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -166,7 +166,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置运行状态对额外信息
+     * Set 运行状态对额外信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 运行状态对额外信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,7 +176,7 @@ public class ServiceStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DesiredReplicas", this.DesiredReplicas);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRuleRequest  extends AbstractModel{
+public class ModifyRuleRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -80,7 +80,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     private String ForwardType;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -88,7 +88,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -96,7 +96,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -104,7 +104,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -112,7 +112,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改的转发规则的 ID。
+     * Get 要修改的转发规则的 ID。 
      * @return LocationId 要修改的转发规则的 ID。
      */
     public String getLocationId() {
@@ -120,7 +120,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的转发规则的 ID。
+     * Set 要修改的转发规则的 ID。
      * @param LocationId 要修改的转发规则的 ID。
      */
     public void setLocationId(String LocationId) {
@@ -128,7 +128,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+     * Get 转发规则的新的转发路径，如不需修改Url，则不需提供此参数 
      * @return Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
      */
     public String getUrl() {
@@ -136,7 +136,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+     * Set 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
      * @param Url 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
      */
     public void setUrl(String Url) {
@@ -144,7 +144,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查信息
+     * Get 健康检查信息 
      * @return HealthCheck 健康检查信息
      */
     public HealthCheck getHealthCheck() {
@@ -152,7 +152,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查信息
+     * Set 健康检查信息
      * @param HealthCheck 健康检查信息
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
@@ -160,8 +160,8 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * Get 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。 
      * @return Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
@@ -170,7 +170,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+     * Set 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      * @param Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
@@ -180,7 +180,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间
+     * Get 会话保持时间 
      * @return SessionExpireTime 会话保持时间
      */
     public Integer getSessionExpireTime() {
@@ -188,7 +188,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间
+     * Set 会话保持时间
      * @param SessionExpireTime 会话保持时间
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
@@ -196,7 +196,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+     * Get 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS 
      * @return ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
      */
     public String getForwardType() {
@@ -204,7 +204,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
+     * Set 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
      * @param ForwardType 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS
      */
     public void setForwardType(String ForwardType) {
@@ -212,7 +212,7 @@ public class ModifyRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileUploadTask  extends AbstractModel{
+public class FileUploadTask extends AbstractModel{
 
     /**
     * 文件唯一 ID。
@@ -53,7 +53,7 @@ public class FileUploadTask  extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-     * 获取文件唯一 ID。
+     * Get 文件唯一 ID。 
      * @return FileId 文件唯一 ID。
      */
     public String getFileId() {
@@ -61,7 +61,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置文件唯一 ID。
+     * Set 文件唯一 ID。
      * @param FileId 文件唯一 ID。
      */
     public void setFileId(String FileId) {
@@ -69,7 +69,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取上传完成后生成的媒体文件基础信息。
+     * Get 上传完成后生成的媒体文件基础信息。 
      * @return MediaBasicInfo 上传完成后生成的媒体文件基础信息。
      */
     public MediaBasicInfo getMediaBasicInfo() {
@@ -77,7 +77,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置上传完成后生成的媒体文件基础信息。
+     * Set 上传完成后生成的媒体文件基础信息。
      * @param MediaBasicInfo 上传完成后生成的媒体文件基础信息。
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
@@ -85,8 +85,8 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProcedureTaskId 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -95,7 +95,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
+     * Set 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcedureTaskId 若视频上传时指定了视频处理流程，则该字段为流程任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,8 +105,8 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取元信息。包括大小、时长、视频流信息、音频流信息等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -115,7 +115,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置元信息。包括大小、时长、视频流信息、音频流信息等。
+     * Set 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,7 +125,7 @@ public class FileUploadTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

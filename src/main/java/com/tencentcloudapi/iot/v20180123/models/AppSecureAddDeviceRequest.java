@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppSecureAddDeviceRequest  extends AbstractModel{
+public class AppSecureAddDeviceRequest extends AbstractModel{
 
     /**
     * 访问Token
@@ -37,7 +37,7 @@ public class AppSecureAddDeviceRequest  extends AbstractModel{
     private String DeviceSignature;
 
     /**
-     * 获取访问Token
+     * Get 访问Token 
      * @return AccessToken 访问Token
      */
     public String getAccessToken() {
@@ -45,7 +45,7 @@ public class AppSecureAddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问Token
+     * Set 访问Token
      * @param AccessToken 访问Token
      */
     public void setAccessToken(String AccessToken) {
@@ -53,7 +53,7 @@ public class AppSecureAddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备签名
+     * Get 设备签名 
      * @return DeviceSignature 设备签名
      */
     public String getDeviceSignature() {
@@ -61,7 +61,7 @@ public class AppSecureAddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备签名
+     * Set 设备签名
      * @param DeviceSignature 设备签名
      */
     public void setDeviceSignature(String DeviceSignature) {
@@ -69,7 +69,7 @@ public class AppSecureAddDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);

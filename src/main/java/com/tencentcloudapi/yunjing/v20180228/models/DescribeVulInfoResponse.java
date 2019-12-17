@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulInfoResponse  extends AbstractModel{
+public class DescribeVulInfoResponse extends AbstractModel{
 
     /**
     * 漏洞种类ID。
     */
     @SerializedName("VulId")
     @Expose
-    private Integer VulId;
+    private Long VulId;
 
     /**
     * 漏洞名称。
@@ -86,23 +86,23 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取漏洞种类ID。
+     * Get 漏洞种类ID。 
      * @return VulId 漏洞种类ID。
      */
-    public Integer getVulId() {
+    public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * 设置漏洞种类ID。
+     * Set 漏洞种类ID。
      * @param VulId 漏洞种类ID。
      */
-    public void setVulId(Integer VulId) {
+    public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * 获取漏洞名称。
+     * Get 漏洞名称。 
      * @return VulName 漏洞名称。
      */
     public String getVulName() {
@@ -110,7 +110,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞名称。
+     * Set 漏洞名称。
      * @param VulName 漏洞名称。
      */
     public void setVulName(String VulName) {
@@ -118,7 +118,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞等级。
+     * Get 漏洞等级。 
      * @return VulLevel 漏洞等级。
      */
     public String getVulLevel() {
@@ -126,7 +126,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞等级。
+     * Set 漏洞等级。
      * @param VulLevel 漏洞等级。
      */
     public void setVulLevel(String VulLevel) {
@@ -134,7 +134,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞类型。
+     * Get 漏洞类型。 
      * @return VulType 漏洞类型。
      */
     public String getVulType() {
@@ -142,7 +142,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞类型。
+     * Set 漏洞类型。
      * @param VulType 漏洞类型。
      */
     public void setVulType(String VulType) {
@@ -150,7 +150,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述。
+     * Get 漏洞描述。 
      * @return Description 漏洞描述。
      */
     public String getDescription() {
@@ -158,7 +158,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述。
+     * Set 漏洞描述。
      * @param Description 漏洞描述。
      */
     public void setDescription(String Description) {
@@ -166,7 +166,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取修复方案。
+     * Get 修复方案。 
      * @return RepairPlan 修复方案。
      */
     public String getRepairPlan() {
@@ -174,7 +174,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置修复方案。
+     * Set 修复方案。
      * @param RepairPlan 修复方案。
      */
     public void setRepairPlan(String RepairPlan) {
@@ -182,7 +182,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞CVE。
+     * Get 漏洞CVE。 
      * @return CveId 漏洞CVE。
      */
     public String getCveId() {
@@ -190,7 +190,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞CVE。
+     * Set 漏洞CVE。
      * @param CveId 漏洞CVE。
      */
     public void setCveId(String CveId) {
@@ -198,7 +198,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取参考链接。
+     * Get 参考链接。 
      * @return Reference 参考链接。
      */
     public String getReference() {
@@ -206,7 +206,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置参考链接。
+     * Set 参考链接。
      * @param Reference 参考链接。
      */
     public void setReference(String Reference) {
@@ -214,7 +214,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class DescribeVulInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);

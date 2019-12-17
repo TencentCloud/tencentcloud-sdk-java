@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagValuesRequest  extends AbstractModel{
+public class DescribeTagValuesRequest extends AbstractModel{
 
     /**
     * 标签键列表
@@ -51,7 +51,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取标签键列表
+     * Get 标签键列表 
      * @return TagKeys 标签键列表
      */
     public String [] getTagKeys() {
@@ -59,7 +59,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签键列表
+     * Set 标签键列表
      * @param TagKeys 标签键列表
      */
     public void setTagKeys(String [] TagKeys) {
@@ -67,7 +67,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
      * @return CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
     public Long getCreateUin() {
@@ -75,7 +75,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Set 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      * @param CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
     public void setCreateUin(Long CreateUin) {
@@ -83,7 +83,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
      * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public Long getOffset() {
@@ -91,7 +91,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public void setOffset(Long Offset) {
@@ -99,7 +99,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，默认为 15
+     * Get 每页大小，默认为 15 
      * @return Limit 每页大小，默认为 15
      */
     public Long getLimit() {
@@ -107,7 +107,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，默认为 15
+     * Set 每页大小，默认为 15
      * @param Limit 每页大小，默认为 15
      */
     public void setLimit(Long Limit) {
@@ -115,7 +115,7 @@ public class DescribeTagValuesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);

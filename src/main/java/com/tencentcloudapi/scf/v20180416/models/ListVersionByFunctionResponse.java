@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListVersionByFunctionResponse  extends AbstractModel{
+public class ListVersionByFunctionResponse extends AbstractModel{
 
     /**
     * 函数版本。
@@ -45,7 +45,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取函数版本。
+     * Get 函数版本。 
      * @return FunctionVersion 函数版本。
      */
     public String [] getFunctionVersion() {
@@ -53,7 +53,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数版本。
+     * Set 函数版本。
      * @param FunctionVersion 函数版本。
      */
     public void setFunctionVersion(String [] FunctionVersion) {
@@ -61,8 +61,8 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数版本列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 函数版本列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Versions 函数版本列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数版本列表。
+     * Set 函数版本列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Versions 函数版本列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class ListVersionByFunctionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FunctionVersion.", this.FunctionVersion);

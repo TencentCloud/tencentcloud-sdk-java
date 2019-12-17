@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveUserFromGroupRequest  extends AbstractModel{
+public class RemoveUserFromGroupRequest extends AbstractModel{
 
     /**
     * 要删除的用户 UID和用户组 ID对应数组
@@ -30,7 +30,7 @@ public class RemoveUserFromGroupRequest  extends AbstractModel{
     private GroupIdOfUidInfo [] Info;
 
     /**
-     * 获取要删除的用户 UID和用户组 ID对应数组
+     * Get 要删除的用户 UID和用户组 ID对应数组 
      * @return Info 要删除的用户 UID和用户组 ID对应数组
      */
     public GroupIdOfUidInfo [] getInfo() {
@@ -38,7 +38,7 @@ public class RemoveUserFromGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的用户 UID和用户组 ID对应数组
+     * Set 要删除的用户 UID和用户组 ID对应数组
      * @param Info 要删除的用户 UID和用户组 ID对应数组
      */
     public void setInfo(GroupIdOfUidInfo [] Info) {
@@ -46,7 +46,7 @@ public class RemoveUserFromGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Info.", this.Info);

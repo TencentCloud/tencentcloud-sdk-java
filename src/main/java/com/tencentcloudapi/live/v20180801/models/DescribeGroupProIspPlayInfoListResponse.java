@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
+public class DescribeGroupProIspPlayInfoListResponse extends AbstractModel{
 
     /**
     * 数据内容。
@@ -37,7 +37,7 @@ public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据内容。
+     * Get 数据内容。 
      * @return DataInfoList 数据内容。
      */
     public GroupProIspDataInfo [] getDataInfoList() {
@@ -45,7 +45,7 @@ public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据内容。
+     * Set 数据内容。
      * @param DataInfoList 数据内容。
      */
     public void setDataInfoList(GroupProIspDataInfo [] DataInfoList) {
@@ -53,7 +53,7 @@ public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeGroupProIspPlayInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);

@@ -29,21 +29,10 @@ public class TkeClient extends AbstractClient{
     private static String endpoint = "tke.tencentcloudapi.com";
     private static String version = "2018-05-25";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TkeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TkeClient(Credential credential, String region, ClientProfile profile) {
         super(TkeClient.endpoint, TkeClient.version, credential, region, profile);
     }

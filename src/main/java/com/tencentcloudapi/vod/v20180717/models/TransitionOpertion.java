@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransitionOpertion  extends AbstractModel{
+public class TransitionOpertion extends AbstractModel{
 
     /**
     * 转场类型，取值有：
@@ -76,7 +76,7 @@ public class TransitionOpertion  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取转场类型，取值有：
+     * Get 转场类型，取值有：
 <ul>
 <li>图像的转场操作，用于两个视频片段图像间的转场处理：
 <ul>
@@ -122,7 +122,7 @@ public class TransitionOpertion  extends AbstractModel{
 <li>AudioFadeInFadeOut：声音淡入淡出。 </li>
 </ul>
 </li>
-</ul>
+</ul> 
      * @return Type 转场类型，取值有：
 <ul>
 <li>图像的转场操作，用于两个视频片段图像间的转场处理：
@@ -176,7 +176,7 @@ public class TransitionOpertion  extends AbstractModel{
     }
 
     /**
-     * 设置转场类型，取值有：
+     * Set 转场类型，取值有：
 <ul>
 <li>图像的转场操作，用于两个视频片段图像间的转场处理：
 <ul>
@@ -276,7 +276,7 @@ public class TransitionOpertion  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

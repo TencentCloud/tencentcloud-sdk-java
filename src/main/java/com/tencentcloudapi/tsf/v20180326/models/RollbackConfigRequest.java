@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackConfigRequest  extends AbstractModel{
+public class RollbackConfigRequest extends AbstractModel{
 
     /**
     * 配置项发布历史ID
@@ -37,7 +37,7 @@ public class RollbackConfigRequest  extends AbstractModel{
     private String ReleaseDesc;
 
     /**
-     * 获取配置项发布历史ID
+     * Get 配置项发布历史ID 
      * @return ConfigReleaseLogId 配置项发布历史ID
      */
     public String getConfigReleaseLogId() {
@@ -45,7 +45,7 @@ public class RollbackConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项发布历史ID
+     * Set 配置项发布历史ID
      * @param ConfigReleaseLogId 配置项发布历史ID
      */
     public void setConfigReleaseLogId(String ConfigReleaseLogId) {
@@ -53,7 +53,7 @@ public class RollbackConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回滚描述
+     * Get 回滚描述 
      * @return ReleaseDesc 回滚描述
      */
     public String getReleaseDesc() {
@@ -61,7 +61,7 @@ public class RollbackConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回滚描述
+     * Set 回滚描述
      * @param ReleaseDesc 回滚描述
      */
     public void setReleaseDesc(String ReleaseDesc) {
@@ -69,7 +69,7 @@ public class RollbackConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigReleaseLogId", this.ConfigReleaseLogId);

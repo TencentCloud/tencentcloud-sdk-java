@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaTaskInput  extends AbstractModel{
+public class ComposeMediaTaskInput extends AbstractModel{
 
     /**
     * 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
@@ -45,7 +45,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     private ComposeMediaOutput Output;
 
     /**
-     * 获取输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
+     * Get 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。 
      * @return Tracks 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
      */
     public MediaTrack [] getTracks() {
@@ -53,7 +53,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
+     * Set 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
      * @param Tracks 输入的媒体轨道列表，包括视频、音频、图片等素材组成的多个轨道信息。
      */
     public void setTracks(MediaTrack [] Tracks) {
@@ -61,8 +61,8 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取制作视频文件时使用的画布。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 制作视频文件时使用的画布。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Canvas 制作视频文件时使用的画布。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置制作视频文件时使用的画布。
+     * Set 制作视频文件时使用的画布。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Canvas 制作视频文件时使用的画布。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取输出的媒体文件信息。
+     * Get 输出的媒体文件信息。 
      * @return Output 输出的媒体文件信息。
      */
     public ComposeMediaOutput getOutput() {
@@ -89,7 +89,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置输出的媒体文件信息。
+     * Set 输出的媒体文件信息。
      * @param Output 输出的媒体文件信息。
      */
     public void setOutput(ComposeMediaOutput Output) {
@@ -97,7 +97,7 @@ public class ComposeMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);

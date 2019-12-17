@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountDescriptionRequest  extends AbstractModel{
+public class ModifyAccountDescriptionRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -44,7 +44,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库账号。
+     * Get 云数据库账号。 
      * @return Accounts 云数据库账号。
      */
     public Account [] getAccounts() {
@@ -68,7 +68,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库账号。
+     * Set 云数据库账号。
      * @param Accounts 云数据库账号。
      */
     public void setAccounts(Account [] Accounts) {
@@ -76,7 +76,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号的备注信息。
+     * Get 数据库账号的备注信息。 
      * @return Description 数据库账号的备注信息。
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号的备注信息。
+     * Set 数据库账号的备注信息。
      * @param Description 数据库账号的备注信息。
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class ModifyAccountDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4RuleHealth  extends AbstractModel{
+public class L4RuleHealth extends AbstractModel{
 
     /**
     * 规则ID
@@ -65,7 +65,7 @@ public class L4RuleHealth  extends AbstractModel{
     private Long AliveNum;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -73,7 +73,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -81,7 +81,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取=1表示开启；=0表示关闭
+     * Get =1表示开启；=0表示关闭 
      * @return Enable =1表示开启；=0表示关闭
      */
     public Long getEnable() {
@@ -89,7 +89,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置=1表示开启；=0表示关闭
+     * Set =1表示开启；=0表示关闭
      * @param Enable =1表示开启；=0表示关闭
      */
     public void setEnable(Long Enable) {
@@ -97,7 +97,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取响应超时时间，单位秒
+     * Get 响应超时时间，单位秒 
      * @return TimeOut 响应超时时间，单位秒
      */
     public Long getTimeOut() {
@@ -105,7 +105,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置响应超时时间，单位秒
+     * Set 响应超时时间，单位秒
      * @param TimeOut 响应超时时间，单位秒
      */
     public void setTimeOut(Long TimeOut) {
@@ -113,7 +113,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取检测间隔时间，单位秒，必须要大于响应超时时间
+     * Get 检测间隔时间，单位秒，必须要大于响应超时时间 
      * @return Interval 检测间隔时间，单位秒，必须要大于响应超时时间
      */
     public Long getInterval() {
@@ -121,7 +121,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置检测间隔时间，单位秒，必须要大于响应超时时间
+     * Set 检测间隔时间，单位秒，必须要大于响应超时时间
      * @param Interval 检测间隔时间，单位秒，必须要大于响应超时时间
      */
     public void setInterval(Long Interval) {
@@ -129,7 +129,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阈值，单位次
+     * Get 不健康阈值，单位次 
      * @return KickNum 不健康阈值，单位次
      */
     public Long getKickNum() {
@@ -137,7 +137,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置不健康阈值，单位次
+     * Set 不健康阈值，单位次
      * @param KickNum 不健康阈值，单位次
      */
     public void setKickNum(Long KickNum) {
@@ -145,7 +145,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 获取健康阈值，单位次
+     * Get 健康阈值，单位次 
      * @return AliveNum 健康阈值，单位次
      */
     public Long getAliveNum() {
@@ -153,7 +153,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 设置健康阈值，单位次
+     * Set 健康阈值，单位次
      * @param AliveNum 健康阈值，单位次
      */
     public void setAliveNum(Long AliveNum) {
@@ -161,7 +161,7 @@ public class L4RuleHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

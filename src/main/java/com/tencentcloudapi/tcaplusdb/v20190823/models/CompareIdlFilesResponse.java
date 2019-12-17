@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompareIdlFilesResponse  extends AbstractModel{
+public class CompareIdlFilesResponse extends AbstractModel{
 
     /**
     * 本次上传校验所有的Idl文件信息列表
@@ -51,7 +51,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取本次上传校验所有的Idl文件信息列表
+     * Get 本次上传校验所有的Idl文件信息列表 
      * @return IdlFiles 本次上传校验所有的Idl文件信息列表
      */
     public IdlFileInfo [] getIdlFiles() {
@@ -59,7 +59,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置本次上传校验所有的Idl文件信息列表
+     * Set 本次上传校验所有的Idl文件信息列表
      * @param IdlFiles 本次上传校验所有的Idl文件信息列表
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
@@ -67,7 +67,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取本次校验合法的表数量
+     * Get 本次校验合法的表数量 
      * @return TotalCount 本次校验合法的表数量
      */
     public Long getTotalCount() {
@@ -75,7 +75,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置本次校验合法的表数量
+     * Set 本次校验合法的表数量
      * @param TotalCount 本次校验合法的表数量
      */
     public void setTotalCount(Long TotalCount) {
@@ -83,7 +83,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+     * Get 读取IDL描述文件后,根据用户指示的所选中表解析校验结果 
      * @return TableInfos 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
      */
     public ParsedTableInfo [] getTableInfos() {
@@ -91,7 +91,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置读取IDL描述文件后,根据用户指示的所选中表解析校验结果
+     * Set 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
      * @param TableInfos 读取IDL描述文件后,根据用户指示的所选中表解析校验结果
      */
     public void setTableInfos(ParsedTableInfo [] TableInfos) {
@@ -99,7 +99,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class CompareIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Container  extends AbstractModel{
+public class Container extends AbstractModel{
 
     /**
     * 容器启动命令
@@ -107,7 +107,7 @@ public class Container  extends AbstractModel{
     private String ContainerId;
 
     /**
-     * 获取容器启动命令
+     * Get 容器启动命令 
      * @return Command 容器启动命令
      */
     public String getCommand() {
@@ -115,7 +115,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器启动命令
+     * Set 容器启动命令
      * @param Command 容器启动命令
      */
     public void setCommand(String Command) {
@@ -123,7 +123,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取容器启动参数
+     * Get 容器启动参数 
      * @return Args 容器启动参数
      */
     public String [] getArgs() {
@@ -131,7 +131,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器启动参数
+     * Set 容器启动参数
      * @param Args 容器启动参数
      */
     public void setArgs(String [] Args) {
@@ -139,7 +139,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取容器环境变量
+     * Get 容器环境变量 
      * @return EnvironmentVars 容器环境变量
      */
     public EnvironmentVar [] getEnvironmentVars() {
@@ -147,7 +147,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器环境变量
+     * Set 容器环境变量
      * @param EnvironmentVars 容器环境变量
      */
     public void setEnvironmentVars(EnvironmentVar [] EnvironmentVars) {
@@ -155,7 +155,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取镜像
+     * Get 镜像 
      * @return Image 镜像
      */
     public String getImage() {
@@ -163,7 +163,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置镜像
+     * Set 镜像
      * @param Image 镜像
      */
     public void setImage(String Image) {
@@ -171,7 +171,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
+     * Get 容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符 
      * @return Name 容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
      */
     public String getName() {
@@ -179,7 +179,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
+     * Set 容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
      * @param Name 容器名，由小写字母、数字和 - 组成，由小写字母开头，小写字母或数字结尾，且长度不超过 63个字符
      */
     public void setName(String Name) {
@@ -187,7 +187,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取CPU，单位：核
+     * Get CPU，单位：核 
      * @return Cpu CPU，单位：核
      */
     public Float getCpu() {
@@ -195,7 +195,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置CPU，单位：核
+     * Set CPU，单位：核
      * @param Cpu CPU，单位：核
      */
     public void setCpu(Float Cpu) {
@@ -203,7 +203,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取内存，单位：Gi
+     * Get 内存，单位：Gi 
      * @return Memory 内存，单位：Gi
      */
     public Float getMemory() {
@@ -211,7 +211,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置内存，单位：Gi
+     * Set 内存，单位：Gi
      * @param Memory 内存，单位：Gi
      */
     public void setMemory(Float Memory) {
@@ -219,7 +219,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取重启次数
+     * Get 重启次数 
      * @return RestartCount 重启次数
      */
     public Integer getRestartCount() {
@@ -227,7 +227,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置重启次数
+     * Set 重启次数
      * @param RestartCount 重启次数
      */
     public void setRestartCount(Integer RestartCount) {
@@ -235,7 +235,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取当前状态
+     * Get 当前状态 
      * @return CurrentState 当前状态
      */
     public ContainerState getCurrentState() {
@@ -243,7 +243,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置当前状态
+     * Set 当前状态
      * @param CurrentState 当前状态
      */
     public void setCurrentState(ContainerState CurrentState) {
@@ -251,7 +251,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取上一次状态
+     * Get 上一次状态 
      * @return PreviousState 上一次状态
      */
     public ContainerState getPreviousState() {
@@ -259,7 +259,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置上一次状态
+     * Set 上一次状态
      * @param PreviousState 上一次状态
      */
     public void setPreviousState(ContainerState PreviousState) {
@@ -267,7 +267,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取容器工作目录
+     * Get 容器工作目录 
      * @return WorkingDir 容器工作目录
      */
     public String getWorkingDir() {
@@ -275,7 +275,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器工作目录
+     * Set 容器工作目录
      * @param WorkingDir 容器工作目录
      */
     public void setWorkingDir(String WorkingDir) {
@@ -283,7 +283,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 获取容器ID
+     * Get 容器ID 
      * @return ContainerId 容器ID
      */
     public String getContainerId() {
@@ -291,7 +291,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 设置容器ID
+     * Set 容器ID
      * @param ContainerId 容器ID
      */
     public void setContainerId(String ContainerId) {
@@ -299,7 +299,7 @@ public class Container  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Command", this.Command);

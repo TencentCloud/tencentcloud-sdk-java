@@ -29,21 +29,10 @@ public class TiaClient extends AbstractClient{
     private static String endpoint = "tia.tencentcloudapi.com";
     private static String version = "2018-02-26";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TiaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TiaClient(Credential credential, String region, ClientProfile profile) {
         super(TiaClient.endpoint, TiaClient.version, credential, region, profile);
     }

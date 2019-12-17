@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcsRequest  extends AbstractModel{
+public class DescribeVpcsRequest extends AbstractModel{
 
     /**
     * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
@@ -56,7 +56,7 @@ zone -  String - （过滤条件）VPC的可用区。
     private Long Limit;
 
     /**
-     * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
      * @return VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public String [] getVpcIds() {
@@ -64,7 +64,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Set VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param VpcIds VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public void setVpcIds(String [] VpcIds) {
@@ -72,12 +72,12 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定VpcIds和Filters。
+     * Get 过滤条件，参数不支持同时指定VpcIds和Filters。
 vpc-name - String - （过滤条件）VPC实例名称。
 vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
 cidr-block - String - （过滤条件）vpc的cidr。
 state - String - （过滤条件）VPC状态。(pending | available).
-zone -  String - （过滤条件）VPC的可用区。
+zone -  String - （过滤条件）VPC的可用区。 
      * @return Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
 vpc-name - String - （过滤条件）VPC实例名称。
 vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
@@ -90,7 +90,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定VpcIds和Filters。
+     * Set 过滤条件，参数不支持同时指定VpcIds和Filters。
 vpc-name - String - （过滤条件）VPC实例名称。
 vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。
 cidr-block - String - （过滤条件）vpc的cidr。
@@ -108,7 +108,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 获取初始行的偏移量，默认为0。
+     * Get 初始行的偏移量，默认为0。 
      * @return Offset 初始行的偏移量，默认为0。
      */
     public Long getOffset() {
@@ -116,7 +116,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 设置初始行的偏移量，默认为0。
+     * Set 初始行的偏移量，默认为0。
      * @param Offset 初始行的偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -124,7 +124,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 获取每页行数，默认为20。
+     * Get 每页行数，默认为20。 
      * @return Limit 每页行数，默认为20。
      */
     public Long getLimit() {
@@ -132,7 +132,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 设置每页行数，默认为20。
+     * Set 每页行数，默认为20。
      * @param Limit 每页行数，默认为20。
      */
     public void setLimit(Long Limit) {
@@ -140,7 +140,7 @@ zone -  String - （过滤条件）VPC的可用区。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);

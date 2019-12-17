@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubTaskDetail  extends AbstractModel{
+public class SubTaskDetail extends AbstractModel{
 
     /**
     * 子任务名
@@ -79,7 +79,7 @@ public class SubTaskDetail  extends AbstractModel{
     private Integer Level;
 
     /**
-     * 获取子任务名
+     * Get 子任务名 
      * @return Name 子任务名
      */
     public String getName() {
@@ -87,7 +87,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务名
+     * Set 子任务名
      * @param Name 子任务名
      */
     public void setName(String Name) {
@@ -95,7 +95,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务结果
+     * Get 子任务结果 
      * @return Result 子任务结果
      */
     public Boolean getResult() {
@@ -103,7 +103,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务结果
+     * Set 子任务结果
      * @param Result 子任务结果
      */
     public void setResult(Boolean Result) {
@@ -111,7 +111,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务错误信息
+     * Get 子任务错误信息 
      * @return ErrMsg 子任务错误信息
      */
     public String getErrMsg() {
@@ -119,7 +119,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务错误信息
+     * Set 子任务错误信息
      * @param ErrMsg 子任务错误信息
      */
     public void setErrMsg(String ErrMsg) {
@@ -127,7 +127,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务类型
+     * Get 子任务类型 
      * @return Type 子任务类型
      */
     public String getType() {
@@ -135,7 +135,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务类型
+     * Set 子任务类型
      * @param Type 子任务类型
      */
     public void setType(String Type) {
@@ -143,7 +143,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务状态，0处理中 1成功 -1失败
+     * Get 子任务状态，0处理中 1成功 -1失败 
      * @return Status 子任务状态，0处理中 1成功 -1失败
      */
     public Integer getStatus() {
@@ -151,7 +151,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务状态，0处理中 1成功 -1失败
+     * Set 子任务状态，0处理中 1成功 -1失败
      * @param Status 子任务状态，0处理中 1成功 -1失败
      */
     public void setStatus(Integer Status) {
@@ -159,7 +159,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取升级检查失败的索引名
+     * Get 升级检查失败的索引名 
      * @return FailedIndices 升级检查失败的索引名
      */
     public String [] getFailedIndices() {
@@ -167,7 +167,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置升级检查失败的索引名
+     * Set 升级检查失败的索引名
      * @param FailedIndices 升级检查失败的索引名
      */
     public void setFailedIndices(String [] FailedIndices) {
@@ -175,7 +175,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务结束时间
+     * Get 子任务结束时间 
      * @return FinishTime 子任务结束时间
      */
     public String getFinishTime() {
@@ -183,7 +183,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务结束时间
+     * Set 子任务结束时间
      * @param FinishTime 子任务结束时间
      */
     public void setFinishTime(String FinishTime) {
@@ -191,7 +191,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务等级，1警告 2失败
+     * Get 子任务等级，1警告 2失败 
      * @return Level 子任务等级，1警告 2失败
      */
     public Integer getLevel() {
@@ -199,7 +199,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务等级，1警告 2失败
+     * Set 子任务等级，1警告 2失败
      * @param Level 子任务等级，1警告 2失败
      */
     public void setLevel(Integer Level) {
@@ -207,7 +207,7 @@ public class SubTaskDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

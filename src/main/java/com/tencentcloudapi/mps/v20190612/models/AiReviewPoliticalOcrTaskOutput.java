@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
+public class AiReviewPoliticalOcrTaskOutput extends AbstractModel{
 
     /**
     * Ocr 文字涉政、敏感评分，分值为0到100。
@@ -47,7 +47,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * 获取Ocr 文字涉政、敏感评分，分值为0到100。
+     * Get Ocr 文字涉政、敏感评分，分值为0到100。 
      * @return Confidence Ocr 文字涉政、敏感评分，分值为0到100。
      */
     public Float getConfidence() {
@@ -55,7 +55,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字涉政、敏感评分，分值为0到100。
+     * Set Ocr 文字涉政、敏感评分，分值为0到100。
      * @param Confidence Ocr 文字涉政、敏感评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
@@ -63,10 +63,10 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Ocr 文字涉政、敏感结果建议，取值范围：
+     * Get Ocr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion Ocr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -77,7 +77,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字涉政、敏感结果建议，取值范围：
+     * Set Ocr 文字涉政、敏感结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -91,7 +91,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Get Ocr 文字有涉政、敏感嫌疑的视频片段列表。 
      * @return SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
@@ -99,7 +99,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字有涉政、敏感嫌疑的视频片段列表。
+     * Set Ocr 文字有涉政、敏感嫌疑的视频片段列表。
      * @param SegmentSet Ocr 文字有涉政、敏感嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
@@ -107,7 +107,7 @@ public class AiReviewPoliticalOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

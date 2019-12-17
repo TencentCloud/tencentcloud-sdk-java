@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTypeConfig  extends AbstractModel{
+public class InstanceTypeConfig extends AbstractModel{
 
     /**
     * 可用区。
@@ -65,7 +65,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     private Integer Memory;
 
     /**
-     * 获取可用区。
+     * Get 可用区。 
      * @return Zone 可用区。
      */
     public String getZone() {
@@ -73,7 +73,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置可用区。
+     * Set 可用区。
      * @param Zone 可用区。
      */
     public void setZone(String Zone) {
@@ -81,7 +81,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型。
+     * Get 实例机型。 
      * @return InstanceType 实例机型。
      */
     public String getInstanceType() {
@@ -89,7 +89,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
      * @param InstanceType 实例机型。
      */
     public void setInstanceType(String InstanceType) {
@@ -97,7 +97,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型系列。
+     * Get 实例机型系列。 
      * @return InstanceFamily 实例机型系列。
      */
     public String getInstanceFamily() {
@@ -105,7 +105,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型系列。
+     * Set 实例机型系列。
      * @param InstanceFamily 实例机型系列。
      */
     public void setInstanceFamily(String InstanceFamily) {
@@ -113,7 +113,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取GPU核数，单位：核。
+     * Get GPU核数，单位：核。 
      * @return GPU GPU核数，单位：核。
      */
     public Integer getGPU() {
@@ -121,7 +121,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置GPU核数，单位：核。
+     * Set GPU核数，单位：核。
      * @param GPU GPU核数，单位：核。
      */
     public void setGPU(Integer GPU) {
@@ -129,7 +129,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核数，单位：核。
+     * Get CPU核数，单位：核。 
      * @return CPU CPU核数，单位：核。
      */
     public Integer getCPU() {
@@ -137,7 +137,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数，单位：核。
+     * Set CPU核数，单位：核。
      * @param CPU CPU核数，单位：核。
      */
     public void setCPU(Integer CPU) {
@@ -145,7 +145,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取内存容量，单位：`GB`。
+     * Get 内存容量，单位：`GB`。 
      * @return Memory 内存容量，单位：`GB`。
      */
     public Integer getMemory() {
@@ -153,7 +153,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量，单位：`GB`。
+     * Set 内存容量，单位：`GB`。
      * @param Memory 内存容量，单位：`GB`。
      */
     public void setMemory(Integer Memory) {
@@ -161,7 +161,7 @@ public class InstanceTypeConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

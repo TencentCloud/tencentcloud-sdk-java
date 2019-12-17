@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWeeklyReportInfoRequest  extends AbstractModel{
+public class DescribeWeeklyReportInfoRequest extends AbstractModel{
 
     /**
     * 专业周报开始时间。
@@ -30,7 +30,7 @@ public class DescribeWeeklyReportInfoRequest  extends AbstractModel{
     private String BeginDate;
 
     /**
-     * 获取专业周报开始时间。
+     * Get 专业周报开始时间。 
      * @return BeginDate 专业周报开始时间。
      */
     public String getBeginDate() {
@@ -38,7 +38,7 @@ public class DescribeWeeklyReportInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专业周报开始时间。
+     * Set 专业周报开始时间。
      * @param BeginDate 专业周报开始时间。
      */
     public void setBeginDate(String BeginDate) {
@@ -46,7 +46,7 @@ public class DescribeWeeklyReportInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginDate", this.BeginDate);

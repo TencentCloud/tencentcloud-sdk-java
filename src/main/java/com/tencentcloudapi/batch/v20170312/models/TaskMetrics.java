@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskMetrics  extends AbstractModel{
+public class TaskMetrics extends AbstractModel{
 
     /**
     * Submitted个数
@@ -79,7 +79,7 @@ public class TaskMetrics  extends AbstractModel{
     private Integer FailedCount;
 
     /**
-     * 获取Submitted个数
+     * Get Submitted个数 
      * @return SubmittedCount Submitted个数
      */
     public Integer getSubmittedCount() {
@@ -87,7 +87,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Submitted个数
+     * Set Submitted个数
      * @param SubmittedCount Submitted个数
      */
     public void setSubmittedCount(Integer SubmittedCount) {
@@ -95,7 +95,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Pending个数
+     * Get Pending个数 
      * @return PendingCount Pending个数
      */
     public Integer getPendingCount() {
@@ -103,7 +103,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Pending个数
+     * Set Pending个数
      * @param PendingCount Pending个数
      */
     public void setPendingCount(Integer PendingCount) {
@@ -111,7 +111,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Runnable个数
+     * Get Runnable个数 
      * @return RunnableCount Runnable个数
      */
     public Integer getRunnableCount() {
@@ -119,7 +119,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Runnable个数
+     * Set Runnable个数
      * @param RunnableCount Runnable个数
      */
     public void setRunnableCount(Integer RunnableCount) {
@@ -127,7 +127,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Starting个数
+     * Get Starting个数 
      * @return StartingCount Starting个数
      */
     public Integer getStartingCount() {
@@ -135,7 +135,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Starting个数
+     * Set Starting个数
      * @param StartingCount Starting个数
      */
     public void setStartingCount(Integer StartingCount) {
@@ -143,7 +143,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Running个数
+     * Get Running个数 
      * @return RunningCount Running个数
      */
     public Integer getRunningCount() {
@@ -151,7 +151,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Running个数
+     * Set Running个数
      * @param RunningCount Running个数
      */
     public void setRunningCount(Integer RunningCount) {
@@ -159,7 +159,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Succeed个数
+     * Get Succeed个数 
      * @return SucceedCount Succeed个数
      */
     public Integer getSucceedCount() {
@@ -167,7 +167,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Succeed个数
+     * Set Succeed个数
      * @param SucceedCount Succeed个数
      */
     public void setSucceedCount(Integer SucceedCount) {
@@ -175,7 +175,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取FailedInterrupted个数
+     * Get FailedInterrupted个数 
      * @return FailedInterruptedCount FailedInterrupted个数
      */
     public Integer getFailedInterruptedCount() {
@@ -183,7 +183,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置FailedInterrupted个数
+     * Set FailedInterrupted个数
      * @param FailedInterruptedCount FailedInterrupted个数
      */
     public void setFailedInterruptedCount(Integer FailedInterruptedCount) {
@@ -191,7 +191,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取Failed个数
+     * Get Failed个数 
      * @return FailedCount Failed个数
      */
     public Integer getFailedCount() {
@@ -199,7 +199,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置Failed个数
+     * Set Failed个数
      * @param FailedCount Failed个数
      */
     public void setFailedCount(Integer FailedCount) {
@@ -207,7 +207,7 @@ public class TaskMetrics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubmittedCount", this.SubmittedCount);

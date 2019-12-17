@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CodeDetail  extends AbstractModel{
+public class CodeDetail extends AbstractModel{
 
     /**
     * 二维码在图片中的位置，由4个点的坐标表示
@@ -51,7 +51,7 @@ public class CodeDetail  extends AbstractModel{
     private Long CodeType;
 
     /**
-     * 获取二维码在图片中的位置，由4个点的坐标表示
+     * Get 二维码在图片中的位置，由4个点的坐标表示 
      * @return CodePosition 二维码在图片中的位置，由4个点的坐标表示
      */
     public CodePosition [] getCodePosition() {
@@ -59,7 +59,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 设置二维码在图片中的位置，由4个点的坐标表示
+     * Set 二维码在图片中的位置，由4个点的坐标表示
      * @param CodePosition 二维码在图片中的位置，由4个点的坐标表示
      */
     public void setCodePosition(CodePosition [] CodePosition) {
@@ -67,7 +67,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 获取二维码文本的编码格式
+     * Get 二维码文本的编码格式 
      * @return CodeCharset 二维码文本的编码格式
      */
     public String getCodeCharset() {
@@ -75,7 +75,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 设置二维码文本的编码格式
+     * Set 二维码文本的编码格式
      * @param CodeCharset 二维码文本的编码格式
      */
     public void setCodeCharset(String CodeCharset) {
@@ -83,7 +83,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 获取二维码的文本内容
+     * Get 二维码的文本内容 
      * @return CodeText 二维码的文本内容
      */
     public String getCodeText() {
@@ -91,7 +91,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 设置二维码的文本内容
+     * Set 二维码的文本内容
      * @param CodeText 二维码的文本内容
      */
     public void setCodeText(String CodeText) {
@@ -99,7 +99,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 获取二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * Get 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX 
      * @return CodeType 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
      */
     public Long getCodeType() {
@@ -107,7 +107,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 设置二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
+     * Set 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
      * @param CodeType 二维码的类型：1：ONED_BARCODE，2：QRCOD，3:WXCODE，4：PDF417，5:DATAMATRIX
      */
     public void setCodeType(Long CodeType) {
@@ -115,7 +115,7 @@ public class CodeDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CodePosition.", this.CodePosition);

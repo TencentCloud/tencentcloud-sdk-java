@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
+public class ModifyDDoSWaterKeyRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -51,7 +51,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     private Long KeyId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -75,7 +75,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -83,7 +83,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
+     * Get 密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）] 
      * @return Method 密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
      */
     public String getMethod() {
@@ -91,7 +91,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
+     * Set 密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
      * @param Method 密钥操作，取值：[add（添加），delete（删除），open（开启），close（关闭），get（获取密钥）]
      */
     public void setMethod(String Method) {
@@ -99,7 +99,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
+     * Get 密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写； 
      * @return KeyId 密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
      */
     public Long getKeyId() {
@@ -107,7 +107,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
+     * Set 密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
      * @param KeyId 密钥ID，当添加密钥操作时可以不填或填0，其他操作时必须填写；
      */
     public void setKeyId(Long KeyId) {
@@ -115,7 +115,7 @@ public class ModifyDDoSWaterKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ForbidLiveStreamRequest  extends AbstractModel{
+public class ForbidLiveStreamRequest extends AbstractModel{
 
     /**
     * 应用名称。
@@ -52,7 +52,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     private String ResumeTime;
 
     /**
-     * 获取应用名称。
+     * Get 应用名称。 
      * @return AppName 应用名称。
      */
     public String getAppName() {
@@ -60,7 +60,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称。
+     * Set 应用名称。
      * @param AppName 应用名称。
      */
     public void setAppName(String AppName) {
@@ -68,7 +68,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取您的加速域名。
+     * Get 您的加速域名。 
      * @return DomainName 您的加速域名。
      */
     public String getDomainName() {
@@ -76,7 +76,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置您的加速域名。
+     * Set 您的加速域名。
      * @param DomainName 您的加速域名。
      */
     public void setDomainName(String DomainName) {
@@ -84,7 +84,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -92,7 +92,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -100,8 +100,8 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
-注意：默认禁播90天，且最长支持禁播90天。
+     * Get 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+注意：默认禁播90天，且最长支持禁播90天。 
      * @return ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
      */
@@ -110,7 +110,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+     * Set 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
      * @param ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：默认禁播90天，且最长支持禁播90天。
@@ -120,7 +120,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

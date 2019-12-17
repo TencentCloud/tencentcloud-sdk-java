@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
+public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
@@ -66,8 +66,8 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     private String [] KeywordSet;
 
     /**
-     * 获取嫌疑片段起始的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 嫌疑片段起始的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段起始的偏移时间，单位：秒。
+     * Set 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,8 +86,8 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段结束的偏移时间，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 嫌疑片段结束的偏移时间，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -96,7 +96,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段结束的偏移时间，单位：秒。
+     * Set 嫌疑片段结束的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,8 +106,8 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段置信度。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 嫌疑片段置信度。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Confidence 嫌疑片段置信度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -116,7 +116,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段置信度。
+     * Set 嫌疑片段置信度。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 嫌疑片段置信度。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,11 +126,11 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段审核结果建议，取值范围：
+     * Get 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -142,7 +142,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段审核结果建议，取值范围：
+     * Set 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -158,8 +158,8 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑关键词列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 嫌疑关键词列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeywordSet 嫌疑关键词列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑关键词列表。
+     * Set 嫌疑关键词列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KeywordSet 嫌疑关键词列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,7 +178,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

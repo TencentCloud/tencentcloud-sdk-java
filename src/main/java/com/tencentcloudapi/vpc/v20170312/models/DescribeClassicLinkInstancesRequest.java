@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
+public class DescribeClassicLinkInstancesRequest extends AbstractModel{
 
     /**
     * 过滤条件。
@@ -46,9 +46,9 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
-<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
+<li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li> 
      * @return Filters 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
 <li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
@@ -58,7 +58,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li>vpc-id - String - （过滤条件）VPC实例ID。</li>
 <li>vm-ip - String - （过滤条件）基础网络云服务器IP。</li>
      * @param Filters 过滤条件。
@@ -70,7 +70,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public String getOffset() {
@@ -78,7 +78,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(String Offset) {
@@ -86,7 +86,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public String getLimit() {
@@ -94,7 +94,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(String Limit) {
@@ -102,7 +102,7 @@ public class DescribeClassicLinkInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

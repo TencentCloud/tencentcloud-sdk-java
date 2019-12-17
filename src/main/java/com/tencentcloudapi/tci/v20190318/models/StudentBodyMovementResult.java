@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StudentBodyMovementResult  extends AbstractModel{
+public class StudentBodyMovementResult extends AbstractModel{
 
     /**
     * 置信度（已废弃）
@@ -93,7 +93,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取置信度（已废弃）
+     * Get 置信度（已废弃） 
      * @return Confidence 置信度（已废弃）
      */
     public Float getConfidence() {
@@ -101,7 +101,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置置信度（已废弃）
+     * Set 置信度（已废弃）
      * @param Confidence 置信度（已废弃）
      */
     public void setConfidence(Float Confidence) {
@@ -109,7 +109,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取举手识别结果置信度
+     * Get 举手识别结果置信度 
      * @return HandupConfidence 举手识别结果置信度
      */
     public Float getHandupConfidence() {
@@ -117,7 +117,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置举手识别结果置信度
+     * Set 举手识别结果置信度
      * @param HandupConfidence 举手识别结果置信度
      */
     public void setHandupConfidence(Float HandupConfidence) {
@@ -125,7 +125,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取举手识别结果，包含举手（handup）和未举手（nothandup）
+     * Get 举手识别结果，包含举手（handup）和未举手（nothandup） 
      * @return HandupStatus 举手识别结果，包含举手（handup）和未举手（nothandup）
      */
     public String getHandupStatus() {
@@ -133,7 +133,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置举手识别结果，包含举手（handup）和未举手（nothandup）
+     * Set 举手识别结果，包含举手（handup）和未举手（nothandup）
      * @param HandupStatus 举手识别结果，包含举手（handup）和未举手（nothandup）
      */
     public void setHandupStatus(String HandupStatus) {
@@ -141,7 +141,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果高度
+     * Get 识别结果高度 
      * @return Height 识别结果高度
      */
     public Long getHeight() {
@@ -149,7 +149,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果高度
+     * Set 识别结果高度
      * @param Height 识别结果高度
      */
     public void setHeight(Long Height) {
@@ -157,7 +157,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果左坐标
+     * Get 识别结果左坐标 
      * @return Left 识别结果左坐标
      */
     public Long getLeft() {
@@ -165,7 +165,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果左坐标
+     * Set 识别结果左坐标
      * @param Left 识别结果左坐标
      */
     public void setLeft(Long Left) {
@@ -173,7 +173,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取动作识别结果（已废弃）
+     * Get 动作识别结果（已废弃） 
      * @return Movements 动作识别结果（已废弃）
      */
     public String getMovements() {
@@ -181,7 +181,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置动作识别结果（已废弃）
+     * Set 动作识别结果（已废弃）
      * @param Movements 动作识别结果（已废弃）
      */
     public void setMovements(String Movements) {
@@ -189,7 +189,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取站立识别结果置信度
+     * Get 站立识别结果置信度 
      * @return StandConfidence 站立识别结果置信度
      */
     public Float getStandConfidence() {
@@ -197,7 +197,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置站立识别结果置信度
+     * Set 站立识别结果置信度
      * @param StandConfidence 站立识别结果置信度
      */
     public void setStandConfidence(Float StandConfidence) {
@@ -205,7 +205,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取站立识别结果，包含站立（stand）和坐着（sit）
+     * Get 站立识别结果，包含站立（stand）和坐着（sit） 
      * @return StandStatus 站立识别结果，包含站立（stand）和坐着（sit）
      */
     public String getStandStatus() {
@@ -213,7 +213,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置站立识别结果，包含站立（stand）和坐着（sit）
+     * Set 站立识别结果，包含站立（stand）和坐着（sit）
      * @param StandStatus 站立识别结果，包含站立（stand）和坐着（sit）
      */
     public void setStandStatus(String StandStatus) {
@@ -221,7 +221,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果顶坐标
+     * Get 识别结果顶坐标 
      * @return Top 识别结果顶坐标
      */
     public Long getTop() {
@@ -229,7 +229,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果顶坐标
+     * Set 识别结果顶坐标
      * @param Top 识别结果顶坐标
      */
     public void setTop(Long Top) {
@@ -237,7 +237,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果宽度
+     * Get 识别结果宽度 
      * @return Width 识别结果宽度
      */
     public Long getWidth() {
@@ -245,7 +245,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果宽度
+     * Set 识别结果宽度
      * @param Width 识别结果宽度
      */
     public void setWidth(Long Width) {
@@ -253,7 +253,7 @@ public class StudentBodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEnterpriseAccountRequest  extends AbstractModel{
+public class CreateEnterpriseAccountRequest extends AbstractModel{
 
     /**
     * 模块名AccountMng
@@ -93,7 +93,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     private String TransactorPhone;
 
     /**
-     * 获取模块名AccountMng
+     * Get 模块名AccountMng 
      * @return Module 模块名AccountMng
      */
     public String getModule() {
@@ -101,7 +101,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名AccountMng
+     * Set 模块名AccountMng
      * @param Module 模块名AccountMng
      */
     public void setModule(String Module) {
@@ -109,7 +109,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名CreateEnterpriseAccount
+     * Get 操作名CreateEnterpriseAccount 
      * @return Operation 操作名CreateEnterpriseAccount
      */
     public String getOperation() {
@@ -117,7 +117,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名CreateEnterpriseAccount
+     * Set 操作名CreateEnterpriseAccount
      * @param Operation 操作名CreateEnterpriseAccount
      */
     public void setOperation(String Operation) {
@@ -125,7 +125,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业用户名称
+     * Get 企业用户名称 
      * @return Name 企业用户名称
      */
     public String getName() {
@@ -133,7 +133,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业用户名称
+     * Set 企业用户名称
      * @param Name 企业用户名称
      */
     public void setName(String Name) {
@@ -141,7 +141,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业用户证件类型，8代表营业执照，详情请见常见问题
+     * Get 企业用户证件类型，8代表营业执照，详情请见常见问题 
      * @return IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
     public Integer getIdentType() {
@@ -149,7 +149,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业用户证件类型，8代表营业执照，详情请见常见问题
+     * Set 企业用户证件类型，8代表营业执照，详情请见常见问题
      * @param IdentType 企业用户证件类型，8代表营业执照，详情请见常见问题
      */
     public void setIdentType(Integer IdentType) {
@@ -157,7 +157,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业用户营业执照号码
+     * Get 企业用户营业执照号码 
      * @return IdentNo 企业用户营业执照号码
      */
     public String getIdentNo() {
@@ -165,7 +165,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业用户营业执照号码
+     * Set 企业用户营业执照号码
      * @param IdentNo 企业用户营业执照号码
      */
     public void setIdentNo(String IdentNo) {
@@ -173,7 +173,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取企业联系人手机号
+     * Get 企业联系人手机号 
      * @return MobilePhone 企业联系人手机号
      */
     public String getMobilePhone() {
@@ -181,7 +181,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业联系人手机号
+     * Set 企业联系人手机号
      * @param MobilePhone 企业联系人手机号
      */
     public void setMobilePhone(String MobilePhone) {
@@ -189,7 +189,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经办人姓名
+     * Get 经办人姓名 
      * @return TransactorName 经办人姓名
      */
     public String getTransactorName() {
@@ -197,7 +197,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置经办人姓名
+     * Set 经办人姓名
      * @param TransactorName 经办人姓名
      */
     public void setTransactorName(String TransactorName) {
@@ -205,7 +205,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经办人证件类型，0代表身份证
+     * Get 经办人证件类型，0代表身份证 
      * @return TransactorIdentType 经办人证件类型，0代表身份证
      */
     public Integer getTransactorIdentType() {
@@ -213,7 +213,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置经办人证件类型，0代表身份证
+     * Set 经办人证件类型，0代表身份证
      * @param TransactorIdentType 经办人证件类型，0代表身份证
      */
     public void setTransactorIdentType(Integer TransactorIdentType) {
@@ -221,7 +221,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经办人证件号码
+     * Get 经办人证件号码 
      * @return TransactorIdentNo 经办人证件号码
      */
     public String getTransactorIdentNo() {
@@ -229,7 +229,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置经办人证件号码
+     * Set 经办人证件号码
      * @param TransactorIdentNo 经办人证件号码
      */
     public void setTransactorIdentNo(String TransactorIdentNo) {
@@ -237,7 +237,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经办人手机号
+     * Get 经办人手机号 
      * @return TransactorPhone 经办人手机号
      */
     public String getTransactorPhone() {
@@ -245,7 +245,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置经办人手机号
+     * Set 经办人手机号
      * @param TransactorPhone 经办人手机号
      */
     public void setTransactorPhone(String TransactorPhone) {
@@ -253,7 +253,7 @@ public class CreateEnterpriseAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

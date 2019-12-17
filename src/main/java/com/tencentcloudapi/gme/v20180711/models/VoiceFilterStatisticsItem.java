@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilterStatisticsItem  extends AbstractModel{
+public class VoiceFilterStatisticsItem extends AbstractModel{
 
     /**
     * 语音过滤总时长
@@ -30,7 +30,7 @@ public class VoiceFilterStatisticsItem  extends AbstractModel{
     private Long Duration;
 
     /**
-     * 获取语音过滤总时长
+     * Get 语音过滤总时长 
      * @return Duration 语音过滤总时长
      */
     public Long getDuration() {
@@ -38,7 +38,7 @@ public class VoiceFilterStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音过滤总时长
+     * Set 语音过滤总时长
      * @param Duration 语音过滤总时长
      */
     public void setDuration(Long Duration) {
@@ -46,7 +46,7 @@ public class VoiceFilterStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListFunctionsResponse  extends AbstractModel{
+public class ListFunctionsResponse extends AbstractModel{
 
     /**
     * 函数列表
@@ -44,7 +44,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取函数列表
+     * Get 函数列表 
      * @return Functions 函数列表
      */
     public Function [] getFunctions() {
@@ -52,7 +52,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数列表
+     * Set 函数列表
      * @param Functions 函数列表
      */
     public void setFunctions(Function [] Functions) {
@@ -60,7 +60,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总数
+     * Get 总数 
      * @return TotalCount 总数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数
+     * Set 总数
      * @param TotalCount 总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ListFunctionsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Functions.", this.Functions);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VocabDetailInfomation  extends AbstractModel{
+public class VocabDetailInfomation extends AbstractModel{
 
     /**
     * 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
@@ -37,7 +37,7 @@ public class VocabDetailInfomation  extends AbstractModel{
     private String VocabLibName;
 
     /**
-     * 获取词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * Get 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳 
      * @return VocabDetailInfo 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      */
     public DetailInfo [] getVocabDetailInfo() {
@@ -45,7 +45,7 @@ public class VocabDetailInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
+     * Set 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      * @param VocabDetailInfo 词汇库中的单词出现在该音频中的那个句子的时间戳，出现了几次，就返回对应次数的起始和结束时间戳
      */
     public void setVocabDetailInfo(DetailInfo [] VocabDetailInfo) {
@@ -53,7 +53,7 @@ public class VocabDetailInfomation  extends AbstractModel{
     }
 
     /**
-     * 获取词汇库名
+     * Get 词汇库名 
      * @return VocabLibName 词汇库名
      */
     public String getVocabLibName() {
@@ -61,7 +61,7 @@ public class VocabDetailInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库名
+     * Set 词汇库名
      * @param VocabLibName 词汇库名
      */
     public void setVocabLibName(String VocabLibName) {
@@ -69,7 +69,7 @@ public class VocabDetailInfomation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);

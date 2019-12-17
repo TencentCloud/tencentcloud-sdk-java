@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAutoBackupConfigResponse  extends AbstractModel{
+public class ModifyAutoBackupConfigResponse extends AbstractModel{
 
     /**
     * 自动备份类型： 1 “定时回档”
@@ -51,7 +51,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取自动备份类型： 1 “定时回档”
+     * Get 自动备份类型： 1 “定时回档” 
      * @return AutoBackupType 自动备份类型： 1 “定时回档”
      */
     public Integer getAutoBackupType() {
@@ -59,7 +59,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置自动备份类型： 1 “定时回档”
+     * Set 自动备份类型： 1 “定时回档”
      * @param AutoBackupType 自动备份类型： 1 “定时回档”
      */
     public void setAutoBackupType(Integer AutoBackupType) {
@@ -67,7 +67,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Get 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。 
      * @return WeekDays 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
     public String [] getWeekDays() {
@@ -75,7 +75,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Set 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      * @param WeekDays 日期Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
     public void setWeekDays(String [] WeekDays) {
@@ -83,7 +83,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Get 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00 
      * @return TimePeriod 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
      */
     public String getTimePeriod() {
@@ -91,7 +91,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Set 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
      * @param TimePeriod 时间段 00:00-01:00, 01:00-02:00...... 23:00-00:00
      */
     public void setTimePeriod(String TimePeriod) {
@@ -99,7 +99,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class ModifyAutoBackupConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);

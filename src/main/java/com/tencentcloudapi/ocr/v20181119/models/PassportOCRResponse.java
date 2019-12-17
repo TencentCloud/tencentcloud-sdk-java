@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PassportOCRResponse  extends AbstractModel{
+public class PassportOCRResponse extends AbstractModel{
 
     /**
     * 国家码
@@ -135,7 +135,7 @@ public class PassportOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取国家码
+     * Get 国家码 
      * @return Country 国家码
      */
     public String getCountry() {
@@ -143,7 +143,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置国家码
+     * Set 国家码
      * @param Country 国家码
      */
     public void setCountry(String Country) {
@@ -151,7 +151,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取护照号
+     * Get 护照号 
      * @return PassportNo 护照号
      */
     public String getPassportNo() {
@@ -159,7 +159,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置护照号
+     * Set 护照号
      * @param PassportNo 护照号
      */
     public void setPassportNo(String PassportNo) {
@@ -167,7 +167,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -175,7 +175,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -183,7 +183,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取国籍
+     * Get 国籍 
      * @return Nationality 国籍
      */
     public String getNationality() {
@@ -191,7 +191,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置国籍
+     * Set 国籍
      * @param Nationality 国籍
      */
     public void setNationality(String Nationality) {
@@ -199,7 +199,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生日期
+     * Get 出生日期 
      * @return BirthDate 出生日期
      */
     public String getBirthDate() {
@@ -207,7 +207,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生日期
+     * Set 出生日期
      * @param BirthDate 出生日期
      */
     public void setBirthDate(String BirthDate) {
@@ -215,7 +215,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生地点
+     * Get 出生地点 
      * @return BirthPlace 出生地点
      */
     public String getBirthPlace() {
@@ -223,7 +223,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生地点
+     * Set 出生地点
      * @param BirthPlace 出生地点
      */
     public void setBirthPlace(String BirthPlace) {
@@ -231,7 +231,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取签发日期
+     * Get 签发日期 
      * @return IssueDate 签发日期
      */
     public String getIssueDate() {
@@ -239,7 +239,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置签发日期
+     * Set 签发日期
      * @param IssueDate 签发日期
      */
     public void setIssueDate(String IssueDate) {
@@ -247,7 +247,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取签发地点
+     * Get 签发地点 
      * @return IssuePlace 签发地点
      */
     public String getIssuePlace() {
@@ -255,7 +255,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置签发地点
+     * Set 签发地点
      * @param IssuePlace 签发地点
      */
     public void setIssuePlace(String IssuePlace) {
@@ -263,7 +263,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效期
+     * Get 有效期 
      * @return ExpiryDate 有效期
      */
     public String getExpiryDate() {
@@ -271,7 +271,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效期
+     * Set 有效期
      * @param ExpiryDate 有效期
      */
     public void setExpiryDate(String ExpiryDate) {
@@ -279,7 +279,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取持证人签名
+     * Get 持证人签名 
      * @return Signature 持证人签名
      */
     public String getSignature() {
@@ -287,7 +287,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置持证人签名
+     * Set 持证人签名
      * @param Signature 持证人签名
      */
     public void setSignature(String Signature) {
@@ -295,7 +295,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最下方第一行 MRZ Code 序列
+     * Get 最下方第一行 MRZ Code 序列 
      * @return CodeSet 最下方第一行 MRZ Code 序列
      */
     public String getCodeSet() {
@@ -303,7 +303,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最下方第一行 MRZ Code 序列
+     * Set 最下方第一行 MRZ Code 序列
      * @param CodeSet 最下方第一行 MRZ Code 序列
      */
     public void setCodeSet(String CodeSet) {
@@ -311,7 +311,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最下方第二行 MRZ Code 序列
+     * Get 最下方第二行 MRZ Code 序列 
      * @return CodeCrc 最下方第二行 MRZ Code 序列
      */
     public String getCodeCrc() {
@@ -319,7 +319,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最下方第二行 MRZ Code 序列
+     * Set 最下方第二行 MRZ Code 序列
      * @param CodeCrc 最下方第二行 MRZ Code 序列
      */
     public void setCodeCrc(String CodeCrc) {
@@ -327,7 +327,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -335,7 +335,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -343,7 +343,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓
+     * Get 姓 
      * @return FamilyName 姓
      */
     public String getFamilyName() {
@@ -351,7 +351,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓
+     * Set 姓
      * @param FamilyName 姓
      */
     public void setFamilyName(String FamilyName) {
@@ -359,7 +359,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取名
+     * Get 名 
      * @return FirstName 名
      */
     public String getFirstName() {
@@ -367,7 +367,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置名
+     * Set 名
      * @param FirstName 名
      */
     public void setFirstName(String FirstName) {
@@ -375,7 +375,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -383,7 +383,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -391,7 +391,7 @@ public class PassportOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Country", this.Country);

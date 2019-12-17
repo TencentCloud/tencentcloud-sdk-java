@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsRequest  extends AbstractModel{
+public class DescribeDBErrlogsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-5bq3wfjd
@@ -72,7 +72,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取实例ID，形如postgres-5bq3wfjd
+     * Get 实例ID，形如postgres-5bq3wfjd 
      * @return DBInstanceId 实例ID，形如postgres-5bq3wfjd
      */
     public String getDBInstanceId() {
@@ -80,7 +80,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-5bq3wfjd
+     * Set 实例ID，形如postgres-5bq3wfjd
      * @param DBInstanceId 实例ID，形如postgres-5bq3wfjd
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -88,7 +88,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+     * Get 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前 
      * @return StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
      */
     public String getStartTime() {
@@ -96,7 +96,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+     * Set 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
      * @param StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
      */
     public void setStartTime(String StartTime) {
@@ -104,7 +104,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间，形如2018-01-01 00:00:00
+     * Get 查询结束时间，形如2018-01-01 00:00:00 
      * @return EndTime 查询结束时间，形如2018-01-01 00:00:00
      */
     public String getEndTime() {
@@ -112,7 +112,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间，形如2018-01-01 00:00:00
+     * Set 查询结束时间，形如2018-01-01 00:00:00
      * @param EndTime 查询结束时间，形如2018-01-01 00:00:00
      */
     public void setEndTime(String EndTime) {
@@ -120,7 +120,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名字
+     * Get 数据库名字 
      * @return DatabaseName 数据库名字
      */
     public String getDatabaseName() {
@@ -128,7 +128,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名字
+     * Set 数据库名字
      * @param DatabaseName 数据库名字
      */
     public void setDatabaseName(String DatabaseName) {
@@ -136,7 +136,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索关键字
+     * Get 搜索关键字 
      * @return SearchKeys 搜索关键字
      */
     public String [] getSearchKeys() {
@@ -144,7 +144,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索关键字
+     * Set 搜索关键字
      * @param SearchKeys 搜索关键字
      */
     public void setSearchKeys(String [] SearchKeys) {
@@ -152,7 +152,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，每页返回的最大数量。取值为1-100
+     * Get 分页返回，每页返回的最大数量。取值为1-100 
      * @return Limit 分页返回，每页返回的最大数量。取值为1-100
      */
     public Integer getLimit() {
@@ -160,7 +160,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回，每页返回的最大数量。取值为1-100
+     * Set 分页返回，每页返回的最大数量。取值为1-100
      * @param Limit 分页返回，每页返回的最大数量。取值为1-100
      */
     public void setLimit(Integer Limit) {
@@ -168,7 +168,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，返回第几页的数据，从第0页开始计数
+     * Get 分页返回，返回第几页的数据，从第0页开始计数 
      * @return Offset 分页返回，返回第几页的数据，从第0页开始计数
      */
     public Integer getOffset() {
@@ -176,7 +176,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回，返回第几页的数据，从第0页开始计数
+     * Set 分页返回，返回第几页的数据，从第0页开始计数
      * @param Offset 分页返回，返回第几页的数据，从第0页开始计数
      */
     public void setOffset(Integer Offset) {
@@ -184,7 +184,7 @@ public class DescribeDBErrlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7RuleEntry  extends AbstractModel{
+public class L7RuleEntry extends AbstractModel{
 
     /**
     * 转发协议，取值[http, https]
@@ -149,7 +149,7 @@ public class L7RuleEntry  extends AbstractModel{
     private String CCLevel;
 
     /**
-     * 获取转发协议，取值[http, https]
+     * Get 转发协议，取值[http, https] 
      * @return Protocol 转发协议，取值[http, https]
      */
     public String getProtocol() {
@@ -157,7 +157,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议，取值[http, https]
+     * Set 转发协议，取值[http, https]
      * @param Protocol 转发协议，取值[http, https]
      */
     public void setProtocol(String Protocol) {
@@ -165,7 +165,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名
+     * Get 转发域名 
      * @return Domain 转发域名
      */
     public String getDomain() {
@@ -173,7 +173,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名
+     * Set 转发域名
      * @param Domain 转发域名
      */
     public void setDomain(String Domain) {
@@ -181,7 +181,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取回源方式，取值[1(域名回源)，2(IP回源)]
+     * Get 回源方式，取值[1(域名回源)，2(IP回源)] 
      * @return SourceType 回源方式，取值[1(域名回源)，2(IP回源)]
      */
     public Long getSourceType() {
@@ -189,7 +189,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置回源方式，取值[1(域名回源)，2(IP回源)]
+     * Set 回源方式，取值[1(域名回源)，2(IP回源)]
      * @param SourceType 回源方式，取值[1(域名回源)，2(IP回源)]
      */
     public void setSourceType(Long SourceType) {
@@ -197,7 +197,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位秒
+     * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
     public Long getKeepTime() {
@@ -205,7 +205,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位秒
+     * Set 会话保持时间，单位秒
      * @param KeepTime 会话保持时间，单位秒
      */
     public void setKeepTime(Long KeepTime) {
@@ -213,7 +213,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取回源列表
+     * Get 回源列表 
      * @return SourceList 回源列表
      */
     public L4RuleSource [] getSourceList() {
@@ -221,7 +221,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置回源列表
+     * Set 回源列表
      * @param SourceList 回源列表
      */
     public void setSourceList(L4RuleSource [] SourceList) {
@@ -229,7 +229,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡方式，取值[1(加权轮询)]
+     * Get 负载均衡方式，取值[1(加权轮询)] 
      * @return LbType 负载均衡方式，取值[1(加权轮询)]
      */
     public Long getLbType() {
@@ -237,7 +237,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡方式，取值[1(加权轮询)]
+     * Set 负载均衡方式，取值[1(加权轮询)]
      * @param LbType 负载均衡方式，取值[1(加权轮询)]
      */
     public void setLbType(Long LbType) {
@@ -245,7 +245,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Get 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)] 
      * @return KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public Long getKeepEnable() {
@@ -253,7 +253,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Set 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      * @param KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public void setKeepEnable(Long KeepEnable) {
@@ -261,7 +261,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -269,7 +269,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -277,7 +277,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * Get 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0 
      * @return CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
      */
     public Long getCertType() {
@@ -285,7 +285,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * Set 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
      * @param CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
      */
     public void setCertType(Long CertType) {
@@ -293,7 +293,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+     * Get 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID 
      * @return SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      */
     public String getSSLId() {
@@ -301,7 +301,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+     * Set 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      */
     public void setSSLId(String SSLId) {
@@ -309,7 +309,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Get 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段) 
      * @return Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public String getCert() {
@@ -317,7 +317,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Set 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public void setCert(String Cert) {
@@ -325,7 +325,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Get 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段) 
      * @return PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public String getPrivateKey() {
@@ -333,7 +333,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Set 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public void setPrivateKey(String PrivateKey) {
@@ -341,7 +341,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取规则描述
+     * Get 规则描述 
      * @return RuleName 规则描述
      */
     public String getRuleName() {
@@ -349,7 +349,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置规则描述
+     * Set 规则描述
      * @param RuleName 规则描述
      */
     public void setRuleName(String RuleName) {
@@ -357,7 +357,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
+     * Get 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)] 
      * @return Status 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      */
     public Long getStatus() {
@@ -365,7 +365,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
+     * Set 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      * @param Status 规则状态，取值[0(规则配置成功)，1(规则配置生效中)，2(规则配置失败)，3(规则删除生效中)，5(规则删除失败)，6(规则等待配置)，7(规则等待删除)，8(规则待配置证书)]
      */
     public void setStatus(Long Status) {
@@ -373,7 +373,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取cc防护状态，取值[0(关闭), 1(开启)]
+     * Get cc防护状态，取值[0(关闭), 1(开启)] 
      * @return CCStatus cc防护状态，取值[0(关闭), 1(开启)]
      */
     public Long getCCStatus() {
@@ -381,7 +381,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置cc防护状态，取值[0(关闭), 1(开启)]
+     * Set cc防护状态，取值[0(关闭), 1(开启)]
      * @param CCStatus cc防护状态，取值[0(关闭), 1(开启)]
      */
     public void setCCStatus(Long CCStatus) {
@@ -389,7 +389,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取https的CC防护状态，取值[0(关闭), 1(开启)]
+     * Get https的CC防护状态，取值[0(关闭), 1(开启)] 
      * @return CCEnable https的CC防护状态，取值[0(关闭), 1(开启)]
      */
     public Long getCCEnable() {
@@ -397,7 +397,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置https的CC防护状态，取值[0(关闭), 1(开启)]
+     * Set https的CC防护状态，取值[0(关闭), 1(开启)]
      * @param CCEnable https的CC防护状态，取值[0(关闭), 1(开启)]
      */
     public void setCCEnable(Long CCEnable) {
@@ -405,7 +405,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取https的CC防护阈值
+     * Get https的CC防护阈值 
      * @return CCThreshold https的CC防护阈值
      */
     public Long getCCThreshold() {
@@ -413,7 +413,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置https的CC防护阈值
+     * Set https的CC防护阈值
      * @param CCThreshold https的CC防护阈值
      */
     public void setCCThreshold(Long CCThreshold) {
@@ -421,7 +421,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取https的CC防护等级
+     * Get https的CC防护等级 
      * @return CCLevel https的CC防护等级
      */
     public String getCCLevel() {
@@ -429,7 +429,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置https的CC防护等级
+     * Set https的CC防护等级
      * @param CCLevel https的CC防护等级
      */
     public void setCCLevel(String CCLevel) {
@@ -437,7 +437,7 @@ public class L7RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

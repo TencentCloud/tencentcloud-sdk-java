@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
+public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
 
     /**
     * 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
@@ -44,7 +44,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     private Long [] WaterMarkDefinition;
 
     /**
-     * 获取该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
+     * Get 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。 
      * @return TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
      */
     public Float getTimeOffset() {
@@ -52,7 +52,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
+     * Set 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
      * @param TimeOffset 该张截图对应视频文件中的时间偏移，单位为<font color=red>毫秒</font>。
      */
     public void setTimeOffset(Float TimeOffset) {
@@ -60,7 +60,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取该张截图的路径。
+     * Get 该张截图的路径。 
      * @return Path 该张截图的路径。
      */
     public String getPath() {
@@ -68,7 +68,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置该张截图的路径。
+     * Set 该张截图的路径。
      * @param Path 该张截图的路径。
      */
     public void setPath(String Path) {
@@ -76,7 +76,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取截图如果被打上了水印，被打水印的模板 ID 列表。
+     * Get 截图如果被打上了水印，被打水印的模板 ID 列表。 
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public Long [] getWaterMarkDefinition() {
@@ -84,7 +84,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置截图如果被打上了水印，被打水印的模板 ID 列表。
+     * Set 截图如果被打上了水印，被打水印的模板 ID 列表。
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
@@ -92,7 +92,7 @@ public class MediaSnapshotByTimePicInfoItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeOffset", this.TimeOffset);

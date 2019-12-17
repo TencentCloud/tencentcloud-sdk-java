@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityTrendsResponse  extends AbstractModel{
+public class DescribeSecurityTrendsResponse extends AbstractModel{
 
     /**
     * 木马事件统计数据数组。
@@ -65,7 +65,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取木马事件统计数据数组。
+     * Get 木马事件统计数据数组。 
      * @return Malwares 木马事件统计数据数组。
      */
     public SecurityTrend [] getMalwares() {
@@ -73,7 +73,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置木马事件统计数据数组。
+     * Set 木马事件统计数据数组。
      * @param Malwares 木马事件统计数据数组。
      */
     public void setMalwares(SecurityTrend [] Malwares) {
@@ -81,7 +81,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取异地登录事件统计数据数组。
+     * Get 异地登录事件统计数据数组。 
      * @return NonLocalLoginPlaces 异地登录事件统计数据数组。
      */
     public SecurityTrend [] getNonLocalLoginPlaces() {
@@ -89,7 +89,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置异地登录事件统计数据数组。
+     * Set 异地登录事件统计数据数组。
      * @param NonLocalLoginPlaces 异地登录事件统计数据数组。
      */
     public void setNonLocalLoginPlaces(SecurityTrend [] NonLocalLoginPlaces) {
@@ -97,7 +97,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密码破解事件统计数据数组。
+     * Get 密码破解事件统计数据数组。 
      * @return BruteAttacks 密码破解事件统计数据数组。
      */
     public SecurityTrend [] getBruteAttacks() {
@@ -105,7 +105,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密码破解事件统计数据数组。
+     * Set 密码破解事件统计数据数组。
      * @param BruteAttacks 密码破解事件统计数据数组。
      */
     public void setBruteAttacks(SecurityTrend [] BruteAttacks) {
@@ -113,7 +113,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞统计数据数组。
+     * Get 漏洞统计数据数组。 
      * @return Vuls 漏洞统计数据数组。
      */
     public SecurityTrend [] getVuls() {
@@ -121,7 +121,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞统计数据数组。
+     * Set 漏洞统计数据数组。
      * @param Vuls 漏洞统计数据数组。
      */
     public void setVuls(SecurityTrend [] Vuls) {
@@ -129,7 +129,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取基线统计数据数组。
+     * Get 基线统计数据数组。 
      * @return BaseLines 基线统计数据数组。
      */
     public SecurityTrend [] getBaseLines() {
@@ -137,7 +137,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置基线统计数据数组。
+     * Set 基线统计数据数组。
      * @param BaseLines 基线统计数据数组。
      */
     public void setBaseLines(SecurityTrend [] BaseLines) {
@@ -145,7 +145,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeSecurityTrendsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Malwares.", this.Malwares);

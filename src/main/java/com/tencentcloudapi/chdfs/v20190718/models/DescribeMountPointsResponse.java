@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMountPointsResponse  extends AbstractModel{
+public class DescribeMountPointsResponse extends AbstractModel{
 
     /**
     * 挂载点列表
@@ -37,7 +37,7 @@ public class DescribeMountPointsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取挂载点列表
+     * Get 挂载点列表 
      * @return MountPoints 挂载点列表
      */
     public MountPoint [] getMountPoints() {
@@ -45,7 +45,7 @@ public class DescribeMountPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点列表
+     * Set 挂载点列表
      * @param MountPoints 挂载点列表
      */
     public void setMountPoints(MountPoint [] MountPoints) {
@@ -53,7 +53,7 @@ public class DescribeMountPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeMountPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeMountPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MountPoints.", this.MountPoints);

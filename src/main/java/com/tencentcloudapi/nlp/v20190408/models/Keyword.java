@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Keyword  extends AbstractModel{
+public class Keyword extends AbstractModel{
 
     /**
     * 权重
@@ -37,7 +37,7 @@ public class Keyword  extends AbstractModel{
     private String Word;
 
     /**
-     * 获取权重
+     * Get 权重 
      * @return Score 权重
      */
     public Float getScore() {
@@ -45,7 +45,7 @@ public class Keyword  extends AbstractModel{
     }
 
     /**
-     * 设置权重
+     * Set 权重
      * @param Score 权重
      */
     public void setScore(Float Score) {
@@ -53,7 +53,7 @@ public class Keyword  extends AbstractModel{
     }
 
     /**
-     * 获取关键词
+     * Get 关键词 
      * @return Word 关键词
      */
     public String getWord() {
@@ -61,7 +61,7 @@ public class Keyword  extends AbstractModel{
     }
 
     /**
-     * 设置关键词
+     * Set 关键词
      * @param Word 关键词
      */
     public void setWord(String Word) {
@@ -69,7 +69,7 @@ public class Keyword  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);

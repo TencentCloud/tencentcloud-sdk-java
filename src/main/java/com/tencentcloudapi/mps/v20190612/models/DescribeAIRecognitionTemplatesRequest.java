@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
+public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
 
     /**
     * 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
@@ -44,7 +44,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取视频内容识别模板唯一标识过滤条件，数组长度限制：10。
+     * Get 视频内容识别模板唯一标识过滤条件，数组长度限制：10。 
      * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      */
     public Long [] getDefinitions() {
@@ -52,7 +52,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板唯一标识过滤条件，数组长度限制：10。
+     * Set 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      * @param Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      */
     public void setDefinitions(Long [] Definitions) {
@@ -60,7 +60,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：50。
+     * Get 返回记录条数，默认值：10，最大值：50。 
      * @return Limit 返回记录条数，默认值：10，最大值：50。
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：50。
+     * Set 返回记录条数，默认值：10，最大值：50。
      * @param Limit 返回记录条数，默认值：10，最大值：50。
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class DescribeAIRecognitionTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);

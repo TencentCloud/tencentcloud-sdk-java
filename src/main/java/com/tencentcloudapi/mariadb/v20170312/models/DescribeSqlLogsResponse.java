@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSqlLogsResponse  extends AbstractModel{
+public class DescribeSqlLogsResponse extends AbstractModel{
 
     /**
     * 当前消息队列中的sql日志条目数。
@@ -72,7 +72,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当前消息队列中的sql日志条目数。
+     * Get 当前消息队列中的sql日志条目数。 
      * @return TotalCount 当前消息队列中的sql日志条目数。
      */
     public Integer getTotalCount() {
@@ -80,7 +80,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前消息队列中的sql日志条目数。
+     * Set 当前消息队列中的sql日志条目数。
      * @param TotalCount 当前消息队列中的sql日志条目数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -88,7 +88,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取消息队列中的sql日志起始偏移。
+     * Get 消息队列中的sql日志起始偏移。 
      * @return StartOffset 消息队列中的sql日志起始偏移。
      */
     public Integer getStartOffset() {
@@ -96,7 +96,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置消息队列中的sql日志起始偏移。
+     * Set 消息队列中的sql日志起始偏移。
      * @param StartOffset 消息队列中的sql日志起始偏移。
      */
     public void setStartOffset(Integer StartOffset) {
@@ -104,7 +104,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取消息队列中的sql日志结束偏移。
+     * Get 消息队列中的sql日志结束偏移。 
      * @return EndOffset 消息队列中的sql日志结束偏移。
      */
     public Integer getEndOffset() {
@@ -112,7 +112,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置消息队列中的sql日志结束偏移。
+     * Set 消息队列中的sql日志结束偏移。
      * @param EndOffset 消息队列中的sql日志结束偏移。
      */
     public void setEndOffset(Integer EndOffset) {
@@ -120,7 +120,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的第一条sql日志的偏移。
+     * Get 返回的第一条sql日志的偏移。 
      * @return Offset 返回的第一条sql日志的偏移。
      */
     public Integer getOffset() {
@@ -128,7 +128,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的第一条sql日志的偏移。
+     * Set 返回的第一条sql日志的偏移。
      * @param Offset 返回的第一条sql日志的偏移。
      */
     public void setOffset(Integer Offset) {
@@ -136,7 +136,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的sql日志数量。
+     * Get 返回的sql日志数量。 
      * @return Count 返回的sql日志数量。
      */
     public Integer getCount() {
@@ -144,7 +144,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的sql日志数量。
+     * Set 返回的sql日志数量。
      * @param Count 返回的sql日志数量。
      */
     public void setCount(Integer Count) {
@@ -152,7 +152,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Sql日志列表。
+     * Get Sql日志列表。 
      * @return SqlItems Sql日志列表。
      */
     public SqlLogItem [] getSqlItems() {
@@ -160,7 +160,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Sql日志列表。
+     * Set Sql日志列表。
      * @param SqlItems Sql日志列表。
      */
     public void setSqlItems(SqlLogItem [] SqlItems) {
@@ -168,7 +168,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeSqlLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDCDBInstanceRequest  extends AbstractModel{
+public class UpgradeDCDBInstanceRequest extends AbstractModel{
 
     /**
     * 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
@@ -75,7 +75,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Get 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -83,7 +83,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Set 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -91,10 +91,10 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级类型，取值范围: 
+     * Get 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+ <li> SPLIT: 将已有分片中的数据切分到新增分片上</li> 
      * @return UpgradeType 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
@@ -105,7 +105,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升级类型，取值范围: 
+     * Set 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
@@ -119,7 +119,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新增分片配置，当UpgradeType为ADD时生效。
+     * Get 新增分片配置，当UpgradeType为ADD时生效。 
      * @return AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
      */
     public AddShardConfig getAddShardConfig() {
@@ -127,7 +127,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新增分片配置，当UpgradeType为ADD时生效。
+     * Set 新增分片配置，当UpgradeType为ADD时生效。
      * @param AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
      */
     public void setAddShardConfig(AddShardConfig AddShardConfig) {
@@ -135,7 +135,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Get 扩容分片配置，当UpgradeType为EXPAND时生效。 
      * @return ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
      */
     public ExpandShardConfig getExpandShardConfig() {
@@ -143,7 +143,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Set 扩容分片配置，当UpgradeType为EXPAND时生效。
      * @param ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
      */
     public void setExpandShardConfig(ExpandShardConfig ExpandShardConfig) {
@@ -151,7 +151,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取切分分片配置，当UpgradeType为SPLIT时生效。
+     * Get 切分分片配置，当UpgradeType为SPLIT时生效。 
      * @return SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      */
     public SplitShardConfig getSplitShardConfig() {
@@ -159,7 +159,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置切分分片配置，当UpgradeType为SPLIT时生效。
+     * Set 切分分片配置，当UpgradeType为SPLIT时生效。
      * @param SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      */
     public void setSplitShardConfig(SplitShardConfig SplitShardConfig) {
@@ -167,7 +167,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券进行支付，默认不使用。
+     * Get 是否自动使用代金券进行支付，默认不使用。 
      * @return AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public Boolean getAutoVoucher() {
@@ -175,7 +175,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券进行支付，默认不使用。
+     * Set 是否自动使用代金券进行支付，默认不使用。
      * @param AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
@@ -183,7 +183,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表，目前仅支持指定一张代金券。
+     * Get 代金券ID列表，目前仅支持指定一张代金券。 
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public String [] getVoucherIds() {
@@ -191,7 +191,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表，目前仅支持指定一张代金券。
+     * Set 代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -199,7 +199,7 @@ public class UpgradeDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

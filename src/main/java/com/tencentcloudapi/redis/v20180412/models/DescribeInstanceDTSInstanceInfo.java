@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
+public class DescribeInstanceDTSInstanceInfo extends AbstractModel{
 
     /**
     * 地域ID
@@ -87,8 +87,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,8 +107,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,8 +127,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 仓库ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetId 仓库ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置仓库ID
+     * Set 仓库ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SetId 仓库ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 可用区ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型
+     * Set 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例访问地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vip 实例访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例访问地址
+     * Set 实例访问地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 实例访问地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态
+     * Set 状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,7 +247,7 @@ public class DescribeInstanceDTSInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

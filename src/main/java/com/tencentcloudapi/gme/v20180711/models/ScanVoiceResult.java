@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVoiceResult  extends AbstractModel{
+public class ScanVoiceResult extends AbstractModel{
 
     /**
     * 数据ID
@@ -37,7 +37,7 @@ public class ScanVoiceResult  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取数据ID
+     * Get 数据ID 
      * @return DataId 数据ID
      */
     public String getDataId() {
@@ -45,7 +45,7 @@ public class ScanVoiceResult  extends AbstractModel{
     }
 
     /**
-     * 设置数据ID
+     * Set 数据ID
      * @param DataId 数据ID
      */
     public void setDataId(String DataId) {
@@ -53,7 +53,7 @@ public class ScanVoiceResult  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public String getTaskId() {
@@ -61,7 +61,7 @@ public class ScanVoiceResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
@@ -69,7 +69,7 @@ public class ScanVoiceResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataId", this.DataId);

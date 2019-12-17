@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConfigSummaryRequest  extends AbstractModel{
+public class DescribeConfigSummaryRequest extends AbstractModel{
 
     /**
     * 应用ID，不传入时查询全量
@@ -51,7 +51,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取应用ID，不传入时查询全量
+     * Get 应用ID，不传入时查询全量 
      * @return ApplicationId 应用ID，不传入时查询全量
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，不传入时查询全量
+     * Set 应用ID，不传入时查询全量
      * @param ApplicationId 应用ID，不传入时查询全量
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
+     * Get 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量 
      * @return SearchWord 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
      */
     public String getSearchWord() {
@@ -75,7 +75,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
+     * Set 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
      * @param SearchWord 查询关键字，模糊查询：应用名称，配置项名称，不传入时查询全量
      */
     public void setSearchWord(String SearchWord) {
@@ -83,7 +83,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -91,7 +91,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -99,7 +99,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数，默认为20
+     * Get 每页条数，默认为20 
      * @return Limit 每页条数，默认为20
      */
     public Long getLimit() {
@@ -107,7 +107,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数，默认为20
+     * Set 每页条数，默认为20
      * @param Limit 每页条数，默认为20
      */
     public void setLimit(Long Limit) {
@@ -115,7 +115,7 @@ public class DescribeConfigSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

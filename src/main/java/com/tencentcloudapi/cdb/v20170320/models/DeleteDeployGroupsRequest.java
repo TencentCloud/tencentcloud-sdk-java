@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeployGroupsRequest  extends AbstractModel{
+public class DeleteDeployGroupsRequest extends AbstractModel{
 
     /**
     * 要删除的置放群组 ID 列表。
@@ -30,7 +30,7 @@ public class DeleteDeployGroupsRequest  extends AbstractModel{
     private String [] DeployGroupIds;
 
     /**
-     * 获取要删除的置放群组 ID 列表。
+     * Get 要删除的置放群组 ID 列表。 
      * @return DeployGroupIds 要删除的置放群组 ID 列表。
      */
     public String [] getDeployGroupIds() {
@@ -38,7 +38,7 @@ public class DeleteDeployGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的置放群组 ID 列表。
+     * Set 要删除的置放群组 ID 列表。
      * @param DeployGroupIds 要删除的置放群组 ID 列表。
      */
     public void setDeployGroupIds(String [] DeployGroupIds) {
@@ -46,7 +46,7 @@ public class DeleteDeployGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBrandCommentCountRequest  extends AbstractModel{
+public class DescribeBrandCommentCountRequest extends AbstractModel{
 
     /**
     * 品牌ID
@@ -44,7 +44,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     private String EndDate;
 
     /**
-     * 获取品牌ID
+     * Get 品牌ID 
      * @return BrandId 品牌ID
      */
     public String getBrandId() {
@@ -52,7 +52,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置品牌ID
+     * Set 品牌ID
      * @param BrandId 品牌ID
      */
     public void setBrandId(String BrandId) {
@@ -60,7 +60,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始日期
+     * Get 查询开始日期 
      * @return StartDate 查询开始日期
      */
     public String getStartDate() {
@@ -68,7 +68,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始日期
+     * Set 查询开始日期
      * @param StartDate 查询开始日期
      */
     public void setStartDate(String StartDate) {
@@ -76,7 +76,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束日期
+     * Get 查询结束日期 
      * @return EndDate 查询结束日期
      */
     public String getEndDate() {
@@ -84,7 +84,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束日期
+     * Set 查询结束日期
      * @param EndDate 查询结束日期
      */
     public void setEndDate(String EndDate) {
@@ -92,7 +92,7 @@ public class DescribeBrandCommentCountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BrandId", this.BrandId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonsRequest  extends AbstractModel{
+public class DescribePersonsRequest extends AbstractModel{
 
     /**
     * 人员库唯一标识符
@@ -44,7 +44,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -52,7 +52,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -60,7 +60,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Long getLimit() {
@@ -68,7 +68,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Long Limit) {
@@ -76,7 +76,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -84,7 +84,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -92,7 +92,7 @@ public class DescribePersonsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);

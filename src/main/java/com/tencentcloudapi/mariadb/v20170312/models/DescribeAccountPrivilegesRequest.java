@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountPrivilegesRequest  extends AbstractModel{
+public class DescribeAccountPrivilegesRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -72,7 +72,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     private String ColName;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名。
+     * Get 登录用户名。 
      * @return UserName 登录用户名。
      */
     public String getUserName() {
@@ -96,7 +96,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录用户名。
+     * Set 登录用户名。
      * @param UserName 登录用户名。
      */
     public void setUserName(String UserName) {
@@ -104,7 +104,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Get 用户允许的访问 host，用户名+host唯一确定一个账号。 
      * @return Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public String getHost() {
@@ -112,7 +112,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Set 用户允许的访问 host，用户名+host唯一确定一个账号。
      * @param Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public void setHost(String Host) {
@@ -120,7 +120,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
+     * Get 数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数 
      * @return DbName 数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
      */
     public String getDbName() {
@@ -128,7 +128,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
+     * Set 数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
      * @param DbName 数据库名。如果为 \*，表示查询全局权限（即 \*.\*），此时忽略 Type 和 Object 参数
      */
     public void setDbName(String DbName) {
@@ -136,7 +136,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数
+     * Get 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数 
      * @return Type 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数
      */
     public String getType() {
@@ -144,7 +144,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数
+     * Set 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数
      * @param Type 类型,可以填入 table 、 view 、 proc 、 func 和 \*。当 DbName 为具体数据库名，Type为 \* 时，表示查询该数据库权限（即db.\*），此时忽略 Object 参数
      */
     public void setType(String Type) {
@@ -152,7 +152,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
+     * Get 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空 
      * @return Object 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      */
     public String getObject() {
@@ -160,7 +160,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
+     * Set 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      * @param Object 具体的 Type 的名称，比如 Type 为 table 时就是具体的表名。DbName 和 Type 都为具体名称，则 Object 表示具体对象名，不能为 \* 或者为空
      */
     public void setObject(String Object) {
@@ -168,7 +168,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限
+     * Get 当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限 
      * @return ColName 当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限
      */
     public String getColName() {
@@ -176,7 +176,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限
+     * Set 当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限
      * @param ColName 当 Type=table 时，ColName 为 \* 表示查询表的权限，如果为具体字段名，表示查询对应字段的权限
      */
     public void setColName(String ColName) {
@@ -184,7 +184,7 @@ public class DescribeAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
+public class DescribeShieldPlanInstanceRequest extends AbstractModel{
 
     /**
     * 资源id
@@ -37,7 +37,7 @@ public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
     private Integer Pid;
 
     /**
-     * 获取资源id
+     * Get 资源id 
      * @return ResourceId 资源id
      */
     public String getResourceId() {
@@ -45,7 +45,7 @@ public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源id
+     * Set 资源id
      * @param ResourceId 资源id
      */
     public void setResourceId(String ResourceId) {
@@ -53,7 +53,7 @@ public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务类别id
+     * Get 服务类别id 
      * @return Pid 服务类别id
      */
     public Integer getPid() {
@@ -61,7 +61,7 @@ public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务类别id
+     * Set 服务类别id
      * @param Pid 服务类别id
      */
     public void setPid(Integer Pid) {
@@ -69,7 +69,7 @@ public class DescribeShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

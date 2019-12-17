@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassicalTargetInfo  extends AbstractModel{
+public class ClassicalTargetInfo extends AbstractModel{
 
     /**
     * 后端实例ID
@@ -37,7 +37,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取后端实例ID
+     * Get 后端实例ID 
      * @return InstanceId 后端实例ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置后端实例ID
+     * Set 后端实例ID
      * @param InstanceId 后端实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取权重，取值范围 [0, 100]
+     * Get 权重，取值范围 [0, 100] 
      * @return Weight 权重，取值范围 [0, 100]
      */
     public Integer getWeight() {
@@ -61,7 +61,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置权重，取值范围 [0, 100]
+     * Set 权重，取值范围 [0, 100]
      * @param Weight 权重，取值范围 [0, 100]
      */
     public void setWeight(Integer Weight) {
@@ -69,7 +69,7 @@ public class ClassicalTargetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

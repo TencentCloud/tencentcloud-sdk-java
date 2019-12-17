@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdCardVerificationResponse  extends AbstractModel{
+public class IdCardVerificationResponse extends AbstractModel{
 
     /**
     * 认证结果码，收费情况如下。
@@ -52,7 +52,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取认证结果码，收费情况如下。
+     * Get 认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
@@ -60,7 +60,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
 -2: 非法身份证号（长度、校验位等不正确）
 -3: 非法姓名（长度、格式等不正确）
 -4: 证件库服务异常
--5: 证件库中无此身份证记录
+-5: 证件库中无此身份证记录 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
@@ -76,7 +76,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置认证结果码，收费情况如下。
+     * Set 认证结果码，收费情况如下。
 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
@@ -100,7 +100,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -108,7 +108,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -116,7 +116,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -124,7 +124,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -132,7 +132,7 @@ public class IdCardVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

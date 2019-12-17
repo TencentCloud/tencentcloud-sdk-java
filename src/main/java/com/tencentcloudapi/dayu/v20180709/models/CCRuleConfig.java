@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCRuleConfig  extends AbstractModel{
+public class CCRuleConfig extends AbstractModel{
 
     /**
     * 统计周期，单位秒，取值[10, 30, 60]
@@ -51,7 +51,7 @@ public class CCRuleConfig  extends AbstractModel{
     private Long ExeDuration;
 
     /**
-     * 获取统计周期，单位秒，取值[10, 30, 60]
+     * Get 统计周期，单位秒，取值[10, 30, 60] 
      * @return Period 统计周期，单位秒，取值[10, 30, 60]
      */
     public Long getPeriod() {
@@ -59,7 +59,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 设置统计周期，单位秒，取值[10, 30, 60]
+     * Set 统计周期，单位秒，取值[10, 30, 60]
      * @param Period 统计周期，单位秒，取值[10, 30, 60]
      */
     public void setPeriod(Long Period) {
@@ -67,7 +67,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 获取访问次数，取值[1-10000]
+     * Get 访问次数，取值[1-10000] 
      * @return ReqNumber 访问次数，取值[1-10000]
      */
     public Long getReqNumber() {
@@ -75,7 +75,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 设置访问次数，取值[1-10000]
+     * Set 访问次数，取值[1-10000]
      * @param ReqNumber 访问次数，取值[1-10000]
      */
     public void setReqNumber(Long ReqNumber) {
@@ -83,7 +83,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 获取执行动作，取值["alg"（人机识别）, "drop"（拦截）]
+     * Get 执行动作，取值["alg"（人机识别）, "drop"（拦截）] 
      * @return Action 执行动作，取值["alg"（人机识别）, "drop"（拦截）]
      */
     public String getAction() {
@@ -91,7 +91,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 设置执行动作，取值["alg"（人机识别）, "drop"（拦截）]
+     * Set 执行动作，取值["alg"（人机识别）, "drop"（拦截）]
      * @param Action 执行动作，取值["alg"（人机识别）, "drop"（拦截）]
      */
     public void setAction(String Action) {
@@ -99,7 +99,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 获取执行时间，单位秒，取值[1-900]
+     * Get 执行时间，单位秒，取值[1-900] 
      * @return ExeDuration 执行时间，单位秒，取值[1-900]
      */
     public Long getExeDuration() {
@@ -107,7 +107,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 设置执行时间，单位秒，取值[1-900]
+     * Set 执行时间，单位秒，取值[1-900]
      * @param ExeDuration 执行时间，单位秒，取值[1-900]
      */
     public void setExeDuration(Long ExeDuration) {
@@ -115,7 +115,7 @@ public class CCRuleConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);

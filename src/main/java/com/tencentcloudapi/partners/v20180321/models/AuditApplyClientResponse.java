@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditApplyClientResponse  extends AbstractModel{
+public class AuditApplyClientResponse extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -58,7 +58,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -66,7 +66,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -74,7 +74,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -82,7 +82,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -90,7 +90,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 获取审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
+     * Get 审核结果，包括accept/reject/qcloudaudit（腾讯云审核） 
      * @return AuditResult 审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
      */
     public String getAuditResult() {
@@ -98,7 +98,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 设置审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
+     * Set 审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
      * @param AuditResult 审核结果，包括accept/reject/qcloudaudit（腾讯云审核）
      */
     public void setAuditResult(String AuditResult) {
@@ -106,7 +106,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 获取关联时间对应的时间戳
+     * Get 关联时间对应的时间戳 
      * @return AgentTime 关联时间对应的时间戳
      */
     public Integer getAgentTime() {
@@ -114,7 +114,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 设置关联时间对应的时间戳
+     * Set 关联时间对应的时间戳
      * @param AgentTime 关联时间对应的时间戳
      */
     public void setAgentTime(Integer AgentTime) {
@@ -122,7 +122,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class AuditApplyClientResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

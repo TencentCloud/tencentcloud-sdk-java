@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoleInfo  extends AbstractModel{
+public class RoleInfo extends AbstractModel{
 
     /**
     * 角色ID
@@ -72,7 +72,7 @@ public class RoleInfo  extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-     * 获取角色ID
+     * Get 角色ID 
      * @return RoleId 角色ID
      */
     public String getRoleId() {
@@ -80,7 +80,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色ID
+     * Set 角色ID
      * @param RoleId 角色ID
      */
     public void setRoleId(String RoleId) {
@@ -88,7 +88,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称
+     * Get 角色名称 
      * @return RoleName 角色名称
      */
     public String getRoleName() {
@@ -96,7 +96,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称
+     * Set 角色名称
      * @param RoleName 角色名称
      */
     public void setRoleName(String RoleName) {
@@ -104,7 +104,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色的策略文档
+     * Get 角色的策略文档 
      * @return PolicyDocument 角色的策略文档
      */
     public String getPolicyDocument() {
@@ -112,7 +112,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色的策略文档
+     * Set 角色的策略文档
      * @param PolicyDocument 角色的策略文档
      */
     public void setPolicyDocument(String PolicyDocument) {
@@ -120,7 +120,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色描述
+     * Get 角色描述 
      * @return Description 角色描述
      */
     public String getDescription() {
@@ -128,7 +128,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色描述
+     * Set 角色描述
      * @param Description 角色描述
      */
     public void setDescription(String Description) {
@@ -136,7 +136,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色的创建时间
+     * Get 角色的创建时间 
      * @return AddTime 角色的创建时间
      */
     public String getAddTime() {
@@ -144,7 +144,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色的创建时间
+     * Set 角色的创建时间
      * @param AddTime 角色的创建时间
      */
     public void setAddTime(String AddTime) {
@@ -152,7 +152,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色的最近一次时间
+     * Get 角色的最近一次时间 
      * @return UpdateTime 角色的最近一次时间
      */
     public String getUpdateTime() {
@@ -160,7 +160,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色的最近一次时间
+     * Set 角色的最近一次时间
      * @param UpdateTime 角色的最近一次时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -168,7 +168,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取角色是否允许登录
+     * Get 角色是否允许登录 
      * @return ConsoleLogin 角色是否允许登录
      */
     public Long getConsoleLogin() {
@@ -176,7 +176,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置角色是否允许登录
+     * Set 角色是否允许登录
      * @param ConsoleLogin 角色是否允许登录
      */
     public void setConsoleLogin(Long ConsoleLogin) {
@@ -184,7 +184,7 @@ public class RoleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);

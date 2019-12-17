@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Microservice  extends AbstractModel{
+public class Microservice extends AbstractModel{
 
     /**
     * 微服务ID
@@ -79,8 +79,8 @@ public class Microservice  extends AbstractModel{
     private Long RunInstanceCount;
 
     /**
-     * 获取微服务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceId 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -89,7 +89,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务ID
+     * Set 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceId 微服务ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,8 +99,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取微服务名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceName 微服务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -109,7 +109,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务名称
+     * Set 微服务名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceName 微服务名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,8 +119,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取微服务描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceDesc 微服务描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,7 +129,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务描述
+     * Set 微服务描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceDesc 微服务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,8 +139,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -149,7 +149,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -159,8 +159,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 获取微服务的运行实例数目
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微服务的运行实例数目
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunInstanceCount 微服务的运行实例数目
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 设置微服务的运行实例数目
+     * Set 微服务的运行实例数目
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RunInstanceCount 微服务的运行实例数目
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,7 +219,7 @@ public class Microservice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);

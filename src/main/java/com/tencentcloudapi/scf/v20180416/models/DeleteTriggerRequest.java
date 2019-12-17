@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTriggerRequest  extends AbstractModel{
+public class DeleteTriggerRequest extends AbstractModel{
 
     /**
     * 函数的名称
@@ -65,7 +65,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     private String Qualifier;
 
     /**
-     * 获取函数的名称
+     * Get 函数的名称 
      * @return FunctionName 函数的名称
      */
     public String getFunctionName() {
@@ -73,7 +73,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的名称
+     * Set 函数的名称
      * @param FunctionName 函数的名称
      */
     public void setFunctionName(String FunctionName) {
@@ -81,7 +81,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的触发器名称
+     * Get 要删除的触发器名称 
      * @return TriggerName 要删除的触发器名称
      */
     public String getTriggerName() {
@@ -89,7 +89,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的触发器名称
+     * Set 要删除的触发器名称
      * @param TriggerName 要删除的触发器名称
      */
     public void setTriggerName(String TriggerName) {
@@ -97,7 +97,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     * Get 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型 
      * @return Type 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
      */
     public String getType() {
@@ -105,7 +105,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
+     * Set 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
      * @param Type 要删除的触发器类型，目前支持 cos 、cmq、 timer、ckafka 类型
      */
     public void setType(String Type) {
@@ -113,7 +113,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属命名空间
+     * Get 函数所属命名空间 
      * @return Namespace 函数所属命名空间
      */
     public String getNamespace() {
@@ -121,7 +121,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属命名空间
+     * Set 函数所属命名空间
      * @param Namespace 函数所属命名空间
      */
     public void setNamespace(String Namespace) {
@@ -129,7 +129,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * Get 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段 
      * @return TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      */
     public String getTriggerDesc() {
@@ -137,7 +137,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
+     * Set 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      * @param TriggerDesc 如果删除的触发器类型为 COS 触发器，该字段为必填值，存放 JSON 格式的数据 {"event":"cos:ObjectCreated:*"}，数据内容和 SetTrigger 接口中该字段的格式相同；如果删除的触发器类型为定时触发器或 CMQ 触发器，可以不指定该字段
      */
     public void setTriggerDesc(String TriggerDesc) {
@@ -145,7 +145,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的版本信息
+     * Get 函数的版本信息 
      * @return Qualifier 函数的版本信息
      */
     public String getQualifier() {
@@ -153,7 +153,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本信息
+     * Set 函数的版本信息
      * @param Qualifier 函数的版本信息
      */
     public void setQualifier(String Qualifier) {
@@ -161,7 +161,7 @@ public class DeleteTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

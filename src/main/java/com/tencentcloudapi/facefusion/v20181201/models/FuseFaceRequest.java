@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FuseFaceRequest  extends AbstractModel{
+public class FuseFaceRequest extends AbstractModel{
 
     /**
     * 活动 ID，请在人脸融合控制台查看。
@@ -74,7 +74,7 @@ public class FuseFaceRequest  extends AbstractModel{
     private Integer CelebrityIdentify;
 
     /**
-     * 获取活动 ID，请在人脸融合控制台查看。
+     * Get 活动 ID，请在人脸融合控制台查看。 
      * @return ProjectId 活动 ID，请在人脸融合控制台查看。
      */
     public String getProjectId() {
@@ -82,7 +82,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置活动 ID，请在人脸融合控制台查看。
+     * Set 活动 ID，请在人脸融合控制台查看。
      * @param ProjectId 活动 ID，请在人脸融合控制台查看。
      */
     public void setProjectId(String ProjectId) {
@@ -90,7 +90,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取素材 ID，请在人脸融合控制台查看。
+     * Get 素材 ID，请在人脸融合控制台查看。 
      * @return ModelId 素材 ID，请在人脸融合控制台查看。
      */
     public String getModelId() {
@@ -98,7 +98,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置素材 ID，请在人脸融合控制台查看。
+     * Set 素材 ID，请在人脸融合控制台查看。
      * @param ModelId 素材 ID，请在人脸融合控制台查看。
      */
     public void setModelId(String ModelId) {
@@ -106,7 +106,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为30天。 
      * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      */
     public String getRspImgType() {
@@ -114,7 +114,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      */
     public void setRspImgType(String RspImgType) {
@@ -122,7 +122,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户人脸图片、素材模板图的人脸位置信息。
+     * Get 用户人脸图片、素材模板图的人脸位置信息。 
      * @return MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
      */
     public MergeInfo [] getMergeInfos() {
@@ -130,7 +130,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户人脸图片、素材模板图的人脸位置信息。
+     * Set 用户人脸图片、素材模板图的人脸位置信息。
      * @param MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
      */
     public void setMergeInfos(MergeInfo [] MergeInfos) {
@@ -138,8 +138,8 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中脸型参数数值。
+     * Get 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
+若此参数不填写，则使用人脸融合控制台中脸型参数数值。 
      * @return FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
      */
@@ -148,7 +148,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
+     * Set 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
      * @param FuseProfileDegree 脸型融合比例，数值越高，融合后的脸型越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中脸型参数数值。
@@ -158,8 +158,8 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
-若此参数不填写，则使用人脸融合控制台中五官参数数值。
+     * Get 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
+若此参数不填写，则使用人脸融合控制台中五官参数数值。 
      * @return FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
      */
@@ -168,7 +168,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
+     * Set 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
      * @param FuseFaceDegree 五官融合比例，数值越高，融合后的五官越像素材人物。取值范围[0,100] 
 若此参数不填写，则使用人脸融合控制台中五官参数数值。
@@ -178,7 +178,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * Get 0表示不需要鉴政，1表示需要鉴政。默认值为0。 
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      */
     public Integer getCelebrityIdentify() {
@@ -186,7 +186,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * Set 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      */
     public void setCelebrityIdentify(Integer CelebrityIdentify) {
@@ -194,7 +194,7 @@ public class FuseFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

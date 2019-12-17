@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceHourResponse  extends AbstractModel{
+public class CreateDBInstanceHourResponse extends AbstractModel{
 
     /**
     * 订单ID
@@ -44,7 +44,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取订单ID
+     * Get 订单ID 
      * @return DealId 订单ID
      */
     public String getDealId() {
@@ -52,7 +52,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订单ID
+     * Set 订单ID
      * @param DealId 订单ID
      */
     public void setDealId(String DealId) {
@@ -60,7 +60,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建的实例ID列表
+     * Get 创建的实例ID列表 
      * @return InstanceIds 创建的实例ID列表
      */
     public String [] getInstanceIds() {
@@ -68,7 +68,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建的实例ID列表
+     * Set 创建的实例ID列表
      * @param InstanceIds 创建的实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -76,7 +76,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateDBInstanceHourResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);

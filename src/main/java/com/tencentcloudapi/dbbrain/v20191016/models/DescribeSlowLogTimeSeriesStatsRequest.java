@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
+public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel{
 
     /**
     * 实例 ID 。
@@ -44,7 +44,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取实例 ID 。
+     * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 。
+     * Set 实例 ID 。
      * @param InstanceId 实例 ID 。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return StartTime 开始时间。
      */
     public String getStartTime() {
@@ -68,7 +68,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -76,7 +76,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndTime 结束时间。
      */
     public String getEndTime() {
@@ -84,7 +84,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -92,7 +92,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPullStreamStatusRequest  extends AbstractModel{
+public class ModifyPullStreamStatusRequest extends AbstractModel{
 
     /**
     * 配置id列表。
@@ -37,7 +37,7 @@ public class ModifyPullStreamStatusRequest  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取配置id列表。
+     * Get 配置id列表。 
      * @return ConfigIds 配置id列表。
      */
     public String [] getConfigIds() {
@@ -45,7 +45,7 @@ public class ModifyPullStreamStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置id列表。
+     * Set 配置id列表。
      * @param ConfigIds 配置id列表。
      */
     public void setConfigIds(String [] ConfigIds) {
@@ -53,7 +53,7 @@ public class ModifyPullStreamStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标状态。0无效，2正在运行，4暂停。
+     * Get 目标状态。0无效，2正在运行，4暂停。 
      * @return Status 目标状态。0无效，2正在运行，4暂停。
      */
     public String getStatus() {
@@ -61,7 +61,7 @@ public class ModifyPullStreamStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标状态。0无效，2正在运行，4暂停。
+     * Set 目标状态。0无效，2正在运行，4暂停。
      * @param Status 目标状态。0无效，2正在运行，4暂停。
      */
     public void setStatus(String Status) {
@@ -69,7 +69,7 @@ public class ModifyPullStreamStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ConfigIds.", this.ConfigIds);

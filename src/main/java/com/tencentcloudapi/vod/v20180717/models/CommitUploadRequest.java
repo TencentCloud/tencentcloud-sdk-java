@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommitUploadRequest  extends AbstractModel{
+public class CommitUploadRequest extends AbstractModel{
 
     /**
     * 点播会话，取申请上传接口的返回值 VodSessionKey。
@@ -37,7 +37,7 @@ public class CommitUploadRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取点播会话，取申请上传接口的返回值 VodSessionKey。
+     * Get 点播会话，取申请上传接口的返回值 VodSessionKey。 
      * @return VodSessionKey 点播会话，取申请上传接口的返回值 VodSessionKey。
      */
     public String getVodSessionKey() {
@@ -45,7 +45,7 @@ public class CommitUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播会话，取申请上传接口的返回值 VodSessionKey。
+     * Set 点播会话，取申请上传接口的返回值 VodSessionKey。
      * @param VodSessionKey 点播会话，取申请上传接口的返回值 VodSessionKey。
      */
     public void setVodSessionKey(String VodSessionKey) {
@@ -53,7 +53,7 @@ public class CommitUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -61,7 +61,7 @@ public class CommitUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -69,7 +69,7 @@ public class CommitUploadRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VodSessionKey", this.VodSessionKey);

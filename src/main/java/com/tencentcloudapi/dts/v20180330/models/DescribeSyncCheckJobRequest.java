@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSyncCheckJobRequest  extends AbstractModel{
+public class DescribeSyncCheckJobRequest extends AbstractModel{
 
     /**
     * 要查询的灾备同步任务ID
@@ -30,7 +30,7 @@ public class DescribeSyncCheckJobRequest  extends AbstractModel{
     private String JobId;
 
     /**
-     * 获取要查询的灾备同步任务ID
+     * Get 要查询的灾备同步任务ID 
      * @return JobId 要查询的灾备同步任务ID
      */
     public String getJobId() {
@@ -38,7 +38,7 @@ public class DescribeSyncCheckJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的灾备同步任务ID
+     * Set 要查询的灾备同步任务ID
      * @param JobId 要查询的灾备同步任务ID
      */
     public void setJobId(String JobId) {
@@ -46,7 +46,7 @@ public class DescribeSyncCheckJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

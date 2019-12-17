@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BodyMovementResult  extends AbstractModel{
+public class BodyMovementResult extends AbstractModel{
 
     /**
     * 置信度
@@ -69,7 +69,7 @@ public class BodyMovementResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取置信度
+     * Get 置信度 
      * @return Confidence 置信度
      */
     public Float getConfidence() {
@@ -77,7 +77,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置置信度
+     * Set 置信度
      * @param Confidence 置信度
      */
     public void setConfidence(Float Confidence) {
@@ -85,7 +85,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果高度
+     * Get 识别结果高度 
      * @return Height 识别结果高度
      */
     public Long getHeight() {
@@ -93,7 +93,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果高度
+     * Set 识别结果高度
      * @param Height 识别结果高度
      */
     public void setHeight(Long Height) {
@@ -101,7 +101,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果左坐标
+     * Get 识别结果左坐标 
      * @return Left 识别结果左坐标
      */
     public Long getLeft() {
@@ -109,7 +109,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果左坐标
+     * Set 识别结果左坐标
      * @param Left 识别结果左坐标
      */
     public void setLeft(Long Left) {
@@ -117,11 +117,11 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取老师动作识别结果，包含
+     * Get 老师动作识别结果，包含
 1、teach_on_positive_attitude 正面讲解
 2、point_to_the_blackboard 指黑板
 3、writing_blackboard 写板书
-4、other 其他
+4、other 其他 
      * @return Movements 老师动作识别结果，包含
 1、teach_on_positive_attitude 正面讲解
 2、point_to_the_blackboard 指黑板
@@ -133,7 +133,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置老师动作识别结果，包含
+     * Set 老师动作识别结果，包含
 1、teach_on_positive_attitude 正面讲解
 2、point_to_the_blackboard 指黑板
 3、writing_blackboard 写板书
@@ -149,7 +149,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果顶坐标
+     * Get 识别结果顶坐标 
      * @return Top 识别结果顶坐标
      */
     public Long getTop() {
@@ -157,7 +157,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果顶坐标
+     * Set 识别结果顶坐标
      * @param Top 识别结果顶坐标
      */
     public void setTop(Long Top) {
@@ -165,7 +165,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果宽度
+     * Get 识别结果宽度 
      * @return Width 识别结果宽度
      */
     public Long getWidth() {
@@ -173,7 +173,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果宽度
+     * Set 识别结果宽度
      * @param Width 识别结果宽度
      */
     public void setWidth(Long Width) {
@@ -181,7 +181,7 @@ public class BodyMovementResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyProxiesResponse  extends AbstractModel{
+public class DestroyProxiesResponse extends AbstractModel{
 
     /**
     * 处于不可销毁状态下的通道实例ID列表。
@@ -44,7 +44,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取处于不可销毁状态下的通道实例ID列表。
+     * Get 处于不可销毁状态下的通道实例ID列表。 
      * @return InvalidStatusInstanceSet 处于不可销毁状态下的通道实例ID列表。
      */
     public String [] getInvalidStatusInstanceSet() {
@@ -52,7 +52,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置处于不可销毁状态下的通道实例ID列表。
+     * Set 处于不可销毁状态下的通道实例ID列表。
      * @param InvalidStatusInstanceSet 处于不可销毁状态下的通道实例ID列表。
      */
     public void setInvalidStatusInstanceSet(String [] InvalidStatusInstanceSet) {
@@ -60,7 +60,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取销毁操作失败的通道实例ID列表。
+     * Get 销毁操作失败的通道实例ID列表。 
      * @return OperationFailedInstanceSet 销毁操作失败的通道实例ID列表。
      */
     public String [] getOperationFailedInstanceSet() {
@@ -68,7 +68,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置销毁操作失败的通道实例ID列表。
+     * Set 销毁操作失败的通道实例ID列表。
      * @param OperationFailedInstanceSet 销毁操作失败的通道实例ID列表。
      */
     public void setOperationFailedInstanceSet(String [] OperationFailedInstanceSet) {
@@ -76,7 +76,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DestroyProxiesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InvalidStatusInstanceSet.", this.InvalidStatusInstanceSet);

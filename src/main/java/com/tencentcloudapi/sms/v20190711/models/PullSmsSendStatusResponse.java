@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsSendStatusResponse  extends AbstractModel{
+public class PullSmsSendStatusResponse extends AbstractModel{
 
     /**
     * 下发状态响应集合
@@ -37,7 +37,7 @@ public class PullSmsSendStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取下发状态响应集合
+     * Get 下发状态响应集合 
      * @return PullSmsSendStatusSet 下发状态响应集合
      */
     public PullSmsSendStatus [] getPullSmsSendStatusSet() {
@@ -45,7 +45,7 @@ public class PullSmsSendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置下发状态响应集合
+     * Set 下发状态响应集合
      * @param PullSmsSendStatusSet 下发状态响应集合
      */
     public void setPullSmsSendStatusSet(PullSmsSendStatus [] PullSmsSendStatusSet) {
@@ -53,7 +53,7 @@ public class PullSmsSendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class PullSmsSendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class PullSmsSendStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PullSmsSendStatusSet.", this.PullSmsSendStatusSet);

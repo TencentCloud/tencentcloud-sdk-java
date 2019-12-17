@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClusterInstancesRequest  extends AbstractModel{
+public class DeleteClusterInstancesRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -51,7 +51,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     private Boolean ForceDelete;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -59,7 +59,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -67,7 +67,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机InstanceId列表
+     * Get 主机InstanceId列表 
      * @return InstanceIds 主机InstanceId列表
      */
     public String [] getInstanceIds() {
@@ -75,7 +75,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机InstanceId列表
+     * Set 主机InstanceId列表
      * @param InstanceIds 主机InstanceId列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -83,7 +83,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * Get 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例） 
      * @return InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public String getInstanceDeleteMode() {
@@ -91,7 +91,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
+     * Set 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      * @param InstanceDeleteMode 集群实例删除时的策略：terminate（销毁实例，仅支持按量计费云主机实例） retain （仅移除，保留实例）
      */
     public void setInstanceDeleteMode(String InstanceDeleteMode) {
@@ -99,7 +99,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     * Get 是否强制删除(当节点在初始化时，可以指定参数为TRUE) 
      * @return ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
      */
     public Boolean getForceDelete() {
@@ -107,7 +107,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制删除(当节点在初始化时，可以指定参数为TRUE)
+     * Set 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
      * @param ForceDelete 是否强制删除(当节点在初始化时，可以指定参数为TRUE)
      */
     public void setForceDelete(Boolean ForceDelete) {
@@ -115,7 +115,7 @@ public class DeleteClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

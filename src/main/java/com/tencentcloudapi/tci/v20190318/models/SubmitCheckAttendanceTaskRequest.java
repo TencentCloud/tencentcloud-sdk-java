@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
+public class SubmitCheckAttendanceTaskRequest extends AbstractModel{
 
     /**
     * 输入数据
@@ -88,7 +88,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     private Float Threshold;
 
     /**
-     * 获取输入数据
+     * Get 输入数据 
      * @return FileContent 输入数据
      */
     public String getFileContent() {
@@ -96,7 +96,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入数据
+     * Set 输入数据
      * @param FileContent 输入数据
      */
     public void setFileContent(String FileContent) {
@@ -104,7 +104,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
+     * Get 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url 
      * @return FileType 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
      */
     public String getFileType() {
@@ -112,7 +112,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
+     * Set 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
      * @param FileType 视频流类型，vod_url表示点播URL，live_url表示直播URL，默认vod_url
      */
     public void setFileType(String FileType) {
@@ -120,7 +120,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库 ID列表
+     * Get 人员库 ID列表 
      * @return LibraryIds 人员库 ID列表
      */
     public String [] getLibraryIds() {
@@ -128,7 +128,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库 ID列表
+     * Set 人员库 ID列表
      * @param LibraryIds 人员库 ID列表
      */
     public void setLibraryIds(String [] LibraryIds) {
@@ -136,7 +136,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取确定出勤阈值；默认为0.92
+     * Get 确定出勤阈值；默认为0.92 
      * @return AttendanceThreshold 确定出勤阈值；默认为0.92
      */
     public Float getAttendanceThreshold() {
@@ -144,7 +144,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置确定出勤阈值；默认为0.92
+     * Set 确定出勤阈值；默认为0.92
      * @param AttendanceThreshold 确定出勤阈值；默认为0.92
      */
     public void setAttendanceThreshold(Float AttendanceThreshold) {
@@ -152,7 +152,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+     * Get 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启 
      * @return EnableStranger 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      */
     public Boolean getEnableStranger() {
@@ -160,7 +160,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
+     * Set 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      * @param EnableStranger 是否开启陌生人模式，陌生人模式是指在任务中发现的非注册人脸库中的人脸也返回相关统计信息，默认不开启
      */
     public void setEnableStranger(Boolean EnableStranger) {
@@ -168,8 +168,8 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
+     * Get 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
+对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时 
      * @return EndTime 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
      */
@@ -178,7 +178,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
+     * Set 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
      * @param EndTime 考勤结束时间（到视频的第几秒结束考勤），单位秒；默认为900 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间往后12小时
@@ -188,7 +188,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知回调地址，要求方法为post，application/json格式
+     * Get 通知回调地址，要求方法为post，application/json格式 
      * @return NoticeUrl 通知回调地址，要求方法为post，application/json格式
      */
     public String getNoticeUrl() {
@@ -196,7 +196,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知回调地址，要求方法为post，application/json格式
+     * Set 通知回调地址，要求方法为post，application/json格式
      * @param NoticeUrl 通知回调地址，要求方法为post，application/json格式
      */
     public void setNoticeUrl(String NoticeUrl) {
@@ -204,8 +204,8 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
-对于直播场景，使用绝对时间戳，单位秒，默认当前时间
+     * Get 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
+对于直播场景，使用绝对时间戳，单位秒，默认当前时间 
      * @return StartTime 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间
      */
@@ -214,7 +214,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
+     * Set 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间
      * @param StartTime 考勤开始时间（从视频的第几秒开始考勤），单位秒；默认为0 
 对于直播场景，使用绝对时间戳，单位秒，默认当前时间
@@ -224,7 +224,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别阈值；默认为0.8
+     * Get 识别阈值；默认为0.8 
      * @return Threshold 识别阈值；默认为0.8
      */
     public Float getThreshold() {
@@ -232,7 +232,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别阈值；默认为0.8
+     * Set 识别阈值；默认为0.8
      * @param Threshold 识别阈值；默认为0.8
      */
     public void setThreshold(Float Threshold) {
@@ -240,7 +240,7 @@ public class SubmitCheckAttendanceTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

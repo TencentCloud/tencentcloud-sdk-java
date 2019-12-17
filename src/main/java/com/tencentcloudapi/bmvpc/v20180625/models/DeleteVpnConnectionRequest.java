@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteVpnConnectionRequest  extends AbstractModel{
+public class DeleteVpnConnectionRequest extends AbstractModel{
 
     /**
     * VPN通道实例ID。形如：bmvpnx-f49l6u0z。
@@ -30,7 +30,7 @@ public class DeleteVpnConnectionRequest  extends AbstractModel{
     private String VpnConnectionId;
 
     /**
-     * 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Get VPN通道实例ID。形如：bmvpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public String getVpnConnectionId() {
@@ -38,7 +38,7 @@ public class DeleteVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Set VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      * @param VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public void setVpnConnectionId(String VpnConnectionId) {
@@ -46,7 +46,7 @@ public class DeleteVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnConnectionId", this.VpnConnectionId);

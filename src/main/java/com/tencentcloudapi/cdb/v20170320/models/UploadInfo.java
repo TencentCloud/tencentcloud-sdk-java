@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadInfo  extends AbstractModel{
+public class UploadInfo extends AbstractModel{
 
     /**
     * 文件所有分片数
@@ -37,7 +37,7 @@ public class UploadInfo  extends AbstractModel{
     private Integer CompleteNum;
 
     /**
-     * 获取文件所有分片数
+     * Get 文件所有分片数 
      * @return AllSliceNum 文件所有分片数
      */
     public Integer getAllSliceNum() {
@@ -45,7 +45,7 @@ public class UploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件所有分片数
+     * Set 文件所有分片数
      * @param AllSliceNum 文件所有分片数
      */
     public void setAllSliceNum(Integer AllSliceNum) {
@@ -53,7 +53,7 @@ public class UploadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取已完成分片数
+     * Get 已完成分片数 
      * @return CompleteNum 已完成分片数
      */
     public Integer getCompleteNum() {
@@ -61,7 +61,7 @@ public class UploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置已完成分片数
+     * Set 已完成分片数
      * @param CompleteNum 已完成分片数
      */
     public void setCompleteNum(Integer CompleteNum) {
@@ -69,7 +69,7 @@ public class UploadInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AllSliceNum", this.AllSliceNum);

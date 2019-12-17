@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OrgInvitation  extends AbstractModel{
+public class OrgInvitation extends AbstractModel{
 
     /**
     * 邀请ID
@@ -100,7 +100,7 @@ public class OrgInvitation  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取邀请ID
+     * Get 邀请ID 
      * @return Id 邀请ID
      */
     public Long getId() {
@@ -108,7 +108,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置邀请ID
+     * Set 邀请ID
      * @param Id 邀请ID
      */
     public void setId(Long Id) {
@@ -116,7 +116,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取被邀请UIN
+     * Get 被邀请UIN 
      * @return Uin 被邀请UIN
      */
     public Long getUin() {
@@ -124,7 +124,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置被邀请UIN
+     * Set 被邀请UIN
      * @param Uin 被邀请UIN
      */
     public void setUin(Long Uin) {
@@ -132,7 +132,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取创建者UIN
+     * Get 创建者UIN 
      * @return HostUin 创建者UIN
      */
     public Long getHostUin() {
@@ -140,7 +140,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置创建者UIN
+     * Set 创建者UIN
      * @param HostUin 创建者UIN
      */
     public void setHostUin(Long HostUin) {
@@ -148,7 +148,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取创建者名称
+     * Get 创建者名称 
      * @return HostName 创建者名称
      */
     public String getHostName() {
@@ -156,7 +156,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置创建者名称
+     * Set 创建者名称
      * @param HostName 创建者名称
      */
     public void setHostName(String HostName) {
@@ -164,7 +164,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取创建者邮箱
+     * Get 创建者邮箱 
      * @return HostMail 创建者邮箱
      */
     public String getHostMail() {
@@ -172,7 +172,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置创建者邮箱
+     * Set 创建者邮箱
      * @param HostMail 创建者邮箱
      */
     public void setHostMail(String HostMail) {
@@ -180,7 +180,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消
+     * Get 邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消 
      * @return Status 邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消
      */
     public Long getStatus() {
@@ -188,7 +188,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消
+     * Set 邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消
      * @param Status 邀请状态。-1：已过期，0：正常，1：已接受，2：已失效，3：已取消
      */
     public void setStatus(Long Status) {
@@ -196,7 +196,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -204,7 +204,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -212,7 +212,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -220,7 +220,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -228,7 +228,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取企业组织类型
+     * Get 企业组织类型 
      * @return OrgType 企业组织类型
      */
     public Long getOrgType() {
@@ -236,7 +236,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置企业组织类型
+     * Set 企业组织类型
      * @param OrgType 企业组织类型
      */
     public void setOrgType(Long OrgType) {
@@ -244,7 +244,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取邀请时间
+     * Get 邀请时间 
      * @return InviteTime 邀请时间
      */
     public String getInviteTime() {
@@ -252,7 +252,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置邀请时间
+     * Set 邀请时间
      * @param InviteTime 邀请时间
      */
     public void setInviteTime(String InviteTime) {
@@ -260,7 +260,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间
+     * Get 过期时间 
      * @return ExpireTime 过期时间
      */
     public String getExpireTime() {
@@ -268,7 +268,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 设置过期时间
+     * Set 过期时间
      * @param ExpireTime 过期时间
      */
     public void setExpireTime(String ExpireTime) {
@@ -276,7 +276,7 @@ public class OrgInvitation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

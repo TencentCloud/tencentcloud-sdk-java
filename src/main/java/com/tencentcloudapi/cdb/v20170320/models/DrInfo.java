@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrInfo  extends AbstractModel{
+public class DrInfo extends AbstractModel{
 
     /**
     * 灾备实例状态
@@ -72,7 +72,7 @@ public class DrInfo  extends AbstractModel{
     private Integer InstanceType;
 
     /**
-     * 获取灾备实例状态
+     * Get 灾备实例状态 
      * @return Status 灾备实例状态
      */
     public Integer getStatus() {
@@ -80,7 +80,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备实例状态
+     * Set 灾备实例状态
      * @param Status 灾备实例状态
      */
     public void setStatus(Integer Status) {
@@ -88,7 +88,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -96,7 +96,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -104,7 +104,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -112,7 +112,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -120,7 +120,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -128,7 +128,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -136,7 +136,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例同步状态
+     * Get 实例同步状态 
      * @return SyncStatus 实例同步状态
      */
     public Integer getSyncStatus() {
@@ -144,7 +144,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例同步状态
+     * Set 实例同步状态
      * @param SyncStatus 实例同步状态
      */
     public void setSyncStatus(Integer SyncStatus) {
@@ -152,7 +152,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -160,7 +160,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -168,7 +168,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型
+     * Get 实例类型 
      * @return InstanceType 实例类型
      */
     public Integer getInstanceType() {
@@ -176,7 +176,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型
+     * Set 实例类型
      * @param InstanceType 实例类型
      */
     public void setInstanceType(Integer InstanceType) {
@@ -184,7 +184,7 @@ public class DrInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

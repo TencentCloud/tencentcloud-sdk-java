@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
+public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
     * 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
@@ -62,7 +62,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     private MediaMiniProgramReviewElem [] ReviewSummary;
 
     /**
-     * 获取模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
+     * Get 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。 
      * @return Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      */
     public Long getDefinition() {
@@ -70,7 +70,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
+     * Set 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      * @param Definition 模板id。小程序视频发布的视频所对应的转码模板ID，为0代表原始视频。
      */
     public void setDefinition(Long Definition) {
@@ -78,7 +78,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频元信息。
+     * Get 视频元信息。 
      * @return MetaData 视频元信息。
      */
     public MediaMetaData getMetaData() {
@@ -86,7 +86,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频元信息。
+     * Set 视频元信息。
      * @param MetaData 视频元信息。
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -94,8 +94,8 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取小程序审核视频播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 小程序审核视频播放地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 小程序审核视频播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置小程序审核视频播放地址。
+     * Set 小程序审核视频播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 小程序审核视频播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,9 +114,9 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取小程序视频发布状态：
+     * Get 小程序视频发布状态：
 <li>Pass：成功。</li>
-<li>Rejected：未通过。</li>
+<li>Rejected：未通过。</li> 
      * @return ReviewResult 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
@@ -126,7 +126,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置小程序视频发布状态：
+     * Set 小程序视频发布状态：
 <li>Pass：成功。</li>
 <li>Rejected：未通过。</li>
      * @param ReviewResult 小程序视频发布状态：
@@ -138,8 +138,8 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 获取小程序审核元素。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 小程序审核元素。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReviewSummary 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 设置小程序审核元素。
+     * Set 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReviewSummary 小程序审核元素。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ public class MediaMiniProgramReviewInfoItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitAudioTaskRequest  extends AbstractModel{
+public class SubmitAudioTaskRequest extends AbstractModel{
 
     /**
     * 音频源的语言，默认0为英文，1为中文
@@ -79,7 +79,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     private String [] VocabLibNameList;
 
     /**
-     * 获取音频源的语言，默认0为英文，1为中文
+     * Get 音频源的语言，默认0为英文，1为中文 
      * @return Lang 音频源的语言，默认0为英文，1为中文
      */
     public Long getLang() {
@@ -87,7 +87,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频源的语言，默认0为英文，1为中文
+     * Set 音频源的语言，默认0为英文，1为中文
      * @param Lang 音频源的语言，默认0为英文，1为中文
      */
     public void setLang(Long Lang) {
@@ -95,7 +95,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频URL。客户请求为URL方式时必须带此字段指名音频的url。
+     * Get 音频URL。客户请求为URL方式时必须带此字段指名音频的url。 
      * @return Url 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
      */
     public String getUrl() {
@@ -103,7 +103,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频URL。客户请求为URL方式时必须带此字段指名音频的url。
+     * Set 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
      * @param Url 音频URL。客户请求为URL方式时必须带此字段指名音频的url。
      */
     public void setUrl(String Url) {
@@ -111,7 +111,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音编码类型 1:pcm
+     * Get 语音编码类型 1:pcm 
      * @return VoiceEncodeType 语音编码类型 1:pcm
      */
     public Long getVoiceEncodeType() {
@@ -119,7 +119,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音编码类型 1:pcm
+     * Set 语音编码类型 1:pcm
      * @param VoiceEncodeType 语音编码类型 1:pcm
      */
     public void setVoiceEncodeType(Long VoiceEncodeType) {
@@ -127,7 +127,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+     * Get 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit） 
      * @return VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      */
     public Long getVoiceFileType() {
@@ -135,7 +135,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
+     * Set 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      * @param VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3，10:视频（三种音频格式目前仅支持16k采样率16bit）
      */
     public void setVoiceFileType(Long VoiceFileType) {
@@ -143,7 +143,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Get 功能开关列表，表示是否需要打开相应的功能，返回相应的信息 
      * @return Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public Function getFunctions() {
@@ -151,7 +151,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Set 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public void setFunctions(Function Functions) {
@@ -159,7 +159,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频文件类型，默认点播，直播填 live_url
+     * Get 视频文件类型，默认点播，直播填 live_url 
      * @return FileType 视频文件类型，默认点播，直播填 live_url
      */
     public String getFileType() {
@@ -167,7 +167,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频文件类型，默认点播，直播填 live_url
+     * Set 视频文件类型，默认点播，直播填 live_url
      * @param FileType 视频文件类型，默认点播，直播填 live_url
      */
     public void setFileType(String FileType) {
@@ -175,7 +175,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     * Get 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s 
      * @return MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
      */
     public Long getMuteThreshold() {
@@ -183,7 +183,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
+     * Set 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
      * @param MuteThreshold 静音阈值设置，如果静音检测开关开启，则静音时间超过这个阈值认为是静音片段，在结果中会返回, 没给的话默认值为3s
      */
     public void setMuteThreshold(Long MuteThreshold) {
@@ -191,7 +191,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Get 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析 
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public String [] getVocabLibNameList() {
@@ -199,7 +199,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Set 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @param VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public void setVocabLibNameList(String [] VocabLibNameList) {
@@ -207,7 +207,7 @@ public class SubmitAudioTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Lang", this.Lang);

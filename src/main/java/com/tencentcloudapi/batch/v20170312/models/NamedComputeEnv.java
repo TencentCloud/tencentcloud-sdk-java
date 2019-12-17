@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NamedComputeEnv  extends AbstractModel{
+public class NamedComputeEnv extends AbstractModel{
 
     /**
     * 计算环境名称
@@ -100,7 +100,7 @@ public class NamedComputeEnv  extends AbstractModel{
     private String ActionIfComputeNodeInactive;
 
     /**
-     * 获取计算环境名称
+     * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
     public String getEnvName() {
@@ -108,7 +108,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
      * @param EnvName 计算环境名称
      */
     public void setEnvName(String EnvName) {
@@ -116,7 +116,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -124,7 +124,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -132,7 +132,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境描述
+     * Get 计算环境描述 
      * @return EnvDescription 计算环境描述
      */
     public String getEnvDescription() {
@@ -140,7 +140,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境描述
+     * Set 计算环境描述
      * @param EnvDescription 计算环境描述
      */
     public void setEnvDescription(String EnvDescription) {
@@ -148,7 +148,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境管理类型
+     * Get 计算环境管理类型 
      * @return EnvType 计算环境管理类型
      */
     public String getEnvType() {
@@ -156,7 +156,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境管理类型
+     * Set 计算环境管理类型
      * @param EnvType 计算环境管理类型
      */
     public void setEnvType(String EnvType) {
@@ -164,7 +164,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境具体参数
+     * Get 计算环境具体参数 
      * @return EnvData 计算环境具体参数
      */
     public EnvData getEnvData() {
@@ -172,7 +172,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境具体参数
+     * Set 计算环境具体参数
      * @param EnvData 计算环境具体参数
      */
     public void setEnvData(EnvData EnvData) {
@@ -180,7 +180,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘挂载选项
+     * Get 数据盘挂载选项 
      * @return MountDataDisks 数据盘挂载选项
      */
     public MountDataDisk [] getMountDataDisks() {
@@ -188,7 +188,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘挂载选项
+     * Set 数据盘挂载选项
      * @param MountDataDisks 数据盘挂载选项
      */
     public void setMountDataDisks(MountDataDisk [] MountDataDisks) {
@@ -196,7 +196,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取授权信息
+     * Get 授权信息 
      * @return Authentications 授权信息
      */
     public Authentication [] getAuthentications() {
@@ -204,7 +204,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置授权信息
+     * Set 授权信息
      * @param Authentications 授权信息
      */
     public void setAuthentications(Authentication [] Authentications) {
@@ -212,7 +212,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取输入映射信息
+     * Get 输入映射信息 
      * @return InputMappings 输入映射信息
      */
     public InputMapping [] getInputMappings() {
@@ -220,7 +220,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置输入映射信息
+     * Set 输入映射信息
      * @param InputMappings 输入映射信息
      */
     public void setInputMappings(InputMapping [] InputMappings) {
@@ -228,7 +228,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取agent运行模式，适用于Windows系统
+     * Get agent运行模式，适用于Windows系统 
      * @return AgentRunningMode agent运行模式，适用于Windows系统
      */
     public AgentRunningMode getAgentRunningMode() {
@@ -236,7 +236,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置agent运行模式，适用于Windows系统
+     * Set agent运行模式，适用于Windows系统
      * @param AgentRunningMode agent运行模式，适用于Windows系统
      */
     public void setAgentRunningMode(AgentRunningMode AgentRunningMode) {
@@ -244,7 +244,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取通知信息
+     * Get 通知信息 
      * @return Notifications 通知信息
      */
     public Notification getNotifications() {
@@ -252,7 +252,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置通知信息
+     * Set 通知信息
      * @param Notifications 通知信息
      */
     public void setNotifications(Notification Notifications) {
@@ -260,7 +260,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 获取非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     * Get 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。 
      * @return ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      */
     public String getActionIfComputeNodeInactive() {
@@ -268,7 +268,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 设置非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
+     * Set 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      * @param ActionIfComputeNodeInactive 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
      */
     public void setActionIfComputeNodeInactive(String ActionIfComputeNodeInactive) {
@@ -276,7 +276,7 @@ public class NamedComputeEnv  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvName", this.EnvName);

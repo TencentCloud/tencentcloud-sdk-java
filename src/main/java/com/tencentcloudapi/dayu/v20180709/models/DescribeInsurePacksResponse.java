@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInsurePacksResponse  extends AbstractModel{
+public class DescribeInsurePacksResponse extends AbstractModel{
 
     /**
     * 保险包套餐列表
@@ -37,7 +37,7 @@ public class DescribeInsurePacksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取保险包套餐列表
+     * Get 保险包套餐列表 
      * @return InsurePacks 保险包套餐列表
      */
     public KeyValueRecord [] getInsurePacks() {
@@ -45,7 +45,7 @@ public class DescribeInsurePacksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置保险包套餐列表
+     * Set 保险包套餐列表
      * @param InsurePacks 保险包套餐列表
      */
     public void setInsurePacks(KeyValueRecord [] InsurePacks) {
@@ -53,7 +53,7 @@ public class DescribeInsurePacksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeInsurePacksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeInsurePacksResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InsurePacks.", this.InsurePacks);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLifecycleHookRequest  extends AbstractModel{
+public class CreateLifecycleHookRequest extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -72,7 +72,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -80,7 +80,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -88,7 +88,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
+     * Get 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。 
      * @return LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
      */
     public String getLifecycleHookName() {
@@ -96,7 +96,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
+     * Set 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
      * @param LifecycleHookName 生命周期挂钩名称。名称仅支持中文、英文、数字、下划线（_）、短横线（-）、小数点（.），最大长度不能超128个字节。
      */
     public void setLifecycleHookName(String LifecycleHookName) {
@@ -104,7 +104,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+     * Get 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING 
      * @return LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
      */
     public String getLifecycleTransition() {
@@ -112,7 +112,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
+     * Set 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
      * @param LifecycleTransition 进行生命周期挂钩的场景，取值范围包括 INSTANCE_LAUNCHING 和 INSTANCE_TERMINATING
      */
     public void setLifecycleTransition(String LifecycleTransition) {
@@ -120,7 +120,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+     * Get 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE 
      * @return DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
      */
     public String getDefaultResult() {
@@ -128,7 +128,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
+     * Set 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
      * @param DefaultResult 定义伸缩组在生命周期挂钩超时的情况下应采取的操作，取值范围是 CONTINUE 或 ABANDON，默认值为 CONTINUE
      */
     public void setDefaultResult(String DefaultResult) {
@@ -136,7 +136,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
+     * Get 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒 
      * @return HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      */
     public Integer getHeartbeatTimeout() {
@@ -144,7 +144,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
+     * Set 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      * @param HeartbeatTimeout 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
      */
     public void setHeartbeatTimeout(Integer HeartbeatTimeout) {
@@ -152,7 +152,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
+     * Get 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。 
      * @return NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      */
     public String getNotificationMetadata() {
@@ -160,7 +160,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
+     * Set 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      * @param NotificationMetadata 弹性伸缩向通知目标发送的附加信息，默认值为空字符串“”。最大长度不能超过1024个字节。
      */
     public void setNotificationMetadata(String NotificationMetadata) {
@@ -168,7 +168,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知目标
+     * Get 通知目标 
      * @return NotificationTarget 通知目标
      */
     public NotificationTarget getNotificationTarget() {
@@ -176,7 +176,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知目标
+     * Set 通知目标
      * @param NotificationTarget 通知目标
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
@@ -184,7 +184,7 @@ public class CreateLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

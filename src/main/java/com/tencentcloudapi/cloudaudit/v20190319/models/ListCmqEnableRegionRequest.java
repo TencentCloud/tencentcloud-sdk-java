@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCmqEnableRegionRequest  extends AbstractModel{
+public class ListCmqEnableRegionRequest extends AbstractModel{
 
     /**
     * 站点类型。zh表示中国区，en表示国际区。默认中国区。
@@ -30,7 +30,7 @@ public class ListCmqEnableRegionRequest  extends AbstractModel{
     private String WebsiteType;
 
     /**
-     * 获取站点类型。zh表示中国区，en表示国际区。默认中国区。
+     * Get 站点类型。zh表示中国区，en表示国际区。默认中国区。 
      * @return WebsiteType 站点类型。zh表示中国区，en表示国际区。默认中国区。
      */
     public String getWebsiteType() {
@@ -38,7 +38,7 @@ public class ListCmqEnableRegionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点类型。zh表示中国区，en表示国际区。默认中国区。
+     * Set 站点类型。zh表示中国区，en表示国际区。默认中国区。
      * @param WebsiteType 站点类型。zh表示中国区，en表示国际区。默认中国区。
      */
     public void setWebsiteType(String WebsiteType) {
@@ -46,7 +46,7 @@ public class ListCmqEnableRegionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WebsiteType", this.WebsiteType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerLogResponse  extends AbstractModel{
+public class DescribeContainerLogResponse extends AbstractModel{
 
     /**
     * 容器日志数组
@@ -37,7 +37,7 @@ public class DescribeContainerLogResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取容器日志数组
+     * Get 容器日志数组 
      * @return ContainerLogList 容器日志数组
      */
     public ContainerLog [] getContainerLogList() {
@@ -45,7 +45,7 @@ public class DescribeContainerLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置容器日志数组
+     * Set 容器日志数组
      * @param ContainerLogList 容器日志数组
      */
     public void setContainerLogList(ContainerLog [] ContainerLogList) {
@@ -53,7 +53,7 @@ public class DescribeContainerLogResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Get 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。 
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeContainerLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Set 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeContainerLogResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ContainerLogList.", this.ContainerLogList);

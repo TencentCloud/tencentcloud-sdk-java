@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransmitAudioStreamRequest  extends AbstractModel{
+public class TransmitAudioStreamRequest extends AbstractModel{
 
     /**
     * 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
@@ -93,7 +93,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     private String [] VocabLibNameList;
 
     /**
-     * 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Get 功能开关列表，表示是否需要打开相应的功能，返回相应的信息 
      * @return Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public Function getFunctions() {
@@ -101,7 +101,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Set 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public void setFunctions(Function Functions) {
@@ -109,7 +109,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
+     * Get 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。 
      * @return SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
      */
     public Long getSeqId() {
@@ -117,7 +117,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
+     * Set 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
      * @param SeqId 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义。
      */
     public void setSeqId(Long SeqId) {
@@ -125,7 +125,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音段唯一标识，一个完整语音一个SessionId。
+     * Get 语音段唯一标识，一个完整语音一个SessionId。 
      * @return SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public String getSessionId() {
@@ -133,7 +133,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音段唯一标识，一个完整语音一个SessionId。
+     * Set 语音段唯一标识，一个完整语音一个SessionId。
      * @param SessionId 语音段唯一标识，一个完整语音一个SessionId。
      */
     public void setSessionId(String SessionId) {
@@ -141,7 +141,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+     * Get 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。 
      * @return UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      */
     public String getUserVoiceData() {
@@ -149,7 +149,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
+     * Set 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      * @param UserVoiceData 当前数据包数据, 流式模式下数据包大小可以按需设置，在网络良好的情况下，建议设置为0.5k，且必须保证分片帧完整（16bit的数据必须保证音频长度为偶数），编码格式要求为BASE64。
      */
     public void setUserVoiceData(String UserVoiceData) {
@@ -157,7 +157,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音编码类型 1:pcm。
+     * Get 语音编码类型 1:pcm。 
      * @return VoiceEncodeType 语音编码类型 1:pcm。
      */
     public Long getVoiceEncodeType() {
@@ -165,7 +165,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音编码类型 1:pcm。
+     * Set 语音编码类型 1:pcm。
      * @param VoiceEncodeType 语音编码类型 1:pcm。
      */
     public void setVoiceEncodeType(Long VoiceEncodeType) {
@@ -173,7 +173,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
+     * Get 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。 
      * @return VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public Long getVoiceFileType() {
@@ -181,7 +181,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
+     * Set 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      * @param VoiceFileType 语音文件类型 	1: raw, 2: wav, 3: mp3 (语言文件格式目前仅支持 16k 采样率 16bit 编码单声道，如有不一致可能导致评估不准确或失败)。
      */
     public void setVoiceFileType(Long VoiceFileType) {
@@ -189,7 +189,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * Get 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。 
      * @return IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public Long getIsEnd() {
@@ -197,7 +197,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
+     * Set 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      * @param IsEnd 是否传输完毕标志，若为0表示未完毕，若为1则传输完毕开始评估，非流式模式下无意义。
      */
     public void setIsEnd(Long IsEnd) {
@@ -205,7 +205,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频源的语言，默认0为英文，1为中文
+     * Get 音频源的语言，默认0为英文，1为中文 
      * @return Lang 音频源的语言，默认0为英文，1为中文
      */
     public Long getLang() {
@@ -213,7 +213,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频源的语言，默认0为英文，1为中文
+     * Set 音频源的语言，默认0为英文，1为中文
      * @param Lang 音频源的语言，默认0为英文，1为中文
      */
     public void setLang(Long Lang) {
@@ -221,7 +221,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否临时保存 音频链接
+     * Get 是否临时保存 音频链接 
      * @return StorageMode 是否临时保存 音频链接
      */
     public Long getStorageMode() {
@@ -229,7 +229,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否临时保存 音频链接
+     * Set 是否临时保存 音频链接
      * @param StorageMode 是否临时保存 音频链接
      */
     public void setStorageMode(Long StorageMode) {
@@ -237,7 +237,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Get 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析 
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public String [] getVocabLibNameList() {
@@ -245,7 +245,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Set 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @param VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public void setVocabLibNameList(String [] VocabLibNameList) {
@@ -253,7 +253,7 @@ public class TransmitAudioStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Functions.", this.Functions);

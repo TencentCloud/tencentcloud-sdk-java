@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
+public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
 
     /**
     * 定期快照策略ID。
@@ -65,7 +65,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     private Integer RetentionDays;
 
     /**
-     * 获取定期快照策略ID。
+     * Get 定期快照策略ID。 
      * @return AutoSnapshotPolicyId 定期快照策略ID。
      */
     public String getAutoSnapshotPolicyId() {
@@ -73,7 +73,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略ID。
+     * Set 定期快照策略ID。
      * @param AutoSnapshotPolicyId 定期快照策略ID。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
@@ -81,7 +81,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照的执行策略。
+     * Get 定期快照的执行策略。 
      * @return Policy 定期快照的执行策略。
      */
     public Policy [] getPolicy() {
@@ -89,7 +89,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照的执行策略。
+     * Set 定期快照的执行策略。
      * @param Policy 定期快照的执行策略。
      */
     public void setPolicy(Policy [] Policy) {
@@ -97,7 +97,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Get 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。 
      * @return AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
      */
     public String getAutoSnapshotPolicyName() {
@@ -105,7 +105,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+     * Set 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
      * @param AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
      */
     public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
@@ -113,7 +113,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+     * Get 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。 
      * @return IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
      */
     public Boolean getIsActivated() {
@@ -121,7 +121,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+     * Set 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
      * @param IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
      */
     public void setIsActivated(Boolean IsActivated) {
@@ -129,7 +129,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * Get 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。 
      * @return IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
      */
     public Boolean getIsPermanent() {
@@ -137,7 +137,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * Set 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
      * @param IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
      */
     public void setIsPermanent(Boolean IsPermanent) {
@@ -145,7 +145,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+     * Get 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。 
      * @return RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      */
     public Integer getRetentionDays() {
@@ -153,7 +153,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+     * Set 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      * @param RetentionDays 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
      */
     public void setRetentionDays(Integer RetentionDays) {
@@ -161,7 +161,7 @@ public class ModifyAutoSnapshotPolicyAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);

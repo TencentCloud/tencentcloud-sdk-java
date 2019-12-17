@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDeviceAliasesRequest  extends AbstractModel{
+public class ModifyDeviceAliasesRequest extends AbstractModel{
 
     /**
     * 需要改名的设备与别名列表
@@ -30,7 +30,7 @@ public class ModifyDeviceAliasesRequest  extends AbstractModel{
     private DeviceAlias [] DeviceAliases;
 
     /**
-     * 获取需要改名的设备与别名列表
+     * Get 需要改名的设备与别名列表 
      * @return DeviceAliases 需要改名的设备与别名列表
      */
     public DeviceAlias [] getDeviceAliases() {
@@ -38,7 +38,7 @@ public class ModifyDeviceAliasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要改名的设备与别名列表
+     * Set 需要改名的设备与别名列表
      * @param DeviceAliases 需要改名的设备与别名列表
      */
     public void setDeviceAliases(DeviceAlias [] DeviceAliases) {
@@ -46,7 +46,7 @@ public class ModifyDeviceAliasesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DeviceAliases.", this.DeviceAliases);

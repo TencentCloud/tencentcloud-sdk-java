@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyFileSystemRequest  extends AbstractModel{
+public class ModifyFileSystemRequest extends AbstractModel{
 
     /**
     * 文件系统ID
@@ -52,7 +52,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     private Long CapacityQuota;
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -60,7 +60,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -68,7 +68,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统名称
+     * Get 文件系统名称 
      * @return FileSystemName 文件系统名称
      */
     public String getFileSystemName() {
@@ -76,7 +76,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统名称
+     * Set 文件系统名称
      * @param FileSystemName 文件系统名称
      */
     public void setFileSystemName(String FileSystemName) {
@@ -84,7 +84,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统描述
+     * Get 文件系统描述 
      * @return Description 文件系统描述
      */
     public String getDescription() {
@@ -92,7 +92,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统描述
+     * Set 文件系统描述
      * @param Description 文件系统描述
      */
     public void setDescription(String Description) {
@@ -100,8 +100,8 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
-注意：修改的文件系统容量不能小于当前使用量
+     * Get 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+注意：修改的文件系统容量不能小于当前使用量 
      * @return CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      */
@@ -110,7 +110,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
+     * Set 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
 注意：修改的文件系统容量不能小于当前使用量
      * @param CapacityQuota 文件系统容量（byte），下限为1M，上限为1P，且必须是1M的整数倍
 注意：修改的文件系统容量不能小于当前使用量
@@ -120,7 +120,7 @@ public class ModifyFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

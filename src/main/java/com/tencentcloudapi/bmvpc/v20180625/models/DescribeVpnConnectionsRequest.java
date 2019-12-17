@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpnConnectionsRequest  extends AbstractModel{
+public class DescribeVpnConnectionsRequest extends AbstractModel{
 
     /**
     * VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
@@ -54,7 +54,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
+     * Get VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。 
      * @return VpnConnectionIds VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      */
     public String [] getVpnConnectionIds() {
@@ -62,7 +62,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
+     * Set VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      * @param VpnConnectionIds VPN通道实例ID。形如：bmvpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
      */
     public void setVpnConnectionIds(String [] VpnConnectionIds) {
@@ -70,10 +70,10 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+     * Get 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li> 
      * @return Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
@@ -84,7 +84,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
+     * Set 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
 <li>state - String - （过滤条件 VPN状态：creating，available，createfailed，changing，changefailed，deleting，deletefailed。</li>
 <li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
@@ -98,7 +98,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public Long getOffset() {
@@ -106,7 +106,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public void setOffset(Long Offset) {
@@ -114,7 +114,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
@@ -122,7 +122,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -130,7 +130,7 @@ public class DescribeVpnConnectionsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpnConnectionIds.", this.VpnConnectionIds);

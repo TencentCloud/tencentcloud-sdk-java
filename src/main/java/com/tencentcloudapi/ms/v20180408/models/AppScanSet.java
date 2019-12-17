@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppScanSet  extends AbstractModel{
+public class AppScanSet extends AbstractModel{
 
     /**
     * 任务唯一标识
@@ -114,7 +114,7 @@ public class AppScanSet  extends AbstractModel{
     private Integer VulCount;
 
     /**
-     * 获取任务唯一标识
+     * Get 任务唯一标识 
      * @return ItemId 任务唯一标识
      */
     public String getItemId() {
@@ -122,7 +122,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识
+     * Set 任务唯一标识
      * @param ItemId 任务唯一标识
      */
     public void setItemId(String ItemId) {
@@ -130,7 +130,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的名称
+     * Get app的名称 
      * @return AppName app的名称
      */
     public String getAppName() {
@@ -138,7 +138,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的名称
+     * Set app的名称
      * @param AppName app的名称
      */
     public void setAppName(String AppName) {
@@ -146,7 +146,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名
+     * Get app的包名 
      * @return AppPkgName app的包名
      */
     public String getAppPkgName() {
@@ -154,7 +154,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的包名
+     * Set app的包名
      * @param AppPkgName app的包名
      */
     public void setAppPkgName(String AppPkgName) {
@@ -162,7 +162,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的版本号
+     * Get app的版本号 
      * @return AppVersion app的版本号
      */
     public String getAppVersion() {
@@ -170,7 +170,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的版本号
+     * Set app的版本号
      * @param AppVersion app的版本号
      */
     public void setAppVersion(String AppVersion) {
@@ -178,7 +178,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的md5
+     * Get app的md5 
      * @return AppMd5 app的md5
      */
     public String getAppMd5() {
@@ -186,7 +186,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的md5
+     * Set app的md5
      * @param AppMd5 app的md5
      */
     public void setAppMd5(String AppMd5) {
@@ -194,7 +194,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的大小
+     * Get app的大小 
      * @return AppSize app的大小
      */
     public Integer getAppSize() {
@@ -202,7 +202,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的大小
+     * Set app的大小
      * @param AppSize app的大小
      */
     public void setAppSize(Integer AppSize) {
@@ -210,7 +210,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取扫描结果返回码
+     * Get 扫描结果返回码 
      * @return ScanCode 扫描结果返回码
      */
     public Integer getScanCode() {
@@ -218,7 +218,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置扫描结果返回码
+     * Set 扫描结果返回码
      * @param ScanCode 扫描结果返回码
      */
     public void setScanCode(Integer ScanCode) {
@@ -226,7 +226,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Integer getTaskStatus() {
@@ -234,7 +234,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -242,7 +242,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取提交扫描时间
+     * Get 提交扫描时间 
      * @return TaskTime 提交扫描时间
      */
     public Integer getTaskTime() {
@@ -250,7 +250,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置提交扫描时间
+     * Set 提交扫描时间
      * @param TaskTime 提交扫描时间
      */
     public void setTaskTime(Integer TaskTime) {
@@ -258,7 +258,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取app的图标url
+     * Get app的图标url 
      * @return AppIconUrl app的图标url
      */
     public String getAppIconUrl() {
@@ -266,7 +266,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置app的图标url
+     * Set app的图标url
      * @param AppIconUrl app的图标url
      */
     public void setAppIconUrl(String AppIconUrl) {
@@ -274,7 +274,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取标识唯一该app，主要用于删除
+     * Get 标识唯一该app，主要用于删除 
      * @return AppSid 标识唯一该app，主要用于删除
      */
     public String getAppSid() {
@@ -282,7 +282,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置标识唯一该app，主要用于删除
+     * Set 标识唯一该app，主要用于删除
      * @param AppSid 标识唯一该app，主要用于删除
      */
     public void setAppSid(String AppSid) {
@@ -290,7 +290,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取安全类型:1-安全软件，2-风险软件，3病毒软件
+     * Get 安全类型:1-安全软件，2-风险软件，3病毒软件 
      * @return SafeType 安全类型:1-安全软件，2-风险软件，3病毒软件
      */
     public Integer getSafeType() {
@@ -298,7 +298,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置安全类型:1-安全软件，2-风险软件，3病毒软件
+     * Set 安全类型:1-安全软件，2-风险软件，3病毒软件
      * @param SafeType 安全类型:1-安全软件，2-风险软件，3病毒软件
      */
     public void setSafeType(Integer SafeType) {
@@ -306,7 +306,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞个数
+     * Get 漏洞个数 
      * @return VulCount 漏洞个数
      */
     public Integer getVulCount() {
@@ -314,7 +314,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞个数
+     * Set 漏洞个数
      * @param VulCount 漏洞个数
      */
     public void setVulCount(Integer VulCount) {
@@ -322,7 +322,7 @@ public class AppScanSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

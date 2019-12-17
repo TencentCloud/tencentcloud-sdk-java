@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteTableInfo  extends AbstractModel{
+public class RouteTableInfo extends AbstractModel{
 
     /**
     * 路由表名称。
@@ -44,7 +44,7 @@ public class RouteTableInfo  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取路由表名称。
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
     public String getRouteTableName() {
@@ -52,7 +52,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
      * @param RouteTableName 路由表名称。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -60,7 +60,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取路由表CIDR。
+     * Get 路由表CIDR。 
      * @return RouteTableCidrBlock 路由表CIDR。
      */
     public String getRouteTableCidrBlock() {
@@ -68,7 +68,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置路由表CIDR。
+     * Set 路由表CIDR。
      * @param RouteTableCidrBlock 路由表CIDR。
      */
     public void setRouteTableCidrBlock(String RouteTableCidrBlock) {
@@ -76,7 +76,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -84,7 +84,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -92,7 +92,7 @@ public class RouteTableInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);

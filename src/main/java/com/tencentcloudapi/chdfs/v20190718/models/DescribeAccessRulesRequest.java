@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessRulesRequest  extends AbstractModel{
+public class DescribeAccessRulesRequest extends AbstractModel{
 
     /**
     * 权限组ID
@@ -44,7 +44,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -52,7 +52,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -60,7 +60,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为所有
+     * Get 返回数量，默认为所有 
      * @return Limit 返回数量，默认为所有
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为所有
+     * Set 返回数量，默认为所有
      * @param Limit 返回数量，默认为所有
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class DescribeAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessGroupId", this.AccessGroupId);

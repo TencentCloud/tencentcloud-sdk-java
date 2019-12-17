@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddProductRequest  extends AbstractModel{
+public class AddProductRequest extends AbstractModel{
 
     /**
     * 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
@@ -72,7 +72,7 @@ public class AddProductRequest  extends AbstractModel{
     private String DeviceType;
 
     /**
-     * 获取产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
+     * Get 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符 
      * @return Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      */
     public String getName() {
@@ -80,7 +80,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
+     * Set 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      * @param Name 产品名称，同一区域产品名称需唯一，支持中文、英文字母、中划线和下划线，长度不超过31个字符，中文占两个字符
      */
     public void setName(String Name) {
@@ -88,7 +88,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return Description 产品描述
      */
     public String getDescription() {
@@ -96,7 +96,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param Description 产品描述
      */
     public void setDescription(String Description) {
@@ -104,7 +104,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据模版
+     * Get 数据模版 
      * @return DataTemplate 数据模版
      */
     public DataTemplate [] getDataTemplate() {
@@ -112,7 +112,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据模版
+     * Set 数据模版
      * @param DataTemplate 数据模版
      */
     public void setDataTemplate(DataTemplate [] DataTemplate) {
@@ -120,7 +120,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品版本（native表示基础版，template表示高级版，默认值为template）
+     * Get 产品版本（native表示基础版，template表示高级版，默认值为template） 
      * @return DataProtocol 产品版本（native表示基础版，template表示高级版，默认值为template）
      */
     public String getDataProtocol() {
@@ -128,7 +128,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品版本（native表示基础版，template表示高级版，默认值为template）
+     * Set 产品版本（native表示基础版，template表示高级版，默认值为template）
      * @param DataProtocol 产品版本（native表示基础版，template表示高级版，默认值为template）
      */
     public void setDataProtocol(String DataProtocol) {
@@ -136,7 +136,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备认证方式（1：动态令牌，2：签名直连鉴权）
+     * Get 设备认证方式（1：动态令牌，2：签名直连鉴权） 
      * @return AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
      */
     public Integer getAuthType() {
@@ -144,7 +144,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备认证方式（1：动态令牌，2：签名直连鉴权）
+     * Set 设备认证方式（1：动态令牌，2：签名直连鉴权）
      * @param AuthType 设备认证方式（1：动态令牌，2：签名直连鉴权）
      */
     public void setAuthType(Integer AuthType) {
@@ -152,7 +152,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通信方式（other/wifi/cellular/nb-iot）
+     * Get 通信方式（other/wifi/cellular/nb-iot） 
      * @return CommProtocol 通信方式（other/wifi/cellular/nb-iot）
      */
     public String getCommProtocol() {
@@ -160,7 +160,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通信方式（other/wifi/cellular/nb-iot）
+     * Set 通信方式（other/wifi/cellular/nb-iot）
      * @param CommProtocol 通信方式（other/wifi/cellular/nb-iot）
      */
     public void setCommProtocol(String CommProtocol) {
@@ -168,7 +168,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     * Get 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备） 
      * @return DeviceType 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
      */
     public String getDeviceType() {
@@ -176,7 +176,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
+     * Set 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
      * @param DeviceType 产品的设备类型（device: 直连设备；sub_device：子设备；gateway：网关设备）
      */
     public void setDeviceType(String DeviceType) {
@@ -184,7 +184,7 @@ public class AddProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

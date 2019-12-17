@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Instance  extends AbstractModel{
+public class Instance extends AbstractModel{
 
     /**
     * 实例所在的位置。
@@ -227,7 +227,7 @@ public class Instance  extends AbstractModel{
     private String LatestOperationRequestId;
 
     /**
-     * 获取实例所在的位置。
+     * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
     public Placement getPlacement() {
@@ -235,7 +235,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在的位置。
+     * Set 实例所在的位置。
      * @param Placement 实例所在的位置。
      */
     public void setPlacement(Placement Placement) {
@@ -243,7 +243,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例`ID`。
+     * Get 实例`ID`。 
      * @return InstanceId 实例`ID`。
      */
     public String getInstanceId() {
@@ -251,7 +251,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例`ID`。
+     * Set 实例`ID`。
      * @param InstanceId 实例`ID`。
      */
     public void setInstanceId(String InstanceId) {
@@ -259,7 +259,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型。
+     * Get 实例机型。 
      * @return InstanceType 实例机型。
      */
     public String getInstanceType() {
@@ -267,7 +267,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
      * @param InstanceType 实例机型。
      */
     public void setInstanceType(String InstanceType) {
@@ -275,7 +275,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例的CPU核数，单位：核。
+     * Get 实例的CPU核数，单位：核。 
      * @return CPU 实例的CPU核数，单位：核。
      */
     public Integer getCPU() {
@@ -283,7 +283,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例的CPU核数，单位：核。
+     * Set 实例的CPU核数，单位：核。
      * @param CPU 实例的CPU核数，单位：核。
      */
     public void setCPU(Integer CPU) {
@@ -291,7 +291,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存容量，单位：`GB`。
+     * Get 实例内存容量，单位：`GB`。 
      * @return Memory 实例内存容量，单位：`GB`。
      */
     public Integer getMemory() {
@@ -299,7 +299,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存容量，单位：`GB`。
+     * Set 实例内存容量，单位：`GB`。
      * @param Memory 实例内存容量，单位：`GB`。
      */
     public void setMemory(Integer Memory) {
@@ -307,7 +307,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
+     * Get 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。 
      * @return RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      */
     public String getRestrictState() {
@@ -315,7 +315,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
+     * Set 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      * @param RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例<br><li>EXPIRED：表示过期的实例<br><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。
      */
     public void setRestrictState(String RestrictState) {
@@ -323,7 +323,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称。
+     * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
@@ -331,7 +331,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称。
+     * Set 实例名称。
      * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
@@ -339,7 +339,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * Get 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。 
      * @return InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      */
     public String getInstanceChargeType() {
@@ -347,7 +347,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
+     * Set 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      * @param InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月<br><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费<br><li>`CDHPAID`：`CDH`付费，即只对`CDH`计费，不对`CDH`上的实例计费。<br><li>`SPOTPAID`：表示竞价实例付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -355,7 +355,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例系统盘信息。
+     * Get 实例系统盘信息。 
      * @return SystemDisk 实例系统盘信息。
      */
     public SystemDisk getSystemDisk() {
@@ -363,7 +363,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例系统盘信息。
+     * Set 实例系统盘信息。
      * @param SystemDisk 实例系统盘信息。
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
@@ -371,7 +371,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例数据盘信息。只包含随实例购买的数据盘。
+     * Get 实例数据盘信息。只包含随实例购买的数据盘。 
      * @return DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
      */
     public DataDisk [] getDataDisks() {
@@ -379,7 +379,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例数据盘信息。只包含随实例购买的数据盘。
+     * Set 实例数据盘信息。只包含随实例购买的数据盘。
      * @param DataDisks 实例数据盘信息。只包含随实例购买的数据盘。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -387,7 +387,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例主网卡的内网`IP`列表。
+     * Get 实例主网卡的内网`IP`列表。 
      * @return PrivateIpAddresses 实例主网卡的内网`IP`列表。
      */
     public String [] getPrivateIpAddresses() {
@@ -395,7 +395,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例主网卡的内网`IP`列表。
+     * Set 实例主网卡的内网`IP`列表。
      * @param PrivateIpAddresses 实例主网卡的内网`IP`列表。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
@@ -403,8 +403,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例主网卡的公网`IP`列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例主网卡的公网`IP`列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicIpAddresses 实例主网卡的公网`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -413,7 +413,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例主网卡的公网`IP`列表。
+     * Set 实例主网卡的公网`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 实例主网卡的公网`IP`列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -423,7 +423,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例带宽信息。
+     * Get 实例带宽信息。 
      * @return InternetAccessible 实例带宽信息。
      */
     public InternetAccessible getInternetAccessible() {
@@ -431,7 +431,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例带宽信息。
+     * Set 实例带宽信息。
      * @param InternetAccessible 实例带宽信息。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -439,7 +439,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属虚拟私有网络信息。
+     * Get 实例所属虚拟私有网络信息。 
      * @return VirtualPrivateCloud 实例所属虚拟私有网络信息。
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
@@ -447,7 +447,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属虚拟私有网络信息。
+     * Set 实例所属虚拟私有网络信息。
      * @param VirtualPrivateCloud 实例所属虚拟私有网络信息。
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
@@ -455,7 +455,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取生产实例所使用的镜像`ID`。
+     * Get 生产实例所使用的镜像`ID`。 
      * @return ImageId 生产实例所使用的镜像`ID`。
      */
     public String getImageId() {
@@ -463,7 +463,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置生产实例所使用的镜像`ID`。
+     * Set 生产实例所使用的镜像`ID`。
      * @param ImageId 生产实例所使用的镜像`ID`。
      */
     public void setImageId(String ImageId) {
@@ -471,7 +471,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+     * Get 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。 
      * @return RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
      */
     public String getRenewFlag() {
@@ -479,7 +479,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
+     * Set 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
      * @param RenewFlag 自动续费标识。取值范围：<br><li>`NOTIFY_AND_MANUAL_RENEW`：表示通知即将过期，但不自动续费<br><li>`NOTIFY_AND_AUTO_RENEW`：表示通知即将过期，而且自动续费<br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`：表示不通知即将过期，也不自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
@@ -487,7 +487,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreatedTime() {
@@ -495,7 +495,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -503,7 +503,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getExpiredTime() {
@@ -511,7 +511,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param ExpiredTime 到期时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setExpiredTime(String ExpiredTime) {
@@ -519,7 +519,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统名称。
+     * Get 操作系统名称。 
      * @return OsName 操作系统名称。
      */
     public String getOsName() {
@@ -527,7 +527,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统名称。
+     * Set 操作系统名称。
      * @param OsName 操作系统名称。
      */
     public void setOsName(String OsName) {
@@ -535,7 +535,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * Get 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。 
      * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
      */
     public String [] getSecurityGroupIds() {
@@ -543,7 +543,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
+     * Set 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
      * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -551,7 +551,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例登录设置。目前只返回实例所关联的密钥。
+     * Get 实例登录设置。目前只返回实例所关联的密钥。 
      * @return LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
      */
     public LoginSettings getLoginSettings() {
@@ -559,7 +559,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例登录设置。目前只返回实例所关联的密钥。
+     * Set 实例登录设置。目前只返回实例所关联的密钥。
      * @param LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
@@ -567,7 +567,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * Get 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li> 
      * @return InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
      */
     public String getInstanceState() {
@@ -575,7 +575,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * Set 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
      * @param InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
      */
     public void setInstanceState(String InstanceState) {
@@ -583,7 +583,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例关联的标签列表。
+     * Get 实例关联的标签列表。 
      * @return Tags 实例关联的标签列表。
      */
     public Tag [] getTags() {
@@ -591,7 +591,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例关联的标签列表。
+     * Set 实例关联的标签列表。
      * @param Tags 实例关联的标签列表。
      */
     public void setTags(Tag [] Tags) {
@@ -599,8 +599,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例的关机计费模式。
-取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
+     * Get 实例的关机计费模式。
+取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br> 
      * @return StopChargingMode 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
      */
@@ -609,7 +609,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例的关机计费模式。
+     * Set 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
      * @param StopChargingMode 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费<br><li>STOP_CHARGING：关机停止收费<li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件<br>
@@ -619,7 +619,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例全局唯一ID
+     * Get 实例全局唯一ID 
      * @return Uuid 实例全局唯一ID
      */
     public String getUuid() {
@@ -627,7 +627,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例全局唯一ID
+     * Set 实例全局唯一ID
      * @param Uuid 实例全局唯一ID
      */
     public void setUuid(String Uuid) {
@@ -635,8 +635,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例的最新操作。例：StopInstances、ResetInstance。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例的最新操作。例：StopInstances、ResetInstance。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -645,7 +645,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例的最新操作。例：StopInstances、ResetInstance。
+     * Set 实例的最新操作。例：StopInstances、ResetInstance。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperation 实例的最新操作。例：StopInstances、ResetInstance。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -655,11 +655,11 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例的最新操作状态。取值范围：<br>
+     * Get 实例的最新操作状态。取值范围：<br>
 <li>SUCCESS：表示操作成功<br>
 <li>OPERATING：表示操作执行中<br>
 <li>FAILED：表示操作失败
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LatestOperationState 实例的最新操作状态。取值范围：<br>
 <li>SUCCESS：表示操作成功<br>
 <li>OPERATING：表示操作执行中<br>
@@ -671,7 +671,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例的最新操作状态。取值范围：<br>
+     * Set 实例的最新操作状态。取值范围：<br>
 <li>SUCCESS：表示操作成功<br>
 <li>OPERATING：表示操作执行中<br>
 <li>FAILED：表示操作失败
@@ -687,8 +687,8 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例最新操作的唯一请求 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例最新操作的唯一请求 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LatestOperationRequestId 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -697,7 +697,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例最新操作的唯一请求 ID。
+     * Set 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestOperationRequestId 实例最新操作的唯一请求 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -707,7 +707,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Placement.", this.Placement);

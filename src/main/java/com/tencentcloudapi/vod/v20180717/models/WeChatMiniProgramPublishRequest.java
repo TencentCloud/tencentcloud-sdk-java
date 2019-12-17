@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WeChatMiniProgramPublishRequest  extends AbstractModel{
+public class WeChatMiniProgramPublishRequest extends AbstractModel{
 
     /**
     * 媒体文件 ID。
@@ -44,7 +44,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取媒体文件 ID。
+     * Get 媒体文件 ID。 
      * @return FileId 媒体文件 ID。
      */
     public String getFileId() {
@@ -52,7 +52,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件 ID。
+     * Set 媒体文件 ID。
      * @param FileId 媒体文件 ID。
      */
     public void setFileId(String FileId) {
@@ -60,7 +60,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 获取发布视频所对应的转码模板 ID，为0代表原始视频。
+     * Get 发布视频所对应的转码模板 ID，为0代表原始视频。 
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
      */
     public Long getSourceDefinition() {
@@ -68,7 +68,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 设置发布视频所对应的转码模板 ID，为0代表原始视频。
+     * Set 发布视频所对应的转码模板 ID，为0代表原始视频。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为0代表原始视频。
      */
     public void setSourceDefinition(Long SourceDefinition) {
@@ -76,7 +76,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -84,7 +84,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -92,7 +92,7 @@ public class WeChatMiniProgramPublishRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

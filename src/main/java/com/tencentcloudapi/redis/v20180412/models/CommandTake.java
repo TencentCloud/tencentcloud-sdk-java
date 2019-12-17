@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommandTake  extends AbstractModel{
+public class CommandTake extends AbstractModel{
 
     /**
     * 命令
@@ -37,7 +37,7 @@ public class CommandTake  extends AbstractModel{
     private Integer Took;
 
     /**
-     * 获取命令
+     * Get 命令 
      * @return Cmd 命令
      */
     public String getCmd() {
@@ -45,7 +45,7 @@ public class CommandTake  extends AbstractModel{
     }
 
     /**
-     * 设置命令
+     * Set 命令
      * @param Cmd 命令
      */
     public void setCmd(String Cmd) {
@@ -53,7 +53,7 @@ public class CommandTake  extends AbstractModel{
     }
 
     /**
-     * 获取耗时
+     * Get 耗时 
      * @return Took 耗时
      */
     public Integer getTook() {
@@ -61,7 +61,7 @@ public class CommandTake  extends AbstractModel{
     }
 
     /**
-     * 设置耗时
+     * Set 耗时
      * @param Took 耗时
      */
     public void setTook(Integer Took) {
@@ -69,7 +69,7 @@ public class CommandTake  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cmd", this.Cmd);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryLogsResponse  extends AbstractModel{
+public class QueryLogsResponse extends AbstractModel{
 
     /**
     * 日志查询上下文，用于加载更多日志
@@ -51,7 +51,7 @@ public class QueryLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日志查询上下文，用于加载更多日志
+     * Get 日志查询上下文，用于加载更多日志 
      * @return Context 日志查询上下文，用于加载更多日志
      */
     public String getContext() {
@@ -59,7 +59,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志查询上下文，用于加载更多日志
+     * Set 日志查询上下文，用于加载更多日志
      * @param Context 日志查询上下文，用于加载更多日志
      */
     public void setContext(String Context) {
@@ -67,7 +67,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志内容列表
+     * Get 日志内容列表 
      * @return Logs 日志内容列表
      */
     public Log [] getLogs() {
@@ -75,7 +75,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志内容列表
+     * Set 日志内容列表
      * @param Logs 日志内容列表
      */
     public void setLogs(Log [] Logs) {
@@ -83,7 +83,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否已经返回所有符合条件的日志
+     * Get 是否已经返回所有符合条件的日志 
      * @return Listover 是否已经返回所有符合条件的日志
      */
     public Boolean getListover() {
@@ -91,7 +91,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否已经返回所有符合条件的日志
+     * Set 是否已经返回所有符合条件的日志
      * @param Listover 是否已经返回所有符合条件的日志
      */
     public void setListover(Boolean Listover) {
@@ -99,7 +99,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class QueryLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Context", this.Context);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AcceptVpcPeerConnectionRequest  extends AbstractModel{
+public class AcceptVpcPeerConnectionRequest extends AbstractModel{
 
     /**
     * 黑石对等连接实例ID
@@ -30,7 +30,7 @@ public class AcceptVpcPeerConnectionRequest  extends AbstractModel{
     private String VpcPeerConnectionId;
 
     /**
-     * 获取黑石对等连接实例ID
+     * Get 黑石对等连接实例ID 
      * @return VpcPeerConnectionId 黑石对等连接实例ID
      */
     public String getVpcPeerConnectionId() {
@@ -38,7 +38,7 @@ public class AcceptVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑石对等连接实例ID
+     * Set 黑石对等连接实例ID
      * @param VpcPeerConnectionId 黑石对等连接实例ID
      */
     public void setVpcPeerConnectionId(String VpcPeerConnectionId) {
@@ -46,7 +46,7 @@ public class AcceptVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcPeerConnectionId", this.VpcPeerConnectionId);

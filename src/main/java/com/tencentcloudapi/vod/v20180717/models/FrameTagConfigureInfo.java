@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FrameTagConfigureInfo  extends AbstractModel{
+public class FrameTagConfigureInfo extends AbstractModel{
 
     /**
     * 智能按帧标签任务开关，可选值：
@@ -39,9 +39,9 @@ public class FrameTagConfigureInfo  extends AbstractModel{
     private Float ScreenshotInterval;
 
     /**
-     * 获取智能按帧标签任务开关，可选值：
+     * Get 智能按帧标签任务开关，可选值：
 <li>ON：开启智能按帧标签任务；</li>
-<li>OFF：关闭智能按帧标签任务。</li>
+<li>OFF：关闭智能按帧标签任务。</li> 
      * @return Switch 智能按帧标签任务开关，可选值：
 <li>ON：开启智能按帧标签任务；</li>
 <li>OFF：关闭智能按帧标签任务。</li>
@@ -51,7 +51,7 @@ public class FrameTagConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置智能按帧标签任务开关，可选值：
+     * Set 智能按帧标签任务开关，可选值：
 <li>ON：开启智能按帧标签任务；</li>
 <li>OFF：关闭智能按帧标签任务。</li>
      * @param Switch 智能按帧标签任务开关，可选值：
@@ -63,7 +63,7 @@ public class FrameTagConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
+     * Get 截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。 
      * @return ScreenshotInterval 截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */
     public Float getScreenshotInterval() {
@@ -71,7 +71,7 @@ public class FrameTagConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
+     * Set 截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      * @param ScreenshotInterval 截帧间隔，单位为秒，当不填时，默认截帧间隔为 1 秒，最小值为 0.5 秒。
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
@@ -79,7 +79,7 @@ public class FrameTagConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

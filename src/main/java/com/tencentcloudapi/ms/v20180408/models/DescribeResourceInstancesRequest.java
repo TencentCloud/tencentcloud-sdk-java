@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceInstancesRequest  extends AbstractModel{
+public class DescribeResourceInstancesRequest extends AbstractModel{
 
     /**
     * 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
@@ -65,7 +65,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     * Get 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。 
      * @return Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      */
     public Integer [] getPids() {
@@ -73,7 +73,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+     * Set 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      * @param Pids 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
      */
     public void setPids(Integer [] Pids) {
@@ -81,7 +81,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持通过资源id，pid进行查询
+     * Get 支持通过资源id，pid进行查询 
      * @return Filters 支持通过资源id，pid进行查询
      */
     public Filter [] getFilters() {
@@ -89,7 +89,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持通过资源id，pid进行查询
+     * Set 支持通过资源id，pid进行查询
      * @param Filters 支持通过资源id，pid进行查询
      */
     public void setFilters(Filter [] Filters) {
@@ -97,7 +97,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制，默认为20，最大值为100。
+     * Get 数量限制，默认为20，最大值为100。 
      * @return Limit 数量限制，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -121,7 +121,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制，默认为20，最大值为100。
+     * Set 数量限制，默认为20，最大值为100。
      * @param Limit 数量限制，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -129,7 +129,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
+     * Get 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。 
      * @return OrderField 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
      */
     public String getOrderField() {
@@ -137,7 +137,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
+     * Set 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
      * @param OrderField 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
      */
     public void setOrderField(String OrderField) {
@@ -145,7 +145,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升序（asc）还是降序（desc），默认：desc。
+     * Get 升序（asc）还是降序（desc），默认：desc。 
      * @return OrderDirection 升序（asc）还是降序（desc），默认：desc。
      */
     public String getOrderDirection() {
@@ -153,7 +153,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升序（asc）还是降序（desc），默认：desc。
+     * Set 升序（asc）还是降序（desc），默认：desc。
      * @param OrderDirection 升序（asc）还是降序（desc），默认：desc。
      */
     public void setOrderDirection(String OrderDirection) {
@@ -161,7 +161,7 @@ public class DescribeResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Pids.", this.Pids);

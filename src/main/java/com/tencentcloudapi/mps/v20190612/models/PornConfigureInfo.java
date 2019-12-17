@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PornConfigureInfo  extends AbstractModel{
+public class PornConfigureInfo extends AbstractModel{
 
     /**
     * 画面鉴黄控制参数。
@@ -44,7 +44,7 @@ public class PornConfigureInfo  extends AbstractModel{
     private PornOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * 获取画面鉴黄控制参数。
+     * Get 画面鉴黄控制参数。 
      * @return ImgReviewInfo 画面鉴黄控制参数。
      */
     public PornImgReviewTemplateInfo getImgReviewInfo() {
@@ -52,7 +52,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置画面鉴黄控制参数。
+     * Set 画面鉴黄控制参数。
      * @param ImgReviewInfo 画面鉴黄控制参数。
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfo ImgReviewInfo) {
@@ -60,7 +60,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取语音鉴黄控制参数。
+     * Get 语音鉴黄控制参数。 
      * @return AsrReviewInfo 语音鉴黄控制参数。
      */
     public PornAsrReviewTemplateInfo getAsrReviewInfo() {
@@ -68,7 +68,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置语音鉴黄控制参数。
+     * Set 语音鉴黄控制参数。
      * @param AsrReviewInfo 语音鉴黄控制参数。
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfo AsrReviewInfo) {
@@ -76,7 +76,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文本鉴黄控制参数。
+     * Get 文本鉴黄控制参数。 
      * @return OcrReviewInfo 文本鉴黄控制参数。
      */
     public PornOcrReviewTemplateInfo getOcrReviewInfo() {
@@ -84,7 +84,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文本鉴黄控制参数。
+     * Set 文本鉴黄控制参数。
      * @param OcrReviewInfo 文本鉴黄控制参数。
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfo OcrReviewInfo) {
@@ -92,7 +92,7 @@ public class PornConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);

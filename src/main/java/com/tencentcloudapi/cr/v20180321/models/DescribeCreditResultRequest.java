@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCreditResultRequest  extends AbstractModel{
+public class DescribeCreditResultRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Credit
@@ -65,7 +65,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     private String RequestDate;
 
     /**
-     * 获取模块名，本接口取值：Credit
+     * Get 模块名，本接口取值：Credit 
      * @return Module 模块名，本接口取值：Credit
      */
     public String getModule() {
@@ -73,7 +73,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Credit
+     * Set 模块名，本接口取值：Credit
      * @param Module 模块名，本接口取值：Credit
      */
     public void setModule(String Module) {
@@ -81,7 +81,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：Get
+     * Get 操作名，本接口取值：Get 
      * @return Operation 操作名，本接口取值：Get
      */
     public String getOperation() {
@@ -89,7 +89,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：Get
+     * Set 操作名，本接口取值：Get
      * @param Operation 操作名，本接口取值：Get
      */
     public void setOperation(String Operation) {
@@ -97,7 +97,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstId 实例ID
      */
     public String getInstId() {
@@ -105,7 +105,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstId 实例ID
      */
     public void setInstId(String InstId) {
@@ -113,7 +113,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID，形如P******。
+     * Get 产品ID，形如P******。 
      * @return ProductId 产品ID，形如P******。
      */
     public String getProductId() {
@@ -121,7 +121,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID，形如P******。
+     * Set 产品ID，形如P******。
      * @param ProductId 产品ID，形如P******。
      */
     public void setProductId(String ProductId) {
@@ -129,7 +129,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取信审任务ID
+     * Get 信审任务ID 
      * @return CaseId 信审任务ID
      */
     public String getCaseId() {
@@ -137,7 +137,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置信审任务ID
+     * Set 信审任务ID
      * @param CaseId 信审任务ID
      */
     public void setCaseId(String CaseId) {
@@ -145,7 +145,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求日期，格式为YYYY-MM-DD
+     * Get 请求日期，格式为YYYY-MM-DD 
      * @return RequestDate 请求日期，格式为YYYY-MM-DD
      */
     public String getRequestDate() {
@@ -153,7 +153,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求日期，格式为YYYY-MM-DD
+     * Set 请求日期，格式为YYYY-MM-DD
      * @param RequestDate 请求日期，格式为YYYY-MM-DD
      */
     public void setRequestDate(String RequestDate) {
@@ -161,7 +161,7 @@ public class DescribeCreditResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchStudioProductRequest  extends AbstractModel{
+public class SearchStudioProductRequest extends AbstractModel{
 
     /**
     * 项目ID
@@ -58,7 +58,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     private String DevStatus;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -66,7 +66,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -74,7 +74,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return ProductName 产品名称
      */
     public String getProductName() {
@@ -82,7 +82,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param ProductName 产品名称
      */
     public void setProductName(String ProductName) {
@@ -90,7 +90,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取列表Limit
+     * Get 列表Limit 
      * @return Limit 列表Limit
      */
     public Long getLimit() {
@@ -98,7 +98,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置列表Limit
+     * Set 列表Limit
      * @param Limit 列表Limit
      */
     public void setLimit(Long Limit) {
@@ -106,7 +106,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取列表Offset
+     * Get 列表Offset 
      * @return Offset 列表Offset
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置列表Offset
+     * Set 列表Offset
      * @param Offset 列表Offset
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品Status
+     * Get 产品Status 
      * @return DevStatus 产品Status
      */
     public String getDevStatus() {
@@ -130,7 +130,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Status
+     * Set 产品Status
      * @param DevStatus 产品Status
      */
     public void setDevStatus(String DevStatus) {
@@ -138,7 +138,7 @@ public class SearchStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

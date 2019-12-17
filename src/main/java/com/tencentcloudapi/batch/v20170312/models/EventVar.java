@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EventVar  extends AbstractModel{
+public class EventVar extends AbstractModel{
 
     /**
     * 自定义键
@@ -37,7 +37,7 @@ public class EventVar  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取自定义键
+     * Get 自定义键 
      * @return Name 自定义键
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class EventVar  extends AbstractModel{
     }
 
     /**
-     * 设置自定义键
+     * Set 自定义键
      * @param Name 自定义键
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class EventVar  extends AbstractModel{
     }
 
     /**
-     * 获取自定义值
+     * Get 自定义值 
      * @return Value 自定义值
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class EventVar  extends AbstractModel{
     }
 
     /**
-     * 设置自定义值
+     * Set 自定义值
      * @param Value 自定义值
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class EventVar  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

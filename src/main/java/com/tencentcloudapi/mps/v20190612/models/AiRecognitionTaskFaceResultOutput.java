@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskFaceResultOutput  extends AbstractModel{
+public class AiRecognitionTaskFaceResultOutput extends AbstractModel{
 
     /**
     * 智能人脸识别结果集。
@@ -30,7 +30,7 @@ public class AiRecognitionTaskFaceResultOutput  extends AbstractModel{
     private AiRecognitionTaskFaceResultItem [] ResultSet;
 
     /**
-     * 获取智能人脸识别结果集。
+     * Get 智能人脸识别结果集。 
      * @return ResultSet 智能人脸识别结果集。
      */
     public AiRecognitionTaskFaceResultItem [] getResultSet() {
@@ -38,7 +38,7 @@ public class AiRecognitionTaskFaceResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置智能人脸识别结果集。
+     * Set 智能人脸识别结果集。
      * @param ResultSet 智能人脸识别结果集。
      */
     public void setResultSet(AiRecognitionTaskFaceResultItem [] ResultSet) {
@@ -46,7 +46,7 @@ public class AiRecognitionTaskFaceResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);

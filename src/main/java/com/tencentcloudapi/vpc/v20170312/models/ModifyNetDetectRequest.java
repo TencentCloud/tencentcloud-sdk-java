@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNetDetectRequest  extends AbstractModel{
+public class ModifyNetDetectRequest extends AbstractModel{
 
     /**
     * 网络探测实例`ID`。形如：`netd-12345678`
@@ -75,7 +75,7 @@ NORMAL_CVM：普通云服务器；
     private String NetDetectDescription;
 
     /**
-     * 获取网络探测实例`ID`。形如：`netd-12345678`
+     * Get 网络探测实例`ID`。形如：`netd-12345678` 
      * @return NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
      */
     public String getNetDetectId() {
@@ -83,7 +83,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置网络探测实例`ID`。形如：`netd-12345678`
+     * Set 网络探测实例`ID`。形如：`netd-12345678`
      * @param NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
      */
     public void setNetDetectId(String NetDetectId) {
@@ -91,7 +91,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 获取网络探测名称，最大长度不能超过60个字节。
+     * Get 网络探测名称，最大长度不能超过60个字节。 
      * @return NetDetectName 网络探测名称，最大长度不能超过60个字节。
      */
     public String getNetDetectName() {
@@ -99,7 +99,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置网络探测名称，最大长度不能超过60个字节。
+     * Set 网络探测名称，最大长度不能超过60个字节。
      * @param NetDetectName 网络探测名称，最大长度不能超过60个字节。
      */
     public void setNetDetectName(String NetDetectName) {
@@ -107,7 +107,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 获取探测目的IPv4地址数组，最多两个。
+     * Get 探测目的IPv4地址数组，最多两个。 
      * @return DetectDestinationIp 探测目的IPv4地址数组，最多两个。
      */
     public String [] getDetectDestinationIp() {
@@ -115,7 +115,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置探测目的IPv4地址数组，最多两个。
+     * Set 探测目的IPv4地址数组，最多两个。
      * @param DetectDestinationIp 探测目的IPv4地址数组，最多两个。
      */
     public void setDetectDestinationIp(String [] DetectDestinationIp) {
@@ -123,12 +123,12 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 获取下一跳类型，目前我们支持的类型有：
+     * Get 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云服务器；
+NORMAL_CVM：普通云服务器； 
      * @return NextHopType 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -141,7 +141,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置下一跳类型，目前我们支持的类型有：
+     * Set 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
@@ -159,12 +159,12 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 获取下一跳目的网关，取值与“下一跳类型”相关：
+     * Get 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12； 
      * @return NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
@@ -177,7 +177,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置下一跳目的网关，取值与“下一跳类型”相关：
+     * Set 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
@@ -195,7 +195,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 获取网络探测描述。
+     * Get 网络探测描述。 
      * @return NetDetectDescription 网络探测描述。
      */
     public String getNetDetectDescription() {
@@ -203,7 +203,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 设置网络探测描述。
+     * Set 网络探测描述。
      * @param NetDetectDescription 网络探测描述。
      */
     public void setNetDetectDescription(String NetDetectDescription) {
@@ -211,7 +211,7 @@ NORMAL_CVM：普通云服务器；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);

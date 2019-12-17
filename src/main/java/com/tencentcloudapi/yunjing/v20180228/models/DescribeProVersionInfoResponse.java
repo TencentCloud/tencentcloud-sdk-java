@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProVersionInfoResponse  extends AbstractModel{
+public class DescribeProVersionInfoResponse extends AbstractModel{
 
     /**
     * 后付费昨日扣费
     */
     @SerializedName("PostPayCost")
     @Expose
-    private Integer PostPayCost;
+    private Long PostPayCost;
 
     /**
     * 新增主机是否自动开通专业版
@@ -41,7 +41,7 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     */
     @SerializedName("ProVersionNum")
     @Expose
-    private Integer ProVersionNum;
+    private Long ProVersionNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,23 +51,23 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取后付费昨日扣费
+     * Get 后付费昨日扣费 
      * @return PostPayCost 后付费昨日扣费
      */
-    public Integer getPostPayCost() {
+    public Long getPostPayCost() {
         return this.PostPayCost;
     }
 
     /**
-     * 设置后付费昨日扣费
+     * Set 后付费昨日扣费
      * @param PostPayCost 后付费昨日扣费
      */
-    public void setPostPayCost(Integer PostPayCost) {
+    public void setPostPayCost(Long PostPayCost) {
         this.PostPayCost = PostPayCost;
     }
 
     /**
-     * 获取新增主机是否自动开通专业版
+     * Get 新增主机是否自动开通专业版 
      * @return IsAutoOpenProVersion 新增主机是否自动开通专业版
      */
     public Boolean getIsAutoOpenProVersion() {
@@ -75,7 +75,7 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置新增主机是否自动开通专业版
+     * Set 新增主机是否自动开通专业版
      * @param IsAutoOpenProVersion 新增主机是否自动开通专业版
      */
     public void setIsAutoOpenProVersion(Boolean IsAutoOpenProVersion) {
@@ -83,23 +83,23 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取开通专业版主机数
+     * Get 开通专业版主机数 
      * @return ProVersionNum 开通专业版主机数
      */
-    public Integer getProVersionNum() {
+    public Long getProVersionNum() {
         return this.ProVersionNum;
     }
 
     /**
-     * 设置开通专业版主机数
+     * Set 开通专业版主机数
      * @param ProVersionNum 开通专业版主机数
      */
-    public void setProVersionNum(Integer ProVersionNum) {
+    public void setProVersionNum(Long ProVersionNum) {
         this.ProVersionNum = ProVersionNum;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeProVersionInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PostPayCost", this.PostPayCost);

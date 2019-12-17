@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConcatTask2017  extends AbstractModel{
+public class ConcatTask2017 extends AbstractModel{
 
     /**
     * 视频拼接任务 ID。
@@ -37,7 +37,7 @@ public class ConcatTask2017  extends AbstractModel{
     private ConcatFileInfo2017 [] FileInfoSet;
 
     /**
-     * 获取视频拼接任务 ID。
+     * Get 视频拼接任务 ID。 
      * @return TaskId 视频拼接任务 ID。
      */
     public String getTaskId() {
@@ -45,7 +45,7 @@ public class ConcatTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接任务 ID。
+     * Set 视频拼接任务 ID。
      * @param TaskId 视频拼接任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -53,7 +53,7 @@ public class ConcatTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接源文件信息。
+     * Get 视频拼接源文件信息。 
      * @return FileInfoSet 视频拼接源文件信息。
      */
     public ConcatFileInfo2017 [] getFileInfoSet() {
@@ -61,7 +61,7 @@ public class ConcatTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接源文件信息。
+     * Set 视频拼接源文件信息。
      * @param FileInfoSet 视频拼接源文件信息。
      */
     public void setFileInfoSet(ConcatFileInfo2017 [] FileInfoSet) {
@@ -69,7 +69,7 @@ public class ConcatTask2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

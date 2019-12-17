@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttendanceResultResponse  extends AbstractModel{
+public class DescribeAttendanceResultResponse extends AbstractModel{
 
     /**
     * 缺失人员的ID列表(只针对请求中的libids字段)
@@ -65,7 +65,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取缺失人员的ID列表(只针对请求中的libids字段)
+     * Get 缺失人员的ID列表(只针对请求中的libids字段) 
      * @return AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
      */
     public AbsenceInfo [] getAbsenceSetInLibs() {
@@ -73,7 +73,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置缺失人员的ID列表(只针对请求中的libids字段)
+     * Set 缺失人员的ID列表(只针对请求中的libids字段)
      * @param AbsenceSetInLibs 缺失人员的ID列表(只针对请求中的libids字段)
      */
     public void setAbsenceSetInLibs(AbsenceInfo [] AbsenceSetInLibs) {
@@ -81,7 +81,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取确定出勤人员列表
+     * Get 确定出勤人员列表 
      * @return AttendanceSet 确定出勤人员列表
      */
     public AttendanceInfo [] getAttendanceSet() {
@@ -89,7 +89,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置确定出勤人员列表
+     * Set 确定出勤人员列表
      * @param AttendanceSet 确定出勤人员列表
      */
     public void setAttendanceSet(AttendanceInfo [] AttendanceSet) {
@@ -97,7 +97,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取疑似出勤人员列表
+     * Get 疑似出勤人员列表 
      * @return SuspectedSet 疑似出勤人员列表
      */
     public SuspectedInfo [] getSuspectedSet() {
@@ -105,7 +105,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置疑似出勤人员列表
+     * Set 疑似出勤人员列表
      * @param SuspectedSet 疑似出勤人员列表
      */
     public void setSuspectedSet(SuspectedInfo [] SuspectedSet) {
@@ -113,7 +113,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取缺失人员的ID列表(只针对请求中的personids字段)
+     * Get 缺失人员的ID列表(只针对请求中的personids字段) 
      * @return AbsenceSet 缺失人员的ID列表(只针对请求中的personids字段)
      */
     public String [] getAbsenceSet() {
@@ -121,7 +121,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置缺失人员的ID列表(只针对请求中的personids字段)
+     * Set 缺失人员的ID列表(只针对请求中的personids字段)
      * @param AbsenceSet 缺失人员的ID列表(只针对请求中的personids字段)
      */
     public void setAbsenceSet(String [] AbsenceSet) {
@@ -129,7 +129,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求处理进度
+     * Get 请求处理进度 
      * @return Progress 请求处理进度
      */
     public Long getProgress() {
@@ -137,7 +137,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求处理进度
+     * Set 请求处理进度
      * @param Progress 请求处理进度
      */
     public void setProgress(Long Progress) {
@@ -145,7 +145,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeAttendanceResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AbsenceSetInLibs.", this.AbsenceSetInLibs);

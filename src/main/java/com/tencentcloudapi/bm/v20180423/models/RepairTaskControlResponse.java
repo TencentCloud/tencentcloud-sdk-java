@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RepairTaskControlResponse  extends AbstractModel{
+public class RepairTaskControlResponse extends AbstractModel{
 
     /**
     * 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
@@ -38,8 +38,8 @@ public class RepairTaskControlResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
-此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
+     * Get 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
+此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。 
      * @return TaskId 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
 此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
      */
@@ -48,7 +48,7 @@ public class RepairTaskControlResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
+     * Set 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
 此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
      * @param TaskId 出参TaskId是黑石异步任务ID，不同于入参TaskId字段。
 此字段可作为DescriptionOperationResult查询异步任务状态接口的入参，查询异步任务执行结果。
@@ -58,7 +58,7 @@ public class RepairTaskControlResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -66,7 +66,7 @@ public class RepairTaskControlResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -74,7 +74,7 @@ public class RepairTaskControlResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

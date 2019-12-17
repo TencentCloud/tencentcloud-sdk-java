@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Vul  extends AbstractModel{
+public class Vul extends AbstractModel{
 
     /**
     * 漏洞种类ID
     */
     @SerializedName("VulId")
     @Expose
-    private Integer VulId;
+    private Long VulId;
 
     /**
     * 漏洞名称
@@ -59,7 +59,7 @@ NOTICE：提示
     */
     @SerializedName("ImpactedHostNum")
     @Expose
-    private Integer ImpactedHostNum;
+    private Long ImpactedHostNum;
 
     /**
     * 漏洞状态
@@ -71,23 +71,23 @@ NOTICE：提示
     private String VulStatus;
 
     /**
-     * 获取漏洞种类ID
+     * Get 漏洞种类ID 
      * @return VulId 漏洞种类ID
      */
-    public Integer getVulId() {
+    public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * 设置漏洞种类ID
+     * Set 漏洞种类ID
      * @param VulId 漏洞种类ID
      */
-    public void setVulId(Integer VulId) {
+    public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * 获取漏洞名称
+     * Get 漏洞名称 
      * @return VulName 漏洞名称
      */
     public String getVulName() {
@@ -95,7 +95,7 @@ NOTICE：提示
     }
 
     /**
-     * 设置漏洞名称
+     * Set 漏洞名称
      * @param VulName 漏洞名称
      */
     public void setVulName(String VulName) {
@@ -103,11 +103,11 @@ NOTICE：提示
     }
 
     /**
-     * 获取漏洞危害等级:
+     * Get 漏洞危害等级:
 HIGH：高危
 MIDDLE：中危
 LOW：低危
-NOTICE：提示
+NOTICE：提示 
      * @return VulLevel 漏洞危害等级:
 HIGH：高危
 MIDDLE：中危
@@ -119,7 +119,7 @@ NOTICE：提示
     }
 
     /**
-     * 设置漏洞危害等级:
+     * Set 漏洞危害等级:
 HIGH：高危
 MIDDLE：中危
 LOW：低危
@@ -135,7 +135,7 @@ NOTICE：提示
     }
 
     /**
-     * 获取最后扫描时间
+     * Get 最后扫描时间 
      * @return LastScanTime 最后扫描时间
      */
     public String getLastScanTime() {
@@ -143,7 +143,7 @@ NOTICE：提示
     }
 
     /**
-     * 设置最后扫描时间
+     * Set 最后扫描时间
      * @param LastScanTime 最后扫描时间
      */
     public void setLastScanTime(String LastScanTime) {
@@ -151,25 +151,25 @@ NOTICE：提示
     }
 
     /**
-     * 获取受影响机器数量
+     * Get 受影响机器数量 
      * @return ImpactedHostNum 受影响机器数量
      */
-    public Integer getImpactedHostNum() {
+    public Long getImpactedHostNum() {
         return this.ImpactedHostNum;
     }
 
     /**
-     * 设置受影响机器数量
+     * Set 受影响机器数量
      * @param ImpactedHostNum 受影响机器数量
      */
-    public void setImpactedHostNum(Integer ImpactedHostNum) {
+    public void setImpactedHostNum(Long ImpactedHostNum) {
         this.ImpactedHostNum = ImpactedHostNum;
     }
 
     /**
-     * 获取漏洞状态
+     * Get 漏洞状态
 * UN_OPERATED : 待处理
-* FIXED : 已修复
+* FIXED : 已修复 
      * @return VulStatus 漏洞状态
 * UN_OPERATED : 待处理
 * FIXED : 已修复
@@ -179,7 +179,7 @@ NOTICE：提示
     }
 
     /**
-     * 设置漏洞状态
+     * Set 漏洞状态
 * UN_OPERATED : 待处理
 * FIXED : 已修复
      * @param VulStatus 漏洞状态
@@ -191,7 +191,7 @@ NOTICE：提示
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);

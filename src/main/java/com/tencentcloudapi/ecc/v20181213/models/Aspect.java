@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Aspect  extends AbstractModel{
+public class Aspect extends AbstractModel{
 
     /**
     * 维度名字
@@ -44,7 +44,7 @@ public class Aspect  extends AbstractModel{
     private Float Percentage;
 
     /**
-     * 获取维度名字
+     * Get 维度名字 
      * @return Name 维度名字
      */
     public String getName() {
@@ -52,7 +52,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 设置维度名字
+     * Set 维度名字
      * @param Name 维度名字
      */
     public void setName(String Name) {
@@ -60,7 +60,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 获取维度得分
+     * Get 维度得分 
      * @return Score 维度得分
      */
     public Float getScore() {
@@ -68,7 +68,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 设置维度得分
+     * Set 维度得分
      * @param Score 维度得分
      */
     public void setScore(Float Score) {
@@ -76,7 +76,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 获取维度分数占比
+     * Get 维度分数占比 
      * @return Percentage 维度分数占比
      */
     public Float getPercentage() {
@@ -84,7 +84,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 设置维度分数占比
+     * Set 维度分数占比
      * @param Percentage 维度分数占比
      */
     public void setPercentage(Float Percentage) {
@@ -92,7 +92,7 @@ public class Aspect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

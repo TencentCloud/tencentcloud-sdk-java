@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProxiesAttributeRequest  extends AbstractModel{
+public class ModifyProxiesAttributeRequest extends AbstractModel{
 
     /**
     * （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
@@ -52,7 +52,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     private String [] ProxyIds;
 
     /**
-     * 获取（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
+     * Get （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
      */
     public String [] getInstanceIds() {
@@ -60,7 +60,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
+     * Set （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
      * @param InstanceIds （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -68,7 +68,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称。可任意命名，但不得超过30个字符。
+     * Get 通道名称。可任意命名，但不得超过30个字符。 
      * @return ProxyName 通道名称。可任意命名，但不得超过30个字符。
      */
     public String getProxyName() {
@@ -76,7 +76,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称。可任意命名，但不得超过30个字符。
+     * Set 通道名称。可任意命名，但不得超过30个字符。
      * @param ProxyName 通道名称。可任意命名，但不得超过30个字符。
      */
     public void setProxyName(String ProxyName) {
@@ -84,8 +84,8 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+更多详细信息请参阅：如何保证幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      */
@@ -94,7 +94,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
@@ -104,7 +104,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）一个或多个待操作的通道ID。
+     * Get （新参数）一个或多个待操作的通道ID。 
      * @return ProxyIds （新参数）一个或多个待操作的通道ID。
      */
     public String [] getProxyIds() {
@@ -112,7 +112,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）一个或多个待操作的通道ID。
+     * Set （新参数）一个或多个待操作的通道ID。
      * @param ProxyIds （新参数）一个或多个待操作的通道ID。
      */
     public void setProxyIds(String [] ProxyIds) {
@@ -120,7 +120,7 @@ public class ModifyProxiesAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

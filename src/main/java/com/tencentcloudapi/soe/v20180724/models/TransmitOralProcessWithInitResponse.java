@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransmitOralProcessWithInitResponse  extends AbstractModel{
+public class TransmitOralProcessWithInitResponse extends AbstractModel{
 
     /**
     * 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
@@ -93,7 +93,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
+     * Get 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。 
      * @return PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
      */
     public Float getPronAccuracy() {
@@ -101,7 +101,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
+     * Set 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
      * @param PronAccuracy 发音精准度，取值范围[-1, 100]，当取-1时指完全不匹配，当为句子模式时，是所有已识别单词准确度的加权平均值，在reftext中但未识别出来的词不计入分数中。当为流式模式且请求中IsEnd未置1时，取值无意义。
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -109,7 +109,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
      * @return PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public Float getPronFluency() {
@@ -117,7 +117,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      * @param PronFluency 发音流利度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public void setPronFluency(Float PronFluency) {
@@ -125,7 +125,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Get 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义 
      * @return PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public Float getPronCompletion() {
@@ -133,7 +133,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
+     * Set 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      * @param PronCompletion 发音完整度，取值范围[0, 1]，当为词模式时，取值无意义；当为流式模式且请求中IsEnd未置1时，取值无意义
      */
     public void setPronCompletion(Float PronCompletion) {
@@ -141,7 +141,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取详细发音评估结果
+     * Get 详细发音评估结果 
      * @return Words 详细发音评估结果
      */
     public WordRsp [] getWords() {
@@ -149,7 +149,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置详细发音评估结果
+     * Set 详细发音评估结果
      * @param Words 详细发音评估结果
      */
     public void setWords(WordRsp [] Words) {
@@ -157,7 +157,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取语音段唯一标识，一段语音一个SessionId
+     * Get 语音段唯一标识，一段语音一个SessionId 
      * @return SessionId 语音段唯一标识，一段语音一个SessionId
      */
     public String getSessionId() {
@@ -165,7 +165,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置语音段唯一标识，一段语音一个SessionId
+     * Set 语音段唯一标识，一段语音一个SessionId
      * @param SessionId 语音段唯一标识，一段语音一个SessionId
      */
     public void setSessionId(String SessionId) {
@@ -173,7 +173,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取保存语音音频文件下载地址
+     * Get 保存语音音频文件下载地址 
      * @return AudioUrl 保存语音音频文件下载地址
      */
     public String getAudioUrl() {
@@ -181,7 +181,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置保存语音音频文件下载地址
+     * Set 保存语音音频文件下载地址
      * @param AudioUrl 保存语音音频文件下载地址
      */
     public void setAudioUrl(String AudioUrl) {
@@ -189,7 +189,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+     * Get 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。 
      * @return SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
      */
     public SentenceInfo [] getSentenceInfoSet() {
@@ -197,7 +197,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
+     * Set 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
      * @param SentenceInfoSet 断句中间结果，中间结果是局部最优而非全局最优的结果，所以中间结果有可能和最终整体结果对应部分不一致；中间结果的输出便于客户端UI更新；待用户发音完全结束后，系统会给出一个综合所有句子的整体结果。
      */
     public void setSentenceInfoSet(SentenceInfo [] SentenceInfoSet) {
@@ -205,7 +205,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * Get 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成 
      * @return Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
      */
     public String getStatus() {
@@ -213,7 +213,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
+     * Set 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
      * @param Status 评估 session 状态，“Evaluating"：评估中、"Failed"：评估失败、"Finished"：评估完成
      */
     public void setStatus(String Status) {
@@ -221,7 +221,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * Get 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。 
      * @return SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      */
     public Float getSuggestedScore() {
@@ -229,7 +229,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
+     * Set 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      * @param SuggestedScore 建议评分，取值范围[0,100]，评分方式为建议评分 = 准确度（PronAccuracyfloat）× 完整度（PronCompletionfloat）×（2 - 完整度（PronCompletionfloat）），如若评分策略不符合请参考Words数组中的详细分数自定义评分逻辑。
      */
     public void setSuggestedScore(Float SuggestedScore) {
@@ -237,7 +237,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class TransmitOralProcessWithInitResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PronAccuracy", this.PronAccuracy);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
+public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
 
     /**
     * 片头识别置信度。取值：0~100。
@@ -51,7 +51,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     private Float TailTimeOffset;
 
     /**
-     * 获取片头识别置信度。取值：0~100。
+     * Get 片头识别置信度。取值：0~100。 
      * @return HeadConfidence 片头识别置信度。取值：0~100。
      */
     public Float getHeadConfidence() {
@@ -59,7 +59,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置片头识别置信度。取值：0~100。
+     * Set 片头识别置信度。取值：0~100。
      * @param HeadConfidence 片头识别置信度。取值：0~100。
      */
     public void setHeadConfidence(Float HeadConfidence) {
@@ -67,7 +67,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取视频片头的结束时间点，单位：秒。
+     * Get 视频片头的结束时间点，单位：秒。 
      * @return HeadTimeOffset 视频片头的结束时间点，单位：秒。
      */
     public Float getHeadTimeOffset() {
@@ -75,7 +75,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频片头的结束时间点，单位：秒。
+     * Set 视频片头的结束时间点，单位：秒。
      * @param HeadTimeOffset 视频片头的结束时间点，单位：秒。
      */
     public void setHeadTimeOffset(Float HeadTimeOffset) {
@@ -83,7 +83,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取片尾识别置信度。取值：0~100。
+     * Get 片尾识别置信度。取值：0~100。 
      * @return TailConfidence 片尾识别置信度。取值：0~100。
      */
     public Float getTailConfidence() {
@@ -91,7 +91,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置片尾识别置信度。取值：0~100。
+     * Set 片尾识别置信度。取值：0~100。
      * @param TailConfidence 片尾识别置信度。取值：0~100。
      */
     public void setTailConfidence(Float TailConfidence) {
@@ -99,7 +99,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取视频片尾的开始时间点，单位：秒。
+     * Get 视频片尾的开始时间点，单位：秒。 
      * @return TailTimeOffset 视频片尾的开始时间点，单位：秒。
      */
     public Float getTailTimeOffset() {
@@ -107,7 +107,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频片尾的开始时间点，单位：秒。
+     * Set 视频片尾的开始时间点，单位：秒。
      * @param TailTimeOffset 视频片尾的开始时间点，单位：秒。
      */
     public void setTailTimeOffset(Float TailTimeOffset) {
@@ -115,7 +115,7 @@ public class AiRecognitionTaskHeadTailResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HeadConfidence", this.HeadConfidence);

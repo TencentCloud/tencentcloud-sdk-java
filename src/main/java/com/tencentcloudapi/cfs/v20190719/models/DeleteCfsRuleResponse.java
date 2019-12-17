@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCfsRuleResponse  extends AbstractModel{
+public class DeleteCfsRuleResponse extends AbstractModel{
 
     /**
     * 规则 ID
@@ -44,7 +44,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取规则 ID
+     * Get 规则 ID 
      * @return RuleId 规则 ID
      */
     public String getRuleId() {
@@ -52,7 +52,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置规则 ID
+     * Set 规则 ID
      * @param RuleId 规则 ID
      */
     public void setRuleId(String RuleId) {
@@ -60,7 +60,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -68,7 +68,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -76,7 +76,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DeleteCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

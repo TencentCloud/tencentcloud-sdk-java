@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckProxyCreateRequest  extends AbstractModel{
+public class CheckProxyCreateRequest extends AbstractModel{
 
     /**
     * 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
@@ -51,7 +51,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     private Long Concurrent;
 
     /**
-     * 获取通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Get 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到 
      * @return AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      */
     public String getAccessRegion() {
@@ -59,7 +59,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Set 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      * @param AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
      */
     public void setAccessRegion(String AccessRegion) {
@@ -67,7 +67,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * Get 通道的源站区域。取值可通过接口DescribeDestRegions获取到 
      * @return RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      */
     public String getRealServerRegion() {
@@ -75,7 +75,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * Set 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      * @param RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
      */
     public void setRealServerRegion(String RealServerRegion) {
@@ -83,7 +83,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道带宽上限，单位：Mbps。
+     * Get 通道带宽上限，单位：Mbps。 
      * @return Bandwidth 通道带宽上限，单位：Mbps。
      */
     public Long getBandwidth() {
@@ -91,7 +91,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道带宽上限，单位：Mbps。
+     * Set 通道带宽上限，单位：Mbps。
      * @param Bandwidth 通道带宽上限，单位：Mbps。
      */
     public void setBandwidth(Long Bandwidth) {
@@ -99,7 +99,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道并发量上限，表示同时在线的连接数，单位：万。
+     * Get 通道并发量上限，表示同时在线的连接数，单位：万。 
      * @return Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public Long getConcurrent() {
@@ -107,7 +107,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道并发量上限，表示同时在线的连接数，单位：万。
+     * Set 通道并发量上限，表示同时在线的连接数，单位：万。
      * @param Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public void setConcurrent(Long Concurrent) {
@@ -115,7 +115,7 @@ public class CheckProxyCreateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);

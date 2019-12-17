@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppStatisticsItem  extends AbstractModel{
+public class AppStatisticsItem extends AbstractModel{
 
     /**
     * 实时语音统计数据
@@ -54,8 +54,8 @@ public class AppStatisticsItem  extends AbstractModel{
     private String Date;
 
     /**
-     * 获取实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实时语音统计数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealtimeSpeechStatisticsItem 实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置实时语音统计数据
+     * Set 实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealtimeSpeechStatisticsItem 实时语音统计数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,8 +74,8 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语音消息统计数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VoiceMessageStatisticsItem 语音消息统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -84,7 +84,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音消息统计数据
+     * Set 语音消息统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceMessageStatisticsItem 语音消息统计数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,8 +94,8 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语音过滤统计数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VoiceFilterStatisticsItem 语音过滤统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音过滤统计数据
+     * Set 语音过滤统计数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceFilterStatisticsItem 语音过滤统计数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,7 +114,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取统计时间
+     * Get 统计时间 
      * @return Date 统计时间
      */
     public String getDate() {
@@ -122,7 +122,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置统计时间
+     * Set 统计时间
      * @param Date 统计时间
      */
     public void setDate(String Date) {
@@ -130,7 +130,7 @@ public class AppStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RealtimeSpeechStatisticsItem.", this.RealtimeSpeechStatisticsItem);

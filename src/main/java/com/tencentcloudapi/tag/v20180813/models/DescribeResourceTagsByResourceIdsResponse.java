@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
+public class DescribeResourceTagsByResourceIdsResponse extends AbstractModel{
 
     /**
     * 结果总数
@@ -58,7 +58,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取结果总数
+     * Get 结果总数 
      * @return TotalCount 结果总数
      */
     public Long getTotalCount() {
@@ -66,7 +66,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结果总数
+     * Set 结果总数
      * @param TotalCount 结果总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -74,7 +74,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据位移偏量
+     * Get 数据位移偏量 
      * @return Offset 数据位移偏量
      */
     public Long getOffset() {
@@ -82,7 +82,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据位移偏量
+     * Set 数据位移偏量
      * @param Offset 数据位移偏量
      */
     public void setOffset(Long Offset) {
@@ -90,7 +90,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小
+     * Get 每页大小 
      * @return Limit 每页大小
      */
     public Long getLimit() {
@@ -98,7 +98,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小
+     * Set 每页大小
      * @param Limit 每页大小
      */
     public void setLimit(Long Limit) {
@@ -106,7 +106,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
+     * Get 标签列表 
      * @return Tags 标签列表
      */
     public TagResource [] getTags() {
@@ -114,7 +114,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
      * @param Tags 标签列表
      */
     public void setTags(TagResource [] Tags) {
@@ -122,7 +122,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeResourceTagsByResourceIdsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

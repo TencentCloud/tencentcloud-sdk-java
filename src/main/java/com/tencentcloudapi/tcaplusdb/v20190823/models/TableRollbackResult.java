@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableRollbackResult  extends AbstractModel{
+public class TableRollbackResult extends AbstractModel{
 
     /**
     * 表实例ID，形如：tcaplus-3be64cbb
@@ -111,8 +111,8 @@ public class TableRollbackResult  extends AbstractModel{
     private Long TotalKeyNum;
 
     /**
-     * 获取表实例ID，形如：tcaplus-3be64cbb
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表实例ID，形如：tcaplus-3be64cbb
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableInstanceId 表实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置表实例ID，形如：tcaplus-3be64cbb
+     * Set 表实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表实例ID，形如：tcaplus-3be64cbb
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务ID，对于创建单任务的接口有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID，对于创建单任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，对于创建单任务的接口有效
+     * Set 任务ID，对于创建单任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID，对于创建单任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取表名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置表名
+     * Set 表名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取表数据结构类型，如：`GENERIC`或`LIST`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表数据结构类型，如：`GENERIC`或`LIST`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableType 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置表数据结构类型，如：`GENERIC`或`LIST`
+     * Set 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表数据结构类型，如：`GENERIC`或`LIST`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,8 +191,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,7 +201,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
+     * Set 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表数据描述语言（IDL）类型，如：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,8 +211,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取表所属大区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表所属大区ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogicZoneId 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -221,7 +221,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置表所属大区ID
+     * Set 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicZoneId 表所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,8 +231,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -241,7 +241,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -251,8 +251,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID列表，对于创建多任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务ID列表，对于创建多任务的接口有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskIds 任务ID列表，对于创建多任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -261,7 +261,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID列表，对于创建多任务的接口有效
+     * Set 任务ID列表，对于创建多任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskIds 任务ID列表，对于创建多任务的接口有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,8 +271,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取上传的key文件ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上传的key文件ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 上传的key文件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置上传的key文件ID
+     * Set 上传的key文件ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 上传的key文件ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取校验成功Key数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 校验成功Key数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuccKeyNum 校验成功Key数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置校验成功Key数量
+     * Set 校验成功Key数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccKeyNum 校验成功Key数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 获取Key文件中包含总的Key数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Key文件中包含总的Key数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalKeyNum Key文件中包含总的Key数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 设置Key文件中包含总的Key数量
+     * Set Key文件中包含总的Key数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalKeyNum Key文件中包含总的Key数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,7 +331,7 @@ public class TableRollbackResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableInstanceId", this.TableInstanceId);

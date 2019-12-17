@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowStatusRequest  extends AbstractModel{
+public class DescribeFlowStatusRequest extends AbstractModel{
 
     /**
     * 流程ID
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
-     * 获取流程ID
+     * Get 流程ID 
      * @return FlowId 流程ID
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * 设置流程ID
+     * Set 流程ID
      * @param FlowId 流程ID
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeyMetadata  extends AbstractModel{
+public class KeyMetadata extends AbstractModel{
 
     /**
     * CMK的全局唯一标识
@@ -124,7 +124,7 @@ public class KeyMetadata  extends AbstractModel{
     private Long ValidTo;
 
     /**
-     * 获取CMK的全局唯一标识
+     * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
     public String getKeyId() {
@@ -132,7 +132,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的全局唯一标识
+     * Set CMK的全局唯一标识
      * @param KeyId CMK的全局唯一标识
      */
     public void setKeyId(String KeyId) {
@@ -140,7 +140,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取作为密钥更容易辨识，更容易被人看懂的别名
+     * Get 作为密钥更容易辨识，更容易被人看懂的别名 
      * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名
      */
     public String getAlias() {
@@ -148,7 +148,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置作为密钥更容易辨识，更容易被人看懂的别名
+     * Set 作为密钥更容易辨识，更容易被人看懂的别名
      * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名
      */
     public void setAlias(String Alias) {
@@ -156,7 +156,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取密钥创建时间
+     * Get 密钥创建时间 
      * @return CreateTime 密钥创建时间
      */
     public Long getCreateTime() {
@@ -164,7 +164,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置密钥创建时间
+     * Set 密钥创建时间
      * @param CreateTime 密钥创建时间
      */
     public void setCreateTime(Long CreateTime) {
@@ -172,7 +172,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的描述
+     * Get CMK的描述 
      * @return Description CMK的描述
      */
     public String getDescription() {
@@ -180,7 +180,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的描述
+     * Set CMK的描述
      * @param Description CMK的描述
      */
     public void setDescription(String Description) {
@@ -188,7 +188,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * Get CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport 
      * @return KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      */
     public String getKeyState() {
@@ -196,7 +196,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
+     * Set CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      * @param KeyState CMK的状态， 取值为：Enabled | Disabled | PendingDelete | PendingImport
      */
     public void setKeyState(String KeyState) {
@@ -204,7 +204,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK用途，当前是 ENCRYPT_DECRYPT
+     * Get CMK用途，当前是 ENCRYPT_DECRYPT 
      * @return KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
      */
     public String getKeyUsage() {
@@ -212,7 +212,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK用途，当前是 ENCRYPT_DECRYPT
+     * Set CMK用途，当前是 ENCRYPT_DECRYPT
      * @param KeyUsage CMK用途，当前是 ENCRYPT_DECRYPT
      */
     public void setKeyUsage(String KeyUsage) {
@@ -220,7 +220,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * Get CMK类型，2 表示符合FIPS标准，4表示符合国密标准 
      * @return Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      */
     public Long getType() {
@@ -228,7 +228,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK类型，2 表示符合FIPS标准，4表示符合国密标准
+     * Set CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      * @param Type CMK类型，2 表示符合FIPS标准，4表示符合国密标准
      */
     public void setType(Long Type) {
@@ -236,7 +236,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取创建者
+     * Get 创建者 
      * @return CreatorUin 创建者
      */
     public Long getCreatorUin() {
@@ -244,7 +244,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置创建者
+     * Set 创建者
      * @param CreatorUin 创建者
      */
     public void setCreatorUin(Long CreatorUin) {
@@ -252,7 +252,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启了密钥轮换功能
+     * Get 是否开启了密钥轮换功能 
      * @return KeyRotationEnabled 是否开启了密钥轮换功能
      */
     public Boolean getKeyRotationEnabled() {
@@ -260,7 +260,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启了密钥轮换功能
+     * Set 是否开启了密钥轮换功能
      * @param KeyRotationEnabled 是否开启了密钥轮换功能
      */
     public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
@@ -268,7 +268,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Get CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名 
      * @return Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      */
     public String getOwner() {
@@ -276,7 +276,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
+     * Set CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      * @param Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      */
     public void setOwner(String Owner) {
@@ -284,7 +284,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取在密钥轮换开启状态下，下次轮换的时间
+     * Get 在密钥轮换开启状态下，下次轮换的时间 
      * @return NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
      */
     public Long getNextRotateTime() {
@@ -292,7 +292,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置在密钥轮换开启状态下，下次轮换的时间
+     * Set 在密钥轮换开启状态下，下次轮换的时间
      * @param NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
      */
     public void setNextRotateTime(Long NextRotateTime) {
@@ -300,8 +300,8 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 计划删除的时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeletionDate 计划删除的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -310,7 +310,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置计划删除的时间
+     * Set 计划删除的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeletionDate 计划删除的时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -320,8 +320,8 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -330,7 +330,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
+     * Set CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
 注意：此字段可能返回 null，表示取不到有效值。
@@ -340,8 +340,8 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 获取在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -350,7 +350,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
+     * Set 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
 注意：此字段可能返回 null，表示取不到有效值。
@@ -360,7 +360,7 @@ public class KeyMetadata  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

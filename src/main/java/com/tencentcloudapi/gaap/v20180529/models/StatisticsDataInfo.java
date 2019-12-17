@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StatisticsDataInfo  extends AbstractModel{
+public class StatisticsDataInfo extends AbstractModel{
 
     /**
     * 对应的时间点
@@ -38,7 +38,7 @@ public class StatisticsDataInfo  extends AbstractModel{
     private Float Data;
 
     /**
-     * 获取对应的时间点
+     * Get 对应的时间点 
      * @return Time 对应的时间点
      */
     public Long getTime() {
@@ -46,7 +46,7 @@ public class StatisticsDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置对应的时间点
+     * Set 对应的时间点
      * @param Time 对应的时间点
      */
     public void setTime(Long Time) {
@@ -54,8 +54,8 @@ public class StatisticsDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取统计数据值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 统计数据值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 统计数据值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class StatisticsDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置统计数据值
+     * Set 统计数据值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 统计数据值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class StatisticsDataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

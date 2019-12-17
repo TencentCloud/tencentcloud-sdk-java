@@ -29,21 +29,10 @@ public class YunsouClient extends AbstractClient{
     private static String endpoint = "yunsou.tencentcloudapi.com";
     private static String version = "2019-11-15";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public YunsouClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public YunsouClient(Credential credential, String region, ClientProfile profile) {
         super(YunsouClient.endpoint, YunsouClient.version, credential, region, profile);
     }

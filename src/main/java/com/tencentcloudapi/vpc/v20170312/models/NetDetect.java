@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetDetect  extends AbstractModel{
+public class NetDetect extends AbstractModel{
 
     /**
     * `VPC`实例`ID`。形如：`vpc-12345678`
@@ -127,7 +127,7 @@ NORMAL_CVM：普通云主机；
     private String CreateTime;
 
     /**
-     * 获取`VPC`实例`ID`。形如：`vpc-12345678`
+     * Get `VPC`实例`ID`。形如：`vpc-12345678` 
      * @return VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      */
     public String getVpcId() {
@@ -135,7 +135,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置`VPC`实例`ID`。形如：`vpc-12345678`
+     * Set `VPC`实例`ID`。形如：`vpc-12345678`
      * @param VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      */
     public void setVpcId(String VpcId) {
@@ -143,7 +143,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取`VPC`实例名称。
+     * Get `VPC`实例名称。 
      * @return VpcName `VPC`实例名称。
      */
     public String getVpcName() {
@@ -151,7 +151,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置`VPC`实例名称。
+     * Set `VPC`实例名称。
      * @param VpcName `VPC`实例名称。
      */
     public void setVpcName(String VpcName) {
@@ -159,7 +159,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取子网实例ID。形如：subnet-12345678。
+     * Get 子网实例ID。形如：subnet-12345678。 
      * @return SubnetId 子网实例ID。形如：subnet-12345678。
      */
     public String getSubnetId() {
@@ -167,7 +167,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置子网实例ID。形如：subnet-12345678。
+     * Set 子网实例ID。形如：subnet-12345678。
      * @param SubnetId 子网实例ID。形如：subnet-12345678。
      */
     public void setSubnetId(String SubnetId) {
@@ -175,7 +175,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取子网实例名称。
+     * Get 子网实例名称。 
      * @return SubnetName 子网实例名称。
      */
     public String getSubnetName() {
@@ -183,7 +183,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置子网实例名称。
+     * Set 子网实例名称。
      * @param SubnetName 子网实例名称。
      */
     public void setSubnetName(String SubnetName) {
@@ -191,7 +191,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取网络探测实例ID。形如：netd-12345678。
+     * Get 网络探测实例ID。形如：netd-12345678。 
      * @return NetDetectId 网络探测实例ID。形如：netd-12345678。
      */
     public String getNetDetectId() {
@@ -199,7 +199,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置网络探测实例ID。形如：netd-12345678。
+     * Set 网络探测实例ID。形如：netd-12345678。
      * @param NetDetectId 网络探测实例ID。形如：netd-12345678。
      */
     public void setNetDetectId(String NetDetectId) {
@@ -207,7 +207,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取网络探测名称，最大长度不能超过60个字节。
+     * Get 网络探测名称，最大长度不能超过60个字节。 
      * @return NetDetectName 网络探测名称，最大长度不能超过60个字节。
      */
     public String getNetDetectName() {
@@ -215,7 +215,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置网络探测名称，最大长度不能超过60个字节。
+     * Set 网络探测名称，最大长度不能超过60个字节。
      * @param NetDetectName 网络探测名称，最大长度不能超过60个字节。
      */
     public void setNetDetectName(String NetDetectName) {
@@ -223,7 +223,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取探测目的IPv4地址数组，最多两个。
+     * Get 探测目的IPv4地址数组，最多两个。 
      * @return DetectDestinationIp 探测目的IPv4地址数组，最多两个。
      */
     public String [] getDetectDestinationIp() {
@@ -231,7 +231,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置探测目的IPv4地址数组，最多两个。
+     * Set 探测目的IPv4地址数组，最多两个。
      * @param DetectDestinationIp 探测目的IPv4地址数组，最多两个。
      */
     public void setDetectDestinationIp(String [] DetectDestinationIp) {
@@ -239,7 +239,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取系统自动分配的探测源IPv4数组。长度为2。
+     * Get 系统自动分配的探测源IPv4数组。长度为2。 
      * @return DetectSourceIp 系统自动分配的探测源IPv4数组。长度为2。
      */
     public String [] getDetectSourceIp() {
@@ -247,7 +247,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置系统自动分配的探测源IPv4数组。长度为2。
+     * Set 系统自动分配的探测源IPv4数组。长度为2。
      * @param DetectSourceIp 系统自动分配的探测源IPv4数组。长度为2。
      */
     public void setDetectSourceIp(String [] DetectSourceIp) {
@@ -255,12 +255,12 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取下一跳类型，目前我们支持的类型有：
+     * Get 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
-NORMAL_CVM：普通云主机；
+NORMAL_CVM：普通云主机； 
      * @return NextHopType 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -273,7 +273,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置下一跳类型，目前我们支持的类型有：
+     * Set 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
@@ -291,12 +291,12 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取下一跳目的网关，取值与“下一跳类型”相关：
+     * Get 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
-下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12；
+下一跳类型为NORMAL_CVM，取值云主机IPv4地址，形如：10.0.0.12； 
      * @return NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
@@ -309,7 +309,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置下一跳目的网关，取值与“下一跳类型”相关：
+     * Set 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
@@ -327,8 +327,8 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 下一跳网关名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NextHopName 下一跳网关名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -337,7 +337,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置下一跳网关名称。
+     * Set 下一跳网关名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NextHopName 下一跳网关名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -347,8 +347,8 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 网络探测描述。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NetDetectDescription 网络探测描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -357,7 +357,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置网络探测描述。
+     * Set 网络探测描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetectDescription 网络探测描述。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -367,8 +367,8 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -377,7 +377,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -387,7 +387,7 @@ NORMAL_CVM：普通云主机；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

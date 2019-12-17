@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeDelayLiveStreamRequest  extends AbstractModel{
+public class ResumeDelayLiveStreamRequest extends AbstractModel{
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
@@ -44,7 +44,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public String getAppName() {
@@ -52,7 +52,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public void setAppName(String AppName) {
@@ -60,7 +60,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -76,7 +76,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -84,7 +84,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -92,7 +92,7 @@ public class ResumeDelayLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

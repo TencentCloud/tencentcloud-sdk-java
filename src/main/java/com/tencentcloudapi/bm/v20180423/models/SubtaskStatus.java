@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubtaskStatus  extends AbstractModel{
+public class SubtaskStatus extends AbstractModel{
 
     /**
     * 实例ID
@@ -44,7 +44,7 @@ public class SubtaskStatus  extends AbstractModel{
     private Integer TaskStatus;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class SubtaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,14 +60,14 @@ public class SubtaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID对应任务的状态，取值如下：<br>
+     * Get 实例ID对应任务的状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
 3：部分成功，部分失败<br>
 4：未完成<br>
 5：部分成功，部分未完成<br>
 6：部分未完成，部分失败<br>
-7：部分未完成，部分失败，部分成功
+7：部分未完成，部分失败，部分成功 
      * @return TaskStatus 实例ID对应任务的状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
@@ -82,7 +82,7 @@ public class SubtaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID对应任务的状态，取值如下：<br>
+     * Set 实例ID对应任务的状态，取值如下：<br>
 1：成功<br>
 2：失败<br>
 3：部分成功，部分失败<br>
@@ -104,7 +104,7 @@ public class SubtaskStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCustomImageAttributeRequest  extends AbstractModel{
+public class ModifyCustomImageAttributeRequest extends AbstractModel{
 
     /**
     * 镜像ID
@@ -44,7 +44,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     private String ImageDescription;
 
     /**
-     * 获取镜像ID
+     * Get 镜像ID 
      * @return ImageId 镜像ID
      */
     public String getImageId() {
@@ -52,7 +52,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID
+     * Set 镜像ID
      * @param ImageId 镜像ID
      */
     public void setImageId(String ImageId) {
@@ -60,7 +60,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设置新的镜像名
+     * Get 设置新的镜像名 
      * @return ImageName 设置新的镜像名
      */
     public String getImageName() {
@@ -68,7 +68,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置新的镜像名
+     * Set 设置新的镜像名
      * @param ImageName 设置新的镜像名
      */
     public void setImageName(String ImageName) {
@@ -76,7 +76,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设置新的镜像描述
+     * Get 设置新的镜像描述 
      * @return ImageDescription 设置新的镜像描述
      */
     public String getImageDescription() {
@@ -84,7 +84,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置新的镜像描述
+     * Set 设置新的镜像描述
      * @param ImageDescription 设置新的镜像描述
      */
     public void setImageDescription(String ImageDescription) {
@@ -92,7 +92,7 @@ public class ModifyCustomImageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

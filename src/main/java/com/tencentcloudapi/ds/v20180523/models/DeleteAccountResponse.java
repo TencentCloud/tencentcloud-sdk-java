@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountResponse  extends AbstractModel{
+public class DeleteAccountResponse extends AbstractModel{
 
     /**
     * 删除成功帐号ID列表
@@ -44,7 +44,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取删除成功帐号ID列表
+     * Get 删除成功帐号ID列表 
      * @return DelSuccessList 删除成功帐号ID列表
      */
     public String [] getDelSuccessList() {
@@ -52,7 +52,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置删除成功帐号ID列表
+     * Set 删除成功帐号ID列表
      * @param DelSuccessList 删除成功帐号ID列表
      */
     public void setDelSuccessList(String [] DelSuccessList) {
@@ -60,7 +60,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 获取删除失败帐号ID列表
+     * Get 删除失败帐号ID列表 
      * @return DelFailedList 删除失败帐号ID列表
      */
     public String [] getDelFailedList() {
@@ -68,7 +68,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置删除失败帐号ID列表
+     * Set 删除失败帐号ID列表
      * @param DelFailedList 删除失败帐号ID列表
      */
     public void setDelFailedList(String [] DelFailedList) {
@@ -76,7 +76,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DelSuccessList.", this.DelSuccessList);

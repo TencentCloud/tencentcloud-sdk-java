@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyComputeEnvRequest  extends AbstractModel{
+public class ModifyComputeEnvRequest extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -58,7 +58,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     private ComputeEnvData EnvData;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -66,7 +66,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -74,7 +74,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -82,7 +82,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -90,7 +90,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境名称
+     * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
     public String getEnvName() {
@@ -98,7 +98,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
      * @param EnvName 计算环境名称
      */
     public void setEnvName(String EnvName) {
@@ -106,7 +106,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境描述
+     * Get 计算环境描述 
      * @return EnvDescription 计算环境描述
      */
     public String getEnvDescription() {
@@ -114,7 +114,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境描述
+     * Set 计算环境描述
      * @param EnvDescription 计算环境描述
      */
     public void setEnvDescription(String EnvDescription) {
@@ -122,7 +122,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境属性数据
+     * Get 计算环境属性数据 
      * @return EnvData 计算环境属性数据
      */
     public ComputeEnvData getEnvData() {
@@ -130,7 +130,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境属性数据
+     * Set 计算环境属性数据
      * @param EnvData 计算环境属性数据
      */
     public void setEnvData(ComputeEnvData EnvData) {
@@ -138,7 +138,7 @@ public class ModifyComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

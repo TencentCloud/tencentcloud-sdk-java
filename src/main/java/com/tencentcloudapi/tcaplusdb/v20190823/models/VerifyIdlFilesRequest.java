@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyIdlFilesRequest  extends AbstractModel{
+public class VerifyIdlFilesRequest extends AbstractModel{
 
     /**
     * 待加表的应用实例ID
@@ -51,7 +51,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     private IdlFileInfo [] NewIdlFiles;
 
     /**
-     * 获取待加表的应用实例ID
+     * Get 待加表的应用实例ID 
      * @return ApplicationId 待加表的应用实例ID
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待加表的应用实例ID
+     * Set 待加表的应用实例ID
      * @param ApplicationId 待加表的应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待加表的大区ID
+     * Get 待加表的大区ID 
      * @return LogicZoneId 待加表的大区ID
      */
     public String getLogicZoneId() {
@@ -75,7 +75,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待加表的大区ID
+     * Set 待加表的大区ID
      * @param LogicZoneId 待加表的大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -83,7 +83,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
+     * Get 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者 
      * @return ExistingIdlFiles 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
      */
     public IdlFileInfo [] getExistingIdlFiles() {
@@ -91,7 +91,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
+     * Set 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
      * @param ExistingIdlFiles 曾经上传过的IDL文件信息列表，与NewIdlFiles至少有一者
      */
     public void setExistingIdlFiles(IdlFileInfo [] ExistingIdlFiles) {
@@ -99,7 +99,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
+     * Get 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者 
      * @return NewIdlFiles 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
      */
     public IdlFileInfo [] getNewIdlFiles() {
@@ -107,7 +107,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
+     * Set 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
      * @param NewIdlFiles 待上传的IDL文件信息列表，与ExistingIdlFiles至少有一者
      */
     public void setNewIdlFiles(IdlFileInfo [] NewIdlFiles) {
@@ -115,7 +115,7 @@ public class VerifyIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

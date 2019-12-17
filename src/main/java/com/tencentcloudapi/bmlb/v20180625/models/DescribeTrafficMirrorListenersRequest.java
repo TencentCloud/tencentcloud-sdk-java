@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
+public class DescribeTrafficMirrorListenersRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -93,7 +93,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     private Integer [] SearchLoadBalancerPorts;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -101,7 +101,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -109,7 +109,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页的偏移量，也即从第几条记录开始查询
+     * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public Integer getOffset() {
@@ -117,7 +117,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页的偏移量，也即从第几条记录开始查询
+     * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public void setOffset(Integer Offset) {
@@ -125,7 +125,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次查询返回的条目数，默认值：500。
+     * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
     public Integer getLimit() {
@@ -133,7 +133,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次查询返回的条目数，默认值：500。
+     * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
     public void setLimit(Integer Limit) {
@@ -141,7 +141,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的负载均衡Id。
+     * Get 待搜索的负载均衡Id。 
      * @return SearchLoadBalancerIds 待搜索的负载均衡Id。
      */
     public String [] getSearchLoadBalancerIds() {
@@ -149,7 +149,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的负载均衡Id。
+     * Set 待搜索的负载均衡Id。
      * @param SearchLoadBalancerIds 待搜索的负载均衡Id。
      */
     public void setSearchLoadBalancerIds(String [] SearchLoadBalancerIds) {
@@ -157,7 +157,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的负载均衡名称。
+     * Get 待搜索的负载均衡名称。 
      * @return SearchLoadBalancerNames 待搜索的负载均衡名称。
      */
     public String [] getSearchLoadBalancerNames() {
@@ -165,7 +165,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的负载均衡名称。
+     * Set 待搜索的负载均衡名称。
      * @param SearchLoadBalancerNames 待搜索的负载均衡名称。
      */
     public void setSearchLoadBalancerNames(String [] SearchLoadBalancerNames) {
@@ -173,7 +173,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的Vip。
+     * Get 待搜索的Vip。 
      * @return SearchVips 待搜索的Vip。
      */
     public String [] getSearchVips() {
@@ -181,7 +181,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的Vip。
+     * Set 待搜索的Vip。
      * @param SearchVips 待搜索的Vip。
      */
     public void setSearchVips(String [] SearchVips) {
@@ -189,7 +189,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的监听器ID。
+     * Get 待搜索的监听器ID。 
      * @return SearchListenerIds 待搜索的监听器ID。
      */
     public String [] getSearchListenerIds() {
@@ -197,7 +197,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的监听器ID。
+     * Set 待搜索的监听器ID。
      * @param SearchListenerIds 待搜索的监听器ID。
      */
     public void setSearchListenerIds(String [] SearchListenerIds) {
@@ -205,7 +205,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的监听器名称。
+     * Get 待搜索的监听器名称。 
      * @return SearchListenerNames 待搜索的监听器名称。
      */
     public String [] getSearchListenerNames() {
@@ -213,7 +213,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的监听器名称。
+     * Set 待搜索的监听器名称。
      * @param SearchListenerNames 待搜索的监听器名称。
      */
     public void setSearchListenerNames(String [] SearchListenerNames) {
@@ -221,7 +221,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的协议名称。
+     * Get 待搜索的协议名称。 
      * @return SearchProtocols 待搜索的协议名称。
      */
     public String [] getSearchProtocols() {
@@ -229,7 +229,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的协议名称。
+     * Set 待搜索的协议名称。
      * @param SearchProtocols 待搜索的协议名称。
      */
     public void setSearchProtocols(String [] SearchProtocols) {
@@ -237,7 +237,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待搜索的端口。
+     * Get 待搜索的端口。 
      * @return SearchLoadBalancerPorts 待搜索的端口。
      */
     public Integer [] getSearchLoadBalancerPorts() {
@@ -245,7 +245,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待搜索的端口。
+     * Set 待搜索的端口。
      * @param SearchLoadBalancerPorts 待搜索的端口。
      */
     public void setSearchLoadBalancerPorts(Integer [] SearchLoadBalancerPorts) {
@@ -253,7 +253,7 @@ public class DescribeTrafficMirrorListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

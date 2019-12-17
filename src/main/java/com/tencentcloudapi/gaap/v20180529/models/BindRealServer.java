@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindRealServer  extends AbstractModel{
+public class BindRealServer extends AbstractModel{
 
     /**
     * 源站ID
@@ -70,7 +70,7 @@ public class BindRealServer  extends AbstractModel{
     private String [] DownIPList;
 
     /**
-     * 获取源站ID
+     * Get 源站ID 
      * @return RealServerId 源站ID
      */
     public String getRealServerId() {
@@ -78,7 +78,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置源站ID
+     * Set 源站ID
      * @param RealServerId 源站ID
      */
     public void setRealServerId(String RealServerId) {
@@ -86,7 +86,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取源站IP或者域名
+     * Get 源站IP或者域名 
      * @return RealServerIP 源站IP或者域名
      */
     public String getRealServerIP() {
@@ -94,7 +94,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置源站IP或者域名
+     * Set 源站IP或者域名
      * @param RealServerIP 源站IP或者域名
      */
     public void setRealServerIP(String RealServerIP) {
@@ -102,7 +102,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取该源站所占权重
+     * Get 该源站所占权重 
      * @return RealServerWeight 该源站所占权重
      */
     public Long getRealServerWeight() {
@@ -110,7 +110,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置该源站所占权重
+     * Set 该源站所占权重
      * @param RealServerWeight 该源站所占权重
      */
     public void setRealServerWeight(Long RealServerWeight) {
@@ -118,11 +118,11 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查状态，其中：
+     * Get 源站健康检查状态，其中：
 0，正常；
 1，异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerStatus 源站健康检查状态，其中：
 0，正常；
 1，异常。
@@ -134,7 +134,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查状态，其中：
+     * Set 源站健康检查状态，其中：
 0，正常；
 1，异常。
 未开启健康检查状态时，该状态始终为正常。
@@ -150,8 +150,8 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源站的端口号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerPort 源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -160,7 +160,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置源站的端口号
+     * Set 源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerPort 源站的端口号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,7 +170,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+     * Get 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。 
      * @return DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     public String [] getDownIPList() {
@@ -178,7 +178,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
+     * Set 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      * @param DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      */
     public void setDownIPList(String [] DownIPList) {
@@ -186,7 +186,7 @@ public class BindRealServer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserCmdTaskInfo  extends AbstractModel{
+public class UserCmdTaskInfo extends AbstractModel{
 
     /**
     * 自动编号，可忽略
@@ -156,7 +156,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     private Integer LastShellExit;
 
     /**
-     * 获取自动编号，可忽略
+     * Get 自动编号，可忽略 
      * @return AutoId 自动编号，可忽略
      */
     public Integer getAutoId() {
@@ -164,7 +164,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自动编号，可忽略
+     * Set 自动编号，可忽略
      * @param AutoId 自动编号，可忽略
      */
     public void setAutoId(Integer AutoId) {
@@ -172,7 +172,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public String getTaskId() {
@@ -180,7 +180,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
@@ -188,7 +188,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始时间
+     * Get 任务开始时间 
      * @return RunBeginTime 任务开始时间
      */
     public String getRunBeginTime() {
@@ -196,7 +196,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始时间
+     * Set 任务开始时间
      * @param RunBeginTime 任务开始时间
      */
     public void setRunBeginTime(String RunBeginTime) {
@@ -204,7 +204,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务结束时间
+     * Get 任务结束时间 
      * @return RunEndTime 任务结束时间
      */
     public String getRunEndTime() {
@@ -212,7 +212,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务结束时间
+     * Set 任务结束时间
      * @param RunEndTime 任务结束时间
      */
     public void setRunEndTime(String RunEndTime) {
@@ -220,7 +220,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
+     * Get 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码 
      * @return Status 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      */
     public Integer getStatus() {
@@ -228,7 +228,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
+     * Set 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      * @param Status 任务状态ID，取值为 -1：进行中；0：成功；>0：失败错误码
      */
     public void setStatus(Integer Status) {
@@ -236,7 +236,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备别名
+     * Get 设备别名 
      * @return InstanceName 设备别名
      */
     public String getInstanceName() {
@@ -244,7 +244,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备别名
+     * Set 设备别名
      * @param InstanceName 设备别名
      */
     public void setInstanceName(String InstanceName) {
@@ -252,7 +252,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备ID
+     * Get 设备ID 
      * @return InstanceId 设备ID
      */
     public String getInstanceId() {
@@ -260,7 +260,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备ID
+     * Set 设备ID
      * @param InstanceId 设备ID
      */
     public void setInstanceId(String InstanceId) {
@@ -268,7 +268,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名
+     * Get 私有网络名 
      * @return VpcName 私有网络名
      */
     public String getVpcName() {
@@ -276,7 +276,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名
+     * Set 私有网络名
      * @param VpcName 私有网络名
      */
     public void setVpcName(String VpcName) {
@@ -284,7 +284,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络整型ID
+     * Get 私有网络整型ID 
      * @return VpcId 私有网络整型ID
      */
     public String getVpcId() {
@@ -292,7 +292,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络整型ID
+     * Set 私有网络整型ID
      * @param VpcId 私有网络整型ID
      */
     public void setVpcId(String VpcId) {
@@ -300,7 +300,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络Cidr
+     * Get 私有网络Cidr 
      * @return VpcCidrBlock 私有网络Cidr
      */
     public String getVpcCidrBlock() {
@@ -308,7 +308,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络Cidr
+     * Set 私有网络Cidr
      * @param VpcCidrBlock 私有网络Cidr
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -316,7 +316,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网名
+     * Get 子网名 
      * @return SubnetName 子网名
      */
     public String getSubnetName() {
@@ -324,7 +324,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名
+     * Set 子网名
      * @param SubnetName 子网名
      */
     public void setSubnetName(String SubnetName) {
@@ -332,7 +332,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -340,7 +340,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -348,7 +348,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网Cidr
+     * Get 子网Cidr 
      * @return SubnetCidrBlock 子网Cidr
      */
     public String getSubnetCidrBlock() {
@@ -356,7 +356,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网Cidr
+     * Set 子网Cidr
      * @param SubnetCidrBlock 子网Cidr
      */
     public void setSubnetCidrBlock(String SubnetCidrBlock) {
@@ -364,7 +364,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP
+     * Get 内网IP 
      * @return LanIp 内网IP
      */
     public String getLanIp() {
@@ -372,7 +372,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP
+     * Set 内网IP
      * @param LanIp 内网IP
      */
     public void setLanIp(String LanIp) {
@@ -380,7 +380,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取脚本内容，base64编码后的值
+     * Get 脚本内容，base64编码后的值 
      * @return CmdContent 脚本内容，base64编码后的值
      */
     public String getCmdContent() {
@@ -388,7 +388,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置脚本内容，base64编码后的值
+     * Set 脚本内容，base64编码后的值
      * @param CmdContent 脚本内容，base64编码后的值
      */
     public void setCmdContent(String CmdContent) {
@@ -396,7 +396,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取脚本参数，base64编码后的值
+     * Get 脚本参数，base64编码后的值 
      * @return CmdParam 脚本参数，base64编码后的值
      */
     public String getCmdParam() {
@@ -404,7 +404,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置脚本参数，base64编码后的值
+     * Set 脚本参数，base64编码后的值
      * @param CmdParam 脚本参数，base64编码后的值
      */
     public void setCmdParam(String CmdParam) {
@@ -412,7 +412,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取脚本执行结果，base64编码后的值
+     * Get 脚本执行结果，base64编码后的值 
      * @return CmdResult 脚本执行结果，base64编码后的值
      */
     public String getCmdResult() {
@@ -420,7 +420,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置脚本执行结果，base64编码后的值
+     * Set 脚本执行结果，base64编码后的值
      * @param CmdResult 脚本执行结果，base64编码后的值
      */
     public void setCmdResult(String CmdResult) {
@@ -428,7 +428,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户AppId
+     * Get 用户AppId 
      * @return AppId 用户AppId
      */
     public Integer getAppId() {
@@ -436,7 +436,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户AppId
+     * Set 用户AppId
      * @param AppId 用户AppId
      */
     public void setAppId(Integer AppId) {
@@ -444,7 +444,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户执行脚本结束退出的返回值，没有返回值为-1
+     * Get 用户执行脚本结束退出的返回值，没有返回值为-1 
      * @return LastShellExit 用户执行脚本结束退出的返回值，没有返回值为-1
      */
     public Integer getLastShellExit() {
@@ -452,7 +452,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户执行脚本结束退出的返回值，没有返回值为-1
+     * Set 用户执行脚本结束退出的返回值，没有返回值为-1
      * @param LastShellExit 用户执行脚本结束退出的返回值，没有返回值为-1
      */
     public void setLastShellExit(Integer LastShellExit) {
@@ -460,7 +460,7 @@ public class UserCmdTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoId", this.AutoId);

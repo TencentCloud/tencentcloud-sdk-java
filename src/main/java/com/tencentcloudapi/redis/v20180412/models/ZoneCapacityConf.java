@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneCapacityConf  extends AbstractModel{
+public class ZoneCapacityConf extends AbstractModel{
 
     /**
     * 可用区ID：如ap-guangzhou-3
@@ -72,7 +72,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     private Integer OldZoneId;
 
     /**
-     * 获取可用区ID：如ap-guangzhou-3
+     * Get 可用区ID：如ap-guangzhou-3 
      * @return ZoneId 可用区ID：如ap-guangzhou-3
      */
     public String getZoneId() {
@@ -80,7 +80,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID：如ap-guangzhou-3
+     * Set 可用区ID：如ap-guangzhou-3
      * @param ZoneId 可用区ID：如ap-guangzhou-3
      */
     public void setZoneId(String ZoneId) {
@@ -88,7 +88,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区名称
+     * Get 可用区名称 
      * @return ZoneName 可用区名称
      */
     public String getZoneName() {
@@ -96,7 +96,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称
+     * Set 可用区名称
      * @param ZoneName 可用区名称
      */
     public void setZoneName(String ZoneName) {
@@ -104,7 +104,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区是否售罄
+     * Get 可用区是否售罄 
      * @return IsSaleout 可用区是否售罄
      */
     public Boolean getIsSaleout() {
@@ -112,7 +112,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区是否售罄
+     * Set 可用区是否售罄
      * @param IsSaleout 可用区是否售罄
      */
     public void setIsSaleout(Boolean IsSaleout) {
@@ -120,7 +120,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否为默认可用区
+     * Get 是否为默认可用区 
      * @return IsDefault 是否为默认可用区
      */
     public Boolean getIsDefault() {
@@ -128,7 +128,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否为默认可用区
+     * Set 是否为默认可用区
      * @param IsDefault 是否为默认可用区
      */
     public void setIsDefault(Boolean IsDefault) {
@@ -136,7 +136,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * Get 网络类型：basenet -- 基础网络；vpcnet -- VPC网络 
      * @return NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      */
     public String [] getNetWorkType() {
@@ -144,7 +144,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * Set 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      * @param NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
      */
     public void setNetWorkType(String [] NetWorkType) {
@@ -152,7 +152,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区内产品规格等信息
+     * Get 可用区内产品规格等信息 
      * @return ProductSet 可用区内产品规格等信息
      */
     public ProductConf [] getProductSet() {
@@ -160,7 +160,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区内产品规格等信息
+     * Set 可用区内产品规格等信息
      * @param ProductSet 可用区内产品规格等信息
      */
     public void setProductSet(ProductConf [] ProductSet) {
@@ -168,7 +168,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID：如100003
+     * Get 可用区ID：如100003 
      * @return OldZoneId 可用区ID：如100003
      */
     public Integer getOldZoneId() {
@@ -176,7 +176,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID：如100003
+     * Set 可用区ID：如100003
      * @param OldZoneId 可用区ID：如100003
      */
     public void setOldZoneId(Integer OldZoneId) {
@@ -184,7 +184,7 @@ public class ZoneCapacityConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

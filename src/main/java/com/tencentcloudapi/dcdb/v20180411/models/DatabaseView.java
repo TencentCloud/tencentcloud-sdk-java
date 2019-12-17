@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabaseView  extends AbstractModel{
+public class DatabaseView extends AbstractModel{
 
     /**
     * 视图名称
@@ -30,7 +30,7 @@ public class DatabaseView  extends AbstractModel{
     private String View;
 
     /**
-     * 获取视图名称
+     * Get 视图名称 
      * @return View 视图名称
      */
     public String getView() {
@@ -38,7 +38,7 @@ public class DatabaseView  extends AbstractModel{
     }
 
     /**
-     * 设置视图名称
+     * Set 视图名称
      * @param View 视图名称
      */
     public void setView(String View) {
@@ -46,7 +46,7 @@ public class DatabaseView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "View", this.View);

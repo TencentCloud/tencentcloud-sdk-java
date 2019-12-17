@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableCcnRoutesRequest  extends AbstractModel{
+public class DisableCcnRoutesRequest extends AbstractModel{
 
     /**
     * CCN实例ID。形如：ccn-f49l6u0z。
@@ -37,7 +37,7 @@ public class DisableCcnRoutesRequest  extends AbstractModel{
     private String [] RouteIds;
 
     /**
-     * 获取CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
@@ -45,7 +45,7 @@ public class DisableCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID。形如：ccn-f49l6u0z。
      * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
@@ -53,7 +53,7 @@ public class DisableCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
      * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      */
     public String [] getRouteIds() {
@@ -61,7 +61,7 @@ public class DisableCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
      */
     public void setRouteIds(String [] RouteIds) {
@@ -69,7 +69,7 @@ public class DisableCcnRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

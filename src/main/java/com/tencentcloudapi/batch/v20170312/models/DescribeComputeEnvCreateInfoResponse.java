@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
+public class DescribeComputeEnvCreateInfoResponse extends AbstractModel{
 
     /**
     * 计算环境 ID
@@ -101,7 +101,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取计算环境 ID
+     * Get 计算环境 ID 
      * @return EnvId 计算环境 ID
      */
     public String getEnvId() {
@@ -109,7 +109,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境 ID
+     * Set 计算环境 ID
      * @param EnvId 计算环境 ID
      */
     public void setEnvId(String EnvId) {
@@ -117,7 +117,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境名称
+     * Get 计算环境名称 
      * @return EnvName 计算环境名称
      */
     public String getEnvName() {
@@ -125,7 +125,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
      * @param EnvName 计算环境名称
      */
     public void setEnvName(String EnvName) {
@@ -133,8 +133,8 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnvDescription 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -143,7 +143,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境描述
+     * Set 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvDescription 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,7 +153,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境类型，仅支持“MANAGED”类型
+     * Get 计算环境类型，仅支持“MANAGED”类型 
      * @return EnvType 计算环境类型，仅支持“MANAGED”类型
      */
     public String getEnvType() {
@@ -161,7 +161,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境类型，仅支持“MANAGED”类型
+     * Set 计算环境类型，仅支持“MANAGED”类型
      * @param EnvType 计算环境类型，仅支持“MANAGED”类型
      */
     public void setEnvType(String EnvType) {
@@ -169,7 +169,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境参数
+     * Get 计算环境参数 
      * @return EnvData 计算环境参数
      */
     public EnvData getEnvData() {
@@ -177,7 +177,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境参数
+     * Set 计算环境参数
      * @param EnvData 计算环境参数
      */
     public void setEnvData(EnvData EnvData) {
@@ -185,7 +185,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘挂载选项
+     * Get 数据盘挂载选项 
      * @return MountDataDisks 数据盘挂载选项
      */
     public MountDataDisk [] getMountDataDisks() {
@@ -193,7 +193,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘挂载选项
+     * Set 数据盘挂载选项
      * @param MountDataDisks 数据盘挂载选项
      */
     public void setMountDataDisks(MountDataDisk [] MountDataDisks) {
@@ -201,7 +201,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取输入映射
+     * Get 输入映射 
      * @return InputMappings 输入映射
      */
     public InputMapping [] getInputMappings() {
@@ -209,7 +209,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置输入映射
+     * Set 输入映射
      * @param InputMappings 输入映射
      */
     public void setInputMappings(InputMapping [] InputMappings) {
@@ -217,7 +217,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取授权信息
+     * Get 授权信息 
      * @return Authentications 授权信息
      */
     public Authentication [] getAuthentications() {
@@ -225,7 +225,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置授权信息
+     * Set 授权信息
      * @param Authentications 授权信息
      */
     public void setAuthentications(Authentication [] Authentications) {
@@ -233,7 +233,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取通知信息
+     * Get 通知信息 
      * @return Notifications 通知信息
      */
     public Notification [] getNotifications() {
@@ -241,7 +241,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通知信息
+     * Set 通知信息
      * @param Notifications 通知信息
      */
     public void setNotifications(Notification [] Notifications) {
@@ -249,7 +249,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -257,7 +257,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -265,7 +265,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -273,7 +273,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -281,7 +281,7 @@ public class DescribeComputeEnvCreateInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

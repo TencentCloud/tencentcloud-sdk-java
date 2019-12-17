@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceInfo  extends AbstractModel{
+public class InstanceInfo extends AbstractModel{
 
     /**
     * 实例ID
@@ -268,7 +268,7 @@ public class InstanceInfo  extends AbstractModel{
     private String LicenseType;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -276,7 +276,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -284,7 +284,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -292,7 +292,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -300,7 +300,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -308,7 +308,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -316,7 +316,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -324,7 +324,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -332,7 +332,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户ID
+     * Get 用户ID 
      * @return AppId 用户ID
      */
     public Integer getAppId() {
@@ -340,7 +340,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户ID
+     * Set 用户ID
      * @param AppId 用户ID
      */
     public void setAppId(Integer AppId) {
@@ -348,7 +348,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户UIN
+     * Get 用户UIN 
      * @return Uin 用户UIN
      */
     public String getUin() {
@@ -356,7 +356,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户UIN
+     * Set 用户UIN
      * @param Uin 用户UIN
      */
     public void setUin(String Uin) {
@@ -364,7 +364,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属VPC的UID
+     * Get 实例所属VPC的UID 
      * @return VpcUid 实例所属VPC的UID
      */
     public String getVpcUid() {
@@ -372,7 +372,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属VPC的UID
+     * Set 实例所属VPC的UID
      * @param VpcUid 实例所属VPC的UID
      */
     public void setVpcUid(String VpcUid) {
@@ -380,7 +380,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属子网的UID
+     * Get 实例所属子网的UID 
      * @return SubnetUid 实例所属子网的UID
      */
     public String getSubnetUid() {
@@ -388,7 +388,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属子网的UID
+     * Set 实例所属子网的UID
      * @param SubnetUid 实例所属子网的UID
      */
     public void setSubnetUid(String SubnetUid) {
@@ -396,7 +396,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * Get 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁 
      * @return Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      */
     public Integer getStatus() {
@@ -404,7 +404,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
+     * Set 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      * @param Status 实例状态，0:处理中,1:正常,-1停止,-2:销毁中,-3:已销毁
      */
     public void setStatus(Integer Status) {
@@ -412,7 +412,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+     * Get 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。 
      * @return ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      */
     public String getChargeType() {
@@ -420,7 +420,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
+     * Set 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      * @param ChargeType 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
      */
     public void setChargeType(String ChargeType) {
@@ -428,7 +428,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取包年包月购买时长,单位:月
+     * Get 包年包月购买时长,单位:月 
      * @return ChargePeriod 包年包月购买时长,单位:月
      */
     public Integer getChargePeriod() {
@@ -436,7 +436,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置包年包月购买时长,单位:月
+     * Set 包年包月购买时长,单位:月
      * @param ChargePeriod 包年包月购买时长,单位:月
      */
     public void setChargePeriod(Integer ChargePeriod) {
@@ -444,7 +444,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Get 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。 
      * @return RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
      */
     public String getRenewFlag() {
@@ -452,7 +452,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+     * Set 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
      * @param RenewFlag 自动续费标识。取值范围：  NOTIFY_AND_AUTO_RENEW：通知过期且自动续费  NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费  DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费  默认取值：NOTIFY_AND_AUTO_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
@@ -460,7 +460,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
      * @return NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getNodeType() {
@@ -468,7 +468,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param NodeType 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setNodeType(String NodeType) {
@@ -476,7 +476,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点个数
+     * Get 节点个数 
      * @return NodeNum 节点个数
      */
     public Integer getNodeNum() {
@@ -484,7 +484,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点个数
+     * Set 节点个数
      * @param NodeNum 节点个数
      */
     public void setNodeNum(Integer NodeNum) {
@@ -492,7 +492,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点CPU核数
+     * Get 节点CPU核数 
      * @return CpuNum 节点CPU核数
      */
     public Integer getCpuNum() {
@@ -500,7 +500,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点CPU核数
+     * Set 节点CPU核数
      * @param CpuNum 节点CPU核数
      */
     public void setCpuNum(Integer CpuNum) {
@@ -508,7 +508,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点内存大小，单位GB
+     * Get 节点内存大小，单位GB 
      * @return MemSize 节点内存大小，单位GB
      */
     public Integer getMemSize() {
@@ -516,7 +516,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点内存大小，单位GB
+     * Set 节点内存大小，单位GB
      * @param MemSize 节点内存大小，单位GB
      */
     public void setMemSize(Integer MemSize) {
@@ -524,7 +524,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点磁盘类型
+     * Get 节点磁盘类型 
      * @return DiskType 节点磁盘类型
      */
     public String getDiskType() {
@@ -532,7 +532,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点磁盘类型
+     * Set 节点磁盘类型
      * @param DiskType 节点磁盘类型
      */
     public void setDiskType(String DiskType) {
@@ -540,7 +540,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点磁盘大小，单位GB
+     * Get 节点磁盘大小，单位GB 
      * @return DiskSize 节点磁盘大小，单位GB
      */
     public Integer getDiskSize() {
@@ -548,7 +548,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点磁盘大小，单位GB
+     * Set 节点磁盘大小，单位GB
      * @param DiskSize 节点磁盘大小，单位GB
      */
     public void setDiskSize(Integer DiskSize) {
@@ -556,7 +556,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES域名
+     * Get ES域名 
      * @return EsDomain ES域名
      */
     public String getEsDomain() {
@@ -564,7 +564,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES域名
+     * Set ES域名
      * @param EsDomain ES域名
      */
     public void setEsDomain(String EsDomain) {
@@ -572,7 +572,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES VIP
+     * Get ES VIP 
      * @return EsVip ES VIP
      */
     public String getEsVip() {
@@ -580,7 +580,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES VIP
+     * Set ES VIP
      * @param EsVip ES VIP
      */
     public void setEsVip(String EsVip) {
@@ -588,7 +588,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES端口
+     * Get ES端口 
      * @return EsPort ES端口
      */
     public Integer getEsPort() {
@@ -596,7 +596,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES端口
+     * Set ES端口
      * @param EsPort ES端口
      */
     public void setEsPort(Integer EsPort) {
@@ -604,7 +604,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Kibana访问url
+     * Get Kibana访问url 
      * @return KibanaUrl Kibana访问url
      */
     public String getKibanaUrl() {
@@ -612,7 +612,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Kibana访问url
+     * Set Kibana访问url
      * @param KibanaUrl Kibana访问url
      */
     public void setKibanaUrl(String KibanaUrl) {
@@ -620,7 +620,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES版本号
+     * Get ES版本号 
      * @return EsVersion ES版本号
      */
     public String getEsVersion() {
@@ -628,7 +628,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES版本号
+     * Set ES版本号
      * @param EsVersion ES版本号
      */
     public void setEsVersion(String EsVersion) {
@@ -636,7 +636,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES配置项
+     * Get ES配置项 
      * @return EsConfig ES配置项
      */
     public String getEsConfig() {
@@ -644,7 +644,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES配置项
+     * Set ES配置项
      * @param EsConfig ES配置项
      */
     public void setEsConfig(String EsConfig) {
@@ -652,7 +652,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取ES访问控制配置
+     * Get ES访问控制配置 
      * @return EsAcl ES访问控制配置
      */
     public EsAcl getEsAcl() {
@@ -660,7 +660,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ES访问控制配置
+     * Set ES访问控制配置
      * @param EsAcl ES访问控制配置
      */
     public void setEsAcl(EsAcl EsAcl) {
@@ -668,7 +668,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
      */
     public String getCreateTime() {
@@ -676,7 +676,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param CreateTime 实例创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -684,7 +684,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例最后修改操作时间
+     * Get 实例最后修改操作时间 
      * @return UpdateTime 实例最后修改操作时间
      */
     public String getUpdateTime() {
@@ -692,7 +692,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例最后修改操作时间
+     * Set 实例最后修改操作时间
      * @param UpdateTime 实例最后修改操作时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -700,7 +700,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间
+     * Get 实例到期时间 
      * @return Deadline 实例到期时间
      */
     public String getDeadline() {
@@ -708,7 +708,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间
+     * Set 实例到期时间
      * @param Deadline 实例到期时间
      */
     public void setDeadline(String Deadline) {
@@ -716,7 +716,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型（实例类型标识，当前只有1,2两种）
+     * Get 实例类型（实例类型标识，当前只有1,2两种） 
      * @return InstanceType 实例类型（实例类型标识，当前只有1,2两种）
      */
     public Integer getInstanceType() {
@@ -724,7 +724,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型（实例类型标识，当前只有1,2两种）
+     * Set 实例类型（实例类型标识，当前只有1,2两种）
      * @param InstanceType 实例类型（实例类型标识，当前只有1,2两种）
      */
     public void setInstanceType(Integer InstanceType) {
@@ -732,7 +732,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Ik分词器配置
+     * Get Ik分词器配置 
      * @return IkConfig Ik分词器配置
      */
     public EsDictionaryInfo getIkConfig() {
@@ -740,7 +740,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Ik分词器配置
+     * Set Ik分词器配置
      * @param IkConfig Ik分词器配置
      */
     public void setIkConfig(EsDictionaryInfo IkConfig) {
@@ -748,7 +748,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点配置
+     * Get 专用主节点配置 
      * @return MasterNodeInfo 专用主节点配置
      */
     public MasterNodeInfo getMasterNodeInfo() {
@@ -756,7 +756,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点配置
+     * Set 专用主节点配置
      * @param MasterNodeInfo 专用主节点配置
      */
     public void setMasterNodeInfo(MasterNodeInfo MasterNodeInfo) {
@@ -764,7 +764,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取cos自动备份配置
+     * Get cos自动备份配置 
      * @return CosBackup cos自动备份配置
      */
     public CosBackup getCosBackup() {
@@ -772,7 +772,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置cos自动备份配置
+     * Set cos自动备份配置
      * @param CosBackup cos自动备份配置
      */
     public void setCosBackup(CosBackup CosBackup) {
@@ -780,7 +780,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否允许cos自动备份
+     * Get 是否允许cos自动备份 
      * @return AllowCosBackup 是否允许cos自动备份
      */
     public Boolean getAllowCosBackup() {
@@ -788,7 +788,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否允许cos自动备份
+     * Set 是否允许cos自动备份
      * @param AllowCosBackup 是否允许cos自动备份
      */
     public void setAllowCosBackup(Boolean AllowCosBackup) {
@@ -796,7 +796,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例拥有的标签列表
+     * Get 实例拥有的标签列表 
      * @return TagList 实例拥有的标签列表
      */
     public TagInfo [] getTagList() {
@@ -804,7 +804,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例拥有的标签列表
+     * Set 实例拥有的标签列表
      * @param TagList 实例拥有的标签列表
      */
     public void setTagList(TagInfo [] TagList) {
@@ -812,7 +812,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Get License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum 
      * @return LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     public String getLicenseType() {
@@ -820,7 +820,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
+     * Set License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      * @param LicenseType License类型<li>oss：开源版</li><li>basic：基础版</li><li>platinum：白金版</li>默认值platinum
      */
     public void setLicenseType(String LicenseType) {
@@ -828,7 +828,7 @@ public class InstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

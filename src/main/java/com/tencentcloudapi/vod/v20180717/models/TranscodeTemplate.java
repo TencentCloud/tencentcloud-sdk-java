@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodeTemplate  extends AbstractModel{
+public class TranscodeTemplate extends AbstractModel{
 
     /**
     * 转码模板唯一标识。
@@ -127,7 +127,7 @@ public class TranscodeTemplate  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取转码模板唯一标识。
+     * Get 转码模板唯一标识。 
      * @return Definition 转码模板唯一标识。
      */
     public String getDefinition() {
@@ -135,7 +135,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转码模板唯一标识。
+     * Set 转码模板唯一标识。
      * @param Definition 转码模板唯一标识。
      */
     public void setDefinition(String Definition) {
@@ -143,7 +143,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+     * Get 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。 
      * @return Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      */
     public String getContainer() {
@@ -151,7 +151,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+     * Set 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      */
     public void setContainer(String Container) {
@@ -159,8 +159,8 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取转码模板名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转码模板名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 转码模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置转码模板名称。
+     * Set 转码模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 转码模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 模板描述信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Comment 模板描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息。
+     * Set 模板描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Comment 模板描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,9 +199,9 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，取值：
+     * Get 模板类型，取值：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -211,7 +211,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，取值：
+     * Set 模板类型，取值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，取值：
@@ -223,9 +223,9 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除视频数据，取值：
+     * Get 是否去除视频数据，取值：
 <li>0：保留；</li>
-<li>1：去除。</li>
+<li>1：去除。</li> 
      * @return RemoveVideo 是否去除视频数据，取值：
 <li>0：保留；</li>
 <li>1：去除。</li>
@@ -235,7 +235,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除视频数据，取值：
+     * Set 是否去除视频数据，取值：
 <li>0：保留；</li>
 <li>1：去除。</li>
      * @param RemoveVideo 是否去除视频数据，取值：
@@ -247,9 +247,9 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除音频数据，取值：
+     * Get 是否去除音频数据，取值：
 <li>0：保留；</li>
-<li>1：去除。</li>
+<li>1：去除。</li> 
      * @return RemoveAudio 是否去除音频数据，取值：
 <li>0：保留；</li>
 <li>1：去除。</li>
@@ -259,7 +259,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除音频数据，取值：
+     * Set 是否去除音频数据，取值：
 <li>0：保留；</li>
 <li>1：去除。</li>
      * @param RemoveAudio 是否去除音频数据，取值：
@@ -271,8 +271,8 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+     * Set 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+     * Set 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取极速高清转码参数，需联系商务架构师开通后才能使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 极速高清转码参数，需联系商务架构师开通后才能使用。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置极速高清转码参数，需联系商务架构师开通后才能使用。
+     * Set 极速高清转码参数，需联系商务架构师开通后才能使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,9 +331,9 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取封装格式过滤条件，可选值：
+     * Get 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li> 
      * @return ContainerType 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -343,7 +343,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置封装格式过滤条件，可选值：
+     * Set 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      * @param ContainerType 封装格式过滤条件，可选值：
@@ -355,7 +355,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -363,7 +363,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -371,7 +371,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -379,7 +379,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -387,7 +387,7 @@ public class TranscodeTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

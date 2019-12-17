@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSummaryOverviewItem  extends AbstractModel{
+public class TagSummaryOverviewItem extends AbstractModel{
 
     /**
     * 标签值
@@ -47,8 +47,8 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-     * 获取标签值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagValue 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagValue 标签值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取实际花费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实际花费
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealTotalCost 实际花费
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置实际花费
+     * Set 实际花费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 实际花费
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取费用所占百分比，两位小数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 费用所占百分比，两位小数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealTotalCostRatio 费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置费用所占百分比，两位小数
+     * Set 费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCostRatio 费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class TagSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagValue", this.TagValue);

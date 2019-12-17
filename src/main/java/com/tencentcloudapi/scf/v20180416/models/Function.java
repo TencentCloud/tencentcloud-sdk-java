@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Function  extends AbstractModel{
+public class Function extends AbstractModel{
 
     /**
     * 修改时间
@@ -100,7 +100,7 @@ public class Function  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModTime 修改时间
      */
     public String getModTime() {
@@ -108,7 +108,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModTime 修改时间
      */
     public void setModTime(String ModTime) {
@@ -116,7 +116,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return AddTime 创建时间
      */
     public String getAddTime() {
@@ -124,7 +124,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param AddTime 创建时间
      */
     public void setAddTime(String AddTime) {
@@ -132,7 +132,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取运行时
+     * Get 运行时 
      * @return Runtime 运行时
      */
     public String getRuntime() {
@@ -140,7 +140,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置运行时
+     * Set 运行时
      * @param Runtime 运行时
      */
     public void setRuntime(String Runtime) {
@@ -148,7 +148,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数名称
+     * Get 函数名称 
      * @return FunctionName 函数名称
      */
     public String getFunctionName() {
@@ -156,7 +156,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数名称
+     * Set 函数名称
      * @param FunctionName 函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -164,7 +164,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数ID
+     * Get 函数ID 
      * @return FunctionId 函数ID
      */
     public String getFunctionId() {
@@ -172,7 +172,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数ID
+     * Set 函数ID
      * @param FunctionId 函数ID
      */
     public void setFunctionId(String FunctionId) {
@@ -180,7 +180,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间
+     * Get 命名空间 
      * @return Namespace 命名空间
      */
     public String getNamespace() {
@@ -188,7 +188,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间
+     * Set 命名空间
      * @param Namespace 命名空间
      */
     public void setNamespace(String Namespace) {
@@ -196,7 +196,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数状态
+     * Get 函数状态 
      * @return Status 函数状态
      */
     public String getStatus() {
@@ -204,7 +204,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数状态
+     * Set 函数状态
      * @param Status 函数状态
      */
     public void setStatus(String Status) {
@@ -212,7 +212,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数状态详情
+     * Get 函数状态详情 
      * @return StatusDesc 函数状态详情
      */
     public String getStatusDesc() {
@@ -220,7 +220,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数状态详情
+     * Set 函数状态详情
      * @param StatusDesc 函数状态详情
      */
     public void setStatusDesc(String StatusDesc) {
@@ -228,7 +228,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数描述
+     * Get 函数描述 
      * @return Description 函数描述
      */
     public String getDescription() {
@@ -236,7 +236,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数描述
+     * Set 函数描述
      * @param Description 函数描述
      */
     public void setDescription(String Description) {
@@ -244,7 +244,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数标签
+     * Get 函数标签 
      * @return Tags 函数标签
      */
     public Tag [] getTags() {
@@ -252,7 +252,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数标签
+     * Set 函数标签
      * @param Tags 函数标签
      */
     public void setTags(Tag [] Tags) {
@@ -260,7 +260,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取函数类型，取值为 HTTP 或者 Event
+     * Get 函数类型，取值为 HTTP 或者 Event 
      * @return Type 函数类型，取值为 HTTP 或者 Event
      */
     public String getType() {
@@ -268,7 +268,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置函数类型，取值为 HTTP 或者 Event
+     * Set 函数类型，取值为 HTTP 或者 Event
      * @param Type 函数类型，取值为 HTTP 或者 Event
      */
     public void setType(String Type) {
@@ -276,7 +276,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);

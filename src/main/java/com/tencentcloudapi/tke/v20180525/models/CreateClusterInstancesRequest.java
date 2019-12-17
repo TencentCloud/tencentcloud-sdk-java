@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterInstancesRequest  extends AbstractModel{
+public class CreateClusterInstancesRequest extends AbstractModel{
 
     /**
     * 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
@@ -44,7 +44,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-     * 获取集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
+     * Get 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段 
      * @return ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
     public String getClusterId() {
@@ -52,7 +52,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
+     * Set 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      * @param ClusterId 集群 ID，请填写 查询集群列表 接口中返回的 clusterId 字段
      */
     public void setClusterId(String ClusterId) {
@@ -60,7 +60,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * Get CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。 
      * @return RunInstancePara CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      */
     public String getRunInstancePara() {
@@ -68,7 +68,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
+     * Set CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      * @param RunInstancePara CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。
      */
     public void setRunInstancePara(String RunInstancePara) {
@@ -76,7 +76,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例额外需要设置参数信息
+     * Get 实例额外需要设置参数信息 
      * @return InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -84,7 +84,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例额外需要设置参数信息
+     * Set 实例额外需要设置参数信息
      * @param InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
@@ -92,7 +92,7 @@ public class CreateClusterInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

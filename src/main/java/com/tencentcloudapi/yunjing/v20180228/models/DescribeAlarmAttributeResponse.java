@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAlarmAttributeResponse  extends AbstractModel{
+public class DescribeAlarmAttributeResponse extends AbstractModel{
 
     /**
     * 防护软件离线告警状态：
@@ -66,9 +66,9 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取防护软件离线告警状态：
+     * Get 防护软件离线告警状态：
 <li>OPEN：告警已开启</li>
-<li>CLOSE： 告警已关闭</li>
+<li>CLOSE： 告警已关闭</li> 
      * @return Offline 防护软件离线告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
@@ -78,7 +78,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置防护软件离线告警状态：
+     * Set 防护软件离线告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
      * @param Offline 防护软件离线告警状态：
@@ -90,9 +90,9 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发现木马告警状态：
+     * Get 发现木马告警状态：
 <li>OPEN：告警已开启</li>
-<li>CLOSE： 告警已关闭</li>
+<li>CLOSE： 告警已关闭</li> 
      * @return Malware 发现木马告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
@@ -102,7 +102,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发现木马告警状态：
+     * Set 发现木马告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
      * @param Malware 发现木马告警状态：
@@ -114,9 +114,9 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发现异地登录告警状态：
+     * Get 发现异地登录告警状态：
 <li>OPEN：告警已开启</li>
-<li>CLOSE： 告警已关闭</li>
+<li>CLOSE： 告警已关闭</li> 
      * @return NonlocalLogin 发现异地登录告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
@@ -126,7 +126,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发现异地登录告警状态：
+     * Set 发现异地登录告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
      * @param NonlocalLogin 发现异地登录告警状态：
@@ -138,9 +138,9 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取被暴力破解成功告警状态：
+     * Get 被暴力破解成功告警状态：
 <li>OPEN：告警已开启</li>
-<li>CLOSE： 告警已关闭</li>
+<li>CLOSE： 告警已关闭</li> 
      * @return CrackSuccess 被暴力破解成功告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
@@ -150,7 +150,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置被暴力破解成功告警状态：
+     * Set 被暴力破解成功告警状态：
 <li>OPEN：告警已开启</li>
 <li>CLOSE： 告警已关闭</li>
      * @param CrackSuccess 被暴力破解成功告警状态：
@@ -162,7 +162,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -170,7 +170,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -178,7 +178,7 @@ public class DescribeAlarmAttributeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offline", this.Offline);

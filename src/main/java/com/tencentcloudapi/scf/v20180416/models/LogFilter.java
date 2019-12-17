@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogFilter  extends AbstractModel{
+public class LogFilter extends AbstractModel{
 
     /**
     * filter.RetCode的取值有：
@@ -36,13 +36,13 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
     private String RetCode;
 
     /**
-     * 获取filter.RetCode的取值有：
+     * Get filter.RetCode的取值有：
 not0 表示只返回错误日志，
 is0 表示只返回正确日志，
 TimeLimitExceeded 返回函数调用发生超时的日志，
 ResourceLimitExceeded 返回函数调用发生资源超限的日志，
 UserCodeException 返回函数调用发生用户代码错误的日志，
-无输入则返回所有日志。
+无输入则返回所有日志。 
      * @return RetCode filter.RetCode的取值有：
 not0 表示只返回错误日志，
 is0 表示只返回正确日志，
@@ -56,7 +56,7 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
     }
 
     /**
-     * 设置filter.RetCode的取值有：
+     * Set filter.RetCode的取值有：
 not0 表示只返回错误日志，
 is0 表示只返回正确日志，
 TimeLimitExceeded 返回函数调用发生超时的日志，
@@ -76,7 +76,7 @@ UserCodeException 返回函数调用发生用户代码错误的日志，
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RetCode", this.RetCode);

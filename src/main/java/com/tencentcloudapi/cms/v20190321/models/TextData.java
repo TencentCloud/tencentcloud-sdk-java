@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextData  extends AbstractModel{
+public class TextData extends AbstractModel{
 
     /**
     * 是否恶意 0：正常 1：可疑
@@ -52,7 +52,7 @@ public class TextData  extends AbstractModel{
     private String [] Keywords;
 
     /**
-     * 获取是否恶意 0：正常 1：可疑
+     * Get 是否恶意 0：正常 1：可疑 
      * @return EvilFlag 是否恶意 0：正常 1：可疑
      */
     public Long getEvilFlag() {
@@ -60,7 +60,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 设置是否恶意 0：正常 1：可疑
+     * Set 是否恶意 0：正常 1：可疑
      * @param EvilFlag 是否恶意 0：正常 1：可疑
      */
     public void setEvilFlag(Long EvilFlag) {
@@ -68,7 +68,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -76,7 +76,7 @@ public class TextData  extends AbstractModel{
 20007：谩骂
 20105：广告引流 
 24001：暴恐
-21000：综合
+21000：综合 
      * @return EvilType 恶意类型
 100：正常
 20001：政治
@@ -92,7 +92,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -116,7 +116,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 获取命中的关键词
+     * Get 命中的关键词 
      * @return Keywords 命中的关键词
      */
     public String [] getKeywords() {
@@ -124,7 +124,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 设置命中的关键词
+     * Set 命中的关键词
      * @param Keywords 命中的关键词
      */
     public void setKeywords(String [] Keywords) {
@@ -132,7 +132,7 @@ public class TextData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);

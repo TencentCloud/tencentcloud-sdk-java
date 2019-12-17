@@ -20,56 +20,56 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetBashEventsStatusRequest  extends AbstractModel{
+public class SetBashEventsStatusRequest extends AbstractModel{
 
     /**
     * ID数组，最大100条。
     */
     @SerializedName("Ids")
     @Expose
-    private Integer [] Ids;
+    private Long [] Ids;
 
     /**
     * 新状态(0-待处理 1-高危 2-正常)
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
-     * 获取ID数组，最大100条。
+     * Get ID数组，最大100条。 
      * @return Ids ID数组，最大100条。
      */
-    public Integer [] getIds() {
+    public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * 设置ID数组，最大100条。
+     * Set ID数组，最大100条。
      * @param Ids ID数组，最大100条。
      */
-    public void setIds(Integer [] Ids) {
+    public void setIds(Long [] Ids) {
         this.Ids = Ids;
     }
 
     /**
-     * 获取新状态(0-待处理 1-高危 2-正常)
+     * Get 新状态(0-待处理 1-高危 2-正常) 
      * @return Status 新状态(0-待处理 1-高危 2-正常)
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置新状态(0-待处理 1-高危 2-正常)
+     * Set 新状态(0-待处理 1-高危 2-正常)
      * @param Status 新状态(0-待处理 1-高危 2-正常)
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

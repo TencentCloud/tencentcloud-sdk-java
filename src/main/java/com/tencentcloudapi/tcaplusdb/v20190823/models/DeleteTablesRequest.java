@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTablesRequest  extends AbstractModel{
+public class DeleteTablesRequest extends AbstractModel{
 
     /**
     * 待删除表所在应用实例ID
@@ -37,7 +37,7 @@ public class DeleteTablesRequest  extends AbstractModel{
     private SelectedTableInfo [] SelectedTables;
 
     /**
-     * 获取待删除表所在应用实例ID
+     * Get 待删除表所在应用实例ID 
      * @return ApplicationId 待删除表所在应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class DeleteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除表所在应用实例ID
+     * Set 待删除表所在应用实例ID
      * @param ApplicationId 待删除表所在应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class DeleteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待删除表信息列表
+     * Get 待删除表信息列表 
      * @return SelectedTables 待删除表信息列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -61,7 +61,7 @@ public class DeleteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除表信息列表
+     * Set 待删除表信息列表
      * @param SelectedTables 待删除表信息列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -69,7 +69,7 @@ public class DeleteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

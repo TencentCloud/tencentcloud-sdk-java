@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CorrectData  extends AbstractModel{
+public class CorrectData extends AbstractModel{
 
     /**
     * 总得分
@@ -51,7 +51,7 @@ public class CorrectData  extends AbstractModel{
     private SentenceCom [] SentenceComments;
 
     /**
-     * 获取总得分
+     * Get 总得分 
      * @return Score 总得分
      */
     public Float getScore() {
@@ -59,7 +59,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 设置总得分
+     * Set 总得分
      * @param Score 总得分
      */
     public void setScore(Float Score) {
@@ -67,7 +67,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 获取各项得分详情
+     * Get 各项得分详情 
      * @return ScoreCat 各项得分详情
      */
     public ScoreCategory getScoreCat() {
@@ -75,7 +75,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 设置各项得分详情
+     * Set 各项得分详情
      * @param ScoreCat 各项得分详情
      */
     public void setScoreCat(ScoreCategory ScoreCat) {
@@ -83,7 +83,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 获取综合评价
+     * Get 综合评价 
      * @return Comment 综合评价
      */
     public String getComment() {
@@ -91,7 +91,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 设置综合评价
+     * Set 综合评价
      * @param Comment 综合评价
      */
     public void setComment(String Comment) {
@@ -99,7 +99,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 获取句子点评
+     * Get 句子点评 
      * @return SentenceComments 句子点评
      */
     public SentenceCom [] getSentenceComments() {
@@ -107,7 +107,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 设置句子点评
+     * Set 句子点评
      * @param SentenceComments 句子点评
      */
     public void setSentenceComments(SentenceCom [] SentenceComments) {
@@ -115,7 +115,7 @@ public class CorrectData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);

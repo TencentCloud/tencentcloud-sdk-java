@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageModerationResponse  extends AbstractModel{
+public class ImageModerationResponse extends AbstractModel{
 
     /**
     * 识别场景的审核结论：
@@ -79,10 +79,10 @@ BLOCK：违规
     private String RequestId;
 
     /**
-     * 获取识别场景的审核结论：
+     * Get 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：违规 
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -93,7 +93,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置识别场景的审核结论：
+     * Set 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -107,8 +107,8 @@ BLOCK：违规
     }
 
     /**
-     * 获取色情识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 色情识别结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornResult 色情识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置色情识别结果。
+     * Set 色情识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PornResult 色情识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,8 +127,8 @@ BLOCK：违规
     }
 
     /**
-     * 获取暴恐识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 暴恐识别结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TerrorismResult 暴恐识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置暴恐识别结果。
+     * Set 暴恐识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismResult 暴恐识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ BLOCK：违规
     }
 
     /**
-     * 获取政治敏感识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 政治敏感识别结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoliticsResult 政治敏感识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置政治敏感识别结果。
+     * Set 政治敏感识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticsResult 政治敏感识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,7 +167,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取透传字段，透传简单信息。
+     * Get 透传字段，透传简单信息。 
      * @return Extra 透传字段，透传简单信息。
      */
     public String getExtra() {
@@ -175,7 +175,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置透传字段，透传简单信息。
+     * Set 透传字段，透传简单信息。
      * @param Extra 透传字段，透传简单信息。
      */
     public void setExtra(String Extra) {
@@ -183,8 +183,8 @@ BLOCK：违规
     }
 
     /**
-     * 获取恶心内容识别结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 恶心内容识别结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DisgustResult 恶心内容识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置恶心内容识别结果。
+     * Set 恶心内容识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DisgustResult 恶心内容识别结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,7 +203,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -211,7 +211,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -219,7 +219,7 @@ BLOCK：违规
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);

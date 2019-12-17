@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPsaRegulationRequest  extends AbstractModel{
+public class ModifyPsaRegulationRequest extends AbstractModel{
 
     /**
     * 预授权规则ID
@@ -58,7 +58,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     private Integer [] TaskTypeIds;
 
     /**
-     * 获取预授权规则ID
+     * Get 预授权规则ID 
      * @return PsaId 预授权规则ID
      */
     public String getPsaId() {
@@ -66,7 +66,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则ID
+     * Set 预授权规则ID
      * @param PsaId 预授权规则ID
      */
     public void setPsaId(String PsaId) {
@@ -74,7 +74,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预授权规则别名
+     * Get 预授权规则别名 
      * @return PsaName 预授权规则别名
      */
     public String getPsaName() {
@@ -82,7 +82,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则别名
+     * Set 预授权规则别名
      * @param PsaName 预授权规则别名
      */
     public void setPsaName(String PsaName) {
@@ -90,7 +90,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取维修中的实例上限
+     * Get 维修中的实例上限 
      * @return RepairLimit 维修中的实例上限
      */
     public Integer getRepairLimit() {
@@ -98,7 +98,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置维修中的实例上限
+     * Set 维修中的实例上限
      * @param RepairLimit 维修中的实例上限
      */
     public void setRepairLimit(Integer RepairLimit) {
@@ -106,7 +106,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预授权规则备注
+     * Get 预授权规则备注 
      * @return PsaDescription 预授权规则备注
      */
     public String getPsaDescription() {
@@ -114,7 +114,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则备注
+     * Set 预授权规则备注
      * @param PsaDescription 预授权规则备注
      */
     public void setPsaDescription(String PsaDescription) {
@@ -122,7 +122,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预授权规则关联故障类型ID列表
+     * Get 预授权规则关联故障类型ID列表 
      * @return TaskTypeIds 预授权规则关联故障类型ID列表
      */
     public Integer [] getTaskTypeIds() {
@@ -130,7 +130,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则关联故障类型ID列表
+     * Set 预授权规则关联故障类型ID列表
      * @param TaskTypeIds 预授权规则关联故障类型ID列表
      */
     public void setTaskTypeIds(Integer [] TaskTypeIds) {
@@ -138,7 +138,7 @@ public class ModifyPsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PsaId", this.PsaId);

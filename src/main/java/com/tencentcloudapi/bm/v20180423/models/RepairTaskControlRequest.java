@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RepairTaskControlRequest  extends AbstractModel{
+public class RepairTaskControlRequest extends AbstractModel{
 
     /**
     * 维修任务ID
@@ -37,7 +37,7 @@ public class RepairTaskControlRequest  extends AbstractModel{
     private String Operate;
 
     /**
-     * 获取维修任务ID
+     * Get 维修任务ID 
      * @return TaskId 维修任务ID
      */
     public String getTaskId() {
@@ -45,7 +45,7 @@ public class RepairTaskControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置维修任务ID
+     * Set 维修任务ID
      * @param TaskId 维修任务ID
      */
     public void setTaskId(String TaskId) {
@@ -53,7 +53,7 @@ public class RepairTaskControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作
+     * Get 操作 
      * @return Operate 操作
      */
     public String getOperate() {
@@ -61,7 +61,7 @@ public class RepairTaskControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作
+     * Set 操作
      * @param Operate 操作
      */
     public void setOperate(String Operate) {
@@ -69,7 +69,7 @@ public class RepairTaskControlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

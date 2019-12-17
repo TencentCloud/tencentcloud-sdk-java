@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
+public class DescribeSupportedPrivilegesResponse extends AbstractModel{
 
     /**
     * 实例支持的全局权限。
@@ -58,7 +58,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例支持的全局权限。
+     * Get 实例支持的全局权限。 
      * @return GlobalSupportedPrivileges 实例支持的全局权限。
      */
     public String [] getGlobalSupportedPrivileges() {
@@ -66,7 +66,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例支持的全局权限。
+     * Set 实例支持的全局权限。
      * @param GlobalSupportedPrivileges 实例支持的全局权限。
      */
     public void setGlobalSupportedPrivileges(String [] GlobalSupportedPrivileges) {
@@ -74,7 +74,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例支持的数据库权限。
+     * Get 实例支持的数据库权限。 
      * @return DatabaseSupportedPrivileges 实例支持的数据库权限。
      */
     public String [] getDatabaseSupportedPrivileges() {
@@ -82,7 +82,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例支持的数据库权限。
+     * Set 实例支持的数据库权限。
      * @param DatabaseSupportedPrivileges 实例支持的数据库权限。
      */
     public void setDatabaseSupportedPrivileges(String [] DatabaseSupportedPrivileges) {
@@ -90,7 +90,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例支持的数据库表权限。
+     * Get 实例支持的数据库表权限。 
      * @return TableSupportedPrivileges 实例支持的数据库表权限。
      */
     public String [] getTableSupportedPrivileges() {
@@ -98,7 +98,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例支持的数据库表权限。
+     * Set 实例支持的数据库表权限。
      * @param TableSupportedPrivileges 实例支持的数据库表权限。
      */
     public void setTableSupportedPrivileges(String [] TableSupportedPrivileges) {
@@ -106,7 +106,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例支持的数据库列权限。
+     * Get 实例支持的数据库列权限。 
      * @return ColumnSupportedPrivileges 实例支持的数据库列权限。
      */
     public String [] getColumnSupportedPrivileges() {
@@ -114,7 +114,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例支持的数据库列权限。
+     * Set 实例支持的数据库列权限。
      * @param ColumnSupportedPrivileges 实例支持的数据库列权限。
      */
     public void setColumnSupportedPrivileges(String [] ColumnSupportedPrivileges) {
@@ -122,7 +122,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeSupportedPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "GlobalSupportedPrivileges.", this.GlobalSupportedPrivileges);

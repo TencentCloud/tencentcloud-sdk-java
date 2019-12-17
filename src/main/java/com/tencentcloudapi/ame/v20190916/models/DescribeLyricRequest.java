@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLyricRequest  extends AbstractModel{
+public class DescribeLyricRequest extends AbstractModel{
 
     /**
     * 歌曲ID
@@ -37,7 +37,7 @@ public class DescribeLyricRequest  extends AbstractModel{
     private String SubItemType;
 
     /**
-     * 获取歌曲ID
+     * Get 歌曲ID 
      * @return ItemId 歌曲ID
      */
     public String getItemId() {
@@ -45,7 +45,7 @@ public class DescribeLyricRequest  extends AbstractModel{
     }
 
     /**
-     * 设置歌曲ID
+     * Set 歌曲ID
      * @param ItemId 歌曲ID
      */
     public void setItemId(String ItemId) {
@@ -53,7 +53,7 @@ public class DescribeLyricRequest  extends AbstractModel{
     }
 
     /**
-     * 获取歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+     * Get 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。 
      * @return SubItemType 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
      */
     public String getSubItemType() {
@@ -61,7 +61,7 @@ public class DescribeLyricRequest  extends AbstractModel{
     }
 
     /**
-     * 设置歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+     * Set 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
      * @param SubItemType 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
      */
     public void setSubItemType(String SubItemType) {
@@ -69,7 +69,7 @@ public class DescribeLyricRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

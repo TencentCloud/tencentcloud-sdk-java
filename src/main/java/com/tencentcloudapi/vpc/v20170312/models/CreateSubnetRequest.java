@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSubnetRequest  extends AbstractModel{
+public class CreateSubnetRequest extends AbstractModel{
 
     /**
     * 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -51,7 +51,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -59,7 +59,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -67,7 +67,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称，最大长度不能超过60个字节。
+     * Get 子网名称，最大长度不能超过60个字节。 
      * @return SubnetName 子网名称，最大长度不能超过60个字节。
      */
     public String getSubnetName() {
@@ -75,7 +75,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称，最大长度不能超过60个字节。
+     * Set 子网名称，最大长度不能超过60个字节。
      * @param SubnetName 子网名称，最大长度不能超过60个字节。
      */
     public void setSubnetName(String SubnetName) {
@@ -83,7 +83,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+     * Get 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。 
      * @return CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
      */
     public String getCidrBlock() {
@@ -91,7 +91,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+     * Set 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
      * @param CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -99,7 +99,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * Get 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。 
      * @return Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
     public String getZone() {
@@ -107,7 +107,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * Set 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      * @param Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
      */
     public void setZone(String Zone) {
@@ -115,7 +115,7 @@ public class CreateSubnetRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

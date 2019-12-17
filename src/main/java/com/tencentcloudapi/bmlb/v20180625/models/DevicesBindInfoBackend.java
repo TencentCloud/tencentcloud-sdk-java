@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoBackend  extends AbstractModel{
+public class DevicesBindInfoBackend extends AbstractModel{
 
     /**
     * 黑石物理机的主机ID、托管主机ID或虚拟机IP。
@@ -37,7 +37,7 @@ public class DevicesBindInfoBackend  extends AbstractModel{
     private Integer Port;
 
     /**
-     * 获取黑石物理机的主机ID、托管主机ID或虚拟机IP。
+     * Get 黑石物理机的主机ID、托管主机ID或虚拟机IP。 
      * @return InstanceId 黑石物理机的主机ID、托管主机ID或虚拟机IP。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DevicesBindInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机的主机ID、托管主机ID或虚拟机IP。
+     * Set 黑石物理机的主机ID、托管主机ID或虚拟机IP。
      * @param InstanceId 黑石物理机的主机ID、托管主机ID或虚拟机IP。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DevicesBindInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取主机端口。
+     * Get 主机端口。 
      * @return Port 主机端口。
      */
     public Integer getPort() {
@@ -61,7 +61,7 @@ public class DevicesBindInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置主机端口。
+     * Set 主机端口。
      * @param Port 主机端口。
      */
     public void setPort(Integer Port) {
@@ -69,7 +69,7 @@ public class DevicesBindInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

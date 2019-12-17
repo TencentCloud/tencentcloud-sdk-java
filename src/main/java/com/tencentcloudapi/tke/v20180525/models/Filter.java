@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter  extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
     * 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
@@ -37,7 +37,7 @@ public class Filter  extends AbstractModel{
     private String [] Values;
 
     /**
-     * 获取属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Get 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。 
      * @return Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Set 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      * @param Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 获取属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Get 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。 
      * @return Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      */
     public String [] getValues() {
@@ -61,7 +61,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Set 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      * @param Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
      */
     public void setValues(String [] Values) {
@@ -69,7 +69,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

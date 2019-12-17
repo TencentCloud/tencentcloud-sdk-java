@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PreviewPaiDomainNameRequest  extends AbstractModel{
+public class PreviewPaiDomainNameRequest extends AbstractModel{
 
     /**
     * 域名类型
@@ -30,7 +30,7 @@ public class PreviewPaiDomainNameRequest  extends AbstractModel{
     private String DomainNameType;
 
     /**
-     * 获取域名类型
+     * Get 域名类型 
      * @return DomainNameType 域名类型
      */
     public String getDomainNameType() {
@@ -38,7 +38,7 @@ public class PreviewPaiDomainNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名类型
+     * Set 域名类型
      * @param DomainNameType 域名类型
      */
     public void setDomainNameType(String DomainNameType) {
@@ -46,7 +46,7 @@ public class PreviewPaiDomainNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainNameType", this.DomainNameType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIp6TranslatorsRequest  extends AbstractModel{
+public class DescribeIp6TranslatorsRequest extends AbstractModel{
 
     /**
     * IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
@@ -55,7 +55,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
+     * Get IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx 
      * @return Ip6TranslatorIds IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
      */
     public String [] getIp6TranslatorIds() {
@@ -63,7 +63,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
+     * Set IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
      * @param Ip6TranslatorIds IPV6转换实例唯一ID数组，形如ip6-xxxxxxxx
      */
     public void setIp6TranslatorIds(String [] Ip6TranslatorIds) {
@@ -71,11 +71,11 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
+     * Get 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
 <li> ip6-translator-id - String - 是否必填：否 - （过滤条件）按照IPV6转换实例的唯一ID过滤,形如ip6-xxxxxxx。</li>
 <li> ip6-translator-vip6 - String - 是否必填：否 - （过滤条件）按照IPV6地址过滤。不支持模糊过滤。</li>
 <li> ip6-translator-name - String - 是否必填：否 - （过滤条件）按照IPV6转换实例名称过滤。不支持模糊过滤。</li>
-<li> ip6-translator-status - String - 是否必填：否 - （过滤条件）按照IPV6转换实例的状态过滤。状态取值范围为"CREATING","RUNNING","DELETING","MODIFYING"
+<li> ip6-translator-status - String - 是否必填：否 - （过滤条件）按照IPV6转换实例的状态过滤。状态取值范围为"CREATING","RUNNING","DELETING","MODIFYING" 
      * @return Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
 <li> ip6-translator-id - String - 是否必填：否 - （过滤条件）按照IPV6转换实例的唯一ID过滤,形如ip6-xxxxxxx。</li>
 <li> ip6-translator-vip6 - String - 是否必填：否 - （过滤条件）按照IPV6地址过滤。不支持模糊过滤。</li>
@@ -87,7 +87,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
+     * Set 每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。参数不支持同时指定`Ip6TranslatorIds`和`Filters`。详细的过滤条件如下：
 <li> ip6-translator-id - String - 是否必填：否 - （过滤条件）按照IPV6转换实例的唯一ID过滤,形如ip6-xxxxxxx。</li>
 <li> ip6-translator-vip6 - String - 是否必填：否 - （过滤条件）按照IPV6地址过滤。不支持模糊过滤。</li>
 <li> ip6-translator-name - String - 是否必填：否 - （过滤条件）按照IPV6转换实例名称过滤。不支持模糊过滤。</li>
@@ -103,7 +103,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
+     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。 
      * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */
     public Integer getOffset() {
@@ -111,7 +111,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
+     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */
     public void setOffset(Integer Offset) {
@@ -119,7 +119,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
+     * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */
     public Integer getLimit() {
@@ -127,7 +127,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
+     * Set 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */
     public void setLimit(Integer Limit) {
@@ -135,7 +135,7 @@ public class DescribeIp6TranslatorsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6TranslatorIds.", this.Ip6TranslatorIds);

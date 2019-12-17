@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
+public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -69,7 +69,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -77,7 +77,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -85,7 +85,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -93,7 +93,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -101,11 +101,11 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件：
+     * Get 过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例实例ID。</li> 
      * @return Filters 过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
@@ -117,7 +117,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件：
+     * Set 过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
@@ -133,7 +133,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云联网实例ID
+     * Get 云联网实例ID 
      * @return CcnId 云联网实例ID
      */
     public String getCcnId() {
@@ -141,7 +141,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云联网实例ID
+     * Set 云联网实例ID
      * @param CcnId 云联网实例ID
      */
     public void setCcnId(String CcnId) {
@@ -149,7 +149,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * Get 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。 
      * @return OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
      */
     public String getOrderField() {
@@ -157,7 +157,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * Set 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
      * @param OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
      */
     public void setOrderField(String OrderField) {
@@ -165,7 +165,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
      * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public String getOrderDirection() {
@@ -173,7 +173,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
      * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public void setOrderDirection(String OrderDirection) {
@@ -181,7 +181,7 @@ public class DescribeCcnAttachedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

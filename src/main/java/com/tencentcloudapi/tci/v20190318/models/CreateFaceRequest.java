@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFaceRequest  extends AbstractModel{
+public class CreateFaceRequest extends AbstractModel{
 
     /**
     * 人员唯一标识符
@@ -51,7 +51,7 @@ public class CreateFaceRequest  extends AbstractModel{
     private String [] Urls;
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -59,7 +59,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -67,7 +67,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * Get 图片数据 base64 字符串，与 Urls 参数选择一个输入 
      * @return Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
      */
     public String [] getImages() {
@@ -75,7 +75,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * Set 图片数据 base64 字符串，与 Urls 参数选择一个输入
      * @param Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
      */
     public void setImages(String [] Images) {
@@ -83,7 +83,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -91,7 +91,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -99,7 +99,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片下载地址，与 Images 参数选择一个输入
+     * Get 图片下载地址，与 Images 参数选择一个输入 
      * @return Urls 图片下载地址，与 Images 参数选择一个输入
      */
     public String [] getUrls() {
@@ -107,7 +107,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片下载地址，与 Images 参数选择一个输入
+     * Set 图片下载地址，与 Images 参数选择一个输入
      * @param Urls 图片下载地址，与 Images 参数选择一个输入
      */
     public void setUrls(String [] Urls) {
@@ -115,7 +115,7 @@ public class CreateFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

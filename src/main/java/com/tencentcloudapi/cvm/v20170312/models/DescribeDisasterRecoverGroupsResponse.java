@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
+public class DescribeDisasterRecoverGroupsResponse extends AbstractModel{
 
     /**
     * 分散置放群组信息列表。
@@ -44,7 +44,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取分散置放群组信息列表。
+     * Get 分散置放群组信息列表。 
      * @return DisasterRecoverGroupSet 分散置放群组信息列表。
      */
     public DisasterRecoverGroup [] getDisasterRecoverGroupSet() {
@@ -52,7 +52,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组信息列表。
+     * Set 分散置放群组信息列表。
      * @param DisasterRecoverGroupSet 分散置放群组信息列表。
      */
     public void setDisasterRecoverGroupSet(DisasterRecoverGroup [] DisasterRecoverGroupSet) {
@@ -60,7 +60,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户置放群组总量。
+     * Get 用户置放群组总量。 
      * @return TotalCount 用户置放群组总量。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户置放群组总量。
+     * Set 用户置放群组总量。
      * @param TotalCount 用户置放群组总量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDisasterRecoverGroupsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DisasterRecoverGroupSet.", this.DisasterRecoverGroupSet);

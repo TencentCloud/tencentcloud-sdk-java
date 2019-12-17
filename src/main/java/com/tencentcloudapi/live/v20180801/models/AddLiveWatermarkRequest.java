@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddLiveWatermarkRequest  extends AbstractModel{
+public class AddLiveWatermarkRequest extends AbstractModel{
 
     /**
     * 水印图片url。
@@ -65,7 +65,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     private Integer Height;
 
     /**
-     * 获取水印图片url。
+     * Get 水印图片url。 
      * @return PictureUrl 水印图片url。
      */
     public String getPictureUrl() {
@@ -73,7 +73,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片url。
+     * Set 水印图片url。
      * @param PictureUrl 水印图片url。
      */
     public void setPictureUrl(String PictureUrl) {
@@ -81,7 +81,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印名称。
+     * Get 水印名称。 
      * @return WatermarkName 水印名称。
      */
     public String getWatermarkName() {
@@ -89,7 +89,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印名称。
+     * Set 水印名称。
      * @param WatermarkName 水印名称。
      */
     public void setWatermarkName(String WatermarkName) {
@@ -97,7 +97,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取显示位置,X轴偏移。
+     * Get 显示位置,X轴偏移。 
      * @return XPosition 显示位置,X轴偏移。
      */
     public Integer getXPosition() {
@@ -105,7 +105,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置显示位置,X轴偏移。
+     * Set 显示位置,X轴偏移。
      * @param XPosition 显示位置,X轴偏移。
      */
     public void setXPosition(Integer XPosition) {
@@ -113,7 +113,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取显示位置,Y轴偏移。
+     * Get 显示位置,Y轴偏移。 
      * @return YPosition 显示位置,Y轴偏移。
      */
     public Integer getYPosition() {
@@ -121,7 +121,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置显示位置,Y轴偏移。
+     * Set 显示位置,Y轴偏移。
      * @param YPosition 显示位置,Y轴偏移。
      */
     public void setYPosition(Integer YPosition) {
@@ -129,7 +129,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Get 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
      * @return Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     public Integer getWidth() {
@@ -137,7 +137,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Set 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      * @param Width 水印宽度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     public void setWidth(Integer Width) {
@@ -145,7 +145,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Get 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。 
      * @return Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     public Integer getHeight() {
@@ -153,7 +153,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
+     * Set 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      * @param Height 水印高度，占直播原始画面宽度百分比，建议高宽只设置一项，另外一项会自适应缩放，避免变形。
      */
     public void setHeight(Integer Height) {
@@ -161,7 +161,7 @@ public class AddLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PictureUrl", this.PictureUrl);

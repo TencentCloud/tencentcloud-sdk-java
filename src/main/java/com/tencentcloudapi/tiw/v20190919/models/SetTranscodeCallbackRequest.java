@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetTranscodeCallbackRequest  extends AbstractModel{
+public class SetTranscodeCallbackRequest extends AbstractModel{
 
     /**
     * 客户的SdkAppId
@@ -37,7 +37,7 @@ public class SetTranscodeCallbackRequest  extends AbstractModel{
     private String Callback;
 
     /**
-     * 获取客户的SdkAppId
+     * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
     public Long getSdkAppId() {
@@ -45,7 +45,7 @@ public class SetTranscodeCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户的SdkAppId
+     * Set 客户的SdkAppId
      * @param SdkAppId 客户的SdkAppId
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -53,7 +53,7 @@ public class SetTranscodeCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * Get 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头 
      * @return Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
      */
     public String getCallback() {
@@ -61,7 +61,7 @@ public class SetTranscodeCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
+     * Set 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
      * @param Callback 文档转码进度回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头
      */
     public void setCallback(String Callback) {
@@ -69,7 +69,7 @@ public class SetTranscodeCallbackRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

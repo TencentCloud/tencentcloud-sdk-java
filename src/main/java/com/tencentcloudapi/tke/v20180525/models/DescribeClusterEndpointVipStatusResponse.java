@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
+public class DescribeClusterEndpointVipStatusResponse extends AbstractModel{
 
     /**
     * 端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
@@ -45,7 +45,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
+     * Get 端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 ) 
      * @return Status 端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
      */
     public String getStatus() {
@@ -53,7 +53,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
+     * Set 端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
      * @param Status 端口操作状态 (Creating 创建中  CreateFailed 创建失败 Created 创建完成 Deleting 删除中 DeletedFailed 删除失败 Deleted 已删除 NotFound 未发现操作 )
      */
     public void setStatus(String Status) {
@@ -61,8 +61,8 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取操作失败的原因
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 操作失败的原因
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrorMsg 操作失败的原因
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置操作失败的原因
+     * Set 操作失败的原因
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMsg 操作失败的原因
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DescribeClusterEndpointVipStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

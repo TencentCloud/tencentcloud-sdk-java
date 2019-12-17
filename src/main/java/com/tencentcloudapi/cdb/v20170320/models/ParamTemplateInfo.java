@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParamTemplateInfo  extends AbstractModel{
+public class ParamTemplateInfo extends AbstractModel{
 
     /**
     * 参数模板ID
@@ -51,7 +51,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     private String EngineVersion;
 
     /**
-     * 获取参数模板ID
+     * Get 参数模板ID 
      * @return TemplateId 参数模板ID
      */
     public Integer getTemplateId() {
@@ -59,7 +59,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板ID
+     * Set 参数模板ID
      * @param TemplateId 参数模板ID
      */
     public void setTemplateId(Integer TemplateId) {
@@ -67,7 +67,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取参数模板名称
+     * Get 参数模板名称 
      * @return Name 参数模板名称
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板名称
+     * Set 参数模板名称
      * @param Name 参数模板名称
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取参数模板描述
+     * Get 参数模板描述 
      * @return Description 参数模板描述
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置参数模板描述
+     * Set 参数模板描述
      * @param Description 参数模板描述
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例引擎版本
+     * Get 实例引擎版本 
      * @return EngineVersion 实例引擎版本
      */
     public String getEngineVersion() {
@@ -107,7 +107,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例引擎版本
+     * Set 实例引擎版本
      * @param EngineVersion 实例引擎版本
      */
     public void setEngineVersion(String EngineVersion) {
@@ -115,7 +115,7 @@ public class ParamTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenPort  extends AbstractModel{
+public class OpenPort extends AbstractModel{
 
     /**
     * 唯一ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端唯一UUID。
@@ -41,7 +41,7 @@ public class OpenPort  extends AbstractModel{
     */
     @SerializedName("Port")
     @Expose
-    private Integer Port;
+    private Long Port;
 
     /**
     * 主机IP。
@@ -69,7 +69,7 @@ public class OpenPort  extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 记录创建时间。
@@ -86,23 +86,23 @@ public class OpenPort  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取唯一ID。
+     * Get 唯一ID。 
      * @return Id 唯一ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置唯一ID。
+     * Set 唯一ID。
      * @param Id 唯一ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端唯一UUID。
+     * Get 云镜客户端唯一UUID。 
      * @return Uuid 云镜客户端唯一UUID。
      */
     public String getUuid() {
@@ -110,7 +110,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一UUID。
+     * Set 云镜客户端唯一UUID。
      * @param Uuid 云镜客户端唯一UUID。
      */
     public void setUuid(String Uuid) {
@@ -118,23 +118,23 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 获取开放端口号。
+     * Get 开放端口号。 
      * @return Port 开放端口号。
      */
-    public Integer getPort() {
+    public Long getPort() {
         return this.Port;
     }
 
     /**
-     * 设置开放端口号。
+     * Set 开放端口号。
      * @param Port 开放端口号。
      */
-    public void setPort(Integer Port) {
+    public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -142,7 +142,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -150,7 +150,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 获取主机名。
+     * Get 主机名。 
      * @return MachineName 主机名。
      */
     public String getMachineName() {
@@ -158,7 +158,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置主机名。
+     * Set 主机名。
      * @param MachineName 主机名。
      */
     public void setMachineName(String MachineName) {
@@ -166,7 +166,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 获取端口对应进程名。
+     * Get 端口对应进程名。 
      * @return ProcessName 端口对应进程名。
      */
     public String getProcessName() {
@@ -174,7 +174,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置端口对应进程名。
+     * Set 端口对应进程名。
      * @param ProcessName 端口对应进程名。
      */
     public void setProcessName(String ProcessName) {
@@ -182,23 +182,23 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 获取端口对应进程Pid。
+     * Get 端口对应进程Pid。 
      * @return Pid 端口对应进程Pid。
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置端口对应进程Pid。
+     * Set 端口对应进程Pid。
      * @param Pid 端口对应进程Pid。
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * 获取记录创建时间。
+     * Get 记录创建时间。 
      * @return CreateTime 记录创建时间。
      */
     public String getCreateTime() {
@@ -206,7 +206,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置记录创建时间。
+     * Set 记录创建时间。
      * @param CreateTime 记录创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -214,7 +214,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 获取记录更新时间。
+     * Get 记录更新时间。 
      * @return ModifyTime 记录更新时间。
      */
     public String getModifyTime() {
@@ -222,7 +222,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 设置记录更新时间。
+     * Set 记录更新时间。
      * @param ModifyTime 记录更新时间。
      */
     public void setModifyTime(String ModifyTime) {
@@ -230,7 +230,7 @@ public class OpenPort  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

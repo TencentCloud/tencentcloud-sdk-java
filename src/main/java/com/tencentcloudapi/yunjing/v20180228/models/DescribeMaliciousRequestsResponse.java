@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMaliciousRequestsResponse  extends AbstractModel{
+public class DescribeMaliciousRequestsResponse extends AbstractModel{
 
     /**
     * 记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 恶意请求记录数组。
@@ -44,23 +44,23 @@ public class DescribeMaliciousRequestsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取记录总数。
+     * Get 记录总数。 
      * @return TotalCount 记录总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置记录总数。
+     * Set 记录总数。
      * @param TotalCount 记录总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取恶意请求记录数组。
+     * Get 恶意请求记录数组。 
      * @return MaliciousRequests 恶意请求记录数组。
      */
     public MaliciousRequest [] getMaliciousRequests() {
@@ -68,7 +68,7 @@ public class DescribeMaliciousRequestsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置恶意请求记录数组。
+     * Set 恶意请求记录数组。
      * @param MaliciousRequests 恶意请求记录数组。
      */
     public void setMaliciousRequests(MaliciousRequest [] MaliciousRequests) {
@@ -76,7 +76,7 @@ public class DescribeMaliciousRequestsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeMaliciousRequestsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeMaliciousRequestsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

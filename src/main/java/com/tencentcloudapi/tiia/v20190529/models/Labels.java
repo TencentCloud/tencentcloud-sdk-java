@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Labels  extends AbstractModel{
+public class Labels extends AbstractModel{
 
     /**
     * 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
@@ -39,8 +39,8 @@ public class Labels  extends AbstractModel{
     private String SecondLabel;
 
     /**
-     * 获取公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class Labels  extends AbstractModel{
     }
 
     /**
-     * 设置公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+     * Set 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstLabel 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class Labels  extends AbstractModel{
     }
 
     /**
-     * 获取公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecondLabel 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class Labels  extends AbstractModel{
     }
 
     /**
-     * 设置公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
+     * Set 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondLabel 公众人物身份标签的二级分类，例如歌手（对应一级标签为“娱乐明星”）；
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class Labels  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FirstLabel", this.FirstLabel);

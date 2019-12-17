@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParsedTableInfo  extends AbstractModel{
+public class ParsedTableInfo extends AbstractModel{
 
     /**
     * 表描述语言类型：`PROTO`或`TDR`
@@ -143,8 +143,8 @@ public class ParsedTableInfo  extends AbstractModel{
     private ErrorInfo Error;
 
     /**
-     * 获取表描述语言类型：`PROTO`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表描述语言类型：`PROTO`或`TDR`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableIdlType 表描述语言类型：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表描述语言类型：`PROTO`或`TDR`
+     * Set 表描述语言类型：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIdlType 表描述语言类型：`PROTO`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,8 +163,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableInstanceId 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,7 +173,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表实例ID
+     * Set 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableInstanceId 表实例ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,8 +183,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableName 表名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表名
+     * Set 表名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,8 +203,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表数据类型：`GENERIC`或`TDR`
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 表数据类型：`GENERIC`或`TDR`
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableType 表数据类型：`GENERIC`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表数据类型：`GENERIC`或`TDR`
+     * Set 表数据类型：`GENERIC`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TableType 表数据类型：`GENERIC`或`TDR`
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主键字段信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyFields 主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主键字段信息
+     * Set 主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFields 主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取原主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 原主键字段信息，改表校验时有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldKeyFields 原主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置原主键字段信息，改表校验时有效
+     * Set 原主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OldKeyFields 原主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取非主键字段信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 非主键字段信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ValueFields 非主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置非主键字段信息
+     * Set 非主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueFields 非主键字段信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取原非主键字段信息，改表校验时有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 原非主键字段信息，改表校验时有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OldValueFields 原非主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置原非主键字段信息，改表校验时有效
+     * Set 原非主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OldValueFields 原非主键字段信息，改表校验时有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,8 +303,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所属大区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 所属大区ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogicZoneId 所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -313,7 +313,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属大区ID
+     * Set 所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LogicZoneId 所属大区ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,8 +323,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主键字段总大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SumKeyFieldSize 主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,7 +333,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主键字段总大小
+     * Set 主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SumKeyFieldSize 主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,8 +343,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取非主键字段总大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 非主键字段总大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SumValueFieldSize 非主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,7 +353,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置非主键字段总大小
+     * Set 非主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SumValueFieldSize 非主键字段总大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -363,8 +363,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取索引键集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 索引键集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IndexKeySet 索引键集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -373,7 +373,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置索引键集合
+     * Set 索引键集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexKeySet 索引键集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,8 +383,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分表因子集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分表因子集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ShardingKeySet 分表因子集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -393,7 +393,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分表因子集合
+     * Set 分表因子集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ShardingKeySet 分表因子集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -403,8 +403,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取TDR版本号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get TDR版本号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TdrVersion TDR版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -413,7 +413,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TDR版本号
+     * Set TDR版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TdrVersion TDR版本号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -423,8 +423,8 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -433,7 +433,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -443,7 +443,7 @@ public class ParsedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableIdlType", this.TableIdlType);

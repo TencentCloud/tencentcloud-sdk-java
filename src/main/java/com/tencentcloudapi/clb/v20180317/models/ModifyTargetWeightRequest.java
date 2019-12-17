@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTargetWeightRequest  extends AbstractModel{
+public class ModifyTargetWeightRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -72,7 +72,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -80,7 +80,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -88,7 +88,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -96,7 +96,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -104,7 +104,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Get 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一 
      * @return LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public String getLocationId() {
@@ -112,7 +112,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
+     * Set 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
      * @param LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一
      */
     public void setLocationId(String LocationId) {
@@ -120,7 +120,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标规则的域名，提供LocationId参数时本参数不生效
+     * Get 目标规则的域名，提供LocationId参数时本参数不生效 
      * @return Domain 目标规则的域名，提供LocationId参数时本参数不生效
      */
     public String getDomain() {
@@ -128,7 +128,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标规则的域名，提供LocationId参数时本参数不生效
+     * Set 目标规则的域名，提供LocationId参数时本参数不生效
      * @param Domain 目标规则的域名，提供LocationId参数时本参数不生效
      */
     public void setDomain(String Domain) {
@@ -136,7 +136,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标规则的URL，提供LocationId参数时本参数不生效
+     * Get 目标规则的URL，提供LocationId参数时本参数不生效 
      * @return Url 目标规则的URL，提供LocationId参数时本参数不生效
      */
     public String getUrl() {
@@ -144,7 +144,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标规则的URL，提供LocationId参数时本参数不生效
+     * Set 目标规则的URL，提供LocationId参数时本参数不生效
      * @param Url 目标规则的URL，提供LocationId参数时本参数不生效
      */
     public void setUrl(String Url) {
@@ -152,7 +152,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改权重的后端服务列表
+     * Get 要修改权重的后端服务列表 
      * @return Targets 要修改权重的后端服务列表
      */
     public Target [] getTargets() {
@@ -160,7 +160,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改权重的后端服务列表
+     * Set 要修改权重的后端服务列表
      * @param Targets 要修改权重的后端服务列表
      */
     public void setTargets(Target [] Targets) {
@@ -168,7 +168,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * Get 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。 
      * @return Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public Integer getWeight() {
@@ -176,7 +176,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
+     * Set 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      * @param Weight 后端服务新的转发权重，取值范围：0~100，默认值10。如果设置了 Targets.Weight 参数，则此参数不生效。
      */
     public void setWeight(Integer Weight) {
@@ -184,7 +184,7 @@ public class ModifyTargetWeightRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetSecurityGroupForLoadbalancersRequest  extends AbstractModel{
+public class SetSecurityGroupForLoadbalancersRequest extends AbstractModel{
 
     /**
     * 安全组ID，如 sg-12345678
@@ -45,7 +45,7 @@ DEL 解绑安全组
     private String [] LoadBalancerIds;
 
     /**
-     * 获取安全组ID，如 sg-12345678
+     * Get 安全组ID，如 sg-12345678 
      * @return SecurityGroup 安全组ID，如 sg-12345678
      */
     public String getSecurityGroup() {
@@ -53,7 +53,7 @@ DEL 解绑安全组
     }
 
     /**
-     * 设置安全组ID，如 sg-12345678
+     * Set 安全组ID，如 sg-12345678
      * @param SecurityGroup 安全组ID，如 sg-12345678
      */
     public void setSecurityGroup(String SecurityGroup) {
@@ -61,8 +61,8 @@ DEL 解绑安全组
     }
 
     /**
-     * 获取ADD 绑定安全组；
-DEL 解绑安全组
+     * Get ADD 绑定安全组；
+DEL 解绑安全组 
      * @return OperationType ADD 绑定安全组；
 DEL 解绑安全组
      */
@@ -71,7 +71,7 @@ DEL 解绑安全组
     }
 
     /**
-     * 设置ADD 绑定安全组；
+     * Set ADD 绑定安全组；
 DEL 解绑安全组
      * @param OperationType ADD 绑定安全组；
 DEL 解绑安全组
@@ -81,7 +81,7 @@ DEL 解绑安全组
     }
 
     /**
-     * 获取负载均衡实例ID数组
+     * Get 负载均衡实例ID数组 
      * @return LoadBalancerIds 负载均衡实例ID数组
      */
     public String [] getLoadBalancerIds() {
@@ -89,7 +89,7 @@ DEL 解绑安全组
     }
 
     /**
-     * 设置负载均衡实例ID数组
+     * Set 负载均衡实例ID数组
      * @param LoadBalancerIds 负载均衡实例ID数组
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -97,7 +97,7 @@ DEL 解绑安全组
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);

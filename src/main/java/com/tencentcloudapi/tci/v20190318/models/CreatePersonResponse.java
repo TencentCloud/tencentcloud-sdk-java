@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonResponse  extends AbstractModel{
+public class CreatePersonResponse extends AbstractModel{
 
     /**
     * 人脸操作结果信息
@@ -58,7 +58,7 @@ public class CreatePersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人脸操作结果信息
+     * Get 人脸操作结果信息 
      * @return FaceInfoSet 人脸操作结果信息
      */
     public FaceInfo [] getFaceInfoSet() {
@@ -66,7 +66,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸操作结果信息
+     * Set 人脸操作结果信息
      * @param FaceInfoSet 人脸操作结果信息
      */
     public void setFaceInfoSet(FaceInfo [] FaceInfoSet) {
@@ -74,7 +74,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -82,7 +82,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -90,7 +90,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -98,7 +98,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -106,7 +106,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -114,7 +114,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -122,7 +122,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FaceInfoSet.", this.FaceInfoSet);

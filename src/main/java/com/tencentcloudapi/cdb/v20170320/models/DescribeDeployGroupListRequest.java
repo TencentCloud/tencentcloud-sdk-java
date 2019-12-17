@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeployGroupListRequest  extends AbstractModel{
+public class DescribeDeployGroupListRequest extends AbstractModel{
 
     /**
     * 置放群组 ID。
@@ -51,7 +51,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取置放群组 ID。
+     * Get 置放群组 ID。 
      * @return DeployGroupId 置放群组 ID。
      */
     public String getDeployGroupId() {
@@ -59,7 +59,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组 ID。
+     * Set 置放群组 ID。
      * @param DeployGroupId 置放群组 ID。
      */
     public void setDeployGroupId(String DeployGroupId) {
@@ -67,7 +67,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组名称。
+     * Get 置放群组名称。 
      * @return DeployGroupName 置放群组名称。
      */
     public String getDeployGroupName() {
@@ -75,7 +75,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组名称。
+     * Set 置放群组名称。
      * @param DeployGroupName 置放群组名称。
      */
     public void setDeployGroupName(String DeployGroupName) {
@@ -83,7 +83,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -91,7 +91,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -99,7 +99,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -107,7 +107,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -115,7 +115,7 @@ public class DescribeDeployGroupListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);

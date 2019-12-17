@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CoverBySnapshotTaskOutput  extends AbstractModel{
+public class CoverBySnapshotTaskOutput extends AbstractModel{
 
     /**
     * 封面 URL。
@@ -30,7 +30,7 @@ public class CoverBySnapshotTaskOutput  extends AbstractModel{
     private String CoverUrl;
 
     /**
-     * 获取封面 URL。
+     * Get 封面 URL。 
      * @return CoverUrl 封面 URL。
      */
     public String getCoverUrl() {
@@ -38,7 +38,7 @@ public class CoverBySnapshotTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置封面 URL。
+     * Set 封面 URL。
      * @param CoverUrl 封面 URL。
      */
     public void setCoverUrl(String CoverUrl) {
@@ -46,7 +46,7 @@ public class CoverBySnapshotTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);

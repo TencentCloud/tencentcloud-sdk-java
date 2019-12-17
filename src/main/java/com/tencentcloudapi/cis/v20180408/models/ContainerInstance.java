@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainerInstance  extends AbstractModel{
+public class ContainerInstance extends AbstractModel{
 
     /**
     * 容器实例ID
@@ -128,7 +128,7 @@ public class ContainerInstance  extends AbstractModel{
     private String LanIp;
 
     /**
-     * 获取容器实例ID
+     * Get 容器实例ID 
      * @return InstanceId 容器实例ID
      */
     public String getInstanceId() {
@@ -136,7 +136,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例ID
+     * Set 容器实例ID
      * @param InstanceId 容器实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -144,7 +144,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例名称
+     * Get 容器实例名称 
      * @return InstanceName 容器实例名称
      */
     public String getInstanceName() {
@@ -152,7 +152,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例名称
+     * Set 容器实例名称
      * @param InstanceName 容器实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -160,7 +160,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例所属VpcId
+     * Get 容器实例所属VpcId 
      * @return VpcId 容器实例所属VpcId
      */
     public String getVpcId() {
@@ -168,7 +168,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例所属VpcId
+     * Set 容器实例所属VpcId
      * @param VpcId 容器实例所属VpcId
      */
     public void setVpcId(String VpcId) {
@@ -176,7 +176,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例所属SubnetId
+     * Get 容器实例所属SubnetId 
      * @return SubnetId 容器实例所属SubnetId
      */
     public String getSubnetId() {
@@ -184,7 +184,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例所属SubnetId
+     * Set 容器实例所属SubnetId
      * @param SubnetId 容器实例所属SubnetId
      */
     public void setSubnetId(String SubnetId) {
@@ -192,7 +192,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例状态
+     * Get 容器实例状态 
      * @return State 容器实例状态
      */
     public String getState() {
@@ -200,7 +200,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例状态
+     * Set 容器实例状态
      * @param State 容器实例状态
      */
     public void setState(String State) {
@@ -208,7 +208,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取容器列表
+     * Get 容器列表 
      * @return Containers 容器列表
      */
     public Container [] getContainers() {
@@ -216,7 +216,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置容器列表
+     * Set 容器列表
      * @param Containers 容器列表
      */
     public void setContainers(Container [] Containers) {
@@ -224,7 +224,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取重启策略
+     * Get 重启策略 
      * @return RestartPolicy 重启策略
      */
     public String getRestartPolicy() {
@@ -232,7 +232,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置重启策略
+     * Set 重启策略
      * @param RestartPolicy 重启策略
      */
     public void setRestartPolicy(String RestartPolicy) {
@@ -240,7 +240,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -248,7 +248,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -256,7 +256,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取启动时间
+     * Get 启动时间 
      * @return StartTime 启动时间
      */
     public String getStartTime() {
@@ -264,7 +264,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置启动时间
+     * Set 启动时间
      * @param StartTime 启动时间
      */
     public void setStartTime(String StartTime) {
@@ -272,7 +272,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -280,7 +280,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -288,7 +288,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取Vpc名称
+     * Get Vpc名称 
      * @return VpcName Vpc名称
      */
     public String getVpcName() {
@@ -296,7 +296,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置Vpc名称
+     * Set Vpc名称
      * @param VpcName Vpc名称
      */
     public void setVpcName(String VpcName) {
@@ -304,7 +304,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取VpcCidr
+     * Get VpcCidr 
      * @return VpcCidr VpcCidr
      */
     public String getVpcCidr() {
@@ -312,7 +312,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置VpcCidr
+     * Set VpcCidr
      * @param VpcCidr VpcCidr
      */
     public void setVpcCidr(String VpcCidr) {
@@ -320,7 +320,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取SubnetName
+     * Get SubnetName 
      * @return SubnetName SubnetName
      */
     public String getSubnetName() {
@@ -328,7 +328,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置SubnetName
+     * Set SubnetName
      * @param SubnetName SubnetName
      */
     public void setSubnetName(String SubnetName) {
@@ -336,7 +336,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取子网Cidr
+     * Get 子网Cidr 
      * @return SubnetCidr 子网Cidr
      */
     public String getSubnetCidr() {
@@ -344,7 +344,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置子网Cidr
+     * Set 子网Cidr
      * @param SubnetCidr 子网Cidr
      */
     public void setSubnetCidr(String SubnetCidr) {
@@ -352,7 +352,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP
+     * Get 内网IP 
      * @return LanIp 内网IP
      */
     public String getLanIp() {
@@ -360,7 +360,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP
+     * Set 内网IP
      * @param LanIp 内网IP
      */
     public void setLanIp(String LanIp) {
@@ -368,7 +368,7 @@ public class ContainerInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

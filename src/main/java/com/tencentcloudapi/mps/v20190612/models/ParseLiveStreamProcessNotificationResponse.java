@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
+public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
 
     /**
     * 直播流处理结果类型，包含：
@@ -85,10 +85,10 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取直播流处理结果类型，包含：
+     * Get 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
-<li>ProcessEof：直播流处理结束。</li>
+<li>ProcessEof：直播流处理结束。</li> 
      * @return NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
@@ -99,7 +99,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置直播流处理结果类型，包含：
+     * Set 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
@@ -113,7 +113,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理任务 ID。
+     * Get 视频处理任务 ID。 
      * @return TaskId 视频处理任务 ID。
      */
     public String getTaskId() {
@@ -121,7 +121,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务 ID。
+     * Set 视频处理任务 ID。
      * @param TaskId 视频处理任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -129,8 +129,8 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProcessEofInfo 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -139,7 +139,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
+     * Set 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessEofInfo 直播流处理错误信息，当 NotificationType 为 ProcessEof 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -149,8 +149,8 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiReviewResultInfo 内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -159,7 +159,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
+     * Set 内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiReviewResultInfo 内容审核结果，当 NotificationType 为 AiReviewResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -169,8 +169,8 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiRecognitionResultInfo 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -179,7 +179,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
+     * Set 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionResultInfo 内容识别结果，当 NotificationType 为 AiRecognitionResult 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -189,7 +189,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -197,7 +197,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -205,7 +205,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      */
     public String getSessionContext() {
@@ -213,7 +213,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长1000个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -221,7 +221,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -229,7 +229,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -237,7 +237,7 @@ public class ParseLiveStreamProcessNotificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NotificationType", this.NotificationType);

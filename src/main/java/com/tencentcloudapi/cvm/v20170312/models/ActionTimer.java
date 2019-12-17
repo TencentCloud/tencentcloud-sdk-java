@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionTimer  extends AbstractModel{
+public class ActionTimer extends AbstractModel{
 
     /**
     * 扩展数据
@@ -44,7 +44,7 @@ public class ActionTimer  extends AbstractModel{
     private String ActionTime;
 
     /**
-     * 获取扩展数据
+     * Get 扩展数据 
      * @return Externals 扩展数据
      */
     public Externals getExternals() {
@@ -52,7 +52,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 设置扩展数据
+     * Set 扩展数据
      * @param Externals 扩展数据
      */
     public void setExternals(Externals Externals) {
@@ -60,7 +60,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 获取定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * Get 定时器名称，目前仅支持销毁一个值：TerminateInstances。 
      * @return TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      */
     public String getTimerAction() {
@@ -68,7 +68,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 设置定时器名称，目前仅支持销毁一个值：TerminateInstances。
+     * Set 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      * @param TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
      */
     public void setTimerAction(String TimerAction) {
@@ -76,7 +76,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 获取执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
+     * Get 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。 
      * @return ActionTime 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public String getActionTime() {
@@ -84,7 +84,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 设置执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
+     * Set 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
      * @param ActionTime 执行时间，格式形如：2018-5-29 11:26:40,执行时间必须大于当前时间5分钟。
      */
     public void setActionTime(String ActionTime) {
@@ -92,7 +92,7 @@ public class ActionTimer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Externals.", this.Externals);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightResult  extends AbstractModel{
+public class LightResult extends AbstractModel{
 
     /**
     * 光照程度，参考提交任务时的LightStandard指定的Name参数
@@ -37,7 +37,7 @@ public class LightResult  extends AbstractModel{
     private Float LightValue;
 
     /**
-     * 获取光照程度，参考提交任务时的LightStandard指定的Name参数
+     * Get 光照程度，参考提交任务时的LightStandard指定的Name参数 
      * @return LightLevel 光照程度，参考提交任务时的LightStandard指定的Name参数
      */
     public String getLightLevel() {
@@ -45,7 +45,7 @@ public class LightResult  extends AbstractModel{
     }
 
     /**
-     * 设置光照程度，参考提交任务时的LightStandard指定的Name参数
+     * Set 光照程度，参考提交任务时的LightStandard指定的Name参数
      * @param LightLevel 光照程度，参考提交任务时的LightStandard指定的Name参数
      */
     public void setLightLevel(String LightLevel) {
@@ -53,7 +53,7 @@ public class LightResult  extends AbstractModel{
     }
 
     /**
-     * 获取光照亮度
+     * Get 光照亮度 
      * @return LightValue 光照亮度
      */
     public Float getLightValue() {
@@ -61,7 +61,7 @@ public class LightResult  extends AbstractModel{
     }
 
     /**
-     * 设置光照亮度
+     * Set 光照亮度
      * @param LightValue 光照亮度
      */
     public void setLightValue(Float LightValue) {
@@ -69,7 +69,7 @@ public class LightResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LightLevel", this.LightLevel);

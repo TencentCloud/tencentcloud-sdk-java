@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecoverRecycleTablesRequest  extends AbstractModel{
+public class RecoverRecycleTablesRequest extends AbstractModel{
 
     /**
     * 表所在应用实例ID
@@ -37,7 +37,7 @@ public class RecoverRecycleTablesRequest  extends AbstractModel{
     private SelectedTableInfo [] SelectedTables;
 
     /**
-     * 获取表所在应用实例ID
+     * Get 表所在应用实例ID 
      * @return ApplicationId 表所在应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class RecoverRecycleTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表所在应用实例ID
+     * Set 表所在应用实例ID
      * @param ApplicationId 表所在应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class RecoverRecycleTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待恢复表信息
+     * Get 待恢复表信息 
      * @return SelectedTables 待恢复表信息
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -61,7 +61,7 @@ public class RecoverRecycleTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待恢复表信息
+     * Set 待恢复表信息
      * @param SelectedTables 待恢复表信息
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -69,7 +69,7 @@ public class RecoverRecycleTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

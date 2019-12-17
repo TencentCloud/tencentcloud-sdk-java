@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesDiskNumResponse  extends AbstractModel{
+public class DescribeInstancesDiskNumResponse extends AbstractModel{
 
     /**
     * 各个云服务器已挂载和可挂载弹性云盘的数量。
@@ -37,7 +37,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取各个云服务器已挂载和可挂载弹性云盘的数量。
+     * Get 各个云服务器已挂载和可挂载弹性云盘的数量。 
      * @return AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
      */
     public AttachDetail [] getAttachDetail() {
@@ -45,7 +45,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各个云服务器已挂载和可挂载弹性云盘的数量。
+     * Set 各个云服务器已挂载和可挂载弹性云盘的数量。
      * @param AttachDetail 各个云服务器已挂载和可挂载弹性云盘的数量。
      */
     public void setAttachDetail(AttachDetail [] AttachDetail) {
@@ -53,7 +53,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeInstancesDiskNumResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AttachDetail.", this.AttachDetail);

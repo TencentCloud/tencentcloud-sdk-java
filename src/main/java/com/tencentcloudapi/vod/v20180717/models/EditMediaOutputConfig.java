@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaOutputConfig  extends AbstractModel{
+public class EditMediaOutputConfig extends AbstractModel{
 
     /**
     * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
@@ -52,7 +52,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。 
      * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      */
     public String getMediaName() {
@@ -60,7 +60,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
      */
     public void setMediaName(String MediaName) {
@@ -68,7 +68,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件格式，可选值：mp4、hls。默认是 mp4。
+     * Get 输出文件格式，可选值：mp4、hls。默认是 mp4。 
      * @return Type 输出文件格式，可选值：mp4、hls。默认是 mp4。
      */
     public String getType() {
@@ -76,7 +76,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件格式，可选值：mp4、hls。默认是 mp4。
+     * Set 输出文件格式，可选值：mp4、hls。默认是 mp4。
      * @param Type 输出文件格式，可选值：mp4、hls。默认是 mp4。
      */
     public void setType(String Type) {
@@ -84,8 +84,8 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li> 
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      */
@@ -94,7 +94,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
@@ -104,7 +104,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getExpireTime() {
@@ -112,7 +112,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setExpireTime(String ExpireTime) {
@@ -120,7 +120,7 @@ public class EditMediaOutputConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);

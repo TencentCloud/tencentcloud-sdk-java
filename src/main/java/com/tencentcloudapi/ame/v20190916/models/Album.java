@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Album  extends AbstractModel{
+public class Album extends AbstractModel{
 
     /**
     * 专辑名
@@ -38,7 +38,7 @@ public class Album  extends AbstractModel{
     private ImagePath [] ImagePathMap;
 
     /**
-     * 获取专辑名
+     * Get 专辑名 
      * @return AlbumName 专辑名
      */
     public String getAlbumName() {
@@ -46,7 +46,7 @@ public class Album  extends AbstractModel{
     }
 
     /**
-     * 设置专辑名
+     * Set 专辑名
      * @param AlbumName 专辑名
      */
     public void setAlbumName(String AlbumName) {
@@ -54,8 +54,8 @@ public class Album  extends AbstractModel{
     }
 
     /**
-     * 获取专辑图片大小及类别
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 专辑图片大小及类别
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImagePathMap 专辑图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class Album  extends AbstractModel{
     }
 
     /**
-     * 设置专辑图片大小及类别
+     * Set 专辑图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImagePathMap 专辑图片大小及类别
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class Album  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AlbumName", this.AlbumName);

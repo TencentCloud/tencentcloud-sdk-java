@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
+public class DescribeTranscodeTemplatesRequest extends AbstractModel{
 
     /**
     * 转码模板唯一标识过滤条件，数组长度限制：100。
@@ -71,7 +71,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取转码模板唯一标识过滤条件，数组长度限制：100。
+     * Get 转码模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
@@ -79,7 +79,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转码模板唯一标识过滤条件，数组长度限制：100。
+     * Set 转码模板唯一标识过滤条件，数组长度限制：100。
      * @param Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
@@ -87,9 +87,9 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型过滤条件，可选值：
+     * Get 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -99,7 +99,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型过滤条件，可选值：
+     * Set 模板类型过滤条件，可选值：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型过滤条件，可选值：
@@ -111,9 +111,9 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取封装格式过滤条件，可选值：
+     * Get 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
+<li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li> 
      * @return ContainerType 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
@@ -123,7 +123,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置封装格式过滤条件，可选值：
+     * Set 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式板；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式。</li>
      * @param ContainerType 封装格式过滤条件，可选值：
@@ -135,9 +135,9 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * Get 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：极速高清模板。</li> 
      * @return TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
@@ -147,7 +147,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * Set 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
      * @param TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
@@ -159,7 +159,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -167,7 +167,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -175,7 +175,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：100。
+     * Get 返回记录条数，默认值：10，最大值：100。 
      * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
@@ -183,7 +183,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：100。
+     * Set 返回记录条数，默认值：10，最大值：100。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -191,7 +191,7 @@ public class DescribeTranscodeTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);

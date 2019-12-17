@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataDisk  extends AbstractModel{
+public class DataDisk extends AbstractModel{
 
     /**
     * 云盘类型
@@ -65,7 +65,7 @@ public class DataDisk  extends AbstractModel{
     private String [] DiskId;
 
     /**
-     * 获取云盘类型
+     * Get 云盘类型 
      * @return DiskType 云盘类型
      */
     public String getDiskType() {
@@ -73,7 +73,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置云盘类型
+     * Set 云盘类型
      * @param DiskType 云盘类型
      */
     public void setDiskType(String DiskType) {
@@ -81,7 +81,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统
+     * Get 文件系统 
      * @return FileSystem 文件系统
      */
     public String getFileSystem() {
@@ -89,7 +89,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统
+     * Set 文件系统
      * @param FileSystem 文件系统
      */
     public void setFileSystem(String FileSystem) {
@@ -97,7 +97,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘大小(G）
+     * Get 云盘大小(G） 
      * @return DiskSize 云盘大小(G）
      */
     public Integer getDiskSize() {
@@ -105,7 +105,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置云盘大小(G）
+     * Set 云盘大小(G）
      * @param DiskSize 云盘大小(G）
      */
     public void setDiskSize(Integer DiskSize) {
@@ -113,7 +113,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动化格式盘并挂载
+     * Get 是否自动化格式盘并挂载 
      * @return AutuFormatAndMount 是否自动化格式盘并挂载
      */
     public Boolean getAutuFormatAndMount() {
@@ -121,7 +121,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动化格式盘并挂载
+     * Set 是否自动化格式盘并挂载
      * @param AutuFormatAndMount 是否自动化格式盘并挂载
      */
     public void setAutuFormatAndMount(Boolean AutuFormatAndMount) {
@@ -129,7 +129,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取挂载目录
+     * Get 挂载目录 
      * @return MountTarget 挂载目录
      */
     public String [] getMountTarget() {
@@ -137,7 +137,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置挂载目录
+     * Set 挂载目录
      * @param MountTarget 挂载目录
      */
     public void setMountTarget(String [] MountTarget) {
@@ -145,7 +145,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取云盘ID
+     * Get 云盘ID 
      * @return DiskId 云盘ID
      */
     public String [] getDiskId() {
@@ -153,7 +153,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置云盘ID
+     * Set 云盘ID
      * @param DiskId 云盘ID
      */
     public void setDiskId(String [] DiskId) {
@@ -161,7 +161,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);

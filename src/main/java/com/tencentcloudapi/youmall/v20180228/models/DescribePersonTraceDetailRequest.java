@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonTraceDetailRequest  extends AbstractModel{
+public class DescribePersonTraceDetailRequest extends AbstractModel{
 
     /**
     * 卖场编码
@@ -44,7 +44,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     private String TraceId;
 
     /**
-     * 获取卖场编码
+     * Get 卖场编码 
      * @return MallId 卖场编码
      */
     public String getMallId() {
@@ -52,7 +52,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卖场编码
+     * Set 卖场编码
      * @param MallId 卖场编码
      */
     public void setMallId(String MallId) {
@@ -60,7 +60,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户编码
+     * Get 客户编码 
      * @return PersonId 客户编码
      */
     public String getPersonId() {
@@ -68,7 +68,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户编码
+     * Set 客户编码
      * @param PersonId 客户编码
      */
     public void setPersonId(String PersonId) {
@@ -76,7 +76,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹编码
+     * Get 轨迹编码 
      * @return TraceId 轨迹编码
      */
     public String getTraceId() {
@@ -84,7 +84,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹编码
+     * Set 轨迹编码
      * @param TraceId 轨迹编码
      */
     public void setTraceId(String TraceId) {
@@ -92,7 +92,7 @@ public class DescribePersonTraceDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallId", this.MallId);

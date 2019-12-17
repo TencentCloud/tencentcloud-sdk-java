@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusRequest  extends AbstractModel{
+public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * 请求ID，即接口返回的 RequestId 参数
@@ -30,7 +30,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取请求ID，即接口返回的 RequestId 参数
+     * Get 请求ID，即接口返回的 RequestId 参数 
      * @return TaskId 请求ID，即接口返回的 RequestId 参数
      */
     public String getTaskId() {
@@ -38,7 +38,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求ID，即接口返回的 RequestId 参数
+     * Set 请求ID，即接口返回的 RequestId 参数
      * @param TaskId 请求ID，即接口返回的 RequestId 参数
      */
     public void setTaskId(String TaskId) {
@@ -46,7 +46,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

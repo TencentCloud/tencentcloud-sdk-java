@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WechatPublishTask  extends AbstractModel{
+public class WechatPublishTask extends AbstractModel{
 
     /**
     * 任务 ID。
@@ -110,7 +110,7 @@ FINISH：已完成。
     private String WechatUrl;
 
     /**
-     * 获取任务 ID。
+     * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
     public String getTaskId() {
@@ -118,7 +118,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置任务 ID。
+     * Set 任务 ID。
      * @param TaskId 任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -126,10 +126,10 @@ FINISH：已完成。
     }
 
     /**
-     * 获取任务状态，取值：
+     * Get 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
-FINISH：已完成。
+FINISH：已完成。 
      * @return Status 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
@@ -140,7 +140,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置任务状态，取值：
+     * Set 任务状态，取值：
 WAITING：等待中；
 PROCESSING：处理中；
 FINISH：已完成。
@@ -154,10 +154,10 @@ FINISH：已完成。
     }
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -168,7 +168,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -182,8 +182,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -192,7 +192,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -202,8 +202,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取发布视频文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布视频文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 发布视频文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -212,7 +212,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置发布视频文件 ID。
+     * Set 发布视频文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 发布视频文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -222,8 +222,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取微信发布模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信发布模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Definition 微信发布模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -232,7 +232,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置微信发布模板 ID。
+     * Set 微信发布模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 微信发布模板 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -242,8 +242,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布视频所对应的转码模板 ID，为 0 代表原始视频。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -252,7 +252,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
+     * Set 发布视频所对应的转码模板 ID，为 0 代表原始视频。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -262,12 +262,12 @@ FINISH：已完成。
     }
 
     /**
-     * 获取微信发布状态，取值：
+     * Get 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
 <li>NOTTRIGGERED：尚未发起微信发布。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WechatStatus 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
@@ -280,7 +280,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置微信发布状态，取值：
+     * Set 微信发布状态，取值：
 <li>FAIL：失败；</li>
 <li>SUCCESS：成功；</li>
 <li>AUDITNOTPASS：审核未通过；</li>
@@ -298,8 +298,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取微信 Vid。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信 Vid。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WechatVid 微信 Vid。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -308,7 +308,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置微信 Vid。
+     * Set 微信 Vid。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatVid 微信 Vid。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -318,8 +318,8 @@ FINISH：已完成。
     }
 
     /**
-     * 获取微信地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WechatUrl 微信地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -328,7 +328,7 @@ FINISH：已完成。
     }
 
     /**
-     * 设置微信地址。
+     * Set 微信地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatUrl 微信地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -338,7 +338,7 @@ FINISH：已完成。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

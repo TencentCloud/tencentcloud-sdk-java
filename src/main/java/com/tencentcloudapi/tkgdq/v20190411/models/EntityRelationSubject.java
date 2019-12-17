@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EntityRelationSubject  extends AbstractModel{
+public class EntityRelationSubject extends AbstractModel{
 
     /**
     * Subject对应id
@@ -44,7 +44,7 @@ public class EntityRelationSubject  extends AbstractModel{
     private Long [] Popular;
 
     /**
-     * 获取Subject对应id
+     * Get Subject对应id 
      * @return Id Subject对应id
      */
     public String [] getId() {
@@ -52,7 +52,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 设置Subject对应id
+     * Set Subject对应id
      * @param Id Subject对应id
      */
     public void setId(String [] Id) {
@@ -60,7 +60,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 获取Subject对应name
+     * Get Subject对应name 
      * @return Name Subject对应name
      */
     public String [] getName() {
@@ -68,7 +68,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 设置Subject对应name
+     * Set Subject对应name
      * @param Name Subject对应name
      */
     public void setName(String [] Name) {
@@ -76,7 +76,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 获取Subject对应popular
+     * Get Subject对应popular 
      * @return Popular Subject对应popular
      */
     public Long [] getPopular() {
@@ -84,7 +84,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 设置Subject对应popular
+     * Set Subject对应popular
      * @param Popular Subject对应popular
      */
     public void setPopular(Long [] Popular) {
@@ -92,7 +92,7 @@ public class EntityRelationSubject  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Id.", this.Id);

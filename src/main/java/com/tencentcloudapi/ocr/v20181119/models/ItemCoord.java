@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ItemCoord  extends AbstractModel{
+public class ItemCoord extends AbstractModel{
 
     /**
     * 左上角x
@@ -51,7 +51,7 @@ public class ItemCoord  extends AbstractModel{
     private Integer Height;
 
     /**
-     * 获取左上角x
+     * Get 左上角x 
      * @return X 左上角x
      */
     public Integer getX() {
@@ -59,7 +59,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置左上角x
+     * Set 左上角x
      * @param X 左上角x
      */
     public void setX(Integer X) {
@@ -67,7 +67,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取左上角y
+     * Get 左上角y 
      * @return Y 左上角y
      */
     public Integer getY() {
@@ -75,7 +75,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置左上角y
+     * Set 左上角y
      * @param Y 左上角y
      */
     public void setY(Integer Y) {
@@ -83,7 +83,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取宽width
+     * Get 宽width 
      * @return Width 宽width
      */
     public Integer getWidth() {
@@ -91,7 +91,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置宽width
+     * Set 宽width
      * @param Width 宽width
      */
     public void setWidth(Integer Width) {
@@ -99,7 +99,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取高height
+     * Get 高height 
      * @return Height 高height
      */
     public Integer getHeight() {
@@ -107,7 +107,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置高height
+     * Set 高height
      * @param Height 高height
      */
     public void setHeight(Integer Height) {
@@ -115,7 +115,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

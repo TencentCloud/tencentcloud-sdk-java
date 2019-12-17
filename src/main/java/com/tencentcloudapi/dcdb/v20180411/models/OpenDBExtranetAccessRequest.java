@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OpenDBExtranetAccessRequest  extends AbstractModel{
+public class OpenDBExtranetAccessRequest extends AbstractModel{
 
     /**
     * 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
@@ -30,7 +30,7 @@ public class OpenDBExtranetAccessRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
+     * Get 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。 
      * @return InstanceId 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class OpenDBExtranetAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
+     * Set 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
      * @param InstanceId 待开放外网访问的实例ID。形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class OpenDBExtranetAccessRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

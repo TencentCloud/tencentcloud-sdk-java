@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DealInfo  extends AbstractModel{
+public class DealInfo extends AbstractModel{
 
     /**
     * 订单名
@@ -34,14 +34,14 @@ public class DealInfo  extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 关联的流程 Id，可用于查询流程执行状态
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
     * 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
@@ -65,7 +65,7 @@ public class DealInfo  extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-     * 获取订单名
+     * Get 订单名 
      * @return DealName 订单名
      */
     public String getDealName() {
@@ -73,7 +73,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 设置订单名
+     * Set 订单名
      * @param DealName 订单名
      */
     public void setDealName(String DealName) {
@@ -81,39 +81,39 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 获取商品数量
+     * Get 商品数量 
      * @return Count 商品数量
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置商品数量
+     * Set 商品数量
      * @param Count 商品数量
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取关联的流程 Id，可用于查询流程执行状态
+     * Get 关联的流程 Id，可用于查询流程执行状态 
      * @return FlowId 关联的流程 Id，可用于查询流程执行状态
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * 设置关联的流程 Id，可用于查询流程执行状态
+     * Set 关联的流程 Id，可用于查询流程执行状态
      * @param FlowId 关联的流程 Id，可用于查询流程执行状态
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * Get 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。 
      * @return InstanceIdSet 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      */
     public String [] getInstanceIdSet() {
@@ -121,7 +121,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * Set 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      * @param InstanceIdSet 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
@@ -129,7 +129,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所属账号
+     * Get 所属账号 
      * @return OwnerUin 所属账号
      */
     public String getOwnerUin() {
@@ -137,7 +137,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属账号
+     * Set 所属账号
      * @param OwnerUin 所属账号
      */
     public void setOwnerUin(String OwnerUin) {
@@ -145,7 +145,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例付费类型
+     * Get 实例付费类型 
      * @return InstanceChargeType 实例付费类型
      */
     public String getInstanceChargeType() {
@@ -153,7 +153,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例付费类型
+     * Set 实例付费类型
      * @param InstanceChargeType 实例付费类型
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -161,7 +161,7 @@ public class DealInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);

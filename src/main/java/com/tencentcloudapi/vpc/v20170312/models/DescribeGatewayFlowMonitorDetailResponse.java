@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
+public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
 
     /**
     * 符合条件的对象数。
@@ -44,7 +44,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的对象数。
+     * Get 符合条件的对象数。 
      * @return TotalCount 符合条件的对象数。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的对象数。
+     * Set 符合条件的对象数。
      * @param TotalCount 符合条件的对象数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取网关流量监控明细。
+     * Get 网关流量监控明细。 
      * @return GatewayFlowMonitorDetailSet 网关流量监控明细。
      */
     public GatewayFlowMonitorDetail [] getGatewayFlowMonitorDetailSet() {
@@ -68,7 +68,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置网关流量监控明细。
+     * Set 网关流量监控明细。
      * @param GatewayFlowMonitorDetailSet 网关流量监控明细。
      */
     public void setGatewayFlowMonitorDetailSet(GatewayFlowMonitorDetail [] GatewayFlowMonitorDetailSet) {
@@ -76,7 +76,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeGatewayFlowMonitorDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

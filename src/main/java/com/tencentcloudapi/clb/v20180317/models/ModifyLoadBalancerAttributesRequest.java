@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
+public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
 
     /**
     * 负载均衡的唯一ID
@@ -51,7 +51,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     private InternetAccessible InternetChargeInfo;
 
     /**
-     * 获取负载均衡的唯一ID
+     * Get 负载均衡的唯一ID 
      * @return LoadBalancerId 负载均衡的唯一ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的唯一ID
+     * Set 负载均衡的唯一ID
      * @param LoadBalancerId 负载均衡的唯一ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡实例名称
+     * Get 负载均衡实例名称 
      * @return LoadBalancerName 负载均衡实例名称
      */
     public String getLoadBalancerName() {
@@ -75,7 +75,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例名称
+     * Set 负载均衡实例名称
      * @param LoadBalancerName 负载均衡实例名称
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -83,7 +83,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡绑定的后端服务的地域信息
+     * Get 负载均衡绑定的后端服务的地域信息 
      * @return TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      */
     public TargetRegionInfo getTargetRegionInfo() {
@@ -91,7 +91,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡绑定的后端服务的地域信息
+     * Set 负载均衡绑定的后端服务的地域信息
      * @param TargetRegionInfo 负载均衡绑定的后端服务的地域信息
      */
     public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
@@ -99,7 +99,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * Get 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。 
      * @return InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
      */
     public InternetAccessible getInternetChargeInfo() {
@@ -107,7 +107,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * Set 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
      * @param InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
      */
     public void setInternetChargeInfo(InternetAccessible InternetChargeInfo) {
@@ -115,7 +115,7 @@ public class ModifyLoadBalancerAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

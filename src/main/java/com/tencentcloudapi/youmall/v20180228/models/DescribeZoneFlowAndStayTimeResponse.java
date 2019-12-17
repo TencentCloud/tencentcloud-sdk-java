@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
+public class DescribeZoneFlowAndStayTimeResponse extends AbstractModel{
 
     /**
     * 集团id
@@ -51,7 +51,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -59,7 +59,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -67,7 +67,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -75,7 +75,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -83,7 +83,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各区域人流数目和停留时长
+     * Get 各区域人流数目和停留时长 
      * @return Data 各区域人流数目和停留时长
      */
     public ZoneFlowAndAvrStayTime [] getData() {
@@ -91,7 +91,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各区域人流数目和停留时长
+     * Set 各区域人流数目和停留时长
      * @param Data 各区域人流数目和停留时长
      */
     public void setData(ZoneFlowAndAvrStayTime [] Data) {
@@ -99,7 +99,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeZoneFlowAndStayTimeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

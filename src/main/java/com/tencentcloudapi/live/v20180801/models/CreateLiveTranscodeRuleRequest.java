@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
+public class CreateLiveTranscodeRuleRequest extends AbstractModel{
 
     /**
     * 播放域名。
@@ -51,7 +51,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     private Integer TemplateId;
 
     /**
-     * 获取播放域名。
+     * Get 播放域名。 
      * @return DomainName 播放域名。
      */
     public String getDomainName() {
@@ -59,7 +59,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名。
+     * Set 播放域名。
      * @param DomainName 播放域名。
      */
     public void setDomainName(String DomainName) {
@@ -67,7 +67,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -75,7 +75,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -83,7 +83,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。如果只绑定域名或路径，则此处填空。
+     * Get 流名称。如果只绑定域名或路径，则此处填空。 
      * @return StreamName 流名称。如果只绑定域名或路径，则此处填空。
      */
     public String getStreamName() {
@@ -91,7 +91,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。如果只绑定域名或路径，则此处填空。
+     * Set 流名称。如果只绑定域名或路径，则此处填空。
      * @param StreamName 流名称。如果只绑定域名或路径，则此处填空。
      */
     public void setStreamName(String StreamName) {
@@ -99,7 +99,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定已有的模板Id。
+     * Get 指定已有的模板Id。 
      * @return TemplateId 指定已有的模板Id。
      */
     public Integer getTemplateId() {
@@ -107,7 +107,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定已有的模板Id。
+     * Set 指定已有的模板Id。
      * @param TemplateId 指定已有的模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -115,7 +115,7 @@ public class CreateLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

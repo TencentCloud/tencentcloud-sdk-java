@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvilToken  extends AbstractModel{
+public class EvilToken extends AbstractModel{
 
     /**
     * 文本是否恶意：
@@ -57,10 +57,10 @@ public class EvilToken  extends AbstractModel{
     private Long EvilType;
 
     /**
-     * 获取文本是否恶意：
+     * Get 文本是否恶意：
 0、正常；
 1、恶意；
-2、可疑送审
+2、可疑送审 
      * @return EvilFlag 文本是否恶意：
 0、正常；
 1、恶意；
@@ -71,7 +71,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 设置文本是否恶意：
+     * Set 文本是否恶意：
 0、正常；
 1、恶意；
 2、可疑送审
@@ -85,7 +85,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 获取恶意关键词组
+     * Get 恶意关键词组 
      * @return EvilKeywords 恶意关键词组
      */
     public String [] getEvilKeywords() {
@@ -93,7 +93,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 设置恶意关键词组
+     * Set 恶意关键词组
      * @param EvilKeywords 恶意关键词组
      */
     public void setEvilKeywords(String [] EvilKeywords) {
@@ -101,7 +101,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 获取文本恶意类型：
+     * Get 文本恶意类型：
 0、正常；
 1、政治；
 2、色情；
@@ -111,7 +111,7 @@ public class EvilToken  extends AbstractModel{
 6、迷信/邪教；
 7、其他违法（如跨站追杀/恶意竞争等）；
 8、综合；
-9、联系方式/链接
+9、联系方式/链接 
      * @return EvilType 文本恶意类型：
 0、正常；
 1、政治；
@@ -129,7 +129,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 设置文本恶意类型：
+     * Set 文本恶意类型：
 0、正常；
 1、政治；
 2、色情；
@@ -157,7 +157,7 @@ public class EvilToken  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);

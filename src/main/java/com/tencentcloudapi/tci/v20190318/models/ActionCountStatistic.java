@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionCountStatistic  extends AbstractModel{
+public class ActionCountStatistic extends AbstractModel{
 
     /**
     * 数量
@@ -37,7 +37,7 @@ public class ActionCountStatistic  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取数量
+     * Get 数量 
      * @return Count 数量
      */
     public Long getCount() {
@@ -45,7 +45,7 @@ public class ActionCountStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置数量
+     * Set 数量
      * @param Count 数量
      */
     public void setCount(Long Count) {
@@ -53,7 +53,7 @@ public class ActionCountStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class ActionCountStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class ActionCountStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

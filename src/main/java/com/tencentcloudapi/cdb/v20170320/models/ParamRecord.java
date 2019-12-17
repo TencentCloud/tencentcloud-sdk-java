@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParamRecord  extends AbstractModel{
+public class ParamRecord extends AbstractModel{
 
     /**
     * 实例ID
@@ -65,7 +65,7 @@ public class ParamRecord  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 获取参数名称
+     * Get 参数名称 
      * @return ParamName 参数名称
      */
     public String getParamName() {
@@ -89,7 +89,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置参数名称
+     * Set 参数名称
      * @param ParamName 参数名称
      */
     public void setParamName(String ParamName) {
@@ -97,7 +97,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 获取参数修改前的值
+     * Get 参数修改前的值 
      * @return OldValue 参数修改前的值
      */
     public String getOldValue() {
@@ -105,7 +105,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置参数修改前的值
+     * Set 参数修改前的值
      * @param OldValue 参数修改前的值
      */
     public void setOldValue(String OldValue) {
@@ -113,7 +113,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 获取参数修改后的值
+     * Get 参数修改后的值 
      * @return NewValue 参数修改后的值
      */
     public String getNewValue() {
@@ -121,7 +121,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置参数修改后的值
+     * Set 参数修改后的值
      * @param NewValue 参数修改后的值
      */
     public void setNewValue(String NewValue) {
@@ -129,7 +129,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 获取参数是否修改成功
+     * Get 参数是否修改成功 
      * @return IsSucess 参数是否修改成功
      */
     public Boolean getIsSucess() {
@@ -137,7 +137,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置参数是否修改成功
+     * Set 参数是否修改成功
      * @param IsSucess 参数是否修改成功
      */
     public void setIsSucess(Boolean IsSucess) {
@@ -145,7 +145,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
@@ -153,7 +153,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -161,7 +161,7 @@ public class ParamRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

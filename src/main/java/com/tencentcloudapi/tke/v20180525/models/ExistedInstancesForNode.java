@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExistedInstancesForNode  extends AbstractModel{
+public class ExistedInstancesForNode extends AbstractModel{
 
     /**
     * 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
@@ -37,7 +37,7 @@ public class ExistedInstancesForNode  extends AbstractModel{
     private ExistedInstancesPara ExistedInstancesPara;
 
     /**
-     * 获取节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
+     * Get 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。 
      * @return NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      */
     public String getNodeRole() {
@@ -45,7 +45,7 @@ public class ExistedInstancesForNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
+     * Set 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      * @param NodeRole 节点角色，取值:MASTER_ETCD, WORKER。MASTER_ETCD只有在创建 INDEPENDENT_CLUSTER 独立集群时需要指定。MASTER_ETCD节点数量为3～7，建议为奇数。MASTER_ETCD最小配置为4C8G。
      */
     public void setNodeRole(String NodeRole) {
@@ -53,7 +53,7 @@ public class ExistedInstancesForNode  extends AbstractModel{
     }
 
     /**
-     * 获取已存在实例的重装参数
+     * Get 已存在实例的重装参数 
      * @return ExistedInstancesPara 已存在实例的重装参数
      */
     public ExistedInstancesPara getExistedInstancesPara() {
@@ -61,7 +61,7 @@ public class ExistedInstancesForNode  extends AbstractModel{
     }
 
     /**
-     * 设置已存在实例的重装参数
+     * Set 已存在实例的重装参数
      * @param ExistedInstancesPara 已存在实例的重装参数
      */
     public void setExistedInstancesPara(ExistedInstancesPara ExistedInstancesPara) {
@@ -69,7 +69,7 @@ public class ExistedInstancesForNode  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);

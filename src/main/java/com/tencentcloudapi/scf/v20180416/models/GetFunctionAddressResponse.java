@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFunctionAddressResponse  extends AbstractModel{
+public class GetFunctionAddressResponse extends AbstractModel{
 
     /**
     * 函数的Cos地址
@@ -44,7 +44,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取函数的Cos地址
+     * Get 函数的Cos地址 
      * @return Url 函数的Cos地址
      */
     public String getUrl() {
@@ -52,7 +52,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的Cos地址
+     * Set 函数的Cos地址
      * @param Url 函数的Cos地址
      */
     public void setUrl(String Url) {
@@ -60,7 +60,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 获取函数的SHA256编码
+     * Get 函数的SHA256编码 
      * @return CodeSha256 函数的SHA256编码
      */
     public String getCodeSha256() {
@@ -68,7 +68,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 设置函数的SHA256编码
+     * Set 函数的SHA256编码
      * @param CodeSha256 函数的SHA256编码
      */
     public void setCodeSha256(String CodeSha256) {
@@ -76,7 +76,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class GetFunctionAddressResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

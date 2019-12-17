@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoModerationResponse  extends AbstractModel{
+public class VideoModerationResponse extends AbstractModel{
 
     /**
     * 业务返回码
@@ -45,8 +45,8 @@ public class VideoModerationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取业务返回码
-60001：成功请求回调任务
+     * Get 业务返回码
+60001：成功请求回调任务 
      * @return BusinessCode 业务返回码
 60001：成功请求回调任务
      */
@@ -55,7 +55,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务返回码
+     * Set 业务返回码
 60001：成功请求回调任务
      * @param BusinessCode 业务返回码
 60001：成功请求回调任务
@@ -65,7 +65,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取识别返回结果
+     * Get 识别返回结果 
      * @return Data 识别返回结果
      */
     public String getData() {
@@ -73,7 +73,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别返回结果
+     * Set 识别返回结果
      * @param Data 识别返回结果
      */
     public void setData(String Data) {
@@ -81,7 +81,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class VideoModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);

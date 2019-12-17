@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTrafficMirrorRequest  extends AbstractModel{
+public class CreateTrafficMirrorRequest extends AbstractModel{
 
     /**
     * 流量镜像实例别名。
@@ -37,7 +37,7 @@ public class CreateTrafficMirrorRequest  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取流量镜像实例别名。
+     * Get 流量镜像实例别名。 
      * @return Alias 流量镜像实例别名。
      */
     public String getAlias() {
@@ -45,7 +45,7 @@ public class CreateTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例别名。
+     * Set 流量镜像实例别名。
      * @param Alias 流量镜像实例别名。
      */
     public void setAlias(String Alias) {
@@ -53,7 +53,7 @@ public class CreateTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像实例所属的私有网络ID，形如：vpc-xxx。
+     * Get 流量镜像实例所属的私有网络ID，形如：vpc-xxx。 
      * @return VpcId 流量镜像实例所属的私有网络ID，形如：vpc-xxx。
      */
     public String getVpcId() {
@@ -61,7 +61,7 @@ public class CreateTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例所属的私有网络ID，形如：vpc-xxx。
+     * Set 流量镜像实例所属的私有网络ID，形如：vpc-xxx。
      * @param VpcId 流量镜像实例所属的私有网络ID，形如：vpc-xxx。
      */
     public void setVpcId(String VpcId) {
@@ -69,7 +69,7 @@ public class CreateTrafficMirrorRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Alias", this.Alias);

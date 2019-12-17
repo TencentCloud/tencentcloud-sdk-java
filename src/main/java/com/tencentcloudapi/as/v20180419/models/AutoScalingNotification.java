@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoScalingNotification  extends AbstractModel{
+public class AutoScalingNotification extends AbstractModel{
 
     /**
     * 伸缩组ID。
@@ -51,7 +51,7 @@ public class AutoScalingNotification  extends AbstractModel{
     private String AutoScalingNotificationId;
 
     /**
-     * 获取伸缩组ID。
+     * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -59,7 +59,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID。
+     * Set 伸缩组ID。
      * @param AutoScalingGroupId 伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -67,7 +67,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 获取用户组ID列表。
+     * Get 用户组ID列表。 
      * @return NotificationUserGroupIds 用户组ID列表。
      */
     public String [] getNotificationUserGroupIds() {
@@ -75,7 +75,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 设置用户组ID列表。
+     * Set 用户组ID列表。
      * @param NotificationUserGroupIds 用户组ID列表。
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
@@ -83,7 +83,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 获取通知事件列表。
+     * Get 通知事件列表。 
      * @return NotificationTypes 通知事件列表。
      */
     public String [] getNotificationTypes() {
@@ -91,7 +91,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 设置通知事件列表。
+     * Set 通知事件列表。
      * @param NotificationTypes 通知事件列表。
      */
     public void setNotificationTypes(String [] NotificationTypes) {
@@ -99,7 +99,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 获取事件通知ID。
+     * Get 事件通知ID。 
      * @return AutoScalingNotificationId 事件通知ID。
      */
     public String getAutoScalingNotificationId() {
@@ -107,7 +107,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 设置事件通知ID。
+     * Set 事件通知ID。
      * @param AutoScalingNotificationId 事件通知ID。
      */
     public void setAutoScalingNotificationId(String AutoScalingNotificationId) {
@@ -115,7 +115,7 @@ public class AutoScalingNotification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

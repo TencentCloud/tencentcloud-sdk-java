@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillResourceSummaryRequest  extends AbstractModel{
+public class DescribeBillResourceSummaryRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -59,7 +59,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     private Integer NeedRecordNum;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -67,7 +67,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -75,7 +75,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量，最大值为1000
+     * Get 数量，最大值为1000 
      * @return Limit 数量，最大值为1000
      */
     public Integer getLimit() {
@@ -83,7 +83,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量，最大值为1000
+     * Set 数量，最大值为1000
      * @param Limit 数量，最大值为1000
      */
     public void setLimit(Integer Limit) {
@@ -91,7 +91,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * Get 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。 
      * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public String getPeriodType() {
@@ -99,7 +99,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * Set 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public void setPeriodType(String PeriodType) {
@@ -107,7 +107,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Get 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。 
      * @return Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getMonth() {
@@ -115,7 +115,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Set 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param Month 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setMonth(String Month) {
@@ -123,8 +123,8 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
+     * Get 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要 
      * @return NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
@@ -133,7 +133,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要访问列表的总记录数，用于前端分页
+     * Set 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      * @param NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
@@ -143,7 +143,7 @@ public class DescribeBillResourceSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

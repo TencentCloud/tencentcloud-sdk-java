@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushUrlsCacheRequest  extends AbstractModel{
+public class PushUrlsCacheRequest extends AbstractModel{
 
     /**
     * URL 列表，需要包含协议头部 http:// 或 https://
@@ -49,7 +49,7 @@ global：预热全球节点
     private String Area;
 
     /**
-     * 获取URL 列表，需要包含协议头部 http:// 或 https://
+     * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public String [] getUrls() {
@@ -57,7 +57,7 @@ global：预热全球节点
     }
 
     /**
-     * 设置URL 列表，需要包含协议头部 http:// 或 https://
+     * Set URL 列表，需要包含协议头部 http:// 或 https://
      * @param Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public void setUrls(String [] Urls) {
@@ -65,8 +65,8 @@ global：预热全球节点
     }
 
     /**
-     * 获取指定预热请求回源时 HTTP 请求的 User-Agent 头部
-默认为 TencentCdn
+     * Get 指定预热请求回源时 HTTP 请求的 User-Agent 头部
+默认为 TencentCdn 
      * @return UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
      */
@@ -75,7 +75,7 @@ global：预热全球节点
     }
 
     /**
-     * 设置指定预热请求回源时 HTTP 请求的 User-Agent 头部
+     * Set 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
      * @param UserAgent 指定预热请求回源时 HTTP 请求的 User-Agent 头部
 默认为 TencentCdn
@@ -85,11 +85,11 @@ global：预热全球节点
     }
 
     /**
-     * 获取预热生效区域
+     * Get 预热生效区域
 mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
-不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务
+不填充情况下，默认为 mainland， URL 中域名必须在对应区域启用了加速服务才能提交对应区域的预热任务 
      * @return Area 预热生效区域
 mainland：预热至境内节点
 overseas：预热至境外节点
@@ -101,7 +101,7 @@ global：预热全球节点
     }
 
     /**
-     * 设置预热生效区域
+     * Set 预热生效区域
 mainland：预热至境内节点
 overseas：预热至境外节点
 global：预热全球节点
@@ -117,7 +117,7 @@ global：预热全球节点
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SimpleHlsClipRequest  extends AbstractModel{
+public class SimpleHlsClipRequest extends AbstractModel{
 
     /**
     * 需要裁剪的腾讯云点播 HLS 视频 URL。
@@ -44,7 +44,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取需要裁剪的腾讯云点播 HLS 视频 URL。
+     * Get 需要裁剪的腾讯云点播 HLS 视频 URL。 
      * @return Url 需要裁剪的腾讯云点播 HLS 视频 URL。
      */
     public String getUrl() {
@@ -52,7 +52,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要裁剪的腾讯云点播 HLS 视频 URL。
+     * Set 需要裁剪的腾讯云点播 HLS 视频 URL。
      * @param Url 需要裁剪的腾讯云点播 HLS 视频 URL。
      */
     public void setUrl(String Url) {
@@ -60,7 +60,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。
+     * Get 裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。 
      * @return StartTimeOffset 裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。
      */
     public Float getStartTimeOffset() {
@@ -68,7 +68,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。
+     * Set 裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。
      * @param StartTimeOffset 裁剪的开始偏移时间，单位秒。默认 0，即从视频开头开始裁剪。负数表示距离视频结束多少秒开始裁剪。比如 -10 表示从倒数第 10 秒开始裁剪。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -76,7 +76,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。
+     * Get 裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。 
      * @return EndTimeOffset 裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。
      */
     public Float getEndTimeOffset() {
@@ -84,7 +84,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。
+     * Set 裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。
      * @param EndTimeOffset 裁剪的结束偏移时间，单位秒。默认 0，即裁剪到视频尾部。负数表示距离视频结束多少秒结束裁剪。比如 -10 表示到倒数第 10 秒结束裁剪。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -92,7 +92,7 @@ public class SimpleHlsClipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

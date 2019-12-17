@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountPasswordRequest  extends AbstractModel{
+public class ModifyAccountPasswordRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -44,7 +44,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     private Account [] Accounts;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
+     * Get 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。 
      * @return NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      */
     public String getNewPassword() {
@@ -68,7 +68,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
+     * Set 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      * @param NewPassword 数据库账号的新密码。密码应至少包含字母、数字和字符（_+-&=!@#$%^*()）中的两种，长度为8-64个字符。
      */
     public void setNewPassword(String NewPassword) {
@@ -76,7 +76,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库账号。
+     * Get 云数据库账号。 
      * @return Accounts 云数据库账号。
      */
     public Account [] getAccounts() {
@@ -84,7 +84,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库账号。
+     * Set 云数据库账号。
      * @param Accounts 云数据库账号。
      */
     public void setAccounts(Account [] Accounts) {
@@ -92,7 +92,7 @@ public class ModifyAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

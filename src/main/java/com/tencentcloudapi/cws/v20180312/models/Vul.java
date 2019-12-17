@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Vul  extends AbstractModel{
+public class Vul extends AbstractModel{
 
     /**
     * 漏洞ID。
@@ -149,7 +149,7 @@ public class Vul  extends AbstractModel{
     private String Uin;
 
     /**
-     * 获取漏洞ID。
+     * Get 漏洞ID。 
      * @return Id 漏洞ID。
      */
     public Integer getId() {
@@ -157,7 +157,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞ID。
+     * Set 漏洞ID。
      * @param Id 漏洞ID。
      */
     public void setId(Integer Id) {
@@ -165,7 +165,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取站点ID。
+     * Get 站点ID。 
      * @return SiteId 站点ID。
      */
     public Integer getSiteId() {
@@ -173,7 +173,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置站点ID。
+     * Set 站点ID。
      * @param SiteId 站点ID。
      */
     public void setSiteId(Integer SiteId) {
@@ -181,7 +181,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取扫描引擎的扫描任务ID。
+     * Get 扫描引擎的扫描任务ID。 
      * @return TaskId 扫描引擎的扫描任务ID。
      */
     public Integer getTaskId() {
@@ -189,7 +189,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置扫描引擎的扫描任务ID。
+     * Set 扫描引擎的扫描任务ID。
      * @param TaskId 扫描引擎的扫描任务ID。
      */
     public void setTaskId(Integer TaskId) {
@@ -197,7 +197,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞级别：high、middle、low、notice。
+     * Get 漏洞级别：high、middle、low、notice。 
      * @return Level 漏洞级别：high、middle、low、notice。
      */
     public String getLevel() {
@@ -205,7 +205,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞级别：high、middle、low、notice。
+     * Set 漏洞级别：high、middle、low、notice。
      * @param Level 漏洞级别：high、middle、low、notice。
      */
     public void setLevel(String Level) {
@@ -213,7 +213,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞名称。
+     * Get 漏洞名称。 
      * @return Name 漏洞名称。
      */
     public String getName() {
@@ -221,7 +221,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞名称。
+     * Set 漏洞名称。
      * @param Name 漏洞名称。
      */
     public void setName(String Name) {
@@ -229,7 +229,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取出现漏洞的url。
+     * Get 出现漏洞的url。 
      * @return Url 出现漏洞的url。
      */
     public String getUrl() {
@@ -237,7 +237,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置出现漏洞的url。
+     * Set 出现漏洞的url。
      * @param Url 出现漏洞的url。
      */
     public void setUrl(String Url) {
@@ -245,7 +245,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取网址/细节。
+     * Get 网址/细节。 
      * @return Html 网址/细节。
      */
     public String getHtml() {
@@ -253,7 +253,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置网址/细节。
+     * Set 网址/细节。
      * @param Html 网址/细节。
      */
     public void setHtml(String Html) {
@@ -261,7 +261,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞类型。
+     * Get 漏洞类型。 
      * @return Nickname 漏洞类型。
      */
     public String getNickname() {
@@ -269,7 +269,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞类型。
+     * Set 漏洞类型。
      * @param Nickname 漏洞类型。
      */
     public void setNickname(String Nickname) {
@@ -277,7 +277,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取危害说明。
+     * Get 危害说明。 
      * @return Harm 危害说明。
      */
     public String getHarm() {
@@ -285,7 +285,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置危害说明。
+     * Set 危害说明。
      * @param Harm 危害说明。
      */
     public void setHarm(String Harm) {
@@ -293,7 +293,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述。
+     * Get 漏洞描述。 
      * @return Describe 漏洞描述。
      */
     public String getDescribe() {
@@ -301,7 +301,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述。
+     * Set 漏洞描述。
      * @param Describe 漏洞描述。
      */
     public void setDescribe(String Describe) {
@@ -309,7 +309,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取解决方案。
+     * Get 解决方案。 
      * @return Solution 解决方案。
      */
     public String getSolution() {
@@ -317,7 +317,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置解决方案。
+     * Set 解决方案。
      * @param Solution 解决方案。
      */
     public void setSolution(String Solution) {
@@ -325,7 +325,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞参考。
+     * Get 漏洞参考。 
      * @return From 漏洞参考。
      */
     public String getFrom() {
@@ -333,7 +333,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞参考。
+     * Set 漏洞参考。
      * @param From 漏洞参考。
      */
     public void setFrom(String From) {
@@ -341,7 +341,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞通过该参数攻击。
+     * Get 漏洞通过该参数攻击。 
      * @return Parameter 漏洞通过该参数攻击。
      */
     public String getParameter() {
@@ -349,7 +349,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞通过该参数攻击。
+     * Set 漏洞通过该参数攻击。
      * @param Parameter 漏洞通过该参数攻击。
      */
     public void setParameter(String Parameter) {
@@ -357,7 +357,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取CreatedAt。
+     * Get CreatedAt。 
      * @return CreatedAt CreatedAt。
      */
     public String getCreatedAt() {
@@ -365,7 +365,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置CreatedAt。
+     * Set CreatedAt。
      * @param CreatedAt CreatedAt。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -373,7 +373,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取UpdatedAt。
+     * Get UpdatedAt。 
      * @return UpdatedAt UpdatedAt。
      */
     public String getUpdatedAt() {
@@ -381,7 +381,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置UpdatedAt。
+     * Set UpdatedAt。
      * @param UpdatedAt UpdatedAt。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -389,7 +389,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取是否已经添加误报，0-否，1-是。
+     * Get 是否已经添加误报，0-否，1-是。 
      * @return IsReported 是否已经添加误报，0-否，1-是。
      */
     public Integer getIsReported() {
@@ -397,7 +397,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置是否已经添加误报，0-否，1-是。
+     * Set 是否已经添加误报，0-否，1-是。
      * @param IsReported 是否已经添加误报，0-否，1-是。
      */
     public void setIsReported(Integer IsReported) {
@@ -405,7 +405,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid。
+     * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
     public Integer getAppid() {
@@ -413,7 +413,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid。
+     * Set 云用户appid。
      * @param Appid 云用户appid。
      */
     public void setAppid(Integer Appid) {
@@ -421,7 +421,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 获取云用户标识。
+     * Get 云用户标识。 
      * @return Uin 云用户标识。
      */
     public String getUin() {
@@ -429,7 +429,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 设置云用户标识。
+     * Set 云用户标识。
      * @param Uin 云用户标识。
      */
     public void setUin(String Uin) {
@@ -437,7 +437,7 @@ public class Vul  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

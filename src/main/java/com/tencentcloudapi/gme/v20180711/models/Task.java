@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Task  extends AbstractModel{
+public class Task extends AbstractModel{
 
     /**
     * 数据的唯一ID
@@ -51,7 +51,7 @@ public class Task  extends AbstractModel{
     private String OpenId;
 
     /**
-     * 获取数据的唯一ID
+     * Get 数据的唯一ID 
      * @return DataId 数据的唯一ID
      */
     public String getDataId() {
@@ -59,7 +59,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置数据的唯一ID
+     * Set 数据的唯一ID
      * @param DataId 数据的唯一ID
      */
     public void setDataId(String DataId) {
@@ -67,7 +67,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取数据文件的url，为 urlencode 编码，流式则为拉流地址
+     * Get 数据文件的url，为 urlencode 编码，流式则为拉流地址 
      * @return Url 数据文件的url，为 urlencode 编码，流式则为拉流地址
      */
     public String getUrl() {
@@ -75,7 +75,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置数据文件的url，为 urlencode 编码，流式则为拉流地址
+     * Set 数据文件的url，为 urlencode 编码，流式则为拉流地址
      * @param Url 数据文件的url，为 urlencode 编码，流式则为拉流地址
      */
     public void setUrl(String Url) {
@@ -83,7 +83,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * Get gme实时语音房间id，通过gme实时语音进行语音分析时输入 
      * @return RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
      */
     public String getRoomId() {
@@ -91,7 +91,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * Set gme实时语音房间id，通过gme实时语音进行语音分析时输入
      * @param RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
      */
     public void setRoomId(String RoomId) {
@@ -99,7 +99,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * Get gme实时语音用户id，通过gme实时语音进行语音分析时输入 
      * @return OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
      */
     public String getOpenId() {
@@ -107,7 +107,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * Set gme实时语音用户id，通过gme实时语音进行语音分析时输入
      * @param OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
      */
     public void setOpenId(String OpenId) {
@@ -115,7 +115,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataId", this.DataId);

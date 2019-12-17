@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceAccountResponse  extends AbstractModel{
+public class DescribeInstanceAccountResponse extends AbstractModel{
 
     /**
     * 账号详细信息
@@ -46,8 +46,8 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取账号详细信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Accounts 账号详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置账号详细信息
+     * Set 账号详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Accounts 账号详细信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 获取账号个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 账号个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置账号个数
+     * Set 账号个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 账号个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class DescribeInstanceAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);

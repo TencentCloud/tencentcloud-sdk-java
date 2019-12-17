@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7ExListener  extends AbstractModel{
+public class L7ExListener extends AbstractModel{
 
     /**
     * 绑定的监听器唯一ID。
@@ -156,7 +156,7 @@ public class L7ExListener  extends AbstractModel{
     private Boolean BindTrafficMirror;
 
     /**
-     * 获取绑定的监听器唯一ID。
+     * Get 绑定的监听器唯一ID。 
      * @return ListenerId 绑定的监听器唯一ID。
      */
     public String getListenerId() {
@@ -164,7 +164,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的监听器唯一ID。
+     * Set 绑定的监听器唯一ID。
      * @param ListenerId 绑定的监听器唯一ID。
      */
     public void setListenerId(String ListenerId) {
@@ -172,7 +172,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称。
+     * Get 监听器名称。 
      * @return ListenerName 监听器名称。
      */
     public String getListenerName() {
@@ -180,7 +180,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称。
+     * Set 监听器名称。
      * @param ListenerName 监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -188,7 +188,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器协议类型，可选值：http,https。
+     * Get 七层监听器协议类型，可选值：http,https。 
      * @return Protocol 七层监听器协议类型，可选值：http,https。
      */
     public String getProtocol() {
@@ -196,7 +196,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器协议类型，可选值：http,https。
+     * Set 七层监听器协议类型，可选值：http,https。
      * @param Protocol 七层监听器协议类型，可选值：http,https。
      */
     public void setProtocol(String Protocol) {
@@ -204,7 +204,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的监听端口。
+     * Get 监听器的监听端口。 
      * @return LoadBalancerPort 监听器的监听端口。
      */
     public Integer getLoadBalancerPort() {
@@ -212,7 +212,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的监听端口。
+     * Set 监听器的监听端口。
      * @param LoadBalancerPort 监听器的监听端口。
      */
     public void setLoadBalancerPort(Integer LoadBalancerPort) {
@@ -220,7 +220,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取当前带宽。
+     * Get 当前带宽。 
      * @return Bandwidth 当前带宽。
      */
     public Integer getBandwidth() {
@@ -228,7 +228,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置当前带宽。
+     * Set 当前带宽。
      * @param Bandwidth 当前带宽。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -236,7 +236,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取带宽上限。
+     * Get 带宽上限。 
      * @return MaxBandwidth 带宽上限。
      */
     public Integer getMaxBandwidth() {
@@ -244,7 +244,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置带宽上限。
+     * Set 带宽上限。
      * @param MaxBandwidth 带宽上限。
      */
     public void setMaxBandwidth(Integer MaxBandwidth) {
@@ -252,7 +252,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器类型。
+     * Get 监听器类型。 
      * @return ListenerType 监听器类型。
      */
     public String getListenerType() {
@@ -260,7 +260,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器类型。
+     * Set 监听器类型。
      * @param ListenerType 监听器类型。
      */
     public void setListenerType(String ListenerType) {
@@ -268,7 +268,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Get 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public Integer getSslMode() {
@@ -276,7 +276,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Set 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public void setSslMode(Integer SslMode) {
@@ -284,7 +284,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书ID。
+     * Get 服务端证书ID。 
      * @return CertId 服务端证书ID。
      */
     public String getCertId() {
@@ -292,7 +292,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书ID。
+     * Set 服务端证书ID。
      * @param CertId 服务端证书ID。
      */
     public void setCertId(String CertId) {
@@ -300,7 +300,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书ID。
+     * Get 客户端证书ID。 
      * @return CertCaId 客户端证书ID。
      */
     public String getCertCaId() {
@@ -308,7 +308,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书ID。
+     * Set 客户端证书ID。
      * @param CertCaId 客户端证书ID。
      */
     public void setCertCaId(String CertCaId) {
@@ -316,7 +316,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取添加时间。
+     * Get 添加时间。 
      * @return AddTimestamp 添加时间。
      */
     public String getAddTimestamp() {
@@ -324,7 +324,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置添加时间。
+     * Set 添加时间。
      * @param AddTimestamp 添加时间。
      */
     public void setAddTimestamp(String AddTimestamp) {
@@ -332,7 +332,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡名ID。
+     * Get 负载均衡名ID。 
      * @return LoadBalancerId 负载均衡名ID。
      */
     public String getLoadBalancerId() {
@@ -340,7 +340,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡名ID。
+     * Set 负载均衡名ID。
      * @param LoadBalancerId 负载均衡名ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -348,7 +348,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称。
+     * Get 私有网络名称。 
      * @return VpcName 私有网络名称。
      */
     public String getVpcName() {
@@ -356,7 +356,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称。
+     * Set 私有网络名称。
      * @param VpcName 私有网络名称。
      */
     public void setVpcName(String VpcName) {
@@ -364,7 +364,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络Cidr。
+     * Get 私有网络Cidr。 
      * @return VpcCidrBlock 私有网络Cidr。
      */
     public String getVpcCidrBlock() {
@@ -372,7 +372,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络Cidr。
+     * Set 私有网络Cidr。
      * @param VpcCidrBlock 私有网络Cidr。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -380,7 +380,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡的VIP。
+     * Get 负载均衡的VIP。 
      * @return LoadBalancerVips 负载均衡的VIP。
      */
     public String [] getLoadBalancerVips() {
@@ -388,7 +388,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的VIP。
+     * Set 负载均衡的VIP。
      * @param LoadBalancerVips 负载均衡的VIP。
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
@@ -396,7 +396,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡名称。
+     * Get 负载均衡名称。 
      * @return LoadBalancerName 负载均衡名称。
      */
     public String getLoadBalancerName() {
@@ -404,7 +404,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡名称。
+     * Set 负载均衡名称。
      * @param LoadBalancerName 负载均衡名称。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -412,7 +412,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡IPV6的VIP。
+     * Get 负载均衡IPV6的VIP。 
      * @return LoadBalancerVipv6s 负载均衡IPV6的VIP。
      */
     public String [] getLoadBalancerVipv6s() {
@@ -420,7 +420,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡IPV6的VIP。
+     * Set 负载均衡IPV6的VIP。
      * @param LoadBalancerVipv6s 负载均衡IPV6的VIP。
      */
     public void setLoadBalancerVipv6s(String [] LoadBalancerVipv6s) {
@@ -428,7 +428,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取支持的IP协议类型。ipv4或者是ipv6。
+     * Get 支持的IP协议类型。ipv4或者是ipv6。 
      * @return IpProtocolType 支持的IP协议类型。ipv4或者是ipv6。
      */
     public String getIpProtocolType() {
@@ -436,7 +436,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置支持的IP协议类型。ipv4或者是ipv6。
+     * Set 支持的IP协议类型。ipv4或者是ipv6。
      * @param IpProtocolType 支持的IP协议类型。ipv4或者是ipv6。
      */
     public void setIpProtocolType(String IpProtocolType) {
@@ -444,7 +444,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 获取是否绑定在入参指定的流量镜像中。
+     * Get 是否绑定在入参指定的流量镜像中。 
      * @return BindTrafficMirror 是否绑定在入参指定的流量镜像中。
      */
     public Boolean getBindTrafficMirror() {
@@ -452,7 +452,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 设置是否绑定在入参指定的流量镜像中。
+     * Set 是否绑定在入参指定的流量镜像中。
      * @param BindTrafficMirror 是否绑定在入参指定的流量镜像中。
      */
     public void setBindTrafficMirror(Boolean BindTrafficMirror) {
@@ -460,7 +460,7 @@ public class L7ExListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

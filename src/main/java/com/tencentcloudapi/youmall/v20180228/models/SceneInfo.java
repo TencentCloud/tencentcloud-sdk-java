@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SceneInfo  extends AbstractModel{
+public class SceneInfo extends AbstractModel{
 
     /**
     * 场景图
@@ -58,7 +58,7 @@ public class SceneInfo  extends AbstractModel{
     private Integer HeadHeight;
 
     /**
-     * 获取场景图
+     * Get 场景图 
      * @return ScenePictureURL 场景图
      */
     public String getScenePictureURL() {
@@ -66,7 +66,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置场景图
+     * Set 场景图
      * @param ScenePictureURL 场景图
      */
     public void setScenePictureURL(String ScenePictureURL) {
@@ -74,7 +74,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍头像左上角X坐标在场景图中的像素点位置
+     * Get 抓拍头像左上角X坐标在场景图中的像素点位置 
      * @return HeadX 抓拍头像左上角X坐标在场景图中的像素点位置
      */
     public Integer getHeadX() {
@@ -82,7 +82,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍头像左上角X坐标在场景图中的像素点位置
+     * Set 抓拍头像左上角X坐标在场景图中的像素点位置
      * @param HeadX 抓拍头像左上角X坐标在场景图中的像素点位置
      */
     public void setHeadX(Integer HeadX) {
@@ -90,7 +90,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍头像左上角Y坐标在场景图中的像素点位置
+     * Get 抓拍头像左上角Y坐标在场景图中的像素点位置 
      * @return HeadY 抓拍头像左上角Y坐标在场景图中的像素点位置
      */
     public Integer getHeadY() {
@@ -98,7 +98,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍头像左上角Y坐标在场景图中的像素点位置
+     * Set 抓拍头像左上角Y坐标在场景图中的像素点位置
      * @param HeadY 抓拍头像左上角Y坐标在场景图中的像素点位置
      */
     public void setHeadY(Integer HeadY) {
@@ -106,7 +106,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍头像在场景图中占有的像素宽度
+     * Get 抓拍头像在场景图中占有的像素宽度 
      * @return HeadWidth 抓拍头像在场景图中占有的像素宽度
      */
     public Integer getHeadWidth() {
@@ -114,7 +114,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍头像在场景图中占有的像素宽度
+     * Set 抓拍头像在场景图中占有的像素宽度
      * @param HeadWidth 抓拍头像在场景图中占有的像素宽度
      */
     public void setHeadWidth(Integer HeadWidth) {
@@ -122,7 +122,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍头像在场景图中占有的像素高度
+     * Get 抓拍头像在场景图中占有的像素高度 
      * @return HeadHeight 抓拍头像在场景图中占有的像素高度
      */
     public Integer getHeadHeight() {
@@ -130,7 +130,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍头像在场景图中占有的像素高度
+     * Set 抓拍头像在场景图中占有的像素高度
      * @param HeadHeight 抓拍头像在场景图中占有的像素高度
      */
     public void setHeadHeight(Integer HeadHeight) {
@@ -138,7 +138,7 @@ public class SceneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScenePictureURL", this.ScenePictureURL);

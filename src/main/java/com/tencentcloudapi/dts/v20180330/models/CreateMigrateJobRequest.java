@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMigrateJobRequest  extends AbstractModel{
+public class CreateMigrateJobRequest extends AbstractModel{
 
     /**
     * 数据迁移任务名称
@@ -94,7 +94,7 @@ Schema:s1}]
     private String DatabaseInfo;
 
     /**
-     * 获取数据迁移任务名称
+     * Get 数据迁移任务名称 
      * @return JobName 数据迁移任务名称
      */
     public String getJobName() {
@@ -102,7 +102,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置数据迁移任务名称
+     * Set 数据迁移任务名称
      * @param JobName 数据迁移任务名称
      */
     public void setJobName(String JobName) {
@@ -110,7 +110,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取迁移任务配置选项
+     * Get 迁移任务配置选项 
      * @return MigrateOption 迁移任务配置选项
      */
     public MigrateOption getMigrateOption() {
@@ -118,7 +118,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置迁移任务配置选项
+     * Set 迁移任务配置选项
      * @param MigrateOption 迁移任务配置选项
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
@@ -126,7 +126,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * Get 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。 
      * @return SrcDatabaseType 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public String getSrcDatabaseType() {
@@ -134,7 +134,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * Set 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      * @param SrcDatabaseType 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -142,7 +142,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * Get 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例) 
      * @return SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public String getSrcAccessType() {
@@ -150,7 +150,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * Set 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      * @param SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -158,7 +158,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取源实例信息，具体内容跟迁移任务类型相关
+     * Get 源实例信息，具体内容跟迁移任务类型相关 
      * @return SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public SrcInfo getSrcInfo() {
@@ -166,7 +166,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置源实例信息，具体内容跟迁移任务类型相关
+     * Set 源实例信息，具体内容跟迁移任务类型相关
      * @param SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public void setSrcInfo(SrcInfo SrcInfo) {
@@ -174,7 +174,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * Get 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。 
      * @return DstDatabaseType 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public String getDstDatabaseType() {
@@ -182,7 +182,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+     * Set 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      * @param DstDatabaseType 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -190,7 +190,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
+     * Get 目标实例接入类型，目前支持：cdb（腾讯云数据库实例） 
      * @return DstAccessType 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
      */
     public String getDstAccessType() {
@@ -198,7 +198,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
+     * Set 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
      * @param DstAccessType 目标实例接入类型，目前支持：cdb（腾讯云数据库实例）
      */
     public void setDstAccessType(String DstAccessType) {
@@ -206,7 +206,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取目标实例信息
+     * Get 目标实例信息 
      * @return DstInfo 目标实例信息
      */
     public DstInfo getDstInfo() {
@@ -214,7 +214,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置目标实例信息
+     * Set 目标实例信息
      * @param DstInfo 目标实例信息
      */
     public void setDstInfo(DstInfo DstInfo) {
@@ -222,7 +222,7 @@ Schema:s1}]
     }
 
     /**
-     * 获取需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
+     * Get 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：
@@ -230,7 +230,7 @@ Schema:s1}]
 Table:[table1,table2]},{Database:db1,Schema:s2
 Table:[table1,table2]},{Database:db2,Schema:s1
 Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+Schema:s1}] 
      * @return DatabaseInfo 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
@@ -246,7 +246,7 @@ Schema:s1}]
     }
 
     /**
-     * 设置需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
+     * Set 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
 对于database-table两级结构的数据库：
 [{Database:db1,Table:[table1,table2]},{Database:db2}]
 对于database-schema-table三级结构：
@@ -270,7 +270,7 @@ Schema:s1}]
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobName", this.JobName);

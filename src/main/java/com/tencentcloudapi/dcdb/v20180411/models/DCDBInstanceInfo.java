@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DCDBInstanceInfo  extends AbstractModel{
+public class DCDBInstanceInfo extends AbstractModel{
 
     /**
     * 实例ID
@@ -290,7 +290,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     private Integer IsAuditSupported;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -298,7 +298,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -306,7 +306,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -314,7 +314,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -322,7 +322,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取APPID
+     * Get APPID 
      * @return AppId APPID
      */
     public Integer getAppId() {
@@ -330,7 +330,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置APPID
+     * Set APPID
      * @param AppId APPID
      */
     public void setAppId(Integer AppId) {
@@ -338,7 +338,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -346,7 +346,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -354,7 +354,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -362,7 +362,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -370,7 +370,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -378,7 +378,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -386,7 +386,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC数字ID
+     * Get VPC数字ID 
      * @return VpcId VPC数字ID
      */
     public Integer getVpcId() {
@@ -394,7 +394,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC数字ID
+     * Set VPC数字ID
      * @param VpcId VPC数字ID
      */
     public void setVpcId(Integer VpcId) {
@@ -402,7 +402,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Subnet数字ID
+     * Get Subnet数字ID 
      * @return SubnetId Subnet数字ID
      */
     public Integer getSubnetId() {
@@ -410,7 +410,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Subnet数字ID
+     * Set Subnet数字ID
      * @param SubnetId Subnet数字ID
      */
     public void setSubnetId(Integer SubnetId) {
@@ -418,7 +418,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态中文描述
+     * Get 状态中文描述 
      * @return StatusDesc 状态中文描述
      */
     public String getStatusDesc() {
@@ -426,7 +426,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态中文描述
+     * Set 状态中文描述
      * @param StatusDesc 状态中文描述
      */
     public void setStatusDesc(String StatusDesc) {
@@ -434,7 +434,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态
+     * Get 状态 
      * @return Status 状态
      */
     public Integer getStatus() {
@@ -442,7 +442,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态
+     * Set 状态
      * @param Status 状态
      */
     public void setStatus(Integer Status) {
@@ -450,7 +450,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP
+     * Get 内网IP 
      * @return Vip 内网IP
      */
     public String getVip() {
@@ -458,7 +458,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP
+     * Set 内网IP
      * @param Vip 内网IP
      */
     public void setVip(String Vip) {
@@ -466,7 +466,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网端口
+     * Get 内网端口 
      * @return Vport 内网端口
      */
     public Integer getVport() {
@@ -474,7 +474,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网端口
+     * Set 内网端口
      * @param Vport 内网端口
      */
     public void setVport(Integer Vport) {
@@ -482,7 +482,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -490,7 +490,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -498,7 +498,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标志
+     * Get 自动续费标志 
      * @return AutoRenewFlag 自动续费标志
      */
     public Integer getAutoRenewFlag() {
@@ -506,7 +506,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标志
+     * Set 自动续费标志
      * @param AutoRenewFlag 自动续费标志
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -514,7 +514,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位 GB
+     * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
     public Integer getMemory() {
@@ -522,7 +522,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位 GB
+     * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
     public void setMemory(Integer Memory) {
@@ -530,7 +530,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储大小，单位 GB
+     * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
     public Integer getStorage() {
@@ -538,7 +538,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储大小，单位 GB
+     * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
     public void setStorage(Integer Storage) {
@@ -546,7 +546,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片个数
+     * Get 分片个数 
      * @return ShardCount 分片个数
      */
     public Integer getShardCount() {
@@ -554,7 +554,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片个数
+     * Set 分片个数
      * @param ShardCount 分片个数
      */
     public void setShardCount(Integer ShardCount) {
@@ -562,7 +562,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间
+     * Get 到期时间 
      * @return PeriodEndTime 到期时间
      */
     public String getPeriodEndTime() {
@@ -570,7 +570,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间
+     * Set 到期时间
      * @param PeriodEndTime 到期时间
      */
     public void setPeriodEndTime(String PeriodEndTime) {
@@ -578,7 +578,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取隔离时间
+     * Get 隔离时间 
      * @return IsolatedTimestamp 隔离时间
      */
     public String getIsolatedTimestamp() {
@@ -586,7 +586,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置隔离时间
+     * Set 隔离时间
      * @param IsolatedTimestamp 隔离时间
      */
     public void setIsolatedTimestamp(String IsolatedTimestamp) {
@@ -594,7 +594,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取UIN
+     * Get UIN 
      * @return Uin UIN
      */
     public String getUin() {
@@ -602,7 +602,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置UIN
+     * Set UIN
      * @param Uin UIN
      */
     public void setUin(String Uin) {
@@ -610,7 +610,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片详情
+     * Get 分片详情 
      * @return ShardDetail 分片详情
      */
     public ShardInfo [] getShardDetail() {
@@ -618,7 +618,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片详情
+     * Set 分片详情
      * @param ShardDetail 分片详情
      */
     public void setShardDetail(ShardInfo [] ShardDetail) {
@@ -626,7 +626,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点数，2 为一主一从， 3 为一主二从
+     * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public Integer getNodeCount() {
@@ -634,7 +634,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点数，2 为一主一从， 3 为一主二从
+     * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public void setNodeCount(Integer NodeCount) {
@@ -642,7 +642,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取临时实例标记，0 为非临时实例
+     * Get 临时实例标记，0 为非临时实例 
      * @return IsTmp 临时实例标记，0 为非临时实例
      */
     public Integer getIsTmp() {
@@ -650,7 +650,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置临时实例标记，0 为非临时实例
+     * Set 临时实例标记，0 为非临时实例
      * @param IsTmp 临时实例标记，0 为非临时实例
      */
     public void setIsTmp(Integer IsTmp) {
@@ -658,7 +658,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群Id，为空表示非独享集群实例
+     * Get 独享集群Id，为空表示非独享集群实例 
      * @return ExclusterId 独享集群Id，为空表示非独享集群实例
      */
     public String getExclusterId() {
@@ -666,7 +666,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群Id，为空表示非独享集群实例
+     * Set 独享集群Id，为空表示非独享集群实例
      * @param ExclusterId 独享集群Id，为空表示非独享集群实例
      */
     public void setExclusterId(String ExclusterId) {
@@ -674,7 +674,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取字符串型的私有网络Id
+     * Get 字符串型的私有网络Id 
      * @return UniqueVpcId 字符串型的私有网络Id
      */
     public String getUniqueVpcId() {
@@ -682,7 +682,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置字符串型的私有网络Id
+     * Set 字符串型的私有网络Id
      * @param UniqueVpcId 字符串型的私有网络Id
      */
     public void setUniqueVpcId(String UniqueVpcId) {
@@ -690,7 +690,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取字符串型的私有网络子网Id
+     * Get 字符串型的私有网络子网Id 
      * @return UniqueSubnetId 字符串型的私有网络子网Id
      */
     public String getUniqueSubnetId() {
@@ -698,7 +698,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置字符串型的私有网络子网Id
+     * Set 字符串型的私有网络子网Id
      * @param UniqueSubnetId 字符串型的私有网络子网Id
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
@@ -706,7 +706,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数字实例Id（过时字段，请勿依赖该值）
+     * Get 数字实例Id（过时字段，请勿依赖该值） 
      * @return Id 数字实例Id（过时字段，请勿依赖该值）
      */
     public Integer getId() {
@@ -714,7 +714,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数字实例Id（过时字段，请勿依赖该值）
+     * Set 数字实例Id（过时字段，请勿依赖该值）
      * @param Id 数字实例Id（过时字段，请勿依赖该值）
      */
     public void setId(Integer Id) {
@@ -722,7 +722,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网访问的域名，公网可解析
+     * Get 外网访问的域名，公网可解析 
      * @return WanDomain 外网访问的域名，公网可解析
      */
     public String getWanDomain() {
@@ -730,7 +730,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网访问的域名，公网可解析
+     * Set 外网访问的域名，公网可解析
      * @param WanDomain 外网访问的域名，公网可解析
      */
     public void setWanDomain(String WanDomain) {
@@ -738,7 +738,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网 IP 地址，公网可访问
+     * Get 外网 IP 地址，公网可访问 
      * @return WanVip 外网 IP 地址，公网可访问
      */
     public String getWanVip() {
@@ -746,7 +746,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网 IP 地址，公网可访问
+     * Set 外网 IP 地址，公网可访问
      * @param WanVip 外网 IP 地址，公网可访问
      */
     public void setWanVip(String WanVip) {
@@ -754,7 +754,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网端口
+     * Get 外网端口 
      * @return WanPort 外网端口
      */
     public Integer getWanPort() {
@@ -762,7 +762,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网端口
+     * Set 外网端口
      * @param WanPort 外网端口
      */
     public void setWanPort(Integer WanPort) {
@@ -770,7 +770,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 Id（过时字段，请勿依赖该值）
+     * Get 产品类型 Id（过时字段，请勿依赖该值） 
      * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
     public Integer getPid() {
@@ -778,7 +778,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型 Id（过时字段，请勿依赖该值）
+     * Set 产品类型 Id（过时字段，请勿依赖该值）
      * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
     public void setPid(Integer Pid) {
@@ -786,7 +786,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例最后更新时间，格式为 2006-01-02 15:04:05
+     * Get 实例最后更新时间，格式为 2006-01-02 15:04:05 
      * @return UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      */
     public String getUpdateTime() {
@@ -794,7 +794,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例最后更新时间，格式为 2006-01-02 15:04:05
+     * Set 实例最后更新时间，格式为 2006-01-02 15:04:05
      * @param UpdateTime 实例最后更新时间，格式为 2006-01-02 15:04:05
      */
     public void setUpdateTime(String UpdateTime) {
@@ -802,7 +802,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎
+     * Get 数据库引擎 
      * @return DbEngine 数据库引擎
      */
     public String getDbEngine() {
@@ -810,7 +810,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库引擎
+     * Set 数据库引擎
      * @param DbEngine 数据库引擎
      */
     public void setDbEngine(String DbEngine) {
@@ -818,7 +818,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库引擎版本
+     * Get 数据库引擎版本 
      * @return DbVersion 数据库引擎版本
      */
     public String getDbVersion() {
@@ -826,7 +826,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库引擎版本
+     * Set 数据库引擎版本
      * @param DbVersion 数据库引擎版本
      */
     public void setDbVersion(String DbVersion) {
@@ -834,7 +834,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式
+     * Get 付费模式 
      * @return Paymode 付费模式
      */
     public String getPaymode() {
@@ -842,7 +842,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式
+     * Set 付费模式
      * @param Paymode 付费模式
      */
     public void setPaymode(String Paymode) {
@@ -850,8 +850,8 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例处于异步任务状态时，表示异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例处于异步任务状态时，表示异步任务流程ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Locker 实例处于异步任务状态时，表示异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -860,7 +860,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例处于异步任务状态时，表示异步任务流程ID
+     * Set 实例处于异步任务状态时，表示异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Locker 实例处于异步任务状态时，表示异步任务流程ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -870,7 +870,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中 
      * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     public Integer getWanStatus() {
@@ -878,7 +878,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
+     * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      */
     public void setWanStatus(Integer WanStatus) {
@@ -886,7 +886,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该实例是否支持审计。1-支持；0-不支持
+     * Get 该实例是否支持审计。1-支持；0-不支持 
      * @return IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
     public Integer getIsAuditSupported() {
@@ -894,7 +894,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该实例是否支持审计。1-支持；0-不支持
+     * Set 该实例是否支持审计。1-支持；0-不支持
      * @param IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      */
     public void setIsAuditSupported(Integer IsAuditSupported) {
@@ -902,7 +902,7 @@ public class DCDBInstanceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

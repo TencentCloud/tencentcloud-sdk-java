@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultListResponse  extends AbstractModel{
+public class DescribeFilterResultListResponse extends AbstractModel{
 
     /**
     * 过滤结果总数
@@ -46,8 +46,8 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取过滤结果总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤结果总数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 过滤结果总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置过滤结果总数
+     * Set 过滤结果总数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 过滤结果总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前分页过滤结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前分页过滤结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 当前分页过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前分页过滤结果列表
+     * Set 当前分页过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 当前分页过滤结果列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class DescribeFilterResultListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

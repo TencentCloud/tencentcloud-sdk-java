@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateTasksRequest  extends AbstractModel{
+public class TerminateTasksRequest extends AbstractModel{
 
     /**
     * 销毁节点所属实例ID
@@ -37,7 +37,7 @@ public class TerminateTasksRequest  extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-     * 获取销毁节点所属实例ID
+     * Get 销毁节点所属实例ID 
      * @return InstanceId 销毁节点所属实例ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class TerminateTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置销毁节点所属实例ID
+     * Set 销毁节点所属实例ID
      * @param InstanceId 销毁节点所属实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class TerminateTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取销毁节点ID
+     * Get 销毁节点ID 
      * @return ResourceIds 销毁节点ID
      */
     public String [] getResourceIds() {
@@ -61,7 +61,7 @@ public class TerminateTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置销毁节点ID
+     * Set 销毁节点ID
      * @param ResourceIds 销毁节点ID
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -69,7 +69,7 @@ public class TerminateTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

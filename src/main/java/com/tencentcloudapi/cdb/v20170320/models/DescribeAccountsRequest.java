@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsRequest  extends AbstractModel{
+public class DescribeAccountsRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -44,7 +44,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量，默认值为0。
+     * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录偏移量，默认值为0。
+     * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Get 单次请求返回的数量，默认值为20，最小值为1，最大值为100。 
      * @return Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20，最小值为1，最大值为100。
+     * Set 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      * @param Limit 单次请求返回的数量，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

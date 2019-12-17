@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextVehicleFront  extends AbstractModel{
+public class TextVehicleFront extends AbstractModel{
 
     /**
     * 号牌号码
@@ -111,8 +111,8 @@ public class TextVehicleFront  extends AbstractModel{
     private String Seal;
 
     /**
-     * 获取号牌号码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 号牌号码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置号牌号码
+     * Set 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取车辆类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 车辆类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VehicleType 车辆类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置车辆类型
+     * Set 车辆类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VehicleType 车辆类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取所有人
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 所有人
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Owner 所有人
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置所有人
+     * Set 所有人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Owner 所有人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取住址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 住址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Address 住址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置住址
+     * Set 住址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 住址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,8 +191,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取使用性质
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 使用性质
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UseCharacter 使用性质
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,7 +201,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置使用性质
+     * Set 使用性质
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UseCharacter 使用性质
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,8 +211,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取品牌型号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 品牌型号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Model 品牌型号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -221,7 +221,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置品牌型号
+     * Set 品牌型号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Model 品牌型号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,8 +231,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取车辆识别代号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 车辆识别代号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vin 车辆识别代号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -241,7 +241,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置车辆识别代号
+     * Set 车辆识别代号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Vin 车辆识别代号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -251,8 +251,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取发动机号码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发动机号码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EngineNo 发动机号码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -261,7 +261,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置发动机号码
+     * Set 发动机号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineNo 发动机号码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,8 +271,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取注册日期
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 注册日期
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegisterDate 注册日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置注册日期
+     * Set 注册日期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisterDate 注册日期
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取发证日期
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发证日期
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IssueDate 发证日期
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置发证日期
+     * Set 发证日期
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IssueDate 发证日期
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 获取印章
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 印章
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Seal 印章
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 设置印章
+     * Set 印章
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Seal 印章
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,7 +331,7 @@ public class TextVehicleFront  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PlateNo", this.PlateNo);

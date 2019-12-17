@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCcnRequest  extends AbstractModel{
+public class CreateCcnRequest extends AbstractModel{
 
     /**
     * CCN名称，最大长度不能超过60个字节。
@@ -58,7 +58,7 @@ public class CreateCcnRequest  extends AbstractModel{
     private String BandwidthLimitType;
 
     /**
-     * 获取CCN名称，最大长度不能超过60个字节。
+     * Get CCN名称，最大长度不能超过60个字节。 
      * @return CcnName CCN名称，最大长度不能超过60个字节。
      */
     public String getCcnName() {
@@ -66,7 +66,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN名称，最大长度不能超过60个字节。
+     * Set CCN名称，最大长度不能超过60个字节。
      * @param CcnName CCN名称，最大长度不能超过60个字节。
      */
     public void setCcnName(String CcnName) {
@@ -74,7 +74,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN描述信息，最大长度不能超过100个字节。
+     * Get CCN描述信息，最大长度不能超过100个字节。 
      * @return CcnDescription CCN描述信息，最大长度不能超过100个字节。
      */
     public String getCcnDescription() {
@@ -82,7 +82,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN描述信息，最大长度不能超过100个字节。
+     * Set CCN描述信息，最大长度不能超过100个字节。
      * @param CcnDescription CCN描述信息，最大长度不能超过100个字节。
      */
     public void setCcnDescription(String CcnDescription) {
@@ -90,7 +90,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * Get CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。 
      * @return QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      */
     public String getQosLevel() {
@@ -98,7 +98,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * Set CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      * @param QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
      */
     public void setQosLevel(String QosLevel) {
@@ -106,7 +106,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     * Get 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。 
      * @return InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
      */
     public String getInstanceChargeType() {
@@ -114,7 +114,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
+     * Set 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
      * @param InstanceChargeType 计费模式，PREPAID：表示预付费，即包年包月，POSTPAID：表示后付费，即按量计费。默认：POSTPAID。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -122,7 +122,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * Get 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT 
      * @return BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
      */
     public String getBandwidthLimitType() {
@@ -130,7 +130,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
+     * Set 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
      * @param BandwidthLimitType 限速类型，OUTER_REGION_LIMIT表示地域出口限速，INTER_REGION_LIMIT为地域间限速，默认为OUTER_REGION_LIMIT
      */
     public void setBandwidthLimitType(String BandwidthLimitType) {
@@ -138,7 +138,7 @@ public class CreateCcnRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnName", this.CcnName);

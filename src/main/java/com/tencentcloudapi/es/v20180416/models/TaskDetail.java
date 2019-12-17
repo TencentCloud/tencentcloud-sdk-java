@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskDetail  extends AbstractModel{
+public class TaskDetail extends AbstractModel{
 
     /**
     * 任务名
@@ -51,7 +51,7 @@ public class TaskDetail  extends AbstractModel{
     private SubTaskDetail [] SubTasks;
 
     /**
-     * 获取任务名
+     * Get 任务名 
      * @return Name 任务名
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务名
+     * Set 任务名
      * @param Name 任务名
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务进度
+     * Get 任务进度 
      * @return Progress 任务进度
      */
     public Float getProgress() {
@@ -75,7 +75,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务进度
+     * Set 任务进度
      * @param Progress 任务进度
      */
     public void setProgress(Float Progress) {
@@ -83,7 +83,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务完成时间
+     * Get 任务完成时间 
      * @return FinishTime 任务完成时间
      */
     public String getFinishTime() {
@@ -91,7 +91,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务完成时间
+     * Set 任务完成时间
      * @param FinishTime 任务完成时间
      */
     public void setFinishTime(String FinishTime) {
@@ -99,7 +99,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子任务
+     * Get 子任务 
      * @return SubTasks 子任务
      */
     public SubTaskDetail [] getSubTasks() {
@@ -107,7 +107,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子任务
+     * Set 子任务
      * @param SubTasks 子任务
      */
     public void setSubTasks(SubTaskDetail [] SubTasks) {
@@ -115,7 +115,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DealGoodsPriceElem  extends AbstractModel{
+public class DealGoodsPriceElem extends AbstractModel{
 
     /**
     * 实付金额
@@ -30,7 +30,7 @@ public class DealGoodsPriceElem  extends AbstractModel{
     private Integer RealTotalCost;
 
     /**
-     * 获取实付金额
+     * Get 实付金额 
      * @return RealTotalCost 实付金额
      */
     public Integer getRealTotalCost() {
@@ -38,7 +38,7 @@ public class DealGoodsPriceElem  extends AbstractModel{
     }
 
     /**
-     * 设置实付金额
+     * Set 实付金额
      * @param RealTotalCost 实付金额
      */
     public void setRealTotalCost(Integer RealTotalCost) {
@@ -46,7 +46,7 @@ public class DealGoodsPriceElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);

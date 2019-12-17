@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PutMonitorDataRequest  extends AbstractModel{
+public class PutMonitorDataRequest extends AbstractModel{
 
     /**
     * 一组指标和数据
@@ -51,7 +51,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     private String AnnounceInstance;
 
     /**
-     * 获取一组指标和数据
+     * Get 一组指标和数据 
      * @return Metrics 一组指标和数据
      */
     public MetricDatum [] getMetrics() {
@@ -59,7 +59,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一组指标和数据
+     * Set 一组指标和数据
      * @param Metrics 一组指标和数据
      */
     public void setMetrics(MetricDatum [] Metrics) {
@@ -67,7 +67,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取上报时自行指定的 IP
+     * Get 上报时自行指定的 IP 
      * @return AnnounceIp 上报时自行指定的 IP
      */
     public String getAnnounceIp() {
@@ -75,7 +75,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置上报时自行指定的 IP
+     * Set 上报时自行指定的 IP
      * @param AnnounceIp 上报时自行指定的 IP
      */
     public void setAnnounceIp(String AnnounceIp) {
@@ -83,7 +83,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取上报时自行指定的时间戳
+     * Get 上报时自行指定的时间戳 
      * @return AnnounceTimestamp 上报时自行指定的时间戳
      */
     public Integer getAnnounceTimestamp() {
@@ -91,7 +91,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置上报时自行指定的时间戳
+     * Set 上报时自行指定的时间戳
      * @param AnnounceTimestamp 上报时自行指定的时间戳
      */
     public void setAnnounceTimestamp(Integer AnnounceTimestamp) {
@@ -99,7 +99,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取上报时自行指定的 IP 或 产品实例ID
+     * Get 上报时自行指定的 IP 或 产品实例ID 
      * @return AnnounceInstance 上报时自行指定的 IP 或 产品实例ID
      */
     public String getAnnounceInstance() {
@@ -107,7 +107,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置上报时自行指定的 IP 或 产品实例ID
+     * Set 上报时自行指定的 IP 或 产品实例ID
      * @param AnnounceInstance 上报时自行指定的 IP 或 产品实例ID
      */
     public void setAnnounceInstance(String AnnounceInstance) {
@@ -115,7 +115,7 @@ public class PutMonitorDataRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Metrics.", this.Metrics);

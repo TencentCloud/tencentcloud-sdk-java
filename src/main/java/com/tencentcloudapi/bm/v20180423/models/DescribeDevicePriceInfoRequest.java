@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicePriceInfoRequest  extends AbstractModel{
+public class DescribeDevicePriceInfoRequest extends AbstractModel{
 
     /**
     * 需要查询的实例列表
@@ -44,7 +44,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     private Integer TimeSpan;
 
     /**
-     * 获取需要查询的实例列表
+     * Get 需要查询的实例列表 
      * @return InstanceIds 需要查询的实例列表
      */
     public String [] getInstanceIds() {
@@ -52,7 +52,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的实例列表
+     * Set 需要查询的实例列表
      * @param InstanceIds 需要查询的实例列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -60,7 +60,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长单位，当前只支持取值为m
+     * Get 购买时长单位，当前只支持取值为m 
      * @return TimeUnit 购买时长单位，当前只支持取值为m
      */
     public String getTimeUnit() {
@@ -68,7 +68,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长单位，当前只支持取值为m
+     * Set 购买时长单位，当前只支持取值为m
      * @param TimeUnit 购买时长单位，当前只支持取值为m
      */
     public void setTimeUnit(String TimeUnit) {
@@ -76,7 +76,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长
+     * Get 购买时长 
      * @return TimeSpan 购买时长
      */
     public Integer getTimeSpan() {
@@ -84,7 +84,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长
+     * Set 购买时长
      * @param TimeSpan 购买时长
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -92,7 +92,7 @@ public class DescribeDevicePriceInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

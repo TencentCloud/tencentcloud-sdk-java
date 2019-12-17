@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CodePosition  extends AbstractModel{
+public class CodePosition extends AbstractModel{
 
     /**
     * 二维码边界点X轴坐标
@@ -37,7 +37,7 @@ public class CodePosition  extends AbstractModel{
     private Float FloatY;
 
     /**
-     * 获取二维码边界点X轴坐标
+     * Get 二维码边界点X轴坐标 
      * @return FloatX 二维码边界点X轴坐标
      */
     public Float getFloatX() {
@@ -45,7 +45,7 @@ public class CodePosition  extends AbstractModel{
     }
 
     /**
-     * 设置二维码边界点X轴坐标
+     * Set 二维码边界点X轴坐标
      * @param FloatX 二维码边界点X轴坐标
      */
     public void setFloatX(Float FloatX) {
@@ -53,7 +53,7 @@ public class CodePosition  extends AbstractModel{
     }
 
     /**
-     * 获取二维码边界点Y轴坐标
+     * Get 二维码边界点Y轴坐标 
      * @return FloatY 二维码边界点Y轴坐标
      */
     public Float getFloatY() {
@@ -61,7 +61,7 @@ public class CodePosition  extends AbstractModel{
     }
 
     /**
-     * 设置二维码边界点Y轴坐标
+     * Set 二维码边界点Y轴坐标
      * @param FloatY 二维码边界点Y轴坐标
      */
     public void setFloatY(Float FloatY) {
@@ -69,7 +69,7 @@ public class CodePosition  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FloatX", this.FloatX);

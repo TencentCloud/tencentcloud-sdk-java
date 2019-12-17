@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RoGroup  extends AbstractModel{
+public class RoGroup extends AbstractModel{
 
     /**
     * 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
@@ -100,7 +100,7 @@ public class RoGroup  extends AbstractModel{
     private Integer Vport;
 
     /**
-     * 获取只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
+     * Get 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组 
      * @return RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
      */
     public String getRoGroupMode() {
@@ -108,7 +108,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
+     * Set 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
      * @param RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组
      */
     public void setRoGroupMode(String RoGroupMode) {
@@ -116,7 +116,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取只读组ID
+     * Get 只读组ID 
      * @return RoGroupId 只读组ID
      */
     public String getRoGroupId() {
@@ -124,7 +124,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组ID
+     * Set 只读组ID
      * @param RoGroupId 只读组ID
      */
     public void setRoGroupId(String RoGroupId) {
@@ -132,7 +132,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取只读组名称
+     * Get 只读组名称 
      * @return RoGroupName 只读组名称
      */
     public String getRoGroupName() {
@@ -140,7 +140,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组名称
+     * Set 只读组名称
      * @param RoGroupName 只读组名称
      */
     public void setRoGroupName(String RoGroupName) {
@@ -148,7 +148,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * Get 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用 
      * @return RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
      */
     public Integer getRoOfflineDelay() {
@@ -156,7 +156,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
+     * Set 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
      * @param RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用
      */
     public void setRoOfflineDelay(Integer RoOfflineDelay) {
@@ -164,7 +164,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取延迟阈值
+     * Get 延迟阈值 
      * @return RoMaxDelayTime 延迟阈值
      */
     public Integer getRoMaxDelayTime() {
@@ -172,7 +172,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置延迟阈值
+     * Set 延迟阈值
      * @param RoMaxDelayTime 延迟阈值
      */
     public void setRoMaxDelayTime(Integer RoMaxDelayTime) {
@@ -180,7 +180,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
+     * Get 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除 
      * @return MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
      */
     public Integer getMinRoInGroup() {
@@ -188,7 +188,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
+     * Set 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
      * @param MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除
      */
     public void setMinRoInGroup(Integer MinRoInGroup) {
@@ -196,7 +196,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取读写权重分配模式，可选值：system-系统自动分配；custom-自定义
+     * Get 读写权重分配模式，可选值：system-系统自动分配；custom-自定义 
      * @return WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义
      */
     public String getWeightMode() {
@@ -204,7 +204,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置读写权重分配模式，可选值：system-系统自动分配；custom-自定义
+     * Set 读写权重分配模式，可选值：system-系统自动分配；custom-自定义
      * @param WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义
      */
     public void setWeightMode(String WeightMode) {
@@ -212,7 +212,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取权重值
+     * Get 权重值 
      * @return Weight 权重值
      */
     public Integer getWeight() {
@@ -220,7 +220,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权重值
+     * Set 权重值
      * @param Weight 权重值
      */
     public void setWeight(Integer Weight) {
@@ -228,7 +228,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取只读组中的只读实例详情
+     * Get 只读组中的只读实例详情 
      * @return RoInstances 只读组中的只读实例详情
      */
     public RoInstanceInfo [] getRoInstances() {
@@ -236,7 +236,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组中的只读实例详情
+     * Set 只读组中的只读实例详情
      * @param RoInstances 只读组中的只读实例详情
      */
     public void setRoInstances(RoInstanceInfo [] RoInstances) {
@@ -244,7 +244,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取只读组的内网IP
+     * Get 只读组的内网IP 
      * @return Vip 只读组的内网IP
      */
     public String getVip() {
@@ -252,7 +252,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组的内网IP
+     * Set 只读组的内网IP
      * @param Vip 只读组的内网IP
      */
     public void setVip(String Vip) {
@@ -260,7 +260,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 获取只读组的内网端口号
+     * Get 只读组的内网端口号 
      * @return Vport 只读组的内网端口号
      */
     public Integer getVport() {
@@ -268,7 +268,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 设置只读组的内网端口号
+     * Set 只读组的内网端口号
      * @param Vport 只读组的内网端口号
      */
     public void setVport(Integer Vport) {
@@ -276,7 +276,7 @@ public class RoGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoGroupMode", this.RoGroupMode);

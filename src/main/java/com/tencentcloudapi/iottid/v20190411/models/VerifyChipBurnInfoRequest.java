@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyChipBurnInfoRequest  extends AbstractModel{
+public class VerifyChipBurnInfoRequest extends AbstractModel{
 
     /**
     * 验证数据
@@ -30,7 +30,7 @@ public class VerifyChipBurnInfoRequest  extends AbstractModel{
     private String Data;
 
     /**
-     * 获取验证数据
+     * Get 验证数据 
      * @return Data 验证数据
      */
     public String getData() {
@@ -38,7 +38,7 @@ public class VerifyChipBurnInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证数据
+     * Set 验证数据
      * @param Data 验证数据
      */
     public void setData(String Data) {
@@ -46,7 +46,7 @@ public class VerifyChipBurnInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);

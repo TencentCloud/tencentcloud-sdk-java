@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInstanceView  extends AbstractModel{
+public class TaskInstanceView extends AbstractModel{
 
     /**
     * 任务实例索引
@@ -105,7 +105,7 @@ public class TaskInstanceView  extends AbstractModel{
     private String StateDetailedReason;
 
     /**
-     * 获取任务实例索引
+     * Get 任务实例索引 
      * @return TaskInstanceIndex 任务实例索引
      */
     public Integer getTaskInstanceIndex() {
@@ -113,7 +113,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例索引
+     * Set 任务实例索引
      * @param TaskInstanceIndex 任务实例索引
      */
     public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
@@ -121,7 +121,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例状态
+     * Get 任务实例状态 
      * @return TaskInstanceState 任务实例状态
      */
     public String getTaskInstanceState() {
@@ -129,7 +129,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例状态
+     * Set 任务实例状态
      * @param TaskInstanceState 任务实例状态
      */
     public void setTaskInstanceState(String TaskInstanceState) {
@@ -137,8 +137,8 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取应用程序执行结束的exit code
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用程序执行结束的exit code
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExitCode 应用程序执行结束的exit code
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -147,7 +147,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置应用程序执行结束的exit code
+     * Set 应用程序执行结束的exit code
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExitCode 应用程序执行结束的exit code
 注意：此字段可能返回 null，表示取不到有效值。
@@ -157,7 +157,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例状态原因，任务实例失败时，会记录失败原因
+     * Get 任务实例状态原因，任务实例失败时，会记录失败原因 
      * @return StateReason 任务实例状态原因，任务实例失败时，会记录失败原因
      */
     public String getStateReason() {
@@ -165,7 +165,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例状态原因，任务实例失败时，会记录失败原因
+     * Set 任务实例状态原因，任务实例失败时，会记录失败原因
      * @param StateReason 任务实例状态原因，任务实例失败时，会记录失败原因
      */
     public void setStateReason(String StateReason) {
@@ -173,8 +173,8 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ComputeNodeInstanceId 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -183,7 +183,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
+     * Set 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ComputeNodeInstanceId 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
 注意：此字段可能返回 null，表示取不到有效值。
@@ -193,7 +193,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -201,7 +201,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -209,8 +209,8 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取启动时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 启动时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LaunchTime 启动时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -219,7 +219,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置启动时间
+     * Set 启动时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTime 启动时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -229,8 +229,8 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取开始运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 开始运行时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunningTime 开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -239,7 +239,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置开始运行时间
+     * Set 开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RunningTime 开始运行时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -249,8 +249,8 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -259,7 +259,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -269,7 +269,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取重定向信息
+     * Get 重定向信息 
      * @return RedirectInfo 重定向信息
      */
     public RedirectInfo getRedirectInfo() {
@@ -277,7 +277,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置重定向信息
+     * Set 重定向信息
      * @param RedirectInfo 重定向信息
      */
     public void setRedirectInfo(RedirectInfo RedirectInfo) {
@@ -285,7 +285,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
+     * Get 任务实例状态原因详情，任务实例失败时，会记录失败原因 
      * @return StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */
     public String getStateDetailedReason() {
@@ -293,7 +293,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例状态原因详情，任务实例失败时，会记录失败原因
+     * Set 任务实例状态原因详情，任务实例失败时，会记录失败原因
      * @param StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */
     public void setStateDetailedReason(String StateDetailedReason) {
@@ -301,7 +301,7 @@ public class TaskInstanceView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskInstanceIndex", this.TaskInstanceIndex);

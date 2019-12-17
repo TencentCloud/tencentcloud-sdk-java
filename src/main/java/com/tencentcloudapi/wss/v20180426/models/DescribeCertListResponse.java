@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertListResponse  extends AbstractModel{
+public class DescribeCertListResponse extends AbstractModel{
 
     /**
     * 总数量
@@ -44,7 +44,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总数量
+     * Get 总数量 
      * @return TotalCount 总数量
      */
     public Long getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数量
+     * Set 总数量
      * @param TotalCount 总数量
      */
     public void setTotalCount(Long TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取列表
+     * Get 列表 
      * @return CertificateSet 列表
      */
     public SSLCertificate [] getCertificateSet() {
@@ -68,7 +68,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置列表
+     * Set 列表
      * @param CertificateSet 列表
      */
     public void setCertificateSet(SSLCertificate [] CertificateSet) {
@@ -76,7 +76,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeCertListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

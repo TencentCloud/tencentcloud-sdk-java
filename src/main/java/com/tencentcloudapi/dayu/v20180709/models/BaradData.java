@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BaradData  extends AbstractModel{
+public class BaradData extends AbstractModel{
 
     /**
     * 指标名（connum表示TCP活跃连接数；
@@ -51,14 +51,14 @@ outpkg表示出包速率；）
     private Long Count;
 
     /**
-     * 获取指标名（connum表示TCP活跃连接数；
+     * Get 指标名（connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
 intraffic表示入流量；
 outtraffic表示出流量；
 alltraffic表示出流量和入流量之和；
 inpkg表示入包速率；
-outpkg表示出包速率；）
+outpkg表示出包速率；） 
      * @return MetricName 指标名（connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
@@ -73,7 +73,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 设置指标名（connum表示TCP活跃连接数；
+     * Set 指标名（connum表示TCP活跃连接数；
 new_conn表示新建TCP连接数；
 inactive_conn表示非活跃连接数;
 intraffic表示入流量；
@@ -95,7 +95,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 获取值数组
+     * Get 值数组 
      * @return Data 值数组
      */
     public Float [] getData() {
@@ -103,7 +103,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 设置值数组
+     * Set 值数组
      * @param Data 值数组
      */
     public void setData(Float [] Data) {
@@ -111,7 +111,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 获取值数组的大小
+     * Get 值数组的大小 
      * @return Count 值数组的大小
      */
     public Long getCount() {
@@ -119,7 +119,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 设置值数组的大小
+     * Set 值数组的大小
      * @param Count 值数组的大小
      */
     public void setCount(Long Count) {
@@ -127,7 +127,7 @@ outpkg表示出包速率；）
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);

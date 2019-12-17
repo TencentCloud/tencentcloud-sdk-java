@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSpecification  extends AbstractModel{
+public class TagSpecification extends AbstractModel{
 
     /**
     * 标签绑定的资源类型，当前支持类型："instance"和"host"
@@ -37,7 +37,7 @@ public class TagSpecification  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取标签绑定的资源类型，当前支持类型："instance"和"host"
+     * Get 标签绑定的资源类型，当前支持类型："instance"和"host" 
      * @return ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
      */
     public String getResourceType() {
@@ -45,7 +45,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置标签绑定的资源类型，当前支持类型："instance"和"host"
+     * Set 标签绑定的资源类型，当前支持类型："instance"和"host"
      * @param ResourceType 标签绑定的资源类型，当前支持类型："instance"和"host"
      */
     public void setResourceType(String ResourceType) {
@@ -53,7 +53,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取标签对列表
+     * Get 标签对列表 
      * @return Tags 标签对列表
      */
     public Tag [] getTags() {
@@ -61,7 +61,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置标签对列表
+     * Set 标签对列表
      * @param Tags 标签对列表
      */
     public void setTags(Tag [] Tags) {
@@ -69,7 +69,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoLocation  extends AbstractModel{
+public class DevicesBindInfoLocation extends AbstractModel{
 
     /**
     * 转发路径。
@@ -44,7 +44,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     private DevicesBindInfoBackend [] BackendSet;
 
     /**
-     * 获取转发路径。
+     * Get 转发路径。 
      * @return Url 转发路径。
      */
     public String getUrl() {
@@ -52,7 +52,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径。
+     * Set 转发路径。
      * @param Url 转发路径。
      */
     public void setUrl(String Url) {
@@ -60,7 +60,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径实例ID。
+     * Get 转发路径实例ID。 
      * @return LocationId 转发路径实例ID。
      */
     public String getLocationId() {
@@ -68,7 +68,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径实例ID。
+     * Set 转发路径实例ID。
      * @param LocationId 转发路径实例ID。
      */
     public void setLocationId(String LocationId) {
@@ -76,7 +76,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 获取该转发路径所绑定的主机列表。
+     * Get 该转发路径所绑定的主机列表。 
      * @return BackendSet 该转发路径所绑定的主机列表。
      */
     public DevicesBindInfoBackend [] getBackendSet() {
@@ -84,7 +84,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 设置该转发路径所绑定的主机列表。
+     * Set 该转发路径所绑定的主机列表。
      * @param BackendSet 该转发路径所绑定的主机列表。
      */
     public void setBackendSet(DevicesBindInfoBackend [] BackendSet) {
@@ -92,7 +92,7 @@ public class DevicesBindInfoLocation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

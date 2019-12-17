@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotsResponse  extends AbstractModel{
+public class DescribeSnapshotsResponse extends AbstractModel{
 
     /**
     * 快照的数量。
@@ -44,7 +44,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取快照的数量。
+     * Get 快照的数量。 
      * @return TotalCount 快照的数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置快照的数量。
+     * Set 快照的数量。
      * @param TotalCount 快照的数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取快照的详情列表。
+     * Get 快照的详情列表。 
      * @return SnapshotSet 快照的详情列表。
      */
     public Snapshot [] getSnapshotSet() {
@@ -68,7 +68,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置快照的详情列表。
+     * Set 快照的详情列表。
      * @param SnapshotSet 快照的详情列表。
      */
     public void setSnapshotSet(Snapshot [] SnapshotSet) {
@@ -76,7 +76,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeSnapshotsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

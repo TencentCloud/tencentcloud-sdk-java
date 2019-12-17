@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProductRequest  extends AbstractModel{
+public class CreateProductRequest extends AbstractModel{
 
     /**
     * 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
@@ -44,7 +44,7 @@ public class CreateProductRequest  extends AbstractModel{
     private String Skey;
 
     /**
-     * 获取产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * Get 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32} 
      * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public String getProductName() {
@@ -52,7 +52,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
+     * Set 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      * @param ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
     public void setProductName(String ProductName) {
@@ -60,7 +60,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品属性
+     * Get 产品属性 
      * @return ProductProperties 产品属性
      */
     public ProductProperties getProductProperties() {
@@ -68,7 +68,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品属性
+     * Set 产品属性
      * @param ProductProperties 产品属性
      */
     public void setProductProperties(ProductProperties ProductProperties) {
@@ -76,7 +76,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建CLAA产品时，需要Skey
+     * Get 创建CLAA产品时，需要Skey 
      * @return Skey 创建CLAA产品时，需要Skey
      */
     public String getSkey() {
@@ -84,7 +84,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建CLAA产品时，需要Skey
+     * Set 创建CLAA产品时，需要Skey
      * @param Skey 创建CLAA产品时，需要Skey
      */
     public void setSkey(String Skey) {
@@ -92,7 +92,7 @@ public class CreateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsRequest  extends AbstractModel{
+public class DescribeAccountsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如：dcdbt-ow728lmc。
@@ -30,7 +30,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取实例ID，形如：dcdbt-ow728lmc。
+     * Get 实例ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如：dcdbt-ow728lmc。
+     * Set 实例ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
+public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * 推流域名。
@@ -58,7 +58,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     private Integer AuthDelta;
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -66,7 +66,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -74,7 +74,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用，0：关闭，1：启用。
+     * Get 是否启用，0：关闭，1：启用。 
      * @return Enable 是否启用，0：关闭，1：启用。
      */
     public Integer getEnable() {
@@ -82,7 +82,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用，0：关闭，1：启用。
+     * Set 是否启用，0：关闭，1：启用。
      * @param Enable 是否启用，0：关闭，1：启用。
      */
     public void setEnable(Integer Enable) {
@@ -90,7 +90,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主鉴权key。
+     * Get 主鉴权key。 
      * @return MasterAuthKey 主鉴权key。
      */
     public String getMasterAuthKey() {
@@ -98,7 +98,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主鉴权key。
+     * Set 主鉴权key。
      * @param MasterAuthKey 主鉴权key。
      */
     public void setMasterAuthKey(String MasterAuthKey) {
@@ -106,7 +106,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备鉴权key。
+     * Get 备鉴权key。 
      * @return BackupAuthKey 备鉴权key。
      */
     public String getBackupAuthKey() {
@@ -114,7 +114,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备鉴权key。
+     * Set 备鉴权key。
      * @param BackupAuthKey 备鉴权key。
      */
     public void setBackupAuthKey(String BackupAuthKey) {
@@ -122,7 +122,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取有效时间，单位：秒。
+     * Get 有效时间，单位：秒。 
      * @return AuthDelta 有效时间，单位：秒。
      */
     public Integer getAuthDelta() {
@@ -130,7 +130,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置有效时间，单位：秒。
+     * Set 有效时间，单位：秒。
      * @param AuthDelta 有效时间，单位：秒。
      */
     public void setAuthDelta(Integer AuthDelta) {
@@ -138,7 +138,7 @@ public class ModifyLivePushAuthKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

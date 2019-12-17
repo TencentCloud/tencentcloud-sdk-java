@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
+public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
 
     /**
     * 总流量。
@@ -93,7 +93,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总流量。
+     * Get 总流量。 
      * @return TotalFlux 总流量。
      */
     public Float getTotalFlux() {
@@ -101,7 +101,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总流量。
+     * Set 总流量。
      * @param TotalFlux 总流量。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -109,7 +109,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总请求数。
+     * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
@@ -117,7 +117,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总请求数。
+     * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
@@ -125,7 +125,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计的类型。
+     * Get 统计的类型。 
      * @return StatType 统计的类型。
      */
     public String getStatType() {
@@ -133,7 +133,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计的类型。
+     * Set 统计的类型。
      * @param StatType 统计的类型。
      */
     public void setStatType(String StatType) {
@@ -141,7 +141,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页的记录数。
+     * Get 每页的记录数。 
      * @return PageSize 每页的记录数。
      */
     public Integer getPageSize() {
@@ -149,7 +149,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页的记录数。
+     * Set 每页的记录数。
      * @param PageSize 每页的记录数。
      */
     public void setPageSize(Integer PageSize) {
@@ -157,7 +157,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取页号。
+     * Get 页号。 
      * @return PageNum 页号。
      */
     public Integer getPageNum() {
@@ -165,7 +165,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置页号。
+     * Set 页号。
      * @param PageNum 页号。
      */
     public void setPageNum(Integer PageNum) {
@@ -173,7 +173,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数。
+     * Get 总记录数。 
      * @return TotalNum 总记录数。
      */
     public Integer getTotalNum() {
@@ -181,7 +181,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数。
+     * Set 总记录数。
      * @param TotalNum 总记录数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -189,7 +189,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总页数。
+     * Get 总页数。 
      * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
@@ -197,7 +197,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总页数。
+     * Set 总页数。
      * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -205,7 +205,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取省份，运营商，国家或地区汇总数据列表。
+     * Get 省份，运营商，国家或地区汇总数据列表。 
      * @return DataInfoList 省份，运营商，国家或地区汇总数据列表。
      */
     public ProIspPlaySumInfo [] getDataInfoList() {
@@ -213,7 +213,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置省份，运营商，国家或地区汇总数据列表。
+     * Set 省份，运营商，国家或地区汇总数据列表。
      * @param DataInfoList 省份，运营商，国家或地区汇总数据列表。
      */
     public void setDataInfoList(ProIspPlaySumInfo [] DataInfoList) {
@@ -221,7 +221,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取平均带宽。
+     * Get 平均带宽。 
      * @return AvgFluxPerSecond 平均带宽。
      */
     public Float getAvgFluxPerSecond() {
@@ -229,7 +229,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置平均带宽。
+     * Set 平均带宽。
      * @param AvgFluxPerSecond 平均带宽。
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
@@ -237,7 +237,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class DescribeProIspPlaySumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalFlux", this.TotalFlux);

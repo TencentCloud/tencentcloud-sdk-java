@@ -29,21 +29,10 @@ public class StsClient extends AbstractClient{
     private static String endpoint = "sts.tencentcloudapi.com";
     private static String version = "2018-08-13";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public StsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public StsClient(Credential credential, String region, ClientProfile profile) {
         super(StsClient.endpoint, StsClient.version, credential, region, profile);
     }

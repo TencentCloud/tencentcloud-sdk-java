@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableRegion  extends AbstractModel{
+public class AvailableRegion extends AbstractModel{
 
     /**
     * 区域名称，如“ap-beijing”
@@ -58,7 +58,7 @@ public class AvailableRegion  extends AbstractModel{
     private String RegionCnName;
 
     /**
-     * 获取区域名称，如“ap-beijing”
+     * Get 区域名称，如“ap-beijing” 
      * @return Region 区域名称，如“ap-beijing”
      */
     public String getRegion() {
@@ -66,7 +66,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称，如“ap-beijing”
+     * Set 区域名称，如“ap-beijing”
      * @param Region 区域名称，如“ap-beijing”
      */
     public void setRegion(String Region) {
@@ -74,7 +74,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称，如“bj”
+     * Get 区域名称，如“bj” 
      * @return RegionName 区域名称，如“bj”
      */
     public String getRegionName() {
@@ -82,7 +82,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称，如“bj”
+     * Set 区域名称，如“bj”
      * @param RegionName 区域名称，如“bj”
      */
     public void setRegionName(String RegionName) {
@@ -90,7 +90,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 获取区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE
+     * Get 区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE 
      * @return RegionStatus 区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE
      */
     public String getRegionStatus() {
@@ -98,7 +98,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 设置区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE
+     * Set 区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE
      * @param RegionStatus 区域可用情况，当区域内至少有一个可用区处于可售状态时，取值为AVAILABLE，否则为UNAVAILABLE
      */
     public void setRegionStatus(String RegionStatus) {
@@ -106,7 +106,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 获取可用区数组
+     * Get 可用区数组 
      * @return Zones 可用区数组
      */
     public AvailableZone [] getZones() {
@@ -114,7 +114,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 设置可用区数组
+     * Set 可用区数组
      * @param Zones 可用区数组
      */
     public void setZones(AvailableZone [] Zones) {
@@ -122,7 +122,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 获取区域中文名称，如“广州”
+     * Get 区域中文名称，如“广州” 
      * @return RegionCnName 区域中文名称，如“广州”
      */
     public String getRegionCnName() {
@@ -130,7 +130,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 设置区域中文名称，如“广州”
+     * Set 区域中文名称，如“广州”
      * @param RegionCnName 区域中文名称，如“广州”
      */
     public void setRegionCnName(String RegionCnName) {
@@ -138,7 +138,7 @@ public class AvailableRegion  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

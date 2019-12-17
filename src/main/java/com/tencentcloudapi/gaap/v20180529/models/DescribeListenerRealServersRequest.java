@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeListenerRealServersRequest  extends AbstractModel{
+public class DescribeListenerRealServersRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -30,7 +30,7 @@ public class DescribeListenerRealServersRequest  extends AbstractModel{
     private String ListenerId;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -38,7 +38,7 @@ public class DescribeListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -46,7 +46,7 @@ public class DescribeListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

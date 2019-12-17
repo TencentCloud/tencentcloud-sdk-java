@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
+public class SubmitOneByOneClassTaskRequest extends AbstractModel{
 
     /**
     * 输入分析对象内容，输入数据格式参考FileType参数释义
@@ -79,7 +79,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     private Long VoiceFileType;
 
     /**
-     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * Get 输入分析对象内容，输入数据格式参考FileType参数释义 
      * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
@@ -87,7 +87,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * Set 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
@@ -95,7 +95,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
+     * Get 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码 
      * @return FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
      */
     public String getFileType() {
@@ -103,7 +103,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
+     * Set 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
      * @param FileType 输入分析对象类型，picture_url:图片地址，vod_url:视频地址，live_url：直播地址，picture: 图片二进制数据的BASE64编码
      */
     public void setFileType(String FileType) {
@@ -111,7 +111,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频源的语言，默认0为英文，1为中文 
+     * Get 音频源的语言，默认0为英文，1为中文  
      * @return Lang 音频源的语言，默认0为英文，1为中文 
      */
     public Long getLang() {
@@ -119,7 +119,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频源的语言，默认0为英文，1为中文 
+     * Set 音频源的语言，默认0为英文，1为中文 
      * @param Lang 音频源的语言，默认0为英文，1为中文 
      */
     public void setLang(Long Lang) {
@@ -127,7 +127,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询人员库列表，可填写学生的注册照所在人员库
+     * Get 查询人员库列表，可填写学生的注册照所在人员库 
      * @return LibrarySet 查询人员库列表，可填写学生的注册照所在人员库
      */
     public String [] getLibrarySet() {
@@ -135,7 +135,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询人员库列表，可填写学生的注册照所在人员库
+     * Set 查询人员库列表，可填写学生的注册照所在人员库
      * @param LibrarySet 查询人员库列表，可填写学生的注册照所在人员库
      */
     public void setLibrarySet(String [] LibrarySet) {
@@ -143,7 +143,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Get 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束 
      * @return MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
@@ -151,7 +151,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Set 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      * @param MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
@@ -159,7 +159,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
+     * Get 识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况 
      * @return VocabLibNameList 识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
      */
     public String [] getVocabLibNameList() {
@@ -167,7 +167,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
+     * Set 识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
      * @param VocabLibNameList 识别词库名列表，这些词汇库用来维护关键词，评估学生对这些关键词的使用情况
      */
     public void setVocabLibNameList(String [] VocabLibNameList) {
@@ -175,7 +175,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
+     * Get 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填 
      * @return VoiceEncodeType 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
      */
     public Long getVoiceEncodeType() {
@@ -183,7 +183,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
+     * Set 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
      * @param VoiceEncodeType 语音编码类型 1:pcm，当FileType为vod_url或live_url时为必填
      */
     public void setVoiceEncodeType(Long VoiceEncodeType) {
@@ -191,7 +191,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
+     * Get 语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填 
      * @return VoiceFileType 语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
      */
     public Long getVoiceFileType() {
@@ -199,7 +199,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
+     * Set 语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
      * @param VoiceFileType 语音文件类型10:视频（三种音频格式目前仅支持16k采样率16bit），当FileType为vod_url或live_url时为必填
      */
     public void setVoiceFileType(Long VoiceFileType) {
@@ -207,7 +207,7 @@ public class SubmitOneByOneClassTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAppPasswordRequest  extends AbstractModel{
+public class ModifyAppPasswordRequest extends AbstractModel{
 
     /**
     * 需要修改密码的应用实例ID
@@ -58,7 +58,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     private String Mode;
 
     /**
-     * 获取需要修改密码的应用实例ID
+     * Get 需要修改密码的应用实例ID 
      * @return ApplicationId 需要修改密码的应用实例ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改密码的应用实例ID
+     * Set 需要修改密码的应用实例ID
      * @param ApplicationId 需要修改密码的应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用旧密码
+     * Get 应用旧密码 
      * @return OldPassword 应用旧密码
      */
     public String getOldPassword() {
@@ -82,7 +82,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用旧密码
+     * Set 应用旧密码
      * @param OldPassword 应用旧密码
      */
     public void setOldPassword(String OldPassword) {
@@ -90,7 +90,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用旧密码预期失效时间
+     * Get 应用旧密码预期失效时间 
      * @return OldPasswordExpireTime 应用旧密码预期失效时间
      */
     public String getOldPasswordExpireTime() {
@@ -98,7 +98,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用旧密码预期失效时间
+     * Set 应用旧密码预期失效时间
      * @param OldPasswordExpireTime 应用旧密码预期失效时间
      */
     public void setOldPasswordExpireTime(String OldPasswordExpireTime) {
@@ -106,7 +106,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用新密码
+     * Get 应用新密码 
      * @return NewPassword 应用新密码
      */
     public String getNewPassword() {
@@ -114,7 +114,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用新密码
+     * Set 应用新密码
      * @param NewPassword 应用新密码
      */
     public void setNewPassword(String NewPassword) {
@@ -122,7 +122,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
+     * Get 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式 
      * @return Mode 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
      */
     public String getMode() {
@@ -130,7 +130,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
+     * Set 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
      * @param Mode 更新模式： `1` 更新密码；`2` 更新旧密码失效时间，默认为`1` 模式
      */
     public void setMode(String Mode) {
@@ -138,7 +138,7 @@ public class ModifyAppPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

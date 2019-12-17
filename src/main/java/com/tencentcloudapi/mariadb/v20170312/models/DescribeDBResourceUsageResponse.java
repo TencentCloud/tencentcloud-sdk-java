@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBResourceUsageResponse  extends AbstractModel{
+public class DescribeDBResourceUsageResponse extends AbstractModel{
 
     /**
     * binlog日志磁盘可用空间,单位GB
@@ -58,7 +58,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取binlog日志磁盘可用空间,单位GB
+     * Get binlog日志磁盘可用空间,单位GB 
      * @return BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      */
     public MonitorData getBinlogDiskAvailable() {
@@ -66,7 +66,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置binlog日志磁盘可用空间,单位GB
+     * Set binlog日志磁盘可用空间,单位GB
      * @param BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      */
     public void setBinlogDiskAvailable(MonitorData BinlogDiskAvailable) {
@@ -74,7 +74,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘可用空间,单位GB
+     * Get 磁盘可用空间,单位GB 
      * @return DataDiskAvailable 磁盘可用空间,单位GB
      */
     public MonitorData getDataDiskAvailable() {
@@ -82,7 +82,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘可用空间,单位GB
+     * Set 磁盘可用空间,单位GB
      * @param DataDiskAvailable 磁盘可用空间,单位GB
      */
     public void setDataDiskAvailable(MonitorData DataDiskAvailable) {
@@ -90,7 +90,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CPU利用率
+     * Get CPU利用率 
      * @return CpuUsageRate CPU利用率
      */
     public MonitorData getCpuUsageRate() {
@@ -98,7 +98,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CPU利用率
+     * Set CPU利用率
      * @param CpuUsageRate CPU利用率
      */
     public void setCpuUsageRate(MonitorData CpuUsageRate) {
@@ -106,7 +106,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内存可用空间,单位GB
+     * Get 内存可用空间,单位GB 
      * @return MemAvailable 内存可用空间,单位GB
      */
     public MonitorData getMemAvailable() {
@@ -114,7 +114,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内存可用空间,单位GB
+     * Set 内存可用空间,单位GB
      * @param MemAvailable 内存可用空间,单位GB
      */
     public void setMemAvailable(MonitorData MemAvailable) {
@@ -122,7 +122,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeDBResourceUsageResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BinlogDiskAvailable.", this.BinlogDiskAvailable);

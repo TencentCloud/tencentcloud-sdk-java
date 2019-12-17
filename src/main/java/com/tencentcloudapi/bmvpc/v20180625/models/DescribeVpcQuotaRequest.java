@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcQuotaRequest  extends AbstractModel{
+public class DescribeVpcQuotaRequest extends AbstractModel{
 
     /**
     * 类型
@@ -30,7 +30,7 @@ public class DescribeVpcQuotaRequest  extends AbstractModel{
     private Long [] TypeIds;
 
     /**
-     * 获取类型
+     * Get 类型 
      * @return TypeIds 类型
      */
     public Long [] getTypeIds() {
@@ -38,7 +38,7 @@ public class DescribeVpcQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置类型
+     * Set 类型
      * @param TypeIds 类型
      */
     public void setTypeIds(Long [] TypeIds) {
@@ -46,7 +46,7 @@ public class DescribeVpcQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TypeIds.", this.TypeIds);

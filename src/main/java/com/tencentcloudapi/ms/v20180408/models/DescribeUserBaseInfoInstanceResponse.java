@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
+public class DescribeUserBaseInfoInstanceResponse extends AbstractModel{
 
     /**
     * 用户uin信息
@@ -51,7 +51,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户uin信息
+     * Get 用户uin信息 
      * @return UserUin 用户uin信息
      */
     public Long getUserUin() {
@@ -59,7 +59,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户uin信息
+     * Set 用户uin信息
      * @param UserUin 用户uin信息
      */
     public void setUserUin(Long UserUin) {
@@ -67,7 +67,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户APPID信息
+     * Get 用户APPID信息 
      * @return UserAppid 用户APPID信息
      */
     public Integer getUserAppid() {
@@ -75,7 +75,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户APPID信息
+     * Set 用户APPID信息
      * @param UserAppid 用户APPID信息
      */
     public void setUserAppid(Integer UserAppid) {
@@ -83,7 +83,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取系统时间戳
+     * Get 系统时间戳 
      * @return TimeStamp 系统时间戳
      */
     public Integer getTimeStamp() {
@@ -91,7 +91,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置系统时间戳
+     * Set 系统时间戳
      * @param TimeStamp 系统时间戳
      */
     public void setTimeStamp(Integer TimeStamp) {
@@ -99,7 +99,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeUserBaseInfoInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserUin", this.UserUin);

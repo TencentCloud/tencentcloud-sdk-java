@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCustomerGatewaysRequest  extends AbstractModel{
+public class DescribeCustomerGatewaysRequest extends AbstractModel{
 
     /**
     * 对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
@@ -54,7 +54,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
+     * Get 对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。 
      * @return CustomerGatewayIds 对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      */
     public String [] getCustomerGatewayIds() {
@@ -62,7 +62,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
+     * Set 对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      * @param CustomerGatewayIds 对端网关ID，例如：cgw-2wqq41m9。每次请求的实例的上限为100。参数不支持同时指定CustomerGatewayIds和Filters。
      */
     public void setCustomerGatewayIds(String [] CustomerGatewayIds) {
@@ -70,10 +70,10 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+     * Get 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
 <li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
 <li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
-<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
+<li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li> 
      * @return Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
 <li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
 <li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
@@ -84,7 +84,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
+     * Set 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定CustomerGatewayIds和Filters。
 <li>customer-gateway-id - String - （过滤条件）用户网关唯一ID形如：`cgw-mgp33pll`。</li>
 <li>customer-gateway-name - String - （过滤条件）用户网关名称形如：`test-cgw`。</li>
 <li>ip-address - String - （过滤条件）公网地址形如：`58.211.1.12`。</li>
@@ -98,7 +98,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
      * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public Integer getOffset() {
@@ -106,7 +106,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      */
     public void setOffset(Integer Offset) {
@@ -114,7 +114,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -122,7 +122,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -130,7 +130,7 @@ public class DescribeCustomerGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "CustomerGatewayIds.", this.CustomerGatewayIds);

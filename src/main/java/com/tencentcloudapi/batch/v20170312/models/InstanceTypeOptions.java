@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTypeOptions  extends AbstractModel{
+public class InstanceTypeOptions extends AbstractModel{
 
     /**
     * CPU核数。
@@ -44,7 +44,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     private String [] InstanceCategories;
 
     /**
-     * 获取CPU核数。
+     * Get CPU核数。 
      * @return CPU CPU核数。
      */
     public Integer getCPU() {
@@ -52,7 +52,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数。
+     * Set CPU核数。
      * @param CPU CPU核数。
      */
     public void setCPU(Integer CPU) {
@@ -60,7 +60,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 获取内存值，单位GB。
+     * Get 内存值，单位GB。 
      * @return Memory 内存值，单位GB。
      */
     public Integer getMemory() {
@@ -68,7 +68,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 设置内存值，单位GB。
+     * Set 内存值，单位GB。
      * @param Memory 内存值，单位GB。
      */
     public void setMemory(Integer Memory) {
@@ -76,7 +76,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+     * Get 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。 
      * @return InstanceCategories 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      */
     public String [] getInstanceCategories() {
@@ -84,7 +84,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
+     * Set 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      * @param InstanceCategories 实例机型类别，可选参数：“ALL”、“GENERAL”、“GENERAL_2”、“GENERAL_3”、“COMPUTE”、“COMPUTE_2”和“COMPUTE_3”。默认值“ALL”。
      */
     public void setInstanceCategories(String [] InstanceCategories) {
@@ -92,7 +92,7 @@ public class InstanceTypeOptions  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CPU", this.CPU);

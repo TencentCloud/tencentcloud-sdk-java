@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TransactionItem  extends AbstractModel{
+public class TransactionItem extends AbstractModel{
 
     /**
     * 交易ID
@@ -79,7 +79,7 @@ public class TransactionItem  extends AbstractModel{
     private String TransactionStatus;
 
     /**
-     * 获取交易ID
+     * Get 交易ID 
      * @return TransactionId 交易ID
      */
     public String getTransactionId() {
@@ -87,7 +87,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID
+     * Set 交易ID
      * @param TransactionId 交易ID
      */
     public void setTransactionId(String TransactionId) {
@@ -95,7 +95,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易hash
+     * Get 交易hash 
      * @return TransactionHash 交易hash
      */
     public String getTransactionHash() {
@@ -103,7 +103,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易hash
+     * Set 交易hash
      * @param TransactionHash 交易hash
      */
     public void setTransactionHash(String TransactionHash) {
@@ -111,7 +111,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取创建交易的组织名
+     * Get 创建交易的组织名 
      * @return CreateOrgName 创建交易的组织名
      */
     public String getCreateOrgName() {
@@ -119,7 +119,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置创建交易的组织名
+     * Set 创建交易的组织名
      * @param CreateOrgName 创建交易的组织名
      */
     public void setCreateOrgName(String CreateOrgName) {
@@ -127,7 +127,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在区块号
+     * Get 交易所在区块号 
      * @return BlockId 交易所在区块号
      */
     public Integer getBlockId() {
@@ -135,7 +135,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在区块号
+     * Set 交易所在区块号
      * @param BlockId 交易所在区块号
      */
     public void setBlockId(Integer BlockId) {
@@ -143,7 +143,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易类型（普通交易和配置交易）
+     * Get 交易类型（普通交易和配置交易） 
      * @return TransactionType 交易类型（普通交易和配置交易）
      */
     public String getTransactionType() {
@@ -151,7 +151,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易类型（普通交易和配置交易）
+     * Set 交易类型（普通交易和配置交易）
      * @param TransactionType 交易类型（普通交易和配置交易）
      */
     public void setTransactionType(String TransactionType) {
@@ -159,7 +159,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易创建时间
+     * Get 交易创建时间 
      * @return CreateTime 交易创建时间
      */
     public String getCreateTime() {
@@ -167,7 +167,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易创建时间
+     * Set 交易创建时间
      * @param CreateTime 交易创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -175,7 +175,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易所在区块高度
+     * Get 交易所在区块高度 
      * @return BlockHeight 交易所在区块高度
      */
     public Integer getBlockHeight() {
@@ -183,7 +183,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易所在区块高度
+     * Set 交易所在区块高度
      * @param BlockHeight 交易所在区块高度
      */
     public void setBlockHeight(Integer BlockHeight) {
@@ -191,7 +191,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 获取交易状态
+     * Get 交易状态 
      * @return TransactionStatus 交易状态
      */
     public String getTransactionStatus() {
@@ -199,7 +199,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 设置交易状态
+     * Set 交易状态
      * @param TransactionStatus 交易状态
      */
     public void setTransactionStatus(String TransactionStatus) {
@@ -207,7 +207,7 @@ public class TransactionItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TransactionId", this.TransactionId);

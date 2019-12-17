@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceLog  extends AbstractModel{
+public class InstanceLog extends AbstractModel{
 
     /**
     * 日志时间
@@ -51,7 +51,7 @@ public class InstanceLog  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取日志时间
+     * Get 日志时间 
      * @return Time 日志时间
      */
     public String getTime() {
@@ -59,7 +59,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志时间
+     * Set 日志时间
      * @param Time 日志时间
      */
     public void setTime(String Time) {
@@ -67,7 +67,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志级别
+     * Get 日志级别 
      * @return Level 日志级别
      */
     public String getLevel() {
@@ -75,7 +75,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志级别
+     * Set 日志级别
      * @param Level 日志级别
      */
     public void setLevel(String Level) {
@@ -83,7 +83,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取集群节点ip
+     * Get 集群节点ip 
      * @return Ip 集群节点ip
      */
     public String getIp() {
@@ -91,7 +91,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置集群节点ip
+     * Set 集群节点ip
      * @param Ip 集群节点ip
      */
     public void setIp(String Ip) {
@@ -99,7 +99,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志内容
+     * Get 日志内容 
      * @return Message 日志内容
      */
     public String getMessage() {
@@ -107,7 +107,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志内容
+     * Set 日志内容
      * @param Message 日志内容
      */
     public void setMessage(String Message) {
@@ -115,7 +115,7 @@ public class InstanceLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StorageInfo  extends AbstractModel{
+public class StorageInfo extends AbstractModel{
 
     /**
     * 资源所属地域。
@@ -52,8 +52,8 @@ public class StorageInfo  extends AbstractModel{
     private String AppId;
 
     /**
-     * 获取资源所属地域。
-当前支持ap-shanghai
+     * Get 资源所属地域。
+当前支持ap-shanghai 
      * @return Region 资源所属地域。
 当前支持ap-shanghai
      */
@@ -62,7 +62,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源所属地域。
+     * Set 资源所属地域。
 当前支持ap-shanghai
      * @param Region 资源所属地域。
 当前支持ap-shanghai
@@ -72,7 +72,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取桶名，存储资源的唯一标识
+     * Get 桶名，存储资源的唯一标识 
      * @return Bucket 桶名，存储资源的唯一标识
      */
     public String getBucket() {
@@ -80,7 +80,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置桶名，存储资源的唯一标识
+     * Set 桶名，存储资源的唯一标识
      * @param Bucket 桶名，存储资源的唯一标识
      */
     public void setBucket(String Bucket) {
@@ -88,7 +88,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取cdn 域名
+     * Get cdn 域名 
      * @return CdnDomain cdn 域名
      */
     public String getCdnDomain() {
@@ -96,7 +96,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置cdn 域名
+     * Set cdn 域名
      * @param CdnDomain cdn 域名
      */
     public void setCdnDomain(String CdnDomain) {
@@ -104,7 +104,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源所属用户的腾讯云appId
+     * Get 资源所属用户的腾讯云appId 
      * @return AppId 资源所属用户的腾讯云appId
      */
     public String getAppId() {
@@ -112,7 +112,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源所属用户的腾讯云appId
+     * Set 资源所属用户的腾讯云appId
      * @param AppId 资源所属用户的腾讯云appId
      */
     public void setAppId(String AppId) {
@@ -120,7 +120,7 @@ public class StorageInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

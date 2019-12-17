@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Group  extends AbstractModel{
+public class Group extends AbstractModel{
 
     /**
     * 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
@@ -46,7 +46,7 @@ public class Group  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
+     * Get 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。 
      * @return ContentType 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
      */
     public String getContentType() {
@@ -54,7 +54,7 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 设置消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
+     * Set 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
      * @param ContentType 消息类型参考互联网MIME类型标准，当前仅支持"text/plain"。
      */
     public void setContentType(String ContentType) {
@@ -62,8 +62,8 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 获取返回内容以链接形式提供。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回内容以链接形式提供。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 返回内容以链接形式提供。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 设置返回内容以链接形式提供。
+     * Set 返回内容以链接形式提供。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 返回内容以链接形式提供。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 获取普通文本。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 普通文本。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 普通文本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 设置普通文本。
+     * Set 普通文本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 普通文本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ public class Group  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);

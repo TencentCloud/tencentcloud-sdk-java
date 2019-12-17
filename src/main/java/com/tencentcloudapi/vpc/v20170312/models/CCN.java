@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCN  extends AbstractModel{
+public class CCN extends AbstractModel{
 
     /**
     * 云联网唯一ID
@@ -88,7 +88,7 @@ public class CCN  extends AbstractModel{
     private String BandwidthLimitType;
 
     /**
-     * 获取云联网唯一ID
+     * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
     public String getCcnId() {
@@ -96,7 +96,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置云联网唯一ID
+     * Set 云联网唯一ID
      * @param CcnId 云联网唯一ID
      */
     public void setCcnId(String CcnId) {
@@ -104,7 +104,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取云联网名称
+     * Get 云联网名称 
      * @return CcnName 云联网名称
      */
     public String getCcnName() {
@@ -112,7 +112,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置云联网名称
+     * Set 云联网名称
      * @param CcnName 云联网名称
      */
     public void setCcnName(String CcnName) {
@@ -120,7 +120,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取云联网描述信息
+     * Get 云联网描述信息 
      * @return CcnDescription 云联网描述信息
      */
     public String getCcnDescription() {
@@ -128,7 +128,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置云联网描述信息
+     * Set 云联网描述信息
      * @param CcnDescription 云联网描述信息
      */
     public void setCcnDescription(String CcnDescription) {
@@ -136,7 +136,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例数量
+     * Get 关联实例数量 
      * @return InstanceCount 关联实例数量
      */
     public Integer getInstanceCount() {
@@ -144,7 +144,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例数量
+     * Set 关联实例数量
      * @param InstanceCount 关联实例数量
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -152,7 +152,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -160,7 +160,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -168,7 +168,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * Get 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。 
      * @return State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      */
     public String getState() {
@@ -176,7 +176,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * Set 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      * @param State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
      */
     public void setState(String State) {
@@ -184,7 +184,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * Get 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。 
      * @return QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      */
     public String getQosLevel() {
@@ -192,7 +192,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * Set 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      * @param QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
      */
     public void setQosLevel(String QosLevel) {
@@ -200,8 +200,8 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型，PREPAID为预付费，POSTPAID为后付费。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 付费类型，PREPAID为预付费，POSTPAID为后付费。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -210,7 +210,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型，PREPAID为预付费，POSTPAID为后付费。
+     * Set 付费类型，PREPAID为预付费，POSTPAID为后付费。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceChargeType 付费类型，PREPAID为预付费，POSTPAID为后付费。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -220,8 +220,8 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 获取限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -230,7 +230,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 设置限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * Set 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -240,7 +240,7 @@ public class CCN  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

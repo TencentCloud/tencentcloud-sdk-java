@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
+public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel{
 
     /**
     * 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
@@ -37,7 +37,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * Get 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。 
      * @return DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public String getDisasterRecoverGroupId() {
@@ -45,7 +45,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * Set 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      * @param DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
@@ -53,7 +53,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
      * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Set 分散置放群组名称，长度1-60个字符，支持中、英文。
      * @param Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);

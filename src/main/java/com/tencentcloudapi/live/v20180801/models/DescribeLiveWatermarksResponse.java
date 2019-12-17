@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveWatermarksResponse  extends AbstractModel{
+public class DescribeLiveWatermarksResponse extends AbstractModel{
 
     /**
     * 水印总个数。
@@ -44,7 +44,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取水印总个数。
+     * Get 水印总个数。 
      * @return TotalNum 水印总个数。
      */
     public Integer getTotalNum() {
@@ -52,7 +52,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置水印总个数。
+     * Set 水印总个数。
      * @param TotalNum 水印总个数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -60,7 +60,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取水印信息列表。
+     * Get 水印信息列表。 
      * @return WatermarkList 水印信息列表。
      */
     public WatermarkInfo [] getWatermarkList() {
@@ -68,7 +68,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置水印信息列表。
+     * Set 水印信息列表。
      * @param WatermarkList 水印信息列表。
      */
     public void setWatermarkList(WatermarkInfo [] WatermarkList) {
@@ -76,7 +76,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLiveWatermarksResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);

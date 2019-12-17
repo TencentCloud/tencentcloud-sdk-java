@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubnetByDeviceResponse  extends AbstractModel{
+public class DescribeSubnetByDeviceResponse extends AbstractModel{
 
     /**
     * 子网个数
@@ -44,7 +44,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子网个数
+     * Get 子网个数 
      * @return TotalCount 子网个数
      */
     public Long getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子网个数
+     * Set 子网个数
      * @param TotalCount 子网个数
      */
     public void setTotalCount(Long TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子网列表
+     * Get 子网列表 
      * @return Data 子网列表
      */
     public SubnetInfo [] getData() {
@@ -68,7 +68,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子网列表
+     * Set 子网列表
      * @param Data 子网列表
      */
     public void setData(SubnetInfo [] Data) {
@@ -76,7 +76,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeSubnetByDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

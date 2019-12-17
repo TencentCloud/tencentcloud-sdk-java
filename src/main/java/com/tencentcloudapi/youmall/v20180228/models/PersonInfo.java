@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonInfo  extends AbstractModel{
+public class PersonInfo extends AbstractModel{
 
     /**
     * 用户ID
@@ -89,7 +89,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     private Integer VisitDays;
 
     /**
-     * 获取用户ID
+     * Get 用户ID 
      * @return PersonId 用户ID
      */
     public Integer getPersonId() {
@@ -97,7 +97,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置用户ID
+     * Set 用户ID
      * @param PersonId 用户ID
      */
     public void setPersonId(Integer PersonId) {
@@ -105,7 +105,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取人脸图片Base64内容，已弃用，返回默认空值
+     * Get 人脸图片Base64内容，已弃用，返回默认空值 
      * @return PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
      */
     public String getPersonPicture() {
@@ -113,7 +113,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置人脸图片Base64内容，已弃用，返回默认空值
+     * Set 人脸图片Base64内容，已弃用，返回默认空值
      * @param PersonPicture 人脸图片Base64内容，已弃用，返回默认空值
      */
     public void setPersonPicture(String PersonPicture) {
@@ -121,7 +121,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取性别：0男1女
+     * Get 性别：0男1女 
      * @return Gender 性别：0男1女
      */
     public Integer getGender() {
@@ -129,7 +129,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置性别：0男1女
+     * Set 性别：0男1女
      * @param Gender 性别：0男1女
      */
     public void setGender(Integer Gender) {
@@ -137,7 +137,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取年龄
+     * Get 年龄 
      * @return Age 年龄
      */
     public Integer getAge() {
@@ -145,7 +145,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置年龄
+     * Set 年龄
      * @param Age 年龄
      */
     public void setAge(Integer Age) {
@@ -153,7 +153,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * Get 身份类型（0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public Integer getPersonType() {
@@ -161,7 +161,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
+     * Set 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型（0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -169,7 +169,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取人脸图片Url，在有效期内可以访问下载
+     * Get 人脸图片Url，在有效期内可以访问下载 
      * @return PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
      */
     public String getPersonPictureUrl() {
@@ -177,7 +177,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置人脸图片Url，在有效期内可以访问下载
+     * Set 人脸图片Url，在有效期内可以访问下载
      * @param PersonPictureUrl 人脸图片Url，在有效期内可以访问下载
      */
     public void setPersonPictureUrl(String PersonPictureUrl) {
@@ -185,10 +185,10 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取身份子类型:
+     * Get 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
-PersonType=2时(黑名单)，0普通黑名单，1小偷)
+PersonType=2时(黑名单)，0普通黑名单，1小偷) 
      * @return PersonSubType 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
@@ -199,7 +199,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置身份子类型:
+     * Set 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册用户，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
@@ -213,7 +213,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取到访次数，-1表示未知
+     * Get 到访次数，-1表示未知 
      * @return VisitTimes 到访次数，-1表示未知
      */
     public Integer getVisitTimes() {
@@ -221,7 +221,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置到访次数，-1表示未知
+     * Set 到访次数，-1表示未知
      * @param VisitTimes 到访次数，-1表示未知
      */
     public void setVisitTimes(Integer VisitTimes) {
@@ -229,7 +229,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取到访天数，-1表示未知
+     * Get 到访天数，-1表示未知 
      * @return VisitDays 到访天数，-1表示未知
      */
     public Integer getVisitDays() {
@@ -237,7 +237,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置到访天数，-1表示未知
+     * Set 到访天数，-1表示未知
      * @param VisitDays 到访天数，-1表示未知
      */
     public void setVisitDays(Integer VisitDays) {
@@ -245,7 +245,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

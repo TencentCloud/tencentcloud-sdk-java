@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonSampleRequest  extends AbstractModel{
+public class CreatePersonSampleRequest extends AbstractModel{
 
     /**
     * 人物名称，长度限制：20 个字符。
@@ -71,7 +71,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取人物名称，长度限制：20 个字符。
+     * Get 人物名称，长度限制：20 个字符。 
      * @return Name 人物名称，长度限制：20 个字符。
      */
     public String getName() {
@@ -79,7 +79,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物名称，长度限制：20 个字符。
+     * Set 人物名称，长度限制：20 个字符。
      * @param Name 人物名称，长度限制：20 个字符。
      */
     public void setName(String Name) {
@@ -87,8 +87,8 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
-注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
+     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。 
      * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      */
@@ -97,7 +97,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
+     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
      * @param FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串，仅支持 jpeg、png 图片格式。数组长度限制：5 张图片。
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
@@ -107,10 +107,10 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物应用场景，可选值：
+     * Get 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
+3. All：用于内容识别、内容审核，等价于 1+2。 
      * @return Usages 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
@@ -121,7 +121,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物应用场景，可选值：
+     * Set 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
 3. All：用于内容识别、内容审核，等价于 1+2。
@@ -135,7 +135,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物描述，长度限制：1024 个字符。
+     * Get 人物描述，长度限制：1024 个字符。 
      * @return Description 人物描述，长度限制：1024 个字符。
      */
     public String getDescription() {
@@ -143,7 +143,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物描述，长度限制：1024 个字符。
+     * Set 人物描述，长度限制：1024 个字符。
      * @param Description 人物描述，长度限制：1024 个字符。
      */
     public void setDescription(String Description) {
@@ -151,9 +151,9 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物标签
+     * Get 人物标签
 <li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+<li>单个标签长度限制：128 个字符。</li> 
      * @return Tags 人物标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
@@ -163,7 +163,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物标签
+     * Set 人物标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
      * @param Tags 人物标签
@@ -175,7 +175,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -183,7 +183,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -191,7 +191,7 @@ public class CreatePersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

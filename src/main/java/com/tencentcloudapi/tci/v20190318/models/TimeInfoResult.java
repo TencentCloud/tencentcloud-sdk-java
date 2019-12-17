@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeInfoResult  extends AbstractModel{
+public class TimeInfoResult extends AbstractModel{
 
     /**
     * 持续时间，单位毫秒
@@ -44,7 +44,7 @@ public class TimeInfoResult  extends AbstractModel{
     private Long StartTs;
 
     /**
-     * 获取持续时间，单位毫秒
+     * Get 持续时间，单位毫秒 
      * @return Duration 持续时间，单位毫秒
      */
     public Long getDuration() {
@@ -52,7 +52,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置持续时间，单位毫秒
+     * Set 持续时间，单位毫秒
      * @param Duration 持续时间，单位毫秒
      */
     public void setDuration(Long Duration) {
@@ -60,7 +60,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间戳，单位毫秒
+     * Get 结束时间戳，单位毫秒 
      * @return EndTs 结束时间戳，单位毫秒
      */
     public Long getEndTs() {
@@ -68,7 +68,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间戳，单位毫秒
+     * Set 结束时间戳，单位毫秒
      * @param EndTs 结束时间戳，单位毫秒
      */
     public void setEndTs(Long EndTs) {
@@ -76,7 +76,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间戳，单位毫秒
+     * Get 开始时间戳，单位毫秒 
      * @return StartTs 开始时间戳，单位毫秒
      */
     public Long getStartTs() {
@@ -84,7 +84,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间戳，单位毫秒
+     * Set 开始时间戳，单位毫秒
      * @param StartTs 开始时间戳，单位毫秒
      */
     public void setStartTs(Long StartTs) {
@@ -92,7 +92,7 @@ public class TimeInfoResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

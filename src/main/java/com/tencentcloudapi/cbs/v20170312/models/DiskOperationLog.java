@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiskOperationLog  extends AbstractModel{
+public class DiskOperationLog extends AbstractModel{
 
     /**
     * 操作者的UIN。
@@ -77,7 +77,7 @@ PROCESSING :表示操作中。
     private String EndTime;
 
     /**
-     * 获取操作者的UIN。
+     * Get 操作者的UIN。 
      * @return Operator 操作者的UIN。
      */
     public String getOperator() {
@@ -85,7 +85,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置操作者的UIN。
+     * Set 操作者的UIN。
      * @param Operator 操作者的UIN。
      */
     public void setOperator(String Operator) {
@@ -93,7 +93,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取操作类型。取值范围：
+     * Get 操作类型。取值范围：
 CBS_OPERATION_ATTACH：挂载云硬盘
 CBS_OPERATION_DETACH：解挂云硬盘
 CBS_OPERATION_RENEW：续费
@@ -102,7 +102,7 @@ CBS_OPERATION_CREATE：创建
 CBS_OPERATION_ISOLATE：隔离
 CBS_OPERATION_MODIFY：修改云硬盘属性
 ASP_OPERATION_BIND：关联定期快照策略
-ASP_OPERATION_UNBIND：取消关联定期快照策略
+ASP_OPERATION_UNBIND：取消关联定期快照策略 
      * @return Operation 操作类型。取值范围：
 CBS_OPERATION_ATTACH：挂载云硬盘
 CBS_OPERATION_DETACH：解挂云硬盘
@@ -119,7 +119,7 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     }
 
     /**
-     * 设置操作类型。取值范围：
+     * Set 操作类型。取值范围：
 CBS_OPERATION_ATTACH：挂载云硬盘
 CBS_OPERATION_DETACH：解挂云硬盘
 CBS_OPERATION_RENEW：续费
@@ -145,7 +145,7 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     }
 
     /**
-     * 获取操作的云盘ID。
+     * Get 操作的云盘ID。 
      * @return DiskId 操作的云盘ID。
      */
     public String getDiskId() {
@@ -153,7 +153,7 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     }
 
     /**
-     * 设置操作的云盘ID。
+     * Set 操作的云盘ID。
      * @param DiskId 操作的云盘ID。
      */
     public void setDiskId(String DiskId) {
@@ -161,10 +161,10 @@ ASP_OPERATION_UNBIND：取消关联定期快照策略
     }
 
     /**
-     * 获取操作的状态。取值范围：
+     * Get 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
-PROCESSING :表示操作中。
+PROCESSING :表示操作中。 
      * @return OperationState 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
@@ -175,7 +175,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置操作的状态。取值范围：
+     * Set 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
 PROCESSING :表示操作中。
@@ -189,7 +189,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return StartTime 开始时间。
      */
     public String getStartTime() {
@@ -197,7 +197,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -205,7 +205,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndTime 结束时间。
      */
     public String getEndTime() {
@@ -213,7 +213,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -221,7 +221,7 @@ PROCESSING :表示操作中。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operator", this.Operator);

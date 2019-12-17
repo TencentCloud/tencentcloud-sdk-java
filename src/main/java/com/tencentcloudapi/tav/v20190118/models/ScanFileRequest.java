@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanFileRequest  extends AbstractModel{
+public class ScanFileRequest extends AbstractModel{
 
     /**
     * 购买服务后获得的授权信息，用于保证请求有效性
@@ -44,7 +44,7 @@ public class ScanFileRequest  extends AbstractModel{
     private String Md5;
 
     /**
-     * 获取购买服务后获得的授权信息，用于保证请求有效性
+     * Get 购买服务后获得的授权信息，用于保证请求有效性 
      * @return Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public String getKey() {
@@ -52,7 +52,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买服务后获得的授权信息，用于保证请求有效性
+     * Set 购买服务后获得的授权信息，用于保证请求有效性
      * @param Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public void setKey(String Key) {
@@ -60,7 +60,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件下载url地址
+     * Get 文件下载url地址 
      * @return Sample 文件下载url地址
      */
     public String getSample() {
@@ -68,7 +68,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件下载url地址
+     * Set 文件下载url地址
      * @param Sample 文件下载url地址
      */
     public void setSample(String Sample) {
@@ -76,7 +76,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件的md5值
+     * Get 文件的md5值 
      * @return Md5 文件的md5值
      */
     public String getMd5() {
@@ -84,7 +84,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件的md5值
+     * Set 文件的md5值
      * @param Md5 文件的md5值
      */
     public void setMd5(String Md5) {
@@ -92,7 +92,7 @@ public class ScanFileRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
+public class DescribeTranscodeTemplatesResponse extends AbstractModel{
 
     /**
     * 符合过滤条件的记录总数。
@@ -45,7 +45,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合过滤条件的记录总数。
+     * Get 符合过滤条件的记录总数。 
      * @return TotalCount 符合过滤条件的记录总数。
      */
     public Long getTotalCount() {
@@ -53,7 +53,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合过滤条件的记录总数。
+     * Set 符合过滤条件的记录总数。
      * @param TotalCount 符合过滤条件的记录总数。
      */
     public void setTotalCount(Long TotalCount) {
@@ -61,8 +61,8 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取转码模板详情列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转码模板详情列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTemplateSet 转码模板详情列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转码模板详情列表。
+     * Set 转码模板详情列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTemplateSet 转码模板详情列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DescribeTranscodeTemplatesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

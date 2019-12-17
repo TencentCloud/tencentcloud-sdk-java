@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendMultiSmsRequest  extends AbstractModel{
+public class SendMultiSmsRequest extends AbstractModel{
 
     /**
     * 应用id
@@ -44,7 +44,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public String getSdkappid() {
@@ -52,7 +52,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(String Sdkappid) {
@@ -60,7 +60,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取卡片列表
+     * Get 卡片列表 
      * @return Iccids 卡片列表
      */
     public String [] getIccids() {
@@ -68,7 +68,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卡片列表
+     * Set 卡片列表
      * @param Iccids 卡片列表
      */
     public void setIccids(String [] Iccids) {
@@ -76,7 +76,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取短信内容
+     * Get 短信内容 
      * @return Content 短信内容
      */
     public String getContent() {
@@ -84,7 +84,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信内容
+     * Set 短信内容
      * @param Content 短信内容
      */
     public void setContent(String Content) {
@@ -92,7 +92,7 @@ public class SendMultiSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

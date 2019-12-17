@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProvincePortraitInfo  extends AbstractModel{
+public class ProvincePortraitInfo extends AbstractModel{
 
     /**
     * 用户省份画像数组
@@ -30,7 +30,7 @@ public class ProvincePortraitInfo  extends AbstractModel{
     private ProvincePortrait [] PortraitSet;
 
     /**
-     * 获取用户省份画像数组
+     * Get 用户省份画像数组 
      * @return PortraitSet 用户省份画像数组
      */
     public ProvincePortrait [] getPortraitSet() {
@@ -38,7 +38,7 @@ public class ProvincePortraitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户省份画像数组
+     * Set 用户省份画像数组
      * @param PortraitSet 用户省份画像数组
      */
     public void setPortraitSet(ProvincePortrait [] PortraitSet) {
@@ -46,7 +46,7 @@ public class ProvincePortraitInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PortraitSet.", this.PortraitSet);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDCDBInstanceResponse  extends AbstractModel{
+public class CreateDCDBInstanceResponse extends AbstractModel{
 
     /**
     * 长订单号。可以据此调用 DescribeOrders
@@ -46,8 +46,8 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取长订单号。可以据此调用 DescribeOrders
- 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+     * Get 长订单号。可以据此调用 DescribeOrders
+ 查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。 
      * @return DealName 长订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      */
@@ -56,7 +56,7 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置长订单号。可以据此调用 DescribeOrders
+     * Set 长订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
      * @param DealName 长订单号。可以据此调用 DescribeOrders
  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
@@ -66,8 +66,8 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceIds 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
+     * Set 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 订单对应的实例 ID 列表，如果此处没有返回实例 ID，可以通过订单查询接口获取。还可通过实例查询接口查询实例是否创建完成。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class CreateDCDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4Listener  extends AbstractModel{
+public class L4Listener extends AbstractModel{
 
     /**
     * 监听器ID。
@@ -170,7 +170,7 @@ public class L4Listener  extends AbstractModel{
     private String BalanceMode;
 
     /**
-     * 获取监听器ID。
+     * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
     public String getListenerId() {
@@ -178,7 +178,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID。
+     * Set 监听器ID。
      * @param ListenerId 监听器ID。
      */
     public void setListenerId(String ListenerId) {
@@ -186,7 +186,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义的监听器名称。
+     * Get 用户自定义的监听器名称。 
      * @return ListenerName 用户自定义的监听器名称。
      */
     public String getListenerName() {
@@ -194,7 +194,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义的监听器名称。
+     * Set 用户自定义的监听器名称。
      * @param ListenerName 用户自定义的监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -202,7 +202,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡实例监听器协议类型，可选值tcp，udp。
+     * Get 负载均衡实例监听器协议类型，可选值tcp，udp。 
      * @return Protocol 负载均衡实例监听器协议类型，可选值tcp，udp。
      */
     public String getProtocol() {
@@ -210,7 +210,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例监听器协议类型，可选值tcp，udp。
+     * Set 负载均衡实例监听器协议类型，可选值tcp，udp。
      * @param Protocol 负载均衡实例监听器协议类型，可选值tcp，udp。
      */
     public void setProtocol(String Protocol) {
@@ -218,7 +218,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器的监听接口，可选值1~65535。
+     * Get 负载均衡监听器的监听接口，可选值1~65535。 
      * @return LoadBalancerPort 负载均衡监听器的监听接口，可选值1~65535。
      */
     public Integer getLoadBalancerPort() {
@@ -226,7 +226,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器的监听接口，可选值1~65535。
+     * Set 负载均衡监听器的监听接口，可选值1~65535。
      * @param LoadBalancerPort 负载均衡监听器的监听接口，可选值1~65535。
      */
     public void setLoadBalancerPort(Integer LoadBalancerPort) {
@@ -234,7 +234,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
+     * Get 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。 
      * @return Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
     public Integer getBandwidth() {
@@ -242,7 +242,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
+     * Set 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      * @param Bandwidth 用于计费模式为固定带宽计费，指定监听器最大带宽值，可选值：0-1000，单位：Mbps。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -250,7 +250,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
+     * Get 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。 
      * @return ListenerType 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      */
     public String getListenerType() {
@@ -258,7 +258,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
+     * Set 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      * @param ListenerType 监听器的类别：L4Listener（四层监听器），L7Listener（七层监听器）。
      */
     public void setListenerType(String ListenerType) {
@@ -266,7 +266,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间。单位：秒
+     * Get 会话保持时间。单位：秒 
      * @return SessionExpire 会话保持时间。单位：秒
      */
     public Integer getSessionExpire() {
@@ -274,7 +274,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间。单位：秒
+     * Set 会话保持时间。单位：秒
      * @param SessionExpire 会话保持时间。单位：秒
      */
     public void setSessionExpire(Integer SessionExpire) {
@@ -282,7 +282,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启了检查：1（开启）、0（关闭）。
+     * Get 是否开启了检查：1（开启）、0（关闭）。 
      * @return HealthSwitch 是否开启了检查：1（开启）、0（关闭）。
      */
     public Integer getHealthSwitch() {
@@ -290,7 +290,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启了检查：1（开启）、0（关闭）。
+     * Set 是否开启了检查：1（开启）、0（关闭）。
      * @param HealthSwitch 是否开启了检查：1（开启）、0（关闭）。
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -298,7 +298,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取响应超时时间，单位：秒。
+     * Get 响应超时时间，单位：秒。 
      * @return TimeOut 响应超时时间，单位：秒。
      */
     public Integer getTimeOut() {
@@ -306,7 +306,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置响应超时时间，单位：秒。
+     * Set 响应超时时间，单位：秒。
      * @param TimeOut 响应超时时间，单位：秒。
      */
     public void setTimeOut(Integer TimeOut) {
@@ -314,7 +314,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取检查间隔，单位：秒。
+     * Get 检查间隔，单位：秒。 
      * @return IntervalTime 检查间隔，单位：秒。
      */
     public Integer getIntervalTime() {
@@ -322,7 +322,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置检查间隔，单位：秒。
+     * Set 检查间隔，单位：秒。
      * @param IntervalTime 检查间隔，单位：秒。
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -330,7 +330,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
+     * Get 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。 
      * @return HealthNum 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
     public Integer getHealthNum() {
@@ -338,7 +338,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
+     * Set 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      * @param HealthNum 负载均衡监听器健康阈值，默认值：3，表示当连续探测三次健康则表示该转发正常，可选值：2-10，单位：次。
      */
     public void setHealthNum(Integer HealthNum) {
@@ -346,7 +346,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
+     * Get 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。 
      * @return UnhealthNum 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
     public Integer getUnhealthNum() {
@@ -354,7 +354,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
+     * Set 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      * @param UnhealthNum 负载均衡监听器不健康阈值，默认值：3，表示当连续探测三次不健康则表示该转发不正常，可选值：2-10，单位：次。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -362,7 +362,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     * Get 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效） 
      * @return CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      */
     public Integer getCustomHealthSwitch() {
@@ -370,7 +370,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
+     * Set 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      * @param CustomHealthSwitch 是否开启自定义健康检查：1（开启）、0（关闭）。默认值0，表示关闭。（该字段在健康检查开启的情况下才生效）
      */
     public void setCustomHealthSwitch(Integer CustomHealthSwitch) {
@@ -378,7 +378,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     * Get 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。 
      * @return InputType 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
      */
     public String getInputType() {
@@ -386,7 +386,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
+     * Set 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
      * @param InputType 自定义健康探测内容类型，可选值：text（文本）、hexadecimal（十六进制）。
      */
     public void setInputType(String InputType) {
@@ -394,7 +394,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     * Get 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。 
      * @return LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      */
     public Integer getLineSeparatorType() {
@@ -402,7 +402,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
+     * Set 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      * @param LineSeparatorType 探测内容类型为文本方式时，针对请求文本中换行替换方式。可选值：1（替换为LF）、2（替换为CR）、3（替换为LF+CR）。
      */
     public void setLineSeparatorType(Integer LineSeparatorType) {
@@ -410,7 +410,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取自定义探测请求内容。
+     * Get 自定义探测请求内容。 
      * @return HealthRequest 自定义探测请求内容。
      */
     public String getHealthRequest() {
@@ -418,7 +418,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置自定义探测请求内容。
+     * Set 自定义探测请求内容。
      * @param HealthRequest 自定义探测请求内容。
      */
     public void setHealthRequest(String HealthRequest) {
@@ -426,7 +426,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取自定义探测返回内容。
+     * Get 自定义探测返回内容。 
      * @return HealthResponse 自定义探测返回内容。
      */
     public String getHealthResponse() {
@@ -434,7 +434,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置自定义探测返回内容。
+     * Set 自定义探测返回内容。
      * @param HealthResponse 自定义探测返回内容。
      */
     public void setHealthResponse(String HealthResponse) {
@@ -442,7 +442,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启toa：1（开启）、0（关闭）。
+     * Get 是否开启toa：1（开启）、0（关闭）。 
      * @return ToaFlag 是否开启toa：1（开启）、0（关闭）。
      */
     public Integer getToaFlag() {
@@ -450,7 +450,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启toa：1（开启）、0（关闭）。
+     * Set 是否开启toa：1（开启）、0（关闭）。
      * @param ToaFlag 是否开启toa：1（开启）、0（关闭）。
      */
     public void setToaFlag(Integer ToaFlag) {
@@ -458,7 +458,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public Integer getStatus() {
@@ -466,7 +466,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public void setStatus(Integer Status) {
@@ -474,7 +474,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间戳。
+     * Get 创建时间戳。 
      * @return AddTimestamp 创建时间戳。
      */
     public String getAddTimestamp() {
@@ -482,7 +482,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳。
+     * Set 创建时间戳。
      * @param AddTimestamp 创建时间戳。
      */
     public void setAddTimestamp(String AddTimestamp) {
@@ -490,7 +490,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 获取转发后端服务器调度类型。
+     * Get 转发后端服务器调度类型。 
      * @return BalanceMode 转发后端服务器调度类型。
      */
     public String getBalanceMode() {
@@ -498,7 +498,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 设置转发后端服务器调度类型。
+     * Set 转发后端服务器调度类型。
      * @param BalanceMode 转发后端服务器调度类型。
      */
     public void setBalanceMode(String BalanceMode) {
@@ -506,7 +506,7 @@ public class L4Listener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

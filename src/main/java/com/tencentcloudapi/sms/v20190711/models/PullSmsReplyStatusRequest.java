@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatusRequest  extends AbstractModel{
+public class PullSmsReplyStatusRequest extends AbstractModel{
 
     /**
     * 拉取最大条数，最多100条
@@ -37,7 +37,7 @@ public class PullSmsReplyStatusRequest  extends AbstractModel{
     private String SmsSdkAppid;
 
     /**
-     * 获取拉取最大条数，最多100条
+     * Get 拉取最大条数，最多100条 
      * @return Limit 拉取最大条数，最多100条
      */
     public Long getLimit() {
@@ -45,7 +45,7 @@ public class PullSmsReplyStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取最大条数，最多100条
+     * Set 拉取最大条数，最多100条
      * @param Limit 拉取最大条数，最多100条
      */
     public void setLimit(Long Limit) {
@@ -53,7 +53,7 @@ public class PullSmsReplyStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
      * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public String getSmsSdkAppid() {
@@ -61,7 +61,7 @@ public class PullSmsReplyStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
@@ -69,7 +69,7 @@ public class PullSmsReplyStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);

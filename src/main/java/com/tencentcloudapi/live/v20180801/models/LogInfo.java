@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogInfo  extends AbstractModel{
+public class LogInfo extends AbstractModel{
 
     /**
     * 日志名称。
@@ -51,7 +51,7 @@ public class LogInfo  extends AbstractModel{
     private Integer FileSize;
 
     /**
-     * 获取日志名称。
+     * Get 日志名称。 
      * @return LogName 日志名称。
      */
     public String getLogName() {
@@ -59,7 +59,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日志名称。
+     * Set 日志名称。
      * @param LogName 日志名称。
      */
     public void setLogName(String LogName) {
@@ -67,7 +67,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取日志Url。
+     * Get 日志Url。 
      * @return LogUrl 日志Url。
      */
     public String getLogUrl() {
@@ -75,7 +75,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日志Url。
+     * Set 日志Url。
      * @param LogUrl 日志Url。
      */
     public void setLogUrl(String LogUrl) {
@@ -83,7 +83,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取日志生成时间
+     * Get 日志生成时间 
      * @return LogTime 日志生成时间
      */
     public String getLogTime() {
@@ -91,7 +91,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日志生成时间
+     * Set 日志生成时间
      * @param LogTime 日志生成时间
      */
     public void setLogTime(String LogTime) {
@@ -99,7 +99,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小
+     * Get 文件大小 
      * @return FileSize 文件大小
      */
     public Integer getFileSize() {
@@ -107,7 +107,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小
+     * Set 文件大小
      * @param FileSize 文件大小
      */
     public void setFileSize(Integer FileSize) {
@@ -115,7 +115,7 @@ public class LogInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogName", this.LogName);

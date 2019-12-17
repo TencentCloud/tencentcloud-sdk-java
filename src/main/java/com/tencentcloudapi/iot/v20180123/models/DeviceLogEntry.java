@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceLogEntry  extends AbstractModel{
+public class DeviceLogEntry extends AbstractModel{
 
     /**
     * 日志id
@@ -65,7 +65,7 @@ public class DeviceLogEntry  extends AbstractModel{
     private String Method;
 
     /**
-     * 获取日志id
+     * Get 日志id 
      * @return Id 日志id
      */
     public String getId() {
@@ -73,7 +73,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置日志id
+     * Set 日志id
      * @param Id 日志id
      */
     public void setId(String Id) {
@@ -81,7 +81,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取日志内容
+     * Get 日志内容 
      * @return Msg 日志内容
      */
     public String getMsg() {
@@ -89,7 +89,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置日志内容
+     * Set 日志内容
      * @param Msg 日志内容
      */
     public void setMsg(String Msg) {
@@ -97,7 +97,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取状态码
+     * Get 状态码 
      * @return Code 状态码
      */
     public String getCode() {
@@ -105,7 +105,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置状态码
+     * Set 状态码
      * @param Code 状态码
      */
     public void setCode(String Code) {
@@ -113,7 +113,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取时间戳
+     * Get 时间戳 
      * @return Timestamp 时间戳
      */
     public Integer getTimestamp() {
@@ -121,7 +121,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置时间戳
+     * Set 时间戳
      * @param Timestamp 时间戳
      */
     public void setTimestamp(Integer Timestamp) {
@@ -129,7 +129,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -137,7 +137,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -145,7 +145,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取设备动作
+     * Get 设备动作 
      * @return Method 设备动作
      */
     public String getMethod() {
@@ -153,7 +153,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置设备动作
+     * Set 设备动作
      * @param Method 设备动作
      */
     public void setMethod(String Method) {
@@ -161,7 +161,7 @@ public class DeviceLogEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

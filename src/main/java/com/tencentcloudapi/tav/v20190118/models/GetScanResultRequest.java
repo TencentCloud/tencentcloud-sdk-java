@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetScanResultRequest  extends AbstractModel{
+public class GetScanResultRequest extends AbstractModel{
 
     /**
     * 购买服务后获得的授权信息，用于保证请求有效性
@@ -37,7 +37,7 @@ public class GetScanResultRequest  extends AbstractModel{
     private String Md5;
 
     /**
-     * 获取购买服务后获得的授权信息，用于保证请求有效性
+     * Get 购买服务后获得的授权信息，用于保证请求有效性 
      * @return Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public String getKey() {
@@ -45,7 +45,7 @@ public class GetScanResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买服务后获得的授权信息，用于保证请求有效性
+     * Set 购买服务后获得的授权信息，用于保证请求有效性
      * @param Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public void setKey(String Key) {
@@ -53,7 +53,7 @@ public class GetScanResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取扫描接口的md5（只允许单个md5）
+     * Get 需要获取扫描接口的md5（只允许单个md5） 
      * @return Md5 需要获取扫描接口的md5（只允许单个md5）
      */
     public String getMd5() {
@@ -61,7 +61,7 @@ public class GetScanResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取扫描接口的md5（只允许单个md5）
+     * Set 需要获取扫描接口的md5（只允许单个md5）
      * @param Md5 需要获取扫描接口的md5（只允许单个md5）
      */
     public void setMd5(String Md5) {
@@ -69,7 +69,7 @@ public class GetScanResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

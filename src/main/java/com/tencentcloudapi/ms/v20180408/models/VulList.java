@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VulList  extends AbstractModel{
+public class VulList extends AbstractModel{
 
     /**
     * 漏洞id
@@ -79,7 +79,7 @@ public class VulList  extends AbstractModel{
     private Integer RiskLevel;
 
     /**
-     * 获取漏洞id
+     * Get 漏洞id 
      * @return VulId 漏洞id
      */
     public String getVulId() {
@@ -87,7 +87,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞id
+     * Set 漏洞id
      * @param VulId 漏洞id
      */
     public void setVulId(String VulId) {
@@ -95,7 +95,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞名称
+     * Get 漏洞名称 
      * @return VulName 漏洞名称
      */
     public String getVulName() {
@@ -103,7 +103,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞名称
+     * Set 漏洞名称
      * @param VulName 漏洞名称
      */
     public void setVulName(String VulName) {
@@ -111,7 +111,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞代码
+     * Get 漏洞代码 
      * @return VulCode 漏洞代码
      */
     public String getVulCode() {
@@ -119,7 +119,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞代码
+     * Set 漏洞代码
      * @param VulCode 漏洞代码
      */
     public void setVulCode(String VulCode) {
@@ -127,7 +127,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述
+     * Get 漏洞描述 
      * @return VulDesc 漏洞描述
      */
     public String getVulDesc() {
@@ -135,7 +135,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述
+     * Set 漏洞描述
      * @param VulDesc 漏洞描述
      */
     public void setVulDesc(String VulDesc) {
@@ -143,7 +143,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞解决方案
+     * Get 漏洞解决方案 
      * @return VulSolution 漏洞解决方案
      */
     public String getVulSolution() {
@@ -151,7 +151,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞解决方案
+     * Set 漏洞解决方案
      * @param VulSolution 漏洞解决方案
      */
     public void setVulSolution(String VulSolution) {
@@ -159,7 +159,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞来源类别，0默认自身，1第三方插件
+     * Get 漏洞来源类别，0默认自身，1第三方插件 
      * @return VulSrcType 漏洞来源类别，0默认自身，1第三方插件
      */
     public Integer getVulSrcType() {
@@ -167,7 +167,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞来源类别，0默认自身，1第三方插件
+     * Set 漏洞来源类别，0默认自身，1第三方插件
      * @param VulSrcType 漏洞来源类别，0默认自身，1第三方插件
      */
     public void setVulSrcType(Integer VulSrcType) {
@@ -175,7 +175,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞位置
+     * Get 漏洞位置 
      * @return VulFilepath 漏洞位置
      */
     public String getVulFilepath() {
@@ -183,7 +183,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞位置
+     * Set 漏洞位置
      * @param VulFilepath 漏洞位置
      */
     public void setVulFilepath(String VulFilepath) {
@@ -191,7 +191,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 获取风险级别：1 低风险 ；2中等风险；3 高风险
+     * Get 风险级别：1 低风险 ；2中等风险；3 高风险 
      * @return RiskLevel 风险级别：1 低风险 ；2中等风险；3 高风险
      */
     public Integer getRiskLevel() {
@@ -199,7 +199,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 设置风险级别：1 低风险 ；2中等风险；3 高风险
+     * Set 风险级别：1 低风险 ；2中等风险；3 高风险
      * @param RiskLevel 风险级别：1 低风险 ；2中等风险；3 高风险
      */
     public void setRiskLevel(Integer RiskLevel) {
@@ -207,7 +207,7 @@ public class VulList  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNetDetectRequest  extends AbstractModel{
+public class DeleteNetDetectRequest extends AbstractModel{
 
     /**
     * 网络探测实例`ID`。形如：`netd-12345678`
@@ -30,7 +30,7 @@ public class DeleteNetDetectRequest  extends AbstractModel{
     private String NetDetectId;
 
     /**
-     * 获取网络探测实例`ID`。形如：`netd-12345678`
+     * Get 网络探测实例`ID`。形如：`netd-12345678` 
      * @return NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
      */
     public String getNetDetectId() {
@@ -38,7 +38,7 @@ public class DeleteNetDetectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网络探测实例`ID`。形如：`netd-12345678`
+     * Set 网络探测实例`ID`。形如：`netd-12345678`
      * @param NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
      */
     public void setNetDetectId(String NetDetectId) {
@@ -46,7 +46,7 @@ public class DeleteNetDetectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);

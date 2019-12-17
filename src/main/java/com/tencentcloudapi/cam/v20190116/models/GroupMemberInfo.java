@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupMemberInfo  extends AbstractModel{
+public class GroupMemberInfo extends AbstractModel{
 
     /**
     * 子用户 Uid。
@@ -100,7 +100,7 @@ public class GroupMemberInfo  extends AbstractModel{
     private Long IsReceiverOwner;
 
     /**
-     * 获取子用户 Uid。
+     * Get 子用户 Uid。 
      * @return Uid 子用户 Uid。
      */
     public Long getUid() {
@@ -108,7 +108,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 Uid。
+     * Set 子用户 Uid。
      * @param Uid 子用户 Uid。
      */
     public void setUid(Long Uid) {
@@ -116,7 +116,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子用户 Uin。
+     * Get 子用户 Uin。 
      * @return Uin 子用户 Uin。
      */
     public Long getUin() {
@@ -124,7 +124,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 Uin。
+     * Set 子用户 Uin。
      * @param Uin 子用户 Uin。
      */
     public void setUin(Long Uin) {
@@ -132,7 +132,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子用户名称。
+     * Get 子用户名称。 
      * @return Name 子用户名称。
      */
     public String getName() {
@@ -140,7 +140,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子用户名称。
+     * Set 子用户名称。
      * @param Name 子用户名称。
      */
     public void setName(String Name) {
@@ -148,7 +148,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取手机号。
+     * Get 手机号。 
      * @return PhoneNum 手机号。
      */
     public String getPhoneNum() {
@@ -156,7 +156,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置手机号。
+     * Set 手机号。
      * @param PhoneNum 手机号。
      */
     public void setPhoneNum(String PhoneNum) {
@@ -164,7 +164,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取手机区域代码。
+     * Get 手机区域代码。 
      * @return CountryCode 手机区域代码。
      */
     public String getCountryCode() {
@@ -172,7 +172,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置手机区域代码。
+     * Set 手机区域代码。
      * @param CountryCode 手机区域代码。
      */
     public void setCountryCode(String CountryCode) {
@@ -180,7 +180,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否已验证手机。
+     * Get 是否已验证手机。 
      * @return PhoneFlag 是否已验证手机。
      */
     public Long getPhoneFlag() {
@@ -188,7 +188,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否已验证手机。
+     * Set 是否已验证手机。
      * @param PhoneFlag 是否已验证手机。
      */
     public void setPhoneFlag(Long PhoneFlag) {
@@ -196,7 +196,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取邮箱地址。
+     * Get 邮箱地址。 
      * @return Email 邮箱地址。
      */
     public String getEmail() {
@@ -204,7 +204,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置邮箱地址。
+     * Set 邮箱地址。
      * @param Email 邮箱地址。
      */
     public void setEmail(String Email) {
@@ -212,7 +212,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否已验证邮箱。
+     * Get 是否已验证邮箱。 
      * @return EmailFlag 是否已验证邮箱。
      */
     public Long getEmailFlag() {
@@ -220,7 +220,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否已验证邮箱。
+     * Set 是否已验证邮箱。
      * @param EmailFlag 是否已验证邮箱。
      */
     public void setEmailFlag(Long EmailFlag) {
@@ -228,7 +228,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户类型。
+     * Get 用户类型。 
      * @return UserType 用户类型。
      */
     public Long getUserType() {
@@ -236,7 +236,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户类型。
+     * Set 用户类型。
      * @param UserType 用户类型。
      */
     public void setUserType(Long UserType) {
@@ -244,7 +244,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -252,7 +252,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -260,7 +260,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否为主消息接收人。
+     * Get 是否为主消息接收人。 
      * @return IsReceiverOwner 是否为主消息接收人。
      */
     public Long getIsReceiverOwner() {
@@ -268,7 +268,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否为主消息接收人。
+     * Set 是否为主消息接收人。
      * @param IsReceiverOwner 是否为主消息接收人。
      */
     public void setIsReceiverOwner(Long IsReceiverOwner) {
@@ -276,7 +276,7 @@ public class GroupMemberInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uid", this.Uid);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConfigResponse  extends AbstractModel{
+public class DescribeConfigResponse extends AbstractModel{
 
     /**
     * 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
@@ -72,7 +72,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
+     * Get 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。 
      * @return NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
      */
     public String getNoticeLevel() {
@@ -80,7 +80,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
+     * Set 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
      * @param NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示。
      */
     public void setNoticeLevel(String NoticeLevel) {
@@ -88,7 +88,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取配置ID。
+     * Get 配置ID。 
      * @return Id 配置ID。
      */
     public Integer getId() {
@@ -96,7 +96,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置配置ID。
+     * Set 配置ID。
      * @param Id 配置ID。
      */
     public void setId(Integer Id) {
@@ -104,7 +104,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取记录创建时间。
+     * Get 记录创建时间。 
      * @return CreatedAt 记录创建时间。
      */
     public String getCreatedAt() {
@@ -112,7 +112,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置记录创建时间。
+     * Set 记录创建时间。
      * @param CreatedAt 记录创建时间。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -120,7 +120,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取记录更新新建。
+     * Get 记录更新新建。 
      * @return UpdatedAt 记录更新新建。
      */
     public String getUpdatedAt() {
@@ -128,7 +128,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置记录更新新建。
+     * Set 记录更新新建。
      * @param UpdatedAt 记录更新新建。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -136,7 +136,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid。
+     * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
     public Integer getAppid() {
@@ -144,7 +144,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid。
+     * Set 云用户appid。
      * @param Appid 云用户appid。
      */
     public void setAppid(Integer Appid) {
@@ -152,7 +152,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内容检测通知等级-1:通知,0-不通知
+     * Get 内容检测通知等级-1:通知,0-不通知 
      * @return ContentLevel 内容检测通知等级-1:通知,0-不通知
      */
     public Integer getContentLevel() {
@@ -160,7 +160,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内容检测通知等级-1:通知,0-不通知
+     * Set 内容检测通知等级-1:通知,0-不通知
      * @param ContentLevel 内容检测通知等级-1:通知,0-不通知
      */
     public void setContentLevel(Integer ContentLevel) {
@@ -168,7 +168,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoticeLevel", this.NoticeLevel);

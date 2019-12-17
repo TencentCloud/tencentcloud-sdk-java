@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
+public class UnbindTrafficMirrorReceiversRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -37,7 +37,7 @@ public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
     private UnbindTrafficMirrorReceiver [] ReceiverSet;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -45,7 +45,7 @@ public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -53,7 +53,7 @@ public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机实例ID和端口数组。
+     * Get 待绑定的主机实例ID和端口数组。 
      * @return ReceiverSet 待绑定的主机实例ID和端口数组。
      */
     public UnbindTrafficMirrorReceiver [] getReceiverSet() {
@@ -61,7 +61,7 @@ public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机实例ID和端口数组。
+     * Set 待绑定的主机实例ID和端口数组。
      * @param ReceiverSet 待绑定的主机实例ID和端口数组。
      */
     public void setReceiverSet(UnbindTrafficMirrorReceiver [] ReceiverSet) {
@@ -69,7 +69,7 @@ public class UnbindTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteEipRequest  extends AbstractModel{
+public class DeleteEipRequest extends AbstractModel{
 
     /**
     * Eip实例ID列表
@@ -30,7 +30,7 @@ public class DeleteEipRequest  extends AbstractModel{
     private String [] EipIds;
 
     /**
-     * 获取Eip实例ID列表
+     * Get Eip实例ID列表 
      * @return EipIds Eip实例ID列表
      */
     public String [] getEipIds() {
@@ -38,7 +38,7 @@ public class DeleteEipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID列表
+     * Set Eip实例ID列表
      * @param EipIds Eip实例ID列表
      */
     public void setEipIds(String [] EipIds) {
@@ -46,7 +46,7 @@ public class DeleteEipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EipIds.", this.EipIds);

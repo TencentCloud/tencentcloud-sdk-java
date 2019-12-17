@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccessGroupRequest  extends AbstractModel{
+public class CreateAccessGroupRequest extends AbstractModel{
 
     /**
     * 权限组名称
@@ -37,7 +37,7 @@ public class CreateAccessGroupRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取权限组名称
+     * Get 权限组名称 
      * @return AccessGroupName 权限组名称
      */
     public String getAccessGroupName() {
@@ -45,7 +45,7 @@ public class CreateAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称
+     * Set 权限组名称
      * @param AccessGroupName 权限组名称
      */
     public void setAccessGroupName(String AccessGroupName) {
@@ -53,7 +53,7 @@ public class CreateAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组描述
+     * Get 权限组描述 
      * @return Description 权限组描述
      */
     public String getDescription() {
@@ -61,7 +61,7 @@ public class CreateAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组描述
+     * Set 权限组描述
      * @param Description 权限组描述
      */
     public void setDescription(String Description) {
@@ -69,7 +69,7 @@ public class CreateAccessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessGroupName", this.AccessGroupName);

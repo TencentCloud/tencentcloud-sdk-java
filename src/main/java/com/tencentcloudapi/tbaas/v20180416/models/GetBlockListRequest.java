@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetBlockListRequest  extends AbstractModel{
+public class GetBlockListRequest extends AbstractModel{
 
     /**
     * 模块名称，固定字段：block
@@ -86,7 +86,7 @@ public class GetBlockListRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取模块名称，固定字段：block
+     * Get 模块名称，固定字段：block 
      * @return Module 模块名称，固定字段：block
      */
     public String getModule() {
@@ -94,7 +94,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，固定字段：block
+     * Set 模块名称，固定字段：block
      * @param Module 模块名称，固定字段：block
      */
     public void setModule(String Module) {
@@ -102,7 +102,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名称，固定字段：block_list
+     * Get 操作名称，固定字段：block_list 
      * @return Operation 操作名称，固定字段：block_list
      */
     public String getOperation() {
@@ -110,7 +110,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名称，固定字段：block_list
+     * Set 操作名称，固定字段：block_list
      * @param Operation 操作名称，固定字段：block_list
      */
     public void setOperation(String Operation) {
@@ -118,7 +118,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，固定字段：0
+     * Get 通道ID，固定字段：0 
      * @return ChannelId 通道ID，固定字段：0
      */
     public Integer getChannelId() {
@@ -126,7 +126,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，固定字段：0
+     * Set 通道ID，固定字段：0
      * @param ChannelId 通道ID，固定字段：0
      */
     public void setChannelId(Integer ChannelId) {
@@ -134,7 +134,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取组织ID，固定字段：0
+     * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
     public Integer getGroupId() {
@@ -142,7 +142,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织ID，固定字段：0
+     * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
     public void setGroupId(Integer GroupId) {
@@ -150,7 +150,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的通道名称，可在通道详情或列表中获取
+     * Get 需要查询的通道名称，可在通道详情或列表中获取 
      * @return ChannelName 需要查询的通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
@@ -158,7 +158,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的通道名称，可在通道详情或列表中获取
+     * Set 需要查询的通道名称，可在通道详情或列表中获取
      * @param ChannelName 需要查询的通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
@@ -166,7 +166,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -174,7 +174,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -182,7 +182,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -190,7 +190,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -198,7 +198,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取的起始交易偏移
+     * Get 需要获取的起始交易偏移 
      * @return Offset 需要获取的起始交易偏移
      */
     public Integer getOffset() {
@@ -206,7 +206,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取的起始交易偏移
+     * Set 需要获取的起始交易偏移
      * @param Offset 需要获取的起始交易偏移
      */
     public void setOffset(Integer Offset) {
@@ -214,7 +214,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取的交易数量
+     * Get 需要获取的交易数量 
      * @return Limit 需要获取的交易数量
      */
     public Integer getLimit() {
@@ -222,7 +222,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取的交易数量
+     * Set 需要获取的交易数量
      * @param Limit 需要获取的交易数量
      */
     public void setLimit(Integer Limit) {
@@ -230,7 +230,7 @@ public class GetBlockListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
+public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
     * 模板Id。
@@ -86,7 +86,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     private String CallbackKey;
 
     /**
-     * 获取模板Id。
+     * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
     public Integer getTemplateId() {
@@ -94,7 +94,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板Id。
+     * Set 模板Id。
      * @param TemplateId 模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -102,7 +102,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称。
+     * Get 模板名称。 
      * @return TemplateName 模板名称。
      */
     public String getTemplateName() {
@@ -110,7 +110,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称。
+     * Set 模板名称。
      * @param TemplateName 模板名称。
      */
     public void setTemplateName(String TemplateName) {
@@ -118,7 +118,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
+     * Get 描述信息。 
      * @return Description 描述信息。
      */
     public String getDescription() {
@@ -126,7 +126,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
      * @param Description 描述信息。
      */
     public void setDescription(String Description) {
@@ -134,7 +134,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开播回调URL。
+     * Get 开播回调URL。 
      * @return StreamBeginNotifyUrl 开播回调URL。
      */
     public String getStreamBeginNotifyUrl() {
@@ -142,7 +142,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开播回调URL。
+     * Set 开播回调URL。
      * @param StreamBeginNotifyUrl 开播回调URL。
      */
     public void setStreamBeginNotifyUrl(String StreamBeginNotifyUrl) {
@@ -150,7 +150,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取断流回调URL。
+     * Get 断流回调URL。 
      * @return StreamEndNotifyUrl 断流回调URL。
      */
     public String getStreamEndNotifyUrl() {
@@ -158,7 +158,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置断流回调URL。
+     * Set 断流回调URL。
      * @param StreamEndNotifyUrl 断流回调URL。
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
@@ -166,7 +166,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取录制回调URL。
+     * Get 录制回调URL。 
      * @return RecordNotifyUrl 录制回调URL。
      */
     public String getRecordNotifyUrl() {
@@ -174,7 +174,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置录制回调URL。
+     * Set 录制回调URL。
      * @param RecordNotifyUrl 录制回调URL。
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
@@ -182,7 +182,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截图回调URL。
+     * Get 截图回调URL。 
      * @return SnapshotNotifyUrl 截图回调URL。
      */
     public String getSnapshotNotifyUrl() {
@@ -190,7 +190,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截图回调URL。
+     * Set 截图回调URL。
      * @param SnapshotNotifyUrl 截图回调URL。
      */
     public void setSnapshotNotifyUrl(String SnapshotNotifyUrl) {
@@ -198,7 +198,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴黄回调URL。
+     * Get 鉴黄回调URL。 
      * @return PornCensorshipNotifyUrl 鉴黄回调URL。
      */
     public String getPornCensorshipNotifyUrl() {
@@ -206,7 +206,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴黄回调URL。
+     * Set 鉴黄回调URL。
      * @param PornCensorshipNotifyUrl 鉴黄回调URL。
      */
     public void setPornCensorshipNotifyUrl(String PornCensorshipNotifyUrl) {
@@ -214,7 +214,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * Get 回调key，回调URL公用，鉴权回调说明详见回调格式文档 
      * @return CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
      */
     public String getCallbackKey() {
@@ -222,7 +222,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * Set 回调key，回调URL公用，鉴权回调说明详见回调格式文档
      * @param CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
      */
     public void setCallbackKey(String CallbackKey) {
@@ -230,7 +230,7 @@ public class ModifyLiveCallbackTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

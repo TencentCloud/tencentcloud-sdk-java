@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceRollbackRangeTime  extends AbstractModel{
+public class InstanceRollbackRangeTime extends AbstractModel{
 
     /**
     * 查询数据库错误码
@@ -51,7 +51,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     private RollbackTimeRange [] Times;
 
     /**
-     * 获取查询数据库错误码
+     * Get 查询数据库错误码 
      * @return Code 查询数据库错误码
      */
     public Integer getCode() {
@@ -59,7 +59,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 设置查询数据库错误码
+     * Set 查询数据库错误码
      * @param Code 查询数据库错误码
      */
     public void setCode(Integer Code) {
@@ -67,7 +67,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 获取查询数据库错误信息
+     * Get 查询数据库错误信息 
      * @return Message 查询数据库错误信息
      */
     public String getMessage() {
@@ -75,7 +75,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 设置查询数据库错误信息
+     * Set 查询数据库错误信息
      * @param Message 查询数据库错误信息
      */
     public void setMessage(String Message) {
@@ -83,7 +83,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -91,7 +91,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -99,7 +99,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 获取可回档时间范围
+     * Get 可回档时间范围 
      * @return Times 可回档时间范围
      */
     public RollbackTimeRange [] getTimes() {
@@ -107,7 +107,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 设置可回档时间范围
+     * Set 可回档时间范围
      * @param Times 可回档时间范围
      */
     public void setTimes(RollbackTimeRange [] Times) {
@@ -115,7 +115,7 @@ public class InstanceRollbackRangeTime  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

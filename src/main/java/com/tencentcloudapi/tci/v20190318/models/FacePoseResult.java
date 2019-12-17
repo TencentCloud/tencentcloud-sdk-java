@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FacePoseResult  extends AbstractModel{
+public class FacePoseResult extends AbstractModel{
 
     /**
     * 正脸或侧脸的消息
@@ -51,7 +51,7 @@ public class FacePoseResult  extends AbstractModel{
     private Float Yaw;
 
     /**
-     * 获取正脸或侧脸的消息
+     * Get 正脸或侧脸的消息 
      * @return Direction 正脸或侧脸的消息
      */
     public String getDirection() {
@@ -59,7 +59,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 设置正脸或侧脸的消息
+     * Set 正脸或侧脸的消息
      * @param Direction 正脸或侧脸的消息
      */
     public void setDirection(String Direction) {
@@ -67,7 +67,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 获取围绕Z轴旋转角度，俯仰角
+     * Get 围绕Z轴旋转角度，俯仰角 
      * @return Pitch 围绕Z轴旋转角度，俯仰角
      */
     public Float getPitch() {
@@ -75,7 +75,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 设置围绕Z轴旋转角度，俯仰角
+     * Set 围绕Z轴旋转角度，俯仰角
      * @param Pitch 围绕Z轴旋转角度，俯仰角
      */
     public void setPitch(Float Pitch) {
@@ -83,7 +83,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 获取围绕X轴旋转角度，翻滚角
+     * Get 围绕X轴旋转角度，翻滚角 
      * @return Roll 围绕X轴旋转角度，翻滚角
      */
     public Float getRoll() {
@@ -91,7 +91,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 设置围绕X轴旋转角度，翻滚角
+     * Set 围绕X轴旋转角度，翻滚角
      * @param Roll 围绕X轴旋转角度，翻滚角
      */
     public void setRoll(Float Roll) {
@@ -99,7 +99,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 获取围绕Y轴旋转角度，偏航角
+     * Get 围绕Y轴旋转角度，偏航角 
      * @return Yaw 围绕Y轴旋转角度，偏航角
      */
     public Float getYaw() {
@@ -107,7 +107,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 设置围绕Y轴旋转角度，偏航角
+     * Set 围绕Y轴旋转角度，偏航角
      * @param Yaw 围绕Y轴旋转角度，偏航角
      */
     public void setYaw(Float Yaw) {
@@ -115,7 +115,7 @@ public class FacePoseResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Direction", this.Direction);

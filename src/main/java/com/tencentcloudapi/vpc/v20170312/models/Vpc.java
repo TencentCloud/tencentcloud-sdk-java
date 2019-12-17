@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Vpc  extends AbstractModel{
+public class Vpc extends AbstractModel{
 
     /**
     * `VPC`名称。
@@ -115,7 +115,7 @@ public class Vpc  extends AbstractModel{
     private AssistantCidr [] AssistantCidrSet;
 
     /**
-     * 获取`VPC`名称。
+     * Get `VPC`名称。 
      * @return VpcName `VPC`名称。
      */
     public String getVpcName() {
@@ -123,7 +123,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`名称。
+     * Set `VPC`名称。
      * @param VpcName `VPC`名称。
      */
     public void setVpcName(String VpcName) {
@@ -131,7 +131,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * Get `VPC`实例`ID`，例如：vpc-azd4dt1c。 
      * @return VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
      */
     public String getVpcId() {
@@ -139,7 +139,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`，例如：vpc-azd4dt1c。
+     * Set `VPC`实例`ID`，例如：vpc-azd4dt1c。
      * @param VpcId `VPC`实例`ID`，例如：vpc-azd4dt1c。
      */
     public void setVpcId(String VpcId) {
@@ -147,7 +147,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`VPC`的`IPv4` `CIDR`。
+     * Get `VPC`的`IPv4` `CIDR`。 
      * @return CidrBlock `VPC`的`IPv4` `CIDR`。
      */
     public String getCidrBlock() {
@@ -155,7 +155,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`的`IPv4` `CIDR`。
+     * Set `VPC`的`IPv4` `CIDR`。
      * @param CidrBlock `VPC`的`IPv4` `CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -163,7 +163,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取是否默认`VPC`。
+     * Get 是否默认`VPC`。 
      * @return IsDefault 是否默认`VPC`。
      */
     public Boolean getIsDefault() {
@@ -171,7 +171,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置是否默认`VPC`。
+     * Set 是否默认`VPC`。
      * @param IsDefault 是否默认`VPC`。
      */
     public void setIsDefault(Boolean IsDefault) {
@@ -179,7 +179,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启组播。
+     * Get 是否开启组播。 
      * @return EnableMulticast 是否开启组播。
      */
     public Boolean getEnableMulticast() {
@@ -187,7 +187,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启组播。
+     * Set 是否开启组播。
      * @param EnableMulticast 是否开启组播。
      */
     public void setEnableMulticast(Boolean EnableMulticast) {
@@ -195,7 +195,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -203,7 +203,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -211,7 +211,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`DNS`列表。
+     * Get `DNS`列表。 
      * @return DnsServerSet `DNS`列表。
      */
     public String [] getDnsServerSet() {
@@ -219,7 +219,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`DNS`列表。
+     * Set `DNS`列表。
      * @param DnsServerSet `DNS`列表。
      */
     public void setDnsServerSet(String [] DnsServerSet) {
@@ -227,7 +227,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`DHCP`域名选项值。
+     * Get `DHCP`域名选项值。 
      * @return DomainName `DHCP`域名选项值。
      */
     public String getDomainName() {
@@ -235,7 +235,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`DHCP`域名选项值。
+     * Set `DHCP`域名选项值。
      * @param DomainName `DHCP`域名选项值。
      */
     public void setDomainName(String DomainName) {
@@ -243,7 +243,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`DHCP`选项集`ID`。
+     * Get `DHCP`选项集`ID`。 
      * @return DhcpOptionsId `DHCP`选项集`ID`。
      */
     public String getDhcpOptionsId() {
@@ -251,7 +251,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`DHCP`选项集`ID`。
+     * Set `DHCP`选项集`ID`。
      * @param DhcpOptionsId `DHCP`选项集`ID`。
      */
     public void setDhcpOptionsId(String DhcpOptionsId) {
@@ -259,7 +259,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启`DHCP`。
+     * Get 是否开启`DHCP`。 
      * @return EnableDhcp 是否开启`DHCP`。
      */
     public Boolean getEnableDhcp() {
@@ -267,7 +267,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启`DHCP`。
+     * Set 是否开启`DHCP`。
      * @param EnableDhcp 是否开启`DHCP`。
      */
     public void setEnableDhcp(Boolean EnableDhcp) {
@@ -275,7 +275,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取`VPC`的`IPv6` `CIDR`。
+     * Get `VPC`的`IPv6` `CIDR`。 
      * @return Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
      */
     public String getIpv6CidrBlock() {
@@ -283,7 +283,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`的`IPv6` `CIDR`。
+     * Set `VPC`的`IPv6` `CIDR`。
      * @param Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -291,7 +291,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取标签键值对
+     * Get 标签键值对 
      * @return TagSet 标签键值对
      */
     public Tag [] getTagSet() {
@@ -299,7 +299,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置标签键值对
+     * Set 标签键值对
      * @param TagSet 标签键值对
      */
     public void setTagSet(Tag [] TagSet) {
@@ -307,8 +307,8 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 获取辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 辅助CIDR
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssistantCidrSet 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -317,7 +317,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 设置辅助CIDR
+     * Set 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AssistantCidrSet 辅助CIDR
 注意：此字段可能返回 null，表示取不到有效值。
@@ -327,7 +327,7 @@ public class Vpc  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);

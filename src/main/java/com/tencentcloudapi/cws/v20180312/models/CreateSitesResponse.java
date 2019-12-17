@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSitesResponse  extends AbstractModel{
+public class CreateSitesResponse extends AbstractModel{
 
     /**
     * 新增站点数。
@@ -44,7 +44,7 @@ public class CreateSitesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新增站点数。
+     * Get 新增站点数。 
      * @return Number 新增站点数。
      */
     public Integer getNumber() {
@@ -52,7 +52,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置新增站点数。
+     * Set 新增站点数。
      * @param Number 新增站点数。
      */
     public void setNumber(Integer Number) {
@@ -60,7 +60,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取站点数组
+     * Get 站点数组 
      * @return Sites 站点数组
      */
     public MiniSite [] getSites() {
@@ -68,7 +68,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置站点数组
+     * Set 站点数组
      * @param Sites 站点数组
      */
     public void setSites(MiniSite [] Sites) {
@@ -76,7 +76,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateSitesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Number", this.Number);

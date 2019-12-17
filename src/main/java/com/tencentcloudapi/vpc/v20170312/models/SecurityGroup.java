@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroup  extends AbstractModel{
+public class SecurityGroup extends AbstractModel{
 
     /**
     * 安全组实例ID，例如：sg-ohuuioma。
@@ -65,7 +65,7 @@ public class SecurityGroup  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取安全组实例ID，例如：sg-ohuuioma。
+     * Get 安全组实例ID，例如：sg-ohuuioma。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public String getSecurityGroupId() {
@@ -73,7 +73,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如：sg-ohuuioma。
+     * Set 安全组实例ID，例如：sg-ohuuioma。
      * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -81,7 +81,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 获取安全组名称，可任意命名，但不得超过60个字符。
+     * Get 安全组名称，可任意命名，但不得超过60个字符。 
      * @return SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public String getSecurityGroupName() {
@@ -89,7 +89,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置安全组名称，可任意命名，但不得超过60个字符。
+     * Set 安全组名称，可任意命名，但不得超过60个字符。
      * @param SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public void setSecurityGroupName(String SecurityGroupName) {
@@ -97,7 +97,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 获取安全组备注，最多100个字符。
+     * Get 安全组备注，最多100个字符。 
      * @return SecurityGroupDesc 安全组备注，最多100个字符。
      */
     public String getSecurityGroupDesc() {
@@ -105,7 +105,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置安全组备注，最多100个字符。
+     * Set 安全组备注，最多100个字符。
      * @param SecurityGroupDesc 安全组备注，最多100个字符。
      */
     public void setSecurityGroupDesc(String SecurityGroupDesc) {
@@ -113,7 +113,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get 项目id，默认0。可在qcloud控制台项目管理页面查询到。 
      * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      */
     public String getProjectId() {
@@ -121,7 +121,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      */
     public void setProjectId(String ProjectId) {
@@ -129,7 +129,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 获取是否是默认安全组，默认安全组不支持删除。
+     * Get 是否是默认安全组，默认安全组不支持删除。 
      * @return IsDefault 是否是默认安全组，默认安全组不支持删除。
      */
     public Boolean getIsDefault() {
@@ -137,7 +137,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置是否是默认安全组，默认安全组不支持删除。
+     * Set 是否是默认安全组，默认安全组不支持删除。
      * @param IsDefault 是否是默认安全组，默认安全组不支持删除。
      */
     public void setIsDefault(Boolean IsDefault) {
@@ -145,7 +145,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 获取安全组创建时间。
+     * Get 安全组创建时间。 
      * @return CreatedTime 安全组创建时间。
      */
     public String getCreatedTime() {
@@ -153,7 +153,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 设置安全组创建时间。
+     * Set 安全组创建时间。
      * @param CreatedTime 安全组创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -161,7 +161,7 @@ public class SecurityGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

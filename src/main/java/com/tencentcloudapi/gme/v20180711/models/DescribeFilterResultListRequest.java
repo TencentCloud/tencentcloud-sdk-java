@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultListRequest  extends AbstractModel{
+public class DescribeFilterResultListRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -58,7 +58,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return BizId 应用ID
      */
     public Long getBizId() {
@@ -66,7 +66,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param BizId 应用ID
      */
     public void setBizId(Long BizId) {
@@ -74,7 +74,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间，格式为 年-月-日，如: 2018-07-11
+     * Get 开始时间，格式为 年-月-日，如: 2018-07-11 
      * @return StartDate 开始时间，格式为 年-月-日，如: 2018-07-11
      */
     public String getStartDate() {
@@ -82,7 +82,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，格式为 年-月-日，如: 2018-07-11
+     * Set 开始时间，格式为 年-月-日，如: 2018-07-11
      * @param StartDate 开始时间，格式为 年-月-日，如: 2018-07-11
      */
     public void setStartDate(String StartDate) {
@@ -90,7 +90,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，格式为 年-月-日，如: 2018-07-11
+     * Get 结束时间，格式为 年-月-日，如: 2018-07-11 
      * @return EndDate 结束时间，格式为 年-月-日，如: 2018-07-11
      */
     public String getEndDate() {
@@ -98,7 +98,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，格式为 年-月-日，如: 2018-07-11
+     * Set 结束时间，格式为 年-月-日，如: 2018-07-11
      * @param EndDate 结束时间，格式为 年-月-日，如: 2018-07-11
      */
     public void setEndDate(String EndDate) {
@@ -106,7 +106,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认值为0。
+     * Get 偏移量，默认值为0。 
      * @return Offset 偏移量，默认值为0。
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认值为0。
+     * Set 偏移量，默认值为0。
      * @param Offset 偏移量，默认值为0。
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认值为10，最大值为100。
+     * Get 返回数量，默认值为10，最大值为100。 
      * @return Limit 返回数量，默认值为10，最大值为100。
      */
     public Long getLimit() {
@@ -130,7 +130,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认值为10，最大值为100。
+     * Set 返回数量，默认值为10，最大值为100。
      * @param Limit 返回数量，默认值为10，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -138,7 +138,7 @@ public class DescribeFilterResultListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteOrganizationNodesRequest  extends AbstractModel{
+public class DeleteOrganizationNodesRequest extends AbstractModel{
 
     /**
     * 组织单元ID列表
@@ -30,7 +30,7 @@ public class DeleteOrganizationNodesRequest  extends AbstractModel{
     private Long [] NodeIds;
 
     /**
-     * 获取组织单元ID列表
+     * Get 组织单元ID列表 
      * @return NodeIds 组织单元ID列表
      */
     public Long [] getNodeIds() {
@@ -38,7 +38,7 @@ public class DeleteOrganizationNodesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织单元ID列表
+     * Set 组织单元ID列表
      * @param NodeIds 组织单元ID列表
      */
     public void setNodeIds(Long [] NodeIds) {
@@ -46,7 +46,7 @@ public class DeleteOrganizationNodesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);

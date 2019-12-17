@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExpressRatioStatistic  extends AbstractModel{
+public class ExpressRatioStatistic extends AbstractModel{
 
     /**
     * 出现次数
@@ -51,7 +51,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     private Float RatioUseDuration;
 
     /**
-     * 获取出现次数
+     * Get 出现次数 
      * @return Count 出现次数
      */
     public Long getCount() {
@@ -59,7 +59,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置出现次数
+     * Set 出现次数
      * @param Count 出现次数
      */
     public void setCount(Long Count) {
@@ -67,7 +67,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取表情
+     * Get 表情 
      * @return Express 表情
      */
     public String getExpress() {
@@ -75,7 +75,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置表情
+     * Set 表情
      * @param Express 表情
      */
     public void setExpress(String Express) {
@@ -83,7 +83,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取该表情时长占所有表情时长的比例
+     * Get 该表情时长占所有表情时长的比例 
      * @return Ratio 该表情时长占所有表情时长的比例
      */
     public Float getRatio() {
@@ -91,7 +91,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置该表情时长占所有表情时长的比例
+     * Set 该表情时长占所有表情时长的比例
      * @param Ratio 该表情时长占所有表情时长的比例
      */
     public void setRatio(Float Ratio) {
@@ -99,7 +99,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取该表情时长占视频总时长的比例
+     * Get 该表情时长占视频总时长的比例 
      * @return RatioUseDuration 该表情时长占视频总时长的比例
      */
     public Float getRatioUseDuration() {
@@ -107,7 +107,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置该表情时长占视频总时长的比例
+     * Set 该表情时长占视频总时长的比例
      * @param RatioUseDuration 该表情时长占视频总时长的比例
      */
     public void setRatioUseDuration(Float RatioUseDuration) {
@@ -115,7 +115,7 @@ public class ExpressRatioStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

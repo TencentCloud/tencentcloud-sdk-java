@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonResponse  extends AbstractModel{
+public class CreatePersonResponse extends AbstractModel{
 
     /**
     * 人脸图片唯一标识。
@@ -60,7 +60,7 @@ public class CreatePersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人脸图片唯一标识。
+     * Get 人脸图片唯一标识。 
      * @return FaceId 人脸图片唯一标识。
      */
     public String getFaceId() {
@@ -68,7 +68,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片唯一标识。
+     * Set 人脸图片唯一标识。
      * @param FaceId 人脸图片唯一标识。
      */
     public void setFaceId(String FaceId) {
@@ -76,8 +76,8 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取检测出的人脸框的位置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检测出的人脸框的位置。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceRect 检测出的人脸框的位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -86,7 +86,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检测出的人脸框的位置。
+     * Set 检测出的人脸框的位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceRect 检测出的人脸框的位置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -96,8 +96,8 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+     * Get 疑似同一人的PersonId。 
+当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。 
      * @return SimilarPersonId 疑似同一人的PersonId。 
 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      */
@@ -106,7 +106,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置疑似同一人的PersonId。 
+     * Set 疑似同一人的PersonId。 
 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      * @param SimilarPersonId 疑似同一人的PersonId。 
 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
@@ -116,7 +116,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -124,7 +124,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -132,7 +132,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -140,7 +140,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -148,7 +148,7 @@ public class CreatePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);

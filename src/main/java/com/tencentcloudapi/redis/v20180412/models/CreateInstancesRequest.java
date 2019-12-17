@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstancesRequest  extends AbstractModel{
+public class CreateInstancesRequest extends AbstractModel{
 
     /**
     * 实例所属的可用区id
@@ -149,7 +149,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * 获取实例所属的可用区id
+     * Get 实例所属的可用区id 
      * @return ZoneId 实例所属的可用区id
      */
     public Integer getZoneId() {
@@ -157,7 +157,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属的可用区id
+     * Set 实例所属的可用区id
      * @param ZoneId 实例所属的可用区id
      */
     public void setZoneId(Integer ZoneId) {
@@ -165,7 +165,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * Get 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版， 
      * @return TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
     public Integer getTypeId() {
@@ -173,7 +173,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
+     * Set 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      * @param TypeId 实例类型：2 – Redis2.8主从版，3 – Redis3.2主从版(CKV主从版)，4 – Redis3.2集群版(CKV集群版)，5-Redis2.8单机版，6 – Redis4.0主从版，7 – Redis4.0集群版，
      */
     public void setTypeId(Integer TypeId) {
@@ -181,7 +181,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
+     * Get 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准 
      * @return MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
     public Integer getMemSize() {
@@ -189,7 +189,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
+     * Set 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      * @param MemSize 实例容量，单位MB， 取值大小以 查询售卖规格接口返回的规格为准
      */
     public void setMemSize(Integer MemSize) {
@@ -197,7 +197,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
+     * Get 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准 
      * @return GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
     public Integer getGoodsNum() {
@@ -205,7 +205,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
+     * Set 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      * @param GoodsNum 实例数量，单次购买实例数量以 查询售卖规格接口返回的规格为准
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -213,7 +213,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Get 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36] 
      * @return Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public Integer getPeriod() {
@@ -221,7 +221,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
+     * Set 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      * @param Period 购买时长，在创建包年包月实例的时候需要填写，按量计费实例填1即可，单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]
      */
     public void setPeriod(Integer Period) {
@@ -229,7 +229,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费方式:0-按量计费，1-包年包月。
+     * Get 付费方式:0-按量计费，1-包年包月。 
      * @return BillingMode 付费方式:0-按量计费，1-包年包月。
      */
     public Integer getBillingMode() {
@@ -237,7 +237,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费方式:0-按量计费，1-包年包月。
+     * Set 付费方式:0-按量计费，1-包年包月。
      * @param BillingMode 付费方式:0-按量计费，1-包年包月。
      */
     public void setBillingMode(Integer BillingMode) {
@@ -245,7 +245,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * Get 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略） 
      * @return Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
      */
     public String getPassword() {
@@ -253,7 +253,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
+     * Set 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
      * @param Password 实例密码，密码规则：1.长度为8-16个字符；2:至少包含字母、数字和字符!@^*()中的两种（创建免密实例时，可不传入该字段，该字段内容会忽略）
      */
     public void setPassword(String Password) {
@@ -261,7 +261,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * Get 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk 
      * @return VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      */
     public String getVpcId() {
@@ -269,7 +269,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
+     * Set 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      * @param VpcId 私有网络ID，如果不传则默认选择基础网络，请使用私有网络列表查询，如：vpc-sad23jfdfk
      */
     public void setVpcId(String VpcId) {
@@ -277,7 +277,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * Get 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2 
      * @return SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      */
     public String getSubnetId() {
@@ -285,7 +285,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
+     * Set 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      * @param SubnetId 基础网络下， subnetId无效； vpc子网下，取值以查询子网列表，如：subnet-fdj24n34j2
      */
     public void setSubnetId(String SubnetId) {
@@ -293,7 +293,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
+     * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准 
      * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      */
     public Integer getProjectId() {
@@ -301,7 +301,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
+     * Set 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      * @param ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准
      */
     public void setProjectId(Integer ProjectId) {
@@ -309,7 +309,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public Integer getAutoRenew() {
@@ -317,7 +317,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -325,7 +325,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组id数组
+     * Get 安全组id数组 
      * @return SecurityGroupIdList 安全组id数组
      */
     public String [] getSecurityGroupIdList() {
@@ -333,7 +333,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组id数组
+     * Set 安全组id数组
      * @param SecurityGroupIdList 安全组id数组
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
@@ -341,7 +341,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义的端口 不填则默认为6379
+     * Get 用户自定义的端口 不填则默认为6379 
      * @return VPort 用户自定义的端口 不填则默认为6379
      */
     public Integer getVPort() {
@@ -349,7 +349,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义的端口 不填则默认为6379
+     * Set 用户自定义的端口 不填则默认为6379
      * @param VPort 用户自定义的端口 不填则默认为6379
      */
     public void setVPort(Integer VPort) {
@@ -357,7 +357,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * Get 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写 
      * @return RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
     public Integer getRedisShardNum() {
@@ -365,7 +365,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
+     * Set 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      * @param RedisShardNum 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写
      */
     public void setRedisShardNum(Integer RedisShardNum) {
@@ -373,7 +373,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public Integer getRedisReplicasNum() {
@@ -381,7 +381,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisReplicasNum 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public void setRedisReplicasNum(Integer RedisReplicasNum) {
@@ -389,7 +389,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public Boolean getReplicasReadonly() {
@@ -397,7 +397,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param ReplicasReadonly 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
@@ -405,7 +405,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -413,7 +413,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -421,7 +421,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * Get 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例 
      * @return NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
      */
     public Boolean getNoAuth() {
@@ -429,7 +429,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
+     * Set 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
      * @param NoAuth 是否支持免密，true-免密实例，false-非免密实例，默认为非免密实例
      */
     public void setNoAuth(Boolean NoAuth) {
@@ -437,7 +437,7 @@ public class CreateInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

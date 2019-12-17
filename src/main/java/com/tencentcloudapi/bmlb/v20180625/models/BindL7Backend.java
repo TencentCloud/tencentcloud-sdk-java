@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindL7Backend  extends AbstractModel{
+public class BindL7Backend extends AbstractModel{
 
     /**
     * 待绑定的主机端口，可选值1~65535。
@@ -44,7 +44,7 @@ public class BindL7Backend  extends AbstractModel{
     private Integer Weight;
 
     /**
-     * 获取待绑定的主机端口，可选值1~65535。
+     * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
     public Integer getPort() {
@@ -52,7 +52,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机端口，可选值1~65535。
+     * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
     public void setPort(Integer Port) {
@@ -60,7 +60,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Get 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。 
      * @return InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public String getInstanceId() {
@@ -68,7 +68,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
+     * Set 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      * @param InstanceId 黑石物理机主机ID、虚拟机IP或者是半托管主机ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -76,7 +76,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机权重，可选值0~100。
+     * Get 待绑定的主机权重，可选值0~100。 
      * @return Weight 待绑定的主机权重，可选值0~100。
      */
     public Integer getWeight() {
@@ -84,7 +84,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机权重，可选值0~100。
+     * Set 待绑定的主机权重，可选值0~100。
      * @param Weight 待绑定的主机权重，可选值0~100。
      */
     public void setWeight(Integer Weight) {
@@ -92,7 +92,7 @@ public class BindL7Backend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

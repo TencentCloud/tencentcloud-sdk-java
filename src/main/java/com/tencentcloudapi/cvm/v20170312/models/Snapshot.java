@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Snapshot  extends AbstractModel{
+public class Snapshot extends AbstractModel{
 
     /**
     * 快照Id。
@@ -46,7 +46,7 @@ DATA_DISK：数据盘。
     private Integer DiskSize;
 
     /**
-     * 获取快照Id。
+     * Get 快照Id。 
      * @return SnapshotId 快照Id。
      */
     public String getSnapshotId() {
@@ -54,7 +54,7 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 设置快照Id。
+     * Set 快照Id。
      * @param SnapshotId 快照Id。
      */
     public void setSnapshotId(String SnapshotId) {
@@ -62,9 +62,9 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 获取创建此快照的云硬盘类型。取值范围：
+     * Get 创建此快照的云硬盘类型。取值范围：
 SYSTEM_DISK：系统盘
-DATA_DISK：数据盘。
+DATA_DISK：数据盘。 
      * @return DiskUsage 创建此快照的云硬盘类型。取值范围：
 SYSTEM_DISK：系统盘
 DATA_DISK：数据盘。
@@ -74,7 +74,7 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 设置创建此快照的云硬盘类型。取值范围：
+     * Set 创建此快照的云硬盘类型。取值范围：
 SYSTEM_DISK：系统盘
 DATA_DISK：数据盘。
      * @param DiskUsage 创建此快照的云硬盘类型。取值范围：
@@ -86,7 +86,7 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 获取创建此快照的云硬盘大小，单位GB。
+     * Get 创建此快照的云硬盘大小，单位GB。 
      * @return DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public Integer getDiskSize() {
@@ -94,7 +94,7 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 设置创建此快照的云硬盘大小，单位GB。
+     * Set 创建此快照的云硬盘大小，单位GB。
      * @param DiskSize 创建此快照的云硬盘大小，单位GB。
      */
     public void setDiskSize(Integer DiskSize) {
@@ -102,7 +102,7 @@ DATA_DISK：数据盘。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);

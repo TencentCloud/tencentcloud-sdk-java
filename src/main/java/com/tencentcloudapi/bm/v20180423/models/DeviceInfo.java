@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceInfo  extends AbstractModel{
+public class DeviceInfo extends AbstractModel{
 
     /**
     * 设备唯一ID
@@ -192,7 +192,7 @@ public class DeviceInfo  extends AbstractModel{
     private Integer IsLuckyDevice;
 
     /**
-     * 获取设备唯一ID
+     * Get 设备唯一ID 
      * @return InstanceId 设备唯一ID
      */
     public String getInstanceId() {
@@ -200,7 +200,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备唯一ID
+     * Set 设备唯一ID
      * @param InstanceId 设备唯一ID
      */
     public void setInstanceId(String InstanceId) {
@@ -208,7 +208,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -216,7 +216,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -224,7 +224,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -232,7 +232,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -240,7 +240,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+     * Get 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li> 
      * @return DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
     public Integer getDeviceStatus() {
@@ -248,7 +248,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
+     * Set 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      * @param DeviceStatus 设备状态ID，取值：<li>1：申领设备中</li><li>2：初始化中</li><li>4：运营中</li><li>7：隔离中</li><li>8：已隔离</li><li>10：解隔离中</li><li>16：故障中</li>
      */
     public void setDeviceStatus(Integer DeviceStatus) {
@@ -256,8 +256,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备操作状态ID，取值：
-<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
+     * Get 设备操作状态ID，取值：
+<li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li> 
      * @return OperateStatus 设备操作状态ID，取值：
 <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      */
@@ -266,7 +266,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备操作状态ID，取值：
+     * Set 设备操作状态ID，取值：
 <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
      * @param OperateStatus 设备操作状态ID，取值：
 <li>1：运行中</li><li>2：正在关机</li><li>3：已关机</li><li>5：正在开机</li><li>7：重启中</li><li>9：重装中</li><li>12：绑定EIP</li><li>13：解绑EIP</li><li>14：绑定LB</li><li>15：解绑LB</li><li>19：更换IP中</li><li>20：制作镜像中</li><li>21：制作镜像失败</li>
@@ -276,7 +276,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+     * Get 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902) 
      * @return OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
     public Integer getOsTypeId() {
@@ -284,7 +284,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
+     * Set 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      * @param OsTypeId 操作系统ID，参考接口[查询操作系统信息(DescribeOsInfo)](https://cloud.tencent.com/document/product/386/32902)
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -292,7 +292,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+     * Get RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910) 
      * @return RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
     public Integer getRaidId() {
@@ -300,7 +300,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
+     * Set RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      * @param RaidId RAID类型ID，参考接口[查询机型RAID方式以及系统盘大小(DescribeDeviceClassPartition)](https://cloud.tencent.com/document/product/386/32910)
      */
     public void setRaidId(Integer RaidId) {
@@ -308,7 +308,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备别名
+     * Get 设备别名 
      * @return Alias 设备别名
      */
     public String getAlias() {
@@ -316,7 +316,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备别名
+     * Set 设备别名
      * @param Alias 设备别名
      */
     public void setAlias(String Alias) {
@@ -324,7 +324,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取AppId
+     * Get AppId 
      * @return AppId AppId
      */
     public Integer getAppId() {
@@ -332,7 +332,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置AppId
+     * Set AppId
      * @param AppId AppId
      */
     public void setAppId(Integer AppId) {
@@ -340,7 +340,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -348,7 +348,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -356,7 +356,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网IP
+     * Get 外网IP 
      * @return WanIp 外网IP
      */
     public String getWanIp() {
@@ -364,7 +364,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网IP
+     * Set 外网IP
      * @param WanIp 外网IP
      */
     public void setWanIp(String WanIp) {
@@ -372,7 +372,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP
+     * Get 内网IP 
      * @return LanIp 内网IP
      */
     public String getLanIp() {
@@ -380,7 +380,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP
+     * Set 内网IP
      * @param LanIp 内网IP
      */
     public void setLanIp(String LanIp) {
@@ -388,7 +388,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备交付时间
+     * Get 设备交付时间 
      * @return DeliverTime 设备交付时间
      */
     public String getDeliverTime() {
@@ -396,7 +396,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备交付时间
+     * Set 设备交付时间
      * @param DeliverTime 设备交付时间
      */
     public void setDeliverTime(String DeliverTime) {
@@ -404,7 +404,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备到期时间
+     * Get 设备到期时间 
      * @return Deadline 设备到期时间
      */
     public String getDeadline() {
@@ -412,7 +412,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备到期时间
+     * Set 设备到期时间
      * @param Deadline 设备到期时间
      */
     public void setDeadline(String Deadline) {
@@ -420,7 +420,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标识。0: 不自动续费; 1:自动续费
+     * Get 自动续费标识。0: 不自动续费; 1:自动续费 
      * @return AutoRenewFlag 自动续费标识。0: 不自动续费; 1:自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -428,7 +428,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。0: 不自动续费; 1:自动续费
+     * Set 自动续费标识。0: 不自动续费; 1:自动续费
      * @param AutoRenewFlag 自动续费标识。0: 不自动续费; 1:自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -436,7 +436,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型
+     * Get 设备类型 
      * @return DeviceClassCode 设备类型
      */
     public String getDeviceClassCode() {
@@ -444,7 +444,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型
+     * Set 设备类型
      * @param DeviceClassCode 设备类型
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -452,7 +452,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
+     * Get 标签列表 
      * @return Tags 标签列表
      */
     public Tag [] getTags() {
@@ -460,7 +460,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
      * @param Tags 标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -468,7 +468,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
+     * Get 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中 
      * @return CpmPayMode 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      */
     public Integer getCpmPayMode() {
@@ -476,7 +476,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
+     * Set 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      * @param CpmPayMode 计费模式。1: 预付费; 2: 后付费; 3:预付费转后付费中
      */
     public void setCpmPayMode(Integer CpmPayMode) {
@@ -484,7 +484,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取带外IP
+     * Get 带外IP 
      * @return DhcpIp 带外IP
      */
     public String getDhcpIp() {
@@ -492,7 +492,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带外IP
+     * Set 带外IP
      * @param DhcpIp 带外IP
      */
     public void setDhcpIp(String DhcpIp) {
@@ -500,7 +500,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在私有网络别名
+     * Get 所在私有网络别名 
      * @return VpcName 所在私有网络别名
      */
     public String getVpcName() {
@@ -508,7 +508,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在私有网络别名
+     * Set 所在私有网络别名
      * @param VpcName 所在私有网络别名
      */
     public void setVpcName(String VpcName) {
@@ -516,7 +516,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在子网别名
+     * Get 所在子网别名 
      * @return SubnetName 所在子网别名
      */
     public String getSubnetName() {
@@ -524,7 +524,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在子网别名
+     * Set 所在子网别名
      * @param SubnetName 所在子网别名
      */
     public void setSubnetName(String SubnetName) {
@@ -532,7 +532,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在私有网络CIDR
+     * Get 所在私有网络CIDR 
      * @return VpcCidrBlock 所在私有网络CIDR
      */
     public String getVpcCidrBlock() {
@@ -540,7 +540,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在私有网络CIDR
+     * Set 所在私有网络CIDR
      * @param VpcCidrBlock 所在私有网络CIDR
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -548,7 +548,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所在子网CIDR
+     * Get 所在子网CIDR 
      * @return SubnetCidrBlock 所在子网CIDR
      */
     public String getSubnetCidrBlock() {
@@ -556,7 +556,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所在子网CIDR
+     * Set 所在子网CIDR
      * @param SubnetCidrBlock 所在子网CIDR
      */
     public void setSubnetCidrBlock(String SubnetCidrBlock) {
@@ -564,7 +564,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
+     * Get 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备 
      * @return IsLuckyDevice 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      */
     public Integer getIsLuckyDevice() {
@@ -572,7 +572,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
+     * Set 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      * @param IsLuckyDevice 标识是否是竞价实例。0: 普通设备; 1: 竞价实例设备
      */
     public void setIsLuckyDevice(Integer IsLuckyDevice) {
@@ -580,7 +580,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

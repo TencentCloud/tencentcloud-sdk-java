@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFilterResultRequest  extends AbstractModel{
+public class DescribeFilterResultRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -37,7 +37,7 @@ public class DescribeFilterResultRequest  extends AbstractModel{
     private String FileId;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return BizId 应用ID
      */
     public Long getBizId() {
@@ -45,7 +45,7 @@ public class DescribeFilterResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param BizId 应用ID
      */
     public void setBizId(Long BizId) {
@@ -53,7 +53,7 @@ public class DescribeFilterResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件ID
+     * Get 文件ID 
      * @return FileId 文件ID
      */
     public String getFileId() {
@@ -61,7 +61,7 @@ public class DescribeFilterResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件ID
+     * Set 文件ID
      * @param FileId 文件ID
      */
     public void setFileId(String FileId) {
@@ -69,7 +69,7 @@ public class DescribeFilterResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizId", this.BizId);

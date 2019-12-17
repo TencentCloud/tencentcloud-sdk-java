@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCUrlAllowRequest  extends AbstractModel{
+public class ModifyCCUrlAllowRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -82,7 +82,7 @@ https://域名/cgi
     private String RuleId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -90,7 +90,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -98,7 +98,7 @@ https://域名/cgi
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -106,7 +106,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -114,7 +114,7 @@ https://域名/cgi
     }
 
     /**
-     * 获取=add表示添加，=delete表示删除
+     * Get =add表示添加，=delete表示删除 
      * @return Method =add表示添加，=delete表示删除
      */
     public String getMethod() {
@@ -122,7 +122,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置=add表示添加，=delete表示删除
+     * Set =add表示添加，=delete表示删除
      * @param Method =add表示添加，=delete表示删除
      */
     public void setMethod(String Method) {
@@ -130,7 +130,7 @@ https://域名/cgi
     }
 
     /**
-     * 获取黑/白名单类型；取值[white(白名单)]
+     * Get 黑/白名单类型；取值[white(白名单)] 
      * @return Type 黑/白名单类型；取值[white(白名单)]
      */
     public String getType() {
@@ -138,7 +138,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置黑/白名单类型；取值[white(白名单)]
+     * Set 黑/白名单类型；取值[white(白名单)]
      * @param Type 黑/白名单类型；取值[white(白名单)]
      */
     public void setType(String Type) {
@@ -146,9 +146,9 @@ https://域名/cgi
     }
 
     /**
-     * 获取URL数组，URL格式如下：
+     * Get URL数组，URL格式如下：
 http://域名/cgi
-https://域名/cgi
+https://域名/cgi 
      * @return UrlList URL数组，URL格式如下：
 http://域名/cgi
 https://域名/cgi
@@ -158,7 +158,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置URL数组，URL格式如下：
+     * Set URL数组，URL格式如下：
 http://域名/cgi
 https://域名/cgi
      * @param UrlList URL数组，URL格式如下：
@@ -170,7 +170,7 @@ https://域名/cgi
     }
 
     /**
-     * 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+     * Get 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段； 
      * @return Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
      */
     public String getProtocol() {
@@ -178,7 +178,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
+     * Set 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
      * @param Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写Domain和RuleId字段；
      */
     public void setProtocol(String Protocol) {
@@ -186,7 +186,7 @@ https://域名/cgi
     }
 
     /**
-     * 获取可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+     * Get 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段； 
      * @return Domain 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
      */
     public String getDomain() {
@@ -194,7 +194,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
+     * Set 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
      * @param Domain 可选字段，表示HTTPS协议的7层转发规则域名（通过获取7层转发规则接口可以获取域名），只有当Protocol字段为https时才必须填写此字段；
      */
     public void setDomain(String Domain) {
@@ -202,8 +202,8 @@ https://域名/cgi
     }
 
     /**
-     * 获取可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
-当Method为delete时，可以不用填写此字段；
+     * Get 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
+当Method为delete时，可以不用填写此字段； 
      * @return RuleId 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
 当Method为delete时，可以不用填写此字段；
      */
@@ -212,7 +212,7 @@ https://域名/cgi
     }
 
     /**
-     * 设置可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
+     * Set 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
 当Method为delete时，可以不用填写此字段；
      * @param RuleId 可选字段，表示HTTPS协议的7层转发规则ID（通过获取7层转发规则接口可以获取规则ID），当添加并且Protocol=https时必须填写；
 当Method为delete时，可以不用填写此字段；
@@ -222,7 +222,7 @@ https://域名/cgi
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

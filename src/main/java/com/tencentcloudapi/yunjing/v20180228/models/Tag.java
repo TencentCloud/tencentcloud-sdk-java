@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag  extends AbstractModel{
+public class Tag extends AbstractModel{
 
     /**
     * 标签ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 标签名
@@ -41,26 +41,26 @@ public class Tag  extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
-     * 获取标签ID
+     * Get 标签ID 
      * @return Id 标签ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置标签ID
+     * Set 标签ID
      * @param Id 标签ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取标签名
+     * Get 标签名 
      * @return Name 标签名
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 设置标签名
+     * Set 标签名
      * @param Name 标签名
      */
     public void setName(String Name) {
@@ -76,23 +76,23 @@ public class Tag  extends AbstractModel{
     }
 
     /**
-     * 获取服务器数
+     * Get 服务器数 
      * @return Count 服务器数
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置服务器数
+     * Set 服务器数
      * @param Count 服务器数
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

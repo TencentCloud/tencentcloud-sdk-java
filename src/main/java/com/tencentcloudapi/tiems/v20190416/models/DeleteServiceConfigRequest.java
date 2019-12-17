@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceConfigRequest  extends AbstractModel{
+public class DeleteServiceConfigRequest extends AbstractModel{
 
     /**
     * 服务配置Id
@@ -37,7 +37,7 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     private String ServiceConfigName;
 
     /**
-     * 获取服务配置Id
+     * Get 服务配置Id 
      * @return ServiceConfigId 服务配置Id
      */
     public String getServiceConfigId() {
@@ -45,7 +45,7 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置Id
+     * Set 服务配置Id
      * @param ServiceConfigId 服务配置Id
      */
     public void setServiceConfigId(String ServiceConfigId) {
@@ -53,7 +53,7 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置名称
+     * Get 服务配置名称 
      * @return ServiceConfigName 服务配置名称
      */
     public String getServiceConfigName() {
@@ -61,7 +61,7 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置名称
+     * Set 服务配置名称
      * @param ServiceConfigName 服务配置名称
      */
     public void setServiceConfigName(String ServiceConfigName) {
@@ -69,7 +69,7 @@ public class DeleteServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceConfigId", this.ServiceConfigId);

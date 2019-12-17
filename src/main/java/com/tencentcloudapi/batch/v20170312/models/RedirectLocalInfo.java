@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RedirectLocalInfo  extends AbstractModel{
+public class RedirectLocalInfo extends AbstractModel{
 
     /**
     * 标准输出重定向本地路径
@@ -51,7 +51,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     private String StderrLocalFileName;
 
     /**
-     * 获取标准输出重定向本地路径
+     * Get 标准输出重定向本地路径 
      * @return StdoutLocalPath 标准输出重定向本地路径
      */
     public String getStdoutLocalPath() {
@@ -59,7 +59,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标准输出重定向本地路径
+     * Set 标准输出重定向本地路径
      * @param StdoutLocalPath 标准输出重定向本地路径
      */
     public void setStdoutLocalPath(String StdoutLocalPath) {
@@ -67,7 +67,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标准错误重定向本地路径
+     * Get 标准错误重定向本地路径 
      * @return StderrLocalPath 标准错误重定向本地路径
      */
     public String getStderrLocalPath() {
@@ -75,7 +75,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标准错误重定向本地路径
+     * Set 标准错误重定向本地路径
      * @param StderrLocalPath 标准错误重定向本地路径
      */
     public void setStderrLocalPath(String StderrLocalPath) {
@@ -83,7 +83,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+     * Get 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
      * @return StdoutLocalFileName 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      */
     public String getStdoutLocalFileName() {
@@ -91,7 +91,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+     * Set 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      * @param StdoutLocalFileName 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      */
     public void setStdoutLocalFileName(String StdoutLocalFileName) {
@@ -99,7 +99,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+     * Get 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
      * @return StderrLocalFileName 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      */
     public String getStderrLocalFileName() {
@@ -107,7 +107,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+     * Set 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      * @param StderrLocalFileName 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
      */
     public void setStderrLocalFileName(String StderrLocalFileName) {
@@ -115,7 +115,7 @@ public class RedirectLocalInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StdoutLocalPath", this.StdoutLocalPath);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyContainerReplicasRequest  extends AbstractModel{
+public class ModifyContainerReplicasRequest extends AbstractModel{
 
     /**
     * 部署组ID，部署组唯一标识
@@ -37,7 +37,7 @@ public class ModifyContainerReplicasRequest  extends AbstractModel{
     private Long InstanceNum;
 
     /**
-     * 获取部署组ID，部署组唯一标识
+     * Get 部署组ID，部署组唯一标识 
      * @return GroupId 部署组ID，部署组唯一标识
      */
     public String getGroupId() {
@@ -45,7 +45,7 @@ public class ModifyContainerReplicasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID，部署组唯一标识
+     * Set 部署组ID，部署组唯一标识
      * @param GroupId 部署组ID，部署组唯一标识
      */
     public void setGroupId(String GroupId) {
@@ -53,7 +53,7 @@ public class ModifyContainerReplicasRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量
+     * Get 实例数量 
      * @return InstanceNum 实例数量
      */
     public Long getInstanceNum() {
@@ -61,7 +61,7 @@ public class ModifyContainerReplicasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量
+     * Set 实例数量
      * @param InstanceNum 实例数量
      */
     public void setInstanceNum(Long InstanceNum) {
@@ -69,7 +69,7 @@ public class ModifyContainerReplicasRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

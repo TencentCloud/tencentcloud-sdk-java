@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModerationOverviewRequest  extends AbstractModel{
+public class DescribeModerationOverviewRequest extends AbstractModel{
 
     /**
     * 日期，如2019-01-01， 查询该日期的概览数据
@@ -44,7 +44,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     private Long [] Channels;
 
     /**
-     * 获取日期，如2019-01-01， 查询该日期的概览数据
+     * Get 日期，如2019-01-01， 查询该日期的概览数据 
      * @return Date 日期，如2019-01-01， 查询该日期的概览数据
      */
     public String getDate() {
@@ -52,7 +52,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日期，如2019-01-01， 查询该日期的概览数据
+     * Set 日期，如2019-01-01， 查询该日期的概览数据
      * @param Date 日期，如2019-01-01， 查询该日期的概览数据
      */
     public void setDate(String Date) {
@@ -60,7 +60,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
+     * Get 服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。 
      * @return ServiceTypes 服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
      */
     public String [] getServiceTypes() {
@@ -68,7 +68,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
+     * Set 服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
      * @param ServiceTypes 服务类型数组，可以动态配置，Text:文本，Image:图片，Audio:音频，Video:视频, 使用"ALL"表示所有类型, 不区分大小写，如 ["Text", "Image"]查询文本和图片服务的数据，["all"]查询所有服务的数据。
      */
     public void setServiceTypes(String [] ServiceTypes) {
@@ -76,7 +76,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 获取渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
+     * Get 渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据 
      * @return Channels 渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
      */
     public Long [] getChannels() {
@@ -84,7 +84,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 设置渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
+     * Set 渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
      * @param Channels 渠道号数组，1:直播 2:点播 3:IM 4:GME，统计指定渠道组合的汇总数据，如[1,2]表示获取直播和点播两个渠道的汇总数据，不填[]为所有渠道汇总数据
      */
     public void setChannels(Long [] Channels) {
@@ -92,7 +92,7 @@ public class DescribeModerationOverviewRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

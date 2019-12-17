@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteConflictsResponse  extends AbstractModel{
+public class DescribeRouteConflictsResponse extends AbstractModel{
 
     /**
     * 路由策略冲突列表
@@ -37,7 +37,7 @@ public class DescribeRouteConflictsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取路由策略冲突列表
+     * Get 路由策略冲突列表 
      * @return RouteConflictSet 路由策略冲突列表
      */
     public RouteConflict [] getRouteConflictSet() {
@@ -45,7 +45,7 @@ public class DescribeRouteConflictsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置路由策略冲突列表
+     * Set 路由策略冲突列表
      * @param RouteConflictSet 路由策略冲突列表
      */
     public void setRouteConflictSet(RouteConflict [] RouteConflictSet) {
@@ -53,7 +53,7 @@ public class DescribeRouteConflictsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeRouteConflictsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeRouteConflictsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RouteConflictSet.", this.RouteConflictSet);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QrcodeResultsInfo  extends AbstractModel{
+public class QrcodeResultsInfo extends AbstractModel{
 
     /**
     * 类型（二维码、条形码）
@@ -44,7 +44,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     private QrcodePositionObj Position;
 
     /**
-     * 获取类型（二维码、条形码）
+     * Get 类型（二维码、条形码） 
      * @return TypeName 类型（二维码、条形码）
      */
     public String getTypeName() {
@@ -52,7 +52,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置类型（二维码、条形码）
+     * Set 类型（二维码、条形码）
      * @param TypeName 类型（二维码、条形码）
      */
     public void setTypeName(String TypeName) {
@@ -60,7 +60,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取二维码/条形码包含的地址
+     * Get 二维码/条形码包含的地址 
      * @return Url 二维码/条形码包含的地址
      */
     public String getUrl() {
@@ -68,7 +68,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置二维码/条形码包含的地址
+     * Set 二维码/条形码包含的地址
      * @param Url 二维码/条形码包含的地址
      */
     public void setUrl(String Url) {
@@ -76,7 +76,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * Get 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1） 
      * @return Position 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
      */
     public QrcodePositionObj getPosition() {
@@ -84,7 +84,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
+     * Set 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
      * @param Position 二维码/条形码坐标（二维码会返回位置坐标，条形码暂不返回位置坐标，因此默认X和Y返回值均为-1）
      */
     public void setPosition(QrcodePositionObj Position) {
@@ -92,7 +92,7 @@ public class QrcodeResultsInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TypeName", this.TypeName);

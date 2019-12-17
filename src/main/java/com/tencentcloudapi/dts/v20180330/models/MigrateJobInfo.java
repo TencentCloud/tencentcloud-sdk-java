@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateJobInfo  extends AbstractModel{
+public class MigrateJobInfo extends AbstractModel{
 
     /**
     * 数据迁移任务ID
@@ -128,7 +128,7 @@ public class MigrateJobInfo  extends AbstractModel{
     private MigrateDetailInfo Detail;
 
     /**
-     * 获取数据迁移任务ID
+     * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
     public String getJobId() {
@@ -136,7 +136,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据迁移任务ID
+     * Set 数据迁移任务ID
      * @param JobId 数据迁移任务ID
      */
     public void setJobId(String JobId) {
@@ -144,7 +144,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据迁移任务名称
+     * Get 数据迁移任务名称 
      * @return JobName 数据迁移任务名称
      */
     public String getJobName() {
@@ -152,7 +152,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据迁移任务名称
+     * Set 数据迁移任务名称
      * @param JobName 数据迁移任务名称
      */
     public void setJobName(String JobName) {
@@ -160,7 +160,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务配置选项
+     * Get 迁移任务配置选项 
      * @return MigrateOption 迁移任务配置选项
      */
     public MigrateOption getMigrateOption() {
@@ -168,7 +168,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务配置选项
+     * Set 迁移任务配置选项
      * @param MigrateOption 迁移任务配置选项
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
@@ -176,7 +176,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * Get 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona 
      * @return SrcDatabaseType 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public String getSrcDatabaseType() {
@@ -184,7 +184,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * Set 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      * @param SrcDatabaseType 源实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -192,7 +192,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * Get 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例) 
      * @return SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public String getSrcAccessType() {
@@ -200,7 +200,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
+     * Set 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      * @param SrcAccessType 源实例接入类型，值包括：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),cdb(腾讯云数据库实例),ccn(云联网实例)
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -208,7 +208,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源实例信息，具体内容跟迁移任务类型相关
+     * Get 源实例信息，具体内容跟迁移任务类型相关 
      * @return SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public SrcInfo getSrcInfo() {
@@ -216,7 +216,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源实例信息，具体内容跟迁移任务类型相关
+     * Set 源实例信息，具体内容跟迁移任务类型相关
      * @param SrcInfo 源实例信息，具体内容跟迁移任务类型相关
      */
     public void setSrcInfo(SrcInfo SrcInfo) {
@@ -224,7 +224,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * Get 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona 
      * @return DstDatabaseType 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public String getDstDatabaseType() {
@@ -232,7 +232,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
+     * Set 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      * @param DstDatabaseType 目标实例数据库类型:mysql，redis，mongodb，postgresql，mariadb，percona
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -240,7 +240,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
+     * Get 目标实例接入类型，目前支持：cdb(腾讯云数据库实例) 
      * @return DstAccessType 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
      */
     public String getDstAccessType() {
@@ -248,7 +248,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
+     * Set 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
      * @param DstAccessType 目标实例接入类型，目前支持：cdb(腾讯云数据库实例)
      */
     public void setDstAccessType(String DstAccessType) {
@@ -256,7 +256,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例信息
+     * Get 目标实例信息 
      * @return DstInfo 目标实例信息
      */
     public DstInfo getDstInfo() {
@@ -264,7 +264,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例信息
+     * Set 目标实例信息
      * @param DstInfo 目标实例信息
      */
     public void setDstInfo(DstInfo DstInfo) {
@@ -272,7 +272,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
+     * Get 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[] 
      * @return DatabaseInfo 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
      */
     public String getDatabaseInfo() {
@@ -280,7 +280,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
+     * Set 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
      * @param DatabaseInfo 需要迁移的源数据库表信息，如果需要迁移的是整个实例，该字段为[]
      */
     public void setDatabaseInfo(String DatabaseInfo) {
@@ -288,7 +288,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建(提交)时间
+     * Get 任务创建(提交)时间 
      * @return CreateTime 任务创建(提交)时间
      */
     public String getCreateTime() {
@@ -296,7 +296,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建(提交)时间
+     * Set 任务创建(提交)时间
      * @param CreateTime 任务创建(提交)时间
      */
     public void setCreateTime(String CreateTime) {
@@ -304,7 +304,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始执行时间
+     * Get 任务开始执行时间 
      * @return StartTime 任务开始执行时间
      */
     public String getStartTime() {
@@ -312,7 +312,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始执行时间
+     * Set 任务开始执行时间
      * @param StartTime 任务开始执行时间
      */
     public void setStartTime(String StartTime) {
@@ -320,7 +320,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务执行结束时间
+     * Get 任务执行结束时间 
      * @return EndTime 任务执行结束时间
      */
     public String getEndTime() {
@@ -328,7 +328,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务执行结束时间
+     * Set 任务执行结束时间
      * @param EndTime 任务执行结束时间
      */
     public void setEndTime(String EndTime) {
@@ -336,7 +336,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
+     * Get 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing） 
      * @return Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
      */
     public Integer getStatus() {
@@ -344,7 +344,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
+     * Set 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
      * @param Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
      */
     public void setStatus(Integer Status) {
@@ -352,7 +352,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务详情
+     * Get 任务详情 
      * @return Detail 任务详情
      */
     public MigrateDetailInfo getDetail() {
@@ -360,7 +360,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务详情
+     * Set 任务详情
      * @param Detail 任务详情
      */
     public void setDetail(MigrateDetailInfo Detail) {
@@ -368,7 +368,7 @@ public class MigrateJobInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

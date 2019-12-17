@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceTemplateGroupResponse  extends AbstractModel{
+public class CreateServiceTemplateGroupResponse extends AbstractModel{
 
     /**
     * 协议端口模板集合对象。
@@ -37,7 +37,7 @@ public class CreateServiceTemplateGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取协议端口模板集合对象。
+     * Get 协议端口模板集合对象。 
      * @return ServiceTemplateGroup 协议端口模板集合对象。
      */
     public ServiceTemplateGroup getServiceTemplateGroup() {
@@ -45,7 +45,7 @@ public class CreateServiceTemplateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板集合对象。
+     * Set 协议端口模板集合对象。
      * @param ServiceTemplateGroup 协议端口模板集合对象。
      */
     public void setServiceTemplateGroup(ServiceTemplateGroup ServiceTemplateGroup) {
@@ -53,7 +53,7 @@ public class CreateServiceTemplateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateServiceTemplateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateServiceTemplateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ServiceTemplateGroup.", this.ServiceTemplateGroup);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipsRequest  extends AbstractModel{
+public class DescribeEipsRequest extends AbstractModel{
 
     /**
     * EIP实例ID列表
@@ -128,7 +128,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     private Integer BindAcl;
 
     /**
-     * 获取EIP实例ID列表
+     * Get EIP实例ID列表 
      * @return EipIds EIP实例ID列表
      */
     public String [] getEipIds() {
@@ -136,7 +136,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP实例ID列表
+     * Set EIP实例ID列表
      * @param EipIds EIP实例ID列表
      */
     public void setEipIds(String [] EipIds) {
@@ -144,7 +144,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP IP 列表
+     * Get EIP IP 列表 
      * @return Eips EIP IP 列表
      */
     public String [] getEips() {
@@ -152,7 +152,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP IP 列表
+     * Set EIP IP 列表
      * @param Eips EIP IP 列表
      */
     public void setEips(String [] Eips) {
@@ -160,7 +160,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机实例ID 列表
+     * Get 主机实例ID 列表 
      * @return InstanceIds 主机实例ID 列表
      */
     public String [] getInstanceIds() {
@@ -168,7 +168,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机实例ID 列表
+     * Set 主机实例ID 列表
      * @param InstanceIds 主机实例ID 列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -176,7 +176,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP名称,模糊匹配
+     * Get EIP名称,模糊匹配 
      * @return SearchKey EIP名称,模糊匹配
      */
     public String getSearchKey() {
@@ -184,7 +184,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP名称,模糊匹配
+     * Set EIP名称,模糊匹配
      * @param SearchKey EIP名称,模糊匹配
      */
     public void setSearchKey(String SearchKey) {
@@ -192,7 +192,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取状态列表, 默认所有
+     * Get 状态列表, 默认所有 
      * @return Status 状态列表, 默认所有
      */
     public Integer [] getStatus() {
@@ -200,7 +200,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置状态列表, 默认所有
+     * Set 状态列表, 默认所有
      * @param Status 状态列表, 默认所有
      */
     public void setStatus(Integer [] Status) {
@@ -208,7 +208,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Integer getOffset() {
@@ -216,7 +216,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Integer Offset) {
@@ -224,7 +224,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回EIP数量，默认 20, 最大值 100
+     * Get 返回EIP数量，默认 20, 最大值 100 
      * @return Limit 返回EIP数量，默认 20, 最大值 100
      */
     public Integer getLimit() {
@@ -232,7 +232,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回EIP数量，默认 20, 最大值 100
+     * Set 返回EIP数量，默认 20, 最大值 100
      * @param Limit 返回EIP数量，默认 20, 最大值 100
      */
     public void setLimit(Integer Limit) {
@@ -240,7 +240,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
+     * Get 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt 
      * @return OrderField 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
      */
     public String getOrderField() {
@@ -248,7 +248,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
+     * Set 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
      * @param OrderField 排序字段，支持： EipId,Eip,Status, InstanceId,CreatedAt
      */
     public void setOrderField(String OrderField) {
@@ -256,7 +256,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式 0:递增 1:递减(默认)
+     * Get 排序方式 0:递增 1:递减(默认) 
      * @return Order 排序方式 0:递增 1:递减(默认)
      */
     public Integer getOrder() {
@@ -264,7 +264,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式 0:递增 1:递减(默认)
+     * Set 排序方式 0:递增 1:递减(默认)
      * @param Order 排序方式 0:递增 1:递减(默认)
      */
     public void setOrder(Integer Order) {
@@ -272,7 +272,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式,流量：flow，带宽：bandwidth
+     * Get 计费模式,流量：flow，带宽：bandwidth 
      * @return PayMode 计费模式,流量：flow，带宽：bandwidth
      */
     public String getPayMode() {
@@ -280,7 +280,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式,流量：flow，带宽：bandwidth
+     * Set 计费模式,流量：flow，带宽：bandwidth
      * @param PayMode 计费模式,流量：flow，带宽：bandwidth
      */
     public void setPayMode(String PayMode) {
@@ -288,7 +288,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP归属VpcId，例如vpc-k7j1t2x1
+     * Get EIP归属VpcId，例如vpc-k7j1t2x1 
      * @return VpcId EIP归属VpcId，例如vpc-k7j1t2x1
      */
     public String getVpcId() {
@@ -296,7 +296,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP归属VpcId，例如vpc-k7j1t2x1
+     * Set EIP归属VpcId，例如vpc-k7j1t2x1
      * @param VpcId EIP归属VpcId，例如vpc-k7j1t2x1
      */
     public void setVpcId(String VpcId) {
@@ -304,7 +304,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
+     * Get 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器 
      * @return BindTypes 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      */
     public Integer [] getBindTypes() {
@@ -312,7 +312,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
+     * Set 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      * @param BindTypes 绑定类型，-1：未绑定，0：物理机，1：nat网关，2：虚拟IP, 3:托管机器
      */
     public void setBindTypes(Integer [] BindTypes) {
@@ -320,7 +320,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取独占标志，0：共享，1：独占
+     * Get 独占标志，0：共享，1：独占 
      * @return ExclusiveTag 独占标志，0：共享，1：独占
      */
     public Integer getExclusiveTag() {
@@ -328,7 +328,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置独占标志，0：共享，1：独占
+     * Set 独占标志，0：共享，1：独占
      * @param ExclusiveTag 独占标志，0：共享，1：独占
      */
     public void setExclusiveTag(Integer ExclusiveTag) {
@@ -336,7 +336,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取EIP ACL实例ID
+     * Get EIP ACL实例ID 
      * @return AclId EIP ACL实例ID
      */
     public String getAclId() {
@@ -344,7 +344,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP ACL实例ID
+     * Set EIP ACL实例ID
      * @param AclId EIP ACL实例ID
      */
     public void setAclId(String AclId) {
@@ -352,7 +352,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
+     * Get 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定 
      * @return BindAcl 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
     public Integer getBindAcl() {
@@ -360,7 +360,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
+     * Set 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      * @param BindAcl 搜索条件，是否绑定了EIP ACL， 0：未绑定，1：绑定
      */
     public void setBindAcl(Integer BindAcl) {
@@ -368,7 +368,7 @@ public class DescribeEipsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EipIds.", this.EipIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTrackItem  extends AbstractModel{
+public class MediaTrackItem extends AbstractModel{
 
     /**
     * 片段类型。取值有：
@@ -76,12 +76,12 @@ public class MediaTrackItem  extends AbstractModel{
     private EmptyTrackItem EmptyItem;
 
     /**
-     * 获取片段类型。取值有：
+     * Get 片段类型。取值有：
 <li>Video：视频片段。</li>
 <li>Audio：音频片段。</li>
 <li>Sticker：贴图片段。</li>
 <li>Transition：转场。</li>
-<li>Empty：空白片段。</li>
+<li>Empty：空白片段。</li> 
      * @return Type 片段类型。取值有：
 <li>Video：视频片段。</li>
 <li>Audio：音频片段。</li>
@@ -94,7 +94,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置片段类型。取值有：
+     * Set 片段类型。取值有：
 <li>Video：视频片段。</li>
 <li>Audio：音频片段。</li>
 <li>Sticker：贴图片段。</li>
@@ -112,8 +112,8 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段，当 Type = Video 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频片段，当 Type = Video 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoItem 视频片段，当 Type = Video 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -122,7 +122,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段，当 Type = Video 时有效。
+     * Set 视频片段，当 Type = Video 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoItem 视频片段，当 Type = Video 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,8 +132,8 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频片段，当 Type = Audio 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频片段，当 Type = Audio 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioItem 音频片段，当 Type = Audio 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频片段，当 Type = Audio 时有效。
+     * Set 音频片段，当 Type = Audio 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioItem 音频片段，当 Type = Audio 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,8 +152,8 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取贴图片段，当 Type = Sticker 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 贴图片段，当 Type = Sticker 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StickerItem 贴图片段，当 Type = Sticker 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -162,7 +162,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置贴图片段，当 Type = Sticker 时有效。
+     * Set 贴图片段，当 Type = Sticker 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StickerItem 贴图片段，当 Type = Sticker 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,8 +172,8 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取转场，当 Type = Transition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转场，当 Type = Transition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TransitionItem 转场，当 Type = Transition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -182,7 +182,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置转场，当 Type = Transition 时有效。
+     * Set 转场，当 Type = Transition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TransitionItem 转场，当 Type = Transition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,9 +192,9 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
+     * Get 空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EmptyItem 空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
+     * Set 空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
 <li>使用 EmptyTrackItem 进行占位，来定位某个Item。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EmptyItem 空白片段，当 Type = Empty 时有效。空片段用于时间轴的占位。<li>如需要两个音频片段之间有一段时间的静音，可以用 EmptyTrackItem 来进行占位。</li>
@@ -216,7 +216,7 @@ public class MediaTrackItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

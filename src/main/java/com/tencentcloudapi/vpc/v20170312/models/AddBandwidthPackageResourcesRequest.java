@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
+public class AddBandwidthPackageResourcesRequest extends AbstractModel{
 
     /**
     * 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
@@ -58,7 +58,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     private String Protocol;
 
     /**
-     * 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+     * Get 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx' 
      * @return ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      */
     public String [] getResourceIds() {
@@ -66,7 +66,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
+     * Set 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      * @param ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -74,7 +74,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包唯一标识ID，形如'bwp-xxxx'
+     * Get 带宽包唯一标识ID，形如'bwp-xxxx' 
      * @return BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      */
     public String getBandwidthPackageId() {
@@ -82,7 +82,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一标识ID，形如'bwp-xxxx'
+     * Set 带宽包唯一标识ID，形如'bwp-xxxx'
      * @param BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -90,7 +90,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * Get 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。 
      * @return NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
      */
     public String getNetworkType() {
@@ -98,7 +98,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
+     * Set 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
      * @param NetworkType 带宽包类型，当前支持'BGP'类型，表示内部资源是BGP IP。
      */
     public void setNetworkType(String NetworkType) {
@@ -106,7 +106,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源类型，包括'Address', 'LoadBalance'
+     * Get 资源类型，包括'Address', 'LoadBalance' 
      * @return ResourceType 资源类型，包括'Address', 'LoadBalance'
      */
     public String getResourceType() {
@@ -114,7 +114,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型，包括'Address', 'LoadBalance'
+     * Set 资源类型，包括'Address', 'LoadBalance'
      * @param ResourceType 资源类型，包括'Address', 'LoadBalance'
      */
     public void setResourceType(String ResourceType) {
@@ -122,7 +122,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
+     * Get 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。 
      * @return Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      */
     public String getProtocol() {
@@ -130,7 +130,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
+     * Set 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      * @param Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议类型。
      */
     public void setProtocol(String Protocol) {
@@ -138,7 +138,7 @@ public class AddBandwidthPackageResourcesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);

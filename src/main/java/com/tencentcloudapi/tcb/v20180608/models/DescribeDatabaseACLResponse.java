@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabaseACLResponse  extends AbstractModel{
+public class DescribeDatabaseACLResponse extends AbstractModel{
 
     /**
     * 权限标签。取值范围：
@@ -41,11 +41,11 @@ public class DescribeDatabaseACLResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取权限标签。取值范围：
+     * Get 权限标签。取值范围：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
-<li> ADMINONLY：仅管理员可读写</li>
+<li> ADMINONLY：仅管理员可读写</li> 
      * @return AclTag 权限标签。取值范围：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
@@ -57,7 +57,7 @@ public class DescribeDatabaseACLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限标签。取值范围：
+     * Set 权限标签。取值范围：
 <li> READONLY：所有用户可读，仅创建者和管理员可写</li>
 <li> PRIVATE：仅创建者及管理员可读写</li>
 <li> ADMINWRITE：所有用户可读，仅管理员可写</li>
@@ -73,7 +73,7 @@ public class DescribeDatabaseACLResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -81,7 +81,7 @@ public class DescribeDatabaseACLResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -89,7 +89,7 @@ public class DescribeDatabaseACLResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclTag", this.AclTag);

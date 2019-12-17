@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterSecurityResponse  extends AbstractModel{
+public class DescribeClusterSecurityResponse extends AbstractModel{
 
     /**
     * 集群的账号名称
@@ -79,7 +79,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集群的账号名称
+     * Get 集群的账号名称 
      * @return UserName 集群的账号名称
      */
     public String getUserName() {
@@ -87,7 +87,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群的账号名称
+     * Set 集群的账号名称
      * @param UserName 集群的账号名称
      */
     public void setUserName(String UserName) {
@@ -95,7 +95,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群的访问密码
+     * Get 集群的访问密码 
      * @return Password 集群的访问密码
      */
     public String getPassword() {
@@ -103,7 +103,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群的访问密码
+     * Set 集群的访问密码
      * @param Password 集群的访问密码
      */
     public void setPassword(String Password) {
@@ -111,7 +111,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群访问CA证书
+     * Get 集群访问CA证书 
      * @return CertificationAuthority 集群访问CA证书
      */
     public String getCertificationAuthority() {
@@ -119,7 +119,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群访问CA证书
+     * Set 集群访问CA证书
      * @param CertificationAuthority 集群访问CA证书
      */
     public void setCertificationAuthority(String CertificationAuthority) {
@@ -127,7 +127,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群访问的地址
+     * Get 集群访问的地址 
      * @return ClusterExternalEndpoint 集群访问的地址
      */
     public String getClusterExternalEndpoint() {
@@ -135,7 +135,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群访问的地址
+     * Set 集群访问的地址
      * @param ClusterExternalEndpoint 集群访问的地址
      */
     public void setClusterExternalEndpoint(String ClusterExternalEndpoint) {
@@ -143,7 +143,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群访问的域名
+     * Get 集群访问的域名 
      * @return Domain 集群访问的域名
      */
     public String getDomain() {
@@ -151,7 +151,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群访问的域名
+     * Set 集群访问的域名
      * @param Domain 集群访问的域名
      */
     public void setDomain(String Domain) {
@@ -159,7 +159,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群Endpoint地址
+     * Get 集群Endpoint地址 
      * @return PgwEndpoint 集群Endpoint地址
      */
     public String getPgwEndpoint() {
@@ -167,7 +167,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群Endpoint地址
+     * Set 集群Endpoint地址
      * @param PgwEndpoint 集群Endpoint地址
      */
     public void setPgwEndpoint(String PgwEndpoint) {
@@ -175,7 +175,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取集群访问策略组
+     * Get 集群访问策略组 
      * @return SecurityPolicy 集群访问策略组
      */
     public String [] getSecurityPolicy() {
@@ -183,7 +183,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集群访问策略组
+     * Set 集群访问策略组
      * @param SecurityPolicy 集群访问策略组
      */
     public void setSecurityPolicy(String [] SecurityPolicy) {
@@ -191,7 +191,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribeClusterSecurityResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSdkAppidResponse  extends AbstractModel{
+public class DescribeSdkAppidResponse extends AbstractModel{
 
     /**
     * 表示 appid 对应的 SdkAppid 的数据
@@ -37,7 +37,7 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取表示 appid 对应的 SdkAppid 的数据
+     * Get 表示 appid 对应的 SdkAppid 的数据 
      * @return SdkAppids 表示 appid 对应的 SdkAppid 的数据
      */
     public Long [] getSdkAppids() {
@@ -45,7 +45,7 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     }
 
     /**
-     * 设置表示 appid 对应的 SdkAppid 的数据
+     * Set 表示 appid 对应的 SdkAppid 的数据
      * @param SdkAppids 表示 appid 对应的 SdkAppid 的数据
      */
     public void setSdkAppids(Long [] SdkAppids) {
@@ -53,7 +53,7 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeSdkAppidResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SdkAppids.", this.SdkAppids);

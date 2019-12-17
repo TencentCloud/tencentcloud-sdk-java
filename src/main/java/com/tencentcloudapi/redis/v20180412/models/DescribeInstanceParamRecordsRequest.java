@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
+public class DescribeInstanceParamRecordsRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -44,7 +44,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小
+     * Get 分页大小 
      * @return Limit 分页大小
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小
+     * Set 分页大小
      * @param Limit 分页大小
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
     public Integer getOffset() {
@@ -84,7 +84,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
     public void setOffset(Integer Offset) {
@@ -92,7 +92,7 @@ public class DescribeInstanceParamRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

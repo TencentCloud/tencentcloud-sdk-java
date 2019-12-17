@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthTestTidRequest  extends AbstractModel{
+public class AuthTestTidRequest extends AbstractModel{
 
     /**
     * 设备端SDK填入测试TID参数后生成的加密数据串
@@ -30,7 +30,7 @@ public class AuthTestTidRequest  extends AbstractModel{
     private String Data;
 
     /**
-     * 获取设备端SDK填入测试TID参数后生成的加密数据串
+     * Get 设备端SDK填入测试TID参数后生成的加密数据串 
      * @return Data 设备端SDK填入测试TID参数后生成的加密数据串
      */
     public String getData() {
@@ -38,7 +38,7 @@ public class AuthTestTidRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备端SDK填入测试TID参数后生成的加密数据串
+     * Set 设备端SDK填入测试TID参数后生成的加密数据串
      * @param Data 设备端SDK填入测试TID参数后生成的加密数据串
      */
     public void setData(String Data) {
@@ -46,7 +46,7 @@ public class AuthTestTidRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);

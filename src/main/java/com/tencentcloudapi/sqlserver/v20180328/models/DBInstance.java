@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBInstance  extends AbstractModel{
+public class DBInstance extends AbstractModel{
 
     /**
     * 实例ID
@@ -41,42 +41,42 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 实例所在地域ID
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 实例所在可用区ID
     */
     @SerializedName("ZoneId")
     @Expose
-    private Integer ZoneId;
+    private Long ZoneId;
 
     /**
     * 实例所在私有网络ID，基础网络时为 0
     */
     @SerializedName("VpcId")
     @Expose
-    private Integer VpcId;
+    private Long VpcId;
 
     /**
     * 实例所在私有网络子网ID，基础网络时为 0
     */
     @SerializedName("SubnetId")
     @Expose
-    private Integer SubnetId;
+    private Long SubnetId;
 
     /**
     * 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 实例访问IP
@@ -90,7 +90,7 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("Vport")
     @Expose
-    private Integer Vport;
+    private Long Vport;
 
     /**
     * 实例创建时间
@@ -132,21 +132,21 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例已经使用存储空间大小，单位G
     */
     @SerializedName("UsedStorage")
     @Expose
-    private Integer UsedStorage;
+    private Long UsedStorage;
 
     /**
     * 实例存储空间大小，单位G
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 实例版本
@@ -160,14 +160,14 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("RenewFlag")
     @Expose
-    private Integer RenewFlag;
+    private Long RenewFlag;
 
     /**
     * 实例高可用， 1-双机高可用，2-单机
     */
     @SerializedName("Model")
     @Expose
-    private Integer Model;
+    private Long Model;
 
     /**
     * 实例所在地域名称，如 ap-guangzhou
@@ -195,7 +195,7 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
     * 实例唯一UID
@@ -209,7 +209,7 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Integer Cpu;
+    private Long Cpu;
 
     /**
     * 实例版本代号
@@ -230,10 +230,10 @@ public class DBInstance  extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -241,7 +241,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -249,7 +249,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return Name 实例名称
      */
     public String getName() {
@@ -257,7 +257,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param Name 实例名称
      */
     public void setName(String Name) {
@@ -265,103 +265,103 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在项目ID
+     * Get 实例所在项目ID 
      * @return ProjectId 实例所在项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置实例所在项目ID
+     * Set 实例所在项目ID
      * @param ProjectId 实例所在项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取实例所在地域ID
+     * Get 实例所在地域ID 
      * @return RegionId 实例所在地域ID
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * 设置实例所在地域ID
+     * Set 实例所在地域ID
      * @param RegionId 实例所在地域ID
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * 获取实例所在可用区ID
+     * Get 实例所在可用区ID 
      * @return ZoneId 实例所在可用区ID
      */
-    public Integer getZoneId() {
+    public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * 设置实例所在可用区ID
+     * Set 实例所在可用区ID
      * @param ZoneId 实例所在可用区ID
      */
-    public void setZoneId(Integer ZoneId) {
+    public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * 获取实例所在私有网络ID，基础网络时为 0
+     * Get 实例所在私有网络ID，基础网络时为 0 
      * @return VpcId 实例所在私有网络ID，基础网络时为 0
      */
-    public Integer getVpcId() {
+    public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * 设置实例所在私有网络ID，基础网络时为 0
+     * Set 实例所在私有网络ID，基础网络时为 0
      * @param VpcId 实例所在私有网络ID，基础网络时为 0
      */
-    public void setVpcId(Integer VpcId) {
+    public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * 获取实例所在私有网络子网ID，基础网络时为 0
+     * Get 实例所在私有网络子网ID，基础网络时为 0 
      * @return SubnetId 实例所在私有网络子网ID，基础网络时为 0
      */
-    public Integer getSubnetId() {
+    public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * 设置实例所在私有网络子网ID，基础网络时为 0
+     * Set 实例所在私有网络子网ID，基础网络时为 0
      * @param SubnetId 实例所在私有网络子网ID，基础网络时为 0
      */
-    public void setSubnetId(Integer SubnetId) {
+    public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * 获取实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
+     * Get 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li> 
      * @return Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
+     * Set 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
      * @param Status 实例状态。取值范围： <li>1：申请中</li> <li>2：运行中</li> <li>3：受限运行中 (主备切换中)</li> <li>4：已隔离</li> <li>5：回收中</li> <li>6：已回收</li> <li>7：任务执行中 (实例做备份、回档等操作)</li> <li>8：已下线</li> <li>9：实例扩容中</li> <li>10：实例迁移中</li> <li>11：只读</li> <li>12：重启中</li>
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取实例访问IP
+     * Get 实例访问IP 
      * @return Vip 实例访问IP
      */
     public String getVip() {
@@ -369,7 +369,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例访问IP
+     * Set 实例访问IP
      * @param Vip 实例访问IP
      */
     public void setVip(String Vip) {
@@ -377,23 +377,23 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例访问端口
+     * Get 实例访问端口 
      * @return Vport 实例访问端口
      */
-    public Integer getVport() {
+    public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * 设置实例访问端口
+     * Set 实例访问端口
      * @param Vport 实例访问端口
      */
-    public void setVport(Integer Vport) {
+    public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
      */
     public String getCreateTime() {
@@ -401,7 +401,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param CreateTime 实例创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -409,7 +409,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例更新时间
+     * Get 实例更新时间 
      * @return UpdateTime 实例更新时间
      */
     public String getUpdateTime() {
@@ -417,7 +417,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例更新时间
+     * Set 实例更新时间
      * @param UpdateTime 实例更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -425,7 +425,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费开始时间
+     * Get 实例计费开始时间 
      * @return StartTime 实例计费开始时间
      */
     public String getStartTime() {
@@ -433,7 +433,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费开始时间
+     * Set 实例计费开始时间
      * @param StartTime 实例计费开始时间
      */
     public void setStartTime(String StartTime) {
@@ -441,7 +441,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费结束时间
+     * Get 实例计费结束时间 
      * @return EndTime 实例计费结束时间
      */
     public String getEndTime() {
@@ -449,7 +449,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费结束时间
+     * Set 实例计费结束时间
      * @param EndTime 实例计费结束时间
      */
     public void setEndTime(String EndTime) {
@@ -457,7 +457,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例隔离时间
+     * Get 实例隔离时间 
      * @return IsolateTime 实例隔离时间
      */
     public String getIsolateTime() {
@@ -465,7 +465,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例隔离时间
+     * Set 实例隔离时间
      * @param IsolateTime 实例隔离时间
      */
     public void setIsolateTime(String IsolateTime) {
@@ -473,55 +473,55 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位G
+     * Get 实例内存大小，单位G 
      * @return Memory 实例内存大小，单位G
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置实例内存大小，单位G
+     * Set 实例内存大小，单位G
      * @param Memory 实例内存大小，单位G
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取实例已经使用存储空间大小，单位G
+     * Get 实例已经使用存储空间大小，单位G 
      * @return UsedStorage 实例已经使用存储空间大小，单位G
      */
-    public Integer getUsedStorage() {
+    public Long getUsedStorage() {
         return this.UsedStorage;
     }
 
     /**
-     * 设置实例已经使用存储空间大小，单位G
+     * Set 实例已经使用存储空间大小，单位G
      * @param UsedStorage 实例已经使用存储空间大小，单位G
      */
-    public void setUsedStorage(Integer UsedStorage) {
+    public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
     }
 
     /**
-     * 获取实例存储空间大小，单位G
+     * Get 实例存储空间大小，单位G 
      * @return Storage 实例存储空间大小，单位G
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * 设置实例存储空间大小，单位G
+     * Set 实例存储空间大小，单位G
      * @param Storage 实例存储空间大小，单位G
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * 获取实例版本
+     * Get 实例版本 
      * @return VersionName 实例版本
      */
     public String getVersionName() {
@@ -529,7 +529,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本
+     * Set 实例版本
      * @param VersionName 实例版本
      */
     public void setVersionName(String VersionName) {
@@ -537,39 +537,39 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+     * Get 实例续费标记，0-正常续费，1-自动续费，2-到期不续费 
      * @return RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
      */
-    public Integer getRenewFlag() {
+    public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * 设置实例续费标记，0-正常续费，1-自动续费，2-到期不续费
+     * Set 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
      * @param RenewFlag 实例续费标记，0-正常续费，1-自动续费，2-到期不续费
      */
-    public void setRenewFlag(Integer RenewFlag) {
+    public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * 获取实例高可用， 1-双机高可用，2-单机
+     * Get 实例高可用， 1-双机高可用，2-单机 
      * @return Model 实例高可用， 1-双机高可用，2-单机
      */
-    public Integer getModel() {
+    public Long getModel() {
         return this.Model;
     }
 
     /**
-     * 设置实例高可用， 1-双机高可用，2-单机
+     * Set 实例高可用， 1-双机高可用，2-单机
      * @param Model 实例高可用， 1-双机高可用，2-单机
      */
-    public void setModel(Integer Model) {
+    public void setModel(Long Model) {
         this.Model = Model;
     }
 
     /**
-     * 获取实例所在地域名称，如 ap-guangzhou
+     * Get 实例所在地域名称，如 ap-guangzhou 
      * @return Region 实例所在地域名称，如 ap-guangzhou
      */
     public String getRegion() {
@@ -577,7 +577,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在地域名称，如 ap-guangzhou
+     * Set 实例所在地域名称，如 ap-guangzhou
      * @param Region 实例所在地域名称，如 ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -585,7 +585,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例所在可用区名称，如 ap-guangzhou-1
+     * Get 实例所在可用区名称，如 ap-guangzhou-1 
      * @return Zone 实例所在可用区名称，如 ap-guangzhou-1
      */
     public String getZone() {
@@ -593,7 +593,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在可用区名称，如 ap-guangzhou-1
+     * Set 实例所在可用区名称，如 ap-guangzhou-1
      * @param Zone 实例所在可用区名称，如 ap-guangzhou-1
      */
     public void setZone(String Zone) {
@@ -601,7 +601,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取备份时间点
+     * Get 备份时间点 
      * @return BackupTime 备份时间点
      */
     public String getBackupTime() {
@@ -609,7 +609,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置备份时间点
+     * Set 备份时间点
      * @param BackupTime 备份时间点
      */
     public void setBackupTime(String BackupTime) {
@@ -617,23 +617,23 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例付费模式， 0-按量计费，1-包年包月
+     * Get 实例付费模式， 0-按量计费，1-包年包月 
      * @return PayMode 实例付费模式， 0-按量计费，1-包年包月
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * 设置实例付费模式， 0-按量计费，1-包年包月
+     * Set 实例付费模式， 0-按量计费，1-包年包月
      * @param PayMode 实例付费模式， 0-按量计费，1-包年包月
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * 获取实例唯一UID
+     * Get 实例唯一UID 
      * @return Uid 实例唯一UID
      */
     public String getUid() {
@@ -641,7 +641,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例唯一UID
+     * Set 实例唯一UID
      * @param Uid 实例唯一UID
      */
     public void setUid(String Uid) {
@@ -649,23 +649,23 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例cpu核心数
+     * Get 实例cpu核心数 
      * @return Cpu 实例cpu核心数
      */
-    public Integer getCpu() {
+    public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * 设置实例cpu核心数
+     * Set 实例cpu核心数
      * @param Cpu 实例cpu核心数
      */
-    public void setCpu(Integer Cpu) {
+    public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * 获取实例版本代号
+     * Get 实例版本代号 
      * @return Version 实例版本代号
      */
     public String getVersion() {
@@ -673,7 +673,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本代号
+     * Set 实例版本代号
      * @param Version 实例版本代号
      */
     public void setVersion(String Version) {
@@ -681,7 +681,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取物理机代号
+     * Get 物理机代号 
      * @return Type 物理机代号
      */
     public String getType() {
@@ -689,7 +689,7 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 设置物理机代号
+     * Set 物理机代号
      * @param Type 物理机代号
      */
     public void setType(String Type) {
@@ -697,23 +697,23 @@ public class DBInstance  extends AbstractModel{
     }
 
     /**
-     * 获取计费ID
+     * Get 计费ID 
      * @return Pid 计费ID
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置计费ID
+     * Set 计费ID
      * @param Pid 计费ID
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

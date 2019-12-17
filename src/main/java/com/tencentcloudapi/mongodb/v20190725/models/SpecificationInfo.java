@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecificationInfo  extends AbstractModel{
+public class SpecificationInfo extends AbstractModel{
 
     /**
     * 地域信息
@@ -44,7 +44,7 @@ public class SpecificationInfo  extends AbstractModel{
     private SpecItem [] SpecItems;
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -52,7 +52,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -60,7 +60,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -68,7 +68,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -76,7 +76,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 获取售卖规格信息
+     * Get 售卖规格信息 
      * @return SpecItems 售卖规格信息
      */
     public SpecItem [] getSpecItems() {
@@ -84,7 +84,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 设置售卖规格信息
+     * Set 售卖规格信息
      * @param SpecItems 售卖规格信息
      */
     public void setSpecItems(SpecItem [] SpecItems) {
@@ -92,7 +92,7 @@ public class SpecificationInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

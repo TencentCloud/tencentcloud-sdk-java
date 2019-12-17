@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StandardImageResult  extends AbstractModel{
+public class StandardImageResult extends AbstractModel{
 
     /**
     * 详细结果
@@ -58,7 +58,7 @@ public class StandardImageResult  extends AbstractModel{
     private Long TotalCount;
 
     /**
-     * 获取详细结果
+     * Get 详细结果 
      * @return ResultSet 详细结果
      */
     public ImageTaskResult [] getResultSet() {
@@ -66,7 +66,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 设置详细结果
+     * Set 详细结果
      * @param ResultSet 详细结果
      */
     public void setResultSet(ImageTaskResult [] ResultSet) {
@@ -74,7 +74,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 获取分析完成后的统计结果
+     * Get 分析完成后的统计结果 
      * @return Statistic 分析完成后的统计结果
      */
     public ImageTaskStatistic getStatistic() {
@@ -82,7 +82,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 设置分析完成后的统计结果
+     * Set 分析完成后的统计结果
      * @param Statistic 分析完成后的统计结果
      */
     public void setStatistic(ImageTaskStatistic Statistic) {
@@ -90,7 +90,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
+     * Get 状态描述 
      * @return Message 状态描述
      */
     public String getMessage() {
@@ -98,7 +98,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
      * @param Message 状态描述
      */
     public void setMessage(String Message) {
@@ -106,7 +106,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public String getStatus() {
@@ -114,7 +114,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(String Status) {
@@ -122,7 +122,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 获取结果总数
+     * Get 结果总数 
      * @return TotalCount 结果总数
      */
     public Long getTotalCount() {
@@ -130,7 +130,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 设置结果总数
+     * Set 结果总数
      * @param TotalCount 结果总数
      */
     public void setTotalCount(Long TotalCount) {
@@ -138,7 +138,7 @@ public class StandardImageResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);

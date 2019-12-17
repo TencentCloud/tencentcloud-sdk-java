@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskNotifyConfig  extends AbstractModel{
+public class TaskNotifyConfig extends AbstractModel{
 
     /**
     * CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
@@ -58,7 +58,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     private String NotifyMode;
 
     /**
-     * 获取CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Get CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。 
      * @return CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      */
     public String getCmqModel() {
@@ -66,7 +66,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
+     * Set CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      * @param CmqModel CMQ 的模型，有 Queue 和 Topic 两种，目前仅支持 Queue。
      */
     public void setCmqModel(String CmqModel) {
@@ -74,7 +74,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 获取CMQ 的园区，如 sh，bj 等。
+     * Get CMQ 的园区，如 sh，bj 等。 
      * @return CmqRegion CMQ 的园区，如 sh，bj 等。
      */
     public String getCmqRegion() {
@@ -82,7 +82,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置CMQ 的园区，如 sh，bj 等。
+     * Set CMQ 的园区，如 sh，bj 等。
      * @param CmqRegion CMQ 的园区，如 sh，bj 等。
      */
     public void setCmqRegion(String CmqRegion) {
@@ -90,7 +90,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 获取当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+     * Get 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。 
      * @return QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      */
     public String getQueueName() {
@@ -98,7 +98,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
+     * Set 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      * @param QueueName 当模型为 Queue 时有效，表示接收事件通知的 CMQ 的队列名。
      */
     public void setQueueName(String QueueName) {
@@ -106,7 +106,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 获取当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Get 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。 
      * @return TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      */
     public String getTopicName() {
@@ -114,7 +114,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
+     * Set 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      * @param TopicName 当模型为 Topic 时有效，表示接收事件通知的 CMQ 的主题名。
      */
     public void setTopicName(String TopicName) {
@@ -122,7 +122,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 获取工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * Get 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。 
      * @return NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
      */
     public String getNotifyMode() {
@@ -130,7 +130,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
+     * Set 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
      * @param NotifyMode 工作流通知的模式，可取值有 Finish 和 Change，不填代表 Finish。
      */
     public void setNotifyMode(String NotifyMode) {
@@ -138,7 +138,7 @@ public class TaskNotifyConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmqModel", this.CmqModel);

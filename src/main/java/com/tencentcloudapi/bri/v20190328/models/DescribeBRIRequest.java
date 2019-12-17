@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBRIRequest  extends AbstractModel{
+public class DescribeBRIRequest extends AbstractModel{
 
     /**
     * 业务风险情报请求体
@@ -37,7 +37,7 @@ public class DescribeBRIRequest  extends AbstractModel{
     private String ResourceId;
 
     /**
-     * 获取业务风险情报请求体
+     * Get 业务风险情报请求体 
      * @return RequestData 业务风险情报请求体
      */
     public BRIRequest getRequestData() {
@@ -45,7 +45,7 @@ public class DescribeBRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务风险情报请求体
+     * Set 业务风险情报请求体
      * @param RequestData 业务风险情报请求体
      */
     public void setRequestData(BRIRequest RequestData) {
@@ -53,7 +53,7 @@ public class DescribeBRIRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户用于计费的资源Id
+     * Get 客户用于计费的资源Id 
      * @return ResourceId 客户用于计费的资源Id
      */
     public String getResourceId() {
@@ -61,7 +61,7 @@ public class DescribeBRIRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户用于计费的资源Id
+     * Set 客户用于计费的资源Id
      * @param ResourceId 客户用于计费的资源Id
      */
     public void setResourceId(String ResourceId) {
@@ -69,7 +69,7 @@ public class DescribeBRIRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "RequestData.", this.RequestData);

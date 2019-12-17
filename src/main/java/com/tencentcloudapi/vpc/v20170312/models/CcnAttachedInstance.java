@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcnAttachedInstance  extends AbstractModel{
+public class CcnAttachedInstance extends AbstractModel{
 
     /**
     * 云联网实例ID。
@@ -105,7 +105,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     private String CcnUin;
 
     /**
-     * 获取云联网实例ID。
+     * Get 云联网实例ID。 
      * @return CcnId 云联网实例ID。
      */
     public String getCcnId() {
@@ -113,7 +113,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置云联网实例ID。
+     * Set 云联网实例ID。
      * @param CcnId 云联网实例ID。
      */
     public void setCcnId(String CcnId) {
@@ -121,10 +121,10 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例类型：
+     * Get 关联实例类型：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+<li>`BMVPC`：黑石私有网络</li> 
      * @return InstanceType 关联实例类型：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
@@ -135,7 +135,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例类型：
+     * Set 关联实例类型：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
@@ -149,7 +149,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例ID。
+     * Get 关联实例ID。 
      * @return InstanceId 关联实例ID。
      */
     public String getInstanceId() {
@@ -157,7 +157,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例ID。
+     * Set 关联实例ID。
      * @param InstanceId 关联实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -165,7 +165,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例名称。
+     * Get 关联实例名称。 
      * @return InstanceName 关联实例名称。
      */
     public String getInstanceName() {
@@ -173,7 +173,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例名称。
+     * Set 关联实例名称。
      * @param InstanceName 关联实例名称。
      */
     public void setInstanceName(String InstanceName) {
@@ -181,7 +181,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例所属大区，例如：ap-guangzhou。
+     * Get 关联实例所属大区，例如：ap-guangzhou。 
      * @return InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
      */
     public String getInstanceRegion() {
@@ -189,7 +189,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例所属大区，例如：ap-guangzhou。
+     * Set 关联实例所属大区，例如：ap-guangzhou。
      * @param InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
      */
     public void setInstanceRegion(String InstanceRegion) {
@@ -197,7 +197,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例所属UIN（根账号）。
+     * Get 关联实例所属UIN（根账号）。 
      * @return InstanceUin 关联实例所属UIN（根账号）。
      */
     public String getInstanceUin() {
@@ -205,7 +205,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例所属UIN（根账号）。
+     * Set 关联实例所属UIN（根账号）。
      * @param InstanceUin 关联实例所属UIN（根账号）。
      */
     public void setInstanceUin(String InstanceUin) {
@@ -213,7 +213,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例CIDR。
+     * Get 关联实例CIDR。 
      * @return CidrBlock 关联实例CIDR。
      */
     public String [] getCidrBlock() {
@@ -221,7 +221,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例CIDR。
+     * Set 关联实例CIDR。
      * @param CidrBlock 关联实例CIDR。
      */
     public void setCidrBlock(String [] CidrBlock) {
@@ -229,7 +229,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例状态：
+     * Get 关联实例状态：
 <li>`PENDING`：申请中</li>
 <li>`ACTIVE`：已连接</li>
 <li>`EXPIRED`：已过期</li>
@@ -238,7 +238,7 @@ public class CcnAttachedInstance  extends AbstractModel{
 <li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
 <li>`ATTACHING`：关联中</li>
 <li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li> 
      * @return State 关联实例状态：
 <li>`PENDING`：申请中</li>
 <li>`ACTIVE`：已连接</li>
@@ -255,7 +255,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例状态：
+     * Set 关联实例状态：
 <li>`PENDING`：申请中</li>
 <li>`ACTIVE`：已连接</li>
 <li>`EXPIRED`：已过期</li>
@@ -281,7 +281,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联时间。
+     * Get 关联时间。 
      * @return AttachedTime 关联时间。
      */
     public String getAttachedTime() {
@@ -289,7 +289,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联时间。
+     * Set 关联时间。
      * @param AttachedTime 关联时间。
      */
     public void setAttachedTime(String AttachedTime) {
@@ -297,7 +297,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取云联网所属UIN（根账号）。
+     * Get 云联网所属UIN（根账号）。 
      * @return CcnUin 云联网所属UIN（根账号）。
      */
     public String getCcnUin() {
@@ -305,7 +305,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置云联网所属UIN（根账号）。
+     * Set 云联网所属UIN（根账号）。
      * @param CcnUin 云联网所属UIN（根账号）。
      */
     public void setCcnUin(String CcnUin) {
@@ -313,7 +313,7 @@ public class CcnAttachedInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);

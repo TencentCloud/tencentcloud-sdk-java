@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeywordsExtractionRequest  extends AbstractModel{
+public class KeywordsExtractionRequest extends AbstractModel{
 
     /**
     * 待处理的文本（仅支持UTF-8格式，不超过10000字）
@@ -37,7 +37,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     private Long Num;
 
     /**
-     * 获取待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * Get 待处理的文本（仅支持UTF-8格式，不超过10000字） 
      * @return Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
      */
     public String getText() {
@@ -45,7 +45,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待处理的文本（仅支持UTF-8格式，不超过10000字）
+     * Set 待处理的文本（仅支持UTF-8格式，不超过10000字）
      * @param Text 待处理的文本（仅支持UTF-8格式，不超过10000字）
      */
     public void setText(String Text) {
@@ -53,7 +53,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定关键词个数上限（默认值为5）
+     * Get 指定关键词个数上限（默认值为5） 
      * @return Num 指定关键词个数上限（默认值为5）
      */
     public Long getNum() {
@@ -61,7 +61,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定关键词个数上限（默认值为5）
+     * Set 指定关键词个数上限（默认值为5）
      * @param Num 指定关键词个数上限（默认值为5）
      */
     public void setNum(Long Num) {
@@ -69,7 +69,7 @@ public class KeywordsExtractionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

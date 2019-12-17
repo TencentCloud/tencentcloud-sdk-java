@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleTagOperation  extends AbstractModel{
+public class AiSampleTagOperation extends AbstractModel{
 
     /**
     * 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
@@ -37,7 +37,7 @@ public class AiSampleTagOperation  extends AbstractModel{
     private String [] Tags;
 
     /**
-     * 获取操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+     * Get 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。 
      * @return Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
      */
     public String getType() {
@@ -45,7 +45,7 @@ public class AiSampleTagOperation  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
+     * Set 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
      * @param Type 操作类型，可选值：add（添加）、delete（删除）、reset（重置）。
      */
     public void setType(String Type) {
@@ -53,7 +53,7 @@ public class AiSampleTagOperation  extends AbstractModel{
     }
 
     /**
-     * 获取标签，长度限制：128 个字符。
+     * Get 标签，长度限制：128 个字符。 
      * @return Tags 标签，长度限制：128 个字符。
      */
     public String [] getTags() {
@@ -61,7 +61,7 @@ public class AiSampleTagOperation  extends AbstractModel{
     }
 
     /**
-     * 设置标签，长度限制：128 个字符。
+     * Set 标签，长度限制：128 个字符。
      * @param Tags 标签，长度限制：128 个字符。
      */
     public void setTags(String [] Tags) {
@@ -69,7 +69,7 @@ public class AiSampleTagOperation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushUrlCacheRequest  extends AbstractModel{
+public class PushUrlCacheRequest extends AbstractModel{
 
     /**
     * 预热的 URL 列表，单次最多指定20个 URL。
@@ -37,7 +37,7 @@ public class PushUrlCacheRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取预热的 URL 列表，单次最多指定20个 URL。
+     * Get 预热的 URL 列表，单次最多指定20个 URL。 
      * @return Urls 预热的 URL 列表，单次最多指定20个 URL。
      */
     public String [] getUrls() {
@@ -45,7 +45,7 @@ public class PushUrlCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预热的 URL 列表，单次最多指定20个 URL。
+     * Set 预热的 URL 列表，单次最多指定20个 URL。
      * @param Urls 预热的 URL 列表，单次最多指定20个 URL。
      */
     public void setUrls(String [] Urls) {
@@ -53,7 +53,7 @@ public class PushUrlCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -61,7 +61,7 @@ public class PushUrlCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -69,7 +69,7 @@ public class PushUrlCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AdInfo  extends AbstractModel{
+public class AdInfo extends AbstractModel{
 
     /**
     * 插播广告列表
@@ -65,7 +65,7 @@ public class AdInfo  extends AbstractModel{
     private PluginInfo [] NotifyBars;
 
     /**
-     * 获取插播广告列表
+     * Get 插播广告列表 
      * @return Spots 插播广告列表
      */
     public PluginInfo [] getSpots() {
@@ -73,7 +73,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置插播广告列表
+     * Set 插播广告列表
      * @param Spots 插播广告列表
      */
     public void setSpots(PluginInfo [] Spots) {
@@ -81,7 +81,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取精品推荐广告列表
+     * Get 精品推荐广告列表 
      * @return BoutiqueRecommands 精品推荐广告列表
      */
     public PluginInfo [] getBoutiqueRecommands() {
@@ -89,7 +89,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置精品推荐广告列表
+     * Set 精品推荐广告列表
      * @param BoutiqueRecommands 精品推荐广告列表
      */
     public void setBoutiqueRecommands(PluginInfo [] BoutiqueRecommands) {
@@ -97,7 +97,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取悬浮窗广告列表
+     * Get 悬浮窗广告列表 
      * @return FloatWindowses 悬浮窗广告列表
      */
     public PluginInfo [] getFloatWindowses() {
@@ -105,7 +105,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置悬浮窗广告列表
+     * Set 悬浮窗广告列表
      * @param FloatWindowses 悬浮窗广告列表
      */
     public void setFloatWindowses(PluginInfo [] FloatWindowses) {
@@ -113,7 +113,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取banner广告列表
+     * Get banner广告列表 
      * @return Banners banner广告列表
      */
     public PluginInfo [] getBanners() {
@@ -121,7 +121,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置banner广告列表
+     * Set banner广告列表
      * @param Banners banner广告列表
      */
     public void setBanners(PluginInfo [] Banners) {
@@ -129,7 +129,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取积分墙广告列表
+     * Get 积分墙广告列表 
      * @return IntegralWalls 积分墙广告列表
      */
     public PluginInfo [] getIntegralWalls() {
@@ -137,7 +137,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置积分墙广告列表
+     * Set 积分墙广告列表
      * @param IntegralWalls 积分墙广告列表
      */
     public void setIntegralWalls(PluginInfo [] IntegralWalls) {
@@ -145,7 +145,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通知栏广告列表
+     * Get 通知栏广告列表 
      * @return NotifyBars 通知栏广告列表
      */
     public PluginInfo [] getNotifyBars() {
@@ -153,7 +153,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通知栏广告列表
+     * Set 通知栏广告列表
      * @param NotifyBars 通知栏广告列表
      */
     public void setNotifyBars(PluginInfo [] NotifyBars) {
@@ -161,7 +161,7 @@ public class AdInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Spots.", this.Spots);

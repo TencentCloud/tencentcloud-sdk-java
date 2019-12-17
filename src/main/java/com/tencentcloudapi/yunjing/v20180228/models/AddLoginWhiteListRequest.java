@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddLoginWhiteListRequest  extends AbstractModel{
+public class AddLoginWhiteListRequest extends AbstractModel{
 
     /**
     * 白名单规则
@@ -30,7 +30,7 @@ public class AddLoginWhiteListRequest  extends AbstractModel{
     private LoginWhiteListsRule Rules;
 
     /**
-     * 获取白名单规则
+     * Get 白名单规则 
      * @return Rules 白名单规则
      */
     public LoginWhiteListsRule getRules() {
@@ -38,7 +38,7 @@ public class AddLoginWhiteListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置白名单规则
+     * Set 白名单规则
      * @param Rules 白名单规则
      */
     public void setRules(LoginWhiteListsRule Rules) {
@@ -46,7 +46,7 @@ public class AddLoginWhiteListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Rules.", this.Rules);

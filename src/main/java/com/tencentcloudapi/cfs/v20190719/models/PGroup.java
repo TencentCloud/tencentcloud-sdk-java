@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PGroup  extends AbstractModel{
+public class PGroup extends AbstractModel{
 
     /**
     * 权限组ID
@@ -37,7 +37,7 @@ public class PGroup  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return PGroupId 权限组ID
      */
     public String getPGroupId() {
@@ -45,7 +45,7 @@ public class PGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param PGroupId 权限组ID
      */
     public void setPGroupId(String PGroupId) {
@@ -53,7 +53,7 @@ public class PGroup  extends AbstractModel{
     }
 
     /**
-     * 获取权限组名称
+     * Get 权限组名称 
      * @return Name 权限组名称
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class PGroup  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称
+     * Set 权限组名称
      * @param Name 权限组名称
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class PGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

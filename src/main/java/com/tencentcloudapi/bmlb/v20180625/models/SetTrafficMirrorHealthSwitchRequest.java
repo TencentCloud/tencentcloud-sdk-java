@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
+public class SetTrafficMirrorHealthSwitchRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -79,7 +79,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     private Integer [] HttpCodes;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -87,7 +87,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -95,7 +95,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查开关，0：关闭，1：打开
+     * Get 健康检查开关，0：关闭，1：打开 
      * @return HealthSwitch 健康检查开关，0：关闭，1：打开
      */
     public Integer getHealthSwitch() {
@@ -103,7 +103,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查开关，0：关闭，1：打开
+     * Set 健康检查开关，0：关闭，1：打开
      * @param HealthSwitch 健康检查开关，0：关闭，1：打开
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -111,7 +111,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查判断健康的次数，最小值2，最大值10。
+     * Get 健康检查判断健康的次数，最小值2，最大值10。 
      * @return HealthNum 健康检查判断健康的次数，最小值2，最大值10。
      */
     public Integer getHealthNum() {
@@ -119,7 +119,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查判断健康的次数，最小值2，最大值10。
+     * Set 健康检查判断健康的次数，最小值2，最大值10。
      * @param HealthNum 健康检查判断健康的次数，最小值2，最大值10。
      */
     public void setHealthNum(Integer HealthNum) {
@@ -127,7 +127,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查判断不健康的次数，最小值2，最大值10。
+     * Get 健康检查判断不健康的次数，最小值2，最大值10。 
      * @return UnhealthNum 健康检查判断不健康的次数，最小值2，最大值10。
      */
     public Integer getUnhealthNum() {
@@ -135,7 +135,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查判断不健康的次数，最小值2，最大值10。
+     * Set 健康检查判断不健康的次数，最小值2，最大值10。
      * @param UnhealthNum 健康检查判断不健康的次数，最小值2，最大值10。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -143,7 +143,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查间隔，单位：秒，最小值5，最大值300。
+     * Get 健康检查间隔，单位：秒，最小值5，最大值300。 
      * @return IntervalTime 健康检查间隔，单位：秒，最小值5，最大值300。
      */
     public Integer getIntervalTime() {
@@ -151,7 +151,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查间隔，单位：秒，最小值5，最大值300。
+     * Set 健康检查间隔，单位：秒，最小值5，最大值300。
      * @param IntervalTime 健康检查间隔，单位：秒，最小值5，最大值300。
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -159,7 +159,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检查的域名配置。
+     * Get 检查的域名配置。 
      * @return HttpCheckDomain 检查的域名配置。
      */
     public String getHttpCheckDomain() {
@@ -167,7 +167,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检查的域名配置。
+     * Set 检查的域名配置。
      * @param HttpCheckDomain 检查的域名配置。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
@@ -175,7 +175,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检查的路径配置。
+     * Get 检查的路径配置。 
      * @return HttpCheckPath 检查的路径配置。
      */
     public String getHttpCheckPath() {
@@ -183,7 +183,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检查的路径配置。
+     * Set 检查的路径配置。
      * @param HttpCheckPath 检查的路径配置。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -191,7 +191,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Get 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。 
      * @return HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public Integer [] getHttpCodes() {
@@ -199,7 +199,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
+     * Set 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      * @param HttpCodes 健康检查中认为健康的HTTP返回码的组合。可选值为1~5的集合，1表示HTTP返回码为1xx认为健康。2表示HTTP返回码为2xx认为健康。3表示HTTP返回码为3xx认为健康。4表示HTTP返回码为4xx认为健康。5表示HTTP返回码为5xx认为健康。
      */
     public void setHttpCodes(Integer [] HttpCodes) {
@@ -207,7 +207,7 @@ public class SetTrafficMirrorHealthSwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

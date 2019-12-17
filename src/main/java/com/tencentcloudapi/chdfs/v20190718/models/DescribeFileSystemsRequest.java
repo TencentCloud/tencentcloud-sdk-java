@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileSystemsRequest  extends AbstractModel{
+public class DescribeFileSystemsRequest extends AbstractModel{
 
     /**
     * 偏移量，默认为0
@@ -37,7 +37,7 @@ public class DescribeFileSystemsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -45,7 +45,7 @@ public class DescribeFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -53,7 +53,7 @@ public class DescribeFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为所有
+     * Get 返回数量，默认为所有 
      * @return Limit 返回数量，默认为所有
      */
     public Long getLimit() {
@@ -61,7 +61,7 @@ public class DescribeFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为所有
+     * Set 返回数量，默认为所有
      * @param Limit 返回数量，默认为所有
      */
     public void setLimit(Long Limit) {
@@ -69,7 +69,7 @@ public class DescribeFileSystemsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

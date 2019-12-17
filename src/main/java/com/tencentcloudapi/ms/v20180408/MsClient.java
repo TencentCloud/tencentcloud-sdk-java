@@ -29,21 +29,10 @@ public class MsClient extends AbstractClient{
     private static String endpoint = "ms.tencentcloudapi.com";
     private static String version = "2018-04-08";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public MsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public MsClient(Credential credential, String region, ClientProfile profile) {
         super(MsClient.endpoint, MsClient.version, credential, region, profile);
     }

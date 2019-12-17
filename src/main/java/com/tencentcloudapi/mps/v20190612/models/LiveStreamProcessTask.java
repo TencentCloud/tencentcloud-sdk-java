@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamProcessTask  extends AbstractModel{
+public class LiveStreamProcessTask extends AbstractModel{
 
     /**
     * 视频处理任务 ID。
@@ -60,7 +60,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取视频处理任务 ID。
+     * Get 视频处理任务 ID。 
      * @return TaskId 视频处理任务 ID。
      */
     public String getTaskId() {
@@ -68,7 +68,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理任务 ID。
+     * Set 视频处理任务 ID。
      * @param TaskId 视频处理任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -76,9 +76,9 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态，取值：
+     * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成。</li> 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -88,7 +88,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态，取值：
+     * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
      * @param Status 任务流状态，取值：
@@ -100,7 +100,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0 表示成功，其他值表示失败。
+     * Get 错误码，0 表示成功，其他值表示失败。 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败。
      */
     public Long getErrCode() {
@@ -108,7 +108,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，0 表示成功，其他值表示失败。
+     * Set 错误码，0 表示成功，其他值表示失败。
      * @param ErrCode 错误码，0 表示成功，其他值表示失败。
      */
     public void setErrCode(Long ErrCode) {
@@ -116,7 +116,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -124,7 +124,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -132,7 +132,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 获取直播流 URL。
+     * Get 直播流 URL。 
      * @return Url 直播流 URL。
      */
     public String getUrl() {
@@ -140,7 +140,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 设置直播流 URL。
+     * Set 直播流 URL。
      * @param Url 直播流 URL。
      */
     public void setUrl(String Url) {
@@ -148,7 +148,7 @@ public class LiveStreamProcessTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

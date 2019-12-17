@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AttachDetail  extends AbstractModel{
+public class AttachDetail extends AbstractModel{
 
     /**
     * 实例ID。
@@ -44,7 +44,7 @@ public class AttachDetail  extends AbstractModel{
     private Integer MaxAttachCount;
 
     /**
-     * 获取实例ID。
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID。
+     * Set 实例ID。
      * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例已挂载数据盘的数量。
+     * Get 实例已挂载数据盘的数量。 
      * @return AttachedDiskCount 实例已挂载数据盘的数量。
      */
     public Integer getAttachedDiskCount() {
@@ -68,7 +68,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例已挂载数据盘的数量。
+     * Set 实例已挂载数据盘的数量。
      * @param AttachedDiskCount 实例已挂载数据盘的数量。
      */
     public void setAttachedDiskCount(Integer AttachedDiskCount) {
@@ -76,7 +76,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例最大可挂载数据盘的数量。
+     * Get 实例最大可挂载数据盘的数量。 
      * @return MaxAttachCount 实例最大可挂载数据盘的数量。
      */
     public Integer getMaxAttachCount() {
@@ -84,7 +84,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例最大可挂载数据盘的数量。
+     * Set 实例最大可挂载数据盘的数量。
      * @param MaxAttachCount 实例最大可挂载数据盘的数量。
      */
     public void setMaxAttachCount(Integer MaxAttachCount) {
@@ -92,7 +92,7 @@ public class AttachDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

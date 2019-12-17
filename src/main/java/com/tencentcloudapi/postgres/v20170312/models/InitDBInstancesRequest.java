@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InitDBInstancesRequest  extends AbstractModel{
+public class InitDBInstancesRequest extends AbstractModel{
 
     /**
     * 实例ID集合。
@@ -51,7 +51,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     private String Charset;
 
     /**
-     * 获取实例ID集合。
+     * Get 实例ID集合。 
      * @return DBInstanceIdSet 实例ID集合。
      */
     public String [] getDBInstanceIdSet() {
@@ -59,7 +59,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID集合。
+     * Set 实例ID集合。
      * @param DBInstanceIdSet 实例ID集合。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
@@ -67,7 +67,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例根账号用户名。
+     * Get 实例根账号用户名。 
      * @return AdminName 实例根账号用户名。
      */
     public String getAdminName() {
@@ -75,7 +75,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例根账号用户名。
+     * Set 实例根账号用户名。
      * @param AdminName 实例根账号用户名。
      */
     public void setAdminName(String AdminName) {
@@ -83,7 +83,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例根账号用户名对应的密码。
+     * Get 实例根账号用户名对应的密码。 
      * @return AdminPassword 实例根账号用户名对应的密码。
      */
     public String getAdminPassword() {
@@ -91,7 +91,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例根账号用户名对应的密码。
+     * Set 实例根账号用户名对应的密码。
      * @param AdminPassword 实例根账号用户名对应的密码。
      */
     public void setAdminPassword(String AdminPassword) {
@@ -99,7 +99,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例字符集，目前只支持：UTF8、LATIN1。
+     * Get 实例字符集，目前只支持：UTF8、LATIN1。 
      * @return Charset 实例字符集，目前只支持：UTF8、LATIN1。
      */
     public String getCharset() {
@@ -107,7 +107,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例字符集，目前只支持：UTF8、LATIN1。
+     * Set 实例字符集，目前只支持：UTF8、LATIN1。
      * @param Charset 实例字符集，目前只支持：UTF8、LATIN1。
      */
     public void setCharset(String Charset) {
@@ -115,7 +115,7 @@ public class InitDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);

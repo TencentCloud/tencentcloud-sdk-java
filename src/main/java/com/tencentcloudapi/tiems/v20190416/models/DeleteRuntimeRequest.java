@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRuntimeRequest  extends AbstractModel{
+public class DeleteRuntimeRequest extends AbstractModel{
 
     /**
     * 要删除的Runtime名
@@ -30,7 +30,7 @@ public class DeleteRuntimeRequest  extends AbstractModel{
     private String Runtime;
 
     /**
-     * 获取要删除的Runtime名
+     * Get 要删除的Runtime名 
      * @return Runtime 要删除的Runtime名
      */
     public String getRuntime() {
@@ -38,7 +38,7 @@ public class DeleteRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的Runtime名
+     * Set 要删除的Runtime名
      * @param Runtime 要删除的Runtime名
      */
     public void setRuntime(String Runtime) {
@@ -46,7 +46,7 @@ public class DeleteRuntimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Runtime", this.Runtime);

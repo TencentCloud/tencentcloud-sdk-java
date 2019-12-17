@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskObjectResultInput  extends AbstractModel{
+public class AiRecognitionTaskObjectResultInput extends AbstractModel{
 
     /**
     * 物体识别模板 ID。
@@ -30,7 +30,7 @@ public class AiRecognitionTaskObjectResultInput  extends AbstractModel{
     private Long Definition;
 
     /**
-     * 获取物体识别模板 ID。
+     * Get 物体识别模板 ID。 
      * @return Definition 物体识别模板 ID。
      */
     public Long getDefinition() {
@@ -38,7 +38,7 @@ public class AiRecognitionTaskObjectResultInput  extends AbstractModel{
     }
 
     /**
-     * 设置物体识别模板 ID。
+     * Set 物体识别模板 ID。
      * @param Definition 物体识别模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -46,7 +46,7 @@ public class AiRecognitionTaskObjectResultInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecordParam  extends AbstractModel{
+public class RecordParam extends AbstractModel{
 
     /**
     * 录制间隔。
@@ -49,10 +49,10 @@ public class RecordParam  extends AbstractModel{
     private Integer Enable;
 
     /**
-     * 获取录制间隔。
+     * Get 录制间隔。
 单位秒，默认值1800。
 取值范围:300-7200。
-此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
+此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。 
      * @return RecordInterval 录制间隔。
 单位秒，默认值1800。
 取值范围:300-7200。
@@ -63,7 +63,7 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 设置录制间隔。
+     * Set 录制间隔。
 单位秒，默认值1800。
 取值范围:300-7200。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
@@ -77,9 +77,9 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 获取录制存储时长。
+     * Get 录制存储时长。
 单位秒，取值范围： 0-93312000。
-0表示永久存储。
+0表示永久存储。 
      * @return StorageTime 录制存储时长。
 单位秒，取值范围： 0-93312000。
 0表示永久存储。
@@ -89,7 +89,7 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 设置录制存储时长。
+     * Set 录制存储时长。
 单位秒，取值范围： 0-93312000。
 0表示永久存储。
      * @param StorageTime 录制存储时长。
@@ -101,7 +101,7 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启当前格式录制，0 否 1是。默认值0。
+     * Get 是否开启当前格式录制，0 否 1是。默认值0。 
      * @return Enable 是否开启当前格式录制，0 否 1是。默认值0。
      */
     public Integer getEnable() {
@@ -109,7 +109,7 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启当前格式录制，0 否 1是。默认值0。
+     * Set 是否开启当前格式录制，0 否 1是。默认值0。
      * @param Enable 是否开启当前格式录制，0 否 1是。默认值0。
      */
     public void setEnable(Integer Enable) {
@@ -117,7 +117,7 @@ public class RecordParam  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordInterval", this.RecordInterval);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessRegionDomainConf  extends AbstractModel{
+public class AccessRegionDomainConf extends AbstractModel{
 
     /**
     * 地域ID。
@@ -37,7 +37,7 @@ public class AccessRegionDomainConf  extends AbstractModel{
     private String [] NationCountryInnerList;
 
     /**
-     * 获取地域ID。
+     * Get 地域ID。 
      * @return RegionId 地域ID。
      */
     public String getRegionId() {
@@ -45,7 +45,7 @@ public class AccessRegionDomainConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID。
+     * Set 地域ID。
      * @param RegionId 地域ID。
      */
     public void setRegionId(String RegionId) {
@@ -53,7 +53,7 @@ public class AccessRegionDomainConf  extends AbstractModel{
     }
 
     /**
-     * 获取就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
+     * Get 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。 
      * @return NationCountryInnerList 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
      */
     public String [] getNationCountryInnerList() {
@@ -61,7 +61,7 @@ public class AccessRegionDomainConf  extends AbstractModel{
     }
 
     /**
-     * 设置就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
+     * Set 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
      * @param NationCountryInnerList 就近接入区域国家内部编码，编码列表可通过DescribeCountryAreaMapping接口获取。
      */
     public void setNationCountryInnerList(String [] NationCountryInnerList) {
@@ -69,7 +69,7 @@ public class AccessRegionDomainConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppSetInfo  extends AbstractModel{
+public class AppSetInfo extends AbstractModel{
 
     /**
     * 任务唯一标识
@@ -128,7 +128,7 @@ public class AppSetInfo  extends AbstractModel{
     private Integer ShieldSize;
 
     /**
-     * 获取任务唯一标识
+     * Get 任务唯一标识 
      * @return ItemId 任务唯一标识
      */
     public String getItemId() {
@@ -136,7 +136,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识
+     * Set 任务唯一标识
      * @param ItemId 任务唯一标识
      */
     public void setItemId(String ItemId) {
@@ -144,7 +144,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的名称
+     * Get app的名称 
      * @return AppName app的名称
      */
     public String getAppName() {
@@ -152,7 +152,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的名称
+     * Set app的名称
      * @param AppName app的名称
      */
     public void setAppName(String AppName) {
@@ -160,7 +160,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名
+     * Get app的包名 
      * @return AppPkgName app的包名
      */
     public String getAppPkgName() {
@@ -168,7 +168,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的包名
+     * Set app的包名
      * @param AppPkgName app的包名
      */
     public void setAppPkgName(String AppPkgName) {
@@ -176,7 +176,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的版本号
+     * Get app的版本号 
      * @return AppVersion app的版本号
      */
     public String getAppVersion() {
@@ -184,7 +184,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的版本号
+     * Set app的版本号
      * @param AppVersion app的版本号
      */
     public void setAppVersion(String AppVersion) {
@@ -192,7 +192,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的md5
+     * Get app的md5 
      * @return AppMd5 app的md5
      */
     public String getAppMd5() {
@@ -200,7 +200,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的md5
+     * Set app的md5
      * @param AppMd5 app的md5
      */
     public void setAppMd5(String AppMd5) {
@@ -208,7 +208,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的大小
+     * Get app的大小 
      * @return AppSize app的大小
      */
     public Integer getAppSize() {
@@ -216,7 +216,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的大小
+     * Set app的大小
      * @param AppSize app的大小
      */
     public void setAppSize(Integer AppSize) {
@@ -224,7 +224,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固服务版本
+     * Get 加固服务版本 
      * @return ServiceEdition 加固服务版本
      */
     public String getServiceEdition() {
@@ -232,7 +232,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固服务版本
+     * Set 加固服务版本
      * @param ServiceEdition 加固服务版本
      */
     public void setServiceEdition(String ServiceEdition) {
@@ -240,7 +240,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固结果返回码
+     * Get 加固结果返回码 
      * @return ShieldCode 加固结果返回码
      */
     public Integer getShieldCode() {
@@ -248,7 +248,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固结果返回码
+     * Set 加固结果返回码
      * @param ShieldCode 加固结果返回码
      */
     public void setShieldCode(Integer ShieldCode) {
@@ -256,7 +256,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后的APP下载地址
+     * Get 加固后的APP下载地址 
      * @return AppUrl 加固后的APP下载地址
      */
     public String getAppUrl() {
@@ -264,7 +264,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后的APP下载地址
+     * Set 加固后的APP下载地址
      * @param AppUrl 加固后的APP下载地址
      */
     public void setAppUrl(String AppUrl) {
@@ -272,7 +272,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Get 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时 
      * @return TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public Integer getTaskStatus() {
@@ -280,7 +280,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
+     * Set 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      * @param TaskStatus 任务状态: 1-已完成,2-处理中,3-处理出错,4-处理超时
      */
     public void setTaskStatus(Integer TaskStatus) {
@@ -288,7 +288,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取请求的客户端ip
+     * Get 请求的客户端ip 
      * @return ClientIp 请求的客户端ip
      */
     public String getClientIp() {
@@ -296,7 +296,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置请求的客户端ip
+     * Set 请求的客户端ip
      * @param ClientIp 请求的客户端ip
      */
     public void setClientIp(String ClientIp) {
@@ -304,7 +304,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取提交加固时间
+     * Get 提交加固时间 
      * @return TaskTime 提交加固时间
      */
     public Integer getTaskTime() {
@@ -312,7 +312,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置提交加固时间
+     * Set 提交加固时间
      * @param TaskTime 提交加固时间
      */
     public void setTaskTime(Integer TaskTime) {
@@ -320,7 +320,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的图标url
+     * Get app的图标url 
      * @return AppIconUrl app的图标url
      */
     public String getAppIconUrl() {
@@ -328,7 +328,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的图标url
+     * Set app的图标url
      * @param AppIconUrl app的图标url
      */
     public void setAppIconUrl(String AppIconUrl) {
@@ -336,7 +336,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后app的md5
+     * Get 加固后app的md5 
      * @return ShieldMd5 加固后app的md5
      */
     public String getShieldMd5() {
@@ -344,7 +344,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后app的md5
+     * Set 加固后app的md5
      * @param ShieldMd5 加固后app的md5
      */
     public void setShieldMd5(String ShieldMd5) {
@@ -352,7 +352,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后app的大小
+     * Get 加固后app的大小 
      * @return ShieldSize 加固后app的大小
      */
     public Integer getShieldSize() {
@@ -360,7 +360,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后app的大小
+     * Set 加固后app的大小
      * @param ShieldSize 加固后app的大小
      */
     public void setShieldSize(Integer ShieldSize) {
@@ -368,7 +368,7 @@ public class AppSetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

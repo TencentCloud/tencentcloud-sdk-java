@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoScalingGroup  extends AbstractModel{
+public class AutoScalingGroup extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -191,7 +191,7 @@ public class AutoScalingGroup  extends AbstractModel{
     private ServiceSettings ServiceSettings;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -199,7 +199,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -207,7 +207,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组名称
+     * Get 伸缩组名称 
      * @return AutoScalingGroupName 伸缩组名称
      */
     public String getAutoScalingGroupName() {
@@ -215,7 +215,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组名称
+     * Set 伸缩组名称
      * @param AutoScalingGroupName 伸缩组名称
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
@@ -223,7 +223,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
+     * Get 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br> 
      * @return AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
      */
     public String getAutoScalingGroupStatus() {
@@ -231,7 +231,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
+     * Set 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
      * @param AutoScalingGroupStatus 伸缩组当前状态。取值范围：<br><li>NORMAL：正常<br><li>CVM_ABNORMAL：启动配置异常<br><li>LB_ABNORMAL：负载均衡器异常<br><li>VPC_ABNORMAL：VPC网络异常<br><li>INSUFFICIENT_BALANCE：余额不足<br>
      */
     public void setAutoScalingGroupStatus(String AutoScalingGroupStatus) {
@@ -239,7 +239,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，采用UTC标准计时
+     * Get 创建时间，采用UTC标准计时 
      * @return CreatedTime 创建时间，采用UTC标准计时
      */
     public String getCreatedTime() {
@@ -247,7 +247,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，采用UTC标准计时
+     * Set 创建时间，采用UTC标准计时
      * @param CreatedTime 创建时间，采用UTC标准计时
      */
     public void setCreatedTime(String CreatedTime) {
@@ -255,7 +255,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取默认冷却时间，单位秒
+     * Get 默认冷却时间，单位秒 
      * @return DefaultCooldown 默认冷却时间，单位秒
      */
     public Integer getDefaultCooldown() {
@@ -263,7 +263,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置默认冷却时间，单位秒
+     * Set 默认冷却时间，单位秒
      * @param DefaultCooldown 默认冷却时间，单位秒
      */
     public void setDefaultCooldown(Integer DefaultCooldown) {
@@ -271,7 +271,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取期望实例数
+     * Get 期望实例数 
      * @return DesiredCapacity 期望实例数
      */
     public Integer getDesiredCapacity() {
@@ -279,7 +279,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置期望实例数
+     * Set 期望实例数
      * @param DesiredCapacity 期望实例数
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -287,7 +287,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取启用状态，取值包括`ENABLED`和`DISABLED`
+     * Get 启用状态，取值包括`ENABLED`和`DISABLED` 
      * @return EnabledStatus 启用状态，取值包括`ENABLED`和`DISABLED`
      */
     public String getEnabledStatus() {
@@ -295,7 +295,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置启用状态，取值包括`ENABLED`和`DISABLED`
+     * Set 启用状态，取值包括`ENABLED`和`DISABLED`
      * @param EnabledStatus 启用状态，取值包括`ENABLED`和`DISABLED`
      */
     public void setEnabledStatus(String EnabledStatus) {
@@ -303,7 +303,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取应用型负载均衡器列表
+     * Get 应用型负载均衡器列表 
      * @return ForwardLoadBalancerSet 应用型负载均衡器列表
      */
     public ForwardLoadBalancer [] getForwardLoadBalancerSet() {
@@ -311,7 +311,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置应用型负载均衡器列表
+     * Set 应用型负载均衡器列表
      * @param ForwardLoadBalancerSet 应用型负载均衡器列表
      */
     public void setForwardLoadBalancerSet(ForwardLoadBalancer [] ForwardLoadBalancerSet) {
@@ -319,7 +319,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量
+     * Get 实例数量 
      * @return InstanceCount 实例数量
      */
     public Integer getInstanceCount() {
@@ -327,7 +327,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量
+     * Set 实例数量
      * @param InstanceCount 实例数量
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -335,7 +335,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取状态为`IN_SERVICE`实例的数量
+     * Get 状态为`IN_SERVICE`实例的数量 
      * @return InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
      */
     public Integer getInServiceInstanceCount() {
@@ -343,7 +343,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置状态为`IN_SERVICE`实例的数量
+     * Set 状态为`IN_SERVICE`实例的数量
      * @param InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
      */
     public void setInServiceInstanceCount(Integer InServiceInstanceCount) {
@@ -351,7 +351,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置ID
+     * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
     public String getLaunchConfigurationId() {
@@ -359,7 +359,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置ID
+     * Set 启动配置ID
      * @param LaunchConfigurationId 启动配置ID
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -367,7 +367,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置名称
+     * Get 启动配置名称 
      * @return LaunchConfigurationName 启动配置名称
      */
     public String getLaunchConfigurationName() {
@@ -375,7 +375,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置名称
+     * Set 启动配置名称
      * @param LaunchConfigurationName 启动配置名称
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
@@ -383,7 +383,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取传统型负载均衡器ID列表
+     * Get 传统型负载均衡器ID列表 
      * @return LoadBalancerIdSet 传统型负载均衡器ID列表
      */
     public String [] getLoadBalancerIdSet() {
@@ -391,7 +391,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置传统型负载均衡器ID列表
+     * Set 传统型负载均衡器ID列表
      * @param LoadBalancerIdSet 传统型负载均衡器ID列表
      */
     public void setLoadBalancerIdSet(String [] LoadBalancerIdSet) {
@@ -399,7 +399,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取最大实例数
+     * Get 最大实例数 
      * @return MaxSize 最大实例数
      */
     public Integer getMaxSize() {
@@ -407,7 +407,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置最大实例数
+     * Set 最大实例数
      * @param MaxSize 最大实例数
      */
     public void setMaxSize(Integer MaxSize) {
@@ -415,7 +415,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取最小实例数
+     * Get 最小实例数 
      * @return MinSize 最小实例数
      */
     public Integer getMinSize() {
@@ -423,7 +423,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置最小实例数
+     * Set 最小实例数
      * @param MinSize 最小实例数
      */
     public void setMinSize(Integer MinSize) {
@@ -431,7 +431,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -439,7 +439,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -447,7 +447,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID列表
+     * Get 子网ID列表 
      * @return SubnetIdSet 子网ID列表
      */
     public String [] getSubnetIdSet() {
@@ -455,7 +455,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID列表
+     * Set 子网ID列表
      * @param SubnetIdSet 子网ID列表
      */
     public void setSubnetIdSet(String [] SubnetIdSet) {
@@ -463,7 +463,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取销毁策略
+     * Get 销毁策略 
      * @return TerminationPolicySet 销毁策略
      */
     public String [] getTerminationPolicySet() {
@@ -471,7 +471,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置销毁策略
+     * Set 销毁策略
      * @param TerminationPolicySet 销毁策略
      */
     public void setTerminationPolicySet(String [] TerminationPolicySet) {
@@ -479,7 +479,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取VPC标识
+     * Get VPC标识 
      * @return VpcId VPC标识
      */
     public String getVpcId() {
@@ -487,7 +487,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置VPC标识
+     * Set VPC标识
      * @param VpcId VPC标识
      */
     public void setVpcId(String VpcId) {
@@ -495,7 +495,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表
+     * Get 可用区列表 
      * @return ZoneSet 可用区列表
      */
     public String [] getZoneSet() {
@@ -503,7 +503,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表
+     * Set 可用区列表
      * @param ZoneSet 可用区列表
      */
     public void setZoneSet(String [] ZoneSet) {
@@ -511,7 +511,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取重试策略
+     * Get 重试策略 
      * @return RetryPolicy 重试策略
      */
     public String getRetryPolicy() {
@@ -519,7 +519,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置重试策略
+     * Set 重试策略
      * @param RetryPolicy 重试策略
      */
     public void setRetryPolicy(String RetryPolicy) {
@@ -527,7 +527,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * Get 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。 
      * @return InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      */
     public String getInActivityStatus() {
@@ -535,7 +535,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * Set 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      * @param InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      */
     public void setInActivityStatus(String InActivityStatus) {
@@ -543,7 +543,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组标签列表
+     * Get 伸缩组标签列表 
      * @return Tags 伸缩组标签列表
      */
     public Tag [] getTags() {
@@ -551,7 +551,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组标签列表
+     * Set 伸缩组标签列表
      * @param Tags 伸缩组标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -559,7 +559,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 获取服务设置
+     * Get 服务设置 
      * @return ServiceSettings 服务设置
      */
     public ServiceSettings getServiceSettings() {
@@ -567,7 +567,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 设置服务设置
+     * Set 服务设置
      * @param ServiceSettings 服务设置
      */
     public void setServiceSettings(ServiceSettings ServiceSettings) {
@@ -575,7 +575,7 @@ public class AutoScalingGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

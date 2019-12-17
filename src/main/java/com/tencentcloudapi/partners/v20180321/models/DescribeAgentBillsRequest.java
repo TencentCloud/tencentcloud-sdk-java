@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentBillsRequest  extends AbstractModel{
+public class DescribeAgentBillsRequest extends AbstractModel{
 
     /**
     * 支付月份，如2018-02
@@ -72,7 +72,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取支付月份，如2018-02
+     * Get 支付月份，如2018-02 
      * @return SettleMonth 支付月份，如2018-02
      */
     public String getSettleMonth() {
@@ -80,7 +80,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支付月份，如2018-02
+     * Set 支付月份，如2018-02
      * @param SettleMonth 支付月份，如2018-02
      */
     public void setSettleMonth(String SettleMonth) {
@@ -88,7 +88,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -96,7 +96,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -104,7 +104,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支付方式，prepay/postpay
+     * Get 支付方式，prepay/postpay 
      * @return PayMode 支付方式，prepay/postpay
      */
     public String getPayMode() {
@@ -112,7 +112,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支付方式，prepay/postpay
+     * Set 支付方式，prepay/postpay
      * @param PayMode 支付方式，prepay/postpay
      */
     public void setPayMode(String PayMode) {
@@ -120,7 +120,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费订单号
+     * Get 预付费订单号 
      * @return OrderId 预付费订单号
      */
     public String getOrderId() {
@@ -128,7 +128,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费订单号
+     * Set 预付费订单号
      * @param OrderId 预付费订单号
      */
     public void setOrderId(String OrderId) {
@@ -136,7 +136,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户备注名称
+     * Get 客户备注名称 
      * @return ClientRemark 客户备注名称
      */
     public String getClientRemark() {
@@ -144,7 +144,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户备注名称
+     * Set 客户备注名称
      * @param ClientRemark 客户备注名称
      */
     public void setClientRemark(String ClientRemark) {
@@ -152,7 +152,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -160,7 +160,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -168,7 +168,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -176,7 +176,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -184,7 +184,7 @@ public class DescribeAgentBillsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SettleMonth", this.SettleMonth);

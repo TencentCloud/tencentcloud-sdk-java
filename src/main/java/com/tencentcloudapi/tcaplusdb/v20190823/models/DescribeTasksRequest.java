@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksRequest  extends AbstractModel{
+public class DescribeTasksRequest extends AbstractModel{
 
     /**
     * 需要查询任务所属的应用ID列表
@@ -58,7 +58,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取需要查询任务所属的应用ID列表
+     * Get 需要查询任务所属的应用ID列表 
      * @return ApplicationIds 需要查询任务所属的应用ID列表
      */
     public String [] getApplicationIds() {
@@ -66,7 +66,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询任务所属的应用ID列表
+     * Set 需要查询任务所属的应用ID列表
      * @param ApplicationIds 需要查询任务所属的应用ID列表
      */
     public void setApplicationIds(String [] ApplicationIds) {
@@ -74,7 +74,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的任务ID列表
+     * Get 需要查询的任务ID列表 
      * @return TaskIds 需要查询的任务ID列表
      */
     public String [] getTaskIds() {
@@ -82,7 +82,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的任务ID列表
+     * Set 需要查询的任务ID列表
      * @param TaskIds 需要查询的任务ID列表
      */
     public void setTaskIds(String [] TaskIds) {
@@ -90,7 +90,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，本接口支持：Content，TaskType, Operator, Time
+     * Get 过滤条件，本接口支持：Content，TaskType, Operator, Time 
      * @return Filters 过滤条件，本接口支持：Content，TaskType, Operator, Time
      */
     public Filter [] getFilters() {
@@ -98,7 +98,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，本接口支持：Content，TaskType, Operator, Time
+     * Set 过滤条件，本接口支持：Content，TaskType, Operator, Time
      * @param Filters 过滤条件，本接口支持：Content，TaskType, Operator, Time
      */
     public void setFilters(Filter [] Filters) {
@@ -106,7 +106,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务列表大小
+     * Get 任务列表大小 
      * @return Limit 任务列表大小
      */
     public Long getLimit() {
@@ -130,7 +130,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务列表大小
+     * Set 任务列表大小
      * @param Limit 任务列表大小
      */
     public void setLimit(Long Limit) {
@@ -138,7 +138,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBandwidthPackageRequest  extends AbstractModel{
+public class CreateBandwidthPackageRequest extends AbstractModel{
 
     /**
     * 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
@@ -72,7 +72,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     private String Protocol;
 
     /**
-     * 获取带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     * Get 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST' 
      * @return NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      */
     public String getNetworkType() {
@@ -80,7 +80,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
+     * Set 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      * @param NetworkType 带宽包类型，包括'BGP'，'SINGLEISP'，'ANYCAST'
      */
     public void setNetworkType(String NetworkType) {
@@ -88,7 +88,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+     * Get 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’ 
      * @return ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      */
     public String getChargeType() {
@@ -96,7 +96,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
+     * Set 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      * @param ChargeType 带宽包计费类型，包括‘TOP5_POSTPAID_BY_MONTH’，‘PERCENT95_POSTPAID_BY_MONTH’
      */
     public void setChargeType(String ChargeType) {
@@ -104,7 +104,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包名字
+     * Get 带宽包名字 
      * @return BandwidthPackageName 带宽包名字
      */
     public String getBandwidthPackageName() {
@@ -112,7 +112,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包名字
+     * Set 带宽包名字
      * @param BandwidthPackageName 带宽包名字
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
@@ -120,7 +120,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包数量(非上移账户只能填1)
+     * Get 带宽包数量(非上移账户只能填1) 
      * @return BandwidthPackageCount 带宽包数量(非上移账户只能填1)
      */
     public Integer getBandwidthPackageCount() {
@@ -128,7 +128,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包数量(非上移账户只能填1)
+     * Set 带宽包数量(非上移账户只能填1)
      * @param BandwidthPackageCount 带宽包数量(非上移账户只能填1)
      */
     public void setBandwidthPackageCount(Integer BandwidthPackageCount) {
@@ -136,7 +136,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Get 带宽包限速大小。单位：Mbps，-1表示不限速。 
      * @return InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public Integer getInternetMaxBandwidth() {
@@ -144,7 +144,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包限速大小。单位：Mbps，-1表示不限速。
+     * Set 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param InternetMaxBandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      */
     public void setInternetMaxBandwidth(Integer InternetMaxBandwidth) {
@@ -152,7 +152,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要关联的标签列表。
+     * Get 需要关联的标签列表。 
      * @return Tags 需要关联的标签列表。
      */
     public Tag [] getTags() {
@@ -160,7 +160,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要关联的标签列表。
+     * Set 需要关联的标签列表。
      * @param Tags 需要关联的标签列表。
      */
     public void setTags(Tag [] Tags) {
@@ -168,7 +168,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     * Get 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。 
      * @return Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      */
     public String getProtocol() {
@@ -176,7 +176,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
+     * Set 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      * @param Protocol 带宽包协议类型。当前支持'ipv4'和'ipv6'协议带宽包，默认值是'ipv4'。
      */
     public void setProtocol(String Protocol) {
@@ -184,7 +184,7 @@ public class CreateBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);

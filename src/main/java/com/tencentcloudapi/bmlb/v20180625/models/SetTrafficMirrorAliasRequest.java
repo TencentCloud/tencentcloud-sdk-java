@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetTrafficMirrorAliasRequest  extends AbstractModel{
+public class SetTrafficMirrorAliasRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -37,7 +37,7 @@ public class SetTrafficMirrorAliasRequest  extends AbstractModel{
     private String Alias;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -45,7 +45,7 @@ public class SetTrafficMirrorAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -53,7 +53,7 @@ public class SetTrafficMirrorAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像实例别名。
+     * Get 流量镜像实例别名。 
      * @return Alias 流量镜像实例别名。
      */
     public String getAlias() {
@@ -61,7 +61,7 @@ public class SetTrafficMirrorAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例别名。
+     * Set 流量镜像实例别名。
      * @param Alias 流量镜像实例别名。
      */
     public void setAlias(String Alias) {
@@ -69,7 +69,7 @@ public class SetTrafficMirrorAliasRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

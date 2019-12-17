@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
+public class ReplaceRouteTableAssociationRequest extends AbstractModel{
 
     /**
     * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
@@ -37,7 +37,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     private String RouteTableId;
 
     /**
-     * 获取子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * Get 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。 
      * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      */
     public String getSubnetId() {
@@ -45,7 +45,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * Set 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
      */
     public void setSubnetId(String SubnetId) {
@@ -53,7 +53,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -61,7 +61,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -69,7 +69,7 @@ public class ReplaceRouteTableAssociationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

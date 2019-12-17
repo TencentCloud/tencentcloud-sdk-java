@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SuspectedInfo  extends AbstractModel{
+public class SuspectedInfo extends AbstractModel{
 
     /**
     * TopN匹配信息列表
@@ -37,7 +37,7 @@ public class SuspectedInfo  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取TopN匹配信息列表
+     * Get TopN匹配信息列表 
      * @return FaceSet TopN匹配信息列表
      */
     public FrameInfo [] getFaceSet() {
@@ -45,7 +45,7 @@ public class SuspectedInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TopN匹配信息列表
+     * Set TopN匹配信息列表
      * @param FaceSet TopN匹配信息列表
      */
     public void setFaceSet(FrameInfo [] FaceSet) {
@@ -53,7 +53,7 @@ public class SuspectedInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别到的人员id
+     * Get 识别到的人员id 
      * @return PersonId 识别到的人员id
      */
     public String getPersonId() {
@@ -61,7 +61,7 @@ public class SuspectedInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的人员id
+     * Set 识别到的人员id
      * @param PersonId 识别到的人员id
      */
     public void setPersonId(String PersonId) {
@@ -69,7 +69,7 @@ public class SuspectedInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FaceSet.", this.FaceSet);

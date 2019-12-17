@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishMessageRequest  extends AbstractModel{
+public class PublishMessageRequest extends AbstractModel{
 
     /**
     * 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
@@ -58,7 +58,7 @@ public class PublishMessageRequest  extends AbstractModel{
     private Integer Qos;
 
     /**
-     * 获取消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
+     * Get 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128} 
      * @return Topic 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
      */
     public String getTopic() {
@@ -66,7 +66,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
+     * Set 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
      * @param Topic 消息发往的主题。命名规则：${ProductId}/${DeviceName}/[a-zA-Z0-9:_-]{1,128}
      */
     public void setTopic(String Topic) {
@@ -74,7 +74,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取消息内容
+     * Get 消息内容 
      * @return Payload 消息内容
      */
     public String getPayload() {
@@ -82,7 +82,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置消息内容
+     * Set 消息内容
      * @param Payload 消息内容
      */
     public void setPayload(String Payload) {
@@ -90,7 +90,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -98,7 +98,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -106,7 +106,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -114,7 +114,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -122,7 +122,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务质量等级，取值为0或1
+     * Get 服务质量等级，取值为0或1 
      * @return Qos 服务质量等级，取值为0或1
      */
     public Integer getQos() {
@@ -130,7 +130,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务质量等级，取值为0或1
+     * Set 服务质量等级，取值为0或1
      * @param Qos 服务质量等级，取值为0或1
      */
     public void setQos(Integer Qos) {
@@ -138,7 +138,7 @@ public class PublishMessageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Topic", this.Topic);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgePortrait  extends AbstractModel{
+public class AgePortrait extends AbstractModel{
 
     /**
     * 年龄区间
@@ -37,7 +37,7 @@ public class AgePortrait  extends AbstractModel{
     private Float Percent;
 
     /**
-     * 获取年龄区间
+     * Get 年龄区间 
      * @return AgeRange 年龄区间
      */
     public String getAgeRange() {
@@ -45,7 +45,7 @@ public class AgePortrait  extends AbstractModel{
     }
 
     /**
-     * 设置年龄区间
+     * Set 年龄区间
      * @param AgeRange 年龄区间
      */
     public void setAgeRange(String AgeRange) {
@@ -53,7 +53,7 @@ public class AgePortrait  extends AbstractModel{
     }
 
     /**
-     * 获取百分比
+     * Get 百分比 
      * @return Percent 百分比
      */
     public Float getPercent() {
@@ -61,7 +61,7 @@ public class AgePortrait  extends AbstractModel{
     }
 
     /**
-     * 设置百分比
+     * Set 百分比
      * @param Percent 百分比
      */
     public void setPercent(Float Percent) {
@@ -69,7 +69,7 @@ public class AgePortrait  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AgeRange", this.AgeRange);

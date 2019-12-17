@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVulsMisinformationRequest  extends AbstractModel{
+public class CreateVulsMisinformationRequest extends AbstractModel{
 
     /**
     * 漏洞ID列表
@@ -30,7 +30,7 @@ public class CreateVulsMisinformationRequest  extends AbstractModel{
     private Integer [] VulIds;
 
     /**
-     * 获取漏洞ID列表
+     * Get 漏洞ID列表 
      * @return VulIds 漏洞ID列表
      */
     public Integer [] getVulIds() {
@@ -38,7 +38,7 @@ public class CreateVulsMisinformationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞ID列表
+     * Set 漏洞ID列表
      * @param VulIds 漏洞ID列表
      */
     public void setVulIds(Integer [] VulIds) {
@@ -46,7 +46,7 @@ public class CreateVulsMisinformationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VulIds.", this.VulIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopLoggingResponse  extends AbstractModel{
+public class StopLoggingResponse extends AbstractModel{
 
     /**
     * 是否关闭成功
@@ -37,7 +37,7 @@ public class StopLoggingResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取是否关闭成功
+     * Get 是否关闭成功 
      * @return IsSuccess 是否关闭成功
      */
     public Long getIsSuccess() {
@@ -45,7 +45,7 @@ public class StopLoggingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否关闭成功
+     * Set 是否关闭成功
      * @param IsSuccess 是否关闭成功
      */
     public void setIsSuccess(Long IsSuccess) {
@@ -53,7 +53,7 @@ public class StopLoggingResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class StopLoggingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class StopLoggingResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsSuccess", this.IsSuccess);

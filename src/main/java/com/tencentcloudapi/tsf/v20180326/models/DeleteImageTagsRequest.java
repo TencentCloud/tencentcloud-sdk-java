@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteImageTagsRequest  extends AbstractModel{
+public class DeleteImageTagsRequest extends AbstractModel{
 
     /**
     * 镜像版本数组
@@ -30,7 +30,7 @@ public class DeleteImageTagsRequest  extends AbstractModel{
     private DeleteImageTag [] ImageTags;
 
     /**
-     * 获取镜像版本数组
+     * Get 镜像版本数组 
      * @return ImageTags 镜像版本数组
      */
     public DeleteImageTag [] getImageTags() {
@@ -38,7 +38,7 @@ public class DeleteImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像版本数组
+     * Set 镜像版本数组
      * @param ImageTags 镜像版本数组
      */
     public void setImageTags(DeleteImageTag [] ImageTags) {
@@ -46,7 +46,7 @@ public class DeleteImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageTags.", this.ImageTags);

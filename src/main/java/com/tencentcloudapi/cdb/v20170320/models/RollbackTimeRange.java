@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackTimeRange  extends AbstractModel{
+public class RollbackTimeRange extends AbstractModel{
 
     /**
     * 实例可回档开始时间，时间格式：2016-10-29 01:06:04
@@ -37,7 +37,7 @@ public class RollbackTimeRange  extends AbstractModel{
     private String End;
 
     /**
-     * 获取实例可回档开始时间，时间格式：2016-10-29 01:06:04
+     * Get 实例可回档开始时间，时间格式：2016-10-29 01:06:04 
      * @return Begin 实例可回档开始时间，时间格式：2016-10-29 01:06:04
      */
     public String getBegin() {
@@ -45,7 +45,7 @@ public class RollbackTimeRange  extends AbstractModel{
     }
 
     /**
-     * 设置实例可回档开始时间，时间格式：2016-10-29 01:06:04
+     * Set 实例可回档开始时间，时间格式：2016-10-29 01:06:04
      * @param Begin 实例可回档开始时间，时间格式：2016-10-29 01:06:04
      */
     public void setBegin(String Begin) {
@@ -53,7 +53,7 @@ public class RollbackTimeRange  extends AbstractModel{
     }
 
     /**
-     * 获取实例可回档结束时间，时间格式：2016-11-02 11:44:47
+     * Get 实例可回档结束时间，时间格式：2016-11-02 11:44:47 
      * @return End 实例可回档结束时间，时间格式：2016-11-02 11:44:47
      */
     public String getEnd() {
@@ -61,7 +61,7 @@ public class RollbackTimeRange  extends AbstractModel{
     }
 
     /**
-     * 设置实例可回档结束时间，时间格式：2016-11-02 11:44:47
+     * Set 实例可回档结束时间，时间格式：2016-11-02 11:44:47
      * @param End 实例可回档结束时间，时间格式：2016-11-02 11:44:47
      */
     public void setEnd(String End) {
@@ -69,7 +69,7 @@ public class RollbackTimeRange  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Begin", this.Begin);

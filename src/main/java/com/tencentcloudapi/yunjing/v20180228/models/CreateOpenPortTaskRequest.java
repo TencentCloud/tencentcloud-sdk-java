@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOpenPortTaskRequest  extends AbstractModel{
+public class CreateOpenPortTaskRequest extends AbstractModel{
 
     /**
     * 云镜客户端唯一Uuid。
@@ -30,7 +30,7 @@ public class CreateOpenPortTaskRequest  extends AbstractModel{
     private String Uuid;
 
     /**
-     * 获取云镜客户端唯一Uuid。
+     * Get 云镜客户端唯一Uuid。 
      * @return Uuid 云镜客户端唯一Uuid。
      */
     public String getUuid() {
@@ -38,7 +38,7 @@ public class CreateOpenPortTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。
+     * Set 云镜客户端唯一Uuid。
      * @param Uuid 云镜客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
@@ -46,7 +46,7 @@ public class CreateOpenPortTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetVpnConnectionRequest  extends AbstractModel{
+public class ResetVpnConnectionRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。
@@ -37,7 +37,7 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     private String VpnConnectionId;
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -45,7 +45,7 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -53,7 +53,7 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * Get VPN通道实例ID。形如：vpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      */
     public String getVpnConnectionId() {
@@ -61,7 +61,7 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * Set VPN通道实例ID。形如：vpnx-f49l6u0z。
      * @param VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      */
     public void setVpnConnectionId(String VpnConnectionId) {
@@ -69,7 +69,7 @@ public class ResetVpnConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

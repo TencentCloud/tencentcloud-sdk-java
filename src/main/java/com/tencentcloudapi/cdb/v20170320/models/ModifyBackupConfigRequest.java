@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyBackupConfigRequest  extends AbstractModel{
+public class ModifyBackupConfigRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
@@ -65,7 +65,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * Get 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。 
      * @return ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
      */
     public Integer getExpireDays() {
@@ -89,7 +89,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+     * Set 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
      * @param ExpireDays 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
      */
     public void setExpireDays(Integer ExpireDays) {
@@ -97,7 +97,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     * Get (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。 
      * @return StartTime (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
      */
     public String getStartTime() {
@@ -105,7 +105,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置(将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
+     * Set (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
      * @param StartTime (将废弃，建议使用 BackupTimeWindow 参数) 备份时间范围，格式为：02:00-06:00，起点和终点时间目前限制为整点，目前可以选择的范围为： 00:00-12:00，02:00-06:00，06：00-10：00，10:00-14:00，14:00-18:00，18:00-22:00，22:00-02:00。
      */
     public void setStartTime(String StartTime) {
@@ -113,7 +113,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动备份方式，仅支持：physical - 物理冷备
+     * Get 自动备份方式，仅支持：physical - 物理冷备 
      * @return BackupMethod 自动备份方式，仅支持：physical - 物理冷备
      */
     public String getBackupMethod() {
@@ -121,7 +121,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动备份方式，仅支持：physical - 物理冷备
+     * Set 自动备份方式，仅支持：physical - 物理冷备
      * @param BackupMethod 自动备份方式，仅支持：physical - 物理冷备
      */
     public void setBackupMethod(String BackupMethod) {
@@ -129,7 +129,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * Get binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。 
      * @return BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
      */
     public Integer getBinlogExpireDays() {
@@ -137,7 +137,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+     * Set binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
      * @param BinlogExpireDays binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
      */
     public void setBinlogExpireDays(Integer BinlogExpireDays) {
@@ -145,7 +145,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+     * Get 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置） 
      * @return BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
      */
     public CommonTimeWindow getBackupTimeWindow() {
@@ -153,7 +153,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
+     * Set 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
      * @param BackupTimeWindow 备份时间窗，比如要设置每周二和周日 10:00-14:00之间备份，该参数如下：{"Monday": "", "Tuesday": "10:00-14:00", "Wednesday": "", "Thursday": "", "Friday": "", "Saturday": "", "Sunday": "10:00-14:00"}    （注：可以设置一周的某几天备份，但是每天的备份时间需要设置为相同的时间段。 如果设置了该字段，将忽略StartTime字段的设置）
      */
     public void setBackupTimeWindow(CommonTimeWindow BackupTimeWindow) {
@@ -161,7 +161,7 @@ public class ModifyBackupConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

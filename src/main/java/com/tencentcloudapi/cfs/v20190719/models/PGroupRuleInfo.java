@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PGroupRuleInfo  extends AbstractModel{
+public class PGroupRuleInfo extends AbstractModel{
 
     /**
     * 规则ID
@@ -58,7 +58,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     private Long Priority;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -66,7 +66,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -74,7 +74,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取允许访问的客户端IP
+     * Get 允许访问的客户端IP 
      * @return AuthClientIp 允许访问的客户端IP
      */
     public String getAuthClientIp() {
@@ -82,7 +82,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置允许访问的客户端IP
+     * Set 允许访问的客户端IP
      * @param AuthClientIp 允许访问的客户端IP
      */
     public void setAuthClientIp(String AuthClientIp) {
@@ -90,7 +90,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取读写权限, ro为只读，rw为读写
+     * Get 读写权限, ro为只读，rw为读写 
      * @return RWPermission 读写权限, ro为只读，rw为读写
      */
     public String getRWPermission() {
@@ -98,7 +98,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置读写权限, ro为只读，rw为读写
+     * Set 读写权限, ro为只读，rw为读写
      * @param RWPermission 读写权限, ro为只读，rw为读写
      */
     public void setRWPermission(String RWPermission) {
@@ -106,7 +106,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
+     * Get 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。 
      * @return UserPermission 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
      */
     public String getUserPermission() {
@@ -114,7 +114,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
+     * Set 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
      * @param UserPermission 用户权限。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。
      */
     public void setUserPermission(String UserPermission) {
@@ -122,7 +122,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规则优先级，1-100。 其中 1 为最高，100为最低
+     * Get 规则优先级，1-100。 其中 1 为最高，100为最低 
      * @return Priority 规则优先级，1-100。 其中 1 为最高，100为最低
      */
     public Long getPriority() {
@@ -130,7 +130,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则优先级，1-100。 其中 1 为最高，100为最低
+     * Set 规则优先级，1-100。 其中 1 为最高，100为最低
      * @param Priority 规则优先级，1-100。 其中 1 为最高，100为最低
      */
     public void setPriority(Long Priority) {
@@ -138,7 +138,7 @@ public class PGroupRuleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

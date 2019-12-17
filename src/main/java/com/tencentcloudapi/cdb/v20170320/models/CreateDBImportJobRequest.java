@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBImportJobRequest  extends AbstractModel{
+public class CreateDBImportJobRequest extends AbstractModel{
 
     /**
     * 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -58,7 +58,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     private String DbName;
 
     /**
-     * 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件名称。该文件是指用户已上传到腾讯云的文件。
+     * Get 文件名称。该文件是指用户已上传到腾讯云的文件。 
      * @return FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
      */
     public String getFileName() {
@@ -82,7 +82,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件名称。该文件是指用户已上传到腾讯云的文件。
+     * Set 文件名称。该文件是指用户已上传到腾讯云的文件。
      * @param FileName 文件名称。该文件是指用户已上传到腾讯云的文件。
      */
     public void setFileName(String FileName) {
@@ -90,7 +90,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库的用户名。
+     * Get 云数据库的用户名。 
      * @return User 云数据库的用户名。
      */
     public String getUser() {
@@ -98,7 +98,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库的用户名。
+     * Set 云数据库的用户名。
      * @param User 云数据库的用户名。
      */
     public void setUser(String User) {
@@ -106,7 +106,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库实例 User 账号的密码。
+     * Get 云数据库实例 User 账号的密码。 
      * @return Password 云数据库实例 User 账号的密码。
      */
     public String getPassword() {
@@ -114,7 +114,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库实例 User 账号的密码。
+     * Set 云数据库实例 User 账号的密码。
      * @param Password 云数据库实例 User 账号的密码。
      */
     public void setPassword(String Password) {
@@ -122,7 +122,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取导入的目标数据库名，不传表示不指定数据库。
+     * Get 导入的目标数据库名，不传表示不指定数据库。 
      * @return DbName 导入的目标数据库名，不传表示不指定数据库。
      */
     public String getDbName() {
@@ -130,7 +130,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置导入的目标数据库名，不传表示不指定数据库。
+     * Set 导入的目标数据库名，不传表示不指定数据库。
      * @param DbName 导入的目标数据库名，不传表示不指定数据库。
      */
     public void setDbName(String DbName) {
@@ -138,7 +138,7 @@ public class CreateDBImportJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WorkflowInfo  extends AbstractModel{
+public class WorkflowInfo extends AbstractModel{
 
     /**
     * 工作流 ID。
@@ -129,7 +129,7 @@ public class WorkflowInfo  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取工作流 ID。
+     * Get 工作流 ID。 
      * @return WorkflowId 工作流 ID。
      */
     public Long getWorkflowId() {
@@ -137,7 +137,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流 ID。
+     * Set 工作流 ID。
      * @param WorkflowId 工作流 ID。
      */
     public void setWorkflowId(Long WorkflowId) {
@@ -145,7 +145,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取工作流名称。
+     * Get 工作流名称。 
      * @return WorkflowName 工作流名称。
      */
     public String getWorkflowName() {
@@ -153,7 +153,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流名称。
+     * Set 工作流名称。
      * @param WorkflowName 工作流名称。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -161,9 +161,9 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取工作流状态，取值范围：
+     * Get 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
-<li>Disabled：已禁用。</li>
+<li>Disabled：已禁用。</li> 
      * @return Status 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
@@ -173,7 +173,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流状态，取值范围：
+     * Set 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
      * @param Status 工作流状态，取值范围：
@@ -185,7 +185,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Get 工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。 
      * @return Trigger 工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
      */
     public WorkflowTrigger getTrigger() {
@@ -193,7 +193,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Set 工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
      * @param Trigger 工作流绑定的输入规则，当上传视频命中该规则到该对象时即触发工作流。
      */
     public void setTrigger(WorkflowTrigger Trigger) {
@@ -201,8 +201,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理的文件输出存储位置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频处理的文件输出存储位置。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 视频处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -211,7 +211,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的文件输出存储位置。
+     * Set 视频处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 视频处理的文件输出存储位置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -221,8 +221,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频处理类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -231,7 +231,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理类型任务参数。
+     * Set 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -241,8 +241,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiContentReviewTask 视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -251,7 +251,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核类型任务参数。
+     * Set 视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -261,8 +261,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiAnalysisTask 视频内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -271,7 +271,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析类型任务参数。
+     * Set 视频内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTask 视频内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -281,8 +281,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容识别类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiRecognitionTask 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -291,7 +291,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别类型任务参数。
+     * Set 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTask 视频内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -301,8 +301,8 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务的事件通知信息，不填代表不获取事件通知。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务的事件通知信息，不填代表不获取事件通知。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -311,7 +311,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务的事件通知信息，不填代表不获取事件通知。
+     * Set 任务的事件通知信息，不填代表不获取事件通知。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -321,7 +321,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Get 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
      * @return TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public Long getTaskPriority() {
@@ -329,7 +329,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Set 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param TaskPriority 任务流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public void setTaskPriority(Long TaskPriority) {
@@ -337,7 +337,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * Get 视频处理生成的文件输出的目标目录，如`/movie/201907/`。 
      * @return OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
      */
     public String getOutputDir() {
@@ -345,7 +345,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+     * Set 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
      * @param OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
      */
     public void setOutputDir(String OutputDir) {
@@ -353,7 +353,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -361,7 +361,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 工作流创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -369,7 +369,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 获取工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -377,7 +377,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 设置工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 工作流最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -385,7 +385,7 @@ public class WorkflowInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);

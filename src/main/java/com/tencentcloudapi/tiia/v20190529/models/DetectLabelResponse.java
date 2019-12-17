@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLabelResponse  extends AbstractModel{
+public class DetectLabelResponse extends AbstractModel{
 
     /**
     * Web网络版标签结果数组。如未选择WEB场景，则为空。
@@ -54,8 +54,8 @@ public class DetectLabelResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取Web网络版标签结果数组。如未选择WEB场景，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Web网络版标签结果数组。如未选择WEB场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels Web网络版标签结果数组。如未选择WEB场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Web网络版标签结果数组。如未选择WEB场景，则为空。
+     * Set Web网络版标签结果数组。如未选择WEB场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels Web网络版标签结果数组。如未选择WEB场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,8 +74,8 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CameraLabels Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -84,7 +84,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
+     * Set Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CameraLabels Camera摄像头版标签结果数组。如未选择CAMERA场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,8 +94,8 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Album相册版标签结果数组。如未选择ALBUM场景，则为空。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlbumLabels Album相册版标签结果数组。如未选择ALBUM场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Album相册版标签结果数组。如未选择ALBUM场景，则为空。
+     * Set Album相册版标签结果数组。如未选择ALBUM场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlbumLabels Album相册版标签结果数组。如未选择ALBUM场景，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,7 +114,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -122,7 +122,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -130,7 +130,7 @@ public class DetectLabelResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);

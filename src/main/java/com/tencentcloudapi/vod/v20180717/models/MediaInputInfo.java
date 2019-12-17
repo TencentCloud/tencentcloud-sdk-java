@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaInputInfo  extends AbstractModel{
+public class MediaInputInfo extends AbstractModel{
 
     /**
     * 视频 URL。
@@ -44,7 +44,7 @@ public class MediaInputInfo  extends AbstractModel{
     private String Id;
 
     /**
-     * 获取视频 URL。
+     * Get 视频 URL。 
      * @return Url 视频 URL。
      */
     public String getUrl() {
@@ -52,7 +52,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频 URL。
+     * Set 视频 URL。
      * @param Url 视频 URL。
      */
     public void setUrl(String Url) {
@@ -60,7 +60,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频名称。
+     * Get 视频名称。 
      * @return Name 视频名称。
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频名称。
+     * Set 视频名称。
      * @param Name 视频名称。
      */
     public void setName(String Name) {
@@ -76,7 +76,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频自定义 ID。
+     * Get 视频自定义 ID。 
      * @return Id 视频自定义 ID。
      */
     public String getId() {
@@ -84,7 +84,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频自定义 ID。
+     * Set 视频自定义 ID。
      * @param Id 视频自定义 ID。
      */
     public void setId(String Id) {
@@ -92,7 +92,7 @@ public class MediaInputInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

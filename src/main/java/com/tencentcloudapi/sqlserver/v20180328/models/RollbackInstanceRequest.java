@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackInstanceRequest  extends AbstractModel{
+public class RollbackInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -34,7 +34,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     */
     @SerializedName("Type")
     @Expose
-    private Integer Type;
+    private Long Type;
 
     /**
     * 需要回档的数据库
@@ -51,7 +51,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     private String Time;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -67,23 +67,23 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
+     * Get 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库 
      * @return Type 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
      */
-    public Integer getType() {
+    public Long getType() {
         return this.Type;
     }
 
     /**
-     * 设置回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
+     * Set 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
      * @param Type 回档类型，0-回档的数据库覆盖原库；1-回档的数据库以重命名的形式生成，不覆盖原库
      */
-    public void setType(Integer Type) {
+    public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * 获取需要回档的数据库
+     * Get 需要回档的数据库 
      * @return DBs 需要回档的数据库
      */
     public String [] getDBs() {
@@ -91,7 +91,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要回档的数据库
+     * Set 需要回档的数据库
      * @param DBs 需要回档的数据库
      */
     public void setDBs(String [] DBs) {
@@ -99,7 +99,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回档目标时间点
+     * Get 回档目标时间点 
      * @return Time 回档目标时间点
      */
     public String getTime() {
@@ -107,7 +107,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回档目标时间点
+     * Set 回档目标时间点
      * @param Time 回档目标时间点
      */
     public void setTime(String Time) {
@@ -115,7 +115,7 @@ public class RollbackInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

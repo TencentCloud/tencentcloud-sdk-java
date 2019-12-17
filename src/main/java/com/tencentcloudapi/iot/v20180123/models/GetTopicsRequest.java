@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTopicsRequest  extends AbstractModel{
+public class GetTopicsRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -44,7 +44,7 @@ public class GetTopicsRequest  extends AbstractModel{
     private Integer Length;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -52,7 +52,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -60,7 +60,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移
+     * Get 偏移 
      * @return Offset 偏移
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移
+     * Set 偏移
      * @param Offset 偏移
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取长度
+     * Get 长度 
      * @return Length 长度
      */
     public Integer getLength() {
@@ -84,7 +84,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置长度
+     * Set 长度
      * @param Length 长度
      */
     public void setLength(Integer Length) {
@@ -92,7 +92,7 @@ public class GetTopicsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubnetCreateInputInfo  extends AbstractModel{
+public class SubnetCreateInputInfo extends AbstractModel{
 
     /**
     * 子网名称，可任意命名，但不得超过60个字符
@@ -86,7 +86,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     private Long IsSmartNic;
 
     /**
-     * 获取子网名称，可任意命名，但不得超过60个字符
+     * Get 子网名称，可任意命名，但不得超过60个字符 
      * @return SubnetName 子网名称，可任意命名，但不得超过60个字符
      */
     public String getSubnetName() {
@@ -94,7 +94,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称，可任意命名，但不得超过60个字符
+     * Set 子网名称，可任意命名，但不得超过60个字符
      * @param SubnetName 子网名称，可任意命名，但不得超过60个字符
      */
     public void setSubnetName(String SubnetName) {
@@ -102,7 +102,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
+     * Get 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠 
      * @return CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
      */
     public String getCidrBlock() {
@@ -110,7 +110,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
+     * Set 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
      * @param CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠
      */
     public void setCidrBlock(String CidrBlock) {
@@ -118,7 +118,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中
+     * Get 是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中 
      * @return DistributedFlag 是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中
      */
     public Long getDistributedFlag() {
@@ -126,7 +126,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中
+     * Set 是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中
      * @param DistributedFlag 是否开启子网分布式网关，默认传1，传0为关闭子网分布式网关。关闭分布式网关子网用于云服务器化子网，此子网中只能有一台物理机，同时此物理机及其上子机只能在此子网中
      */
     public void setDistributedFlag(Long DistributedFlag) {
@@ -134,7 +134,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启dhcp relay ，关闭为0，开启为1。默认为0
+     * Get 是否开启dhcp relay ，关闭为0，开启为1。默认为0 
      * @return DhcpEnable 是否开启dhcp relay ，关闭为0，开启为1。默认为0
      */
     public Long getDhcpEnable() {
@@ -142,7 +142,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启dhcp relay ，关闭为0，开启为1。默认为0
+     * Set 是否开启dhcp relay ，关闭为0，开启为1。默认为0
      * @param DhcpEnable 是否开启dhcp relay ，关闭为0，开启为1。默认为0
      */
     public void setDhcpEnable(Long DhcpEnable) {
@@ -150,7 +150,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP
+     * Get DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP 
      * @return DhcpServerIp DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP
      */
     public String [] getDhcpServerIp() {
@@ -158,7 +158,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP
+     * Set DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP
      * @param DhcpServerIp DHCP SERVER 的IP地址数组。IP地址为相同VPC的子网内分配的IP
      */
     public void setDhcpServerIp(String [] DhcpServerIp) {
@@ -166,7 +166,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段
+     * Get 预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段 
      * @return IpReserve 预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段
      */
     public Long getIpReserve() {
@@ -174,7 +174,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段
+     * Set 预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段
      * @param IpReserve 预留的IP个数。从该子网的最大可分配IP倒序分配N个IP 用于DHCP 动态分配使用的地址段
      */
     public void setIpReserve(Long IpReserve) {
@@ -182,7 +182,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。
+     * Get 子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。 
      * @return VlanId 子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。
      */
     public Long getVlanId() {
@@ -190,7 +190,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。
+     * Set 子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。
      * @param VlanId 子网绑定的vlanId。VlanId取值范围为2000-2999。创建物理机子网，VlanId默认为5; 创建docker子网或者虚拟子网，VlanId默认会分配2000--2999未使用的数值。
      */
     public void setVlanId(Long VlanId) {
@@ -198,7 +198,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取黑石子网的可用区
+     * Get 黑石子网的可用区 
      * @return Zone 黑石子网的可用区
      */
     public String getZone() {
@@ -206,7 +206,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置黑石子网的可用区
+     * Set 黑石子网的可用区
      * @param Zone 黑石子网的可用区
      */
     public void setZone(String Zone) {
@@ -214,7 +214,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否25G子网，1为是，0为否。
+     * Get 是否25G子网，1为是，0为否。 
      * @return IsSmartNic 是否25G子网，1为是，0为否。
      */
     public Long getIsSmartNic() {
@@ -222,7 +222,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否25G子网，1为是，0为否。
+     * Set 是否25G子网，1为是，0为否。
      * @param IsSmartNic 是否25G子网，1为是，0为否。
      */
     public void setIsSmartNic(Long IsSmartNic) {
@@ -230,7 +230,7 @@ public class SubnetCreateInputInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);

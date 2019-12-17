@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRollbackRangeTimeRequest  extends AbstractModel{
+public class DescribeRollbackRangeTimeRequest extends AbstractModel{
 
     /**
     * 实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
@@ -30,7 +30,7 @@ public class DescribeRollbackRangeTimeRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceIds 实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class DescribeRollbackRangeTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceIds 实例 ID 列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class DescribeRollbackRangeTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

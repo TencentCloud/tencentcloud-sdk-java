@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageRecord  extends AbstractModel{
+public class ImageRecord extends AbstractModel{
 
     /**
     * 图片翻译结果
@@ -30,7 +30,7 @@ public class ImageRecord  extends AbstractModel{
     private ItemValue [] Value;
 
     /**
-     * 获取图片翻译结果
+     * Get 图片翻译结果 
      * @return Value 图片翻译结果
      */
     public ItemValue [] getValue() {
@@ -38,7 +38,7 @@ public class ImageRecord  extends AbstractModel{
     }
 
     /**
-     * 设置图片翻译结果
+     * Set 图片翻译结果
      * @param Value 图片翻译结果
      */
     public void setValue(ItemValue [] Value) {
@@ -46,7 +46,7 @@ public class ImageRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Value.", this.Value);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterEndpointVipRequest  extends AbstractModel{
+public class CreateClusterEndpointVipRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -37,7 +37,7 @@ public class CreateClusterEndpointVipRequest  extends AbstractModel{
     private String [] SecurityPolicies;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -45,7 +45,7 @@ public class CreateClusterEndpointVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -53,7 +53,7 @@ public class CreateClusterEndpointVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+     * Get 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有) 
      * @return SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
      */
     public String [] getSecurityPolicies() {
@@ -61,7 +61,7 @@ public class CreateClusterEndpointVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+     * Set 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
      * @param SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
      */
     public void setSecurityPolicies(String [] SecurityPolicies) {
@@ -69,7 +69,7 @@ public class CreateClusterEndpointVipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

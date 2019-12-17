@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsRet  extends AbstractModel{
+public class SmsRet extends AbstractModel{
 
     /**
     * 该iccid请求状态
@@ -51,7 +51,7 @@ public class SmsRet  extends AbstractModel{
     private String Sid;
 
     /**
-     * 获取该iccid请求状态
+     * Get 该iccid请求状态 
      * @return Code 该iccid请求状态
      */
     public String getCode() {
@@ -59,7 +59,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 设置该iccid请求状态
+     * Set 该iccid请求状态
      * @param Code 该iccid请求状态
      */
     public void setCode(String Code) {
@@ -67,7 +67,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 获取短信发送返回信息
+     * Get 短信发送返回信息 
      * @return Msg 短信发送返回信息
      */
     public String getMsg() {
@@ -75,7 +75,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 设置短信发送返回信息
+     * Set 短信发送返回信息
      * @param Msg 短信发送返回信息
      */
     public void setMsg(String Msg) {
@@ -83,7 +83,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 获取卡片id
+     * Get 卡片id 
      * @return Iccid 卡片id
      */
     public String getIccid() {
@@ -91,7 +91,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 设置卡片id
+     * Set 卡片id
      * @param Iccid 卡片id
      */
     public void setIccid(String Iccid) {
@@ -99,7 +99,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 获取流水id
+     * Get 流水id 
      * @return Sid 流水id
      */
     public String getSid() {
@@ -107,7 +107,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 设置流水id
+     * Set 流水id
      * @param Sid 流水id
      */
     public void setSid(String Sid) {
@@ -115,7 +115,7 @@ public class SmsRet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExtraInfo  extends AbstractModel{
+public class ExtraInfo extends AbstractModel{
 
     /**
     * 是否开通VIP直通
@@ -39,8 +39,8 @@ public class ExtraInfo  extends AbstractModel{
     private String TgwGroupName;
 
     /**
-     * 获取是否开通VIP直通
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否开通VIP直通
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZhiTong 是否开通VIP直通
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class ExtraInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开通VIP直通
+     * Set 是否开通VIP直通
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZhiTong 是否开通VIP直通
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class ExtraInfo  extends AbstractModel{
     }
 
     /**
-     * 获取TgwGroup名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get TgwGroup名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TgwGroupName TgwGroup名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class ExtraInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TgwGroup名称
+     * Set TgwGroup名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TgwGroupName TgwGroup名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class ExtraInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZhiTong", this.ZhiTong);

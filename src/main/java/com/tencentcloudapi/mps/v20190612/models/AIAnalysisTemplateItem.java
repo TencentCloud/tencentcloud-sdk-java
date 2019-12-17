@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AIAnalysisTemplateItem  extends AbstractModel{
+public class AIAnalysisTemplateItem extends AbstractModel{
 
     /**
     * 智能分析模板唯一标识。
@@ -90,7 +90,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取智能分析模板唯一标识。
+     * Get 智能分析模板唯一标识。 
      * @return Definition 智能分析模板唯一标识。
      */
     public Long getDefinition() {
@@ -98,7 +98,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分析模板唯一标识。
+     * Set 智能分析模板唯一标识。
      * @param Definition 智能分析模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -106,7 +106,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能分析模板名称。
+     * Get 智能分析模板名称。 
      * @return Name 智能分析模板名称。
      */
     public String getName() {
@@ -114,7 +114,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分析模板名称。
+     * Set 智能分析模板名称。
      * @param Name 智能分析模板名称。
      */
     public void setName(String Name) {
@@ -122,7 +122,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能分析模板描述信息。
+     * Get 智能分析模板描述信息。 
      * @return Comment 智能分析模板描述信息。
      */
     public String getComment() {
@@ -130,7 +130,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分析模板描述信息。
+     * Set 智能分析模板描述信息。
      * @param Comment 智能分析模板描述信息。
      */
     public void setComment(String Comment) {
@@ -138,8 +138,8 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能分类任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 智能分类任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClassificationConfigure 智能分类任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能分类任务控制参数。
+     * Set 智能分类任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassificationConfigure 智能分类任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,8 +158,8 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 智能标签任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagConfigure 智能标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能标签任务控制参数。
+     * Set 智能标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagConfigure 智能标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,8 +178,8 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能封面任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 智能封面任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CoverConfigure 智能封面任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -188,7 +188,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面任务控制参数。
+     * Set 智能封面任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverConfigure 智能封面任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,8 +198,8 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取智能按帧标签任务控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 智能按帧标签任务控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FrameTagConfigure 智能按帧标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -208,7 +208,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置智能按帧标签任务控制参数。
+     * Set 智能按帧标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FrameTagConfigure 智能按帧标签任务控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,7 +218,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -226,7 +226,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -234,7 +234,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -242,7 +242,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -250,7 +250,7 @@ public class AIAnalysisTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

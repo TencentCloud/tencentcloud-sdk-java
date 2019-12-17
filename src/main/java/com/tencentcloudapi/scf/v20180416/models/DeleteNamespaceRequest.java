@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNamespaceRequest  extends AbstractModel{
+public class DeleteNamespaceRequest extends AbstractModel{
 
     /**
     * 命名空间名称
@@ -30,7 +30,7 @@ public class DeleteNamespaceRequest  extends AbstractModel{
     private String Namespace;
 
     /**
-     * 获取命名空间名称
+     * Get 命名空间名称 
      * @return Namespace 命名空间名称
      */
     public String getNamespace() {
@@ -38,7 +38,7 @@ public class DeleteNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
      * @param Namespace 命名空间名称
      */
     public void setNamespace(String Namespace) {
@@ -46,7 +46,7 @@ public class DeleteNamespaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);

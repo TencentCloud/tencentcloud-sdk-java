@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTranscodeResponse  extends AbstractModel{
+public class DescribeTranscodeResponse extends AbstractModel{
 
     /**
     * 文档的总页数
@@ -109,7 +109,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取文档的总页数
+     * Get 文档的总页数 
      * @return Pages 文档的总页数
      */
     public Long getPages() {
@@ -117,7 +117,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文档的总页数
+     * Set 文档的总页数
      * @param Pages 文档的总页数
      */
     public void setPages(Long Pages) {
@@ -125,7 +125,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取转码的当前进度,取值范围为0~100
+     * Get 转码的当前进度,取值范围为0~100 
      * @return Progress 转码的当前进度,取值范围为0~100
      */
     public Long getProgress() {
@@ -133,7 +133,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转码的当前进度,取值范围为0~100
+     * Set 转码的当前进度,取值范围为0~100
      * @param Progress 转码的当前进度,取值范围为0~100
      */
     public void setProgress(Long Progress) {
@@ -141,7 +141,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文档的分辨率
+     * Get 文档的分辨率 
      * @return Resolution 文档的分辨率
      */
     public String getResolution() {
@@ -149,7 +149,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文档的分辨率
+     * Set 文档的分辨率
      * @param Resolution 文档的分辨率
      */
     public void setResolution(String Resolution) {
@@ -157,10 +157,10 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取转码完成后结果的URL
+     * Get 转码完成后结果的URL
 动态转码：PPT转动态H5的链接
 静态转码：文档每一页的图片URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/`，那么文档第1页的图片URL为
-`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
+`http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推 
      * @return ResultUrl 转码完成后结果的URL
 动态转码：PPT转动态H5的链接
 静态转码：文档每一页的图片URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/`，那么文档第1页的图片URL为
@@ -171,7 +171,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转码完成后结果的URL
+     * Set 转码完成后结果的URL
 动态转码：PPT转动态H5的链接
 静态转码：文档每一页的图片URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/`，那么文档第1页的图片URL为
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
@@ -185,10 +185,10 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的当前状态
+     * Get 任务的当前状态
 - QUEUED: 正在排队等待转换
 - PROCESSING: 转换中
-- FINISHED: 转换完成
+- FINISHED: 转换完成 
      * @return Status 任务的当前状态
 - QUEUED: 正在排队等待转换
 - PROCESSING: 转换中
@@ -199,7 +199,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的当前状态
+     * Set 任务的当前状态
 - QUEUED: 正在排队等待转换
 - PROCESSING: 转换中
 - FINISHED: 转换完成
@@ -213,7 +213,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取转码任务的唯一标识Id
+     * Get 转码任务的唯一标识Id 
      * @return TaskId 转码任务的唯一标识Id
      */
     public String getTaskId() {
@@ -221,7 +221,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转码任务的唯一标识Id
+     * Set 转码任务的唯一标识Id
      * @param TaskId 转码任务的唯一标识Id
      */
     public void setTaskId(String TaskId) {
@@ -229,7 +229,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文档的文件名
+     * Get 文档的文件名 
      * @return Title 文档的文件名
      */
     public String getTitle() {
@@ -237,7 +237,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文档的文件名
+     * Set 文档的文件名
      * @param Title 文档的文件名
      */
     public void setTitle(String Title) {
@@ -245,10 +245,10 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
+     * Get 缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
 
-如果发起文档转码请求参数中带了ThumbnailResolution参数，并且转码类型为动态转码，该参数不为空，其余情况该参数为空字符串
+如果发起文档转码请求参数中带了ThumbnailResolution参数，并且转码类型为动态转码，该参数不为空，其余情况该参数为空字符串 
      * @return ThumbnailUrl 缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
 
@@ -259,7 +259,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
+     * Set 缩略图URL前缀，比如，该URL前缀为`http://example.com/g0jb42ps49vtebjshilb/ `，那么动态PPT第1页的缩略图URL为
 `http://example.com/g0jb42ps49vtebjshilb/1.jpg`，其它页以此类推
 
 如果发起文档转码请求参数中带了ThumbnailResolution参数，并且转码类型为动态转码，该参数不为空，其余情况该参数为空字符串
@@ -273,7 +273,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取动态转码缩略图生成分辨率
+     * Get 动态转码缩略图生成分辨率 
      * @return ThumbnailResolution 动态转码缩略图生成分辨率
      */
     public String getThumbnailResolution() {
@@ -281,7 +281,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置动态转码缩略图生成分辨率
+     * Set 动态转码缩略图生成分辨率
      * @param ThumbnailResolution 动态转码缩略图生成分辨率
      */
     public void setThumbnailResolution(String ThumbnailResolution) {
@@ -289,7 +289,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
+     * Get 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串 
      * @return CompressFileUrl 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
      */
     public String getCompressFileUrl() {
@@ -297,7 +297,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
+     * Set 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
      * @param CompressFileUrl 转码压缩文件下载的URL，如果发起文档转码请求参数中`CompressFileType`为空或者不是支持的压缩格式，该参数为空字符串
      */
     public void setCompressFileUrl(String CompressFileUrl) {
@@ -305,7 +305,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -313,7 +313,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -321,7 +321,7 @@ public class DescribeTranscodeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pages", this.Pages);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackTablesRequest  extends AbstractModel{
+public class RollbackTablesRequest extends AbstractModel{
 
     /**
     * 待回档表所在应用实例ID
@@ -51,7 +51,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     private String Mode;
 
     /**
-     * 获取待回档表所在应用实例ID
+     * Get 待回档表所在应用实例ID 
      * @return ApplicationId 待回档表所在应用实例ID
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待回档表所在应用实例ID
+     * Set 待回档表所在应用实例ID
      * @param ApplicationId 待回档表所在应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待回档表列表
+     * Get 待回档表列表 
      * @return SelectedTables 待回档表列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -75,7 +75,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待回档表列表
+     * Set 待回档表列表
      * @param SelectedTables 待回档表列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -83,7 +83,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待回档时间
+     * Get 待回档时间 
      * @return RollbackTime 待回档时间
      */
     public String getRollbackTime() {
@@ -91,7 +91,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待回档时间
+     * Set 待回档时间
      * @param RollbackTime 待回档时间
      */
     public void setRollbackTime(String RollbackTime) {
@@ -99,7 +99,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取回档模式，支持：`KEYS`
+     * Get 回档模式，支持：`KEYS` 
      * @return Mode 回档模式，支持：`KEYS`
      */
     public String getMode() {
@@ -107,7 +107,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回档模式，支持：`KEYS`
+     * Set 回档模式，支持：`KEYS`
      * @param Mode 回档模式，支持：`KEYS`
      */
     public void setMode(String Mode) {
@@ -115,7 +115,7 @@ public class RollbackTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

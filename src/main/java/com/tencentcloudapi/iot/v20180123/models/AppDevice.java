@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppDevice  extends AbstractModel{
+public class AppDevice extends AbstractModel{
 
     /**
     * 设备Id
@@ -72,7 +72,7 @@ public class AppDevice  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取设备Id
+     * Get 设备Id 
      * @return DeviceId 设备Id
      */
     public String getDeviceId() {
@@ -80,7 +80,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置设备Id
+     * Set 设备Id
      * @param DeviceId 设备Id
      */
     public void setDeviceId(String DeviceId) {
@@ -88,7 +88,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取所属产品Id
+     * Get 所属产品Id 
      * @return ProductId 所属产品Id
      */
     public String getProductId() {
@@ -96,7 +96,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置所属产品Id
+     * Set 所属产品Id
      * @param ProductId 所属产品Id
      */
     public void setProductId(String ProductId) {
@@ -104,7 +104,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -112,7 +112,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -120,7 +120,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取别名
+     * Get 别名 
      * @return AliasName 别名
      */
     public String getAliasName() {
@@ -128,7 +128,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置别名
+     * Set 别名
      * @param AliasName 别名
      */
     public void setAliasName(String AliasName) {
@@ -136,7 +136,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取地区
+     * Get 地区 
      * @return Region 地区
      */
     public String getRegion() {
@@ -144,7 +144,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置地区
+     * Set 地区
      * @param Region 地区
      */
     public void setRegion(String Region) {
@@ -152,7 +152,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -160,7 +160,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -168,7 +168,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -176,7 +176,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -184,7 +184,7 @@ public class AppDevice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);

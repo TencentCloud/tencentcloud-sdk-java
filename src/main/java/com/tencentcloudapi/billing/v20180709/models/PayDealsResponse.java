@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayDealsResponse  extends AbstractModel{
+public class PayDealsResponse extends AbstractModel{
 
     /**
     * 此次操作支付成功的订单号数组
@@ -44,7 +44,7 @@ public class PayDealsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取此次操作支付成功的订单号数组
+     * Get 此次操作支付成功的订单号数组 
      * @return OrderIds 此次操作支付成功的订单号数组
      */
     public String [] getOrderIds() {
@@ -52,7 +52,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置此次操作支付成功的订单号数组
+     * Set 此次操作支付成功的订单号数组
      * @param OrderIds 此次操作支付成功的订单号数组
      */
     public void setOrderIds(String [] OrderIds) {
@@ -60,7 +60,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取此次操作支付成功的资源Id数组
+     * Get 此次操作支付成功的资源Id数组 
      * @return ResourceIds 此次操作支付成功的资源Id数组
      */
     public String [] getResourceIds() {
@@ -68,7 +68,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置此次操作支付成功的资源Id数组
+     * Set 此次操作支付成功的资源Id数组
      * @param ResourceIds 此次操作支付成功的资源Id数组
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -76,7 +76,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class PayDealsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);

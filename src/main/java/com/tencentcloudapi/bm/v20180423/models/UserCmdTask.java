@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserCmdTask  extends AbstractModel{
+public class UserCmdTask extends AbstractModel{
 
     /**
     * 任务ID
@@ -86,7 +86,7 @@ public class UserCmdTask  extends AbstractModel{
     private String RunEndTime;
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public String getTaskId() {
@@ -94,7 +94,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
@@ -102,7 +102,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态ID，取值: -1(进行中) 0(结束)
+     * Get 任务状态ID，取值: -1(进行中) 0(结束) 
      * @return Status 任务状态ID，取值: -1(进行中) 0(结束)
      */
     public Integer getStatus() {
@@ -110,7 +110,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态ID，取值: -1(进行中) 0(结束)
+     * Set 任务状态ID，取值: -1(进行中) 0(结束)
      * @param Status 任务状态ID，取值: -1(进行中) 0(结束)
      */
     public void setStatus(Integer Status) {
@@ -118,7 +118,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取脚本名称
+     * Get 脚本名称 
      * @return Alias 脚本名称
      */
     public String getAlias() {
@@ -126,7 +126,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置脚本名称
+     * Set 脚本名称
      * @param Alias 脚本名称
      */
     public void setAlias(String Alias) {
@@ -134,7 +134,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取脚本ID
+     * Get 脚本ID 
      * @return CmdId 脚本ID
      */
     public String getCmdId() {
@@ -142,7 +142,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置脚本ID
+     * Set 脚本ID
      * @param CmdId 脚本ID
      */
     public void setCmdId(String CmdId) {
@@ -150,7 +150,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取运行实例数量
+     * Get 运行实例数量 
      * @return InstanceCount 运行实例数量
      */
     public Integer getInstanceCount() {
@@ -158,7 +158,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置运行实例数量
+     * Set 运行实例数量
      * @param InstanceCount 运行实例数量
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -166,7 +166,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取运行成功数量
+     * Get 运行成功数量 
      * @return SuccessCount 运行成功数量
      */
     public Integer getSuccessCount() {
@@ -174,7 +174,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置运行成功数量
+     * Set 运行成功数量
      * @param SuccessCount 运行成功数量
      */
     public void setSuccessCount(Integer SuccessCount) {
@@ -182,7 +182,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取运行失败数量
+     * Get 运行失败数量 
      * @return FailureCount 运行失败数量
      */
     public Integer getFailureCount() {
@@ -190,7 +190,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置运行失败数量
+     * Set 运行失败数量
      * @param FailureCount 运行失败数量
      */
     public void setFailureCount(Integer FailureCount) {
@@ -198,7 +198,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取执行开始时间
+     * Get 执行开始时间 
      * @return RunBeginTime 执行开始时间
      */
     public String getRunBeginTime() {
@@ -206,7 +206,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置执行开始时间
+     * Set 执行开始时间
      * @param RunBeginTime 执行开始时间
      */
     public void setRunBeginTime(String RunBeginTime) {
@@ -214,7 +214,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 获取执行结束时间
+     * Get 执行结束时间 
      * @return RunEndTime 执行结束时间
      */
     public String getRunEndTime() {
@@ -222,7 +222,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 设置执行结束时间
+     * Set 执行结束时间
      * @param RunEndTime 执行结束时间
      */
     public void setRunEndTime(String RunEndTime) {
@@ -230,7 +230,7 @@ public class UserCmdTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

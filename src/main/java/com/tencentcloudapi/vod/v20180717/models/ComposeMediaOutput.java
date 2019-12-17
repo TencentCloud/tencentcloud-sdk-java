@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeMediaOutput  extends AbstractModel{
+public class ComposeMediaOutput extends AbstractModel{
 
     /**
     * 文件名称，最长 64 个字符。
@@ -95,7 +95,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     private Long RemoveAudio;
 
     /**
-     * 获取文件名称，最长 64 个字符。
+     * Get 文件名称，最长 64 个字符。 
      * @return FileName 文件名称，最长 64 个字符。
      */
     public String getFileName() {
@@ -103,7 +103,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置文件名称，最长 64 个字符。
+     * Set 文件名称，最长 64 个字符。
      * @param FileName 文件名称，最长 64 个字符。
      */
     public void setFileName(String FileName) {
@@ -111,7 +111,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息，最长 128 个字符。
+     * Get 描述信息，最长 128 个字符。 
      * @return Description 描述信息，最长 128 个字符。
      */
     public String getDescription() {
@@ -119,7 +119,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息，最长 128 个字符。
+     * Set 描述信息，最长 128 个字符。
      * @param Description 描述信息，最长 128 个字符。
      */
     public void setDescription(String Description) {
@@ -127,8 +127,8 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+<li>默认值：0，表示其他分类。</li> 
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      */
@@ -137,7 +137,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
@@ -147,7 +147,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getExpireTime() {
@@ -155,7 +155,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setExpireTime(String ExpireTime) {
@@ -163,7 +163,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
+     * Get 封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
      */
     public String getContainer() {
@@ -171,7 +171,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
+     * Set 封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
      * @param Container 封装格式，可选值：mp4、mp3。其中，mp3 为纯音频文件。
      */
     public void setContainer(String Container) {
@@ -179,8 +179,8 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取输出的视频信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输出的视频信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoStream 输出的视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置输出的视频信息。
+     * Set 输出的视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoStream 输出的视频信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取输出的音频信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输出的音频信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioStream 输出的音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置输出的音频信息。
+     * Set 输出的音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioStream 输出的音频信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,10 +219,10 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除视频数据，可选值：
+     * Get 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
-默认值：0。
+默认值：0。 
      * @return RemoveVideo 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
@@ -233,7 +233,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除视频数据，可选值：
+     * Set 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
 默认值：0。
@@ -247,10 +247,10 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除音频数据，可选值：
+     * Get 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
-默认值：0。
+默认值：0。 
      * @return RemoveAudio 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
@@ -261,7 +261,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除音频数据，可选值：
+     * Set 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
 默认值：0。
@@ -275,7 +275,7 @@ public class ComposeMediaOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileName", this.FileName);

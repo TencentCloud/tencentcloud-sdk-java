@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagResource  extends AbstractModel{
+public class TagResource extends AbstractModel{
 
     /**
     * 标签键
@@ -58,7 +58,7 @@ public class TagResource  extends AbstractModel{
     private String TagValueMd5;
 
     /**
-     * 获取标签键
+     * Get 标签键 
      * @return TagKey 标签键
      */
     public String getTagKey() {
@@ -66,7 +66,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 设置标签键
+     * Set 标签键
      * @param TagKey 标签键
      */
     public void setTagKey(String TagKey) {
@@ -74,7 +74,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 获取标签值
+     * Get 标签值 
      * @return TagValue 标签值
      */
     public String getTagValue() {
@@ -82,7 +82,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
      * @param TagValue 标签值
      */
     public void setTagValue(String TagValue) {
@@ -90,7 +90,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return ResourceId 资源ID
      */
     public String getResourceId() {
@@ -98,7 +98,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param ResourceId 资源ID
      */
     public void setResourceId(String ResourceId) {
@@ -106,7 +106,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 获取标签键MD5值
+     * Get 标签键MD5值 
      * @return TagKeyMd5 标签键MD5值
      */
     public String getTagKeyMd5() {
@@ -114,7 +114,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 设置标签键MD5值
+     * Set 标签键MD5值
      * @param TagKeyMd5 标签键MD5值
      */
     public void setTagKeyMd5(String TagKeyMd5) {
@@ -122,7 +122,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 获取标签值MD5值
+     * Get 标签值MD5值 
      * @return TagValueMd5 标签值MD5值
      */
     public String getTagValueMd5() {
@@ -130,7 +130,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 设置标签值MD5值
+     * Set 标签值MD5值
      * @param TagValueMd5 标签值MD5值
      */
     public void setTagValueMd5(String TagValueMd5) {
@@ -138,7 +138,7 @@ public class TagResource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

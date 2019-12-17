@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateHostsRequest  extends AbstractModel{
+public class AllocateHostsRequest extends AbstractModel{
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -72,7 +72,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-     * 获取实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public Placement getPlacement() {
@@ -80,7 +80,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
      */
     public void setPlacement(Placement Placement) {
@@ -88,7 +88,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。
+     * Get 用于保证请求幂等性的字符串。 
      * @return ClientToken 用于保证请求幂等性的字符串。
      */
     public String getClientToken() {
@@ -96,7 +96,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。
+     * Set 用于保证请求幂等性的字符串。
      * @param ClientToken 用于保证请求幂等性的字符串。
      */
     public void setClientToken(String ClientToken) {
@@ -104,7 +104,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
      * @return HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public ChargePrepaid getHostChargePrepaid() {
@@ -112,7 +112,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param HostChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public void setHostChargePrepaid(ChargePrepaid HostChargePrepaid) {
@@ -120,7 +120,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * Get 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。 
      * @return HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
      */
     public String getHostChargeType() {
@@ -128,7 +128,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
+     * Set 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
      * @param HostChargeType 实例计费类型。目前仅支持：PREPAID（预付费，即包年包月模式）。
      */
     public void setHostChargeType(String HostChargeType) {
@@ -136,7 +136,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CDH实例机型，默认为：'HS1'。
+     * Get CDH实例机型，默认为：'HS1'。 
      * @return HostType CDH实例机型，默认为：'HS1'。
      */
     public String getHostType() {
@@ -144,7 +144,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CDH实例机型，默认为：'HS1'。
+     * Set CDH实例机型，默认为：'HS1'。
      * @param HostType CDH实例机型，默认为：'HS1'。
      */
     public void setHostType(String HostType) {
@@ -152,7 +152,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买CDH实例数量。
+     * Get 购买CDH实例数量。 
      * @return HostCount 购买CDH实例数量。
      */
     public Integer getHostCount() {
@@ -160,7 +160,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买CDH实例数量。
+     * Set 购买CDH实例数量。
      * @param HostCount 购买CDH实例数量。
      */
     public void setHostCount(Integer HostCount) {
@@ -168,7 +168,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。 
      * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      */
     public TagSpecification [] getTagSpecification() {
@@ -176,7 +176,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
@@ -184,7 +184,7 @@ public class AllocateHostsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Placement.", this.Placement);

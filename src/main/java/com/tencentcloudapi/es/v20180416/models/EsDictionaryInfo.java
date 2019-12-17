@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EsDictionaryInfo  extends AbstractModel{
+public class EsDictionaryInfo extends AbstractModel{
 
     /**
     * 启用词词典列表
@@ -37,7 +37,7 @@ public class EsDictionaryInfo  extends AbstractModel{
     private DictInfo [] Stopwords;
 
     /**
-     * 获取启用词词典列表
+     * Get 启用词词典列表 
      * @return MainDict 启用词词典列表
      */
     public DictInfo [] getMainDict() {
@@ -45,7 +45,7 @@ public class EsDictionaryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置启用词词典列表
+     * Set 启用词词典列表
      * @param MainDict 启用词词典列表
      */
     public void setMainDict(DictInfo [] MainDict) {
@@ -53,7 +53,7 @@ public class EsDictionaryInfo  extends AbstractModel{
     }
 
     /**
-     * 获取停用词词典列表
+     * Get 停用词词典列表 
      * @return Stopwords 停用词词典列表
      */
     public DictInfo [] getStopwords() {
@@ -61,7 +61,7 @@ public class EsDictionaryInfo  extends AbstractModel{
     }
 
     /**
-     * 设置停用词词典列表
+     * Set 停用词词典列表
      * @param Stopwords 停用词词典列表
      */
     public void setStopwords(DictInfo [] Stopwords) {
@@ -69,7 +69,7 @@ public class EsDictionaryInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MainDict.", this.MainDict);

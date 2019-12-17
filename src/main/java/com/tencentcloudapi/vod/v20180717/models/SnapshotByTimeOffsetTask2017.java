@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
+public class SnapshotByTimeOffsetTask2017 extends AbstractModel{
 
     /**
     * 截图任务 ID。
@@ -51,7 +51,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     private SnapshotByTimeOffset2017 [] SnapshotInfoSet;
 
     /**
-     * 获取截图任务 ID。
+     * Get 截图任务 ID。 
      * @return TaskId 截图任务 ID。
      */
     public String getTaskId() {
@@ -59,7 +59,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图任务 ID。
+     * Set 截图任务 ID。
      * @param TaskId 截图任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -67,7 +67,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取截图文件 ID。
+     * Get 截图文件 ID。 
      * @return FileId 截图文件 ID。
      */
     public String getFileId() {
@@ -75,7 +75,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图文件 ID。
+     * Set 截图文件 ID。
      * @param FileId 截图文件 ID。
      */
     public void setFileId(String FileId) {
@@ -83,7 +83,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -91,7 +91,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 截图规格，参见[指定时间点截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -99,7 +99,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取截图结果信息。
+     * Get 截图结果信息。 
      * @return SnapshotInfoSet 截图结果信息。
      */
     public SnapshotByTimeOffset2017 [] getSnapshotInfoSet() {
@@ -107,7 +107,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图结果信息。
+     * Set 截图结果信息。
      * @param SnapshotInfoSet 截图结果信息。
      */
     public void setSnapshotInfoSet(SnapshotByTimeOffset2017 [] SnapshotInfoSet) {
@@ -115,7 +115,7 @@ public class SnapshotByTimeOffsetTask2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

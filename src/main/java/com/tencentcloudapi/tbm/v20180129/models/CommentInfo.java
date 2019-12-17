@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CommentInfo  extends AbstractModel{
+public class CommentInfo extends AbstractModel{
 
     /**
     * 用户评论内容
@@ -37,7 +37,7 @@ public class CommentInfo  extends AbstractModel{
     private String Date;
 
     /**
-     * 获取用户评论内容
+     * Get 用户评论内容 
      * @return Comment 用户评论内容
      */
     public String getComment() {
@@ -45,7 +45,7 @@ public class CommentInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户评论内容
+     * Set 用户评论内容
      * @param Comment 用户评论内容
      */
     public void setComment(String Comment) {
@@ -53,7 +53,7 @@ public class CommentInfo  extends AbstractModel{
     }
 
     /**
-     * 获取评论的时间
+     * Get 评论的时间 
      * @return Date 评论的时间
      */
     public String getDate() {
@@ -61,7 +61,7 @@ public class CommentInfo  extends AbstractModel{
     }
 
     /**
-     * 设置评论的时间
+     * Set 评论的时间
      * @param Date 评论的时间
      */
     public void setDate(String Date) {
@@ -69,7 +69,7 @@ public class CommentInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Comment", this.Comment);

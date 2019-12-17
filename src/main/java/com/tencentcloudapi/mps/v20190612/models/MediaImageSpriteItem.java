@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaImageSpriteItem  extends AbstractModel{
+public class MediaImageSpriteItem extends AbstractModel{
 
     /**
     * 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -72,7 +72,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     private TaskOutputStorage Storage;
 
     /**
-     * 获取雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -80,7 +80,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -88,7 +88,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图小图的高度。
+     * Get 雪碧图小图的高度。 
      * @return Height 雪碧图小图的高度。
      */
     public Long getHeight() {
@@ -96,7 +96,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图小图的高度。
+     * Set 雪碧图小图的高度。
      * @param Height 雪碧图小图的高度。
      */
     public void setHeight(Long Height) {
@@ -104,7 +104,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图小图的宽度。
+     * Get 雪碧图小图的宽度。 
      * @return Width 雪碧图小图的宽度。
      */
     public Long getWidth() {
@@ -112,7 +112,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图小图的宽度。
+     * Set 雪碧图小图的宽度。
      * @param Width 雪碧图小图的宽度。
      */
     public void setWidth(Long Width) {
@@ -120,7 +120,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取每一张雪碧图大图里小图的数量。
+     * Get 每一张雪碧图大图里小图的数量。 
      * @return TotalCount 每一张雪碧图大图里小图的数量。
      */
     public Long getTotalCount() {
@@ -128,7 +128,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置每一张雪碧图大图里小图的数量。
+     * Set 每一张雪碧图大图里小图的数量。
      * @param TotalCount 每一张雪碧图大图里小图的数量。
      */
     public void setTotalCount(Long TotalCount) {
@@ -136,7 +136,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取每一张雪碧图大图的路径。
+     * Get 每一张雪碧图大图的路径。 
      * @return ImagePathSet 每一张雪碧图大图的路径。
      */
     public String [] getImagePathSet() {
@@ -144,7 +144,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置每一张雪碧图大图的路径。
+     * Set 每一张雪碧图大图的路径。
      * @param ImagePathSet 每一张雪碧图大图的路径。
      */
     public void setImagePathSet(String [] ImagePathSet) {
@@ -152,7 +152,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Get 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。 
      * @return WebVttPath 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
      */
     public String getWebVttPath() {
@@ -160,7 +160,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Set 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
      * @param WebVttPath 雪碧图子图位置与时间关系的 WebVtt 文件路径。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在在雪碧大图里的坐标位置，一般被播放器用于实现预览。
      */
     public void setWebVttPath(String WebVttPath) {
@@ -168,7 +168,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图文件的存储位置。
+     * Get 雪碧图文件的存储位置。 
      * @return Storage 雪碧图文件的存储位置。
      */
     public TaskOutputStorage getStorage() {
@@ -176,7 +176,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图文件的存储位置。
+     * Set 雪碧图文件的存储位置。
      * @param Storage 雪碧图文件的存储位置。
      */
     public void setStorage(TaskOutputStorage Storage) {
@@ -184,7 +184,7 @@ public class MediaImageSpriteItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

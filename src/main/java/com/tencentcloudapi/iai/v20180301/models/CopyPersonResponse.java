@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CopyPersonResponse  extends AbstractModel{
+public class CopyPersonResponse extends AbstractModel{
 
     /**
     * 成功加入的人员库数量
@@ -44,7 +44,7 @@ public class CopyPersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取成功加入的人员库数量
+     * Get 成功加入的人员库数量 
      * @return SucGroupNum 成功加入的人员库数量
      */
     public Long getSucGroupNum() {
@@ -52,7 +52,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置成功加入的人员库数量
+     * Set 成功加入的人员库数量
      * @param SucGroupNum 成功加入的人员库数量
      */
     public void setSucGroupNum(Long SucGroupNum) {
@@ -60,7 +60,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取成功加入的人员库列表
+     * Get 成功加入的人员库列表 
      * @return SucGroupIds 成功加入的人员库列表
      */
     public String [] getSucGroupIds() {
@@ -68,7 +68,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置成功加入的人员库列表
+     * Set 成功加入的人员库列表
      * @param SucGroupIds 成功加入的人员库列表
      */
     public void setSucGroupIds(String [] SucGroupIds) {
@@ -76,7 +76,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CopyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SucGroupNum", this.SucGroupNum);

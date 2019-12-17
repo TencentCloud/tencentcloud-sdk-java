@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Artist  extends AbstractModel{
+public class Artist extends AbstractModel{
 
     /**
     * 歌手名
@@ -30,7 +30,7 @@ public class Artist  extends AbstractModel{
     private String ArtistName;
 
     /**
-     * 获取歌手名
+     * Get 歌手名 
      * @return ArtistName 歌手名
      */
     public String getArtistName() {
@@ -38,7 +38,7 @@ public class Artist  extends AbstractModel{
     }
 
     /**
-     * 设置歌手名
+     * Set 歌手名
      * @param ArtistName 歌手名
      */
     public void setArtistName(String ArtistName) {
@@ -46,7 +46,7 @@ public class Artist  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ArtistName", this.ArtistName);

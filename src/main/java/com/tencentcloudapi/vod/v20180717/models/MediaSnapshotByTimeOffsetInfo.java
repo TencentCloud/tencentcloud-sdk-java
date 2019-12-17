@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSnapshotByTimeOffsetInfo  extends AbstractModel{
+public class MediaSnapshotByTimeOffsetInfo extends AbstractModel{
 
     /**
     * 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
@@ -31,8 +31,8 @@ public class MediaSnapshotByTimeOffsetInfo  extends AbstractModel{
     private MediaSnapshotByTimeOffsetItem [] SnapshotByTimeOffsetSet;
 
     /**
-     * 获取特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetSet 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaSnapshotByTimeOffsetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
+     * Set 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetSet 特定规格的指定时间点截图信息集合。目前每种规格只能有一套截图。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaSnapshotByTimeOffsetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SnapshotByTimeOffsetSet.", this.SnapshotByTimeOffsetSet);

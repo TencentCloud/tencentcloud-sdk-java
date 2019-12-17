@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveRealServersRequest  extends AbstractModel{
+public class RemoveRealServersRequest extends AbstractModel{
 
     /**
     * 源站Id列表
@@ -30,7 +30,7 @@ public class RemoveRealServersRequest  extends AbstractModel{
     private String [] RealServerIds;
 
     /**
-     * 获取源站Id列表
+     * Get 源站Id列表 
      * @return RealServerIds 源站Id列表
      */
     public String [] getRealServerIds() {
@@ -38,7 +38,7 @@ public class RemoveRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站Id列表
+     * Set 源站Id列表
      * @param RealServerIds 源站Id列表
      */
     public void setRealServerIds(String [] RealServerIds) {
@@ -46,7 +46,7 @@ public class RemoveRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RealServerIds.", this.RealServerIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDBInstanceRequest  extends AbstractModel{
+public class UpgradeDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -51,7 +51,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private Integer OplogSize;
 
     /**
-     * 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级后的内存大小，单位：GB
+     * Get 升级后的内存大小，单位：GB 
      * @return Memory 升级后的内存大小，单位：GB
      */
     public Integer getMemory() {
@@ -75,7 +75,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升级后的内存大小，单位：GB
+     * Set 升级后的内存大小，单位：GB
      * @param Memory 升级后的内存大小，单位：GB
      */
     public void setMemory(Integer Memory) {
@@ -83,7 +83,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级后的硬盘大小，单位：GB
+     * Get 升级后的硬盘大小，单位：GB 
      * @return Volume 升级后的硬盘大小，单位：GB
      */
     public Integer getVolume() {
@@ -91,7 +91,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升级后的硬盘大小，单位：GB
+     * Set 升级后的硬盘大小，单位：GB
      * @param Volume 升级后的硬盘大小，单位：GB
      */
     public void setVolume(Integer Volume) {
@@ -99,7 +99,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
+     * Get 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90% 
      * @return OplogSize 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      */
     public Integer getOplogSize() {
@@ -107,7 +107,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
+     * Set 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      * @param OplogSize 升级后oplog的大小，单位：GB，默认为磁盘空间的10%，允许设置的最小值为磁盘的10%，最大值为磁盘的90%
      */
     public void setOplogSize(Integer OplogSize) {
@@ -115,7 +115,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

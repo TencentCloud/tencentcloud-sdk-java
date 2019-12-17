@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchResult  extends AbstractModel{
+public class SearchResult extends AbstractModel{
 
     /**
     * 检索耗时，单位ms
@@ -74,7 +74,7 @@ public class SearchResult  extends AbstractModel{
     private SearchResultSeg [] SegList;
 
     /**
-     * 获取检索耗时，单位ms
+     * Get 检索耗时，单位ms 
      * @return CostTime 检索耗时，单位ms
      */
     public Long getCostTime() {
@@ -82,7 +82,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置检索耗时，单位ms
+     * Set 检索耗时，单位ms
      * @param CostTime 检索耗时，单位ms
      */
     public void setCostTime(Long CostTime) {
@@ -90,7 +90,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取搜索最多可以展示的结果数，多页
+     * Get 搜索最多可以展示的结果数，多页 
      * @return DisplayNum 搜索最多可以展示的结果数，多页
      */
     public Long getDisplayNum() {
@@ -98,7 +98,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置搜索最多可以展示的结果数，多页
+     * Set 搜索最多可以展示的结果数，多页
      * @param DisplayNum 搜索最多可以展示的结果数，多页
      */
     public void setDisplayNum(Long DisplayNum) {
@@ -106,7 +106,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取和检索请求中的echo相对应
+     * Get 和检索请求中的echo相对应 
      * @return Echo 和检索请求中的echo相对应
      */
     public String getEcho() {
@@ -114,7 +114,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置和检索请求中的echo相对应
+     * Set 和检索请求中的echo相对应
      * @param Echo 和检索请求中的echo相对应
      */
     public void setEcho(String Echo) {
@@ -122,7 +122,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取检索结果的估算篇数，由索引平台估算
+     * Get 检索结果的估算篇数，由索引平台估算 
      * @return EResultNum 检索结果的估算篇数，由索引平台估算
      */
     public Long getEResultNum() {
@@ -130,7 +130,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置检索结果的估算篇数，由索引平台估算
+     * Set 检索结果的估算篇数，由索引平台估算
      * @param EResultNum 检索结果的估算篇数，由索引平台估算
      */
     public void setEResultNum(Long EResultNum) {
@@ -138,7 +138,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取检索返回的当前页码结果数
+     * Get 检索返回的当前页码结果数 
      * @return ResultNum 检索返回的当前页码结果数
      */
     public Long getResultNum() {
@@ -146,7 +146,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置检索返回的当前页码结果数
+     * Set 检索返回的当前页码结果数
      * @param ResultNum 检索返回的当前页码结果数
      */
     public void setResultNum(Long ResultNum) {
@@ -154,8 +154,8 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取检索结果列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检索结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultList 检索结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,7 +164,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置检索结果列表
+     * Set 检索结果列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultList 检索结果列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,8 +174,8 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 获取检索的分词结果，array类型，可包含多个
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检索的分词结果，array类型，可包含多个
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegList 检索的分词结果，array类型，可包含多个
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -184,7 +184,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 设置检索的分词结果，array类型，可包含多个
+     * Set 检索的分词结果，array类型，可包含多个
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegList 检索的分词结果，array类型，可包含多个
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,7 +194,7 @@ public class SearchResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CostTime", this.CostTime);

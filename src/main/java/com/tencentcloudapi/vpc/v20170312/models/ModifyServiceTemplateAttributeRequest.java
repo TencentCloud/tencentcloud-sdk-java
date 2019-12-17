@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
+public class ModifyServiceTemplateAttributeRequest extends AbstractModel{
 
     /**
     * 协议端口模板实例ID，例如：ppm-529nwwj8。
@@ -44,7 +44,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     private String [] Services;
 
     /**
-     * 获取协议端口模板实例ID，例如：ppm-529nwwj8。
+     * Get 协议端口模板实例ID，例如：ppm-529nwwj8。 
      * @return ServiceTemplateId 协议端口模板实例ID，例如：ppm-529nwwj8。
      */
     public String getServiceTemplateId() {
@@ -52,7 +52,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板实例ID，例如：ppm-529nwwj8。
+     * Set 协议端口模板实例ID，例如：ppm-529nwwj8。
      * @param ServiceTemplateId 协议端口模板实例ID，例如：ppm-529nwwj8。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
@@ -60,7 +60,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口模板名称。
+     * Get 协议端口模板名称。 
      * @return ServiceTemplateName 协议端口模板名称。
      */
     public String getServiceTemplateName() {
@@ -68,7 +68,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板名称。
+     * Set 协议端口模板名称。
      * @param ServiceTemplateName 协议端口模板名称。
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
@@ -76,7 +76,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Get 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。 
      * @return Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
      */
     public String [] getServices() {
@@ -84,7 +84,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Set 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
      * @param Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
      */
     public void setServices(String [] Services) {
@@ -92,7 +92,7 @@ public class ModifyServiceTemplateAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);

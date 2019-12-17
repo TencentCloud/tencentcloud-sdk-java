@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
+public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
 
     /**
     * 指定时间点截图模板 ID。
@@ -46,7 +46,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * 获取指定时间点截图模板 ID。
+     * Get 指定时间点截图模板 ID。 
      * @return Definition 指定时间点截图模板 ID。
      */
     public Long getDefinition() {
@@ -54,7 +54,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图模板 ID。
+     * Set 指定时间点截图模板 ID。
      * @param Definition 指定时间点截图模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -62,8 +62,8 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间点列表，单位为<font color=red>毫秒</font>。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 截图时间点列表，单位为<font color=red>毫秒</font>。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置截图时间点列表，单位为<font color=red>毫秒</font>。
+     * Set 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOffsetSet 截图时间点列表，单位为<font color=red>毫秒</font>。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

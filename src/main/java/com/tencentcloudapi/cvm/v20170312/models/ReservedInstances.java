@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReservedInstances  extends AbstractModel{
+public class ReservedInstances extends AbstractModel{
 
     /**
     * 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
@@ -107,7 +107,7 @@ public class ReservedInstances  extends AbstractModel{
     private String OfferingType;
 
     /**
-     * 获取已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * Get 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。 
      * @return ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      */
     public String getReservedInstancesId() {
@@ -115,7 +115,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+     * Set 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      * @param ReservedInstancesId 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
      */
     public void setReservedInstancesId(String ReservedInstancesId) {
@@ -123,8 +123,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的类型。形如：S3.MEDIUM4。
-返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
+     * Get 预留实例计费的类型。形如：S3.MEDIUM4。
+返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a> 
      * @return InstanceType 预留实例计费的类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
      */
@@ -133,7 +133,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的类型。形如：S3.MEDIUM4。
+     * Set 预留实例计费的类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
      * @param InstanceType 预留实例计费的类型。形如：S3.MEDIUM4。
 返回项：<a href="https://cloud.tencent.com/document/product/213/11518">预留实例计费类型列表</a>
@@ -143,8 +143,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费可购买的可用区。形如：ap-guangzhou-1。
-返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
+     * Get 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
+返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a> 
      * @return Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
      */
@@ -153,7 +153,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费可购买的可用区。形如：ap-guangzhou-1。
+     * Set 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
      * @param Zone 预留实例计费可购买的可用区。形如：ap-guangzhou-1。
 返回项：<a href="https://cloud.tencent.com/document/product/213/6091">可用区列表</a>
@@ -163,7 +163,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费开始时间。形如：1949-10-01 00:00:00
+     * Get 预留实例计费开始时间。形如：1949-10-01 00:00:00 
      * @return StartTime 预留实例计费开始时间。形如：1949-10-01 00:00:00
      */
     public String getStartTime() {
@@ -171,7 +171,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费开始时间。形如：1949-10-01 00:00:00
+     * Set 预留实例计费开始时间。形如：1949-10-01 00:00:00
      * @param StartTime 预留实例计费开始时间。形如：1949-10-01 00:00:00
      */
     public void setStartTime(String StartTime) {
@@ -179,7 +179,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费到期时间。形如：1949-10-01 00:00:00
+     * Get 预留实例计费到期时间。形如：1949-10-01 00:00:00 
      * @return EndTime 预留实例计费到期时间。形如：1949-10-01 00:00:00
      */
     public String getEndTime() {
@@ -187,7 +187,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费到期时间。形如：1949-10-01 00:00:00
+     * Set 预留实例计费到期时间。形如：1949-10-01 00:00:00
      * @param EndTime 预留实例计费到期时间。形如：1949-10-01 00:00:00
      */
     public void setEndTime(String EndTime) {
@@ -195,8 +195,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
-计量单位：秒。
+     * Get 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
+计量单位：秒。 
      * @return Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒。
      */
@@ -205,7 +205,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
+     * Set 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒。
      * @param Duration 预留实例计费【有效期】即预留实例计费购买时长。形如：31536000。
 计量单位：秒。
@@ -215,7 +215,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取已购买的预留实例计费个数。形如：10。
+     * Get 已购买的预留实例计费个数。形如：10。 
      * @return InstanceCount 已购买的预留实例计费个数。形如：10。
      */
     public Integer getInstanceCount() {
@@ -223,7 +223,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置已购买的预留实例计费个数。形如：10。
+     * Set 已购买的预留实例计费个数。形如：10。
      * @param InstanceCount 已购买的预留实例计费个数。形如：10。
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -231,8 +231,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取描述预留实例计费的平台描述（即操作系统）。形如：linux。
-返回项： linux 。
+     * Get 描述预留实例计费的平台描述（即操作系统）。形如：linux。
+返回项： linux 。 
      * @return ProductDescription 描述预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
      */
@@ -241,7 +241,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置描述预留实例计费的平台描述（即操作系统）。形如：linux。
+     * Set 描述预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
      * @param ProductDescription 描述预留实例计费的平台描述（即操作系统）。形如：linux。
 返回项： linux 。
@@ -251,8 +251,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费购买的状态。形如：active
-返回项： active (以创建) | pending (等待被创建) | retired (过期)。
+     * Get 预留实例计费购买的状态。形如：active
+返回项： active (以创建) | pending (等待被创建) | retired (过期)。 
      * @return State 预留实例计费购买的状态。形如：active
 返回项： active (以创建) | pending (等待被创建) | retired (过期)。
      */
@@ -261,7 +261,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费购买的状态。形如：active
+     * Set 预留实例计费购买的状态。形如：active
 返回项： active (以创建) | pending (等待被创建) | retired (过期)。
      * @param State 预留实例计费购买的状态。形如：active
 返回项： active (以创建) | pending (等待被创建) | retired (过期)。
@@ -271,8 +271,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
-返回项：USD（美元）。
+     * Get 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
+返回项：USD（美元）。 
      * @return CurrencyCode 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
 返回项：USD（美元）。
      */
@@ -281,7 +281,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
+     * Set 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
 返回项：USD（美元）。
      * @param CurrencyCode 可购买的预留实例计费类型的结算货币，使用ISO 4217标准货币代码。形如：USD。
 返回项：USD（美元）。
@@ -291,8 +291,8 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 获取预留实例计费的付款类型。形如：All Upfront。
-返回项： All Upfront (预付全部费用)。
+     * Get 预留实例计费的付款类型。形如：All Upfront。
+返回项： All Upfront (预付全部费用)。 
      * @return OfferingType 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
      */
@@ -301,7 +301,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 设置预留实例计费的付款类型。形如：All Upfront。
+     * Set 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
      * @param OfferingType 预留实例计费的付款类型。形如：All Upfront。
 返回项： All Upfront (预付全部费用)。
@@ -311,7 +311,7 @@ public class ReservedInstances  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReservedInstancesId", this.ReservedInstancesId);

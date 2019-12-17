@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePullStreamConfigRequest  extends AbstractModel{
+public class CreatePullStreamConfigRequest extends AbstractModel{
 
     /**
     * 源Url。目前可支持直播流及点播文件。
@@ -83,7 +83,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取源Url。目前可支持直播流及点播文件。
+     * Get 源Url。目前可支持直播流及点播文件。 
      * @return FromUrl 源Url。目前可支持直播流及点播文件。
      */
     public String getFromUrl() {
@@ -91,7 +91,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源Url。目前可支持直播流及点播文件。
+     * Set 源Url。目前可支持直播流及点播文件。
      * @param FromUrl 源Url。目前可支持直播流及点播文件。
      */
     public void setFromUrl(String FromUrl) {
@@ -99,7 +99,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的Url，目前限制该目标地址为腾讯域名。
+     * Get 目的Url，目前限制该目标地址为腾讯域名。 
      * @return ToUrl 目的Url，目前限制该目标地址为腾讯域名。
      */
     public String getToUrl() {
@@ -107,7 +107,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的Url，目前限制该目标地址为腾讯域名。
+     * Set 目的Url，目前限制该目标地址为腾讯域名。
      * @param ToUrl 目的Url，目前限制该目标地址为腾讯域名。
      */
     public void setToUrl(String ToUrl) {
@@ -115,11 +115,11 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取选择完成转拉推的服务所在区域:
+     * Get 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
-4-中国香港。
+4-中国香港。 
      * @return AreaId 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
@@ -131,7 +131,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置选择完成转拉推的服务所在区域:
+     * Set 选择完成转拉推的服务所在区域:
 1-深圳，
 2-上海，
 3-天津，
@@ -147,12 +147,12 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取选择完成转拉推服务使用的运营商网络：
+     * Get 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
 4-其他。
-注：AreaId为4的时候,IspId只能为其他。
+注：AreaId为4的时候,IspId只能为其他。 
      * @return IspId 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
@@ -165,7 +165,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置选择完成转拉推服务使用的运营商网络：
+     * Set 选择完成转拉推服务使用的运营商网络：
 1-电信，
 2-移动，
 3-联通，
@@ -183,10 +183,10 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return StartTime 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
@@ -197,7 +197,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -211,13 +211,13 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，注意：
+     * Get 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
@@ -231,7 +231,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，注意：
+     * Set 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
@@ -251,7 +251,7 @@ public class CreatePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromUrl", this.FromUrl);

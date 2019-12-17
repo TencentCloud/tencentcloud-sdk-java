@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityPolicyDatabase  extends AbstractModel{
+public class SecurityPolicyDatabase extends AbstractModel{
 
     /**
     * 本端网段
@@ -37,7 +37,7 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     private String [] RemoteCidrBlock;
 
     /**
-     * 获取本端网段
+     * Get 本端网段 
      * @return LocalCidrBlock 本端网段
      */
     public String getLocalCidrBlock() {
@@ -45,7 +45,7 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     }
 
     /**
-     * 设置本端网段
+     * Set 本端网段
      * @param LocalCidrBlock 本端网段
      */
     public void setLocalCidrBlock(String LocalCidrBlock) {
@@ -53,7 +53,7 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     }
 
     /**
-     * 获取对端网段
+     * Get 对端网段 
      * @return RemoteCidrBlock 对端网段
      */
     public String [] getRemoteCidrBlock() {
@@ -61,7 +61,7 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     }
 
     /**
-     * 设置对端网段
+     * Set 对端网段
      * @param RemoteCidrBlock 对端网段
      */
     public void setRemoteCidrBlock(String [] RemoteCidrBlock) {
@@ -69,7 +69,7 @@ public class SecurityPolicyDatabase  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LocalCidrBlock", this.LocalCidrBlock);

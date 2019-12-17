@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL7ListenerInfoRequest  extends AbstractModel{
+public class DescribeL7ListenerInfoRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -51,7 +51,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     private Integer IfGetBackendInfo;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查找的键值，可用于模糊查找有该转发域名的监听器。
+     * Get 查找的键值，可用于模糊查找有该转发域名的监听器。 
      * @return SearchKey 查找的键值，可用于模糊查找有该转发域名的监听器。
      */
     public String getSearchKey() {
@@ -75,7 +75,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查找的键值，可用于模糊查找有该转发域名的监听器。
+     * Set 查找的键值，可用于模糊查找有该转发域名的监听器。
      * @param SearchKey 查找的键值，可用于模糊查找有该转发域名的监听器。
      */
     public void setSearchKey(String SearchKey) {
@@ -83,7 +83,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
+     * Get 主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。 
      * @return InstanceIds 主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
      */
     public String [] getInstanceIds() {
@@ -91,7 +91,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
+     * Set 主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
      * @param InstanceIds 主机ID或虚机IP列表，可用于获取绑定了该主机的监听器。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -99,7 +99,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否获取转发规则下的主机信息。默认为0，不获取。
+     * Get 是否获取转发规则下的主机信息。默认为0，不获取。 
      * @return IfGetBackendInfo 是否获取转发规则下的主机信息。默认为0，不获取。
      */
     public Integer getIfGetBackendInfo() {
@@ -107,7 +107,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否获取转发规则下的主机信息。默认为0，不获取。
+     * Set 是否获取转发规则下的主机信息。默认为0，不获取。
      * @param IfGetBackendInfo 是否获取转发规则下的主机信息。默认为0，不获取。
      */
     public void setIfGetBackendInfo(Integer IfGetBackendInfo) {
@@ -115,7 +115,7 @@ public class DescribeL7ListenerInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCPolicySwitchRequest  extends AbstractModel{
+public class ModifyCCPolicySwitchRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -51,7 +51,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     private Long Switch;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -75,7 +75,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -83,7 +83,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return SetId 策略ID
      */
     public String getSetId() {
@@ -91,7 +91,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param SetId 策略ID
      */
     public void setSetId(String SetId) {
@@ -99,7 +99,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开关状态
+     * Get 开关状态 
      * @return Switch 开关状态
      */
     public Long getSwitch() {
@@ -107,7 +107,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开关状态
+     * Set 开关状态
      * @param Switch 开关状态
      */
     public void setSwitch(Long Switch) {
@@ -115,7 +115,7 @@ public class ModifyCCPolicySwitchRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

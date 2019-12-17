@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextItem  extends AbstractModel{
+public class TextItem extends AbstractModel{
 
     /**
     * 当前句子包含的所有单词信息
@@ -72,7 +72,7 @@ public class TextItem  extends AbstractModel{
     private Long TextSize;
 
     /**
-     * 获取当前句子包含的所有单词信息
+     * Get 当前句子包含的所有单词信息 
      * @return Words 当前句子包含的所有单词信息
      */
     public Word [] getWords() {
@@ -80,7 +80,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子包含的所有单词信息
+     * Set 当前句子包含的所有单词信息
      * @param Words 当前句子包含的所有单词信息
      */
     public void setWords(Word [] Words) {
@@ -88,7 +88,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子的置信度
+     * Get 当前句子的置信度 
      * @return Confidence 当前句子的置信度
      */
     public Float getConfidence() {
@@ -96,7 +96,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子的置信度
+     * Set 当前句子的置信度
      * @param Confidence 当前句子的置信度
      */
     public void setConfidence(Float Confidence) {
@@ -104,7 +104,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子语音的起始时间点，单位为ms
+     * Get 当前句子语音的起始时间点，单位为ms 
      * @return Mbtm 当前句子语音的起始时间点，单位为ms
      */
     public Long getMbtm() {
@@ -112,7 +112,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子语音的起始时间点，单位为ms
+     * Set 当前句子语音的起始时间点，单位为ms
      * @param Mbtm 当前句子语音的起始时间点，单位为ms
      */
     public void setMbtm(Long Mbtm) {
@@ -120,7 +120,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子语音的终止时间点，单位为ms
+     * Get 当前句子语音的终止时间点，单位为ms 
      * @return Metm 当前句子语音的终止时间点，单位为ms
      */
     public Long getMetm() {
@@ -128,7 +128,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子语音的终止时间点，单位为ms
+     * Set 当前句子语音的终止时间点，单位为ms
      * @param Metm 当前句子语音的终止时间点，单位为ms
      */
     public void setMetm(Long Metm) {
@@ -136,7 +136,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取保留参数，暂无意义
+     * Get 保留参数，暂无意义 
      * @return Tag 保留参数，暂无意义
      */
     public Long getTag() {
@@ -144,7 +144,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置保留参数，暂无意义
+     * Set 保留参数，暂无意义
      * @param Tag 保留参数，暂无意义
      */
     public void setTag(Long Tag) {
@@ -152,7 +152,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子
+     * Get 当前句子 
      * @return Text 当前句子
      */
     public String getText() {
@@ -160,7 +160,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子
+     * Set 当前句子
      * @param Text 当前句子
      */
     public void setText(String Text) {
@@ -168,7 +168,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 获取当前句子的字节数
+     * Get 当前句子的字节数 
      * @return TextSize 当前句子的字节数
      */
     public Long getTextSize() {
@@ -176,7 +176,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 设置当前句子的字节数
+     * Set 当前句子的字节数
      * @param TextSize 当前句子的字节数
      */
     public void setTextSize(Long TextSize) {
@@ -184,7 +184,7 @@ public class TextItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Words.", this.Words);

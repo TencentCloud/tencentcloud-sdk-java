@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealtimeSpeechConf  extends AbstractModel{
+public class RealtimeSpeechConf extends AbstractModel{
 
     /**
     * 实时语音服务开关，取值：open/close
@@ -37,7 +37,7 @@ public class RealtimeSpeechConf  extends AbstractModel{
     private String Quality;
 
     /**
-     * 获取实时语音服务开关，取值：open/close
+     * Get 实时语音服务开关，取值：open/close 
      * @return Status 实时语音服务开关，取值：open/close
      */
     public String getStatus() {
@@ -45,7 +45,7 @@ public class RealtimeSpeechConf  extends AbstractModel{
     }
 
     /**
-     * 设置实时语音服务开关，取值：open/close
+     * Set 实时语音服务开关，取值：open/close
      * @param Status 实时语音服务开关，取值：open/close
      */
     public void setStatus(String Status) {
@@ -53,7 +53,7 @@ public class RealtimeSpeechConf  extends AbstractModel{
     }
 
     /**
-     * 获取实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+     * Get 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。 
      * @return Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
      */
     public String getQuality() {
@@ -61,7 +61,7 @@ public class RealtimeSpeechConf  extends AbstractModel{
     }
 
     /**
-     * 设置实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+     * Set 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
      * @param Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
      */
     public void setQuality(String Quality) {
@@ -69,7 +69,7 @@ public class RealtimeSpeechConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

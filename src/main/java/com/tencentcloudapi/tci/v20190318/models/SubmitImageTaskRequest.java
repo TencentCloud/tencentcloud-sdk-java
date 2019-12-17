@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitImageTaskRequest  extends AbstractModel{
+public class SubmitImageTaskRequest extends AbstractModel{
 
     /**
     * 输入分析对象内容，输入数据格式参考FileType参数释义
@@ -79,7 +79,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     private Float SimThreshold;
 
     /**
-     * 获取输入分析对象内容，输入数据格式参考FileType参数释义
+     * Get 输入分析对象内容，输入数据格式参考FileType参数释义 
      * @return FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public String getFileContent() {
@@ -87,7 +87,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象内容，输入数据格式参考FileType参数释义
+     * Set 输入分析对象内容，输入数据格式参考FileType参数释义
      * @param FileContent 输入分析对象内容，输入数据格式参考FileType参数释义
      */
     public void setFileContent(String FileContent) {
@@ -95,7 +95,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+     * Get 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址 
      * @return FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      */
     public String getFileType() {
@@ -103,7 +103,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
+     * Set 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      * @param FileType 输入分析对象类型，picture：二进制图片的 base64 编码字符串，picture_url:图片地址，vod_url：视频地址，live_url：直播地址
      */
     public void setFileType(String FileType) {
@@ -111,7 +111,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务控制选项
+     * Get 任务控制选项 
      * @return Functions 任务控制选项
      */
     public ImageTaskFunction getFunctions() {
@@ -119,7 +119,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务控制选项
+     * Set 任务控制选项
      * @param Functions 任务控制选项
      */
     public void setFunctions(ImageTaskFunction Functions) {
@@ -127,7 +127,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取光照标准列表
+     * Get 光照标准列表 
      * @return LightStandardSet 光照标准列表
      */
     public LightStandard [] getLightStandardSet() {
@@ -135,7 +135,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置光照标准列表
+     * Set 光照标准列表
      * @param LightStandardSet 光照标准列表
      */
     public void setLightStandardSet(LightStandard [] LightStandardSet) {
@@ -143,7 +143,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+     * Get 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。 
      * @return FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public Long getFrameInterval() {
@@ -151,7 +151,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
+     * Set 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      * @param FrameInterval 抽帧的时间间隔，单位毫秒，默认值1000，保留字段，当前不支持填写。
      */
     public void setFrameInterval(Long FrameInterval) {
@@ -159,7 +159,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询人员库列表
+     * Get 查询人员库列表 
      * @return LibrarySet 查询人员库列表
      */
     public String [] getLibrarySet() {
@@ -167,7 +167,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询人员库列表
+     * Set 查询人员库列表
      * @param LibrarySet 查询人员库列表
      */
     public void setLibrarySet(String [] LibrarySet) {
@@ -175,7 +175,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Get 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束 
      * @return MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public Long getMaxVideoDuration() {
@@ -183,7 +183,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
+     * Set 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      * @param MaxVideoDuration 视频评估时间，单位秒，点播场景默认值为2小时（无法探测长度时）或完整视频，直播场景默认值为10分钟或直播提前结束
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
@@ -191,7 +191,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+     * Get 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。 
      * @return SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public Float getSimThreshold() {
@@ -199,7 +199,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
+     * Set 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      * @param SimThreshold 人脸识别中的相似度阈值，默认值为0.89，保留字段，当前不支持填写。
      */
     public void setSimThreshold(Float SimThreshold) {
@@ -207,7 +207,7 @@ public class SubmitImageTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileContent", this.FileContent);

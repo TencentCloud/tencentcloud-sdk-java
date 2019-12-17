@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneTrafficInfo  extends AbstractModel{
+public class ZoneTrafficInfo extends AbstractModel{
 
     /**
     * 日期
@@ -37,7 +37,7 @@ public class ZoneTrafficInfo  extends AbstractModel{
     private ZoneTrafficInfoDetail [] ZoneTrafficInfoDetailSet;
 
     /**
-     * 获取日期
+     * Get 日期 
      * @return Date 日期
      */
     public String getDate() {
@@ -45,7 +45,7 @@ public class ZoneTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日期
+     * Set 日期
      * @param Date 日期
      */
     public void setDate(String Date) {
@@ -53,7 +53,7 @@ public class ZoneTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 获取门店区域客流详细信息
+     * Get 门店区域客流详细信息 
      * @return ZoneTrafficInfoDetailSet 门店区域客流详细信息
      */
     public ZoneTrafficInfoDetail [] getZoneTrafficInfoDetailSet() {
@@ -61,7 +61,7 @@ public class ZoneTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置门店区域客流详细信息
+     * Set 门店区域客流详细信息
      * @param ZoneTrafficInfoDetailSet 门店区域客流详细信息
      */
     public void setZoneTrafficInfoDetailSet(ZoneTrafficInfoDetail [] ZoneTrafficInfoDetailSet) {
@@ -69,7 +69,7 @@ public class ZoneTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

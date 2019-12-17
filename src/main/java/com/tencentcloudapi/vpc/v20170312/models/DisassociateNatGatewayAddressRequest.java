@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
+public class DisassociateNatGatewayAddressRequest extends AbstractModel{
 
     /**
     * NAT网关的ID，形如：`nat-df45454`。
@@ -37,7 +37,7 @@ public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
-     * 获取NAT网关的ID，形如：`nat-df45454`。
+     * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public String getNatGatewayId() {
@@ -45,7 +45,7 @@ public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关的ID，形如：`nat-df45454`。
+     * Set NAT网关的ID，形如：`nat-df45454`。
      * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
     public void setNatGatewayId(String NatGatewayId) {
@@ -53,7 +53,7 @@ public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定NAT网关的弹性IP数组。
+     * Get 绑定NAT网关的弹性IP数组。 
      * @return PublicIpAddresses 绑定NAT网关的弹性IP数组。
      */
     public String [] getPublicIpAddresses() {
@@ -61,7 +61,7 @@ public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定NAT网关的弹性IP数组。
+     * Set 绑定NAT网关的弹性IP数组。
      * @param PublicIpAddresses 绑定NAT网关的弹性IP数组。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -69,7 +69,7 @@ public class DisassociateNatGatewayAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);

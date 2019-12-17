@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Point  extends AbstractModel{
+public class Point extends AbstractModel{
 
     /**
     * x坐标
@@ -37,7 +37,7 @@ public class Point  extends AbstractModel{
     private Long Y;
 
     /**
-     * 获取x坐标
+     * Get x坐标 
      * @return X x坐标
      */
     public Long getX() {
@@ -45,7 +45,7 @@ public class Point  extends AbstractModel{
     }
 
     /**
-     * 设置x坐标
+     * Set x坐标
      * @param X x坐标
      */
     public void setX(Long X) {
@@ -53,7 +53,7 @@ public class Point  extends AbstractModel{
     }
 
     /**
-     * 获取Y坐标
+     * Get Y坐标 
      * @return Y Y坐标
      */
     public Long getY() {
@@ -61,7 +61,7 @@ public class Point  extends AbstractModel{
     }
 
     /**
-     * 设置Y坐标
+     * Set Y坐标
      * @param Y Y坐标
      */
     public void setY(Long Y) {
@@ -69,7 +69,7 @@ public class Point  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

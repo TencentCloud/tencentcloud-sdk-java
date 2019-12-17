@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxyGroupRequest  extends AbstractModel{
+public class CreateProxyGroupRequest extends AbstractModel{
 
     /**
     * 通道组所属项目ID
@@ -51,7 +51,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
-     * 获取通道组所属项目ID
+     * Get 通道组所属项目ID 
      * @return ProjectId 通道组所属项目ID
      */
     public Long getProjectId() {
@@ -59,7 +59,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组所属项目ID
+     * Set 通道组所属项目ID
      * @param ProjectId 通道组所属项目ID
      */
     public void setProjectId(Long ProjectId) {
@@ -67,7 +67,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组别名
+     * Get 通道组别名 
      * @return GroupName 通道组别名
      */
     public String getGroupName() {
@@ -75,7 +75,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组别名
+     * Set 通道组别名
      * @param GroupName 通道组别名
      */
     public void setGroupName(String GroupName) {
@@ -83,7 +83,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * Get 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId 
      * @return RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
      */
     public String getRealServerRegion() {
@@ -91,7 +91,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * Set 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
      * @param RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
      */
     public void setRealServerRegion(String RealServerRegion) {
@@ -99,7 +99,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
+     * Get 标签列表 
      * @return TagSet 标签列表
      */
     public TagPair [] getTagSet() {
@@ -107,7 +107,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
      * @param TagSet 标签列表
      */
     public void setTagSet(TagPair [] TagSet) {
@@ -115,7 +115,7 @@ public class CreateProxyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

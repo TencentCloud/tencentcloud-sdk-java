@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HTTPListener  extends AbstractModel{
+public class HTTPListener extends AbstractModel{
 
     /**
     * 监听器ID
@@ -70,7 +70,7 @@ public class HTTPListener  extends AbstractModel{
     private Long ListenerStatus;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -78,7 +78,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -86,7 +86,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -94,7 +94,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -102,7 +102,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Long getPort() {
@@ -110,7 +110,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Long Port) {
@@ -118,7 +118,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器创建时间，Unix时间戳
+     * Get 监听器创建时间，Unix时间戳 
      * @return CreateTime 监听器创建时间，Unix时间戳
      */
     public Long getCreateTime() {
@@ -126,7 +126,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器创建时间，Unix时间戳
+     * Set 监听器创建时间，Unix时间戳
      * @param CreateTime 监听器创建时间，Unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -134,7 +134,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议
+     * Get 监听器协议 
      * @return Protocol 监听器协议
      */
     public String getProtocol() {
@@ -142,7 +142,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议
+     * Set 监听器协议
      * @param Protocol 监听器协议
      */
     public void setProtocol(String Protocol) {
@@ -150,12 +150,12 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器状态，其中：
+     * Get 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
 3，源站调整中；
-4，配置变更中。
+4，配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
 0， 运行中；
 1， 创建中；
@@ -168,7 +168,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器状态，其中：
+     * Set 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
@@ -186,7 +186,7 @@ public class HTTPListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

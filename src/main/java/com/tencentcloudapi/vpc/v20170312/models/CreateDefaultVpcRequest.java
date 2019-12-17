@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDefaultVpcRequest  extends AbstractModel{
+public class CreateDefaultVpcRequest extends AbstractModel{
 
     /**
     * 子网所在的可用区ID，不指定将随机选择可用区
@@ -37,7 +37,7 @@ public class CreateDefaultVpcRequest  extends AbstractModel{
     private Boolean Force;
 
     /**
-     * 获取子网所在的可用区ID，不指定将随机选择可用区
+     * Get 子网所在的可用区ID，不指定将随机选择可用区 
      * @return Zone 子网所在的可用区ID，不指定将随机选择可用区
      */
     public String getZone() {
@@ -45,7 +45,7 @@ public class CreateDefaultVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网所在的可用区ID，不指定将随机选择可用区
+     * Set 子网所在的可用区ID，不指定将随机选择可用区
      * @param Zone 子网所在的可用区ID，不指定将随机选择可用区
      */
     public void setZone(String Zone) {
@@ -53,7 +53,7 @@ public class CreateDefaultVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制返回默认VPC
+     * Get 是否强制返回默认VPC 
      * @return Force 是否强制返回默认VPC
      */
     public Boolean getForce() {
@@ -61,7 +61,7 @@ public class CreateDefaultVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制返回默认VPC
+     * Set 是否强制返回默认VPC
      * @param Force 是否强制返回默认VPC
      */
     public void setForce(Boolean Force) {
@@ -69,7 +69,7 @@ public class CreateDefaultVpcRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

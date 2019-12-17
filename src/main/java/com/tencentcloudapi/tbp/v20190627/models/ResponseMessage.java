@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResponseMessage  extends AbstractModel{
+public class ResponseMessage extends AbstractModel{
 
     /**
     * 消息组列表。
@@ -31,8 +31,8 @@ public class ResponseMessage  extends AbstractModel{
     private Group [] GroupList;
 
     /**
-     * 获取消息组列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 消息组列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupList 消息组列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class ResponseMessage  extends AbstractModel{
     }
 
     /**
-     * 设置消息组列表。
+     * Set 消息组列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupList 消息组列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class ResponseMessage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);

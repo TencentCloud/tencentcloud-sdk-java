@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLabelItem  extends AbstractModel{
+public class DetectLabelItem extends AbstractModel{
 
     /**
     * 图片中的物体名称。
@@ -51,7 +51,7 @@ public class DetectLabelItem  extends AbstractModel{
     private String SecondCategory;
 
     /**
-     * 获取图片中的物体名称。
+     * Get 图片中的物体名称。 
      * @return Name 图片中的物体名称。
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 设置图片中的物体名称。
+     * Set 图片中的物体名称。
      * @param Name 图片中的物体名称。
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 获取算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
+     * Get 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。 
      * @return Confidence 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
      */
     public Long getConfidence() {
@@ -75,7 +75,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 设置算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
+     * Set 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
      * @param Confidence 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定。
      */
     public void setConfidence(Long Confidence) {
@@ -83,7 +83,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 获取标签的一级分类
+     * Get 标签的一级分类 
      * @return FirstCategory 标签的一级分类
      */
     public String getFirstCategory() {
@@ -91,7 +91,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 设置标签的一级分类
+     * Set 标签的一级分类
      * @param FirstCategory 标签的一级分类
      */
     public void setFirstCategory(String FirstCategory) {
@@ -99,7 +99,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 获取标签的二级分类
+     * Get 标签的二级分类 
      * @return SecondCategory 标签的二级分类
      */
     public String getSecondCategory() {
@@ -107,7 +107,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 设置标签的二级分类
+     * Set 标签的二级分类
      * @param SecondCategory 标签的二级分类
      */
     public void setSecondCategory(String SecondCategory) {
@@ -115,7 +115,7 @@ public class DetectLabelItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

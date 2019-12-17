@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteListenersRequest  extends AbstractModel{
+public class DeleteListenersRequest extends AbstractModel{
 
     /**
     * 待删除的监听器ID列表
@@ -51,7 +51,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取待删除的监听器ID列表
+     * Get 待删除的监听器ID列表 
      * @return ListenerIds 待删除的监听器ID列表
      */
     public String [] getListenerIds() {
@@ -59,7 +59,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的监听器ID列表
+     * Set 待删除的监听器ID列表
      * @param ListenerIds 待删除的监听器ID列表
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -67,7 +67,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
+     * Get 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许 
      * @return Force 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
      */
     public Long getForce() {
@@ -75,7 +75,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
+     * Set 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
      * @param Force 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
      */
     public void setForce(Long Force) {
@@ -83,7 +83,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。 
      * @return GroupId 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
@@ -91,7 +91,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
      * @param GroupId 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -99,7 +99,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Get 通道ID，该参数和GroupId必须设置一个，但不能同时设置。 
      * @return ProxyId 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     public String getProxyId() {
@@ -107,7 +107,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Set 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
      * @param ProxyId 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -115,7 +115,7 @@ public class DeleteListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);

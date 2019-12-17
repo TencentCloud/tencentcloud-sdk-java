@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteTable  extends AbstractModel{
+public class RouteTable extends AbstractModel{
 
     /**
     * VPC实例ID。
@@ -72,7 +72,7 @@ public class RouteTable  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -80,7 +80,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -88,7 +88,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -96,7 +96,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -104,7 +104,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表名称。
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
     public String getRouteTableName() {
@@ -112,7 +112,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
      * @param RouteTableName 路由表名称。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -120,7 +120,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表关联关系。
+     * Get 路由表关联关系。 
      * @return AssociationSet 路由表关联关系。
      */
     public RouteTableAssociation [] getAssociationSet() {
@@ -128,7 +128,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表关联关系。
+     * Set 路由表关联关系。
      * @param AssociationSet 路由表关联关系。
      */
     public void setAssociationSet(RouteTableAssociation [] AssociationSet) {
@@ -136,7 +136,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取路由表策略集合。
+     * Get 路由表策略集合。 
      * @return RouteSet 路由表策略集合。
      */
     public Route [] getRouteSet() {
@@ -144,7 +144,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置路由表策略集合。
+     * Set 路由表策略集合。
      * @param RouteSet 路由表策略集合。
      */
     public void setRouteSet(Route [] RouteSet) {
@@ -152,7 +152,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取是否默认路由表。
+     * Get 是否默认路由表。 
      * @return Main 是否默认路由表。
      */
     public Boolean getMain() {
@@ -160,7 +160,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置是否默认路由表。
+     * Set 是否默认路由表。
      * @param Main 是否默认路由表。
      */
     public void setMain(Boolean Main) {
@@ -168,7 +168,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -176,7 +176,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -184,7 +184,7 @@ public class RouteTable  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

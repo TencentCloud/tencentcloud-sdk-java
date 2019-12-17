@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonRequest  extends AbstractModel{
+public class CreatePersonRequest extends AbstractModel{
 
     /**
     * 人员库唯一标识符
@@ -93,7 +93,7 @@ public class CreatePersonRequest  extends AbstractModel{
     private String [] Urls;
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -101,7 +101,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -109,7 +109,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -117,7 +117,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -125,7 +125,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * Get 图片数据 base64 字符串，与 Urls 参数选择一个输入 
      * @return Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
      */
     public String [] getImages() {
@@ -133,7 +133,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片数据 base64 字符串，与 Urls 参数选择一个输入
+     * Set 图片数据 base64 字符串，与 Urls 参数选择一个输入
      * @param Images 图片数据 base64 字符串，与 Urls 参数选择一个输入
      */
     public void setImages(String [] Images) {
@@ -141,7 +141,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员工作号码
+     * Get 人员工作号码 
      * @return JobNumber 人员工作号码
      */
     public String getJobNumber() {
@@ -149,7 +149,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员工作号码
+     * Set 人员工作号码
      * @param JobNumber 人员工作号码
      */
     public void setJobNumber(String JobNumber) {
@@ -157,7 +157,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员邮箱
+     * Get 人员邮箱 
      * @return Mail 人员邮箱
      */
     public String getMail() {
@@ -165,7 +165,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员邮箱
+     * Set 人员邮箱
      * @param Mail 人员邮箱
      */
     public void setMail(String Mail) {
@@ -173,7 +173,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员性别，0：未知 1：男性，2：女性
+     * Get 人员性别，0：未知 1：男性，2：女性 
      * @return Male 人员性别，0：未知 1：男性，2：女性
      */
     public Long getMale() {
@@ -181,7 +181,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员性别，0：未知 1：男性，2：女性
+     * Set 人员性别，0：未知 1：男性，2：女性
      * @param Male 人员性别，0：未知 1：男性，2：女性
      */
     public void setMale(Long Male) {
@@ -189,7 +189,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自定义人员 ID，注意不能使用 tci_person_ 前缀
+     * Get 自定义人员 ID，注意不能使用 tci_person_ 前缀 
      * @return PersonId 自定义人员 ID，注意不能使用 tci_person_ 前缀
      */
     public String getPersonId() {
@@ -197,7 +197,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自定义人员 ID，注意不能使用 tci_person_ 前缀
+     * Set 自定义人员 ID，注意不能使用 tci_person_ 前缀
      * @param PersonId 自定义人员 ID，注意不能使用 tci_person_ 前缀
      */
     public void setPersonId(String PersonId) {
@@ -205,7 +205,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员电话号码
+     * Get 人员电话号码 
      * @return PhoneNumber 人员电话号码
      */
     public String getPhoneNumber() {
@@ -213,7 +213,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员电话号码
+     * Set 人员电话号码
      * @param PhoneNumber 人员电话号码
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -221,7 +221,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员学生号码
+     * Get 人员学生号码 
      * @return StudentNumber 人员学生号码
      */
     public String getStudentNumber() {
@@ -229,7 +229,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员学生号码
+     * Set 人员学生号码
      * @param StudentNumber 人员学生号码
      */
     public void setStudentNumber(String StudentNumber) {
@@ -237,7 +237,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片下载地址，与 Images 参数选择一个输入
+     * Get 图片下载地址，与 Images 参数选择一个输入 
      * @return Urls 图片下载地址，与 Images 参数选择一个输入
      */
     public String [] getUrls() {
@@ -245,7 +245,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片下载地址，与 Images 参数选择一个输入
+     * Set 图片下载地址，与 Images 参数选择一个输入
      * @param Urls 图片下载地址，与 Images 参数选择一个输入
      */
     public void setUrls(String [] Urls) {
@@ -253,7 +253,7 @@ public class CreatePersonRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);

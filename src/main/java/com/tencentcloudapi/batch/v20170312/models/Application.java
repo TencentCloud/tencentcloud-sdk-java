@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Application  extends AbstractModel{
+public class Application extends AbstractModel{
 
     /**
     * 任务执行命令
@@ -51,7 +51,7 @@ public class Application  extends AbstractModel{
     private Docker Docker;
 
     /**
-     * 获取任务执行命令
+     * Get 任务执行命令 
      * @return Command 任务执行命令
      */
     public String getCommand() {
@@ -59,7 +59,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 设置任务执行命令
+     * Set 任务执行命令
      * @param Command 任务执行命令
      */
     public void setCommand(String Command) {
@@ -67,7 +67,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 获取应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
+     * Get 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。 
      * @return DeliveryForm 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
      */
     public String getDeliveryForm() {
@@ -75,7 +75,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 设置应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
+     * Set 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
      * @param DeliveryForm 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
      */
     public void setDeliveryForm(String DeliveryForm) {
@@ -83,7 +83,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 获取应用程序软件包的远程存储路径
+     * Get 应用程序软件包的远程存储路径 
      * @return PackagePath 应用程序软件包的远程存储路径
      */
     public String getPackagePath() {
@@ -91,7 +91,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 设置应用程序软件包的远程存储路径
+     * Set 应用程序软件包的远程存储路径
      * @param PackagePath 应用程序软件包的远程存储路径
      */
     public void setPackagePath(String PackagePath) {
@@ -99,7 +99,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 获取应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
+     * Get 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。 
      * @return Docker 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
      */
     public Docker getDocker() {
@@ -107,7 +107,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 设置应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
+     * Set 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
      * @param Docker 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
      */
     public void setDocker(Docker Docker) {
@@ -115,7 +115,7 @@ public class Application  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Command", this.Command);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlaySumStatInfo  extends AbstractModel{
+public class PlaySumStatInfo extends AbstractModel{
 
     /**
     * 域名或流id。
@@ -51,7 +51,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     private Integer TotalRequest;
 
     /**
-     * 获取域名或流id。
+     * Get 域名或流id。 
      * @return Name 域名或流id。
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名或流id。
+     * Set 域名或流id。
      * @param Name 域名或流id。
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
+     * Get 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。 
      * @return AvgFluxPerSecond 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
      */
     public Float getAvgFluxPerSecond() {
@@ -75,7 +75,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
+     * Set 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
      * @param AvgFluxPerSecond 平均下载速度，单位是MB/s，计算公式是每分钟的下载速度求平均值。
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
@@ -83,7 +83,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总流量，单位是MB。
+     * Get 总流量，单位是MB。 
      * @return TotalFlux 总流量，单位是MB。
      */
     public Float getTotalFlux() {
@@ -91,7 +91,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总流量，单位是MB。
+     * Set 总流量，单位是MB。
      * @param TotalFlux 总流量，单位是MB。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -99,7 +99,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总请求数。
+     * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
@@ -107,7 +107,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总请求数。
+     * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
@@ -115,7 +115,7 @@ public class PlaySumStatInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

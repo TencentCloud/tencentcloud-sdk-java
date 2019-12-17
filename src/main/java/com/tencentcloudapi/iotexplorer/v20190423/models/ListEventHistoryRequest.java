@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListEventHistoryRequest  extends AbstractModel{
+public class ListEventHistoryRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -72,7 +72,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     private Long Size;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -80,7 +80,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -88,7 +88,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -96,7 +96,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -104,7 +104,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索的事件类型
+     * Get 搜索的事件类型 
      * @return Type 搜索的事件类型
      */
     public String getType() {
@@ -112,7 +112,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索的事件类型
+     * Set 搜索的事件类型
      * @param Type 搜索的事件类型
      */
     public void setType(String Type) {
@@ -120,7 +120,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间, 为0 表示 当前时间 - 24h
+     * Get 起始时间, 为0 表示 当前时间 - 24h 
      * @return StartTime 起始时间, 为0 表示 当前时间 - 24h
      */
     public Long getStartTime() {
@@ -128,7 +128,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间, 为0 表示 当前时间 - 24h
+     * Set 起始时间, 为0 表示 当前时间 - 24h
      * @param StartTime 起始时间, 为0 表示 当前时间 - 24h
      */
     public void setStartTime(Long StartTime) {
@@ -136,7 +136,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间, 为0 表示当前时间
+     * Get 结束时间, 为0 表示当前时间 
      * @return EndTime 结束时间, 为0 表示当前时间
      */
     public Long getEndTime() {
@@ -144,7 +144,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间, 为0 表示当前时间
+     * Set 结束时间, 为0 表示当前时间
      * @param EndTime 结束时间, 为0 表示当前时间
      */
     public void setEndTime(Long EndTime) {
@@ -152,7 +152,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索上下文, 用作查询游标
+     * Get 搜索上下文, 用作查询游标 
      * @return Context 搜索上下文, 用作查询游标
      */
     public String getContext() {
@@ -160,7 +160,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索上下文, 用作查询游标
+     * Set 搜索上下文, 用作查询游标
      * @param Context 搜索上下文, 用作查询游标
      */
     public void setContext(String Context) {
@@ -168,7 +168,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次获取的历史数据项目的最大数量
+     * Get 单次获取的历史数据项目的最大数量 
      * @return Size 单次获取的历史数据项目的最大数量
      */
     public Long getSize() {
@@ -176,7 +176,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次获取的历史数据项目的最大数量
+     * Set 单次获取的历史数据项目的最大数量
      * @param Size 单次获取的历史数据项目的最大数量
      */
     public void setSize(Long Size) {
@@ -184,7 +184,7 @@ public class ListEventHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

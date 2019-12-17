@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RedisBackupSet  extends AbstractModel{
+public class RedisBackupSet extends AbstractModel{
 
     /**
     * 开始备份的时间
@@ -65,7 +65,7 @@ public class RedisBackupSet  extends AbstractModel{
     private Integer Locked;
 
     /**
-     * 获取开始备份的时间
+     * Get 开始备份的时间 
      * @return StartTime 开始备份的时间
      */
     public String getStartTime() {
@@ -73,7 +73,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置开始备份的时间
+     * Set 开始备份的时间
      * @param StartTime 开始备份的时间
      */
     public void setStartTime(String StartTime) {
@@ -81,7 +81,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 获取备份ID
+     * Get 备份ID 
      * @return BackupId 备份ID
      */
     public String getBackupId() {
@@ -89,7 +89,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置备份ID
+     * Set 备份ID
      * @param BackupId 备份ID
      */
     public void setBackupId(String BackupId) {
@@ -97,7 +97,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 获取备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
+     * Get 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份 
      * @return BackupType 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
      */
     public String getBackupType() {
@@ -105,7 +105,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
+     * Set 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
      * @param BackupType 备份类型。 manualBackupInstance：用户发起的手动备份； systemBackupInstance：凌晨系统发起的备份
      */
     public void setBackupType(String BackupType) {
@@ -113,7 +113,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 获取备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
+     * Get 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功" 
      * @return Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      */
     public Integer getStatus() {
@@ -121,7 +121,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
+     * Set 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      * @param Status 备份状态。  1:"备份被其它流程锁定";  2:"备份正常，没有被任何流程锁定";  -1:"备份已过期"； 3:"备份正在被导出";  4:"备份导出成功"
      */
     public void setStatus(Integer Status) {
@@ -129,7 +129,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 获取备份的备注信息
+     * Get 备份的备注信息 
      * @return Remark 备份的备注信息
      */
     public String getRemark() {
@@ -137,7 +137,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置备份的备注信息
+     * Set 备份的备注信息
      * @param Remark 备份的备注信息
      */
     public void setRemark(String Remark) {
@@ -145,7 +145,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 获取备份是否被锁定，0：未被锁定；1：已被锁定
+     * Get 备份是否被锁定，0：未被锁定；1：已被锁定 
      * @return Locked 备份是否被锁定，0：未被锁定；1：已被锁定
      */
     public Integer getLocked() {
@@ -153,7 +153,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 设置备份是否被锁定，0：未被锁定；1：已被锁定
+     * Set 备份是否被锁定，0：未被锁定；1：已被锁定
      * @param Locked 备份是否被锁定，0：未被锁定；1：已被锁定
      */
     public void setLocked(Integer Locked) {
@@ -161,7 +161,7 @@ public class RedisBackupSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

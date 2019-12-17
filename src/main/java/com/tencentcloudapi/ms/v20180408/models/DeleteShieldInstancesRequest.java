@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteShieldInstancesRequest  extends AbstractModel{
+public class DeleteShieldInstancesRequest extends AbstractModel{
 
     /**
     * 任务唯一标识ItemId的列表
@@ -30,7 +30,7 @@ public class DeleteShieldInstancesRequest  extends AbstractModel{
     private String [] ItemIds;
 
     /**
-     * 获取任务唯一标识ItemId的列表
+     * Get 任务唯一标识ItemId的列表 
      * @return ItemIds 任务唯一标识ItemId的列表
      */
     public String [] getItemIds() {
@@ -38,7 +38,7 @@ public class DeleteShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识ItemId的列表
+     * Set 任务唯一标识ItemId的列表
      * @param ItemIds 任务唯一标识ItemId的列表
      */
     public void setItemIds(String [] ItemIds) {
@@ -46,7 +46,7 @@ public class DeleteShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ItemIds.", this.ItemIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSlowlogsRequest  extends AbstractModel{
+public class DescribeDBSlowlogsRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-lnp6j617
@@ -79,7 +79,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取实例ID，形如postgres-lnp6j617
+     * Get 实例ID，形如postgres-lnp6j617 
      * @return DBInstanceId 实例ID，形如postgres-lnp6j617
      */
     public String getDBInstanceId() {
@@ -87,7 +87,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-lnp6j617
+     * Set 实例ID，形如postgres-lnp6j617
      * @param DBInstanceId 实例ID，形如postgres-lnp6j617
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -95,7 +95,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
+     * Get 查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前 
      * @return StartTime 查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
      */
     public String getStartTime() {
@@ -103,7 +103,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
+     * Set 查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
      * @param StartTime 查询起始时间，形如2018-06-10 17:06:38，起始时间不得小于7天以前
      */
     public void setStartTime(String StartTime) {
@@ -111,7 +111,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束时间，形如2018-06-10 17:06:38
+     * Get 查询结束时间，形如2018-06-10 17:06:38 
      * @return EndTime 查询结束时间，形如2018-06-10 17:06:38
      */
     public String getEndTime() {
@@ -119,7 +119,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束时间，形如2018-06-10 17:06:38
+     * Set 查询结束时间，形如2018-06-10 17:06:38
      * @param EndTime 查询结束时间，形如2018-06-10 17:06:38
      */
     public void setEndTime(String EndTime) {
@@ -127,7 +127,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名字
+     * Get 数据库名字 
      * @return DatabaseName 数据库名字
      */
     public String getDatabaseName() {
@@ -135,7 +135,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名字
+     * Set 数据库名字
      * @param DatabaseName 数据库名字
      */
     public void setDatabaseName(String DatabaseName) {
@@ -143,7 +143,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间
+     * Get 按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间 
      * @return OrderBy 按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间
      */
     public String getOrderBy() {
@@ -151,7 +151,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间
+     * Set 按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间
      * @param OrderBy 按照何种指标排序，取值为sum_calls或者sum_cost_time。sum_calls-总调用次数；sum_cost_time-总的花费时间
      */
     public void setOrderBy(String OrderBy) {
@@ -159,7 +159,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序规则。desc-降序；asc-升序
+     * Get 排序规则。desc-降序；asc-升序 
      * @return OrderByType 排序规则。desc-降序；asc-升序
      */
     public String getOrderByType() {
@@ -167,7 +167,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序规则。desc-降序；asc-升序
+     * Set 排序规则。desc-降序；asc-升序
      * @param OrderByType 排序规则。desc-降序；asc-升序
      */
     public void setOrderByType(String OrderByType) {
@@ -175,7 +175,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回结果，每页最大返回数量，取值为1-100，默认20
+     * Get 分页返回结果，每页最大返回数量，取值为1-100，默认20 
      * @return Limit 分页返回结果，每页最大返回数量，取值为1-100，默认20
      */
     public Integer getLimit() {
@@ -183,7 +183,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回结果，每页最大返回数量，取值为1-100，默认20
+     * Set 分页返回结果，每页最大返回数量，取值为1-100，默认20
      * @param Limit 分页返回结果，每页最大返回数量，取值为1-100，默认20
      */
     public void setLimit(Integer Limit) {
@@ -191,7 +191,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回结果，返回结果的第几页，从0开始计数
+     * Get 分页返回结果，返回结果的第几页，从0开始计数 
      * @return Offset 分页返回结果，返回结果的第几页，从0开始计数
      */
     public Integer getOffset() {
@@ -199,7 +199,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页返回结果，返回结果的第几页，从0开始计数
+     * Set 分页返回结果，返回结果的第几页，从0开始计数
      * @param Offset 分页返回结果，返回结果的第几页，从0开始计数
      */
     public void setOffset(Integer Offset) {
@@ -207,7 +207,7 @@ public class DescribeDBSlowlogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

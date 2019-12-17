@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabasesRequest  extends AbstractModel{
+public class DescribeDatabasesRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -51,7 +51,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     private String DatabaseRegexp;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，最小值为0。
+     * Get 偏移量，最小值为0。 
      * @return Offset 偏移量，最小值为0。
      */
     public Integer getOffset() {
@@ -75,7 +75,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，最小值为0。
+     * Set 偏移量，最小值为0。
      * @param Offset 偏移量，最小值为0。
      */
     public void setOffset(Integer Offset) {
@@ -83,7 +83,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求数量，默认值为20，最小值为1，最大值为100。
+     * Get 单次请求数量，默认值为20，最小值为1，最大值为100。 
      * @return Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
     public Integer getLimit() {
@@ -91,7 +91,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求数量，默认值为20，最小值为1，最大值为100。
+     * Set 单次请求数量，默认值为20，最小值为1，最大值为100。
      * @param Limit 单次请求数量，默认值为20，最小值为1，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -99,7 +99,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * Get 匹配数据库库名的正则表达式，规则同 MySQL 官网 
      * @return DatabaseRegexp 匹配数据库库名的正则表达式，规则同 MySQL 官网
      */
     public String getDatabaseRegexp() {
@@ -107,7 +107,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置匹配数据库库名的正则表达式，规则同 MySQL 官网
+     * Set 匹配数据库库名的正则表达式，规则同 MySQL 官网
      * @param DatabaseRegexp 匹配数据库库名的正则表达式，规则同 MySQL 官网
      */
     public void setDatabaseRegexp(String DatabaseRegexp) {
@@ -115,7 +115,7 @@ public class DescribeDatabasesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

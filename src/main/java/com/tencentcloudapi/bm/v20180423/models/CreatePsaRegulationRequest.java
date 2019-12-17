@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePsaRegulationRequest  extends AbstractModel{
+public class CreatePsaRegulationRequest extends AbstractModel{
 
     /**
     * 规则别名
@@ -51,7 +51,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     private String PsaDescription;
 
     /**
-     * 获取规则别名
+     * Get 规则别名 
      * @return PsaName 规则别名
      */
     public String getPsaName() {
@@ -59,7 +59,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则别名
+     * Set 规则别名
      * @param PsaName 规则别名
      */
     public void setPsaName(String PsaName) {
@@ -67,7 +67,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关联的故障类型ID列表
+     * Get 关联的故障类型ID列表 
      * @return TaskTypeIds 关联的故障类型ID列表
      */
     public Integer [] getTaskTypeIds() {
@@ -75,7 +75,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关联的故障类型ID列表
+     * Set 关联的故障类型ID列表
      * @param TaskTypeIds 关联的故障类型ID列表
      */
     public void setTaskTypeIds(Integer [] TaskTypeIds) {
@@ -83,7 +83,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取维修实例上限，默认为5
+     * Get 维修实例上限，默认为5 
      * @return RepairLimit 维修实例上限，默认为5
      */
     public Integer getRepairLimit() {
@@ -91,7 +91,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置维修实例上限，默认为5
+     * Set 维修实例上限，默认为5
      * @param RepairLimit 维修实例上限，默认为5
      */
     public void setRepairLimit(Integer RepairLimit) {
@@ -99,7 +99,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则备注
+     * Get 规则备注 
      * @return PsaDescription 规则备注
      */
     public String getPsaDescription() {
@@ -107,7 +107,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则备注
+     * Set 规则备注
      * @param PsaDescription 规则备注
      */
     public void setPsaDescription(String PsaDescription) {
@@ -115,7 +115,7 @@ public class CreatePsaRegulationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PsaName", this.PsaName);

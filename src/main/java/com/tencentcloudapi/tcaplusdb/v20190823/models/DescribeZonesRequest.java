@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZonesRequest  extends AbstractModel{
+public class DescribeZonesRequest extends AbstractModel{
 
     /**
     * 大区所属应用实例ID
@@ -58,7 +58,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取大区所属应用实例ID
+     * Get 大区所属应用实例ID 
      * @return ApplicationId 大区所属应用实例ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区所属应用实例ID
+     * Set 大区所属应用实例ID
      * @param ApplicationId 大区所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大区ID
+     * Get 大区ID 
      * @return LogicZoneIds 大区ID
      */
     public String [] getLogicZoneIds() {
@@ -82,7 +82,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区ID
+     * Set 大区ID
      * @param LogicZoneIds 大区ID
      */
     public void setLogicZoneIds(String [] LogicZoneIds) {
@@ -90,7 +90,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，本接口支持：ZoneName，ZoneId
+     * Get 过滤条件，本接口支持：ZoneName，ZoneId 
      * @return Filters 过滤条件，本接口支持：ZoneName，ZoneId
      */
     public Filter [] getFilters() {
@@ -98,7 +98,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，本接口支持：ZoneName，ZoneId
+     * Set 过滤条件，本接口支持：ZoneName，ZoneId
      * @param Filters 过滤条件，本接口支持：ZoneName，ZoneId
      */
     public void setFilters(Filter [] Filters) {
@@ -106,7 +106,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大区列表大小
+     * Get 大区列表大小 
      * @return Limit 大区列表大小
      */
     public Long getLimit() {
@@ -130,7 +130,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区列表大小
+     * Set 大区列表大小
      * @param Limit 大区列表大小
      */
     public void setLimit(Long Limit) {
@@ -138,7 +138,7 @@ public class DescribeZonesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

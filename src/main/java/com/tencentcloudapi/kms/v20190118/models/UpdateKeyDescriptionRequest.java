@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateKeyDescriptionRequest  extends AbstractModel{
+public class UpdateKeyDescriptionRequest extends AbstractModel{
 
     /**
     * 新的描述信息，最大支持1024字节
@@ -37,7 +37,7 @@ public class UpdateKeyDescriptionRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取新的描述信息，最大支持1024字节
+     * Get 新的描述信息，最大支持1024字节 
      * @return Description 新的描述信息，最大支持1024字节
      */
     public String getDescription() {
@@ -45,7 +45,7 @@ public class UpdateKeyDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的描述信息，最大支持1024字节
+     * Set 新的描述信息，最大支持1024字节
      * @param Description 新的描述信息，最大支持1024字节
      */
     public void setDescription(String Description) {
@@ -53,7 +53,7 @@ public class UpdateKeyDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改描述信息的的CMK ID
+     * Get 需要修改描述信息的的CMK ID 
      * @return KeyId 需要修改描述信息的的CMK ID
      */
     public String getKeyId() {
@@ -61,7 +61,7 @@ public class UpdateKeyDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改描述信息的的CMK ID
+     * Set 需要修改描述信息的的CMK ID
      * @param KeyId 需要修改描述信息的的CMK ID
      */
     public void setKeyId(String KeyId) {
@@ -69,7 +69,7 @@ public class UpdateKeyDescriptionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);

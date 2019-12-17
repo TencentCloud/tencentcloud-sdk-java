@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
+public class SubmitDoubleVideoHighlightsResponse extends AbstractModel{
 
     /**
     * 视频拆条任务ID，用来唯一标识视频拆条任务。
@@ -44,7 +44,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取视频拆条任务ID，用来唯一标识视频拆条任务。
+     * Get 视频拆条任务ID，用来唯一标识视频拆条任务。 
      * @return JobId 视频拆条任务ID，用来唯一标识视频拆条任务。
      */
     public Long getJobId() {
@@ -52,7 +52,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条任务ID，用来唯一标识视频拆条任务。
+     * Set 视频拆条任务ID，用来唯一标识视频拆条任务。
      * @param JobId 视频拆条任务ID，用来唯一标识视频拆条任务。
      */
     public void setJobId(Long JobId) {
@@ -60,7 +60,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
+     * Get 未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。 
      * @return NotRegistered 未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
      */
     public String [] getNotRegistered() {
@@ -68,7 +68,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
+     * Set 未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
      * @param NotRegistered 未注册的人员ID列表。若出现此项，代表评估出现了问题，输入的PersonId中有不在库中的人员ID。
      */
     public void setNotRegistered(String [] NotRegistered) {
@@ -76,7 +76,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class SubmitDoubleVideoHighlightsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

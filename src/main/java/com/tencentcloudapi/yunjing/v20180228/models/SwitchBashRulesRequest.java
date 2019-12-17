@@ -20,56 +20,56 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SwitchBashRulesRequest  extends AbstractModel{
+public class SwitchBashRulesRequest extends AbstractModel{
 
     /**
     * 规则ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 是否禁用
     */
     @SerializedName("Disabled")
     @Expose
-    private Integer Disabled;
+    private Long Disabled;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return Id 规则ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param Id 规则ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取是否禁用
+     * Get 是否禁用 
      * @return Disabled 是否禁用
      */
-    public Integer getDisabled() {
+    public Long getDisabled() {
         return this.Disabled;
     }
 
     /**
-     * 设置是否禁用
+     * Set 是否禁用
      * @param Disabled 是否禁用
      */
-    public void setDisabled(Integer Disabled) {
+    public void setDisabled(Long Disabled) {
         this.Disabled = Disabled;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

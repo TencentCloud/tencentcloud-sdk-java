@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDeviceListRequest  extends AbstractModel{
+public class GetDeviceListRequest extends AbstractModel{
 
     /**
     * 需要查看设备列表的产品 ID
@@ -44,7 +44,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取需要查看设备列表的产品 ID
+     * Get 需要查看设备列表的产品 ID 
      * @return ProductId 需要查看设备列表的产品 ID
      */
     public String getProductId() {
@@ -52,7 +52,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查看设备列表的产品 ID
+     * Set 需要查看设备列表的产品 ID
      * @param ProductId 需要查看设备列表的产品 ID
      */
     public void setProductId(String ProductId) {
@@ -60,7 +60,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移
+     * Get 分页偏移 
      * @return Offset 分页偏移
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移
+     * Set 分页偏移
      * @param Offset 分页偏移
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页的大小，数值范围 10-100
+     * Get 分页的大小，数值范围 10-100 
      * @return Limit 分页的大小，数值范围 10-100
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页的大小，数值范围 10-100
+     * Set 分页的大小，数值范围 10-100
      * @param Limit 分页的大小，数值范围 10-100
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class GetDeviceListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassificationResult  extends AbstractModel{
+public class ClassificationResult extends AbstractModel{
 
     /**
     * 一级分类名称
@@ -51,7 +51,7 @@ public class ClassificationResult  extends AbstractModel{
     private Float SecondClassProbability;
 
     /**
-     * 获取一级分类名称
+     * Get 一级分类名称 
      * @return FirstClassName 一级分类名称
      */
     public String getFirstClassName() {
@@ -59,7 +59,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 设置一级分类名称
+     * Set 一级分类名称
      * @param FirstClassName 一级分类名称
      */
     public void setFirstClassName(String FirstClassName) {
@@ -67,7 +67,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 获取一级分类概率
+     * Get 一级分类概率 
      * @return FirstClassProbability 一级分类概率
      */
     public Float getFirstClassProbability() {
@@ -75,7 +75,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 设置一级分类概率
+     * Set 一级分类概率
      * @param FirstClassProbability 一级分类概率
      */
     public void setFirstClassProbability(Float FirstClassProbability) {
@@ -83,7 +83,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 获取二级分类名称
+     * Get 二级分类名称 
      * @return SecondClassName 二级分类名称
      */
     public String getSecondClassName() {
@@ -91,7 +91,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 设置二级分类名称
+     * Set 二级分类名称
      * @param SecondClassName 二级分类名称
      */
     public void setSecondClassName(String SecondClassName) {
@@ -99,7 +99,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 获取二级分类概率
+     * Get 二级分类概率 
      * @return SecondClassProbability 二级分类概率
      */
     public Float getSecondClassProbability() {
@@ -107,7 +107,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 设置二级分类概率
+     * Set 二级分类概率
      * @param SecondClassProbability 二级分类概率
      */
     public void setSecondClassProbability(Float SecondClassProbability) {
@@ -115,7 +115,7 @@ public class ClassificationResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FirstClassName", this.FirstClassName);

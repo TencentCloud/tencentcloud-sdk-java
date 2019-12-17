@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
+public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc。
@@ -44,7 +44,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
+     * Get 实例 ID，形如：tdsql-ow728lmc。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
+     * Set 实例 ID，形如：tdsql-ow728lmc。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志备份天数
+     * Get 日志备份天数 
      * @return Days 日志备份天数
      */
     public Integer getDays() {
@@ -68,7 +68,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志备份天数
+     * Set 日志备份天数
      * @param Days 日志备份天数
      */
     public void setDays(Integer Days) {
@@ -76,7 +76,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLogFileRetentionPeriodResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

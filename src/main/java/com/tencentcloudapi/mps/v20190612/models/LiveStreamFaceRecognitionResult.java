@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamFaceRecognitionResult  extends AbstractModel{
+public class LiveStreamFaceRecognitionResult extends AbstractModel{
 
     /**
     * 人物唯一标识 ID。
@@ -73,7 +73,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     private Long [] AreaCoordSet;
 
     /**
-     * 获取人物唯一标识 ID。
+     * Get 人物唯一标识 ID。 
      * @return Id 人物唯一标识 ID。
      */
     public String getId() {
@@ -81,7 +81,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置人物唯一标识 ID。
+     * Set 人物唯一标识 ID。
      * @param Id 人物唯一标识 ID。
      */
     public void setId(String Id) {
@@ -89,7 +89,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取人物名称。
+     * Get 人物名称。 
      * @return Name 人物名称。
      */
     public String getName() {
@@ -97,7 +97,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置人物名称。
+     * Set 人物名称。
      * @param Name 人物名称。
      */
     public void setName(String Name) {
@@ -105,8 +105,8 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取人物库类型，表示识别出的人物来自哪个人物库：
-<li>Default：默认人物库；</li><li>UserDefine：用户自定义人物库。</li>
+     * Get 人物库类型，表示识别出的人物来自哪个人物库：
+<li>Default：默认人物库；</li><li>UserDefine：用户自定义人物库。</li> 
      * @return Type 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li><li>UserDefine：用户自定义人物库。</li>
      */
@@ -115,7 +115,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置人物库类型，表示识别出的人物来自哪个人物库：
+     * Set 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li><li>UserDefine：用户自定义人物库。</li>
      * @param Type 人物库类型，表示识别出的人物来自哪个人物库：
 <li>Default：默认人物库；</li><li>UserDefine：用户自定义人物库。</li>
@@ -125,7 +125,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段起始的 PTS 时间，单位：秒。
+     * Get 识别片段起始的 PTS 时间，单位：秒。 
      * @return StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public Float getStartPtsTime() {
@@ -133,7 +133,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的 PTS 时间，单位：秒。
+     * Set 识别片段起始的 PTS 时间，单位：秒。
      * @param StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public void setStartPtsTime(Float StartPtsTime) {
@@ -141,7 +141,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的 PTS 时间，单位：秒。
+     * Get 识别片段终止的 PTS 时间，单位：秒。 
      * @return EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public Float getEndPtsTime() {
@@ -149,7 +149,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的 PTS 时间，单位：秒。
+     * Set 识别片段终止的 PTS 时间，单位：秒。
      * @param EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public void setEndPtsTime(Float EndPtsTime) {
@@ -157,7 +157,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -165,7 +165,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -173,7 +173,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Get 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。 
      * @return AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public Long [] getAreaCoordSet() {
@@ -181,7 +181,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * Set 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      * @param AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
@@ -189,7 +189,7 @@ public class LiveStreamFaceRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

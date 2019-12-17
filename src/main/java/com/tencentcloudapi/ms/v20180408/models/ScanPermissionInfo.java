@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanPermissionInfo  extends AbstractModel{
+public class ScanPermissionInfo extends AbstractModel{
 
     /**
     * 系统权限
@@ -30,7 +30,7 @@ public class ScanPermissionInfo  extends AbstractModel{
     private String Permission;
 
     /**
-     * 获取系统权限
+     * Get 系统权限 
      * @return Permission 系统权限
      */
     public String getPermission() {
@@ -38,7 +38,7 @@ public class ScanPermissionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置系统权限
+     * Set 系统权限
      * @param Permission 系统权限
      */
     public void setPermission(String Permission) {
@@ -46,7 +46,7 @@ public class ScanPermissionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Permission", this.Permission);

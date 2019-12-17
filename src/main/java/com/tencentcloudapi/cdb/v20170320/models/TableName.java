@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableName  extends AbstractModel{
+public class TableName extends AbstractModel{
 
     /**
     * 表名
@@ -30,7 +30,7 @@ public class TableName  extends AbstractModel{
     private String TableName;
 
     /**
-     * 获取表名
+     * Get 表名 
      * @return TableName 表名
      */
     public String getTableName() {
@@ -38,7 +38,7 @@ public class TableName  extends AbstractModel{
     }
 
     /**
-     * 设置表名
+     * Set 表名
      * @param TableName 表名
      */
     public void setTableName(String TableName) {
@@ -46,7 +46,7 @@ public class TableName  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);

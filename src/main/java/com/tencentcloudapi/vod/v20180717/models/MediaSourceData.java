@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSourceData  extends AbstractModel{
+public class MediaSourceData extends AbstractModel{
 
     /**
     * 媒体文件的来源类别：
@@ -43,12 +43,12 @@ public class MediaSourceData  extends AbstractModel{
     private String SourceContext;
 
     /**
-     * 获取媒体文件的来源类别：
+     * Get 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
 <li>Unknown：未知来源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceType 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
@@ -61,7 +61,7 @@ public class MediaSourceData  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件的来源类别：
+     * Set 媒体文件的来源类别：
 <li>Record：来自录制。如直播录制、直播时移录制等。</li>
 <li>Upload：来自上传。如拉取上传、服务端上传、客户端 UGC 上传等。</li>
 <li>VideoProcessing：来自视频处理。如视频拼接、视频剪辑等。</li>
@@ -79,8 +79,8 @@ public class MediaSourceData  extends AbstractModel{
     }
 
     /**
-     * 获取用户创建文件时透传的字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户创建文件时透传的字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContext 用户创建文件时透传的字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -89,7 +89,7 @@ public class MediaSourceData  extends AbstractModel{
     }
 
     /**
-     * 设置用户创建文件时透传的字段
+     * Set 用户创建文件时透传的字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceContext 用户创建文件时透传的字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,7 +99,7 @@ public class MediaSourceData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);

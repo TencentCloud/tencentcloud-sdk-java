@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BashEvent  extends AbstractModel{
+public class BashEvent extends AbstractModel{
 
     /**
     * ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜ID
@@ -62,7 +62,7 @@ public class BashEvent  extends AbstractModel{
     */
     @SerializedName("Platform")
     @Expose
-    private Integer Platform;
+    private Long Platform;
 
     /**
     * 执行命令
@@ -76,7 +76,7 @@ public class BashEvent  extends AbstractModel{
     */
     @SerializedName("RuleId")
     @Expose
-    private Integer RuleId;
+    private Long RuleId;
 
     /**
     * 规则名称
@@ -90,14 +90,14 @@ public class BashEvent  extends AbstractModel{
     */
     @SerializedName("RuleLevel")
     @Expose
-    private Integer RuleLevel;
+    private Long RuleLevel;
 
     /**
     * 处理状态
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 发生时间
@@ -114,23 +114,23 @@ public class BashEvent  extends AbstractModel{
     private String MachineName;
 
     /**
-     * 获取ID
+     * Get ID 
      * @return Id ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置ID
+     * Set ID
      * @param Id ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜ID
+     * Get 云镜ID 
      * @return Uuid 云镜ID
      */
     public String getUuid() {
@@ -138,7 +138,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置云镜ID
+     * Set 云镜ID
      * @param Uuid 云镜ID
      */
     public void setUuid(String Uuid) {
@@ -146,7 +146,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID
+     * Get 主机ID 
      * @return Quuid 主机ID
      */
     public String getQuuid() {
@@ -154,7 +154,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID
+     * Set 主机ID
      * @param Quuid 主机ID
      */
     public void setQuuid(String Quuid) {
@@ -162,7 +162,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP
+     * Get 主机内网IP 
      * @return Hostip 主机内网IP
      */
     public String getHostip() {
@@ -170,7 +170,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP
+     * Set 主机内网IP
      * @param Hostip 主机内网IP
      */
     public void setHostip(String Hostip) {
@@ -178,7 +178,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取执行用户名
+     * Get 执行用户名 
      * @return User 执行用户名
      */
     public String getUser() {
@@ -186,7 +186,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置执行用户名
+     * Set 执行用户名
      * @param User 执行用户名
      */
     public void setUser(String User) {
@@ -194,23 +194,23 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取平台类型
+     * Get 平台类型 
      * @return Platform 平台类型
      */
-    public Integer getPlatform() {
+    public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * 设置平台类型
+     * Set 平台类型
      * @param Platform 平台类型
      */
-    public void setPlatform(Integer Platform) {
+    public void setPlatform(Long Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * 获取执行命令
+     * Get 执行命令 
      * @return BashCmd 执行命令
      */
     public String getBashCmd() {
@@ -218,7 +218,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置执行命令
+     * Set 执行命令
      * @param BashCmd 执行命令
      */
     public void setBashCmd(String BashCmd) {
@@ -226,23 +226,23 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
-    public Integer getRuleId() {
+    public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
-    public void setRuleId(Integer RuleId) {
+    public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * 获取规则名称
+     * Get 规则名称 
      * @return RuleName 规则名称
      */
     public String getRuleName() {
@@ -250,7 +250,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置规则名称
+     * Set 规则名称
      * @param RuleName 规则名称
      */
     public void setRuleName(String RuleName) {
@@ -258,39 +258,39 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取规则等级
+     * Get 规则等级 
      * @return RuleLevel 规则等级
      */
-    public Integer getRuleLevel() {
+    public Long getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * 设置规则等级
+     * Set 规则等级
      * @param RuleLevel 规则等级
      */
-    public void setRuleLevel(Integer RuleLevel) {
+    public void setRuleLevel(Long RuleLevel) {
         this.RuleLevel = RuleLevel;
     }
 
     /**
-     * 获取处理状态
+     * Get 处理状态 
      * @return Status 处理状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置处理状态
+     * Set 处理状态
      * @param Status 处理状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取发生时间
+     * Get 发生时间 
      * @return CreateTime 发生时间
      */
     public String getCreateTime() {
@@ -298,7 +298,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置发生时间
+     * Set 发生时间
      * @param CreateTime 发生时间
      */
     public void setCreateTime(String CreateTime) {
@@ -306,7 +306,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 获取主机名
+     * Get 主机名 
      * @return MachineName 主机名
      */
     public String getMachineName() {
@@ -314,7 +314,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 设置主机名
+     * Set 主机名
      * @param MachineName 主机名
      */
     public void setMachineName(String MachineName) {
@@ -322,7 +322,7 @@ public class BashEvent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

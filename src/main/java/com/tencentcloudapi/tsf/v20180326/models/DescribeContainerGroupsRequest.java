@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerGroupsRequest  extends AbstractModel{
+public class DescribeContainerGroupsRequest extends AbstractModel{
 
     /**
     * 搜索字段，模糊搜索groupName字段
@@ -79,7 +79,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     private String NamespaceId;
 
     /**
-     * 获取搜索字段，模糊搜索groupName字段
+     * Get 搜索字段，模糊搜索groupName字段 
      * @return SearchWord 搜索字段，模糊搜索groupName字段
      */
     public String getSearchWord() {
@@ -87,7 +87,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索字段，模糊搜索groupName字段
+     * Set 搜索字段，模糊搜索groupName字段
      * @param SearchWord 搜索字段，模糊搜索groupName字段
      */
     public void setSearchWord(String SearchWord) {
@@ -95,7 +95,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分组所属应用ID
+     * Get 分组所属应用ID 
      * @return ApplicationId 分组所属应用ID
      */
     public String getApplicationId() {
@@ -103,7 +103,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组所属应用ID
+     * Set 分组所属应用ID
      * @param ApplicationId 分组所属应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -111,7 +111,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，默认为 createTime字段，支持id， name， createTime
+     * Get 排序字段，默认为 createTime字段，支持id， name， createTime 
      * @return OrderBy 排序字段，默认为 createTime字段，支持id， name， createTime
      */
     public String getOrderBy() {
@@ -119,7 +119,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，默认为 createTime字段，支持id， name， createTime
+     * Set 排序字段，默认为 createTime字段，支持id， name， createTime
      * @param OrderBy 排序字段，默认为 createTime字段，支持id， name， createTime
      */
     public void setOrderBy(String OrderBy) {
@@ -127,7 +127,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，默认为1：倒序排序，0：正序，1：倒序
+     * Get 排序方式，默认为1：倒序排序，0：正序，1：倒序 
      * @return OrderType 排序方式，默认为1：倒序排序，0：正序，1：倒序
      */
     public Long getOrderType() {
@@ -135,7 +135,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，默认为1：倒序排序，0：正序，1：倒序
+     * Set 排序方式，默认为1：倒序排序，0：正序，1：倒序
      * @param OrderType 排序方式，默认为1：倒序排序，0：正序，1：倒序
      */
     public void setOrderType(Long OrderType) {
@@ -143,7 +143,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取值从0开始
+     * Get 偏移量，取值从0开始 
      * @return Offset 偏移量，取值从0开始
      */
     public Long getOffset() {
@@ -151,7 +151,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取值从0开始
+     * Set 偏移量，取值从0开始
      * @param Offset 偏移量，取值从0开始
      */
     public void setOffset(Long Offset) {
@@ -159,7 +159,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数，默认为20， 取值应为1~50
+     * Get 分页个数，默认为20， 取值应为1~50 
      * @return Limit 分页个数，默认为20， 取值应为1~50
      */
     public Long getLimit() {
@@ -167,7 +167,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数，默认为20， 取值应为1~50
+     * Set 分页个数，默认为20， 取值应为1~50
      * @param Limit 分页个数，默认为20， 取值应为1~50
      */
     public void setLimit(Long Limit) {
@@ -175,7 +175,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -183,7 +183,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -191,7 +191,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间 ID
+     * Get 命名空间 ID 
      * @return NamespaceId 命名空间 ID
      */
     public String getNamespaceId() {
@@ -199,7 +199,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间 ID
+     * Set 命名空间 ID
      * @param NamespaceId 命名空间 ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -207,7 +207,7 @@ public class DescribeContainerGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);

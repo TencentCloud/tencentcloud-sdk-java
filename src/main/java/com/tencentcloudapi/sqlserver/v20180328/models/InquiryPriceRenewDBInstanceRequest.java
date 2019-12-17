@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
+public class InquiryPriceRenewDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -34,7 +34,7 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     */
     @SerializedName("Period")
     @Expose
-    private Integer Period;
+    private Long Period;
 
     /**
     * 续费周期单位。month表示按月续费，当前只支持按月付费查询价格
@@ -44,7 +44,7 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     private String TimeUnit;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,23 +60,23 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取续费周期。按月续费最多48个月。默认查询续费一个月的价格
+     * Get 续费周期。按月续费最多48个月。默认查询续费一个月的价格 
      * @return Period 续费周期。按月续费最多48个月。默认查询续费一个月的价格
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * 设置续费周期。按月续费最多48个月。默认查询续费一个月的价格
+     * Set 续费周期。按月续费最多48个月。默认查询续费一个月的价格
      * @param Period 续费周期。按月续费最多48个月。默认查询续费一个月的价格
      */
-    public void setPeriod(Integer Period) {
+    public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * 获取续费周期单位。month表示按月续费，当前只支持按月付费查询价格
+     * Get 续费周期单位。month表示按月续费，当前只支持按月付费查询价格 
      * @return TimeUnit 续费周期单位。month表示按月续费，当前只支持按月付费查询价格
      */
     public String getTimeUnit() {
@@ -84,7 +84,7 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置续费周期单位。month表示按月续费，当前只支持按月付费查询价格
+     * Set 续费周期单位。month表示按月续费，当前只支持按月付费查询价格
      * @param TimeUnit 续费周期单位。month表示按月续费，当前只支持按月付费查询价格
      */
     public void setTimeUnit(String TimeUnit) {
@@ -92,7 +92,7 @@ public class InquiryPriceRenewDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

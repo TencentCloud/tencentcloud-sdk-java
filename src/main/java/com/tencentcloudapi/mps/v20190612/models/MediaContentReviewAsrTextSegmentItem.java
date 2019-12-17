@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
+public class MediaContentReviewAsrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
@@ -61,7 +61,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     private String [] KeywordSet;
 
     /**
-     * 获取嫌疑片段起始的偏移时间，单位：秒。
+     * Get 嫌疑片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -69,7 +69,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段起始的偏移时间，单位：秒。
+     * Set 嫌疑片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -77,7 +77,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段结束的偏移时间，单位：秒。
+     * Get 嫌疑片段结束的偏移时间，单位：秒。 
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -85,7 +85,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段结束的偏移时间，单位：秒。
+     * Set 嫌疑片段结束的偏移时间，单位：秒。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -93,7 +93,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段置信度。
+     * Get 嫌疑片段置信度。 
      * @return Confidence 嫌疑片段置信度。
      */
     public Float getConfidence() {
@@ -101,7 +101,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段置信度。
+     * Set 嫌疑片段置信度。
      * @param Confidence 嫌疑片段置信度。
      */
     public void setConfidence(Float Confidence) {
@@ -109,10 +109,10 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑片段审核结果建议，取值范围：
+     * Get 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -123,7 +123,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑片段审核结果建议，取值范围：
+     * Set 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -137,7 +137,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取嫌疑关键词列表。
+     * Get 嫌疑关键词列表。 
      * @return KeywordSet 嫌疑关键词列表。
      */
     public String [] getKeywordSet() {
@@ -145,7 +145,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置嫌疑关键词列表。
+     * Set 嫌疑关键词列表。
      * @param KeywordSet 嫌疑关键词列表。
      */
     public void setKeywordSet(String [] KeywordSet) {
@@ -153,7 +153,7 @@ public class MediaContentReviewAsrTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

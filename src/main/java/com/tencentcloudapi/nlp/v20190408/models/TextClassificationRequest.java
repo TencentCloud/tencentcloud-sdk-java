@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextClassificationRequest  extends AbstractModel{
+public class TextClassificationRequest extends AbstractModel{
 
     /**
     * 待分类的文本（仅支持UTF-8格式，不超过10000字）
@@ -39,7 +39,7 @@ public class TextClassificationRequest  extends AbstractModel{
     private Long Flag;
 
     /**
-     * 获取待分类的文本（仅支持UTF-8格式，不超过10000字）
+     * Get 待分类的文本（仅支持UTF-8格式，不超过10000字） 
      * @return Text 待分类的文本（仅支持UTF-8格式，不超过10000字）
      */
     public String getText() {
@@ -47,7 +47,7 @@ public class TextClassificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待分类的文本（仅支持UTF-8格式，不超过10000字）
+     * Set 待分类的文本（仅支持UTF-8格式，不超过10000字）
      * @param Text 待分类的文本（仅支持UTF-8格式，不超过10000字）
      */
     public void setText(String Text) {
@@ -55,9 +55,9 @@ public class TextClassificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取领域分类体系（默认取1值）：
+     * Get 领域分类体系（默认取1值）：
 1、通用领域
-2、新闻领域
+2、新闻领域 
      * @return Flag 领域分类体系（默认取1值）：
 1、通用领域
 2、新闻领域
@@ -67,7 +67,7 @@ public class TextClassificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置领域分类体系（默认取1值）：
+     * Set 领域分类体系（默认取1值）：
 1、通用领域
 2、新闻领域
      * @param Flag 领域分类体系（默认取1值）：
@@ -79,7 +79,7 @@ public class TextClassificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

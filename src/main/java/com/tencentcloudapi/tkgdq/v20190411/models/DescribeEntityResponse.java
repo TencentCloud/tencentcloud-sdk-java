@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEntityResponse  extends AbstractModel{
+public class DescribeEntityResponse extends AbstractModel{
 
     /**
     * 返回查询实体相关信息
@@ -37,7 +37,7 @@ public class DescribeEntityResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回查询实体相关信息
+     * Get 返回查询实体相关信息 
      * @return Content 返回查询实体相关信息
      */
     public String getContent() {
@@ -45,7 +45,7 @@ public class DescribeEntityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回查询实体相关信息
+     * Set 返回查询实体相关信息
      * @param Content 返回查询实体相关信息
      */
     public void setContent(String Content) {
@@ -53,7 +53,7 @@ public class DescribeEntityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeEntityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeEntityResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

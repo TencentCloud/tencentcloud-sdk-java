@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Component  extends AbstractModel{
+public class Component extends AbstractModel{
 
     /**
     * 唯一ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端唯一Uuid。
@@ -81,23 +81,23 @@ public class Component  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取唯一ID。
+     * Get 唯一ID。 
      * @return Id 唯一ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置唯一ID。
+     * Set 唯一ID。
      * @param Id 唯一ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端唯一Uuid。
+     * Get 云镜客户端唯一Uuid。 
      * @return Uuid 云镜客户端唯一Uuid。
      */
     public String getUuid() {
@@ -105,7 +105,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid。
+     * Set 云镜客户端唯一Uuid。
      * @param Uuid 云镜客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
@@ -113,7 +113,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -121,7 +121,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -129,7 +129,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取主机名。
+     * Get 主机名。 
      * @return MachineName 主机名。
      */
     public String getMachineName() {
@@ -137,7 +137,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置主机名。
+     * Set 主机名。
      * @param MachineName 主机名。
      */
     public void setMachineName(String MachineName) {
@@ -145,7 +145,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取组件版本号。
+     * Get 组件版本号。 
      * @return ComponentVersion 组件版本号。
      */
     public String getComponentVersion() {
@@ -153,7 +153,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置组件版本号。
+     * Set 组件版本号。
      * @param ComponentVersion 组件版本号。
      */
     public void setComponentVersion(String ComponentVersion) {
@@ -161,9 +161,9 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取组件类型。
+     * Get 组件类型。
 <li>SYSTEM：系统组件</li>
-<li>WEB：WEB组件</li>
+<li>WEB：WEB组件</li> 
      * @return ComponentType 组件类型。
 <li>SYSTEM：系统组件</li>
 <li>WEB：WEB组件</li>
@@ -173,7 +173,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置组件类型。
+     * Set 组件类型。
 <li>SYSTEM：系统组件</li>
 <li>WEB：WEB组件</li>
      * @param ComponentType 组件类型。
@@ -185,7 +185,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取组件名称。
+     * Get 组件名称。 
      * @return ComponentName 组件名称。
      */
     public String getComponentName() {
@@ -193,7 +193,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置组件名称。
+     * Set 组件名称。
      * @param ComponentName 组件名称。
      */
     public void setComponentName(String ComponentName) {
@@ -201,7 +201,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 获取组件检测更新时间。
+     * Get 组件检测更新时间。 
      * @return ModifyTime 组件检测更新时间。
      */
     public String getModifyTime() {
@@ -209,7 +209,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 设置组件检测更新时间。
+     * Set 组件检测更新时间。
      * @param ModifyTime 组件检测更新时间。
      */
     public void setModifyTime(String ModifyTime) {
@@ -217,7 +217,7 @@ public class Component  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

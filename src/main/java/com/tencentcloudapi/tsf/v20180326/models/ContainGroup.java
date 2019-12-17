@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContainGroup  extends AbstractModel{
+public class ContainGroup extends AbstractModel{
 
     /**
     * 部署组ID
@@ -135,8 +135,8 @@ public class ContainGroup  extends AbstractModel{
     private String MemLimit;
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,8 +155,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -165,7 +165,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分组名称
+     * Set 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,8 +175,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,7 +185,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -195,8 +195,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取镜像server
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像server
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Server 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -205,7 +205,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置镜像server
+     * Set 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Server 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,8 +215,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取镜像名，如/tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像名，如/tsf/nginx
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RepoName 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置镜像名，如/tsf/nginx
+     * Set 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RepoName 镜像名，如/tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取镜像版本名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像版本名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagName 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置镜像版本名称
+     * Set 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagName 镜像版本名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,8 +275,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -285,7 +285,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -295,8 +295,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -305,7 +305,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -315,8 +315,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -325,7 +325,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -335,8 +335,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的 CPU 核数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 初始分配的 CPU 核数，对应 K8S request
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CpuRequest 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -345,7 +345,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的 CPU 核数，对应 K8S request
+     * Set 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuRequest 初始分配的 CPU 核数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
@@ -355,8 +355,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配的 CPU 核数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最大分配的 CPU 核数，对应 K8S limit
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CpuLimit 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -365,7 +365,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配的 CPU 核数，对应 K8S limit
+     * Set 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLimit 最大分配的 CPU 核数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
@@ -375,8 +375,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的内存 MiB 数，对应 K8S request
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 初始分配的内存 MiB 数，对应 K8S request
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -385,7 +385,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的内存 MiB 数，对应 K8S request
+     * Set 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemRequest 初始分配的内存 MiB 数，对应 K8S request
 注意：此字段可能返回 null，表示取不到有效值。
@@ -395,8 +395,8 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配的内存 MiB 数，对应 K8S limit
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最大分配的内存 MiB 数，对应 K8S limit
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemLimit 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -405,7 +405,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配的内存 MiB 数，对应 K8S limit
+     * Set 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemLimit 最大分配的内存 MiB 数，对应 K8S limit
 注意：此字段可能返回 null，表示取不到有效值。
@@ -415,7 +415,7 @@ public class ContainGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

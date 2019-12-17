@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppResetPasswordRequest  extends AbstractModel{
+public class AppResetPasswordRequest extends AbstractModel{
 
     /**
     * 访问Token
@@ -44,7 +44,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     private String NewPassword;
 
     /**
-     * 获取访问Token
+     * Get 访问Token 
      * @return AccessToken 访问Token
      */
     public String getAccessToken() {
@@ -52,7 +52,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问Token
+     * Set 访问Token
      * @param AccessToken 访问Token
      */
     public void setAccessToken(String AccessToken) {
@@ -60,7 +60,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取旧密码
+     * Get 旧密码 
      * @return OldPassword 旧密码
      */
     public String getOldPassword() {
@@ -68,7 +68,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置旧密码
+     * Set 旧密码
      * @param OldPassword 旧密码
      */
     public void setOldPassword(String OldPassword) {
@@ -76,7 +76,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新密码
+     * Get 新密码 
      * @return NewPassword 新密码
      */
     public String getNewPassword() {
@@ -84,7 +84,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新密码
+     * Set 新密码
      * @param NewPassword 新密码
      */
     public void setNewPassword(String NewPassword) {
@@ -92,7 +92,7 @@ public class AppResetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);

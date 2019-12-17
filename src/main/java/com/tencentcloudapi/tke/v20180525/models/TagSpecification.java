@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSpecification  extends AbstractModel{
+public class TagSpecification extends AbstractModel{
 
     /**
     * 标签绑定的资源类型，当前支持类型："cluster"
@@ -39,8 +39,8 @@ public class TagSpecification  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取标签绑定的资源类型，当前支持类型："cluster"
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签绑定的资源类型，当前支持类型："cluster"
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceType 标签绑定的资源类型，当前支持类型："cluster"
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置标签绑定的资源类型，当前支持类型："cluster"
+     * Set 标签绑定的资源类型，当前支持类型："cluster"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceType 标签绑定的资源类型，当前支持类型："cluster"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取标签对列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签对列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 标签对列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置标签对列表
+     * Set 标签对列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签对列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class TagSpecification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);

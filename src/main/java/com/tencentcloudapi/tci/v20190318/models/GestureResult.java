@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GestureResult  extends AbstractModel{
+public class GestureResult extends AbstractModel{
 
     /**
     * 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
@@ -65,7 +65,7 @@ public class GestureResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+     * Get 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他 
      * Java getClass cannot and should not be overrided, hence we have to transfer it to a new name which should never conflict with another attribute. The underscode(_) is used as a postfix, because it is invalid in API 3.0, but can be used in Java, even it is not recommended.
      * @return Class 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      */
@@ -74,7 +74,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
+     * Set 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      * @param Class 识别结果，包含"USPEAK":听你说，"LISTEN":听我说，"GOOD":GOOD，"TOOLS":拿教具，"OTHERS":其他
      */
     public void setClass(String Class) {
@@ -82,7 +82,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 获取置信度
+     * Get 置信度 
      * @return Confidence 置信度
      */
     public Float getConfidence() {
@@ -90,7 +90,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置置信度
+     * Set 置信度
      * @param Confidence 置信度
      */
     public void setConfidence(Float Confidence) {
@@ -98,7 +98,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果高度
+     * Get 识别结果高度 
      * @return Height 识别结果高度
      */
     public Long getHeight() {
@@ -106,7 +106,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果高度
+     * Set 识别结果高度
      * @param Height 识别结果高度
      */
     public void setHeight(Long Height) {
@@ -114,7 +114,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果左坐标
+     * Get 识别结果左坐标 
      * @return Left 识别结果左坐标
      */
     public Long getLeft() {
@@ -122,7 +122,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果左坐标
+     * Set 识别结果左坐标
      * @param Left 识别结果左坐标
      */
     public void setLeft(Long Left) {
@@ -130,7 +130,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果顶坐标
+     * Get 识别结果顶坐标 
      * @return Top 识别结果顶坐标
      */
     public Long getTop() {
@@ -138,7 +138,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果顶坐标
+     * Set 识别结果顶坐标
      * @param Top 识别结果顶坐标
      */
     public void setTop(Long Top) {
@@ -146,7 +146,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果宽度
+     * Get 识别结果宽度 
      * @return Width 识别结果宽度
      */
     public Long getWidth() {
@@ -154,7 +154,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果宽度
+     * Set 识别结果宽度
      * @param Width 识别结果宽度
      */
     public void setWidth(Long Width) {
@@ -162,7 +162,7 @@ public class GestureResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Class", this.Class);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskInfo  extends AbstractModel{
+public class TaskInfo extends AbstractModel{
 
     /**
     * 任务ID
@@ -93,7 +93,7 @@ public class TaskInfo  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return TaskId 任务ID
      */
     public String getTaskId() {
@@ -101,7 +101,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
@@ -109,7 +109,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型
+     * Get 任务类型 
      * @return TaskType 任务类型
      */
     public String getTaskType() {
@@ -117,7 +117,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型
+     * Set 任务类型
      * @param TaskType 任务类型
      */
     public void setTaskType(String TaskType) {
@@ -125,7 +125,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务所关联的TcaplusDB内部事务ID
+     * Get 任务所关联的TcaplusDB内部事务ID 
      * @return TransId 任务所关联的TcaplusDB内部事务ID
      */
     public String getTransId() {
@@ -133,7 +133,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务所关联的TcaplusDB内部事务ID
+     * Set 任务所关联的TcaplusDB内部事务ID
      * @param TransId 任务所关联的TcaplusDB内部事务ID
      */
     public void setTransId(String TransId) {
@@ -141,7 +141,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务所属应用实例ID
+     * Get 任务所属应用实例ID 
      * @return ApplicationId 任务所属应用实例ID
      */
     public String getApplicationId() {
@@ -149,7 +149,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务所属应用实例ID
+     * Set 任务所属应用实例ID
      * @param ApplicationId 任务所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -157,7 +157,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务所属应用名称
+     * Get 任务所属应用名称 
      * @return AppName 任务所属应用名称
      */
     public String getAppName() {
@@ -165,7 +165,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务所属应用名称
+     * Set 任务所属应用名称
      * @param AppName 任务所属应用名称
      */
     public void setAppName(String AppName) {
@@ -173,7 +173,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务进度
+     * Get 任务进度 
      * @return Progress 任务进度
      */
     public Long getProgress() {
@@ -181,7 +181,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务进度
+     * Set 任务进度
      * @param Progress 任务进度
      */
     public void setProgress(Long Progress) {
@@ -189,7 +189,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间
+     * Get 任务创建时间 
      * @return StartTime 任务创建时间
      */
     public String getStartTime() {
@@ -197,7 +197,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间
+     * Set 任务创建时间
      * @param StartTime 任务创建时间
      */
     public void setStartTime(String StartTime) {
@@ -205,7 +205,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务最后更新时间
+     * Get 任务最后更新时间 
      * @return UpdateTime 任务最后更新时间
      */
     public String getUpdateTime() {
@@ -213,7 +213,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务最后更新时间
+     * Set 任务最后更新时间
      * @param UpdateTime 任务最后更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -221,7 +221,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作者
+     * Get 操作者 
      * @return Operator 操作者
      */
     public String getOperator() {
@@ -229,7 +229,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作者
+     * Set 操作者
      * @param Operator 操作者
      */
     public void setOperator(String Operator) {
@@ -237,7 +237,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务详情
+     * Get 任务详情 
      * @return Content 任务详情
      */
     public String getContent() {
@@ -245,7 +245,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务详情
+     * Set 任务详情
      * @param Content 任务详情
      */
     public void setContent(String Content) {
@@ -253,7 +253,7 @@ public class TaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

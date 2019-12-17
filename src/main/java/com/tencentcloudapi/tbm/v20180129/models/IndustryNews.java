@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IndustryNews  extends AbstractModel{
+public class IndustryNews extends AbstractModel{
 
     /**
     * 行业报道ID
@@ -86,7 +86,7 @@ public class IndustryNews  extends AbstractModel{
     private String Abstract;
 
     /**
-     * 获取行业报道ID
+     * Get 行业报道ID 
      * @return IndustryId 行业报道ID
      */
     public String getIndustryId() {
@@ -94,7 +94,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置行业报道ID
+     * Set 行业报道ID
      * @param IndustryId 行业报道ID
      */
     public void setIndustryId(String IndustryId) {
@@ -102,7 +102,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道发表时间
+     * Get 报道发表时间 
      * @return PubTime 报道发表时间
      */
     public String getPubTime() {
@@ -110,7 +110,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道发表时间
+     * Set 报道发表时间
      * @param PubTime 报道发表时间
      */
     public void setPubTime(String PubTime) {
@@ -118,7 +118,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道来源
+     * Get 报道来源 
      * @return FromSite 报道来源
      */
     public String getFromSite() {
@@ -126,7 +126,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道来源
+     * Set 报道来源
      * @param FromSite 报道来源
      */
     public void setFromSite(String FromSite) {
@@ -134,7 +134,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道标题
+     * Get 报道标题 
      * @return Title 报道标题
      */
     public String getTitle() {
@@ -142,7 +142,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道标题
+     * Set 报道标题
      * @param Title 报道标题
      */
     public void setTitle(String Title) {
@@ -150,7 +150,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道来源url
+     * Get 报道来源url 
      * @return Url 报道来源url
      */
     public String getUrl() {
@@ -158,7 +158,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道来源url
+     * Set 报道来源url
      * @param Url 报道来源url
      */
     public void setUrl(String Url) {
@@ -166,7 +166,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道来源等级
+     * Get 报道来源等级 
      * @return Level 报道来源等级
      */
     public Integer getLevel() {
@@ -174,7 +174,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道来源等级
+     * Set 报道来源等级
      * @param Level 报道来源等级
      */
     public void setLevel(Integer Level) {
@@ -182,7 +182,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取热度值
+     * Get 热度值 
      * @return Hot 热度值
      */
     public Integer getHot() {
@@ -190,7 +190,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置热度值
+     * Set 热度值
      * @param Hot 热度值
      */
     public void setHot(Integer Hot) {
@@ -198,7 +198,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道标识
+     * Get 报道标识 
      * @return Flag 报道标识
      */
     public Integer getFlag() {
@@ -206,7 +206,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道标识
+     * Set 报道标识
      * @param Flag 报道标识
      */
     public void setFlag(Integer Flag) {
@@ -214,7 +214,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 获取报道摘要
+     * Get 报道摘要 
      * @return Abstract 报道摘要
      */
     public String getAbstract() {
@@ -222,7 +222,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 设置报道摘要
+     * Set 报道摘要
      * @param Abstract 报道摘要
      */
     public void setAbstract(String Abstract) {
@@ -230,7 +230,7 @@ public class IndustryNews  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IndustryId", this.IndustryId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupStatisticsInfo  extends AbstractModel{
+public class GroupStatisticsInfo extends AbstractModel{
 
     /**
     * 通道组ID
@@ -44,7 +44,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     private ProxySimpleInfo [] ProxySet;
 
     /**
-     * 获取通道组ID
+     * Get 通道组ID 
      * @return GroupId 通道组ID
      */
     public String getGroupId() {
@@ -52,7 +52,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID
+     * Set 通道组ID
      * @param GroupId 通道组ID
      */
     public void setGroupId(String GroupId) {
@@ -60,7 +60,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道组名称
+     * Get 通道组名称 
      * @return GroupName 通道组名称
      */
     public String getGroupName() {
@@ -68,7 +68,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组名称
+     * Set 通道组名称
      * @param GroupName 通道组名称
      */
     public void setGroupName(String GroupName) {
@@ -76,7 +76,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道组下通道列表
+     * Get 通道组下通道列表 
      * @return ProxySet 通道组下通道列表
      */
     public ProxySimpleInfo [] getProxySet() {
@@ -84,7 +84,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组下通道列表
+     * Set 通道组下通道列表
      * @param ProxySet 通道组下通道列表
      */
     public void setProxySet(ProxySimpleInfo [] ProxySet) {
@@ -92,7 +92,7 @@ public class GroupStatisticsInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

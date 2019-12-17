@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoadBalancerPortInfoListener  extends AbstractModel{
+public class LoadBalancerPortInfoListener extends AbstractModel{
 
     /**
     * 负载均衡监听器ID。
@@ -72,7 +72,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     private Integer Port;
 
     /**
-     * 获取负载均衡监听器ID。
+     * Get 负载均衡监听器ID。 
      * @return ListenerId 负载均衡监听器ID。
      */
     public String getListenerId() {
@@ -80,7 +80,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器ID。
+     * Set 负载均衡监听器ID。
      * @param ListenerId 负载均衡监听器ID。
      */
     public void setListenerId(String ListenerId) {
@@ -88,7 +88,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称。
+     * Get 监听器名称。 
      * @return ListenerName 监听器名称。
      */
     public String getListenerName() {
@@ -96,7 +96,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称。
+     * Set 监听器名称。
      * @param ListenerName 监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -104,7 +104,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议类型，可选值：http，https，tcp，udp。
+     * Get 监听器协议类型，可选值：http，https，tcp，udp。 
      * @return Protocol 监听器协议类型，可选值：http，https，tcp，udp。
      */
     public String getProtocol() {
@@ -112,7 +112,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议类型，可选值：http，https，tcp，udp。
+     * Set 监听器协议类型，可选值：http，https，tcp，udp。
      * @param Protocol 监听器协议类型，可选值：http，https，tcp，udp。
      */
     public void setProtocol(String Protocol) {
@@ -120,7 +120,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的监听端口。
+     * Get 监听器的监听端口。 
      * @return LoadBalancerPort 监听器的监听端口。
      */
     public Integer getLoadBalancerPort() {
@@ -128,7 +128,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的监听端口。
+     * Set 监听器的监听端口。
      * @param LoadBalancerPort 监听器的监听端口。
      */
     public void setLoadBalancerPort(Integer LoadBalancerPort) {
@@ -136,7 +136,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
+     * Get 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
     public Integer getBandwidth() {
@@ -144,7 +144,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
+     * Set 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，单位：Mbps。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -152,7 +152,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Get 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public Integer getStatus() {
@@ -160,7 +160,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Set 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 监听器当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public void setStatus(Integer Status) {
@@ -168,7 +168,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 获取与监听器绑定的主机端口。
+     * Get 与监听器绑定的主机端口。 
      * @return Port 与监听器绑定的主机端口。
      */
     public Integer getPort() {
@@ -176,7 +176,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 设置与监听器绑定的主机端口。
+     * Set 与监听器绑定的主机端口。
      * @param Port 与监听器绑定的主机端口。
      */
     public void setPort(Integer Port) {
@@ -184,7 +184,7 @@ public class LoadBalancerPortInfoListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

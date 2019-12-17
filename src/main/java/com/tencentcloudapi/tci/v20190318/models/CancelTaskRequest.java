@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelTaskRequest  extends AbstractModel{
+public class CancelTaskRequest extends AbstractModel{
 
     /**
     * 待取消任务标志符。
@@ -30,7 +30,7 @@ public class CancelTaskRequest  extends AbstractModel{
     private Long JobId;
 
     /**
-     * 获取待取消任务标志符。
+     * Get 待取消任务标志符。 
      * @return JobId 待取消任务标志符。
      */
     public Long getJobId() {
@@ -38,7 +38,7 @@ public class CancelTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待取消任务标志符。
+     * Set 待取消任务标志符。
      * @param JobId 待取消任务标志符。
      */
     public void setJobId(Long JobId) {
@@ -46,7 +46,7 @@ public class CancelTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

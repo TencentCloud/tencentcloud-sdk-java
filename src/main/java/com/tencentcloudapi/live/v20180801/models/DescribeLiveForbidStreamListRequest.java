@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
+public class DescribeLiveForbidStreamListRequest extends AbstractModel{
 
     /**
     * 取得第几页，默认1。
@@ -39,7 +39,7 @@ public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
     private Integer PageSize;
 
     /**
-     * 获取取得第几页，默认1。
+     * Get 取得第几页，默认1。 
      * @return PageNum 取得第几页，默认1。
      */
     public Integer getPageNum() {
@@ -47,7 +47,7 @@ public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置取得第几页，默认1。
+     * Set 取得第几页，默认1。
      * @param PageNum 取得第几页，默认1。
      */
     public void setPageNum(Integer PageNum) {
@@ -55,9 +55,9 @@ public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，最大100。 
+     * Get 每页大小，最大100。 
 取值：1~100之前的任意整数。
-默认值：10。
+默认值：10。 
      * @return PageSize 每页大小，最大100。 
 取值：1~100之前的任意整数。
 默认值：10。
@@ -67,7 +67,7 @@ public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，最大100。 
+     * Set 每页大小，最大100。 
 取值：1~100之前的任意整数。
 默认值：10。
      * @param PageSize 每页大小，最大100。 
@@ -79,7 +79,7 @@ public class DescribeLiveForbidStreamListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);

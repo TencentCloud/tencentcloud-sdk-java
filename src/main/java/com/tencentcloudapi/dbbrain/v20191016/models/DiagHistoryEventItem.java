@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiagHistoryEventItem  extends AbstractModel{
+public class DiagHistoryEventItem extends AbstractModel{
 
     /**
     * 诊断类型。
@@ -96,7 +96,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     private String Region;
 
     /**
-     * 获取诊断类型。
+     * Get 诊断类型。 
      * @return DiagType 诊断类型。
      */
     public String getDiagType() {
@@ -104,7 +104,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置诊断类型。
+     * Set 诊断类型。
      * @param DiagType 诊断类型。
      */
     public void setDiagType(String DiagType) {
@@ -112,7 +112,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndTime 结束时间。
      */
     public String getEndTime() {
@@ -120,7 +120,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -128,7 +128,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return StartTime 开始时间。
      */
     public String getStartTime() {
@@ -136,7 +136,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -144,7 +144,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件 ID 。
+     * Get 事件 ID 。 
      * @return EventId 事件 ID 。
      */
     public Long getEventId() {
@@ -152,7 +152,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件 ID 。
+     * Set 事件 ID 。
      * @param EventId 事件 ID 。
      */
     public void setEventId(Long EventId) {
@@ -160,7 +160,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * Get 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。 
      * @return Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      */
     public Long getSeverity() {
@@ -168,7 +168,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
+     * Set 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      * @param Severity 严重程度。从1-4，严重程度递减，意义与DBBrain生成的实例健康报告中对应概念一致。
      */
     public void setSeverity(Long Severity) {
@@ -176,7 +176,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取概要。
+     * Get 概要。 
      * @return Outline 概要。
      */
     public String getOutline() {
@@ -184,7 +184,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置概要。
+     * Set 概要。
      * @param Outline 概要。
      */
     public void setOutline(String Outline) {
@@ -192,7 +192,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取诊断项。
+     * Get 诊断项。 
      * @return DiagItem 诊断项。
      */
     public String getDiagItem() {
@@ -200,7 +200,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置诊断项。
+     * Set 诊断项。
      * @param DiagItem 诊断项。
      */
     public void setDiagItem(String DiagItem) {
@@ -208,8 +208,8 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例 ID 。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例 ID 。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -218,7 +218,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 。
+     * Set 实例 ID 。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例 ID 。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -228,8 +228,8 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 保留字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Metric 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -238,7 +238,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -248,8 +248,8 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -258,7 +258,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -268,7 +268,7 @@ public class DiagHistoryEventItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiagType", this.DiagType);

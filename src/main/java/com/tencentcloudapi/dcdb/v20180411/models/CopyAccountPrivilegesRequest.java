@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CopyAccountPrivilegesRequest  extends AbstractModel{
+public class CopyAccountPrivilegesRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：dcdbt-ow728lmc。
@@ -72,7 +72,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     private String DstReadOnly;
 
     /**
-     * 获取实例 ID，形如：dcdbt-ow728lmc。
+     * Get 实例 ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：dcdbt-ow728lmc。
+     * Set 实例 ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源用户名
+     * Get 源用户名 
      * @return SrcUserName 源用户名
      */
     public String getSrcUserName() {
@@ -96,7 +96,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源用户名
+     * Set 源用户名
      * @param SrcUserName 源用户名
      */
     public void setSrcUserName(String SrcUserName) {
@@ -104,7 +104,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源用户允许的访问 host
+     * Get 源用户允许的访问 host 
      * @return SrcHost 源用户允许的访问 host
      */
     public String getSrcHost() {
@@ -112,7 +112,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源用户允许的访问 host
+     * Set 源用户允许的访问 host
      * @param SrcHost 源用户允许的访问 host
      */
     public void setSrcHost(String SrcHost) {
@@ -120,7 +120,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的用户名
+     * Get 目的用户名 
      * @return DstUserName 目的用户名
      */
     public String getDstUserName() {
@@ -128,7 +128,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的用户名
+     * Set 目的用户名
      * @param DstUserName 目的用户名
      */
     public void setDstUserName(String DstUserName) {
@@ -136,7 +136,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的用户允许的访问 host
+     * Get 目的用户允许的访问 host 
      * @return DstHost 目的用户允许的访问 host
      */
     public String getDstHost() {
@@ -144,7 +144,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的用户允许的访问 host
+     * Set 目的用户允许的访问 host
      * @param DstHost 目的用户允许的访问 host
      */
     public void setDstHost(String DstHost) {
@@ -152,7 +152,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源账号的 ReadOnly 属性
+     * Get 源账号的 ReadOnly 属性 
      * @return SrcReadOnly 源账号的 ReadOnly 属性
      */
     public String getSrcReadOnly() {
@@ -160,7 +160,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源账号的 ReadOnly 属性
+     * Set 源账号的 ReadOnly 属性
      * @param SrcReadOnly 源账号的 ReadOnly 属性
      */
     public void setSrcReadOnly(String SrcReadOnly) {
@@ -168,7 +168,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的账号的 ReadOnly 属性
+     * Get 目的账号的 ReadOnly 属性 
      * @return DstReadOnly 目的账号的 ReadOnly 属性
      */
     public String getDstReadOnly() {
@@ -176,7 +176,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的账号的 ReadOnly 属性
+     * Set 目的账号的 ReadOnly 属性
      * @param DstReadOnly 目的账号的 ReadOnly 属性
      */
     public void setDstReadOnly(String DstReadOnly) {
@@ -184,7 +184,7 @@ public class CopyAccountPrivilegesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

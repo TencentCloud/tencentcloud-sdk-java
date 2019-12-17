@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCustomMFATokenInfoResponse  extends AbstractModel{
+public class GetCustomMFATokenInfoResponse extends AbstractModel{
 
     /**
     * 自定义多因子验证Token对应的帐号Id
@@ -37,7 +37,7 @@ public class GetCustomMFATokenInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取自定义多因子验证Token对应的帐号Id
+     * Get 自定义多因子验证Token对应的帐号Id 
      * @return Uin 自定义多因子验证Token对应的帐号Id
      */
     public Long getUin() {
@@ -45,7 +45,7 @@ public class GetCustomMFATokenInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置自定义多因子验证Token对应的帐号Id
+     * Set 自定义多因子验证Token对应的帐号Id
      * @param Uin 自定义多因子验证Token对应的帐号Id
      */
     public void setUin(Long Uin) {
@@ -53,7 +53,7 @@ public class GetCustomMFATokenInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class GetCustomMFATokenInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class GetCustomMFATokenInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

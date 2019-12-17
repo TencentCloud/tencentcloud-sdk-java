@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClusterInstancesInfo  extends AbstractModel{
+public class ClusterInstancesInfo extends AbstractModel{
 
     /**
     * ID
@@ -199,8 +199,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     private String AlarmInfo;
 
     /**
-     * 获取ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置ID
+     * Set ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Id ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,8 +219,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -229,7 +229,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,8 +239,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标题
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标题
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ftitle 标题
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -249,7 +249,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标题
+     * Set 标题
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ftitle 标题
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,8 +259,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集群名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,7 +269,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集群名
+     * Set 集群名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,8 +279,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -289,7 +289,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,8 +299,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地区ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneId 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -309,7 +309,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地区ID
+     * Set 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 地区ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,8 +319,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户APPID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户APPID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -329,7 +329,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户APPID
+     * Set 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -339,8 +339,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 用户UIN
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uin 用户UIN
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -349,7 +349,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户UIN
+     * Set 用户UIN
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户UIN
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,8 +359,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -369,7 +369,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -379,8 +379,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集群VPCID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群VPCID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId 集群VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -389,7 +389,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集群VPCID
+     * Set 集群VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 集群VPCID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -399,8 +399,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -409,7 +409,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -419,8 +419,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -429,7 +429,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态
+     * Set 状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -439,8 +439,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取添加时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 添加时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AddTime 添加时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -449,7 +449,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置添加时间
+     * Set 添加时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 添加时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -459,8 +459,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取已经运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 已经运行时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunTime 已经运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -469,7 +469,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置已经运行时间
+     * Set 已经运行时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RunTime 已经运行时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -479,8 +479,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集群产品配置信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群产品配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Config 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -489,7 +489,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集群产品配置信息
+     * Set 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Config 集群产品配置信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -499,8 +499,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主节点外网IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主节点外网IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MasterIp 主节点外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -509,7 +509,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主节点外网IP
+     * Set 主节点外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterIp 主节点外网IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -519,8 +519,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EMR版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get EMR版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EmrVersion EMR版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -529,7 +529,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EMR版本
+     * Set EMR版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EmrVersion EMR版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -539,8 +539,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取收费类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 收费类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -549,7 +549,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置收费类型
+     * Set 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ChargeType 收费类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -559,8 +559,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取交易版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 交易版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TradeVersion 交易版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -569,7 +569,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置交易版本
+     * Set 交易版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeVersion 交易版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -579,8 +579,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源订单ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源订单ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceOrderId 资源订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -589,7 +589,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源订单ID
+     * Set 资源订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceOrderId 资源订单ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -599,8 +599,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否计费集群
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否计费集群
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsTradeCluster 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -609,7 +609,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否计费集群
+     * Set 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsTradeCluster 是否计费集群
 注意：此字段可能返回 null，表示取不到有效值。
@@ -619,8 +619,8 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取集群错误状态告警信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群错误状态告警信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlarmInfo 集群错误状态告警信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -629,7 +629,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置集群错误状态告警信息
+     * Set 集群错误状态告警信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmInfo 集群错误状态告警信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -639,7 +639,7 @@ public class ClusterInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

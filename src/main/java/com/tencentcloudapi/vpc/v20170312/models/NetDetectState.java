@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetDetectState  extends AbstractModel{
+public class NetDetectState extends AbstractModel{
 
     /**
     * 网络探测实例ID。形如：netd-12345678。
@@ -37,7 +37,7 @@ public class NetDetectState  extends AbstractModel{
     private NetDetectIpState [] NetDetectIpStateSet;
 
     /**
-     * 获取网络探测实例ID。形如：netd-12345678。
+     * Get 网络探测实例ID。形如：netd-12345678。 
      * @return NetDetectId 网络探测实例ID。形如：netd-12345678。
      */
     public String getNetDetectId() {
@@ -45,7 +45,7 @@ public class NetDetectState  extends AbstractModel{
     }
 
     /**
-     * 设置网络探测实例ID。形如：netd-12345678。
+     * Set 网络探测实例ID。形如：netd-12345678。
      * @param NetDetectId 网络探测实例ID。形如：netd-12345678。
      */
     public void setNetDetectId(String NetDetectId) {
@@ -53,7 +53,7 @@ public class NetDetectState  extends AbstractModel{
     }
 
     /**
-     * 获取网络探测目的IP验证结果对象数组。
+     * Get 网络探测目的IP验证结果对象数组。 
      * @return NetDetectIpStateSet 网络探测目的IP验证结果对象数组。
      */
     public NetDetectIpState [] getNetDetectIpStateSet() {
@@ -61,7 +61,7 @@ public class NetDetectState  extends AbstractModel{
     }
 
     /**
-     * 设置网络探测目的IP验证结果对象数组。
+     * Set 网络探测目的IP验证结果对象数组。
      * @param NetDetectIpStateSet 网络探测目的IP验证结果对象数组。
      */
     public void setNetDetectIpStateSet(NetDetectIpState [] NetDetectIpStateSet) {
@@ -69,7 +69,7 @@ public class NetDetectState  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetDetectId", this.NetDetectId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchPublishMessage  extends AbstractModel{
+public class BatchPublishMessage extends AbstractModel{
 
     /**
     * 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
@@ -37,7 +37,7 @@ public class BatchPublishMessage  extends AbstractModel{
     private String Payload;
 
     /**
-     * 获取消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
+     * Get 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event” 
      * @return Topic 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
      */
     public String getTopic() {
@@ -45,7 +45,7 @@ public class BatchPublishMessage  extends AbstractModel{
     }
 
     /**
-     * 设置消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
+     * Set 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
      * @param Topic 消息发往的主题。为 Topic 权限中去除 ProductID 和 DeviceName 的部分，如 “event”
      */
     public void setTopic(String Topic) {
@@ -53,7 +53,7 @@ public class BatchPublishMessage  extends AbstractModel{
     }
 
     /**
-     * 获取消息内容
+     * Get 消息内容 
      * @return Payload 消息内容
      */
     public String getPayload() {
@@ -61,7 +61,7 @@ public class BatchPublishMessage  extends AbstractModel{
     }
 
     /**
-     * 设置消息内容
+     * Set 消息内容
      * @param Payload 消息内容
      */
     public void setPayload(String Payload) {
@@ -69,7 +69,7 @@ public class BatchPublishMessage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Topic", this.Topic);

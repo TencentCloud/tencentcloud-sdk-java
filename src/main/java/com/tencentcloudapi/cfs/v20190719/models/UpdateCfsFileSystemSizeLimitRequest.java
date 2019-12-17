@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
+public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
 
     /**
     * 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
@@ -37,7 +37,7 @@ public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
     private String FileSystemId;
 
     /**
-     * 获取文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
+     * Get 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。 
      * @return FsLimit 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
      */
     public Long getFsLimit() {
@@ -45,7 +45,7 @@ public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
+     * Set 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
      * @param FsLimit 文件系统容量限制大小，输入范围0-1073741824, 单位为GB；其中输入值为0时，表示不限制文件系统容量。
      */
     public void setFsLimit(Long FsLimit) {
@@ -53,7 +53,7 @@ public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -61,7 +61,7 @@ public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -69,7 +69,7 @@ public class UpdateCfsFileSystemSizeLimitRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FsLimit", this.FsLimit);

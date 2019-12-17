@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateRandomRequest  extends AbstractModel{
+public class GenerateRandomRequest extends AbstractModel{
 
     /**
     * 生成的随机数的长度。最小值为1， 最大值为1024。
@@ -30,7 +30,7 @@ public class GenerateRandomRequest  extends AbstractModel{
     private Long NumberOfBytes;
 
     /**
-     * 获取生成的随机数的长度。最小值为1， 最大值为1024。
+     * Get 生成的随机数的长度。最小值为1， 最大值为1024。 
      * @return NumberOfBytes 生成的随机数的长度。最小值为1， 最大值为1024。
      */
     public Long getNumberOfBytes() {
@@ -38,7 +38,7 @@ public class GenerateRandomRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生成的随机数的长度。最小值为1， 最大值为1024。
+     * Set 生成的随机数的长度。最小值为1， 最大值为1024。
      * @param NumberOfBytes 生成的随机数的长度。最小值为1， 最大值为1024。
      */
     public void setNumberOfBytes(Long NumberOfBytes) {
@@ -46,7 +46,7 @@ public class GenerateRandomRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMapInfoRequest  extends AbstractModel{
+public class DescribeMapInfoRequest extends AbstractModel{
 
     /**
     * 映射查询类别：
@@ -32,9 +32,9 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
     private String Name;
 
     /**
-     * 获取映射查询类别：
+     * Get 映射查询类别：
 isp：运营商映射查询
-district：省份（中国境内）、国家/地区（中国境外）映射查询
+district：省份（中国境内）、国家/地区（中国境外）映射查询 
      * @return Name 映射查询类别：
 isp：运营商映射查询
 district：省份（中国境内）、国家/地区（中国境外）映射查询
@@ -44,7 +44,7 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
     }
 
     /**
-     * 设置映射查询类别：
+     * Set 映射查询类别：
 isp：运营商映射查询
 district：省份（中国境内）、国家/地区（中国境外）映射查询
      * @param Name 映射查询类别：
@@ -56,7 +56,7 @@ district：省份（中国境内）、国家/地区（中国境外）映射查�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

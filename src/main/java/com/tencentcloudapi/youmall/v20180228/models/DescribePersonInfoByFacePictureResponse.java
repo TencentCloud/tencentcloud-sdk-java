@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
+public class DescribePersonInfoByFacePictureResponse extends AbstractModel{
 
     /**
     * 集团id
@@ -79,7 +79,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团id
+     * Get 集团id 
      * @return CompanyId 集团id
      */
     public String getCompanyId() {
@@ -87,7 +87,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团id
+     * Set 集团id
      * @param CompanyId 集团id
      */
     public void setCompanyId(String CompanyId) {
@@ -95,7 +95,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺id
+     * Get 店铺id 
      * @return ShopId 店铺id
      */
     public Integer getShopId() {
@@ -103,7 +103,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺id
+     * Set 店铺id
      * @param ShopId 店铺id
      */
     public void setShopId(Integer ShopId) {
@@ -111,7 +111,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取顾客face id
+     * Get 顾客face id 
      * @return PersonId 顾客face id
      */
     public Integer getPersonId() {
@@ -119,7 +119,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置顾客face id
+     * Set 顾客face id
      * @param PersonId 顾客face id
      */
     public void setPersonId(Integer PersonId) {
@@ -127,7 +127,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取顾客底图url
+     * Get 顾客底图url 
      * @return PictureUrl 顾客底图url
      */
     public String getPictureUrl() {
@@ -135,7 +135,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置顾客底图url
+     * Set 顾客底图url
      * @param PictureUrl 顾客底图url
      */
     public void setPictureUrl(String PictureUrl) {
@@ -143,7 +143,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Get 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public Integer getPersonType() {
@@ -151,7 +151,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Set 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 顾客类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -159,7 +159,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取顾客首次进店时间
+     * Get 顾客首次进店时间 
      * @return FirstVisitTime 顾客首次进店时间
      */
     public String getFirstVisitTime() {
@@ -167,7 +167,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置顾客首次进店时间
+     * Set 顾客首次进店时间
      * @param FirstVisitTime 顾客首次进店时间
      */
     public void setFirstVisitTime(String FirstVisitTime) {
@@ -175,7 +175,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取顾客历史到访次数
+     * Get 顾客历史到访次数 
      * @return VisitTimes 顾客历史到访次数
      */
     public Integer getVisitTimes() {
@@ -183,7 +183,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置顾客历史到访次数
+     * Set 顾客历史到访次数
      * @param VisitTimes 顾客历史到访次数
      */
     public void setVisitTimes(Integer VisitTimes) {
@@ -191,7 +191,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribePersonInfoByFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

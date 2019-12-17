@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel{
+public class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
     * 专线网关ID，形如：`dcg-prpqlmg1`。
@@ -53,7 +53,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     private Integer Limit;
 
     /**
-     * 获取专线网关ID，形如：`dcg-prpqlmg1`。
+     * Get 专线网关ID，形如：`dcg-prpqlmg1`。 
      * @return DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
      */
     public String getDirectConnectGatewayId() {
@@ -61,7 +61,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 设置专线网关ID，形如：`dcg-prpqlmg1`。
+     * Set 专线网关ID，形如：`dcg-prpqlmg1`。
      * @param DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -69,9 +69,9 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 获取云联网路由学习类型，可选值：
+     * Get 云联网路由学习类型，可选值：
 <li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
+<li>`STATIC` - 静态，即用户配置，默认值。</li> 
      * @return CcnRouteType 云联网路由学习类型，可选值：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置，默认值。</li>
@@ -81,7 +81,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 设置云联网路由学习类型，可选值：
+     * Set 云联网路由学习类型，可选值：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置，默认值。</li>
      * @param CcnRouteType 云联网路由学习类型，可选值：
@@ -93,7 +93,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public Integer getOffset() {
@@ -101,7 +101,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -109,7 +109,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 获取返回数量。
+     * Get 返回数量。 
      * @return Limit 返回数量。
      */
     public Integer getLimit() {
@@ -117,7 +117,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 设置返回数量。
+     * Set 返回数量。
      * @param Limit 返回数量。
      */
     public void setLimit(Integer Limit) {
@@ -125,7 +125,7 @@ public class DescribeDirectConnectGatewayCcnRoutesRequest  extends AbstractModel
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

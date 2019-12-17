@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoSummarizationRequest  extends AbstractModel{
+public class AutoSummarizationRequest extends AbstractModel{
 
     /**
     * 待处理的文本（仅支持UTF-8格式，不超过2000字）
@@ -38,7 +38,7 @@ public class AutoSummarizationRequest  extends AbstractModel{
     private Long Length;
 
     /**
-     * 获取待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * Get 待处理的文本（仅支持UTF-8格式，不超过2000字） 
      * @return Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
      */
     public String getText() {
@@ -46,7 +46,7 @@ public class AutoSummarizationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待处理的文本（仅支持UTF-8格式，不超过2000字）
+     * Set 待处理的文本（仅支持UTF-8格式，不超过2000字）
      * @param Text 待处理的文本（仅支持UTF-8格式，不超过2000字）
      */
     public void setText(String Text) {
@@ -54,8 +54,8 @@ public class AutoSummarizationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定摘要的长度（默认值为200）
-注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
+     * Get 指定摘要的长度（默认值为200）
+注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动 
      * @return Length 指定摘要的长度（默认值为200）
 注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
      */
@@ -64,7 +64,7 @@ public class AutoSummarizationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定摘要的长度（默认值为200）
+     * Set 指定摘要的长度（默认值为200）
 注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
      * @param Length 指定摘要的长度（默认值为200）
 注：为保证摘要的可读性，最终生成的摘要长度并不会严格遵循这个值，会有略微的浮动
@@ -74,7 +74,7 @@ public class AutoSummarizationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

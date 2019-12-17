@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCameraPersonRequest  extends AbstractModel{
+public class DescribeCameraPersonRequest extends AbstractModel{
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -79,7 +79,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     private Integer IsNeedPic;
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -87,7 +87,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -95,7 +95,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public Integer getShopId() {
@@ -103,7 +103,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setShopId(Integer ShopId) {
@@ -111,7 +111,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取摄像头id
+     * Get 摄像头id 
      * @return CameraId 摄像头id
      */
     public Integer getCameraId() {
@@ -119,7 +119,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置摄像头id
+     * Set 摄像头id
      * @param CameraId 摄像头id
      */
     public void setCameraId(Integer CameraId) {
@@ -127,7 +127,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取开始时间戳，单位秒
+     * Get 拉取开始时间戳，单位秒 
      * @return StartTime 拉取开始时间戳，单位秒
      */
     public Integer getStartTime() {
@@ -135,7 +135,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取开始时间戳，单位秒
+     * Set 拉取开始时间戳，单位秒
      * @param StartTime 拉取开始时间戳，单位秒
      */
     public void setStartTime(Integer StartTime) {
@@ -143,7 +143,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
+     * Get 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10 
      * @return EndTime 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      */
     public Integer getEndTime() {
@@ -151,7 +151,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
+     * Set 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      * @param EndTime 拉取结束时间戳，单位秒，不超过StartTime+10秒，超过默认为StartTime+10
      */
     public void setEndTime(Integer EndTime) {
@@ -159,7 +159,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取pos机id
+     * Get pos机id 
      * @return PosId pos机id
      */
     public String getPosId() {
@@ -167,7 +167,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置pos机id
+     * Set pos机id
      * @param PosId pos机id
      */
     public void setPosId(String PosId) {
@@ -175,7 +175,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取图片数，默认为1，最大为3
+     * Get 拉取图片数，默认为1，最大为3 
      * @return Num 拉取图片数，默认为1，最大为3
      */
     public Integer getNum() {
@@ -183,7 +183,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取图片数，默认为1，最大为3
+     * Set 拉取图片数，默认为1，最大为3
      * @param Num 拉取图片数，默认为1，最大为3
      */
     public void setNum(Integer Num) {
@@ -191,7 +191,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要base64的图片，0-不需要，1-需要，默认0
+     * Get 是否需要base64的图片，0-不需要，1-需要，默认0 
      * @return IsNeedPic 是否需要base64的图片，0-不需要，1-需要，默认0
      */
     public Integer getIsNeedPic() {
@@ -199,7 +199,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要base64的图片，0-不需要，1-需要，默认0
+     * Set 是否需要base64的图片，0-不需要，1-需要，默认0
      * @param IsNeedPic 是否需要base64的图片，0-不需要，1-需要，默认0
      */
     public void setIsNeedPic(Integer IsNeedPic) {
@@ -207,7 +207,7 @@ public class DescribeCameraPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

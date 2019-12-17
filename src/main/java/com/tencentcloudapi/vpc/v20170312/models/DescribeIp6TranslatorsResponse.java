@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIp6TranslatorsResponse  extends AbstractModel{
+public class DescribeIp6TranslatorsResponse extends AbstractModel{
 
     /**
     * 符合过滤条件的IPV6转换实例数量。
@@ -44,7 +44,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合过滤条件的IPV6转换实例数量。
+     * Get 符合过滤条件的IPV6转换实例数量。 
      * @return TotalCount 符合过滤条件的IPV6转换实例数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合过滤条件的IPV6转换实例数量。
+     * Set 符合过滤条件的IPV6转换实例数量。
      * @param TotalCount 符合过滤条件的IPV6转换实例数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合过滤条件的IPV6转换实例详细信息
+     * Get 符合过滤条件的IPV6转换实例详细信息 
      * @return Ip6TranslatorSet 符合过滤条件的IPV6转换实例详细信息
      */
     public Ip6Translator [] getIp6TranslatorSet() {
@@ -68,7 +68,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合过滤条件的IPV6转换实例详细信息
+     * Set 符合过滤条件的IPV6转换实例详细信息
      * @param Ip6TranslatorSet 符合过滤条件的IPV6转换实例详细信息
      */
     public void setIp6TranslatorSet(Ip6Translator [] Ip6TranslatorSet) {
@@ -76,7 +76,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeIp6TranslatorsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

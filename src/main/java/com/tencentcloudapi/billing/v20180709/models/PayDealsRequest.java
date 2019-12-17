@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PayDealsRequest  extends AbstractModel{
+public class PayDealsRequest extends AbstractModel{
 
     /**
     * 需要支付的一个或者多个订单号
@@ -44,7 +44,7 @@ public class PayDealsRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取需要支付的一个或者多个订单号
+     * Get 需要支付的一个或者多个订单号 
      * @return OrderIds 需要支付的一个或者多个订单号
      */
     public String [] getOrderIds() {
@@ -52,7 +52,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要支付的一个或者多个订单号
+     * Set 需要支付的一个或者多个订单号
      * @param OrderIds 需要支付的一个或者多个订单号
      */
     public void setOrderIds(String [] OrderIds) {
@@ -60,7 +60,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券,1:是,0否,默认0
+     * Get 是否自动使用代金券,1:是,0否,默认0 
      * @return AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      */
     public Integer getAutoVoucher() {
@@ -68,7 +68,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券,1:是,0否,默认0
+     * Set 是否自动使用代金券,1:是,0否,默认0
      * @param AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      */
     public void setAutoVoucher(Integer AutoVoucher) {
@@ -76,7 +76,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表,目前仅支持指定一张代金券
+     * Get 代金券ID列表,目前仅支持指定一张代金券 
      * @return VoucherIds 代金券ID列表,目前仅支持指定一张代金券
      */
     public String [] getVoucherIds() {
@@ -84,7 +84,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表,目前仅支持指定一张代金券
+     * Set 代金券ID列表,目前仅支持指定一张代金券
      * @param VoucherIds 代金券ID列表,目前仅支持指定一张代金券
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -92,7 +92,7 @@ public class PayDealsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "OrderIds.", this.OrderIds);

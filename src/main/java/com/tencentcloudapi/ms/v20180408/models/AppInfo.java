@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppInfo  extends AbstractModel{
+public class AppInfo extends AbstractModel{
 
     /**
     * app的url，必须保证不用权限校验就可以下载
@@ -79,7 +79,7 @@ public class AppInfo  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取app的url，必须保证不用权限校验就可以下载
+     * Get app的url，必须保证不用权限校验就可以下载 
      * @return AppUrl app的url，必须保证不用权限校验就可以下载
      */
     public String getAppUrl() {
@@ -87,7 +87,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的url，必须保证不用权限校验就可以下载
+     * Set app的url，必须保证不用权限校验就可以下载
      * @param AppUrl app的url，必须保证不用权限校验就可以下载
      */
     public void setAppUrl(String AppUrl) {
@@ -95,7 +95,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的md5，需要正确传递
+     * Get app的md5，需要正确传递 
      * @return AppMd5 app的md5，需要正确传递
      */
     public String getAppMd5() {
@@ -103,7 +103,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的md5，需要正确传递
+     * Set app的md5，需要正确传递
      * @param AppMd5 app的md5，需要正确传递
      */
     public void setAppMd5(String AppMd5) {
@@ -111,7 +111,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的大小
+     * Get app的大小 
      * @return AppSize app的大小
      */
     public Integer getAppSize() {
@@ -119,7 +119,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的大小
+     * Set app的大小
      * @param AppSize app的大小
      */
     public void setAppSize(Integer AppSize) {
@@ -127,7 +127,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * Get app的文件名，指定后加固后的文件名是{FileName}_legu.apk 
      * @return FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
      */
     public String getFileName() {
@@ -135,7 +135,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的文件名，指定后加固后的文件名是{FileName}_legu.apk
+     * Set app的文件名，指定后加固后的文件名是{FileName}_legu.apk
      * @param FileName app的文件名，指定后加固后的文件名是{FileName}_legu.apk
      */
     public void setFileName(String FileName) {
@@ -143,7 +143,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名，需要正确的传递此字段
+     * Get app的包名，需要正确的传递此字段 
      * @return AppPkgName app的包名，需要正确的传递此字段
      */
     public String getAppPkgName() {
@@ -151,7 +151,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的包名，需要正确的传递此字段
+     * Set app的包名，需要正确的传递此字段
      * @param AppPkgName app的包名，需要正确的传递此字段
      */
     public void setAppPkgName(String AppPkgName) {
@@ -159,7 +159,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的版本号
+     * Get app的版本号 
      * @return AppVersion app的版本号
      */
     public String getAppVersion() {
@@ -167,7 +167,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的版本号
+     * Set app的版本号
      * @param AppVersion app的版本号
      */
     public void setAppVersion(String AppVersion) {
@@ -175,7 +175,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的图标url
+     * Get app的图标url 
      * @return AppIconUrl app的图标url
      */
     public String getAppIconUrl() {
@@ -183,7 +183,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的图标url
+     * Set app的图标url
      * @param AppIconUrl app的图标url
      */
     public void setAppIconUrl(String AppIconUrl) {
@@ -191,7 +191,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 获取app的名称
+     * Get app的名称 
      * @return AppName app的名称
      */
     public String getAppName() {
@@ -199,7 +199,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 设置app的名称
+     * Set app的名称
      * @param AppName app的名称
      */
     public void setAppName(String AppName) {
@@ -207,7 +207,7 @@ public class AppInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppUrl", this.AppUrl);

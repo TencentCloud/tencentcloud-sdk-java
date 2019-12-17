@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRuleRequest  extends AbstractModel{
+public class DeleteRuleRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -58,7 +58,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -66,7 +66,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -74,7 +74,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -82,7 +82,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -90,7 +90,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的转发规则的ID组成的数组
+     * Get 要删除的转发规则的ID组成的数组 
      * @return LocationIds 要删除的转发规则的ID组成的数组
      */
     public String [] getLocationIds() {
@@ -98,7 +98,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的转发规则的ID组成的数组
+     * Set 要删除的转发规则的ID组成的数组
      * @param LocationIds 要删除的转发规则的ID组成的数组
      */
     public void setLocationIds(String [] LocationIds) {
@@ -106,7 +106,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+     * Get 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效 
      * @return Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
      */
     public String getDomain() {
@@ -114,7 +114,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+     * Set 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
      * @param Domain 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
      */
     public void setDomain(String Domain) {
@@ -122,7 +122,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * Get 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效 
      * @return Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
      */
     public String getUrl() {
@@ -130,7 +130,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+     * Set 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
      * @param Url 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
      */
     public void setUrl(String Url) {
@@ -138,7 +138,7 @@ public class DeleteRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

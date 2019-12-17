@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Rule  extends AbstractModel{
+public class Rule extends AbstractModel{
 
     /**
     * 规则Id
@@ -107,7 +107,7 @@ public class Rule  extends AbstractModel{
     private Integer DataType;
 
     /**
-     * 获取规则Id
+     * Get 规则Id 
      * @return RuleId 规则Id
      */
     public String getRuleId() {
@@ -115,7 +115,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置规则Id
+     * Set 规则Id
      * @param RuleId 规则Id
      */
     public void setRuleId(String RuleId) {
@@ -123,7 +123,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取AppId
+     * Get AppId 
      * @return AppId AppId
      */
     public Integer getAppId() {
@@ -131,7 +131,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置AppId
+     * Set AppId
      * @param AppId AppId
      */
     public void setAppId(Integer AppId) {
@@ -139,7 +139,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -147,7 +147,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -155,7 +155,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取描述
+     * Get 描述 
      * @return Description 描述
      */
     public String getDescription() {
@@ -163,7 +163,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置描述
+     * Set 描述
      * @param Description 描述
      */
     public void setDescription(String Description) {
@@ -171,7 +171,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取查询
+     * Get 查询 
      * @return Query 查询
      */
     public RuleQuery getQuery() {
@@ -179,7 +179,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置查询
+     * Set 查询
      * @param Query 查询
      */
     public void setQuery(RuleQuery Query) {
@@ -187,7 +187,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取转发
+     * Get 转发 
      * @return Actions 转发
      */
     public Action [] getActions() {
@@ -195,7 +195,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转发
+     * Set 转发
      * @param Actions 转发
      */
     public void setActions(Action [] Actions) {
@@ -203,7 +203,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取已启动
+     * Get 已启动 
      * @return Active 已启动
      */
     public Integer getActive() {
@@ -211,7 +211,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置已启动
+     * Set 已启动
      * @param Active 已启动
      */
     public void setActive(Integer Active) {
@@ -219,7 +219,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取已删除
+     * Get 已删除 
      * @return Deleted 已删除
      */
     public Integer getDeleted() {
@@ -227,7 +227,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置已删除
+     * Set 已删除
      * @param Deleted 已删除
      */
     public void setDeleted(Integer Deleted) {
@@ -235,7 +235,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -243,7 +243,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -251,7 +251,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -259,7 +259,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -267,7 +267,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取消息顺序
+     * Get 消息顺序 
      * @return MsgOrder 消息顺序
      */
     public Integer getMsgOrder() {
@@ -275,7 +275,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置消息顺序
+     * Set 消息顺序
      * @param MsgOrder 消息顺序
      */
     public void setMsgOrder(Integer MsgOrder) {
@@ -283,7 +283,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 获取数据类型（0：文本，1：二进制）
+     * Get 数据类型（0：文本，1：二进制） 
      * @return DataType 数据类型（0：文本，1：二进制）
      */
     public Integer getDataType() {
@@ -291,7 +291,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 设置数据类型（0：文本，1：二进制）
+     * Set 数据类型（0：文本，1：二进制）
      * @param DataType 数据类型（0：文本，1：二进制）
      */
     public void setDataType(Integer DataType) {
@@ -299,7 +299,7 @@ public class Rule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeployContainerGroupRequest  extends AbstractModel{
+public class DeployContainerGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID，分组唯一标识
@@ -121,7 +121,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     private Long UpdateIvl;
 
     /**
-     * 获取部署组ID，分组唯一标识
+     * Get 部署组ID，分组唯一标识 
      * @return GroupId 部署组ID，分组唯一标识
      */
     public String getGroupId() {
@@ -129,7 +129,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID，分组唯一标识
+     * Set 部署组ID，分组唯一标识
      * @param GroupId 部署组ID，分组唯一标识
      */
     public void setGroupId(String GroupId) {
@@ -137,7 +137,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像server
+     * Get 镜像server 
      * @return Server 镜像server
      */
     public String getServer() {
@@ -145,7 +145,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像server
+     * Set 镜像server
      * @param Server 镜像server
      */
     public void setServer(String Server) {
@@ -153,7 +153,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像版本名称,如v1
+     * Get 镜像版本名称,如v1 
      * @return TagName 镜像版本名称,如v1
      */
     public String getTagName() {
@@ -161,7 +161,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像版本名称,如v1
+     * Set 镜像版本名称,如v1
      * @param TagName 镜像版本名称,如v1
      */
     public void setTagName(String TagName) {
@@ -169,7 +169,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量
+     * Get 实例数量 
      * @return InstanceNum 实例数量
      */
     public Long getInstanceNum() {
@@ -177,7 +177,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量
+     * Set 实例数量
      * @param InstanceNum 实例数量
      */
     public void setInstanceNum(Long InstanceNum) {
@@ -185,7 +185,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取旧版镜像名，如/tsf/nginx
+     * Get 旧版镜像名，如/tsf/nginx 
      * @return Reponame 旧版镜像名，如/tsf/nginx
      */
     public String getReponame() {
@@ -193,7 +193,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置旧版镜像名，如/tsf/nginx
+     * Set 旧版镜像名，如/tsf/nginx
      * @param Reponame 旧版镜像名，如/tsf/nginx
      */
     public void setReponame(String Reponame) {
@@ -201,7 +201,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Get 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
      * @return CpuLimit 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public String getCpuLimit() {
@@ -209,7 +209,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Set 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      * @param CpuLimit 最大的 CPU 核数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public void setCpuLimit(String CpuLimit) {
@@ -217,7 +217,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Get 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍 
      * @return MemLimit 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public String getMemLimit() {
@@ -225,7 +225,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
+     * Set 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      * @param MemLimit 最大的内存 MiB 数，对应 K8S 的 limit；不填时默认为 request 的 2 倍
      */
     public void setMemLimit(String MemLimit) {
@@ -233,7 +233,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取jvm参数
+     * Get jvm参数 
      * @return JvmOpts jvm参数
      */
     public String getJvmOpts() {
@@ -241,7 +241,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置jvm参数
+     * Set jvm参数
      * @param JvmOpts jvm参数
      */
     public void setJvmOpts(String JvmOpts) {
@@ -249,7 +249,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分配的 CPU 核数，对应 K8S 的 request
+     * Get 分配的 CPU 核数，对应 K8S 的 request 
      * @return CpuRequest 分配的 CPU 核数，对应 K8S 的 request
      */
     public String getCpuRequest() {
@@ -257,7 +257,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分配的 CPU 核数，对应 K8S 的 request
+     * Set 分配的 CPU 核数，对应 K8S 的 request
      * @param CpuRequest 分配的 CPU 核数，对应 K8S 的 request
      */
     public void setCpuRequest(String CpuRequest) {
@@ -265,7 +265,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分配的内存 MiB 数，对应 K8S 的 request
+     * Get 分配的内存 MiB 数，对应 K8S 的 request 
      * @return MemRequest 分配的内存 MiB 数，对应 K8S 的 request
      */
     public String getMemRequest() {
@@ -273,7 +273,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分配的内存 MiB 数，对应 K8S 的 request
+     * Set 分配的内存 MiB 数，对应 K8S 的 request
      * @param MemRequest 分配的内存 MiB 数，对应 K8S 的 request
      */
     public void setMemRequest(String MemRequest) {
@@ -281,7 +281,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否不立即启动
+     * Get 是否不立即启动 
      * @return DoNotStart 是否不立即启动
      */
     public Boolean getDoNotStart() {
@@ -289,7 +289,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否不立即启动
+     * Set 是否不立即启动
      * @param DoNotStart 是否不立即启动
      */
     public void setDoNotStart(Boolean DoNotStart) {
@@ -297,7 +297,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（优先使用）新版镜像名，如/tsf/nginx
+     * Get （优先使用）新版镜像名，如/tsf/nginx 
      * @return RepoName （优先使用）新版镜像名，如/tsf/nginx
      */
     public String getRepoName() {
@@ -305,7 +305,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（优先使用）新版镜像名，如/tsf/nginx
+     * Set （优先使用）新版镜像名，如/tsf/nginx
      * @param RepoName （优先使用）新版镜像名，如/tsf/nginx
      */
     public void setRepoName(String RepoName) {
@@ -313,7 +313,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新方式：0:快速更新 1:滚动更新
+     * Get 更新方式：0:快速更新 1:滚动更新 
      * @return UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public Long getUpdateType() {
@@ -321,7 +321,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新方式：0:快速更新 1:滚动更新
+     * Set 更新方式：0:快速更新 1:滚动更新
      * @param UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public void setUpdateType(Long UpdateType) {
@@ -329,7 +329,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取滚动更新必填，更新间隔
+     * Get 滚动更新必填，更新间隔 
      * @return UpdateIvl 滚动更新必填，更新间隔
      */
     public Long getUpdateIvl() {
@@ -337,7 +337,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置滚动更新必填，更新间隔
+     * Set 滚动更新必填，更新间隔
      * @param UpdateIvl 滚动更新必填，更新间隔
      */
     public void setUpdateIvl(Long UpdateIvl) {
@@ -345,7 +345,7 @@ public class DeployContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

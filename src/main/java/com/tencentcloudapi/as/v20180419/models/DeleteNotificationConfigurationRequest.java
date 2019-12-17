@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteNotificationConfigurationRequest  extends AbstractModel{
+public class DeleteNotificationConfigurationRequest extends AbstractModel{
 
     /**
     * 待删除的通知ID。
@@ -30,7 +30,7 @@ public class DeleteNotificationConfigurationRequest  extends AbstractModel{
     private String AutoScalingNotificationId;
 
     /**
-     * 获取待删除的通知ID。
+     * Get 待删除的通知ID。 
      * @return AutoScalingNotificationId 待删除的通知ID。
      */
     public String getAutoScalingNotificationId() {
@@ -38,7 +38,7 @@ public class DeleteNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的通知ID。
+     * Set 待删除的通知ID。
      * @param AutoScalingNotificationId 待删除的通知ID。
      */
     public void setAutoScalingNotificationId(String AutoScalingNotificationId) {
@@ -46,7 +46,7 @@ public class DeleteNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingNotificationId", this.AutoScalingNotificationId);

@@ -29,21 +29,10 @@ public class MongodbClient extends AbstractClient{
     private static String endpoint = "mongodb.tencentcloudapi.com";
     private static String version = "2019-07-25";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public MongodbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public MongodbClient(Credential credential, String region, ClientProfile profile) {
         super(MongodbClient.endpoint, MongodbClient.version, credential, region, profile);
     }

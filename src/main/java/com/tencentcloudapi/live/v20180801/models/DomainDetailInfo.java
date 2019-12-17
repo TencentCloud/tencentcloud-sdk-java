@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainDetailInfo  extends AbstractModel{
+public class DomainDetailInfo extends AbstractModel{
 
     /**
     * 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
@@ -58,7 +58,7 @@ public class DomainDetailInfo  extends AbstractModel{
     private Integer Request;
 
     /**
-     * 获取国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+     * Get 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。 
      * @return MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
      */
     public String getMainlandOrOversea() {
@@ -66,7 +66,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
+     * Set 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
      * @param MainlandOrOversea 国内还是国外，可选值包括Mainland和Oversea，如果为“Mainland”，表示国内数据；如果为“Oversea”，表示国外数据。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -74,7 +74,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取带宽，单位是Mbps。
+     * Get 带宽，单位是Mbps。 
      * @return Bandwidth 带宽，单位是Mbps。
      */
     public Float getBandwidth() {
@@ -82,7 +82,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带宽，单位是Mbps。
+     * Set 带宽，单位是Mbps。
      * @param Bandwidth 带宽，单位是Mbps。
      */
     public void setBandwidth(Float Bandwidth) {
@@ -90,7 +90,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流量，单位是MB。
+     * Get 流量，单位是MB。 
      * @return Flux 流量，单位是MB。
      */
     public Float getFlux() {
@@ -98,7 +98,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流量，单位是MB。
+     * Set 流量，单位是MB。
      * @param Flux 流量，单位是MB。
      */
     public void setFlux(Float Flux) {
@@ -106,7 +106,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人数。
+     * Get 人数。 
      * @return Online 人数。
      */
     public Integer getOnline() {
@@ -114,7 +114,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人数。
+     * Set 人数。
      * @param Online 人数。
      */
     public void setOnline(Integer Online) {
@@ -122,7 +122,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取请求数。
+     * Get 请求数。 
      * @return Request 请求数。
      */
     public Integer getRequest() {
@@ -130,7 +130,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置请求数。
+     * Set 请求数。
      * @param Request 请求数。
      */
     public void setRequest(Integer Request) {
@@ -138,7 +138,7 @@ public class DomainDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);

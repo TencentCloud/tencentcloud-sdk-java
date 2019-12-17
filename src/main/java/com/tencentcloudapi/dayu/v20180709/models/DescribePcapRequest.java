@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePcapRequest  extends AbstractModel{
+public class DescribePcapRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
@@ -58,7 +58,7 @@ public class DescribePcapRequest  extends AbstractModel{
     private String Ip;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
      */
     public String getBusiness() {
@@ -66,7 +66,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；shield表示棋牌盾）
      */
     public void setBusiness(String Business) {
@@ -74,7 +74,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例ID
+     * Get 资源实例ID 
      * @return Id 资源实例ID
      */
     public String getId() {
@@ -82,7 +82,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例ID
+     * Set 资源实例ID
      * @param Id 资源实例ID
      */
     public void setId(String Id) {
@@ -90,7 +90,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 获取攻击事件的开始时间，格式为"2018-08-28 07:00:00"
+     * Get 攻击事件的开始时间，格式为"2018-08-28 07:00:00" 
      * @return StartTime 攻击事件的开始时间，格式为"2018-08-28 07:00:00"
      */
     public String getStartTime() {
@@ -98,7 +98,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 设置攻击事件的开始时间，格式为"2018-08-28 07:00:00"
+     * Set 攻击事件的开始时间，格式为"2018-08-28 07:00:00"
      * @param StartTime 攻击事件的开始时间，格式为"2018-08-28 07:00:00"
      */
     public void setStartTime(String StartTime) {
@@ -106,7 +106,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 获取攻击事件的结束时间，格式为"2018-08-28 07:02:00"
+     * Get 攻击事件的结束时间，格式为"2018-08-28 07:02:00" 
      * @return EndTime 攻击事件的结束时间，格式为"2018-08-28 07:02:00"
      */
     public String getEndTime() {
@@ -114,7 +114,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 设置攻击事件的结束时间，格式为"2018-08-28 07:02:00"
+     * Set 攻击事件的结束时间，格式为"2018-08-28 07:02:00"
      * @param EndTime 攻击事件的结束时间，格式为"2018-08-28 07:02:00"
      */
     public void setEndTime(String EndTime) {
@@ -122,7 +122,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP，只有当Business为net时才需要填写资源实例下的IP；
+     * Get 资源的IP，只有当Business为net时才需要填写资源实例下的IP； 
      * @return Ip 资源的IP，只有当Business为net时才需要填写资源实例下的IP；
      */
     public String getIp() {
@@ -130,7 +130,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP，只有当Business为net时才需要填写资源实例下的IP；
+     * Set 资源的IP，只有当Business为net时才需要填写资源实例下的IP；
      * @param Ip 资源的IP，只有当Business为net时才需要填写资源实例下的IP；
      */
     public void setIp(String Ip) {
@@ -138,7 +138,7 @@ public class DescribePcapRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

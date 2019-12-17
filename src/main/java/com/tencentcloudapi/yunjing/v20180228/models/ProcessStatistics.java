@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessStatistics  extends AbstractModel{
+public class ProcessStatistics extends AbstractModel{
 
     /**
     * 进程名。
@@ -34,10 +34,10 @@ public class ProcessStatistics  extends AbstractModel{
     */
     @SerializedName("MachineNum")
     @Expose
-    private Integer MachineNum;
+    private Long MachineNum;
 
     /**
-     * 获取进程名。
+     * Get 进程名。 
      * @return ProcessName 进程名。
      */
     public String getProcessName() {
@@ -45,7 +45,7 @@ public class ProcessStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置进程名。
+     * Set 进程名。
      * @param ProcessName 进程名。
      */
     public void setProcessName(String ProcessName) {
@@ -53,23 +53,23 @@ public class ProcessStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取主机数量。
+     * Get 主机数量。 
      * @return MachineNum 主机数量。
      */
-    public Integer getMachineNum() {
+    public Long getMachineNum() {
         return this.MachineNum;
     }
 
     /**
-     * 设置主机数量。
+     * Set 主机数量。
      * @param MachineNum 主机数量。
      */
-    public void setMachineNum(Integer MachineNum) {
+    public void setMachineNum(Long MachineNum) {
         this.MachineNum = MachineNum;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);

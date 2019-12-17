@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoSnapshotPolicy  extends AbstractModel{
+public class AutoSnapshotPolicy extends AbstractModel{
 
     /**
     * 定期快照策略ID。
@@ -93,7 +93,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     private String [] DiskIdSet;
 
     /**
-     * 获取定期快照策略ID。
+     * Get 定期快照策略ID。 
      * @return AutoSnapshotPolicyId 定期快照策略ID。
      */
     public String getAutoSnapshotPolicyId() {
@@ -101,7 +101,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略ID。
+     * Set 定期快照策略ID。
      * @param AutoSnapshotPolicyId 定期快照策略ID。
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
@@ -109,7 +109,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照策略名称。
+     * Get 定期快照策略名称。 
      * @return AutoSnapshotPolicyName 定期快照策略名称。
      */
     public String getAutoSnapshotPolicyName() {
@@ -117,7 +117,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略名称。
+     * Set 定期快照策略名称。
      * @param AutoSnapshotPolicyName 定期快照策略名称。
      */
     public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
@@ -125,7 +125,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * Get 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。 
      * @return AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
      */
     public String getAutoSnapshotPolicyState() {
@@ -133,7 +133,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * Set 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
      * @param AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
      */
     public void setAutoSnapshotPolicyState(String AutoSnapshotPolicyState) {
@@ -141,7 +141,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照策略是否激活。
+     * Get 定期快照策略是否激活。 
      * @return IsActivated 定期快照策略是否激活。
      */
     public Boolean getIsActivated() {
@@ -149,7 +149,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略是否激活。
+     * Set 定期快照策略是否激活。
      * @param IsActivated 定期快照策略是否激活。
      */
     public void setIsActivated(Boolean IsActivated) {
@@ -157,7 +157,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取使用该定期快照策略创建出来的快照是否永久保留。
+     * Get 使用该定期快照策略创建出来的快照是否永久保留。 
      * @return IsPermanent 使用该定期快照策略创建出来的快照是否永久保留。
      */
     public Boolean getIsPermanent() {
@@ -165,7 +165,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置使用该定期快照策略创建出来的快照是否永久保留。
+     * Set 使用该定期快照策略创建出来的快照是否永久保留。
      * @param IsPermanent 使用该定期快照策略创建出来的快照是否永久保留。
      */
     public void setIsPermanent(Boolean IsPermanent) {
@@ -173,7 +173,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取使用该定期快照策略创建出来的快照保留天数。
+     * Get 使用该定期快照策略创建出来的快照保留天数。 
      * @return RetentionDays 使用该定期快照策略创建出来的快照保留天数。
      */
     public Integer getRetentionDays() {
@@ -181,7 +181,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置使用该定期快照策略创建出来的快照保留天数。
+     * Set 使用该定期快照策略创建出来的快照保留天数。
      * @param RetentionDays 使用该定期快照策略创建出来的快照保留天数。
      */
     public void setRetentionDays(Integer RetentionDays) {
@@ -189,7 +189,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照策略的创建时间。
+     * Get 定期快照策略的创建时间。 
      * @return CreateTime 定期快照策略的创建时间。
      */
     public String getCreateTime() {
@@ -197,7 +197,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照策略的创建时间。
+     * Set 定期快照策略的创建时间。
      * @param CreateTime 定期快照策略的创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -205,7 +205,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照下次触发的时间。
+     * Get 定期快照下次触发的时间。 
      * @return NextTriggerTime 定期快照下次触发的时间。
      */
     public String getNextTriggerTime() {
@@ -213,7 +213,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照下次触发的时间。
+     * Set 定期快照下次触发的时间。
      * @param NextTriggerTime 定期快照下次触发的时间。
      */
     public void setNextTriggerTime(String NextTriggerTime) {
@@ -221,7 +221,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取定期快照的执行策略。
+     * Get 定期快照的执行策略。 
      * @return Policy 定期快照的执行策略。
      */
     public Policy [] getPolicy() {
@@ -229,7 +229,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置定期快照的执行策略。
+     * Set 定期快照的执行策略。
      * @param Policy 定期快照的执行策略。
      */
     public void setPolicy(Policy [] Policy) {
@@ -237,7 +237,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定当前定期快照策略的云盘ID列表。
+     * Get 已绑定当前定期快照策略的云盘ID列表。 
      * @return DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      */
     public String [] getDiskIdSet() {
@@ -245,7 +245,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定当前定期快照策略的云盘ID列表。
+     * Set 已绑定当前定期快照策略的云盘ID列表。
      * @param DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      */
     public void setDiskIdSet(String [] DiskIdSet) {
@@ -253,7 +253,7 @@ public class AutoSnapshotPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);

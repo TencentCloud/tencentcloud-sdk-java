@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAutoOpenProVersionConfigRequest  extends AbstractModel{
+public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel{
 
     /**
     * 设置自动开通状态。
@@ -32,9 +32,9 @@ public class ModifyAutoOpenProVersionConfigRequest  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取设置自动开通状态。
+     * Get 设置自动开通状态。
 <li>CLOSE：关闭</li>
-<li>OPEN：打开</li>
+<li>OPEN：打开</li> 
      * @return Status 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
@@ -44,7 +44,7 @@ public class ModifyAutoOpenProVersionConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置自动开通状态。
+     * Set 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
      * @param Status 设置自动开通状态。
@@ -56,7 +56,7 @@ public class ModifyAutoOpenProVersionConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

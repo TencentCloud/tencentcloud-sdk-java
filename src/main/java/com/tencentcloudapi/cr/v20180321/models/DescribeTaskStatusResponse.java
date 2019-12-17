@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusResponse  extends AbstractModel{
+public class DescribeTaskStatusResponse extends AbstractModel{
 
     /**
     * <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
@@ -52,7 +52,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+     * Get <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul> 
      * @return TaskResult <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      */
     public String getTaskResult() {
@@ -60,7 +60,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置<p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
+     * Set <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      * @param TaskResult <p>任务结果：</p><ul style="margin-bottom:0px;"><li>处理中："Uploading Data."</li><li>上传成功："File Uploading Task Success."</li><li>上传失败：具体失败原因</li></ul>
      */
     public void setTaskResult(String TaskResult) {
@@ -68,7 +68,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取<p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
+     * Get <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul> 
      * @return TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
      */
     public String getTaskType() {
@@ -76,7 +76,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置<p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
+     * Set <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
      * @param TaskType <p>任务类型：</p><ul style="margin-bottom:0px;"><li>到期/逾期提醒数据上传：002</li><li>到期/逾期提醒停拨数据上传：003</li><li>回访数据上传：004</li><li>回访停拨数据上传：005</li></ul>
      */
     public void setTaskType(String TaskType) {
@@ -84,8 +84,8 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取过滤文件下载链接，有过滤数据时才存在。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤文件下载链接，有过滤数据时才存在。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,7 +94,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置过滤文件下载链接，有过滤数据时才存在。
+     * Set 过滤文件下载链接，有过滤数据时才存在。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskFileUrl 过滤文件下载链接，有过滤数据时才存在。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -112,7 +112,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -120,7 +120,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskResult", this.TaskResult);

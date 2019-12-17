@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4RuleEntry  extends AbstractModel{
+public class L4RuleEntry extends AbstractModel{
 
     /**
     * 转发协议，取值[TCP, UDP]
@@ -100,7 +100,7 @@ public class L4RuleEntry  extends AbstractModel{
     private Long RemoveSwitch;
 
     /**
-     * 获取转发协议，取值[TCP, UDP]
+     * Get 转发协议，取值[TCP, UDP] 
      * @return Protocol 转发协议，取值[TCP, UDP]
      */
     public String getProtocol() {
@@ -108,7 +108,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议，取值[TCP, UDP]
+     * Set 转发协议，取值[TCP, UDP]
      * @param Protocol 转发协议，取值[TCP, UDP]
      */
     public void setProtocol(String Protocol) {
@@ -116,7 +116,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取转发端口
+     * Get 转发端口 
      * @return VirtualPort 转发端口
      */
     public Long getVirtualPort() {
@@ -124,7 +124,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置转发端口
+     * Set 转发端口
      * @param VirtualPort 转发端口
      */
     public void setVirtualPort(Long VirtualPort) {
@@ -132,7 +132,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取源站端口
+     * Get 源站端口 
      * @return SourcePort 源站端口
      */
     public Long getSourcePort() {
@@ -140,7 +140,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置源站端口
+     * Set 源站端口
      * @param SourcePort 源站端口
      */
     public void setSourcePort(Long SourcePort) {
@@ -148,7 +148,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取回源方式，取值[1(域名回源)，2(IP回源)]
+     * Get 回源方式，取值[1(域名回源)，2(IP回源)] 
      * @return SourceType 回源方式，取值[1(域名回源)，2(IP回源)]
      */
     public Long getSourceType() {
@@ -156,7 +156,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置回源方式，取值[1(域名回源)，2(IP回源)]
+     * Set 回源方式，取值[1(域名回源)，2(IP回源)]
      * @param SourceType 回源方式，取值[1(域名回源)，2(IP回源)]
      */
     public void setSourceType(Long SourceType) {
@@ -164,7 +164,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间，单位秒
+     * Get 会话保持时间，单位秒 
      * @return KeepTime 会话保持时间，单位秒
      */
     public Long getKeepTime() {
@@ -172,7 +172,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间，单位秒
+     * Set 会话保持时间，单位秒
      * @param KeepTime 会话保持时间，单位秒
      */
     public void setKeepTime(Long KeepTime) {
@@ -180,7 +180,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取回源列表
+     * Get 回源列表 
      * @return SourceList 回源列表
      */
     public L4RuleSource [] getSourceList() {
@@ -188,7 +188,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置回源列表
+     * Set 回源列表
      * @param SourceList 回源列表
      */
     public void setSourceList(L4RuleSource [] SourceList) {
@@ -196,7 +196,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
+     * Get 负载均衡方式，取值[1(加权轮询)，2(源IP hash)] 
      * @return LbType 负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
      */
     public Long getLbType() {
@@ -204,7 +204,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
+     * Set 负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
      * @param LbType 负载均衡方式，取值[1(加权轮询)，2(源IP hash)]
      */
     public void setLbType(Long LbType) {
@@ -212,7 +212,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Get 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)] 
      * @return KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public Long getKeepEnable() {
@@ -220,7 +220,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Set 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      * @param KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
      */
     public void setKeepEnable(Long KeepEnable) {
@@ -228,7 +228,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -236,7 +236,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -244,7 +244,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取规则描述
+     * Get 规则描述 
      * @return RuleName 规则描述
      */
     public String getRuleName() {
@@ -252,7 +252,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置规则描述
+     * Set 规则描述
      * @param RuleName 规则描述
      */
     public void setRuleName(String RuleName) {
@@ -260,7 +260,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 获取移除水印状态，取值[0(关闭)，1(开启)]
+     * Get 移除水印状态，取值[0(关闭)，1(开启)] 
      * @return RemoveSwitch 移除水印状态，取值[0(关闭)，1(开启)]
      */
     public Long getRemoveSwitch() {
@@ -268,7 +268,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 设置移除水印状态，取值[0(关闭)，1(开启)]
+     * Set 移除水印状态，取值[0(关闭)，1(开启)]
      * @param RemoveSwitch 移除水印状态，取值[0(关闭)，1(开启)]
      */
     public void setRemoveSwitch(Long RemoveSwitch) {
@@ -276,7 +276,7 @@ public class L4RuleEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

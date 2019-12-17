@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceCertResponse  extends AbstractModel{
+public class ReplaceCertResponse extends AbstractModel{
 
     /**
     * 新证书ID。
@@ -44,7 +44,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取新证书ID。
+     * Get 新证书ID。 
      * @return NewCertId 新证书ID。
      */
     public String getNewCertId() {
@@ -52,7 +52,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置新证书ID。
+     * Set 新证书ID。
      * @param NewCertId 新证书ID。
      */
     public void setNewCertId(String NewCertId) {
@@ -60,7 +60,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 获取旧证书ID。
+     * Get 旧证书ID。 
      * @return OldCertId 旧证书ID。
      */
     public String getOldCertId() {
@@ -68,7 +68,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置旧证书ID。
+     * Set 旧证书ID。
      * @param OldCertId 旧证书ID。
      */
     public void setOldCertId(String OldCertId) {
@@ -76,7 +76,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ReplaceCertResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NewCertId", this.NewCertId);

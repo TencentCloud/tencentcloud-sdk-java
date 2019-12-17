@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGroupResponse  extends AbstractModel{
+public class CreateGroupResponse extends AbstractModel{
 
     /**
     * 用户组 ID
@@ -37,7 +37,7 @@ public class CreateGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户组 ID
+     * Get 用户组 ID 
      * @return GroupId 用户组 ID
      */
     public Long getGroupId() {
@@ -45,7 +45,7 @@ public class CreateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID
+     * Set 用户组 ID
      * @param GroupId 用户组 ID
      */
     public void setGroupId(Long GroupId) {
@@ -53,7 +53,7 @@ public class CreateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

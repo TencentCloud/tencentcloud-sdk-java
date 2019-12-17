@@ -29,21 +29,10 @@ public class SqlserverClient extends AbstractClient{
     private static String endpoint = "sqlserver.tencentcloudapi.com";
     private static String version = "2018-03-28";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public SqlserverClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public SqlserverClient(Credential credential, String region, ClientProfile profile) {
         super(SqlserverClient.endpoint, SqlserverClient.version, credential, region, profile);
     }

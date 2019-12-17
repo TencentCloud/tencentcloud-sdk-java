@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceCategoryItem  extends AbstractModel{
+public class InstanceCategoryItem extends AbstractModel{
 
     /**
     * 实例类型名
@@ -37,7 +37,7 @@ public class InstanceCategoryItem  extends AbstractModel{
     private String [] InstanceFamilySet;
 
     /**
-     * 获取实例类型名
+     * Get 实例类型名 
      * @return InstanceCategory 实例类型名
      */
     public String getInstanceCategory() {
@@ -45,7 +45,7 @@ public class InstanceCategoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型名
+     * Set 实例类型名
      * @param InstanceCategory 实例类型名
      */
     public void setInstanceCategory(String InstanceCategory) {
@@ -53,7 +53,7 @@ public class InstanceCategoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例族列表
+     * Get 实例族列表 
      * @return InstanceFamilySet 实例族列表
      */
     public String [] getInstanceFamilySet() {
@@ -61,7 +61,7 @@ public class InstanceCategoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例族列表
+     * Set 实例族列表
      * @param InstanceFamilySet 实例族列表
      */
     public void setInstanceFamilySet(String [] InstanceFamilySet) {
@@ -69,7 +69,7 @@ public class InstanceCategoryItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceCategory", this.InstanceCategory);

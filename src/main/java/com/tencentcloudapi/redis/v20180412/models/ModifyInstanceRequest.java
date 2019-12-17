@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceRequest  extends AbstractModel{
+public class ModifyInstanceRequest extends AbstractModel{
 
     /**
     * 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
@@ -58,7 +58,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     private Integer AutoRenew;
 
     /**
-     * 获取修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * Get 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记 
      * @return Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      */
     public String getOperation() {
@@ -66,7 +66,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * Set 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      * @param Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
      */
     public void setOperation(String Operation) {
@@ -74,7 +74,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -82,7 +82,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -90,7 +90,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例的新名称
+     * Get 实例的新名称 
      * @return InstanceName 实例的新名称
      */
     public String getInstanceName() {
@@ -98,7 +98,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例的新名称
+     * Set 实例的新名称
      * @param InstanceName 实例的新名称
      */
     public void setInstanceName(String InstanceName) {
@@ -106,7 +106,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
+     * Get 项目Id 
      * @return ProjectId 项目Id
      */
     public Integer getProjectId() {
@@ -114,7 +114,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
      * @param ProjectId 项目Id
      */
     public void setProjectId(Integer ProjectId) {
@@ -122,7 +122,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public Integer getAutoRenew() {
@@ -130,7 +130,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenew 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -138,7 +138,7 @@ public class ModifyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operation", this.Operation);

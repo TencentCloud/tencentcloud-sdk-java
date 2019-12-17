@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteZoneRequest  extends AbstractModel{
+public class DeleteZoneRequest extends AbstractModel{
 
     /**
     * 大区所属的应用实例ID
@@ -37,7 +37,7 @@ public class DeleteZoneRequest  extends AbstractModel{
     private String LogicZoneId;
 
     /**
-     * 获取大区所属的应用实例ID
+     * Get 大区所属的应用实例ID 
      * @return ApplicationId 大区所属的应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class DeleteZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区所属的应用实例ID
+     * Set 大区所属的应用实例ID
      * @param ApplicationId 大区所属的应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class DeleteZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大区ID
+     * Get 大区ID 
      * @return LogicZoneId 大区ID
      */
     public String getLogicZoneId() {
@@ -61,7 +61,7 @@ public class DeleteZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区ID
+     * Set 大区ID
      * @param LogicZoneId 大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -69,7 +69,7 @@ public class DeleteZoneRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

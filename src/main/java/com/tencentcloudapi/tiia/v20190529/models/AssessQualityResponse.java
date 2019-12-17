@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssessQualityResponse  extends AbstractModel{
+public class AssessQualityResponse extends AbstractModel{
 
     /**
     * 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
@@ -79,7 +79,7 @@ public class AssessQualityResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
+     * Get 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。 
      * @return LongImage 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
      */
     public Boolean getLongImage() {
@@ -87,7 +87,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
+     * Set 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
      * @param LongImage 取值为TRUE或FALSE，TRUE为长图，FALSE为正常图，长图定义为长宽比大于等于3或小于等于1/3的图片。
      */
     public void setLongImage(Boolean LongImage) {
@@ -95,7 +95,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。
+     * Get 取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。 
      * @return BlackAndWhite 取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。
      */
     public Boolean getBlackAndWhite() {
@@ -103,7 +103,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。
+     * Set 取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。
      * @param BlackAndWhite 取值为TRUE或FALSE，TRUE为黑白图，FALSE为否。黑白图即灰度图，指红绿蓝三个通道都是以灰度色阶显示的图片，并非视觉上的“黑白图片”。
      */
     public void setBlackAndWhite(Boolean BlackAndWhite) {
@@ -111,7 +111,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。
+     * Get 取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。 
      * @return SmallImage 取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。
      */
     public Boolean getSmallImage() {
@@ -119,7 +119,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。
+     * Set 取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。
      * @param SmallImage 取值为TRUE或FALSE，TRUE为小图，FALSE为否, 小图定义为最长边小于179像素的图片。当一张图片被判断为小图时，不建议做推荐和展示，其他字段统一输出为0或FALSE。
      */
     public void setSmallImage(Boolean SmallImage) {
@@ -127,7 +127,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片
+     * Get 取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片 
      * @return BigImage 取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片
      */
     public Boolean getBigImage() {
@@ -135,7 +135,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片
+     * Set 取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片
      * @param BigImage 取值为TRUE或FALSE，TRUE为大图，FALSE为否，定义为最短边大于1000像素的图片
      */
     public void setBigImage(Boolean BigImage) {
@@ -143,7 +143,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。
+     * Get 取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。 
      * @return PureImage 取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。
      */
     public Boolean getPureImage() {
@@ -151,7 +151,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。
+     * Set 取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。
      * @param PureImage 取值为TRUE或FALSE，TRUE为纯色图或纯文字图，即没有内容或只有简单内容的图片，FALSE为正常图片。
      */
     public void setPureImage(Boolean PureImage) {
@@ -159,7 +159,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。
+     * Get 综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。 
      * @return ClarityScore 综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。
      */
     public Long getClarityScore() {
@@ -167,7 +167,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。
+     * Set 综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。
      * @param ClarityScore 综合评分。图像清晰度的得分，对图片的噪声、曝光、模糊、压缩等因素进行综合评估，取值为[0, 100]，值越大，越清晰。一般大于50为较清晰图片，标准可以自行把握。
      */
     public void setClarityScore(Long ClarityScore) {
@@ -175,7 +175,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。
+     * Get 综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。 
      * @return AestheticScore 综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。
      */
     public Long getAestheticScore() {
@@ -183,7 +183,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。
+     * Set 综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。
      * @param AestheticScore 综合评分。图像美观度得分， 从构图、色彩等多个艺术性维度评价图片，取值为[0, 100]，值越大，越美观。一般大于50为较美观图片，标准可以自行把握。
      */
     public void setAestheticScore(Long AestheticScore) {
@@ -191,7 +191,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class AssessQualityResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LongImage", this.LongImage);

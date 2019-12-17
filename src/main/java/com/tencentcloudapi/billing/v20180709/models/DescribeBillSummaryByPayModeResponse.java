@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
+public class DescribeBillSummaryByPayModeResponse extends AbstractModel{
 
     /**
     * 数据是否准备好，0未准备好，1准备好
@@ -45,7 +45,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据是否准备好，0未准备好，1准备好
+     * Get 数据是否准备好，0未准备好，1准备好 
      * @return Ready 数据是否准备好，0未准备好，1准备好
      */
     public Integer getReady() {
@@ -53,7 +53,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据是否准备好，0未准备好，1准备好
+     * Set 数据是否准备好，0未准备好，1准备好
      * @param Ready 数据是否准备好，0未准备好，1准备好
      */
     public void setReady(Integer Ready) {
@@ -61,8 +61,8 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各付费模式花费分布详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 各付费模式花费分布详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SummaryOverview 各付费模式花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各付费模式花费分布详情
+     * Set 各付费模式花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SummaryOverview 各付费模式花费分布详情
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DescribeBillSummaryByPayModeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ready", this.Ready);

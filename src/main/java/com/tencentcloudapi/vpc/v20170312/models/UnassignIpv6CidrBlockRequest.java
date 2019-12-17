@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
+public class UnassignIpv6CidrBlockRequest extends AbstractModel{
 
     /**
     * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
@@ -37,7 +37,7 @@ public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
     private String Ipv6CidrBlock;
 
     /**
-     * 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
      * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Get `IPv6`网段。形如：`3402:4e00:20:1000::/56` 
      * @return Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
      */
     public String getIpv6CidrBlock() {
@@ -61,7 +61,7 @@ public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Set `IPv6`网段。形如：`3402:4e00:20:1000::/56`
      * @param Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -69,7 +69,7 @@ public class UnassignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

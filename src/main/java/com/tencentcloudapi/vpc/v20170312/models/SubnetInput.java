@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubnetInput  extends AbstractModel{
+public class SubnetInput extends AbstractModel{
 
     /**
     * 子网的`CIDR`。
@@ -51,7 +51,7 @@ public class SubnetInput  extends AbstractModel{
     private String RouteTableId;
 
     /**
-     * 获取子网的`CIDR`。
+     * Get 子网的`CIDR`。 
      * @return CidrBlock 子网的`CIDR`。
      */
     public String getCidrBlock() {
@@ -59,7 +59,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 设置子网的`CIDR`。
+     * Set 子网的`CIDR`。
      * @param CidrBlock 子网的`CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -67,7 +67,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称。
+     * Get 子网名称。 
      * @return SubnetName 子网名称。
      */
     public String getSubnetName() {
@@ -75,7 +75,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称。
+     * Set 子网名称。
      * @param SubnetName 子网名称。
      */
     public void setSubnetName(String SubnetName) {
@@ -83,7 +83,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 获取可用区。形如：`ap-guangzhou-2`。
+     * Get 可用区。形如：`ap-guangzhou-2`。 
      * @return Zone 可用区。形如：`ap-guangzhou-2`。
      */
     public String getZone() {
@@ -91,7 +91,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 设置可用区。形如：`ap-guangzhou-2`。
+     * Set 可用区。形如：`ap-guangzhou-2`。
      * @param Zone 可用区。形如：`ap-guangzhou-2`。
      */
     public void setZone(String Zone) {
@@ -99,7 +99,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 获取指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * Get 指定关联路由表，形如：`rtb-3ryrwzuu`。 
      * @return RouteTableId 指定关联路由表，形如：`rtb-3ryrwzuu`。
      */
     public String getRouteTableId() {
@@ -107,7 +107,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 设置指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * Set 指定关联路由表，形如：`rtb-3ryrwzuu`。
      * @param RouteTableId 指定关联路由表，形如：`rtb-3ryrwzuu`。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -115,7 +115,7 @@ public class SubnetInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);

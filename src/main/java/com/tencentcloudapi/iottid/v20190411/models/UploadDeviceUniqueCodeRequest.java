@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
+public class UploadDeviceUniqueCodeRequest extends AbstractModel{
 
     /**
     * 硬件唯一标识码
@@ -37,7 +37,7 @@ public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
     private String OrderId;
 
     /**
-     * 获取硬件唯一标识码
+     * Get 硬件唯一标识码 
      * @return CodeSet 硬件唯一标识码
      */
     public String [] getCodeSet() {
@@ -45,7 +45,7 @@ public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬件唯一标识码
+     * Set 硬件唯一标识码
      * @param CodeSet 硬件唯一标识码
      */
     public void setCodeSet(String [] CodeSet) {
@@ -53,7 +53,7 @@ public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取硬件标识码绑定的申请编号
+     * Get 硬件标识码绑定的申请编号 
      * @return OrderId 硬件标识码绑定的申请编号
      */
     public String getOrderId() {
@@ -61,7 +61,7 @@ public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬件标识码绑定的申请编号
+     * Set 硬件标识码绑定的申请编号
      * @param OrderId 硬件标识码绑定的申请编号
      */
     public void setOrderId(String OrderId) {
@@ -69,7 +69,7 @@ public class UploadDeviceUniqueCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "CodeSet.", this.CodeSet);

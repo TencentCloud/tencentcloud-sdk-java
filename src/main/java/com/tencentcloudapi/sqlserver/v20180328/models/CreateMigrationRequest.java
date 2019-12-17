@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMigrationRequest  extends AbstractModel{
+public class CreateMigrationRequest extends AbstractModel{
 
     /**
     * 迁移任务的名称
@@ -34,14 +34,14 @@ public class CreateMigrationRequest  extends AbstractModel{
     */
     @SerializedName("MigrateType")
     @Expose
-    private Integer MigrateType;
+    private Long MigrateType;
 
     /**
     * 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
     */
     @SerializedName("SourceType")
     @Expose
-    private Integer SourceType;
+    private Long SourceType;
 
     /**
     * 迁移源
@@ -65,7 +65,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     private MigrateDB [] MigrateDBSet;
 
     /**
-     * 获取迁移任务的名称
+     * Get 迁移任务的名称 
      * @return MigrateName 迁移任务的名称
      */
     public String getMigrateName() {
@@ -73,7 +73,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务的名称
+     * Set 迁移任务的名称
      * @param MigrateName 迁移任务的名称
      */
     public void setMigrateName(String MigrateName) {
@@ -81,39 +81,39 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
+     * Get 迁移类型（1:结构迁移 2:数据迁移 3:增量同步） 
      * @return MigrateType 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
      */
-    public Integer getMigrateType() {
+    public Long getMigrateType() {
         return this.MigrateType;
     }
 
     /**
-     * 设置迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
+     * Set 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
      * @param MigrateType 迁移类型（1:结构迁移 2:数据迁移 3:增量同步）
      */
-    public void setMigrateType(Integer MigrateType) {
+    public void setMigrateType(Long MigrateType) {
         this.MigrateType = MigrateType;
     }
 
     /**
-     * 获取迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * Get 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式） 
      * @return SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
-    public Integer getSourceType() {
+    public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * 设置迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
+     * Set 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      * @param SourceType 迁移源的类型 1:CDB for SQLServer 2:云服务器自建SQLServer数据库 4:SQLServer备份还原 5:SQLServer备份还原（COS方式）
      */
-    public void setSourceType(Integer SourceType) {
+    public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * 获取迁移源
+     * Get 迁移源 
      * @return Source 迁移源
      */
     public MigrateSource getSource() {
@@ -121,7 +121,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源
+     * Set 迁移源
      * @param Source 迁移源
      */
     public void setSource(MigrateSource Source) {
@@ -129,7 +129,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目标
+     * Get 迁移目标 
      * @return Target 迁移目标
      */
     public MigrateTarget getTarget() {
@@ -137,7 +137,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目标
+     * Set 迁移目标
      * @param Target 迁移目标
      */
     public void setTarget(MigrateTarget Target) {
@@ -145,7 +145,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
+     * Get 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。 
      * @return MigrateDBSet 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
      */
     public MigrateDB [] getMigrateDBSet() {
@@ -153,7 +153,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
+     * Set 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
      * @param MigrateDBSet 迁移DB对象 ，离线迁移不使用（SourceType=4或SourceType=5）。
      */
     public void setMigrateDBSet(MigrateDB [] MigrateDBSet) {
@@ -161,7 +161,7 @@ public class CreateMigrationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MigrateName", this.MigrateName);

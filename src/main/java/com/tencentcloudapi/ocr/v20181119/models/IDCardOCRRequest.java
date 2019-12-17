@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IDCardOCRRequest  extends AbstractModel{
+public class IDCardOCRRequest extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -73,10 +73,10 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     private String Config;
 
     /**
-     * 获取图片的 Base64 值。
+     * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -87,7 +87,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 设置图片的 Base64 值。
+     * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -101,11 +101,11 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 获取图片的 Url 地址。
+     * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -117,7 +117,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 设置图片的 Url 地址。
+     * Set 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
@@ -133,8 +133,8 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 获取FRONT 为身份证有照片的一面（人像面），
-BACK 为身份证有国徽的一面（国徽面）。
+     * Get FRONT 为身份证有照片的一面（人像面），
+BACK 为身份证有国徽的一面（国徽面）。 
      * @return CardSide FRONT 为身份证有照片的一面（人像面），
 BACK 为身份证有国徽的一面（国徽面）。
      */
@@ -143,7 +143,7 @@ BACK 为身份证有国徽的一面（国徽面）。
     }
 
     /**
-     * 设置FRONT 为身份证有照片的一面（人像面），
+     * Set FRONT 为身份证有照片的一面（人像面），
 BACK 为身份证有国徽的一面（国徽面）。
      * @param CardSide FRONT 为身份证有照片的一面（人像面），
 BACK 为身份证有国徽的一面（国徽面）。
@@ -153,7 +153,7 @@ BACK 为身份证有国徽的一面（国徽面）。
     }
 
     /**
-     * 获取可选字段，根据需要选择是否请求对应字段。
+     * Get 可选字段，根据需要选择是否请求对应字段。
 目前包含的字段为：
 CropIdCard，身份证照片裁剪，bool 类型，默认false，
 CropPortrait，人像照片裁剪，bool 类型，默认false，
@@ -167,7 +167,7 @@ InvalidDateWarn，身份证有效日期不合法告警，bool类型，默认fals
 SDK 设置方式参考：
 Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
 API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+Config = {"CropIdCard":true,"CropPortrait":true} 
      * @return Config 可选字段，根据需要选择是否请求对应字段。
 目前包含的字段为：
 CropIdCard，身份证照片裁剪，bool 类型，默认false，
@@ -189,7 +189,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 设置可选字段，根据需要选择是否请求对应字段。
+     * Set 可选字段，根据需要选择是否请求对应字段。
 目前包含的字段为：
 CropIdCard，身份证照片裁剪，bool 类型，默认false，
 CropPortrait，人像照片裁剪，bool 类型，默认false，
@@ -225,7 +225,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

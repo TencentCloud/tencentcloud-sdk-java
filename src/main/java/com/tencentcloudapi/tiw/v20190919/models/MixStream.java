@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixStream  extends AbstractModel{
+public class MixStream extends AbstractModel{
 
     /**
     * 是否开启混流
@@ -62,7 +62,7 @@ public class MixStream  extends AbstractModel{
     private CustomLayout Custom;
 
     /**
-     * 获取是否开启混流
+     * Get 是否开启混流 
      * @return Enabled 是否开启混流
      */
     public Boolean getEnabled() {
@@ -70,7 +70,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启混流
+     * Set 是否开启混流
      * @param Enabled 是否开启混流
      */
     public void setEnabled(Boolean Enabled) {
@@ -78,7 +78,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 获取是否禁用音频混流
+     * Get 是否禁用音频混流 
      * @return DisableAudio 是否禁用音频混流
      */
     public Boolean getDisableAudio() {
@@ -86,7 +86,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 设置是否禁用音频混流
+     * Set 是否禁用音频混流
      * @param DisableAudio 是否禁用音频混流
      */
     public void setDisableAudio(Boolean DisableAudio) {
@@ -94,8 +94,8 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 获取内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
-在没有填Custom字段时候，ModelId是必填的
+     * Get 内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
+在没有填Custom字段时候，ModelId是必填的 
      * @return ModelId 内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
 在没有填Custom字段时候，ModelId是必填的
      */
@@ -104,7 +104,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 设置内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
+     * Set 内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
 在没有填Custom字段时候，ModelId是必填的
      * @param ModelId 内置混流布局模板ID, 取值 [1, 2], 区别见内置混流布局模板样式示例说明
 在没有填Custom字段时候，ModelId是必填的
@@ -114,9 +114,9 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 获取老师用户ID
+     * Get 老师用户ID
 此字段只有在ModelId填了的情况下生效
-填写TeacherId的效果是把指定为TeacherId的用户视频流显示在内置模板的第一个小画面中
+填写TeacherId的效果是把指定为TeacherId的用户视频流显示在内置模板的第一个小画面中 
      * @return TeacherId 老师用户ID
 此字段只有在ModelId填了的情况下生效
 填写TeacherId的效果是把指定为TeacherId的用户视频流显示在内置模板的第一个小画面中
@@ -126,7 +126,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 设置老师用户ID
+     * Set 老师用户ID
 此字段只有在ModelId填了的情况下生效
 填写TeacherId的效果是把指定为TeacherId的用户视频流显示在内置模板的第一个小画面中
      * @param TeacherId 老师用户ID
@@ -138,8 +138,8 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 获取自定义混流布局参数
-当此字段存在时，ModelId 及 TeacherId 字段将被忽略
+     * Get 自定义混流布局参数
+当此字段存在时，ModelId 及 TeacherId 字段将被忽略 
      * @return Custom 自定义混流布局参数
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
      */
@@ -148,7 +148,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 设置自定义混流布局参数
+     * Set 自定义混流布局参数
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
      * @param Custom 自定义混流布局参数
 当此字段存在时，ModelId 及 TeacherId 字段将被忽略
@@ -158,7 +158,7 @@ public class MixStream  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceAccountRequest  extends AbstractModel{
+public class CreateInstanceAccountRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -65,7 +65,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号名称
+     * Get 子账号名称 
      * @return AccountName 子账号名称
      */
     public String getAccountName() {
@@ -89,7 +89,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号名称
+     * Set 子账号名称
      * @param AccountName 子账号名称
      */
     public void setAccountName(String AccountName) {
@@ -97,7 +97,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号密码
+     * Get 子账号密码 
      * @return AccountPassword 子账号密码
      */
     public String getAccountPassword() {
@@ -105,7 +105,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号密码
+     * Set 子账号密码
      * @param AccountPassword 子账号密码
      */
     public void setAccountPassword(String AccountPassword) {
@@ -113,7 +113,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由策略：填写master或者replication，表示主节点或者从节点
+     * Get 路由策略：填写master或者replication，表示主节点或者从节点 
      * @return ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      */
     public String [] getReadonlyPolicy() {
@@ -121,7 +121,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由策略：填写master或者replication，表示主节点或者从节点
+     * Set 路由策略：填写master或者replication，表示主节点或者从节点
      * @param ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
@@ -129,7 +129,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取读写策略：填写r、w、rw，表示只读、只写、读写
+     * Get 读写策略：填写r、w、rw，表示只读、只写、读写 
      * @return Privilege 读写策略：填写r、w、rw，表示只读、只写、读写
      */
     public String getPrivilege() {
@@ -137,7 +137,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置读写策略：填写r、w、rw，表示只读、只写、读写
+     * Set 读写策略：填写r、w、rw，表示只读、只写、读写
      * @param Privilege 读写策略：填写r、w、rw，表示只读、只写、读写
      */
     public void setPrivilege(String Privilege) {
@@ -145,7 +145,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号描述信息
+     * Get 子账号描述信息 
      * @return Remark 子账号描述信息
      */
     public String getRemark() {
@@ -153,7 +153,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号描述信息
+     * Set 子账号描述信息
      * @param Remark 子账号描述信息
      */
     public void setRemark(String Remark) {
@@ -161,7 +161,7 @@ public class CreateInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

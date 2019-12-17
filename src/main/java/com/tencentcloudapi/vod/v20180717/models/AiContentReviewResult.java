@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiContentReviewResult  extends AbstractModel{
+public class AiContentReviewResult extends AbstractModel{
 
     /**
     * 任务的类型，可以取的值有：
@@ -93,14 +93,14 @@ public class AiContentReviewResult  extends AbstractModel{
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
-     * 获取任务的类型，可以取的值有：
+     * Get 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
 <li>Political：图片鉴政</li>
 <li>Porn.Asr：Asr 文字鉴黄</li>
 <li>Porn.Ocr：Ocr 文字鉴黄</li>
 <li>Political.Asr：Asr 文字鉴政</li>
-<li>Political.Ocr：Ocr 文字鉴政</li>
+<li>Political.Ocr：Ocr 文字鉴政</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
@@ -115,7 +115,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务的类型，可以取的值有：
+     * Set 任务的类型，可以取的值有：
 <li>Porn：图片鉴黄</li>
 <li>Terrorism：图片鉴恐</li>
 <li>Political：图片鉴政</li>
@@ -137,8 +137,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornTask 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -147,7 +147,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+     * Set 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PornTask 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -157,8 +157,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -167,7 +167,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+     * Set 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorismTask 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,8 +177,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -187,7 +187,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+     * Set 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalTask 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,8 +197,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornAsrTask 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,7 +207,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+     * Set 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PornAsrTask 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -217,8 +217,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornOcrTask 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -227,7 +227,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+     * Set 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PornOcrTask 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -237,8 +237,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoliticalAsrTask 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -247,7 +247,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+     * Set 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalAsrTask 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -257,8 +257,8 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PoliticalOcrTask 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -267,7 +267,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+     * Set 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PoliticalOcrTask 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -277,7 +277,7 @@ public class AiContentReviewResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

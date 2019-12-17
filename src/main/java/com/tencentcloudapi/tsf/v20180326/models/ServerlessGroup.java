@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServerlessGroup  extends AbstractModel{
+public class ServerlessGroup extends AbstractModel{
 
     /**
     * 部署组ID
@@ -127,8 +127,8 @@ public class ServerlessGroup  extends AbstractModel{
     private String PkgVersion;
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置分组名称
+     * Set 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取服务状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 服务状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置服务状态
+     * Set 服务状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 服务状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取程序包名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgName 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置程序包名
+     * Set 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgName 程序包名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,8 +247,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取集群id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -257,7 +257,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置集群id
+     * Set 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,8 +267,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -277,7 +277,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -287,8 +287,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -297,7 +297,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间id
+     * Set 命名空间id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -307,8 +307,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -317,7 +317,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -327,8 +327,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取vpc ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get vpc ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -337,7 +337,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置vpc ID
+     * Set vpc ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -347,8 +347,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取vpc 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get vpc 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId vpc 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -357,7 +357,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置vpc 子网ID
+     * Set vpc 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId vpc 子网ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -367,8 +367,8 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 获取程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgVersion 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -377,7 +377,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 设置程序包版本
+     * Set 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgVersion 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -387,7 +387,7 @@ public class ServerlessGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

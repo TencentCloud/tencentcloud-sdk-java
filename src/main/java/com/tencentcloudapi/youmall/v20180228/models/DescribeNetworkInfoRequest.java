@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInfoRequest  extends AbstractModel{
+public class DescribeNetworkInfoRequest extends AbstractModel{
 
     /**
     * 请求时间戳
@@ -44,7 +44,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     private Integer ShopId;
 
     /**
-     * 获取请求时间戳
+     * Get 请求时间戳 
      * @return Time 请求时间戳
      */
     public Integer getTime() {
@@ -52,7 +52,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求时间戳
+     * Set 请求时间戳
      * @param Time 请求时间戳
      */
     public void setTime(Integer Time) {
@@ -60,7 +60,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -68,7 +68,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -76,7 +76,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      */
     public Integer getShopId() {
@@ -84,7 +84,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，不填则拉取集团全部店铺当前
      */
     public void setShopId(Integer ShopId) {
@@ -92,7 +92,7 @@ public class DescribeNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTargetHealthRequest  extends AbstractModel{
+public class DescribeTargetHealthRequest extends AbstractModel{
 
     /**
     * 要查询的负载均衡实例 ID列表
@@ -30,7 +30,7 @@ public class DescribeTargetHealthRequest  extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-     * 获取要查询的负载均衡实例 ID列表
+     * Get 要查询的负载均衡实例 ID列表 
      * @return LoadBalancerIds 要查询的负载均衡实例 ID列表
      */
     public String [] getLoadBalancerIds() {
@@ -38,7 +38,7 @@ public class DescribeTargetHealthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的负载均衡实例 ID列表
+     * Set 要查询的负载均衡实例 ID列表
      * @param LoadBalancerIds 要查询的负载均衡实例 ID列表
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -46,7 +46,7 @@ public class DescribeTargetHealthRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateInstanceSettings  extends AbstractModel{
+public class UpdateInstanceSettings extends AbstractModel{
 
     /**
     * 内存容量，单位为G
@@ -44,7 +44,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     private String ResourceId;
 
     /**
-     * 获取内存容量，单位为G
+     * Get 内存容量，单位为G 
      * @return Memory 内存容量，单位为G
      */
     public Integer getMemory() {
@@ -52,7 +52,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 设置内存容量，单位为G
+     * Set 内存容量，单位为G
      * @param Memory 内存容量，单位为G
      */
     public void setMemory(Integer Memory) {
@@ -60,7 +60,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核数
+     * Get CPU核数 
      * @return CPUCores CPU核数
      */
     public Integer getCPUCores() {
@@ -68,7 +68,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数
+     * Set CPU核数
      * @param CPUCores CPU核数
      */
     public void setCPUCores(Integer CPUCores) {
@@ -76,7 +76,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 获取机器资源ID（EMR测资源标识）
+     * Get 机器资源ID（EMR测资源标识） 
      * @return ResourceId 机器资源ID（EMR测资源标识）
      */
     public String getResourceId() {
@@ -84,7 +84,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 设置机器资源ID（EMR测资源标识）
+     * Set 机器资源ID（EMR测资源标识）
      * @param ResourceId 机器资源ID（EMR测资源标识）
      */
     public void setResourceId(String ResourceId) {
@@ -92,7 +92,7 @@ public class UpdateInstanceSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Memory", this.Memory);

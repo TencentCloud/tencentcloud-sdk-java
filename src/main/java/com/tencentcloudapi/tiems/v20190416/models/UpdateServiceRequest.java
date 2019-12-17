@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateServiceRequest  extends AbstractModel{
+public class UpdateServiceRequest extends AbstractModel{
 
     /**
     * 服务Id
@@ -72,7 +72,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     private String GpuType;
 
     /**
-     * 获取服务Id
+     * Get 服务Id 
      * @return ServiceId 服务Id
      */
     public String getServiceId() {
@@ -80,7 +80,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务Id
+     * Set 服务Id
      * @param ServiceId 服务Id
      */
     public void setServiceId(String ServiceId) {
@@ -88,7 +88,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩缩容配置
+     * Get 扩缩容配置 
      * @return Scaler 扩缩容配置
      */
     public Scaler getScaler() {
@@ -96,7 +96,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩缩容配置
+     * Set 扩缩容配置
      * @param Scaler 扩缩容配置
      */
     public void setScaler(Scaler Scaler) {
@@ -104,7 +104,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置Id
+     * Get 服务配置Id 
      * @return ServiceConfigId 服务配置Id
      */
     public String getServiceConfigId() {
@@ -112,7 +112,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置Id
+     * Set 服务配置Id
      * @param ServiceConfigId 服务配置Id
      */
     public void setServiceConfigId(String ServiceConfigId) {
@@ -120,7 +120,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
+     * Get 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容 
      * @return ScaleMode 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
      */
     public String getScaleMode() {
@@ -128,7 +128,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
+     * Set 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
      * @param ScaleMode 支持AUTO, MANUAL，分别表示自动扩缩容，手动扩缩容
      */
     public void setScaleMode(String ScaleMode) {
@@ -136,7 +136,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持STOP(停止) RESUME(重启)
+     * Get 支持STOP(停止) RESUME(重启) 
      * @return ServiceAction 支持STOP(停止) RESUME(重启)
      */
     public String getServiceAction() {
@@ -144,7 +144,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持STOP(停止) RESUME(重启)
+     * Set 支持STOP(停止) RESUME(重启)
      * @param ServiceAction 支持STOP(停止) RESUME(重启)
      */
     public void setServiceAction(String ServiceAction) {
@@ -152,7 +152,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Description 备注
      */
     public String getDescription() {
@@ -160,7 +160,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Description 备注
      */
     public void setDescription(String Description) {
@@ -168,7 +168,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取GPU卡类型
+     * Get GPU卡类型 
      * @return GpuType GPU卡类型
      */
     public String getGpuType() {
@@ -176,7 +176,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GPU卡类型
+     * Set GPU卡类型
      * @param GpuType GPU卡类型
      */
     public void setGpuType(String GpuType) {
@@ -184,7 +184,7 @@ public class UpdateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);

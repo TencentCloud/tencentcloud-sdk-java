@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TsfPageConfig  extends AbstractModel{
+public class TsfPageConfig extends AbstractModel{
 
     /**
     * TsfPageConfig
@@ -37,7 +37,7 @@ public class TsfPageConfig  extends AbstractModel{
     private Config [] Content;
 
     /**
-     * 获取TsfPageConfig
+     * Get TsfPageConfig 
      * @return TotalCount TsfPageConfig
      */
     public Long getTotalCount() {
@@ -45,7 +45,7 @@ public class TsfPageConfig  extends AbstractModel{
     }
 
     /**
-     * 设置TsfPageConfig
+     * Set TsfPageConfig
      * @param TotalCount TsfPageConfig
      */
     public void setTotalCount(Long TotalCount) {
@@ -53,7 +53,7 @@ public class TsfPageConfig  extends AbstractModel{
     }
 
     /**
-     * 获取配置项列表
+     * Get 配置项列表 
      * @return Content 配置项列表
      */
     public Config [] getContent() {
@@ -61,7 +61,7 @@ public class TsfPageConfig  extends AbstractModel{
     }
 
     /**
-     * 设置配置项列表
+     * Set 配置项列表
      * @param Content 配置项列表
      */
     public void setContent(Config [] Content) {
@@ -69,7 +69,7 @@ public class TsfPageConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

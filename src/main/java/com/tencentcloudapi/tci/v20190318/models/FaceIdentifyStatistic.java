@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceIdentifyStatistic  extends AbstractModel{
+public class FaceIdentifyStatistic extends AbstractModel{
 
     /**
     * 持续时间
@@ -58,7 +58,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     private Long StartTs;
 
     /**
-     * 获取持续时间
+     * Get 持续时间 
      * @return Duration 持续时间
      */
     public Long getDuration() {
@@ -66,7 +66,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置持续时间
+     * Set 持续时间
      * @param Duration 持续时间
      */
     public void setDuration(Long Duration) {
@@ -74,7 +74,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTs 结束时间
      */
     public Long getEndTs() {
@@ -82,7 +82,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTs 结束时间
      */
     public void setEndTs(Long EndTs) {
@@ -90,7 +90,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -98,7 +98,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -106,7 +106,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取相似度
+     * Get 相似度 
      * @return Similarity 相似度
      */
     public Float getSimilarity() {
@@ -114,7 +114,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置相似度
+     * Set 相似度
      * @param Similarity 相似度
      */
     public void setSimilarity(Float Similarity) {
@@ -122,7 +122,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTs 开始时间
      */
     public Long getStartTs() {
@@ -130,7 +130,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTs 开始时间
      */
     public void setStartTs(Long StartTs) {
@@ -138,7 +138,7 @@ public class FaceIdentifyStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

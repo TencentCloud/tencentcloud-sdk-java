@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckSimilarPersonRequest  extends AbstractModel{
+public class CheckSimilarPersonRequest extends AbstractModel{
 
     /**
     * 待整理的人员库列表。 
@@ -41,8 +41,8 @@ public class CheckSimilarPersonRequest  extends AbstractModel{
     private Long UniquePersonControl;
 
     /**
-     * 获取待整理的人员库列表。 
-人员库总人数不可超过200万，人员库个数不可超过10个。
+     * Get 待整理的人员库列表。 
+人员库总人数不可超过200万，人员库个数不可超过10个。 
      * @return GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
      */
@@ -51,7 +51,7 @@ public class CheckSimilarPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待整理的人员库列表。 
+     * Set 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
      * @param GroupIds 待整理的人员库列表。 
 人员库总人数不可超过200万，人员库个数不可超过10个。
@@ -61,10 +61,10 @@ public class CheckSimilarPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取疑似同一人判断控制。  
+     * Get 疑似同一人判断控制。  
 1：宽松的同一人要求； 
 2：严格的同一人要求。  
-注： 要求越高，则疑似同一人的概率越小。
+注： 要求越高，则疑似同一人的概率越小。 
      * @return UniquePersonControl 疑似同一人判断控制。  
 1：宽松的同一人要求； 
 2：严格的同一人要求。  
@@ -75,7 +75,7 @@ public class CheckSimilarPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置疑似同一人判断控制。  
+     * Set 疑似同一人判断控制。  
 1：宽松的同一人要求； 
 2：严格的同一人要求。  
 注： 要求越高，则疑似同一人的概率越小。
@@ -89,7 +89,7 @@ public class CheckSimilarPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);

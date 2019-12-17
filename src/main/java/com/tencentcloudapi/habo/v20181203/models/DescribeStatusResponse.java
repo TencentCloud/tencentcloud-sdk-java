@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStatusResponse  extends AbstractModel{
+public class DescribeStatusResponse extends AbstractModel{
 
     /**
     * 接口调用状态，1表示成功，非1表示失败
@@ -51,7 +51,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取接口调用状态，1表示成功，非1表示失败
+     * Get 接口调用状态，1表示成功，非1表示失败 
      * @return Status 接口调用状态，1表示成功，非1表示失败
      */
     public Integer getStatus() {
@@ -59,7 +59,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置接口调用状态，1表示成功，非1表示失败
+     * Set 接口调用状态，1表示成功，非1表示失败
      * @param Status 接口调用状态，1表示成功，非1表示失败
      */
     public void setStatus(Integer Status) {
@@ -67,7 +67,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取成功时返回success，失败时返回具体的失败原因，如样本分析未完成
+     * Get 成功时返回success，失败时返回具体的失败原因，如样本分析未完成 
      * @return Info 成功时返回success，失败时返回具体的失败原因，如样本分析未完成
      */
     public String getInfo() {
@@ -75,7 +75,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置成功时返回success，失败时返回具体的失败原因，如样本分析未完成
+     * Set 成功时返回success，失败时返回具体的失败原因，如样本分析未完成
      * @param Info 成功时返回success，失败时返回具体的失败原因，如样本分析未完成
      */
     public void setInfo(String Info) {
@@ -83,7 +83,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取成功时返回样本日志下载地址，该地址10分钟内有效
+     * Get 成功时返回样本日志下载地址，该地址10分钟内有效 
      * @return Data 成功时返回样本日志下载地址，该地址10分钟内有效
      */
     public String getData() {
@@ -91,7 +91,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置成功时返回样本日志下载地址，该地址10分钟内有效
+     * Set 成功时返回样本日志下载地址，该地址10分钟内有效
      * @param Data 成功时返回样本日志下载地址，该地址10分钟内有效
      */
     public void setData(String Data) {
@@ -99,7 +99,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

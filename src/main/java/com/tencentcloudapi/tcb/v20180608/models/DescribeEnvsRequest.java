@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvsRequest  extends AbstractModel{
+public class DescribeEnvsRequest extends AbstractModel{
 
     /**
     * 环境ID，如果传了这个参数则只返回该环境的相关信息
@@ -30,7 +30,7 @@ public class DescribeEnvsRequest  extends AbstractModel{
     private String EnvId;
 
     /**
-     * 获取环境ID，如果传了这个参数则只返回该环境的相关信息
+     * Get 环境ID，如果传了这个参数则只返回该环境的相关信息 
      * @return EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      */
     public String getEnvId() {
@@ -38,7 +38,7 @@ public class DescribeEnvsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置环境ID，如果传了这个参数则只返回该环境的相关信息
+     * Set 环境ID，如果传了这个参数则只返回该环境的相关信息
      * @param EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      */
     public void setEnvId(String EnvId) {
@@ -46,7 +46,7 @@ public class DescribeEnvsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

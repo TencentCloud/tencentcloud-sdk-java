@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextResetResponse  extends AbstractModel{
+public class TextResetResponse extends AbstractModel{
 
     /**
     * 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
@@ -86,8 +86,8 @@ public class TextResetResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DialogStatus 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -96,7 +96,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
+     * Set 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DialogStatus 当前会话状态，取值："START"/"COUTINUE"/"COMPLETE"。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,8 +106,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的机器人名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 匹配到的机器人名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BotName 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -116,7 +116,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的机器人名称。
+     * Set 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BotName 匹配到的机器人名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -126,8 +126,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的意图名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 匹配到的意图名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IntentName 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -136,7 +136,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的意图名称。
+     * Set 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IntentName 匹配到的意图名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,8 +146,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取槽位信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 槽位信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SlotInfoList 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -156,7 +156,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置槽位信息。
+     * Set 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SlotInfoList 槽位信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -166,8 +166,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取原始的用户说法。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 原始的用户说法。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InputText 原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -176,7 +176,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置原始的用户说法。
+     * Set 原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InputText 原始的用户说法。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -186,8 +186,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取透传字段，由用户自定义的WebService服务返回。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 透传字段，由用户自定义的WebService服务返回。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionAttributes 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -196,7 +196,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置透传字段，由用户自定义的WebService服务返回。
+     * Set 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionAttributes 透传字段，由用户自定义的WebService服务返回。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -206,8 +206,8 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取机器人对话的应答文本。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResponseText 机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -216,7 +216,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置机器人对话的应答文本。
+     * Set 机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResponseText 机器人对话的应答文本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,7 +226,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -234,7 +234,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -242,7 +242,7 @@ public class TextResetResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DialogStatus", this.DialogStatus);

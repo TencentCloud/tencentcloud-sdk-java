@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricSet  extends AbstractModel{
+public class MetricSet extends AbstractModel{
 
     /**
     * 命名空间，每个云产品会有一个命名空间
@@ -79,7 +79,7 @@ public class MetricSet  extends AbstractModel{
     private DimensionsDesc [] Dimensions;
 
     /**
-     * 获取命名空间，每个云产品会有一个命名空间
+     * Get 命名空间，每个云产品会有一个命名空间 
      * @return Namespace 命名空间，每个云产品会有一个命名空间
      */
     public String getNamespace() {
@@ -87,7 +87,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间，每个云产品会有一个命名空间
+     * Set 命名空间，每个云产品会有一个命名空间
      * @param Namespace 命名空间，每个云产品会有一个命名空间
      */
     public void setNamespace(String Namespace) {
@@ -95,7 +95,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取指标名称
+     * Get 指标名称 
      * @return MetricName 指标名称
      */
     public String getMetricName() {
@@ -103,7 +103,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置指标名称
+     * Set 指标名称
      * @param MetricName 指标名称
      */
     public void setMetricName(String MetricName) {
@@ -111,7 +111,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取指标使用的单位
+     * Get 指标使用的单位 
      * @return Unit 指标使用的单位
      */
     public String getUnit() {
@@ -119,7 +119,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置指标使用的单位
+     * Set 指标使用的单位
      * @param Unit 指标使用的单位
      */
     public void setUnit(String Unit) {
@@ -127,7 +127,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取指标使用的单位
+     * Get 指标使用的单位 
      * @return UnitCname 指标使用的单位
      */
     public String getUnitCname() {
@@ -135,7 +135,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置指标使用的单位
+     * Set 指标使用的单位
      * @param UnitCname 指标使用的单位
      */
     public void setUnitCname(String UnitCname) {
@@ -143,7 +143,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取指标支持的统计周期，单位是秒，如60、300
+     * Get 指标支持的统计周期，单位是秒，如60、300 
      * @return Period 指标支持的统计周期，单位是秒，如60、300
      */
     public Integer [] getPeriod() {
@@ -151,7 +151,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置指标支持的统计周期，单位是秒，如60、300
+     * Set 指标支持的统计周期，单位是秒，如60、300
      * @param Period 指标支持的统计周期，单位是秒，如60、300
      */
     public void setPeriod(Integer [] Period) {
@@ -159,7 +159,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取统计周期内指标方式
+     * Get 统计周期内指标方式 
      * @return Periods 统计周期内指标方式
      */
     public PeriodsSt [] getPeriods() {
@@ -167,7 +167,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置统计周期内指标方式
+     * Set 统计周期内指标方式
      * @param Periods 统计周期内指标方式
      */
     public void setPeriods(PeriodsSt [] Periods) {
@@ -175,7 +175,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取统计指标含义解释
+     * Get 统计指标含义解释 
      * @return Meaning 统计指标含义解释
      */
     public MetricObjectMeaning getMeaning() {
@@ -183,7 +183,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置统计指标含义解释
+     * Set 统计指标含义解释
      * @param Meaning 统计指标含义解释
      */
     public void setMeaning(MetricObjectMeaning Meaning) {
@@ -191,7 +191,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 获取维度描述信息
+     * Get 维度描述信息 
      * @return Dimensions 维度描述信息
      */
     public DimensionsDesc [] getDimensions() {
@@ -199,7 +199,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 设置维度描述信息
+     * Set 维度描述信息
      * @param Dimensions 维度描述信息
      */
     public void setDimensions(DimensionsDesc [] Dimensions) {
@@ -207,7 +207,7 @@ public class MetricSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);

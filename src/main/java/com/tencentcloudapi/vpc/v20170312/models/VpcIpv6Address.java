@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcIpv6Address  extends AbstractModel{
+public class VpcIpv6Address extends AbstractModel{
 
     /**
     * `VPC`内`IPv6`地址。
@@ -51,7 +51,7 @@ public class VpcIpv6Address  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取`VPC`内`IPv6`地址。
+     * Get `VPC`内`IPv6`地址。 
      * @return Ipv6Address `VPC`内`IPv6`地址。
      */
     public String getIpv6Address() {
@@ -59,7 +59,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`内`IPv6`地址。
+     * Set `VPC`内`IPv6`地址。
      * @param Ipv6Address `VPC`内`IPv6`地址。
      */
     public void setIpv6Address(String Ipv6Address) {
@@ -67,7 +67,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取所属子网 `IPv6` `CIDR`。
+     * Get 所属子网 `IPv6` `CIDR`。 
      * @return CidrBlock 所属子网 `IPv6` `CIDR`。
      */
     public String getCidrBlock() {
@@ -75,7 +75,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置所属子网 `IPv6` `CIDR`。
+     * Set 所属子网 `IPv6` `CIDR`。
      * @param CidrBlock 所属子网 `IPv6` `CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -83,7 +83,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`类型。
+     * Get `IPv6`类型。 
      * @return Ipv6AddressType `IPv6`类型。
      */
     public String getIpv6AddressType() {
@@ -91,7 +91,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`类型。
+     * Set `IPv6`类型。
      * @param Ipv6AddressType `IPv6`类型。
      */
     public void setIpv6AddressType(String Ipv6AddressType) {
@@ -99,7 +99,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`申请时间。
+     * Get `IPv6`申请时间。 
      * @return CreatedTime `IPv6`申请时间。
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`申请时间。
+     * Set `IPv6`申请时间。
      * @param CreatedTime `IPv6`申请时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class VpcIpv6Address  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ipv6Address", this.Ipv6Address);

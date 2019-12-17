@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterIMRequest  extends AbstractModel{
+public class RegisterIMRequest extends AbstractModel{
 
     /**
     * 用户昵称
@@ -51,7 +51,7 @@ public class RegisterIMRequest  extends AbstractModel{
     private Long Level;
 
     /**
-     * 获取用户昵称
+     * Get 用户昵称 
      * @return Nickname 用户昵称
      */
     public String getNickname() {
@@ -59,7 +59,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户昵称
+     * Set 用户昵称
      * @param Nickname 用户昵称
      */
     public void setNickname(String Nickname) {
@@ -67,7 +67,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户唯一ID，建议采用用户小程序OpenID加盐形式
+     * Get 用户唯一ID，建议采用用户小程序OpenID加盐形式 
      * @return UserId 用户唯一ID，建议采用用户小程序OpenID加盐形式
      */
     public String getUserId() {
@@ -75,7 +75,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户唯一ID，建议采用用户小程序OpenID加盐形式
+     * Set 用户唯一ID，建议采用用户小程序OpenID加盐形式
      * @param UserId 用户唯一ID，建议采用用户小程序OpenID加盐形式
      */
     public void setUserId(String UserId) {
@@ -83,7 +83,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户头像URL
+     * Get 用户头像URL 
      * @return HeadImgUrl 用户头像URL
      */
     public String getHeadImgUrl() {
@@ -91,7 +91,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户头像URL
+     * Set 用户头像URL
      * @param HeadImgUrl 用户头像URL
      */
     public void setHeadImgUrl(String HeadImgUrl) {
@@ -99,7 +99,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户身份，默认值：0，表示无特殊身份
+     * Get 用户身份，默认值：0，表示无特殊身份 
      * @return Level 用户身份，默认值：0，表示无特殊身份
      */
     public Long getLevel() {
@@ -107,7 +107,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户身份，默认值：0，表示无特殊身份
+     * Set 用户身份，默认值：0，表示无特殊身份
      * @param Level 用户身份，默认值：0，表示无特殊身份
      */
     public void setLevel(Long Level) {
@@ -115,7 +115,7 @@ public class RegisterIMRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Nickname", this.Nickname);

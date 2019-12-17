@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OperationDetail  extends AbstractModel{
+public class OperationDetail extends AbstractModel{
 
     /**
     * 实例原始配置信息
@@ -37,7 +37,7 @@ public class OperationDetail  extends AbstractModel{
     private KeyValue [] NewInfo;
 
     /**
-     * 获取实例原始配置信息
+     * Get 实例原始配置信息 
      * @return OldInfo 实例原始配置信息
      */
     public KeyValue [] getOldInfo() {
@@ -45,7 +45,7 @@ public class OperationDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例原始配置信息
+     * Set 实例原始配置信息
      * @param OldInfo 实例原始配置信息
      */
     public void setOldInfo(KeyValue [] OldInfo) {
@@ -53,7 +53,7 @@ public class OperationDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例更新后配置信息
+     * Get 实例更新后配置信息 
      * @return NewInfo 实例更新后配置信息
      */
     public KeyValue [] getNewInfo() {
@@ -61,7 +61,7 @@ public class OperationDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例更新后配置信息
+     * Set 实例更新后配置信息
      * @param NewInfo 实例更新后配置信息
      */
     public void setNewInfo(KeyValue [] NewInfo) {
@@ -69,7 +69,7 @@ public class OperationDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "OldInfo.", this.OldInfo);

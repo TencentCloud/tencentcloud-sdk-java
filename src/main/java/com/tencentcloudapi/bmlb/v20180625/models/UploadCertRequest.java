@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadCertRequest  extends AbstractModel{
+public class UploadCertRequest extends AbstractModel{
 
     /**
     * 证书类型，可选值：CA，SVR。
@@ -51,7 +51,7 @@ public class UploadCertRequest  extends AbstractModel{
     private String Key;
 
     /**
-     * 获取证书类型，可选值：CA，SVR。
+     * Get 证书类型，可选值：CA，SVR。 
      * @return CertType 证书类型，可选值：CA，SVR。
      */
     public String getCertType() {
@@ -59,7 +59,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型，可选值：CA，SVR。
+     * Set 证书类型，可选值：CA，SVR。
      * @param CertType 证书类型，可选值：CA，SVR。
      */
     public void setCertType(String CertType) {
@@ -67,7 +67,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容。
+     * Get 证书内容。 
      * @return Cert 证书内容。
      */
     public String getCert() {
@@ -75,7 +75,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容。
+     * Set 证书内容。
      * @param Cert 证书内容。
      */
     public void setCert(String Cert) {
@@ -83,7 +83,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书别名。
+     * Get 证书别名。 
      * @return Alias 证书别名。
      */
     public String getAlias() {
@@ -91,7 +91,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书别名。
+     * Set 证书别名。
      * @param Alias 证书别名。
      */
     public void setAlias(String Alias) {
@@ -99,7 +99,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私钥内容，证书类型为SVR时不需要传递。
+     * Get 私钥内容，证书类型为SVR时不需要传递。 
      * @return Key 私钥内容，证书类型为SVR时不需要传递。
      */
     public String getKey() {
@@ -107,7 +107,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私钥内容，证书类型为SVR时不需要传递。
+     * Set 私钥内容，证书类型为SVR时不需要传递。
      * @param Key 私钥内容，证书类型为SVR时不需要传递。
      */
     public void setKey(String Key) {
@@ -115,7 +115,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertType", this.CertType);

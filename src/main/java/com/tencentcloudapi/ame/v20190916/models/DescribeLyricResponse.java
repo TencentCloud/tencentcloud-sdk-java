@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLyricResponse  extends AbstractModel{
+public class DescribeLyricResponse extends AbstractModel{
 
     /**
     * 歌词详情
@@ -38,8 +38,8 @@ public class DescribeLyricResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取歌词详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 歌词详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Lyric 歌词详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -48,7 +48,7 @@ public class DescribeLyricResponse  extends AbstractModel{
     }
 
     /**
-     * 设置歌词详情
+     * Set 歌词详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Lyric 歌词详情
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ public class DescribeLyricResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -66,7 +66,7 @@ public class DescribeLyricResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -74,7 +74,7 @@ public class DescribeLyricResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Lyric.", this.Lyric);

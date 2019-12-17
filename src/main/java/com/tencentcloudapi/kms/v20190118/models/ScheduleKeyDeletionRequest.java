@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScheduleKeyDeletionRequest  extends AbstractModel{
+public class ScheduleKeyDeletionRequest extends AbstractModel{
 
     /**
     * CMK的唯一标志
@@ -37,7 +37,7 @@ public class ScheduleKeyDeletionRequest  extends AbstractModel{
     private Long PendingWindowInDays;
 
     /**
-     * 获取CMK的唯一标志
+     * Get CMK的唯一标志 
      * @return KeyId CMK的唯一标志
      */
     public String getKeyId() {
@@ -45,7 +45,7 @@ public class ScheduleKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的唯一标志
+     * Set CMK的唯一标志
      * @param KeyId CMK的唯一标志
      */
     public void setKeyId(String KeyId) {
@@ -53,7 +53,7 @@ public class ScheduleKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计划删除时间区间[7,30]
+     * Get 计划删除时间区间[7,30] 
      * @return PendingWindowInDays 计划删除时间区间[7,30]
      */
     public Long getPendingWindowInDays() {
@@ -61,7 +61,7 @@ public class ScheduleKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计划删除时间区间[7,30]
+     * Set 计划删除时间区间[7,30]
      * @param PendingWindowInDays 计划删除时间区间[7,30]
      */
     public void setPendingWindowInDays(Long PendingWindowInDays) {
@@ -69,7 +69,7 @@ public class ScheduleKeyDeletionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MixedInvoiceOCRRequest  extends AbstractModel{
+public class MixedInvoiceOCRRequest extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -62,10 +62,10 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     private Integer [] Types;
 
     /**
-     * 获取图片的 Base64 值。
+     * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -76,7 +76,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片的 Base64 值。
+     * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -90,11 +90,11 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片的 Url 地址。
+     * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -106,7 +106,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片的 Url 地址。
+     * Set 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
@@ -122,7 +122,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要识别的票据类型列表，为空或不填表示识别全部类型。
+     * Get 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
 2：火车票
@@ -133,7 +133,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
 10：轮船票
 11：增值税发票（卷票 ）
 12：购车发票
-13：过路过桥费发票
+13：过路过桥费发票 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -152,7 +152,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要识别的票据类型列表，为空或不填表示识别全部类型。
+     * Set 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
 2：火车票
@@ -182,7 +182,7 @@ public class MixedInvoiceOCRRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

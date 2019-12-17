@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BackupInfo  extends AbstractModel{
+public class BackupInfo extends AbstractModel{
 
     /**
     * 实例ID
@@ -90,7 +90,7 @@ public class BackupInfo  extends AbstractModel{
     private Integer BackupMethod;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -98,7 +98,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -106,7 +106,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份方式，0-自动备份，1-手动备份
+     * Get 备份方式，0-自动备份，1-手动备份 
      * @return BackupType 备份方式，0-自动备份，1-手动备份
      */
     public Integer getBackupType() {
@@ -114,7 +114,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份方式，0-自动备份，1-手动备份
+     * Set 备份方式，0-自动备份，1-手动备份
      * @param BackupType 备份方式，0-自动备份，1-手动备份
      */
     public void setBackupType(Integer BackupType) {
@@ -122,7 +122,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份名称
+     * Get 备份名称 
      * @return BackupName 备份名称
      */
     public String getBackupName() {
@@ -130,7 +130,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份名称
+     * Set 备份名称
      * @param BackupName 备份名称
      */
     public void setBackupName(String BackupName) {
@@ -138,8 +138,8 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备份备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BackupDesc 备份备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份备注
+     * Set 备份备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupDesc 备份备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,8 +158,8 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件大小，单位KB
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备份文件大小，单位KB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BackupSize 备份文件大小，单位KB
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份文件大小，单位KB
+     * Set 备份文件大小，单位KB
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSize 备份文件大小，单位KB
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,8 +178,8 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备份开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 备份开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -188,7 +188,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份开始时间
+     * Set 备份开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 备份开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,8 +198,8 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备份结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 备份结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -208,7 +208,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份结束时间
+     * Set 备份结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 备份结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,7 +218,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份状态，1-备份中，2-备份成功
+     * Get 备份状态，1-备份中，2-备份成功 
      * @return Status 备份状态，1-备份中，2-备份成功
      */
     public Integer getStatus() {
@@ -226,7 +226,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份状态，1-备份中，2-备份成功
+     * Set 备份状态，1-备份中，2-备份成功
      * @param Status 备份状态，1-备份中，2-备份成功
      */
     public void setStatus(Integer Status) {
@@ -234,7 +234,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备份方法，0-逻辑备份，1-物理备份
+     * Get 备份方法，0-逻辑备份，1-物理备份 
      * @return BackupMethod 备份方法，0-逻辑备份，1-物理备份
      */
     public Integer getBackupMethod() {
@@ -242,7 +242,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备份方法，0-逻辑备份，1-物理备份
+     * Set 备份方法，0-逻辑备份，1-物理备份
      * @param BackupMethod 备份方法，0-逻辑备份，1-物理备份
      */
     public void setBackupMethod(Integer BackupMethod) {
@@ -250,7 +250,7 @@ public class BackupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

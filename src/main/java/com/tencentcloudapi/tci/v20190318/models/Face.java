@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Face  extends AbstractModel{
+public class Face extends AbstractModel{
 
     /**
     * 人脸唯一标识符
@@ -44,7 +44,7 @@ public class Face  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取人脸唯一标识符
+     * Get 人脸唯一标识符 
      * @return FaceId 人脸唯一标识符
      */
     public String getFaceId() {
@@ -52,7 +52,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸唯一标识符
+     * Set 人脸唯一标识符
      * @param FaceId 人脸唯一标识符
      */
     public void setFaceId(String FaceId) {
@@ -60,7 +60,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片 URL
+     * Get 人脸图片 URL 
      * @return FaceUrl 人脸图片 URL
      */
     public String getFaceUrl() {
@@ -68,7 +68,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片 URL
+     * Set 人脸图片 URL
      * @param FaceUrl 人脸图片 URL
      */
     public void setFaceUrl(String FaceUrl) {
@@ -76,7 +76,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -84,7 +84,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -92,7 +92,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);

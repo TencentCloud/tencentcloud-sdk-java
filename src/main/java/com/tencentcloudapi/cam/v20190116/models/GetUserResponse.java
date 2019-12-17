@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetUserResponse  extends AbstractModel{
+public class GetUserResponse extends AbstractModel{
 
     /**
     * 子用户用户 ID
@@ -86,7 +86,7 @@ public class GetUserResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子用户用户 ID
+     * Get 子用户用户 ID 
      * @return Uin 子用户用户 ID
      */
     public Long getUin() {
@@ -94,7 +94,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户用户 ID
+     * Set 子用户用户 ID
      * @param Uin 子用户用户 ID
      */
     public void setUin(Long Uin) {
@@ -102,7 +102,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户用户名
+     * Get 子用户用户名 
      * @return Name 子用户用户名
      */
     public String getName() {
@@ -110,7 +110,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户用户名
+     * Set 子用户用户名
      * @param Name 子用户用户名
      */
     public void setName(String Name) {
@@ -118,7 +118,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户 UID
+     * Get 子用户 UID 
      * @return Uid 子用户 UID
      */
     public Long getUid() {
@@ -126,7 +126,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户 UID
+     * Set 子用户 UID
      * @param Uid 子用户 UID
      */
     public void setUid(Long Uid) {
@@ -134,7 +134,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户备注
+     * Get 子用户备注 
      * @return Remark 子用户备注
      */
     public String getRemark() {
@@ -142,7 +142,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户备注
+     * Set 子用户备注
      * @param Remark 子用户备注
      */
     public void setRemark(String Remark) {
@@ -150,7 +150,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子用户能否登录控制台
+     * Get 子用户能否登录控制台 
      * @return ConsoleLogin 子用户能否登录控制台
      */
     public Long getConsoleLogin() {
@@ -158,7 +158,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户能否登录控制台
+     * Set 子用户能否登录控制台
      * @param ConsoleLogin 子用户能否登录控制台
      */
     public void setConsoleLogin(Long ConsoleLogin) {
@@ -166,7 +166,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取手机号
+     * Get 手机号 
      * @return PhoneNum 手机号
      */
     public String getPhoneNum() {
@@ -174,7 +174,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置手机号
+     * Set 手机号
      * @param PhoneNum 手机号
      */
     public void setPhoneNum(String PhoneNum) {
@@ -182,7 +182,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区号
+     * Get 区号 
      * @return CountryCode 区号
      */
     public String getCountryCode() {
@@ -190,7 +190,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区号
+     * Set 区号
      * @param CountryCode 区号
      */
     public void setCountryCode(String CountryCode) {
@@ -198,7 +198,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取邮箱
+     * Get 邮箱 
      * @return Email 邮箱
      */
     public String getEmail() {
@@ -206,7 +206,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置邮箱
+     * Set 邮箱
      * @param Email 邮箱
      */
     public void setEmail(String Email) {
@@ -214,7 +214,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class GetUserResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

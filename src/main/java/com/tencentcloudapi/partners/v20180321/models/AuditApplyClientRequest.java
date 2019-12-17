@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditApplyClientRequest  extends AbstractModel{
+public class AuditApplyClientRequest extends AbstractModel{
 
     /**
     * 待审核客户账号ID
@@ -44,7 +44,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     private String Note;
 
     /**
-     * 获取待审核客户账号ID
+     * Get 待审核客户账号ID 
      * @return ClientUin 待审核客户账号ID
      */
     public String getClientUin() {
@@ -52,7 +52,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待审核客户账号ID
+     * Set 待审核客户账号ID
      * @param ClientUin 待审核客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -60,7 +60,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 获取审核结果，可能的取值：accept/reject
+     * Get 审核结果，可能的取值：accept/reject 
      * @return AuditResult 审核结果，可能的取值：accept/reject
      */
     public String getAuditResult() {
@@ -68,7 +68,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 设置审核结果，可能的取值：accept/reject
+     * Set 审核结果，可能的取值：accept/reject
      * @param AuditResult 审核结果，可能的取值：accept/reject
      */
     public void setAuditResult(String AuditResult) {
@@ -76,7 +76,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 获取申请理由，B类客户审核通过时必须填写申请理由
+     * Get 申请理由，B类客户审核通过时必须填写申请理由 
      * @return Note 申请理由，B类客户审核通过时必须填写申请理由
      */
     public String getNote() {
@@ -84,7 +84,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 设置申请理由，B类客户审核通过时必须填写申请理由
+     * Set 申请理由，B类客户审核通过时必须填写申请理由
      * @param Note 申请理由，B类客户审核通过时必须填写申请理由
      */
     public void setNote(String Note) {
@@ -92,7 +92,7 @@ public class AuditApplyClientRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);

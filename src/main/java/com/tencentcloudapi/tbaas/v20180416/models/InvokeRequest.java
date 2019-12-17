@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvokeRequest  extends AbstractModel{
+public class InvokeRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -93,7 +93,7 @@ public class InvokeRequest  extends AbstractModel{
     private Integer AsyncFlag;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -101,7 +101,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -109,7 +109,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：invoke
+     * Get 操作名，固定字段：invoke 
      * @return Operation 操作名，固定字段：invoke
      */
     public String getOperation() {
@@ -117,7 +117,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：invoke
+     * Set 操作名，固定字段：invoke
      * @param Operation 操作名，固定字段：invoke
      */
     public void setOperation(String Operation) {
@@ -125,7 +125,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -133,7 +133,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -141,7 +141,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务所属智能合约名称，可在智能合约详情或列表中获取
+     * Get 业务所属智能合约名称，可在智能合约详情或列表中获取 
      * @return ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      */
     public String getChaincodeName() {
@@ -149,7 +149,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务所属智能合约名称，可在智能合约详情或列表中获取
+     * Set 业务所属智能合约名称，可在智能合约详情或列表中获取
      * @param ChaincodeName 业务所属智能合约名称，可在智能合约详情或列表中获取
      */
     public void setChaincodeName(String ChaincodeName) {
@@ -157,7 +157,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务所属通道名称，可在通道详情或列表中获取
+     * Get 业务所属通道名称，可在通道详情或列表中获取 
      * @return ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
@@ -165,7 +165,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务所属通道名称，可在通道详情或列表中获取
+     * Set 业务所属通道名称，可在通道详情或列表中获取
      * @param ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
@@ -173,7 +173,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Get 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称 
      * @return Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public PeerSet [] getPeers() {
@@ -181,7 +181,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Set 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      * @param Peers 对该笔交易进行背书的节点列表（包括节点名称和节点所属组织名称，详见数据结构一节），可以在通道详情中获取该通道上的节点名称极其所属组织名称
      */
     public void setPeers(PeerSet [] Peers) {
@@ -189,7 +189,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取该笔交易需要调用的智能合约中的函数名称
+     * Get 该笔交易需要调用的智能合约中的函数名称 
      * @return FuncName 该笔交易需要调用的智能合约中的函数名称
      */
     public String getFuncName() {
@@ -197,7 +197,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置该笔交易需要调用的智能合约中的函数名称
+     * Set 该笔交易需要调用的智能合约中的函数名称
      * @param FuncName 该笔交易需要调用的智能合约中的函数名称
      */
     public void setFuncName(String FuncName) {
@@ -205,7 +205,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -213,7 +213,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 调用合约的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -221,7 +221,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被调用的函数参数列表
+     * Get 被调用的函数参数列表 
      * @return Args 被调用的函数参数列表
      */
     public String [] getArgs() {
@@ -229,7 +229,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被调用的函数参数列表
+     * Set 被调用的函数参数列表
      * @param Args 被调用的函数参数列表
      */
     public void setArgs(String [] Args) {
@@ -237,7 +237,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+     * Get 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时） 
      * @return AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public Integer getAsyncFlag() {
@@ -245,7 +245,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
+     * Set 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      * @param AsyncFlag 同步调用标识，可选参数，值为0或者不传表示使用同步方法调用，调用后会等待交易执行后再返回执行结果；值为1时表示使用异步方式调用Invoke，执行后会立即返回交易对应的Txid，后续需要通过GetInvokeTx这个API查询该交易的执行结果。（对于逻辑较为简单的交易，可以使用同步模式；对于逻辑较为复杂的交易，建议使用异步模式，否则容易导致API因等待时间过长，返回等待超时）
      */
     public void setAsyncFlag(Integer AsyncFlag) {
@@ -253,7 +253,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

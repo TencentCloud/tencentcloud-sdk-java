@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemoveInstancesRequest  extends AbstractModel{
+public class RemoveInstancesRequest extends AbstractModel{
 
     /**
     * 集群 ID
@@ -37,7 +37,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
-     * 获取集群 ID
+     * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
     public String getClusterId() {
@@ -45,7 +45,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群 ID
+     * Set 集群 ID
      * @param ClusterId 集群 ID
      */
     public void setClusterId(String ClusterId) {
@@ -53,7 +53,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云主机 ID 列表
+     * Get 云主机 ID 列表 
      * @return InstanceIdList 云主机 ID 列表
      */
     public String [] getInstanceIdList() {
@@ -61,7 +61,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云主机 ID 列表
+     * Set 云主机 ID 列表
      * @param InstanceIdList 云主机 ID 列表
      */
     public void setInstanceIdList(String [] InstanceIdList) {
@@ -69,7 +69,7 @@ public class RemoveInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

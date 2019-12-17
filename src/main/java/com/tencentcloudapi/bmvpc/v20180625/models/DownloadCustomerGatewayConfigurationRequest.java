@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
+public class DownloadCustomerGatewayConfigurationRequest extends AbstractModel{
 
     /**
     * VPN通道实例ID。形如：bmvpnx-f49l6u0z。
@@ -37,7 +37,7 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     private String VendorName;
 
     /**
-     * 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Get VPN通道实例ID。形如：bmvpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public String getVpnConnectionId() {
@@ -45,7 +45,7 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Set VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      * @param VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public void setVpnConnectionId(String VpnConnectionId) {
@@ -53,7 +53,7 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取厂商,取值 h3c，cisco
+     * Get 厂商,取值 h3c，cisco 
      * @return VendorName 厂商,取值 h3c，cisco
      */
     public String getVendorName() {
@@ -61,7 +61,7 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置厂商,取值 h3c，cisco
+     * Set 厂商,取值 h3c，cisco
      * @param VendorName 厂商,取值 h3c，cisco
      */
     public void setVendorName(String VendorName) {
@@ -69,7 +69,7 @@ public class DownloadCustomerGatewayConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnConnectionId", this.VpnConnectionId);

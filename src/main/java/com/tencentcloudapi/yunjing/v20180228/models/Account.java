@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Account  extends AbstractModel{
+public class Account extends AbstractModel{
 
     /**
     * 唯一ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端唯一Uuid
@@ -88,23 +88,23 @@ public class Account  extends AbstractModel{
     private String LastLoginTime;
 
     /**
-     * 获取唯一ID。
+     * Get 唯一ID。 
      * @return Id 唯一ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置唯一ID。
+     * Set 唯一ID。
      * @param Id 唯一ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端唯一Uuid
+     * Get 云镜客户端唯一Uuid 
      * @return Uuid 云镜客户端唯一Uuid
      */
     public String getUuid() {
@@ -112,7 +112,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一Uuid
+     * Set 云镜客户端唯一Uuid
      * @param Uuid 云镜客户端唯一Uuid
      */
     public void setUuid(String Uuid) {
@@ -120,7 +120,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -128,7 +128,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -136,7 +136,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取主机名称。
+     * Get 主机名称。 
      * @return MachineName 主机名称。
      */
     public String getMachineName() {
@@ -144,7 +144,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称。
+     * Set 主机名称。
      * @param MachineName 主机名称。
      */
     public void setMachineName(String MachineName) {
@@ -152,7 +152,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取帐号名。
+     * Get 帐号名。 
      * @return Username 帐号名。
      */
     public String getUsername() {
@@ -160,7 +160,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置帐号名。
+     * Set 帐号名。
      * @param Username 帐号名。
      */
     public void setUsername(String Username) {
@@ -168,7 +168,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取帐号所属组。
+     * Get 帐号所属组。 
      * @return Groups 帐号所属组。
      */
     public String getGroups() {
@@ -176,7 +176,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置帐号所属组。
+     * Set 帐号所属组。
      * @param Groups 帐号所属组。
      */
     public void setGroups(String Groups) {
@@ -184,9 +184,9 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取帐号类型。
+     * Get 帐号类型。
 <li>ORDINARY：普通帐号</li>
-<li>SUPPER：超级管理员帐号</li>
+<li>SUPPER：超级管理员帐号</li> 
      * @return Privilege 帐号类型。
 <li>ORDINARY：普通帐号</li>
 <li>SUPPER：超级管理员帐号</li>
@@ -196,7 +196,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置帐号类型。
+     * Set 帐号类型。
 <li>ORDINARY：普通帐号</li>
 <li>SUPPER：超级管理员帐号</li>
      * @param Privilege 帐号类型。
@@ -208,7 +208,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取帐号创建时间。
+     * Get 帐号创建时间。 
      * @return AccountCreateTime 帐号创建时间。
      */
     public String getAccountCreateTime() {
@@ -216,7 +216,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置帐号创建时间。
+     * Set 帐号创建时间。
      * @param AccountCreateTime 帐号创建时间。
      */
     public void setAccountCreateTime(String AccountCreateTime) {
@@ -224,7 +224,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 获取帐号最后登录时间。
+     * Get 帐号最后登录时间。 
      * @return LastLoginTime 帐号最后登录时间。
      */
     public String getLastLoginTime() {
@@ -232,7 +232,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 设置帐号最后登录时间。
+     * Set 帐号最后登录时间。
      * @param LastLoginTime 帐号最后登录时间。
      */
     public void setLastLoginTime(String LastLoginTime) {
@@ -240,7 +240,7 @@ public class Account  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

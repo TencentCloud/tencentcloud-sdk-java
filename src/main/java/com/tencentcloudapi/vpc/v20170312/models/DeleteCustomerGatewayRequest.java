@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCustomerGatewayRequest  extends AbstractModel{
+public class DeleteCustomerGatewayRequest extends AbstractModel{
 
     /**
     * 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
@@ -30,7 +30,7 @@ public class DeleteCustomerGatewayRequest  extends AbstractModel{
     private String CustomerGatewayId;
 
     /**
-     * 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。 
      * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      */
     public String getCustomerGatewayId() {
@@ -38,7 +38,7 @@ public class DeleteCustomerGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
@@ -46,7 +46,7 @@ public class DeleteCustomerGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);

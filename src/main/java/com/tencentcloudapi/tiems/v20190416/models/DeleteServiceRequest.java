@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceRequest  extends AbstractModel{
+public class DeleteServiceRequest extends AbstractModel{
 
     /**
     * 服务Id
@@ -30,7 +30,7 @@ public class DeleteServiceRequest  extends AbstractModel{
     private String ServiceId;
 
     /**
-     * 获取服务Id
+     * Get 服务Id 
      * @return ServiceId 服务Id
      */
     public String getServiceId() {
@@ -38,7 +38,7 @@ public class DeleteServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务Id
+     * Set 服务Id
      * @param ServiceId 服务Id
      */
     public void setServiceId(String ServiceId) {
@@ -46,7 +46,7 @@ public class DeleteServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);

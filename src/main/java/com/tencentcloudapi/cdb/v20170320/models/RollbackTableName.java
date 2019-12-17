@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackTableName  extends AbstractModel{
+public class RollbackTableName extends AbstractModel{
 
     /**
     * 回档前的原数据库表名
@@ -37,7 +37,7 @@ public class RollbackTableName  extends AbstractModel{
     private String NewTableName;
 
     /**
-     * 获取回档前的原数据库表名
+     * Get 回档前的原数据库表名 
      * @return TableName 回档前的原数据库表名
      */
     public String getTableName() {
@@ -45,7 +45,7 @@ public class RollbackTableName  extends AbstractModel{
     }
 
     /**
-     * 设置回档前的原数据库表名
+     * Set 回档前的原数据库表名
      * @param TableName 回档前的原数据库表名
      */
     public void setTableName(String TableName) {
@@ -53,7 +53,7 @@ public class RollbackTableName  extends AbstractModel{
     }
 
     /**
-     * 获取回档后的新数据库表名
+     * Get 回档后的新数据库表名 
      * @return NewTableName 回档后的新数据库表名
      */
     public String getNewTableName() {
@@ -61,7 +61,7 @@ public class RollbackTableName  extends AbstractModel{
     }
 
     /**
-     * 设置回档后的新数据库表名
+     * Set 回档后的新数据库表名
      * @param NewTableName 回档后的新数据库表名
      */
     public void setNewTableName(String NewTableName) {
@@ -69,7 +69,7 @@ public class RollbackTableName  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableName", this.TableName);

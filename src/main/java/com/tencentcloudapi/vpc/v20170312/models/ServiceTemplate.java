@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ServiceTemplate  extends AbstractModel{
+public class ServiceTemplate extends AbstractModel{
 
     /**
     * 协议端口实例ID，例如：ppm-f5n1f8da。
@@ -51,7 +51,7 @@ public class ServiceTemplate  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取协议端口实例ID，例如：ppm-f5n1f8da。
+     * Get 协议端口实例ID，例如：ppm-f5n1f8da。 
      * @return ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      */
     public String getServiceTemplateId() {
@@ -59,7 +59,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口实例ID，例如：ppm-f5n1f8da。
+     * Set 协议端口实例ID，例如：ppm-f5n1f8da。
      * @param ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
@@ -67,7 +67,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称。
+     * Get 模板名称。 
      * @return ServiceTemplateName 模板名称。
      */
     public String getServiceTemplateName() {
@@ -75,7 +75,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称。
+     * Set 模板名称。
      * @param ServiceTemplateName 模板名称。
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
@@ -83,7 +83,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取协议端口信息。
+     * Get 协议端口信息。 
      * @return ServiceSet 协议端口信息。
      */
     public String [] getServiceSet() {
@@ -91,7 +91,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口信息。
+     * Set 协议端口信息。
      * @param ServiceSet 协议端口信息。
      */
     public void setServiceSet(String [] ServiceSet) {
@@ -99,7 +99,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class ServiceTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);

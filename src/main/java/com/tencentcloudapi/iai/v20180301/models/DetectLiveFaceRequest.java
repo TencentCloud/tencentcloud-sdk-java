@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLiveFaceRequest  extends AbstractModel{
+public class DetectLiveFaceRequest extends AbstractModel{
 
     /**
     * 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
@@ -52,8 +52,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String FaceModelVersion;
 
     /**
-     * 获取图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Get 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
@@ -62,7 +62,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
+     * Set 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Image 图片 base64 数据，base64 编码后大小不可超过5M（图片的宽高比请接近3:4，不符合宽高比的图片返回的分值不具备参考意义）。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -72,12 +72,12 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Get 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
@@ -90,7 +90,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Set 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。 
 （图片的宽高比请接近 3:4，不符合宽高比的图片返回的分值不具备参考意义） 
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
@@ -108,9 +108,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+     * Get 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 默认为"2.0"。 
-不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。 
      * @return FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 默认为"2.0"。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
@@ -120,7 +120,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
+     * Set 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
 默认为"2.0"。 
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      * @param FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。  
@@ -132,7 +132,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Image", this.Image);

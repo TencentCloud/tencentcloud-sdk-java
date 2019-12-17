@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
+public class CreateDisasterRecoverGroupResponse extends AbstractModel{
 
     /**
     * 分散置放群组ID列表。
@@ -72,7 +72,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取分散置放群组ID列表。
+     * Get 分散置放群组ID列表。 
      * @return DisasterRecoverGroupId 分散置放群组ID列表。
      */
     public String getDisasterRecoverGroupId() {
@@ -80,7 +80,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组ID列表。
+     * Set 分散置放群组ID列表。
      * @param DisasterRecoverGroupId 分散置放群组ID列表。
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
@@ -88,7 +88,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * Get 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架 
      * @return Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      */
     public String getType() {
@@ -96,7 +96,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * Set 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      * @param Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
      */
     public void setType(String Type) {
@@ -104,7 +104,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
      * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
     public String getName() {
@@ -112,7 +112,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Set 分散置放群组名称，长度1-60个字符，支持中、英文。
      * @param Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      */
     public void setName(String Name) {
@@ -120,7 +120,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组内可容纳的云服务器数量。
+     * Get 置放群组内可容纳的云服务器数量。 
      * @return CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
     public Integer getCvmQuotaTotal() {
@@ -128,7 +128,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组内可容纳的云服务器数量。
+     * Set 置放群组内可容纳的云服务器数量。
      * @param CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      */
     public void setCvmQuotaTotal(Integer CvmQuotaTotal) {
@@ -136,7 +136,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组内已有的云服务器数量。
+     * Get 置放群组内已有的云服务器数量。 
      * @return CurrentNum 置放群组内已有的云服务器数量。
      */
     public Integer getCurrentNum() {
@@ -144,7 +144,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组内已有的云服务器数量。
+     * Set 置放群组内已有的云服务器数量。
      * @param CurrentNum 置放群组内已有的云服务器数量。
      */
     public void setCurrentNum(Integer CurrentNum) {
@@ -152,7 +152,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组创建时间。
+     * Get 置放群组创建时间。 
      * @return CreateTime 置放群组创建时间。
      */
     public String getCreateTime() {
@@ -160,7 +160,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组创建时间。
+     * Set 置放群组创建时间。
      * @param CreateTime 置放群组创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -168,7 +168,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class CreateDisasterRecoverGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
+public class InquiryPriceRenewInstanceRequest extends AbstractModel{
 
     /**
     * 时间长度
@@ -65,7 +65,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     private String Currency;
 
     /**
-     * 获取时间长度
+     * Get 时间长度 
      * @return TimeSpan 时间长度
      */
     public Integer getTimeSpan() {
@@ -73,7 +73,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间长度
+     * Set 时间长度
      * @param TimeSpan 时间长度
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -81,7 +81,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID列表
+     * Get 资源ID列表 
      * @return ResourceIds 资源ID列表
      */
     public String [] getResourceIds() {
@@ -89,7 +89,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID列表
+     * Set 资源ID列表
      * @param ResourceIds 资源ID列表
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -97,7 +97,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -105,7 +105,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -113,7 +113,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+     * Get 计费模式，0表示按量，1表示包年报月，此处只能为包年包月 
      * @return PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      */
     public Integer getPayMode() {
@@ -121,7 +121,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式，0表示按量，1表示包年报月，此处只能为包年包月
+     * Set 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      * @param PayMode 计费模式，0表示按量，1表示包年报月，此处只能为包年包月
      */
     public void setPayMode(Integer PayMode) {
@@ -129,7 +129,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间单位，默认为m
+     * Get 时间单位，默认为m 
      * @return TimeUnit 时间单位，默认为m
      */
     public String getTimeUnit() {
@@ -137,7 +137,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位，默认为m
+     * Set 时间单位，默认为m
      * @param TimeUnit 时间单位，默认为m
      */
     public void setTimeUnit(String TimeUnit) {
@@ -145,7 +145,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取货币种类
+     * Get 货币种类 
      * @return Currency 货币种类
      */
     public String getCurrency() {
@@ -153,7 +153,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置货币种类
+     * Set 货币种类
      * @param Currency 货币种类
      */
     public void setCurrency(String Currency) {
@@ -161,7 +161,7 @@ public class InquiryPriceRenewInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);

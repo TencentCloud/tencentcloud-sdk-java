@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIpInfoResponse  extends AbstractModel{
+public class DescribeIpInfoResponse extends AbstractModel{
 
     /**
     * 是否有数据，0代表有数据，1代表没有数据
@@ -95,7 +95,7 @@ malware IP = 恶意IP
     private String RequestId;
 
     /**
-     * 获取是否有数据，0代表有数据，1代表没有数据
+     * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public Integer getReturnCode() {
@@ -103,7 +103,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置是否有数据，0代表有数据，1代表没有数据
+     * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public void setReturnCode(Integer ReturnCode) {
@@ -111,7 +111,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取判定结果，如：black、white、grey
+     * Get 判定结果，如：black、white、grey 
      * @return Result 判定结果，如：black、white、grey
      */
     public String getResult() {
@@ -119,7 +119,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置判定结果，如：black、white、grey
+     * Set 判定结果，如：black、white、grey
      * @param Result 判定结果，如：black、white、grey
      */
     public void setResult(String Result) {
@@ -127,7 +127,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取置信度，取值0-100
+     * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
     public Integer getConfidence() {
@@ -135,7 +135,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置置信度，取值0-100
+     * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
     public void setConfidence(Integer Confidence) {
@@ -143,7 +143,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取威胁类型。
+     * Get 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
 ransomware = 勒索软件
@@ -159,7 +159,7 @@ tor = 暗网
 miner = 挖矿
 maleware site = 恶意站点
 malware IP = 恶意IP
-等等
+等等 
      * @return ThreatTypes 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
@@ -183,7 +183,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置威胁类型。
+     * Set 威胁类型。
 botnet = 僵尸网络
 trojan = 木马
 ransomware = 勒索软件
@@ -223,7 +223,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取恶意标签，对应的团伙，家族等信息。
+     * Get 恶意标签，对应的团伙，家族等信息。 
      * @return Tags 恶意标签，对应的团伙，家族等信息。
      */
     public TagType [] getTags() {
@@ -231,7 +231,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置恶意标签，对应的团伙，家族等信息。
+     * Set 恶意标签，对应的团伙，家族等信息。
      * @param Tags 恶意标签，对应的团伙，家族等信息。
      */
     public void setTags(TagType [] Tags) {
@@ -239,7 +239,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取对应的历史上的威胁情报事件
+     * Get 对应的历史上的威胁情报事件 
      * @return Intelligences 对应的历史上的威胁情报事件
      */
     public IntelligenceType [] getIntelligences() {
@@ -247,7 +247,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置对应的历史上的威胁情报事件
+     * Set 对应的历史上的威胁情报事件
      * @param Intelligences 对应的历史上的威胁情报事件
      */
     public void setIntelligences(IntelligenceType [] Intelligences) {
@@ -255,7 +255,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取情报相关的上下文
+     * Get 情报相关的上下文 
      * @return Context 情报相关的上下文
      */
     public String getContext() {
@@ -263,7 +263,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置情报相关的上下文
+     * Set 情报相关的上下文
      * @param Context 情报相关的上下文
      */
     public void setContext(String Context) {
@@ -271,7 +271,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -279,7 +279,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -287,7 +287,7 @@ malware IP = 恶意IP
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);

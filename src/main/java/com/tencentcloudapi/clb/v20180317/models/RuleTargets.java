@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleTargets  extends AbstractModel{
+public class RuleTargets extends AbstractModel{
 
     /**
     * 转发规则的 ID
@@ -52,7 +52,7 @@ public class RuleTargets  extends AbstractModel{
     private Backend [] Targets;
 
     /**
-     * 获取转发规则的 ID
+     * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
     public String getLocationId() {
@@ -60,7 +60,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的 ID
+     * Set 转发规则的 ID
      * @param LocationId 转发规则的 ID
      */
     public void setLocationId(String LocationId) {
@@ -68,7 +68,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的域名
+     * Get 转发规则的域名 
      * @return Domain 转发规则的域名
      */
     public String getDomain() {
@@ -76,7 +76,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的域名
+     * Set 转发规则的域名
      * @param Domain 转发规则的域名
      */
     public void setDomain(String Domain) {
@@ -84,7 +84,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的路径。
+     * Get 转发规则的路径。 
      * @return Url 转发规则的路径。
      */
     public String getUrl() {
@@ -92,7 +92,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的路径。
+     * Set 转发规则的路径。
      * @param Url 转发规则的路径。
      */
     public void setUrl(String Url) {
@@ -100,8 +100,8 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Targets 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,7 +110,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的信息
+     * Set 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 后端服务的信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ public class RuleTargets  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);

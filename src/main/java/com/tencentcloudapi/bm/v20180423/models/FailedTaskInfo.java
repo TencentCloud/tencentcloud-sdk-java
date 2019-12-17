@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FailedTaskInfo  extends AbstractModel{
+public class FailedTaskInfo extends AbstractModel{
 
     /**
     * 运行脚本的设备ID
@@ -37,7 +37,7 @@ public class FailedTaskInfo  extends AbstractModel{
     private String ErrorMsg;
 
     /**
-     * 获取运行脚本的设备ID
+     * Get 运行脚本的设备ID 
      * @return InstanceId 运行脚本的设备ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class FailedTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运行脚本的设备ID
+     * Set 运行脚本的设备ID
      * @param InstanceId 运行脚本的设备ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class FailedTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取失败原因
+     * Get 失败原因 
      * @return ErrorMsg 失败原因
      */
     public String getErrorMsg() {
@@ -61,7 +61,7 @@ public class FailedTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置失败原因
+     * Set 失败原因
      * @param ErrorMsg 失败原因
      */
     public void setErrorMsg(String ErrorMsg) {
@@ -69,7 +69,7 @@ public class FailedTaskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

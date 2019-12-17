@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeModelRequest  extends AbstractModel{
+public class DescribeModelRequest extends AbstractModel{
 
     /**
     * 模型名称
@@ -44,7 +44,7 @@ public class DescribeModelRequest  extends AbstractModel{
     private String ServType;
 
     /**
-     * 获取模型名称
+     * Get 模型名称 
      * @return Name 模型名称
      */
     public String getName() {
@@ -52,7 +52,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型名称
+     * Set 模型名称
      * @param Name 模型名称
      */
     public void setName(String Name) {
@@ -60,7 +60,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模型所在集群名称，`集群模式` 必填
+     * Get 模型所在集群名称，`集群模式` 必填 
      * @return Cluster 模型所在集群名称，`集群模式` 必填
      */
     public String getCluster() {
@@ -68,7 +68,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型所在集群名称，`集群模式` 必填
+     * Set 模型所在集群名称，`集群模式` 必填
      * @param Cluster 模型所在集群名称，`集群模式` 必填
      */
     public void setCluster(String Cluster) {
@@ -76,7 +76,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+     * Get 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式` 
      * @return ServType 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public String getServType() {
@@ -84,7 +84,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
+     * Set 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      * @param ServType 模型类型，取值 `serverless` 即为 `无服务器模式`，否则为 `集群模式`
      */
     public void setServType(String ServType) {
@@ -92,7 +92,7 @@ public class DescribeModelRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

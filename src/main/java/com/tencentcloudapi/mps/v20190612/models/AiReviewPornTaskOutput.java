@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornTaskOutput  extends AbstractModel{
+public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
     * 视频鉴黄评分，分值为0到100。
@@ -58,7 +58,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * 获取视频鉴黄评分，分值为0到100。
+     * Get 视频鉴黄评分，分值为0到100。 
      * @return Confidence 视频鉴黄评分，分值为0到100。
      */
     public Float getConfidence() {
@@ -66,7 +66,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频鉴黄评分，分值为0到100。
+     * Set 视频鉴黄评分，分值为0到100。
      * @param Confidence 视频鉴黄评分，分值为0到100。
      */
     public void setConfidence(Float Confidence) {
@@ -74,10 +74,10 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取鉴黄结果建议，取值范围：
+     * Get 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -88,7 +88,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置鉴黄结果建议，取值范围：
+     * Set 鉴黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -102,11 +102,11 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取视频鉴黄结果标签，取值范围：
+     * Get 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
-<li>intimacy：亲密行为。</li>
+<li>intimacy：亲密行为。</li> 
      * @return Label 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
@@ -118,7 +118,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频鉴黄结果标签，取值范围：
+     * Set 视频鉴黄结果标签，取值范围：
 <li>porn：色情。</li>
 <li>sexy：性感。</li>
 <li>vulgar：低俗。</li>
@@ -134,7 +134,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取有涉黄嫌疑的视频片段列表。
+     * Get 有涉黄嫌疑的视频片段列表。 
      * @return SegmentSet 有涉黄嫌疑的视频片段列表。
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
@@ -142,7 +142,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置有涉黄嫌疑的视频片段列表。
+     * Set 有涉黄嫌疑的视频片段列表。
      * @param SegmentSet 有涉黄嫌疑的视频片段列表。
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
@@ -150,7 +150,7 @@ public class AiReviewPornTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

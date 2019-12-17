@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRouteRequest  extends AbstractModel{
+public class CreateClusterRouteRequest extends AbstractModel{
 
     /**
     * 路由表名称。
@@ -44,7 +44,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     private String GatewayIp;
 
     /**
-     * 获取路由表名称。
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
     public String getRouteTableName() {
@@ -52,7 +52,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
      * @param RouteTableName 路由表名称。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -60,7 +60,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的端CIDR。
+     * Get 目的端CIDR。 
      * @return DestinationCidrBlock 目的端CIDR。
      */
     public String getDestinationCidrBlock() {
@@ -68,7 +68,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的端CIDR。
+     * Set 目的端CIDR。
      * @param DestinationCidrBlock 目的端CIDR。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -76,7 +76,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳地址。
+     * Get 下一跳地址。 
      * @return GatewayIp 下一跳地址。
      */
     public String getGatewayIp() {
@@ -84,7 +84,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置下一跳地址。
+     * Set 下一跳地址。
      * @param GatewayIp 下一跳地址。
      */
     public void setGatewayIp(String GatewayIp) {
@@ -92,7 +92,7 @@ public class CreateClusterRouteRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);

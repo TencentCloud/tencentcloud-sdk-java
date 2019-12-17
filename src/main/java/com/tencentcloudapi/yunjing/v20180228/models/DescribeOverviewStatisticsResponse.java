@@ -20,56 +20,56 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOverviewStatisticsResponse  extends AbstractModel{
+public class DescribeOverviewStatisticsResponse extends AbstractModel{
 
     /**
     * 服务器在线数。
     */
     @SerializedName("OnlineMachineNum")
     @Expose
-    private Integer OnlineMachineNum;
+    private Long OnlineMachineNum;
 
     /**
     * 专业服务器数。
     */
     @SerializedName("ProVersionMachineNum")
     @Expose
-    private Integer ProVersionMachineNum;
+    private Long ProVersionMachineNum;
 
     /**
     * 木马文件数。
     */
     @SerializedName("MalwareNum")
     @Expose
-    private Integer MalwareNum;
+    private Long MalwareNum;
 
     /**
     * 异地登录数。
     */
     @SerializedName("NonlocalLoginNum")
     @Expose
-    private Integer NonlocalLoginNum;
+    private Long NonlocalLoginNum;
 
     /**
     * 暴力破解成功数。
     */
     @SerializedName("BruteAttackSuccessNum")
     @Expose
-    private Integer BruteAttackSuccessNum;
+    private Long BruteAttackSuccessNum;
 
     /**
     * 漏洞数。
     */
     @SerializedName("VulNum")
     @Expose
-    private Integer VulNum;
+    private Long VulNum;
 
     /**
     * 安全基线数。
     */
     @SerializedName("BaseLineNum")
     @Expose
-    private Integer BaseLineNum;
+    private Long BaseLineNum;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -79,119 +79,119 @@ public class DescribeOverviewStatisticsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取服务器在线数。
+     * Get 服务器在线数。 
      * @return OnlineMachineNum 服务器在线数。
      */
-    public Integer getOnlineMachineNum() {
+    public Long getOnlineMachineNum() {
         return this.OnlineMachineNum;
     }
 
     /**
-     * 设置服务器在线数。
+     * Set 服务器在线数。
      * @param OnlineMachineNum 服务器在线数。
      */
-    public void setOnlineMachineNum(Integer OnlineMachineNum) {
+    public void setOnlineMachineNum(Long OnlineMachineNum) {
         this.OnlineMachineNum = OnlineMachineNum;
     }
 
     /**
-     * 获取专业服务器数。
+     * Get 专业服务器数。 
      * @return ProVersionMachineNum 专业服务器数。
      */
-    public Integer getProVersionMachineNum() {
+    public Long getProVersionMachineNum() {
         return this.ProVersionMachineNum;
     }
 
     /**
-     * 设置专业服务器数。
+     * Set 专业服务器数。
      * @param ProVersionMachineNum 专业服务器数。
      */
-    public void setProVersionMachineNum(Integer ProVersionMachineNum) {
+    public void setProVersionMachineNum(Long ProVersionMachineNum) {
         this.ProVersionMachineNum = ProVersionMachineNum;
     }
 
     /**
-     * 获取木马文件数。
+     * Get 木马文件数。 
      * @return MalwareNum 木马文件数。
      */
-    public Integer getMalwareNum() {
+    public Long getMalwareNum() {
         return this.MalwareNum;
     }
 
     /**
-     * 设置木马文件数。
+     * Set 木马文件数。
      * @param MalwareNum 木马文件数。
      */
-    public void setMalwareNum(Integer MalwareNum) {
+    public void setMalwareNum(Long MalwareNum) {
         this.MalwareNum = MalwareNum;
     }
 
     /**
-     * 获取异地登录数。
+     * Get 异地登录数。 
      * @return NonlocalLoginNum 异地登录数。
      */
-    public Integer getNonlocalLoginNum() {
+    public Long getNonlocalLoginNum() {
         return this.NonlocalLoginNum;
     }
 
     /**
-     * 设置异地登录数。
+     * Set 异地登录数。
      * @param NonlocalLoginNum 异地登录数。
      */
-    public void setNonlocalLoginNum(Integer NonlocalLoginNum) {
+    public void setNonlocalLoginNum(Long NonlocalLoginNum) {
         this.NonlocalLoginNum = NonlocalLoginNum;
     }
 
     /**
-     * 获取暴力破解成功数。
+     * Get 暴力破解成功数。 
      * @return BruteAttackSuccessNum 暴力破解成功数。
      */
-    public Integer getBruteAttackSuccessNum() {
+    public Long getBruteAttackSuccessNum() {
         return this.BruteAttackSuccessNum;
     }
 
     /**
-     * 设置暴力破解成功数。
+     * Set 暴力破解成功数。
      * @param BruteAttackSuccessNum 暴力破解成功数。
      */
-    public void setBruteAttackSuccessNum(Integer BruteAttackSuccessNum) {
+    public void setBruteAttackSuccessNum(Long BruteAttackSuccessNum) {
         this.BruteAttackSuccessNum = BruteAttackSuccessNum;
     }
 
     /**
-     * 获取漏洞数。
+     * Get 漏洞数。 
      * @return VulNum 漏洞数。
      */
-    public Integer getVulNum() {
+    public Long getVulNum() {
         return this.VulNum;
     }
 
     /**
-     * 设置漏洞数。
+     * Set 漏洞数。
      * @param VulNum 漏洞数。
      */
-    public void setVulNum(Integer VulNum) {
+    public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * 获取安全基线数。
+     * Get 安全基线数。 
      * @return BaseLineNum 安全基线数。
      */
-    public Integer getBaseLineNum() {
+    public Long getBaseLineNum() {
         return this.BaseLineNum;
     }
 
     /**
-     * 设置安全基线数。
+     * Set 安全基线数。
      * @param BaseLineNum 安全基线数。
      */
-    public void setBaseLineNum(Integer BaseLineNum) {
+    public void setBaseLineNum(Long BaseLineNum) {
         this.BaseLineNum = BaseLineNum;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribeOverviewStatisticsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribeOverviewStatisticsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OnlineMachineNum", this.OnlineMachineNum);

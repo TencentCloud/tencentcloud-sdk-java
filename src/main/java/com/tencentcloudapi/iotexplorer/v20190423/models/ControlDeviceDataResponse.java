@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ControlDeviceDataResponse  extends AbstractModel{
+public class ControlDeviceDataResponse extends AbstractModel{
 
     /**
     * 返回信息
@@ -46,7 +46,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     private String RequestId;
 
     /**
-     * 获取返回信息
+     * Get 返回信息 
      * @return Data 返回信息
      */
     public String getData() {
@@ -54,7 +54,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 设置返回信息
+     * Set 返回信息
      * @param Data 返回信息
      */
     public void setData(String Data) {
@@ -62,9 +62,9 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 获取JSON字符串， 返回下发控制的结果信息, 
+     * Get JSON字符串， 返回下发控制的结果信息, 
 Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result JSON字符串， 返回下发控制的结果信息, 
 Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 设置JSON字符串， 返回下发控制的结果信息, 
+     * Set JSON字符串， 返回下发控制的结果信息, 
 Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Result JSON字符串， 返回下发控制的结果信息, 
@@ -86,7 +86,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ Sent = 1 表示设备已经在线并且订阅了控制下发的mqtt topic
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);

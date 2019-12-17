@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaKeyFrameDescInfo  extends AbstractModel{
+public class MediaKeyFrameDescInfo extends AbstractModel{
 
     /**
     * 视频打点信息数组。
@@ -31,8 +31,8 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
     private MediaKeyFrameDescItem [] KeyFrameDescSet;
 
     /**
-     * 获取视频打点信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频打点信息数组。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyFrameDescSet 视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频打点信息数组。
+     * Set 视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFrameDescSet 视频打点信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaKeyFrameDescInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "KeyFrameDescSet.", this.KeyFrameDescSet);

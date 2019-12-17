@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrganizationRequest  extends AbstractModel{
+public class CreateOrganizationRequest extends AbstractModel{
 
     /**
     * 组织类型（目前固定为1）
@@ -30,7 +30,7 @@ public class CreateOrganizationRequest  extends AbstractModel{
     private Long OrgType;
 
     /**
-     * 获取组织类型（目前固定为1）
+     * Get 组织类型（目前固定为1） 
      * @return OrgType 组织类型（目前固定为1）
      */
     public Long getOrgType() {
@@ -38,7 +38,7 @@ public class CreateOrganizationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织类型（目前固定为1）
+     * Set 组织类型（目前固定为1）
      * @param OrgType 组织类型（目前固定为1）
      */
     public void setOrgType(Long OrgType) {
@@ -46,7 +46,7 @@ public class CreateOrganizationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrgType", this.OrgType);

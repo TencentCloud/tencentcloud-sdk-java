@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectEntryEx  extends AbstractModel{
+public class ProjectEntryEx extends AbstractModel{
 
     /**
     * 项目ID
@@ -79,7 +79,7 @@ public class ProjectEntryEx  extends AbstractModel{
     private Long WebAppCount;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -87,7 +87,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -95,7 +95,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -103,7 +103,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -111,7 +111,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取项目描述
+     * Get 项目描述 
      * @return ProjectDesc 项目描述
      */
     public String getProjectDesc() {
@@ -119,7 +119,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置项目描述
+     * Set 项目描述
      * @param ProjectDesc 项目描述
      */
     public void setProjectDesc(String ProjectDesc) {
@@ -127,7 +127,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取项目创建时间，unix时间戳
+     * Get 项目创建时间，unix时间戳 
      * @return CreateTime 项目创建时间，unix时间戳
      */
     public Long getCreateTime() {
@@ -135,7 +135,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置项目创建时间，unix时间戳
+     * Set 项目创建时间，unix时间戳
      * @param CreateTime 项目创建时间，unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -143,7 +143,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取项目更新时间，unix时间戳
+     * Get 项目更新时间，unix时间戳 
      * @return UpdateTime 项目更新时间，unix时间戳
      */
     public Long getUpdateTime() {
@@ -151,7 +151,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置项目更新时间，unix时间戳
+     * Set 项目更新时间，unix时间戳
      * @param UpdateTime 项目更新时间，unix时间戳
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -159,7 +159,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取产品数量
+     * Get 产品数量 
      * @return ProductCount 产品数量
      */
     public Long getProductCount() {
@@ -167,7 +167,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置产品数量
+     * Set 产品数量
      * @param ProductCount 产品数量
      */
     public void setProductCount(Long ProductCount) {
@@ -175,7 +175,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取NativeApp数量
+     * Get NativeApp数量 
      * @return NativeAppCount NativeApp数量
      */
     public Long getNativeAppCount() {
@@ -183,7 +183,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置NativeApp数量
+     * Set NativeApp数量
      * @param NativeAppCount NativeApp数量
      */
     public void setNativeAppCount(Long NativeAppCount) {
@@ -191,7 +191,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 获取WebApp数量
+     * Get WebApp数量 
      * @return WebAppCount WebApp数量
      */
     public Long getWebAppCount() {
@@ -199,7 +199,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 设置WebApp数量
+     * Set WebApp数量
      * @param WebAppCount WebApp数量
      */
     public void setWebAppCount(Long WebAppCount) {
@@ -207,7 +207,7 @@ public class ProjectEntryEx  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

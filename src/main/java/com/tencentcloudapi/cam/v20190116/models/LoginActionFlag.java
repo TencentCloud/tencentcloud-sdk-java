@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginActionFlag  extends AbstractModel{
+public class LoginActionFlag extends AbstractModel{
 
     /**
     * 手机
@@ -58,7 +58,7 @@ public class LoginActionFlag  extends AbstractModel{
     private Long Custom;
 
     /**
-     * 获取手机
+     * Get 手机 
      * @return Phone 手机
      */
     public Long getPhone() {
@@ -66,7 +66,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 设置手机
+     * Set 手机
      * @param Phone 手机
      */
     public void setPhone(Long Phone) {
@@ -74,7 +74,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 获取硬token
+     * Get 硬token 
      * @return Token 硬token
      */
     public Long getToken() {
@@ -82,7 +82,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 设置硬token
+     * Set 硬token
      * @param Token 硬token
      */
     public void setToken(Long Token) {
@@ -90,7 +90,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 获取软token
+     * Get 软token 
      * @return Stoken 软token
      */
     public Long getStoken() {
@@ -98,7 +98,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 设置软token
+     * Set 软token
      * @param Stoken 软token
      */
     public void setStoken(Long Stoken) {
@@ -106,7 +106,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 获取微信
+     * Get 微信 
      * @return Wechat 微信
      */
     public Long getWechat() {
@@ -114,7 +114,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 设置微信
+     * Set 微信
      * @param Wechat 微信
      */
     public void setWechat(Long Wechat) {
@@ -122,7 +122,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 获取自定义
+     * Get 自定义 
      * @return Custom 自定义
      */
     public Long getCustom() {
@@ -130,7 +130,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 设置自定义
+     * Set 自定义
      * @param Custom 自定义
      */
     public void setCustom(Long Custom) {
@@ -138,7 +138,7 @@ public class LoginActionFlag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Phone", this.Phone);

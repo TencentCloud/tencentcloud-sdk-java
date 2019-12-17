@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecIndexResponse  extends AbstractModel{
+public class DescribeSecIndexResponse extends AbstractModel{
 
     /**
     * 字段值，如下：
@@ -56,12 +56,12 @@ IpNum：统计的IP数据
     private String RequestId;
 
     /**
-     * 获取字段值，如下：
+     * Get 字段值，如下：
 AttackIpCount：受攻击的IP数
 AttackCount：攻击次数
 BlockCount：封堵次数
 MaxMbps：攻击峰值Mbps
-IpNum：统计的IP数据
+IpNum：统计的IP数据 
      * @return Data 字段值，如下：
 AttackIpCount：受攻击的IP数
 AttackCount：攻击次数
@@ -74,7 +74,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 设置字段值，如下：
+     * Set 字段值，如下：
 AttackIpCount：受攻击的IP数
 AttackCount：攻击次数
 BlockCount：封堵次数
@@ -92,7 +92,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 获取本月开始时间
+     * Get 本月开始时间 
      * @return BeginDate 本月开始时间
      */
     public String getBeginDate() {
@@ -100,7 +100,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 设置本月开始时间
+     * Set 本月开始时间
      * @param BeginDate 本月开始时间
      */
     public void setBeginDate(String BeginDate) {
@@ -108,7 +108,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 获取本月结束时间
+     * Get 本月结束时间 
      * @return EndDate 本月结束时间
      */
     public String getEndDate() {
@@ -116,7 +116,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 设置本月结束时间
+     * Set 本月结束时间
      * @param EndDate 本月结束时间
      */
     public void setEndDate(String EndDate) {
@@ -124,7 +124,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -132,7 +132,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -140,7 +140,7 @@ IpNum：统计的IP数据
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

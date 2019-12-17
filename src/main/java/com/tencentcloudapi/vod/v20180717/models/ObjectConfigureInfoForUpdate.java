@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ObjectConfigureInfoForUpdate  extends AbstractModel{
+public class ObjectConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 物体识别任务开关，可选值：
@@ -42,9 +42,9 @@ public class ObjectConfigureInfoForUpdate  extends AbstractModel{
     private String ObjectLibrary;
 
     /**
-     * 获取物体识别任务开关，可选值：
+     * Get 物体识别任务开关，可选值：
 <li>ON：开启智能物体识别任务；</li>
-<li>OFF：关闭智能物体识别任务。</li>
+<li>OFF：关闭智能物体识别任务。</li> 
      * @return Switch 物体识别任务开关，可选值：
 <li>ON：开启智能物体识别任务；</li>
 <li>OFF：关闭智能物体识别任务。</li>
@@ -54,7 +54,7 @@ public class ObjectConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置物体识别任务开关，可选值：
+     * Set 物体识别任务开关，可选值：
 <li>ON：开启智能物体识别任务；</li>
 <li>OFF：关闭智能物体识别任务。</li>
      * @param Switch 物体识别任务开关，可选值：
@@ -66,10 +66,10 @@ public class ObjectConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取物体库选择，可选值：
+     * Get 物体库选择，可选值：
 <li>Default：使用默认物体库；</li>
 <li>UserDefine：使用用户自定义物体库。</li>
-<li>All：同时使用默认物体库和用户自定义物体库。</li>
+<li>All：同时使用默认物体库和用户自定义物体库。</li> 
      * @return ObjectLibrary 物体库选择，可选值：
 <li>Default：使用默认物体库；</li>
 <li>UserDefine：使用用户自定义物体库。</li>
@@ -80,7 +80,7 @@ public class ObjectConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置物体库选择，可选值：
+     * Set 物体库选择，可选值：
 <li>Default：使用默认物体库；</li>
 <li>UserDefine：使用用户自定义物体库。</li>
 <li>All：同时使用默认物体库和用户自定义物体库。</li>
@@ -94,7 +94,7 @@ public class ObjectConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

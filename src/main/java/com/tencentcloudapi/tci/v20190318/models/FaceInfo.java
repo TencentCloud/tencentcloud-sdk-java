@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceInfo  extends AbstractModel{
+public class FaceInfo extends AbstractModel{
 
     /**
     * 人脸操作错误码
@@ -58,7 +58,7 @@ public class FaceInfo  extends AbstractModel{
     private String PersonId;
 
     /**
-     * 获取人脸操作错误码
+     * Get 人脸操作错误码 
      * @return ErrorCode 人脸操作错误码
      */
     public String getErrorCode() {
@@ -66,7 +66,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸操作错误码
+     * Set 人脸操作错误码
      * @param ErrorCode 人脸操作错误码
      */
     public void setErrorCode(String ErrorCode) {
@@ -74,7 +74,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸操作结果信息
+     * Get 人脸操作结果信息 
      * @return ErrorMsg 人脸操作结果信息
      */
     public String getErrorMsg() {
@@ -82,7 +82,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸操作结果信息
+     * Set 人脸操作结果信息
      * @param ErrorMsg 人脸操作结果信息
      */
     public void setErrorMsg(String ErrorMsg) {
@@ -90,7 +90,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸唯一标识符
+     * Get 人脸唯一标识符 
      * @return FaceId 人脸唯一标识符
      */
     public String getFaceId() {
@@ -98,7 +98,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸唯一标识符
+     * Set 人脸唯一标识符
      * @param FaceId 人脸唯一标识符
      */
     public void setFaceId(String FaceId) {
@@ -106,7 +106,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸保存地址
+     * Get 人脸保存地址 
      * @return FaceUrl 人脸保存地址
      */
     public String getFaceUrl() {
@@ -114,7 +114,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸保存地址
+     * Set 人脸保存地址
      * @param FaceUrl 人脸保存地址
      */
     public void setFaceUrl(String FaceUrl) {
@@ -122,7 +122,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识
+     * Get 人员唯一标识 
      * @return PersonId 人员唯一标识
      */
     public String getPersonId() {
@@ -130,7 +130,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识
+     * Set 人员唯一标识
      * @param PersonId 人员唯一标识
      */
     public void setPersonId(String PersonId) {
@@ -138,7 +138,7 @@ public class FaceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputAudioStream  extends AbstractModel{
+public class OutputAudioStream extends AbstractModel{
 
     /**
     * 音频流的编码格式，可选值：
@@ -55,9 +55,9 @@ public class OutputAudioStream  extends AbstractModel{
     private Long AudioChannel;
 
     /**
-     * 获取音频流的编码格式，可选值：
+     * Get 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
-默认值：libfdk_aac。
+默认值：libfdk_aac。 
      * @return Codec 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
 默认值：libfdk_aac。
@@ -67,7 +67,7 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的编码格式，可选值：
+     * Set 音频流的编码格式，可选值：
 <li>libfdk_aac：适合 mp4 文件。</li>
 默认值：libfdk_aac。
      * @param Codec 音频流的编码格式，可选值：
@@ -79,13 +79,13 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 获取音频流的采样率，可选值：
+     * Get 音频流的采样率，可选值：
 <li>16000</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 单位：Hz。
-默认值：16000。
+默认值：16000。 
      * @return SampleRate 音频流的采样率，可选值：
 <li>16000</li>
 <li>32000</li>
@@ -99,7 +99,7 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 设置音频流的采样率，可选值：
+     * Set 音频流的采样率，可选值：
 <li>16000</li>
 <li>32000</li>
 <li>44100</li>
@@ -119,10 +119,10 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 获取音频声道数，可选值：
+     * Get 音频声道数，可选值：
 <li>1：单声道 。</li>
 <li>2：双声道</li>
-默认值：2。
+默认值：2。 
      * @return AudioChannel 音频声道数，可选值：
 <li>1：单声道 。</li>
 <li>2：双声道</li>
@@ -133,7 +133,7 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 设置音频声道数，可选值：
+     * Set 音频声道数，可选值：
 <li>1：单声道 。</li>
 <li>2：双声道</li>
 默认值：2。
@@ -147,7 +147,7 @@ public class OutputAudioStream  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Codec", this.Codec);

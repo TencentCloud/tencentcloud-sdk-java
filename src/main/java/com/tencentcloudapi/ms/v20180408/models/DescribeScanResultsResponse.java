@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultsResponse  extends AbstractModel{
+public class DescribeScanResultsResponse extends AbstractModel{
 
     /**
     * 批量扫描的app结果集
@@ -44,7 +44,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取批量扫描的app结果集
+     * Get 批量扫描的app结果集 
      * @return ScanSet 批量扫描的app结果集
      */
     public ScanSetInfo [] getScanSet() {
@@ -52,7 +52,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置批量扫描的app结果集
+     * Set 批量扫描的app结果集
      * @param ScanSet 批量扫描的app结果集
      */
     public void setScanSet(ScanSetInfo [] ScanSet) {
@@ -60,7 +60,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取批量扫描结果的个数
+     * Get 批量扫描结果的个数 
      * @return TotalCount 批量扫描结果的个数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置批量扫描结果的个数
+     * Set 批量扫描结果的个数
      * @param TotalCount 批量扫描结果的个数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeScanResultsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ScanSet.", this.ScanSet);

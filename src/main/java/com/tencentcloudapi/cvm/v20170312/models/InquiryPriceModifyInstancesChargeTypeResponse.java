@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractModel{
+public class InquiryPriceModifyInstancesChargeTypeResponse extends AbstractModel{
 
     /**
     * 该参数表示对应配置实例转换计费模式的价格。
@@ -37,7 +37,7 @@ public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractMode
     private String RequestId;
 
     /**
-     * 获取该参数表示对应配置实例转换计费模式的价格。
+     * Get 该参数表示对应配置实例转换计费模式的价格。 
      * @return Price 该参数表示对应配置实例转换计费模式的价格。
      */
     public Price getPrice() {
@@ -45,7 +45,7 @@ public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractMode
     }
 
     /**
-     * 设置该参数表示对应配置实例转换计费模式的价格。
+     * Set 该参数表示对应配置实例转换计费模式的价格。
      * @param Price 该参数表示对应配置实例转换计费模式的价格。
      */
     public void setPrice(Price Price) {
@@ -53,7 +53,7 @@ public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractMode
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractMode
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class InquiryPriceModifyInstancesChargeTypeResponse  extends AbstractMode
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Price.", this.Price);

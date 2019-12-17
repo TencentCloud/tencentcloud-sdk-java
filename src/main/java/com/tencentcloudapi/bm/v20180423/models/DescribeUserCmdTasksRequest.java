@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserCmdTasksRequest  extends AbstractModel{
+public class DescribeUserCmdTasksRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -51,7 +51,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     private Integer Order;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -59,7 +59,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -67,7 +67,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制
+     * Get 数量限制 
      * @return Limit 数量限制
      */
     public Integer getLimit() {
@@ -75,7 +75,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制
+     * Set 数量限制
      * @param Limit 数量限制
      */
     public void setLimit(Integer Limit) {
@@ -83,7 +83,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
+     * Get 排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount 
      * @return OrderField 排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
      */
     public String getOrderField() {
@@ -91,7 +91,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
+     * Set 排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
      * @param OrderField 排序字段，支持： RunBeginTime,RunEndTime,InstanceCount,SuccessCount,FailureCount
      */
     public void setOrderField(String OrderField) {
@@ -99,7 +99,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，取值: 1倒序，0顺序；默认倒序
+     * Get 排序方式，取值: 1倒序，0顺序；默认倒序 
      * @return Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
     public Integer getOrder() {
@@ -107,7 +107,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，取值: 1倒序，0顺序；默认倒序
+     * Set 排序方式，取值: 1倒序，0顺序；默认倒序
      * @param Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
     public void setOrder(Integer Order) {
@@ -115,7 +115,7 @@ public class DescribeUserCmdTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

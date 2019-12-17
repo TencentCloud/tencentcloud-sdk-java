@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TradeDealDetail  extends AbstractModel{
+public class TradeDealDetail extends AbstractModel{
 
     /**
     * 订单号ID，调用云API时使用此ID
@@ -107,7 +107,7 @@ public class TradeDealDetail  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取订单号ID，调用云API时使用此ID
+     * Get 订单号ID，调用云API时使用此ID 
      * @return DealId 订单号ID，调用云API时使用此ID
      */
     public String getDealId() {
@@ -115,7 +115,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单号ID，调用云API时使用此ID
+     * Set 订单号ID，调用云API时使用此ID
      * @param DealId 订单号ID，调用云API时使用此ID
      */
     public void setDealId(String DealId) {
@@ -123,7 +123,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取长订单ID，反馈订单问题给官方客服使用此ID
+     * Get 长订单ID，反馈订单问题给官方客服使用此ID 
      * @return DealName 长订单ID，反馈订单问题给官方客服使用此ID
      */
     public String getDealName() {
@@ -131,7 +131,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置长订单ID，反馈订单问题给官方客服使用此ID
+     * Set 长订单ID，反馈订单问题给官方客服使用此ID
      * @param DealName 长订单ID，反馈订单问题给官方客服使用此ID
      */
     public void setDealName(String DealName) {
@@ -139,7 +139,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取可用区id
+     * Get 可用区id 
      * @return ZoneId 可用区id
      */
     public Integer getZoneId() {
@@ -147,7 +147,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置可用区id
+     * Set 可用区id
      * @param ZoneId 可用区id
      */
     public void setZoneId(Integer ZoneId) {
@@ -155,7 +155,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单关联的实例数
+     * Get 订单关联的实例数 
      * @return GoodsNum 订单关联的实例数
      */
     public Integer getGoodsNum() {
@@ -163,7 +163,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单关联的实例数
+     * Set 订单关联的实例数
      * @param GoodsNum 订单关联的实例数
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -171,7 +171,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取创建用户uin
+     * Get 创建用户uin 
      * @return Creater 创建用户uin
      */
     public String getCreater() {
@@ -179,7 +179,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建用户uin
+     * Set 创建用户uin
      * @param Creater 创建用户uin
      */
     public void setCreater(String Creater) {
@@ -187,7 +187,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单创建时间
+     * Get 订单创建时间 
      * @return CreatTime 订单创建时间
      */
     public String getCreatTime() {
@@ -195,7 +195,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单创建时间
+     * Set 订单创建时间
      * @param CreatTime 订单创建时间
      */
     public void setCreatTime(String CreatTime) {
@@ -203,7 +203,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单超时时间
+     * Get 订单超时时间 
      * @return OverdueTime 订单超时时间
      */
     public String getOverdueTime() {
@@ -211,7 +211,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单超时时间
+     * Set 订单超时时间
      * @param OverdueTime 订单超时时间
      */
     public void setOverdueTime(String OverdueTime) {
@@ -219,7 +219,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单完成时间
+     * Get 订单完成时间 
      * @return EndTime 订单完成时间
      */
     public String getEndTime() {
@@ -227,7 +227,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单完成时间
+     * Set 订单完成时间
      * @param EndTime 订单完成时间
      */
     public void setEndTime(String EndTime) {
@@ -235,7 +235,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
+     * Get 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中 
      * @return Status 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      */
     public Integer getStatus() {
@@ -243,7 +243,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
+     * Set 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      * @param Status 订单状态 1：未支付 2:已支付，未发货 3:发货中 4:发货成功 5:发货失败 6:已退款 7:已关闭订单 8:订单过期 9:订单已失效 10:产品已失效 11:代付拒绝 12:支付中
      */
     public void setStatus(Integer Status) {
@@ -251,7 +251,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单状态描述
+     * Get 订单状态描述 
      * @return Description 订单状态描述
      */
     public String getDescription() {
@@ -259,7 +259,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单状态描述
+     * Set 订单状态描述
      * @param Description 订单状态描述
      */
     public void setDescription(String Description) {
@@ -267,7 +267,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单实际总价，单位：分
+     * Get 订单实际总价，单位：分 
      * @return Price 订单实际总价，单位：分
      */
     public Integer getPrice() {
@@ -275,7 +275,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单实际总价，单位：分
+     * Set 订单实际总价，单位：分
      * @param Price 订单实际总价，单位：分
      */
     public void setPrice(Integer Price) {
@@ -283,7 +283,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceIds 实例ID
      */
     public String [] getInstanceIds() {
@@ -291,7 +291,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceIds 实例ID
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -299,7 +299,7 @@ public class TradeDealDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);

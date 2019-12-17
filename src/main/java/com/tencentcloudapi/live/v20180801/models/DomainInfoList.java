@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainInfoList  extends AbstractModel{
+public class DomainInfoList extends AbstractModel{
 
     /**
     * 域名。
@@ -37,7 +37,7 @@ public class DomainInfoList  extends AbstractModel{
     private DomainDetailInfo [] DetailInfoList;
 
     /**
-     * 获取域名。
+     * Get 域名。 
      * @return Domain 域名。
      */
     public String getDomain() {
@@ -45,7 +45,7 @@ public class DomainInfoList  extends AbstractModel{
     }
 
     /**
-     * 设置域名。
+     * Set 域名。
      * @param Domain 域名。
      */
     public void setDomain(String Domain) {
@@ -53,7 +53,7 @@ public class DomainInfoList  extends AbstractModel{
     }
 
     /**
-     * 获取明细信息。
+     * Get 明细信息。 
      * @return DetailInfoList 明细信息。
      */
     public DomainDetailInfo [] getDetailInfoList() {
@@ -61,7 +61,7 @@ public class DomainInfoList  extends AbstractModel{
     }
 
     /**
-     * 设置明细信息。
+     * Set 明细信息。
      * @param DetailInfoList 明细信息。
      */
     public void setDetailInfoList(DomainDetailInfo [] DetailInfoList) {
@@ -69,7 +69,7 @@ public class DomainInfoList  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

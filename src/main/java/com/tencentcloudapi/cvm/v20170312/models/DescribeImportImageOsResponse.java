@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImportImageOsResponse  extends AbstractModel{
+public class DescribeImportImageOsResponse extends AbstractModel{
 
     /**
     * 支持的导入镜像的操作系统类型。
@@ -44,7 +44,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取支持的导入镜像的操作系统类型。
+     * Get 支持的导入镜像的操作系统类型。 
      * @return ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      */
     public ImageOsList getImportImageOsListSupported() {
@@ -52,7 +52,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置支持的导入镜像的操作系统类型。
+     * Set 支持的导入镜像的操作系统类型。
      * @param ImportImageOsListSupported 支持的导入镜像的操作系统类型。
      */
     public void setImportImageOsListSupported(ImageOsList ImportImageOsListSupported) {
@@ -60,7 +60,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取支持的导入镜像的操作系统版本。
+     * Get 支持的导入镜像的操作系统版本。 
      * @return ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
      */
     public OsVersion [] getImportImageOsVersionSet() {
@@ -68,7 +68,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置支持的导入镜像的操作系统版本。
+     * Set 支持的导入镜像的操作系统版本。
      * @param ImportImageOsVersionSet 支持的导入镜像的操作系统版本。
      */
     public void setImportImageOsVersionSet(OsVersion [] ImportImageOsVersionSet) {
@@ -76,7 +76,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeImportImageOsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImportImageOsListSupported.", this.ImportImageOsListSupported);

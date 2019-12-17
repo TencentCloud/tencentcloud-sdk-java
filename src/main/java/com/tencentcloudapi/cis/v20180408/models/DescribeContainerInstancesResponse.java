@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerInstancesResponse  extends AbstractModel{
+public class DescribeContainerInstancesResponse extends AbstractModel{
 
     /**
     * 容器实例列表
@@ -44,7 +44,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取容器实例列表
+     * Get 容器实例列表 
      * @return ContainerInstanceList 容器实例列表
      */
     public ContainerInstance [] getContainerInstanceList() {
@@ -52,7 +52,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例列表
+     * Set 容器实例列表
      * @param ContainerInstanceList 容器实例列表
      */
     public void setContainerInstanceList(ContainerInstance [] ContainerInstanceList) {
@@ -60,7 +60,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取容器实例总数
+     * Get 容器实例总数 
      * @return TotalCount 容器实例总数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例总数
+     * Set 容器实例总数
      * @param TotalCount 容器实例总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Get 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。 
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Set 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeContainerInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ContainerInstanceList.", this.ContainerInstanceList);

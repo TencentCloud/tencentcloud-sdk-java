@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankCard4EVerificationResponse  extends AbstractModel{
+public class BankCard4EVerificationResponse extends AbstractModel{
 
     /**
     * 认证结果码
@@ -65,7 +65,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取认证结果码
+     * Get 认证结果码
 收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
@@ -86,7 +86,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-5': '手机号码不合法'
-'-18': '服务繁忙'
+'-18': '服务繁忙' 
      * @return Result 认证结果码
 收费结果码：
 '0': '认证通过'
@@ -115,7 +115,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置认证结果码
+     * Set 认证结果码
 收费结果码：
 '0': '认证通过'
 '-1': '认证未通过'
@@ -165,7 +165,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -173,7 +173,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -181,7 +181,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -189,7 +189,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -197,7 +197,7 @@ public class BankCard4EVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

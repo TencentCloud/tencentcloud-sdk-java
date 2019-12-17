@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePayRelationForClientRequest  extends AbstractModel{
+public class CreatePayRelationForClientRequest extends AbstractModel{
 
     /**
     * 客户账号ID
@@ -30,7 +30,7 @@ public class CreatePayRelationForClientRequest  extends AbstractModel{
     private String ClientUin;
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -38,7 +38,7 @@ public class CreatePayRelationForClientRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -46,7 +46,7 @@ public class CreatePayRelationForClientRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);

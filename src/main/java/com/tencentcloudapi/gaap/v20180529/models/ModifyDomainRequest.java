@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDomainRequest  extends AbstractModel{
+public class ModifyDomainRequest extends AbstractModel{
 
     /**
     * 7层监听器ID
@@ -74,7 +74,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
-     * 获取7层监听器ID
+     * Get 7层监听器ID 
      * @return ListenerId 7层监听器ID
      */
     public String getListenerId() {
@@ -82,7 +82,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置7层监听器ID
+     * Set 7层监听器ID
      * @param ListenerId 7层监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -90,7 +90,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改前的域名信息
+     * Get 修改前的域名信息 
      * @return OldDomain 修改前的域名信息
      */
     public String getOldDomain() {
@@ -98,7 +98,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改前的域名信息
+     * Set 修改前的域名信息
      * @param OldDomain 修改前的域名信息
      */
     public void setOldDomain(String OldDomain) {
@@ -106,7 +106,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的域名信息
+     * Get 修改后的域名信息 
      * @return NewDomain 修改后的域名信息
      */
     public String getNewDomain() {
@@ -114,7 +114,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的域名信息
+     * Set 修改后的域名信息
      * @param NewDomain 修改后的域名信息
      */
     public void setNewDomain(String NewDomain) {
@@ -122,10 +122,10 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务器SSL证书ID，仅适用于version3.0的通道。其中：
+     * Get 服务器SSL证书ID，仅适用于version3.0的通道。其中：
 不带该字段时，表示使用原证书；
 携带该字段时并且CertificateId=default，表示使用监听器证书；
-其他情况，使用该CertificateId指定的证书。
+其他情况，使用该CertificateId指定的证书。 
      * @return CertificateId 服务器SSL证书ID，仅适用于version3.0的通道。其中：
 不带该字段时，表示使用原证书；
 携带该字段时并且CertificateId=default，表示使用监听器证书；
@@ -136,7 +136,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务器SSL证书ID，仅适用于version3.0的通道。其中：
+     * Set 服务器SSL证书ID，仅适用于version3.0的通道。其中：
 不带该字段时，表示使用原证书；
 携带该字段时并且CertificateId=default，表示使用监听器证书；
 其他情况，使用该CertificateId指定的证书。
@@ -150,10 +150,10 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+     * Get 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。 
      * @return ClientCertificateId 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
@@ -164,7 +164,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+     * Set 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和PolyClientCertificateIds时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
@@ -178,10 +178,10 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端CA证书ID，仅适用于version3.0的通道。其中：
+     * Get 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
-其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
+其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。 
      * @return PolyClientCertificateIds 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
@@ -192,7 +192,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端CA证书ID，仅适用于version3.0的通道。其中：
+     * Set 客户端CA证书ID，仅适用于version3.0的通道。其中：
 不带该字段和ClientCertificateId时，表示使用原证书；
 携带该字段时并且ClientCertificateId=default，表示使用监听器证书；
 其他情况，使用该ClientCertificateId或PolyClientCertificateIds指定的证书。
@@ -206,7 +206,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

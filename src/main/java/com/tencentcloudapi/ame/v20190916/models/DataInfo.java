@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataInfo  extends AbstractModel{
+public class DataInfo extends AbstractModel{
 
     /**
     * Song Name
@@ -58,7 +58,7 @@ public class DataInfo  extends AbstractModel{
     private Long AuditionEnd;
 
     /**
-     * 获取Song Name
+     * Get Song Name 
      * @return Name Song Name
      */
     public String getName() {
@@ -66,7 +66,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Song Name
+     * Set Song Name
      * @param Name Song Name
      */
     public void setName(String Name) {
@@ -74,7 +74,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取歌曲版本
+     * Get 歌曲版本 
      * @return Version 歌曲版本
      */
     public String getVersion() {
@@ -82,7 +82,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置歌曲版本
+     * Set 歌曲版本
      * @param Version 歌曲版本
      */
     public void setVersion(String Version) {
@@ -90,7 +90,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取歌曲总时长（非试听时长）
+     * Get 歌曲总时长（非试听时长） 
      * @return Duration 歌曲总时长（非试听时长）
      */
     public String getDuration() {
@@ -98,7 +98,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置歌曲总时长（非试听时长）
+     * Set 歌曲总时长（非试听时长）
      * @param Duration 歌曲总时长（非试听时长）
      */
     public void setDuration(String Duration) {
@@ -106,7 +106,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取试听开始时间
+     * Get 试听开始时间 
      * @return AuditionBegin 试听开始时间
      */
     public Long getAuditionBegin() {
@@ -114,7 +114,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置试听开始时间
+     * Set 试听开始时间
      * @param AuditionBegin 试听开始时间
      */
     public void setAuditionBegin(Long AuditionBegin) {
@@ -122,7 +122,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取试听结束时间
+     * Get 试听结束时间 
      * @return AuditionEnd 试听结束时间
      */
     public Long getAuditionEnd() {
@@ -130,7 +130,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置试听结束时间
+     * Set 试听结束时间
      * @param AuditionEnd 试听结束时间
      */
     public void setAuditionEnd(Long AuditionEnd) {
@@ -138,7 +138,7 @@ public class DataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

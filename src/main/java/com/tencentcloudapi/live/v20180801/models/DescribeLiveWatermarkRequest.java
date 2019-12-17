@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveWatermarkRequest  extends AbstractModel{
+public class DescribeLiveWatermarkRequest extends AbstractModel{
 
     /**
     * 水印ID。
@@ -30,7 +30,7 @@ public class DescribeLiveWatermarkRequest  extends AbstractModel{
     private Integer WatermarkId;
 
     /**
-     * 获取水印ID。
+     * Get 水印ID。 
      * @return WatermarkId 水印ID。
      */
     public Integer getWatermarkId() {
@@ -38,7 +38,7 @@ public class DescribeLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置水印ID。
+     * Set 水印ID。
      * @param WatermarkId 水印ID。
      */
     public void setWatermarkId(Integer WatermarkId) {
@@ -46,7 +46,7 @@ public class DescribeLiveWatermarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);

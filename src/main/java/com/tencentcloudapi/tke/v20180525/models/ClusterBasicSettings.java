@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClusterBasicSettings  extends AbstractModel{
+public class ClusterBasicSettings extends AbstractModel{
 
     /**
     * 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
@@ -86,7 +86,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     private Boolean NeedWorkSecurityGroup;
 
     /**
-     * 获取集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * Get 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64 
      * @return ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      */
     public String getClusterOs() {
@@ -94,7 +94,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * Set 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      * @param ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
      */
     public void setClusterOs(String ClusterOs) {
@@ -102,7 +102,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群版本,默认值为1.10.5
+     * Get 集群版本,默认值为1.10.5 
      * @return ClusterVersion 集群版本,默认值为1.10.5
      */
     public String getClusterVersion() {
@@ -110,7 +110,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群版本,默认值为1.10.5
+     * Set 集群版本,默认值为1.10.5
      * @param ClusterVersion 集群版本,默认值为1.10.5
      */
     public void setClusterVersion(String ClusterVersion) {
@@ -118,7 +118,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
+     * Get 集群名称 
      * @return ClusterName 集群名称
      */
     public String getClusterName() {
@@ -126,7 +126,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
      * @param ClusterName 集群名称
      */
     public void setClusterName(String ClusterName) {
@@ -134,7 +134,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群描述
+     * Get 集群描述 
      * @return ClusterDescription 集群描述
      */
     public String getClusterDescription() {
@@ -142,7 +142,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群描述
+     * Set 集群描述
      * @param ClusterDescription 集群描述
      */
     public void setClusterDescription(String ClusterDescription) {
@@ -150,7 +150,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+     * Get 私有网络ID，形如vpc-xxx。创建托管空集群时必传。 
      * @return VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
      */
     public String getVpcId() {
@@ -158,7 +158,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，形如vpc-xxx。创建托管空集群时必传。
+     * Set 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
      * @param VpcId 私有网络ID，形如vpc-xxx。创建托管空集群时必传。
      */
     public void setVpcId(String VpcId) {
@@ -166,7 +166,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群内新增资源所属项目ID。
+     * Get 集群内新增资源所属项目ID。 
      * @return ProjectId 集群内新增资源所属项目ID。
      */
     public Integer getProjectId() {
@@ -174,7 +174,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群内新增资源所属项目ID。
+     * Set 集群内新增资源所属项目ID。
      * @param ProjectId 集群内新增资源所属项目ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -182,7 +182,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。 
      * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      */
     public TagSpecification [] getTagSpecification() {
@@ -190,7 +190,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
@@ -198,7 +198,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Get 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值) 
      * @return OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      */
     public String getOsCustomizeType() {
@@ -206,7 +206,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
+     * Set 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      */
     public void setOsCustomizeType(String OsCustomizeType) {
@@ -214,7 +214,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * Get 是否开启节点的默认安全组(默认: 否，Aphla特性) 
      * @return NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
      */
     public Boolean getNeedWorkSecurityGroup() {
@@ -222,7 +222,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启节点的默认安全组(默认: 否，Aphla特性)
+     * Set 是否开启节点的默认安全组(默认: 否，Aphla特性)
      * @param NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Aphla特性)
      */
     public void setNeedWorkSecurityGroup(Boolean NeedWorkSecurityGroup) {
@@ -230,7 +230,7 @@ public class ClusterBasicSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterOs", this.ClusterOs);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaMetaData  extends AbstractModel{
+public class MediaMetaData extends AbstractModel{
 
     /**
     * 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
@@ -111,8 +111,8 @@ public class MediaMetaData  extends AbstractModel{
     private Float AudioDuration;
 
     /**
-     * 获取上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+     * Set 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取容器类型，例如 m4a，mp4 等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 容器类型，例如 m4a，mp4 等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Container 容器类型，例如 m4a，mp4 等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置容器类型，例如 m4a，mp4 等。
+     * Set 容器类型，例如 m4a，mp4 等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Container 容器类型，例如 m4a，mp4 等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频流码率平均值与音频流码率平均值之和，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流码率平均值与音频流码率平均值之和，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频流码率平均值与音频流码率平均值之和，单位：bps。
+     * Set 视频流码率平均值与音频流码率平均值之和，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频流高度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流高度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 视频流高度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频流高度的最大值，单位：px。
+     * Set 视频流高度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频流高度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,8 +191,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频流宽度的最大值，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流宽度的最大值，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 视频流宽度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -201,7 +201,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频流宽度的最大值，单位：px。
+     * Set 视频流宽度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频流宽度的最大值，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -211,8 +211,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -221,7 +221,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频时长，单位：秒。
+     * Set 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -231,8 +231,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频拍摄时的选择角度，单位：度。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拍摄时的选择角度，单位：度。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rotate 视频拍摄时的选择角度，单位：度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -241,7 +241,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频拍摄时的选择角度，单位：度。
+     * Set 视频拍摄时的选择角度，单位：度。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Rotate 视频拍摄时的选择角度，单位：度。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -251,8 +251,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoStreamSet 视频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -261,7 +261,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频流信息。
+     * Set 视频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoStreamSet 视频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,8 +271,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取音频流信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频流信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioStreamSet 音频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置音频流信息。
+     * Set 音频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioStreamSet 音频流信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoDuration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置视频时长，单位：秒。
+     * Set 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VideoDuration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 获取音频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioDuration 音频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 设置音频时长，单位：秒。
+     * Set 音频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioDuration 音频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,7 +331,7 @@ public class MediaMetaData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Size", this.Size);

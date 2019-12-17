@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLoraDeviceRequest  extends AbstractModel{
+public class DeleteLoraDeviceRequest extends AbstractModel{
 
     /**
     * 设备所属产品id
@@ -37,7 +37,7 @@ public class DeleteLoraDeviceRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
-     * 获取设备所属产品id
+     * Get 设备所属产品id 
      * @return ProductId 设备所属产品id
      */
     public String getProductId() {
@@ -45,7 +45,7 @@ public class DeleteLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备所属产品id
+     * Set 设备所属产品id
      * @param ProductId 设备所属产品id
      */
     public void setProductId(String ProductId) {
@@ -53,7 +53,7 @@ public class DeleteLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -61,7 +61,7 @@ public class DeleteLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -69,7 +69,7 @@ public class DeleteLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

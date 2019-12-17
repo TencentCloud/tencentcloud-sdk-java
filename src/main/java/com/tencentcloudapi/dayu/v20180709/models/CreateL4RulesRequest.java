@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL4RulesRequest  extends AbstractModel{
+public class CreateL4RulesRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -44,7 +44,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     private L4RuleEntry [] Rules;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -52,7 +52,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -60,7 +60,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -68,7 +68,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -76,7 +76,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则列表
+     * Get 规则列表 
      * @return Rules 规则列表
      */
     public L4RuleEntry [] getRules() {
@@ -84,7 +84,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则列表
+     * Set 规则列表
      * @param Rules 规则列表
      */
     public void setRules(L4RuleEntry [] Rules) {
@@ -92,7 +92,7 @@ public class CreateL4RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

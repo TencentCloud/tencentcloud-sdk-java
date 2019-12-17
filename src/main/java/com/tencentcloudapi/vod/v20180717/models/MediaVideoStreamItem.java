@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaVideoStreamItem  extends AbstractModel{
+public class MediaVideoStreamItem extends AbstractModel{
 
     /**
     * 视频流的码率，单位：bps。
@@ -63,8 +63,8 @@ public class MediaVideoStreamItem  extends AbstractModel{
     private Long Fps;
 
     /**
-     * 获取视频流的码率，单位：bps。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流的码率，单位：bps。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bitrate 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -73,7 +73,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的码率，单位：bps。
+     * Set 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bitrate 视频流的码率，单位：bps。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,8 +83,8 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的高度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流的高度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 视频流的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -93,7 +93,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的高度，单位：px。
+     * Set 视频流的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 视频流的高度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,8 +103,8 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的宽度，单位：px。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流的宽度，单位：px。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 视频流的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -113,7 +113,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的宽度，单位：px。
+     * Set 视频流的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 视频流的宽度，单位：px。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -123,8 +123,8 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频流的编码格式，例如 h264。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频流的编码格式，例如 h264。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 视频流的编码格式，例如 h264。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频流的编码格式，例如 h264。
+     * Set 视频流的编码格式，例如 h264。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 视频流的编码格式，例如 h264。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,8 +143,8 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 获取帧率，单位：hz。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 帧率，单位：hz。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Fps 帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,7 +153,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 设置帧率，单位：hz。
+     * Set 帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Fps 帧率，单位：hz。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -163,7 +163,7 @@ public class MediaVideoStreamItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);

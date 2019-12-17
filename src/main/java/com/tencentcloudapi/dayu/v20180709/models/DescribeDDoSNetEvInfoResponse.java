@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
+public class DescribeDDoSNetEvInfoResponse extends AbstractModel{
 
     /**
     * 大禹子产品代号（net表示高防IP专业版）
@@ -142,7 +142,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取大禹子产品代号（net表示高防IP专业版）
+     * Get 大禹子产品代号（net表示高防IP专业版） 
      * @return Business 大禹子产品代号（net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -150,7 +150,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（net表示高防IP专业版）
+     * Set 大禹子产品代号（net表示高防IP专业版）
      * @param Business 大禹子产品代号（net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -158,7 +158,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -166,7 +166,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -174,7 +174,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击开始时间
+     * Get 攻击开始时间 
      * @return StartTime 攻击开始时间
      */
     public String getStartTime() {
@@ -182,7 +182,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击开始时间
+     * Set 攻击开始时间
      * @param StartTime 攻击开始时间
      */
     public void setStartTime(String StartTime) {
@@ -190,7 +190,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击结束时间
+     * Get 攻击结束时间 
      * @return EndTime 攻击结束时间
      */
     public String getEndTime() {
@@ -198,7 +198,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击结束时间
+     * Set 攻击结束时间
      * @param EndTime 攻击结束时间
      */
     public void setEndTime(String EndTime) {
@@ -206,7 +206,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取TCP报文攻击包数
+     * Get TCP报文攻击包数 
      * @return TcpPacketSum TCP报文攻击包数
      */
     public Long getTcpPacketSum() {
@@ -214,7 +214,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置TCP报文攻击包数
+     * Set TCP报文攻击包数
      * @param TcpPacketSum TCP报文攻击包数
      */
     public void setTcpPacketSum(Long TcpPacketSum) {
@@ -222,7 +222,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取TCP报文攻击流量，单位KB
+     * Get TCP报文攻击流量，单位KB 
      * @return TcpKBSum TCP报文攻击流量，单位KB
      */
     public Long getTcpKBSum() {
@@ -230,7 +230,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置TCP报文攻击流量，单位KB
+     * Set TCP报文攻击流量，单位KB
      * @param TcpKBSum TCP报文攻击流量，单位KB
      */
     public void setTcpKBSum(Long TcpKBSum) {
@@ -238,7 +238,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取UDP报文攻击包数
+     * Get UDP报文攻击包数 
      * @return UdpPacketSum UDP报文攻击包数
      */
     public Long getUdpPacketSum() {
@@ -246,7 +246,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置UDP报文攻击包数
+     * Set UDP报文攻击包数
      * @param UdpPacketSum UDP报文攻击包数
      */
     public void setUdpPacketSum(Long UdpPacketSum) {
@@ -254,7 +254,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取UDP报文攻击流量，单位KB
+     * Get UDP报文攻击流量，单位KB 
      * @return UdpKBSum UDP报文攻击流量，单位KB
      */
     public Long getUdpKBSum() {
@@ -262,7 +262,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置UDP报文攻击流量，单位KB
+     * Set UDP报文攻击流量，单位KB
      * @param UdpKBSum UDP报文攻击流量，单位KB
      */
     public void setUdpKBSum(Long UdpKBSum) {
@@ -270,7 +270,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取ICMP报文攻击包数
+     * Get ICMP报文攻击包数 
      * @return IcmpPacketSum ICMP报文攻击包数
      */
     public Long getIcmpPacketSum() {
@@ -278,7 +278,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ICMP报文攻击包数
+     * Set ICMP报文攻击包数
      * @param IcmpPacketSum ICMP报文攻击包数
      */
     public void setIcmpPacketSum(Long IcmpPacketSum) {
@@ -286,7 +286,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取ICMP报文攻击流量，单位KB
+     * Get ICMP报文攻击流量，单位KB 
      * @return IcmpKBSum ICMP报文攻击流量，单位KB
      */
     public Long getIcmpKBSum() {
@@ -294,7 +294,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置ICMP报文攻击流量，单位KB
+     * Set ICMP报文攻击流量，单位KB
      * @param IcmpKBSum ICMP报文攻击流量，单位KB
      */
     public void setIcmpKBSum(Long IcmpKBSum) {
@@ -302,7 +302,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取其他报文攻击包数
+     * Get 其他报文攻击包数 
      * @return OtherPacketSum 其他报文攻击包数
      */
     public Long getOtherPacketSum() {
@@ -310,7 +310,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置其他报文攻击包数
+     * Set 其他报文攻击包数
      * @param OtherPacketSum 其他报文攻击包数
      */
     public void setOtherPacketSum(Long OtherPacketSum) {
@@ -318,7 +318,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取其他报文攻击流量，单位KB
+     * Get 其他报文攻击流量，单位KB 
      * @return OtherKBSum 其他报文攻击流量，单位KB
      */
     public Long getOtherKBSum() {
@@ -326,7 +326,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置其他报文攻击流量，单位KB
+     * Set 其他报文攻击流量，单位KB
      * @param OtherKBSum 其他报文攻击流量，单位KB
      */
     public void setOtherKBSum(Long OtherKBSum) {
@@ -334,7 +334,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取累计攻击流量，单位KB
+     * Get 累计攻击流量，单位KB 
      * @return TotalTraffic 累计攻击流量，单位KB
      */
     public Long getTotalTraffic() {
@@ -342,7 +342,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置累计攻击流量，单位KB
+     * Set 累计攻击流量，单位KB
      * @param TotalTraffic 累计攻击流量，单位KB
      */
     public void setTotalTraffic(Long TotalTraffic) {
@@ -350,7 +350,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击流量带宽峰值
+     * Get 攻击流量带宽峰值 
      * @return Mbps 攻击流量带宽峰值
      */
     public Long getMbps() {
@@ -358,7 +358,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击流量带宽峰值
+     * Set 攻击流量带宽峰值
      * @param Mbps 攻击流量带宽峰值
      */
     public void setMbps(Long Mbps) {
@@ -366,7 +366,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取攻击包速率峰值
+     * Get 攻击包速率峰值 
      * @return Pps 攻击包速率峰值
      */
     public Long getPps() {
@@ -374,7 +374,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置攻击包速率峰值
+     * Set 攻击包速率峰值
      * @param Pps 攻击包速率峰值
      */
     public void setPps(Long Pps) {
@@ -382,7 +382,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取PCAP文件下载链接
+     * Get PCAP文件下载链接 
      * @return PcapUrl PCAP文件下载链接
      */
     public String [] getPcapUrl() {
@@ -390,7 +390,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置PCAP文件下载链接
+     * Set PCAP文件下载链接
      * @param PcapUrl PCAP文件下载链接
      */
     public void setPcapUrl(String [] PcapUrl) {
@@ -398,7 +398,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -406,7 +406,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -414,7 +414,7 @@ public class DescribeDDoSNetEvInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccessRulesRequest  extends AbstractModel{
+public class DeleteAccessRulesRequest extends AbstractModel{
 
     /**
     * 多个权限规则ID，上限为10
@@ -30,7 +30,7 @@ public class DeleteAccessRulesRequest  extends AbstractModel{
     private Long [] AccessRuleIds;
 
     /**
-     * 获取多个权限规则ID，上限为10
+     * Get 多个权限规则ID，上限为10 
      * @return AccessRuleIds 多个权限规则ID，上限为10
      */
     public Long [] getAccessRuleIds() {
@@ -38,7 +38,7 @@ public class DeleteAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置多个权限规则ID，上限为10
+     * Set 多个权限规则ID，上限为10
      * @param AccessRuleIds 多个权限规则ID，上限为10
      */
     public void setAccessRuleIds(Long [] AccessRuleIds) {
@@ -46,7 +46,7 @@ public class DeleteAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AccessRuleIds.", this.AccessRuleIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddInstancesRequest  extends AbstractModel{
+public class AddInstancesRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -79,7 +79,7 @@ public class AddInstancesRequest  extends AbstractModel{
     private String InstanceImportMode;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -87,7 +87,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -95,7 +95,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云主机ID列表
+     * Get 云主机ID列表 
      * @return InstanceIdList 云主机ID列表
      */
     public String [] getInstanceIdList() {
@@ -103,7 +103,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云主机ID列表
+     * Set 云主机ID列表
      * @param InstanceIdList 云主机ID列表
      */
     public void setInstanceIdList(String [] InstanceIdList) {
@@ -111,7 +111,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统名称
+     * Get 操作系统名称 
      * @return OsName 操作系统名称
      */
     public String getOsName() {
@@ -119,7 +119,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统名称
+     * Set 操作系统名称
      * @param OsName 操作系统名称
      */
     public void setOsName(String OsName) {
@@ -127,7 +127,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统镜像ID
+     * Get 操作系统镜像ID 
      * @return ImageId 操作系统镜像ID
      */
     public String getImageId() {
@@ -135,7 +135,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统镜像ID
+     * Set 操作系统镜像ID
      * @param ImageId 操作系统镜像ID
      */
     public void setImageId(String ImageId) {
@@ -143,7 +143,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重装系统密码设置
+     * Get 重装系统密码设置 
      * @return Password 重装系统密码设置
      */
     public String getPassword() {
@@ -151,7 +151,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重装系统密码设置
+     * Set 重装系统密码设置
      * @param Password 重装系统密码设置
      */
     public void setPassword(String Password) {
@@ -159,7 +159,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重装系统，关联密钥设置
+     * Get 重装系统，关联密钥设置 
      * @return KeyId 重装系统，关联密钥设置
      */
     public String getKeyId() {
@@ -167,7 +167,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重装系统，关联密钥设置
+     * Set 重装系统，关联密钥设置
      * @param KeyId 重装系统，关联密钥设置
      */
     public void setKeyId(String KeyId) {
@@ -175,7 +175,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组设置
+     * Get 安全组设置 
      * @return SgId 安全组设置
      */
     public String getSgId() {
@@ -183,7 +183,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组设置
+     * Set 安全组设置
      * @param SgId 安全组设置
      */
     public void setSgId(String SgId) {
@@ -191,7 +191,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+     * Get 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent 
      * @return InstanceImportMode 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      */
     public String getInstanceImportMode() {
@@ -199,7 +199,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
+     * Set 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      * @param InstanceImportMode 云主机导入方式，虚拟机集群必填，容器集群不填写此字段，R：重装TSF系统镜像，M：手动安装agent
      */
     public void setInstanceImportMode(String InstanceImportMode) {
@@ -207,7 +207,7 @@ public class AddInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

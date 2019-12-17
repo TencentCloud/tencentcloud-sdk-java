@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleWordInfo  extends AbstractModel{
+public class AiSampleWordInfo extends AbstractModel{
 
     /**
     * 关键词，长度限制：20 个字符。
@@ -39,7 +39,7 @@ public class AiSampleWordInfo  extends AbstractModel{
     private String [] Tags;
 
     /**
-     * 获取关键词，长度限制：20 个字符。
+     * Get 关键词，长度限制：20 个字符。 
      * @return Keyword 关键词，长度限制：20 个字符。
      */
     public String getKeyword() {
@@ -47,7 +47,7 @@ public class AiSampleWordInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关键词，长度限制：20 个字符。
+     * Set 关键词，长度限制：20 个字符。
      * @param Keyword 关键词，长度限制：20 个字符。
      */
     public void setKeyword(String Keyword) {
@@ -55,9 +55,9 @@ public class AiSampleWordInfo  extends AbstractModel{
     }
 
     /**
-     * 获取关键词标签
+     * Get 关键词标签
 <li>数组长度限制：20 个标签；</li>
-<li>单个标签长度限制：128 个字符。</li>
+<li>单个标签长度限制：128 个字符。</li> 
      * @return Tags 关键词标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
@@ -67,7 +67,7 @@ public class AiSampleWordInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关键词标签
+     * Set 关键词标签
 <li>数组长度限制：20 个标签；</li>
 <li>单个标签长度限制：128 个字符。</li>
      * @param Tags 关键词标签
@@ -79,7 +79,7 @@ public class AiSampleWordInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);

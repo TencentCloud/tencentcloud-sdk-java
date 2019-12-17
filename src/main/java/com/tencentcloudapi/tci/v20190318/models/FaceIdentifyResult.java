@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceIdentifyResult  extends AbstractModel{
+public class FaceIdentifyResult extends AbstractModel{
 
     /**
     * 人脸标识符
@@ -51,7 +51,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     private Float Similarity;
 
     /**
-     * 获取人脸标识符
+     * Get 人脸标识符 
      * @return FaceId 人脸标识符
      */
     public String getFaceId() {
@@ -59,7 +59,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸标识符
+     * Set 人脸标识符
      * @param FaceId 人脸标识符
      */
     public void setFaceId(String FaceId) {
@@ -67,7 +67,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 获取人员库标识符
+     * Get 人员库标识符 
      * @return LibraryId 人员库标识符
      */
     public String getLibraryId() {
@@ -75,7 +75,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置人员库标识符
+     * Set 人员库标识符
      * @param LibraryId 人员库标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -83,7 +83,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 获取人员标识符
+     * Get 人员标识符 
      * @return PersonId 人员标识符
      */
     public String getPersonId() {
@@ -91,7 +91,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置人员标识符
+     * Set 人员标识符
      * @param PersonId 人员标识符
      */
     public void setPersonId(String PersonId) {
@@ -99,7 +99,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 获取相似度
+     * Get 相似度 
      * @return Similarity 相似度
      */
     public Float getSimilarity() {
@@ -107,7 +107,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 设置相似度
+     * Set 相似度
      * @param Similarity 相似度
      */
     public void setSimilarity(Float Similarity) {
@@ -115,7 +115,7 @@ public class FaceIdentifyResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);

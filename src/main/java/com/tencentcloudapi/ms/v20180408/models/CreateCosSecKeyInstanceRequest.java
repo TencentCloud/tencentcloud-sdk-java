@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
+public class CreateCosSecKeyInstanceRequest extends AbstractModel{
 
     /**
     * 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
@@ -37,7 +37,7 @@ public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
     private Integer Duration;
 
     /**
-     * 获取地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
+     * Get 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。 
      * @return CosRegion 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
      */
     public String getCosRegion() {
@@ -45,7 +45,7 @@ public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
+     * Set 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
      * @param CosRegion 地域信息，例如广州：ap-guangzhou，上海：ap-shanghai，默认为广州。
      */
     public void setCosRegion(String CosRegion) {
@@ -53,7 +53,7 @@ public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密钥有效时间，默认为1小时。
+     * Get 密钥有效时间，默认为1小时。 
      * @return Duration 密钥有效时间，默认为1小时。
      */
     public Integer getDuration() {
@@ -61,7 +61,7 @@ public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密钥有效时间，默认为1小时。
+     * Set 密钥有效时间，默认为1小时。
      * @param Duration 密钥有效时间，默认为1小时。
      */
     public void setDuration(Integer Duration) {
@@ -69,7 +69,7 @@ public class CreateCosSecKeyInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);

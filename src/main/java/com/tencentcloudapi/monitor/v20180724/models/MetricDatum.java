@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricDatum  extends AbstractModel{
+public class MetricDatum extends AbstractModel{
 
     /**
     * 指标名称
@@ -37,7 +37,7 @@ public class MetricDatum  extends AbstractModel{
     private Integer Value;
 
     /**
-     * 获取指标名称
+     * Get 指标名称 
      * @return MetricName 指标名称
      */
     public String getMetricName() {
@@ -45,7 +45,7 @@ public class MetricDatum  extends AbstractModel{
     }
 
     /**
-     * 设置指标名称
+     * Set 指标名称
      * @param MetricName 指标名称
      */
     public void setMetricName(String MetricName) {
@@ -53,7 +53,7 @@ public class MetricDatum  extends AbstractModel{
     }
 
     /**
-     * 获取指标的值
+     * Get 指标的值 
      * @return Value 指标的值
      */
     public Integer getValue() {
@@ -61,7 +61,7 @@ public class MetricDatum  extends AbstractModel{
     }
 
     /**
-     * 设置指标的值
+     * Set 指标的值
      * @param Value 指标的值
      */
     public void setValue(Integer Value) {
@@ -69,7 +69,7 @@ public class MetricDatum  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);

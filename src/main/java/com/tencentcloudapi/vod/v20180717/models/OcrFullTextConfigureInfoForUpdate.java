@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OcrFullTextConfigureInfoForUpdate  extends AbstractModel{
+public class OcrFullTextConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 文本全文识别任务开关，可选值：
@@ -32,9 +32,9 @@ public class OcrFullTextConfigureInfoForUpdate  extends AbstractModel{
     private String Switch;
 
     /**
-     * 获取文本全文识别任务开关，可选值：
+     * Get 文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
-<li>OFF：关闭智能文本全文识别任务。</li>
+<li>OFF：关闭智能文本全文识别任务。</li> 
      * @return Switch 文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
 <li>OFF：关闭智能文本全文识别任务。</li>
@@ -44,7 +44,7 @@ public class OcrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置文本全文识别任务开关，可选值：
+     * Set 文本全文识别任务开关，可选值：
 <li>ON：开启智能文本全文识别任务；</li>
 <li>OFF：关闭智能文本全文识别任务。</li>
      * @param Switch 文本全文识别任务开关，可选值：
@@ -56,7 +56,7 @@ public class OcrFullTextConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

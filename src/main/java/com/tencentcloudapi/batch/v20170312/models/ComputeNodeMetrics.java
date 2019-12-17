@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeNodeMetrics  extends AbstractModel{
+public class ComputeNodeMetrics extends AbstractModel{
 
     /**
     * 已经完成提交的计算节点数量
@@ -72,7 +72,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     private Integer AbnormalCount;
 
     /**
-     * 获取已经完成提交的计算节点数量
+     * Get 已经完成提交的计算节点数量 
      * @return SubmittedCount 已经完成提交的计算节点数量
      */
     public Integer getSubmittedCount() {
@@ -80,7 +80,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置已经完成提交的计算节点数量
+     * Set 已经完成提交的计算节点数量
      * @param SubmittedCount 已经完成提交的计算节点数量
      */
     public void setSubmittedCount(Integer SubmittedCount) {
@@ -88,7 +88,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取创建中的计算节点数量
+     * Get 创建中的计算节点数量 
      * @return CreatingCount 创建中的计算节点数量
      */
     public Integer getCreatingCount() {
@@ -96,7 +96,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置创建中的计算节点数量
+     * Set 创建中的计算节点数量
      * @param CreatingCount 创建中的计算节点数量
      */
     public void setCreatingCount(Integer CreatingCount) {
@@ -104,7 +104,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取创建失败的计算节点数量
+     * Get 创建失败的计算节点数量 
      * @return CreationFailedCount 创建失败的计算节点数量
      */
     public Integer getCreationFailedCount() {
@@ -112,7 +112,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置创建失败的计算节点数量
+     * Set 创建失败的计算节点数量
      * @param CreationFailedCount 创建失败的计算节点数量
      */
     public void setCreationFailedCount(Integer CreationFailedCount) {
@@ -120,7 +120,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取完成创建的计算节点数量
+     * Get 完成创建的计算节点数量 
      * @return CreatedCount 完成创建的计算节点数量
      */
     public Integer getCreatedCount() {
@@ -128,7 +128,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置完成创建的计算节点数量
+     * Set 完成创建的计算节点数量
      * @param CreatedCount 完成创建的计算节点数量
      */
     public void setCreatedCount(Integer CreatedCount) {
@@ -136,7 +136,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取运行中的计算节点数量
+     * Get 运行中的计算节点数量 
      * @return RunningCount 运行中的计算节点数量
      */
     public Integer getRunningCount() {
@@ -144,7 +144,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置运行中的计算节点数量
+     * Set 运行中的计算节点数量
      * @param RunningCount 运行中的计算节点数量
      */
     public void setRunningCount(Integer RunningCount) {
@@ -152,7 +152,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取销毁中的计算节点数量
+     * Get 销毁中的计算节点数量 
      * @return DeletingCount 销毁中的计算节点数量
      */
     public Integer getDeletingCount() {
@@ -160,7 +160,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置销毁中的计算节点数量
+     * Set 销毁中的计算节点数量
      * @param DeletingCount 销毁中的计算节点数量
      */
     public void setDeletingCount(Integer DeletingCount) {
@@ -168,7 +168,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 获取异常的计算节点数量
+     * Get 异常的计算节点数量 
      * @return AbnormalCount 异常的计算节点数量
      */
     public Integer getAbnormalCount() {
@@ -176,7 +176,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 设置异常的计算节点数量
+     * Set 异常的计算节点数量
      * @param AbnormalCount 异常的计算节点数量
      */
     public void setAbnormalCount(Integer AbnormalCount) {
@@ -184,7 +184,7 @@ public class ComputeNodeMetrics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubmittedCount", this.SubmittedCount);

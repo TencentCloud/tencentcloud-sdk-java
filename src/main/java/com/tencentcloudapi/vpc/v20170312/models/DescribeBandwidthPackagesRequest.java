@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBandwidthPackagesRequest  extends AbstractModel{
+public class DescribeBandwidthPackagesRequest extends AbstractModel{
 
     /**
     * 带宽包唯一ID列表
@@ -58,7 +58,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取带宽包唯一ID列表
+     * Get 带宽包唯一ID列表 
      * @return BandwidthPackageIds 带宽包唯一ID列表
      */
     public String [] getBandwidthPackageIds() {
@@ -66,7 +66,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一ID列表
+     * Set 带宽包唯一ID列表
      * @param BandwidthPackageIds 带宽包唯一ID列表
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
@@ -74,14 +74,14 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
+     * Get 每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
 <li> bandwidth-package_id - String - 是否必填：否 - （过滤条件）按照带宽包的唯一标识ID过滤。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （过滤条件）按照 带宽包名称过滤。不支持模糊过滤。</li>
 <li> network-type - String - 是否必填：否 - （过滤条件）按照带宽包的类型过滤。类型包括'BGP','SINGLEISP'和'ANYCAST'。</li>
 <li> charge-type - String - 是否必填：否 - （过滤条件）按照带宽包的计费类型过滤。计费类型包括'TOP5_POSTPAID_BY_MONTH'和'PERCENT95_POSTPAID_BY_MONTH'</li>
 <li> resource.resource-type - String - 是否必填：否 - （过滤条件）按照带宽包资源类型过滤。资源类型包括'Address'和'LoadBalance'</li>
 <li> resource.resource-id - String - 是否必填：否 - （过滤条件）按照带宽包资源Id过滤。资源Id形如'eip-xxxx','lb-xxxx'</li>
-<li> resource.address-ip - String - 是否必填：否 - （过滤条件）按照带宽包资源Ip过滤。</li>
+<li> resource.address-ip - String - 是否必填：否 - （过滤条件）按照带宽包资源Ip过滤。</li> 
      * @return Filters 每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
 <li> bandwidth-package_id - String - 是否必填：否 - （过滤条件）按照带宽包的唯一标识ID过滤。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （过滤条件）按照 带宽包名称过滤。不支持模糊过滤。</li>
@@ -96,7 +96,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
+     * Set 每次请求的`Filters`的上限为10。参数不支持同时指定`BandwidthPackageIds`和`Filters`。详细的过滤条件如下：
 <li> bandwidth-package_id - String - 是否必填：否 - （过滤条件）按照带宽包的唯一标识ID过滤。</li>
 <li> bandwidth-package-name - String - 是否必填：否 - （过滤条件）按照 带宽包名称过滤。不支持模糊过滤。</li>
 <li> network-type - String - 是否必填：否 - （过滤条件）按照带宽包的类型过滤。类型包括'BGP','SINGLEISP'和'ANYCAST'。</li>
@@ -118,7 +118,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询带宽包偏移量
+     * Get 查询带宽包偏移量 
      * @return Offset 查询带宽包偏移量
      */
     public Integer getOffset() {
@@ -126,7 +126,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询带宽包偏移量
+     * Set 查询带宽包偏移量
      * @param Offset 查询带宽包偏移量
      */
     public void setOffset(Integer Offset) {
@@ -134,7 +134,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询带宽包数量限制
+     * Get 查询带宽包数量限制 
      * @return Limit 查询带宽包数量限制
      */
     public Integer getLimit() {
@@ -142,7 +142,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询带宽包数量限制
+     * Set 查询带宽包数量限制
      * @param Limit 查询带宽包数量限制
      */
     public void setLimit(Integer Limit) {
@@ -150,7 +150,7 @@ public class DescribeBandwidthPackagesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BandwidthPackageIds.", this.BandwidthPackageIds);

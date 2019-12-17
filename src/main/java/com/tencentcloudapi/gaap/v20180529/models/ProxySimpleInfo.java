@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxySimpleInfo  extends AbstractModel{
+public class ProxySimpleInfo extends AbstractModel{
 
     /**
     * 通道ID
@@ -44,7 +44,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     private ListenerInfo [] ListenerList;
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -52,7 +52,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -60,7 +60,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称
+     * Get 通道名称 
      * @return ProxyName 通道名称
      */
     public String getProxyName() {
@@ -68,7 +68,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称
+     * Set 通道名称
      * @param ProxyName 通道名称
      */
     public void setProxyName(String ProxyName) {
@@ -76,7 +76,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器列表
+     * Get 监听器列表 
      * @return ListenerList 监听器列表
      */
     public ListenerInfo [] getListenerList() {
@@ -84,7 +84,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器列表
+     * Set 监听器列表
      * @param ListenerList 监听器列表
      */
     public void setListenerList(ListenerInfo [] ListenerList) {
@@ -92,7 +92,7 @@ public class ProxySimpleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

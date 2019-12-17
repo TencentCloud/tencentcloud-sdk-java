@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
+public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -37,7 +37,7 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * Get 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。 
      * @return SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     public String [] getSecurityGroupIds() {
@@ -61,7 +61,7 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * Set 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      * @param SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -69,7 +69,7 @@ public class ModifyDBInstanceSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

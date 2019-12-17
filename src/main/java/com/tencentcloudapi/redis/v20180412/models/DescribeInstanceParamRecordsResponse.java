@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
+public class DescribeInstanceParamRecordsResponse extends AbstractModel{
 
     /**
     * 总的修改历史记录数。
@@ -44,7 +44,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总的修改历史记录数。
+     * Get 总的修改历史记录数。 
      * @return TotalCount 总的修改历史记录数。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总的修改历史记录数。
+     * Set 总的修改历史记录数。
      * @param TotalCount 总的修改历史记录数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取修改历史记录信息。
+     * Get 修改历史记录信息。 
      * @return InstanceParamHistory 修改历史记录信息。
      */
     public InstanceParamHistory [] getInstanceParamHistory() {
@@ -68,7 +68,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置修改历史记录信息。
+     * Set 修改历史记录信息。
      * @param InstanceParamHistory 修改历史记录信息。
      */
     public void setInstanceParamHistory(InstanceParamHistory [] InstanceParamHistory) {
@@ -76,7 +76,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeInstanceParamRecordsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

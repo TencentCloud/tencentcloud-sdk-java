@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SharePermission  extends AbstractModel{
+public class SharePermission extends AbstractModel{
 
     /**
     * 快照分享的时间
@@ -37,7 +37,7 @@ public class SharePermission  extends AbstractModel{
     private String AccountId;
 
     /**
-     * 获取快照分享的时间
+     * Get 快照分享的时间 
      * @return CreatedTime 快照分享的时间
      */
     public String getCreatedTime() {
@@ -45,7 +45,7 @@ public class SharePermission  extends AbstractModel{
     }
 
     /**
-     * 设置快照分享的时间
+     * Set 快照分享的时间
      * @param CreatedTime 快照分享的时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -53,7 +53,7 @@ public class SharePermission  extends AbstractModel{
     }
 
     /**
-     * 获取分享的账号Id
+     * Get 分享的账号Id 
      * @return AccountId 分享的账号Id
      */
     public String getAccountId() {
@@ -61,7 +61,7 @@ public class SharePermission  extends AbstractModel{
     }
 
     /**
-     * 设置分享的账号Id
+     * Set 分享的账号Id
      * @param AccountId 分享的账号Id
      */
     public void setAccountId(String AccountId) {
@@ -69,7 +69,7 @@ public class SharePermission  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);

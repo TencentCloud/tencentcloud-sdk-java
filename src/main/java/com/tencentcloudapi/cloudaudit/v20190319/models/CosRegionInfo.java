@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosRegionInfo  extends AbstractModel{
+public class CosRegionInfo extends AbstractModel{
 
     /**
     * cos地域
@@ -37,7 +37,7 @@ public class CosRegionInfo  extends AbstractModel{
     private String CosRegionName;
 
     /**
-     * 获取cos地域
+     * Get cos地域 
      * @return CosRegion cos地域
      */
     public String getCosRegion() {
@@ -45,7 +45,7 @@ public class CosRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置cos地域
+     * Set cos地域
      * @param CosRegion cos地域
      */
     public void setCosRegion(String CosRegion) {
@@ -53,7 +53,7 @@ public class CosRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域描述
+     * Get 地域描述 
      * @return CosRegionName 地域描述
      */
     public String getCosRegionName() {
@@ -61,7 +61,7 @@ public class CosRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域描述
+     * Set 地域描述
      * @param CosRegionName 地域描述
      */
     public void setCosRegionName(String CosRegionName) {
@@ -69,7 +69,7 @@ public class CosRegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);

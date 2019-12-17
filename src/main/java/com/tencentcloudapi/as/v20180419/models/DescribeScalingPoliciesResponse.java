@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScalingPoliciesResponse  extends AbstractModel{
+public class DescribeScalingPoliciesResponse extends AbstractModel{
 
     /**
     * 弹性伸缩告警触发策略详细信息列表。
@@ -44,7 +44,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取弹性伸缩告警触发策略详细信息列表。
+     * Get 弹性伸缩告警触发策略详细信息列表。 
      * @return ScalingPolicySet 弹性伸缩告警触发策略详细信息列表。
      */
     public ScalingPolicy [] getScalingPolicySet() {
@@ -52,7 +52,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置弹性伸缩告警触发策略详细信息列表。
+     * Set 弹性伸缩告警触发策略详细信息列表。
      * @param ScalingPolicySet 弹性伸缩告警触发策略详细信息列表。
      */
     public void setScalingPolicySet(ScalingPolicy [] ScalingPolicySet) {
@@ -60,7 +60,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合条件的通知数量。
+     * Get 符合条件的通知数量。 
      * @return TotalCount 符合条件的通知数量。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的通知数量。
+     * Set 符合条件的通知数量。
      * @param TotalCount 符合条件的通知数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeScalingPoliciesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ScalingPolicySet.", this.ScalingPolicySet);

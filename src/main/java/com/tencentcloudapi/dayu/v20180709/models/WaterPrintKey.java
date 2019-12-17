@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WaterPrintKey  extends AbstractModel{
+public class WaterPrintKey extends AbstractModel{
 
     /**
     * 水印KeyID
@@ -58,7 +58,7 @@ public class WaterPrintKey  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取水印KeyID
+     * Get 水印KeyID 
      * @return KeyId 水印KeyID
      */
     public String getKeyId() {
@@ -66,7 +66,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 设置水印KeyID
+     * Set 水印KeyID
      * @param KeyId 水印KeyID
      */
     public void setKeyId(String KeyId) {
@@ -74,7 +74,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 获取水印Key值
+     * Get 水印Key值 
      * @return KeyContent 水印Key值
      */
     public String getKeyContent() {
@@ -82,7 +82,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 设置水印Key值
+     * Set 水印Key值
      * @param KeyContent 水印Key值
      */
     public void setKeyContent(String KeyContent) {
@@ -90,7 +90,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 获取水印Key的版本号
+     * Get 水印Key的版本号 
      * @return KeyVersion 水印Key的版本号
      */
     public String getKeyVersion() {
@@ -98,7 +98,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 设置水印Key的版本号
+     * Set 水印Key的版本号
      * @param KeyVersion 水印Key的版本号
      */
     public void setKeyVersion(String KeyVersion) {
@@ -106,7 +106,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启，取值[0（没有开启），1（已开启）]
+     * Get 是否开启，取值[0（没有开启），1（已开启）] 
      * @return OpenStatus 是否开启，取值[0（没有开启），1（已开启）]
      */
     public Long getOpenStatus() {
@@ -114,7 +114,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启，取值[0（没有开启），1（已开启）]
+     * Set 是否开启，取值[0（没有开启），1（已开启）]
      * @param OpenStatus 是否开启，取值[0（没有开启），1（已开启）]
      */
     public void setOpenStatus(Long OpenStatus) {
@@ -122,7 +122,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 获取密钥生成时间
+     * Get 密钥生成时间 
      * @return CreateTime 密钥生成时间
      */
     public String getCreateTime() {
@@ -130,7 +130,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 设置密钥生成时间
+     * Set 密钥生成时间
      * @param CreateTime 密钥生成时间
      */
     public void setCreateTime(String CreateTime) {
@@ -138,7 +138,7 @@ public class WaterPrintKey  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

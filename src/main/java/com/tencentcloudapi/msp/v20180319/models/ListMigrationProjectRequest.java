@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListMigrationProjectRequest  extends AbstractModel{
+public class ListMigrationProjectRequest extends AbstractModel{
 
     /**
     * 记录起始数，默认值为0
@@ -37,7 +37,7 @@ public class ListMigrationProjectRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取记录起始数，默认值为0
+     * Get 记录起始数，默认值为0 
      * @return Offset 记录起始数，默认值为0
      */
     public Integer getOffset() {
@@ -45,7 +45,7 @@ public class ListMigrationProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录起始数，默认值为0
+     * Set 记录起始数，默认值为0
      * @param Offset 记录起始数，默认值为0
      */
     public void setOffset(Integer Offset) {
@@ -53,7 +53,7 @@ public class ListMigrationProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回条数，默认值为500
+     * Get 返回条数，默认值为500 
      * @return Limit 返回条数，默认值为500
      */
     public Integer getLimit() {
@@ -61,7 +61,7 @@ public class ListMigrationProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回条数，默认值为500
+     * Set 返回条数，默认值为500
      * @param Limit 返回条数，默认值为500
      */
     public void setLimit(Integer Limit) {
@@ -69,7 +69,7 @@ public class ListMigrationProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

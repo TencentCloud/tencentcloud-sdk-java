@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SqlLogItem  extends AbstractModel{
+public class SqlLogItem extends AbstractModel{
 
     /**
     * 本条日志在消息队列中的偏移量。
@@ -93,7 +93,7 @@ public class SqlLogItem  extends AbstractModel{
     private Integer ResultCode;
 
     /**
-     * 获取本条日志在消息队列中的偏移量。
+     * Get 本条日志在消息队列中的偏移量。 
      * @return Offset 本条日志在消息队列中的偏移量。
      */
     public Integer getOffset() {
@@ -101,7 +101,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置本条日志在消息队列中的偏移量。
+     * Set 本条日志在消息队列中的偏移量。
      * @param Offset 本条日志在消息队列中的偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -109,7 +109,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取执行本条sql的用户。
+     * Get 执行本条sql的用户。 
      * @return User 执行本条sql的用户。
      */
     public String getUser() {
@@ -117,7 +117,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置执行本条sql的用户。
+     * Set 执行本条sql的用户。
      * @param User 执行本条sql的用户。
      */
     public void setUser(String User) {
@@ -125,7 +125,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取执行本条sql的客户端IP+端口。
+     * Get 执行本条sql的客户端IP+端口。 
      * @return Client 执行本条sql的客户端IP+端口。
      */
     public String getClient() {
@@ -133,7 +133,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置执行本条sql的客户端IP+端口。
+     * Set 执行本条sql的客户端IP+端口。
      * @param Client 执行本条sql的客户端IP+端口。
      */
     public void setClient(String Client) {
@@ -141,7 +141,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称。
+     * Get 数据库名称。 
      * @return DbName 数据库名称。
      */
     public String getDbName() {
@@ -149,7 +149,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称。
+     * Set 数据库名称。
      * @param DbName 数据库名称。
      */
     public void setDbName(String DbName) {
@@ -157,7 +157,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取执行的sql语句。
+     * Get 执行的sql语句。 
      * @return Sql 执行的sql语句。
      */
     public String getSql() {
@@ -165,7 +165,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置执行的sql语句。
+     * Set 执行的sql语句。
      * @param Sql 执行的sql语句。
      */
     public void setSql(String Sql) {
@@ -173,7 +173,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取返回的数据行数。
+     * Get 返回的数据行数。 
      * @return SelectRowNum 返回的数据行数。
      */
     public Integer getSelectRowNum() {
@@ -181,7 +181,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置返回的数据行数。
+     * Set 返回的数据行数。
      * @param SelectRowNum 返回的数据行数。
      */
     public void setSelectRowNum(Integer SelectRowNum) {
@@ -189,7 +189,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取影响行数。
+     * Get 影响行数。 
      * @return AffectRowNum 影响行数。
      */
     public Integer getAffectRowNum() {
@@ -197,7 +197,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置影响行数。
+     * Set 影响行数。
      * @param AffectRowNum 影响行数。
      */
     public void setAffectRowNum(Integer AffectRowNum) {
@@ -205,7 +205,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取Sql执行时间戳。
+     * Get Sql执行时间戳。 
      * @return Timestamp Sql执行时间戳。
      */
     public Integer getTimestamp() {
@@ -213,7 +213,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置Sql执行时间戳。
+     * Set Sql执行时间戳。
      * @param Timestamp Sql执行时间戳。
      */
     public void setTimestamp(Integer Timestamp) {
@@ -221,7 +221,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取Sql耗时，单位为毫秒。
+     * Get Sql耗时，单位为毫秒。 
      * @return TimeCostMs Sql耗时，单位为毫秒。
      */
     public Integer getTimeCostMs() {
@@ -229,7 +229,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置Sql耗时，单位为毫秒。
+     * Set Sql耗时，单位为毫秒。
      * @param TimeCostMs Sql耗时，单位为毫秒。
      */
     public void setTimeCostMs(Integer TimeCostMs) {
@@ -237,7 +237,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 获取Sql返回码，0为成功。
+     * Get Sql返回码，0为成功。 
      * @return ResultCode Sql返回码，0为成功。
      */
     public Integer getResultCode() {
@@ -245,7 +245,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 设置Sql返回码，0为成功。
+     * Set Sql返回码，0为成功。
      * @param ResultCode Sql返回码，0为成功。
      */
     public void setResultCode(Integer ResultCode) {
@@ -253,7 +253,7 @@ public class SqlLogItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

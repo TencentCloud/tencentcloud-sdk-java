@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDefaultParamsRequest  extends AbstractModel{
+public class DescribeDefaultParamsRequest extends AbstractModel{
 
     /**
     * mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
@@ -30,7 +30,7 @@ public class DescribeDefaultParamsRequest  extends AbstractModel{
     private String EngineVersion;
 
     /**
-     * 获取mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * Get mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。 
      * @return EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     public String getEngineVersion() {
@@ -38,7 +38,7 @@ public class DescribeDefaultParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * Set mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      * @param EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
      */
     public void setEngineVersion(String EngineVersion) {
@@ -46,7 +46,7 @@ public class DescribeDefaultParamsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7RulesRequest  extends AbstractModel{
+public class CreateL7RulesRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -44,7 +44,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     private CreateL7Rule [] RuleSet;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。
+     * Get 七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。 
      * @return RuleSet 七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。
      */
     public CreateL7Rule [] getRuleSet() {
@@ -84,7 +84,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。
+     * Set 七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。
      * @param RuleSet 七层转发规则信息数组，可以创建多个七层转发规则。目前一个七层监听器下面最多允许创建50个七层转发域名，而每一个转发域名下最多可以创建100个转发规则。目前只能单条创建，不能批量创建。
      */
     public void setRuleSet(CreateL7Rule [] RuleSet) {
@@ -92,7 +92,7 @@ public class CreateL7RulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

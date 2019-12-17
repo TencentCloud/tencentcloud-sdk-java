@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTaskStatistic  extends AbstractModel{
+public class ImageTaskStatistic extends AbstractModel{
 
     /**
     * 人员检测统计信息
@@ -79,7 +79,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     private ActionStatistic TeacherMovement;
 
     /**
-     * 获取人员检测统计信息
+     * Get 人员检测统计信息 
      * @return FaceDetect 人员检测统计信息
      */
     public FaceDetectStatistic [] getFaceDetect() {
@@ -87,7 +87,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人员检测统计信息
+     * Set 人员检测统计信息
      * @param FaceDetect 人员检测统计信息
      */
     public void setFaceDetect(FaceDetectStatistic [] FaceDetect) {
@@ -95,7 +95,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取人脸表情统计信息
+     * Get 人脸表情统计信息 
      * @return FaceExpression 人脸表情统计信息
      */
     public FaceExpressStatistic [] getFaceExpression() {
@@ -103,7 +103,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人脸表情统计信息
+     * Set 人脸表情统计信息
      * @param FaceExpression 人脸表情统计信息
      */
     public void setFaceExpression(FaceExpressStatistic [] FaceExpression) {
@@ -111,7 +111,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检索统计信息
+     * Get 人脸检索统计信息 
      * @return FaceIdentify 人脸检索统计信息
      */
     public FaceIdentifyStatistic [] getFaceIdentify() {
@@ -119,7 +119,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检索统计信息
+     * Set 人脸检索统计信息
      * @param FaceIdentify 人脸检索统计信息
      */
     public void setFaceIdentify(FaceIdentifyStatistic [] FaceIdentify) {
@@ -127,7 +127,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取姿势识别统计信息
+     * Get 姿势识别统计信息 
      * @return Gesture 姿势识别统计信息
      */
     public ActionStatistic getGesture() {
@@ -135,7 +135,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置姿势识别统计信息
+     * Set 姿势识别统计信息
      * @param Gesture 姿势识别统计信息
      */
     public void setGesture(ActionStatistic Gesture) {
@@ -143,7 +143,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取手势识别统计信息
+     * Get 手势识别统计信息 
      * @return Handtracking 手势识别统计信息
      */
     public ActionStatistic getHandtracking() {
@@ -151,7 +151,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置手势识别统计信息
+     * Set 手势识别统计信息
      * @param Handtracking 手势识别统计信息
      */
     public void setHandtracking(ActionStatistic Handtracking) {
@@ -159,7 +159,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取光照统计信息
+     * Get 光照统计信息 
      * @return Light 光照统计信息
      */
     public LightStatistic getLight() {
@@ -167,7 +167,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置光照统计信息
+     * Set 光照统计信息
      * @param Light 光照统计信息
      */
     public void setLight(LightStatistic Light) {
@@ -175,7 +175,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取学生动作统计信息
+     * Get 学生动作统计信息 
      * @return StudentMovement 学生动作统计信息
      */
     public ActionStatistic getStudentMovement() {
@@ -183,7 +183,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置学生动作统计信息
+     * Set 学生动作统计信息
      * @param StudentMovement 学生动作统计信息
      */
     public void setStudentMovement(ActionStatistic StudentMovement) {
@@ -191,7 +191,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取教师动作统计信息
+     * Get 教师动作统计信息 
      * @return TeacherMovement 教师动作统计信息
      */
     public ActionStatistic getTeacherMovement() {
@@ -199,7 +199,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置教师动作统计信息
+     * Set 教师动作统计信息
      * @param TeacherMovement 教师动作统计信息
      */
     public void setTeacherMovement(ActionStatistic TeacherMovement) {
@@ -207,7 +207,7 @@ public class ImageTaskStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FaceDetect.", this.FaceDetect);

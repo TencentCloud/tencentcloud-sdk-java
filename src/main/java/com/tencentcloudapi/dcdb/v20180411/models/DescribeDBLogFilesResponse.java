@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBLogFilesResponse  extends AbstractModel{
+public class DescribeDBLogFilesResponse extends AbstractModel{
 
     /**
     * 实例 ID，形如：dcdbt-ow728lmc。
@@ -79,7 +79,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例 ID，形如：dcdbt-ow728lmc。
+     * Get 实例 ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -87,7 +87,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：dcdbt-ow728lmc。
+     * Set 实例 ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -95,7 +95,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+     * Get 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。 
      * @return Type 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
     public Integer getType() {
@@ -103,7 +103,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
+     * Set 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
      * @param Type 请求日志类型。1-binlog，2-冷备，3-errlog，4-slowlog。
      */
     public void setType(Integer Type) {
@@ -111,7 +111,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求日志总数
+     * Get 请求日志总数 
      * @return Total 请求日志总数
      */
     public Integer getTotal() {
@@ -119,7 +119,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求日志总数
+     * Set 请求日志总数
      * @param Total 请求日志总数
      */
     public void setTotal(Integer Total) {
@@ -127,7 +127,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志文件列表
+     * Get 日志文件列表 
      * @return Files 日志文件列表
      */
     public LogFileInfo [] getFiles() {
@@ -135,7 +135,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志文件列表
+     * Set 日志文件列表
      * @param Files 日志文件列表
      */
     public void setFiles(LogFileInfo [] Files) {
@@ -143,7 +143,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * Get 如果是VPC网络的实例，做用本前缀加上URI为下载地址 
      * @return VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      */
     public String getVpcPrefix() {
@@ -151,7 +151,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置如果是VPC网络的实例，做用本前缀加上URI为下载地址
+     * Set 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      * @param VpcPrefix 如果是VPC网络的实例，做用本前缀加上URI为下载地址
      */
     public void setVpcPrefix(String VpcPrefix) {
@@ -159,7 +159,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * Get 如果是普通网络的实例，做用本前缀加上URI为下载地址 
      * @return NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
      */
     public String getNormalPrefix() {
@@ -167,7 +167,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置如果是普通网络的实例，做用本前缀加上URI为下载地址
+     * Set 如果是普通网络的实例，做用本前缀加上URI为下载地址
      * @param NormalPrefix 如果是普通网络的实例，做用本前缀加上URI为下载地址
      */
     public void setNormalPrefix(String NormalPrefix) {
@@ -175,7 +175,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分片 ID，形如：shard-7noic7tv
+     * Get 分片 ID，形如：shard-7noic7tv 
      * @return ShardId 分片 ID，形如：shard-7noic7tv
      */
     public String getShardId() {
@@ -183,7 +183,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分片 ID，形如：shard-7noic7tv
+     * Set 分片 ID，形如：shard-7noic7tv
      * @param ShardId 分片 ID，形如：shard-7noic7tv
      */
     public void setShardId(String ShardId) {
@@ -191,7 +191,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribeDBLogFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

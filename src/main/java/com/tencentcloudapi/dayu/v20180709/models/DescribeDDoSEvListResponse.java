@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSEvListResponse  extends AbstractModel{
+public class DescribeDDoSEvListResponse extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
@@ -80,7 +80,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -88,7 +88,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版；basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -96,7 +96,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -104,7 +104,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -112,8 +112,8 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 资源的IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IpList 资源的IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -122,7 +122,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP
+     * Set 资源的IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IpList 资源的IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,7 +132,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -140,7 +140,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -148,7 +148,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -156,7 +156,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -164,7 +164,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取DDoS攻击事件列表
+     * Get DDoS攻击事件列表 
      * @return Data DDoS攻击事件列表
      */
     public DDoSEventRecord [] getData() {
@@ -172,7 +172,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置DDoS攻击事件列表
+     * Set DDoS攻击事件列表
      * @param Data DDoS攻击事件列表
      */
     public void setData(DDoSEventRecord [] Data) {
@@ -180,7 +180,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数
+     * Get 总记录数 
      * @return Total 总记录数
      */
     public Long getTotal() {
@@ -188,7 +188,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数
+     * Set 总记录数
      * @param Total 总记录数
      */
     public void setTotal(Long Total) {
@@ -196,7 +196,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -204,7 +204,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -212,7 +212,7 @@ public class DescribeDDoSEvListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

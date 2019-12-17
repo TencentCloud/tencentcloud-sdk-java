@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSecurityPolicyRequest  extends AbstractModel{
+public class CreateSecurityPolicyRequest extends AbstractModel{
 
     /**
     * 加速通道ID
@@ -37,7 +37,7 @@ public class CreateSecurityPolicyRequest  extends AbstractModel{
     private String DefaultAction;
 
     /**
-     * 获取加速通道ID
+     * Get 加速通道ID 
      * @return ProxyId 加速通道ID
      */
     public String getProxyId() {
@@ -45,7 +45,7 @@ public class CreateSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加速通道ID
+     * Set 加速通道ID
      * @param ProxyId 加速通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -53,7 +53,7 @@ public class CreateSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取默认策略：ACCEPT或DROP
+     * Get 默认策略：ACCEPT或DROP 
      * @return DefaultAction 默认策略：ACCEPT或DROP
      */
     public String getDefaultAction() {
@@ -61,7 +61,7 @@ public class CreateSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置默认策略：ACCEPT或DROP
+     * Set 默认策略：ACCEPT或DROP
      * @param DefaultAction 默认策略：ACCEPT或DROP
      */
     public void setDefaultAction(String DefaultAction) {
@@ -69,7 +69,7 @@ public class CreateSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

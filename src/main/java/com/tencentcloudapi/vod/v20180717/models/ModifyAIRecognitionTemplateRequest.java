@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
+public class ModifyAIRecognitionTemplateRequest extends AbstractModel{
 
     /**
     * 视频内容识别模板唯一标识。
@@ -114,7 +114,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频内容识别模板唯一标识。
+     * Get 视频内容识别模板唯一标识。 
      * @return Definition 视频内容识别模板唯一标识。
      */
     public Long getDefinition() {
@@ -122,7 +122,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板唯一标识。
+     * Set 视频内容识别模板唯一标识。
      * @param Definition 视频内容识别模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -130,7 +130,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别模板名称，长度限制：64 个字符。
+     * Get 视频内容识别模板名称，长度限制：64 个字符。 
      * @return Name 视频内容识别模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -138,7 +138,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板名称，长度限制：64 个字符。
+     * Set 视频内容识别模板名称，长度限制：64 个字符。
      * @param Name 视频内容识别模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -146,7 +146,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别模板描述信息，长度限制：256 个字符。
+     * Get 视频内容识别模板描述信息，长度限制：256 个字符。 
      * @return Comment 视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -154,7 +154,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板描述信息，长度限制：256 个字符。
+     * Set 视频内容识别模板描述信息，长度限制：256 个字符。
      * @param Comment 视频内容识别模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -162,7 +162,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频片头片尾识别控制参数。
+     * Get 视频片头片尾识别控制参数。 
      * @return HeadTailConfigure 视频片头片尾识别控制参数。
      */
     public HeadTailConfigureInfoForUpdate getHeadTailConfigure() {
@@ -170,7 +170,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频片头片尾识别控制参数。
+     * Set 视频片头片尾识别控制参数。
      * @param HeadTailConfigure 视频片头片尾识别控制参数。
      */
     public void setHeadTailConfigure(HeadTailConfigureInfoForUpdate HeadTailConfigure) {
@@ -178,7 +178,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频拆条识别控制参数。
+     * Get 视频拆条识别控制参数。 
      * @return SegmentConfigure 视频拆条识别控制参数。
      */
     public SegmentConfigureInfoForUpdate getSegmentConfigure() {
@@ -186,7 +186,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条识别控制参数。
+     * Set 视频拆条识别控制参数。
      * @param SegmentConfigure 视频拆条识别控制参数。
      */
     public void setSegmentConfigure(SegmentConfigureInfoForUpdate SegmentConfigure) {
@@ -194,7 +194,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别控制参数。
+     * Get 人脸识别控制参数。 
      * @return FaceConfigure 人脸识别控制参数。
      */
     public FaceConfigureInfoForUpdate getFaceConfigure() {
@@ -202,7 +202,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别控制参数。
+     * Set 人脸识别控制参数。
      * @param FaceConfigure 人脸识别控制参数。
      */
     public void setFaceConfigure(FaceConfigureInfoForUpdate FaceConfigure) {
@@ -210,7 +210,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文本全文识别控制参数。
+     * Get 文本全文识别控制参数。 
      * @return OcrFullTextConfigure 文本全文识别控制参数。
      */
     public OcrFullTextConfigureInfoForUpdate getOcrFullTextConfigure() {
@@ -218,7 +218,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文本全文识别控制参数。
+     * Set 文本全文识别控制参数。
      * @param OcrFullTextConfigure 文本全文识别控制参数。
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfoForUpdate OcrFullTextConfigure) {
@@ -226,7 +226,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文本关键词识别控制参数。
+     * Get 文本关键词识别控制参数。 
      * @return OcrWordsConfigure 文本关键词识别控制参数。
      */
     public OcrWordsConfigureInfoForUpdate getOcrWordsConfigure() {
@@ -234,7 +234,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文本关键词识别控制参数。
+     * Set 文本关键词识别控制参数。
      * @param OcrWordsConfigure 文本关键词识别控制参数。
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfoForUpdate OcrWordsConfigure) {
@@ -242,7 +242,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音全文识别控制参数。
+     * Get 语音全文识别控制参数。 
      * @return AsrFullTextConfigure 语音全文识别控制参数。
      */
     public AsrFullTextConfigureInfoForUpdate getAsrFullTextConfigure() {
@@ -250,7 +250,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别控制参数。
+     * Set 语音全文识别控制参数。
      * @param AsrFullTextConfigure 语音全文识别控制参数。
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfoForUpdate AsrFullTextConfigure) {
@@ -258,7 +258,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音关键词识别控制参数。
+     * Get 语音关键词识别控制参数。 
      * @return AsrWordsConfigure 语音关键词识别控制参数。
      */
     public AsrWordsConfigureInfoForUpdate getAsrWordsConfigure() {
@@ -266,7 +266,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词识别控制参数。
+     * Set 语音关键词识别控制参数。
      * @param AsrWordsConfigure 语音关键词识别控制参数。
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfoForUpdate AsrWordsConfigure) {
@@ -274,7 +274,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物体识别控制参数。
+     * Get 物体识别控制参数。 
      * @return ObjectConfigure 物体识别控制参数。
      */
     public ObjectConfigureInfoForUpdate getObjectConfigure() {
@@ -282,7 +282,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物体识别控制参数。
+     * Set 物体识别控制参数。
      * @param ObjectConfigure 物体识别控制参数。
      */
     public void setObjectConfigure(ObjectConfigureInfoForUpdate ObjectConfigure) {
@@ -290,7 +290,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截帧间隔，单位为秒，最小值为 0.5 秒。
+     * Get 截帧间隔，单位为秒，最小值为 0.5 秒。 
      * @return ScreenshotInterval 截帧间隔，单位为秒，最小值为 0.5 秒。
      */
     public Float getScreenshotInterval() {
@@ -298,7 +298,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截帧间隔，单位为秒，最小值为 0.5 秒。
+     * Set 截帧间隔，单位为秒，最小值为 0.5 秒。
      * @param ScreenshotInterval 截帧间隔，单位为秒，最小值为 0.5 秒。
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
@@ -306,7 +306,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -314,7 +314,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -322,7 +322,7 @@ public class ModifyAIRecognitionTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

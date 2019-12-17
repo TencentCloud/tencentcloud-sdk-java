@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentVul  extends AbstractModel{
+public class AgentVul extends AbstractModel{
 
     /**
     * 漏洞ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机IP。
@@ -73,7 +73,7 @@ public class AgentVul  extends AbstractModel{
     */
     @SerializedName("VulId")
     @Expose
-    private Integer VulId;
+    private Long VulId;
 
     /**
     * 漏洞状态。
@@ -85,23 +85,23 @@ public class AgentVul  extends AbstractModel{
     private String VulStatus;
 
     /**
-     * 获取漏洞ID。
+     * Get 漏洞ID。 
      * @return Id 漏洞ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置漏洞ID。
+     * Set 漏洞ID。
      * @param Id 漏洞ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -109,7 +109,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -117,7 +117,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞名称。
+     * Get 漏洞名称。 
      * @return VulName 漏洞名称。
      */
     public String getVulName() {
@@ -125,7 +125,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞名称。
+     * Set 漏洞名称。
      * @param VulName 漏洞名称。
      */
     public void setVulName(String VulName) {
@@ -133,11 +133,11 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞危害等级。
+     * Get 漏洞危害等级。
 <li>HIGH：高危</li>
 <li>MIDDLE：中危</li>
 <li>LOW：低危</li>
-<li>NOTICE：提示</li>
+<li>NOTICE：提示</li> 
      * @return VulLevel 漏洞危害等级。
 <li>HIGH：高危</li>
 <li>MIDDLE：中危</li>
@@ -149,7 +149,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞危害等级。
+     * Set 漏洞危害等级。
 <li>HIGH：高危</li>
 <li>MIDDLE：中危</li>
 <li>LOW：低危</li>
@@ -165,7 +165,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 获取最后扫描时间。
+     * Get 最后扫描时间。 
      * @return LastScanTime 最后扫描时间。
      */
     public String getLastScanTime() {
@@ -173,7 +173,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置最后扫描时间。
+     * Set 最后扫描时间。
      * @param LastScanTime 最后扫描时间。
      */
     public void setLastScanTime(String LastScanTime) {
@@ -181,7 +181,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述。
+     * Get 漏洞描述。 
      * @return Description 漏洞描述。
      */
     public String getDescription() {
@@ -189,7 +189,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述。
+     * Set 漏洞描述。
      * @param Description 漏洞描述。
      */
     public void setDescription(String Description) {
@@ -197,25 +197,25 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞种类ID。
+     * Get 漏洞种类ID。 
      * @return VulId 漏洞种类ID。
      */
-    public Integer getVulId() {
+    public Long getVulId() {
         return this.VulId;
     }
 
     /**
-     * 设置漏洞种类ID。
+     * Set 漏洞种类ID。
      * @param VulId 漏洞种类ID。
      */
-    public void setVulId(Integer VulId) {
+    public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * 获取漏洞状态。
+     * Get 漏洞状态。
 <li>UN_OPERATED : 待处理</li>
-<li>FIXED : 已修复</li>
+<li>FIXED : 已修复</li> 
      * @return VulStatus 漏洞状态。
 <li>UN_OPERATED : 待处理</li>
 <li>FIXED : 已修复</li>
@@ -225,7 +225,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞状态。
+     * Set 漏洞状态。
 <li>UN_OPERATED : 待处理</li>
 <li>FIXED : 已修复</li>
      * @param VulStatus 漏洞状态。
@@ -237,7 +237,7 @@ public class AgentVul  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

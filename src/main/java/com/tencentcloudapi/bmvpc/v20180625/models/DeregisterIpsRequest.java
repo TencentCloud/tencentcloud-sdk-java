@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeregisterIpsRequest  extends AbstractModel{
+public class DeregisterIpsRequest extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -44,7 +44,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -52,7 +52,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -60,7 +60,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取注销指定IP的列表
+     * Get 注销指定IP的列表 
      * @return IpSet 注销指定IP的列表
      */
     public String [] getIpSet() {
@@ -68,7 +68,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置注销指定IP的列表
+     * Set 注销指定IP的列表
      * @param IpSet 注销指定IP的列表
      */
     public void setIpSet(String [] IpSet) {
@@ -76,7 +76,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络子网ID
+     * Get 私有网络子网ID 
      * @return SubnetId 私有网络子网ID
      */
     public String getSubnetId() {
@@ -84,7 +84,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络子网ID
+     * Set 私有网络子网ID
      * @param SubnetId 私有网络子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -92,7 +92,7 @@ public class DeregisterIpsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

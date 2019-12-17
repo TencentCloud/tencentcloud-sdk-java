@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteHaVipRequest  extends AbstractModel{
+public class DeleteHaVipRequest extends AbstractModel{
 
     /**
     * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
@@ -30,7 +30,7 @@ public class DeleteHaVipRequest  extends AbstractModel{
     private String HaVipId;
 
     /**
-     * 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
      * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public String getHaVipId() {
@@ -38,7 +38,7 @@ public class DeleteHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public void setHaVipId(String HaVipId) {
@@ -46,7 +46,7 @@ public class DeleteHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);

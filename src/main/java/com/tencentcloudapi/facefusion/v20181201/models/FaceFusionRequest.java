@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceFusionRequest  extends AbstractModel{
+public class FaceFusionRequest extends AbstractModel{
 
     /**
     * 活动 ID，请在人脸融合控制台查看。
@@ -65,7 +65,7 @@ public class FaceFusionRequest  extends AbstractModel{
     private Integer CelebrityIdentify;
 
     /**
-     * 获取活动 ID，请在人脸融合控制台查看。
+     * Get 活动 ID，请在人脸融合控制台查看。 
      * @return ProjectId 活动 ID，请在人脸融合控制台查看。
      */
     public String getProjectId() {
@@ -73,7 +73,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置活动 ID，请在人脸融合控制台查看。
+     * Set 活动 ID，请在人脸融合控制台查看。
      * @param ProjectId 活动 ID，请在人脸融合控制台查看。
      */
     public void setProjectId(String ProjectId) {
@@ -81,7 +81,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取素材 ID，请在人脸融合控制台查看。
+     * Get 素材 ID，请在人脸融合控制台查看。 
      * @return ModelId 素材 ID，请在人脸融合控制台查看。
      */
     public String getModelId() {
@@ -89,7 +89,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置素材 ID，请在人脸融合控制台查看。
+     * Set 素材 ID，请在人脸融合控制台查看。
      * @param ModelId 素材 ID，请在人脸融合控制台查看。
      */
     public void setModelId(String ModelId) {
@@ -97,7 +97,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
+     * Get 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。 
      * @return Image 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      */
     public String getImage() {
@@ -105,7 +105,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
+     * Set 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      * @param Image 图片 base64 数据。请确保人脸为正脸，无旋转。若某些手机拍摄后人脸被旋转，请使用图片的 EXIF 信息对图片进行旋转处理；请勿在 base64 数据中包含头部，如“data:image/jpeg;base64,”。
      */
     public void setImage(String Image) {
@@ -113,7 +113,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Get 返回图像方式（url 或 base64) ，二选一。url有效期为30天。 
      * @return RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      */
     public String getRspImgType() {
@@ -121,7 +121,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+     * Set 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      * @param RspImgType 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
      */
     public void setRspImgType(String RspImgType) {
@@ -129,7 +129,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
+     * Get 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。 
      * @return PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
     public Integer getPornDetect() {
@@ -137,7 +137,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
+     * Set 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      * @param PornDetect 历史遗留字段，无需填写。因为融合只需提取人脸特征，不需要鉴黄。
      */
     public void setPornDetect(Integer PornDetect) {
@@ -145,7 +145,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * Get 0表示不需要鉴政，1表示需要鉴政。默认值为0。 
      * @return CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      */
     public Integer getCelebrityIdentify() {
@@ -153,7 +153,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0表示不需要鉴政，1表示需要鉴政。默认值为0。
+     * Set 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      * @param CelebrityIdentify 0表示不需要鉴政，1表示需要鉴政。默认值为0。
      */
     public void setCelebrityIdentify(Integer CelebrityIdentify) {
@@ -161,7 +161,7 @@ public class FaceFusionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

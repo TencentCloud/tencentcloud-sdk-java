@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Library  extends AbstractModel{
+public class Library extends AbstractModel{
 
     /**
     * 人员库创建时间
@@ -58,7 +58,7 @@ public class Library  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取人员库创建时间
+     * Get 人员库创建时间 
      * @return CreateTime 人员库创建时间
      */
     public String getCreateTime() {
@@ -66,7 +66,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 设置人员库创建时间
+     * Set 人员库创建时间
      * @param CreateTime 人员库创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -74,7 +74,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -82,7 +82,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -90,7 +90,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 获取人员库名称
+     * Get 人员库名称 
      * @return LibraryName 人员库名称
      */
     public String getLibraryName() {
@@ -98,7 +98,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 设置人员库名称
+     * Set 人员库名称
      * @param LibraryName 人员库名称
      */
     public void setLibraryName(String LibraryName) {
@@ -106,7 +106,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 获取人员库人员数量
+     * Get 人员库人员数量 
      * @return PersonCount 人员库人员数量
      */
     public Long getPersonCount() {
@@ -114,7 +114,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 设置人员库人员数量
+     * Set 人员库人员数量
      * @param PersonCount 人员库人员数量
      */
     public void setPersonCount(Long PersonCount) {
@@ -122,7 +122,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 获取人员库修改时间
+     * Get 人员库修改时间 
      * @return UpdateTime 人员库修改时间
      */
     public String getUpdateTime() {
@@ -130,7 +130,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 设置人员库修改时间
+     * Set 人员库修改时间
      * @param UpdateTime 人员库修改时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -138,7 +138,7 @@ public class Library  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

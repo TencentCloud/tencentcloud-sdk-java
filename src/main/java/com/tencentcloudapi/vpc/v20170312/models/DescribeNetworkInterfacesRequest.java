@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfacesRequest  extends AbstractModel{
+public class DescribeNetworkInterfacesRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
@@ -61,7 +61,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Get 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。 
      * @return NetworkInterfaceIds 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
      */
     public String [] getNetworkInterfaceIds() {
@@ -69,7 +69,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Set 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
      * @param NetworkInterfaceIds 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。
      */
     public void setNetworkInterfaceIds(String [] NetworkInterfaceIds) {
@@ -77,7 +77,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Get 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
 <li>network-interface-id - String - （过滤条件）弹性网卡实例ID，形如：eni-5k56k7k7。</li>
@@ -87,7 +87,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
 <li>network-interface-description - String - （过滤条件）网卡实例描述。</li>
 <li>address-ip - String - （过滤条件）内网IPv4地址。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li> 
      * @return Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
@@ -105,7 +105,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
+     * Set 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。</li>
 <li>network-interface-id - String - （过滤条件）弹性网卡实例ID，形如：eni-5k56k7k7。</li>
@@ -133,7 +133,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -141,7 +141,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -149,7 +149,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -157,7 +157,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -165,7 +165,7 @@ public class DescribeNetworkInterfacesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NetworkInterfaceIds.", this.NetworkInterfaceIds);

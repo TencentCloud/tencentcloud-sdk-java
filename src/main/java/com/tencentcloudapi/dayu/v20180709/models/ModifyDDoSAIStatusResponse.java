@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSAIStatusResponse  extends AbstractModel{
+public class ModifyDDoSAIStatusResponse extends AbstractModel{
 
     /**
     * AI防护状态，取值[on，off]
@@ -44,7 +44,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取AI防护状态，取值[on，off]
+     * Get AI防护状态，取值[on，off] 
      * @return DDoSAI AI防护状态，取值[on，off]
      */
     public String getDDoSAI() {
@@ -52,7 +52,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置AI防护状态，取值[on，off]
+     * Set AI防护状态，取值[on，off]
      * @param DDoSAI AI防护状态，取值[on，off]
      */
     public void setDDoSAI(String DDoSAI) {
@@ -60,7 +60,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -68,7 +68,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -76,7 +76,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ModifyDDoSAIStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DDoSAI", this.DDoSAI);

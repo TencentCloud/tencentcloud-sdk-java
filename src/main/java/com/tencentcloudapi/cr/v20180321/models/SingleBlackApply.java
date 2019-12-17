@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SingleBlackApply  extends AbstractModel{
+public class SingleBlackApply extends AbstractModel{
 
     /**
     * 黑名单类型，01代表手机号码。
@@ -58,7 +58,7 @@ public class SingleBlackApply  extends AbstractModel{
     private String BlackValidDate;
 
     /**
-     * 获取黑名单类型，01代表手机号码。
+     * Get 黑名单类型，01代表手机号码。 
      * @return BlackType 黑名单类型，01代表手机号码。
      */
     public String getBlackType() {
@@ -66,7 +66,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 设置黑名单类型，01代表手机号码。
+     * Set 黑名单类型，01代表手机号码。
      * @param BlackType 黑名单类型，01代表手机号码。
      */
     public void setBlackType(String BlackType) {
@@ -74,7 +74,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 获取操作类型，A为新增，D为删除。
+     * Get 操作类型，A为新增，D为删除。 
      * @return OperationType 操作类型，A为新增，D为删除。
      */
     public String getOperationType() {
@@ -82,7 +82,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型，A为新增，D为删除。
+     * Set 操作类型，A为新增，D为删除。
      * @param OperationType 操作类型，A为新增，D为删除。
      */
     public void setOperationType(String OperationType) {
@@ -90,7 +90,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 获取黑名单值，BlackType为01时，填写11位手机号码。
+     * Get 黑名单值，BlackType为01时，填写11位手机号码。 
      * @return BlackValue 黑名单值，BlackType为01时，填写11位手机号码。
      */
     public String getBlackValue() {
@@ -98,7 +98,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 设置黑名单值，BlackType为01时，填写11位手机号码。
+     * Set 黑名单值，BlackType为01时，填写11位手机号码。
      * @param BlackValue 黑名单值，BlackType为01时，填写11位手机号码。
      */
     public void setBlackValue(String BlackValue) {
@@ -106,7 +106,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 获取备注。
+     * Get 备注。 
      * @return BlackDescription 备注。
      */
     public String getBlackDescription() {
@@ -114,7 +114,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 设置备注。
+     * Set 备注。
      * @param BlackDescription 备注。
      */
     public void setBlackDescription(String BlackDescription) {
@@ -122,7 +122,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 获取黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     * Get 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。 
      * @return BlackValidDate 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
      */
     public String getBlackValidDate() {
@@ -130,7 +130,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 设置黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
+     * Set 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
      * @param BlackValidDate 黑名单生效截止日期，格式为YYYY-MM-DD，不填默认为永久。
      */
     public void setBlackValidDate(String BlackValidDate) {
@@ -138,7 +138,7 @@ public class SingleBlackApply  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BlackType", this.BlackType);

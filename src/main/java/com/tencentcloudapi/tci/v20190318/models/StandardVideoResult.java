@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StandardVideoResult  extends AbstractModel{
+public class StandardVideoResult extends AbstractModel{
 
     /**
     * 分析完成后的统计结果
@@ -44,7 +44,7 @@ public class StandardVideoResult  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取分析完成后的统计结果
+     * Get 分析完成后的统计结果 
      * @return HighlightsInfo 分析完成后的统计结果
      */
     public HighlightsInfomation [] getHighlightsInfo() {
@@ -52,7 +52,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 设置分析完成后的统计结果
+     * Set 分析完成后的统计结果
      * @param HighlightsInfo 分析完成后的统计结果
      */
     public void setHighlightsInfo(HighlightsInfomation [] HighlightsInfo) {
@@ -60,7 +60,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
+     * Get 状态描述 
      * @return Message 状态描述
      */
     public String getMessage() {
@@ -68,7 +68,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
      * @param Message 状态描述
      */
     public void setMessage(String Message) {
@@ -76,7 +76,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public String getStatus() {
@@ -84,7 +84,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(String Status) {
@@ -92,7 +92,7 @@ public class StandardVideoResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "HighlightsInfo.", this.HighlightsInfo);

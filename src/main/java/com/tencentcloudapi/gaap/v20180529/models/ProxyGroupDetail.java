@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyGroupDetail  extends AbstractModel{
+public class ProxyGroupDetail extends AbstractModel{
 
     /**
     * 创建时间
@@ -120,7 +120,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public Long getCreateTime() {
@@ -128,7 +128,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(Long CreateTime) {
@@ -136,7 +136,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Long getProjectId() {
@@ -144,7 +144,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Long ProjectId) {
@@ -152,7 +152,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道组中通道数量
+     * Get 通道组中通道数量 
      * @return ProxyNum 通道组中通道数量
      */
     public Long getProxyNum() {
@@ -160,7 +160,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道组中通道数量
+     * Set 通道组中通道数量
      * @param ProxyNum 通道组中通道数量
      */
     public void setProxyNum(Long ProxyNum) {
@@ -168,11 +168,11 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道组状态：
+     * Get 通道组状态：
 0 正常运行
 1 创建中
 4 销毁中
-11 迁移中
+11 迁移中 
      * @return Status 通道组状态：
 0 正常运行
 1 创建中
@@ -184,7 +184,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道组状态：
+     * Set 通道组状态：
 0 正常运行
 1 创建中
 4 销毁中
@@ -200,7 +200,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取归属Uin
+     * Get 归属Uin 
      * @return OwnerUin 归属Uin
      */
     public String getOwnerUin() {
@@ -208,7 +208,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置归属Uin
+     * Set 归属Uin
      * @param OwnerUin 归属Uin
      */
     public void setOwnerUin(String OwnerUin) {
@@ -216,7 +216,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取创建Uin
+     * Get 创建Uin 
      * @return CreateUin 创建Uin
      */
     public String getCreateUin() {
@@ -224,7 +224,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建Uin
+     * Set 创建Uin
      * @param CreateUin 创建Uin
      */
     public void setCreateUin(String CreateUin) {
@@ -232,7 +232,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道名称
+     * Get 通道名称 
      * @return GroupName 通道名称
      */
     public String getGroupName() {
@@ -240,7 +240,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道名称
+     * Set 通道名称
      * @param GroupName 通道名称
      */
     public void setGroupName(String GroupName) {
@@ -248,7 +248,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道组域名解析默认IP
+     * Get 通道组域名解析默认IP 
      * @return DnsDefaultIp 通道组域名解析默认IP
      */
     public String getDnsDefaultIp() {
@@ -256,7 +256,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道组域名解析默认IP
+     * Set 通道组域名解析默认IP
      * @param DnsDefaultIp 通道组域名解析默认IP
      */
     public void setDnsDefaultIp(String DnsDefaultIp) {
@@ -264,8 +264,8 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道组域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通道组域名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -274,7 +274,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道组域名
+     * Set 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -284,7 +284,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取目标地域
+     * Get 目标地域 
      * @return RealServerRegionInfo 目标地域
      */
     public RegionDetail getRealServerRegionInfo() {
@@ -292,7 +292,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置目标地域
+     * Set 目标地域
      * @param RealServerRegionInfo 目标地域
      */
     public void setRealServerRegionInfo(RegionDetail RealServerRegionInfo) {
@@ -300,7 +300,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取是否老通道组，2018-08-03之前创建的通道组为老通道组
+     * Get 是否老通道组，2018-08-03之前创建的通道组为老通道组 
      * @return IsOldGroup 是否老通道组，2018-08-03之前创建的通道组为老通道组
      */
     public Boolean getIsOldGroup() {
@@ -308,7 +308,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置是否老通道组，2018-08-03之前创建的通道组为老通道组
+     * Set 是否老通道组，2018-08-03之前创建的通道组为老通道组
      * @param IsOldGroup 是否老通道组，2018-08-03之前创建的通道组为老通道组
      */
     public void setIsOldGroup(Boolean IsOldGroup) {
@@ -316,7 +316,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID
+     * Get 通道组ID 
      * @return GroupId 通道组ID
      */
     public String getGroupId() {
@@ -324,7 +324,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID
+     * Set 通道组ID
      * @param GroupId 通道组ID
      */
     public void setGroupId(String GroupId) {
@@ -332,8 +332,8 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagSet 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -342,7 +342,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表
+     * Set 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -352,7 +352,7 @@ public class ProxyGroupDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Function  extends AbstractModel{
+public class Function extends AbstractModel{
 
     /**
     * 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
@@ -58,7 +58,7 @@ public class Function  extends AbstractModel{
     private Boolean EnableVolume;
 
     /**
-     * 获取输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     * Get 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本 
      * @return EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
      */
     public Boolean getEnableAllText() {
@@ -66,7 +66,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
+     * Set 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
      * @param EnableAllText 输出全部文本标识，当该值设置为true时，会输出当前音频的全部文本
      */
     public void setEnableAllText(Boolean EnableAllText) {
@@ -74,7 +74,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
+     * Get 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。 
      * @return EnableKeyword 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
      */
     public Boolean getEnableKeyword() {
@@ -82,7 +82,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
+     * Set 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
      * @param EnableKeyword 输出关键词信息标识，当该值设置为true时，会输出当前音频的关键词信息。
      */
     public void setEnableKeyword(Boolean EnableKeyword) {
@@ -90,7 +90,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     * Get 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。 
      * @return EnableMuteDetect 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
      */
     public Boolean getEnableMuteDetect() {
@@ -98,7 +98,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
+     * Set 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
      * @param EnableMuteDetect 静音检测标识，当设置为 true 时，需要设置静音时间阈值字段mute_threshold，统计结果中会返回静音片段。
      */
     public void setEnableMuteDetect(Boolean EnableMuteDetect) {
@@ -106,7 +106,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
+     * Get 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat） 
      * @return EnableVadInfo 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      */
     public Boolean getEnableVadInfo() {
@@ -114,7 +114,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
+     * Set 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      * @param EnableVadInfo 输出音频统计信息标识，当设置为 true 时，任务查询结果会输出音频的统计信息（AsrStat）
      */
     public void setEnableVadInfo(Boolean EnableVadInfo) {
@@ -122,7 +122,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 获取输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
+     * Get 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。 
      * @return EnableVolume 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
      */
     public Boolean getEnableVolume() {
@@ -130,7 +130,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 设置输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
+     * Set 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
      * @param EnableVolume 输出音频音量信息标识，当设置为 true 时，会输出当前音频音量信息。
      */
     public void setEnableVolume(Boolean EnableVolume) {
@@ -138,7 +138,7 @@ public class Function  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableAllText", this.EnableAllText);

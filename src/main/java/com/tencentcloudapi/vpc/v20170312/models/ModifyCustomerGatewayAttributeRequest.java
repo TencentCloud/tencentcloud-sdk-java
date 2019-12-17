@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
+public class ModifyCustomerGatewayAttributeRequest extends AbstractModel{
 
     /**
     * 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
@@ -37,7 +37,7 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     private String CustomerGatewayName;
 
     /**
-     * 获取对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。 
      * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      */
     public String getCustomerGatewayId() {
@@ -45,7 +45,7 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
@@ -53,7 +53,7 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对端网关名称，可任意命名，但不得超过60个字符。
+     * Get 对端网关名称，可任意命名，但不得超过60个字符。 
      * @return CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
      */
     public String getCustomerGatewayName() {
@@ -61,7 +61,7 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端网关名称，可任意命名，但不得超过60个字符。
+     * Set 对端网关名称，可任意命名，但不得超过60个字符。
      * @param CustomerGatewayName 对端网关名称，可任意命名，但不得超过60个字符。
      */
     public void setCustomerGatewayName(String CustomerGatewayName) {
@@ -69,7 +69,7 @@ public class ModifyCustomerGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);

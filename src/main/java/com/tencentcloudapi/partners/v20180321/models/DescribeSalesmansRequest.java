@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSalesmansRequest  extends AbstractModel{
+public class DescribeSalesmansRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -58,7 +58,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -66,7 +66,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -74,7 +74,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -82,7 +82,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -90,7 +90,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务员姓名(模糊查询)
+     * Get 业务员姓名(模糊查询) 
      * @return SalesName 业务员姓名(模糊查询)
      */
     public String getSalesName() {
@@ -98,7 +98,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务员姓名(模糊查询)
+     * Set 业务员姓名(模糊查询)
      * @param SalesName 业务员姓名(模糊查询)
      */
     public void setSalesName(String SalesName) {
@@ -106,7 +106,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务员ID
+     * Get 业务员ID 
      * @return SalesUin 业务员ID
      */
     public String getSalesUin() {
@@ -114,7 +114,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务员ID
+     * Set 业务员ID
      * @param SalesUin 业务员ID
      */
     public void setSalesUin(String SalesUin) {
@@ -122,7 +122,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ASC/DESC， 不区分大小写，按创建通过时间排序
+     * Get ASC/DESC， 不区分大小写，按创建通过时间排序 
      * @return OrderDirection ASC/DESC， 不区分大小写，按创建通过时间排序
      */
     public String getOrderDirection() {
@@ -130,7 +130,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ASC/DESC， 不区分大小写，按创建通过时间排序
+     * Set ASC/DESC， 不区分大小写，按创建通过时间排序
      * @param OrderDirection ASC/DESC， 不区分大小写，按创建通过时间排序
      */
     public void setOrderDirection(String OrderDirection) {
@@ -138,7 +138,7 @@ public class DescribeSalesmansRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

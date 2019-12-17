@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListFunctionsRequest  extends AbstractModel{
+public class ListFunctionsRequest extends AbstractModel{
 
     /**
     * 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
@@ -82,7 +82,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * Get 以升序还是降序的方式返回结果，可选值 ASC 和 DESC 
      * @return Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
     public String getOrder() {
@@ -90,7 +90,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置以升序还是降序的方式返回结果，可选值 ASC 和 DESC
+     * Set 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      * @param Order 以升序还是降序的方式返回结果，可选值 ASC 和 DESC
      */
     public void setOrder(String Order) {
@@ -98,7 +98,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName 
      * @return Orderby 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
      */
     public String getOrderby() {
@@ -106,7 +106,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
      * @param Orderby 根据哪个字段进行返回结果排序,支持以下字段：AddTime, ModTime, FunctionName
      */
     public void setOrderby(String Orderby) {
@@ -114,7 +114,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据偏移量，默认值为 0
+     * Get 数据偏移量，默认值为 0 
      * @return Offset 数据偏移量，默认值为 0
      */
     public Integer getOffset() {
@@ -122,7 +122,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据偏移量，默认值为 0
+     * Set 数据偏移量，默认值为 0
      * @param Offset 数据偏移量，默认值为 0
      */
     public void setOffset(Integer Offset) {
@@ -130,7 +130,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数据长度，默认值为 20
+     * Get 返回数据长度，默认值为 20 
      * @return Limit 返回数据长度，默认值为 20
      */
     public Integer getLimit() {
@@ -138,7 +138,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数据长度，默认值为 20
+     * Set 返回数据长度，默认值为 20
      * @param Limit 返回数据长度，默认值为 20
      */
     public void setLimit(Integer Limit) {
@@ -146,7 +146,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持FunctionName模糊匹配
+     * Get 支持FunctionName模糊匹配 
      * @return SearchKey 支持FunctionName模糊匹配
      */
     public String getSearchKey() {
@@ -154,7 +154,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持FunctionName模糊匹配
+     * Set 支持FunctionName模糊匹配
      * @param SearchKey 支持FunctionName模糊匹配
      */
     public void setSearchKey(String SearchKey) {
@@ -162,7 +162,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间
+     * Get 命名空间 
      * @return Namespace 命名空间
      */
     public String getNamespace() {
@@ -170,7 +170,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间
+     * Set 命名空间
      * @param Namespace 命名空间
      */
     public void setNamespace(String Namespace) {
@@ -178,7 +178,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数描述，支持模糊搜索
+     * Get 函数描述，支持模糊搜索 
      * @return Description 函数描述，支持模糊搜索
      */
     public String getDescription() {
@@ -186,7 +186,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数描述，支持模糊搜索
+     * Set 函数描述，支持模糊搜索
      * @param Description 函数描述，支持模糊搜索
      */
     public void setDescription(String Description) {
@@ -194,10 +194,10 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为5。 
      * @return Filters 过滤条件。
 - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 
@@ -208,7 +208,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 - tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
@@ -222,7 +222,7 @@ public class ListFunctionsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Order", this.Order);

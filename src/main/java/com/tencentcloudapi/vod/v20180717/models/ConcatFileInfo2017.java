@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConcatFileInfo2017  extends AbstractModel{
+public class ConcatFileInfo2017 extends AbstractModel{
 
     /**
     * 错误码
@@ -65,10 +65,10 @@ public class ConcatFileInfo2017  extends AbstractModel{
     private String FileType;
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -79,7 +79,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,8 +93,8 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -103,7 +103,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -113,8 +113,8 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接源文件的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拼接源文件的 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 视频拼接源文件的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -123,7 +123,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接源文件的 ID。
+     * Set 视频拼接源文件的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 视频拼接源文件的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -133,8 +133,8 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接源文件的地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拼接源文件的地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileUrl 视频拼接源文件的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -143,7 +143,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接源文件的地址。
+     * Set 视频拼接源文件的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 视频拼接源文件的地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,8 +153,8 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接源文件的格式。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拼接源文件的格式。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileType 视频拼接源文件的格式。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -163,7 +163,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接源文件的格式。
+     * Set 视频拼接源文件的格式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 视频拼接源文件的格式。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -173,7 +173,7 @@ public class ConcatFileInfo2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncOption  extends AbstractModel{
+public class SyncOption extends AbstractModel{
 
     /**
     * 同步对象，1-整个实例，2-指定库表
@@ -51,7 +51,7 @@ public class SyncOption  extends AbstractModel{
     private Integer ConsistencyType;
 
     /**
-     * 获取同步对象，1-整个实例，2-指定库表
+     * Get 同步对象，1-整个实例，2-指定库表 
      * @return SyncObject 同步对象，1-整个实例，2-指定库表
      */
     public Integer getSyncObject() {
@@ -59,7 +59,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 设置同步对象，1-整个实例，2-指定库表
+     * Set 同步对象，1-整个实例，2-指定库表
      * @param SyncObject 同步对象，1-整个实例，2-指定库表
      */
     public void setSyncObject(Integer SyncObject) {
@@ -67,7 +67,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 获取同步开始设置，1-立即开始
+     * Get 同步开始设置，1-立即开始 
      * @return RunMode 同步开始设置，1-立即开始
      */
     public Integer getRunMode() {
@@ -75,7 +75,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 设置同步开始设置，1-立即开始
+     * Set 同步开始设置，1-立即开始
      * @param RunMode 同步开始设置，1-立即开始
      */
     public void setRunMode(Integer RunMode) {
@@ -83,7 +83,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 获取同步模式， 3-全量且增量同步
+     * Get 同步模式， 3-全量且增量同步 
      * @return SyncType 同步模式， 3-全量且增量同步
      */
     public Integer getSyncType() {
@@ -91,7 +91,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 设置同步模式， 3-全量且增量同步
+     * Set 同步模式， 3-全量且增量同步
      * @param SyncType 同步模式， 3-全量且增量同步
      */
     public void setSyncType(Integer SyncType) {
@@ -99,7 +99,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 获取数据一致性检测， 1-无需配置
+     * Get 数据一致性检测， 1-无需配置 
      * @return ConsistencyType 数据一致性检测， 1-无需配置
      */
     public Integer getConsistencyType() {
@@ -107,7 +107,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 设置数据一致性检测， 1-无需配置
+     * Set 数据一致性检测， 1-无需配置
      * @param ConsistencyType 数据一致性检测， 1-无需配置
      */
     public void setConsistencyType(Integer ConsistencyType) {
@@ -115,7 +115,7 @@ public class SyncOption  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SyncObject", this.SyncObject);

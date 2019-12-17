@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageTagsRequest  extends AbstractModel{
+public class DescribeImageTagsRequest extends AbstractModel{
 
     /**
     * 应用Id
@@ -51,7 +51,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     private Long QueryImageIdFlag;
 
     /**
-     * 获取应用Id
+     * Get 应用Id 
      * @return ApplicationId 应用Id
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用Id
+     * Set 应用Id
      * @param ApplicationId 应用Id
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取值从0开始
+     * Get 偏移量，取值从0开始 
      * @return Offset 偏移量，取值从0开始
      */
     public Long getOffset() {
@@ -75,7 +75,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取值从0开始
+     * Set 偏移量，取值从0开始
      * @param Offset 偏移量，取值从0开始
      */
     public void setOffset(Long Offset) {
@@ -83,7 +83,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数，默认为20， 取值应为1~100
+     * Get 分页个数，默认为20， 取值应为1~100 
      * @return Limit 分页个数，默认为20， 取值应为1~100
      */
     public Long getLimit() {
@@ -91,7 +91,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数，默认为20， 取值应为1~100
+     * Set 分页个数，默认为20， 取值应为1~100
      * @param Limit 分页个数，默认为20， 取值应为1~100
      */
     public void setLimit(Long Limit) {
@@ -99,7 +99,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取不填和0:查询 1:不查询
+     * Get 不填和0:查询 1:不查询 
      * @return QueryImageIdFlag 不填和0:查询 1:不查询
      */
     public Long getQueryImageIdFlag() {
@@ -107,7 +107,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置不填和0:查询 1:不查询
+     * Set 不填和0:查询 1:不查询
      * @param QueryImageIdFlag 不填和0:查询 1:不查询
      */
     public void setQueryImageIdFlag(Long QueryImageIdFlag) {
@@ -115,7 +115,7 @@ public class DescribeImageTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

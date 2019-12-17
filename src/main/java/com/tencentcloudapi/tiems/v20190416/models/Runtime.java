@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Runtime  extends AbstractModel{
+public class Runtime extends AbstractModel{
 
     /**
     * 运行环境名称
@@ -76,7 +76,7 @@ public class Runtime  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取运行环境名称
+     * Get 运行环境名称 
      * @return Name 运行环境名称
      */
     public String getName() {
@@ -84,7 +84,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境名称
+     * Set 运行环境名称
      * @param Name 运行环境名称
      */
     public void setName(String Name) {
@@ -92,7 +92,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境框架
+     * Get 运行环境框架 
      * @return Framework 运行环境框架
      */
     public String getFramework() {
@@ -100,7 +100,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境框架
+     * Set 运行环境框架
      * @param Framework 运行环境框架
      */
     public void setFramework(String Framework) {
@@ -108,7 +108,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境描述
+     * Get 运行环境描述 
      * @return Description 运行环境描述
      */
     public String getDescription() {
@@ -116,7 +116,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境描述
+     * Set 运行环境描述
      * @param Description 运行环境描述
      */
     public void setDescription(String Description) {
@@ -124,8 +124,8 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取是否为公开运行环境
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否为公开运行环境
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Public 是否为公开运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -134,7 +134,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置是否为公开运行环境
+     * Set 是否为公开运行环境
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Public 是否为公开运行环境
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,8 +144,8 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取是否打开健康检查
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否打开健康检查
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthCheckOn 是否打开健康检查
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -154,7 +154,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置是否打开健康检查
+     * Set 是否打开健康检查
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckOn 是否打开健康检查
 注意：此字段可能返回 null，表示取不到有效值。
@@ -164,8 +164,8 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 镜像地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Image 镜像地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -174,7 +174,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置镜像地址
+     * Set 镜像地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Image 镜像地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,8 +184,8 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -194,7 +194,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ public class Runtime  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

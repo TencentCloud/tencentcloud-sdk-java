@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContentApprovalResponse  extends AbstractModel{
+public class ContentApprovalResponse extends AbstractModel{
 
     /**
     * 文本是否恶意：
@@ -63,10 +63,10 @@ public class ContentApprovalResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取文本是否恶意：
+     * Get 文本是否恶意：
 0、正常；
 1、恶意；
-2、可疑送审
+2、可疑送审 
      * @return EvilFlag 文本是否恶意：
 0、正常；
 1、恶意；
@@ -77,7 +77,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文本是否恶意：
+     * Set 文本是否恶意：
 0、正常；
 1、恶意；
 2、可疑送审
@@ -91,7 +91,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 获取恶意关键词组
+     * Get 恶意关键词组 
      * @return EvilKeywords 恶意关键词组
      */
     public String [] getEvilKeywords() {
@@ -99,7 +99,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 设置恶意关键词组
+     * Set 恶意关键词组
      * @param EvilKeywords 恶意关键词组
      */
     public void setEvilKeywords(String [] EvilKeywords) {
@@ -107,7 +107,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文本恶意类型：
+     * Get 文本恶意类型：
 0、正常；
 1、政治；
 2、色情；
@@ -116,7 +116,7 @@ public class ContentApprovalResponse  extends AbstractModel{
 5、广告/灌水；
 6、迷信/邪教；
 7、其他违法（如跨站追杀/恶意竞争等）；
-8、综合
+8、综合 
      * @return EvilType 文本恶意类型：
 0、正常；
 1、政治；
@@ -133,7 +133,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文本恶意类型：
+     * Set 文本恶意类型：
 0、正常；
 1、政治；
 2、色情；
@@ -159,7 +159,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -167,7 +167,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -175,7 +175,7 @@ public class ContentApprovalResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);

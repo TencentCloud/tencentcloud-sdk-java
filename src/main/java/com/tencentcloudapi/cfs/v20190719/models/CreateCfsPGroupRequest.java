@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsPGroupRequest  extends AbstractModel{
+public class CreateCfsPGroupRequest extends AbstractModel{
 
     /**
     * 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
@@ -37,7 +37,7 @@ public class CreateCfsPGroupRequest  extends AbstractModel{
     private String DescInfo;
 
     /**
-     * 获取权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
+     * Get 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线 
      * @return Name 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class CreateCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
+     * Set 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
      * @param Name 权限组名称，1-64个字符且只能为中文，字母，数字，下划线或横线
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class CreateCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组描述信息，1-255个字符
+     * Get 权限组描述信息，1-255个字符 
      * @return DescInfo 权限组描述信息，1-255个字符
      */
     public String getDescInfo() {
@@ -61,7 +61,7 @@ public class CreateCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组描述信息，1-255个字符
+     * Set 权限组描述信息，1-255个字符
      * @param DescInfo 权限组描述信息，1-255个字符
      */
     public void setDescInfo(String DescInfo) {
@@ -69,7 +69,7 @@ public class CreateCfsPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

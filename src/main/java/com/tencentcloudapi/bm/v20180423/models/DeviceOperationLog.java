@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceOperationLog  extends AbstractModel{
+public class DeviceOperationLog extends AbstractModel{
 
     /**
     * 日志的ID
@@ -93,7 +93,7 @@ public class DeviceOperationLog  extends AbstractModel{
     private String LogDescription;
 
     /**
-     * 获取日志的ID
+     * Get 日志的ID 
      * @return Id 日志的ID
      */
     public Integer getId() {
@@ -101,7 +101,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志的ID
+     * Set 日志的ID
      * @param Id 日志的ID
      */
     public void setId(Integer Id) {
@@ -109,7 +109,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取设备ID
+     * Get 设备ID 
      * @return InstanceId 设备ID
      */
     public String getInstanceId() {
@@ -117,7 +117,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置设备ID
+     * Set 设备ID
      * @param InstanceId 设备ID
      */
     public void setInstanceId(String InstanceId) {
@@ -125,7 +125,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志对应的操作任务ID
+     * Get 日志对应的操作任务ID 
      * @return TaskId 日志对应的操作任务ID
      */
     public Integer getTaskId() {
@@ -133,7 +133,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志对应的操作任务ID
+     * Set 日志对应的操作任务ID
      * @param TaskId 日志对应的操作任务ID
      */
     public void setTaskId(Integer TaskId) {
@@ -141,7 +141,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作任务名称
+     * Get 操作任务名称 
      * @return TaskName 操作任务名称
      */
     public String getTaskName() {
@@ -149,7 +149,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作任务名称
+     * Set 操作任务名称
      * @param TaskName 操作任务名称
      */
     public void setTaskName(String TaskName) {
@@ -157,7 +157,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作任务中文名称
+     * Get 操作任务中文名称 
      * @return TaskDescription 操作任务中文名称
      */
     public String getTaskDescription() {
@@ -165,7 +165,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作任务中文名称
+     * Set 操作任务中文名称
      * @param TaskDescription 操作任务中文名称
      */
     public void setTaskDescription(String TaskDescription) {
@@ -173,7 +173,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作开始时间
+     * Get 操作开始时间 
      * @return StartTime 操作开始时间
      */
     public String getStartTime() {
@@ -181,7 +181,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作开始时间
+     * Set 操作开始时间
      * @param StartTime 操作开始时间
      */
     public void setStartTime(String StartTime) {
@@ -189,7 +189,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作结束时间
+     * Get 操作结束时间 
      * @return EndTime 操作结束时间
      */
     public String getEndTime() {
@@ -197,7 +197,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作结束时间
+     * Set 操作结束时间
      * @param EndTime 操作结束时间
      */
     public void setEndTime(String EndTime) {
@@ -205,7 +205,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
+     * Get 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。 
      * @return Status 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      */
     public Integer getStatus() {
@@ -213,7 +213,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
+     * Set 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      * @param Status 操作状态，0: 正在执行中；1：任务成功； 2: 任务失败。
      */
     public void setStatus(Integer Status) {
@@ -221,7 +221,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作者
+     * Get 操作者 
      * @return OpUin 操作者
      */
     public String getOpUin() {
@@ -229,7 +229,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作者
+     * Set 操作者
      * @param OpUin 操作者
      */
     public void setOpUin(String OpUin) {
@@ -237,7 +237,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作描述
+     * Get 操作描述 
      * @return LogDescription 操作描述
      */
     public String getLogDescription() {
@@ -245,7 +245,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作描述
+     * Set 操作描述
      * @param LogDescription 操作描述
      */
     public void setLogDescription(String LogDescription) {
@@ -253,7 +253,7 @@ public class DeviceOperationLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

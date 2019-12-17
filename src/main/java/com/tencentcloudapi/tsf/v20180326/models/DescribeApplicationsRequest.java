@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeApplicationsRequest  extends AbstractModel{
+public class DescribeApplicationsRequest extends AbstractModel{
 
     /**
     * 搜索字段
@@ -79,7 +79,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     private String [] ApplicationResourceTypeList;
 
     /**
-     * 获取搜索字段
+     * Get 搜索字段 
      * @return SearchWord 搜索字段
      */
     public String getSearchWord() {
@@ -87,7 +87,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索字段
+     * Set 搜索字段
      * @param SearchWord 搜索字段
      */
     public void setSearchWord(String SearchWord) {
@@ -95,7 +95,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段
+     * Get 排序字段 
      * @return OrderBy 排序字段
      */
     public String getOrderBy() {
@@ -103,7 +103,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段
+     * Set 排序字段
      * @param OrderBy 排序字段
      */
     public void setOrderBy(String OrderBy) {
@@ -111,7 +111,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型
+     * Get 排序类型 
      * @return OrderType 排序类型
      */
     public Long getOrderType() {
@@ -119,7 +119,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型
+     * Set 排序类型
      * @param OrderType 排序类型
      */
     public void setOrderType(Long OrderType) {
@@ -127,7 +127,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -135,7 +135,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -143,7 +143,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数
+     * Get 分页个数 
      * @return Limit 分页个数
      */
     public Long getLimit() {
@@ -151,7 +151,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数
+     * Set 分页个数
      * @param Limit 分页个数
      */
     public void setLimit(Long Limit) {
@@ -159,7 +159,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
+     * Get 应用类型 
      * @return ApplicationType 应用类型
      */
     public String getApplicationType() {
@@ -167,7 +167,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
      * @param ApplicationType 应用类型
      */
     public void setApplicationType(String ApplicationType) {
@@ -175,7 +175,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用的微服务类型
+     * Get 应用的微服务类型 
      * @return MicroserviceType 应用的微服务类型
      */
     public String getMicroserviceType() {
@@ -183,7 +183,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用的微服务类型
+     * Set 应用的微服务类型
      * @param MicroserviceType 应用的微服务类型
      */
     public void setMicroserviceType(String MicroserviceType) {
@@ -191,7 +191,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用资源类型数组
+     * Get 应用资源类型数组 
      * @return ApplicationResourceTypeList 应用资源类型数组
      */
     public String [] getApplicationResourceTypeList() {
@@ -199,7 +199,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用资源类型数组
+     * Set 应用资源类型数组
      * @param ApplicationResourceTypeList 应用资源类型数组
      */
     public void setApplicationResourceTypeList(String [] ApplicationResourceTypeList) {
@@ -207,7 +207,7 @@ public class DescribeApplicationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);

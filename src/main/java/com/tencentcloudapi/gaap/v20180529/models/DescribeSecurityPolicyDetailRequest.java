@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityPolicyDetailRequest  extends AbstractModel{
+public class DescribeSecurityPolicyDetailRequest extends AbstractModel{
 
     /**
     * 安全策略ID
@@ -30,7 +30,7 @@ public class DescribeSecurityPolicyDetailRequest  extends AbstractModel{
     private String PolicyId;
 
     /**
-     * 获取安全策略ID
+     * Get 安全策略ID 
      * @return PolicyId 安全策略ID
      */
     public String getPolicyId() {
@@ -38,7 +38,7 @@ public class DescribeSecurityPolicyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全策略ID
+     * Set 安全策略ID
      * @param PolicyId 安全策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -46,7 +46,7 @@ public class DescribeSecurityPolicyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

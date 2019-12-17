@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportRecord  extends AbstractModel{
+public class ImportRecord extends AbstractModel{
 
     /**
     * 状态值
@@ -114,7 +114,7 @@ public class ImportRecord  extends AbstractModel{
     private String AsyncRequestId;
 
     /**
-     * 获取状态值
+     * Get 状态值 
      * @return Status 状态值
      */
     public Integer getStatus() {
@@ -122,7 +122,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置状态值
+     * Set 状态值
      * @param Status 状态值
      */
     public void setStatus(Integer Status) {
@@ -130,7 +130,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取状态值
+     * Get 状态值 
      * @return Code 状态值
      */
     public Integer getCode() {
@@ -138,7 +138,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置状态值
+     * Set 状态值
      * @param Code 状态值
      */
     public void setCode(Integer Code) {
@@ -146,7 +146,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取执行时间
+     * Get 执行时间 
      * @return CostTime 执行时间
      */
     public Integer getCostTime() {
@@ -154,7 +154,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置执行时间
+     * Set 执行时间
      * @param CostTime 执行时间
      */
     public void setCostTime(Integer CostTime) {
@@ -162,7 +162,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -170,7 +170,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -178,7 +178,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取后端任务ID
+     * Get 后端任务ID 
      * @return WorkId 后端任务ID
      */
     public String getWorkId() {
@@ -186,7 +186,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置后端任务ID
+     * Set 后端任务ID
      * @param WorkId 后端任务ID
      */
     public void setWorkId(String WorkId) {
@@ -194,7 +194,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取导入文件名
+     * Get 导入文件名 
      * @return FileName 导入文件名
      */
     public String getFileName() {
@@ -202,7 +202,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置导入文件名
+     * Set 导入文件名
      * @param FileName 导入文件名
      */
     public void setFileName(String FileName) {
@@ -210,7 +210,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取执行进度
+     * Get 执行进度 
      * @return Process 执行进度
      */
     public Integer getProcess() {
@@ -218,7 +218,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置执行进度
+     * Set 执行进度
      * @param Process 执行进度
      */
     public void setProcess(Integer Process) {
@@ -226,7 +226,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间
+     * Get 任务创建时间 
      * @return CreateTime 任务创建时间
      */
     public String getCreateTime() {
@@ -234,7 +234,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间
+     * Set 任务创建时间
      * @param CreateTime 任务创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -242,7 +242,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小
+     * Get 文件大小 
      * @return FileSize 文件大小
      */
     public String getFileSize() {
@@ -250,7 +250,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小
+     * Set 文件大小
      * @param FileSize 文件大小
      */
     public void setFileSize(String FileSize) {
@@ -258,7 +258,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取任务执行信息
+     * Get 任务执行信息 
      * @return Message 任务执行信息
      */
     public String getMessage() {
@@ -266,7 +266,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置任务执行信息
+     * Set 任务执行信息
      * @param Message 任务执行信息
      */
     public void setMessage(String Message) {
@@ -274,7 +274,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return JobId 任务ID
      */
     public Integer getJobId() {
@@ -282,7 +282,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param JobId 任务ID
      */
     public void setJobId(Integer JobId) {
@@ -290,7 +290,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取导入库表名
+     * Get 导入库表名 
      * @return DbName 导入库表名
      */
     public String getDbName() {
@@ -298,7 +298,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置导入库表名
+     * Set 导入库表名
      * @param DbName 导入库表名
      */
     public void setDbName(String DbName) {
@@ -306,7 +306,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 获取异步任务的请求ID
+     * Get 异步任务的请求ID 
      * @return AsyncRequestId 异步任务的请求ID
      */
     public String getAsyncRequestId() {
@@ -314,7 +314,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务的请求ID
+     * Set 异步任务的请求ID
      * @param AsyncRequestId 异步任务的请求ID
      */
     public void setAsyncRequestId(String AsyncRequestId) {
@@ -322,7 +322,7 @@ public class ImportRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

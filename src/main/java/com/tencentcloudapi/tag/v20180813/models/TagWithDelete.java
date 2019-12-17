@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagWithDelete  extends AbstractModel{
+public class TagWithDelete extends AbstractModel{
 
     /**
     * 标签键
@@ -44,7 +44,7 @@ public class TagWithDelete  extends AbstractModel{
     private Long CanDelete;
 
     /**
-     * 获取标签键
+     * Get 标签键 
      * @return TagKey 标签键
      */
     public String getTagKey() {
@@ -52,7 +52,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 设置标签键
+     * Set 标签键
      * @param TagKey 标签键
      */
     public void setTagKey(String TagKey) {
@@ -60,7 +60,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 获取标签值
+     * Get 标签值 
      * @return TagValue 标签值
      */
     public String getTagValue() {
@@ -68,7 +68,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
      * @param TagValue 标签值
      */
     public void setTagValue(String TagValue) {
@@ -76,7 +76,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 获取是否可以删除
+     * Get 是否可以删除 
      * @return CanDelete 是否可以删除
      */
     public Long getCanDelete() {
@@ -84,7 +84,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 设置是否可以删除
+     * Set 是否可以删除
      * @param CanDelete 是否可以删除
      */
     public void setCanDelete(Long CanDelete) {
@@ -92,7 +92,7 @@ public class TagWithDelete  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

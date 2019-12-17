@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
+public class DescribeLiveStreamOnlineListResponse extends AbstractModel{
 
     /**
     * 符合条件的总个数。
@@ -65,7 +65,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取符合条件的总个数。
+     * Get 符合条件的总个数。 
      * @return TotalNum 符合条件的总个数。
      */
     public Integer getTotalNum() {
@@ -73,7 +73,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的总个数。
+     * Set 符合条件的总个数。
      * @param TotalNum 符合条件的总个数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -81,7 +81,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总页数。
+     * Get 总页数。 
      * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
@@ -89,7 +89,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总页数。
+     * Set 总页数。
      * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -97,7 +97,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分页的页码。
+     * Get 分页的页码。 
      * @return PageNum 分页的页码。
      */
     public Integer getPageNum() {
@@ -105,7 +105,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分页的页码。
+     * Set 分页的页码。
      * @param PageNum 分页的页码。
      */
     public void setPageNum(Integer PageNum) {
@@ -113,7 +113,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页显示的条数。
+     * Get 每页显示的条数。 
      * @return PageSize 每页显示的条数。
      */
     public Integer getPageSize() {
@@ -121,7 +121,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页显示的条数。
+     * Set 每页显示的条数。
      * @param PageSize 每页显示的条数。
      */
     public void setPageSize(Integer PageSize) {
@@ -129,7 +129,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取正在推送流的信息列表。
+     * Get 正在推送流的信息列表。 
      * @return OnlineInfo 正在推送流的信息列表。
      */
     public StreamOnlineInfo [] getOnlineInfo() {
@@ -137,7 +137,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置正在推送流的信息列表。
+     * Set 正在推送流的信息列表。
      * @param OnlineInfo 正在推送流的信息列表。
      */
     public void setOnlineInfo(StreamOnlineInfo [] OnlineInfo) {
@@ -145,7 +145,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeLiveStreamOnlineListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);

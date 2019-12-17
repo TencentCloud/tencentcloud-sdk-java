@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEnvRequest  extends AbstractModel{
+public class ModifyEnvRequest extends AbstractModel{
 
     /**
     * 环境ID
@@ -37,7 +37,7 @@ public class ModifyEnvRequest  extends AbstractModel{
     private String Alias;
 
     /**
-     * 获取环境ID
+     * Get 环境ID 
      * @return EnvId 环境ID
      */
     public String getEnvId() {
@@ -45,7 +45,7 @@ public class ModifyEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置环境ID
+     * Set 环境ID
      * @param EnvId 环境ID
      */
     public void setEnvId(String EnvId) {
@@ -53,7 +53,7 @@ public class ModifyEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Get 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
      * @return Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public String getAlias() {
@@ -61,7 +61,7 @@ public class ModifyEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Set 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      * @param Alias 环境备注名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
      */
     public void setAlias(String Alias) {
@@ -69,7 +69,7 @@ public class ModifyEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

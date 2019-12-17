@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordRsp  extends AbstractModel{
+public class WordRsp extends AbstractModel{
 
     /**
     * 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
@@ -79,7 +79,7 @@ public class WordRsp  extends AbstractModel{
     private String ReferenceWord;
 
     /**
-     * 获取当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+     * Get 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
     public Integer getMemBeginTime() {
@@ -87,7 +87,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
+     * Set 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      * @param MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
     public void setMemBeginTime(Integer MemBeginTime) {
@@ -95,7 +95,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
+     * Get 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
     public Integer getMemEndTime() {
@@ -103,7 +103,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
+     * Set 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      * @param MemEndTime 当前单词语音终止时间点，单位为ms，该字段段落模式下无意义。
      */
     public void setMemEndTime(Integer MemEndTime) {
@@ -111,7 +111,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+     * Get 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配 
      * @return PronAccuracy 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      */
     public Float getPronAccuracy() {
@@ -119,7 +119,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+     * Set 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      * @param PronAccuracy 单词发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -127,7 +127,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取单词发音流利度，取值范围[0, 1]
+     * Get 单词发音流利度，取值范围[0, 1] 
      * @return PronFluency 单词发音流利度，取值范围[0, 1]
      */
     public Float getPronFluency() {
@@ -135,7 +135,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置单词发音流利度，取值范围[0, 1]
+     * Set 单词发音流利度，取值范围[0, 1]
      * @param PronFluency 单词发音流利度，取值范围[0, 1]
      */
     public void setPronFluency(Float PronFluency) {
@@ -143,7 +143,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取当前词
+     * Get 当前词 
      * @return Word 当前词
      */
     public String getWord() {
@@ -151,7 +151,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置当前词
+     * Set 当前词
      * @param Word 当前词
      */
     public void setWord(String Word) {
@@ -159,7 +159,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * Get 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。 
      * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public Integer getMatchTag() {
@@ -167,7 +167,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * Set 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public void setMatchTag(Integer MatchTag) {
@@ -175,7 +175,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取音节评估详情
+     * Get 音节评估详情 
      * @return PhoneInfos 音节评估详情
      */
     public PhoneInfo [] getPhoneInfos() {
@@ -183,7 +183,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置音节评估详情
+     * Set 音节评估详情
      * @param PhoneInfos 音节评估详情
      */
     public void setPhoneInfos(PhoneInfo [] PhoneInfos) {
@@ -191,7 +191,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 获取参考词，目前为保留字段。
+     * Get 参考词，目前为保留字段。 
      * @return ReferenceWord 参考词，目前为保留字段。
      */
     public String getReferenceWord() {
@@ -199,7 +199,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 设置参考词，目前为保留字段。
+     * Set 参考词，目前为保留字段。
      * @param ReferenceWord 参考词，目前为保留字段。
      */
     public void setReferenceWord(String ReferenceWord) {
@@ -207,7 +207,7 @@ public class WordRsp  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MemBeginTime", this.MemBeginTime);

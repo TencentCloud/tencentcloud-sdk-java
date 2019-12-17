@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NewResourceSpec  extends AbstractModel{
+public class NewResourceSpec extends AbstractModel{
 
     /**
     * 描述Master节点资源
@@ -79,7 +79,7 @@ public class NewResourceSpec  extends AbstractModel{
     private Integer CommonCount;
 
     /**
-     * 获取描述Master节点资源
+     * Get 描述Master节点资源 
      * @return MasterResourceSpec 描述Master节点资源
      */
     public Resource getMasterResourceSpec() {
@@ -87,7 +87,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置描述Master节点资源
+     * Set 描述Master节点资源
      * @param MasterResourceSpec 描述Master节点资源
      */
     public void setMasterResourceSpec(Resource MasterResourceSpec) {
@@ -95,7 +95,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取描述Core节点资源
+     * Get 描述Core节点资源 
      * @return CoreResourceSpec 描述Core节点资源
      */
     public Resource getCoreResourceSpec() {
@@ -103,7 +103,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置描述Core节点资源
+     * Set 描述Core节点资源
      * @param CoreResourceSpec 描述Core节点资源
      */
     public void setCoreResourceSpec(Resource CoreResourceSpec) {
@@ -111,7 +111,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取描述Task节点资源
+     * Get 描述Task节点资源 
      * @return TaskResourceSpec 描述Task节点资源
      */
     public Resource getTaskResourceSpec() {
@@ -119,7 +119,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置描述Task节点资源
+     * Set 描述Task节点资源
      * @param TaskResourceSpec 描述Task节点资源
      */
     public void setTaskResourceSpec(Resource TaskResourceSpec) {
@@ -127,7 +127,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取Master节点数量
+     * Get Master节点数量 
      * @return MasterCount Master节点数量
      */
     public Integer getMasterCount() {
@@ -135,7 +135,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置Master节点数量
+     * Set Master节点数量
      * @param MasterCount Master节点数量
      */
     public void setMasterCount(Integer MasterCount) {
@@ -143,7 +143,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取Core节点数量
+     * Get Core节点数量 
      * @return CoreCount Core节点数量
      */
     public Integer getCoreCount() {
@@ -151,7 +151,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置Core节点数量
+     * Set Core节点数量
      * @param CoreCount Core节点数量
      */
     public void setCoreCount(Integer CoreCount) {
@@ -159,7 +159,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取Task节点数量
+     * Get Task节点数量 
      * @return TaskCount Task节点数量
      */
     public Integer getTaskCount() {
@@ -167,7 +167,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置Task节点数量
+     * Set Task节点数量
      * @param TaskCount Task节点数量
      */
     public void setTaskCount(Integer TaskCount) {
@@ -175,7 +175,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取描述Common节点资源
+     * Get 描述Common节点资源 
      * @return CommonResourceSpec 描述Common节点资源
      */
     public Resource getCommonResourceSpec() {
@@ -183,7 +183,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置描述Common节点资源
+     * Set 描述Common节点资源
      * @param CommonResourceSpec 描述Common节点资源
      */
     public void setCommonResourceSpec(Resource CommonResourceSpec) {
@@ -191,7 +191,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 获取Common节点数量
+     * Get Common节点数量 
      * @return CommonCount Common节点数量
      */
     public Integer getCommonCount() {
@@ -199,7 +199,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 设置Common节点数量
+     * Set Common节点数量
      * @param CommonCount Common节点数量
      */
     public void setCommonCount(Integer CommonCount) {
@@ -207,7 +207,7 @@ public class NewResourceSpec  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "MasterResourceSpec.", this.MasterResourceSpec);

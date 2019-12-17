@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WaterPrintPolicy  extends AbstractModel{
+public class WaterPrintPolicy extends AbstractModel{
 
     /**
     * TCP端口段，例如["2000-3000","3500-4000"]
@@ -58,7 +58,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     private Long OpenStatus;
 
     /**
-     * 获取TCP端口段，例如["2000-3000","3500-4000"]
+     * Get TCP端口段，例如["2000-3000","3500-4000"] 
      * @return TcpPortList TCP端口段，例如["2000-3000","3500-4000"]
      */
     public String [] getTcpPortList() {
@@ -66,7 +66,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置TCP端口段，例如["2000-3000","3500-4000"]
+     * Set TCP端口段，例如["2000-3000","3500-4000"]
      * @param TcpPortList TCP端口段，例如["2000-3000","3500-4000"]
      */
     public void setTcpPortList(String [] TcpPortList) {
@@ -74,7 +74,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取UDP端口段，例如["2000-3000","3500-4000"]
+     * Get UDP端口段，例如["2000-3000","3500-4000"] 
      * @return UdpPortList UDP端口段，例如["2000-3000","3500-4000"]
      */
     public String [] getUdpPortList() {
@@ -82,7 +82,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置UDP端口段，例如["2000-3000","3500-4000"]
+     * Set UDP端口段，例如["2000-3000","3500-4000"]
      * @param UdpPortList UDP端口段，例如["2000-3000","3500-4000"]
      */
     public void setUdpPortList(String [] UdpPortList) {
@@ -90,7 +90,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取水印偏移量，取值范围[0, 100)
+     * Get 水印偏移量，取值范围[0, 100) 
      * @return Offset 水印偏移量，取值范围[0, 100)
      */
     public Long getOffset() {
@@ -98,7 +98,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置水印偏移量，取值范围[0, 100)
+     * Set 水印偏移量，取值范围[0, 100)
      * @param Offset 水印偏移量，取值范围[0, 100)
      */
     public void setOffset(Long Offset) {
@@ -106,7 +106,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
+     * Get 是否自动剥离，取值[0（不自动剥离），1（自动剥离）] 
      * @return RemoveSwitch 是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
      */
     public Long getRemoveSwitch() {
@@ -114,7 +114,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
+     * Set 是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
      * @param RemoveSwitch 是否自动剥离，取值[0（不自动剥离），1（自动剥离）]
      */
     public void setRemoveSwitch(Long RemoveSwitch) {
@@ -122,7 +122,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启，取值[0（没有开启），1（已开启）]
+     * Get 是否开启，取值[0（没有开启），1（已开启）] 
      * @return OpenStatus 是否开启，取值[0（没有开启），1（已开启）]
      */
     public Long getOpenStatus() {
@@ -130,7 +130,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启，取值[0（没有开启），1（已开启）]
+     * Set 是否开启，取值[0（没有开启），1（已开启）]
      * @param OpenStatus 是否开启，取值[0（没有开启），1（已开启）]
      */
     public void setOpenStatus(Long OpenStatus) {
@@ -138,7 +138,7 @@ public class WaterPrintPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TcpPortList.", this.TcpPortList);

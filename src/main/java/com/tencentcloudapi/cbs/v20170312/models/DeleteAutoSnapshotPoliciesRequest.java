@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAutoSnapshotPoliciesRequest  extends AbstractModel{
+public class DeleteAutoSnapshotPoliciesRequest extends AbstractModel{
 
     /**
     * 要删除的定期快照策略ID列表。
@@ -30,7 +30,7 @@ public class DeleteAutoSnapshotPoliciesRequest  extends AbstractModel{
     private String [] AutoSnapshotPolicyIds;
 
     /**
-     * 获取要删除的定期快照策略ID列表。
+     * Get 要删除的定期快照策略ID列表。 
      * @return AutoSnapshotPolicyIds 要删除的定期快照策略ID列表。
      */
     public String [] getAutoSnapshotPolicyIds() {
@@ -38,7 +38,7 @@ public class DeleteAutoSnapshotPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的定期快照策略ID列表。
+     * Set 要删除的定期快照策略ID列表。
      * @param AutoSnapshotPolicyIds 要删除的定期快照策略ID列表。
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
@@ -46,7 +46,7 @@ public class DeleteAutoSnapshotPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AutoSnapshotPolicyIds.", this.AutoSnapshotPolicyIds);

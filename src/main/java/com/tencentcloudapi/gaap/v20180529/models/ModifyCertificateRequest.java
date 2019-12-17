@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCertificateRequest  extends AbstractModel{
+public class ModifyCertificateRequest extends AbstractModel{
 
     /**
     * 监听器实例ID
@@ -62,7 +62,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
-     * 获取监听器实例ID
+     * Get 监听器实例ID 
      * @return ListenerId 监听器实例ID
      */
     public String getListenerId() {
@@ -70,7 +70,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器实例ID
+     * Set 监听器实例ID
      * @param ListenerId 监听器实例ID
      */
     public void setListenerId(String ListenerId) {
@@ -78,7 +78,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改证书的域名
+     * Get 需要修改证书的域名 
      * @return Domain 需要修改证书的域名
      */
     public String getDomain() {
@@ -86,7 +86,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改证书的域名
+     * Set 需要修改证书的域名
      * @param Domain 需要修改证书的域名
      */
     public void setDomain(String Domain) {
@@ -94,8 +94,8 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的服务器证书ID。其中：
-当CertificateId=default时，表示使用监听器的证书。
+     * Get 新的服务器证书ID。其中：
+当CertificateId=default时，表示使用监听器的证书。 
      * @return CertificateId 新的服务器证书ID。其中：
 当CertificateId=default时，表示使用监听器的证书。
      */
@@ -104,7 +104,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的服务器证书ID。其中：
+     * Set 新的服务器证书ID。其中：
 当CertificateId=default时，表示使用监听器的证书。
      * @param CertificateId 新的服务器证书ID。其中：
 当CertificateId=default时，表示使用监听器的证书。
@@ -114,9 +114,9 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的客户端证书ID。其中：
+     * Get 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
-仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
+仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。 
      * @return ClientCertificateId 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
 仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
@@ -126,7 +126,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的客户端证书ID。其中：
+     * Set 新的客户端证书ID。其中：
 当ClientCertificateId=default时，表示使用监听器的证书。
 仅当采用双向认证方式时，需要设置该参数或者PolyClientCertificateIds。
      * @param ClientCertificateId 新的客户端证书ID。其中：
@@ -138,8 +138,8 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的多客户端证书ID列表。其中：
-仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
+     * Get 新的多客户端证书ID列表。其中：
+仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。 
      * @return PolyClientCertificateIds 新的多客户端证书ID列表。其中：
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
      */
@@ -148,7 +148,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的多客户端证书ID列表。其中：
+     * Set 新的多客户端证书ID列表。其中：
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
      * @param PolyClientCertificateIds 新的多客户端证书ID列表。其中：
 仅当采用双向认证方式时，需要设置该参数或ClientCertificateId参数。
@@ -158,7 +158,7 @@ public class ModifyCertificateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

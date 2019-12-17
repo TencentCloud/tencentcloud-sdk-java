@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgePathCacheRequest  extends AbstractModel{
+public class PurgePathCacheRequest extends AbstractModel{
 
     /**
     * 目录列表，需要包含协议头部 http:// 或 https://
@@ -39,7 +39,7 @@ delete：刷新全部资源
     private String FlushType;
 
     /**
-     * 获取目录列表，需要包含协议头部 http:// 或 https://
+     * Get 目录列表，需要包含协议头部 http:// 或 https:// 
      * @return Paths 目录列表，需要包含协议头部 http:// 或 https://
      */
     public String [] getPaths() {
@@ -47,7 +47,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置目录列表，需要包含协议头部 http:// 或 https://
+     * Set 目录列表，需要包含协议头部 http:// 或 https://
      * @param Paths 目录列表，需要包含协议头部 http:// 或 https://
      */
     public void setPaths(String [] Paths) {
@@ -55,9 +55,9 @@ delete：刷新全部资源
     }
 
     /**
-     * 获取刷新类型
+     * Get 刷新类型
 flush：刷新产生更新的资源
-delete：刷新全部资源
+delete：刷新全部资源 
      * @return FlushType 刷新类型
 flush：刷新产生更新的资源
 delete：刷新全部资源
@@ -67,7 +67,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 设置刷新类型
+     * Set 刷新类型
 flush：刷新产生更新的资源
 delete：刷新全部资源
      * @param FlushType 刷新类型
@@ -79,7 +79,7 @@ delete：刷新全部资源
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Paths.", this.Paths);

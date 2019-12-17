@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlaybackPolicy  extends AbstractModel{
+public class PlaybackPolicy extends AbstractModel{
 
     /**
     * 播放许可证的有效期
@@ -37,7 +37,7 @@ public class PlaybackPolicy  extends AbstractModel{
     private Integer PlaybackDurationSeconds;
 
     /**
-     * 获取播放许可证的有效期
+     * Get 播放许可证的有效期 
      * @return LicenseDurationSeconds 播放许可证的有效期
      */
     public Integer getLicenseDurationSeconds() {
@@ -45,7 +45,7 @@ public class PlaybackPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置播放许可证的有效期
+     * Set 播放许可证的有效期
      * @param LicenseDurationSeconds 播放许可证的有效期
      */
     public void setLicenseDurationSeconds(Integer LicenseDurationSeconds) {
@@ -53,7 +53,7 @@ public class PlaybackPolicy  extends AbstractModel{
     }
 
     /**
-     * 获取开始播放后，允许最长播放时间
+     * Get 开始播放后，允许最长播放时间 
      * @return PlaybackDurationSeconds 开始播放后，允许最长播放时间
      */
     public Integer getPlaybackDurationSeconds() {
@@ -61,7 +61,7 @@ public class PlaybackPolicy  extends AbstractModel{
     }
 
     /**
-     * 设置开始播放后，允许最长播放时间
+     * Set 开始播放后，允许最长播放时间
      * @param PlaybackDurationSeconds 开始播放后，允许最长播放时间
      */
     public void setPlaybackDurationSeconds(Integer PlaybackDurationSeconds) {
@@ -69,7 +69,7 @@ public class PlaybackPolicy  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LicenseDurationSeconds", this.LicenseDurationSeconds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskTemplateRequest  extends AbstractModel{
+public class CreateTaskTemplateRequest extends AbstractModel{
 
     /**
     * 任务模板名称
@@ -44,7 +44,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     private String TaskTemplateDescription;
 
     /**
-     * 获取任务模板名称
+     * Get 任务模板名称 
      * @return TaskTemplateName 任务模板名称
      */
     public String getTaskTemplateName() {
@@ -52,7 +52,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板名称
+     * Set 任务模板名称
      * @param TaskTemplateName 任务模板名称
      */
     public void setTaskTemplateName(String TaskTemplateName) {
@@ -60,7 +60,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板内容，参数要求与任务一致
+     * Get 任务模板内容，参数要求与任务一致 
      * @return TaskTemplateInfo 任务模板内容，参数要求与任务一致
      */
     public Task getTaskTemplateInfo() {
@@ -68,7 +68,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板内容，参数要求与任务一致
+     * Set 任务模板内容，参数要求与任务一致
      * @param TaskTemplateInfo 任务模板内容，参数要求与任务一致
      */
     public void setTaskTemplateInfo(Task TaskTemplateInfo) {
@@ -76,7 +76,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板描述
+     * Get 任务模板描述 
      * @return TaskTemplateDescription 任务模板描述
      */
     public String getTaskTemplateDescription() {
@@ -84,7 +84,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板描述
+     * Set 任务模板描述
      * @param TaskTemplateDescription 任务模板描述
      */
     public void setTaskTemplateDescription(String TaskTemplateDescription) {
@@ -92,7 +92,7 @@ public class CreateTaskTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVpcAttributeRequest  extends AbstractModel{
+public class ModifyVpcAttributeRequest extends AbstractModel{
 
     /**
     * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
@@ -58,7 +58,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     private String DomainName;
 
     /**
-     * 获取VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
      * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public String getVpcId() {
@@ -66,7 +66,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Set VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      * @param VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
     public void setVpcId(String VpcId) {
@@ -74,7 +74,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称，可任意命名，但不得超过60个字符。
+     * Get 私有网络名称，可任意命名，但不得超过60个字符。 
      * @return VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      */
     public String getVpcName() {
@@ -82,7 +82,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称，可任意命名，但不得超过60个字符。
+     * Set 私有网络名称，可任意命名，但不得超过60个字符。
      * @param VpcName 私有网络名称，可任意命名，但不得超过60个字符。
      */
     public void setVpcName(String VpcName) {
@@ -90,7 +90,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启组播。true: 开启, false: 关闭。
+     * Get 是否开启组播。true: 开启, false: 关闭。 
      * @return EnableMulticast 是否开启组播。true: 开启, false: 关闭。
      */
     public String getEnableMulticast() {
@@ -98,7 +98,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启组播。true: 开启, false: 关闭。
+     * Set 是否开启组播。true: 开启, false: 关闭。
      * @param EnableMulticast 是否开启组播。true: 开启, false: 关闭。
      */
     public void setEnableMulticast(String EnableMulticast) {
@@ -106,7 +106,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Get DNS地址，最多支持4个，第1个默认为主，其余为备 
      * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
      */
     public String [] getDnsServers() {
@@ -114,7 +114,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Set DNS地址，最多支持4个，第1个默认为主，其余为备
      * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
      */
     public void setDnsServers(String [] DnsServers) {
@@ -122,7 +122,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return DomainName 域名
      */
     public String getDomainName() {
@@ -130,7 +130,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param DomainName 域名
      */
     public void setDomainName(String DomainName) {
@@ -138,7 +138,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddShardConfig  extends AbstractModel{
+public class AddShardConfig extends AbstractModel{
 
     /**
     * 新增分片的数量
@@ -44,7 +44,7 @@ public class AddShardConfig  extends AbstractModel{
     private Integer ShardStorage;
 
     /**
-     * 获取新增分片的数量
+     * Get 新增分片的数量 
      * @return ShardCount 新增分片的数量
      */
     public Integer getShardCount() {
@@ -52,7 +52,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 设置新增分片的数量
+     * Set 新增分片的数量
      * @param ShardCount 新增分片的数量
      */
     public void setShardCount(Integer ShardCount) {
@@ -60,7 +60,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 获取分片内存大小，单位 GB
+     * Get 分片内存大小，单位 GB 
      * @return ShardMemory 分片内存大小，单位 GB
      */
     public Integer getShardMemory() {
@@ -68,7 +68,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 设置分片内存大小，单位 GB
+     * Set 分片内存大小，单位 GB
      * @param ShardMemory 分片内存大小，单位 GB
      */
     public void setShardMemory(Integer ShardMemory) {
@@ -76,7 +76,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 获取分片存储大小，单位 GB
+     * Get 分片存储大小，单位 GB 
      * @return ShardStorage 分片存储大小，单位 GB
      */
     public Integer getShardStorage() {
@@ -84,7 +84,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 设置分片存储大小，单位 GB
+     * Set 分片存储大小，单位 GB
      * @param ShardStorage 分片存储大小，单位 GB
      */
     public void setShardStorage(Integer ShardStorage) {
@@ -92,7 +92,7 @@ public class AddShardConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShardCount", this.ShardCount);

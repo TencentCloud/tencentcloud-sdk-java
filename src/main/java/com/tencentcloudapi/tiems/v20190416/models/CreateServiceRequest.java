@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceRequest  extends AbstractModel{
+public class CreateServiceRequest extends AbstractModel{
 
     /**
     * 扩缩容配置
@@ -114,7 +114,7 @@ public class CreateServiceRequest  extends AbstractModel{
     private String GpuType;
 
     /**
-     * 获取扩缩容配置
+     * Get 扩缩容配置 
      * @return Scaler 扩缩容配置
      */
     public Scaler getScaler() {
@@ -122,7 +122,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩缩容配置
+     * Set 扩缩容配置
      * @param Scaler 扩缩容配置
      */
     public void setScaler(Scaler Scaler) {
@@ -130,7 +130,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务配置Id
+     * Get 服务配置Id 
      * @return ServiceConfigId 服务配置Id
      */
     public String getServiceConfigId() {
@@ -138,7 +138,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务配置Id
+     * Set 服务配置Id
      * @param ServiceConfigId 服务配置Id
      */
     public void setServiceConfigId(String ServiceConfigId) {
@@ -146,7 +146,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务名称
+     * Get 服务名称 
      * @return Name 服务名称
      */
     public String getName() {
@@ -154,7 +154,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务名称
+     * Set 服务名称
      * @param Name 服务名称
      */
     public void setName(String Name) {
@@ -162,7 +162,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
+     * Get 扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容 
      * @return ScaleMode 扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
      */
     public String getScaleMode() {
@@ -170,7 +170,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
+     * Set 扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
      * @param ScaleMode 扩缩容方式，支持AUTO, MANUAL，分别表示自动扩缩容和手动扩缩容
      */
     public void setScaleMode(String ScaleMode) {
@@ -178,7 +178,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/1000核；范围[100, 256000]
+     * Get 处理器配置, 单位为1/1000核；范围[100, 256000] 
      * @return Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
      */
     public Long getCpu() {
@@ -186,7 +186,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置处理器配置, 单位为1/1000核；范围[100, 256000]
+     * Set 处理器配置, 单位为1/1000核；范围[100, 256000]
      * @param Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
      */
     public void setCpu(Long Cpu) {
@@ -194,7 +194,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存配置, 单位为1M；范围[100, 256000]
+     * Get 内存配置, 单位为1M；范围[100, 256000] 
      * @return Memory 内存配置, 单位为1M；范围[100, 256000]
      */
     public Long getMemory() {
@@ -202,7 +202,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存配置, 单位为1M；范围[100, 256000]
+     * Set 内存配置, 单位为1M；范围[100, 256000]
      * @param Memory 内存配置, 单位为1M；范围[100, 256000]
      */
     public void setMemory(Long Memory) {
@@ -210,7 +210,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群，不填则使用默认集群
+     * Get 集群，不填则使用默认集群 
      * @return Cluster 集群，不填则使用默认集群
      */
     public String getCluster() {
@@ -218,7 +218,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群，不填则使用默认集群
+     * Set 集群，不填则使用默认集群
      * @param Cluster 集群，不填则使用默认集群
      */
     public void setCluster(String Cluster) {
@@ -226,7 +226,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署要使用的资源组Id，默认为共享资源组
+     * Get 部署要使用的资源组Id，默认为共享资源组 
      * @return ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
      */
     public String getResourceGroupId() {
@@ -234,7 +234,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署要使用的资源组Id，默认为共享资源组
+     * Set 部署要使用的资源组Id，默认为共享资源组
      * @param ResourceGroupId 部署要使用的资源组Id，默认为共享资源组
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -242,7 +242,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
+     * Get 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式 
      * @return Authentication 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
      */
     public String getAuthentication() {
@@ -250,7 +250,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
+     * Set 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
      * @param Authentication 默认为空，表示不需要鉴权，TOKEN 表示选择 Token 鉴权方式
      */
     public void setAuthentication(String Authentication) {
@@ -258,7 +258,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+     * Get GPU算力配置，单位为1/1000 卡，范围 [0, 256000] 
      * @return Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      */
     public Long getGpu() {
@@ -266,7 +266,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+     * Set GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      * @param Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      */
     public void setGpu(Long Gpu) {
@@ -274,7 +274,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取显存配置, 单位为1M，范围 [0, 256000]
+     * Get 显存配置, 单位为1M，范围 [0, 256000] 
      * @return GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      */
     public Long getGpuMemory() {
@@ -282,7 +282,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置显存配置, 单位为1M，范围 [0, 256000]
+     * Set 显存配置, 单位为1M，范围 [0, 256000]
      * @param GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      */
     public void setGpuMemory(Long GpuMemory) {
@@ -290,7 +290,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Description 备注
      */
     public String getDescription() {
@@ -298,7 +298,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Description 备注
      */
     public void setDescription(String Description) {
@@ -306,7 +306,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取GPU类型
+     * Get GPU类型 
      * @return GpuType GPU类型
      */
     public String getGpuType() {
@@ -314,7 +314,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GPU类型
+     * Set GPU类型
      * @param GpuType GPU类型
      */
     public void setGpuType(String GpuType) {
@@ -322,7 +322,7 @@ public class CreateServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Scaler.", this.Scaler);

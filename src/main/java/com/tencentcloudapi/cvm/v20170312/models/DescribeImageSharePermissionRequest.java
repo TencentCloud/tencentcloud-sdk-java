@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageSharePermissionRequest  extends AbstractModel{
+public class DescribeImageSharePermissionRequest extends AbstractModel{
 
     /**
     * 需要共享的镜像Id
@@ -30,7 +30,7 @@ public class DescribeImageSharePermissionRequest  extends AbstractModel{
     private String ImageId;
 
     /**
-     * 获取需要共享的镜像Id
+     * Get 需要共享的镜像Id 
      * @return ImageId 需要共享的镜像Id
      */
     public String getImageId() {
@@ -38,7 +38,7 @@ public class DescribeImageSharePermissionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要共享的镜像Id
+     * Set 需要共享的镜像Id
      * @param ImageId 需要共享的镜像Id
      */
     public void setImageId(String ImageId) {
@@ -46,7 +46,7 @@ public class DescribeImageSharePermissionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

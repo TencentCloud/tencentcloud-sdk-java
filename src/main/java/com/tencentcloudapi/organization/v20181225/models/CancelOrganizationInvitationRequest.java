@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelOrganizationInvitationRequest  extends AbstractModel{
+public class CancelOrganizationInvitationRequest extends AbstractModel{
 
     /**
     * 邀请ID
@@ -30,7 +30,7 @@ public class CancelOrganizationInvitationRequest  extends AbstractModel{
     private Long Id;
 
     /**
-     * 获取邀请ID
+     * Get 邀请ID 
      * @return Id 邀请ID
      */
     public Long getId() {
@@ -38,7 +38,7 @@ public class CancelOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置邀请ID
+     * Set 邀请ID
      * @param Id 邀请ID
      */
     public void setId(Long Id) {
@@ -46,7 +46,7 @@ public class CancelOrganizationInvitationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsFileSystemRequest  extends AbstractModel{
+public class CreateCfsFileSystemRequest extends AbstractModel{
 
     /**
     * 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
@@ -86,7 +86,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     private String FsName;
 
     /**
-     * 获取可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
+     * Get 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表 
      * @return Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      */
     public String getZone() {
@@ -94,7 +94,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
+     * Set 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      */
     public void setZone(String Zone) {
@@ -102,7 +102,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
+     * Get 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络 
      * @return NetInterface 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
      */
     public String getNetInterface() {
@@ -110,7 +110,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
+     * Set 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
      * @param NetInterface 网络类型，值为 VPC，BASIC；其中 VPC 为私有网络，BASIC 为基础网络
      */
     public void setNetInterface(String NetInterface) {
@@ -118,7 +118,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -126,7 +126,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -134,7 +134,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
+     * Get 文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议 
      * @return Protocol 文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
      */
     public String getProtocol() {
@@ -142,7 +142,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
+     * Set 文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
      * @param Protocol 文件系统协议类型， 值为 NFS、CIFS; 若留空则默认为 NFS协议
      */
     public void setProtocol(String Protocol) {
@@ -150,7 +150,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+     * Get 文件系统存储类型，值为 SD ；其中 SD 为标准型存储 
      * @return StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
      */
     public String getStorageType() {
@@ -158,7 +158,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统存储类型，值为 SD ；其中 SD 为标准型存储
+     * Set 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
      * @param StorageType 文件系统存储类型，值为 SD ；其中 SD 为标准型存储
      */
     public void setStorageType(String StorageType) {
@@ -166,7 +166,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网路（VPC） ID
+     * Get 私有网路（VPC） ID 
      * @return VpcId 私有网路（VPC） ID
      */
     public String getVpcId() {
@@ -174,7 +174,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网路（VPC） ID
+     * Set 私有网路（VPC） ID
      * @param VpcId 私有网路（VPC） ID
      */
     public void setVpcId(String VpcId) {
@@ -182,7 +182,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网 ID
+     * Get 子网 ID 
      * @return SubnetId 子网 ID
      */
     public String getSubnetId() {
@@ -190,7 +190,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网 ID
+     * Set 子网 ID
      * @param SubnetId 子网 ID
      */
     public void setSubnetId(String SubnetId) {
@@ -198,7 +198,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
+     * Get 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP 
      * @return MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
      */
     public String getMountIP() {
@@ -206,7 +206,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
+     * Set 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
      * @param MountIP 指定IP地址，仅VPC网络支持；若不填写、将在该子网下随机分配 IP
      */
     public void setMountIP(String MountIP) {
@@ -214,7 +214,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return FsName 用户自定义文件系统名称
      */
     public String getFsName() {
@@ -222,7 +222,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param FsName 用户自定义文件系统名称
      */
     public void setFsName(String FsName) {
@@ -230,7 +230,7 @@ public class CreateCfsFileSystemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogRequest  extends AbstractModel{
+public class DescribeSlowLogRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -65,7 +65,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return BeginTime 开始时间
      */
     public String getBeginTime() {
@@ -89,7 +89,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param BeginTime 开始时间
      */
     public void setBeginTime(String BeginTime) {
@@ -97,7 +97,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -105,7 +105,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -113,7 +113,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取慢查询阈值（单位：微秒）
+     * Get 慢查询阈值（单位：微秒） 
      * @return MinQueryTime 慢查询阈值（单位：微秒）
      */
     public Integer getMinQueryTime() {
@@ -121,7 +121,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置慢查询阈值（单位：微秒）
+     * Set 慢查询阈值（单位：微秒）
      * @param MinQueryTime 慢查询阈值（单位：微秒）
      */
     public void setMinQueryTime(Integer MinQueryTime) {
@@ -129,7 +129,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页面大小
+     * Get 页面大小 
      * @return Limit 页面大小
      */
     public Integer getLimit() {
@@ -137,7 +137,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页面大小
+     * Set 页面大小
      * @param Limit 页面大小
      */
     public void setLimit(Integer Limit) {
@@ -145,7 +145,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
     public Integer getOffset() {
@@ -153,7 +153,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
     public void setOffset(Integer Offset) {
@@ -161,7 +161,7 @@ public class DescribeSlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProjectSummaryOverviewItem  extends AbstractModel{
+public class ProjectSummaryOverviewItem extends AbstractModel{
 
     /**
     * 项目ID
@@ -79,7 +79,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     private String BillMonth;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -87,7 +87,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -95,7 +95,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -103,7 +103,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -111,7 +111,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取实际花费
+     * Get 实际花费 
      * @return RealTotalCost 实际花费
      */
     public String getRealTotalCost() {
@@ -119,7 +119,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置实际花费
+     * Set 实际花费
      * @param RealTotalCost 实际花费
      */
     public void setRealTotalCost(String RealTotalCost) {
@@ -127,7 +127,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取费用所占百分比，两位小数
+     * Get 费用所占百分比，两位小数 
      * @return RealTotalCostRatio 费用所占百分比，两位小数
      */
     public String getRealTotalCostRatio() {
@@ -135,7 +135,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置费用所占百分比，两位小数
+     * Set 费用所占百分比，两位小数
      * @param RealTotalCostRatio 费用所占百分比，两位小数
      */
     public void setRealTotalCostRatio(String RealTotalCostRatio) {
@@ -143,7 +143,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取现金金额
+     * Get 现金金额 
      * @return CashPayAmount 现金金额
      */
     public String getCashPayAmount() {
@@ -151,7 +151,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置现金金额
+     * Set 现金金额
      * @param CashPayAmount 现金金额
      */
     public void setCashPayAmount(String CashPayAmount) {
@@ -159,7 +159,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取赠送金金额
+     * Get 赠送金金额 
      * @return IncentivePayAmount 赠送金金额
      */
     public String getIncentivePayAmount() {
@@ -167,7 +167,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置赠送金金额
+     * Set 赠送金金额
      * @param IncentivePayAmount 赠送金金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
@@ -175,7 +175,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取代金券金额
+     * Get 代金券金额 
      * @return VoucherPayAmount 代金券金额
      */
     public String getVoucherPayAmount() {
@@ -183,7 +183,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置代金券金额
+     * Set 代金券金额
      * @param VoucherPayAmount 代金券金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
@@ -191,7 +191,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取账单月份，格式2019-08
+     * Get 账单月份，格式2019-08 
      * @return BillMonth 账单月份，格式2019-08
      */
     public String getBillMonth() {
@@ -199,7 +199,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置账单月份，格式2019-08
+     * Set 账单月份，格式2019-08
      * @param BillMonth 账单月份，格式2019-08
      */
     public void setBillMonth(String BillMonth) {
@@ -207,7 +207,7 @@ public class ProjectSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

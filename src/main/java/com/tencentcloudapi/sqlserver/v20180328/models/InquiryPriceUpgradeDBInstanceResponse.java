@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceResponse  extends AbstractModel{
+public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
 
     /**
     * 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
     */
     @SerializedName("OriginalPrice")
     @Expose
-    private Integer OriginalPrice;
+    private Long OriginalPrice;
 
     /**
     * 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
     */
     @SerializedName("Price")
     @Expose
-    private Integer Price;
+    private Long Price;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,39 +44,39 @@ public class InquiryPriceUpgradeDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+     * Get 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元 
      * @return OriginalPrice 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
      */
-    public Integer getOriginalPrice() {
+    public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * 设置未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
+     * Set 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
      * @param OriginalPrice 未打折的原价，其值除以100表示最终的价格。比如10094表示100.94元
      */
-    public void setOriginalPrice(Integer OriginalPrice) {
+    public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * 获取实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * Get 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元 
      * @return Price 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
      */
-    public Integer getPrice() {
+    public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * 设置实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
+     * Set 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
      * @param Price 实际需要支付价格，其值除以100表示最终的价格。比如10094表示100.94元
      */
-    public void setPrice(Integer Price) {
+    public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class InquiryPriceUpgradeDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class InquiryPriceUpgradeDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicePartitionRequest  extends AbstractModel{
+public class DescribeDevicePartitionRequest extends AbstractModel{
 
     /**
     * 物理机ID
@@ -30,7 +30,7 @@ public class DescribeDevicePartitionRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return InstanceId 物理机ID
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class DescribeDevicePartitionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param InstanceId 物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class DescribeDevicePartitionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

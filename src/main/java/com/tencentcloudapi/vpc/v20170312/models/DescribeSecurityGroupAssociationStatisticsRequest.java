@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupAssociationStatisticsRequest  extends AbstractModel{
+public class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel{
 
     /**
     * 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
@@ -30,7 +30,7 @@ public class DescribeSecurityGroupAssociationStatisticsRequest  extends Abstract
     private String [] SecurityGroupIds;
 
     /**
-     * 获取安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public String [] getSecurityGroupIds() {
@@ -38,7 +38,7 @@ public class DescribeSecurityGroupAssociationStatisticsRequest  extends Abstract
     }
 
     /**
-     * 设置安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -46,7 +46,7 @@ public class DescribeSecurityGroupAssociationStatisticsRequest  extends Abstract
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

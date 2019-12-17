@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcResourceRequest  extends AbstractModel{
+public class DescribeVpcResourceRequest extends AbstractModel{
 
     /**
     * 私有网络实例ID
@@ -55,7 +55,7 @@ state - String - （过滤条件）VPC状态。
     private Long Limit;
 
     /**
-     * 获取私有网络实例ID
+     * Get 私有网络实例ID 
      * @return VpcIds 私有网络实例ID
      */
     public String [] getVpcIds() {
@@ -63,7 +63,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 设置私有网络实例ID
+     * Set 私有网络实例ID
      * @param VpcIds 私有网络实例ID
      */
     public void setVpcIds(String [] VpcIds) {
@@ -71,11 +71,11 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Get 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
-state - String - （过滤条件）VPC状态。
+state - String - （过滤条件）VPC状态。 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
@@ -87,7 +87,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定SubnetIds和Filters。
+     * Set 过滤条件，参数不支持同时指定SubnetIds和Filters。
 vpc-id - String - （过滤条件）私有网络实例ID，形如：vpc-f49l6u0z。
 vpc-name - String - （过滤条件）私有网络名称。
 zone - String - （过滤条件）可用区。
@@ -103,7 +103,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -111,7 +111,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -119,7 +119,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Long getLimit() {
@@ -127,7 +127,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Long Limit) {
@@ -135,7 +135,7 @@ state - String - （过滤条件）VPC状态。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);

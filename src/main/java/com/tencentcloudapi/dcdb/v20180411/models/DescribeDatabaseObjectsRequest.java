@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabaseObjectsRequest  extends AbstractModel{
+public class DescribeDatabaseObjectsRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：dcdbt-ow7t8lmc。
@@ -37,7 +37,7 @@ public class DescribeDatabaseObjectsRequest  extends AbstractModel{
     private String DbName;
 
     /**
-     * 获取实例 ID，形如：dcdbt-ow7t8lmc。
+     * Get 实例 ID，形如：dcdbt-ow7t8lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeDatabaseObjectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：dcdbt-ow7t8lmc。
+     * Set 实例 ID，形如：dcdbt-ow7t8lmc。
      * @param InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeDatabaseObjectsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称，通过 DescribeDatabases 接口获取。
+     * Get 数据库名称，通过 DescribeDatabases 接口获取。 
      * @return DbName 数据库名称，通过 DescribeDatabases 接口获取。
      */
     public String getDbName() {
@@ -61,7 +61,7 @@ public class DescribeDatabaseObjectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称，通过 DescribeDatabases 接口获取。
+     * Set 数据库名称，通过 DescribeDatabases 接口获取。
      * @param DbName 数据库名称，通过 DescribeDatabases 接口获取。
      */
     public void setDbName(String DbName) {
@@ -69,7 +69,7 @@ public class DescribeDatabaseObjectsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GroupInfo  extends AbstractModel{
+public class GroupInfo extends AbstractModel{
 
     /**
     * 用户组 ID。
@@ -51,7 +51,7 @@ public class GroupInfo  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取用户组 ID。
+     * Get 用户组 ID。 
      * @return GroupId 用户组 ID。
      */
     public Long getGroupId() {
@@ -59,7 +59,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID。
+     * Set 用户组 ID。
      * @param GroupId 用户组 ID。
      */
     public void setGroupId(Long GroupId) {
@@ -67,7 +67,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户组名称。
+     * Get 用户组名称。 
      * @return GroupName 用户组名称。
      */
     public String getGroupName() {
@@ -75,7 +75,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户组名称。
+     * Set 用户组名称。
      * @param GroupName 用户组名称。
      */
     public void setGroupName(String GroupName) {
@@ -83,7 +83,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户组创建时间。
+     * Get 用户组创建时间。 
      * @return CreateTime 用户组创建时间。
      */
     public String getCreateTime() {
@@ -91,7 +91,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户组创建时间。
+     * Set 用户组创建时间。
      * @param CreateTime 用户组创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -99,7 +99,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户组描述。
+     * Get 用户组描述。 
      * @return Remark 用户组描述。
      */
     public String getRemark() {
@@ -107,7 +107,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户组描述。
+     * Set 用户组描述。
      * @param Remark 用户组描述。
      */
     public void setRemark(String Remark) {
@@ -115,7 +115,7 @@ public class GroupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

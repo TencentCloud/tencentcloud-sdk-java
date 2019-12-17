@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CpmVirtualPrivateCloud  extends AbstractModel{
+public class CpmVirtualPrivateCloud extends AbstractModel{
 
     /**
     * 黑石私有网络ID
@@ -37,7 +37,7 @@ public class CpmVirtualPrivateCloud  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取黑石私有网络ID
+     * Get 黑石私有网络ID 
      * @return VpcId 黑石私有网络ID
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class CpmVirtualPrivateCloud  extends AbstractModel{
     }
 
     /**
-     * 设置黑石私有网络ID
+     * Set 黑石私有网络ID
      * @param VpcId 黑石私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class CpmVirtualPrivateCloud  extends AbstractModel{
     }
 
     /**
-     * 获取黑石子网ID
+     * Get 黑石子网ID 
      * @return SubnetId 黑石子网ID
      */
     public String getSubnetId() {
@@ -61,7 +61,7 @@ public class CpmVirtualPrivateCloud  extends AbstractModel{
     }
 
     /**
-     * 设置黑石子网ID
+     * Set 黑石子网ID
      * @param SubnetId 黑石子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -69,7 +69,7 @@ public class CpmVirtualPrivateCloud  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

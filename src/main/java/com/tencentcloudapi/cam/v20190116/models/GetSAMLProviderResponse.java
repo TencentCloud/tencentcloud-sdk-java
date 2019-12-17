@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSAMLProviderResponse  extends AbstractModel{
+public class GetSAMLProviderResponse extends AbstractModel{
 
     /**
     * SAML身份提供商名称
@@ -65,7 +65,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取SAML身份提供商名称
+     * Get SAML身份提供商名称 
      * @return Name SAML身份提供商名称
      */
     public String getName() {
@@ -73,7 +73,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商名称
+     * Set SAML身份提供商名称
      * @param Name SAML身份提供商名称
      */
     public void setName(String Name) {
@@ -81,7 +81,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商描述
+     * Get SAML身份提供商描述 
      * @return Description SAML身份提供商描述
      */
     public String getDescription() {
@@ -89,7 +89,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商描述
+     * Set SAML身份提供商描述
      * @param Description SAML身份提供商描述
      */
     public void setDescription(String Description) {
@@ -97,7 +97,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商创建时间
+     * Get SAML身份提供商创建时间 
      * @return CreateTime SAML身份提供商创建时间
      */
     public String getCreateTime() {
@@ -105,7 +105,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商创建时间
+     * Set SAML身份提供商创建时间
      * @param CreateTime SAML身份提供商创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -113,7 +113,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商上次修改时间
+     * Get SAML身份提供商上次修改时间 
      * @return ModifyTime SAML身份提供商上次修改时间
      */
     public String getModifyTime() {
@@ -121,7 +121,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商上次修改时间
+     * Set SAML身份提供商上次修改时间
      * @param ModifyTime SAML身份提供商上次修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -129,7 +129,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商元数据文档
+     * Get SAML身份提供商元数据文档 
      * @return SAMLMetadata SAML身份提供商元数据文档
      */
     public String getSAMLMetadata() {
@@ -137,7 +137,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商元数据文档
+     * Set SAML身份提供商元数据文档
      * @param SAMLMetadata SAML身份提供商元数据文档
      */
     public void setSAMLMetadata(String SAMLMetadata) {
@@ -145,7 +145,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class GetSAMLProviderResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

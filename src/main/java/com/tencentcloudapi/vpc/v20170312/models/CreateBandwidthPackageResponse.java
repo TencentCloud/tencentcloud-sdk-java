@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBandwidthPackageResponse  extends AbstractModel{
+public class CreateBandwidthPackageResponse extends AbstractModel{
 
     /**
     * 带宽包唯一ID
@@ -44,7 +44,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取带宽包唯一ID
+     * Get 带宽包唯一ID 
      * @return BandwidthPackageId 带宽包唯一ID
      */
     public String getBandwidthPackageId() {
@@ -52,7 +52,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一ID
+     * Set 带宽包唯一ID
      * @param BandwidthPackageId 带宽包唯一ID
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -60,7 +60,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包唯一ID列表(申请数量大于1时有效)
+     * Get 带宽包唯一ID列表(申请数量大于1时有效) 
      * @return BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)
      */
     public String [] getBandwidthPackageIds() {
@@ -68,7 +68,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一ID列表(申请数量大于1时有效)
+     * Set 带宽包唯一ID列表(申请数量大于1时有效)
      * @param BandwidthPackageIds 带宽包唯一ID列表(申请数量大于1时有效)
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
@@ -76,7 +76,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateBandwidthPackageResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

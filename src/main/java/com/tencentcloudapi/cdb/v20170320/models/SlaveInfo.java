@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlaveInfo  extends AbstractModel{
+public class SlaveInfo extends AbstractModel{
 
     /**
     * 第一备机信息
@@ -38,7 +38,7 @@ public class SlaveInfo  extends AbstractModel{
     private SlaveInstanceInfo Second;
 
     /**
-     * 获取第一备机信息
+     * Get 第一备机信息 
      * @return First 第一备机信息
      */
     public SlaveInstanceInfo getFirst() {
@@ -46,7 +46,7 @@ public class SlaveInfo  extends AbstractModel{
     }
 
     /**
-     * 设置第一备机信息
+     * Set 第一备机信息
      * @param First 第一备机信息
      */
     public void setFirst(SlaveInstanceInfo First) {
@@ -54,8 +54,8 @@ public class SlaveInfo  extends AbstractModel{
     }
 
     /**
-     * 获取第二备机信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 第二备机信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Second 第二备机信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class SlaveInfo  extends AbstractModel{
     }
 
     /**
-     * 设置第二备机信息
+     * Set 第二备机信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Second 第二备机信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class SlaveInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "First.", this.First);

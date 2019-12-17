@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUDPListenersResponse  extends AbstractModel{
+public class CreateUDPListenersResponse extends AbstractModel{
 
     /**
     * 返回监听器ID
@@ -37,7 +37,7 @@ public class CreateUDPListenersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回监听器ID
+     * Get 返回监听器ID 
      * @return ListenerIds 返回监听器ID
      */
     public String [] getListenerIds() {
@@ -45,7 +45,7 @@ public class CreateUDPListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回监听器ID
+     * Set 返回监听器ID
      * @param ListenerIds 返回监听器ID
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -53,7 +53,7 @@ public class CreateUDPListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateUDPListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateUDPListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);

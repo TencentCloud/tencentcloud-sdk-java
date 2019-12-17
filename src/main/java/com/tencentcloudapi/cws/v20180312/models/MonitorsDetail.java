@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorsDetail  extends AbstractModel{
+public class MonitorsDetail extends AbstractModel{
 
     /**
     * 监控任务基础信息。
@@ -107,7 +107,7 @@ public class MonitorsDetail  extends AbstractModel{
     private Integer ContentNumber;
 
     /**
-     * 获取监控任务基础信息。
+     * Get 监控任务基础信息。 
      * @return Basic 监控任务基础信息。
      */
     public Monitor getBasic() {
@@ -115,7 +115,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务基础信息。
+     * Set 监控任务基础信息。
      * @param Basic 监控任务基础信息。
      */
     public void setBasic(Monitor Basic) {
@@ -123,7 +123,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务包含的站点列表。
+     * Get 监控任务包含的站点列表。 
      * @return Sites 监控任务包含的站点列表。
      */
     public MonitorMiniSite [] getSites() {
@@ -131,7 +131,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务包含的站点列表。
+     * Set 监控任务包含的站点列表。
      * @param Sites 监控任务包含的站点列表。
      */
     public void setSites(MonitorMiniSite [] Sites) {
@@ -139,7 +139,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务包含的站点列表数量。
+     * Get 监控任务包含的站点列表数量。 
      * @return SiteNumber 监控任务包含的站点列表数量。
      */
     public Integer getSiteNumber() {
@@ -147,7 +147,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务包含的站点列表数量。
+     * Set 监控任务包含的站点列表数量。
      * @param SiteNumber 监控任务包含的站点列表数量。
      */
     public void setSiteNumber(Integer SiteNumber) {
@@ -155,7 +155,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务包含的受漏洞威胁的站点列表。
+     * Get 监控任务包含的受漏洞威胁的站点列表。 
      * @return ImpactSites 监控任务包含的受漏洞威胁的站点列表。
      */
     public MonitorMiniSite [] getImpactSites() {
@@ -163,7 +163,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务包含的受漏洞威胁的站点列表。
+     * Set 监控任务包含的受漏洞威胁的站点列表。
      * @param ImpactSites 监控任务包含的受漏洞威胁的站点列表。
      */
     public void setImpactSites(MonitorMiniSite [] ImpactSites) {
@@ -171,7 +171,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务包含的受漏洞威胁的站点列表数量。
+     * Get 监控任务包含的受漏洞威胁的站点列表数量。 
      * @return ImpactSiteNumber 监控任务包含的受漏洞威胁的站点列表数量。
      */
     public Integer getImpactSiteNumber() {
@@ -179,7 +179,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务包含的受漏洞威胁的站点列表数量。
+     * Set 监控任务包含的受漏洞威胁的站点列表数量。
      * @param ImpactSiteNumber 监控任务包含的受漏洞威胁的站点列表数量。
      */
     public void setImpactSiteNumber(Integer ImpactSiteNumber) {
@@ -187,7 +187,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取高风险漏洞数量。
+     * Get 高风险漏洞数量。 
      * @return VulsHighNumber 高风险漏洞数量。
      */
     public Integer getVulsHighNumber() {
@@ -195,7 +195,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置高风险漏洞数量。
+     * Set 高风险漏洞数量。
      * @param VulsHighNumber 高风险漏洞数量。
      */
     public void setVulsHighNumber(Integer VulsHighNumber) {
@@ -203,7 +203,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取中风险漏洞数量。
+     * Get 中风险漏洞数量。 
      * @return VulsMiddleNumber 中风险漏洞数量。
      */
     public Integer getVulsMiddleNumber() {
@@ -211,7 +211,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置中风险漏洞数量。
+     * Set 中风险漏洞数量。
      * @param VulsMiddleNumber 中风险漏洞数量。
      */
     public void setVulsMiddleNumber(Integer VulsMiddleNumber) {
@@ -219,7 +219,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取低风险漏洞数量。
+     * Get 低风险漏洞数量。 
      * @return VulsLowNumber 低风险漏洞数量。
      */
     public Integer getVulsLowNumber() {
@@ -227,7 +227,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置低风险漏洞数量。
+     * Set 低风险漏洞数量。
      * @param VulsLowNumber 低风险漏洞数量。
      */
     public void setVulsLowNumber(Integer VulsLowNumber) {
@@ -235,7 +235,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取提示数量。
+     * Get 提示数量。 
      * @return VulsNoticeNumber 提示数量。
      */
     public Integer getVulsNoticeNumber() {
@@ -243,7 +243,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置提示数量。
+     * Set 提示数量。
      * @param VulsNoticeNumber 提示数量。
      */
     public void setVulsNoticeNumber(Integer VulsNoticeNumber) {
@@ -251,7 +251,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务包含的站点列表的平均扫描进度。
+     * Get 监控任务包含的站点列表的平均扫描进度。 
      * @return Progress 监控任务包含的站点列表的平均扫描进度。
      */
     public Integer getProgress() {
@@ -259,7 +259,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务包含的站点列表的平均扫描进度。
+     * Set 监控任务包含的站点列表的平均扫描进度。
      * @param Progress 监控任务包含的站点列表的平均扫描进度。
      */
     public void setProgress(Integer Progress) {
@@ -267,7 +267,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取扫描页面总数。
+     * Get 扫描页面总数。 
      * @return PageCount 扫描页面总数。
      */
     public Integer getPageCount() {
@@ -275,7 +275,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置扫描页面总数。
+     * Set 扫描页面总数。
      * @param PageCount 扫描页面总数。
      */
     public void setPageCount(Integer PageCount) {
@@ -283,7 +283,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 获取内容检测数量。
+     * Get 内容检测数量。 
      * @return ContentNumber 内容检测数量。
      */
     public Integer getContentNumber() {
@@ -291,7 +291,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 设置内容检测数量。
+     * Set 内容检测数量。
      * @param ContentNumber 内容检测数量。
      */
     public void setContentNumber(Integer ContentNumber) {
@@ -299,7 +299,7 @@ public class MonitorsDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Basic.", this.Basic);

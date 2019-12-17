@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordSimilarityRequest  extends AbstractModel{
+public class WordSimilarityRequest extends AbstractModel{
 
     /**
     * 计算相似度的源词（仅支持UTF-8格式，不超过20字）
@@ -37,7 +37,7 @@ public class WordSimilarityRequest  extends AbstractModel{
     private String TargetWord;
 
     /**
-     * 获取计算相似度的源词（仅支持UTF-8格式，不超过20字）
+     * Get 计算相似度的源词（仅支持UTF-8格式，不超过20字） 
      * @return SrcWord 计算相似度的源词（仅支持UTF-8格式，不超过20字）
      */
     public String getSrcWord() {
@@ -45,7 +45,7 @@ public class WordSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算相似度的源词（仅支持UTF-8格式，不超过20字）
+     * Set 计算相似度的源词（仅支持UTF-8格式，不超过20字）
      * @param SrcWord 计算相似度的源词（仅支持UTF-8格式，不超过20字）
      */
     public void setSrcWord(String SrcWord) {
@@ -53,7 +53,7 @@ public class WordSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算相似度的目标词（仅支持UTF-8格式，不超过20字）
+     * Get 计算相似度的目标词（仅支持UTF-8格式，不超过20字） 
      * @return TargetWord 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
      */
     public String getTargetWord() {
@@ -61,7 +61,7 @@ public class WordSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算相似度的目标词（仅支持UTF-8格式，不超过20字）
+     * Set 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
      * @param TargetWord 计算相似度的目标词（仅支持UTF-8格式，不超过20字）
      */
     public void setTargetWord(String TargetWord) {
@@ -69,7 +69,7 @@ public class WordSimilarityRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SrcWord", this.SrcWord);

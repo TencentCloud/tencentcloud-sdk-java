@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpCodeValue  extends AbstractModel{
+public class HttpCodeValue extends AbstractModel{
 
     /**
     * 时间，格式：yyyy-mm-dd HH:MM:SS。
@@ -44,7 +44,7 @@ public class HttpCodeValue  extends AbstractModel{
     private Float Percentage;
 
     /**
-     * 获取时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Get 时间，格式：yyyy-mm-dd HH:MM:SS。 
      * @return Time 时间，格式：yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
@@ -52,7 +52,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 设置时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Set 时间，格式：yyyy-mm-dd HH:MM:SS。
      * @param Time 时间，格式：yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
@@ -60,7 +60,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 获取次数。
+     * Get 次数。 
      * @return Numbers 次数。
      */
     public Integer getNumbers() {
@@ -68,7 +68,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 设置次数。
+     * Set 次数。
      * @param Numbers 次数。
      */
     public void setNumbers(Integer Numbers) {
@@ -76,7 +76,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 获取占比。
+     * Get 占比。 
      * @return Percentage 占比。
      */
     public Float getPercentage() {
@@ -84,7 +84,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 设置占比。
+     * Set 占比。
      * @param Percentage 占比。
      */
     public void setPercentage(Float Percentage) {
@@ -92,7 +92,7 @@ public class HttpCodeValue  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

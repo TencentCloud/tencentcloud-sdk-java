@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
+public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
 
     /**
     * 带宽包唯一标识ID
@@ -37,7 +37,7 @@ public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-     * 获取带宽包唯一标识ID
+     * Get 带宽包唯一标识ID 
      * @return BandwidthPackageId 带宽包唯一标识ID
      */
     public String getBandwidthPackageId() {
@@ -45,7 +45,7 @@ public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包唯一标识ID
+     * Set 带宽包唯一标识ID
      * @param BandwidthPackageId 带宽包唯一标识ID
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -53,7 +53,7 @@ public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽包名称
+     * Get 带宽包名称 
      * @return BandwidthPackageName 带宽包名称
      */
     public String getBandwidthPackageName() {
@@ -61,7 +61,7 @@ public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽包名称
+     * Set 带宽包名称
      * @param BandwidthPackageName 带宽包名称
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
@@ -69,7 +69,7 @@ public class ModifyBandwidthPackageAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

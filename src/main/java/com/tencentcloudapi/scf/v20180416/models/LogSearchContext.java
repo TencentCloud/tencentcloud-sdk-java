@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogSearchContext  extends AbstractModel{
+public class LogSearchContext extends AbstractModel{
 
     /**
     * 偏移量
@@ -51,7 +51,7 @@ public class LogSearchContext  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public String getOffset() {
@@ -59,7 +59,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(String Offset) {
@@ -67,7 +67,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 获取日志条数
+     * Get 日志条数 
      * @return Limit 日志条数
      */
     public Integer getLimit() {
@@ -75,7 +75,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 设置日志条数
+     * Set 日志条数
      * @param Limit 日志条数
      */
     public void setLimit(Integer Limit) {
@@ -83,7 +83,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 获取日志关键词
+     * Get 日志关键词 
      * @return Keyword 日志关键词
      */
     public String getKeyword() {
@@ -91,7 +91,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 设置日志关键词
+     * Set 日志关键词
      * @param Keyword 日志关键词
      */
     public void setKeyword(String Keyword) {
@@ -99,7 +99,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 获取日志类型，支持Application和Platform，默认为Application
+     * Get 日志类型，支持Application和Platform，默认为Application 
      * @return Type 日志类型，支持Application和Platform，默认为Application
      */
     public String getType() {
@@ -107,7 +107,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 设置日志类型，支持Application和Platform，默认为Application
+     * Set 日志类型，支持Application和Platform，默认为Application
      * @param Type 日志类型，支持Application和Platform，默认为Application
      */
     public void setType(String Type) {
@@ -115,7 +115,7 @@ public class LogSearchContext  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

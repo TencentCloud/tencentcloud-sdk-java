@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPersonListNumRequest  extends AbstractModel{
+public class GetPersonListNumRequest extends AbstractModel{
 
     /**
     * 人员库ID
@@ -30,7 +30,7 @@ public class GetPersonListNumRequest  extends AbstractModel{
     private String GroupId;
 
     /**
-     * 获取人员库ID
+     * Get 人员库ID 
      * @return GroupId 人员库ID
      */
     public String getGroupId() {
@@ -38,7 +38,7 @@ public class GetPersonListNumRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库ID
+     * Set 人员库ID
      * @param GroupId 人员库ID
      */
     public void setGroupId(String GroupId) {
@@ -46,7 +46,7 @@ public class GetPersonListNumRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

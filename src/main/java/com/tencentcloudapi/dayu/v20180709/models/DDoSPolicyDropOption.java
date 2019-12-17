@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSPolicyDropOption  extends AbstractModel{
+public class DDoSPolicyDropOption extends AbstractModel{
 
     /**
     * 禁用TCP协议，取值范围[0,1]
@@ -156,7 +156,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     private Long DOtherMbpsLimit;
 
     /**
-     * 获取禁用TCP协议，取值范围[0,1]
+     * Get 禁用TCP协议，取值范围[0,1] 
      * @return DropTcp 禁用TCP协议，取值范围[0,1]
      */
     public Long getDropTcp() {
@@ -164,7 +164,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置禁用TCP协议，取值范围[0,1]
+     * Set 禁用TCP协议，取值范围[0,1]
      * @param DropTcp 禁用TCP协议，取值范围[0,1]
      */
     public void setDropTcp(Long DropTcp) {
@@ -172,7 +172,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取禁用UDP协议，取值范围[0,1]
+     * Get 禁用UDP协议，取值范围[0,1] 
      * @return DropUdp 禁用UDP协议，取值范围[0,1]
      */
     public Long getDropUdp() {
@@ -180,7 +180,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置禁用UDP协议，取值范围[0,1]
+     * Set 禁用UDP协议，取值范围[0,1]
      * @param DropUdp 禁用UDP协议，取值范围[0,1]
      */
     public void setDropUdp(Long DropUdp) {
@@ -188,7 +188,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取禁用ICMP协议，取值范围[0,1]
+     * Get 禁用ICMP协议，取值范围[0,1] 
      * @return DropIcmp 禁用ICMP协议，取值范围[0,1]
      */
     public Long getDropIcmp() {
@@ -196,7 +196,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置禁用ICMP协议，取值范围[0,1]
+     * Set 禁用ICMP协议，取值范围[0,1]
      * @param DropIcmp 禁用ICMP协议，取值范围[0,1]
      */
     public void setDropIcmp(Long DropIcmp) {
@@ -204,7 +204,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取禁用其他协议，取值范围[0,1]
+     * Get 禁用其他协议，取值范围[0,1] 
      * @return DropOther 禁用其他协议，取值范围[0,1]
      */
     public Long getDropOther() {
@@ -212,7 +212,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置禁用其他协议，取值范围[0,1]
+     * Set 禁用其他协议，取值范围[0,1]
      * @param DropOther 禁用其他协议，取值范围[0,1]
      */
     public void setDropOther(Long DropOther) {
@@ -220,7 +220,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取拒绝海外流量，取值范围[0,1]
+     * Get 拒绝海外流量，取值范围[0,1] 
      * @return DropAbroad 拒绝海外流量，取值范围[0,1]
      */
     public Long getDropAbroad() {
@@ -228,7 +228,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置拒绝海外流量，取值范围[0,1]
+     * Set 拒绝海外流量，取值范围[0,1]
      * @param DropAbroad 拒绝海外流量，取值范围[0,1]
      */
     public void setDropAbroad(Long DropAbroad) {
@@ -236,7 +236,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取空连接防护，取值范围[0,1]
+     * Get 空连接防护，取值范围[0,1] 
      * @return CheckSyncConn 空连接防护，取值范围[0,1]
      */
     public Long getCheckSyncConn() {
@@ -244,7 +244,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置空连接防护，取值范围[0,1]
+     * Set 空连接防护，取值范围[0,1]
      * @param CheckSyncConn 空连接防护，取值范围[0,1]
      */
     public void setCheckSyncConn(Long CheckSyncConn) {
@@ -252,7 +252,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295]
+     * Get 基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295] 
      * @return SdNewLimit 基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295]
      */
     public Long getSdNewLimit() {
@@ -260,7 +260,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295]
+     * Set 基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295]
      * @param SdNewLimit 基于来源IP及目的IP的新建连接抑制，取值范围[0,4294967295]
      */
     public void setSdNewLimit(Long SdNewLimit) {
@@ -268,7 +268,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取基于目的IP的新建连接抑制，取值范围[0,4294967295]
+     * Get 基于目的IP的新建连接抑制，取值范围[0,4294967295] 
      * @return DstNewLimit 基于目的IP的新建连接抑制，取值范围[0,4294967295]
      */
     public Long getDstNewLimit() {
@@ -276,7 +276,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置基于目的IP的新建连接抑制，取值范围[0,4294967295]
+     * Set 基于目的IP的新建连接抑制，取值范围[0,4294967295]
      * @param DstNewLimit 基于目的IP的新建连接抑制，取值范围[0,4294967295]
      */
     public void setDstNewLimit(Long DstNewLimit) {
@@ -284,7 +284,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295]
+     * Get 基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295] 
      * @return SdConnLimit 基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295]
      */
     public Long getSdConnLimit() {
@@ -292,7 +292,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295]
+     * Set 基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295]
      * @param SdConnLimit 基于来源IP及目的IP的并发连接抑制，取值范围[0,4294967295]
      */
     public void setSdConnLimit(Long SdConnLimit) {
@@ -300,7 +300,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取基于目的IP的并发连接抑制，取值范围[0,4294967295]
+     * Get 基于目的IP的并发连接抑制，取值范围[0,4294967295] 
      * @return DstConnLimit 基于目的IP的并发连接抑制，取值范围[0,4294967295]
      */
     public Long getDstConnLimit() {
@@ -308,7 +308,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置基于目的IP的并发连接抑制，取值范围[0,4294967295]
+     * Set 基于目的IP的并发连接抑制，取值范围[0,4294967295]
      * @param DstConnLimit 基于目的IP的并发连接抑制，取值范围[0,4294967295]
      */
     public void setDstConnLimit(Long DstConnLimit) {
@@ -316,7 +316,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取基于连接抑制触发阈值，取值范围[0,4294967295]
+     * Get 基于连接抑制触发阈值，取值范围[0,4294967295] 
      * @return BadConnThreshold 基于连接抑制触发阈值，取值范围[0,4294967295]
      */
     public Long getBadConnThreshold() {
@@ -324,7 +324,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置基于连接抑制触发阈值，取值范围[0,4294967295]
+     * Set 基于连接抑制触发阈值，取值范围[0,4294967295]
      * @param BadConnThreshold 基于连接抑制触发阈值，取值范围[0,4294967295]
      */
     public void setBadConnThreshold(Long BadConnThreshold) {
@@ -332,7 +332,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取异常连接检测条件，空连接防护开关，，取值范围[0,1]
+     * Get 异常连接检测条件，空连接防护开关，，取值范围[0,1] 
      * @return NullConnEnable 异常连接检测条件，空连接防护开关，，取值范围[0,1]
      */
     public Long getNullConnEnable() {
@@ -340,7 +340,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置异常连接检测条件，空连接防护开关，，取值范围[0,1]
+     * Set 异常连接检测条件，空连接防护开关，，取值范围[0,1]
      * @param NullConnEnable 异常连接检测条件，空连接防护开关，，取值范围[0,1]
      */
     public void setNullConnEnable(Long NullConnEnable) {
@@ -348,7 +348,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取异常连接检测条件，连接超时，，取值范围[0,65535]
+     * Get 异常连接检测条件，连接超时，，取值范围[0,65535] 
      * @return ConnTimeout 异常连接检测条件，连接超时，，取值范围[0,65535]
      */
     public Long getConnTimeout() {
@@ -356,7 +356,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置异常连接检测条件，连接超时，，取值范围[0,65535]
+     * Set 异常连接检测条件，连接超时，，取值范围[0,65535]
      * @param ConnTimeout 异常连接检测条件，连接超时，，取值范围[0,65535]
      */
     public void setConnTimeout(Long ConnTimeout) {
@@ -364,7 +364,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取异常连接检测条件，syn占比ack百分比，，取值范围[0,100]
+     * Get 异常连接检测条件，syn占比ack百分比，，取值范围[0,100] 
      * @return SynRate 异常连接检测条件，syn占比ack百分比，，取值范围[0,100]
      */
     public Long getSynRate() {
@@ -372,7 +372,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置异常连接检测条件，syn占比ack百分比，，取值范围[0,100]
+     * Set 异常连接检测条件，syn占比ack百分比，，取值范围[0,100]
      * @param SynRate 异常连接检测条件，syn占比ack百分比，，取值范围[0,100]
      */
     public void setSynRate(Long SynRate) {
@@ -380,7 +380,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取异常连接检测条件，syn阈值，取值范围[0,100]
+     * Get 异常连接检测条件，syn阈值，取值范围[0,100] 
      * @return SynLimit 异常连接检测条件，syn阈值，取值范围[0,100]
      */
     public Long getSynLimit() {
@@ -388,7 +388,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置异常连接检测条件，syn阈值，取值范围[0,100]
+     * Set 异常连接检测条件，syn阈值，取值范围[0,100]
      * @param SynLimit 异常连接检测条件，syn阈值，取值范围[0,100]
      */
     public void setSynLimit(Long SynLimit) {
@@ -396,7 +396,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取tcp限速，取值范围[0,4294967295]
+     * Get tcp限速，取值范围[0,4294967295] 
      * @return DTcpMbpsLimit tcp限速，取值范围[0,4294967295]
      */
     public Long getDTcpMbpsLimit() {
@@ -404,7 +404,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置tcp限速，取值范围[0,4294967295]
+     * Set tcp限速，取值范围[0,4294967295]
      * @param DTcpMbpsLimit tcp限速，取值范围[0,4294967295]
      */
     public void setDTcpMbpsLimit(Long DTcpMbpsLimit) {
@@ -412,7 +412,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取udp限速，取值范围[0,4294967295]
+     * Get udp限速，取值范围[0,4294967295] 
      * @return DUdpMbpsLimit udp限速，取值范围[0,4294967295]
      */
     public Long getDUdpMbpsLimit() {
@@ -420,7 +420,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置udp限速，取值范围[0,4294967295]
+     * Set udp限速，取值范围[0,4294967295]
      * @param DUdpMbpsLimit udp限速，取值范围[0,4294967295]
      */
     public void setDUdpMbpsLimit(Long DUdpMbpsLimit) {
@@ -428,7 +428,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取icmp限速，取值范围[0,4294967295]
+     * Get icmp限速，取值范围[0,4294967295] 
      * @return DIcmpMbpsLimit icmp限速，取值范围[0,4294967295]
      */
     public Long getDIcmpMbpsLimit() {
@@ -436,7 +436,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置icmp限速，取值范围[0,4294967295]
+     * Set icmp限速，取值范围[0,4294967295]
      * @param DIcmpMbpsLimit icmp限速，取值范围[0,4294967295]
      */
     public void setDIcmpMbpsLimit(Long DIcmpMbpsLimit) {
@@ -444,7 +444,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 获取other协议限速，取值范围[0,4294967295]
+     * Get other协议限速，取值范围[0,4294967295] 
      * @return DOtherMbpsLimit other协议限速，取值范围[0,4294967295]
      */
     public Long getDOtherMbpsLimit() {
@@ -452,7 +452,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 设置other协议限速，取值范围[0,4294967295]
+     * Set other协议限速，取值范围[0,4294967295]
      * @param DOtherMbpsLimit other协议限速，取值范围[0,4294967295]
      */
     public void setDOtherMbpsLimit(Long DOtherMbpsLimit) {
@@ -460,7 +460,7 @@ public class DDoSPolicyDropOption  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DropTcp", this.DropTcp);

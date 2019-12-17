@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncCheckStepInfo  extends AbstractModel{
+public class SyncCheckStepInfo extends AbstractModel{
 
     /**
     * 步骤序列
@@ -51,7 +51,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     private String StepMessage;
 
     /**
-     * 获取步骤序列
+     * Get 步骤序列 
      * @return StepNo 步骤序列
      */
     public Integer getStepNo() {
@@ -59,7 +59,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤序列
+     * Set 步骤序列
      * @param StepNo 步骤序列
      */
     public void setStepNo(Integer StepNo) {
@@ -67,7 +67,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤展现名称
+     * Get 步骤展现名称 
      * @return StepName 步骤展现名称
      */
     public String getStepName() {
@@ -75,7 +75,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤展现名称
+     * Set 步骤展现名称
      * @param StepName 步骤展现名称
      */
     public void setStepName(String StepName) {
@@ -83,7 +83,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤执行结果代码
+     * Get 步骤执行结果代码 
      * @return StepCode 步骤执行结果代码
      */
     public Integer getStepCode() {
@@ -91,7 +91,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤执行结果代码
+     * Set 步骤执行结果代码
      * @param StepCode 步骤执行结果代码
      */
     public void setStepCode(Integer StepCode) {
@@ -99,7 +99,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤执行结果提示
+     * Get 步骤执行结果提示 
      * @return StepMessage 步骤执行结果提示
      */
     public String getStepMessage() {
@@ -107,7 +107,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤执行结果提示
+     * Set 步骤执行结果提示
      * @param StepMessage 步骤执行结果提示
      */
     public void setStepMessage(String StepMessage) {
@@ -115,7 +115,7 @@ public class SyncCheckStepInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepNo", this.StepNo);

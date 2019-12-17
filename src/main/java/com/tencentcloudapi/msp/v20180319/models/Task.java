@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Task  extends AbstractModel{
+public class Task extends AbstractModel{
 
     /**
     * 任务Id
@@ -93,7 +93,7 @@ public class Task  extends AbstractModel{
     private DstInfo DstInfo;
 
     /**
-     * 获取任务Id
+     * Get 任务Id 
      * @return TaskId 任务Id
      */
     public String getTaskId() {
@@ -101,7 +101,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务Id
+     * Set 任务Id
      * @param TaskId 任务Id
      */
     public void setTaskId(String TaskId) {
@@ -109,7 +109,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -117,7 +117,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -125,7 +125,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取迁移类型
+     * Get 迁移类型 
      * @return MigrationType 迁移类型
      */
     public String getMigrationType() {
@@ -133,7 +133,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置迁移类型
+     * Set 迁移类型
      * @param MigrationType 迁移类型
      */
     public void setMigrationType(String MigrationType) {
@@ -141,7 +141,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取迁移状态
+     * Get 迁移状态 
      * @return Status 迁移状态
      */
     public String getStatus() {
@@ -149,7 +149,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置迁移状态
+     * Set 迁移状态
      * @param Status 迁移状态
      */
     public void setStatus(String Status) {
@@ -157,7 +157,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取项目Id
+     * Get 项目Id 
      * @return ProjectId 项目Id
      */
     public Integer getProjectId() {
@@ -165,7 +165,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置项目Id
+     * Set 项目Id
      * @param ProjectId 项目Id
      */
     public void setProjectId(Integer ProjectId) {
@@ -173,7 +173,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -181,7 +181,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -189,7 +189,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源信息
+     * Get 迁移源信息 
      * @return SrcInfo 迁移源信息
      */
     public SrcInfo getSrcInfo() {
@@ -197,7 +197,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源信息
+     * Set 迁移源信息
      * @param SrcInfo 迁移源信息
      */
     public void setSrcInfo(SrcInfo SrcInfo) {
@@ -205,7 +205,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取迁移时间信息
+     * Get 迁移时间信息 
      * @return MigrationTimeLine 迁移时间信息
      */
     public TimeObj getMigrationTimeLine() {
@@ -213,7 +213,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置迁移时间信息
+     * Set 迁移时间信息
      * @param MigrationTimeLine 迁移时间信息
      */
     public void setMigrationTimeLine(TimeObj MigrationTimeLine) {
@@ -221,7 +221,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取状态更新时间
+     * Get 状态更新时间 
      * @return Updated 状态更新时间
      */
     public String getUpdated() {
@@ -229,7 +229,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置状态更新时间
+     * Set 状态更新时间
      * @param Updated 状态更新时间
      */
     public void setUpdated(String Updated) {
@@ -237,7 +237,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目的信息
+     * Get 迁移目的信息 
      * @return DstInfo 迁移目的信息
      */
     public DstInfo getDstInfo() {
@@ -245,7 +245,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目的信息
+     * Set 迁移目的信息
      * @param DstInfo 迁移目的信息
      */
     public void setDstInfo(DstInfo DstInfo) {
@@ -253,7 +253,7 @@ public class Task  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

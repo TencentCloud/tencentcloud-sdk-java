@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRebateInfosRequest  extends AbstractModel{
+public class DescribeRebateInfosRequest extends AbstractModel{
 
     /**
     * 返佣月份，如2018-02
@@ -44,7 +44,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取返佣月份，如2018-02
+     * Get 返佣月份，如2018-02 
      * @return RebateMonth 返佣月份，如2018-02
      */
     public String getRebateMonth() {
@@ -52,7 +52,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返佣月份，如2018-02
+     * Set 返佣月份，如2018-02
      * @param RebateMonth 返佣月份，如2018-02
      */
     public void setRebateMonth(String RebateMonth) {
@@ -60,7 +60,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeRebateInfosRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RebateMonth", this.RebateMonth);

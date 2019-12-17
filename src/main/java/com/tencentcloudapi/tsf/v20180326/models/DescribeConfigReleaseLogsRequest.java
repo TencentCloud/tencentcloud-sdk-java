@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
+public class DescribeConfigReleaseLogsRequest extends AbstractModel{
 
     /**
     * 部署组ID，不传入时查询全量
@@ -65,7 +65,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     private String ApplicationId;
 
     /**
-     * 获取部署组ID，不传入时查询全量
+     * Get 部署组ID，不传入时查询全量 
      * @return GroupId 部署组ID，不传入时查询全量
      */
     public String getGroupId() {
@@ -73,7 +73,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID，不传入时查询全量
+     * Set 部署组ID，不传入时查询全量
      * @param GroupId 部署组ID，不传入时查询全量
      */
     public void setGroupId(String GroupId) {
@@ -81,7 +81,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -89,7 +89,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -97,7 +97,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数，默认为20
+     * Get 每页条数，默认为20 
      * @return Limit 每页条数，默认为20
      */
     public Long getLimit() {
@@ -105,7 +105,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数，默认为20
+     * Set 每页条数，默认为20
      * @param Limit 每页条数，默认为20
      */
     public void setLimit(Long Limit) {
@@ -113,7 +113,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量 
      * @return NamespaceId 命名空间ID，不传入时查询全量
      */
     public String getNamespaceId() {
@@ -121,7 +121,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量
      * @param NamespaceId 命名空间ID，不传入时查询全量
      */
     public void setNamespaceId(String NamespaceId) {
@@ -129,7 +129,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID，不传入时查询全量
+     * Get 集群ID，不传入时查询全量 
      * @return ClusterId 集群ID，不传入时查询全量
      */
     public String getClusterId() {
@@ -137,7 +137,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID，不传入时查询全量
+     * Set 集群ID，不传入时查询全量
      * @param ClusterId 集群ID，不传入时查询全量
      */
     public void setClusterId(String ClusterId) {
@@ -145,7 +145,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID，不传入时查询全量
+     * Get 应用ID，不传入时查询全量 
      * @return ApplicationId 应用ID，不传入时查询全量
      */
     public String getApplicationId() {
@@ -153,7 +153,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID，不传入时查询全量
+     * Set 应用ID，不传入时查询全量
      * @param ApplicationId 应用ID，不传入时查询全量
      */
     public void setApplicationId(String ApplicationId) {
@@ -161,7 +161,7 @@ public class DescribeConfigReleaseLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

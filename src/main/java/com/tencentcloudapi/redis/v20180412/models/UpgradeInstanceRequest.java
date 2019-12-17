@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeInstanceRequest  extends AbstractModel{
+public class UpgradeInstanceRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -51,7 +51,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     private Integer RedisReplicasNum;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片大小 单位 MB
+     * Get 分片大小 单位 MB 
      * @return MemSize 分片大小 单位 MB
      */
     public Integer getMemSize() {
@@ -75,7 +75,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片大小 单位 MB
+     * Set 分片大小 单位 MB
      * @param MemSize 分片大小 单位 MB
      */
     public void setMemSize(Integer MemSize) {
@@ -83,7 +83,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public Integer getRedisShardNum() {
@@ -91,7 +91,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisShardNum 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public void setRedisShardNum(Integer RedisShardNum) {
@@ -99,7 +99,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Get 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写 
      * @return RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public Integer getRedisReplicasNum() {
@@ -107,7 +107,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+     * Set 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      * @param RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
      */
     public void setRedisReplicasNum(Integer RedisReplicasNum) {
@@ -115,7 +115,7 @@ public class UpgradeInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
+public class ModifyProVersionRenewFlagRequest extends AbstractModel{
 
     /**
     * 自动续费标识。取值范围：
@@ -40,10 +40,10 @@ public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
     private String Quuid;
 
     /**
-     * 获取自动续费标识。取值范围：
+     * Get 自动续费标识。取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
-<li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
+<li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li> 
      * @return RenewFlag 自动续费标识。取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
@@ -54,7 +54,7 @@ public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标识。取值范围：
+     * Set 自动续费标识。取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
 <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
 <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
@@ -68,7 +68,7 @@ public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机唯一ID，对应CVM的uuid、BM的instanceId。
+     * Get 主机唯一ID，对应CVM的uuid、BM的instanceId。 
      * @return Quuid 主机唯一ID，对应CVM的uuid、BM的instanceId。
      */
     public String getQuuid() {
@@ -76,7 +76,7 @@ public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机唯一ID，对应CVM的uuid、BM的instanceId。
+     * Set 主机唯一ID，对应CVM的uuid、BM的instanceId。
      * @param Quuid 主机唯一ID，对应CVM的uuid、BM的instanceId。
      */
     public void setQuuid(String Quuid) {
@@ -84,7 +84,7 @@ public class ModifyProVersionRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);

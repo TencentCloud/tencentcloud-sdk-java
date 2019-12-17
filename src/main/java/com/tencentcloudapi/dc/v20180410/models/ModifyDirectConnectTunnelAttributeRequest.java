@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
+public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
 
     /**
     * 专用通道ID
@@ -72,7 +72,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     private Integer Bandwidth;
 
     /**
-     * 获取专用通道ID
+     * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
     public String getDirectConnectTunnelId() {
@@ -80,7 +80,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用通道ID
+     * Set 专用通道ID
      * @param DirectConnectTunnelId 专用通道ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
@@ -88,7 +88,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专用通道名称
+     * Get 专用通道名称 
      * @return DirectConnectTunnelName 专用通道名称
      */
     public String getDirectConnectTunnelName() {
@@ -96,7 +96,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用通道名称
+     * Set 专用通道名称
      * @param DirectConnectTunnelName 专用通道名称
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
@@ -104,7 +104,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户侧BGP，包括Asn，AuthKey
+     * Get 用户侧BGP，包括Asn，AuthKey 
      * @return BgpPeer 用户侧BGP，包括Asn，AuthKey
      */
     public BgpPeer getBgpPeer() {
@@ -112,7 +112,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧BGP，包括Asn，AuthKey
+     * Set 用户侧BGP，包括Asn，AuthKey
      * @param BgpPeer 用户侧BGP，包括Asn，AuthKey
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
@@ -120,7 +120,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户侧网段地址
+     * Get 用户侧网段地址 
      * @return RouteFilterPrefixes 用户侧网段地址
      */
     public RouteFilterPrefix [] getRouteFilterPrefixes() {
@@ -128,7 +128,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧网段地址
+     * Set 用户侧网段地址
      * @param RouteFilterPrefixes 用户侧网段地址
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix [] RouteFilterPrefixes) {
@@ -136,7 +136,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取腾讯侧互联IP
+     * Get 腾讯侧互联IP 
      * @return TencentAddress 腾讯侧互联IP
      */
     public String getTencentAddress() {
@@ -144,7 +144,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置腾讯侧互联IP
+     * Set 腾讯侧互联IP
      * @param TencentAddress 腾讯侧互联IP
      */
     public void setTencentAddress(String TencentAddress) {
@@ -152,7 +152,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户侧互联IP
+     * Get 用户侧互联IP 
      * @return CustomerAddress 用户侧互联IP
      */
     public String getCustomerAddress() {
@@ -160,7 +160,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧互联IP
+     * Set 用户侧互联IP
      * @param CustomerAddress 用户侧互联IP
      */
     public void setCustomerAddress(String CustomerAddress) {
@@ -168,7 +168,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专用通道带宽值，单位为M。
+     * Get 专用通道带宽值，单位为M。 
      * @return Bandwidth 专用通道带宽值，单位为M。
      */
     public Integer getBandwidth() {
@@ -176,7 +176,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专用通道带宽值，单位为M。
+     * Set 专用通道带宽值，单位为M。
      * @param Bandwidth 专用通道带宽值，单位为M。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -184,7 +184,7 @@ public class ModifyDirectConnectTunnelAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectTunnelId", this.DirectConnectTunnelId);

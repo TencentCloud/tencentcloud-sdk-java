@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceRenewFlagRequest  extends AbstractModel{
+public class ModifyDBInstanceRenewFlagRequest extends AbstractModel{
 
     /**
     * 实例续费状态标记信息
@@ -30,7 +30,7 @@ public class ModifyDBInstanceRenewFlagRequest  extends AbstractModel{
     private InstanceRenewInfo [] RenewFlags;
 
     /**
-     * 获取实例续费状态标记信息
+     * Get 实例续费状态标记信息 
      * @return RenewFlags 实例续费状态标记信息
      */
     public InstanceRenewInfo [] getRenewFlags() {
@@ -38,7 +38,7 @@ public class ModifyDBInstanceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例续费状态标记信息
+     * Set 实例续费状态标记信息
      * @param RenewFlags 实例续费状态标记信息
      */
     public void setRenewFlags(InstanceRenewInfo [] RenewFlags) {
@@ -46,7 +46,7 @@ public class ModifyDBInstanceRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RenewFlags.", this.RenewFlags);

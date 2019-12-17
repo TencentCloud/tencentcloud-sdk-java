@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteProductRequest  extends AbstractModel{
+public class DeleteProductRequest extends AbstractModel{
 
     /**
     * 需要删除的产品 ID
@@ -37,7 +37,7 @@ public class DeleteProductRequest  extends AbstractModel{
     private String Skey;
 
     /**
-     * 获取需要删除的产品 ID
+     * Get 需要删除的产品 ID 
      * @return ProductId 需要删除的产品 ID
      */
     public String getProductId() {
@@ -45,7 +45,7 @@ public class DeleteProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的产品 ID
+     * Set 需要删除的产品 ID
      * @param ProductId 需要删除的产品 ID
      */
     public void setProductId(String ProductId) {
@@ -53,7 +53,7 @@ public class DeleteProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取删除LoRa产品需要skey
+     * Get 删除LoRa产品需要skey 
      * @return Skey 删除LoRa产品需要skey
      */
     public String getSkey() {
@@ -61,7 +61,7 @@ public class DeleteProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置删除LoRa产品需要skey
+     * Set 删除LoRa产品需要skey
      * @param Skey 删除LoRa产品需要skey
      */
     public void setSkey(String Skey) {
@@ -69,7 +69,7 @@ public class DeleteProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

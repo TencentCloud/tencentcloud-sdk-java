@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KickOutUserRequest  extends AbstractModel{
+public class KickOutUserRequest extends AbstractModel{
 
     /**
     * TRTC的SDKAppId。
@@ -44,7 +44,7 @@ public class KickOutUserRequest  extends AbstractModel{
     private String [] UserIds;
 
     /**
-     * 获取TRTC的SDKAppId。
+     * Get TRTC的SDKAppId。 
      * @return SdkAppId TRTC的SDKAppId。
      */
     public Long getSdkAppId() {
@@ -52,7 +52,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TRTC的SDKAppId。
+     * Set TRTC的SDKAppId。
      * @param SdkAppId TRTC的SDKAppId。
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -60,7 +60,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取房间号。
+     * Get 房间号。 
      * @return RoomId 房间号。
      */
     public Long getRoomId() {
@@ -68,7 +68,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置房间号。
+     * Set 房间号。
      * @param RoomId 房间号。
      */
     public void setRoomId(Long RoomId) {
@@ -76,7 +76,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要踢的用户列表，最多10个。
+     * Get 要踢的用户列表，最多10个。 
      * @return UserIds 要踢的用户列表，最多10个。
      */
     public String [] getUserIds() {
@@ -84,7 +84,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要踢的用户列表，最多10个。
+     * Set 要踢的用户列表，最多10个。
      * @param UserIds 要踢的用户列表，最多10个。
      */
     public void setUserIds(String [] UserIds) {
@@ -92,7 +92,7 @@ public class KickOutUserRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

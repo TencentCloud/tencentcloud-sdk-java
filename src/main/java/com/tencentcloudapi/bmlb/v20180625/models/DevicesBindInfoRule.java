@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicesBindInfoRule  extends AbstractModel{
+public class DevicesBindInfoRule extends AbstractModel{
 
     /**
     * 转发域名。
@@ -44,7 +44,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     private DevicesBindInfoLocation [] LocationSet;
 
     /**
-     * 获取转发域名。
+     * Get 转发域名。 
      * @return Domain 转发域名。
      */
     public String getDomain() {
@@ -52,7 +52,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名。
+     * Set 转发域名。
      * @param Domain 转发域名。
      */
     public void setDomain(String Domain) {
@@ -60,7 +60,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名ID。
+     * Get 转发域名ID。 
      * @return DomainId 转发域名ID。
      */
     public String getDomainId() {
@@ -68,7 +68,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名ID。
+     * Set 转发域名ID。
      * @param DomainId 转发域名ID。
      */
     public void setDomainId(String DomainId) {
@@ -76,7 +76,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径列表。
+     * Get 转发路径列表。 
      * @return LocationSet 转发路径列表。
      */
     public DevicesBindInfoLocation [] getLocationSet() {
@@ -84,7 +84,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径列表。
+     * Set 转发路径列表。
      * @param LocationSet 转发路径列表。
      */
     public void setLocationSet(DevicesBindInfoLocation [] LocationSet) {
@@ -92,7 +92,7 @@ public class DevicesBindInfoRule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

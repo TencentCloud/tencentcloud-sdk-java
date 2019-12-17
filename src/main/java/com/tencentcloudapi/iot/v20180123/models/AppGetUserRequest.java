@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppGetUserRequest  extends AbstractModel{
+public class AppGetUserRequest extends AbstractModel{
 
     /**
     * 访问Token
@@ -30,7 +30,7 @@ public class AppGetUserRequest  extends AbstractModel{
     private String AccessToken;
 
     /**
-     * 获取访问Token
+     * Get 访问Token 
      * @return AccessToken 访问Token
      */
     public String getAccessToken() {
@@ -38,7 +38,7 @@ public class AppGetUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问Token
+     * Set 访问Token
      * @param AccessToken 访问Token
      */
     public void setAccessToken(String AccessToken) {
@@ -46,7 +46,7 @@ public class AppGetUserRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);

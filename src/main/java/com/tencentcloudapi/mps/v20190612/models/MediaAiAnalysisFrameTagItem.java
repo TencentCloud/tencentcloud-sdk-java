@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
+public class MediaAiAnalysisFrameTagItem extends AbstractModel{
 
     /**
     * 按帧标签名称。
@@ -37,7 +37,7 @@ public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取按帧标签名称。
+     * Get 按帧标签名称。 
      * @return Tag 按帧标签名称。
      */
     public String getTag() {
@@ -45,7 +45,7 @@ public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置按帧标签名称。
+     * Set 按帧标签名称。
      * @param Tag 按帧标签名称。
      */
     public void setTag(String Tag) {
@@ -53,7 +53,7 @@ public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取按帧标签的可信度，取值范围是 0 到 100。
+     * Get 按帧标签的可信度，取值范围是 0 到 100。 
      * @return Confidence 按帧标签的可信度，取值范围是 0 到 100。
      */
     public Float getConfidence() {
@@ -61,7 +61,7 @@ public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置按帧标签的可信度，取值范围是 0 到 100。
+     * Set 按帧标签的可信度，取值范围是 0 到 100。
      * @param Confidence 按帧标签的可信度，取值范围是 0 到 100。
      */
     public void setConfidence(Float Confidence) {
@@ -69,7 +69,7 @@ public class MediaAiAnalysisFrameTagItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);

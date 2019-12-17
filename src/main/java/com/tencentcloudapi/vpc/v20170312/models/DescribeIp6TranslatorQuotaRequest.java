@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIp6TranslatorQuotaRequest  extends AbstractModel{
+public class DescribeIp6TranslatorQuotaRequest extends AbstractModel{
 
     /**
     * 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
@@ -30,7 +30,7 @@ public class DescribeIp6TranslatorQuotaRequest  extends AbstractModel{
     private String [] Ip6TranslatorIds;
 
     /**
-     * 获取待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
+     * Get 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx 
      * @return Ip6TranslatorIds 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
      */
     public String [] getIp6TranslatorIds() {
@@ -38,7 +38,7 @@ public class DescribeIp6TranslatorQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
+     * Set 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
      * @param Ip6TranslatorIds 待查询IPV6转换实例的唯一ID列表，形如ip6-xxxxxxxx
      */
     public void setIp6TranslatorIds(String [] Ip6TranslatorIds) {
@@ -46,7 +46,7 @@ public class DescribeIp6TranslatorQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6TranslatorIds.", this.Ip6TranslatorIds);

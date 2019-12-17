@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceParamsResponse  extends AbstractModel{
+public class DescribeInstanceParamsResponse extends AbstractModel{
 
     /**
     * 实例参数个数
@@ -65,7 +65,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例参数个数
+     * Get 实例参数个数 
      * @return TotalCount 实例参数个数
      */
     public Integer getTotalCount() {
@@ -73,7 +73,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例参数个数
+     * Set 实例参数个数
      * @param TotalCount 实例参数个数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -81,7 +81,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例枚举类型参数
+     * Get 实例枚举类型参数 
      * @return InstanceEnumParam 实例枚举类型参数
      */
     public InstanceEnumParam [] getInstanceEnumParam() {
@@ -89,7 +89,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例枚举类型参数
+     * Set 实例枚举类型参数
      * @param InstanceEnumParam 实例枚举类型参数
      */
     public void setInstanceEnumParam(InstanceEnumParam [] InstanceEnumParam) {
@@ -97,7 +97,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例整型参数
+     * Get 实例整型参数 
      * @return InstanceIntegerParam 实例整型参数
      */
     public InstanceIntegerParam [] getInstanceIntegerParam() {
@@ -105,7 +105,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例整型参数
+     * Set 实例整型参数
      * @param InstanceIntegerParam 实例整型参数
      */
     public void setInstanceIntegerParam(InstanceIntegerParam [] InstanceIntegerParam) {
@@ -113,7 +113,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例字符型参数
+     * Get 实例字符型参数 
      * @return InstanceTextParam 实例字符型参数
      */
     public InstanceTextParam [] getInstanceTextParam() {
@@ -121,7 +121,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例字符型参数
+     * Set 实例字符型参数
      * @param InstanceTextParam 实例字符型参数
      */
     public void setInstanceTextParam(InstanceTextParam [] InstanceTextParam) {
@@ -129,7 +129,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例多选项型参数
+     * Get 实例多选项型参数 
      * @return InstanceMultiParam 实例多选项型参数
      */
     public InstanceMultiParam [] getInstanceMultiParam() {
@@ -137,7 +137,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例多选项型参数
+     * Set 实例多选项型参数
      * @param InstanceMultiParam 实例多选项型参数
      */
     public void setInstanceMultiParam(InstanceMultiParam [] InstanceMultiParam) {
@@ -145,7 +145,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeInstanceParamsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

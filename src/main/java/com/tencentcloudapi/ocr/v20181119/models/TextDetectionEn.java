@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextDetectionEn  extends AbstractModel{
+public class TextDetectionEn extends AbstractModel{
 
     /**
     * 识别出的文本行内容
@@ -52,7 +52,7 @@ public class TextDetectionEn  extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-     * 获取识别出的文本行内容
+     * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
     public String getDetectedText() {
@@ -60,7 +60,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的文本行内容
+     * Set 识别出的文本行内容
      * @param DetectedText 识别出的文本行内容
      */
     public void setDetectedText(String DetectedText) {
@@ -68,7 +68,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 获取置信度 0 ~100
+     * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
     public Integer getConfidence() {
@@ -76,7 +76,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 设置置信度 0 ~100
+     * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
     public void setConfidence(Integer Confidence) {
@@ -84,8 +84,8 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文本行坐标，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Polygon 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,7 +94,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示
+     * Set 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Polygon 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
@@ -104,7 +104,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 获取此字段为扩展字段。目前EnglishOCR接口返回内容为空。
+     * Get 此字段为扩展字段。目前EnglishOCR接口返回内容为空。 
      * @return AdvancedInfo 此字段为扩展字段。目前EnglishOCR接口返回内容为空。
      */
     public String getAdvancedInfo() {
@@ -112,7 +112,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 设置此字段为扩展字段。目前EnglishOCR接口返回内容为空。
+     * Set 此字段为扩展字段。目前EnglishOCR接口返回内容为空。
      * @param AdvancedInfo 此字段为扩展字段。目前EnglishOCR接口返回内容为空。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -120,7 +120,7 @@ public class TextDetectionEn  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);

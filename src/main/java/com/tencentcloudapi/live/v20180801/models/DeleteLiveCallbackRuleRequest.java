@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
+public class DeleteLiveCallbackRuleRequest extends AbstractModel{
 
     /**
     * 推流域名。
@@ -37,7 +37,7 @@ public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -45,7 +45,7 @@ public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -53,7 +53,7 @@ public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public String getAppName() {
@@ -61,7 +61,7 @@ public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。
      */
     public void setAppName(String AppName) {
@@ -69,7 +69,7 @@ public class DeleteLiveCallbackRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBAccount  extends AbstractModel{
+public class DBAccount extends AbstractModel{
 
     /**
     * 用户名
@@ -73,7 +73,7 @@ public class DBAccount  extends AbstractModel{
     private Integer DelayThresh;
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -81,7 +81,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -89,7 +89,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
+     * Get 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%） 
      * @return Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
      */
     public String getHost() {
@@ -97,7 +97,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
+     * Set 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
      * @param Host 用户可以从哪台主机登录（对应 MySQL 用户的 host 字段，UserName + Host 唯一标识一个用户，IP形式，IP段以%结尾；支持填入%；为空默认等于%）
      */
     public void setHost(String Host) {
@@ -105,7 +105,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取用户备注信息
+     * Get 用户备注信息 
      * @return Description 用户备注信息
      */
     public String getDescription() {
@@ -113,7 +113,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置用户备注信息
+     * Set 用户备注信息
      * @param Description 用户备注信息
      */
     public void setDescription(String Description) {
@@ -121,7 +121,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -129,7 +129,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -137,7 +137,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取最后更新时间
+     * Get 最后更新时间 
      * @return UpdateTime 最后更新时间
      */
     public String getUpdateTime() {
@@ -145,7 +145,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置最后更新时间
+     * Set 最后更新时间
      * @param UpdateTime 最后更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -153,7 +153,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+     * Get 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。 
      * @return ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
     public Integer getReadOnly() {
@@ -161,7 +161,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
+     * Set 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      * @param ReadOnly 只读标记，0：否， 1：该账号的sql请求优先选择备机执行，备机不可用时选择主机执行，2：优先选择备机执行，备机不可用时操作失败。
      */
     public void setReadOnly(Integer ReadOnly) {
@@ -169,8 +169,8 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 获取该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -179,7 +179,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 设置该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
+     * Set 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayThresh 该字段对只读帐号有意义，表示选择主备延迟小于该值的备机
 注意：此字段可能返回 null，表示取不到有效值。
@@ -189,7 +189,7 @@ public class DBAccount  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

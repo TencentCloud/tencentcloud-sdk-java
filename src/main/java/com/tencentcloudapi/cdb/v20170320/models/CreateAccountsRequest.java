@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountsRequest  extends AbstractModel{
+public class CreateAccountsRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -51,7 +51,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云数据库账号。
+     * Get 云数据库账号。 
      * @return Accounts 云数据库账号。
      */
     public Account [] getAccounts() {
@@ -75,7 +75,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库账号。
+     * Set 云数据库账号。
      * @param Accounts 云数据库账号。
      */
     public void setAccounts(Account [] Accounts) {
@@ -83,7 +83,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新账户的密码。
+     * Get 新账户的密码。 
      * @return Password 新账户的密码。
      */
     public String getPassword() {
@@ -91,7 +91,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新账户的密码。
+     * Set 新账户的密码。
      * @param Password 新账户的密码。
      */
     public void setPassword(String Password) {
@@ -99,7 +99,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注信息。
+     * Get 备注信息。 
      * @return Description 备注信息。
      */
     public String getDescription() {
@@ -107,7 +107,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注信息。
+     * Set 备注信息。
      * @param Description 备注信息。
      */
     public void setDescription(String Description) {
@@ -115,7 +115,7 @@ public class CreateAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncRequestInfoRequest  extends AbstractModel{
+public class DescribeAsyncRequestInfoRequest extends AbstractModel{
 
     /**
     * 异步任务的请求 ID。
@@ -30,7 +30,7 @@ public class DescribeAsyncRequestInfoRequest  extends AbstractModel{
     private String AsyncRequestId;
 
     /**
-     * 获取异步任务的请求 ID。
+     * Get 异步任务的请求 ID。 
      * @return AsyncRequestId 异步任务的请求 ID。
      */
     public String getAsyncRequestId() {
@@ -38,7 +38,7 @@ public class DescribeAsyncRequestInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务的请求 ID。
+     * Set 异步任务的请求 ID。
      * @param AsyncRequestId 异步任务的请求 ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
@@ -46,7 +46,7 @@ public class DescribeAsyncRequestInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);

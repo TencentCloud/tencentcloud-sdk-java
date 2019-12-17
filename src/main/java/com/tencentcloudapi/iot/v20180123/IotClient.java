@@ -29,21 +29,10 @@ public class IotClient extends AbstractClient{
     private static String endpoint = "iot.tencentcloudapi.com";
     private static String version = "2018-01-23";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public IotClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public IotClient(Credential credential, String region, ClientProfile profile) {
         super(IotClient.endpoint, IotClient.version, credential, region, profile);
     }

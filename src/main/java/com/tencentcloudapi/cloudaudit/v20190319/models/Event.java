@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Event  extends AbstractModel{
+public class Event extends AbstractModel{
 
     /**
     * 资源对
@@ -128,7 +128,7 @@ public class Event  extends AbstractModel{
     private String Username;
 
     /**
-     * 获取资源对
+     * Get 资源对 
      * @return Resources 资源对
      */
     public Resource getResources() {
@@ -136,7 +136,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置资源对
+     * Set 资源对
      * @param Resources 资源对
      */
     public void setResources(Resource Resources) {
@@ -144,7 +144,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取主账号ID
+     * Get 主账号ID 
      * @return AccountID 主账号ID
      */
     public Long getAccountID() {
@@ -152,7 +152,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置主账号ID
+     * Set 主账号ID
      * @param AccountID 主账号ID
      */
     public void setAccountID(Long AccountID) {
@@ -160,7 +160,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取日志详情
+     * Get 日志详情 
      * @return CloudAuditEvent 日志详情
      */
     public String getCloudAuditEvent() {
@@ -168,7 +168,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置日志详情
+     * Set 日志详情
      * @param CloudAuditEvent 日志详情
      */
     public void setCloudAuditEvent(String CloudAuditEvent) {
@@ -176,7 +176,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权错误码
+     * Get 鉴权错误码 
      * @return ErrorCode 鉴权错误码
      */
     public Long getErrorCode() {
@@ -184,7 +184,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权错误码
+     * Set 鉴权错误码
      * @param ErrorCode 鉴权错误码
      */
     public void setErrorCode(Long ErrorCode) {
@@ -192,7 +192,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取日志ID
+     * Get 日志ID 
      * @return EventId 日志ID
      */
     public String getEventId() {
@@ -200,7 +200,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置日志ID
+     * Set 日志ID
      * @param EventId 日志ID
      */
     public void setEventId(String EventId) {
@@ -208,7 +208,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件名称
+     * Get 事件名称 
      * @return EventName 事件名称
      */
     public String getEventName() {
@@ -216,7 +216,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件名称
+     * Set 事件名称
      * @param EventName 事件名称
      */
     public void setEventName(String EventName) {
@@ -224,7 +224,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件名称中文描述
+     * Get 事件名称中文描述 
      * @return EventNameCn 事件名称中文描述
      */
     public String getEventNameCn() {
@@ -232,7 +232,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件名称中文描述
+     * Set 事件名称中文描述
      * @param EventNameCn 事件名称中文描述
      */
     public void setEventNameCn(String EventNameCn) {
@@ -240,7 +240,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件地域
+     * Get 事件地域 
      * @return EventRegion 事件地域
      */
     public String getEventRegion() {
@@ -248,7 +248,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件地域
+     * Set 事件地域
      * @param EventRegion 事件地域
      */
     public void setEventRegion(String EventRegion) {
@@ -256,7 +256,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取请求来源
+     * Get 请求来源 
      * @return EventSource 请求来源
      */
     public String getEventSource() {
@@ -264,7 +264,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置请求来源
+     * Set 请求来源
      * @param EventSource 请求来源
      */
     public void setEventSource(String EventSource) {
@@ -272,7 +272,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取事件时间
+     * Get 事件时间 
      * @return EventTime 事件时间
      */
     public String getEventTime() {
@@ -280,7 +280,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置事件时间
+     * Set 事件时间
      * @param EventTime 事件时间
      */
     public void setEventTime(String EventTime) {
@@ -288,7 +288,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取请求ID
+     * Get 请求ID 
      * @return RequestID 请求ID
      */
     public String getRequestID() {
@@ -296,7 +296,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置请求ID
+     * Set 请求ID
      * @param RequestID 请求ID
      */
     public void setRequestID(String RequestID) {
@@ -304,7 +304,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取资源类型中文描述
+     * Get 资源类型中文描述 
      * @return ResourceTypeCn 资源类型中文描述
      */
     public String getResourceTypeCn() {
@@ -312,7 +312,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型中文描述
+     * Set 资源类型中文描述
      * @param ResourceTypeCn 资源类型中文描述
      */
     public void setResourceTypeCn(String ResourceTypeCn) {
@@ -320,7 +320,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取证书ID
+     * Get 证书ID 
      * @return SecretId 证书ID
      */
     public String getSecretId() {
@@ -328,7 +328,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置证书ID
+     * Set 证书ID
      * @param SecretId 证书ID
      */
     public void setSecretId(String SecretId) {
@@ -336,7 +336,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取源IP
+     * Get 源IP 
      * @return SourceIPAddress 源IP
      */
     public String getSourceIPAddress() {
@@ -344,7 +344,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置源IP
+     * Set 源IP
      * @param SourceIPAddress 源IP
      */
     public void setSourceIPAddress(String SourceIPAddress) {
@@ -352,7 +352,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return Username 用户名
      */
     public String getUsername() {
@@ -360,7 +360,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param Username 用户名
      */
     public void setUsername(String Username) {
@@ -368,7 +368,7 @@ public class Event  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Resources.", this.Resources);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceTag  extends AbstractModel{
+public class DeviceTag extends AbstractModel{
 
     /**
     * 属性名称
@@ -44,7 +44,7 @@ public class DeviceTag  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取属性名称
+     * Get 属性名称 
      * @return Tag 属性名称
      */
     public String getTag() {
@@ -52,7 +52,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 设置属性名称
+     * Set 属性名称
      * @param Tag 属性名称
      */
     public void setTag(String Tag) {
@@ -60,7 +60,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 获取属性值的类型，1 int，2 string
+     * Get 属性值的类型，1 int，2 string 
      * @return Type 属性值的类型，1 int，2 string
      */
     public Integer getType() {
@@ -68,7 +68,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 设置属性值的类型，1 int，2 string
+     * Set 属性值的类型，1 int，2 string
      * @param Type 属性值的类型，1 int，2 string
      */
     public void setType(Integer Type) {
@@ -76,7 +76,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 获取属性的值
+     * Get 属性的值 
      * @return Value 属性的值
      */
     public String getValue() {
@@ -84,7 +84,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 设置属性的值
+     * Set 属性的值
      * @param Value 属性的值
      */
     public void setValue(String Value) {
@@ -92,7 +92,7 @@ public class DeviceTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);

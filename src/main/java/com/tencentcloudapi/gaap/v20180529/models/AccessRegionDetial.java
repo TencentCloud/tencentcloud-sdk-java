@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessRegionDetial  extends AbstractModel{
+public class AccessRegionDetial extends AbstractModel{
 
     /**
     * 区域ID
@@ -51,7 +51,7 @@ public class AccessRegionDetial  extends AbstractModel{
     private Long [] BandwidthList;
 
     /**
-     * 获取区域ID
+     * Get 区域ID 
      * @return RegionId 区域ID
      */
     public String getRegionId() {
@@ -59,7 +59,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID
+     * Set 区域ID
      * @param RegionId 区域ID
      */
     public void setRegionId(String RegionId) {
@@ -67,7 +67,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 获取区域的中文或英文名称
+     * Get 区域的中文或英文名称 
      * @return RegionName 区域的中文或英文名称
      */
     public String getRegionName() {
@@ -75,7 +75,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 设置区域的中文或英文名称
+     * Set 区域的中文或英文名称
      * @param RegionName 区域的中文或英文名称
      */
     public void setRegionName(String RegionName) {
@@ -83,7 +83,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 获取可选的并发量取值数组
+     * Get 可选的并发量取值数组 
      * @return ConcurrentList 可选的并发量取值数组
      */
     public Long [] getConcurrentList() {
@@ -91,7 +91,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 设置可选的并发量取值数组
+     * Set 可选的并发量取值数组
      * @param ConcurrentList 可选的并发量取值数组
      */
     public void setConcurrentList(Long [] ConcurrentList) {
@@ -99,7 +99,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 获取可选的带宽取值数组
+     * Get 可选的带宽取值数组 
      * @return BandwidthList 可选的带宽取值数组
      */
     public Long [] getBandwidthList() {
@@ -107,7 +107,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 设置可选的带宽取值数组
+     * Set 可选的带宽取值数组
      * @param BandwidthList 可选的带宽取值数组
      */
     public void setBandwidthList(Long [] BandwidthList) {
@@ -115,7 +115,7 @@ public class AccessRegionDetial  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

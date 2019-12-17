@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
+public class ModifyLoadBalancerChargeModeListener extends AbstractModel{
 
     /**
     * 监听器ID。
@@ -44,7 +44,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     private Integer Bandwidth;
 
     /**
-     * 获取监听器ID。
+     * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
     public String getListenerId() {
@@ -52,7 +52,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID。
+     * Set 监听器ID。
      * @param ListenerId 监听器ID。
      */
     public void setListenerId(String ListenerId) {
@@ -60,7 +60,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 获取协议类型。
+     * Get 协议类型。 
      * @return Protocol 协议类型。
      */
     public String getProtocol() {
@@ -68,7 +68,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 设置协议类型。
+     * Set 协议类型。
      * @param Protocol 协议类型。
      */
     public void setProtocol(String Protocol) {
@@ -76,7 +76,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 获取带宽。
+     * Get 带宽。 
      * @return Bandwidth 带宽。
      */
     public Integer getBandwidth() {
@@ -84,7 +84,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 设置带宽。
+     * Set 带宽。
      * @param Bandwidth 带宽。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -92,7 +92,7 @@ public class ModifyLoadBalancerChargeModeListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

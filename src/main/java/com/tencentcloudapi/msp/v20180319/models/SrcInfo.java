@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrcInfo  extends AbstractModel{
+public class SrcInfo extends AbstractModel{
 
     /**
     * 迁移源地域
@@ -51,7 +51,7 @@ public class SrcInfo  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取迁移源地域
+     * Get 迁移源地域 
      * @return Region 迁移源地域
      */
     public String getRegion() {
@@ -59,7 +59,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源地域
+     * Set 迁移源地域
      * @param Region 迁移源地域
      */
     public void setRegion(String Region) {
@@ -67,7 +67,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源Ip
+     * Get 迁移源Ip 
      * @return Ip 迁移源Ip
      */
     public String getIp() {
@@ -75,7 +75,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源Ip
+     * Set 迁移源Ip
      * @param Ip 迁移源Ip
      */
     public void setIp(String Ip) {
@@ -83,7 +83,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源端口
+     * Get 迁移源端口 
      * @return Port 迁移源端口
      */
     public String getPort() {
@@ -91,7 +91,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源端口
+     * Set 迁移源端口
      * @param Port 迁移源端口
      */
     public void setPort(String Port) {
@@ -99,7 +99,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移源实例Id
+     * Get 迁移源实例Id 
      * @return InstanceId 迁移源实例Id
      */
     public String getInstanceId() {
@@ -107,7 +107,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移源实例Id
+     * Set 迁移源实例Id
      * @param InstanceId 迁移源实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -115,7 +115,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

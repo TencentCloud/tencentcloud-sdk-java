@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeployGroupRequest  extends AbstractModel{
+public class DeployGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID
@@ -44,7 +44,7 @@ public class DeployGroupRequest  extends AbstractModel{
     private String StartupParameters;
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -52,7 +52,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -60,7 +60,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包ID
+     * Get 程序包ID 
      * @return PkgId 程序包ID
      */
     public String getPkgId() {
@@ -68,7 +68,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
      * @param PkgId 程序包ID
      */
     public void setPkgId(String PkgId) {
@@ -76,7 +76,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取部署组启动参数
+     * Get 部署组启动参数 
      * @return StartupParameters 部署组启动参数
      */
     public String getStartupParameters() {
@@ -84,7 +84,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组启动参数
+     * Set 部署组启动参数
      * @param StartupParameters 部署组启动参数
      */
     public void setStartupParameters(String StartupParameters) {
@@ -92,7 +92,7 @@ public class DeployGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

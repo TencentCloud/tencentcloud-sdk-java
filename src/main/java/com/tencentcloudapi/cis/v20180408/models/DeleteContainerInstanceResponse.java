@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteContainerInstanceResponse  extends AbstractModel{
+public class DeleteContainerInstanceResponse extends AbstractModel{
 
     /**
     * 操作信息
@@ -37,7 +37,7 @@ public class DeleteContainerInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取操作信息
+     * Get 操作信息 
      * @return Msg 操作信息
      */
     public String getMsg() {
@@ -45,7 +45,7 @@ public class DeleteContainerInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置操作信息
+     * Set 操作信息
      * @param Msg 操作信息
      */
     public void setMsg(String Msg) {
@@ -53,7 +53,7 @@ public class DeleteContainerInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Get 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。 
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DeleteContainerInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Set 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DeleteContainerInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Msg", this.Msg);

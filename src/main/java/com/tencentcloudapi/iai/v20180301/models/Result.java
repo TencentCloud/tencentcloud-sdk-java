@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Result  extends AbstractModel{
+public class Result extends AbstractModel{
 
     /**
     * 识别出的最相似候选人
@@ -45,7 +45,7 @@ public class Result  extends AbstractModel{
     private Long RetCode;
 
     /**
-     * 获取识别出的最相似候选人
+     * Get 识别出的最相似候选人 
      * @return Candidates 识别出的最相似候选人
      */
     public Candidate [] getCandidates() {
@@ -53,7 +53,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的最相似候选人
+     * Set 识别出的最相似候选人
      * @param Candidates 识别出的最相似候选人
      */
     public void setCandidates(Candidate [] Candidates) {
@@ -61,7 +61,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取检测出的人脸框位置
+     * Get 检测出的人脸框位置 
      * @return FaceRect 检测出的人脸框位置
      */
     public FaceRect getFaceRect() {
@@ -69,7 +69,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置检测出的人脸框位置
+     * Set 检测出的人脸框位置
      * @param FaceRect 检测出的人脸框位置
      */
     public void setFaceRect(FaceRect FaceRect) {
@@ -77,8 +77,8 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * Get 检测出的人脸图片状态返回码。0 表示正常。 
+-1601代表不符合图片质量控制要求，此时Candidate内容为空。 
      * @return RetCode 检测出的人脸图片状态返回码。0 表示正常。 
 -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
@@ -87,7 +87,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置检测出的人脸图片状态返回码。0 表示正常。 
+     * Set 检测出的人脸图片状态返回码。0 表示正常。 
 -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      * @param RetCode 检测出的人脸图片状态返回码。0 表示正常。 
 -1601代表不符合图片质量控制要求，此时Candidate内容为空。
@@ -97,7 +97,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Candidates.", this.Candidates);

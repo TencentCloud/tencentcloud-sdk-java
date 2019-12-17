@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCDNUsageDataResponse  extends AbstractModel{
+public class DescribeCDNUsageDataResponse extends AbstractModel{
 
     /**
     * 时间粒度，单位：分钟。
@@ -44,7 +44,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取时间粒度，单位：分钟。
+     * Get 时间粒度，单位：分钟。 
      * @return DataInterval 时间粒度，单位：分钟。
      */
     public Long getDataInterval() {
@@ -52,7 +52,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置时间粒度，单位：分钟。
+     * Set 时间粒度，单位：分钟。
      * @param DataInterval 时间粒度，单位：分钟。
      */
     public void setDataInterval(Long DataInterval) {
@@ -60,7 +60,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CDN 统计数据。
+     * Get CDN 统计数据。 
      * @return Data CDN 统计数据。
      */
     public StatDataItem [] getData() {
@@ -68,7 +68,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CDN 统计数据。
+     * Set CDN 统计数据。
      * @param Data CDN 统计数据。
      */
     public void setData(StatDataItem [] Data) {
@@ -76,7 +76,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeCDNUsageDataResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);

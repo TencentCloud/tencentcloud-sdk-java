@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppIssueDeviceControlRequest  extends AbstractModel{
+public class AppIssueDeviceControlRequest extends AbstractModel{
 
     /**
     * 访问Token
@@ -58,7 +58,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     private Boolean Metadata;
 
     /**
-     * 获取访问Token
+     * Get 访问Token 
      * @return AccessToken 访问Token
      */
     public String getAccessToken() {
@@ -66,7 +66,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问Token
+     * Set 访问Token
      * @param AccessToken 访问Token
      */
     public void setAccessToken(String AccessToken) {
@@ -74,7 +74,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -82,7 +82,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -90,7 +90,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -98,7 +98,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -106,7 +106,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取控制数据（json）
+     * Get 控制数据（json） 
      * @return ControlData 控制数据（json）
      */
     public String getControlData() {
@@ -114,7 +114,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置控制数据（json）
+     * Set 控制数据（json）
      * @param ControlData 控制数据（json）
      */
     public void setControlData(String ControlData) {
@@ -122,7 +122,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否发送metadata字段
+     * Get 是否发送metadata字段 
      * @return Metadata 是否发送metadata字段
      */
     public Boolean getMetadata() {
@@ -130,7 +130,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否发送metadata字段
+     * Set 是否发送metadata字段
      * @param Metadata 是否发送metadata字段
      */
     public void setMetadata(Boolean Metadata) {
@@ -138,7 +138,7 @@ public class AppIssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessToken", this.AccessToken);

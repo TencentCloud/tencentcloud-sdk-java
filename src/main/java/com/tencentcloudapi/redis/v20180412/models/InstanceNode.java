@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceNode  extends AbstractModel{
+public class InstanceNode extends AbstractModel{
 
     /**
     * Id
@@ -37,7 +37,7 @@ public class InstanceNode  extends AbstractModel{
     private InstanceClusterNode [] InstanceClusterNode;
 
     /**
-     * 获取Id
+     * Get Id 
      * @return Id Id
      */
     public Integer getId() {
@@ -45,7 +45,7 @@ public class InstanceNode  extends AbstractModel{
     }
 
     /**
-     * 设置Id
+     * Set Id
      * @param Id Id
      */
     public void setId(Integer Id) {
@@ -53,7 +53,7 @@ public class InstanceNode  extends AbstractModel{
     }
 
     /**
-     * 获取节点详细信息
+     * Get 节点详细信息 
      * @return InstanceClusterNode 节点详细信息
      */
     public InstanceClusterNode [] getInstanceClusterNode() {
@@ -61,7 +61,7 @@ public class InstanceNode  extends AbstractModel{
     }
 
     /**
-     * 设置节点详细信息
+     * Set 节点详细信息
      * @param InstanceClusterNode 节点详细信息
      */
     public void setInstanceClusterNode(InstanceClusterNode [] InstanceClusterNode) {
@@ -69,7 +69,7 @@ public class InstanceNode  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

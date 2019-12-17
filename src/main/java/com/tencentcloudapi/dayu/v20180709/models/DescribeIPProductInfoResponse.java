@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIPProductInfoResponse  extends AbstractModel{
+public class DescribeIPProductInfoResponse extends AbstractModel{
 
     /**
     * 云产品信息列表，如果没有查询到则返回空数组，值说明如下：
@@ -41,11 +41,11 @@ Key为IP时，value表示云产品实例的IP；
     private String RequestId;
 
     /**
-     * 获取云产品信息列表，如果没有查询到则返回空数组，值说明如下：
+     * Get 云产品信息列表，如果没有查询到则返回空数组，值说明如下：
 Key为ProductName时，value表示云产品实例的名称；
 Key为ProductInstanceId时，value表示云产品实例的ID；
 Key为ProductType时，value表示的是云产品的类型（cvm表示云主机、clb表示负载均衡）;
-Key为IP时，value表示云产品实例的IP；
+Key为IP时，value表示云产品实例的IP； 
      * @return Data 云产品信息列表，如果没有查询到则返回空数组，值说明如下：
 Key为ProductName时，value表示云产品实例的名称；
 Key为ProductInstanceId时，value表示云产品实例的ID；
@@ -57,7 +57,7 @@ Key为IP时，value表示云产品实例的IP；
     }
 
     /**
-     * 设置云产品信息列表，如果没有查询到则返回空数组，值说明如下：
+     * Set 云产品信息列表，如果没有查询到则返回空数组，值说明如下：
 Key为ProductName时，value表示云产品实例的名称；
 Key为ProductInstanceId时，value表示云产品实例的ID；
 Key为ProductType时，value表示的是云产品的类型（cvm表示云主机、clb表示负载均衡）;
@@ -73,7 +73,7 @@ Key为IP时，value表示云产品实例的IP；
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -81,7 +81,7 @@ Key为IP时，value表示云产品实例的IP；
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -89,7 +89,7 @@ Key为IP时，value表示云产品实例的IP；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ForbidLiveStreamRequest  extends AbstractModel{
+public class ForbidLiveStreamRequest extends AbstractModel{
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -63,7 +63,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     private String Reason;
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -71,7 +71,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -79,7 +79,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取您的推流域名。
+     * Get 您的推流域名。 
      * @return DomainName 您的推流域名。
      */
     public String getDomainName() {
@@ -87,7 +87,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置您的推流域名。
+     * Set 您的推流域名。
      * @param DomainName 您的推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -95,7 +95,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -103,7 +103,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -111,10 +111,10 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+     * Get 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
 1. 默认禁播7天，且最长支持禁播90天。
-2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return ResumeTime 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
 1. 默认禁播7天，且最长支持禁播90天。
@@ -125,7 +125,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
+     * Set 恢复流的时间。UTC 格式，例如：2018-11-29T19:00:00Z。
 注意：
 1. 默认禁播7天，且最长支持禁播90天。
 2. 北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -139,9 +139,9 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取禁推原因。
+     * Get 禁推原因。
 注明：请务必填写禁推原因，防止误操作。
-长度限制：2048字节。
+长度限制：2048字节。 
      * @return Reason 禁推原因。
 注明：请务必填写禁推原因，防止误操作。
 长度限制：2048字节。
@@ -151,7 +151,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置禁推原因。
+     * Set 禁推原因。
 注明：请务必填写禁推原因，防止误操作。
 长度限制：2048字节。
      * @param Reason 禁推原因。
@@ -163,7 +163,7 @@ public class ForbidLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

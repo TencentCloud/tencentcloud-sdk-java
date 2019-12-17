@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePkgsRequest  extends AbstractModel{
+public class DescribePkgsRequest extends AbstractModel{
 
     /**
     * 应用ID（只传入应用ID，返回该应用下所有软件包信息）
@@ -65,7 +65,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * Get 应用ID（只传入应用ID，返回该应用下所有软件包信息） 
      * @return ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      */
     public String getApplicationId() {
@@ -73,7 +73,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * Set 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      * @param ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
      */
     public void setApplicationId(String ApplicationId) {
@@ -81,7 +81,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询关键字（支持根据包ID，包名，包版本号搜索）
+     * Get 查询关键字（支持根据包ID，包名，包版本号搜索） 
      * @return SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
      */
     public String getSearchWord() {
@@ -89,7 +89,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询关键字（支持根据包ID，包名，包版本号搜索）
+     * Set 查询关键字（支持根据包ID，包名，包版本号搜索）
      * @param SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
      */
     public void setSearchWord(String SearchWord) {
@@ -97,7 +97,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序关键字（默认为"UploadTime"：上传时间）
+     * Get 排序关键字（默认为"UploadTime"：上传时间） 
      * @return OrderBy 排序关键字（默认为"UploadTime"：上传时间）
      */
     public String getOrderBy() {
@@ -105,7 +105,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序关键字（默认为"UploadTime"：上传时间）
+     * Set 排序关键字（默认为"UploadTime"：上传时间）
      * @param OrderBy 排序关键字（默认为"UploadTime"：上传时间）
      */
     public void setOrderBy(String OrderBy) {
@@ -113,7 +113,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升序：0/降序：1（默认降序）
+     * Get 升序：0/降序：1（默认降序） 
      * @return OrderType 升序：0/降序：1（默认降序）
      */
     public Long getOrderType() {
@@ -121,7 +121,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升序：0/降序：1（默认降序）
+     * Set 升序：0/降序：1（默认降序）
      * @param OrderType 升序：0/降序：1（默认降序）
      */
     public void setOrderType(Long OrderType) {
@@ -129,7 +129,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询起始偏移
+     * Get 查询起始偏移 
      * @return Offset 查询起始偏移
      */
     public Long getOffset() {
@@ -137,7 +137,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询起始偏移
+     * Set 查询起始偏移
      * @param Offset 查询起始偏移
      */
     public void setOffset(Long Offset) {
@@ -145,7 +145,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量限制
+     * Get 返回数量限制 
      * @return Limit 返回数量限制
      */
     public Long getLimit() {
@@ -153,7 +153,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量限制
+     * Set 返回数量限制
      * @param Limit 返回数量限制
      */
     public void setLimit(Long Limit) {
@@ -161,7 +161,7 @@ public class DescribePkgsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

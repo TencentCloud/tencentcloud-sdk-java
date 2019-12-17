@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealServersRequest  extends AbstractModel{
+public class DescribeRealServersRequest extends AbstractModel{
 
     /**
     * 查询源站的所属项目ID，-1表示所有项目
@@ -66,7 +66,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取查询源站的所属项目ID，-1表示所有项目
+     * Get 查询源站的所属项目ID，-1表示所有项目 
      * @return ProjectId 查询源站的所属项目ID，-1表示所有项目
      */
     public Long getProjectId() {
@@ -74,7 +74,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询源站的所属项目ID，-1表示所有项目
+     * Set 查询源站的所属项目ID，-1表示所有项目
      * @param ProjectId 查询源站的所属项目ID，-1表示所有项目
      */
     public void setProjectId(Long ProjectId) {
@@ -82,7 +82,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的源站IP或域名，支持模糊匹配
+     * Get 需要查询的源站IP或域名，支持模糊匹配 
      * @return SearchValue 需要查询的源站IP或域名，支持模糊匹配
      */
     public String getSearchValue() {
@@ -90,7 +90,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的源站IP或域名，支持模糊匹配
+     * Set 需要查询的源站IP或域名，支持模糊匹配
      * @param SearchValue 需要查询的源站IP或域名，支持模糊匹配
      */
     public void setSearchValue(String SearchValue) {
@@ -98,7 +98,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认值是0
+     * Get 偏移量，默认值是0 
      * @return Offset 偏移量，默认值是0
      */
     public Long getOffset() {
@@ -106,7 +106,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认值是0
+     * Set 偏移量，默认值是0
      * @param Offset 偏移量，默认值是0
      */
     public void setOffset(Long Offset) {
@@ -114,7 +114,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20个，最大值为50个
+     * Get 返回数量，默认为20个，最大值为50个 
      * @return Limit 返回数量，默认为20个，最大值为50个
      */
     public Long getLimit() {
@@ -122,7 +122,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20个，最大值为50个
+     * Set 返回数量，默认为20个，最大值为50个
      * @param Limit 返回数量，默认为20个，最大值为50个
      */
     public void setLimit(Long Limit) {
@@ -130,8 +130,8 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
+     * Get 标签列表，当存在该字段时，拉取对应标签下的资源列表。
+最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。 
      * @return TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
      */
@@ -140,7 +140,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
+     * Set 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
      * @param TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，源站会被拉取出来。
@@ -150,7 +150,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件。filter的name取值(RealServerName,RealServerIP)
+     * Get 过滤条件。filter的name取值(RealServerName,RealServerIP) 
      * @return Filters 过滤条件。filter的name取值(RealServerName,RealServerIP)
      */
     public Filter [] getFilters() {
@@ -158,7 +158,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。filter的name取值(RealServerName,RealServerIP)
+     * Set 过滤条件。filter的name取值(RealServerName,RealServerIP)
      * @param Filters 过滤条件。filter的name取值(RealServerName,RealServerIP)
      */
     public void setFilters(Filter [] Filters) {
@@ -166,7 +166,7 @@ public class DescribeRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

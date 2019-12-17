@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeJobRequest  extends AbstractModel{
+public class DescribeJobRequest extends AbstractModel{
 
     /**
     * 任务名称
@@ -37,7 +37,7 @@ public class DescribeJobRequest  extends AbstractModel{
     private String Cluster;
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class DescribeJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class DescribeJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的集群
+     * Get 运行任务的集群 
      * @return Cluster 运行任务的集群
      */
     public String getCluster() {
@@ -61,7 +61,7 @@ public class DescribeJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的集群
+     * Set 运行任务的集群
      * @param Cluster 运行任务的集群
      */
     public void setCluster(String Cluster) {
@@ -69,7 +69,7 @@ public class DescribeJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

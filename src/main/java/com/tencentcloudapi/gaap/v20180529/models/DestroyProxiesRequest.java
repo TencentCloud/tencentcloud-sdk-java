@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyProxiesRequest  extends AbstractModel{
+public class DestroyProxiesRequest extends AbstractModel{
 
     /**
     * 强制删除标识。
@@ -55,10 +55,10 @@ public class DestroyProxiesRequest  extends AbstractModel{
     private String [] ProxyIds;
 
     /**
-     * 获取强制删除标识。
+     * Get 强制删除标识。
 1，强制删除该通道列表，无论是否已经绑定了源站；
 0，如果已绑定了源站，则无法删除。
-删除多通道时，如果该标识为0，只有所有的通道都没有绑定源站，才允许删除。
+删除多通道时，如果该标识为0，只有所有的通道都没有绑定源站，才允许删除。 
      * @return Force 强制删除标识。
 1，强制删除该通道列表，无论是否已经绑定了源站；
 0，如果已绑定了源站，则无法删除。
@@ -69,7 +69,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置强制删除标识。
+     * Set 强制删除标识。
 1，强制删除该通道列表，无论是否已经绑定了源站；
 0，如果已绑定了源站，则无法删除。
 删除多通道时，如果该标识为0，只有所有的通道都没有绑定源站，才允许删除。
@@ -83,7 +83,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（旧参数，请切换到ProxyIds）通道实例ID列表。
+     * Get （旧参数，请切换到ProxyIds）通道实例ID列表。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）通道实例ID列表。
      */
     public String [] getInstanceIds() {
@@ -91,7 +91,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（旧参数，请切换到ProxyIds）通道实例ID列表。
+     * Set （旧参数，请切换到ProxyIds）通道实例ID列表。
      * @param InstanceIds （旧参数，请切换到ProxyIds）通道实例ID列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -99,8 +99,8 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+更多详细信息请参阅：如何保证幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      */
@@ -109,7 +109,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
@@ -119,7 +119,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（新参数）通道实例ID列表。
+     * Get （新参数）通道实例ID列表。 
      * @return ProxyIds （新参数）通道实例ID列表。
      */
     public String [] getProxyIds() {
@@ -127,7 +127,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（新参数）通道实例ID列表。
+     * Set （新参数）通道实例ID列表。
      * @param ProxyIds （新参数）通道实例ID列表。
      */
     public void setProxyIds(String [] ProxyIds) {
@@ -135,7 +135,7 @@ public class DestroyProxiesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Force", this.Force);

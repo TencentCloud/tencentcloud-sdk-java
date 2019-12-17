@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpcPeerConnectionRequest  extends AbstractModel{
+public class CreateVpcPeerConnectionRequest extends AbstractModel{
 
     /**
     * 本端VPC唯一ID
@@ -65,7 +65,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     private Long Bandwidth;
 
     /**
-     * 获取本端VPC唯一ID
+     * Get 本端VPC唯一ID 
      * @return VpcId 本端VPC唯一ID
      */
     public String getVpcId() {
@@ -73,7 +73,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置本端VPC唯一ID
+     * Set 本端VPC唯一ID
      * @param VpcId 本端VPC唯一ID
      */
     public void setVpcId(String VpcId) {
@@ -81,7 +81,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对端VPC唯一ID
+     * Get 对端VPC唯一ID 
      * @return PeerVpcId 对端VPC唯一ID
      */
     public String getPeerVpcId() {
@@ -89,7 +89,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端VPC唯一ID
+     * Set 对端VPC唯一ID
      * @param PeerVpcId 对端VPC唯一ID
      */
     public void setPeerVpcId(String PeerVpcId) {
@@ -97,7 +97,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等
+     * Get 对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等 
      * @return PeerRegion 对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等
      */
     public String getPeerRegion() {
@@ -105,7 +105,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等
+     * Set 对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等
      * @param PeerRegion 对端地域，取值范围为gz,sh,bj,hk,cd,de,sh_bm,gz_bm,bj_bm,cq_bm等
      */
     public void setPeerRegion(String PeerRegion) {
@@ -113,7 +113,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接名称
+     * Get 对等连接名称 
      * @return VpcPeerConnectionName 对等连接名称
      */
     public String getVpcPeerConnectionName() {
@@ -121,7 +121,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接名称
+     * Set 对等连接名称
      * @param VpcPeerConnectionName 对等连接名称
      */
     public void setVpcPeerConnectionName(String VpcPeerConnectionName) {
@@ -129,7 +129,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对端账户OwnerUin（默认值为本端账户）
+     * Get 对端账户OwnerUin（默认值为本端账户） 
      * @return PeerUin 对端账户OwnerUin（默认值为本端账户）
      */
     public String getPeerUin() {
@@ -137,7 +137,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对端账户OwnerUin（默认值为本端账户）
+     * Set 对端账户OwnerUin（默认值为本端账户）
      * @param PeerUin 对端账户OwnerUin（默认值为本端账户）
      */
     public void setPeerUin(String PeerUin) {
@@ -145,7 +145,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取跨地域必传，带宽上限值
+     * Get 跨地域必传，带宽上限值 
      * @return Bandwidth 跨地域必传，带宽上限值
      */
     public Long getBandwidth() {
@@ -153,7 +153,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置跨地域必传，带宽上限值
+     * Set 跨地域必传，带宽上限值
      * @param Bandwidth 跨地域必传，带宽上限值
      */
     public void setBandwidth(Long Bandwidth) {
@@ -161,7 +161,7 @@ public class CreateVpcPeerConnectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

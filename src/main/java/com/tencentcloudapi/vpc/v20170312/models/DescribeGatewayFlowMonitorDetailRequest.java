@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
+public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel{
 
     /**
     * 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
@@ -86,7 +86,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+     * Get 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。 
      * @return TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
      */
     public String getTimePoint() {
@@ -94,7 +94,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+     * Set 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
      * @param TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
      */
     public void setTimePoint(String TimePoint) {
@@ -102,7 +102,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关实例ID，形如：`vpn-ltjahce6`。
+     * Get VPN网关实例ID，形如：`vpn-ltjahce6`。 
      * @return VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
      */
     public String getVpnId() {
@@ -110,7 +110,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID，形如：`vpn-ltjahce6`。
+     * Set VPN网关实例ID，形如：`vpn-ltjahce6`。
      * @param VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
      */
     public void setVpnId(String VpnId) {
@@ -118,7 +118,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专线网关实例ID，形如：`dcg-ltjahce6`。
+     * Get 专线网关实例ID，形如：`dcg-ltjahce6`。 
      * @return DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
      */
     public String getDirectConnectGatewayId() {
@@ -126,7 +126,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关实例ID，形如：`dcg-ltjahce6`。
+     * Set 专线网关实例ID，形如：`dcg-ltjahce6`。
      * @param DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -134,7 +134,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对等连接实例ID，形如：`pcx-ltjahce6`。
+     * Get 对等连接实例ID，形如：`pcx-ltjahce6`。 
      * @return PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
      */
     public String getPeeringConnectionId() {
@@ -142,7 +142,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对等连接实例ID，形如：`pcx-ltjahce6`。
+     * Set 对等连接实例ID，形如：`pcx-ltjahce6`。
      * @param PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
      */
     public void setPeeringConnectionId(String PeeringConnectionId) {
@@ -150,7 +150,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关实例ID，形如：`nat-ltjahce6`。
+     * Get NAT网关实例ID，形如：`nat-ltjahce6`。 
      * @return NatId NAT网关实例ID，形如：`nat-ltjahce6`。
      */
     public String getNatId() {
@@ -158,7 +158,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关实例ID，形如：`nat-ltjahce6`。
+     * Set NAT网关实例ID，形如：`nat-ltjahce6`。
      * @param NatId NAT网关实例ID，形如：`nat-ltjahce6`。
      */
     public void setNatId(String NatId) {
@@ -166,7 +166,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public Integer getOffset() {
@@ -174,7 +174,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -182,7 +182,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量。
+     * Get 返回数量。 
      * @return Limit 返回数量。
      */
     public Integer getLimit() {
@@ -190,7 +190,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量。
+     * Set 返回数量。
      * @param Limit 返回数量。
      */
     public void setLimit(Integer Limit) {
@@ -198,7 +198,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * Get 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。 
      * @return OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
      */
     public String getOrderField() {
@@ -206,7 +206,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * Set 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
      * @param OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
      */
     public void setOrderField(String OrderField) {
@@ -214,7 +214,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
      * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public String getOrderDirection() {
@@ -222,7 +222,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
      * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
      */
     public void setOrderDirection(String OrderDirection) {
@@ -230,7 +230,7 @@ public class DescribeGatewayFlowMonitorDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimePoint", this.TimePoint);

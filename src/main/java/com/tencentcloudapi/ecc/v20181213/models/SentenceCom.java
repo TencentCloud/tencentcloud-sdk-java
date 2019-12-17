@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceCom  extends AbstractModel{
+public class SentenceCom extends AbstractModel{
 
     /**
     * 句子错误纠正信息
@@ -37,7 +37,7 @@ public class SentenceCom  extends AbstractModel{
     private SentenceItem Sentence;
 
     /**
-     * 获取句子错误纠正信息
+     * Get 句子错误纠正信息 
      * @return Suggestions 句子错误纠正信息
      */
     public SentenceSuggest [] getSuggestions() {
@@ -45,7 +45,7 @@ public class SentenceCom  extends AbstractModel{
     }
 
     /**
-     * 设置句子错误纠正信息
+     * Set 句子错误纠正信息
      * @param Suggestions 句子错误纠正信息
      */
     public void setSuggestions(SentenceSuggest [] Suggestions) {
@@ -53,7 +53,7 @@ public class SentenceCom  extends AbstractModel{
     }
 
     /**
-     * 获取句子信息
+     * Get 句子信息 
      * @return Sentence 句子信息
      */
     public SentenceItem getSentence() {
@@ -61,7 +61,7 @@ public class SentenceCom  extends AbstractModel{
     }
 
     /**
-     * 设置句子信息
+     * Set 句子信息
      * @param Sentence 句子信息
      */
     public void setSentence(SentenceItem Sentence) {
@@ -69,7 +69,7 @@ public class SentenceCom  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Suggestions.", this.Suggestions);

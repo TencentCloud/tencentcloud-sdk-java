@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStationsResponse  extends AbstractModel{
+public class DescribeStationsResponse extends AbstractModel{
 
     /**
     * 总数量
@@ -66,7 +66,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总数量
+     * Get 总数量 
      * @return Total 总数量
      */
     public Long getTotal() {
@@ -74,7 +74,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数量
+     * Set 总数量
      * @param Total 总数量
      */
     public void setTotal(Long Total) {
@@ -82,7 +82,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量
+     * Get 分页偏移量 
      * @return Offset 分页偏移量
      */
     public Long getOffset() {
@@ -90,7 +90,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量
+     * Set 分页偏移量
      * @param Offset 分页偏移量
      */
     public void setOffset(Long Offset) {
@@ -98,7 +98,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前页station数量
+     * Get 当前页station数量 
      * @return Size 当前页station数量
      */
     public Long getSize() {
@@ -106,7 +106,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前页station数量
+     * Set 当前页station数量
      * @param Size 当前页station数量
      */
     public void setSize(Long Size) {
@@ -114,7 +114,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取剩余数量（total-offset-size），通过这个值判断是否还有下一页
+     * Get 剩余数量（total-offset-size），通过这个值判断是否还有下一页 
      * @return HaveMore 剩余数量（total-offset-size），通过这个值判断是否还有下一页
      */
     public Long getHaveMore() {
@@ -122,7 +122,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剩余数量（total-offset-size），通过这个值判断是否还有下一页
+     * Set 剩余数量（total-offset-size），通过这个值判断是否还有下一页
      * @param HaveMore 剩余数量（total-offset-size），通过这个值判断是否还有下一页
      */
     public void setHaveMore(Long HaveMore) {
@@ -130,8 +130,8 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Stations 素材库列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Stations 素材库列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stations Stations 素材库列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -140,7 +140,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Stations 素材库列表
+     * Set Stations 素材库列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Stations Stations 素材库列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,7 +150,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -158,7 +158,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -166,7 +166,7 @@ public class DescribeStationsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);

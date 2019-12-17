@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosCredentials  extends AbstractModel{
+public class CosCredentials extends AbstractModel{
 
     /**
     * 会话Token
@@ -71,8 +71,8 @@ public class CosCredentials  extends AbstractModel{
     private String Domain;
 
     /**
-     * 获取会话Token
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 会话Token
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionToken 会话Token
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,7 +81,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置会话Token
+     * Set 会话Token
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionToken 会话Token
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,8 +91,8 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 临时应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TmpAppId 临时应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置临时应用ID
+     * Set 临时应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpAppId 临时应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 临时调用者身份ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TmpSecretId 临时调用者身份ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置临时调用者身份ID
+     * Set 临时调用者身份ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretId 临时调用者身份ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 获取临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 临时密钥
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TmpSecretKey 临时密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置临时密钥
+     * Set 临时密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TmpSecretKey 临时密钥
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpiredTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置过期时间
+     * Set 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 获取所在域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 所在域
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 所在域
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 设置所在域
+     * Set 所在域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 所在域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class CosCredentials  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionToken", this.SessionToken);

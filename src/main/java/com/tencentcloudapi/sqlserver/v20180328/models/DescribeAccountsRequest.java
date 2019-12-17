@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsRequest  extends AbstractModel{
+public class DescribeAccountsRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -34,17 +34,17 @@ public class DescribeAccountsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 分页返回，从第几页开始返回。从第0页开始，默认第0页
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,39 +60,39 @@ public class DescribeAccountsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页返回，每页返回的数目，取值为1-100，默认值为20
+     * Get 分页返回，每页返回的数目，取值为1-100，默认值为20 
      * @return Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置分页返回，每页返回的数目，取值为1-100，默认值为20
+     * Set 分页返回，每页返回的数目，取值为1-100，默认值为20
      * @param Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取分页返回，从第几页开始返回。从第0页开始，默认第0页
+     * Get 分页返回，从第几页开始返回。从第0页开始，默认第0页 
      * @return Offset 分页返回，从第几页开始返回。从第0页开始，默认第0页
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置分页返回，从第几页开始返回。从第0页开始，默认第0页
+     * Set 分页返回，从第几页开始返回。从第0页开始，默认第0页
      * @param Offset 分页返回，从第几页开始返回。从第0页开始，默认第0页
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

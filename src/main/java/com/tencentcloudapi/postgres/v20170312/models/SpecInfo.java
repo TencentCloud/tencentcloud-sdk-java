@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecInfo  extends AbstractModel{
+public class SpecInfo extends AbstractModel{
 
     /**
     * 地域英文编码，对应RegionSet的Region字段
@@ -44,7 +44,7 @@ public class SpecInfo  extends AbstractModel{
     private SpecItemInfo [] SpecItemInfoList;
 
     /**
-     * 获取地域英文编码，对应RegionSet的Region字段
+     * Get 地域英文编码，对应RegionSet的Region字段 
      * @return Region 地域英文编码，对应RegionSet的Region字段
      */
     public String getRegion() {
@@ -52,7 +52,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域英文编码，对应RegionSet的Region字段
+     * Set 地域英文编码，对应RegionSet的Region字段
      * @param Region 地域英文编码，对应RegionSet的Region字段
      */
     public void setRegion(String Region) {
@@ -60,7 +60,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取区域英文编码，对应ZoneSet的Zone字段
+     * Get 区域英文编码，对应ZoneSet的Zone字段 
      * @return Zone 区域英文编码，对应ZoneSet的Zone字段
      */
     public String getZone() {
@@ -68,7 +68,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置区域英文编码，对应ZoneSet的Zone字段
+     * Set 区域英文编码，对应ZoneSet的Zone字段
      * @param Zone 区域英文编码，对应ZoneSet的Zone字段
      */
     public void setZone(String Zone) {
@@ -76,7 +76,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规格详细信息列表
+     * Get 规格详细信息列表 
      * @return SpecItemInfoList 规格详细信息列表
      */
     public SpecItemInfo [] getSpecItemInfoList() {
@@ -84,7 +84,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规格详细信息列表
+     * Set 规格详细信息列表
      * @param SpecItemInfoList 规格详细信息列表
      */
     public void setSpecItemInfoList(SpecItemInfo [] SpecItemInfoList) {
@@ -92,7 +92,7 @@ public class SpecInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpStatusData  extends AbstractModel{
+public class HttpStatusData extends AbstractModel{
 
     /**
     * 数据时间点，
@@ -38,8 +38,8 @@ public class HttpStatusData  extends AbstractModel{
     private HttpStatusInfo [] HttpStatusInfoList;
 
     /**
-     * 获取数据时间点，
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 数据时间点，
+格式：yyyy-mm-dd HH:MM:SS。 
      * @return Time 数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
      */
@@ -48,7 +48,7 @@ public class HttpStatusData  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间点，
+     * Set 数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
      * @param Time 数据时间点，
 格式：yyyy-mm-dd HH:MM:SS。
@@ -58,7 +58,7 @@ public class HttpStatusData  extends AbstractModel{
     }
 
     /**
-     * 获取播放状态码详细信息。
+     * Get 播放状态码详细信息。 
      * @return HttpStatusInfoList 播放状态码详细信息。
      */
     public HttpStatusInfo [] getHttpStatusInfoList() {
@@ -66,7 +66,7 @@ public class HttpStatusData  extends AbstractModel{
     }
 
     /**
-     * 设置播放状态码详细信息。
+     * Set 播放状态码详细信息。
      * @param HttpStatusInfoList 播放状态码详细信息。
      */
     public void setHttpStatusInfoList(HttpStatusInfo [] HttpStatusInfoList) {
@@ -74,7 +74,7 @@ public class HttpStatusData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

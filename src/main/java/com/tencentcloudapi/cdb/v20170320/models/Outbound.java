@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Outbound  extends AbstractModel{
+public class Outbound extends AbstractModel{
 
     /**
     * 策略，ACCEPT 或者 DROP
@@ -58,7 +58,7 @@ public class Outbound  extends AbstractModel{
     private String Dir;
 
     /**
-     * 获取策略，ACCEPT 或者 DROP
+     * Get 策略，ACCEPT 或者 DROP 
      * @return Action 策略，ACCEPT 或者 DROP
      */
     public String getAction() {
@@ -66,7 +66,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 设置策略，ACCEPT 或者 DROP
+     * Set 策略，ACCEPT 或者 DROP
      * @param Action 策略，ACCEPT 或者 DROP
      */
     public void setAction(String Action) {
@@ -74,7 +74,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 获取目的 IP 或 IP 段，例如172.16.0.0/12
+     * Get 目的 IP 或 IP 段，例如172.16.0.0/12 
      * @return CidrIp 目的 IP 或 IP 段，例如172.16.0.0/12
      */
     public String getCidrIp() {
@@ -82,7 +82,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 设置目的 IP 或 IP 段，例如172.16.0.0/12
+     * Set 目的 IP 或 IP 段，例如172.16.0.0/12
      * @param CidrIp 目的 IP 或 IP 段，例如172.16.0.0/12
      */
     public void setCidrIp(String CidrIp) {
@@ -90,7 +90,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 获取端口或者端口范围
+     * Get 端口或者端口范围 
      * @return PortRange 端口或者端口范围
      */
     public String getPortRange() {
@@ -98,7 +98,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 设置端口或者端口范围
+     * Set 端口或者端口范围
      * @param PortRange 端口或者端口范围
      */
     public void setPortRange(String PortRange) {
@@ -106,7 +106,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 获取网络协议，支持 UDP、TCP等
+     * Get 网络协议，支持 UDP、TCP等 
      * @return IpProtocol 网络协议，支持 UDP、TCP等
      */
     public String getIpProtocol() {
@@ -114,7 +114,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 设置网络协议，支持 UDP、TCP等
+     * Set 网络协议，支持 UDP、TCP等
      * @param IpProtocol 网络协议，支持 UDP、TCP等
      */
     public void setIpProtocol(String IpProtocol) {
@@ -122,7 +122,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 获取规则限定的方向，进站规则为 OUTPUT
+     * Get 规则限定的方向，进站规则为 OUTPUT 
      * @return Dir 规则限定的方向，进站规则为 OUTPUT
      */
     public String getDir() {
@@ -130,7 +130,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 设置规则限定的方向，进站规则为 OUTPUT
+     * Set 规则限定的方向，进站规则为 OUTPUT
      * @param Dir 规则限定的方向，进站规则为 OUTPUT
      */
     public void setDir(String Dir) {
@@ -138,7 +138,7 @@ public class Outbound  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);

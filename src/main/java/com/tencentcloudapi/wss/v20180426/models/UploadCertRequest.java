@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UploadCertRequest  extends AbstractModel{
+public class UploadCertRequest extends AbstractModel{
 
     /**
     * 证书内容
@@ -65,7 +65,7 @@ public class UploadCertRequest  extends AbstractModel{
     private String Alias;
 
     /**
-     * 获取证书内容
+     * Get 证书内容 
      * @return Cert 证书内容
      */
     public String getCert() {
@@ -73,7 +73,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容
+     * Set 证书内容
      * @param Cert 证书内容
      */
     public void setCert(String Cert) {
@@ -81,7 +81,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
+     * Get 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书） 
      * @return CertType 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
      */
     public String getCertType() {
@@ -89,7 +89,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
+     * Set 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
      * @param CertType 证书类型（目前支持：CA 为客户端证书，SVR 为服务器证书）
      */
     public void setCertType(String CertType) {
@@ -97,7 +97,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -105,7 +105,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -113,7 +113,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模块名称，应填ssl
+     * Get 模块名称，应填ssl 
      * @return ModuleType 模块名称，应填ssl
      */
     public String getModuleType() {
@@ -121,7 +121,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，应填ssl
+     * Set 模块名称，应填ssl
      * @param ModuleType 模块名称，应填ssl
      */
     public void setModuleType(String ModuleType) {
@@ -129,7 +129,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书私钥，certType=SVR 时必填
+     * Get 证书私钥，certType=SVR 时必填 
      * @return Key 证书私钥，certType=SVR 时必填
      */
     public String getKey() {
@@ -137,7 +137,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书私钥，certType=SVR 时必填
+     * Set 证书私钥，certType=SVR 时必填
      * @param Key 证书私钥，certType=SVR 时必填
      */
     public void setKey(String Key) {
@@ -145,7 +145,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书备注
+     * Get 证书备注 
      * @return Alias 证书备注
      */
     public String getAlias() {
@@ -153,7 +153,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书备注
+     * Set 证书备注
      * @param Alias 证书备注
      */
     public void setAlias(String Alias) {
@@ -161,7 +161,7 @@ public class UploadCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cert", this.Cert);

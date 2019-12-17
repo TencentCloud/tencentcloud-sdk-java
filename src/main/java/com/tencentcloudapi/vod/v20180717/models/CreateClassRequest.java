@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClassRequest  extends AbstractModel{
+public class CreateClassRequest extends AbstractModel{
 
     /**
     * 父类 ID，一级分类填写 -1。
@@ -44,7 +44,7 @@ public class CreateClassRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取父类 ID，一级分类填写 -1。
+     * Get 父类 ID，一级分类填写 -1。 
      * @return ParentId 父类 ID，一级分类填写 -1。
      */
     public Long getParentId() {
@@ -52,7 +52,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 设置父类 ID，一级分类填写 -1。
+     * Set 父类 ID，一级分类填写 -1。
      * @param ParentId 父类 ID，一级分类填写 -1。
      */
     public void setParentId(Long ParentId) {
@@ -60,7 +60,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分类名称，长度限制：1-64 个字符。
+     * Get 分类名称，长度限制：1-64 个字符。 
      * @return ClassName 分类名称，长度限制：1-64 个字符。
      */
     public String getClassName() {
@@ -68,7 +68,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分类名称，长度限制：1-64 个字符。
+     * Set 分类名称，长度限制：1-64 个字符。
      * @param ClassName 分类名称，长度限制：1-64 个字符。
      */
     public void setClassName(String ClassName) {
@@ -76,7 +76,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -84,7 +84,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -92,7 +92,7 @@ public class CreateClassRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ParentId", this.ParentId);

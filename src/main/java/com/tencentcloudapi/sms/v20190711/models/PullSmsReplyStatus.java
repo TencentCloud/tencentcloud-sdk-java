@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatus  extends AbstractModel{
+public class PullSmsReplyStatus extends AbstractModel{
 
     /**
     * 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
@@ -65,7 +65,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     private String ReplyTime;
 
     /**
-     * 获取短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * Get 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773) 
      * @return ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      */
     public String getExtendCode() {
@@ -73,7 +73,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * Set 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      * @param ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
      */
     public void setExtendCode(String ExtendCode) {
@@ -81,7 +81,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 获取国家（或地区）码
+     * Get 国家（或地区）码 
      * @return NationCode 国家（或地区）码
      */
     public String getNationCode() {
@@ -89,7 +89,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置国家（或地区）码
+     * Set 国家（或地区）码
      * @param NationCode 国家（或地区）码
      */
     public void setNationCode(String NationCode) {
@@ -97,7 +97,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 获取手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号 
      * @return PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public String getPhoneNumber() {
@@ -105,7 +105,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      * @param PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -113,7 +113,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 获取短信签名
+     * Get 短信签名 
      * @return Sign 短信签名
      */
     public String getSign() {
@@ -121,7 +121,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置短信签名
+     * Set 短信签名
      * @param Sign 短信签名
      */
     public void setSign(String Sign) {
@@ -129,7 +129,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 获取用户回复的内容
+     * Get 用户回复的内容 
      * @return ReplyContent 用户回复的内容
      */
     public String getReplyContent() {
@@ -137,7 +137,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置用户回复的内容
+     * Set 用户回复的内容
      * @param ReplyContent 用户回复的内容
      */
     public void setReplyContent(String ReplyContent) {
@@ -145,7 +145,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 获取回复时间(例如：2019-10-08 17:18:37)
+     * Get 回复时间(例如：2019-10-08 17:18:37) 
      * @return ReplyTime 回复时间(例如：2019-10-08 17:18:37)
      */
     public String getReplyTime() {
@@ -153,7 +153,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 设置回复时间(例如：2019-10-08 17:18:37)
+     * Set 回复时间(例如：2019-10-08 17:18:37)
      * @param ReplyTime 回复时间(例如：2019-10-08 17:18:37)
      */
     public void setReplyTime(String ReplyTime) {
@@ -161,7 +161,7 @@ public class PullSmsReplyStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExtendCode", this.ExtendCode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMapInfoResponse  extends AbstractModel{
+public class DescribeMapInfoResponse extends AbstractModel{
 
     /**
     * 映射关系数组。
@@ -53,7 +53,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取映射关系数组。
+     * Get 映射关系数组。 
      * @return MapInfoList 映射关系数组。
      */
     public MapInfo [] getMapInfoList() {
@@ -61,7 +61,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置映射关系数组。
+     * Set 映射关系数组。
      * @param MapInfoList 映射关系数组。
      */
     public void setMapInfoList(MapInfo [] MapInfoList) {
@@ -69,8 +69,8 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务端区域id和子区域id的映射关系。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServerRegionRelation 服务端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -79,7 +79,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务端区域id和子区域id的映射关系。
+     * Set 服务端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerRegionRelation 服务端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,8 +89,8 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户端区域id和子区域id的映射关系。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户端区域id和子区域id的映射关系。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientRegionRelation 客户端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -99,7 +99,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户端区域id和子区域id的映射关系。
+     * Set 客户端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientRegionRelation 客户端区域id和子区域id的映射关系。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -109,7 +109,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -117,7 +117,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -125,7 +125,7 @@ public class DescribeMapInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MapInfoList.", this.MapInfoList);

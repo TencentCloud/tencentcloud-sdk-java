@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetachRolePolicyRequest  extends AbstractModel{
+public class DetachRolePolicyRequest extends AbstractModel{
 
     /**
     * 策略ID
@@ -44,7 +44,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     private String DetachRoleName;
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public Long getPolicyId() {
@@ -52,7 +52,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(Long PolicyId) {
@@ -60,7 +60,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Get 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一 
      * @return DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      */
     public String getDetachRoleId() {
@@ -68,7 +68,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Set 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      * @param DetachRoleId 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      */
     public void setDetachRoleId(String DetachRoleId) {
@@ -76,7 +76,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Get 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一 
      * @return DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      */
     public String getDetachRoleName() {
@@ -84,7 +84,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+     * Set 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      * @param DetachRoleName 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
      */
     public void setDetachRoleName(String DetachRoleName) {
@@ -92,7 +92,7 @@ public class DetachRolePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);

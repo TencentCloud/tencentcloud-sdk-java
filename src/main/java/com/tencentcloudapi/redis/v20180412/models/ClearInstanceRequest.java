@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClearInstanceRequest  extends AbstractModel{
+public class ClearInstanceRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * Get redis的实例密码（免密实例不需要传密码，非免密实例必传） 
      * @return Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
      */
     public String getPassword() {
@@ -61,7 +61,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * Set redis的实例密码（免密实例不需要传密码，非免密实例必传）
      * @param Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
      */
     public void setPassword(String Password) {
@@ -69,7 +69,7 @@ public class ClearInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
+public class DescribeInstanceDTSInfoResponse extends AbstractModel{
 
     /**
     * DTS任务ID
@@ -94,8 +94,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取DTS任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get DTS任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId DTS任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -104,7 +104,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置DTS任务ID
+     * Set DTS任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId DTS任务ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -114,8 +114,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取DTS任务名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get DTS任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobName DTS任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -124,7 +124,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置DTS任务名称
+     * Set DTS任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobName DTS任务名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,8 +134,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -144,7 +144,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态
+     * Set 状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -154,8 +154,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,7 +164,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态描述
+     * Set 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -174,8 +174,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取同步时延，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 同步时延，单位：字节
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Offset 同步时延，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -184,7 +184,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置同步时延，单位：字节
+     * Set 同步时延，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 同步时延，单位：字节
 注意：此字段可能返回 null，表示取不到有效值。
@@ -194,8 +194,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取断开时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 断开时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CutDownTime 断开时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -204,7 +204,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置断开时间
+     * Set 断开时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CutDownTime 断开时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -214,8 +214,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SrcInfo 源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -224,7 +224,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置源实例信息
+     * Set 源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInfo 源实例信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -234,8 +234,8 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 目标实例信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DstInfo 目标实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -244,7 +244,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例信息
+     * Set 目标实例信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInfo 目标实例信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -254,7 +254,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -262,7 +262,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -270,7 +270,7 @@ public class DescribeInstanceDTSInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

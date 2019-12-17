@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 可用区ID
@@ -44,7 +44,7 @@ public class ZoneInfo  extends AbstractModel{
     private String ZoneDescription;
 
     /**
-     * 获取可用区ID
+     * Get 可用区ID 
      * @return Zone 可用区ID
      */
     public String getZone() {
@@ -52,7 +52,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
      * @param Zone 可用区ID
      */
     public void setZone(String Zone) {
@@ -60,7 +60,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区整型ID
+     * Get 可用区整型ID 
      * @return ZoneId 可用区整型ID
      */
     public Integer getZoneId() {
@@ -68,7 +68,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区整型ID
+     * Set 可用区整型ID
      * @param ZoneId 可用区整型ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -76,7 +76,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区描述
+     * Get 可用区描述 
      * @return ZoneDescription 可用区描述
      */
     public String getZoneDescription() {
@@ -84,7 +84,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区描述
+     * Set 可用区描述
      * @param ZoneDescription 可用区描述
      */
     public void setZoneDescription(String ZoneDescription) {
@@ -92,7 +92,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

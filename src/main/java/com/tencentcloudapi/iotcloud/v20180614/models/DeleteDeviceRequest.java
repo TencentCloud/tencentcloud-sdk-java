@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeviceRequest  extends AbstractModel{
+public class DeleteDeviceRequest extends AbstractModel{
 
     /**
     * 设备所属的产品 ID
@@ -44,7 +44,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     private String Skey;
 
     /**
-     * 获取设备所属的产品 ID
+     * Get 设备所属的产品 ID 
      * @return ProductId 设备所属的产品 ID
      */
     public String getProductId() {
@@ -52,7 +52,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备所属的产品 ID
+     * Set 设备所属的产品 ID
      * @param ProductId 设备所属的产品 ID
      */
     public void setProductId(String ProductId) {
@@ -60,7 +60,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要删除的设备名称
+     * Get 需要删除的设备名称 
      * @return DeviceName 需要删除的设备名称
      */
     public String getDeviceName() {
@@ -68,7 +68,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的设备名称
+     * Set 需要删除的设备名称
      * @param DeviceName 需要删除的设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -76,7 +76,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取删除LoRa设备以及LoRa网关设备需要skey
+     * Get 删除LoRa设备以及LoRa网关设备需要skey 
      * @return Skey 删除LoRa设备以及LoRa网关设备需要skey
      */
     public String getSkey() {
@@ -84,7 +84,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置删除LoRa设备以及LoRa网关设备需要skey
+     * Set 删除LoRa设备以及LoRa网关设备需要skey
      * @param Skey 删除LoRa设备以及LoRa网关设备需要skey
      */
     public void setSkey(String Skey) {
@@ -92,7 +92,7 @@ public class DeleteDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

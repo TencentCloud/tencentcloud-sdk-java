@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
+public class DescribeContainerInstanceEventsResponse extends AbstractModel{
 
     /**
     * 容器实例事件列表
@@ -37,7 +37,7 @@ public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取容器实例事件列表
+     * Get 容器实例事件列表 
      * @return EventList 容器实例事件列表
      */
     public Event [] getEventList() {
@@ -45,7 +45,7 @@ public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例事件列表
+     * Set 容器实例事件列表
      * @param EventList 容器实例事件列表
      */
     public void setEventList(Event [] EventList) {
@@ -53,7 +53,7 @@ public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Get 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。 
      * @return RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
+     * Set 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      * @param RequestId 唯一请求ID，每次请求都会返回。定位问题时需要提供该次请求的RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeContainerInstanceEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EventList.", this.EventList);

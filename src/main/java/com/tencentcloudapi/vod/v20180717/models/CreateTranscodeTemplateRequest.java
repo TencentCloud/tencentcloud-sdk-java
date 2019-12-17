@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTranscodeTemplateRequest  extends AbstractModel{
+public class CreateTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
@@ -92,7 +92,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+     * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
     public String getContainer() {
@@ -100,7 +100,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
+     * Set 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
     public void setContainer(String Container) {
@@ -108,7 +108,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转码模板名称，长度限制：64 个字符。
+     * Get 转码模板名称，长度限制：64 个字符。 
      * @return Name 转码模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -116,7 +116,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转码模板名称，长度限制：64 个字符。
+     * Set 转码模板名称，长度限制：64 个字符。
      * @param Name 转码模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -124,7 +124,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -132,7 +132,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -140,10 +140,10 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除视频数据，可选值：
+     * Get 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
-默认值：0。
+默认值：0。 
      * @return RemoveVideo 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
@@ -154,7 +154,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除视频数据，可选值：
+     * Set 是否去除视频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
 默认值：0。
@@ -168,10 +168,10 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否去除音频数据，可选值：
+     * Get 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
-默认值：0。
+默认值：0。 
      * @return RemoveAudio 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
@@ -182,7 +182,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否去除音频数据，可选值：
+     * Set 是否去除音频数据，可选值：
 <li>0：保留</li>
 <li>1：去除</li>
 默认值：0。
@@ -196,7 +196,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频流配置参数，当 RemoveVideo 为 0，该字段必填。
+     * Get 视频流配置参数，当 RemoveVideo 为 0，该字段必填。 
      * @return VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      */
     public VideoTemplateInfo getVideoTemplate() {
@@ -204,7 +204,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频流配置参数，当 RemoveVideo 为 0，该字段必填。
+     * Set 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
@@ -212,7 +212,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+     * Get 音频流配置参数，当 RemoveAudio 为 0，该字段必填。 
      * @return AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      */
     public AudioTemplateInfo getAudioTemplate() {
@@ -220,7 +220,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
+     * Set 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
@@ -228,7 +228,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取极速高清转码参数，需联系商务架构师开通后才能使用。
+     * Get 极速高清转码参数，需联系商务架构师开通后才能使用。 
      * @return TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
      */
     public TEHDConfig getTEHDConfig() {
@@ -236,7 +236,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置极速高清转码参数，需联系商务架构师开通后才能使用。
+     * Set 极速高清转码参数，需联系商务架构师开通后才能使用。
      * @param TEHDConfig 极速高清转码参数，需联系商务架构师开通后才能使用。
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
@@ -244,7 +244,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -252,7 +252,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -260,7 +260,7 @@ public class CreateTranscodeTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Container", this.Container);

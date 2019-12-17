@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTranscodeInfo  extends AbstractModel{
+public class MediaTranscodeInfo extends AbstractModel{
 
     /**
     * 各规格的转码信息集合，每个元素代表一个规格的转码结果。
@@ -31,8 +31,8 @@ public class MediaTranscodeInfo  extends AbstractModel{
     private MediaTranscodeItem [] TranscodeSet;
 
     /**
-     * 获取各规格的转码信息集合，每个元素代表一个规格的转码结果。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 各规格的转码信息集合，每个元素代表一个规格的转码结果。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaTranscodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置各规格的转码信息集合，每个元素代表一个规格的转码结果。
+     * Set 各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeSet 各规格的转码信息集合，每个元素代表一个规格的转码结果。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaTranscodeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TranscodeSet.", this.TranscodeSet);

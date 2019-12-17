@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyConfigAttributeRequest  extends AbstractModel{
+public class ModifyConfigAttributeRequest extends AbstractModel{
 
     /**
     * 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
@@ -30,7 +30,7 @@ public class ModifyConfigAttributeRequest  extends AbstractModel{
     private String NoticeLevel;
 
     /**
-     * 获取漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
+     * Get 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示 
      * @return NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
      */
     public String getNoticeLevel() {
@@ -38,7 +38,7 @@ public class ModifyConfigAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
+     * Set 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
      * @param NoticeLevel 漏洞告警通知等级，4位分别代表：高危、中危、低危、提示
      */
     public void setNoticeLevel(String NoticeLevel) {
@@ -46,7 +46,7 @@ public class ModifyConfigAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NoticeLevel", this.NoticeLevel);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableKeyRotationRequest  extends AbstractModel{
+public class EnableKeyRotationRequest extends AbstractModel{
 
     /**
     * CMK唯一标识符
@@ -30,7 +30,7 @@ public class EnableKeyRotationRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取CMK唯一标识符
+     * Get CMK唯一标识符 
      * @return KeyId CMK唯一标识符
      */
     public String getKeyId() {
@@ -38,7 +38,7 @@ public class EnableKeyRotationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK唯一标识符
+     * Set CMK唯一标识符
      * @param KeyId CMK唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -46,7 +46,7 @@ public class EnableKeyRotationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

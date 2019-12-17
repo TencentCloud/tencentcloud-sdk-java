@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLibraryRequest  extends AbstractModel{
+public class CreateLibraryRequest extends AbstractModel{
 
     /**
     * 人员库名称
@@ -37,7 +37,7 @@ public class CreateLibraryRequest  extends AbstractModel{
     private String LibraryId;
 
     /**
-     * 获取人员库名称
+     * Get 人员库名称 
      * @return LibraryName 人员库名称
      */
     public String getLibraryName() {
@@ -45,7 +45,7 @@ public class CreateLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库名称
+     * Set 人员库名称
      * @param LibraryName 人员库名称
      */
     public void setLibraryName(String LibraryName) {
@@ -53,7 +53,7 @@ public class CreateLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标志符，为空则系统自动生成。
+     * Get 人员库唯一标志符，为空则系统自动生成。 
      * @return LibraryId 人员库唯一标志符，为空则系统自动生成。
      */
     public String getLibraryId() {
@@ -61,7 +61,7 @@ public class CreateLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标志符，为空则系统自动生成。
+     * Set 人员库唯一标志符，为空则系统自动生成。
      * @param LibraryId 人员库唯一标志符，为空则系统自动生成。
      */
     public void setLibraryId(String LibraryId) {
@@ -69,7 +69,7 @@ public class CreateLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryName", this.LibraryName);

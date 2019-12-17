@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonProfile  extends AbstractModel{
+public class PersonProfile extends AbstractModel{
 
     /**
     * 客人编码
@@ -72,7 +72,7 @@ public class PersonProfile  extends AbstractModel{
     private Float Similarity;
 
     /**
-     * 获取客人编码
+     * Get 客人编码 
      * @return PersonId 客人编码
      */
     public String getPersonId() {
@@ -80,7 +80,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置客人编码
+     * Set 客人编码
      * @param PersonId 客人编码
      */
     public void setPersonId(String PersonId) {
@@ -88,7 +88,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Gender 性别
      */
     public Integer getGender() {
@@ -96,7 +96,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Gender 性别
      */
     public void setGender(Integer Gender) {
@@ -104,7 +104,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取年龄
+     * Get 年龄 
      * @return Age 年龄
      */
     public Integer getAge() {
@@ -112,7 +112,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置年龄
+     * Set 年龄
      * @param Age 年龄
      */
     public void setAge(Integer Age) {
@@ -120,7 +120,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取首次到场时间
+     * Get 首次到场时间 
      * @return FirstArrivedTime 首次到场时间
      */
     public String getFirstArrivedTime() {
@@ -128,7 +128,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置首次到场时间
+     * Set 首次到场时间
      * @param FirstArrivedTime 首次到场时间
      */
     public void setFirstArrivedTime(String FirstArrivedTime) {
@@ -136,7 +136,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取来访次数
+     * Get 来访次数 
      * @return ArrivedCount 来访次数
      */
     public Integer getArrivedCount() {
@@ -144,7 +144,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置来访次数
+     * Set 来访次数
      * @param ArrivedCount 来访次数
      */
     public void setArrivedCount(Integer ArrivedCount) {
@@ -152,7 +152,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取客户图片
+     * Get 客户图片 
      * @return PicUrl 客户图片
      */
     public String getPicUrl() {
@@ -160,7 +160,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置客户图片
+     * Set 客户图片
      * @param PicUrl 客户图片
      */
     public void setPicUrl(String PicUrl) {
@@ -168,7 +168,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 获取置信度
+     * Get 置信度 
      * @return Similarity 置信度
      */
     public Float getSimilarity() {
@@ -176,7 +176,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 设置置信度
+     * Set 置信度
      * @param Similarity 置信度
      */
     public void setSimilarity(Float Similarity) {
@@ -184,7 +184,7 @@ public class PersonProfile  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

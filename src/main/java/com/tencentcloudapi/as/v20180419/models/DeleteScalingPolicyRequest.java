@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteScalingPolicyRequest  extends AbstractModel{
+public class DeleteScalingPolicyRequest extends AbstractModel{
 
     /**
     * 待删除的告警策略ID。
@@ -30,7 +30,7 @@ public class DeleteScalingPolicyRequest  extends AbstractModel{
     private String AutoScalingPolicyId;
 
     /**
-     * 获取待删除的告警策略ID。
+     * Get 待删除的告警策略ID。 
      * @return AutoScalingPolicyId 待删除的告警策略ID。
      */
     public String getAutoScalingPolicyId() {
@@ -38,7 +38,7 @@ public class DeleteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的告警策略ID。
+     * Set 待删除的告警策略ID。
      * @param AutoScalingPolicyId 待删除的告警策略ID。
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
@@ -46,7 +46,7 @@ public class DeleteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);

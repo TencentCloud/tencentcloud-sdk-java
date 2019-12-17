@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VulInfo  extends AbstractModel{
+public class VulInfo extends AbstractModel{
 
     /**
     * 漏洞列表
@@ -37,7 +37,7 @@ public class VulInfo  extends AbstractModel{
     private Integer VulFileScore;
 
     /**
-     * 获取漏洞列表
+     * Get 漏洞列表 
      * @return VulList 漏洞列表
      */
     public VulList [] getVulList() {
@@ -45,7 +45,7 @@ public class VulInfo  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞列表
+     * Set 漏洞列表
      * @param VulList 漏洞列表
      */
     public void setVulList(VulList [] VulList) {
@@ -53,7 +53,7 @@ public class VulInfo  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞文件评分
+     * Get 漏洞文件评分 
      * @return VulFileScore 漏洞文件评分
      */
     public Integer getVulFileScore() {
@@ -61,7 +61,7 @@ public class VulInfo  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞文件评分
+     * Set 漏洞文件评分
      * @param VulFileScore 漏洞文件评分
      */
     public void setVulFileScore(Integer VulFileScore) {
@@ -69,7 +69,7 @@ public class VulInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VulList.", this.VulList);

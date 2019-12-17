@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankCard2EVerificationRequest  extends AbstractModel{
+public class BankCard2EVerificationRequest extends AbstractModel{
 
     /**
     * 姓名
@@ -37,7 +37,7 @@ public class BankCard2EVerificationRequest  extends AbstractModel{
     private String BankCard;
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class BankCard2EVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class BankCard2EVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取银行卡
+     * Get 银行卡 
      * @return BankCard 银行卡
      */
     public String getBankCard() {
@@ -61,7 +61,7 @@ public class BankCard2EVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置银行卡
+     * Set 银行卡
      * @param BankCard 银行卡
      */
     public void setBankCard(String BankCard) {
@@ -69,7 +69,7 @@ public class BankCard2EVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

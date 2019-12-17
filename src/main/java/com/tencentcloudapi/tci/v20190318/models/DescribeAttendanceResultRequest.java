@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAttendanceResultRequest  extends AbstractModel{
+public class DescribeAttendanceResultRequest extends AbstractModel{
 
     /**
     * 任务唯一标识符
@@ -30,7 +30,7 @@ public class DescribeAttendanceResultRequest  extends AbstractModel{
     private Long JobId;
 
     /**
-     * 获取任务唯一标识符
+     * Get 任务唯一标识符 
      * @return JobId 任务唯一标识符
      */
     public Long getJobId() {
@@ -38,7 +38,7 @@ public class DescribeAttendanceResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识符
+     * Set 任务唯一标识符
      * @param JobId 任务唯一标识符
      */
     public void setJobId(Long JobId) {
@@ -46,7 +46,7 @@ public class DescribeAttendanceResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

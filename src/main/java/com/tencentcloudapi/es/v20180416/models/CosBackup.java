@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosBackup  extends AbstractModel{
+public class CosBackup extends AbstractModel{
 
     /**
     * 是否开启cos自动备份
@@ -37,7 +37,7 @@ public class CosBackup  extends AbstractModel{
     private String BackupTime;
 
     /**
-     * 获取是否开启cos自动备份
+     * Get 是否开启cos自动备份 
      * @return IsAutoBackup 是否开启cos自动备份
      */
     public Boolean getIsAutoBackup() {
@@ -45,7 +45,7 @@ public class CosBackup  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启cos自动备份
+     * Set 是否开启cos自动备份
      * @param IsAutoBackup 是否开启cos自动备份
      */
     public void setIsAutoBackup(Boolean IsAutoBackup) {
@@ -53,7 +53,7 @@ public class CosBackup  extends AbstractModel{
     }
 
     /**
-     * 获取自动备份执行时间（精确到小时）, e.g. "22:00"
+     * Get 自动备份执行时间（精确到小时）, e.g. "22:00" 
      * @return BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public String getBackupTime() {
@@ -61,7 +61,7 @@ public class CosBackup  extends AbstractModel{
     }
 
     /**
-     * 设置自动备份执行时间（精确到小时）, e.g. "22:00"
+     * Set 自动备份执行时间（精确到小时）, e.g. "22:00"
      * @param BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
      */
     public void setBackupTime(String BackupTime) {
@@ -69,7 +69,7 @@ public class CosBackup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsAutoBackup", this.IsAutoBackup);

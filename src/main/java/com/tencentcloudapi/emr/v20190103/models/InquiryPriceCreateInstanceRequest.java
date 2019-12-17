@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
+public class InquiryPriceCreateInstanceRequest extends AbstractModel{
 
     /**
     * 时间单位
@@ -86,7 +86,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     private VPCSettings VPCSettings;
 
     /**
-     * 获取时间单位
+     * Get 时间单位 
      * @return TimeUnit 时间单位
      */
     public String getTimeUnit() {
@@ -94,7 +94,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位
+     * Set 时间单位
      * @param TimeUnit 时间单位
      */
     public void setTimeUnit(String TimeUnit) {
@@ -102,7 +102,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间长度
+     * Get 时间长度 
      * @return TimeSpan 时间长度
      */
     public Integer getTimeSpan() {
@@ -110,7 +110,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间长度
+     * Set 时间长度
      * @param TimeSpan 时间长度
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -118,7 +118,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取询价资源描述
+     * Get 询价资源描述 
      * @return ResourceSpec 询价资源描述
      */
     public NewResourceSpec getResourceSpec() {
@@ -126,7 +126,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置询价资源描述
+     * Set 询价资源描述
      * @param ResourceSpec 询价资源描述
      */
     public void setResourceSpec(NewResourceSpec ResourceSpec) {
@@ -134,7 +134,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取货币种类
+     * Get 货币种类 
      * @return Currency 货币种类
      */
     public String getCurrency() {
@@ -142,7 +142,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置货币种类
+     * Set 货币种类
      * @param Currency 货币种类
      */
     public void setCurrency(String Currency) {
@@ -150,7 +150,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费类型
+     * Get 计费类型 
      * @return PayMode 计费类型
      */
     public Integer getPayMode() {
@@ -158,7 +158,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费类型
+     * Set 计费类型
      * @param PayMode 计费类型
      */
     public void setPayMode(Integer PayMode) {
@@ -166,7 +166,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持HA， 1 支持，0 不支持
+     * Get 是否支持HA， 1 支持，0 不支持 
      * @return SupportHA 是否支持HA， 1 支持，0 不支持
      */
     public Integer getSupportHA() {
@@ -174,7 +174,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持HA， 1 支持，0 不支持
+     * Set 是否支持HA， 1 支持，0 不支持
      * @param SupportHA 是否支持HA， 1 支持，0 不支持
      */
     public void setSupportHA(Integer SupportHA) {
@@ -182,7 +182,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取软件列表
+     * Get 软件列表 
      * @return Software 软件列表
      */
     public String [] getSoftware() {
@@ -190,7 +190,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置软件列表
+     * Set 软件列表
      * @param Software 软件列表
      */
     public void setSoftware(String [] Software) {
@@ -198,7 +198,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -206,7 +206,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -214,7 +214,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC信息
+     * Get VPC信息 
      * @return VPCSettings VPC信息
      */
     public VPCSettings getVPCSettings() {
@@ -222,7 +222,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC信息
+     * Set VPC信息
      * @param VPCSettings VPC信息
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
@@ -230,7 +230,7 @@ public class InquiryPriceCreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableReplicaReadonlyRequest  extends AbstractModel{
+public class DisableReplicaReadonlyRequest extends AbstractModel{
 
     /**
     * 实例序号ID
@@ -30,7 +30,7 @@ public class DisableReplicaReadonlyRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取实例序号ID
+     * Get 实例序号ID 
      * @return InstanceId 实例序号ID
      */
     public String getInstanceId() {
@@ -38,7 +38,7 @@ public class DisableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例序号ID
+     * Set 实例序号ID
      * @param InstanceId 实例序号ID
      */
     public void setInstanceId(String InstanceId) {
@@ -46,7 +46,7 @@ public class DisableReplicaReadonlyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

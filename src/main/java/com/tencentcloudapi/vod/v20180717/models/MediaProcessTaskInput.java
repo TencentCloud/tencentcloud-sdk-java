@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskInput  extends AbstractModel{
+public class MediaProcessTaskInput extends AbstractModel{
 
     /**
     * 视频转码任务列表。
@@ -79,8 +79,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
 
     /**
-     * 获取视频转码任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转码任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTaskSet 视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -89,7 +89,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码任务列表。
+     * Set 视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTaskSet 视频转码任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -99,8 +99,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取视频转动图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转动图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AnimatedGraphicTaskSet 视频转动图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -109,7 +109,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转动图任务列表。
+     * Set 视频转动图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTaskSet 视频转动图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,8 +119,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频按时间点截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频按时间点截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,7 +129,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频按时间点截图任务列表。
+     * Set 对视频按时间点截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,8 +139,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频采样截图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频采样截图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SampleSnapshotTaskSet 对视频采样截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -149,7 +149,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频采样截图任务列表。
+     * Set 对视频采样截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTaskSet 对视频采样截图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -159,8 +159,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截雪碧图任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频截雪碧图任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteTaskSet 对视频截雪碧图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截雪碧图任务列表。
+     * Set 对视频截雪碧图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteTaskSet 对视频截雪碧图任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截图做封面任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频截图做封面任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CoverBySnapshotTaskSet 对视频截图做封面任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截图做封面任务列表。
+     * Set 对视频截图做封面任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverBySnapshotTaskSet 对视频截图做封面任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频转自适应码流任务列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频转自适应码流任务列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频转自适应码流任务列表。
+     * Set 对视频转自适应码流任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingTaskSet 对视频转自适应码流任务列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,7 +219,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TranscodeTaskSet.", this.TranscodeTaskSet);

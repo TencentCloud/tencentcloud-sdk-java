@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccessPointsResponse  extends AbstractModel{
+public class DescribeAccessPointsResponse extends AbstractModel{
 
     /**
     * 接入点信息。
@@ -44,7 +44,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取接入点信息。
+     * Get 接入点信息。 
      * @return AccessPointSet 接入点信息。
      */
     public AccessPoint [] getAccessPointSet() {
@@ -52,7 +52,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置接入点信息。
+     * Set 接入点信息。
      * @param AccessPointSet 接入点信息。
      */
     public void setAccessPointSet(AccessPoint [] AccessPointSet) {
@@ -60,7 +60,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合接入点数量。
+     * Get 符合接入点数量。 
      * @return TotalCount 符合接入点数量。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合接入点数量。
+     * Set 符合接入点数量。
      * @param TotalCount 符合接入点数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeAccessPointsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AccessPointSet.", this.AccessPointSet);

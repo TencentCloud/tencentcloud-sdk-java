@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPushInfoListRequest  extends AbstractModel{
+public class DescribeStreamPushInfoListRequest extends AbstractModel{
 
     /**
     * 流名称。
@@ -58,7 +58,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -66,7 +66,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -74,7 +74,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getStartTime() {
@@ -82,7 +82,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setStartTime(String StartTime) {
@@ -90,7 +90,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
      */
     public String getEndTime() {
@@ -98,7 +98,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，最大时间跨度支持6小时，支持最近6天数据查询。
      */
     public void setEndTime(String EndTime) {
@@ -106,7 +106,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return PushDomain 推流域名。
      */
     public String getPushDomain() {
@@ -114,7 +114,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param PushDomain 推流域名。
      */
     public void setPushDomain(String PushDomain) {
@@ -122,7 +122,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -130,7 +130,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -138,7 +138,7 @@ public class DescribeStreamPushInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

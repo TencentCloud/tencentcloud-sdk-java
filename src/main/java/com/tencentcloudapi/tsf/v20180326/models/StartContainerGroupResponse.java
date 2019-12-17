@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartContainerGroupResponse  extends AbstractModel{
+public class StartContainerGroupResponse extends AbstractModel{
 
     /**
     * 启动操作是否成功。
@@ -39,9 +39,9 @@ false：启动失败
     private String RequestId;
 
     /**
-     * 获取启动操作是否成功。
+     * Get 启动操作是否成功。
 true：启动成功
-false：启动失败
+false：启动失败 
      * @return Result 启动操作是否成功。
 true：启动成功
 false：启动失败
@@ -51,7 +51,7 @@ false：启动失败
     }
 
     /**
-     * 设置启动操作是否成功。
+     * Set 启动操作是否成功。
 true：启动成功
 false：启动失败
      * @param Result 启动操作是否成功。
@@ -63,7 +63,7 @@ false：启动失败
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -71,7 +71,7 @@ false：启动失败
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -79,7 +79,7 @@ false：启动失败
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

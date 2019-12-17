@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BatchUpdateShadow  extends AbstractModel{
+public class BatchUpdateShadow extends AbstractModel{
 
     /**
     * 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
@@ -30,7 +30,7 @@ public class BatchUpdateShadow  extends AbstractModel{
     private String Desired;
 
     /**
-     * 获取设备影子的期望状态，格式为 Json 对象序列化之后的字符串
+     * Get 设备影子的期望状态，格式为 Json 对象序列化之后的字符串 
      * @return Desired 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
     public String getDesired() {
@@ -38,7 +38,7 @@ public class BatchUpdateShadow  extends AbstractModel{
     }
 
     /**
-     * 设置设备影子的期望状态，格式为 Json 对象序列化之后的字符串
+     * Set 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      * @param Desired 设备影子的期望状态，格式为 Json 对象序列化之后的字符串
      */
     public void setDesired(String Desired) {
@@ -46,7 +46,7 @@ public class BatchUpdateShadow  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Desired", this.Desired);

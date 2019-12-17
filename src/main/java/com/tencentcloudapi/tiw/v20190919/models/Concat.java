@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Concat  extends AbstractModel{
+public class Concat extends AbstractModel{
 
     /**
     * 是否开启拼接功能
@@ -38,8 +38,8 @@ public class Concat  extends AbstractModel{
     private String Image;
 
     /**
-     * 获取是否开启拼接功能
-在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
+     * Get 是否开启拼接功能
+在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频 
      * @return Enabled 是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
      */
@@ -48,7 +48,7 @@ public class Concat  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启拼接功能
+     * Set 是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
      * @param Enabled 是否开启拼接功能
 在开启了视频拼接功能的情况下，实时录制服务会把同一个用户因为暂停导致的多段视频拼接成一个视频
@@ -58,7 +58,7 @@ public class Concat  extends AbstractModel{
     }
 
     /**
-     * 获取视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
+     * Get 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片 
      * @return Image 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
      */
     public String getImage() {
@@ -66,7 +66,7 @@ public class Concat  extends AbstractModel{
     }
 
     /**
-     * 设置视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
+     * Set 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
      * @param Image 视频拼接时使用的垫片图片下载地址，不填默认用全黑的图片进行视频垫片
      */
     public void setImage(String Image) {
@@ -74,7 +74,7 @@ public class Concat  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);

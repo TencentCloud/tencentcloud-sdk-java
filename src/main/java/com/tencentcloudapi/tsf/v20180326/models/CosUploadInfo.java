@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosUploadInfo  extends AbstractModel{
+public class CosUploadInfo extends AbstractModel{
 
     /**
     * 程序包ID
@@ -62,8 +62,8 @@ public class CosUploadInfo  extends AbstractModel{
     private CosCredentials Credentials;
 
     /**
-     * 获取程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取桶
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 桶
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bucket 桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置桶
+     * Set 桶
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 桶
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 目标地域
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 目标地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标地域
+     * Set 目标地域
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 目标地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 存储路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 存储路径
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储路径
+     * Set 存储路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 存储路径
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 获取鉴权信息
+     * Get 鉴权信息 
      * @return Credentials 鉴权信息
      */
     public CosCredentials getCredentials() {
@@ -150,7 +150,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 设置鉴权信息
+     * Set 鉴权信息
      * @param Credentials 鉴权信息
      */
     public void setCredentials(CosCredentials Credentials) {
@@ -158,7 +158,7 @@ public class CosUploadInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);

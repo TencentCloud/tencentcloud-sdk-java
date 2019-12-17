@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPullStreamConfigRequest  extends AbstractModel{
+public class ModifyPullStreamConfigRequest extends AbstractModel{
 
     /**
     * 配置id。
@@ -87,7 +87,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取配置id。
+     * Get 配置id。 
      * @return ConfigId 配置id。
      */
     public String getConfigId() {
@@ -95,7 +95,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置id。
+     * Set 配置id。
      * @param ConfigId 配置id。
      */
     public void setConfigId(String ConfigId) {
@@ -103,7 +103,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源Url。
+     * Get 源Url。 
      * @return FromUrl 源Url。
      */
     public String getFromUrl() {
@@ -111,7 +111,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源Url。
+     * Set 源Url。
      * @param FromUrl 源Url。
      */
     public void setFromUrl(String FromUrl) {
@@ -119,7 +119,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的Url。
+     * Get 目的Url。 
      * @return ToUrl 目的Url。
      */
     public String getToUrl() {
@@ -127,7 +127,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的Url。
+     * Set 目的Url。
      * @param ToUrl 目的Url。
      */
     public void setToUrl(String ToUrl) {
@@ -135,12 +135,12 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区域id：
+     * Get 区域id：
 1-深圳，
 2-上海，
 3-天津，
 4-中国香港。
-如有改动，需同时传入IspId。
+如有改动，需同时传入IspId。 
      * @return AreaId 区域id：
 1-深圳，
 2-上海，
@@ -153,7 +153,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区域id：
+     * Set 区域id：
 1-深圳，
 2-上海，
 3-天津，
@@ -171,7 +171,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+     * Get 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。 
      * @return IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      */
     public Integer getIspId() {
@@ -179,7 +179,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
+     * Set 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      * @param IspId 运营商id,1-电信,2-移动,3-联通,4-其他,AreaId为4的时候,IspId只能为其他。如有改动，需同时传入AreaId。
      */
     public void setIspId(Integer IspId) {
@@ -187,10 +187,10 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return StartTime 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
@@ -201,7 +201,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -215,14 +215,14 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，注意：
+     * Get 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 
 使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
      * @return EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
@@ -237,7 +237,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，注意：
+     * Set 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
@@ -259,7 +259,7 @@ public class ModifyPullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

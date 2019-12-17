@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Listener  extends AbstractModel{
+public class Listener extends AbstractModel{
 
     /**
     * 负载均衡监听器 ID
@@ -116,7 +116,7 @@ public class Listener  extends AbstractModel{
     private Integer EndPort;
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -124,7 +124,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -132,7 +132,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议
+     * Get 监听器协议 
      * @return Protocol 监听器协议
      */
     public String getProtocol() {
@@ -140,7 +140,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议
+     * Set 监听器协议
      * @param Protocol 监听器协议
      */
     public void setProtocol(String Protocol) {
@@ -148,7 +148,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Integer getPort() {
@@ -156,7 +156,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Integer Port) {
@@ -164,8 +164,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器绑定的证书信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器绑定的证书信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Certificate 监听器绑定的证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -174,7 +174,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器绑定的证书信息
+     * Set 监听器绑定的证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 监听器绑定的证书信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,8 +184,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器的健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthCheck 监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -194,7 +194,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的健康检查信息
+     * Set 监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 监听器的健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,8 +204,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取请求的调度方式
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 请求的调度方式
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Scheduler 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -214,7 +214,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置请求的调度方式
+     * Set 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Scheduler 请求的调度方式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -224,8 +224,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 会话保持时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -234,7 +234,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间
+     * Set 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionExpireTime 会话保持时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -244,8 +244,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -254,7 +254,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
+     * Set 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -264,8 +264,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -274,7 +274,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
+     * Set 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 监听器下的全部转发规则（本参数仅对于HTTP/HTTPS监听器有意义）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -284,8 +284,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器的名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ListenerName 监听器的名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -294,7 +294,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的名称
+     * Set 监听器的名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerName 监听器的名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -304,8 +304,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 监听器的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -314,7 +314,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的创建时间。
+     * Set 监听器的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 监听器的创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -324,8 +324,8 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 获取端口段结束端口
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 端口段结束端口
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndPort 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -334,7 +334,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 设置端口段结束端口
+     * Set 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndPort 端口段结束端口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -344,7 +344,7 @@ public class Listener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

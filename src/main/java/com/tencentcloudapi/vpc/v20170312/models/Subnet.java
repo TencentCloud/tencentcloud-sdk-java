@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Subnet  extends AbstractModel{
+public class Subnet extends AbstractModel{
 
     /**
     * `VPC`实例`ID`。
@@ -114,7 +114,7 @@ public class Subnet  extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
-     * 获取`VPC`实例`ID`。
+     * Get `VPC`实例`ID`。 
      * @return VpcId `VPC`实例`ID`。
      */
     public String getVpcId() {
@@ -122,7 +122,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`。
+     * Set `VPC`实例`ID`。
      * @param VpcId `VPC`实例`ID`。
      */
     public void setVpcId(String VpcId) {
@@ -130,7 +130,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取子网实例`ID`，例如：subnet-bthucmmy。
+     * Get 子网实例`ID`，例如：subnet-bthucmmy。 
      * @return SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      */
     public String getSubnetId() {
@@ -138,7 +138,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例`ID`，例如：subnet-bthucmmy。
+     * Set 子网实例`ID`，例如：subnet-bthucmmy。
      * @param SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
      */
     public void setSubnetId(String SubnetId) {
@@ -146,7 +146,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称。
+     * Get 子网名称。 
      * @return SubnetName 子网名称。
      */
     public String getSubnetName() {
@@ -154,7 +154,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称。
+     * Set 子网名称。
      * @param SubnetName 子网名称。
      */
     public void setSubnetName(String SubnetName) {
@@ -162,7 +162,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取子网的 `IPv4` `CIDR`。
+     * Get 子网的 `IPv4` `CIDR`。 
      * @return CidrBlock 子网的 `IPv4` `CIDR`。
      */
     public String getCidrBlock() {
@@ -170,7 +170,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置子网的 `IPv4` `CIDR`。
+     * Set 子网的 `IPv4` `CIDR`。
      * @param CidrBlock 子网的 `IPv4` `CIDR`。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -178,7 +178,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取是否默认子网。
+     * Get 是否默认子网。 
      * @return IsDefault 是否默认子网。
      */
     public Boolean getIsDefault() {
@@ -186,7 +186,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置是否默认子网。
+     * Set 是否默认子网。
      * @param IsDefault 是否默认子网。
      */
     public void setIsDefault(Boolean IsDefault) {
@@ -194,7 +194,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启广播。
+     * Get 是否开启广播。 
      * @return EnableBroadcast 是否开启广播。
      */
     public Boolean getEnableBroadcast() {
@@ -202,7 +202,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启广播。
+     * Set 是否开启广播。
      * @param EnableBroadcast 是否开启广播。
      */
     public void setEnableBroadcast(Boolean EnableBroadcast) {
@@ -210,7 +210,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取可用区。
+     * Get 可用区。 
      * @return Zone 可用区。
      */
     public String getZone() {
@@ -218,7 +218,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置可用区。
+     * Set 可用区。
      * @param Zone 可用区。
      */
     public void setZone(String Zone) {
@@ -226,7 +226,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取路由表实例ID，例如：rtb-l2h8d7c2。
+     * Get 路由表实例ID，例如：rtb-l2h8d7c2。 
      * @return RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
      */
     public String getRouteTableId() {
@@ -234,7 +234,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-l2h8d7c2。
+     * Set 路由表实例ID，例如：rtb-l2h8d7c2。
      * @param RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -242,7 +242,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -250,7 +250,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -258,7 +258,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取可用`IP`数。
+     * Get 可用`IP`数。 
      * @return AvailableIpAddressCount 可用`IP`数。
      */
     public Integer getAvailableIpAddressCount() {
@@ -266,7 +266,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置可用`IP`数。
+     * Set 可用`IP`数。
      * @param AvailableIpAddressCount 可用`IP`数。
      */
     public void setAvailableIpAddressCount(Integer AvailableIpAddressCount) {
@@ -274,7 +274,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取子网的 `IPv6` `CIDR`。
+     * Get 子网的 `IPv6` `CIDR`。 
      * @return Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
      */
     public String getIpv6CidrBlock() {
@@ -282,7 +282,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置子网的 `IPv6` `CIDR`。
+     * Set 子网的 `IPv6` `CIDR`。
      * @param Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -290,7 +290,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取关联`ACL`ID
+     * Get 关联`ACL`ID 
      * @return NetworkAclId 关联`ACL`ID
      */
     public String getNetworkAclId() {
@@ -298,7 +298,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置关联`ACL`ID
+     * Set 关联`ACL`ID
      * @param NetworkAclId 关联`ACL`ID
      */
     public void setNetworkAclId(String NetworkAclId) {
@@ -306,7 +306,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 获取是否为 `SNAT` 地址池子网。
+     * Get 是否为 `SNAT` 地址池子网。 
      * @return IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
      */
     public Boolean getIsRemoteVpcSnat() {
@@ -314,7 +314,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 设置是否为 `SNAT` 地址池子网。
+     * Set 是否为 `SNAT` 地址池子网。
      * @param IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
      */
     public void setIsRemoteVpcSnat(Boolean IsRemoteVpcSnat) {
@@ -322,7 +322,7 @@ public class Subnet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

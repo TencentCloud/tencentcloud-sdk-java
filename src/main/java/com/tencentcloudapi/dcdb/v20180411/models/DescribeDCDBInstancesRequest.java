@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBInstancesRequest  extends AbstractModel{
+public class DescribeDCDBInstancesRequest extends AbstractModel{
 
     /**
     * 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
@@ -121,7 +121,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     private String [] ExclusterIds;
 
     /**
-     * 获取按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
+     * Get 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d 
      * @return InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      */
     public String [] getInstanceIds() {
@@ -129,7 +129,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
+     * Set 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      * @param InstanceIds 按照一个或者多个实例 ID 查询。实例 ID 形如：dcdbt-2t4cf98d
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -137,7 +137,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
+     * Get 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。 
      * @return SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      */
     public String getSearchName() {
@@ -145,7 +145,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
+     * Set 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      * @param SearchName 搜索的字段名，当前支持的值有：instancename、vip、all。传 instancename 表示按实例名进行搜索；传 vip 表示按内网IP进行搜索；传 all 将会按实例ID、实例名和内网IP进行搜索。
      */
     public void setSearchName(String SearchName) {
@@ -153,7 +153,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
+     * Get 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。 
      * @return SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
      */
     public String getSearchKey() {
@@ -161,7 +161,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
+     * Set 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
      * @param SearchKey 搜索的关键字，支持模糊搜索。多个关键字使用换行符（'\n'）分割。
      */
     public void setSearchKey(String SearchKey) {
@@ -169,7 +169,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按项目 ID 查询
+     * Get 按项目 ID 查询 
      * @return ProjectIds 按项目 ID 查询
      */
     public Integer [] getProjectIds() {
@@ -177,7 +177,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按项目 ID 查询
+     * Set 按项目 ID 查询
      * @param ProjectIds 按项目 ID 查询
      */
     public void setProjectIds(Integer [] ProjectIds) {
@@ -185,7 +185,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否根据 VPC 网络来搜索
+     * Get 是否根据 VPC 网络来搜索 
      * @return IsFilterVpc 是否根据 VPC 网络来搜索
      */
     public Boolean getIsFilterVpc() {
@@ -193,7 +193,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否根据 VPC 网络来搜索
+     * Set 是否根据 VPC 网络来搜索
      * @param IsFilterVpc 是否根据 VPC 网络来搜索
      */
     public void setIsFilterVpc(Boolean IsFilterVpc) {
@@ -201,7 +201,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络 ID， IsFilterVpc 为 1 时有效
+     * Get 私有网络 ID， IsFilterVpc 为 1 时有效 
      * @return VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
      */
     public String getVpcId() {
@@ -209,7 +209,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络 ID， IsFilterVpc 为 1 时有效
+     * Set 私有网络 ID， IsFilterVpc 为 1 时有效
      * @param VpcId 私有网络 ID， IsFilterVpc 为 1 时有效
      */
     public void setVpcId(String VpcId) {
@@ -217,7 +217,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的子网 ID， IsFilterVpc 为 1 时有效
+     * Get 私有网络的子网 ID， IsFilterVpc 为 1 时有效 
      * @return SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      */
     public String getSubnetId() {
@@ -225,7 +225,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的子网 ID， IsFilterVpc 为 1 时有效
+     * Set 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      * @param SubnetId 私有网络的子网 ID， IsFilterVpc 为 1 时有效
      */
     public void setSubnetId(String SubnetId) {
@@ -233,7 +233,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段， projectId， createtime， instancename 三者之一
+     * Get 排序字段， projectId， createtime， instancename 三者之一 
      * @return OrderBy 排序字段， projectId， createtime， instancename 三者之一
      */
     public String getOrderBy() {
@@ -241,7 +241,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段， projectId， createtime， instancename 三者之一
+     * Set 排序字段， projectId， createtime， instancename 三者之一
      * @param OrderBy 排序字段， projectId， createtime， instancename 三者之一
      */
     public void setOrderBy(String OrderBy) {
@@ -249,7 +249,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型， desc 或者 asc
+     * Get 排序类型， desc 或者 asc 
      * @return OrderByType 排序类型， desc 或者 asc
      */
     public String getOrderByType() {
@@ -257,7 +257,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型， desc 或者 asc
+     * Set 排序类型， desc 或者 asc
      * @param OrderByType 排序类型， desc 或者 asc
      */
     public void setOrderByType(String OrderByType) {
@@ -265,7 +265,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为 0
+     * Get 偏移量，默认为 0 
      * @return Offset 偏移量，默认为 0
      */
     public Integer getOffset() {
@@ -273,7 +273,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为 0
+     * Set 偏移量，默认为 0
      * @param Offset 偏移量，默认为 0
      */
     public void setOffset(Integer Offset) {
@@ -281,7 +281,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为 10，最大值为 100。
+     * Get 返回数量，默认为 10，最大值为 100。 
      * @return Limit 返回数量，默认为 10，最大值为 100。
      */
     public Integer getLimit() {
@@ -289,7 +289,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为 10，最大值为 100。
+     * Set 返回数量，默认为 10，最大值为 100。
      * @param Limit 返回数量，默认为 10，最大值为 100。
      */
     public void setLimit(Integer Limit) {
@@ -297,7 +297,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取1非独享集群，2独享集群， 0全部
+     * Get 1非独享集群，2独享集群， 0全部 
      * @return ExclusterType 1非独享集群，2独享集群， 0全部
      */
     public Integer getExclusterType() {
@@ -305,7 +305,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置1非独享集群，2独享集群， 0全部
+     * Set 1非独享集群，2独享集群， 0全部
      * @param ExclusterType 1非独享集群，2独享集群， 0全部
      */
     public void setExclusterType(Integer ExclusterType) {
@@ -313,7 +313,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标识是否使用ExclusterType字段, false不使用，true使用
+     * Get 标识是否使用ExclusterType字段, false不使用，true使用 
      * @return IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
      */
     public Boolean getIsFilterExcluster() {
@@ -321,7 +321,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标识是否使用ExclusterType字段, false不使用，true使用
+     * Set 标识是否使用ExclusterType字段, false不使用，true使用
      * @param IsFilterExcluster 标识是否使用ExclusterType字段, false不使用，true使用
      */
     public void setIsFilterExcluster(Boolean IsFilterExcluster) {
@@ -329,7 +329,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取独享集群ID
+     * Get 独享集群ID 
      * @return ExclusterIds 独享集群ID
      */
     public String [] getExclusterIds() {
@@ -337,7 +337,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置独享集群ID
+     * Set 独享集群ID
      * @param ExclusterIds 独享集群ID
      */
     public void setExclusterIds(String [] ExclusterIds) {
@@ -345,7 +345,7 @@ public class DescribeDCDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

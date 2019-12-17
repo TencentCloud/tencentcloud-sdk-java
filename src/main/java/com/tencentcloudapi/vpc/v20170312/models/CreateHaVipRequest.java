@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHaVipRequest  extends AbstractModel{
+public class CreateHaVipRequest extends AbstractModel{
 
     /**
     * `HAVIP`所在私有网络`ID`。
@@ -51,7 +51,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     private String Vip;
 
     /**
-     * 获取`HAVIP`所在私有网络`ID`。
+     * Get `HAVIP`所在私有网络`ID`。 
      * @return VpcId `HAVIP`所在私有网络`ID`。
      */
     public String getVpcId() {
@@ -59,7 +59,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`所在私有网络`ID`。
+     * Set `HAVIP`所在私有网络`ID`。
      * @param VpcId `HAVIP`所在私有网络`ID`。
      */
     public void setVpcId(String VpcId) {
@@ -67,7 +67,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`所在子网`ID`。
+     * Get `HAVIP`所在子网`ID`。 
      * @return SubnetId `HAVIP`所在子网`ID`。
      */
     public String getSubnetId() {
@@ -75,7 +75,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`所在子网`ID`。
+     * Set `HAVIP`所在子网`ID`。
      * @param SubnetId `HAVIP`所在子网`ID`。
      */
     public void setSubnetId(String SubnetId) {
@@ -83,7 +83,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`名称。
+     * Get `HAVIP`名称。 
      * @return HaVipName `HAVIP`名称。
      */
     public String getHaVipName() {
@@ -91,7 +91,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`名称。
+     * Set `HAVIP`名称。
      * @param HaVipName `HAVIP`名称。
      */
     public void setHaVipName(String HaVipName) {
@@ -99,7 +99,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * Get 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。 
      * @return Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      */
     public String getVip() {
@@ -107,7 +107,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * Set 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      * @param Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
      */
     public void setVip(String Vip) {
@@ -115,7 +115,7 @@ public class CreateHaVipRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

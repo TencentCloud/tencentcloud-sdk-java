@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigResponse  extends AbstractModel{
+public class DescribePublicConfigResponse extends AbstractModel{
 
     /**
     * 全局配置
@@ -38,8 +38,8 @@ public class DescribePublicConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取全局配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 全局配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 全局配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -48,7 +48,7 @@ public class DescribePublicConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置全局配置
+     * Set 全局配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 全局配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ public class DescribePublicConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -66,7 +66,7 @@ public class DescribePublicConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -74,7 +74,7 @@ public class DescribePublicConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Result.", this.Result);

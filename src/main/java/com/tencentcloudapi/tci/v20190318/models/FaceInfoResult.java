@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceInfoResult  extends AbstractModel{
+public class FaceInfoResult extends AbstractModel{
 
     /**
     * 人脸尺寸的占比
@@ -72,7 +72,7 @@ public class FaceInfoResult  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取人脸尺寸的占比
+     * Get 人脸尺寸的占比 
      * @return FaceRatio 人脸尺寸的占比
      */
     public Float getFaceRatio() {
@@ -80,7 +80,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸尺寸的占比
+     * Set 人脸尺寸的占比
      * @param FaceRatio 人脸尺寸的占比
      */
     public void setFaceRatio(Float FaceRatio) {
@@ -88,7 +88,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取帧高度
+     * Get 帧高度 
      * @return FrameHeight 帧高度
      */
     public Long getFrameHeight() {
@@ -96,7 +96,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置帧高度
+     * Set 帧高度
      * @param FrameHeight 帧高度
      */
     public void setFrameHeight(Long FrameHeight) {
@@ -104,7 +104,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取帧宽度
+     * Get 帧宽度 
      * @return FrameWidth 帧宽度
      */
     public Long getFrameWidth() {
@@ -112,7 +112,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置帧宽度
+     * Set 帧宽度
      * @param FrameWidth 帧宽度
      */
     public void setFrameWidth(Long FrameWidth) {
@@ -120,7 +120,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸高度
+     * Get 人脸高度 
      * @return Height 人脸高度
      */
     public Long getHeight() {
@@ -128,7 +128,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸高度
+     * Set 人脸高度
      * @param Height 人脸高度
      */
     public void setHeight(Long Height) {
@@ -136,7 +136,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸左坐标
+     * Get 人脸左坐标 
      * @return Left 人脸左坐标
      */
     public Long getLeft() {
@@ -144,7 +144,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸左坐标
+     * Set 人脸左坐标
      * @param Left 人脸左坐标
      */
     public void setLeft(Long Left) {
@@ -152,7 +152,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸顶坐标
+     * Get 人脸顶坐标 
      * @return Top 人脸顶坐标
      */
     public Long getTop() {
@@ -160,7 +160,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸顶坐标
+     * Set 人脸顶坐标
      * @param Top 人脸顶坐标
      */
     public void setTop(Long Top) {
@@ -168,7 +168,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 获取人脸宽度
+     * Get 人脸宽度 
      * @return Width 人脸宽度
      */
     public Long getWidth() {
@@ -176,7 +176,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 设置人脸宽度
+     * Set 人脸宽度
      * @param Width 人脸宽度
      */
     public void setWidth(Long Width) {
@@ -184,7 +184,7 @@ public class FaceInfoResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceRatio", this.FaceRatio);

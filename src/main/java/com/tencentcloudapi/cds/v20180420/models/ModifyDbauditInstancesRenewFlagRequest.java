@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
+public class ModifyDbauditInstancesRenewFlagRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -37,7 +37,7 @@ public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
     private Integer AutoRenewFlag;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
+     * Get 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费 
      * @return AutoRenewFlag 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      */
     public Integer getAutoRenewFlag() {
@@ -61,7 +61,7 @@ public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
+     * Set 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      * @param AutoRenewFlag 0，表示默认状态(用户未设置，即初始状态)；1，表示自动续费；2，表示明确不自动续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -69,7 +69,7 @@ public class ModifyDbauditInstancesRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

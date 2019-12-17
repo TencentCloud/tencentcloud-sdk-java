@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Instance  extends AbstractModel{
+public class Instance extends AbstractModel{
 
     /**
     * 实例ID
@@ -51,7 +51,7 @@ public class Instance  extends AbstractModel{
     private String InstanceState;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
+     * Get 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER 
      * @return InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      */
     public String getInstanceRole() {
@@ -75,7 +75,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
+     * Set 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      * @param InstanceRole 节点角色, MASTER, WORKER, ETCD, MASTER_ETCD,ALL, 默认为WORKER
      */
     public void setInstanceRole(String InstanceRole) {
@@ -83,7 +83,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例异常(或者处于初始化中)的原因
+     * Get 实例异常(或者处于初始化中)的原因 
      * @return FailedReason 实例异常(或者处于初始化中)的原因
      */
     public String getFailedReason() {
@@ -91,7 +91,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例异常(或者处于初始化中)的原因
+     * Set 实例异常(或者处于初始化中)的原因
      * @param FailedReason 实例异常(或者处于初始化中)的原因
      */
     public void setFailedReason(String FailedReason) {
@@ -99,7 +99,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 获取实例的状态（running 运行中，initializing 初始化中，failed 异常）
+     * Get 实例的状态（running 运行中，initializing 初始化中，failed 异常） 
      * @return InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      */
     public String getInstanceState() {
@@ -107,7 +107,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 设置实例的状态（running 运行中，initializing 初始化中，failed 异常）
+     * Set 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      * @param InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      */
     public void setInstanceState(String InstanceState) {
@@ -115,7 +115,7 @@ public class Instance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

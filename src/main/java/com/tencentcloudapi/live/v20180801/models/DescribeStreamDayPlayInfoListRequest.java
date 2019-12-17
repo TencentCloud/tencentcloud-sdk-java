@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
+public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
     * 日期，
@@ -52,8 +52,8 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     private Integer PageSize;
 
     /**
-     * 获取日期，
-格式：YYYY-mm-dd。
+     * Get 日期，
+格式：YYYY-mm-dd。 
      * @return DayTime 日期，
 格式：YYYY-mm-dd。
      */
@@ -62,7 +62,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日期，
+     * Set 日期，
 格式：YYYY-mm-dd。
      * @param DayTime 日期，
 格式：YYYY-mm-dd。
@@ -72,7 +72,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名。
+     * Get 播放域名。 
      * @return PlayDomain 播放域名。
      */
     public String getPlayDomain() {
@@ -80,7 +80,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名。
+     * Set 播放域名。
      * @param PlayDomain 播放域名。
      */
     public void setPlayDomain(String PlayDomain) {
@@ -88,7 +88,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页号，范围[1,10]，默认值是1。
+     * Get 页号，范围[1,10]，默认值是1。 
      * @return PageNum 页号，范围[1,10]，默认值是1。
      */
     public Integer getPageNum() {
@@ -96,7 +96,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页号，范围[1,10]，默认值是1。
+     * Set 页号，范围[1,10]，默认值是1。
      * @param PageNum 页号，范围[1,10]，默认值是1。
      */
     public void setPageNum(Integer PageNum) {
@@ -104,7 +104,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，范围[100,1000]，默认值是1000。
+     * Get 每页个数，范围[100,1000]，默认值是1000。 
      * @return PageSize 每页个数，范围[100,1000]，默认值是1000。
      */
     public Integer getPageSize() {
@@ -112,7 +112,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，范围[100,1000]，默认值是1000。
+     * Set 每页个数，范围[100,1000]，默认值是1000。
      * @param PageSize 每页个数，范围[100,1000]，默认值是1000。
      */
     public void setPageSize(Integer PageSize) {
@@ -120,7 +120,7 @@ public class DescribeStreamDayPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DayTime", this.DayTime);

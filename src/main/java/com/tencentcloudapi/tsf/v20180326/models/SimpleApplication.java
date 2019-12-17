@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SimpleApplication  extends AbstractModel{
+public class SimpleApplication extends AbstractModel{
 
     /**
     * 应用ID
@@ -95,8 +95,8 @@ public class SimpleApplication  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,8 +135,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,8 +155,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用微服务类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MicroserviceType 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -165,7 +165,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置应用微服务类型
+     * Set 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroserviceType 应用微服务类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,8 +175,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ApplicationDesc
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationDesc ApplicationDesc
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,7 +185,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置ApplicationDesc
+     * Set ApplicationDesc
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationDesc ApplicationDesc
 注意：此字段可能返回 null，表示取不到有效值。
@@ -195,8 +195,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ProgLang
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProgLang ProgLang
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -205,7 +205,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置ProgLang
+     * Set ProgLang
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgLang ProgLang
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,8 +215,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get ApplicationResourceType
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationResourceType ApplicationResourceType
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置ApplicationResourceType
+     * Set ApplicationResourceType
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationResourceType ApplicationResourceType
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CreateTime
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime CreateTime
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置CreateTime
+     * Set CreateTime
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime CreateTime
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,8 +255,8 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 获取UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get UpdateTime
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime UpdateTime
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -265,7 +265,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 设置UpdateTime
+     * Set UpdateTime
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime UpdateTime
 注意：此字段可能返回 null，表示取不到有效值。
@@ -275,7 +275,7 @@ public class SimpleApplication  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

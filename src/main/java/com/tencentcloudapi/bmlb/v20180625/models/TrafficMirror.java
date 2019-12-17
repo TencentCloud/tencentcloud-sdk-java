@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrafficMirror  extends AbstractModel{
+public class TrafficMirror extends AbstractModel{
 
     /**
     * 流量镜像ID。
@@ -121,7 +121,7 @@ public class TrafficMirror  extends AbstractModel{
     private String VpcName;
 
     /**
-     * 获取流量镜像ID。
+     * Get 流量镜像ID。 
      * @return TrafficMirrorId 流量镜像ID。
      */
     public String getTrafficMirrorId() {
@@ -129,7 +129,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像ID。
+     * Set 流量镜像ID。
      * @param TrafficMirrorId 流量镜像ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -137,7 +137,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像名称。
+     * Get 流量镜像名称。 
      * @return Alias 流量镜像名称。
      */
     public String getAlias() {
@@ -145,7 +145,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像名称。
+     * Set 流量镜像名称。
      * @param Alias 流量镜像名称。
      */
     public void setAlias(String Alias) {
@@ -153,7 +153,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像所在的私有网络ID。
+     * Get 流量镜像所在的私有网络ID。 
      * @return VpcId 流量镜像所在的私有网络ID。
      */
     public String getVpcId() {
@@ -161,7 +161,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像所在的私有网络ID。
+     * Set 流量镜像所在的私有网络ID。
      * @param VpcId 流量镜像所在的私有网络ID。
      */
     public void setVpcId(String VpcId) {
@@ -169,7 +169,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取接收机负载均衡方式。wrr，ip_hash，wlc。
+     * Get 接收机负载均衡方式。wrr，ip_hash，wlc。 
      * @return LoadBalancerType 接收机负载均衡方式。wrr，ip_hash，wlc。
      */
     public String getLoadBalancerType() {
@@ -177,7 +177,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置接收机负载均衡方式。wrr，ip_hash，wlc。
+     * Set 接收机负载均衡方式。wrr，ip_hash，wlc。
      * @param LoadBalancerType 接收机负载均衡方式。wrr，ip_hash，wlc。
      */
     public void setLoadBalancerType(String LoadBalancerType) {
@@ -185,7 +185,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取是否开始对接收机的健康检查。0：关闭，非0：开启。
+     * Get 是否开始对接收机的健康检查。0：关闭，非0：开启。 
      * @return HealthSwitch 是否开始对接收机的健康检查。0：关闭，非0：开启。
      */
     public Integer getHealthSwitch() {
@@ -193,7 +193,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置是否开始对接收机的健康检查。0：关闭，非0：开启。
+     * Set 是否开始对接收机的健康检查。0：关闭，非0：开启。
      * @param HealthSwitch 是否开始对接收机的健康检查。0：关闭，非0：开启。
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -201,7 +201,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取健康阈值。
+     * Get 健康阈值。 
      * @return HealthNum 健康阈值。
      */
     public Integer getHealthNum() {
@@ -209,7 +209,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置健康阈值。
+     * Set 健康阈值。
      * @param HealthNum 健康阈值。
      */
     public void setHealthNum(Integer HealthNum) {
@@ -217,7 +217,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阈值。
+     * Get 不健康阈值。 
      * @return UnhealthNum 不健康阈值。
      */
     public Integer getUnhealthNum() {
@@ -225,7 +225,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置不健康阈值。
+     * Set 不健康阈值。
      * @param UnhealthNum 不健康阈值。
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -233,7 +233,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取检查间隔。
+     * Get 检查间隔。 
      * @return IntervalTime 检查间隔。
      */
     public Integer getIntervalTime() {
@@ -241,7 +241,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置检查间隔。
+     * Set 检查间隔。
      * @param IntervalTime 检查间隔。
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -249,7 +249,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取检查域名。
+     * Get 检查域名。 
      * @return HttpCheckDomain 检查域名。
      */
     public String getHttpCheckDomain() {
@@ -257,7 +257,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置检查域名。
+     * Set 检查域名。
      * @param HttpCheckDomain 检查域名。
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
@@ -265,7 +265,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取检查目录。
+     * Get 检查目录。 
      * @return HttpCheckPath 检查目录。
      */
     public String getHttpCheckPath() {
@@ -273,7 +273,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置检查目录。
+     * Set 检查目录。
      * @param HttpCheckPath 检查目录。
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -281,7 +281,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
+     * Get 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。 
      * @return HttpCodes 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      */
     public Integer [] getHttpCodes() {
@@ -289,7 +289,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
+     * Set 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      * @param HttpCodes 健康检查返回码。 1：1xx，2：2xx，3：3xx，4：4xx，5：5xx。
      */
     public void setHttpCodes(Integer [] HttpCodes) {
@@ -297,7 +297,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -305,7 +305,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -313,7 +313,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像所在私有网络的Cidr。
+     * Get 流量镜像所在私有网络的Cidr。 
      * @return VpcCidrBlock 流量镜像所在私有网络的Cidr。
      */
     public String getVpcCidrBlock() {
@@ -321,7 +321,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像所在私有网络的Cidr。
+     * Set 流量镜像所在私有网络的Cidr。
      * @param VpcCidrBlock 流量镜像所在私有网络的Cidr。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -329,7 +329,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像所在私有网络的名称。
+     * Get 流量镜像所在私有网络的名称。 
      * @return VpcName 流量镜像所在私有网络的名称。
      */
     public String getVpcName() {
@@ -337,7 +337,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像所在私有网络的名称。
+     * Set 流量镜像所在私有网络的名称。
      * @param VpcName 流量镜像所在私有网络的名称。
      */
     public void setVpcName(String VpcName) {
@@ -345,7 +345,7 @@ public class TrafficMirror  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

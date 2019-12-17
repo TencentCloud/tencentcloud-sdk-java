@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetClusterSummaryRequest  extends AbstractModel{
+public class GetClusterSummaryRequest extends AbstractModel{
 
     /**
     * 模块名称，固定字段：cluster_mng
@@ -58,7 +58,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     private String GroupName;
 
     /**
-     * 获取模块名称，固定字段：cluster_mng
+     * Get 模块名称，固定字段：cluster_mng 
      * @return Module 模块名称，固定字段：cluster_mng
      */
     public String getModule() {
@@ -66,7 +66,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，固定字段：cluster_mng
+     * Set 模块名称，固定字段：cluster_mng
      * @param Module 模块名称，固定字段：cluster_mng
      */
     public void setModule(String Module) {
@@ -74,7 +74,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名称，固定字段：cluster_summary
+     * Get 操作名称，固定字段：cluster_summary 
      * @return Operation 操作名称，固定字段：cluster_summary
      */
     public String getOperation() {
@@ -82,7 +82,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名称，固定字段：cluster_summary
+     * Set 操作名称，固定字段：cluster_summary
      * @param Operation 操作名称，固定字段：cluster_summary
      */
     public void setOperation(String Operation) {
@@ -90,7 +90,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -98,7 +98,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -106,7 +106,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取组织ID，固定字段：0
+     * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
     public Integer getGroupId() {
@@ -114,7 +114,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织ID，固定字段：0
+     * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
     public void setGroupId(Integer GroupId) {
@@ -122,7 +122,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -130,7 +130,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -138,7 +138,7 @@ public class GetClusterSummaryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceSignature  extends AbstractModel{
+public class DeviceSignature extends AbstractModel{
 
     /**
     * 设备名称
@@ -37,7 +37,7 @@ public class DeviceSignature  extends AbstractModel{
     private String DeviceSignature;
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -45,7 +45,7 @@ public class DeviceSignature  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -53,7 +53,7 @@ public class DeviceSignature  extends AbstractModel{
     }
 
     /**
-     * 获取设备签名
+     * Get 设备签名 
      * @return DeviceSignature 设备签名
      */
     public String getDeviceSignature() {
@@ -61,7 +61,7 @@ public class DeviceSignature  extends AbstractModel{
     }
 
     /**
-     * 设置设备签名
+     * Set 设备签名
      * @param DeviceSignature 设备签名
      */
     public void setDeviceSignature(String DeviceSignature) {
@@ -69,7 +69,7 @@ public class DeviceSignature  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

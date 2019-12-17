@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOsInfoRequest  extends AbstractModel{
+public class DescribeOsInfoRequest extends AbstractModel{
 
     /**
     * 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
@@ -30,7 +30,7 @@ public class DescribeOsInfoRequest  extends AbstractModel{
     private String DeviceClassCode;
 
     /**
-     * 获取设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
+     * Get 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表 
      * @return DeviceClassCode 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
      */
     public String getDeviceClassCode() {
@@ -38,7 +38,7 @@ public class DescribeOsInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
+     * Set 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
      * @param DeviceClassCode 设备类型代号。 可以从DescribeDeviceClass查询设备类型列表
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -46,7 +46,7 @@ public class DescribeOsInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceClassCode", this.DeviceClassCode);

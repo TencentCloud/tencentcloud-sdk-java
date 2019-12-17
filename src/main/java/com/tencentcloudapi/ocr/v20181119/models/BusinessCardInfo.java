@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessCardInfo  extends AbstractModel{
+public class BusinessCardInfo extends AbstractModel{
 
     /**
     * 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
@@ -38,8 +38,8 @@ public class BusinessCardInfo  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
-姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
+     * Get 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
+姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。 
      * @return Name 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
      */
@@ -48,7 +48,7 @@ public class BusinessCardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
+     * Set 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
      * @param Name 识别出的字段名称（关键字，可能重复，比如多个手机），能识别的字段名为：
 姓名、英文姓名、英文地址、公司、英文公司、职位、英文职位、部门、英文部门、手机、电话、传真、社交帐号、QQ、MSN、微信、微博、邮箱、邮编、网址、公司账号、其他。
@@ -58,7 +58,7 @@ public class BusinessCardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * Get 识别出的字段名称对应的值，也就是字段name对应的字符串结果。 
      * @return Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
      */
     public String getValue() {
@@ -66,7 +66,7 @@ public class BusinessCardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称对应的值，也就是字段name对应的字符串结果。
+     * Set 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
      * @param Value 识别出的字段名称对应的值，也就是字段name对应的字符串结果。
      */
     public void setValue(String Value) {
@@ -74,7 +74,7 @@ public class BusinessCardInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

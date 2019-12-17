@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStatusRequest  extends AbstractModel{
+public class DescribeStatusRequest extends AbstractModel{
 
     /**
     * 购买服务后获得的授权帐号，用于保证请求有效性
@@ -37,7 +37,7 @@ public class DescribeStatusRequest  extends AbstractModel{
     private String Md5;
 
     /**
-     * 获取购买服务后获得的授权帐号，用于保证请求有效性
+     * Get 购买服务后获得的授权帐号，用于保证请求有效性 
      * @return Pk 购买服务后获得的授权帐号，用于保证请求有效性
      */
     public String getPk() {
@@ -45,7 +45,7 @@ public class DescribeStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买服务后获得的授权帐号，用于保证请求有效性
+     * Set 购买服务后获得的授权帐号，用于保证请求有效性
      * @param Pk 购买服务后获得的授权帐号，用于保证请求有效性
      */
     public void setPk(String Pk) {
@@ -53,7 +53,7 @@ public class DescribeStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取分析结果的样本md5
+     * Get 需要获取分析结果的样本md5 
      * @return Md5 需要获取分析结果的样本md5
      */
     public String getMd5() {
@@ -61,7 +61,7 @@ public class DescribeStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取分析结果的样本md5
+     * Set 需要获取分析结果的样本md5
      * @param Md5 需要获取分析结果的样本md5
      */
     public void setMd5(String Md5) {
@@ -69,7 +69,7 @@ public class DescribeStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pk", this.Pk);

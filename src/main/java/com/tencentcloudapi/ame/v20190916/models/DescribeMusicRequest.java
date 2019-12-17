@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMusicRequest  extends AbstractModel{
+public class DescribeMusicRequest extends AbstractModel{
 
     /**
     * 歌曲ID
@@ -52,7 +52,7 @@ Values:Y , N(default)
     private String Ssl;
 
     /**
-     * 获取歌曲ID
+     * Get 歌曲ID 
      * @return ItemId 歌曲ID
      */
     public String getItemId() {
@@ -60,7 +60,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 设置歌曲ID
+     * Set 歌曲ID
      * @param ItemId 歌曲ID
      */
     public void setItemId(String ItemId) {
@@ -68,7 +68,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 获取User identity ID，用来唯一标识用户
+     * Get User identity ID，用来唯一标识用户 
      * @return IdentityId User identity ID，用来唯一标识用户
      */
     public String getIdentityId() {
@@ -76,7 +76,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 设置User identity ID，用来唯一标识用户
+     * Set User identity ID，用来唯一标识用户
      * @param IdentityId User identity ID，用来唯一标识用户
      */
     public void setIdentityId(String IdentityId) {
@@ -84,7 +84,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 获取填 MP3-64K-FTD-P 获取歌曲热门片段
+     * Get 填 MP3-64K-FTD-P 获取歌曲热门片段 
      * @return SubItemType 填 MP3-64K-FTD-P 获取歌曲热门片段
      */
     public String getSubItemType() {
@@ -92,7 +92,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 设置填 MP3-64K-FTD-P 获取歌曲热门片段
+     * Set 填 MP3-64K-FTD-P 获取歌曲热门片段
      * @param SubItemType 填 MP3-64K-FTD-P 获取歌曲热门片段
      */
     public void setSubItemType(String SubItemType) {
@@ -100,8 +100,8 @@ Values:Y , N(default)
     }
 
     /**
-     * 获取CDN URL Protocol:HTTP or HTTPS/SSL
-Values:Y , N(default)
+     * Get CDN URL Protocol:HTTP or HTTPS/SSL
+Values:Y , N(default) 
      * @return Ssl CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
      */
@@ -110,7 +110,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 设置CDN URL Protocol:HTTP or HTTPS/SSL
+     * Set CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
      * @param Ssl CDN URL Protocol:HTTP or HTTPS/SSL
 Values:Y , N(default)
@@ -120,7 +120,7 @@ Values:Y , N(default)
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

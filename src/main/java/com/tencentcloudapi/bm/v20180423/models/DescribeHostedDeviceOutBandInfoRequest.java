@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
+public class DescribeHostedDeviceOutBandInfoRequest extends AbstractModel{
 
     /**
     * 托管设备的唯一ID数组,数组个数不超过20
@@ -37,7 +37,7 @@ public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取托管设备的唯一ID数组,数组个数不超过20
+     * Get 托管设备的唯一ID数组,数组个数不超过20 
      * @return InstanceIds 托管设备的唯一ID数组,数组个数不超过20
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置托管设备的唯一ID数组,数组个数不超过20
+     * Set 托管设备的唯一ID数组,数组个数不超过20
      * @param InstanceIds 托管设备的唯一ID数组,数组个数不超过20
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区ID
+     * Get 可用区ID 
      * @return Zone 可用区ID
      */
     public String getZone() {
@@ -61,7 +61,7 @@ public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区ID
+     * Set 可用区ID
      * @param Zone 可用区ID
      */
     public void setZone(String Zone) {
@@ -69,7 +69,7 @@ public class DescribeHostedDeviceOutBandInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

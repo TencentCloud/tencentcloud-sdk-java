@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTagsRequest  extends AbstractModel{
+public class DescribeTagsRequest extends AbstractModel{
 
     /**
     * 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
@@ -58,7 +58,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     private Long CreateUin;
 
     /**
-     * 获取标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Get 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签 
      * @return TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
     public String getTagKey() {
@@ -66,7 +66,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Set 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      * @param TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
     public void setTagKey(String TagKey) {
@@ -74,7 +74,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Get 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签 
      * @return TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
     public String getTagValue() {
@@ -82,7 +82,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Set 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
      * @param TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
      */
     public void setTagValue(String TagValue) {
@@ -90,7 +90,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
      * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public Long getOffset() {
@@ -98,7 +98,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public void setOffset(Long Offset) {
@@ -106,7 +106,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，默认为 15
+     * Get 每页大小，默认为 15 
      * @return Limit 每页大小，默认为 15
      */
     public Long getLimit() {
@@ -114,7 +114,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，默认为 15
+     * Set 每页大小，默认为 15
      * @param Limit 每页大小，默认为 15
      */
     public void setLimit(Long Limit) {
@@ -122,7 +122,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
      * @return CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
     public Long getCreateUin() {
@@ -130,7 +130,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Set 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      * @param CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
      */
     public void setCreateUin(Long CreateUin) {
@@ -138,7 +138,7 @@ public class DescribeTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

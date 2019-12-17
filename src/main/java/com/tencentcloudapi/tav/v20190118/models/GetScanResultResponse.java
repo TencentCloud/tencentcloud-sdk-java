@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetScanResultResponse  extends AbstractModel{
+public class GetScanResultResponse extends AbstractModel{
 
     /**
     * 接口调用状态，成功返回200，失败返回400
@@ -52,7 +52,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     private String RequestId;
 
     /**
-     * 获取接口调用状态，成功返回200，失败返回400
+     * Get 接口调用状态，成功返回200，失败返回400 
      * @return Status 接口调用状态，成功返回200，失败返回400
      */
     public Integer getStatus() {
@@ -60,7 +60,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 设置接口调用状态，成功返回200，失败返回400
+     * Set 接口调用状态，成功返回200，失败返回400
      * @param Status 接口调用状态，成功返回200，失败返回400
      */
     public void setStatus(Integer Status) {
@@ -68,7 +68,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 获取接口调用描述信息，成功返回"scan success"，失败返回"scan error"
+     * Get 接口调用描述信息，成功返回"scan success"，失败返回"scan error" 
      * @return Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      */
     public String getInfo() {
@@ -76,7 +76,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 设置接口调用描述信息，成功返回"scan success"，失败返回"scan error"
+     * Set 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      * @param Info 接口调用描述信息，成功返回"scan success"，失败返回"scan error"
      */
     public void setInfo(String Info) {
@@ -84,8 +84,8 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 获取实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
-scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败；
+     * Get 实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
+scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败； 
      * @return Data 实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
 scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败；
      */
@@ -94,7 +94,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 设置实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
+     * Set 实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
 scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败；
      * @param Data 实际结果信息，包括md5、scan_status、virus_name三个字段；virus_name报毒名："torjan.**":黑样本的报毒名、".":样本不报毒、"" :样本无检出信息，需上传扫描；
 scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、1样本扫描结束且不报毒、2样本扫描结束且报黑、3样本下载失败；
@@ -104,7 +104,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -112,7 +112,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -120,7 +120,7 @@ scan_status样本状态：-1无检出信息需上传扫描、0样本扫描中、
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

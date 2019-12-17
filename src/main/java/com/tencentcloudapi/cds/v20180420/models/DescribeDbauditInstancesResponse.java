@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDbauditInstancesResponse  extends AbstractModel{
+public class DescribeDbauditInstancesResponse extends AbstractModel{
 
     /**
     * 总实例数
@@ -44,7 +44,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总实例数
+     * Get 总实例数 
      * @return TotalCount 总实例数
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总实例数
+     * Set 总实例数
      * @param TotalCount 总实例数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据安全审计实例信息列表
+     * Get 数据安全审计实例信息列表 
      * @return CdsAuditInstanceSet 数据安全审计实例信息列表
      */
     public CdsAuditInstance [] getCdsAuditInstanceSet() {
@@ -68,7 +68,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据安全审计实例信息列表
+     * Set 数据安全审计实例信息列表
      * @param CdsAuditInstanceSet 数据安全审计实例信息列表
      */
     public void setCdsAuditInstanceSet(CdsAuditInstance [] CdsAuditInstanceSet) {
@@ -76,7 +76,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDbauditInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
+public class ModifyMigrationTaskStatusRequest extends AbstractModel{
 
     /**
     * 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
@@ -37,7 +37,7 @@ public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+     * Get 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败 
      * @return Status 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      */
     public String getStatus() {
@@ -45,7 +45,7 @@ public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
+     * Set 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      * @param Status 任务状态，取值为unstart，migrating，finish，fail之一，分别代表该迁移任务状态为迁移未开始，迁移中，迁移完成，迁移失败
      */
     public void setStatus(String Status) {
@@ -53,7 +53,7 @@ public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID，例如msp-jitoh33n
+     * Get 任务ID，例如msp-jitoh33n 
      * @return TaskId 任务ID，例如msp-jitoh33n
      */
     public String getTaskId() {
@@ -61,7 +61,7 @@ public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，例如msp-jitoh33n
+     * Set 任务ID，例如msp-jitoh33n
      * @param TaskId 任务ID，例如msp-jitoh33n
      */
     public void setTaskId(String TaskId) {
@@ -69,7 +69,7 @@ public class ModifyMigrationTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

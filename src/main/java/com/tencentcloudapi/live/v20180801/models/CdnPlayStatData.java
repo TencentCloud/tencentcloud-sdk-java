@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnPlayStatData  extends AbstractModel{
+public class CdnPlayStatData extends AbstractModel{
 
     /**
     * 时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -58,7 +58,7 @@ public class CdnPlayStatData  extends AbstractModel{
     private Integer Online;
 
     /**
-     * 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
@@ -66,7 +66,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 设置时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
@@ -74,7 +74,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 获取带宽，（单位Mbps）。
+     * Get 带宽，（单位Mbps）。 
      * @return Bandwidth 带宽，（单位Mbps）。
      */
     public Float getBandwidth() {
@@ -82,7 +82,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 设置带宽，（单位Mbps）。
+     * Set 带宽，（单位Mbps）。
      * @param Bandwidth 带宽，（单位Mbps）。
      */
     public void setBandwidth(Float Bandwidth) {
@@ -90,7 +90,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 获取流量，（单位MB）。
+     * Get 流量，（单位MB）。 
      * @return Flux 流量，（单位MB）。
      */
     public Float getFlux() {
@@ -98,7 +98,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 设置流量，（单位MB）。
+     * Set 流量，（单位MB）。
      * @param Flux 流量，（单位MB）。
      */
     public void setFlux(Float Flux) {
@@ -106,7 +106,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 获取新增请求数。
+     * Get 新增请求数。 
      * @return Request 新增请求数。
      */
     public Integer getRequest() {
@@ -114,7 +114,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 设置新增请求数。
+     * Set 新增请求数。
      * @param Request 新增请求数。
      */
     public void setRequest(Integer Request) {
@@ -122,7 +122,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 获取并发连接数。
+     * Get 并发连接数。 
      * @return Online 并发连接数。
      */
     public Integer getOnline() {
@@ -130,7 +130,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 设置并发连接数。
+     * Set 并发连接数。
      * @param Online 并发连接数。
      */
     public void setOnline(Integer Online) {
@@ -138,7 +138,7 @@ public class CdnPlayStatData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

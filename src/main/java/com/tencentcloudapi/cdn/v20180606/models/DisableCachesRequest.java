@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableCachesRequest  extends AbstractModel{
+public class DisableCachesRequest extends AbstractModel{
 
     /**
     * 需要禁用的 URL 列表
@@ -31,8 +31,8 @@ public class DisableCachesRequest  extends AbstractModel{
     private String [] Urls;
 
     /**
-     * 获取需要禁用的 URL 列表
-每次最多可提交 100 条，每日最多可提交 3000 条
+     * Get 需要禁用的 URL 列表
+每次最多可提交 100 条，每日最多可提交 3000 条 
      * @return Urls 需要禁用的 URL 列表
 每次最多可提交 100 条，每日最多可提交 3000 条
      */
@@ -41,7 +41,7 @@ public class DisableCachesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要禁用的 URL 列表
+     * Set 需要禁用的 URL 列表
 每次最多可提交 100 条，每日最多可提交 3000 条
      * @param Urls 需要禁用的 URL 列表
 每次最多可提交 100 条，每日最多可提交 3000 条
@@ -51,7 +51,7 @@ public class DisableCachesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

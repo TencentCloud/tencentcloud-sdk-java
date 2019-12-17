@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceQualityCompleteness  extends AbstractModel{
+public class FaceQualityCompleteness extends AbstractModel{
 
     /**
     * 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
@@ -77,9 +77,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     private Long Chin;
 
     /**
-     * 获取眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
+     * Get 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Eyebrow 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,7 +89,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
+     * Set 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Eyebrow 眉毛的遮挡分数[0,100]，分数越高遮挡越少。 
@@ -101,9 +101,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 获取眼睛的遮挡分数[0,100],分数越高遮挡越少。 
+     * Get 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Eye 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -113,7 +113,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置眼睛的遮挡分数[0,100],分数越高遮挡越少。 
+     * Set 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,80]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Eye 眼睛的遮挡分数[0,100],分数越高遮挡越少。 
@@ -125,9 +125,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 获取鼻子的遮挡分数[0,100],分数越高遮挡越少。 
+     * Get 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,60]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Nose 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,60]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -137,7 +137,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置鼻子的遮挡分数[0,100],分数越高遮挡越少。 
+     * Set 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,60]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Nose 鼻子的遮挡分数[0,100],分数越高遮挡越少。 
@@ -149,9 +149,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 获取脸颊的遮挡分数[0,100],分数越高遮挡越少。 
+     * Get 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cheek 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,7 +161,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置脸颊的遮挡分数[0,100],分数越高遮挡越少。 
+     * Set 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cheek 脸颊的遮挡分数[0,100],分数越高遮挡越少。 
@@ -173,9 +173,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 获取嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
+     * Get 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,50]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mouth 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,50]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -185,7 +185,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
+     * Set 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,50]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Mouth 嘴巴的遮挡分数[0,100],分数越高遮挡越少。 
@@ -197,9 +197,9 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 获取下巴的遮挡分数[0,100],分数越高遮挡越少。 
+     * Get 下巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Chin 下巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -209,7 +209,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 设置下巴的遮挡分数[0,100],分数越高遮挡越少。 
+     * Set 下巴的遮挡分数[0,100],分数越高遮挡越少。 
 参考范围：[0,70]表示发生遮挡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Chin 下巴的遮挡分数[0,100],分数越高遮挡越少。 
@@ -221,7 +221,7 @@ public class FaceQualityCompleteness  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Eyebrow", this.Eyebrow);

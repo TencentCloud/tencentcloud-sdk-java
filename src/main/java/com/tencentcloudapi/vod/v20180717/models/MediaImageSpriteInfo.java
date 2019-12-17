@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaImageSpriteInfo  extends AbstractModel{
+public class MediaImageSpriteInfo extends AbstractModel{
 
     /**
     * 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
@@ -31,8 +31,8 @@ public class MediaImageSpriteInfo  extends AbstractModel{
     private MediaImageSpriteItem [] ImageSpriteSet;
 
     /**
-     * 获取特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteSet 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaImageSpriteInfo  extends AbstractModel{
     }
 
     /**
-     * 设置特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
+     * Set 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteSet 特定规格的雪碧图信息集合，每个元素代表一套相同规格的雪碧图。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaImageSpriteInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageSpriteSet.", this.ImageSpriteSet);

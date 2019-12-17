@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipAcl  extends AbstractModel{
+public class EipAcl extends AbstractModel{
 
     /**
     * ACL 实例 ID。
@@ -72,7 +72,7 @@ public class EipAcl  extends AbstractModel{
     private EipAclRule [] InRules;
 
     /**
-     * 获取ACL 实例 ID。
+     * Get ACL 实例 ID。 
      * @return AclId ACL 实例 ID。
      */
     public String getAclId() {
@@ -80,7 +80,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例 ID。
+     * Set ACL 实例 ID。
      * @param AclId ACL 实例 ID。
      */
     public void setAclId(String AclId) {
@@ -88,7 +88,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 实例名称
+     * Get ACL 实例名称 
      * @return AclName ACL 实例名称
      */
     public String getAclName() {
@@ -96,7 +96,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 实例名称
+     * Set ACL 实例名称
      * @param AclName ACL 实例名称
      */
     public void setAclName(String AclName) {
@@ -104,7 +104,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取ACL 状态。0：无状态，1：有状态
+     * Get ACL 状态。0：无状态，1：有状态 
      * @return Status ACL 状态。0：无状态，1：有状态
      */
     public String getStatus() {
@@ -112,7 +112,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置ACL 状态。0：无状态，1：有状态
+     * Set ACL 状态。0：无状态，1：有状态
      * @param Status ACL 状态。0：无状态，1：有状态
      */
     public void setStatus(String Status) {
@@ -120,7 +120,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取EIPACL 创建时间
+     * Get EIPACL 创建时间 
      * @return CreatedAt EIPACL 创建时间
      */
     public String getCreatedAt() {
@@ -128,7 +128,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置EIPACL 创建时间
+     * Set EIPACL 创建时间
      * @param CreatedAt EIPACL 创建时间
      */
     public void setCreatedAt(String CreatedAt) {
@@ -136,7 +136,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取EIPACL 已关联的 eip 数目
+     * Get EIPACL 已关联的 eip 数目 
      * @return EipNum EIPACL 已关联的 eip 数目
      */
     public Integer getEipNum() {
@@ -144,7 +144,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置EIPACL 已关联的 eip 数目
+     * Set EIPACL 已关联的 eip 数目
      * @param EipNum EIPACL 已关联的 eip 数目
      */
     public void setEipNum(Integer EipNum) {
@@ -152,7 +152,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取出站规则
+     * Get 出站规则 
      * @return OutRules 出站规则
      */
     public EipAclRule [] getOutRules() {
@@ -160,7 +160,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置出站规则
+     * Set 出站规则
      * @param OutRules 出站规则
      */
     public void setOutRules(EipAclRule [] OutRules) {
@@ -168,7 +168,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 获取入站规则
+     * Get 入站规则 
      * @return InRules 入站规则
      */
     public EipAclRule [] getInRules() {
@@ -176,7 +176,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 设置入站规则
+     * Set 入站规则
      * @param InRules 入站规则
      */
     public void setInRules(EipAclRule [] InRules) {
@@ -184,7 +184,7 @@ public class EipAcl  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AclId", this.AclId);

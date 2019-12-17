@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProIspPlaySumInfo  extends AbstractModel{
+public class ProIspPlaySumInfo extends AbstractModel{
 
     /**
     * 省份/运营商/国家或地区。
@@ -51,7 +51,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     private Float AvgFluxPerSecond;
 
     /**
-     * 获取省份/运营商/国家或地区。
+     * Get 省份/运营商/国家或地区。 
      * @return Name 省份/运营商/国家或地区。
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置省份/运营商/国家或地区。
+     * Set 省份/运营商/国家或地区。
      * @param Name 省份/运营商/国家或地区。
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总流量，单位：MB。
+     * Get 总流量，单位：MB。 
      * @return TotalFlux 总流量，单位：MB。
      */
     public Float getTotalFlux() {
@@ -75,7 +75,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总流量，单位：MB。
+     * Set 总流量，单位：MB。
      * @param TotalFlux 总流量，单位：MB。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -83,7 +83,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总请求数。
+     * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
@@ -91,7 +91,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总请求数。
+     * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
@@ -99,7 +99,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均下载流量，单位：MB/s
+     * Get 平均下载流量，单位：MB/s 
      * @return AvgFluxPerSecond 平均下载流量，单位：MB/s
      */
     public Float getAvgFluxPerSecond() {
@@ -107,7 +107,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均下载流量，单位：MB/s
+     * Set 平均下载流量，单位：MB/s
      * @param AvgFluxPerSecond 平均下载流量，单位：MB/s
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
@@ -115,7 +115,7 @@ public class ProIspPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

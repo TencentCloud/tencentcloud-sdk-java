@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComponentInfoRequest  extends AbstractModel{
+public class DescribeComponentInfoRequest extends AbstractModel{
 
     /**
     * 组件ID。
     */
     @SerializedName("ComponentId")
     @Expose
-    private Integer ComponentId;
+    private Long ComponentId;
 
     /**
-     * 获取组件ID。
+     * Get 组件ID。 
      * @return ComponentId 组件ID。
      */
-    public Integer getComponentId() {
+    public Long getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * 设置组件ID。
+     * Set 组件ID。
      * @param ComponentId 组件ID。
      */
-    public void setComponentId(Integer ComponentId) {
+    public void setComponentId(Long ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ComponentId", this.ComponentId);

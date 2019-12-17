@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipQuotaResponse  extends AbstractModel{
+public class DescribeEipQuotaResponse extends AbstractModel{
 
     /**
     * 能拥有的EIP个数的总配额，默认是100个
@@ -65,7 +65,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取能拥有的EIP个数的总配额，默认是100个
+     * Get 能拥有的EIP个数的总配额，默认是100个 
      * @return EipNumQuota 能拥有的EIP个数的总配额，默认是100个
      */
     public Integer getEipNumQuota() {
@@ -73,7 +73,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置能拥有的EIP个数的总配额，默认是100个
+     * Set 能拥有的EIP个数的总配额，默认是100个
      * @param EipNumQuota 能拥有的EIP个数的总配额，默认是100个
      */
     public void setEipNumQuota(Integer EipNumQuota) {
@@ -81,7 +81,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
+     * Get 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和 
      * @return CurrentEipNum 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      */
     public Integer getCurrentEipNum() {
@@ -89,7 +89,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
+     * Set 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      * @param CurrentEipNum 当前已使用的EIP个数，包括创建中、绑定中、已绑定、解绑中、未绑定几种状态的EIP个数总和
      */
     public void setCurrentEipNum(Integer CurrentEipNum) {
@@ -97,7 +97,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当天申请EIP次数
+     * Get 当天申请EIP次数 
      * @return DailyApplyCount 当天申请EIP次数
      */
     public Integer getDailyApplyCount() {
@@ -105,7 +105,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当天申请EIP次数
+     * Set 当天申请EIP次数
      * @param DailyApplyCount 当天申请EIP次数
      */
     public void setDailyApplyCount(Integer DailyApplyCount) {
@@ -113,7 +113,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每日申请EIP的次数限制
+     * Get 每日申请EIP的次数限制 
      * @return DailyApplyQuota 每日申请EIP的次数限制
      */
     public Integer getDailyApplyQuota() {
@@ -121,7 +121,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每日申请EIP的次数限制
+     * Set 每日申请EIP的次数限制
      * @param DailyApplyQuota 每日申请EIP的次数限制
      */
     public void setDailyApplyQuota(Integer DailyApplyQuota) {
@@ -129,7 +129,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取BatchApplyMax
+     * Get BatchApplyMax 
      * @return BatchApplyMax BatchApplyMax
      */
     public Integer getBatchApplyMax() {
@@ -137,7 +137,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置BatchApplyMax
+     * Set BatchApplyMax
      * @param BatchApplyMax BatchApplyMax
      */
     public void setBatchApplyMax(Integer BatchApplyMax) {
@@ -145,7 +145,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeEipQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipNumQuota", this.EipNumQuota);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyGroupRequest  extends AbstractModel{
+public class ModifyGroupRequest extends AbstractModel{
 
     /**
     * 人员库ID
@@ -51,7 +51,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     private String Tag;
 
     /**
-     * 获取人员库ID
+     * Get 人员库ID 
      * @return GroupId 人员库ID
      */
     public String getGroupId() {
@@ -59,7 +59,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库ID
+     * Set 人员库ID
      * @param GroupId 人员库ID
      */
     public void setGroupId(String GroupId) {
@@ -67,7 +67,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库名称
+     * Get 人员库名称 
      * @return GroupName 人员库名称
      */
     public String getGroupName() {
@@ -75,7 +75,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库名称
+     * Set 人员库名称
      * @param GroupName 人员库名称
      */
     public void setGroupName(String GroupName) {
@@ -83,7 +83,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的人员库自定义描述字段，key-value
+     * Get 需要修改的人员库自定义描述字段，key-value 
      * @return GroupExDescriptionInfos 需要修改的人员库自定义描述字段，key-value
      */
     public GroupExDescriptionInfo [] getGroupExDescriptionInfos() {
@@ -91,7 +91,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的人员库自定义描述字段，key-value
+     * Set 需要修改的人员库自定义描述字段，key-value
      * @param GroupExDescriptionInfos 需要修改的人员库自定义描述字段，key-value
      */
     public void setGroupExDescriptionInfos(GroupExDescriptionInfo [] GroupExDescriptionInfos) {
@@ -99,7 +99,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库信息备注
+     * Get 人员库信息备注 
      * @return Tag 人员库信息备注
      */
     public String getTag() {
@@ -107,7 +107,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库信息备注
+     * Set 人员库信息备注
      * @param Tag 人员库信息备注
      */
     public void setTag(String Tag) {
@@ -115,7 +115,7 @@ public class ModifyGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

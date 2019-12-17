@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImagePolityDetect  extends AbstractModel{
+public class ImagePolityDetect extends AbstractModel{
 
     /**
     * 恶意类型
@@ -67,9 +67,9 @@ public class ImagePolityDetect  extends AbstractModel{
     private Long Score;
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常 
-20001：政治
+20001：政治 
      * @return EvilType 恶意类型
 100：正常 
 20001：政治
@@ -79,7 +79,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常 
 20001：政治
      * @param EvilType 恶意类型
@@ -91,7 +91,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 获取处置判定  0：正常 1：可疑
+     * Get 处置判定  0：正常 1：可疑 
      * @return HitFlag 处置判定  0：正常 1：可疑
      */
     public Long getHitFlag() {
@@ -99,7 +99,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置处置判定  0：正常 1：可疑
+     * Set 处置判定  0：正常 1：可疑
      * @param HitFlag 处置判定  0：正常 1：可疑
      */
     public void setHitFlag(Long HitFlag) {
@@ -107,7 +107,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 获取命中的人脸名称
+     * Get 命中的人脸名称 
      * @return FaceNames 命中的人脸名称
      */
     public String [] getFaceNames() {
@@ -115,7 +115,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置命中的人脸名称
+     * Set 命中的人脸名称
      * @param FaceNames 命中的人脸名称
      */
     public void setFaceNames(String [] FaceNames) {
@@ -123,7 +123,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 获取关键词明细
+     * Get 关键词明细 
      * @return Keywords 关键词明细
      */
     public String [] getKeywords() {
@@ -131,7 +131,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置关键词明细
+     * Set 关键词明细
      * @param Keywords 关键词明细
      */
     public void setKeywords(String [] Keywords) {
@@ -139,7 +139,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 获取命中的政治物品名称
+     * Get 命中的政治物品名称 
      * @return PolityItems 命中的政治物品名称
      */
     public String [] getPolityItems() {
@@ -147,7 +147,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置命中的政治物品名称
+     * Set 命中的政治物品名称
      * @param PolityItems 命中的政治物品名称
      */
     public void setPolityItems(String [] PolityItems) {
@@ -155,7 +155,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 获取政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
+     * Get 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高 
      * @return Score 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
     public Long getScore() {
@@ -163,7 +163,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 设置政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
+     * Set 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      * @param Score 政治（人脸）分：分值范围 0-100，分数越高可疑程度越高
      */
     public void setScore(Long Score) {
@@ -171,7 +171,7 @@ public class ImagePolityDetect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);

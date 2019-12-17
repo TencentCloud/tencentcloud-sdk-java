@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ipv6SubnetCidrBlock  extends AbstractModel{
+public class Ipv6SubnetCidrBlock extends AbstractModel{
 
     /**
     * 子网实例`ID`。形如：`subnet-pxir56ns`。
@@ -37,7 +37,7 @@ public class Ipv6SubnetCidrBlock  extends AbstractModel{
     private String Ipv6CidrBlock;
 
     /**
-     * 获取子网实例`ID`。形如：`subnet-pxir56ns`。
+     * Get 子网实例`ID`。形如：`subnet-pxir56ns`。 
      * @return SubnetId 子网实例`ID`。形如：`subnet-pxir56ns`。
      */
     public String getSubnetId() {
@@ -45,7 +45,7 @@ public class Ipv6SubnetCidrBlock  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例`ID`。形如：`subnet-pxir56ns`。
+     * Set 子网实例`ID`。形如：`subnet-pxir56ns`。
      * @param SubnetId 子网实例`ID`。形如：`subnet-pxir56ns`。
      */
     public void setSubnetId(String SubnetId) {
@@ -53,7 +53,7 @@ public class Ipv6SubnetCidrBlock  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * Get `IPv6`子网段。形如：`3402:4e00:20:1001::/64` 
      * @return Ipv6CidrBlock `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
      */
     public String getIpv6CidrBlock() {
@@ -61,7 +61,7 @@ public class Ipv6SubnetCidrBlock  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * Set `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
      * @param Ipv6CidrBlock `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -69,7 +69,7 @@ public class Ipv6SubnetCidrBlock  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

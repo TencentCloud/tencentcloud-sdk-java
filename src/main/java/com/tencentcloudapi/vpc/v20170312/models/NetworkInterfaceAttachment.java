@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkInterfaceAttachment  extends AbstractModel{
+public class NetworkInterfaceAttachment extends AbstractModel{
 
     /**
     * 云主机实例ID。
@@ -51,7 +51,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     private String AttachTime;
 
     /**
-     * 获取云主机实例ID。
+     * Get 云主机实例ID。 
      * @return InstanceId 云主机实例ID。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 设置云主机实例ID。
+     * Set 云主机实例ID。
      * @param InstanceId 云主机实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 获取网卡在云主机实例内的序号。
+     * Get 网卡在云主机实例内的序号。 
      * @return DeviceIndex 网卡在云主机实例内的序号。
      */
     public Integer getDeviceIndex() {
@@ -75,7 +75,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 设置网卡在云主机实例内的序号。
+     * Set 网卡在云主机实例内的序号。
      * @param DeviceIndex 网卡在云主机实例内的序号。
      */
     public void setDeviceIndex(Integer DeviceIndex) {
@@ -83,7 +83,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 获取云主机所有者账户信息。
+     * Get 云主机所有者账户信息。 
      * @return InstanceAccountId 云主机所有者账户信息。
      */
     public String getInstanceAccountId() {
@@ -91,7 +91,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 设置云主机所有者账户信息。
+     * Set 云主机所有者账户信息。
      * @param InstanceAccountId 云主机所有者账户信息。
      */
     public void setInstanceAccountId(String InstanceAccountId) {
@@ -99,7 +99,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 获取绑定时间。
+     * Get 绑定时间。 
      * @return AttachTime 绑定时间。
      */
     public String getAttachTime() {
@@ -107,7 +107,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 设置绑定时间。
+     * Set 绑定时间。
      * @param AttachTime 绑定时间。
      */
     public void setAttachTime(String AttachTime) {
@@ -115,7 +115,7 @@ public class NetworkInterfaceAttachment  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLaunchConfigurationRequest  extends AbstractModel{
+public class DeleteLaunchConfigurationRequest extends AbstractModel{
 
     /**
     * 需要删除的启动配置ID。
@@ -30,7 +30,7 @@ public class DeleteLaunchConfigurationRequest  extends AbstractModel{
     private String LaunchConfigurationId;
 
     /**
-     * 获取需要删除的启动配置ID。
+     * Get 需要删除的启动配置ID。 
      * @return LaunchConfigurationId 需要删除的启动配置ID。
      */
     public String getLaunchConfigurationId() {
@@ -38,7 +38,7 @@ public class DeleteLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的启动配置ID。
+     * Set 需要删除的启动配置ID。
      * @param LaunchConfigurationId 需要删除的启动配置ID。
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -46,7 +46,7 @@ public class DeleteLaunchConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);

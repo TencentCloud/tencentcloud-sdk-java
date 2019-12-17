@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
+public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
 
     /**
     * VPN通道实例ID。形如：bmvpnx-f49l6u0z。
@@ -72,7 +72,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-     * 获取VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Get VPN通道实例ID。形如：bmvpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public String getVpnConnectionId() {
@@ -80,7 +80,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道实例ID。形如：bmvpnx-f49l6u0z。
+     * Set VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      * @param VpnConnectionId VPN通道实例ID。形如：bmvpnx-f49l6u0z。
      */
     public void setVpnConnectionId(String VpnConnectionId) {
@@ -88,7 +88,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID
+     * Get VPC实例ID 
      * @return VpcId VPC实例ID
      */
     public String getVpcId() {
@@ -96,7 +96,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID
+     * Set VPC实例ID
      * @param VpcId VPC实例ID
      */
     public void setVpcId(String VpcId) {
@@ -104,7 +104,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN通道名称，可任意命名，但不得超过60个字符。
+     * Get VPN通道名称，可任意命名，但不得超过60个字符。 
      * @return VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      */
     public String getVpnConnectionName() {
@@ -112,7 +112,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN通道名称，可任意命名，但不得超过60个字符。
+     * Set VPN通道名称，可任意命名，但不得超过60个字符。
      * @param VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      */
     public void setVpnConnectionName(String VpnConnectionName) {
@@ -120,7 +120,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预共享密钥。
+     * Get 预共享密钥。 
      * @return PreShareKey 预共享密钥。
      */
     public String getPreShareKey() {
@@ -128,7 +128,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预共享密钥。
+     * Set 预共享密钥。
      * @param PreShareKey 预共享密钥。
      */
     public void setPreShareKey(String PreShareKey) {
@@ -136,7 +136,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Get SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。 
      * @return SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabases() {
@@ -144,7 +144,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Set SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      * @param SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      */
     public void setSecurityPolicyDatabases(SecurityPolicyDatabase [] SecurityPolicyDatabases) {
@@ -152,7 +152,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
+     * Get IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。 
      * @return IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
@@ -160,7 +160,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
+     * Set IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
      * @param IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议。
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
@@ -168,7 +168,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPSec配置，腾讯云提供IPSec安全会话设置。
+     * Get IPSec配置，腾讯云提供IPSec安全会话设置。 
      * @return IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
@@ -176,7 +176,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPSec配置，腾讯云提供IPSec安全会话设置。
+     * Set IPSec配置，腾讯云提供IPSec安全会话设置。
      * @param IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置。
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
@@ -184,7 +184,7 @@ public class ModifyVpnConnectionAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnConnectionId", this.VpnConnectionId);

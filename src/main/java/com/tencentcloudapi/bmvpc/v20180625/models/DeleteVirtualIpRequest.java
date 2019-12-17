@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteVirtualIpRequest  extends AbstractModel{
+public class DeleteVirtualIpRequest extends AbstractModel{
 
     /**
     * 私有网络唯一ID。
@@ -37,7 +37,7 @@ public class DeleteVirtualIpRequest  extends AbstractModel{
     private String [] Ips;
 
     /**
-     * 获取私有网络唯一ID。
+     * Get 私有网络唯一ID。 
      * @return VpcId 私有网络唯一ID。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DeleteVirtualIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络唯一ID。
+     * Set 私有网络唯一ID。
      * @param VpcId 私有网络唯一ID。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DeleteVirtualIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取退还的IP列表。
+     * Get 退还的IP列表。 
      * @return Ips 退还的IP列表。
      */
     public String [] getIps() {
@@ -61,7 +61,7 @@ public class DeleteVirtualIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置退还的IP列表。
+     * Set 退还的IP列表。
      * @param Ips 退还的IP列表。
      */
     public void setIps(String [] Ips) {
@@ -69,7 +69,7 @@ public class DeleteVirtualIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

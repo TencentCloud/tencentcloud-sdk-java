@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TimeType  extends AbstractModel{
+public class TimeType extends AbstractModel{
 
     /**
     * 结束时间戳
@@ -37,7 +37,7 @@ public class TimeType  extends AbstractModel{
     private Long StartTime;
 
     /**
-     * 获取结束时间戳
+     * Get 结束时间戳 
      * @return EndTime 结束时间戳
      */
     public Long getEndTime() {
@@ -45,7 +45,7 @@ public class TimeType  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间戳
+     * Set 结束时间戳
      * @param EndTime 结束时间戳
      */
     public void setEndTime(Long EndTime) {
@@ -53,7 +53,7 @@ public class TimeType  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间戳
+     * Get 起始时间戳 
      * @return StartTime 起始时间戳
      */
     public Long getStartTime() {
@@ -61,7 +61,7 @@ public class TimeType  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间戳
+     * Set 起始时间戳
      * @param StartTime 起始时间戳
      */
     public void setStartTime(Long StartTime) {
@@ -69,7 +69,7 @@ public class TimeType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);

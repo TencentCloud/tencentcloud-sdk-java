@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartEncryptionRequest  extends AbstractModel{
+public class StartEncryptionRequest extends AbstractModel{
 
     /**
     * cos的end point。
@@ -65,7 +65,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     private DrmOutputObject [] OutputObjects;
 
     /**
-     * 获取cos的end point。
+     * Get cos的end point。 
      * @return CosEndPoint cos的end point。
      */
     public String getCosEndPoint() {
@@ -73,7 +73,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置cos的end point。
+     * Set cos的end point。
      * @param CosEndPoint cos的end point。
      */
     public void setCosEndPoint(String CosEndPoint) {
@@ -81,7 +81,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取cos api密钥id。
+     * Get cos api密钥id。 
      * @return CosSecretId cos api密钥id。
      */
     public String getCosSecretId() {
@@ -89,7 +89,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置cos api密钥id。
+     * Set cos api密钥id。
      * @param CosSecretId cos api密钥id。
      */
     public void setCosSecretId(String CosSecretId) {
@@ -97,7 +97,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取cos api密钥。
+     * Get cos api密钥。 
      * @return CosSecretKey cos api密钥。
      */
     public String getCosSecretKey() {
@@ -105,7 +105,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置cos api密钥。
+     * Set cos api密钥。
      * @param CosSecretKey cos api密钥。
      */
     public void setCosSecretKey(String CosSecretKey) {
@@ -113,7 +113,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
+     * Get 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY 
      * @return DrmType 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
      */
     public String getDrmType() {
@@ -121,7 +121,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
+     * Set 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
      * @param DrmType 使用的DRM方案类型，接口取值WIDEVINE,FAIRPLAY
      */
     public void setDrmType(String DrmType) {
@@ -129,7 +129,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取存储在COS上的原始内容信息
+     * Get 存储在COS上的原始内容信息 
      * @return SourceObject 存储在COS上的原始内容信息
      */
     public DrmSourceObject getSourceObject() {
@@ -137,7 +137,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置存储在COS上的原始内容信息
+     * Set 存储在COS上的原始内容信息
      * @param SourceObject 存储在COS上的原始内容信息
      */
     public void setSourceObject(DrmSourceObject SourceObject) {
@@ -145,7 +145,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加密后的内容存储到COS的对象
+     * Get 加密后的内容存储到COS的对象 
      * @return OutputObjects 加密后的内容存储到COS的对象
      */
     public DrmOutputObject [] getOutputObjects() {
@@ -153,7 +153,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加密后的内容存储到COS的对象
+     * Set 加密后的内容存储到COS的对象
      * @param OutputObjects 加密后的内容存储到COS的对象
      */
     public void setOutputObjects(DrmOutputObject [] OutputObjects) {
@@ -161,7 +161,7 @@ public class StartEncryptionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosEndPoint", this.CosEndPoint);

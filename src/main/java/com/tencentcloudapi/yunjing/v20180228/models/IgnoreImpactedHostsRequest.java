@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IgnoreImpactedHostsRequest  extends AbstractModel{
+public class IgnoreImpactedHostsRequest extends AbstractModel{
 
     /**
     * 漏洞ID数组。
     */
     @SerializedName("Ids")
     @Expose
-    private Integer [] Ids;
+    private Long [] Ids;
 
     /**
-     * 获取漏洞ID数组。
+     * Get 漏洞ID数组。 
      * @return Ids 漏洞ID数组。
      */
-    public Integer [] getIds() {
+    public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * 设置漏洞ID数组。
+     * Set 漏洞ID数组。
      * @param Ids 漏洞ID数组。
      */
-    public void setIds(Integer [] Ids) {
+    public void setIds(Long [] Ids) {
         this.Ids = Ids;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

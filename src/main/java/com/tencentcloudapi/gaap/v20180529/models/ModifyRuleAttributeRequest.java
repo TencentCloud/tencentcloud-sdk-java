@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRuleAttributeRequest  extends AbstractModel{
+public class ModifyRuleAttributeRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -86,7 +86,7 @@ lc，最小连接数。
     private String ForwardHost;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -94,7 +94,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -102,7 +102,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取转发规则ID
+     * Get 转发规则ID 
      * @return RuleId 转发规则ID
      */
     public String getRuleId() {
@@ -110,7 +110,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置转发规则ID
+     * Set 转发规则ID
      * @param RuleId 转发规则ID
      */
     public void setRuleId(String RuleId) {
@@ -118,10 +118,10 @@ lc，最小连接数。
     }
 
     /**
-     * 获取调度策略，其中：
+     * Get 调度策略，其中：
 rr，轮询；
 wrr，加权轮询；
-lc，最小连接数。
+lc，最小连接数。 
      * @return Scheduler 调度策略，其中：
 rr，轮询；
 wrr，加权轮询；
@@ -132,7 +132,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置调度策略，其中：
+     * Set 调度策略，其中：
 rr，轮询；
 wrr，加权轮询；
 lc，最小连接数。
@@ -146,9 +146,9 @@ lc，最小连接数。
     }
 
     /**
-     * 获取源站健康检查开关，其中：
+     * Get 源站健康检查开关，其中：
 1，开启；
-0，关闭。
+0，关闭。 
      * @return HealthCheck 源站健康检查开关，其中：
 1，开启；
 0，关闭。
@@ -158,7 +158,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置源站健康检查开关，其中：
+     * Set 源站健康检查开关，其中：
 1，开启；
 0，关闭。
      * @param HealthCheck 源站健康检查开关，其中：
@@ -170,7 +170,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取健康检查配置参数
+     * Get 健康检查配置参数 
      * @return CheckParams 健康检查配置参数
      */
     public RuleCheckParams getCheckParams() {
@@ -178,7 +178,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置健康检查配置参数
+     * Set 健康检查配置参数
      * @param CheckParams 健康检查配置参数
      */
     public void setCheckParams(RuleCheckParams CheckParams) {
@@ -186,7 +186,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取转发规则路径
+     * Get 转发规则路径 
      * @return Path 转发规则路径
      */
     public String getPath() {
@@ -194,7 +194,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置转发规则路径
+     * Set 转发规则路径
      * @param Path 转发规则路径
      */
     public void setPath(String Path) {
@@ -202,8 +202,8 @@ lc，最小连接数。
     }
 
     /**
-     * 获取加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
-当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。
+     * Get 加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
+当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。 
      * @return ForwardProtocol 加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
 当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。
      */
@@ -212,7 +212,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
+     * Set 加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
 当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。
      * @param ForwardProtocol 加速通道转发到源站的协议类型，支持：default, HTTP和HTTPS。
 当ForwardProtocol=default时，表示使用对应监听器的ForwardProtocol。
@@ -222,8 +222,8 @@ lc，最小连接数。
     }
 
     /**
-     * 获取加速通道转发到源站的请求中携带的host。
-当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
+     * Get 加速通道转发到源站的请求中携带的host。
+当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。 
      * @return ForwardHost 加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      */
@@ -232,7 +232,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置加速通道转发到源站的请求中携带的host。
+     * Set 加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
      * @param ForwardHost 加速通道转发到源站的请求中携带的host。
 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
@@ -242,7 +242,7 @@ lc，最小连接数。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

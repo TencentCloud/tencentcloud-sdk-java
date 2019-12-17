@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanSensitiveList  extends AbstractModel{
+public class ScanSensitiveList extends AbstractModel{
 
     /**
     * 敏感词列表
@@ -30,7 +30,7 @@ public class ScanSensitiveList  extends AbstractModel{
     private ScanSensitiveInfo [] SensitiveList;
 
     /**
-     * 获取敏感词列表
+     * Get 敏感词列表 
      * @return SensitiveList 敏感词列表
      */
     public ScanSensitiveInfo [] getSensitiveList() {
@@ -38,7 +38,7 @@ public class ScanSensitiveList  extends AbstractModel{
     }
 
     /**
-     * 设置敏感词列表
+     * Set 敏感词列表
      * @param SensitiveList 敏感词列表
      */
     public void setSensitiveList(ScanSensitiveInfo [] SensitiveList) {
@@ -46,7 +46,7 @@ public class ScanSensitiveList  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SensitiveList.", this.SensitiveList);

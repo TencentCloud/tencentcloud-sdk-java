@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FunctionLog  extends AbstractModel{
+public class FunctionLog extends AbstractModel{
 
     /**
     * 函数的名称
@@ -107,7 +107,7 @@ public class FunctionLog  extends AbstractModel{
     private String Source;
 
     /**
-     * 获取函数的名称
+     * Get 函数的名称 
      * @return FunctionName 函数的名称
      */
     public String getFunctionName() {
@@ -115,7 +115,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数的名称
+     * Set 函数的名称
      * @param FunctionName 函数的名称
      */
     public void setFunctionName(String FunctionName) {
@@ -123,7 +123,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数执行完成后的返回值
+     * Get 函数执行完成后的返回值 
      * @return RetMsg 函数执行完成后的返回值
      */
     public String getRetMsg() {
@@ -131,7 +131,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数执行完成后的返回值
+     * Set 函数执行完成后的返回值
      * @param RetMsg 函数执行完成后的返回值
      */
     public void setRetMsg(String RetMsg) {
@@ -139,7 +139,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取执行该函数对应的requestId
+     * Get 执行该函数对应的requestId 
      * @return RequestId 执行该函数对应的requestId
      */
     public String getRequestId() {
@@ -147,7 +147,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置执行该函数对应的requestId
+     * Set 执行该函数对应的requestId
      * @param RequestId 执行该函数对应的requestId
      */
     public void setRequestId(String RequestId) {
@@ -155,7 +155,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数开始执行时的时间点
+     * Get 函数开始执行时的时间点 
      * @return StartTime 函数开始执行时的时间点
      */
     public String getStartTime() {
@@ -163,7 +163,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数开始执行时的时间点
+     * Set 函数开始执行时的时间点
      * @param StartTime 函数开始执行时的时间点
      */
     public void setStartTime(String StartTime) {
@@ -171,7 +171,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * Get 函数执行结果，如果是 0 表示执行成功，其他值表示失败 
      * @return RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      */
     public Integer getRetCode() {
@@ -179,7 +179,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * Set 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      * @param RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
      */
     public void setRetCode(Integer RetCode) {
@@ -187,7 +187,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
+     * Get 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常 
      * @return InvokeFinished 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      */
     public Integer getInvokeFinished() {
@@ -195,7 +195,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
+     * Set 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      * @param InvokeFinished 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      */
     public void setInvokeFinished(Integer InvokeFinished) {
@@ -203,7 +203,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数执行耗时，单位为 ms
+     * Get 函数执行耗时，单位为 ms 
      * @return Duration 函数执行耗时，单位为 ms
      */
     public Float getDuration() {
@@ -211,7 +211,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数执行耗时，单位为 ms
+     * Set 函数执行耗时，单位为 ms
      * @param Duration 函数执行耗时，单位为 ms
      */
     public void setDuration(Float Duration) {
@@ -219,7 +219,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
+     * Get 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms 
      * @return BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      */
     public Integer getBillDuration() {
@@ -227,7 +227,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
+     * Set 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      * @param BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms
      */
     public void setBillDuration(Integer BillDuration) {
@@ -235,7 +235,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数执行时消耗实际内存大小，单位为 Byte
+     * Get 函数执行时消耗实际内存大小，单位为 Byte 
      * @return MemUsage 函数执行时消耗实际内存大小，单位为 Byte
      */
     public Integer getMemUsage() {
@@ -243,7 +243,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数执行时消耗实际内存大小，单位为 Byte
+     * Set 函数执行时消耗实际内存大小，单位为 Byte
      * @param MemUsage 函数执行时消耗实际内存大小，单位为 Byte
      */
     public void setMemUsage(Integer MemUsage) {
@@ -251,7 +251,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取函数执行过程中的日志输出
+     * Get 函数执行过程中的日志输出 
      * @return Log 函数执行过程中的日志输出
      */
     public String getLog() {
@@ -259,7 +259,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置函数执行过程中的日志输出
+     * Set 函数执行过程中的日志输出
      * @param Log 函数执行过程中的日志输出
      */
     public void setLog(String Log) {
@@ -267,7 +267,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志等级
+     * Get 日志等级 
      * @return Level 日志等级
      */
     public String getLevel() {
@@ -275,7 +275,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志等级
+     * Set 日志等级
      * @param Level 日志等级
      */
     public void setLevel(String Level) {
@@ -283,7 +283,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 获取日志来源
+     * Get 日志来源 
      * @return Source 日志来源
      */
     public String getSource() {
@@ -291,7 +291,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 设置日志来源
+     * Set 日志来源
      * @param Source 日志来源
      */
     public void setSource(String Source) {
@@ -299,7 +299,7 @@ public class FunctionLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

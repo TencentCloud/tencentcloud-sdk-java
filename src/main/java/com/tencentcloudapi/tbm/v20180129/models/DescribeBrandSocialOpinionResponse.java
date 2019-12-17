@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
+public class DescribeBrandSocialOpinionResponse extends AbstractModel{
 
     /**
     * 文章总数
@@ -58,7 +58,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取文章总数
+     * Get 文章总数 
      * @return ArticleCount 文章总数
      */
     public Integer getArticleCount() {
@@ -66,7 +66,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文章总数
+     * Set 文章总数
      * @param ArticleCount 文章总数
      */
     public void setArticleCount(Integer ArticleCount) {
@@ -74,7 +74,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取来源统计总数
+     * Get 来源统计总数 
      * @return FromCount 来源统计总数
      */
     public Integer getFromCount() {
@@ -82,7 +82,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置来源统计总数
+     * Set 来源统计总数
      * @param FromCount 来源统计总数
      */
     public void setFromCount(Integer FromCount) {
@@ -90,7 +90,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取疑似负面报道总数
+     * Get 疑似负面报道总数 
      * @return AdverseCount 疑似负面报道总数
      */
     public Integer getAdverseCount() {
@@ -98,7 +98,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置疑似负面报道总数
+     * Set 疑似负面报道总数
      * @param AdverseCount 疑似负面报道总数
      */
     public void setAdverseCount(Integer AdverseCount) {
@@ -106,7 +106,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文章列表详情
+     * Get 文章列表详情 
      * @return ArticleSet 文章列表详情
      */
     public BrandReportArticle [] getArticleSet() {
@@ -114,7 +114,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文章列表详情
+     * Set 文章列表详情
      * @param ArticleSet 文章列表详情
      */
     public void setArticleSet(BrandReportArticle [] ArticleSet) {
@@ -122,7 +122,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeBrandSocialOpinionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ArticleCount", this.ArticleCount);

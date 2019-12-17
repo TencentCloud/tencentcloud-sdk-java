@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStationsRequest  extends AbstractModel{
+public class DescribeStationsRequest extends AbstractModel{
 
     /**
     * 条数，必须大于0
@@ -37,7 +37,7 @@ public class DescribeStationsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取条数，必须大于0
+     * Get 条数，必须大于0 
      * @return Limit 条数，必须大于0
      */
     public Long getLimit() {
@@ -45,7 +45,7 @@ public class DescribeStationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置条数，必须大于0
+     * Set 条数，必须大于0
      * @param Limit 条数，必须大于0
      */
     public void setLimit(Long Limit) {
@@ -53,7 +53,7 @@ public class DescribeStationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取offset (Default = 0)，(当前页-1) * Limit
+     * Get offset (Default = 0)，(当前页-1) * Limit 
      * @return Offset offset (Default = 0)，(当前页-1) * Limit
      */
     public Long getOffset() {
@@ -61,7 +61,7 @@ public class DescribeStationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置offset (Default = 0)，(当前页-1) * Limit
+     * Set offset (Default = 0)，(当前页-1) * Limit
      * @param Offset offset (Default = 0)，(当前页-1) * Limit
      */
     public void setOffset(Long Offset) {
@@ -69,7 +69,7 @@ public class DescribeStationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);

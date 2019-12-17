@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListOrganizationMembersResponse  extends AbstractModel{
+public class ListOrganizationMembersResponse extends AbstractModel{
 
     /**
     * 成员列表
@@ -44,7 +44,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取成员列表
+     * Get 成员列表 
      * @return Members 成员列表
      */
     public OrgMember [] getMembers() {
@@ -52,7 +52,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置成员列表
+     * Set 成员列表
      * @param Members 成员列表
      */
     public void setMembers(OrgMember [] Members) {
@@ -60,7 +60,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总数目
+     * Get 总数目 
      * @return TotalCount 总数目
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总数目
+     * Set 总数目
      * @param TotalCount 总数目
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ListOrganizationMembersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Members.", this.Members);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DelayDistribution  extends AbstractModel{
+public class DelayDistribution extends AbstractModel{
 
     /**
     * 分布阶梯
@@ -37,7 +37,7 @@ public class DelayDistribution  extends AbstractModel{
     private Integer Size;
 
     /**
-     * 获取分布阶梯
+     * Get 分布阶梯 
      * @return Ladder 分布阶梯
      */
     public Integer getLadder() {
@@ -45,7 +45,7 @@ public class DelayDistribution  extends AbstractModel{
     }
 
     /**
-     * 设置分布阶梯
+     * Set 分布阶梯
      * @param Ladder 分布阶梯
      */
     public void setLadder(Integer Ladder) {
@@ -53,7 +53,7 @@ public class DelayDistribution  extends AbstractModel{
     }
 
     /**
-     * 获取大小
+     * Get 大小 
      * @return Size 大小
      */
     public Integer getSize() {
@@ -61,7 +61,7 @@ public class DelayDistribution  extends AbstractModel{
     }
 
     /**
-     * 设置大小
+     * Set 大小
      * @param Size 大小
      */
     public void setSize(Integer Size) {
@@ -69,7 +69,7 @@ public class DelayDistribution  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ladder", this.Ladder);

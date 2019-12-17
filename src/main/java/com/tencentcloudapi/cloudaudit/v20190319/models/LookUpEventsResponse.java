@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LookUpEventsResponse  extends AbstractModel{
+public class LookUpEventsResponse extends AbstractModel{
 
     /**
     * 日志集合
@@ -51,7 +51,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日志集合
+     * Get 日志集合 
      * @return Events 日志集合
      */
     public Event [] getEvents() {
@@ -59,7 +59,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志集合
+     * Set 日志集合
      * @param Events 日志集合
      */
     public void setEvents(Event [] Events) {
@@ -67,7 +67,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日志集合是否结束
+     * Get 日志集合是否结束 
      * @return ListOver 日志集合是否结束
      */
     public Boolean getListOver() {
@@ -75,7 +75,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志集合是否结束
+     * Set 日志集合是否结束
      * @param ListOver 日志集合是否结束
      */
     public void setListOver(Boolean ListOver) {
@@ -83,7 +83,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取查看更多日志的凭证
+     * Get 查看更多日志的凭证 
      * @return NextToken 查看更多日志的凭证
      */
     public String getNextToken() {
@@ -91,7 +91,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置查看更多日志的凭证
+     * Set 查看更多日志的凭证
      * @param NextToken 查看更多日志的凭证
      */
     public void setNextToken(String NextToken) {
@@ -99,7 +99,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class LookUpEventsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Events.", this.Events);

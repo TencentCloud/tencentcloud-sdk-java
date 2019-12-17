@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TempCertificate  extends AbstractModel{
+public class TempCertificate extends AbstractModel{
 
     /**
     * 临时安全证书 Id。
@@ -51,7 +51,7 @@ public class TempCertificate  extends AbstractModel{
     private Long ExpiredTime;
 
     /**
-     * 获取临时安全证书 Id。
+     * Get 临时安全证书 Id。 
      * @return SecretId 临时安全证书 Id。
      */
     public String getSecretId() {
@@ -59,7 +59,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置临时安全证书 Id。
+     * Set 临时安全证书 Id。
      * @param SecretId 临时安全证书 Id。
      */
     public void setSecretId(String SecretId) {
@@ -67,7 +67,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取临时安全证书 Key。
+     * Get 临时安全证书 Key。 
      * @return SecretKey 临时安全证书 Key。
      */
     public String getSecretKey() {
@@ -75,7 +75,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置临时安全证书 Key。
+     * Set 临时安全证书 Key。
      * @param SecretKey 临时安全证书 Key。
      */
     public void setSecretKey(String SecretKey) {
@@ -83,7 +83,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取Token 值。
+     * Get Token 值。 
      * @return Token Token 值。
      */
     public String getToken() {
@@ -91,7 +91,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置Token 值。
+     * Set Token 值。
      * @param Token Token 值。
      */
     public void setToken(String Token) {
@@ -99,7 +99,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书无效的时间，返回 Unix 时间戳，精确到秒。
+     * Get 证书无效的时间，返回 Unix 时间戳，精确到秒。 
      * @return ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒。
      */
     public Long getExpiredTime() {
@@ -107,7 +107,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书无效的时间，返回 Unix 时间戳，精确到秒。
+     * Set 证书无效的时间，返回 Unix 时间戳，精确到秒。
      * @param ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒。
      */
     public void setExpiredTime(Long ExpiredTime) {
@@ -115,7 +115,7 @@ public class TempCertificate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);

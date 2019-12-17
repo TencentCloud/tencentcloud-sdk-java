@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitHighlightsRequest  extends AbstractModel{
+public class SubmitHighlightsRequest extends AbstractModel{
 
     /**
     * 表情配置开关项。
@@ -86,7 +86,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     private Float SimThreshold;
 
     /**
-     * 获取表情配置开关项。
+     * Get 表情配置开关项。 
      * @return Functions 表情配置开关项。
      */
     public HLFunction getFunctions() {
@@ -94,7 +94,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表情配置开关项。
+     * Set 表情配置开关项。
      * @param Functions 表情配置开关项。
      */
     public void setFunctions(HLFunction Functions) {
@@ -102,7 +102,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频url。
+     * Get 视频url。 
      * @return FileContent 视频url。
      */
     public String getFileContent() {
@@ -110,7 +110,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频url。
+     * Set 视频url。
      * @param FileContent 视频url。
      */
     public void setFileContent(String FileContent) {
@@ -118,7 +118,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频类型及来源，目前只支持点播类型："vod_url"。
+     * Get 视频类型及来源，目前只支持点播类型："vod_url"。 
      * @return FileType 视频类型及来源，目前只支持点播类型："vod_url"。
      */
     public String getFileType() {
@@ -126,7 +126,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频类型及来源，目前只支持点播类型："vod_url"。
+     * Set 视频类型及来源，目前只支持点播类型："vod_url"。
      * @param FileType 视频类型及来源，目前只支持点播类型："vod_url"。
      */
     public void setFileType(String FileType) {
@@ -134,7 +134,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
+     * Get 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。 
      * @return LibIds 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
      */
     public String [] getLibIds() {
@@ -142,7 +142,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
+     * Set 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
      * @param LibIds 需要检索的人脸合集库，不在库中的人脸将不参与精彩集锦。
      */
     public void setLibIds(String [] LibIds) {
@@ -150,7 +150,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理的抽帧间隔，单位毫秒。建议留空。
+     * Get 视频处理的抽帧间隔，单位毫秒。建议留空。 
      * @return FrameInterval 视频处理的抽帧间隔，单位毫秒。建议留空。
      */
     public Long getFrameInterval() {
@@ -158,7 +158,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的抽帧间隔，单位毫秒。建议留空。
+     * Set 视频处理的抽帧间隔，单位毫秒。建议留空。
      * @param FrameInterval 视频处理的抽帧间隔，单位毫秒。建议留空。
      */
     public void setFrameInterval(Long FrameInterval) {
@@ -166,7 +166,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键词语言类型，0为英文，1为中文。
+     * Get 关键词语言类型，0为英文，1为中文。 
      * @return KeywordsLanguage 关键词语言类型，0为英文，1为中文。
      */
     public Long getKeywordsLanguage() {
@@ -174,7 +174,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词语言类型，0为英文，1为中文。
+     * Set 关键词语言类型，0为英文，1为中文。
      * @param KeywordsLanguage 关键词语言类型，0为英文，1为中文。
      */
     public void setKeywordsLanguage(Long KeywordsLanguage) {
@@ -182,7 +182,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
+     * Get 关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。 
      * @return KeywordsStrings 关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
      */
     public String [] getKeywordsStrings() {
@@ -190,7 +190,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
+     * Set 关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
      * @param KeywordsStrings 关键词数组，当且仅当Funtions中的EnableKeywordWonderfulTime为true时有意义，匹配相应的关键字。
      */
     public void setKeywordsStrings(String [] KeywordsStrings) {
@@ -198,7 +198,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
+     * Get 处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。 
      * @return MaxVideoDuration 处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
      */
     public Long getMaxVideoDuration() {
@@ -206,7 +206,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
+     * Set 处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
      * @param MaxVideoDuration 处理视频的总时长，单位毫秒。该值为0或未设置时，默认值两小时生效；当该值大于视频实际时长时，视频实际时长生效；当该值小于视频实际时长时，该值生效；当获取视频实际时长失败时，若该值设置则生效，否则默认值生效。建议留空。
      */
     public void setMaxVideoDuration(Long MaxVideoDuration) {
@@ -214,7 +214,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸检索的相似度阈值，默认值0.89。建议留空。
+     * Get 人脸检索的相似度阈值，默认值0.89。建议留空。 
      * @return SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public Float getSimThreshold() {
@@ -222,7 +222,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸检索的相似度阈值，默认值0.89。建议留空。
+     * Set 人脸检索的相似度阈值，默认值0.89。建议留空。
      * @param SimThreshold 人脸检索的相似度阈值，默认值0.89。建议留空。
      */
     public void setSimThreshold(Float SimThreshold) {
@@ -230,7 +230,7 @@ public class SubmitHighlightsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Functions.", this.Functions);

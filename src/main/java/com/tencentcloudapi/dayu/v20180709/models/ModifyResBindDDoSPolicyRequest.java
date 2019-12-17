@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
+public class ModifyResBindDDoSPolicyRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -51,7 +51,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     private String Method;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -75,7 +75,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -83,7 +83,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -91,7 +91,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -99,7 +99,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定或解绑，bind表示绑定策略，unbind表示解绑策略
+     * Get 绑定或解绑，bind表示绑定策略，unbind表示解绑策略 
      * @return Method 绑定或解绑，bind表示绑定策略，unbind表示解绑策略
      */
     public String getMethod() {
@@ -107,7 +107,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定或解绑，bind表示绑定策略，unbind表示解绑策略
+     * Set 绑定或解绑，bind表示绑定策略，unbind表示解绑策略
      * @param Method 绑定或解绑，bind表示绑定策略，unbind表示解绑策略
      */
     public void setMethod(String Method) {
@@ -115,7 +115,7 @@ public class ModifyResBindDDoSPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

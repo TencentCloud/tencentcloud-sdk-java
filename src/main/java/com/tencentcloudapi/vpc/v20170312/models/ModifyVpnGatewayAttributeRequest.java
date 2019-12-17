@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
+public class ModifyVpnGatewayAttributeRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。
@@ -44,7 +44,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -52,7 +52,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -60,7 +60,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关名称，最大长度不能超过60个字节。
+     * Get VPN网关名称，最大长度不能超过60个字节。 
      * @return VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      */
     public String getVpnGatewayName() {
@@ -68,7 +68,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关名称，最大长度不能超过60个字节。
+     * Set VPN网关名称，最大长度不能超过60个字节。
      * @param VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      */
     public void setVpnGatewayName(String VpnGatewayName) {
@@ -76,7 +76,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * Get VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。 
      * @return InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
      */
     public String getInstanceChargeType() {
@@ -84,7 +84,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * Set VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
      * @param InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -92,7 +92,7 @@ public class ModifyVpnGatewayAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

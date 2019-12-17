@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetLatesdTransactionListRequest  extends AbstractModel{
+public class GetLatesdTransactionListRequest extends AbstractModel{
 
     /**
     * 模块名称，固定字段：transaction
@@ -93,7 +93,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取模块名称，固定字段：transaction
+     * Get 模块名称，固定字段：transaction 
      * @return Module 模块名称，固定字段：transaction
      */
     public String getModule() {
@@ -101,7 +101,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，固定字段：transaction
+     * Set 模块名称，固定字段：transaction
      * @param Module 模块名称，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -109,7 +109,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名称，固定字段：latest_transaction_list
+     * Get 操作名称，固定字段：latest_transaction_list 
      * @return Operation 操作名称，固定字段：latest_transaction_list
      */
     public String getOperation() {
@@ -117,7 +117,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名称，固定字段：latest_transaction_list
+     * Set 操作名称，固定字段：latest_transaction_list
      * @param Operation 操作名称，固定字段：latest_transaction_list
      */
     public void setOperation(String Operation) {
@@ -125,7 +125,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取组织ID，固定字段：0
+     * Get 组织ID，固定字段：0 
      * @return GroupId 组织ID，固定字段：0
      */
     public Integer getGroupId() {
@@ -133,7 +133,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织ID，固定字段：0
+     * Set 组织ID，固定字段：0
      * @param GroupId 组织ID，固定字段：0
      */
     public void setGroupId(Integer GroupId) {
@@ -141,7 +141,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，固定字段：0
+     * Get 通道ID，固定字段：0 
      * @return ChannelId 通道ID，固定字段：0
      */
     public Integer getChannelId() {
@@ -149,7 +149,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，固定字段：0
+     * Set 通道ID，固定字段：0
      * @param ChannelId 通道ID，固定字段：0
      */
     public void setChannelId(Integer ChannelId) {
@@ -157,7 +157,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取获取的最新交易的区块数量，取值范围1~5
+     * Get 获取的最新交易的区块数量，取值范围1~5 
      * @return LatestBlockNumber 获取的最新交易的区块数量，取值范围1~5
      */
     public Integer getLatestBlockNumber() {
@@ -165,7 +165,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置获取的最新交易的区块数量，取值范围1~5
+     * Set 获取的最新交易的区块数量，取值范围1~5
      * @param LatestBlockNumber 获取的最新交易的区块数量，取值范围1~5
      */
     public void setLatestBlockNumber(Integer LatestBlockNumber) {
@@ -173,7 +173,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -181,7 +181,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 调用接口的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -189,7 +189,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的通道名称，可在通道详情或列表中获取
+     * Get 需要查询的通道名称，可在通道详情或列表中获取 
      * @return ChannelName 需要查询的通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
@@ -197,7 +197,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的通道名称，可在通道详情或列表中获取
+     * Set 需要查询的通道名称，可在通道详情或列表中获取
      * @param ChannelName 需要查询的通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
@@ -205,7 +205,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -213,7 +213,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -221,7 +221,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取的起始交易偏移
+     * Get 需要获取的起始交易偏移 
      * @return Offset 需要获取的起始交易偏移
      */
     public Integer getOffset() {
@@ -229,7 +229,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取的起始交易偏移
+     * Set 需要获取的起始交易偏移
      * @param Offset 需要获取的起始交易偏移
      */
     public void setOffset(Integer Offset) {
@@ -237,7 +237,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要获取的交易数量
+     * Get 需要获取的交易数量 
      * @return Limit 需要获取的交易数量
      */
     public Integer getLimit() {
@@ -245,7 +245,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取的交易数量
+     * Set 需要获取的交易数量
      * @param Limit 需要获取的交易数量
      */
     public void setLimit(Integer Limit) {
@@ -253,7 +253,7 @@ public class GetLatesdTransactionListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

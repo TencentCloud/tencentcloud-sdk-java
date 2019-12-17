@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DbauditTypesInfo  extends AbstractModel{
+public class DbauditTypesInfo extends AbstractModel{
 
     /**
     * 规格描述
@@ -72,7 +72,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     private Integer ArchivingStorageCapacity;
 
     /**
-     * 获取规格描述
+     * Get 规格描述 
      * @return InstanceVersionName 规格描述
      */
     public String getInstanceVersionName() {
@@ -80,7 +80,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规格描述
+     * Set 规格描述
      * @param InstanceVersionName 规格描述
      */
     public void setInstanceVersionName(String InstanceVersionName) {
@@ -88,7 +88,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规格名称
+     * Get 规格名称 
      * @return InstanceVersionKey 规格名称
      */
     public String getInstanceVersionKey() {
@@ -96,7 +96,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规格名称
+     * Set 规格名称
      * @param InstanceVersionKey 规格名称
      */
     public void setInstanceVersionKey(String InstanceVersionKey) {
@@ -104,7 +104,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大吞吐量
+     * Get 最大吞吐量 
      * @return Qps 最大吞吐量
      */
     public Integer getQps() {
@@ -112,7 +112,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大吞吐量
+     * Set 最大吞吐量
      * @param Qps 最大吞吐量
      */
     public void setQps(Integer Qps) {
@@ -120,7 +120,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大实例数
+     * Get 最大实例数 
      * @return MaxInstances 最大实例数
      */
     public Integer getMaxInstances() {
@@ -128,7 +128,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大实例数
+     * Set 最大实例数
      * @param MaxInstances 最大实例数
      */
     public void setMaxInstances(Integer MaxInstances) {
@@ -136,7 +136,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取入库速率（每小时）
+     * Get 入库速率（每小时） 
      * @return InsertSpeed 入库速率（每小时）
      */
     public Integer getInsertSpeed() {
@@ -144,7 +144,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置入库速率（每小时）
+     * Set 入库速率（每小时）
      * @param InsertSpeed 入库速率（每小时）
      */
     public void setInsertSpeed(Integer InsertSpeed) {
@@ -152,7 +152,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大在线存储量，单位：条
+     * Get 最大在线存储量，单位：条 
      * @return OnlineStorageCapacity 最大在线存储量，单位：条
      */
     public Integer getOnlineStorageCapacity() {
@@ -160,7 +160,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大在线存储量，单位：条
+     * Set 最大在线存储量，单位：条
      * @param OnlineStorageCapacity 最大在线存储量，单位：条
      */
     public void setOnlineStorageCapacity(Integer OnlineStorageCapacity) {
@@ -168,7 +168,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大归档存储量，单位：条
+     * Get 最大归档存储量，单位：条 
      * @return ArchivingStorageCapacity 最大归档存储量，单位：条
      */
     public Integer getArchivingStorageCapacity() {
@@ -176,7 +176,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大归档存储量，单位：条
+     * Set 最大归档存储量，单位：条
      * @param ArchivingStorageCapacity 最大归档存储量，单位：条
      */
     public void setArchivingStorageCapacity(Integer ArchivingStorageCapacity) {
@@ -184,7 +184,7 @@ public class DbauditTypesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceVersionName", this.InstanceVersionName);

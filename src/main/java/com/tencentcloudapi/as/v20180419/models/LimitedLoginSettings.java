@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LimitedLoginSettings  extends AbstractModel{
+public class LimitedLoginSettings extends AbstractModel{
 
     /**
     * 密钥ID列表。
@@ -30,7 +30,7 @@ public class LimitedLoginSettings  extends AbstractModel{
     private String [] KeyIds;
 
     /**
-     * 获取密钥ID列表。
+     * Get 密钥ID列表。 
      * @return KeyIds 密钥ID列表。
      */
     public String [] getKeyIds() {
@@ -38,7 +38,7 @@ public class LimitedLoginSettings  extends AbstractModel{
     }
 
     /**
-     * 设置密钥ID列表。
+     * Set 密钥ID列表。
      * @param KeyIds 密钥ID列表。
      */
     public void setKeyIds(String [] KeyIds) {
@@ -46,7 +46,7 @@ public class LimitedLoginSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);

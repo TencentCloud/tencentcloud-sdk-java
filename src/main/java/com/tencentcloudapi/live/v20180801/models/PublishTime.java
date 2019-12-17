@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishTime  extends AbstractModel{
+public class PublishTime extends AbstractModel{
 
     /**
     * 推流时间
@@ -31,8 +31,8 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     private String PublishTime;
 
     /**
-     * 获取推流时间
-UTC 格式，例如：2018-06-29T19:00:00Z。
+     * Get 推流时间
+UTC 格式，例如：2018-06-29T19:00:00Z。 
      * @return PublishTime 推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
      */
@@ -41,7 +41,7 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     }
 
     /**
-     * 设置推流时间
+     * Set 推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
      * @param PublishTime 推流时间
 UTC 格式，例如：2018-06-29T19:00:00Z。
@@ -51,7 +51,7 @@ UTC 格式，例如：2018-06-29T19:00:00Z。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);

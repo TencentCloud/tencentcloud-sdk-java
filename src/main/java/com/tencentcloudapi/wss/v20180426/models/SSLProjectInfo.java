@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SSLProjectInfo  extends AbstractModel{
+public class SSLProjectInfo extends AbstractModel{
 
     /**
     * 项目ID
@@ -71,8 +71,8 @@ public class SSLProjectInfo  extends AbstractModel{
     private String Info;
 
     /**
-     * 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,7 +81,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,8 +91,8 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目所属的 uin（默认项目为0）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目所属的 uin（默认项目为0）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 项目所属的 uin（默认项目为0）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目所属的 uin（默认项目为0）
+     * Set 项目所属的 uin（默认项目为0）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 项目所属的 uin（默认项目为0）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 项目名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建项目的 uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建项目的 uin
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatorUin 创建项目的 uin
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建项目的 uin
+     * Set 创建项目的 uin
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorUin 创建项目的 uin
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 项目创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目创建时间
+     * Set 项目创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 项目创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目说明
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目说明
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Info 项目说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目说明
+     * Set 项目说明
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 项目说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class SSLProjectInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

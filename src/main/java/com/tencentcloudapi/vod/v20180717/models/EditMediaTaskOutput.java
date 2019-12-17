@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaTaskOutput  extends AbstractModel{
+public class EditMediaTaskOutput extends AbstractModel{
 
     /**
     * 文件类型，例如 mp4、flv 等。
@@ -72,8 +72,8 @@ public class EditMediaTaskOutput  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取文件类型，例如 mp4、flv 等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件类型，例如 mp4、flv 等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileType 文件类型，例如 mp4、flv 等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -82,7 +82,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置文件类型，例如 mp4、flv 等。
+     * Set 文件类型，例如 mp4、flv 等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 文件类型，例如 mp4、flv 等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -92,8 +92,8 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 媒体文件播放地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileUrl 媒体文件播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -102,7 +102,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件播放地址。
+     * Set 媒体文件播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUrl 媒体文件播放地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,8 +112,8 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 媒体文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 媒体文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -122,7 +122,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件 ID。
+     * Set 媒体文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 媒体文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,8 +132,8 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,9 +152,9 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -164,7 +164,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
 <li>默认值：0，表示其他分类。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
@@ -176,8 +176,8 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -186,7 +186,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,7 +196,7 @@ public class EditMediaTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileType", this.FileType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyFaceResponse  extends AbstractModel{
+public class VerifyFaceResponse extends AbstractModel{
 
     /**
     * 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
@@ -55,11 +55,11 @@ public class VerifyFaceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+     * Get 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
 
 不同算法版本返回的相似度分数不同。
 若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
-2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。
+2.0版本误识率千分之一对应分数为70分，误识率万分之一对应分数为80分，误识率十万分之一对应分数为90分。 一般超过80分则可认定为同一人。 
      * @return Score 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
 
 不同算法版本返回的相似度分数不同。
@@ -71,7 +71,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
+     * Set 给定的人脸图片与 PersonId 对应人脸的相似度。若 PersonId 下有多张人脸（Face），返回相似度最大的分数。
 
 不同算法版本返回的相似度分数不同。
 若需要验证两张图片中人脸是否为同一人，3.0版本误识率千分之一对应分数为40分，误识率万分之一对应分数为50分，误识率十万分之一对应分数为60分。 一般超过50分则可认定为同一人。
@@ -87,7 +87,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否为同一人的判断。
+     * Get 是否为同一人的判断。 
      * @return IsMatch 是否为同一人的判断。
      */
     public Boolean getIsMatch() {
@@ -95,7 +95,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否为同一人的判断。
+     * Set 是否为同一人的判断。
      * @param IsMatch 是否为同一人的判断。
      */
     public void setIsMatch(Boolean IsMatch) {
@@ -103,7 +103,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -111,7 +111,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -119,7 +119,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -127,7 +127,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -135,7 +135,7 @@ public class VerifyFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);

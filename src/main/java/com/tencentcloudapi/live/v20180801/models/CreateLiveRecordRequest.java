@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveRecordRequest  extends AbstractModel{
+public class CreateLiveRecordRequest extends AbstractModel{
 
     /**
     * 流名称。
@@ -110,7 +110,7 @@ eg. record_interval=3600&storage_time=2592000
     private String StreamParam;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -118,7 +118,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -126,7 +126,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -134,7 +134,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -142,7 +142,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取推流域名。多域名推流必须设置。
+     * Get 推流域名。多域名推流必须设置。 
      * @return DomainName 推流域名。多域名推流必须设置。
      */
     public String getDomainName() {
@@ -150,7 +150,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置推流域名。多域名推流必须设置。
+     * Set 推流域名。多域名推流必须设置。
      * @param DomainName 推流域名。多域名推流必须设置。
      */
     public void setDomainName(String DomainName) {
@@ -158,8 +158,8 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
-定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
+     * Get 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。 
      * @return StartTime 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
      */
@@ -168,7 +168,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
+     * Set 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
      * @param StartTime 录制开始时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:10:01，编码为：2017-01-01+10%3a10%3a01。
 定时录制模式，必须设置该字段；实时视频录制模式，忽略该字段。
@@ -178,8 +178,8 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
-定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
+     * Get 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。 
      * @return EndTime 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      */
@@ -188,7 +188,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
+     * Set 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
      * @param EndTime 录制结束时间。中国标准时间，需要URLEncode(rfc3986)。如 2017-01-01 10:30:01，编码为：2017-01-01+10%3a30%3a01。
 定时录制模式，必须设置该字段；实时录制模式，为可选字段。如果通过Highlight参数，设置录制为实时视频录制模式，其设置的结束时间不应超过当前时间+30分钟，如果设置的结束时间超过当前时间+30分钟或者小于当前时间或者不设置该参数，则实际结束时间为当前时间+30分钟。
@@ -198,10 +198,10 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取录制类型。
+     * Get 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
-在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。 
      * @return RecordType 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
@@ -212,7 +212,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置录制类型。
+     * Set 录制类型。
 “video” : 音视频录制【默认】。
 “audio” : 纯音频录制。
 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
@@ -226,9 +226,9 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取录制文件格式。其值为：
+     * Get 录制文件格式。其值为：
 “flv”【默认】,“hls”,”mp4”,“aac”,”mp3”。
-在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
+在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。 
      * @return FileFormat 录制文件格式。其值为：
 “flv”【默认】,“hls”,”mp4”,“aac”,”mp3”。
 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
@@ -238,7 +238,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置录制文件格式。其值为：
+     * Set 录制文件格式。其值为：
 “flv”【默认】,“hls”,”mp4”,“aac”,”mp3”。
 在定时录制模式或实时视频录制模式下，该参数均有效，不区分大小写。
      * @param FileFormat 录制文件格式。其值为：
@@ -250,9 +250,9 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取开启实时视频录制模式标志。
+     * Get 开启实时视频录制模式标志。
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
-1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
+1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。 
      * @return Highlight 开启实时视频录制模式标志。
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
@@ -262,7 +262,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置开启实时视频录制模式标志。
+     * Set 开启实时视频录制模式标志。
 0：不开启实时视频录制模式，即定时录制模式【默认】。见[示例一](#.E7.A4.BA.E4.BE.8B1-.E5.88.9B.E5.BB.BA.E5.AE.9A.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
 1：开启实时视频录制模式。见[示例二](#.E7.A4.BA.E4.BE.8B2-.E5.88.9B.E5.BB.BA.E5.AE.9E.E6.97.B6.E5.BD.95.E5.88.B6.E4.BB.BB.E5.8A.A1)。
      * @param Highlight 开启实时视频录制模式标志。
@@ -274,10 +274,10 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取开启A+B=C混流C流录制标志。
+     * Get 开启A+B=C混流C流录制标志。
 0：不开启A+B=C混流C流录制【默认】。
 1：开启A+B=C混流C流录制。
-在定时录制模式或实时视频录制模式下，该参数均有效。
+在定时录制模式或实时视频录制模式下，该参数均有效。 
      * @return MixStream 开启A+B=C混流C流录制标志。
 0：不开启A+B=C混流C流录制【默认】。
 1：开启A+B=C混流C流录制。
@@ -288,7 +288,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置开启A+B=C混流C流录制标志。
+     * Set 开启A+B=C混流C流录制标志。
 0：不开启A+B=C混流C流录制【默认】。
 1：开启A+B=C混流C流录制。
 在定时录制模式或实时视频录制模式下，该参数均有效。
@@ -302,12 +302,12 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 获取录制流参数。当前支持以下参数：
+     * Get 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
 eg. record_interval=3600&storage_time=2592000
 注：参数需要url encode。
-在定时录制模式或实时视频录制模式下，该参数均有效。
+在定时录制模式或实时视频录制模式下，该参数均有效。 
      * @return StreamParam 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
@@ -320,7 +320,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 设置录制流参数。当前支持以下参数：
+     * Set 录制流参数。当前支持以下参数：
 record_interval - 录制分片时长，单位 秒，1800 - 7200
 storage_time - 录制文件存储时长，单位 秒
 eg. record_interval=3600&storage_time=2592000
@@ -338,7 +338,7 @@ eg. record_interval=3600&storage_time=2592000
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

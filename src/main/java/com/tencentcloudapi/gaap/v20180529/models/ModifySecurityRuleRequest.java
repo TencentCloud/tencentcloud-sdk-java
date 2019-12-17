@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySecurityRuleRequest  extends AbstractModel{
+public class ModifySecurityRuleRequest extends AbstractModel{
 
     /**
     * 规则ID
@@ -44,7 +44,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     private String PolicyId;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -52,7 +52,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -60,7 +60,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则名：不得超过30个字符，超过部分会被截断。
+     * Get 规则名：不得超过30个字符，超过部分会被截断。 
      * @return AliasName 规则名：不得超过30个字符，超过部分会被截断。
      */
     public String getAliasName() {
@@ -68,7 +68,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则名：不得超过30个字符，超过部分会被截断。
+     * Set 规则名：不得超过30个字符，超过部分会被截断。
      * @param AliasName 规则名：不得超过30个字符，超过部分会被截断。
      */
     public void setAliasName(String AliasName) {
@@ -76,7 +76,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全策略ID
+     * Get 安全策略ID 
      * @return PolicyId 安全策略ID
      */
     public String getPolicyId() {
@@ -84,7 +84,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全策略ID
+     * Set 安全策略ID
      * @param PolicyId 安全策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -92,7 +92,7 @@ public class ModifySecurityRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

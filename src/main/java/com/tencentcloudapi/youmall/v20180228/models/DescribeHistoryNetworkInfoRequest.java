@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
+public class DescribeHistoryNetworkInfoRequest extends AbstractModel{
 
     /**
     * 请求时间戳
@@ -72,7 +72,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取请求时间戳
+     * Get 请求时间戳 
      * @return Time 请求时间戳
      */
     public Integer getTime() {
@@ -80,7 +80,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求时间戳
+     * Set 请求时间戳
      * @param Time 请求时间戳
      */
     public void setTime(Integer Time) {
@@ -88,7 +88,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -96,7 +96,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -104,7 +104,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
     public Integer getShopId() {
@@ -112,7 +112,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
     public void setShopId(Integer ShopId) {
@@ -120,7 +120,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取开始日期，格式：2018-09-05
+     * Get 拉取开始日期，格式：2018-09-05 
      * @return StartDay 拉取开始日期，格式：2018-09-05
      */
     public String getStartDay() {
@@ -128,7 +128,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取开始日期，格式：2018-09-05
+     * Set 拉取开始日期，格式：2018-09-05
      * @param StartDay 拉取开始日期，格式：2018-09-05
      */
     public void setStartDay(String StartDay) {
@@ -136,7 +136,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
+     * Get 拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算 
      * @return EndDay 拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
      */
     public String getEndDay() {
@@ -144,7 +144,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
+     * Set 拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
      * @param EndDay 拉取结束日期，格式L:2018-09-05，超过StartDay 90天，按StartDay+90天算
      */
     public void setEndDay(String EndDay) {
@@ -152,7 +152,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取条数，默认10
+     * Get 拉取条数，默认10 
      * @return Limit 拉取条数，默认10
      */
     public Integer getLimit() {
@@ -160,7 +160,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取条数，默认10
+     * Set 拉取条数，默认10
      * @param Limit 拉取条数，默认10
      */
     public void setLimit(Integer Limit) {
@@ -168,7 +168,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取偏移，返回offset之后的数据
+     * Get 拉取偏移，返回offset之后的数据 
      * @return Offset 拉取偏移，返回offset之后的数据
      */
     public Integer getOffset() {
@@ -176,7 +176,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取偏移，返回offset之后的数据
+     * Set 拉取偏移，返回offset之后的数据
      * @param Offset 拉取偏移，返回offset之后的数据
      */
     public void setOffset(Integer Offset) {
@@ -184,7 +184,7 @@ public class DescribeHistoryNetworkInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

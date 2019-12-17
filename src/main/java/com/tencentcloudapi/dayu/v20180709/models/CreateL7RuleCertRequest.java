@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7RuleCertRequest  extends AbstractModel{
+public class CreateL7RuleCertRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -72,7 +72,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     private String PrivateKey;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -80,7 +80,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -88,7 +88,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -96,7 +96,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -104,7 +104,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -112,7 +112,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -120,7 +120,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
+     * Get 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)] 
      * @return CertType 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      */
     public Long getCertType() {
@@ -128,7 +128,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
+     * Set 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      * @param CertType 证书类型，当为协议为HTTPS协议时必须填，取值[2(腾讯云托管证书)]
      */
     public void setCertType(Long CertType) {
@@ -136,7 +136,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+     * Get 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID 
      * @return SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      */
     public String getSSLId() {
@@ -144,7 +144,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
+     * Set 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      * @param SSLId 当证书来源为腾讯云托管证书时，此字段必须填写托管证书ID
      */
     public void setSSLId(String SSLId) {
@@ -152,7 +152,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Get 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段) 
      * @return Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public String getCert() {
@@ -160,7 +160,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Set 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param Cert 当证书来源为自有证书时，此字段必须填写证书内容；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public void setCert(String Cert) {
@@ -168,7 +168,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Get 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段) 
      * @return PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public String getPrivateKey() {
@@ -176,7 +176,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
+     * Set 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      * @param PrivateKey 当证书来源为自有证书时，此字段必须填写证书密钥；(因已不再支持自有证书，此字段已弃用，请不用填写此字段)
      */
     public void setPrivateKey(String PrivateKey) {
@@ -184,7 +184,7 @@ public class CreateL7RuleCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

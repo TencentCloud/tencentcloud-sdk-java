@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignContractByKeywordRequest  extends AbstractModel{
+public class SignContractByKeywordRequest extends AbstractModel{
 
     /**
     * 模块名ContractMng
@@ -93,7 +93,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     private String ImageData;
 
     /**
-     * 获取模块名ContractMng
+     * Get 模块名ContractMng 
      * @return Module 模块名ContractMng
      */
     public String getModule() {
@@ -101,7 +101,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名ContractMng
+     * Set 模块名ContractMng
      * @param Module 模块名ContractMng
      */
     public void setModule(String Module) {
@@ -109,7 +109,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名SignContractByKeyword
+     * Get 操作名SignContractByKeyword 
      * @return Operation 操作名SignContractByKeyword
      */
     public String getOperation() {
@@ -117,7 +117,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名SignContractByKeyword
+     * Set 操作名SignContractByKeyword
      * @param Operation 操作名SignContractByKeyword
      */
     public void setOperation(String Operation) {
@@ -125,7 +125,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同ID
+     * Get 合同ID 
      * @return ContractResId 合同ID
      */
     public String getContractResId() {
@@ -133,7 +133,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同ID
+     * Set 合同ID
      * @param ContractResId 合同ID
      */
     public void setContractResId(String ContractResId) {
@@ -141,7 +141,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账户ID
+     * Get 账户ID 
      * @return AccountResId 账户ID
      */
     public String getAccountResId() {
@@ -149,7 +149,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账户ID
+     * Set 账户ID
      * @param AccountResId 账户ID
      */
     public void setAccountResId(String AccountResId) {
@@ -157,7 +157,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取授权时间，格式为年月日时分秒，例20160801095509
+     * Get 授权时间，格式为年月日时分秒，例20160801095509 
      * @return AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      */
     public String getAuthorizationTime() {
@@ -165,7 +165,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置授权时间，格式为年月日时分秒，例20160801095509
+     * Set 授权时间，格式为年月日时分秒，例20160801095509
      * @param AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      */
     public void setAuthorizationTime(String AuthorizationTime) {
@@ -173,7 +173,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取授权IP地址
+     * Get 授权IP地址 
      * @return Position 授权IP地址
      */
     public String getPosition() {
@@ -181,7 +181,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置授权IP地址
+     * Set 授权IP地址
      * @param Position 授权IP地址
      */
     public void setPosition(String Position) {
@@ -189,7 +189,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签署关键字，偏移坐标原点为关键字中心
+     * Get 签署关键字，偏移坐标原点为关键字中心 
      * @return SignKeyword 签署关键字，偏移坐标原点为关键字中心
      */
     public SignKeyword getSignKeyword() {
@@ -197,7 +197,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签署关键字，偏移坐标原点为关键字中心
+     * Set 签署关键字，偏移坐标原点为关键字中心
      * @param SignKeyword 签署关键字，偏移坐标原点为关键字中心
      */
     public void setSignKeyword(SignKeyword SignKeyword) {
@@ -205,7 +205,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签章ID
+     * Get 签章ID 
      * @return SealResId 签章ID
      */
     public String getSealResId() {
@@ -213,7 +213,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签章ID
+     * Set 签章ID
      * @param SealResId 签章ID
      */
     public void setSealResId(String SealResId) {
@@ -221,7 +221,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * Get 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1 
      * @return CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     public Integer getCertType() {
@@ -229,7 +229,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * Set 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param CertType 选用证书类型：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     public void setCertType(Integer CertType) {
@@ -237,7 +237,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取签名图片，base64编码
+     * Get 签名图片，base64编码 
      * @return ImageData 签名图片，base64编码
      */
     public String getImageData() {
@@ -245,7 +245,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置签名图片，base64编码
+     * Set 签名图片，base64编码
      * @param ImageData 签名图片，base64编码
      */
     public void setImageData(String ImageData) {
@@ -253,7 +253,7 @@ public class SignContractByKeywordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

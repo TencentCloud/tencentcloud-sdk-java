@@ -29,21 +29,10 @@ public class AaiClient extends AbstractClient{
     private static String endpoint = "aai.tencentcloudapi.com";
     private static String version = "2018-05-22";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public AaiClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public AaiClient(Credential credential, String region, ClientProfile profile) {
         super(AaiClient.endpoint, AaiClient.version, credential, region, profile);
     }

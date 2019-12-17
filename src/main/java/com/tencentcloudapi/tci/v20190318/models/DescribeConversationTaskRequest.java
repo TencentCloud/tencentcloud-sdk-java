@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeConversationTaskRequest  extends AbstractModel{
+public class DescribeConversationTaskRequest extends AbstractModel{
 
     /**
     * 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
@@ -51,7 +51,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Get 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。 
      * @return JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public Long getJobId() {
@@ -59,7 +59,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Set 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param JobId 音频任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public void setJobId(Long JobId) {
@@ -67,7 +67,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询明细的流的身份，1 老师 2 学生
+     * Get 要查询明细的流的身份，1 老师 2 学生 
      * @return Identity 要查询明细的流的身份，1 老师 2 学生
      */
     public Long getIdentity() {
@@ -75,7 +75,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询明细的流的身份，1 老师 2 学生
+     * Set 要查询明细的流的身份，1 老师 2 学生
      * @param Identity 要查询明细的流的身份，1 老师 2 学生
      */
     public void setIdentity(Long Identity) {
@@ -83,7 +83,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Long getLimit() {
@@ -91,7 +91,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Long Limit) {
@@ -99,7 +99,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -107,7 +107,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -115,7 +115,7 @@ public class DescribeConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

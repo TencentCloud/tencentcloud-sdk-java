@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateRandomResponse  extends AbstractModel{
+public class GenerateRandomResponse extends AbstractModel{
 
     /**
     * 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
@@ -37,7 +37,7 @@ public class GenerateRandomResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
+     * Get 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。 
      * @return Plaintext 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
      */
     public String getPlaintext() {
@@ -45,7 +45,7 @@ public class GenerateRandomResponse  extends AbstractModel{
     }
 
     /**
-     * 设置生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
+     * Set 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
      * @param Plaintext 生成的随机数的明文，该明文使用base64编码，用户需要使用base64解码得到明文。
      */
     public void setPlaintext(String Plaintext) {
@@ -53,7 +53,7 @@ public class GenerateRandomResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class GenerateRandomResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class GenerateRandomResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Plaintext", this.Plaintext);

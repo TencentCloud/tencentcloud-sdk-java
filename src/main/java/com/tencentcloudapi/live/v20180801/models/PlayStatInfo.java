@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayStatInfo  extends AbstractModel{
+public class PlayStatInfo extends AbstractModel{
 
     /**
     * 数据时间点。
@@ -38,7 +38,7 @@ public class PlayStatInfo  extends AbstractModel{
     private Float Value;
 
     /**
-     * 获取数据时间点。
+     * Get 数据时间点。 
      * @return Time 数据时间点。
      */
     public String getTime() {
@@ -46,7 +46,7 @@ public class PlayStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间点。
+     * Set 数据时间点。
      * @param Time 数据时间点。
      */
     public void setTime(String Time) {
@@ -54,8 +54,8 @@ public class PlayStatInfo  extends AbstractModel{
     }
 
     /**
-     * 获取带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Value 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class PlayStatInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
+     * Set 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 带宽/流量/请求数/并发连接数/下载速度的值，若没数据返回时该值为0
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class PlayStatInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

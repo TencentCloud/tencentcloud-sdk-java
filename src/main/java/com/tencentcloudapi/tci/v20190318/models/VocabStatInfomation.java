@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VocabStatInfomation  extends AbstractModel{
+public class VocabStatInfomation extends AbstractModel{
 
     /**
     * 单词出现在该音频中总次数
@@ -37,7 +37,7 @@ public class VocabStatInfomation  extends AbstractModel{
     private String VocabLibName;
 
     /**
-     * 获取单词出现在该音频中总次数
+     * Get 单词出现在该音频中总次数 
      * @return VocabDetailInfo 单词出现在该音频中总次数
      */
     public StatInfo [] getVocabDetailInfo() {
@@ -45,7 +45,7 @@ public class VocabStatInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置单词出现在该音频中总次数
+     * Set 单词出现在该音频中总次数
      * @param VocabDetailInfo 单词出现在该音频中总次数
      */
     public void setVocabDetailInfo(StatInfo [] VocabDetailInfo) {
@@ -53,7 +53,7 @@ public class VocabStatInfomation  extends AbstractModel{
     }
 
     /**
-     * 获取词汇库名称
+     * Get 词汇库名称 
      * @return VocabLibName 词汇库名称
      */
     public String getVocabLibName() {
@@ -61,7 +61,7 @@ public class VocabStatInfomation  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库名称
+     * Set 词汇库名称
      * @param VocabLibName 词汇库名称
      */
     public void setVocabLibName(String VocabLibName) {
@@ -69,7 +69,7 @@ public class VocabStatInfomation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VocabDetailInfo.", this.VocabDetailInfo);

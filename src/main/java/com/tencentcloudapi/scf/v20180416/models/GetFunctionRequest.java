@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFunctionRequest  extends AbstractModel{
+public class GetFunctionRequest extends AbstractModel{
 
     /**
     * 需要获取详情的函数名称
@@ -51,7 +51,7 @@ public class GetFunctionRequest  extends AbstractModel{
     private String ShowCode;
 
     /**
-     * 获取需要获取详情的函数名称
+     * Get 需要获取详情的函数名称 
      * @return FunctionName 需要获取详情的函数名称
      */
     public String getFunctionName() {
@@ -59,7 +59,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要获取详情的函数名称
+     * Set 需要获取详情的函数名称
      * @param FunctionName 需要获取详情的函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -67,7 +67,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的版本号
+     * Get 函数的版本号 
      * @return Qualifier 函数的版本号
      */
     public String getQualifier() {
@@ -75,7 +75,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本号
+     * Set 函数的版本号
      * @param Qualifier 函数的版本号
      */
     public void setQualifier(String Qualifier) {
@@ -83,7 +83,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属命名空间
+     * Get 函数所属命名空间 
      * @return Namespace 函数所属命名空间
      */
     public String getNamespace() {
@@ -91,7 +91,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属命名空间
+     * Set 函数所属命名空间
      * @param Namespace 函数所属命名空间
      */
     public void setNamespace(String Namespace) {
@@ -99,7 +99,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
+     * Get 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示 
      * @return ShowCode 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
     public String getShowCode() {
@@ -107,7 +107,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
+     * Set 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      * @param ShowCode 是否显示代码, TRUE表示显示代码，FALSE表示不显示代码,大于1M的入口文件不会显示
      */
     public void setShowCode(String ShowCode) {
@@ -115,7 +115,7 @@ public class GetFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

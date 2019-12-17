@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NumberData  extends AbstractModel{
+public class NumberData extends AbstractModel{
 
     /**
     * 名称
@@ -51,7 +51,7 @@ public class NumberData  extends AbstractModel{
     private Float [] Range;
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 获取描述
+     * Get 描述 
      * @return Desc 描述
      */
     public String getDesc() {
@@ -75,7 +75,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 设置描述
+     * Set 描述
      * @param Desc 描述
      */
     public void setDesc(String Desc) {
@@ -83,7 +83,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 获取读写模式
+     * Get 读写模式 
      * @return Mode 读写模式
      */
     public String getMode() {
@@ -91,7 +91,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 设置读写模式
+     * Set 读写模式
      * @param Mode 读写模式
      */
     public void setMode(String Mode) {
@@ -99,7 +99,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 获取取值范围
+     * Get 取值范围 
      * @return Range 取值范围
      */
     public Float [] getRange() {
@@ -107,7 +107,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 设置取值范围
+     * Set 取值范围
      * @param Range 取值范围
      */
     public void setRange(Float [] Range) {
@@ -115,7 +115,7 @@ public class NumberData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

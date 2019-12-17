@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateComputeEnvRequest  extends AbstractModel{
+public class CreateComputeEnvRequest extends AbstractModel{
 
     /**
     * 计算环境信息
@@ -44,7 +44,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     private String ClientToken;
 
     /**
-     * 获取计算环境信息
+     * Get 计算环境信息 
      * @return ComputeEnv 计算环境信息
      */
     public NamedComputeEnv getComputeEnv() {
@@ -52,7 +52,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境信息
+     * Set 计算环境信息
      * @param ComputeEnv 计算环境信息
      */
     public void setComputeEnv(NamedComputeEnv ComputeEnv) {
@@ -60,7 +60,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
+     * Get 位置信息 
      * @return Placement 位置信息
      */
     public Placement getPlacement() {
@@ -68,7 +68,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
      * @param Placement 位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -76,7 +76,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
@@ -84,7 +84,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
@@ -92,7 +92,7 @@ public class CreateComputeEnvRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ComputeEnv.", this.ComputeEnv);

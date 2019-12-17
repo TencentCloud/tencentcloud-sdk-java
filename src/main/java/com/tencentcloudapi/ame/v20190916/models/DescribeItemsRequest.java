@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeItemsRequest  extends AbstractModel{
+public class DescribeItemsRequest extends AbstractModel{
 
     /**
     * offset (Default = 0)，(当前页-1) * Limit
@@ -51,7 +51,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     private String CategoryCode;
 
     /**
-     * 获取offset (Default = 0)，(当前页-1) * Limit
+     * Get offset (Default = 0)，(当前页-1) * Limit 
      * @return Offset offset (Default = 0)，(当前页-1) * Limit
      */
     public Long getOffset() {
@@ -59,7 +59,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置offset (Default = 0)，(当前页-1) * Limit
+     * Set offset (Default = 0)，(当前页-1) * Limit
      * @param Offset offset (Default = 0)，(当前页-1) * Limit
      */
     public void setOffset(Long Offset) {
@@ -67,7 +67,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取条数，必须大于0，最大值为30
+     * Get 条数，必须大于0，最大值为30 
      * @return Limit 条数，必须大于0，最大值为30
      */
     public Long getLimit() {
@@ -75,7 +75,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置条数，必须大于0，最大值为30
+     * Set 条数，必须大于0，最大值为30
      * @param Limit 条数，必须大于0，最大值为30
      */
     public void setLimit(Long Limit) {
@@ -83,7 +83,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（电台/歌单）ID，CategoryId和CategoryCode两个必传1个
+     * Get （电台/歌单）ID，CategoryId和CategoryCode两个必传1个 
      * @return CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个
      */
     public String getCategoryId() {
@@ -91,7 +91,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（电台/歌单）ID，CategoryId和CategoryCode两个必传1个
+     * Set （电台/歌单）ID，CategoryId和CategoryCode两个必传1个
      * @param CategoryId （电台/歌单）ID，CategoryId和CategoryCode两个必传1个
      */
     public void setCategoryId(String CategoryId) {
@@ -99,7 +99,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取（电台/歌单）代码，CategoryId和CategoryCode两个必传1个
+     * Get （电台/歌单）代码，CategoryId和CategoryCode两个必传1个 
      * @return CategoryCode （电台/歌单）代码，CategoryId和CategoryCode两个必传1个
      */
     public String getCategoryCode() {
@@ -107,7 +107,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置（电台/歌单）代码，CategoryId和CategoryCode两个必传1个
+     * Set （电台/歌单）代码，CategoryId和CategoryCode两个必传1个
      * @param CategoryCode （电台/歌单）代码，CategoryId和CategoryCode两个必传1个
      */
     public void setCategoryCode(String CategoryCode) {
@@ -115,7 +115,7 @@ public class DescribeItemsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

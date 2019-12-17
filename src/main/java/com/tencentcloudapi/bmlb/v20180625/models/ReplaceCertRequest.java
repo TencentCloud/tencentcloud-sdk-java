@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceCertRequest  extends AbstractModel{
+public class ReplaceCertRequest extends AbstractModel{
 
     /**
     * 要被替换的证书ID
@@ -58,7 +58,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     private Integer DeleteOld;
 
     /**
-     * 获取要被替换的证书ID
+     * Get 要被替换的证书ID 
      * @return OldCertId 要被替换的证书ID
      */
     public String getOldCertId() {
@@ -66,7 +66,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要被替换的证书ID
+     * Set 要被替换的证书ID
      * @param OldCertId 要被替换的证书ID
      */
     public void setOldCertId(String OldCertId) {
@@ -74,7 +74,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容
+     * Get 证书内容 
      * @return NewCert 证书内容
      */
     public String getNewCert() {
@@ -82,7 +82,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容
+     * Set 证书内容
      * @param NewCert 证书内容
      */
     public void setNewCert(String NewCert) {
@@ -90,7 +90,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书名称
+     * Get 证书名称 
      * @return NewAlias 证书名称
      */
     public String getNewAlias() {
@@ -98,7 +98,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称
+     * Set 证书名称
      * @param NewAlias 证书名称
      */
     public void setNewAlias(String NewAlias) {
@@ -106,7 +106,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私钥内容，证书类型为SVR时不需要传递
+     * Get 私钥内容，证书类型为SVR时不需要传递 
      * @return NewKey 私钥内容，证书类型为SVR时不需要传递
      */
     public String getNewKey() {
@@ -114,7 +114,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私钥内容，证书类型为SVR时不需要传递
+     * Set 私钥内容，证书类型为SVR时不需要传递
      * @param NewKey 私钥内容，证书类型为SVR时不需要传递
      */
     public void setNewKey(String NewKey) {
@@ -122,7 +122,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否删除旧证书，0 表示不删除，1 表示删除
+     * Get 是否删除旧证书，0 表示不删除，1 表示删除 
      * @return DeleteOld 是否删除旧证书，0 表示不删除，1 表示删除
      */
     public Integer getDeleteOld() {
@@ -130,7 +130,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否删除旧证书，0 表示不删除，1 表示删除
+     * Set 是否删除旧证书，0 表示不删除，1 表示删除
      * @param DeleteOld 是否删除旧证书，0 表示不删除，1 表示删除
      */
     public void setDeleteOld(Integer DeleteOld) {
@@ -138,7 +138,7 @@ public class ReplaceCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OldCertId", this.OldCertId);

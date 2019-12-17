@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EventHistoryItem  extends AbstractModel{
+public class EventHistoryItem extends AbstractModel{
 
     /**
     * 事件的时间戳
@@ -71,8 +71,8 @@ public class EventHistoryItem  extends AbstractModel{
     private String Data;
 
     /**
-     * 获取事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeStamp 事件的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,7 +81,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的时间戳
+     * Set 事件的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeStamp 事件的时间戳
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,8 +91,8 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的产品ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductId 事件的产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的产品ID
+     * Set 事件的产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductId 事件的产品ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的设备名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceName 事件的设备名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的设备名称
+     * Set 事件的设备名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceName 事件的设备名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的标识符ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventId 事件的标识符ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的标识符ID
+     * Set 事件的标识符ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件的标识符ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 事件的类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的类型
+     * Set 事件的类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 事件的类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 获取事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件的数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 事件的数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 设置事件的数据
+     * Set 事件的数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 事件的数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class EventHistoryItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeStamp", this.TimeStamp);

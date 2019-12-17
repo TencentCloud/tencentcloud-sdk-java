@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTripleRequest  extends AbstractModel{
+public class DescribeTripleRequest extends AbstractModel{
 
     /**
     * 三元组查询条件
@@ -30,7 +30,7 @@ public class DescribeTripleRequest  extends AbstractModel{
     private String TripleCondition;
 
     /**
-     * 获取三元组查询条件
+     * Get 三元组查询条件 
      * @return TripleCondition 三元组查询条件
      */
     public String getTripleCondition() {
@@ -38,7 +38,7 @@ public class DescribeTripleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置三元组查询条件
+     * Set 三元组查询条件
      * @param TripleCondition 三元组查询条件
      */
     public void setTripleCondition(String TripleCondition) {
@@ -46,7 +46,7 @@ public class DescribeTripleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TripleCondition", this.TripleCondition);

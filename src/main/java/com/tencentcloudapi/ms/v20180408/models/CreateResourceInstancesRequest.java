@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateResourceInstancesRequest  extends AbstractModel{
+public class CreateResourceInstancesRequest extends AbstractModel{
 
     /**
     * 资源类型id。13624：加固专业版。
@@ -51,7 +51,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     private Integer ResourceNum;
 
     /**
-     * 获取资源类型id。13624：加固专业版。
+     * Get 资源类型id。13624：加固专业版。 
      * @return Pid 资源类型id。13624：加固专业版。
      */
     public Integer getPid() {
@@ -59,7 +59,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源类型id。13624：加固专业版。
+     * Set 资源类型id。13624：加固专业版。
      * @param Pid 资源类型id。13624：加固专业版。
      */
     public void setPid(Integer Pid) {
@@ -67,7 +67,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间单位，取值为d，m，y，分别表示天，月，年。
+     * Get 时间单位，取值为d，m，y，分别表示天，月，年。 
      * @return TimeUnit 时间单位，取值为d，m，y，分别表示天，月，年。
      */
     public String getTimeUnit() {
@@ -75,7 +75,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位，取值为d，m，y，分别表示天，月，年。
+     * Set 时间单位，取值为d，m，y，分别表示天，月，年。
      * @param TimeUnit 时间单位，取值为d，m，y，分别表示天，月，年。
      */
     public void setTimeUnit(String TimeUnit) {
@@ -83,7 +83,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间数量。
+     * Get 时间数量。 
      * @return TimeSpan 时间数量。
      */
     public Integer getTimeSpan() {
@@ -91,7 +91,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间数量。
+     * Set 时间数量。
      * @param TimeSpan 时间数量。
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -99,7 +99,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源数量。
+     * Get 资源数量。 
      * @return ResourceNum 资源数量。
      */
     public Integer getResourceNum() {
@@ -107,7 +107,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源数量。
+     * Set 资源数量。
      * @param ResourceNum 资源数量。
      */
     public void setResourceNum(Integer ResourceNum) {
@@ -115,7 +115,7 @@ public class CreateResourceInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Pid", this.Pid);

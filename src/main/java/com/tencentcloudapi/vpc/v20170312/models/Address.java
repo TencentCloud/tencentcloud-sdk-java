@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Address  extends AbstractModel{
+public class Address extends AbstractModel{
 
     /**
     * `EIP`的`ID`，是`EIP`的唯一标识。
@@ -114,7 +114,7 @@ public class Address  extends AbstractModel{
     private Boolean CascadeRelease;
 
     /**
-     * 获取`EIP`的`ID`，是`EIP`的唯一标识。
+     * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
     public String getAddressId() {
@@ -122,7 +122,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置`EIP`的`ID`，是`EIP`的唯一标识。
+     * Set `EIP`的`ID`，是`EIP`的唯一标识。
      * @param AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
     public void setAddressId(String AddressId) {
@@ -130,7 +130,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取`EIP`名称。
+     * Get `EIP`名称。 
      * @return AddressName `EIP`名称。
      */
     public String getAddressName() {
@@ -138,7 +138,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置`EIP`名称。
+     * Set `EIP`名称。
      * @param AddressName `EIP`名称。
      */
     public void setAddressName(String AddressName) {
@@ -146,7 +146,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取`EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * Get `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡) 
      * @return AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
      */
     public String getAddressStatus() {
@@ -154,7 +154,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置`EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
+     * Set `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
      * @param AddressStatus `EIP`状态，包含'CREATING'(创建中),'BINDING'(绑定中),'BIND'(已绑定),'UNBINDING'(解绑中),'UNBIND'(已解绑),'OFFLINING'(释放中),'BIND_ENI'(绑定悬空弹性网卡)
      */
     public void setAddressStatus(String AddressStatus) {
@@ -162,7 +162,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取外网IP地址
+     * Get 外网IP地址 
      * @return AddressIp 外网IP地址
      */
     public String getAddressIp() {
@@ -170,7 +170,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置外网IP地址
+     * Set 外网IP地址
      * @param AddressIp 外网IP地址
      */
     public void setAddressIp(String AddressIp) {
@@ -178,7 +178,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Get 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。 
      * @return InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      */
     public String getInstanceId() {
@@ -186,7 +186,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Set 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      * @param InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      */
     public void setInstanceId(String InstanceId) {
@@ -194,7 +194,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreatedTime() {
@@ -202,7 +202,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -210,7 +210,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的弹性网卡ID
+     * Get 绑定的弹性网卡ID 
      * @return NetworkInterfaceId 绑定的弹性网卡ID
      */
     public String getNetworkInterfaceId() {
@@ -218,7 +218,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的弹性网卡ID
+     * Set 绑定的弹性网卡ID
      * @param NetworkInterfaceId 绑定的弹性网卡ID
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -226,7 +226,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的资源内网ip
+     * Get 绑定的资源内网ip 
      * @return PrivateAddressIp 绑定的资源内网ip
      */
     public String getPrivateAddressIp() {
@@ -234,7 +234,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的资源内网ip
+     * Set 绑定的资源内网ip
      * @param PrivateAddressIp 绑定的资源内网ip
      */
     public void setPrivateAddressIp(String PrivateAddressIp) {
@@ -242,7 +242,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Get 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态 
      * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      */
     public Boolean getIsArrears() {
@@ -250,7 +250,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Set 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      */
     public void setIsArrears(Boolean IsArrears) {
@@ -258,7 +258,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Get 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态 
      * @return IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      */
     public Boolean getIsBlocked() {
@@ -266,7 +266,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Set 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      */
     public void setIsBlocked(Boolean IsBlocked) {
@@ -274,7 +274,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Get eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式 
      * @return IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      */
     public Boolean getIsEipDirectConnection() {
@@ -282,7 +282,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Set eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      * @param IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      */
     public void setIsEipDirectConnection(Boolean IsEipDirectConnection) {
@@ -290,7 +290,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * Get eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP 
      * @return AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      */
     public String getAddressType() {
@@ -298,7 +298,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * Set eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      * @param AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
      */
     public void setAddressType(String AddressType) {
@@ -306,7 +306,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 获取eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Get eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放 
      * @return CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      */
     public Boolean getCascadeRelease() {
@@ -314,7 +314,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Set eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      */
     public void setCascadeRelease(Boolean CascadeRelease) {
@@ -322,7 +322,7 @@ public class Address  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressId", this.AddressId);

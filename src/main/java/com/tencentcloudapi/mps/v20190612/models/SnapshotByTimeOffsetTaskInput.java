@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
+public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
 
     /**
     * 指定时间点截图模板 ID。
@@ -67,7 +67,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * 获取指定时间点截图模板 ID。
+     * Get 指定时间点截图模板 ID。 
      * @return Definition 指定时间点截图模板 ID。
      */
     public Long getDefinition() {
@@ -75,7 +75,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图模板 ID。
+     * Set 指定时间点截图模板 ID。
      * @param Definition 指定时间点截图模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -83,7 +83,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间点列表，单位为<font color=red>秒</font>。
+     * Get 截图时间点列表，单位为<font color=red>秒</font>。 
      * @return TimeOffsetSet 截图时间点列表，单位为<font color=red>秒</font>。
      */
     public Float [] getTimeOffsetSet() {
@@ -91,7 +91,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置截图时间点列表，单位为<font color=red>秒</font>。
+     * Set 截图时间点列表，单位为<font color=red>秒</font>。
      * @param TimeOffsetSet 截图时间点列表，单位为<font color=red>秒</font>。
      */
     public void setTimeOffsetSet(Float [] TimeOffsetSet) {
@@ -99,7 +99,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     public WatermarkInput [] getWatermarkSet() {
@@ -107,7 +107,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
@@ -115,8 +115,8 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OutputStorage 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
+     * Set 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputStorage 时间点截图后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
+     * Get 时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。 
      * @return OutputObjectPath 时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
      */
     public String getOutputObjectPath() {
@@ -143,7 +143,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
+     * Set 时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
      * @param OutputObjectPath 时间点截图后图片文件的输出路径，可以为相对路径或者绝对路径。如果不填，则默认为相对路径：`{inputName}_snapshotByTimeOffset_{definition}_{number}.{format}`。
      */
     public void setOutputObjectPath(String OutputObjectPath) {
@@ -151,8 +151,8 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取时间点截图后输出路径中的`{number}`变量的规则。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 时间点截图后输出路径中的`{number}`变量的规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ObjectNumberFormat 时间点截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置时间点截图后输出路径中的`{number}`变量的规则。
+     * Set 时间点截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectNumberFormat 时间点截图后输出路径中的`{number}`变量的规则。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,7 +171,7 @@ public class SnapshotByTimeOffsetTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTopicPolicyRequest  extends AbstractModel{
+public class CreateTopicPolicyRequest extends AbstractModel{
 
     /**
     * 产品自身id
@@ -51,7 +51,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     private BrokerSubscribe BrokerSubscribe;
 
     /**
-     * 获取产品自身id
+     * Get 产品自身id 
      * @return ProductID 产品自身id
      */
     public String getProductID() {
@@ -59,7 +59,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品自身id
+     * Set 产品自身id
      * @param ProductID 产品自身id
      */
     public void setProductID(String ProductID) {
@@ -67,7 +67,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Topic名称
+     * Get Topic名称 
      * @return TopicName Topic名称
      */
     public String getTopicName() {
@@ -75,7 +75,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Topic名称
+     * Set Topic名称
      * @param TopicName Topic名称
      */
     public void setTopicName(String TopicName) {
@@ -83,7 +83,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Topic权限，1发布，2订阅，3订阅和发布
+     * Get Topic权限，1发布，2订阅，3订阅和发布 
      * @return Privilege Topic权限，1发布，2订阅，3订阅和发布
      */
     public Integer getPrivilege() {
@@ -91,7 +91,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Topic权限，1发布，2订阅，3订阅和发布
+     * Set Topic权限，1发布，2订阅，3订阅和发布
      * @param Privilege Topic权限，1发布，2订阅，3订阅和发布
      */
     public void setPrivilege(Integer Privilege) {
@@ -99,7 +99,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+     * Get 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。 
      * @return BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
      */
     public BrokerSubscribe getBrokerSubscribe() {
@@ -107,7 +107,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+     * Set 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
      * @param BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
      */
     public void setBrokerSubscribe(BrokerSubscribe BrokerSubscribe) {
@@ -115,7 +115,7 @@ public class CreateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductID", this.ProductID);

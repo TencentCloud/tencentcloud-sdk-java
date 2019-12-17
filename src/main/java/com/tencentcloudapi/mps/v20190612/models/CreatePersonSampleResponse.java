@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonSampleResponse  extends AbstractModel{
+public class CreatePersonSampleResponse extends AbstractModel{
 
     /**
     * 人物信息。
@@ -44,7 +44,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人物信息。
+     * Get 人物信息。 
      * @return Person 人物信息。
      */
     public AiSamplePerson getPerson() {
@@ -52,7 +52,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人物信息。
+     * Set 人物信息。
      * @param Person 人物信息。
      */
     public void setPerson(AiSamplePerson Person) {
@@ -60,7 +60,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取处理失败的人脸信息。
+     * Get 处理失败的人脸信息。 
      * @return FailFaceInfoSet 处理失败的人脸信息。
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
@@ -68,7 +68,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置处理失败的人脸信息。
+     * Set 处理失败的人脸信息。
      * @param FailFaceInfoSet 处理失败的人脸信息。
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
@@ -76,7 +76,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreatePersonSampleResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Person.", this.Person);

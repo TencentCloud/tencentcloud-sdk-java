@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListMigrationTaskRequest  extends AbstractModel{
+public class ListMigrationTaskRequest extends AbstractModel{
 
     /**
     * 记录起始数，默认值为0
@@ -44,7 +44,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取记录起始数，默认值为0
+     * Get 记录起始数，默认值为0 
      * @return Offset 记录起始数，默认值为0
      */
     public Integer getOffset() {
@@ -52,7 +52,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录起始数，默认值为0
+     * Set 记录起始数，默认值为0
      * @param Offset 记录起始数，默认值为0
      */
     public void setOffset(Integer Offset) {
@@ -60,7 +60,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录条数，默认值为10
+     * Get 记录条数，默认值为10 
      * @return Limit 记录条数，默认值为10
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录条数，默认值为10
+     * Set 记录条数，默认值为10
      * @param Limit 记录条数，默认值为10
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，默认值为空
+     * Get 项目ID，默认值为空 
      * @return ProjectId 项目ID，默认值为空
      */
     public Integer getProjectId() {
@@ -84,7 +84,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，默认值为空
+     * Set 项目ID，默认值为空
      * @param ProjectId 项目ID，默认值为空
      */
     public void setProjectId(Integer ProjectId) {
@@ -92,7 +92,7 @@ public class ListMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

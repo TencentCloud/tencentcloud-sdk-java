@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AutoRewriteRequest  extends AbstractModel{
+public class AutoRewriteRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID
@@ -44,7 +44,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     private String [] Domains;
 
     /**
-     * 获取负载均衡实例ID
+     * Get 负载均衡实例ID 
      * @return LoadBalancerId 负载均衡实例ID
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID
+     * Set 负载均衡实例ID
      * @param LoadBalancerId 负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取HTTPS:443监听器的ID
+     * Get HTTPS:443监听器的ID 
      * @return ListenerId HTTPS:443监听器的ID
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置HTTPS:443监听器的ID
+     * Set HTTPS:443监听器的ID
      * @param ListenerId HTTPS:443监听器的ID
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 获取HTTPS:443监听器下需要重定向的域名
+     * Get HTTPS:443监听器下需要重定向的域名 
      * @return Domains HTTPS:443监听器下需要重定向的域名
      */
     public String [] getDomains() {
@@ -84,7 +84,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 设置HTTPS:443监听器下需要重定向的域名
+     * Set HTTPS:443监听器下需要重定向的域名
      * @param Domains HTTPS:443监听器下需要重定向的域名
      */
     public void setDomains(String [] Domains) {
@@ -92,7 +92,7 @@ public class AutoRewriteRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

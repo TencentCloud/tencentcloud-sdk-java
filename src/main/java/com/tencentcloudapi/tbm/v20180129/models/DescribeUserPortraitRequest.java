@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserPortraitRequest  extends AbstractModel{
+public class DescribeUserPortraitRequest extends AbstractModel{
 
     /**
     * 品牌ID
@@ -30,7 +30,7 @@ public class DescribeUserPortraitRequest  extends AbstractModel{
     private String BrandId;
 
     /**
-     * 获取品牌ID
+     * Get 品牌ID 
      * @return BrandId 品牌ID
      */
     public String getBrandId() {
@@ -38,7 +38,7 @@ public class DescribeUserPortraitRequest  extends AbstractModel{
     }
 
     /**
-     * 设置品牌ID
+     * Set 品牌ID
      * @param BrandId 品牌ID
      */
     public void setBrandId(String BrandId) {
@@ -46,7 +46,7 @@ public class DescribeUserPortraitRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BrandId", this.BrandId);

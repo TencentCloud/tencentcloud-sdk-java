@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceStatus  extends AbstractModel{
+public class DeviceStatus extends AbstractModel{
 
     /**
     * 设备名称
@@ -58,7 +58,7 @@ public class DeviceStatus  extends AbstractModel{
     private Integer OnlineTimes;
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -66,7 +66,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -74,7 +74,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取设备状态（inactive, online, offline）
+     * Get 设备状态（inactive, online, offline） 
      * @return Status 设备状态（inactive, online, offline）
      */
     public String getStatus() {
@@ -82,7 +82,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置设备状态（inactive, online, offline）
+     * Set 设备状态（inactive, online, offline）
      * @param Status 设备状态（inactive, online, offline）
      */
     public void setStatus(String Status) {
@@ -90,7 +90,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取首次上线时间
+     * Get 首次上线时间 
      * @return FirstOnline 首次上线时间
      */
     public String getFirstOnline() {
@@ -98,7 +98,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置首次上线时间
+     * Set 首次上线时间
      * @param FirstOnline 首次上线时间
      */
     public void setFirstOnline(String FirstOnline) {
@@ -106,7 +106,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取最后上线时间
+     * Get 最后上线时间 
      * @return LastOnline 最后上线时间
      */
     public String getLastOnline() {
@@ -114,7 +114,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置最后上线时间
+     * Set 最后上线时间
      * @param LastOnline 最后上线时间
      */
     public void setLastOnline(String LastOnline) {
@@ -122,7 +122,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 获取上线次数
+     * Get 上线次数 
      * @return OnlineTimes 上线次数
      */
     public Integer getOnlineTimes() {
@@ -130,7 +130,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 设置上线次数
+     * Set 上线次数
      * @param OnlineTimes 上线次数
      */
     public void setOnlineTimes(Integer OnlineTimes) {
@@ -138,7 +138,7 @@ public class DeviceStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

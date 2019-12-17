@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMountPointRequest  extends AbstractModel{
+public class DeleteMountPointRequest extends AbstractModel{
 
     /**
     * 挂载点ID
@@ -30,7 +30,7 @@ public class DeleteMountPointRequest  extends AbstractModel{
     private String MountPointId;
 
     /**
-     * 获取挂载点ID
+     * Get 挂载点ID 
      * @return MountPointId 挂载点ID
      */
     public String getMountPointId() {
@@ -38,7 +38,7 @@ public class DeleteMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点ID
+     * Set 挂载点ID
      * @param MountPointId 挂载点ID
      */
     public void setMountPointId(String MountPointId) {
@@ -46,7 +46,7 @@ public class DeleteMountPointRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MountPointId", this.MountPointId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HlsSpecialParam  extends AbstractModel{
+public class HlsSpecialParam extends AbstractModel{
 
     /**
     * HLS续流超时时间。
@@ -30,7 +30,7 @@ public class HlsSpecialParam  extends AbstractModel{
     private Integer FlowContinueDuration;
 
     /**
-     * 获取HLS续流超时时间。
+     * Get HLS续流超时时间。 
      * @return FlowContinueDuration HLS续流超时时间。
      */
     public Integer getFlowContinueDuration() {
@@ -38,7 +38,7 @@ public class HlsSpecialParam  extends AbstractModel{
     }
 
     /**
-     * 设置HLS续流超时时间。
+     * Set HLS续流超时时间。
      * @param FlowContinueDuration HLS续流超时时间。
      */
     public void setFlowContinueDuration(Integer FlowContinueDuration) {
@@ -46,7 +46,7 @@ public class HlsSpecialParam  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowContinueDuration", this.FlowContinueDuration);

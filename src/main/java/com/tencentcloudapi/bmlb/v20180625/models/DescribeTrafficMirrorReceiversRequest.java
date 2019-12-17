@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
+public class DescribeTrafficMirrorReceiversRequest extends AbstractModel{
 
     /**
     * 流量镜像实例ID。
@@ -79,7 +79,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     private String VagueIp;
 
     /**
-     * 获取流量镜像实例ID。
+     * Get 流量镜像实例ID。 
      * @return TrafficMirrorId 流量镜像实例ID。
      */
     public String getTrafficMirrorId() {
@@ -87,7 +87,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像实例ID。
+     * Set 流量镜像实例ID。
      * @param TrafficMirrorId 流量镜像实例ID。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -95,7 +95,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取接收机黑石物理机实例ID数组。
+     * Get 接收机黑石物理机实例ID数组。 
      * @return InstanceIds 接收机黑石物理机实例ID数组。
      */
     public String [] getInstanceIds() {
@@ -103,7 +103,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置接收机黑石物理机实例ID数组。
+     * Set 接收机黑石物理机实例ID数组。
      * @param InstanceIds 接收机黑石物理机实例ID数组。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -111,7 +111,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取接收机接收端口数组。
+     * Get 接收机接收端口数组。 
      * @return Ports 接收机接收端口数组。
      */
     public Integer [] getPorts() {
@@ -119,7 +119,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置接收机接收端口数组。
+     * Set 接收机接收端口数组。
      * @param Ports 接收机接收端口数组。
      */
     public void setPorts(Integer [] Ports) {
@@ -127,7 +127,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取接收机实例权重数组。
+     * Get 接收机实例权重数组。 
      * @return Weights 接收机实例权重数组。
      */
     public Integer [] getWeights() {
@@ -135,7 +135,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置接收机实例权重数组。
+     * Set 接收机实例权重数组。
      * @param Weights 接收机实例权重数组。
      */
     public void setWeights(Integer [] Weights) {
@@ -143,7 +143,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页的偏移量，也即从第几条记录开始查询
+     * Get 分页的偏移量，也即从第几条记录开始查询 
      * @return Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public Integer getOffset() {
@@ -151,7 +151,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页的偏移量，也即从第几条记录开始查询
+     * Set 分页的偏移量，也即从第几条记录开始查询
      * @param Offset 分页的偏移量，也即从第几条记录开始查询
      */
     public void setOffset(Integer Offset) {
@@ -159,7 +159,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次查询返回的条目数，默认值：500。
+     * Get 单次查询返回的条目数，默认值：500。 
      * @return Limit 单次查询返回的条目数，默认值：500。
      */
     public Integer getLimit() {
@@ -167,7 +167,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次查询返回的条目数，默认值：500。
+     * Set 单次查询返回的条目数，默认值：500。
      * @param Limit 单次查询返回的条目数，默认值：500。
      */
     public void setLimit(Integer Limit) {
@@ -175,7 +175,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索instance或者alias
+     * Get 搜索instance或者alias 
      * @return VagueStr 搜索instance或者alias
      */
     public String getVagueStr() {
@@ -183,7 +183,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索instance或者alias
+     * Set 搜索instance或者alias
      * @param VagueStr 搜索instance或者alias
      */
     public void setVagueStr(String VagueStr) {
@@ -191,7 +191,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索IP
+     * Get 搜索IP 
      * @return VagueIp 搜索IP
      */
     public String getVagueIp() {
@@ -199,7 +199,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索IP
+     * Set 搜索IP
      * @param VagueIp 搜索IP
      */
     public void setVagueIp(String VagueIp) {
@@ -207,7 +207,7 @@ public class DescribeTrafficMirrorReceiversRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

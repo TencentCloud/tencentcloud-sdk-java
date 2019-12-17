@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLicenseResponse  extends AbstractModel{
+public class CreateLicenseResponse extends AbstractModel{
 
     /**
     * Base64 编码的许可证二进制数据。
@@ -44,7 +44,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取Base64 编码的许可证二进制数据。
+     * Get Base64 编码的许可证二进制数据。 
      * @return License Base64 编码的许可证二进制数据。
      */
     public String getLicense() {
@@ -52,7 +52,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Base64 编码的许可证二进制数据。
+     * Set Base64 编码的许可证二进制数据。
      * @param License Base64 编码的许可证二进制数据。
      */
     public void setLicense(String License) {
@@ -60,7 +60,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 获取加密内容的内容ID
+     * Get 加密内容的内容ID 
      * @return ContentId 加密内容的内容ID
      */
     public String getContentId() {
@@ -68,7 +68,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加密内容的内容ID
+     * Set 加密内容的内容ID
      * @param ContentId 加密内容的内容ID
      */
     public void setContentId(String ContentId) {
@@ -76,7 +76,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateLicenseResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "License", this.License);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginWhiteListsRule  extends AbstractModel{
+public class LoginWhiteListsRule extends AbstractModel{
 
     /**
     * 加白地域
@@ -62,10 +62,10 @@ public class LoginWhiteListsRule  extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
-     * 获取加白地域
+     * Get 加白地域 
      * @return Places 加白地域
      */
     public Place [] getPlaces() {
@@ -73,7 +73,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 设置加白地域
+     * Set 加白地域
      * @param Places 加白地域
      */
     public void setPlaces(Place [] Places) {
@@ -81,7 +81,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 获取加白源IP，支持网段，多个IP以逗号隔开
+     * Get 加白源IP，支持网段，多个IP以逗号隔开 
      * @return SrcIp 加白源IP，支持网段，多个IP以逗号隔开
      */
     public String getSrcIp() {
@@ -89,7 +89,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 设置加白源IP，支持网段，多个IP以逗号隔开
+     * Set 加白源IP，支持网段，多个IP以逗号隔开
      * @param SrcIp 加白源IP，支持网段，多个IP以逗号隔开
      */
     public void setSrcIp(String SrcIp) {
@@ -97,7 +97,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 获取加白用户名，多个用户名以逗号隔开
+     * Get 加白用户名，多个用户名以逗号隔开 
      * @return UserName 加白用户名，多个用户名以逗号隔开
      */
     public String getUserName() {
@@ -105,7 +105,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 设置加白用户名，多个用户名以逗号隔开
+     * Set 加白用户名，多个用户名以逗号隔开
      * @param UserName 加白用户名，多个用户名以逗号隔开
      */
     public void setUserName(String UserName) {
@@ -113,7 +113,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 获取是否对全局生效
+     * Get 是否对全局生效 
      * @return IsGlobal 是否对全局生效
      */
     public Boolean getIsGlobal() {
@@ -121,7 +121,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 设置是否对全局生效
+     * Set 是否对全局生效
      * @param IsGlobal 是否对全局生效
      */
     public void setIsGlobal(Boolean IsGlobal) {
@@ -129,7 +129,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 获取白名单生效的机器
+     * Get 白名单生效的机器 
      * @return HostIp 白名单生效的机器
      */
     public String getHostIp() {
@@ -137,7 +137,7 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 设置白名单生效的机器
+     * Set 白名单生效的机器
      * @param HostIp 白名单生效的机器
      */
     public void setHostIp(String HostIp) {
@@ -145,23 +145,23 @@ public class LoginWhiteListsRule  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID，用于更新规则
+     * Get 规则ID，用于更新规则 
      * @return Id 规则ID，用于更新规则
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置规则ID，用于更新规则
+     * Set 规则ID，用于更新规则
      * @param Id 规则ID，用于更新规则
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Places.", this.Places);

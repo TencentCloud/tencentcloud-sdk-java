@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonTagInfoRequest  extends AbstractModel{
+public class ModifyPersonTagInfoRequest extends AbstractModel{
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -44,7 +44,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     private PersonTagInfo [] Tags;
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -52,7 +52,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -60,7 +60,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
     public Integer getShopId() {
@@ -68,7 +68,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取，为0则拉取集团全部店铺当前
      */
     public void setShopId(Integer ShopId) {
@@ -76,7 +76,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要设置的顾客信息，批量设置最大为10个
+     * Get 需要设置的顾客信息，批量设置最大为10个 
      * @return Tags 需要设置的顾客信息，批量设置最大为10个
      */
     public PersonTagInfo [] getTags() {
@@ -84,7 +84,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要设置的顾客信息，批量设置最大为10个
+     * Set 需要设置的顾客信息，批量设置最大为10个
      * @param Tags 需要设置的顾客信息，批量设置最大为10个
      */
     public void setTags(PersonTagInfo [] Tags) {
@@ -92,7 +92,7 @@ public class ModifyPersonTagInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

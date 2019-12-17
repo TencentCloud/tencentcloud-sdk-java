@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityPolicyRuleOut  extends AbstractModel{
+public class SecurityPolicyRuleOut extends AbstractModel{
 
     /**
     * 策略：允许（ACCEPT）或拒绝（DROP）
@@ -75,7 +75,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     private String PolicyId;
 
     /**
-     * 获取策略：允许（ACCEPT）或拒绝（DROP）
+     * Get 策略：允许（ACCEPT）或拒绝（DROP） 
      * @return Action 策略：允许（ACCEPT）或拒绝（DROP）
      */
     public String getAction() {
@@ -83,7 +83,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置策略：允许（ACCEPT）或拒绝（DROP）
+     * Set 策略：允许（ACCEPT）或拒绝（DROP）
      * @param Action 策略：允许（ACCEPT）或拒绝（DROP）
      */
     public void setAction(String Action) {
@@ -91,7 +91,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取请求来源Ip或Ip段
+     * Get 请求来源Ip或Ip段 
      * @return SourceCidr 请求来源Ip或Ip段
      */
     public String getSourceCidr() {
@@ -99,7 +99,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置请求来源Ip或Ip段
+     * Set 请求来源Ip或Ip段
      * @param SourceCidr 请求来源Ip或Ip段
      */
     public void setSourceCidr(String SourceCidr) {
@@ -107,7 +107,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取规则别名
+     * Get 规则别名 
      * @return AliasName 规则别名
      */
     public String getAliasName() {
@@ -115,7 +115,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置规则别名
+     * Set 规则别名
      * @param AliasName 规则别名
      */
     public void setAliasName(String AliasName) {
@@ -123,8 +123,8 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 目标端口范围
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DestPortRange 目标端口范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口范围
+     * Set 目标端口范围
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DestPortRange 目标端口范围
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,7 +143,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -151,7 +151,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -159,8 +159,8 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 要匹配的协议类型（TCP/UDP）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Protocol 要匹配的协议类型（TCP/UDP）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置要匹配的协议类型（TCP/UDP）
+     * Set 要匹配的协议类型（TCP/UDP）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 要匹配的协议类型（TCP/UDP）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 获取安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 安全策略ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 安全策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 设置安全策略ID
+     * Set 安全策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyId 安全策略ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,7 +199,7 @@ public class SecurityPolicyRuleOut  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);

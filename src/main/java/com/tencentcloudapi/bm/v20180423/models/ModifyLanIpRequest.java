@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLanIpRequest  extends AbstractModel{
+public class ModifyLanIpRequest extends AbstractModel{
 
     /**
     * 物理机ID
@@ -58,7 +58,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     private Integer RebootDevice;
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return InstanceId 物理机ID
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param InstanceId 物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定新VPC
+     * Get 指定新VPC 
      * @return VpcId 指定新VPC
      */
     public String getVpcId() {
@@ -82,7 +82,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定新VPC
+     * Set 指定新VPC
      * @param VpcId 指定新VPC
      */
     public void setVpcId(String VpcId) {
@@ -90,7 +90,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定新子网
+     * Get 指定新子网 
      * @return SubnetId 指定新子网
      */
     public String getSubnetId() {
@@ -98,7 +98,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定新子网
+     * Set 指定新子网
      * @param SubnetId 指定新子网
      */
     public void setSubnetId(String SubnetId) {
@@ -106,7 +106,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定新内网IP
+     * Get 指定新内网IP 
      * @return LanIp 指定新内网IP
      */
     public String getLanIp() {
@@ -114,7 +114,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定新内网IP
+     * Set 指定新内网IP
      * @param LanIp 指定新内网IP
      */
     public void setLanIp(String LanIp) {
@@ -122,7 +122,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
+     * Get 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0 
      * @return RebootDevice 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      */
     public Integer getRebootDevice() {
@@ -130,7 +130,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
+     * Set 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      * @param RebootDevice 是否需要重启机器，取值 1(需要) 0(不需要)，默认取值0
      */
     public void setRebootDevice(Integer RebootDevice) {
@@ -138,7 +138,7 @@ public class ModifyLanIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

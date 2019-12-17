@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetRequest  extends AbstractModel{
+public class ResetRequest extends AbstractModel{
 
     /**
     * 机器人标识
@@ -51,7 +51,7 @@ public class ResetRequest  extends AbstractModel{
     private String BotEnv;
 
     /**
-     * 获取机器人标识
+     * Get 机器人标识 
      * @return BotId 机器人标识
      */
     public String getBotId() {
@@ -59,7 +59,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器人标识
+     * Set 机器人标识
      * @param BotId 机器人标识
      */
     public void setBotId(String BotId) {
@@ -67,7 +67,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账户id，每个终端对应一个
+     * Get 子账户id，每个终端对应一个 
      * @return UserId 子账户id，每个终端对应一个
      */
     public String getUserId() {
@@ -75,7 +75,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账户id，每个终端对应一个
+     * Set 子账户id，每个终端对应一个
      * @param UserId 子账户id，每个终端对应一个
      */
     public void setUserId(String UserId) {
@@ -83,7 +83,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+     * Get 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev 
      * @return BotVersion 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      */
     public String getBotVersion() {
@@ -91,7 +91,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+     * Set 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      * @param BotVersion 机器人版本号。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      */
     public void setBotVersion(String BotVersion) {
@@ -99,7 +99,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+     * Get 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev 
      * @return BotEnv 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      */
     public String getBotEnv() {
@@ -107,7 +107,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
+     * Set 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      * @param BotEnv 机器人环境{dev:测试;release:线上}。BotVersion/BotEnv二选一：二者均填，仅BotVersion有效；二者均不填，默认BotEnv=dev
      */
     public void setBotEnv(String BotEnv) {
@@ -115,7 +115,7 @@ public class ResetRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotId", this.BotId);

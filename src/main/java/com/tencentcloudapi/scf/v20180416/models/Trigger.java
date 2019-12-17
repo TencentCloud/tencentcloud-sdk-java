@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Trigger  extends AbstractModel{
+public class Trigger extends AbstractModel{
 
     /**
     * 触发器最后修改时间
@@ -72,7 +72,7 @@ public class Trigger  extends AbstractModel{
     private String CustomArgument;
 
     /**
-     * 获取触发器最后修改时间
+     * Get 触发器最后修改时间 
      * @return ModTime 触发器最后修改时间
      */
     public String getModTime() {
@@ -80,7 +80,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器最后修改时间
+     * Set 触发器最后修改时间
      * @param ModTime 触发器最后修改时间
      */
     public void setModTime(String ModTime) {
@@ -88,7 +88,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取触发器类型
+     * Get 触发器类型 
      * @return Type 触发器类型
      */
     public String getType() {
@@ -96,7 +96,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器类型
+     * Set 触发器类型
      * @param Type 触发器类型
      */
     public void setType(String Type) {
@@ -104,7 +104,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取触发器详细配置
+     * Get 触发器详细配置 
      * @return TriggerDesc 触发器详细配置
      */
     public String getTriggerDesc() {
@@ -112,7 +112,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器详细配置
+     * Set 触发器详细配置
      * @param TriggerDesc 触发器详细配置
      */
     public void setTriggerDesc(String TriggerDesc) {
@@ -120,7 +120,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取触发器名称
+     * Get 触发器名称 
      * @return TriggerName 触发器名称
      */
     public String getTriggerName() {
@@ -128,7 +128,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器名称
+     * Set 触发器名称
      * @param TriggerName 触发器名称
      */
     public void setTriggerName(String TriggerName) {
@@ -136,7 +136,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取触发器创建时间
+     * Get 触发器创建时间 
      * @return AddTime 触发器创建时间
      */
     public String getAddTime() {
@@ -144,7 +144,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置触发器创建时间
+     * Set 触发器创建时间
      * @param AddTime 触发器创建时间
      */
     public void setAddTime(String AddTime) {
@@ -152,7 +152,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取使能开关
+     * Get 使能开关 
      * @return Enable 使能开关
      */
     public Integer getEnable() {
@@ -160,7 +160,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置使能开关
+     * Set 使能开关
      * @param Enable 使能开关
      */
     public void setEnable(Integer Enable) {
@@ -168,7 +168,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 获取客户自定义参数
+     * Get 客户自定义参数 
      * @return CustomArgument 客户自定义参数
      */
     public String getCustomArgument() {
@@ -176,7 +176,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 设置客户自定义参数
+     * Set 客户自定义参数
      * @param CustomArgument 客户自定义参数
      */
     public void setCustomArgument(String CustomArgument) {
@@ -184,7 +184,7 @@ public class Trigger  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);

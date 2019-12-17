@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssociateSecurityGroupsRequest  extends AbstractModel{
+public class AssociateSecurityGroupsRequest extends AbstractModel{
 
     /**
     * 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
@@ -37,7 +37,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+     * Get 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。 
      * @return SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      */
     public String [] getSecurityGroupIds() {
@@ -45,7 +45,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
+     * Set 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      * @param SecurityGroupIds 要绑定的`安全组ID`，类似sg-efil73jd，只支持绑定单个安全组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -53,7 +53,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * Get 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。 
      * @return InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
+     * Set 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      * @param InstanceIds 被绑定的`实例ID`，类似ins-lesecurk，支持指定多个实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class AssociateSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

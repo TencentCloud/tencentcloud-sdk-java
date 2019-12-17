@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceTopicRuleRequest  extends AbstractModel{
+public class ReplaceTopicRuleRequest extends AbstractModel{
 
     /**
     * 规则名称
@@ -51,7 +51,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     private Integer ActionIndex;
 
     /**
-     * 获取规则名称
+     * Get 规则名称 
      * @return RuleName 规则名称
      */
     public String getRuleName() {
@@ -59,7 +59,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则名称
+     * Set 规则名称
      * @param RuleName 规则名称
      */
     public void setRuleName(String RuleName) {
@@ -67,7 +67,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取替换的规则包体
+     * Get 替换的规则包体 
      * @return TopicRulePayload 替换的规则包体
      */
     public TopicRulePayload getTopicRulePayload() {
@@ -75,7 +75,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置替换的规则包体
+     * Set 替换的规则包体
      * @param TopicRulePayload 替换的规则包体
      */
     public void setTopicRulePayload(TopicRulePayload TopicRulePayload) {
@@ -83,7 +83,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
+     * Get 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为 
      * @return ModifyType 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      */
     public Integer getModifyType() {
@@ -91,7 +91,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
+     * Set 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      * @param ModifyType 修改类型，0：其他，1：创建行为，2：更新行为，3：删除行为
      */
     public void setModifyType(Integer ModifyType) {
@@ -99,7 +99,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取action增删改变更填对应topicRulePayload里面第几个action
+     * Get action增删改变更填对应topicRulePayload里面第几个action 
      * @return ActionIndex action增删改变更填对应topicRulePayload里面第几个action
      */
     public Integer getActionIndex() {
@@ -107,7 +107,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置action增删改变更填对应topicRulePayload里面第几个action
+     * Set action增删改变更填对应topicRulePayload里面第几个action
      * @param ActionIndex action增删改变更填对应topicRulePayload里面第几个action
      */
     public void setActionIndex(Integer ActionIndex) {
@@ -115,7 +115,7 @@ public class ReplaceTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);

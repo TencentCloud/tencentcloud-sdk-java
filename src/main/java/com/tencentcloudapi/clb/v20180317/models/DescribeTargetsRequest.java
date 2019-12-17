@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTargetsRequest  extends AbstractModel{
+public class DescribeTargetsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -51,7 +51,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     private Integer Port;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器 ID列表
+     * Get 监听器 ID列表 
      * @return ListenerIds 监听器 ID列表
      */
     public String [] getListenerIds() {
@@ -75,7 +75,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器 ID列表
+     * Set 监听器 ID列表
      * @param ListenerIds 监听器 ID列表
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -83,7 +83,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议类型
+     * Get 监听器协议类型 
      * @return Protocol 监听器协议类型
      */
     public String getProtocol() {
@@ -91,7 +91,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议类型
+     * Set 监听器协议类型
      * @param Protocol 监听器协议类型
      */
     public void setProtocol(String Protocol) {
@@ -99,7 +99,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Integer getPort() {
@@ -107,7 +107,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Integer Port) {
@@ -115,7 +115,7 @@ public class DescribeTargetsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

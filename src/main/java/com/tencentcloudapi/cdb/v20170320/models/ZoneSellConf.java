@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneSellConf  extends AbstractModel{
+public class ZoneSellConf extends AbstractModel{
 
     /**
     * 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
@@ -121,7 +121,7 @@ public class ZoneSellConf  extends AbstractModel{
     private String [] DrZone;
 
     /**
-     * 获取可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+     * Get 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示 
      * @return Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
     public Integer getStatus() {
@@ -129,7 +129,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+     * Set 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      * @param Status 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
      */
     public void setStatus(Integer Status) {
@@ -137,7 +137,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区中文名称
+     * Get 可用区中文名称 
      * @return ZoneName 可用区中文名称
      */
     public String getZoneName() {
@@ -145,7 +145,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区中文名称
+     * Set 可用区中文名称
      * @param ZoneName 可用区中文名称
      */
     public void setZoneName(String ZoneName) {
@@ -153,7 +153,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型是否为自定义类型
+     * Get 实例类型是否为自定义类型 
      * @return IsCustom 实例类型是否为自定义类型
      */
     public Boolean getIsCustom() {
@@ -161,7 +161,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型是否为自定义类型
+     * Set 实例类型是否为自定义类型
      * @param IsCustom 实例类型是否为自定义类型
      */
     public void setIsCustom(Boolean IsCustom) {
@@ -169,7 +169,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持灾备
+     * Get 是否支持灾备 
      * @return IsSupportDr 是否支持灾备
      */
     public Boolean getIsSupportDr() {
@@ -177,7 +177,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持灾备
+     * Set 是否支持灾备
      * @param IsSupportDr 是否支持灾备
      */
     public void setIsSupportDr(Boolean IsSupportDr) {
@@ -185,7 +185,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持私有网络
+     * Get 是否支持私有网络 
      * @return IsSupportVpc 是否支持私有网络
      */
     public Boolean getIsSupportVpc() {
@@ -193,7 +193,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持私有网络
+     * Set 是否支持私有网络
      * @param IsSupportVpc 是否支持私有网络
      */
     public void setIsSupportVpc(Boolean IsSupportVpc) {
@@ -201,7 +201,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取小时计费实例最大售卖数量
+     * Get 小时计费实例最大售卖数量 
      * @return HourInstanceSaleMaxNum 小时计费实例最大售卖数量
      */
     public Integer getHourInstanceSaleMaxNum() {
@@ -209,7 +209,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置小时计费实例最大售卖数量
+     * Set 小时计费实例最大售卖数量
      * @param HourInstanceSaleMaxNum 小时计费实例最大售卖数量
      */
     public void setHourInstanceSaleMaxNum(Integer HourInstanceSaleMaxNum) {
@@ -217,7 +217,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否为默认可用区
+     * Get 是否为默认可用区 
      * @return IsDefaultZone 是否为默认可用区
      */
     public Boolean getIsDefaultZone() {
@@ -225,7 +225,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否为默认可用区
+     * Set 是否为默认可用区
      * @param IsDefaultZone 是否为默认可用区
      */
     public void setIsDefaultZone(Boolean IsDefaultZone) {
@@ -233,7 +233,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否为黑石区
+     * Get 是否为黑石区 
      * @return IsBm 是否为黑石区
      */
     public Boolean getIsBm() {
@@ -241,7 +241,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否为黑石区
+     * Set 是否为黑石区
      * @param IsBm 是否为黑石区
      */
     public void setIsBm(Boolean IsBm) {
@@ -249,7 +249,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
+     * Get 支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费 
      * @return PayType 支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
      */
     public String [] getPayType() {
@@ -257,7 +257,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
+     * Set 支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
      * @param PayType 支持的付费类型。可能的返回值为：0-包年包月；1-小时计费；2-后付费
      */
     public void setPayType(String [] PayType) {
@@ -265,7 +265,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
+     * Get 数据复制类型。0-异步复制；1-半同步复制；2-强同步复制 
      * @return ProtectMode 数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
      */
     public String [] getProtectMode() {
@@ -273,7 +273,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
+     * Set 数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
      * @param ProtectMode 数据复制类型。0-异步复制；1-半同步复制；2-强同步复制
      */
     public void setProtectMode(String [] ProtectMode) {
@@ -281,7 +281,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区名称
+     * Get 可用区名称 
      * @return Zone 可用区名称
      */
     public String getZone() {
@@ -289,7 +289,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称
+     * Set 可用区名称
      * @param Zone 可用区名称
      */
     public void setZone(String Zone) {
@@ -297,7 +297,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取售卖实例类型数组
+     * Get 售卖实例类型数组 
      * @return SellType 售卖实例类型数组
      */
     public SellType [] getSellType() {
@@ -305,7 +305,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置售卖实例类型数组
+     * Set 售卖实例类型数组
      * @param SellType 售卖实例类型数组
      */
     public void setSellType(SellType [] SellType) {
@@ -313,7 +313,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取多可用区信息
+     * Get 多可用区信息 
      * @return ZoneConf 多可用区信息
      */
     public ZoneConf getZoneConf() {
@@ -321,7 +321,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置多可用区信息
+     * Set 多可用区信息
      * @param ZoneConf 多可用区信息
      */
     public void setZoneConf(ZoneConf ZoneConf) {
@@ -329,7 +329,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取可支持的灾备可用区信息
+     * Get 可支持的灾备可用区信息 
      * @return DrZone 可支持的灾备可用区信息
      */
     public String [] getDrZone() {
@@ -337,7 +337,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置可支持的灾备可用区信息
+     * Set 可支持的灾备可用区信息
      * @param DrZone 可支持的灾备可用区信息
      */
     public void setDrZone(String [] DrZone) {
@@ -345,7 +345,7 @@ public class ZoneSellConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

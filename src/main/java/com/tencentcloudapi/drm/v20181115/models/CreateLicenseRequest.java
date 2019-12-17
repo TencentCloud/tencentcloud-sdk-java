@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLicenseRequest  extends AbstractModel{
+public class CreateLicenseRequest extends AbstractModel{
 
     /**
     * DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
@@ -59,7 +59,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     private PlaybackPolicy PlaybackPolicy;
 
     /**
-     * 获取DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
+     * Get DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。 
      * @return DrmType DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      */
     public String getDrmType() {
@@ -67,7 +67,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
+     * Set DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      * @param DrmType DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      */
     public void setDrmType(String DrmType) {
@@ -75,7 +75,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Base64编码的终端设备License Request数据。
+     * Get Base64编码的终端设备License Request数据。 
      * @return LicenseRequest Base64编码的终端设备License Request数据。
      */
     public String getLicenseRequest() {
@@ -83,7 +83,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Base64编码的终端设备License Request数据。
+     * Set Base64编码的终端设备License Request数据。
      * @param LicenseRequest Base64编码的终端设备License Request数据。
      */
     public void setLicenseRequest(String LicenseRequest) {
@@ -91,7 +91,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内容类型，接口取值：VodVideo,LiveVideo。
+     * Get 内容类型，接口取值：VodVideo,LiveVideo。 
      * @return ContentType 内容类型，接口取值：VodVideo,LiveVideo。
      */
     public String getContentType() {
@@ -99,7 +99,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内容类型，接口取值：VodVideo,LiveVideo。
+     * Set 内容类型，接口取值：VodVideo,LiveVideo。
      * @param ContentType 内容类型，接口取值：VodVideo,LiveVideo。
      */
     public void setContentType(String ContentType) {
@@ -107,8 +107,8 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取授权播放的Track列表。
-该值为空时，默认授权所有track播放。
+     * Get 授权播放的Track列表。
+该值为空时，默认授权所有track播放。 
      * @return Tracks 授权播放的Track列表。
 该值为空时，默认授权所有track播放。
      */
@@ -117,7 +117,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置授权播放的Track列表。
+     * Set 授权播放的Track列表。
 该值为空时，默认授权所有track播放。
      * @param Tracks 授权播放的Track列表。
 该值为空时，默认授权所有track播放。
@@ -127,7 +127,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放策略参数。
+     * Get 播放策略参数。 
      * @return PlaybackPolicy 播放策略参数。
      */
     public PlaybackPolicy getPlaybackPolicy() {
@@ -135,7 +135,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放策略参数。
+     * Set 播放策略参数。
      * @param PlaybackPolicy 播放策略参数。
      */
     public void setPlaybackPolicy(PlaybackPolicy PlaybackPolicy) {
@@ -143,7 +143,7 @@ public class CreateLicenseRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);

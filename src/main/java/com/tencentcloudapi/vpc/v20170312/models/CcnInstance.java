@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcnInstance  extends AbstractModel{
+public class CcnInstance extends AbstractModel{
 
     /**
     * 关联实例ID。
@@ -47,7 +47,7 @@ public class CcnInstance  extends AbstractModel{
     private String InstanceType;
 
     /**
-     * 获取关联实例ID。
+     * Get 关联实例ID。 
      * @return InstanceId 关联实例ID。
      */
     public String getInstanceId() {
@@ -55,7 +55,7 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例ID。
+     * Set 关联实例ID。
      * @param InstanceId 关联实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -63,7 +63,7 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例ID所属大区，例如：ap-guangzhou。
+     * Get 关联实例ID所属大区，例如：ap-guangzhou。 
      * @return InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
      */
     public String getInstanceRegion() {
@@ -71,7 +71,7 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例ID所属大区，例如：ap-guangzhou。
+     * Set 关联实例ID所属大区，例如：ap-guangzhou。
      * @param InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
      */
     public void setInstanceRegion(String InstanceRegion) {
@@ -79,10 +79,10 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例类型，可选值：
+     * Get 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+<li>`BMVPC`：黑石私有网络</li> 
      * @return InstanceType 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
@@ -93,7 +93,7 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例类型，可选值：
+     * Set 关联实例类型，可选值：
 <li>`VPC`：私有网络</li>
 <li>`DIRECTCONNECT`：专线网关</li>
 <li>`BMVPC`：黑石私有网络</li>
@@ -107,7 +107,7 @@ public class CcnInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

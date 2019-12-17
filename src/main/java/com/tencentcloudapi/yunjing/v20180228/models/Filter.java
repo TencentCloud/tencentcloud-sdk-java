@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter  extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
     * 过滤键的名称。
@@ -37,7 +37,7 @@ public class Filter  extends AbstractModel{
     private String [] Values;
 
     /**
-     * 获取过滤键的名称。
+     * Get 过滤键的名称。 
      * @return Name 过滤键的名称。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置过滤键的名称。
+     * Set 过滤键的名称。
      * @param Name 过滤键的名称。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 获取一个或者多个过滤值。
+     * Get 一个或者多个过滤值。 
      * @return Values 一个或者多个过滤值。
      */
     public String [] getValues() {
@@ -61,7 +61,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置一个或者多个过滤值。
+     * Set 一个或者多个过滤值。
      * @param Values 一个或者多个过滤值。
      */
     public void setValues(String [] Values) {
@@ -69,7 +69,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

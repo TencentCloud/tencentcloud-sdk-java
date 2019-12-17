@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorData  extends AbstractModel{
+public class MonitorData extends AbstractModel{
 
     /**
     * 起始时间，形如 2018-03-24 23:59:59
@@ -44,7 +44,7 @@ public class MonitorData  extends AbstractModel{
     private Float [] Data;
 
     /**
-     * 获取起始时间，形如 2018-03-24 23:59:59
+     * Get 起始时间，形如 2018-03-24 23:59:59 
      * @return StartTime 起始时间，形如 2018-03-24 23:59:59
      */
     public String getStartTime() {
@@ -52,7 +52,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间，形如 2018-03-24 23:59:59
+     * Set 起始时间，形如 2018-03-24 23:59:59
      * @param StartTime 起始时间，形如 2018-03-24 23:59:59
      */
     public void setStartTime(String StartTime) {
@@ -60,7 +60,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，形如 2018-03-24 23:59:59
+     * Get 结束时间，形如 2018-03-24 23:59:59 
      * @return EndTime 结束时间，形如 2018-03-24 23:59:59
      */
     public String getEndTime() {
@@ -68,7 +68,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，形如 2018-03-24 23:59:59
+     * Set 结束时间，形如 2018-03-24 23:59:59
      * @param EndTime 结束时间，形如 2018-03-24 23:59:59
      */
     public void setEndTime(String EndTime) {
@@ -76,7 +76,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 获取监控数据
+     * Get 监控数据 
      * @return Data 监控数据
      */
     public Float [] getData() {
@@ -84,7 +84,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 设置监控数据
+     * Set 监控数据
      * @param Data 监控数据
      */
     public void setData(Float [] Data) {
@@ -92,7 +92,7 @@ public class MonitorData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

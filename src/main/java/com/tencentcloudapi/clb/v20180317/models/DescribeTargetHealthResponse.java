@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTargetHealthResponse  extends AbstractModel{
+public class DescribeTargetHealthResponse extends AbstractModel{
 
     /**
     * 负载均衡实例列表
@@ -38,8 +38,8 @@ public class DescribeTargetHealthResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取负载均衡实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 负载均衡实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadBalancers 负载均衡实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -48,7 +48,7 @@ public class DescribeTargetHealthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例列表
+     * Set 负载均衡实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancers 负载均衡实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,7 +58,7 @@ public class DescribeTargetHealthResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -66,7 +66,7 @@ public class DescribeTargetHealthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -74,7 +74,7 @@ public class DescribeTargetHealthResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LoadBalancers.", this.LoadBalancers);

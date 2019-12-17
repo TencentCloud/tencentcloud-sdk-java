@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataPoint  extends AbstractModel{
+public class DataPoint extends AbstractModel{
 
     /**
     * 实例对象维度组合
@@ -44,7 +44,7 @@ public class DataPoint  extends AbstractModel{
     private Float [] Values;
 
     /**
-     * 获取实例对象维度组合
+     * Get 实例对象维度组合 
      * @return Dimensions 实例对象维度组合
      */
     public Dimension [] getDimensions() {
@@ -52,7 +52,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 设置实例对象维度组合
+     * Set 实例对象维度组合
      * @param Dimensions 实例对象维度组合
      */
     public void setDimensions(Dimension [] Dimensions) {
@@ -60,7 +60,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 获取时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
+     * Get 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了 
      * @return Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      */
     public Long [] getTimestamps() {
@@ -68,7 +68,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 设置时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
+     * Set 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      * @param Timestamps 时间戳数组，表示那些时间点有数据，缺失的时间戳，没有数据点，可以理解为掉点了
      */
     public void setTimestamps(Long [] Timestamps) {
@@ -76,7 +76,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 获取监控值数组，该数组和Timestamps一一对应
+     * Get 监控值数组，该数组和Timestamps一一对应 
      * @return Values 监控值数组，该数组和Timestamps一一对应
      */
     public Float [] getValues() {
@@ -84,7 +84,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 设置监控值数组，该数组和Timestamps一一对应
+     * Set 监控值数组，该数组和Timestamps一一对应
      * @param Values 监控值数组，该数组和Timestamps一一对应
      */
     public void setValues(Float [] Values) {
@@ -92,7 +92,7 @@ public class DataPoint  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);

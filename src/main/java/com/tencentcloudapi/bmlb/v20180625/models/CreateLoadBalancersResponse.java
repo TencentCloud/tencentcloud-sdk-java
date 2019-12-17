@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancersResponse  extends AbstractModel{
+public class CreateLoadBalancersResponse extends AbstractModel{
 
     /**
     * 创建的黑石负载均衡实例ID。
@@ -44,7 +44,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取创建的黑石负载均衡实例ID。
+     * Get 创建的黑石负载均衡实例ID。 
      * @return LoadBalancerIds 创建的黑石负载均衡实例ID。
      */
     public String [] getLoadBalancerIds() {
@@ -52,7 +52,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建的黑石负载均衡实例ID。
+     * Set 创建的黑石负载均衡实例ID。
      * @param LoadBalancerIds 创建的黑石负载均衡实例ID。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -60,7 +60,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建负载均衡的异步任务ID。
+     * Get 创建负载均衡的异步任务ID。 
      * @return TaskId 创建负载均衡的异步任务ID。
      */
     public String getTaskId() {
@@ -68,7 +68,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建负载均衡的异步任务ID。
+     * Set 创建负载均衡的异步任务ID。
      * @param TaskId 创建负载均衡的异步任务ID。
      */
     public void setTaskId(String TaskId) {
@@ -76,7 +76,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateLoadBalancersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);

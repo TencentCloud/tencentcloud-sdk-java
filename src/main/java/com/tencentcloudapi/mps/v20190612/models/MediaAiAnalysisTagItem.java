@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAiAnalysisTagItem  extends AbstractModel{
+public class MediaAiAnalysisTagItem extends AbstractModel{
 
     /**
     * 标签名称。
@@ -37,7 +37,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取标签名称。
+     * Get 标签名称。 
      * @return Tag 标签名称。
      */
     public String getTag() {
@@ -45,7 +45,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置标签名称。
+     * Set 标签名称。
      * @param Tag 标签名称。
      */
     public void setTag(String Tag) {
@@ -53,7 +53,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取标签的可信度，取值范围是 0 到 100。
+     * Get 标签的可信度，取值范围是 0 到 100。 
      * @return Confidence 标签的可信度，取值范围是 0 到 100。
      */
     public Float getConfidence() {
@@ -61,7 +61,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置标签的可信度，取值范围是 0 到 100。
+     * Set 标签的可信度，取值范围是 0 到 100。
      * @param Confidence 标签的可信度，取值范围是 0 到 100。
      */
     public void setConfidence(Float Confidence) {
@@ -69,7 +69,7 @@ public class MediaAiAnalysisTagItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);

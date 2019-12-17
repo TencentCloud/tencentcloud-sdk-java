@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonTagInfo  extends AbstractModel{
+public class PersonTagInfo extends AbstractModel{
 
     /**
     * 顾客原类型
@@ -44,7 +44,7 @@ public class PersonTagInfo  extends AbstractModel{
     private Integer PersonId;
 
     /**
-     * 获取顾客原类型
+     * Get 顾客原类型 
      * @return OldType 顾客原类型
      */
     public Integer getOldType() {
@@ -52,7 +52,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 设置顾客原类型
+     * Set 顾客原类型
      * @param OldType 顾客原类型
      */
     public void setOldType(Integer OldType) {
@@ -60,7 +60,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 获取顾客新类型
+     * Get 顾客新类型 
      * @return NewType 顾客新类型
      */
     public Integer getNewType() {
@@ -68,7 +68,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 设置顾客新类型
+     * Set 顾客新类型
      * @param NewType 顾客新类型
      */
     public void setNewType(Integer NewType) {
@@ -76,7 +76,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 获取顾客face id
+     * Get 顾客face id 
      * @return PersonId 顾客face id
      */
     public Integer getPersonId() {
@@ -84,7 +84,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 设置顾客face id
+     * Set 顾客face id
      * @param PersonId 顾客face id
      */
     public void setPersonId(Integer PersonId) {
@@ -92,7 +92,7 @@ public class PersonTagInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OldType", this.OldType);

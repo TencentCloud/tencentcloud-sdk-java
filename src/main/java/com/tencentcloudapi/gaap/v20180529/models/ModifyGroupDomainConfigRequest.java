@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyGroupDomainConfigRequest  extends AbstractModel{
+public class ModifyGroupDomainConfigRequest extends AbstractModel{
 
     /**
     * 通道组ID。
@@ -44,7 +44,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     private AccessRegionDomainConf [] AccessRegionList;
 
     /**
-     * 获取通道组ID。
+     * Get 通道组ID。 
      * @return GroupId 通道组ID。
      */
     public String getGroupId() {
@@ -52,7 +52,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID。
+     * Set 通道组ID。
      * @param GroupId 通道组ID。
      */
     public void setGroupId(String GroupId) {
@@ -60,7 +60,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名解析默认访问IP或域名。
+     * Get 域名解析默认访问IP或域名。 
      * @return DefaultDnsIp 域名解析默认访问IP或域名。
      */
     public String getDefaultDnsIp() {
@@ -68,7 +68,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名解析默认访问IP或域名。
+     * Set 域名解析默认访问IP或域名。
      * @param DefaultDnsIp 域名解析默认访问IP或域名。
      */
     public void setDefaultDnsIp(String DefaultDnsIp) {
@@ -76,7 +76,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取就近接入区域配置。
+     * Get 就近接入区域配置。 
      * @return AccessRegionList 就近接入区域配置。
      */
     public AccessRegionDomainConf [] getAccessRegionList() {
@@ -84,7 +84,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置就近接入区域配置。
+     * Set 就近接入区域配置。
      * @param AccessRegionList 就近接入区域配置。
      */
     public void setAccessRegionList(AccessRegionDomainConf [] AccessRegionList) {
@@ -92,7 +92,7 @@ public class ModifyGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

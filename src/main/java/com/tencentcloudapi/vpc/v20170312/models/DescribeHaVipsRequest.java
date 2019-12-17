@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHaVipsRequest  extends AbstractModel{
+public class DescribeHaVipsRequest extends AbstractModel{
 
     /**
     * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
@@ -56,7 +56,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
      * @return HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public String [] getHaVipIds() {
@@ -64,7 +64,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      * @param HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public void setHaVipIds(String [] HaVipIds) {
@@ -72,12 +72,12 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
+     * Get 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
 <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
 <li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li> 
      * @return Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
 <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
 <li>havip-name - String - `HAVIP`名称。</li>
@@ -90,7 +90,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
+     * Set 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
 <li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
 <li>havip-name - String - `HAVIP`名称。</li>
 <li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
@@ -108,7 +108,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -116,7 +116,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -124,7 +124,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -132,7 +132,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -140,7 +140,7 @@ public class DescribeHaVipsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "HaVipIds.", this.HaVipIds);

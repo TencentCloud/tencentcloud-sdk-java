@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSPolicyPortLimit  extends AbstractModel{
+public class DDoSPolicyPortLimit extends AbstractModel{
 
     /**
     * 协议，取值范围[tcp,udp,icmp,all]
@@ -76,7 +76,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     private Long Kind;
 
     /**
-     * 获取协议，取值范围[tcp,udp,icmp,all]
+     * Get 协议，取值范围[tcp,udp,icmp,all] 
      * @return Protocol 协议，取值范围[tcp,udp,icmp,all]
      */
     public String getProtocol() {
@@ -84,7 +84,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置协议，取值范围[tcp,udp,icmp,all]
+     * Set 协议，取值范围[tcp,udp,icmp,all]
      * @param Protocol 协议，取值范围[tcp,udp,icmp,all]
      */
     public void setProtocol(String Protocol) {
@@ -92,7 +92,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取开始目的端口，取值范围[0,65535]
+     * Get 开始目的端口，取值范围[0,65535] 
      * @return DPortStart 开始目的端口，取值范围[0,65535]
      */
     public Long getDPortStart() {
@@ -100,7 +100,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置开始目的端口，取值范围[0,65535]
+     * Set 开始目的端口，取值范围[0,65535]
      * @param DPortStart 开始目的端口，取值范围[0,65535]
      */
     public void setDPortStart(Long DPortStart) {
@@ -108,7 +108,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
+     * Get 结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口 
      * @return DPortEnd 结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
      */
     public Long getDPortEnd() {
@@ -116,7 +116,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
+     * Set 结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
      * @param DPortEnd 结束目的端口，取值范围[0,65535]，要求大于等于开始目的端口
      */
     public void setDPortEnd(Long DPortEnd) {
@@ -124,8 +124,8 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取开始源端口，取值范围[0,65535]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 开始源端口，取值范围[0,65535]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SPortStart 开始源端口，取值范围[0,65535]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -134,7 +134,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置开始源端口，取值范围[0,65535]
+     * Set 开始源端口，取值范围[0,65535]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SPortStart 开始源端口，取值范围[0,65535]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,8 +144,8 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取结束源端口，取值范围[0,65535]，要求大于等于开始源端口
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 结束源端口，取值范围[0,65535]，要求大于等于开始源端口
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SPortEnd 结束源端口，取值范围[0,65535]，要求大于等于开始源端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -154,7 +154,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置结束源端口，取值范围[0,65535]，要求大于等于开始源端口
+     * Set 结束源端口，取值范围[0,65535]，要求大于等于开始源端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SPortEnd 结束源端口，取值范围[0,65535]，要求大于等于开始源端口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -164,8 +164,8 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取执行动作，取值[drop(丢弃) ，transmit(转发)]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 执行动作，取值[drop(丢弃) ，transmit(转发)]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Action 执行动作，取值[drop(丢弃) ，transmit(转发)]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -174,7 +174,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置执行动作，取值[drop(丢弃) ，transmit(转发)]
+     * Set 执行动作，取值[drop(丢弃) ，transmit(转发)]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 执行动作，取值[drop(丢弃) ，transmit(转发)]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,8 +184,8 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 获取禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Kind 禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -194,7 +194,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 设置禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
+     * Set 禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Kind 禁用端口类型，取值[0（目的端口范围禁用）， 1（源端口范围禁用）， 2（目的和源端口范围同时禁用）]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -204,7 +204,7 @@ public class DDoSPolicyPortLimit  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

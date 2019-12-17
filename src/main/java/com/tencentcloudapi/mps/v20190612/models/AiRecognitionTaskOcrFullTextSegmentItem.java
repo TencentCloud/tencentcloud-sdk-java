@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
+public class AiRecognitionTaskOcrFullTextSegmentItem extends AbstractModel{
 
     /**
     * 识别片段起始的偏移时间，单位：秒。
@@ -44,7 +44,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     private AiRecognitionTaskOcrFullTextSegmentTextItem [] TextSet;
 
     /**
-     * 获取识别片段起始的偏移时间，单位：秒。
+     * Get 识别片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -52,7 +52,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的偏移时间，单位：秒。
+     * Set 识别片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -60,7 +60,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的偏移时间，单位：秒。
+     * Get 识别片段终止的偏移时间，单位：秒。 
      * @return EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -68,7 +68,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的偏移时间，单位：秒。
+     * Set 识别片段终止的偏移时间，单位：秒。
      * @param EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -76,7 +76,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段结果集。
+     * Get 识别片段结果集。 
      * @return TextSet 识别片段结果集。
      */
     public AiRecognitionTaskOcrFullTextSegmentTextItem [] getTextSet() {
@@ -84,7 +84,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段结果集。
+     * Set 识别片段结果集。
      * @param TextSet 识别片段结果集。
      */
     public void setTextSet(AiRecognitionTaskOcrFullTextSegmentTextItem [] TextSet) {
@@ -92,7 +92,7 @@ public class AiRecognitionTaskOcrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

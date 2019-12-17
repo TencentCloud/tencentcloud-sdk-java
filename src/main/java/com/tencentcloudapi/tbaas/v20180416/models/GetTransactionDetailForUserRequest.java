@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransactionDetailForUserRequest  extends AbstractModel{
+public class GetTransactionDetailForUserRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -72,7 +72,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     private String TransactionId;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -80,7 +80,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -88,7 +88,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：transaction_detail_for_user
+     * Get 操作名，固定字段：transaction_detail_for_user 
      * @return Operation 操作名，固定字段：transaction_detail_for_user
      */
     public String getOperation() {
@@ -96,7 +96,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：transaction_detail_for_user
+     * Set 操作名，固定字段：transaction_detail_for_user
      * @param Operation 操作名，固定字段：transaction_detail_for_user
      */
     public void setOperation(String Operation) {
@@ -104,7 +104,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块链网络ID，可在区块链网络详情或列表中获取
+     * Get 区块链网络ID，可在区块链网络详情或列表中获取 
      * @return ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public String getClusterId() {
@@ -112,7 +112,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块链网络ID，可在区块链网络详情或列表中获取
+     * Set 区块链网络ID，可在区块链网络详情或列表中获取
      * @param ClusterId 区块链网络ID，可在区块链网络详情或列表中获取
      */
     public void setClusterId(String ClusterId) {
@@ -120,7 +120,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Get 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称 
      * @return GroupName 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public String getGroupName() {
@@ -128,7 +128,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
+     * Set 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
      * @param GroupName 参与交易的组织名称，可以在组织管理列表中获取当前组织的名称
      */
     public void setGroupName(String GroupName) {
@@ -136,7 +136,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取业务所属通道名称，可在通道详情或列表中获取
+     * Get 业务所属通道名称，可在通道详情或列表中获取 
      * @return ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public String getChannelName() {
@@ -144,7 +144,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务所属通道名称，可在通道详情或列表中获取
+     * Set 业务所属通道名称，可在通道详情或列表中获取
      * @param ChannelName 业务所属通道名称，可在通道详情或列表中获取
      */
     public void setChannelName(String ChannelName) {
@@ -152,7 +152,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
+     * Get 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID 
      * @return BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
     public Integer getBlockId() {
@@ -160,7 +160,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
+     * Set 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      * @param BlockId 区块ID，通过GetInvokeTx接口可以获取交易所在的区块ID
      */
     public void setBlockId(Integer BlockId) {
@@ -168,7 +168,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取交易ID，需要查询的详情的交易ID
+     * Get 交易ID，需要查询的详情的交易ID 
      * @return TransactionId 交易ID，需要查询的详情的交易ID
      */
     public String getTransactionId() {
@@ -176,7 +176,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID，需要查询的详情的交易ID
+     * Set 交易ID，需要查询的详情的交易ID
      * @param TransactionId 交易ID，需要查询的详情的交易ID
      */
     public void setTransactionId(String TransactionId) {
@@ -184,7 +184,7 @@ public class GetTransactionDetailForUserRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

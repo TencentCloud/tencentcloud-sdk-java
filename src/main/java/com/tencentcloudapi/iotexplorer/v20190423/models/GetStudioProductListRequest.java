@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetStudioProductListRequest  extends AbstractModel{
+public class GetStudioProductListRequest extends AbstractModel{
 
     /**
     * 项目ID
@@ -51,7 +51,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -59,7 +59,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -67,7 +67,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品DevStatus
+     * Get 产品DevStatus 
      * @return DevStatus 产品DevStatus
      */
     public String getDevStatus() {
@@ -75,7 +75,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品DevStatus
+     * Set 产品DevStatus
      * @param DevStatus 产品DevStatus
      */
     public void setDevStatus(String DevStatus) {
@@ -83,7 +83,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Offset
+     * Get Offset 
      * @return Offset Offset
      */
     public Long getOffset() {
@@ -91,7 +91,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Offset
+     * Set Offset
      * @param Offset Offset
      */
     public void setOffset(Long Offset) {
@@ -99,7 +99,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Limit
+     * Get Limit 
      * @return Limit Limit
      */
     public Long getLimit() {
@@ -107,7 +107,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Limit
+     * Set Limit
      * @param Limit Limit
      */
     public void setLimit(Long Limit) {
@@ -115,7 +115,7 @@ public class GetStudioProductListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

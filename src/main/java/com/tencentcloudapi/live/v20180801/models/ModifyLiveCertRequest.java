@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveCertRequest  extends AbstractModel{
+public class ModifyLiveCertRequest extends AbstractModel{
 
     /**
     * 证书Id。
@@ -65,7 +65,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取证书Id。
+     * Get 证书Id。 
      * @return CertId 证书Id。
      */
     public String getCertId() {
@@ -73,7 +73,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书Id。
+     * Set 证书Id。
      * @param CertId 证书Id。
      */
     public void setCertId(String CertId) {
@@ -81,7 +81,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型。0-用户添加证书；1-腾讯云托管证书。
+     * Get 证书类型。0-用户添加证书；1-腾讯云托管证书。 
      * @return CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
     public Integer getCertType() {
@@ -89,7 +89,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型。0-用户添加证书；1-腾讯云托管证书。
+     * Set 证书类型。0-用户添加证书；1-腾讯云托管证书。
      * @param CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
     public void setCertType(Integer CertType) {
@@ -97,7 +97,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书名称。
+     * Get 证书名称。 
      * @return CertName 证书名称。
      */
     public String getCertName() {
@@ -105,7 +105,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称。
+     * Set 证书名称。
      * @param CertName 证书名称。
      */
     public void setCertName(String CertName) {
@@ -113,7 +113,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容，即公钥。
+     * Get 证书内容，即公钥。 
      * @return HttpsCrt 证书内容，即公钥。
      */
     public String getHttpsCrt() {
@@ -121,7 +121,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容，即公钥。
+     * Set 证书内容，即公钥。
      * @param HttpsCrt 证书内容，即公钥。
      */
     public void setHttpsCrt(String HttpsCrt) {
@@ -129,7 +129,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私钥。
+     * Get 私钥。 
      * @return HttpsKey 私钥。
      */
     public String getHttpsKey() {
@@ -137,7 +137,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私钥。
+     * Set 私钥。
      * @param HttpsKey 私钥。
      */
     public void setHttpsKey(String HttpsKey) {
@@ -145,7 +145,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
+     * Get 描述信息。 
      * @return Description 描述信息。
      */
     public String getDescription() {
@@ -153,7 +153,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
      * @param Description 描述信息。
      */
     public void setDescription(String Description) {
@@ -161,7 +161,7 @@ public class ModifyLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

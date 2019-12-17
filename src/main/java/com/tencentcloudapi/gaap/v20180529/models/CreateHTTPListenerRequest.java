@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHTTPListenerRequest  extends AbstractModel{
+public class CreateHTTPListenerRequest extends AbstractModel{
 
     /**
     * 监听器名称
@@ -44,7 +44,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -52,7 +52,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -60,7 +60,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Get 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复 
      * @return Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      */
     public Long getPort() {
@@ -68,7 +68,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Set 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      * @param Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
      */
     public void setPort(Long Port) {
@@ -76,7 +76,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -84,7 +84,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -92,7 +92,7 @@ public class CreateHTTPListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);

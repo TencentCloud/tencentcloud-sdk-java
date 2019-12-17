@@ -29,21 +29,10 @@ public class CloudauditClient extends AbstractClient{
     private static String endpoint = "cloudaudit.tencentcloudapi.com";
     private static String version = "2019-03-19";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public CloudauditClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public CloudauditClient(Credential credential, String region, ClientProfile profile) {
         super(CloudauditClient.endpoint, CloudauditClient.version, credential, region, profile);
     }

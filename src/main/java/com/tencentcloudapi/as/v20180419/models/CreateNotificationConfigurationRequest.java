@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNotificationConfigurationRequest  extends AbstractModel{
+public class CreateNotificationConfigurationRequest extends AbstractModel{
 
     /**
     * 伸缩组ID。
@@ -50,7 +50,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-     * 获取伸缩组ID。
+     * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -58,7 +58,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID。
+     * Set 伸缩组ID。
      * @param AutoScalingGroupId 伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -66,13 +66,13 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知类型，即为需要订阅的通知类型集合，取值范围如下：
+     * Get 通知类型，即为需要订阅的通知类型集合，取值范围如下：
 <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
 <li>SCALE_OUT_FAILED：扩容失败</li>
 <li>SCALE_IN_SUCCESSFUL：缩容成功</li>
 <li>SCALE_IN_FAILED：缩容失败</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
-<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li> 
      * @return NotificationTypes 通知类型，即为需要订阅的通知类型集合，取值范围如下：
 <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
 <li>SCALE_OUT_FAILED：扩容失败</li>
@@ -86,7 +86,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知类型，即为需要订阅的通知类型集合，取值范围如下：
+     * Set 通知类型，即为需要订阅的通知类型集合，取值范围如下：
 <li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
 <li>SCALE_OUT_FAILED：扩容失败</li>
 <li>SCALE_IN_SUCCESSFUL：缩容成功</li>
@@ -106,7 +106,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。 
      * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
      */
     public String [] getNotificationUserGroupIds() {
@@ -114,7 +114,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
+     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
      * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[DescribeUserGroup](https://cloud.tencent.com/document/api/378/4404)查询。
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
@@ -122,7 +122,7 @@ public class CreateNotificationConfigurationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

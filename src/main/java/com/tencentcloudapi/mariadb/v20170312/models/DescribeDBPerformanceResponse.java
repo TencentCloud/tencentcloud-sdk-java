@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPerformanceResponse  extends AbstractModel{
+public class DescribeDBPerformanceResponse extends AbstractModel{
 
     /**
     * 慢查询数
@@ -100,7 +100,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取慢查询数
+     * Get 慢查询数 
      * @return LongQuery 慢查询数
      */
     public MonitorData getLongQuery() {
@@ -108,7 +108,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置慢查询数
+     * Set 慢查询数
      * @param LongQuery 慢查询数
      */
     public void setLongQuery(MonitorData LongQuery) {
@@ -116,7 +116,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取查询操作数SELECT
+     * Get 查询操作数SELECT 
      * @return SelectTotal 查询操作数SELECT
      */
     public MonitorData getSelectTotal() {
@@ -124,7 +124,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置查询操作数SELECT
+     * Set 查询操作数SELECT
      * @param SelectTotal 查询操作数SELECT
      */
     public void setSelectTotal(MonitorData SelectTotal) {
@@ -132,7 +132,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取更新操作数UPDATE
+     * Get 更新操作数UPDATE 
      * @return UpdateTotal 更新操作数UPDATE
      */
     public MonitorData getUpdateTotal() {
@@ -140,7 +140,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置更新操作数UPDATE
+     * Set 更新操作数UPDATE
      * @param UpdateTotal 更新操作数UPDATE
      */
     public void setUpdateTotal(MonitorData UpdateTotal) {
@@ -148,7 +148,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取插入操作数INSERT
+     * Get 插入操作数INSERT 
      * @return InsertTotal 插入操作数INSERT
      */
     public MonitorData getInsertTotal() {
@@ -156,7 +156,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置插入操作数INSERT
+     * Set 插入操作数INSERT
      * @param InsertTotal 插入操作数INSERT
      */
     public void setInsertTotal(MonitorData InsertTotal) {
@@ -164,7 +164,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取删除操作数DELETE
+     * Get 删除操作数DELETE 
      * @return DeleteTotal 删除操作数DELETE
      */
     public MonitorData getDeleteTotal() {
@@ -172,7 +172,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置删除操作数DELETE
+     * Set 删除操作数DELETE
      * @param DeleteTotal 删除操作数DELETE
      */
     public void setDeleteTotal(MonitorData DeleteTotal) {
@@ -180,7 +180,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取缓存命中率
+     * Get 缓存命中率 
      * @return MemHitRate 缓存命中率
      */
     public MonitorData getMemHitRate() {
@@ -188,7 +188,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置缓存命中率
+     * Set 缓存命中率
      * @param MemHitRate 缓存命中率
      */
     public void setMemHitRate(MonitorData MemHitRate) {
@@ -196,7 +196,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘每秒IO次数
+     * Get 磁盘每秒IO次数 
      * @return DiskIops 磁盘每秒IO次数
      */
     public MonitorData getDiskIops() {
@@ -204,7 +204,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘每秒IO次数
+     * Set 磁盘每秒IO次数
      * @param DiskIops 磁盘每秒IO次数
      */
     public void setDiskIops(MonitorData DiskIops) {
@@ -212,7 +212,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取活跃连接数
+     * Get 活跃连接数 
      * @return ConnActive 活跃连接数
      */
     public MonitorData getConnActive() {
@@ -220,7 +220,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置活跃连接数
+     * Set 活跃连接数
      * @param ConnActive 活跃连接数
      */
     public void setConnActive(MonitorData ConnActive) {
@@ -228,7 +228,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否发生主备切换，1为发生，0否
+     * Get 是否发生主备切换，1为发生，0否 
      * @return IsMasterSwitched 是否发生主备切换，1为发生，0否
      */
     public MonitorData getIsMasterSwitched() {
@@ -236,7 +236,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否发生主备切换，1为发生，0否
+     * Set 是否发生主备切换，1为发生，0否
      * @param IsMasterSwitched 是否发生主备切换，1为发生，0否
      */
     public void setIsMasterSwitched(MonitorData IsMasterSwitched) {
@@ -244,7 +244,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主备延迟
+     * Get 主备延迟 
      * @return SlaveDelay 主备延迟
      */
     public MonitorData getSlaveDelay() {
@@ -252,7 +252,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主备延迟
+     * Set 主备延迟
      * @param SlaveDelay 主备延迟
      */
     public void setSlaveDelay(MonitorData SlaveDelay) {
@@ -260,7 +260,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -268,7 +268,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -276,7 +276,7 @@ public class DescribeDBPerformanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LongQuery.", this.LongQuery);

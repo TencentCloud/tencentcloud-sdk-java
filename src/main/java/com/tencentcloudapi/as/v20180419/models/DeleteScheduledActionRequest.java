@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteScheduledActionRequest  extends AbstractModel{
+public class DeleteScheduledActionRequest extends AbstractModel{
 
     /**
     * 待删除的定时任务ID。
@@ -30,7 +30,7 @@ public class DeleteScheduledActionRequest  extends AbstractModel{
     private String ScheduledActionId;
 
     /**
-     * 获取待删除的定时任务ID。
+     * Get 待删除的定时任务ID。 
      * @return ScheduledActionId 待删除的定时任务ID。
      */
     public String getScheduledActionId() {
@@ -38,7 +38,7 @@ public class DeleteScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的定时任务ID。
+     * Set 待删除的定时任务ID。
      * @param ScheduledActionId 待删除的定时任务ID。
      */
     public void setScheduledActionId(String ScheduledActionId) {
@@ -46,7 +46,7 @@ public class DeleteScheduledActionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScheduledActionId", this.ScheduledActionId);

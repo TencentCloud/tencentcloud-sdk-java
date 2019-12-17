@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCustomImageRequest  extends AbstractModel{
+public class CreateCustomImageRequest extends AbstractModel{
 
     /**
     * 用于制作镜像的物理机ID
@@ -44,7 +44,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     private String ImageDescription;
 
     /**
-     * 获取用于制作镜像的物理机ID
+     * Get 用于制作镜像的物理机ID 
      * @return InstanceId 用于制作镜像的物理机ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于制作镜像的物理机ID
+     * Set 用于制作镜像的物理机ID
      * @param InstanceId 用于制作镜像的物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像别名
+     * Get 镜像别名 
      * @return ImageName 镜像别名
      */
     public String getImageName() {
@@ -68,7 +68,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像别名
+     * Set 镜像别名
      * @param ImageName 镜像别名
      */
     public void setImageName(String ImageName) {
@@ -76,7 +76,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 获取镜像描述
+     * Get 镜像描述 
      * @return ImageDescription 镜像描述
      */
     public String getImageDescription() {
@@ -84,7 +84,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置镜像描述
+     * Set 镜像描述
      * @param ImageDescription 镜像描述
      */
     public void setImageDescription(String ImageDescription) {
@@ -92,7 +92,7 @@ public class CreateCustomImageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

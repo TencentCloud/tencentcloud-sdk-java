@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanDetail  extends AbstractModel{
+public class ScanDetail extends AbstractModel{
 
     /**
     * 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
@@ -58,7 +58,7 @@ public class ScanDetail  extends AbstractModel{
     private Long EndTime;
 
     /**
-     * 获取违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
+     * Get 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义 
      * @return Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      */
     public String getLabel() {
@@ -66,7 +66,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 设置违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
+     * Set 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      * @param Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      */
     public void setLabel(String Label) {
@@ -74,7 +74,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 获取该场景下概率[0.00,100.00],分值越大违规概率越高
+     * Get 该场景下概率[0.00,100.00],分值越大违规概率越高 
      * @return Rate 该场景下概率[0.00,100.00],分值越大违规概率越高
      */
     public String getRate() {
@@ -82,7 +82,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 设置该场景下概率[0.00,100.00],分值越大违规概率越高
+     * Set 该场景下概率[0.00,100.00],分值越大违规概率越高
      * @param Rate 该场景下概率[0.00,100.00],分值越大违规概率越高
      */
     public void setRate(String Rate) {
@@ -90,7 +90,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 获取违规关键字
+     * Get 违规关键字 
      * @return KeyWord 违规关键字
      */
     public String getKeyWord() {
@@ -98,7 +98,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 设置违规关键字
+     * Set 违规关键字
      * @param KeyWord 违规关键字
      */
     public void setKeyWord(String KeyWord) {
@@ -106,7 +106,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 获取关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+     * Get 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒 
      * @return StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
      */
     public Long getStartTime() {
@@ -114,7 +114,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 设置关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+     * Set 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
      * @param StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
      */
     public void setStartTime(Long StartTime) {
@@ -122,7 +122,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 获取关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * Get 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒 
      * @return EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
      */
     public Long getEndTime() {
@@ -130,7 +130,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 设置关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * Set 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
      * @param EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
      */
     public void setEndTime(Long EndTime) {
@@ -138,7 +138,7 @@ public class ScanDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Label", this.Label);

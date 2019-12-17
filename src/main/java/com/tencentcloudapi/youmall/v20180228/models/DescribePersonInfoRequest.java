@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonInfoRequest  extends AbstractModel{
+public class DescribePersonInfoRequest extends AbstractModel{
 
     /**
     * 公司ID
@@ -72,7 +72,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     private Integer PersonType;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -80,7 +80,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -88,7 +88,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -96,7 +96,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -104,7 +104,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
+     * Get 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId 
      * @return StartPersonId 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      */
     public Integer getStartPersonId() {
@@ -112,7 +112,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
+     * Set 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      * @param StartPersonId 起始ID，第一次拉取时StartPersonId传0，后续送入的值为上一页最后一条数据项的PersonId
      */
     public void setStartPersonId(Integer StartPersonId) {
@@ -120,7 +120,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public Integer getOffset() {
@@ -128,7 +128,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public void setOffset(Integer Offset) {
@@ -136,7 +136,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public Integer getLimit() {
@@ -144,7 +144,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public void setLimit(Integer Limit) {
@@ -152,7 +152,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Get 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天） 
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public Integer getPictureExpires() {
@@ -160,7 +160,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Set 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public void setPictureExpires(Integer PictureExpires) {
@@ -168,7 +168,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * Get 身份类型(0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public Integer getPersonType() {
@@ -176,7 +176,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * Set 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -184,7 +184,7 @@ public class DescribePersonInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

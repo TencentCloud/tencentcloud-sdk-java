@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnDomainLogsRequest  extends AbstractModel{
+public class DescribeCdnDomainLogsRequest extends AbstractModel{
 
     /**
     * 指定域名查询
@@ -69,7 +69,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     private String Area;
 
     /**
-     * 获取指定域名查询
+     * Get 指定域名查询 
      * @return Domain 指定域名查询
      */
     public String getDomain() {
@@ -77,7 +77,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置指定域名查询
+     * Set 指定域名查询
      * @param Domain 指定域名查询
      */
     public void setDomain(String Domain) {
@@ -85,7 +85,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 获取开始时间，如 2019-09-04 00:00:00
+     * Get 开始时间，如 2019-09-04 00:00:00 
      * @return StartTime 开始时间，如 2019-09-04 00:00:00
      */
     public String getStartTime() {
@@ -93,7 +93,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置开始时间，如 2019-09-04 00:00:00
+     * Set 开始时间，如 2019-09-04 00:00:00
      * @param StartTime 开始时间，如 2019-09-04 00:00:00
      */
     public void setStartTime(String StartTime) {
@@ -101,7 +101,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 获取结束时间，如 2019-09-04 12:00:00
+     * Get 结束时间，如 2019-09-04 12:00:00 
      * @return EndTime 结束时间，如 2019-09-04 12:00:00
      */
     public String getEndTime() {
@@ -109,7 +109,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置结束时间，如 2019-09-04 12:00:00
+     * Set 结束时间，如 2019-09-04 12:00:00
      * @param EndTime 结束时间，如 2019-09-04 12:00:00
      */
     public void setEndTime(String EndTime) {
@@ -117,7 +117,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 获取分页查询偏移量，默认为 0 （第一页）
+     * Get 分页查询偏移量，默认为 0 （第一页） 
      * @return Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public Integer getOffset() {
@@ -125,7 +125,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置分页查询偏移量，默认为 0 （第一页）
+     * Set 分页查询偏移量，默认为 0 （第一页）
      * @param Offset 分页查询偏移量，默认为 0 （第一页）
      */
     public void setOffset(Integer Offset) {
@@ -133,7 +133,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 获取分页查询限制数目，默认为 100，最大为 1000
+     * Get 分页查询限制数目，默认为 100，最大为 1000 
      * @return Limit 分页查询限制数目，默认为 100，最大为 1000
      */
     public Integer getLimit() {
@@ -141,7 +141,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置分页查询限制数目，默认为 100，最大为 1000
+     * Set 分页查询限制数目，默认为 100，最大为 1000
      * @param Limit 分页查询限制数目，默认为 100，最大为 1000
      */
     public void setLimit(Integer Limit) {
@@ -149,11 +149,11 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 获取指定区域下载日志
+     * Get 指定区域下载日志
 mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
-不指定时默认为 mainland
+不指定时默认为 mainland 
      * @return Area 指定区域下载日志
 mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
@@ -165,7 +165,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 设置指定区域下载日志
+     * Set 指定区域下载日志
 mainland：获取境内加速日志包下载链接
 overseas：获取境外加速日志包下载链接
 global：同时获取境内、境外加速日志包下载链接（分开打包）
@@ -181,7 +181,7 @@ global：同时获取境内、境外加速日志包下载链接（分开打包�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

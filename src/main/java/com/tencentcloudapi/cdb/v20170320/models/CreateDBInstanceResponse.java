@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceResponse  extends AbstractModel{
+public class CreateDBInstanceResponse extends AbstractModel{
 
     /**
     * 短订单 ID。
@@ -44,7 +44,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取短订单 ID。
+     * Get 短订单 ID。 
      * @return DealIds 短订单 ID。
      */
     public String [] getDealIds() {
@@ -52,7 +52,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置短订单 ID。
+     * Set 短订单 ID。
      * @param DealIds 短订单 ID。
      */
     public void setDealIds(String [] DealIds) {
@@ -60,7 +60,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例 ID 列表。
+     * Get 实例 ID 列表。 
      * @return InstanceIds 实例 ID 列表。
      */
     public String [] getInstanceIds() {
@@ -68,7 +68,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 列表。
+     * Set 实例 ID 列表。
      * @param InstanceIds 实例 ID 列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -76,7 +76,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateDBInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);

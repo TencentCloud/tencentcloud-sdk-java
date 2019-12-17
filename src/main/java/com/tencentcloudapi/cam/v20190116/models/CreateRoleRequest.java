@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRoleRequest  extends AbstractModel{
+public class CreateRoleRequest extends AbstractModel{
 
     /**
     * 角色名称
@@ -51,7 +51,7 @@ public class CreateRoleRequest  extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-     * 获取角色名称
+     * Get 角色名称 
      * @return RoleName 角色名称
      */
     public String getRoleName() {
@@ -59,7 +59,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称
+     * Set 角色名称
      * @param RoleName 角色名称
      */
     public void setRoleName(String RoleName) {
@@ -67,7 +67,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+     * Get 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo 
      * @return PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public String getPolicyDocument() {
@@ -75,7 +75,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
+     * Set 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      * @param PolicyDocument 策略文档，示例：{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}，principal用于指定角色的授权对象。获取该参数可参阅 获取角色详情（https://cloud.tencent.com/document/product/598/36221） 输出参数RoleInfo
      */
     public void setPolicyDocument(String PolicyDocument) {
@@ -83,7 +83,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色描述
+     * Get 角色描述 
      * @return Description 角色描述
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色描述
+     * Set 角色描述
      * @param Description 角色描述
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否允许登录
+     * Get 是否允许登录 
      * @return ConsoleLogin 是否允许登录
      */
     public Long getConsoleLogin() {
@@ -107,7 +107,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否允许登录
+     * Set 是否允许登录
      * @param ConsoleLogin 是否允许登录
      */
     public void setConsoleLogin(Long ConsoleLogin) {
@@ -115,7 +115,7 @@ public class CreateRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);

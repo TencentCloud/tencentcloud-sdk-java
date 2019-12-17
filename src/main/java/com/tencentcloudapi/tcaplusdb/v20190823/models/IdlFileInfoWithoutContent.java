@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdlFileInfoWithoutContent  extends AbstractModel{
+public class IdlFileInfoWithoutContent extends AbstractModel{
 
     /**
     * 文件名称，不包含扩展名
@@ -71,8 +71,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     private ErrorInfo Error;
 
     /**
-     * 获取文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件名称，不包含扩展名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName 文件名称，不包含扩展名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -81,7 +81,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置文件名称，不包含扩展名
+     * Set 文件名称，不包含扩展名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件名称，不包含扩展名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,8 +91,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 获取数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据描述语言（IDL）类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileType 数据描述语言（IDL）类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置数据描述语言（IDL）类型
+     * Set 数据描述语言（IDL）类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 数据描述语言（IDL）类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 获取文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件扩展名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileExtType 文件扩展名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置文件扩展名
+     * Set 文件扩展名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileExtType 文件扩展名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,8 +131,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件大小（Bytes）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileSize 文件大小（Bytes）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小（Bytes）
+     * Set 文件大小（Bytes）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 文件大小（Bytes）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 获取文件ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 文件ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置文件ID
+     * Set 文件ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,8 +171,8 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -181,7 +181,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Error 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -191,7 +191,7 @@ public class IdlFileInfoWithoutContent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileName", this.FileName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SelectedTableInfo  extends AbstractModel{
+public class SelectedTableInfo extends AbstractModel{
 
     /**
     * 表所属大区ID
@@ -121,7 +121,7 @@ public class SelectedTableInfo  extends AbstractModel{
     private String FileContent;
 
     /**
-     * 获取表所属大区ID
+     * Get 表所属大区ID 
      * @return LogicZoneId 表所属大区ID
      */
     public String getLogicZoneId() {
@@ -129,7 +129,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表所属大区ID
+     * Set 表所属大区ID
      * @param LogicZoneId 表所属大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -137,7 +137,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表名称
+     * Get 表名称 
      * @return TableName 表名称
      */
     public String getTableName() {
@@ -145,7 +145,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表名称
+     * Set 表名称
      * @param TableName 表名称
      */
     public void setTableName(String TableName) {
@@ -153,7 +153,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表实例ID
+     * Get 表实例ID 
      * @return TableInstanceId 表实例ID
      */
     public String getTableInstanceId() {
@@ -161,7 +161,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表实例ID
+     * Set 表实例ID
      * @param TableInstanceId 表实例ID
      */
     public void setTableInstanceId(String TableInstanceId) {
@@ -169,7 +169,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表描述语言类型：`PROTO`或`TDR`
+     * Get 表描述语言类型：`PROTO`或`TDR` 
      * @return TableIdlType 表描述语言类型：`PROTO`或`TDR`
      */
     public String getTableIdlType() {
@@ -177,7 +177,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表描述语言类型：`PROTO`或`TDR`
+     * Set 表描述语言类型：`PROTO`或`TDR`
      * @param TableIdlType 表描述语言类型：`PROTO`或`TDR`
      */
     public void setTableIdlType(String TableIdlType) {
@@ -185,7 +185,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表数据结构类型：`GENERIC`或`LIST`
+     * Get 表数据结构类型：`GENERIC`或`LIST` 
      * @return TableType 表数据结构类型：`GENERIC`或`LIST`
      */
     public String getTableType() {
@@ -193,7 +193,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表数据结构类型：`GENERIC`或`LIST`
+     * Set 表数据结构类型：`GENERIC`或`LIST`
      * @param TableType 表数据结构类型：`GENERIC`或`LIST`
      */
     public void setTableType(String TableType) {
@@ -201,7 +201,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取LIST表元素个数
+     * Get LIST表元素个数 
      * @return ListElementNum LIST表元素个数
      */
     public Long getListElementNum() {
@@ -209,7 +209,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置LIST表元素个数
+     * Set LIST表元素个数
      * @param ListElementNum LIST表元素个数
      */
     public void setListElementNum(Long ListElementNum) {
@@ -217,7 +217,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留容量（GB）
+     * Get 表预留容量（GB） 
      * @return ReservedVolume 表预留容量（GB）
      */
     public Long getReservedVolume() {
@@ -225,7 +225,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留容量（GB）
+     * Set 表预留容量（GB）
      * @param ReservedVolume 表预留容量（GB）
      */
     public void setReservedVolume(Long ReservedVolume) {
@@ -233,7 +233,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留读QPS
+     * Get 表预留读QPS 
      * @return ReservedReadQps 表预留读QPS
      */
     public Long getReservedReadQps() {
@@ -241,7 +241,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留读QPS
+     * Set 表预留读QPS
      * @param ReservedReadQps 表预留读QPS
      */
     public void setReservedReadQps(Long ReservedReadQps) {
@@ -249,7 +249,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表预留写QPS
+     * Get 表预留写QPS 
      * @return ReservedWriteQps 表预留写QPS
      */
     public Long getReservedWriteQps() {
@@ -257,7 +257,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表预留写QPS
+     * Set 表预留写QPS
      * @param ReservedWriteQps 表预留写QPS
      */
     public void setReservedWriteQps(Long ReservedWriteQps) {
@@ -265,7 +265,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取表备注信息
+     * Get 表备注信息 
      * @return Memo 表备注信息
      */
     public String getMemo() {
@@ -273,7 +273,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置表备注信息
+     * Set 表备注信息
      * @param Memo 表备注信息
      */
     public void setMemo(String Memo) {
@@ -281,7 +281,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Key回档文件名，回档专用
+     * Get Key回档文件名，回档专用 
      * @return FileName Key回档文件名，回档专用
      */
     public String getFileName() {
@@ -289,7 +289,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Key回档文件名，回档专用
+     * Set Key回档文件名，回档专用
      * @param FileName Key回档文件名，回档专用
      */
     public void setFileName(String FileName) {
@@ -297,7 +297,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Key回档文件扩展名，回档专用
+     * Get Key回档文件扩展名，回档专用 
      * @return FileExtType Key回档文件扩展名，回档专用
      */
     public String getFileExtType() {
@@ -305,7 +305,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Key回档文件扩展名，回档专用
+     * Set Key回档文件扩展名，回档专用
      * @param FileExtType Key回档文件扩展名，回档专用
      */
     public void setFileExtType(String FileExtType) {
@@ -313,7 +313,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Key回档文件大小，回档专用
+     * Get Key回档文件大小，回档专用 
      * @return FileSize Key回档文件大小，回档专用
      */
     public Long getFileSize() {
@@ -321,7 +321,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Key回档文件大小，回档专用
+     * Set Key回档文件大小，回档专用
      * @param FileSize Key回档文件大小，回档专用
      */
     public void setFileSize(Long FileSize) {
@@ -329,7 +329,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Key回档文件内容，回档专用
+     * Get Key回档文件内容，回档专用 
      * @return FileContent Key回档文件内容，回档专用
      */
     public String getFileContent() {
@@ -337,7 +337,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Key回档文件内容，回档专用
+     * Set Key回档文件内容，回档专用
      * @param FileContent Key回档文件内容，回档专用
      */
     public void setFileContent(String FileContent) {
@@ -345,7 +345,7 @@ public class SelectedTableInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogicZoneId", this.LogicZoneId);

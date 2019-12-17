@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetOrganizationMemberResponse  extends AbstractModel{
+public class GetOrganizationMemberResponse extends AbstractModel{
 
     /**
     * 组织成员UIN
@@ -79,7 +79,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取组织成员UIN
+     * Get 组织成员UIN 
      * @return Uin 组织成员UIN
      */
     public Long getUin() {
@@ -87,7 +87,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组织成员UIN
+     * Set 组织成员UIN
      * @param Uin 组织成员UIN
      */
     public void setUin(Long Uin) {
@@ -95,7 +95,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组织成员名称
+     * Get 组织成员名称 
      * @return Name 组织成员名称
      */
     public String getName() {
@@ -103,7 +103,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组织成员名称
+     * Set 组织成员名称
      * @param Name 组织成员名称
      */
     public void setName(String Name) {
@@ -111,7 +111,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -119,7 +119,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -127,7 +127,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取加入时间
+     * Get 加入时间 
      * @return JoinTime 加入时间
      */
     public String getJoinTime() {
@@ -135,7 +135,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加入时间
+     * Set 加入时间
      * @param JoinTime 加入时间
      */
     public void setJoinTime(String JoinTime) {
@@ -143,7 +143,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组织单元ID
+     * Get 组织单元ID 
      * @return NodeId 组织单元ID
      */
     public Long getNodeId() {
@@ -151,7 +151,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组织单元ID
+     * Set 组织单元ID
      * @param NodeId 组织单元ID
      */
     public void setNodeId(Long NodeId) {
@@ -159,7 +159,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组织单元名称
+     * Get 组织单元名称 
      * @return NodeName 组织单元名称
      */
     public String getNodeName() {
@@ -167,7 +167,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组织单元名称
+     * Set 组织单元名称
      * @param NodeName 组织单元名称
      */
     public void setNodeName(String NodeName) {
@@ -175,7 +175,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取父组织单元ID
+     * Get 父组织单元ID 
      * @return ParentNodeId 父组织单元ID
      */
     public Long getParentNodeId() {
@@ -183,7 +183,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置父组织单元ID
+     * Set 父组织单元ID
      * @param ParentNodeId 父组织单元ID
      */
     public void setParentNodeId(Long ParentNodeId) {
@@ -191,7 +191,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class GetOrganizationMemberResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

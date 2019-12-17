@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DebugLogEntry  extends AbstractModel{
+public class DebugLogEntry extends AbstractModel{
 
     /**
     * 日志id
@@ -79,7 +79,7 @@ public class DebugLogEntry  extends AbstractModel{
     private String DeviceName;
 
     /**
-     * 获取日志id
+     * Get 日志id 
      * @return Id 日志id
      */
     public String getId() {
@@ -87,7 +87,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置日志id
+     * Set 日志id
      * @param Id 日志id
      */
     public void setId(String Id) {
@@ -95,7 +95,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取行为（事件）
+     * Get 行为（事件） 
      * @return Event 行为（事件）
      */
     public String getEvent() {
@@ -103,7 +103,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置行为（事件）
+     * Set 行为（事件）
      * @param Event 行为（事件）
      */
     public void setEvent(String Event) {
@@ -111,7 +111,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志
+     * Get shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志 
      * @return LogType shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志
      */
     public String getLogType() {
@@ -119,7 +119,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志
+     * Set shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志
      * @param LogType shadow/action/mqtt, 分别表示：影子/规则引擎/上下线日志
      */
     public void setLogType(String LogType) {
@@ -127,7 +127,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取时间戳
+     * Get 时间戳 
      * @return Timestamp 时间戳
      */
     public Integer getTimestamp() {
@@ -135,7 +135,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置时间戳
+     * Set 时间戳
      * @param Timestamp 时间戳
      */
     public void setTimestamp(Integer Timestamp) {
@@ -143,7 +143,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取success/fail
+     * Get success/fail 
      * @return Result success/fail
      */
     public String getResult() {
@@ -151,7 +151,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置success/fail
+     * Set success/fail
      * @param Result success/fail
      */
     public void setResult(String Result) {
@@ -159,7 +159,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取日志详细内容
+     * Get 日志详细内容 
      * @return Data 日志详细内容
      */
     public String getData() {
@@ -167,7 +167,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置日志详细内容
+     * Set 日志详细内容
      * @param Data 日志详细内容
      */
     public void setData(String Data) {
@@ -175,7 +175,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取数据来源topic
+     * Get 数据来源topic 
      * @return Topic 数据来源topic
      */
     public String getTopic() {
@@ -183,7 +183,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置数据来源topic
+     * Set 数据来源topic
      * @param Topic 数据来源topic
      */
     public void setTopic(String Topic) {
@@ -191,7 +191,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -199,7 +199,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -207,7 +207,7 @@ public class DebugLogEntry  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

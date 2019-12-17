@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutterResource  extends AbstractModel{
+public class OutterResource extends AbstractModel{
 
     /**
     * 规格
@@ -87,8 +87,8 @@ public class OutterResource  extends AbstractModel{
     private Integer DiskSize;
 
     /**
-     * 获取规格
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Spec 规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置规格
+     * Set 规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 规格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,8 +107,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取规格名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 规格名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SpecName 规格名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -117,7 +117,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置规格名
+     * Set 规格名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecName 规格名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,8 +127,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 硬盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,7 +137,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘类型
+     * Set 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 硬盘类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -147,8 +147,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 盘类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置盘类型
+     * Set 盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 盘类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 系统盘大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RootSize 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘大小
+     * Set 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RootSize 系统盘大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内存大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小
+     * Set 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取CPU个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CPU个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu CPU个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置CPU个数
+     * Set CPU个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 硬盘大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskSize 硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘大小
+     * Set 硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 硬盘大小
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,7 +247,7 @@ public class OutterResource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Spec", this.Spec);

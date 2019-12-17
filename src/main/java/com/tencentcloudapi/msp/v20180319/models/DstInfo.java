@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DstInfo  extends AbstractModel{
+public class DstInfo extends AbstractModel{
 
     /**
     * 迁移目的地域
@@ -51,7 +51,7 @@ public class DstInfo  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取迁移目的地域
+     * Get 迁移目的地域 
      * @return Region 迁移目的地域
      */
     public String getRegion() {
@@ -59,7 +59,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目的地域
+     * Set 迁移目的地域
      * @param Region 迁移目的地域
      */
     public void setRegion(String Region) {
@@ -67,7 +67,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目的Ip
+     * Get 迁移目的Ip 
      * @return Ip 迁移目的Ip
      */
     public String getIp() {
@@ -75,7 +75,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目的Ip
+     * Set 迁移目的Ip
      * @param Ip 迁移目的Ip
      */
     public void setIp(String Ip) {
@@ -83,7 +83,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目的端口
+     * Get 迁移目的端口 
      * @return Port 迁移目的端口
      */
     public String getPort() {
@@ -91,7 +91,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目的端口
+     * Set 迁移目的端口
      * @param Port 迁移目的端口
      */
     public void setPort(String Port) {
@@ -99,7 +99,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移目的实例Id
+     * Get 迁移目的实例Id 
      * @return InstanceId 迁移目的实例Id
      */
     public String getInstanceId() {
@@ -107,7 +107,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移目的实例Id
+     * Set 迁移目的实例Id
      * @param InstanceId 迁移目的实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -115,7 +115,7 @@ public class DstInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSyncJobsRequest  extends AbstractModel{
+public class DescribeSyncJobsRequest extends AbstractModel{
 
     /**
     * 灾备同步任务ID
@@ -65,7 +65,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取灾备同步任务ID
+     * Get 灾备同步任务ID 
      * @return JobId 灾备同步任务ID
      */
     public String getJobId() {
@@ -73,7 +73,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务ID
+     * Set 灾备同步任务ID
      * @param JobId 灾备同步任务ID
      */
     public void setJobId(String JobId) {
@@ -81,7 +81,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取灾备同步任务名
+     * Get 灾备同步任务名 
      * @return JobName 灾备同步任务名
      */
     public String getJobName() {
@@ -89,7 +89,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置灾备同步任务名
+     * Set 灾备同步任务名
      * @param JobName 灾备同步任务名
      */
     public void setJobName(String JobName) {
@@ -97,7 +97,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，可以取值为JobId、Status、JobName、CreateTime
+     * Get 排序字段，可以取值为JobId、Status、JobName、CreateTime 
      * @return Order 排序字段，可以取值为JobId、Status、JobName、CreateTime
      */
     public String getOrder() {
@@ -105,7 +105,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，可以取值为JobId、Status、JobName、CreateTime
+     * Set 排序字段，可以取值为JobId、Status、JobName、CreateTime
      * @param Order 排序字段，可以取值为JobId、Status、JobName、CreateTime
      */
     public void setOrder(String Order) {
@@ -113,7 +113,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，升序为ASC，降序为DESC
+     * Get 排序方式，升序为ASC，降序为DESC 
      * @return OrderSeq 排序方式，升序为ASC，降序为DESC
      */
     public String getOrderSeq() {
@@ -121,7 +121,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，升序为ASC，降序为DESC
+     * Set 排序方式，升序为ASC，降序为DESC
      * @param OrderSeq 排序方式，升序为ASC，降序为DESC
      */
     public void setOrderSeq(String OrderSeq) {
@@ -129,7 +129,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回实例数量，默认20，有效区间[1,100]
+     * Get 返回实例数量，默认20，有效区间[1,100] 
      * @return Limit 返回实例数量，默认20，有效区间[1,100]
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回实例数量，默认20，有效区间[1,100]
+     * Set 返回实例数量，默认20，有效区间[1,100]
      * @param Limit 返回实例数量，默认20，有效区间[1,100]
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeSyncJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

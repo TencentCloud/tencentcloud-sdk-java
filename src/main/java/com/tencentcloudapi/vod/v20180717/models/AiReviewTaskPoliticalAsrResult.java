@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
+public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
 
     /**
     * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -63,7 +63,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     private AiReviewPoliticalAsrTaskOutput Output;
 
     /**
-     * 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public String getStatus() {
@@ -71,7 +71,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Set 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public void setStatus(String Status) {
@@ -79,11 +79,11 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0 表示成功，其他值表示失败：
+     * Get 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
@@ -95,7 +95,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，0 表示成功，其他值表示失败：
+     * Set 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
@@ -111,8 +111,8 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,7 +131,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核 Asr 文字鉴政任务输入。
+     * Get 内容审核 Asr 文字鉴政任务输入。 
      * @return Input 内容审核 Asr 文字鉴政任务输入。
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
@@ -139,7 +139,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核 Asr 文字鉴政任务输入。
+     * Set 内容审核 Asr 文字鉴政任务输入。
      * @param Input 内容审核 Asr 文字鉴政任务输入。
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
@@ -147,7 +147,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核 Asr 文字鉴政任务输出。
+     * Get 内容审核 Asr 文字鉴政任务输出。 
      * @return Output 内容审核 Asr 文字鉴政任务输出。
      */
     public AiReviewPoliticalAsrTaskOutput getOutput() {
@@ -155,7 +155,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核 Asr 文字鉴政任务输出。
+     * Set 内容审核 Asr 文字鉴政任务输出。
      * @param Output 内容审核 Asr 文字鉴政任务输出。
      */
     public void setOutput(AiReviewPoliticalAsrTaskOutput Output) {
@@ -163,7 +163,7 @@ public class AiReviewTaskPoliticalAsrResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountResponse  extends AbstractModel{
+public class DeleteAccountResponse extends AbstractModel{
 
     /**
     * 任务流id
     */
     @SerializedName("FlowId")
     @Expose
-    private Integer FlowId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,23 +37,23 @@ public class DeleteAccountResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务流id
+     * Get 任务流id 
      * @return FlowId 任务流id
      */
-    public Integer getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * 设置任务流id
+     * Set 任务流id
      * @param FlowId 任务流id
      */
-    public void setFlowId(Integer FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DeleteAccountResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);

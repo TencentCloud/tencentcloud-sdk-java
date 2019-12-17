@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubnetAttributeRequest  extends AbstractModel{
+public class ModifySubnetAttributeRequest extends AbstractModel{
 
     /**
     * 子网实例ID。形如：subnet-pxir56ns。
@@ -44,7 +44,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     private String EnableBroadcast;
 
     /**
-     * 获取子网实例ID。形如：subnet-pxir56ns。
+     * Get 子网实例ID。形如：subnet-pxir56ns。 
      * @return SubnetId 子网实例ID。形如：subnet-pxir56ns。
      */
     public String getSubnetId() {
@@ -52,7 +52,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID。形如：subnet-pxir56ns。
+     * Set 子网实例ID。形如：subnet-pxir56ns。
      * @param SubnetId 子网实例ID。形如：subnet-pxir56ns。
      */
     public void setSubnetId(String SubnetId) {
@@ -60,7 +60,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网名称，最大长度不能超过60个字节。
+     * Get 子网名称，最大长度不能超过60个字节。 
      * @return SubnetName 子网名称，最大长度不能超过60个字节。
      */
     public String getSubnetName() {
@@ -68,7 +68,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称，最大长度不能超过60个字节。
+     * Set 子网名称，最大长度不能超过60个字节。
      * @param SubnetName 子网名称，最大长度不能超过60个字节。
      */
     public void setSubnetName(String SubnetName) {
@@ -76,7 +76,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网是否开启广播。
+     * Get 子网是否开启广播。 
      * @return EnableBroadcast 子网是否开启广播。
      */
     public String getEnableBroadcast() {
@@ -84,7 +84,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网是否开启广播。
+     * Set 子网是否开启广播。
      * @param EnableBroadcast 子网是否开启广播。
      */
     public void setEnableBroadcast(String EnableBroadcast) {
@@ -92,7 +92,7 @@ public class ModifySubnetAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

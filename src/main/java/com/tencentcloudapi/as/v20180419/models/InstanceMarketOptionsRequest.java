@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceMarketOptionsRequest  extends AbstractModel{
+public class InstanceMarketOptionsRequest extends AbstractModel{
 
     /**
     * 竞价相关选项
@@ -38,7 +38,7 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     private String MarketType;
 
     /**
-     * 获取竞价相关选项
+     * Get 竞价相关选项 
      * @return SpotOptions 竞价相关选项
      */
     public SpotMarketOptions getSpotOptions() {
@@ -46,7 +46,7 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置竞价相关选项
+     * Set 竞价相关选项
      * @param SpotOptions 竞价相关选项
      */
     public void setSpotOptions(SpotMarketOptions SpotOptions) {
@@ -54,8 +54,8 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取市场选项类型，当前只支持取值：spot
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 市场选项类型，当前只支持取值：spot
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MarketType 市场选项类型，当前只支持取值：spot
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置市场选项类型，当前只支持取值：spot
+     * Set 市场选项类型，当前只支持取值：spot
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MarketType 市场选项类型，当前只支持取值：spot
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class InstanceMarketOptionsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SpotOptions.", this.SpotOptions);

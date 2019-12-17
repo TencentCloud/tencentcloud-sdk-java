@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableColumn  extends AbstractModel{
+public class TableColumn extends AbstractModel{
 
     /**
     * 列名称
@@ -37,7 +37,7 @@ public class TableColumn  extends AbstractModel{
     private String Type;
 
     /**
-     * 获取列名称
+     * Get 列名称 
      * @return Col 列名称
      */
     public String getCol() {
@@ -45,7 +45,7 @@ public class TableColumn  extends AbstractModel{
     }
 
     /**
-     * 设置列名称
+     * Set 列名称
      * @param Col 列名称
      */
     public void setCol(String Col) {
@@ -53,7 +53,7 @@ public class TableColumn  extends AbstractModel{
     }
 
     /**
-     * 获取列类型
+     * Get 列类型 
      * @return Type 列类型
      */
     public String getType() {
@@ -61,7 +61,7 @@ public class TableColumn  extends AbstractModel{
     }
 
     /**
-     * 设置列类型
+     * Set 列类型
      * @param Type 列类型
      */
     public void setType(String Type) {
@@ -69,7 +69,7 @@ public class TableColumn  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Col", this.Col);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QrcodeOCRResponse  extends AbstractModel{
+public class QrcodeOCRResponse extends AbstractModel{
 
     /**
     * 二维码/条形码识别结果信息，具体内容请点击左侧链接。
@@ -44,7 +44,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取二维码/条形码识别结果信息，具体内容请点击左侧链接。
+     * Get 二维码/条形码识别结果信息，具体内容请点击左侧链接。 
      * @return CodeResults 二维码/条形码识别结果信息，具体内容请点击左侧链接。
      */
     public QrcodeResultsInfo [] getCodeResults() {
@@ -52,7 +52,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置二维码/条形码识别结果信息，具体内容请点击左侧链接。
+     * Set 二维码/条形码识别结果信息，具体内容请点击左侧链接。
      * @param CodeResults 二维码/条形码识别结果信息，具体内容请点击左侧链接。
      */
     public void setCodeResults(QrcodeResultsInfo [] CodeResults) {
@@ -60,7 +60,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片大小，具体内容请点击左侧链接。
+     * Get 图片大小，具体内容请点击左侧链接。 
      * @return ImgSize 图片大小，具体内容请点击左侧链接。
      */
     public QrcodeImgSize getImgSize() {
@@ -68,7 +68,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片大小，具体内容请点击左侧链接。
+     * Set 图片大小，具体内容请点击左侧链接。
      * @param ImgSize 图片大小，具体内容请点击左侧链接。
      */
     public void setImgSize(QrcodeImgSize ImgSize) {
@@ -76,7 +76,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class QrcodeOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CodeResults.", this.CodeResults);

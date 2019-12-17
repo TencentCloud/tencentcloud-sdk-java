@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusResponse  extends AbstractModel{
+public class DescribeTaskStatusResponse extends AbstractModel{
 
     /**
     * 任务结果
@@ -44,7 +44,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务结果
+     * Get 任务结果 
      * @return TaskResult 任务结果
      */
     public String getTaskResult() {
@@ -52,7 +52,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务结果
+     * Set 任务结果
      * @param TaskResult 任务结果
      */
     public void setTaskResult(String TaskResult) {
@@ -60,7 +60,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务类型，010代表合同上传结果，020代表合同下载结果
+     * Get 任务类型，010代表合同上传结果，020代表合同下载结果 
      * @return TaskType 任务类型，010代表合同上传结果，020代表合同下载结果
      */
     public String getTaskType() {
@@ -68,7 +68,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，010代表合同上传结果，020代表合同下载结果
+     * Set 任务类型，010代表合同上传结果，020代表合同下载结果
      * @param TaskType 任务类型，010代表合同上传结果，020代表合同下载结果
      */
     public void setTaskType(String TaskType) {
@@ -76,7 +76,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeTaskStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskResult", this.TaskResult);

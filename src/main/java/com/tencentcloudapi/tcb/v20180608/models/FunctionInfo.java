@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FunctionInfo  extends AbstractModel{
+public class FunctionInfo extends AbstractModel{
 
     /**
     * 命名空间
@@ -38,7 +38,7 @@ public class FunctionInfo  extends AbstractModel{
     private String Region;
 
     /**
-     * 获取命名空间
+     * Get 命名空间 
      * @return Namespace 命名空间
      */
     public String getNamespace() {
@@ -46,7 +46,7 @@ public class FunctionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间
+     * Set 命名空间
      * @param Namespace 命名空间
      */
     public void setNamespace(String Namespace) {
@@ -54,8 +54,8 @@ public class FunctionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所属地域。
-当前支持ap-shanghai
+     * Get 所属地域。
+当前支持ap-shanghai 
      * @return Region 所属地域。
 当前支持ap-shanghai
      */
@@ -64,7 +64,7 @@ public class FunctionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属地域。
+     * Set 所属地域。
 当前支持ap-shanghai
      * @param Region 所属地域。
 当前支持ap-shanghai
@@ -74,7 +74,7 @@ public class FunctionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);

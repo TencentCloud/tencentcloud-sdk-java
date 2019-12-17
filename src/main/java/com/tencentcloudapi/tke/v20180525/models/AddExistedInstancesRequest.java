@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddExistedInstancesRequest  extends AbstractModel{
+public class AddExistedInstancesRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -72,7 +72,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     private String HostName;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -80,7 +80,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -88,7 +88,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例列表
+     * Get 实例列表 
      * @return InstanceIds 实例列表
      */
     public String [] getInstanceIds() {
@@ -96,7 +96,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例列表
+     * Set 实例列表
      * @param InstanceIds 实例列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -104,7 +104,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例额外需要设置参数信息
+     * Get 实例额外需要设置参数信息 
      * @return InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -112,7 +112,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例额外需要设置参数信息
+     * Set 实例额外需要设置参数信息
      * @param InstanceAdvancedSettings 实例额外需要设置参数信息
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
@@ -120,7 +120,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * Get 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。 
      * @return EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      */
     public EnhancedService getEnhancedService() {
@@ -128,7 +128,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
+     * Set 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      * @param EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。若不指定该参数，则默认开启云监控、云安全服务。
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
@@ -136,7 +136,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点登录信息（目前仅支持使用Password或者单个KeyIds）
+     * Get 节点登录信息（目前仅支持使用Password或者单个KeyIds） 
      * @return LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      */
     public LoginSettings getLoginSettings() {
@@ -144,7 +144,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点登录信息（目前仅支持使用Password或者单个KeyIds）
+     * Set 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      * @param LoginSettings 节点登录信息（目前仅支持使用Password或者单个KeyIds）
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
@@ -152,7 +152,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * Get 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId） 
      * @return SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      */
     public String [] getSecurityGroupIds() {
@@ -160,7 +160,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
+     * Set 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      * @param SecurityGroupIds 实例所属安全组。该参数可以通过调用 DescribeSecurityGroups 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。（目前仅支持设置单个sgId）
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -168,7 +168,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     * Get 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致) 
      * @return HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     public String getHostName() {
@@ -176,7 +176,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
+     * Set 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      * @param HostName 重装系统时，可以指定修改实例的HostName(集群为HostName模式时，此参数必传，规则名称除不支持大写字符外与[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口HostName一致)
      */
     public void setHostName(String HostName) {
@@ -184,7 +184,7 @@ public class AddExistedInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

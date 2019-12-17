@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOnlineRecordResponse  extends AbstractModel{
+public class DescribeOnlineRecordResponse extends AbstractModel{
 
     /**
     * 录制结束原因，
@@ -120,10 +120,10 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取录制结束原因，
+     * Get 录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
-- EXCEPTION: 录制异常结束
+- EXCEPTION: 录制异常结束 
      * @return FinishReason 录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
@@ -134,7 +134,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录制结束原因，
+     * Set 录制结束原因，
 - AUTO: 房间内长时间没有音视频上行及白板操作导致自动停止录制
 - USER_CALL: 主动调用了停止录制接口
 - EXCEPTION: 录制异常结束
@@ -148,7 +148,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询结果的录制任务Id
+     * Get 需要查询结果的录制任务Id 
      * @return TaskId 需要查询结果的录制任务Id
      */
     public String getTaskId() {
@@ -156,7 +156,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询结果的录制任务Id
+     * Set 需要查询结果的录制任务Id
      * @param TaskId 需要查询结果的录制任务Id
      */
     public void setTaskId(String TaskId) {
@@ -164,10 +164,10 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取录制任务状态
+     * Get 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
-- FINISHED: 表示录制完成
+- FINISHED: 表示录制完成 
      * @return Status 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
@@ -178,7 +178,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录制任务状态
+     * Set 录制任务状态
 - PREPARED: 表示录制正在准备中（进房/启动录制服务等操作）
 - RECORDING: 表示录制已开始
 - FINISHED: 表示录制完成
@@ -192,7 +192,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取房间号
+     * Get 房间号 
      * @return RoomId 房间号
      */
     public Long getRoomId() {
@@ -200,7 +200,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置房间号
+     * Set 房间号
      * @param RoomId 房间号
      */
     public void setRoomId(Long RoomId) {
@@ -208,7 +208,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取白板的群组 Id
+     * Get 白板的群组 Id 
      * @return GroupId 白板的群组 Id
      */
     public String getGroupId() {
@@ -216,7 +216,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置白板的群组 Id
+     * Set 白板的群组 Id
      * @param GroupId 白板的群组 Id
      */
     public void setGroupId(String GroupId) {
@@ -224,7 +224,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取录制用户Id
+     * Get 录制用户Id 
      * @return RecordUserId 录制用户Id
      */
     public String getRecordUserId() {
@@ -232,7 +232,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录制用户Id
+     * Set 录制用户Id
      * @param RecordUserId 录制用户Id
      */
     public void setRecordUserId(String RecordUserId) {
@@ -240,7 +240,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实际开始录制时间，Unix 时间戳，单位秒
+     * Get 实际开始录制时间，Unix 时间戳，单位秒 
      * @return RecordStartTime 实际开始录制时间，Unix 时间戳，单位秒
      */
     public Long getRecordStartTime() {
@@ -248,7 +248,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实际开始录制时间，Unix 时间戳，单位秒
+     * Set 实际开始录制时间，Unix 时间戳，单位秒
      * @param RecordStartTime 实际开始录制时间，Unix 时间戳，单位秒
      */
     public void setRecordStartTime(Long RecordStartTime) {
@@ -256,7 +256,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实际停止录制时间，Unix 时间戳，单位秒
+     * Get 实际停止录制时间，Unix 时间戳，单位秒 
      * @return RecordStopTime 实际停止录制时间，Unix 时间戳，单位秒
      */
     public Long getRecordStopTime() {
@@ -264,7 +264,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实际停止录制时间，Unix 时间戳，单位秒
+     * Set 实际停止录制时间，Unix 时间戳，单位秒
      * @param RecordStopTime 实际停止录制时间，Unix 时间戳，单位秒
      */
     public void setRecordStopTime(Long RecordStopTime) {
@@ -272,7 +272,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取回放视频总时长（单位：毫秒）
+     * Get 回放视频总时长（单位：毫秒） 
      * @return TotalTime 回放视频总时长（单位：毫秒）
      */
     public Long getTotalTime() {
@@ -280,7 +280,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置回放视频总时长（单位：毫秒）
+     * Set 回放视频总时长（单位：毫秒）
      * @param TotalTime 回放视频总时长（单位：毫秒）
      */
     public void setTotalTime(Long TotalTime) {
@@ -288,7 +288,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取录制过程中出现异常的次数
+     * Get 录制过程中出现异常的次数 
      * @return ExceptionCnt 录制过程中出现异常的次数
      */
     public Long getExceptionCnt() {
@@ -296,7 +296,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录制过程中出现异常的次数
+     * Set 录制过程中出现异常的次数
      * @param ExceptionCnt 录制过程中出现异常的次数
      */
     public void setExceptionCnt(Long ExceptionCnt) {
@@ -304,7 +304,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
+     * Get 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的 
      * @return OmittedDurations 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
      */
     public OmittedDuration [] getOmittedDurations() {
@@ -312,7 +312,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
+     * Set 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
      * @param OmittedDurations 拼接视频中被忽略的时间段，只有开启视频拼接功能的时候，这个参数才是有效的
      */
     public void setOmittedDurations(OmittedDuration [] OmittedDurations) {
@@ -320,7 +320,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取录制视频列表
+     * Get 录制视频列表 
      * @return VideoInfos 录制视频列表
      */
     public VideoInfo [] getVideoInfos() {
@@ -328,7 +328,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置录制视频列表
+     * Set 录制视频列表
      * @param VideoInfos 录制视频列表
      */
     public void setVideoInfos(VideoInfo [] VideoInfos) {
@@ -336,7 +336,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -344,7 +344,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -352,7 +352,7 @@ public class DescribeOnlineRecordResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FinishReason", this.FinishReason);

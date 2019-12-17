@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonExDescriptionInfo  extends AbstractModel{
+public class PersonExDescriptionInfo extends AbstractModel{
 
     /**
     * 人员描述字段Index，从0开始
@@ -37,7 +37,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     private String PersonExDescription;
 
     /**
-     * 获取人员描述字段Index，从0开始
+     * Get 人员描述字段Index，从0开始 
      * @return PersonExDescriptionIndex 人员描述字段Index，从0开始
      */
     public Long getPersonExDescriptionIndex() {
@@ -45,7 +45,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人员描述字段Index，从0开始
+     * Set 人员描述字段Index，从0开始
      * @param PersonExDescriptionIndex 人员描述字段Index，从0开始
      */
     public void setPersonExDescriptionIndex(Long PersonExDescriptionIndex) {
@@ -53,7 +53,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取需要更新的人员描述字段内容
+     * Get 需要更新的人员描述字段内容 
      * @return PersonExDescription 需要更新的人员描述字段内容
      */
     public String getPersonExDescription() {
@@ -61,7 +61,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置需要更新的人员描述字段内容
+     * Set 需要更新的人员描述字段内容
      * @param PersonExDescription 需要更新的人员描述字段内容
      */
     public void setPersonExDescription(String PersonExDescription) {
@@ -69,7 +69,7 @@ public class PersonExDescriptionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonExDescriptionIndex", this.PersonExDescriptionIndex);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoraDeviceRequest  extends AbstractModel{
+public class CreateLoraDeviceRequest extends AbstractModel{
 
     /**
     * 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
@@ -79,7 +79,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     private String Memo;
 
     /**
-     * 获取产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID 
      * @return ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public String getProductId() {
@@ -87,7 +87,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
      * @param ProductId 产品 ID ，创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public void setProductId(String ProductId) {
@@ -95,7 +95,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -103,7 +103,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -111,7 +111,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型 ，目前支持A、B、C三种
+     * Get 设备类型 ，目前支持A、B、C三种 
      * @return DeviceType 设备类型 ，目前支持A、B、C三种
      */
     public String getDeviceType() {
@@ -119,7 +119,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型 ，目前支持A、B、C三种
+     * Set 设备类型 ，目前支持A、B、C三种
      * @param DeviceType 设备类型 ，目前支持A、B、C三种
      */
     public void setDeviceType(String DeviceType) {
@@ -127,7 +127,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa应用UUID
+     * Get LoRa应用UUID 
      * @return AppEui LoRa应用UUID
      */
     public String getAppEui() {
@@ -135,7 +135,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa应用UUID
+     * Set LoRa应用UUID
      * @param AppEui LoRa应用UUID
      */
     public void setAppEui(String AppEui) {
@@ -143,7 +143,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备UUID
+     * Get LoRa设备UUID 
      * @return DeviceEui LoRa设备UUID
      */
     public String getDeviceEui() {
@@ -151,7 +151,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备UUID
+     * Set LoRa设备UUID
      * @param DeviceEui LoRa设备UUID
      */
     public void setDeviceEui(String DeviceEui) {
@@ -159,7 +159,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa应用密钥
+     * Get LoRa应用密钥 
      * @return AppKey LoRa应用密钥
      */
     public String getAppKey() {
@@ -167,7 +167,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa应用密钥
+     * Set LoRa应用密钥
      * @param AppKey LoRa应用密钥
      */
     public void setAppKey(String AppKey) {
@@ -175,7 +175,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备验证密钥
+     * Get LoRa设备验证密钥 
      * @return AuthKey LoRa设备验证密钥
      */
     public String getAuthKey() {
@@ -183,7 +183,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备验证密钥
+     * Set LoRa设备验证密钥
      * @param AuthKey LoRa设备验证密钥
      */
     public void setAuthKey(String AuthKey) {
@@ -191,7 +191,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备备注
+     * Get 设备备注 
      * @return Memo 设备备注
      */
     public String getMemo() {
@@ -199,7 +199,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备备注
+     * Set 设备备注
      * @param Memo 设备备注
      */
     public void setMemo(String Memo) {
@@ -207,7 +207,7 @@ public class CreateLoraDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

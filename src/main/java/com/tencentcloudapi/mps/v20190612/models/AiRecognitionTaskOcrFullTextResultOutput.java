@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskOcrFullTextResultOutput  extends AbstractModel{
+public class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel{
 
     /**
     * 文本全文识别结果集。
@@ -30,7 +30,7 @@ public class AiRecognitionTaskOcrFullTextResultOutput  extends AbstractModel{
     private AiRecognitionTaskOcrFullTextSegmentItem [] SegmentSet;
 
     /**
-     * 获取文本全文识别结果集。
+     * Get 文本全文识别结果集。 
      * @return SegmentSet 文本全文识别结果集。
      */
     public AiRecognitionTaskOcrFullTextSegmentItem [] getSegmentSet() {
@@ -38,7 +38,7 @@ public class AiRecognitionTaskOcrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置文本全文识别结果集。
+     * Set 文本全文识别结果集。
      * @param SegmentSet 文本全文识别结果集。
      */
     public void setSegmentSet(AiRecognitionTaskOcrFullTextSegmentItem [] SegmentSet) {
@@ -46,7 +46,7 @@ public class AiRecognitionTaskOcrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Backup  extends AbstractModel{
+public class Backup extends AbstractModel{
 
     /**
     * 文件名
@@ -34,7 +34,7 @@ public class Backup  extends AbstractModel{
     */
     @SerializedName("Size")
     @Expose
-    private Integer Size;
+    private Long Size;
 
     /**
     * 备份开始时间
@@ -69,14 +69,14 @@ public class Backup  extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 备份文件状态（0-创建中；1-成功；2-失败）
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 多库备份时的DB列表
@@ -90,17 +90,17 @@ public class Backup  extends AbstractModel{
     */
     @SerializedName("Strategy")
     @Expose
-    private Integer Strategy;
+    private Long Strategy;
 
     /**
     * 备份方式，0-定时备份；1-手动临时备份
     */
     @SerializedName("BackupWay")
     @Expose
-    private Integer BackupWay;
+    private Long BackupWay;
 
     /**
-     * 获取文件名
+     * Get 文件名 
      * @return FileName 文件名
      */
     public String getFileName() {
@@ -108,7 +108,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
      * @param FileName 文件名
      */
     public void setFileName(String FileName) {
@@ -116,23 +116,23 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小，单位 KB
+     * Get 文件大小，单位 KB 
      * @return Size 文件大小，单位 KB
      */
-    public Integer getSize() {
+    public Long getSize() {
         return this.Size;
     }
 
     /**
-     * 设置文件大小，单位 KB
+     * Set 文件大小，单位 KB
      * @param Size 文件大小，单位 KB
      */
-    public void setSize(Integer Size) {
+    public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * 获取备份开始时间
+     * Get 备份开始时间 
      * @return StartTime 备份开始时间
      */
     public String getStartTime() {
@@ -140,7 +140,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置备份开始时间
+     * Set 备份开始时间
      * @param StartTime 备份开始时间
      */
     public void setStartTime(String StartTime) {
@@ -148,7 +148,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取备份结束时间
+     * Get 备份结束时间 
      * @return EndTime 备份结束时间
      */
     public String getEndTime() {
@@ -156,7 +156,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置备份结束时间
+     * Set 备份结束时间
      * @param EndTime 备份结束时间
      */
     public void setEndTime(String EndTime) {
@@ -164,7 +164,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取内网下载地址
+     * Get 内网下载地址 
      * @return InternalAddr 内网下载地址
      */
     public String getInternalAddr() {
@@ -172,7 +172,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置内网下载地址
+     * Set 内网下载地址
      * @param InternalAddr 内网下载地址
      */
     public void setInternalAddr(String InternalAddr) {
@@ -180,7 +180,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取外网下载地址
+     * Get 外网下载地址 
      * @return ExternalAddr 外网下载地址
      */
     public String getExternalAddr() {
@@ -188,7 +188,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置外网下载地址
+     * Set 外网下载地址
      * @param ExternalAddr 外网下载地址
      */
     public void setExternalAddr(String ExternalAddr) {
@@ -196,39 +196,39 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件唯一标识，RestoreInstance接口会用到该字段
+     * Get 备份文件唯一标识，RestoreInstance接口会用到该字段 
      * @return Id 备份文件唯一标识，RestoreInstance接口会用到该字段
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置备份文件唯一标识，RestoreInstance接口会用到该字段
+     * Set 备份文件唯一标识，RestoreInstance接口会用到该字段
      * @param Id 备份文件唯一标识，RestoreInstance接口会用到该字段
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取备份文件状态（0-创建中；1-成功；2-失败）
+     * Get 备份文件状态（0-创建中；1-成功；2-失败） 
      * @return Status 备份文件状态（0-创建中；1-成功；2-失败）
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置备份文件状态（0-创建中；1-成功；2-失败）
+     * Set 备份文件状态（0-创建中；1-成功；2-失败）
      * @param Status 备份文件状态（0-创建中；1-成功；2-失败）
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取多库备份时的DB列表
+     * Get 多库备份时的DB列表 
      * @return DBs 多库备份时的DB列表
      */
     public String [] getDBs() {
@@ -236,7 +236,7 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 设置多库备份时的DB列表
+     * Set 多库备份时的DB列表
      * @param DBs 多库备份时的DB列表
      */
     public void setDBs(String [] DBs) {
@@ -244,39 +244,39 @@ public class Backup  extends AbstractModel{
     }
 
     /**
-     * 获取备份策略（0-实例备份；1-多库备份）
+     * Get 备份策略（0-实例备份；1-多库备份） 
      * @return Strategy 备份策略（0-实例备份；1-多库备份）
      */
-    public Integer getStrategy() {
+    public Long getStrategy() {
         return this.Strategy;
     }
 
     /**
-     * 设置备份策略（0-实例备份；1-多库备份）
+     * Set 备份策略（0-实例备份；1-多库备份）
      * @param Strategy 备份策略（0-实例备份；1-多库备份）
      */
-    public void setStrategy(Integer Strategy) {
+    public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * 获取备份方式，0-定时备份；1-手动临时备份
+     * Get 备份方式，0-定时备份；1-手动临时备份 
      * @return BackupWay 备份方式，0-定时备份；1-手动临时备份
      */
-    public Integer getBackupWay() {
+    public Long getBackupWay() {
         return this.BackupWay;
     }
 
     /**
-     * 设置备份方式，0-定时备份；1-手动临时备份
+     * Set 备份方式，0-定时备份；1-手动临时备份
      * @param BackupWay 备份方式，0-定时备份；1-手动临时备份
      */
-    public void setBackupWay(Integer BackupWay) {
+    public void setBackupWay(Long BackupWay) {
         this.BackupWay = BackupWay;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileName", this.FileName);

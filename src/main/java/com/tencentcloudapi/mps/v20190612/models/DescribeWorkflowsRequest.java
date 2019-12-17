@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWorkflowsRequest  extends AbstractModel{
+public class DescribeWorkflowsRequest extends AbstractModel{
 
     /**
     * 工作流 ID 过滤条件，数组长度限制：100。
@@ -54,7 +54,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取工作流 ID 过滤条件，数组长度限制：100。
+     * Get 工作流 ID 过滤条件，数组长度限制：100。 
      * @return WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
      */
     public Long [] getWorkflowIds() {
@@ -62,7 +62,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流 ID 过滤条件，数组长度限制：100。
+     * Set 工作流 ID 过滤条件，数组长度限制：100。
      * @param WorkflowIds 工作流 ID 过滤条件，数组长度限制：100。
      */
     public void setWorkflowIds(Long [] WorkflowIds) {
@@ -70,10 +70,10 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取工作流状态，取值范围：
+     * Get 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
-不填此参数，则不区分工作流状态。
+不填此参数，则不区分工作流状态。 
      * @return Status 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
@@ -84,7 +84,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流状态，取值范围：
+     * Set 工作流状态，取值范围：
 <li>Enabled：已启用，</li>
 <li>Disabled：已禁用。</li>
 不填此参数，则不区分工作流状态。
@@ -98,7 +98,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -106,7 +106,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -114,7 +114,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：100。
+     * Get 返回记录条数，默认值：10，最大值：100。 
      * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
@@ -122,7 +122,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：100。
+     * Set 返回记录条数，默认值：10，最大值：100。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -130,7 +130,7 @@ public class DescribeWorkflowsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "WorkflowIds.", this.WorkflowIds);

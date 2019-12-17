@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyVpcAttributeRequest  extends AbstractModel{
+public class ModifyVpcAttributeRequest extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -44,7 +44,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     private Boolean EnableMonitor;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -52,7 +52,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -60,7 +60,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -68,7 +68,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -76,7 +76,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启内网监控，0为关闭，1为开启
+     * Get 是否开启内网监控，0为关闭，1为开启 
      * @return EnableMonitor 是否开启内网监控，0为关闭，1为开启
      */
     public Boolean getEnableMonitor() {
@@ -84,7 +84,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启内网监控，0为关闭，1为开启
+     * Set 是否开启内网监控，0为关闭，1为开启
      * @param EnableMonitor 是否开启内网监控，0为关闭，1为开启
      */
     public void setEnableMonitor(Boolean EnableMonitor) {
@@ -92,7 +92,7 @@ public class ModifyVpcAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

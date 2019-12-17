@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceDetail  extends AbstractModel{
+public class InstanceDetail extends AbstractModel{
 
     /**
     * 实例ID
@@ -289,7 +289,7 @@ public class InstanceDetail  extends AbstractModel{
     private String RealInstanceId;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -297,7 +297,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -305,7 +305,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -313,7 +313,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -321,7 +321,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型，可能的返回值：1-包年包月；0-按量计费
+     * Get 付费类型，可能的返回值：1-包年包月；0-按量计费 
      * @return PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
      */
     public Integer getPayMode() {
@@ -329,7 +329,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型，可能的返回值：1-包年包月；0-按量计费
+     * Set 付费类型，可能的返回值：1-包年包月；0-按量计费
      * @param PayMode 付费类型，可能的返回值：1-包年包月；0-按量计费
      */
     public void setPayMode(Integer PayMode) {
@@ -337,7 +337,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -345,7 +345,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -353,7 +353,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型，可能的返回值：0-副本集实例，1-分片实例，
+     * Get 集群类型，可能的返回值：0-副本集实例，1-分片实例， 
      * @return ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      */
     public Integer getClusterType() {
@@ -361,7 +361,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型，可能的返回值：0-副本集实例，1-分片实例，
+     * Set 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      * @param ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
      */
     public void setClusterType(Integer ClusterType) {
@@ -369,7 +369,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取地域信息
+     * Get 地域信息 
      * @return Region 地域信息
      */
     public String getRegion() {
@@ -377,7 +377,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置地域信息
+     * Set 地域信息
      * @param Region 地域信息
      */
     public void setRegion(String Region) {
@@ -385,7 +385,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取可用区信息
+     * Get 可用区信息 
      * @return Zone 可用区信息
      */
     public String getZone() {
@@ -393,7 +393,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息
+     * Set 可用区信息
      * @param Zone 可用区信息
      */
     public void setZone(String Zone) {
@@ -401,7 +401,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取网络类型，可能的返回值：0-基础网络，1-私有网络
+     * Get 网络类型，可能的返回值：0-基础网络，1-私有网络 
      * @return NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
      */
     public Integer getNetType() {
@@ -409,7 +409,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置网络类型，可能的返回值：0-基础网络，1-私有网络
+     * Set 网络类型，可能的返回值：0-基础网络，1-私有网络
      * @param NetType 网络类型，可能的返回值：0-基础网络，1-私有网络
      */
     public void setNetType(Integer NetType) {
@@ -417,7 +417,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的ID
+     * Get 私有网络的ID 
      * @return VpcId 私有网络的ID
      */
     public String getVpcId() {
@@ -425,7 +425,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的ID
+     * Set 私有网络的ID
      * @param VpcId 私有网络的ID
      */
     public void setVpcId(String VpcId) {
@@ -433,7 +433,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的子网ID
+     * Get 私有网络的子网ID 
      * @return SubnetId 私有网络的子网ID
      */
     public String getSubnetId() {
@@ -441,7 +441,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的子网ID
+     * Set 私有网络的子网ID
      * @param SubnetId 私有网络的子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -449,7 +449,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+     * Get 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期 
      * @return Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      */
     public Integer getStatus() {
@@ -457,7 +457,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+     * Set 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      * @param Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
      */
     public void setStatus(Integer Status) {
@@ -465,7 +465,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例IP
+     * Get 实例IP 
      * @return Vip 实例IP
      */
     public String getVip() {
@@ -473,7 +473,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例IP
+     * Set 实例IP
      * @param Vip 实例IP
      */
     public void setVip(String Vip) {
@@ -481,7 +481,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取端口号
+     * Get 端口号 
      * @return Vport 端口号
      */
     public Integer getVport() {
@@ -489,7 +489,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置端口号
+     * Set 端口号
      * @param Vport 端口号
      */
     public void setVport(Integer Vport) {
@@ -497,7 +497,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间
+     * Get 实例创建时间 
      * @return CreateTime 实例创建时间
      */
     public String getCreateTime() {
@@ -505,7 +505,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间
+     * Set 实例创建时间
      * @param CreateTime 实例创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -513,7 +513,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例到期时间
+     * Get 实例到期时间 
      * @return DeadLine 实例到期时间
      */
     public String getDeadLine() {
@@ -521,7 +521,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例到期时间
+     * Set 实例到期时间
      * @param DeadLine 实例到期时间
      */
     public void setDeadLine(String DeadLine) {
@@ -529,7 +529,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例版本信息
+     * Get 实例版本信息 
      * @return MongoVersion 实例版本信息
      */
     public String getMongoVersion() {
@@ -537,7 +537,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本信息
+     * Set 实例版本信息
      * @param MongoVersion 实例版本信息
      */
     public void setMongoVersion(String MongoVersion) {
@@ -545,7 +545,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存规格，单位为MB
+     * Get 实例内存规格，单位为MB 
      * @return Memory 实例内存规格，单位为MB
      */
     public Integer getMemory() {
@@ -553,7 +553,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存规格，单位为MB
+     * Set 实例内存规格，单位为MB
      * @param Memory 实例内存规格，单位为MB
      */
     public void setMemory(Integer Memory) {
@@ -561,7 +561,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例磁盘规格，单位为MB
+     * Get 实例磁盘规格，单位为MB 
      * @return Volume 实例磁盘规格，单位为MB
      */
     public Integer getVolume() {
@@ -569,7 +569,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例磁盘规格，单位为MB
+     * Set 实例磁盘规格，单位为MB
      * @param Volume 实例磁盘规格，单位为MB
      */
     public void setVolume(Integer Volume) {
@@ -577,7 +577,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例CPU核心数
+     * Get 实例CPU核心数 
      * @return CpuNum 实例CPU核心数
      */
     public Integer getCpuNum() {
@@ -585,7 +585,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例CPU核心数
+     * Set 实例CPU核心数
      * @param CpuNum 实例CPU核心数
      */
     public void setCpuNum(Integer CpuNum) {
@@ -593,7 +593,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例机器类型
+     * Get 实例机器类型 
      * @return MachineType 实例机器类型
      */
     public String getMachineType() {
@@ -601,7 +601,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例机器类型
+     * Set 实例机器类型
      * @param MachineType 实例机器类型
      */
     public void setMachineType(String MachineType) {
@@ -609,7 +609,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例从节点数
+     * Get 实例从节点数 
      * @return SecondaryNum 实例从节点数
      */
     public Integer getSecondaryNum() {
@@ -617,7 +617,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例从节点数
+     * Set 实例从节点数
      * @param SecondaryNum 实例从节点数
      */
     public void setSecondaryNum(Integer SecondaryNum) {
@@ -625,7 +625,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例分片数
+     * Get 实例分片数 
      * @return ReplicationSetNum 实例分片数
      */
     public Integer getReplicationSetNum() {
@@ -633,7 +633,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例分片数
+     * Set 实例分片数
      * @param ReplicationSetNum 实例分片数
      */
     public void setReplicationSetNum(Integer ReplicationSetNum) {
@@ -641,7 +641,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+     * Get 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费 
      * @return AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      */
     public Integer getAutoRenewFlag() {
@@ -649,7 +649,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+     * Set 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      * @param AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -657,7 +657,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取已用容量，单位MB
+     * Get 已用容量，单位MB 
      * @return UsedVolume 已用容量，单位MB
      */
     public Integer getUsedVolume() {
@@ -665,7 +665,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置已用容量，单位MB
+     * Set 已用容量，单位MB
      * @param UsedVolume 已用容量，单位MB
      */
     public void setUsedVolume(Integer UsedVolume) {
@@ -673,7 +673,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取维护窗口起始时间
+     * Get 维护窗口起始时间 
      * @return MaintenanceStart 维护窗口起始时间
      */
     public String getMaintenanceStart() {
@@ -681,7 +681,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置维护窗口起始时间
+     * Set 维护窗口起始时间
      * @param MaintenanceStart 维护窗口起始时间
      */
     public void setMaintenanceStart(String MaintenanceStart) {
@@ -689,7 +689,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取维护窗口结束时间
+     * Get 维护窗口结束时间 
      * @return MaintenanceEnd 维护窗口结束时间
      */
     public String getMaintenanceEnd() {
@@ -697,7 +697,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置维护窗口结束时间
+     * Set 维护窗口结束时间
      * @param MaintenanceEnd 维护窗口结束时间
      */
     public void setMaintenanceEnd(String MaintenanceEnd) {
@@ -705,7 +705,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取分片信息
+     * Get 分片信息 
      * @return ReplicaSets 分片信息
      */
     public ShardInfo [] getReplicaSets() {
@@ -713,7 +713,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置分片信息
+     * Set 分片信息
      * @param ReplicaSets 分片信息
      */
     public void setReplicaSets(ShardInfo [] ReplicaSets) {
@@ -721,7 +721,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取只读实例信息
+     * Get 只读实例信息 
      * @return ReadonlyInstances 只读实例信息
      */
     public DBInstanceInfo [] getReadonlyInstances() {
@@ -729,7 +729,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置只读实例信息
+     * Set 只读实例信息
      * @param ReadonlyInstances 只读实例信息
      */
     public void setReadonlyInstances(DBInstanceInfo [] ReadonlyInstances) {
@@ -737,7 +737,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取灾备实例信息
+     * Get 灾备实例信息 
      * @return StandbyInstances 灾备实例信息
      */
     public DBInstanceInfo [] getStandbyInstances() {
@@ -745,7 +745,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置灾备实例信息
+     * Set 灾备实例信息
      * @param StandbyInstances 灾备实例信息
      */
     public void setStandbyInstances(DBInstanceInfo [] StandbyInstances) {
@@ -753,7 +753,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取临时实例信息
+     * Get 临时实例信息 
      * @return CloneInstances 临时实例信息
      */
     public DBInstanceInfo [] getCloneInstances() {
@@ -761,7 +761,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置临时实例信息
+     * Set 临时实例信息
      * @param CloneInstances 临时实例信息
      */
     public void setCloneInstances(DBInstanceInfo [] CloneInstances) {
@@ -769,7 +769,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+     * Get 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息 
      * @return RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
      */
     public DBInstanceInfo getRelatedInstance() {
@@ -777,7 +777,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+     * Set 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
      * @param RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
      */
     public void setRelatedInstance(DBInstanceInfo RelatedInstance) {
@@ -785,7 +785,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例标签信息集合
+     * Get 实例标签信息集合 
      * @return Tags 实例标签信息集合
      */
     public TagInfo [] getTags() {
@@ -793,7 +793,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例标签信息集合
+     * Set 实例标签信息集合
      * @param Tags 实例标签信息集合
      */
     public void setTags(TagInfo [] Tags) {
@@ -801,7 +801,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例版本标记
+     * Get 实例版本标记 
      * @return InstanceVer 实例版本标记
      */
     public Integer getInstanceVer() {
@@ -809,7 +809,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本标记
+     * Set 实例版本标记
      * @param InstanceVer 实例版本标记
      */
     public void setInstanceVer(Integer InstanceVer) {
@@ -817,7 +817,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例版本标记
+     * Get 实例版本标记 
      * @return ClusterVer 实例版本标记
      */
     public Integer getClusterVer() {
@@ -825,7 +825,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例版本标记
+     * Set 实例版本标记
      * @param ClusterVer 实例版本标记
      */
     public void setClusterVer(Integer ClusterVer) {
@@ -833,7 +833,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * Get 协议信息，可能的返回值：1-mongodb，2-dynamodb 
      * @return Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
      */
     public Integer getProtocol() {
@@ -841,7 +841,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * Set 协议信息，可能的返回值：1-mongodb，2-dynamodb
      * @param Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
      */
     public void setProtocol(Integer Protocol) {
@@ -849,7 +849,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+     * Get 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例 
      * @return InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      */
     public Integer getInstanceType() {
@@ -857,7 +857,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
+     * Set 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      * @param InstanceType 实例类型，可能的返回值，1-正式实例，2-临时实例，3-只读实例，4-灾备实例
      */
     public void setInstanceType(Integer InstanceType) {
@@ -865,7 +865,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态描述
+     * Get 实例状态描述 
      * @return InstanceStatusDesc 实例状态描述
      */
     public String getInstanceStatusDesc() {
@@ -873,7 +873,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态描述
+     * Set 实例状态描述
      * @param InstanceStatusDesc 实例状态描述
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
@@ -881,7 +881,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * Get 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取 
      * @return RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      */
     public String getRealInstanceId() {
@@ -889,7 +889,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
+     * Set 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      * @param RealInstanceId 实例对应的物理实例id，回档并替换过的实例有不同的InstanceId和RealInstanceId，从barad获取监控数据等场景下需要用物理id获取
      */
     public void setRealInstanceId(String RealInstanceId) {
@@ -897,7 +897,7 @@ public class InstanceDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

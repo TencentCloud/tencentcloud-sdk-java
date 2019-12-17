@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLibrariesResponse  extends AbstractModel{
+public class DescribeLibrariesResponse extends AbstractModel{
 
     /**
     * 人员库列表
@@ -44,7 +44,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员库列表
+     * Get 人员库列表 
      * @return LibrarySet 人员库列表
      */
     public Library [] getLibrarySet() {
@@ -52,7 +52,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员库列表
+     * Set 人员库列表
      * @param LibrarySet 人员库列表
      */
     public void setLibrarySet(Library [] LibrarySet) {
@@ -60,7 +60,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员库总数量
+     * Get 人员库总数量 
      * @return TotalCount 人员库总数量
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员库总数量
+     * Set 人员库总数量
      * @param TotalCount 人员库总数量
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLibrariesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LibrarySet.", this.LibrarySet);

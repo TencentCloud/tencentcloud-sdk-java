@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProductResponse  extends AbstractModel{
+public class CreateProductResponse extends AbstractModel{
 
     /**
     * 产品名称
@@ -51,7 +51,7 @@ public class CreateProductResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return ProductName 产品名称
      */
     public String getProductName() {
@@ -59,7 +59,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param ProductName 产品名称
      */
     public void setProductName(String ProductName) {
@@ -67,7 +67,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品 ID，腾讯云生成全局唯一 ID
+     * Get 产品 ID，腾讯云生成全局唯一 ID 
      * @return ProductId 产品 ID，腾讯云生成全局唯一 ID
      */
     public String getProductId() {
@@ -75,7 +75,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID，腾讯云生成全局唯一 ID
+     * Set 产品 ID，腾讯云生成全局唯一 ID
      * @param ProductId 产品 ID，腾讯云生成全局唯一 ID
      */
     public void setProductId(String ProductId) {
@@ -83,7 +83,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品属性
+     * Get 产品属性 
      * @return ProductProperties 产品属性
      */
     public ProductProperties getProductProperties() {
@@ -91,7 +91,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品属性
+     * Set 产品属性
      * @param ProductProperties 产品属性
      */
     public void setProductProperties(ProductProperties ProductProperties) {
@@ -99,7 +99,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class CreateProductResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHardwareSpecificationResponse  extends AbstractModel{
+public class DescribeHardwareSpecificationResponse extends AbstractModel{
 
     /**
     * CPU型号列表
@@ -51,7 +51,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CPU型号列表
+     * Get CPU型号列表 
      * @return CpuInfoSet CPU型号列表
      */
     public CpuInfo [] getCpuInfoSet() {
@@ -59,7 +59,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CPU型号列表
+     * Set CPU型号列表
      * @param CpuInfoSet CPU型号列表
      */
     public void setCpuInfoSet(CpuInfo [] CpuInfoSet) {
@@ -67,7 +67,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内存的取值，单位为G
+     * Get 内存的取值，单位为G 
      * @return MemSet 内存的取值，单位为G
      */
     public Integer [] getMemSet() {
@@ -75,7 +75,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内存的取值，单位为G
+     * Set 内存的取值，单位为G
      * @param MemSet 内存的取值，单位为G
      */
     public void setMemSet(Integer [] MemSet) {
@@ -83,7 +83,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘型号列表
+     * Get 硬盘型号列表 
      * @return DiskInfoSet 硬盘型号列表
      */
     public DiskInfo [] getDiskInfoSet() {
@@ -91,7 +91,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘型号列表
+     * Set 硬盘型号列表
      * @param DiskInfoSet 硬盘型号列表
      */
     public void setDiskInfoSet(DiskInfo [] DiskInfoSet) {
@@ -99,7 +99,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeHardwareSpecificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CpuInfoSet.", this.CpuInfoSet);

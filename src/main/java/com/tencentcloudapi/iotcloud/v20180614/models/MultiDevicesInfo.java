@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MultiDevicesInfo  extends AbstractModel{
+public class MultiDevicesInfo extends AbstractModel{
 
     /**
     * 设备名
@@ -65,7 +65,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     private String ErrMsg;
 
     /**
-     * 获取设备名
+     * Get 设备名 
      * @return DeviceName 设备名
      */
     public String getDeviceName() {
@@ -73,7 +73,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备名
+     * Set 设备名
      * @param DeviceName 设备名
      */
     public void setDeviceName(String DeviceName) {
@@ -81,7 +81,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取对称加密密钥，base64 编码，采用对称加密时返回该参数
+     * Get 对称加密密钥，base64 编码，采用对称加密时返回该参数 
      * @return DevicePsk 对称加密密钥，base64 编码，采用对称加密时返回该参数
      */
     public String getDevicePsk() {
@@ -89,7 +89,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置对称加密密钥，base64 编码，采用对称加密时返回该参数
+     * Set 对称加密密钥，base64 编码，采用对称加密时返回该参数
      * @param DevicePsk 对称加密密钥，base64 编码，采用对称加密时返回该参数
      */
     public void setDevicePsk(String DevicePsk) {
@@ -97,7 +97,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备证书，采用非对称加密时返回该参数
+     * Get 设备证书，采用非对称加密时返回该参数 
      * @return DeviceCert 设备证书，采用非对称加密时返回该参数
      */
     public String getDeviceCert() {
@@ -105,7 +105,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书，采用非对称加密时返回该参数
+     * Set 设备证书，采用非对称加密时返回该参数
      * @param DeviceCert 设备证书，采用非对称加密时返回该参数
      */
     public void setDeviceCert(String DeviceCert) {
@@ -113,7 +113,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致
+     * Get 设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致 
      * @return DevicePrivateKey 设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致
      */
     public String getDevicePrivateKey() {
@@ -121,7 +121,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致
+     * Set 设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致
      * @param DevicePrivateKey 设备私钥，采用非对称加密时返回该参数，腾讯云为用户缓存起来，其生命周期与任务生命周期一致
      */
     public void setDevicePrivateKey(String DevicePrivateKey) {
@@ -129,7 +129,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
+     * Get 错误码 
      * @return Result 错误码
      */
     public Integer getResult() {
@@ -137,7 +137,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
      * @param Result 错误码
      */
     public void setResult(Integer Result) {
@@ -145,7 +145,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息
+     * Get 错误信息 
      * @return ErrMsg 错误信息
      */
     public String getErrMsg() {
@@ -153,7 +153,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息
+     * Set 错误信息
      * @param ErrMsg 错误信息
      */
     public void setErrMsg(String ErrMsg) {
@@ -161,7 +161,7 @@ public class MultiDevicesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

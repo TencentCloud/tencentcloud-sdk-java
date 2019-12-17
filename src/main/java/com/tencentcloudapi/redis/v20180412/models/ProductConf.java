@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductConf  extends AbstractModel{
+public class ProductConf extends AbstractModel{
 
     /**
     * 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
@@ -114,7 +114,7 @@ public class ProductConf  extends AbstractModel{
     private Boolean EnableRepicaReadOnly;
 
     /**
-     * 获取产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
+     * Get 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版 
      * @return Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      */
     public Integer getType() {
@@ -122,7 +122,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
+     * Set 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      * @param Type 产品类型，2-Redis主从版，3-CKV主从版，4-CKV集群版，5-Redis单机版，7-Redis集群版
      */
     public void setType(Integer Type) {
@@ -130,7 +130,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
+     * Get 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版 
      * @return TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
      */
     public String getTypeName() {
@@ -138,7 +138,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
+     * Set 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
      * @param TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版
      */
     public void setTypeName(String TypeName) {
@@ -146,7 +146,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取购买时的最小数量
+     * Get 购买时的最小数量 
      * @return MinBuyNum 购买时的最小数量
      */
     public Integer getMinBuyNum() {
@@ -154,7 +154,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置购买时的最小数量
+     * Set 购买时的最小数量
      * @param MinBuyNum 购买时的最小数量
      */
     public void setMinBuyNum(Integer MinBuyNum) {
@@ -162,7 +162,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取购买时的最大数量
+     * Get 购买时的最大数量 
      * @return MaxBuyNum 购买时的最大数量
      */
     public Integer getMaxBuyNum() {
@@ -170,7 +170,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置购买时的最大数量
+     * Set 购买时的最大数量
      * @param MaxBuyNum 购买时的最大数量
      */
     public void setMaxBuyNum(Integer MaxBuyNum) {
@@ -178,7 +178,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取产品是否售罄
+     * Get 产品是否售罄 
      * @return Saleout 产品是否售罄
      */
     public Boolean getSaleout() {
@@ -186,7 +186,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置产品是否售罄
+     * Set 产品是否售罄
      * @param Saleout 产品是否售罄
      */
     public void setSaleout(Boolean Saleout) {
@@ -194,7 +194,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取产品引擎，腾讯云CKV或者社区版Redis
+     * Get 产品引擎，腾讯云CKV或者社区版Redis 
      * @return Engine 产品引擎，腾讯云CKV或者社区版Redis
      */
     public String getEngine() {
@@ -202,7 +202,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置产品引擎，腾讯云CKV或者社区版Redis
+     * Set 产品引擎，腾讯云CKV或者社区版Redis
      * @param Engine 产品引擎，腾讯云CKV或者社区版Redis
      */
     public void setEngine(String Engine) {
@@ -210,7 +210,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+     * Get 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0 
      * @return Version 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
      */
     public String getVersion() {
@@ -218,7 +218,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+     * Set 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
      * @param Version 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
      */
     public void setVersion(String Version) {
@@ -226,7 +226,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取规格总大小，单位G
+     * Get 规格总大小，单位G 
      * @return TotalSize 规格总大小，单位G
      */
     public String [] getTotalSize() {
@@ -234,7 +234,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置规格总大小，单位G
+     * Set 规格总大小，单位G
      * @param TotalSize 规格总大小，单位G
      */
     public void setTotalSize(String [] TotalSize) {
@@ -242,7 +242,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取每个分片大小，单位G
+     * Get 每个分片大小，单位G 
      * @return ShardSize 每个分片大小，单位G
      */
     public String [] getShardSize() {
@@ -250,7 +250,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置每个分片大小，单位G
+     * Set 每个分片大小，单位G
      * @param ShardSize 每个分片大小，单位G
      */
     public void setShardSize(String [] ShardSize) {
@@ -258,7 +258,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取副本数量
+     * Get 副本数量 
      * @return ReplicaNum 副本数量
      */
     public String [] getReplicaNum() {
@@ -266,7 +266,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置副本数量
+     * Set 副本数量
      * @param ReplicaNum 副本数量
      */
     public void setReplicaNum(String [] ReplicaNum) {
@@ -274,7 +274,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取分片数量
+     * Get 分片数量 
      * @return ShardNum 分片数量
      */
     public String [] getShardNum() {
@@ -282,7 +282,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置分片数量
+     * Set 分片数量
      * @param ShardNum 分片数量
      */
     public void setShardNum(String [] ShardNum) {
@@ -290,7 +290,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取支持的计费模式，1-包年包月，0-按量计费
+     * Get 支持的计费模式，1-包年包月，0-按量计费 
      * @return PayMode 支持的计费模式，1-包年包月，0-按量计费
      */
     public String getPayMode() {
@@ -298,7 +298,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置支持的计费模式，1-包年包月，0-按量计费
+     * Set 支持的计费模式，1-包年包月，0-按量计费
      * @param PayMode 支持的计费模式，1-包年包月，0-按量计费
      */
     public void setPayMode(String PayMode) {
@@ -306,7 +306,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持副本只读
+     * Get 是否支持副本只读 
      * @return EnableRepicaReadOnly 是否支持副本只读
      */
     public Boolean getEnableRepicaReadOnly() {
@@ -314,7 +314,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持副本只读
+     * Set 是否支持副本只读
      * @param EnableRepicaReadOnly 是否支持副本只读
      */
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
@@ -322,7 +322,7 @@ public class ProductConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRuleRealServersRequest  extends AbstractModel{
+public class DescribeRuleRealServersRequest extends AbstractModel{
 
     /**
     * 转发规则ID
@@ -30,7 +30,7 @@ public class DescribeRuleRealServersRequest  extends AbstractModel{
     private String RuleId;
 
     /**
-     * 获取转发规则ID
+     * Get 转发规则ID 
      * @return RuleId 转发规则ID
      */
     public String getRuleId() {
@@ -38,7 +38,7 @@ public class DescribeRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则ID
+     * Set 转发规则ID
      * @param RuleId 转发规则ID
      */
     public void setRuleId(String RuleId) {
@@ -46,7 +46,7 @@ public class DescribeRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

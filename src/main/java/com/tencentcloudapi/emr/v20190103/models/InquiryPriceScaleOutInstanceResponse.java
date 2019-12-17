@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
+public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
 
     /**
     * 刊例价
@@ -62,8 +62,8 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取刊例价
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 刊例价
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginalCost 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置刊例价
+     * Set 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 刊例价
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 折扣价格
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置折扣价格
+     * Set 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,8 +102,8 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 单位
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置单位
+     * Set 单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,8 +122,8 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取询价配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 询价配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PriceSpec 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置询价配置
+     * Set 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceSpec 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,7 +142,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -150,7 +150,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -158,7 +158,7 @@ public class InquiryPriceScaleOutInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalCost", this.OriginalCost);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodeTask2017  extends AbstractModel{
+public class TranscodeTask2017 extends AbstractModel{
 
     /**
     * 转码任务 ID。
@@ -88,7 +88,7 @@ public class TranscodeTask2017  extends AbstractModel{
     private TranscodePlayInfo2017 [] PlayInfoSet;
 
     /**
-     * 获取转码任务 ID。
+     * Get 转码任务 ID。 
      * @return TaskId 转码任务 ID。
      */
     public String getTaskId() {
@@ -96,7 +96,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置转码任务 ID。
+     * Set 转码任务 ID。
      * @param TaskId 转码任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -104,10 +104,10 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -118,7 +118,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,8 +132,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,8 +152,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取被转码文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 被转码文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 被转码文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -162,7 +162,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置被转码文件 ID。
+     * Set 被转码文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 被转码文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,8 +172,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取被转码文件名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 被转码文件名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName 被转码文件名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -182,7 +182,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置被转码文件名称。
+     * Set 被转码文件名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 被转码文件名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,8 +192,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频时长，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频时长，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -202,7 +202,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频时长，单位：秒。
+     * Set 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 视频时长，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,8 +212,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取封面地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 封面地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CoverUrl 封面地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -222,7 +222,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置封面地址。
+     * Set 封面地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverUrl 封面地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -232,8 +232,8 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频转码后生成的播放信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转码后生成的播放信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlayInfoSet 视频转码后生成的播放信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -242,7 +242,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码后生成的播放信息。
+     * Set 视频转码后生成的播放信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayInfoSet 视频转码后生成的播放信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -252,7 +252,7 @@ public class TranscodeTask2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

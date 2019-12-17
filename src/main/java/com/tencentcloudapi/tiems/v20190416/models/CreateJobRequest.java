@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateJobRequest  extends AbstractModel{
+public class CreateJobRequest extends AbstractModel{
 
     /**
     * 任务名称
@@ -107,7 +107,7 @@ public class CreateJobRequest  extends AbstractModel{
     private String GpuType;
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -115,7 +115,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -123,7 +123,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取同时处理任务的 Worker 个数
+     * Get 同时处理任务的 Worker 个数 
      * @return WorkerCount 同时处理任务的 Worker 个数
      */
     public Long getWorkerCount() {
@@ -131,7 +131,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置同时处理任务的 Worker 个数
+     * Set 同时处理任务的 Worker 个数
      * @param WorkerCount 同时处理任务的 Worker 个数
      */
     public void setWorkerCount(Long WorkerCount) {
@@ -139,7 +139,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取使用的配置 Id
+     * Get 使用的配置 Id 
      * @return ConfigId 使用的配置 Id
      */
     public String getConfigId() {
@@ -147,7 +147,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置使用的配置 Id
+     * Set 使用的配置 Id
      * @param ConfigId 使用的配置 Id
      */
     public void setConfigId(String ConfigId) {
@@ -155,7 +155,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/1000核；范围[100, 256000]
+     * Get 处理器配置, 单位为1/1000核；范围[100, 256000] 
      * @return Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
      */
     public Long getCpu() {
@@ -163,7 +163,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置处理器配置, 单位为1/1000核；范围[100, 256000]
+     * Set 处理器配置, 单位为1/1000核；范围[100, 256000]
      * @param Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
      */
     public void setCpu(Long Cpu) {
@@ -171,7 +171,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存配置, 单位为1M；范围[100, 256000]
+     * Get 内存配置, 单位为1M；范围[100, 256000] 
      * @return Memory 内存配置, 单位为1M；范围[100, 256000]
      */
     public Long getMemory() {
@@ -179,7 +179,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存配置, 单位为1M；范围[100, 256000]
+     * Set 内存配置, 单位为1M；范围[100, 256000]
      * @param Memory 内存配置, 单位为1M；范围[100, 256000]
      */
     public void setMemory(Long Memory) {
@@ -187,7 +187,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行集群
+     * Get 运行集群 
      * @return Cluster 运行集群
      */
     public String getCluster() {
@@ -195,7 +195,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行集群
+     * Set 运行集群
      * @param Cluster 运行集群
      */
     public void setCluster(String Cluster) {
@@ -203,7 +203,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预测输入
+     * Get 预测输入 
      * @return PredictInput 预测输入
      */
     public PredictInput getPredictInput() {
@@ -211,7 +211,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预测输入
+     * Set 预测输入
      * @param PredictInput 预测输入
      */
     public void setPredictInput(PredictInput PredictInput) {
@@ -219,7 +219,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务描述
+     * Get 任务描述 
      * @return Description 任务描述
      */
     public String getDescription() {
@@ -227,7 +227,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务描述
+     * Set 任务描述
      * @param Description 任务描述
      */
     public void setDescription(String Description) {
@@ -235,7 +235,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取使用的资源组 Id，默认使用共享资源组
+     * Get 使用的资源组 Id，默认使用共享资源组 
      * @return ResourceGroupId 使用的资源组 Id，默认使用共享资源组
      */
     public String getResourceGroupId() {
@@ -243,7 +243,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置使用的资源组 Id，默认使用共享资源组
+     * Set 使用的资源组 Id，默认使用共享资源组
      * @param ResourceGroupId 使用的资源组 Id，默认使用共享资源组
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -251,7 +251,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+     * Get GPU算力配置，单位为1/1000 卡，范围 [0, 256000] 
      * @return Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      */
     public Long getGpu() {
@@ -259,7 +259,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+     * Set GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      * @param Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
      */
     public void setGpu(Long Gpu) {
@@ -267,7 +267,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取显存配置, 单位为1M，范围 [0, 256000]
+     * Get 显存配置, 单位为1M，范围 [0, 256000] 
      * @return GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      */
     public Long getGpuMemory() {
@@ -275,7 +275,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置显存配置, 单位为1M，范围 [0, 256000]
+     * Set 显存配置, 单位为1M，范围 [0, 256000]
      * @param GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
      */
     public void setGpuMemory(Long GpuMemory) {
@@ -283,7 +283,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取GPU类型
+     * Get GPU类型 
      * @return GpuType GPU类型
      */
     public String getGpuType() {
@@ -291,7 +291,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置GPU类型
+     * Set GPU类型
      * @param GpuType GPU类型
      */
     public void setGpuType(String GpuType) {
@@ -299,7 +299,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

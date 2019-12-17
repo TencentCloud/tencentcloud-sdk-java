@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodePlayInfo2017  extends AbstractModel{
+public class TranscodePlayInfo2017 extends AbstractModel{
 
     /**
     * 播放地址。
@@ -58,7 +58,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     private Long Width;
 
     /**
-     * 获取播放地址。
+     * Get 播放地址。 
      * @return Url 播放地址。
      */
     public String getUrl() {
@@ -66,7 +66,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置播放地址。
+     * Set 播放地址。
      * @param Url 播放地址。
      */
     public void setUrl(String Url) {
@@ -74,7 +74,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -82,7 +82,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -90,7 +90,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Get 视频流码率平均值与音频流码率平均值之和， 单位：bps。 
      * @return Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
     public Long getBitrate() {
@@ -98,7 +98,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频流码率平均值与音频流码率平均值之和， 单位：bps。
+     * Set 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      * @param Bitrate 视频流码率平均值与音频流码率平均值之和， 单位：bps。
      */
     public void setBitrate(Long Bitrate) {
@@ -106,7 +106,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频流高度的最大值，单位：px。
+     * Get 视频流高度的最大值，单位：px。 
      * @return Height 视频流高度的最大值，单位：px。
      */
     public Long getHeight() {
@@ -114,7 +114,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频流高度的最大值，单位：px。
+     * Set 视频流高度的最大值，单位：px。
      * @param Height 视频流高度的最大值，单位：px。
      */
     public void setHeight(Long Height) {
@@ -122,7 +122,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 获取视频流宽度的最大值，单位：px。
+     * Get 视频流宽度的最大值，单位：px。 
      * @return Width 视频流宽度的最大值，单位：px。
      */
     public Long getWidth() {
@@ -130,7 +130,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 设置视频流宽度的最大值，单位：px。
+     * Set 视频流宽度的最大值，单位：px。
      * @param Width 视频流宽度的最大值，单位：px。
      */
     public void setWidth(Long Width) {
@@ -138,7 +138,7 @@ public class TranscodePlayInfo2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

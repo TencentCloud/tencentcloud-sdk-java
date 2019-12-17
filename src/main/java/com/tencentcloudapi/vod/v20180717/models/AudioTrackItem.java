@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioTrackItem  extends AbstractModel{
+public class AudioTrackItem extends AbstractModel{
 
     /**
     * 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
@@ -52,7 +52,7 @@ public class AudioTrackItem  extends AbstractModel{
     private AudioTransform [] AudioOperations;
 
     /**
-     * 获取音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * Get 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。 
      * @return SourceMedia 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      */
     public String getSourceMedia() {
@@ -60,7 +60,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
+     * Set 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      * @param SourceMedia 音频素材的媒体文件来源。可以是点播的文件 ID，也可以是其它文件的 URL。
      */
     public void setSourceMedia(String SourceMedia) {
@@ -68,7 +68,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
+     * Get 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。 
      * @return SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      */
     public Float getSourceMediaStartTime() {
@@ -76,7 +76,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
+     * Set 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      * @param SourceMediaStartTime 音频片段取自素材文件的起始时间，单位为秒。0 表示从素材开始位置截取。默认为0。
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
@@ -84,7 +84,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
+     * Get 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。 
      * @return Duration 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
      */
     public Float getDuration() {
@@ -92,7 +92,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
+     * Set 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
      * @param Duration 音频片段的时长，单位为秒。默认和素材本身长度一致，表示截取全部素材。
      */
     public void setDuration(Float Duration) {
@@ -100,8 +100,8 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取对音频片段进行的操作，如音量调节等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对音频片段进行的操作，如音量调节等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioOperations 对音频片段进行的操作，如音量调节等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,7 +110,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置对音频片段进行的操作，如音量调节等。
+     * Set 对音频片段进行的操作，如音量调节等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioOperations 对音频片段进行的操作，如音量调节等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ public class AudioTrackItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);

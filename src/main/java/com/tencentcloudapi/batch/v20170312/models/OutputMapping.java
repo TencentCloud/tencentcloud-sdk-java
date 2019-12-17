@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OutputMapping  extends AbstractModel{
+public class OutputMapping extends AbstractModel{
 
     /**
     * 源端路径
@@ -37,7 +37,7 @@ public class OutputMapping  extends AbstractModel{
     private String DestinationPath;
 
     /**
-     * 获取源端路径
+     * Get 源端路径 
      * @return SourcePath 源端路径
      */
     public String getSourcePath() {
@@ -45,7 +45,7 @@ public class OutputMapping  extends AbstractModel{
     }
 
     /**
-     * 设置源端路径
+     * Set 源端路径
      * @param SourcePath 源端路径
      */
     public void setSourcePath(String SourcePath) {
@@ -53,7 +53,7 @@ public class OutputMapping  extends AbstractModel{
     }
 
     /**
-     * 获取目的端路径
+     * Get 目的端路径 
      * @return DestinationPath 目的端路径
      */
     public String getDestinationPath() {
@@ -61,7 +61,7 @@ public class OutputMapping  extends AbstractModel{
     }
 
     /**
-     * 设置目的端路径
+     * Set 目的端路径
      * @param DestinationPath 目的端路径
      */
     public void setDestinationPath(String DestinationPath) {
@@ -69,7 +69,7 @@ public class OutputMapping  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourcePath", this.SourcePath);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAddressQuotaResponse  extends AbstractModel{
+public class DescribeAddressQuotaResponse extends AbstractModel{
 
     /**
     * 账户 EIP 配额信息。
@@ -37,7 +37,7 @@ public class DescribeAddressQuotaResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取账户 EIP 配额信息。
+     * Get 账户 EIP 配额信息。 
      * @return QuotaSet 账户 EIP 配额信息。
      */
     public Quota [] getQuotaSet() {
@@ -45,7 +45,7 @@ public class DescribeAddressQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置账户 EIP 配额信息。
+     * Set 账户 EIP 配额信息。
      * @param QuotaSet 账户 EIP 配额信息。
      */
     public void setQuotaSet(Quota [] QuotaSet) {
@@ -53,7 +53,7 @@ public class DescribeAddressQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeAddressQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeAddressQuotaResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "QuotaSet.", this.QuotaSet);

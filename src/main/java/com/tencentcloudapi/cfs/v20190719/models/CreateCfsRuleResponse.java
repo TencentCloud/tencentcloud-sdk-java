@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsRuleResponse  extends AbstractModel{
+public class CreateCfsRuleResponse extends AbstractModel{
 
     /**
     * 规则 ID
@@ -72,7 +72,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取规则 ID
+     * Get 规则 ID 
      * @return RuleId 规则 ID
      */
     public String getRuleId() {
@@ -80,7 +80,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置规则 ID
+     * Set 规则 ID
      * @param RuleId 规则 ID
      */
     public void setRuleId(String RuleId) {
@@ -88,7 +88,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -96,7 +96,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -104,7 +104,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户端 IP
+     * Get 客户端 IP 
      * @return AuthClientIp 客户端 IP
      */
     public String getAuthClientIp() {
@@ -112,7 +112,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户端 IP
+     * Set 客户端 IP
      * @param AuthClientIp 客户端 IP
      */
     public void setAuthClientIp(String AuthClientIp) {
@@ -120,7 +120,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取读写权限
+     * Get 读写权限 
      * @return RWPermission 读写权限
      */
     public String getRWPermission() {
@@ -128,7 +128,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置读写权限
+     * Set 读写权限
      * @param RWPermission 读写权限
      */
     public void setRWPermission(String RWPermission) {
@@ -136,7 +136,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户权限
+     * Get 用户权限 
      * @return UserPermission 用户权限
      */
     public String getUserPermission() {
@@ -144,7 +144,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户权限
+     * Set 用户权限
      * @param UserPermission 用户权限
      */
     public void setUserPermission(String UserPermission) {
@@ -152,7 +152,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取优先级
+     * Get 优先级 
      * @return Priority 优先级
      */
     public Long getPriority() {
@@ -160,7 +160,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置优先级
+     * Set 优先级
      * @param Priority 优先级
      */
     public void setPriority(Long Priority) {
@@ -168,7 +168,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class CreateCfsRuleResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

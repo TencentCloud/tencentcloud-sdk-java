@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCLevelRequest  extends AbstractModel{
+public class ModifyCCLevelRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -58,7 +58,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     private String RuleId;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -66,7 +66,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -74,7 +74,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -82,7 +82,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -90,7 +90,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
+     * Get CC防护等级，取值[default(正常), loose(宽松), strict(严格)]; 
      * @return Level CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
      */
     public String getLevel() {
@@ -98,7 +98,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
+     * Set CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
      * @param Level CC防护等级，取值[default(正常), loose(宽松), strict(严格)];
      */
     public void setLevel(String Level) {
@@ -106,7 +106,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * Get 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段； 
      * @return Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public String getProtocol() {
@@ -114,7 +114,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
+     * Set 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      * @param Protocol 可选字段，代表CC防护类型，取值[http（HTTP协议的CC防护），https（HTTPS协议的CC防护）]；当不填时，默认为HTTP协议的CC防护；当填写https时还需要填写RuleId字段；
      */
     public void setProtocol(String Protocol) {
@@ -122,7 +122,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 获取表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+     * Get 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）； 
      * @return RuleId 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public String getRuleId() {
@@ -130,7 +130,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
+     * Set 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      * @param RuleId 表示7层转发规则ID（通过获取7层转发规则接口可以获取规则ID）；
      */
     public void setRuleId(String RuleId) {
@@ -138,7 +138,7 @@ public class ModifyCCLevelRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

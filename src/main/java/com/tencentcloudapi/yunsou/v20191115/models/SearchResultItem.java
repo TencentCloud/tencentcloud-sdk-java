@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchResultItem  extends AbstractModel{
+public class SearchResultItem extends AbstractModel{
 
     /**
     * 动态摘要信息
@@ -58,7 +58,7 @@ public class SearchResultItem  extends AbstractModel{
     private String SearchDebuginfo;
 
     /**
-     * 获取动态摘要信息
+     * Get 动态摘要信息 
      * @return DocAbs 动态摘要信息
      */
     public String getDocAbs() {
@@ -66,7 +66,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置动态摘要信息
+     * Set 动态摘要信息
      * @param DocAbs 动态摘要信息
      */
     public void setDocAbs(String DocAbs) {
@@ -74,7 +74,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取检索文档id
+     * Get 检索文档id 
      * @return DocId 检索文档id
      */
     public String getDocId() {
@@ -82,7 +82,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置检索文档id
+     * Set 检索文档id
      * @param DocId 检索文档id
      */
     public void setDocId(String DocId) {
@@ -90,7 +90,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取原始文档信息
+     * Get 原始文档信息 
      * @return DocMeta 原始文档信息
      */
     public String getDocMeta() {
@@ -98,7 +98,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置原始文档信息
+     * Set 原始文档信息
      * @param DocMeta 原始文档信息
      */
     public void setDocMeta(String DocMeta) {
@@ -106,7 +106,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取精计算得分
+     * Get 精计算得分 
      * @return L2Score 精计算得分
      */
     public Float getL2Score() {
@@ -114,7 +114,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置精计算得分
+     * Set 精计算得分
      * @param L2Score 精计算得分
      */
     public void setL2Score(Float L2Score) {
@@ -122,7 +122,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取文档级回传信息
+     * Get 文档级回传信息 
      * @return SearchDebuginfo 文档级回传信息
      */
     public String getSearchDebuginfo() {
@@ -130,7 +130,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置文档级回传信息
+     * Set 文档级回传信息
      * @param SearchDebuginfo 文档级回传信息
      */
     public void setSearchDebuginfo(String SearchDebuginfo) {
@@ -138,7 +138,7 @@ public class SearchResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DocAbs", this.DocAbs);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectCelebrityResponse  extends AbstractModel{
+public class DetectCelebrityResponse extends AbstractModel{
 
     /**
     * 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
@@ -37,7 +37,7 @@ public class DetectCelebrityResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
+     * Get 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。 
      * @return Faces 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
      */
     public Face [] getFaces() {
@@ -45,7 +45,7 @@ public class DetectCelebrityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
+     * Set 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
      * @param Faces 公众人物识别结果数组。如果检测不到人脸，返回为空；最多可以返回10个人脸识别结果。
      */
     public void setFaces(Face [] Faces) {
@@ -53,7 +53,7 @@ public class DetectCelebrityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DetectCelebrityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DetectCelebrityResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Faces.", this.Faces);

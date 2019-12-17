@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetProcedureTemplateRequest  extends AbstractModel{
+public class ResetProcedureTemplateRequest extends AbstractModel{
 
     /**
     * 任务流名字
@@ -65,7 +65,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取任务流名字
+     * Get 任务流名字 
      * @return Name 任务流名字
      */
     public String getName() {
@@ -73,7 +73,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流名字
+     * Set 任务流名字
      * @param Name 任务流名字
      */
     public void setName(String Name) {
@@ -81,7 +81,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理类型任务参数。
+     * Get 视频处理类型任务参数。 
      * @return MediaProcessTask 视频处理类型任务参数。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
@@ -89,7 +89,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理类型任务参数。
+     * Set 视频处理类型任务参数。
      * @param MediaProcessTask 视频处理类型任务参数。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
@@ -97,7 +97,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取AI 智能内容审核类型任务参数。
+     * Get AI 智能内容审核类型任务参数。 
      * @return AiContentReviewTask AI 智能内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -105,7 +105,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置AI 智能内容审核类型任务参数。
+     * Set AI 智能内容审核类型任务参数。
      * @param AiContentReviewTask AI 智能内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -113,7 +113,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取AI 智能内容分析类型任务参数。
+     * Get AI 智能内容分析类型任务参数。 
      * @return AiAnalysisTask AI 智能内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -121,7 +121,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置AI 智能内容分析类型任务参数。
+     * Set AI 智能内容分析类型任务参数。
      * @param AiAnalysisTask AI 智能内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -129,7 +129,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取AI 内容识别类型任务参数。
+     * Get AI 内容识别类型任务参数。 
      * @return AiRecognitionTask AI 内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -137,7 +137,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置AI 内容识别类型任务参数。
+     * Set AI 内容识别类型任务参数。
      * @param AiRecognitionTask AI 内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -145,7 +145,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -153,7 +153,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -161,7 +161,7 @@ public class ResetProcedureTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ForbidStreamInfo  extends AbstractModel{
+public class ForbidStreamInfo extends AbstractModel{
 
     /**
     * 流名称。
@@ -44,7 +44,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -52,7 +52,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -60,7 +60,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -68,7 +68,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -76,7 +76,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取禁推过期时间。
+     * Get 禁推过期时间。 
      * @return ExpireTime 禁推过期时间。
      */
     public String getExpireTime() {
@@ -84,7 +84,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置禁推过期时间。
+     * Set 禁推过期时间。
      * @param ExpireTime 禁推过期时间。
      */
     public void setExpireTime(String ExpireTime) {
@@ -92,7 +92,7 @@ public class ForbidStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

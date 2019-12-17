@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
+public class DescribeStreamPlayInfoListRequest extends AbstractModel{
 
     /**
     * 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
@@ -64,8 +64,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-当前时间 和 开始时间 间隔不超过30天。
+     * Get 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
+当前时间 和 开始时间 间隔不超过30天。 
      * @return StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
      */
@@ -74,7 +74,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
+     * Set 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
      * @param StartTime 开始时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 当前时间 和 开始时间 间隔不超过30天。
@@ -84,8 +84,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
-结束时间 和 开始时间  必须在同一天内。
+     * Get 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
+结束时间 和 开始时间  必须在同一天内。 
      * @return EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      */
@@ -94,7 +94,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
+     * Set 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
      * @param EndTime 结束时间，北京时间，格式为yyyy-mm-dd HH:MM:SS，
 结束时间 和 开始时间  必须在同一天内。
@@ -104,8 +104,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名，
-若不填，则为查询所有播放域名的在线流数据。
+     * Get 播放域名，
+若不填，则为查询所有播放域名的在线流数据。 
      * @return PlayDomain 播放域名，
 若不填，则为查询所有播放域名的在线流数据。
      */
@@ -114,7 +114,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名，
+     * Set 播放域名，
 若不填，则为查询所有播放域名的在线流数据。
      * @param PlayDomain 播放域名，
 若不填，则为查询所有播放域名的在线流数据。
@@ -124,8 +124,8 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称，精确匹配。
-若不填，则为查询总体播放数据。
+     * Get 流名称，精确匹配。
+若不填，则为查询总体播放数据。 
      * @return StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。
      */
@@ -134,7 +134,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称，精确匹配。
+     * Set 流名称，精确匹配。
 若不填，则为查询总体播放数据。
      * @param StreamName 流名称，精确匹配。
 若不填，则为查询总体播放数据。
@@ -144,9 +144,9 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
-注意：按AppName查询，需要联系客服同学提单支持。
+注意：按AppName查询，需要联系客服同学提单支持。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
@@ -156,7 +156,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
 若不填，则为查询总体播放数据。
 注意：按AppName查询，需要联系客服同学提单支持。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为live。精确匹配，不支持。
@@ -168,7 +168,7 @@ public class DescribeStreamPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

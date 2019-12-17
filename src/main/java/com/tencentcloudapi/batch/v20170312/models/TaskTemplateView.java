@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskTemplateView  extends AbstractModel{
+public class TaskTemplateView extends AbstractModel{
 
     /**
     * 任务模板ID
@@ -58,7 +58,7 @@ public class TaskTemplateView  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取任务模板ID
+     * Get 任务模板ID 
      * @return TaskTemplateId 任务模板ID
      */
     public String getTaskTemplateId() {
@@ -66,7 +66,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板ID
+     * Set 任务模板ID
      * @param TaskTemplateId 任务模板ID
      */
     public void setTaskTemplateId(String TaskTemplateId) {
@@ -74,7 +74,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板名称
+     * Get 任务模板名称 
      * @return TaskTemplateName 任务模板名称
      */
     public String getTaskTemplateName() {
@@ -82,7 +82,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板名称
+     * Set 任务模板名称
      * @param TaskTemplateName 任务模板名称
      */
     public void setTaskTemplateName(String TaskTemplateName) {
@@ -90,7 +90,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板描述
+     * Get 任务模板描述 
      * @return TaskTemplateDescription 任务模板描述
      */
     public String getTaskTemplateDescription() {
@@ -98,7 +98,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板描述
+     * Set 任务模板描述
      * @param TaskTemplateDescription 任务模板描述
      */
     public void setTaskTemplateDescription(String TaskTemplateDescription) {
@@ -106,7 +106,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 获取任务模板信息
+     * Get 任务模板信息 
      * @return TaskTemplateInfo 任务模板信息
      */
     public Task getTaskTemplateInfo() {
@@ -114,7 +114,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 设置任务模板信息
+     * Set 任务模板信息
      * @param TaskTemplateInfo 任务模板信息
      */
     public void setTaskTemplateInfo(Task TaskTemplateInfo) {
@@ -122,7 +122,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -130,7 +130,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -138,7 +138,7 @@ public class TaskTemplateView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskTemplateId", this.TaskTemplateId);

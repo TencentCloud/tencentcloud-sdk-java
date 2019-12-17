@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest  extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel{
 
     /**
     * 筛选选项
@@ -65,7 +65,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private String ResourceGroupId;
 
     /**
-     * 获取筛选选项
+     * Get 筛选选项 
      * @return Filters 筛选选项
      */
     public Filter [] getFilters() {
@@ -73,7 +73,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置筛选选项
+     * Set 筛选选项
      * @param Filters 筛选选项
      */
     public void setFilters(Filter [] Filters) {
@@ -81,7 +81,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -89,7 +89,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -97,7 +97,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为200
+     * Get 返回数量，默认为20，最大值为200 
      * @return Limit 返回数量，默认为20，最大值为200
      */
     public Long getLimit() {
@@ -105,7 +105,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为200
+     * Set 返回数量，默认为20，最大值为200
      * @param Limit 返回数量，默认为20，最大值为200
      */
     public void setLimit(Long Limit) {
@@ -113,7 +113,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Get 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列 
      * @return Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public String getOrder() {
@@ -121,7 +121,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Set 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      * @param Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public void setOrder(String Order) {
@@ -129,7 +129,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+     * Get 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME" 
      * @return OrderField 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public String getOrderField() {
@@ -137,7 +137,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+     * Set 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      * @param OrderField 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public void setOrderField(String OrderField) {
@@ -145,7 +145,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的资源组 ID
+     * Get 要查询的资源组 ID 
      * @return ResourceGroupId 要查询的资源组 ID
      */
     public String getResourceGroupId() {
@@ -153,7 +153,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的资源组 ID
+     * Set 要查询的资源组 ID
      * @param ResourceGroupId 要查询的资源组 ID
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -161,7 +161,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

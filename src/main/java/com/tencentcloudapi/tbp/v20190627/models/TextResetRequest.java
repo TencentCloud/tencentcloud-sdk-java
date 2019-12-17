@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextResetRequest  extends AbstractModel{
+public class TextResetRequest extends AbstractModel{
 
     /**
     * 机器人标识，用于定义抽象机器人。
@@ -58,7 +58,7 @@ public class TextResetRequest  extends AbstractModel{
     private String PlatformId;
 
     /**
-     * 获取机器人标识，用于定义抽象机器人。
+     * Get 机器人标识，用于定义抽象机器人。 
      * @return BotId 机器人标识，用于定义抽象机器人。
      */
     public String getBotId() {
@@ -66,7 +66,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器人标识，用于定义抽象机器人。
+     * Set 机器人标识，用于定义抽象机器人。
      * @param BotId 机器人标识，用于定义抽象机器人。
      */
     public void setBotId(String BotId) {
@@ -74,7 +74,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
+     * Get 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。 
      * @return BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
      */
     public String getBotEnv() {
@@ -82,7 +82,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
+     * Set 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
      * @param BotEnv 机器人版本，取值"dev"或"release"，{调试版本：dev；线上版本：release}。
      */
     public void setBotEnv(String BotEnv) {
@@ -90,7 +90,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取终端标识，每个终端(或线程)对应一个，区分并发多用户。
+     * Get 终端标识，每个终端(或线程)对应一个，区分并发多用户。 
      * @return TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
      */
     public String getTerminalId() {
@@ -98,7 +98,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置终端标识，每个终端(或线程)对应一个，区分并发多用户。
+     * Set 终端标识，每个终端(或线程)对应一个，区分并发多用户。
      * @param TerminalId 终端标识，每个终端(或线程)对应一个，区分并发多用户。
      */
     public void setTerminalId(String TerminalId) {
@@ -106,7 +106,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+     * Get 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。 
      * @return PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public String getPlatformType() {
@@ -114,7 +114,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
+     * Set 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      * @param PlatformType 平台类型，{小程序：MiniProgram；小微：XiaoWei；公众号：OfficialAccount；企业微信: WXWork}。
      */
     public void setPlatformType(String PlatformType) {
@@ -122,7 +122,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     * Get 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识 
      * @return PlatformId 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
      */
     public String getPlatformId() {
@@ -130,7 +130,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
+     * Set 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
      * @param PlatformId 当PlatformType为微信公众号或企业微信时，传递对应微信公众号或企业微信的唯一标识
      */
     public void setPlatformId(String PlatformId) {
@@ -138,7 +138,7 @@ public class TextResetRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotId", this.BotId);

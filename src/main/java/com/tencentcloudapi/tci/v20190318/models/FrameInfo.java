@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FrameInfo  extends AbstractModel{
+public class FrameInfo extends AbstractModel{
 
     /**
     * 相似度
@@ -44,7 +44,7 @@ public class FrameInfo  extends AbstractModel{
     private Long Ts;
 
     /**
-     * 获取相似度
+     * Get 相似度 
      * @return Similarity 相似度
      */
     public Float getSimilarity() {
@@ -52,7 +52,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 设置相似度
+     * Set 相似度
      * @param Similarity 相似度
      */
     public void setSimilarity(Float Similarity) {
@@ -60,7 +60,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 获取截图的存储地址
+     * Get 截图的存储地址 
      * @return SnapshotUrl 截图的存储地址
      */
     public String getSnapshotUrl() {
@@ -68,7 +68,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 设置截图的存储地址
+     * Set 截图的存储地址
      * @param SnapshotUrl 截图的存储地址
      */
     public void setSnapshotUrl(String SnapshotUrl) {
@@ -76,7 +76,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 获取相对于视频起始时间的时间戳，单位秒
+     * Get 相对于视频起始时间的时间戳，单位秒 
      * @return Ts 相对于视频起始时间的时间戳，单位秒
      */
     public Long getTs() {
@@ -84,7 +84,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 设置相对于视频起始时间的时间戳，单位秒
+     * Set 相对于视频起始时间的时间戳，单位秒
      * @param Ts 相对于视频起始时间的时间戳，单位秒
      */
     public void setTs(Long Ts) {
@@ -92,7 +92,7 @@ public class FrameInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Similarity", this.Similarity);

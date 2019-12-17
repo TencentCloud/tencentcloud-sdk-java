@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetPolicyResponse  extends AbstractModel{
+public class GetPolicyResponse extends AbstractModel{
 
     /**
     * 策略名
@@ -78,8 +78,8 @@ public class GetPolicyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取策略名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyName 策略名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,7 +88,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置策略名
+     * Set 策略名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,8 +98,8 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 策略描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,7 +108,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置策略描述
+     * Set 策略描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,8 +118,8 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取1 表示自定义策略，2 表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 1 表示自定义策略，2 表示预设策略
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 1 表示自定义策略，2 表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -128,7 +128,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置1 表示自定义策略，2 表示预设策略
+     * Set 1 表示自定义策略，2 表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 1 表示自定义策略，2 表示预设策略
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,8 +138,8 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,8 +158,8 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最近更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -168,7 +168,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最近更新时间
+     * Set 最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最近更新时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -178,8 +178,8 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取策略文档
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 策略文档
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyDocument 策略文档
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -188,7 +188,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置策略文档
+     * Set 策略文档
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyDocument 策略文档
 注意：此字段可能返回 null，表示取不到有效值。
@@ -198,7 +198,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -206,7 +206,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -214,7 +214,7 @@ public class GetPolicyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);

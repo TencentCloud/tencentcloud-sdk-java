@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaFileInfo  extends AbstractModel{
+public class EditMediaFileInfo extends AbstractModel{
 
     /**
     * 视频的 ID。
@@ -46,7 +46,7 @@ public class EditMediaFileInfo  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取视频的 ID。
+     * Get 视频的 ID。 
      * @return FileId 视频的 ID。
      */
     public String getFileId() {
@@ -54,7 +54,7 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频的 ID。
+     * Set 视频的 ID。
      * @param FileId 视频的 ID。
      */
     public void setFileId(String FileId) {
@@ -62,8 +62,8 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频剪辑的起始偏移时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频剪辑的起始偏移时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑的起始偏移时间偏移，单位：秒。
+     * Set 视频剪辑的起始偏移时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeOffset 视频剪辑的起始偏移时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频剪辑的起始结束时间偏移，单位：秒。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频剪辑的起始结束时间偏移，单位：秒。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTimeOffset 视频剪辑的起始结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频剪辑的起始结束时间偏移，单位：秒。
+     * Set 视频剪辑的起始结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTimeOffset 视频剪辑的起始结束时间偏移，单位：秒。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ public class EditMediaFileInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

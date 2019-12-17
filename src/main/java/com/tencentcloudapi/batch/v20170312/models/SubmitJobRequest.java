@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitJobRequest  extends AbstractModel{
+public class SubmitJobRequest extends AbstractModel{
 
     /**
     * 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
@@ -44,7 +44,7 @@ public class SubmitJobRequest  extends AbstractModel{
     private String ClientToken;
 
     /**
-     * 获取作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+     * Get 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。 
      * @return Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      */
     public Placement getPlacement() {
@@ -52,7 +52,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
+     * Set 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      * @param Placement 作业所提交的位置信息。通过该参数可以指定作业关联CVM所属可用区等信息。
      */
     public void setPlacement(Placement Placement) {
@@ -60,7 +60,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取作业信息
+     * Get 作业信息 
      * @return Job 作业信息
      */
     public Job getJob() {
@@ -68,7 +68,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业信息
+     * Set 作业信息
      * @param Job 作业信息
      */
     public void setJob(Job Job) {
@@ -76,7 +76,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
      * @return ClientToken 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public String getClientToken() {
@@ -84,7 +84,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      * @param ClientToken 用于保证请求幂等性的字符串。该字符串由用户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     public void setClientToken(String ClientToken) {
@@ -92,7 +92,7 @@ public class SubmitJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Placement.", this.Placement);

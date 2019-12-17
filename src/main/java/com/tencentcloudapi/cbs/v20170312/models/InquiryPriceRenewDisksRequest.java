@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDisksRequest  extends AbstractModel{
+public class InquiryPriceRenewDisksRequest extends AbstractModel{
 
     /**
     * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
@@ -51,7 +51,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
      * @return DiskIds 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public String [] getDiskIds() {
@@ -59,7 +59,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param DiskIds 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -67,7 +67,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。 
      * @return DiskChargePrepaids 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
      */
     public DiskChargePrepaid [] getDiskChargePrepaids() {
@@ -75,7 +75,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
      * @param DiskChargePrepaids 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
      */
     public void setDiskChargePrepaids(DiskChargePrepaid [] DiskChargePrepaids) {
@@ -83,7 +83,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * Get 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。 
      * @return NewDeadline 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      */
     public String getNewDeadline() {
@@ -91,7 +91,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * Set 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      * @param NewDeadline 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      */
     public void setNewDeadline(String NewDeadline) {
@@ -99,7 +99,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云盘所属项目ID。 如传入则仅用于鉴权。
+     * Get 云盘所属项目ID。 如传入则仅用于鉴权。 
      * @return ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
     public Integer getProjectId() {
@@ -107,7 +107,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云盘所属项目ID。 如传入则仅用于鉴权。
+     * Set 云盘所属项目ID。 如传入则仅用于鉴权。
      * @param ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
      */
     public void setProjectId(Integer ProjectId) {
@@ -115,7 +115,7 @@ public class InquiryPriceRenewDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

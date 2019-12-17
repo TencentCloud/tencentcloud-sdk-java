@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4Backend  extends AbstractModel{
+public class DescribeL4Backend extends AbstractModel{
 
     /**
     * 待绑定的主机端口，可选值1~65535。
@@ -37,7 +37,7 @@ public class DescribeL4Backend  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取待绑定的主机端口，可选值1~65535。
+     * Get 待绑定的主机端口，可选值1~65535。 
      * @return Port 待绑定的主机端口，可选值1~65535。
      */
     public Integer getPort() {
@@ -45,7 +45,7 @@ public class DescribeL4Backend  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机端口，可选值1~65535。
+     * Set 待绑定的主机端口，可选值1~65535。
      * @param Port 待绑定的主机端口，可选值1~65535。
      */
     public void setPort(Integer Port) {
@@ -53,7 +53,7 @@ public class DescribeL4Backend  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机的主机ID。
+     * Get 黑石物理机的主机ID。 
      * @return InstanceId 黑石物理机的主机ID。
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class DescribeL4Backend  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机的主机ID。
+     * Set 黑石物理机的主机ID。
      * @param InstanceId 黑石物理机的主机ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class DescribeL4Backend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

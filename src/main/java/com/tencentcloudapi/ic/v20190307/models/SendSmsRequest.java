@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendSmsRequest  extends AbstractModel{
+public class SendSmsRequest extends AbstractModel{
 
     /**
     * 应用id
@@ -44,7 +44,7 @@ public class SendSmsRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public Integer getSdkappid() {
@@ -52,7 +52,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(Integer Sdkappid) {
@@ -60,7 +60,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取卡片id
+     * Get 卡片id 
      * @return Iccid 卡片id
      */
     public String getIccid() {
@@ -68,7 +68,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置卡片id
+     * Set 卡片id
      * @param Iccid 卡片id
      */
     public void setIccid(String Iccid) {
@@ -76,7 +76,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取短信内容
+     * Get 短信内容 
      * @return Content 短信内容
      */
     public String getContent() {
@@ -84,7 +84,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置短信内容
+     * Set 短信内容
      * @param Content 短信内容
      */
     public void setContent(String Content) {
@@ -92,7 +92,7 @@ public class SendSmsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

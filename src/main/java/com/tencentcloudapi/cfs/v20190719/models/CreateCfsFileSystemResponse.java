@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCfsFileSystemResponse  extends AbstractModel{
+public class CreateCfsFileSystemResponse extends AbstractModel{
 
     /**
     * 文件系统创建时间
@@ -86,7 +86,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取文件系统创建时间
+     * Get 文件系统创建时间 
      * @return CreationTime 文件系统创建时间
      */
     public String getCreationTime() {
@@ -94,7 +94,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统创建时间
+     * Set 文件系统创建时间
      * @param CreationTime 文件系统创建时间
      */
     public void setCreationTime(String CreationTime) {
@@ -102,7 +102,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return CreationToken 用户自定义文件系统名称
      */
     public String getCreationToken() {
@@ -110,7 +110,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param CreationToken 用户自定义文件系统名称
      */
     public void setCreationToken(String CreationToken) {
@@ -118,7 +118,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -126,7 +126,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -134,7 +134,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统状态
+     * Get 文件系统状态 
      * @return LifeCycleState 文件系统状态
      */
     public String getLifeCycleState() {
@@ -142,7 +142,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统状态
+     * Set 文件系统状态
      * @param LifeCycleState 文件系统状态
      */
     public void setLifeCycleState(String LifeCycleState) {
@@ -150,7 +150,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统已使用容量大小
+     * Get 文件系统已使用容量大小 
      * @return SizeByte 文件系统已使用容量大小
      */
     public Long getSizeByte() {
@@ -158,7 +158,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统已使用容量大小
+     * Set 文件系统已使用容量大小
      * @param SizeByte 文件系统已使用容量大小
      */
     public void setSizeByte(Long SizeByte) {
@@ -166,7 +166,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取可用区 ID
+     * Get 可用区 ID 
      * @return ZoneId 可用区 ID
      */
     public Long getZoneId() {
@@ -174,7 +174,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可用区 ID
+     * Set 可用区 ID
      * @param ZoneId 可用区 ID
      */
     public void setZoneId(Long ZoneId) {
@@ -182,7 +182,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return FsName 用户自定义文件系统名称
      */
     public String getFsName() {
@@ -190,7 +190,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param FsName 用户自定义文件系统名称
      */
     public void setFsName(String FsName) {
@@ -198,7 +198,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统是否加密
+     * Get 文件系统是否加密 
      * @return Encrypted 文件系统是否加密
      */
     public Boolean getEncrypted() {
@@ -206,7 +206,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统是否加密
+     * Set 文件系统是否加密
      * @param Encrypted 文件系统是否加密
      */
     public void setEncrypted(Boolean Encrypted) {
@@ -214,7 +214,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class CreateCfsFileSystemResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreationTime", this.CreationTime);

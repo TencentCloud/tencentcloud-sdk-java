@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
+public class ModifyDirectConnectAttributeRequest extends AbstractModel{
 
     /**
     * 物理专线的ID。
@@ -100,7 +100,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
-     * 获取物理专线的ID。
+     * Get 物理专线的ID。 
      * @return DirectConnectId 物理专线的ID。
      */
     public String getDirectConnectId() {
@@ -108,7 +108,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的ID。
+     * Set 物理专线的ID。
      * @param DirectConnectId 物理专线的ID。
      */
     public void setDirectConnectId(String DirectConnectId) {
@@ -116,7 +116,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线名称。
+     * Get 物理专线名称。 
      * @return DirectConnectName 物理专线名称。
      */
     public String getDirectConnectName() {
@@ -124,7 +124,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线名称。
+     * Set 物理专线名称。
      * @param DirectConnectName 物理专线名称。
      */
     public void setDirectConnectName(String DirectConnectName) {
@@ -132,7 +132,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运营商或者服务商为物理专线提供的电路编码。
+     * Get 运营商或者服务商为物理专线提供的电路编码。 
      * @return CircuitCode 运营商或者服务商为物理专线提供的电路编码。
      */
     public String getCircuitCode() {
@@ -140,7 +140,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运营商或者服务商为物理专线提供的电路编码。
+     * Set 运营商或者服务商为物理专线提供的电路编码。
      * @param CircuitCode 运营商或者服务商为物理专线提供的电路编码。
      */
     public void setCircuitCode(String CircuitCode) {
@@ -148,7 +148,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试VLAN。
+     * Get 物理专线调试VLAN。 
      * @return Vlan 物理专线调试VLAN。
      */
     public Integer getVlan() {
@@ -156,7 +156,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试VLAN。
+     * Set 物理专线调试VLAN。
      * @param Vlan 物理专线调试VLAN。
      */
     public void setVlan(Integer Vlan) {
@@ -164,7 +164,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试腾讯侧互联 IP。
+     * Get 物理专线调试腾讯侧互联 IP。 
      * @return TencentAddress 物理专线调试腾讯侧互联 IP。
      */
     public String getTencentAddress() {
@@ -172,7 +172,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试腾讯侧互联 IP。
+     * Set 物理专线调试腾讯侧互联 IP。
      * @param TencentAddress 物理专线调试腾讯侧互联 IP。
      */
     public void setTencentAddress(String TencentAddress) {
@@ -180,7 +180,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线调试用户侧互联 IP。
+     * Get 物理专线调试用户侧互联 IP。 
      * @return CustomerAddress 物理专线调试用户侧互联 IP。
      */
     public String getCustomerAddress() {
@@ -188,7 +188,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线调试用户侧互联 IP。
+     * Set 物理专线调试用户侧互联 IP。
      * @param CustomerAddress 物理专线调试用户侧互联 IP。
      */
     public void setCustomerAddress(String CustomerAddress) {
@@ -196,7 +196,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者姓名。默认从账户体系获取。
+     * Get 物理专线申请者姓名。默认从账户体系获取。 
      * @return CustomerName 物理专线申请者姓名。默认从账户体系获取。
      */
     public String getCustomerName() {
@@ -204,7 +204,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者姓名。默认从账户体系获取。
+     * Set 物理专线申请者姓名。默认从账户体系获取。
      * @param CustomerName 物理专线申请者姓名。默认从账户体系获取。
      */
     public void setCustomerName(String CustomerName) {
@@ -212,7 +212,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者联系邮箱。默认从账户体系获取。
+     * Get 物理专线申请者联系邮箱。默认从账户体系获取。 
      * @return CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
      */
     public String getCustomerContactMail() {
@@ -220,7 +220,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者联系邮箱。默认从账户体系获取。
+     * Set 物理专线申请者联系邮箱。默认从账户体系获取。
      * @param CustomerContactMail 物理专线申请者联系邮箱。默认从账户体系获取。
      */
     public void setCustomerContactMail(String CustomerContactMail) {
@@ -228,7 +228,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取物理专线申请者联系号码。默认从账户体系获取。
+     * Get 物理专线申请者联系号码。默认从账户体系获取。 
      * @return CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
      */
     public String getCustomerContactNumber() {
@@ -236,7 +236,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线申请者联系号码。默认从账户体系获取。
+     * Set 物理专线申请者联系号码。默认从账户体系获取。
      * @param CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
      */
     public void setCustomerContactNumber(String CustomerContactNumber) {
@@ -244,7 +244,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取报障联系人。
+     * Get 报障联系人。 
      * @return FaultReportContactPerson 报障联系人。
      */
     public String getFaultReportContactPerson() {
@@ -252,7 +252,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置报障联系人。
+     * Set 报障联系人。
      * @param FaultReportContactPerson 报障联系人。
      */
     public void setFaultReportContactPerson(String FaultReportContactPerson) {
@@ -260,7 +260,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取报障联系电话。
+     * Get 报障联系电话。 
      * @return FaultReportContactNumber 报障联系电话。
      */
     public String getFaultReportContactNumber() {
@@ -268,7 +268,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置报障联系电话。
+     * Set 报障联系电话。
      * @param FaultReportContactNumber 报障联系电话。
      */
     public void setFaultReportContactNumber(String FaultReportContactNumber) {
@@ -276,7 +276,7 @@ public class ModifyDirectConnectAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);

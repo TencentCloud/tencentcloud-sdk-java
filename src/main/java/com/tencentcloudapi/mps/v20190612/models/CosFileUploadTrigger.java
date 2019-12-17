@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosFileUploadTrigger  extends AbstractModel{
+public class CosFileUploadTrigger extends AbstractModel{
 
     /**
     * 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
@@ -51,7 +51,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     private String [] Formats;
 
     /**
-     * 获取工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * Get 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。 
      * @return Bucket 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      */
     public String getBucket() {
@@ -59,7 +59,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * Set 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param Bucket 工作流绑定的 COS Bucket 名，如 TopRankVideo-125xxx88。
      */
     public void setBucket(String Bucket) {
@@ -67,7 +67,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 获取工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
+     * Get 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。 
      * @return Region 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
      */
     public String getRegion() {
@@ -75,7 +75,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
+     * Set 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
      * @param Region 工作流绑定的 COS Bucket 所属园区，如 ap-chongiqng。
      */
     public void setRegion(String Region) {
@@ -83,7 +83,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 获取工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * Get 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。 
      * @return Dir 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
      */
     public String getDir() {
@@ -91,7 +91,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
+     * Set 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
      * @param Dir 工作流绑定的输入路径目录，如`/movie/201907/`，不填代表根目录`/`。
      */
     public void setDir(String Dir) {
@@ -99,7 +99,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 获取工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
+     * Get 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。 
      * @return Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
      */
     public String [] getFormats() {
@@ -107,7 +107,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 设置工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
+     * Set 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
      * @param Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。
      */
     public void setFormats(String [] Formats) {
@@ -115,7 +115,7 @@ public class CosFileUploadTrigger  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);

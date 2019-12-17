@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBPriceRequest  extends AbstractModel{
+public class DescribeDBPriceRequest extends AbstractModel{
 
     /**
     * 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
@@ -79,7 +79,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     private Integer ProtectMode;
 
     /**
-     * 获取可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
+     * Get 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。 
      * @return Zone 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
      */
     public String getZone() {
@@ -87,7 +87,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
+     * Set 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
      * @param Zone 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
      */
     public void setZone(String Zone) {
@@ -95,7 +95,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量，默认值为 1，最小值 1，最大值为 100。
+     * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public Integer getGoodsNum() {
@@ -103,7 +103,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量，默认值为 1，最小值 1，最大值为 100。
+     * Set 实例数量，默认值为 1，最小值 1，最大值为 100。
      * @param GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -111,7 +111,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小，单位：MB。
+     * Get 实例内存大小，单位：MB。 
      * @return Memory 实例内存大小，单位：MB。
      */
     public Integer getMemory() {
@@ -119,7 +119,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存大小，单位：MB。
+     * Set 实例内存大小，单位：MB。
      * @param Memory 实例内存大小，单位：MB。
      */
     public void setMemory(Integer Memory) {
@@ -127,7 +127,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例硬盘大小，单位：GB。
+     * Get 实例硬盘大小，单位：GB。 
      * @return Volume 实例硬盘大小，单位：GB。
      */
     public Integer getVolume() {
@@ -135,7 +135,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例硬盘大小，单位：GB。
+     * Set 实例硬盘大小，单位：GB。
      * @param Volume 实例硬盘大小，单位：GB。
      */
     public void setVolume(Integer Volume) {
@@ -143,7 +143,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
+     * Get 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。 
      * @return PayType 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
      */
     public String getPayType() {
@@ -151,7 +151,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
+     * Set 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
      * @param PayType 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
      */
     public void setPayType(String PayType) {
@@ -159,7 +159,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
+     * Get 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。 
      * @return Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      */
     public Integer getPeriod() {
@@ -167,7 +167,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
+     * Set 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      * @param Period 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
      */
     public void setPeriod(Integer Period) {
@@ -175,7 +175,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
+     * Get 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。 
      * @return InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
      */
     public String getInstanceRole() {
@@ -183,7 +183,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
+     * Set 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
      * @param InstanceRole 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
      */
     public void setInstanceRole(String InstanceRole) {
@@ -191,7 +191,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+     * Get 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。 
      * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public Integer getProtectMode() {
@@ -199,7 +199,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+     * Set 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public void setProtectMode(Integer ProtectMode) {
@@ -207,7 +207,7 @@ public class DescribeDBPriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

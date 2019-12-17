@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAccountRequest  extends AbstractModel{
+public class DeleteAccountRequest extends AbstractModel{
 
     /**
     * 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -44,7 +44,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     private String Host;
 
     /**
-     * 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -68,7 +68,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -76,7 +76,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户允许的访问 host
+     * Get 用户允许的访问 host 
      * @return Host 用户允许的访问 host
      */
     public String getHost() {
@@ -84,7 +84,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户允许的访问 host
+     * Set 用户允许的访问 host
      * @param Host 用户允许的访问 host
      */
     public void setHost(String Host) {
@@ -92,7 +92,7 @@ public class DeleteAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteFunctionRequest  extends AbstractModel{
+public class ExecuteFunctionRequest extends AbstractModel{
 
     /**
     * 调用后端接口名称。
@@ -44,7 +44,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取调用后端接口名称。
+     * Get 调用后端接口名称。 
      * @return FunctionName 调用后端接口名称。
      */
     public String getFunctionName() {
@@ -52,7 +52,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用后端接口名称。
+     * Set 调用后端接口名称。
      * @param FunctionName 调用后端接口名称。
      */
     public void setFunctionName(String FunctionName) {
@@ -60,7 +60,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取接口参数，具体参数格式调用时与后端协调。
+     * Get 接口参数，具体参数格式调用时与后端协调。 
      * @return FunctionArg 接口参数，具体参数格式调用时与后端协调。
      */
     public String getFunctionArg() {
@@ -68,7 +68,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置接口参数，具体参数格式调用时与后端协调。
+     * Set 接口参数，具体参数格式调用时与后端协调。
      * @param FunctionArg 接口参数，具体参数格式调用时与后端协调。
      */
     public void setFunctionArg(String FunctionArg) {
@@ -76,7 +76,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -84,7 +84,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -92,7 +92,7 @@ public class ExecuteFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

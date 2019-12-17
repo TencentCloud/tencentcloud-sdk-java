@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksRequest  extends AbstractModel{
+public class DescribeTasksRequest extends AbstractModel{
 
     /**
     * 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
@@ -44,7 +44,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     private String ScrollToken;
 
     /**
-     * 获取过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Get 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。 
      * @return Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      */
     public String getStatus() {
@@ -52,7 +52,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
+     * Set 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      * @param Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      */
     public void setStatus(String Status) {
@@ -60,7 +60,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：100。
+     * Get 返回记录条数，默认值：10，最大值：100。 
      * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
@@ -68,7 +68,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：100。
+     * Set 返回记录条数，默认值：10，最大值：100。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -76,7 +76,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * Get 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。 
      * @return ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      */
     public String getScrollToken() {
@@ -84,7 +84,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * Set 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      * @param ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
      */
     public void setScrollToken(String ScrollToken) {
@@ -92,7 +92,7 @@ public class DescribeTasksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageOsList  extends AbstractModel{
+public class ImageOsList extends AbstractModel{
 
     /**
     * 支持的windows操作系统。
@@ -39,8 +39,8 @@ public class ImageOsList  extends AbstractModel{
     private String [] Linux;
 
     /**
-     * 获取支持的windows操作系统。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 支持的windows操作系统。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Windows 支持的windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class ImageOsList  extends AbstractModel{
     }
 
     /**
-     * 设置支持的windows操作系统。
+     * Set 支持的windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Windows 支持的windows操作系统。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class ImageOsList  extends AbstractModel{
     }
 
     /**
-     * 获取支持的linux操作系统
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 支持的linux操作系统
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Linux 支持的linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class ImageOsList  extends AbstractModel{
     }
 
     /**
-     * 设置支持的linux操作系统
+     * Set 支持的linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Linux 支持的linux操作系统
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class ImageOsList  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Windows.", this.Windows);

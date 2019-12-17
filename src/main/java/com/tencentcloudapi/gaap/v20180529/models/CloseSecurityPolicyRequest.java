@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloseSecurityPolicyRequest  extends AbstractModel{
+public class CloseSecurityPolicyRequest extends AbstractModel{
 
     /**
     * 通道ID
@@ -30,7 +30,7 @@ public class CloseSecurityPolicyRequest  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -38,7 +38,7 @@ public class CloseSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -46,7 +46,7 @@ public class CloseSecurityPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
+public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
 
     /**
     * 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
@@ -65,7 +65,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     private Boolean InheritInstanceTag;
 
     /**
-     * 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
+     * Get 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。 
      * @return AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
     public String getAutoScalingGroupName() {
@@ -73,7 +73,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
+     * Set 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
@@ -81,7 +81,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -89,7 +89,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -97,7 +97,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大实例数，取值范围为0-2000。
+     * Get 最大实例数，取值范围为0-2000。 
      * @return MinSize 最大实例数，取值范围为0-2000。
      */
     public Integer getMinSize() {
@@ -105,7 +105,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大实例数，取值范围为0-2000。
+     * Set 最大实例数，取值范围为0-2000。
      * @param MinSize 最大实例数，取值范围为0-2000。
      */
     public void setMinSize(Integer MinSize) {
@@ -113,7 +113,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最小实例数，取值范围为0-2000。
+     * Get 最小实例数，取值范围为0-2000。 
      * @return MaxSize 最小实例数，取值范围为0-2000。
      */
     public Integer getMaxSize() {
@@ -121,7 +121,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最小实例数，取值范围为0-2000。
+     * Set 最小实例数，取值范围为0-2000。
      * @param MaxSize 最小实例数，取值范围为0-2000。
      */
     public void setMaxSize(Integer MaxSize) {
@@ -129,7 +129,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取期望实例数，大小介于最小实例数和最大实例数之间。
+     * Get 期望实例数，大小介于最小实例数和最大实例数之间。 
      * @return DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
      */
     public Integer getDesiredCapacity() {
@@ -137,7 +137,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置期望实例数，大小介于最小实例数和最大实例数之间。
+     * Set 期望实例数，大小介于最小实例数和最大实例数之间。
      * @param DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间。
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -145,7 +145,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否继承实例标签，默认值为False
+     * Get 是否继承实例标签，默认值为False 
      * @return InheritInstanceTag 是否继承实例标签，默认值为False
      */
     public Boolean getInheritInstanceTag() {
@@ -153,7 +153,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否继承实例标签，默认值为False
+     * Set 是否继承实例标签，默认值为False
      * @param InheritInstanceTag 是否继承实例标签，默认值为False
      */
     public void setInheritInstanceTag(Boolean InheritInstanceTag) {
@@ -161,7 +161,7 @@ public class CreateAutoScalingGroupFromInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);

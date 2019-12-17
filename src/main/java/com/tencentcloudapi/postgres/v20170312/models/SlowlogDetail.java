@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlowlogDetail  extends AbstractModel{
+public class SlowlogDetail extends AbstractModel{
 
     /**
     * 花费总时间
@@ -44,7 +44,7 @@ public class SlowlogDetail  extends AbstractModel{
     private NormalQueryItem [] NormalQueries;
 
     /**
-     * 获取花费总时间
+     * Get 花费总时间 
      * @return TotalTime 花费总时间
      */
     public Float getTotalTime() {
@@ -52,7 +52,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置花费总时间
+     * Set 花费总时间
      * @param TotalTime 花费总时间
      */
     public void setTotalTime(Float TotalTime) {
@@ -60,7 +60,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取调用总次数
+     * Get 调用总次数 
      * @return TotalCalls 调用总次数
      */
     public Integer getTotalCalls() {
@@ -68,7 +68,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置调用总次数
+     * Set 调用总次数
      * @param TotalCalls 调用总次数
      */
     public void setTotalCalls(Integer TotalCalls) {
@@ -76,7 +76,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取脱敏后的慢SQL列表
+     * Get 脱敏后的慢SQL列表 
      * @return NormalQueries 脱敏后的慢SQL列表
      */
     public NormalQueryItem [] getNormalQueries() {
@@ -84,7 +84,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置脱敏后的慢SQL列表
+     * Set 脱敏后的慢SQL列表
      * @param NormalQueries 脱敏后的慢SQL列表
      */
     public void setNormalQueries(NormalQueryItem [] NormalQueries) {
@@ -92,7 +92,7 @@ public class SlowlogDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);

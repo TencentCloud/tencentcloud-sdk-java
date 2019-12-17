@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCfsServiceStatusResponse  extends AbstractModel{
+public class DescribeCfsServiceStatusResponse extends AbstractModel{
 
     /**
     * 该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
@@ -37,7 +37,7 @@ public class DescribeCfsServiceStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
+     * Get 该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通 
      * @return CfsServiceStatus 该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
      */
     public String getCfsServiceStatus() {
@@ -45,7 +45,7 @@ public class DescribeCfsServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
+     * Set 该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
      * @param CfsServiceStatus 该用户当前 CFS 服务的状态，none 为未开通，creating 为开通中，created 为已开通
      */
     public void setCfsServiceStatus(String CfsServiceStatus) {
@@ -53,7 +53,7 @@ public class DescribeCfsServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeCfsServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeCfsServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CfsServiceStatus", this.CfsServiceStatus);

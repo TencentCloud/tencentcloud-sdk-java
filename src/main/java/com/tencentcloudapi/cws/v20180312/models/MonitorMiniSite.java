@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MonitorMiniSite  extends AbstractModel{
+public class MonitorMiniSite extends AbstractModel{
 
     /**
     * 站点ID。
@@ -37,7 +37,7 @@ public class MonitorMiniSite  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取站点ID。
+     * Get 站点ID。 
      * @return SiteId 站点ID。
      */
     public Integer getSiteId() {
@@ -45,7 +45,7 @@ public class MonitorMiniSite  extends AbstractModel{
     }
 
     /**
-     * 设置站点ID。
+     * Set 站点ID。
      * @param SiteId 站点ID。
      */
     public void setSiteId(Integer SiteId) {
@@ -53,7 +53,7 @@ public class MonitorMiniSite  extends AbstractModel{
     }
 
     /**
-     * 获取站点Url。
+     * Get 站点Url。 
      * @return Url 站点Url。
      */
     public String getUrl() {
@@ -61,7 +61,7 @@ public class MonitorMiniSite  extends AbstractModel{
     }
 
     /**
-     * 设置站点Url。
+     * Set 站点Url。
      * @param Url 站点Url。
      */
     public void setUrl(String Url) {
@@ -69,7 +69,7 @@ public class MonitorMiniSite  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SiteId", this.SiteId);

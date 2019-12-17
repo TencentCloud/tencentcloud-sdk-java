@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShopDayTrafficInfo  extends AbstractModel{
+public class ShopDayTrafficInfo extends AbstractModel{
 
     /**
     * 日期
@@ -44,7 +44,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     private GenderAgeTrafficDetail [] GenderAgeTrafficDetailSet;
 
     /**
-     * 获取日期
+     * Get 日期 
      * @return Date 日期
      */
     public String getDate() {
@@ -52,7 +52,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日期
+     * Set 日期
      * @param Date 日期
      */
     public void setDate(String Date) {
@@ -60,7 +60,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 获取客流量
+     * Get 客流量 
      * @return DayTrafficTotalCount 客流量
      */
     public Integer getDayTrafficTotalCount() {
@@ -68,7 +68,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客流量
+     * Set 客流量
      * @param DayTrafficTotalCount 客流量
      */
     public void setDayTrafficTotalCount(Integer DayTrafficTotalCount) {
@@ -76,7 +76,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 获取性别年龄分组下的客流信息
+     * Get 性别年龄分组下的客流信息 
      * @return GenderAgeTrafficDetailSet 性别年龄分组下的客流信息
      */
     public GenderAgeTrafficDetail [] getGenderAgeTrafficDetailSet() {
@@ -84,7 +84,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 设置性别年龄分组下的客流信息
+     * Set 性别年龄分组下的客流信息
      * @param GenderAgeTrafficDetailSet 性别年龄分组下的客流信息
      */
     public void setGenderAgeTrafficDetailSet(GenderAgeTrafficDetail [] GenderAgeTrafficDetailSet) {
@@ -92,7 +92,7 @@ public class ShopDayTrafficInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

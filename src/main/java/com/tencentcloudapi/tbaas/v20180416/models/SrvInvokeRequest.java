@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrvInvokeRequest  extends AbstractModel{
+public class SrvInvokeRequest extends AbstractModel{
 
     /**
     * 服务类型，iss或者dam
@@ -44,7 +44,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     private String Param;
 
     /**
-     * 获取服务类型，iss或者dam
+     * Get 服务类型，iss或者dam 
      * @return Service 服务类型，iss或者dam
      */
     public String getService() {
@@ -52,7 +52,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务类型，iss或者dam
+     * Set 服务类型，iss或者dam
      * @param Service 服务类型，iss或者dam
      */
     public void setService(String Service) {
@@ -60,7 +60,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务接口，要调用的方法函数名
+     * Get 服务接口，要调用的方法函数名 
      * @return Method 服务接口，要调用的方法函数名
      */
     public String getMethod() {
@@ -68,7 +68,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务接口，要调用的方法函数名
+     * Set 服务接口，要调用的方法函数名
      * @param Method 服务接口，要调用的方法函数名
      */
     public void setMethod(String Method) {
@@ -76,7 +76,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义json字符串
+     * Get 用户自定义json字符串 
      * @return Param 用户自定义json字符串
      */
     public String getParam() {
@@ -84,7 +84,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义json字符串
+     * Set 用户自定义json字符串
      * @param Param 用户自定义json字符串
      */
     public void setParam(String Param) {
@@ -92,7 +92,7 @@ public class SrvInvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Service", this.Service);

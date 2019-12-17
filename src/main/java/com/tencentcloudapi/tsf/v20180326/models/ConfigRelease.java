@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConfigRelease  extends AbstractModel{
+public class ConfigRelease extends AbstractModel{
 
     /**
     * 配置项发布ID
@@ -119,8 +119,8 @@ public class ConfigRelease  extends AbstractModel{
     private String ReleaseDesc;
 
     /**
-     * 获取配置项发布ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项发布ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -129,7 +129,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置配置项发布ID
+     * Set 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigReleaseId 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,8 +139,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取配置项ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -149,7 +149,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID
+     * Set 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigId 配置项ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -159,8 +159,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取配置项名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -169,7 +169,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称
+     * Set 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置项名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -179,8 +179,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置项版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -189,7 +189,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本
+     * Set 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersion 配置项版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -199,8 +199,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取发布时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseTime 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置发布时间
+     * Set 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseTime 发布时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,8 +219,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -229,7 +229,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,8 +239,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -249,7 +249,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置部署组名称
+     * Set 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -259,8 +259,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -269,7 +269,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -279,8 +279,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -289,7 +289,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -299,8 +299,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -309,7 +309,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -319,8 +319,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -329,7 +329,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -339,8 +339,8 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 获取发布描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 发布描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseDesc 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -349,7 +349,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 设置发布描述
+     * Set 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseDesc 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -359,7 +359,7 @@ public class ConfigRelease  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigReleaseId", this.ConfigReleaseId);

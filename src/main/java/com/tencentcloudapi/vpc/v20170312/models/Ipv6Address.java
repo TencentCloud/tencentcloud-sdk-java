@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ipv6Address  extends AbstractModel{
+public class Ipv6Address extends AbstractModel{
 
     /**
     * `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
@@ -69,7 +69,7 @@ public class Ipv6Address  extends AbstractModel{
     private String State;
 
     /**
-     * 获取`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * Get `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3` 
      * @return Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
     public String getAddress() {
@@ -77,7 +77,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * Set `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      * @param Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
     public void setAddress(String Address) {
@@ -85,7 +85,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取是否是主`IP`。
+     * Get 是否是主`IP`。 
      * @return Primary 是否是主`IP`。
      */
     public Boolean getPrimary() {
@@ -93,7 +93,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置是否是主`IP`。
+     * Set 是否是主`IP`。
      * @param Primary 是否是主`IP`。
      */
     public void setPrimary(Boolean Primary) {
@@ -101,7 +101,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取`EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Get `EIP`实例`ID`，形如：`eip-hxlqja90`。 
      * @return AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
      */
     public String getAddressId() {
@@ -109,7 +109,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Set `EIP`实例`ID`，形如：`eip-hxlqja90`。
      * @param AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
      */
     public void setAddressId(String AddressId) {
@@ -117,7 +117,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
+     * Get 描述信息。 
      * @return Description 描述信息。
      */
     public String getDescription() {
@@ -125,7 +125,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
      * @param Description 描述信息。
      */
     public void setDescription(String Description) {
@@ -133,7 +133,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取公网IP是否被封堵。
+     * Get 公网IP是否被封堵。 
      * @return IsWanIpBlocked 公网IP是否被封堵。
      */
     public Boolean getIsWanIpBlocked() {
@@ -141,7 +141,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置公网IP是否被封堵。
+     * Set 公网IP是否被封堵。
      * @param IsWanIpBlocked 公网IP是否被封堵。
      */
     public void setIsWanIpBlocked(Boolean IsWanIpBlocked) {
@@ -149,11 +149,11 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`地址状态：
+     * Get `IPv6`地址状态：
 <li>`PENDING`：生产中</li>
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+<li>`AVAILABLE`：可用的</li> 
      * @return State `IPv6`地址状态：
 <li>`PENDING`：生产中</li>
 <li>`MIGRATING`：迁移中</li>
@@ -165,7 +165,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`地址状态：
+     * Set `IPv6`地址状态：
 <li>`PENDING`：生产中</li>
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
@@ -181,7 +181,7 @@ public class Ipv6Address  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Address", this.Address);

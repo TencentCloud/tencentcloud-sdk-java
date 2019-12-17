@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RebateInfoElem  extends AbstractModel{
+public class RebateInfoElem extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -65,7 +65,7 @@ public class RebateInfoElem  extends AbstractModel{
     private String ExceptionFlag;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -73,7 +73,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -81,7 +81,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 获取返佣月份，如2018-02
+     * Get 返佣月份，如2018-02 
      * @return RebateMonth 返佣月份，如2018-02
      */
     public String getRebateMonth() {
@@ -89,7 +89,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置返佣月份，如2018-02
+     * Set 返佣月份，如2018-02
      * @param RebateMonth 返佣月份，如2018-02
      */
     public void setRebateMonth(String RebateMonth) {
@@ -97,7 +97,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 获取返佣金额，单位分
+     * Get 返佣金额，单位分 
      * @return Amt 返佣金额，单位分
      */
     public Integer getAmt() {
@@ -105,7 +105,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置返佣金额，单位分
+     * Set 返佣金额，单位分
      * @param Amt 返佣金额，单位分
      */
     public void setAmt(Integer Amt) {
@@ -113,7 +113,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 获取月度业绩，单位分
+     * Get 月度业绩，单位分 
      * @return MonthSales 月度业绩，单位分
      */
     public Integer getMonthSales() {
@@ -121,7 +121,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置月度业绩，单位分
+     * Set 月度业绩，单位分
      * @param MonthSales 月度业绩，单位分
      */
     public void setMonthSales(Integer MonthSales) {
@@ -129,7 +129,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 获取季度业绩，单位分
+     * Get 季度业绩，单位分 
      * @return QuarterSales 季度业绩，单位分
      */
     public Integer getQuarterSales() {
@@ -137,7 +137,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置季度业绩，单位分
+     * Set 季度业绩，单位分
      * @param QuarterSales 季度业绩，单位分
      */
     public void setQuarterSales(Integer QuarterSales) {
@@ -145,7 +145,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 获取NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+     * Get NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同) 
      * @return ExceptionFlag NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
      */
     public String getExceptionFlag() {
@@ -153,7 +153,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 设置NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+     * Set NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
      * @param ExceptionFlag NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
      */
     public void setExceptionFlag(String ExceptionFlag) {
@@ -161,7 +161,7 @@ public class RebateInfoElem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

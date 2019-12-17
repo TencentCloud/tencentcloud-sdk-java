@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HLFunction  extends AbstractModel{
+public class HLFunction extends AbstractModel{
 
     /**
     * 是否开启人脸检测
@@ -58,7 +58,7 @@ public class HLFunction  extends AbstractModel{
     private Boolean EnableSmileWonderfulTime;
 
     /**
-     * 获取是否开启人脸检测
+     * Get 是否开启人脸检测 
      * @return EnableFaceDetect 是否开启人脸检测
      */
     public Boolean getEnableFaceDetect() {
@@ -66,7 +66,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启人脸检测
+     * Set 是否开启人脸检测
      * @param EnableFaceDetect 是否开启人脸检测
      */
     public void setEnableFaceDetect(Boolean EnableFaceDetect) {
@@ -74,7 +74,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启表情识别
+     * Get 是否开启表情识别 
      * @return EnableFaceExpression 是否开启表情识别
      */
     public Boolean getEnableFaceExpression() {
@@ -82,7 +82,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启表情识别
+     * Set 是否开启表情识别
      * @param EnableFaceExpression 是否开启表情识别
      */
     public void setEnableFaceExpression(Boolean EnableFaceExpression) {
@@ -90,7 +90,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启人脸检索
+     * Get 是否开启人脸检索 
      * @return EnableFaceIdent 是否开启人脸检索
      */
     public Boolean getEnableFaceIdent() {
@@ -98,7 +98,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启人脸检索
+     * Set 是否开启人脸检索
      * @param EnableFaceIdent 是否开启人脸检索
      */
     public void setEnableFaceIdent(Boolean EnableFaceIdent) {
@@ -106,7 +106,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启视频集锦-老师关键字识别
+     * Get 是否开启视频集锦-老师关键字识别 
      * @return EnableKeywordWonderfulTime 是否开启视频集锦-老师关键字识别
      */
     public Boolean getEnableKeywordWonderfulTime() {
@@ -114,7 +114,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启视频集锦-老师关键字识别
+     * Set 是否开启视频集锦-老师关键字识别
      * @param EnableKeywordWonderfulTime 是否开启视频集锦-老师关键字识别
      */
     public void setEnableKeywordWonderfulTime(Boolean EnableKeywordWonderfulTime) {
@@ -122,7 +122,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启视频集锦-微笑识别
+     * Get 是否开启视频集锦-微笑识别 
      * @return EnableSmileWonderfulTime 是否开启视频集锦-微笑识别
      */
     public Boolean getEnableSmileWonderfulTime() {
@@ -130,7 +130,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启视频集锦-微笑识别
+     * Set 是否开启视频集锦-微笑识别
      * @param EnableSmileWonderfulTime 是否开启视频集锦-微笑识别
      */
     public void setEnableSmileWonderfulTime(Boolean EnableSmileWonderfulTime) {
@@ -138,7 +138,7 @@ public class HLFunction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableFaceDetect", this.EnableFaceDetect);

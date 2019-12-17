@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileSystem  extends AbstractModel{
+public class FileSystem extends AbstractModel{
 
     /**
     * appid
@@ -86,7 +86,7 @@ public class FileSystem  extends AbstractModel{
     private Long Status;
 
     /**
-     * 获取appid
+     * Get appid 
      * @return AppId appid
      */
     public Long getAppId() {
@@ -94,7 +94,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置appid
+     * Set appid
      * @param AppId appid
      */
     public void setAppId(Long AppId) {
@@ -102,7 +102,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统名称
+     * Get 文件系统名称 
      * @return FileSystemName 文件系统名称
      */
     public String getFileSystemName() {
@@ -110,7 +110,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统名称
+     * Set 文件系统名称
      * @param FileSystemName 文件系统名称
      */
     public void setFileSystemName(String FileSystemName) {
@@ -118,7 +118,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统描述
+     * Get 文件系统描述 
      * @return Description 文件系统描述
      */
     public String getDescription() {
@@ -126,7 +126,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统描述
+     * Set 文件系统描述
      * @param Description 文件系统描述
      */
     public void setDescription(String Description) {
@@ -134,7 +134,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -142,7 +142,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -150,7 +150,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -158,7 +158,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -166,7 +166,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -174,7 +174,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -182,7 +182,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统块大小（byte）
+     * Get 文件系统块大小（byte） 
      * @return BlockSize 文件系统块大小（byte）
      */
     public Long getBlockSize() {
@@ -190,7 +190,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统块大小（byte）
+     * Set 文件系统块大小（byte）
      * @param BlockSize 文件系统块大小（byte）
      */
     public void setBlockSize(Long BlockSize) {
@@ -198,7 +198,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统容量（byte）
+     * Get 文件系统容量（byte） 
      * @return CapacityQuota 文件系统容量（byte）
      */
     public Long getCapacityQuota() {
@@ -206,7 +206,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统容量（byte）
+     * Set 文件系统容量（byte）
      * @param CapacityQuota 文件系统容量（byte）
      */
     public void setCapacityQuota(Long CapacityQuota) {
@@ -214,7 +214,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统状态（1：创建中；2：创建成功；3：创建失败）
+     * Get 文件系统状态（1：创建中；2：创建成功；3：创建失败） 
      * @return Status 文件系统状态（1：创建中；2：创建成功；3：创建失败）
      */
     public Long getStatus() {
@@ -222,7 +222,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统状态（1：创建中；2：创建成功；3：创建失败）
+     * Set 文件系统状态（1：创建中；2：创建成功；3：创建失败）
      * @param Status 文件系统状态（1：创建中；2：创建成功；3：创建失败）
      */
     public void setStatus(Long Status) {
@@ -230,7 +230,7 @@ public class FileSystem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);

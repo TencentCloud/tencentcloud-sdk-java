@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribleL7RulesResponse  extends AbstractModel{
+public class DescribleL7RulesResponse extends AbstractModel{
 
     /**
     * 转发规则列表
@@ -51,7 +51,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取转发规则列表
+     * Get 转发规则列表 
      * @return Rules 转发规则列表
      */
     public L7RuleEntry [] getRules() {
@@ -59,7 +59,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则列表
+     * Set 转发规则列表
      * @param Rules 转发规则列表
      */
     public void setRules(L7RuleEntry [] Rules) {
@@ -67,7 +67,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总规则数
+     * Get 总规则数 
      * @return Total 总规则数
      */
     public Long getTotal() {
@@ -75,7 +75,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总规则数
+     * Set 总规则数
      * @param Total 总规则数
      */
     public void setTotal(Long Total) {
@@ -83,7 +83,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查配置列表
+     * Get 健康检查配置列表 
      * @return Healths 健康检查配置列表
      */
     public L7RuleHealth [] getHealths() {
@@ -91,7 +91,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查配置列表
+     * Set 健康检查配置列表
      * @param Healths 健康检查配置列表
      */
     public void setHealths(L7RuleHealth [] Healths) {
@@ -99,7 +99,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribleL7RulesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);

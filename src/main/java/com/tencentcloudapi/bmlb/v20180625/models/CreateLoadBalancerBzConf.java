@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerBzConf  extends AbstractModel{
+public class CreateLoadBalancerBzConf extends AbstractModel{
 
     /**
     * 按月/按小时计费。
@@ -44,7 +44,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     private String BzL7Metrics;
 
     /**
-     * 获取按月/按小时计费。
+     * Get 按月/按小时计费。 
      * @return BzPayMode 按月/按小时计费。
      */
     public String getBzPayMode() {
@@ -52,7 +52,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 设置按月/按小时计费。
+     * Set 按月/按小时计费。
      * @param BzPayMode 按月/按小时计费。
      */
     public void setBzPayMode(String BzPayMode) {
@@ -60,7 +60,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 获取四层可选按带宽，连接数衡量。
+     * Get 四层可选按带宽，连接数衡量。 
      * @return BzL4Metrics 四层可选按带宽，连接数衡量。
      */
     public String getBzL4Metrics() {
@@ -68,7 +68,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 设置四层可选按带宽，连接数衡量。
+     * Set 四层可选按带宽，连接数衡量。
      * @param BzL4Metrics 四层可选按带宽，连接数衡量。
      */
     public void setBzL4Metrics(String BzL4Metrics) {
@@ -76,7 +76,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 获取七层可选按qps衡量。
+     * Get 七层可选按qps衡量。 
      * @return BzL7Metrics 七层可选按qps衡量。
      */
     public String getBzL7Metrics() {
@@ -84,7 +84,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 设置七层可选按qps衡量。
+     * Set 七层可选按qps衡量。
      * @param BzL7Metrics 七层可选按qps衡量。
      */
     public void setBzL7Metrics(String BzL7Metrics) {
@@ -92,7 +92,7 @@ public class CreateLoadBalancerBzConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BzPayMode", this.BzPayMode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL7ListenersRequest  extends AbstractModel{
+public class CreateL7ListenersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID
@@ -37,7 +37,7 @@ public class CreateL7ListenersRequest  extends AbstractModel{
     private CreateL7Listener [] ListenerSet;
 
     /**
-     * 获取负载均衡实例ID
+     * Get 负载均衡实例ID 
      * @return LoadBalancerId 负载均衡实例ID
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class CreateL7ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID
+     * Set 负载均衡实例ID
      * @param LoadBalancerId 负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class CreateL7ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
+     * Get 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。 
      * @return ListenerSet 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
      */
     public CreateL7Listener [] getListenerSet() {
@@ -61,7 +61,7 @@ public class CreateL7ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
+     * Set 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
      * @param ListenerSet 七层监听器信息数组，可以创建多个七层监听器。目前一个负载均衡下面最多允许创建50个七层监听器。
      */
     public void setListenerSet(CreateL7Listener [] ListenerSet) {
@@ -69,7 +69,7 @@ public class CreateL7ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

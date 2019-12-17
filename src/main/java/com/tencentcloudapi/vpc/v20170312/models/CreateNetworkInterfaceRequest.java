@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNetworkInterfaceRequest  extends AbstractModel{
+public class CreateNetworkInterfaceRequest extends AbstractModel{
 
     /**
     * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -79,7 +79,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -87,7 +87,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -95,7 +95,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡名称，最大长度不能超过60个字节。
+     * Get 弹性网卡名称，最大长度不能超过60个字节。 
      * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      */
     public String getNetworkInterfaceName() {
@@ -103,7 +103,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡名称，最大长度不能超过60个字节。
+     * Set 弹性网卡名称，最大长度不能超过60个字节。
      * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
@@ -111,7 +111,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * Get 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。 
      * @return SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      */
     public String getSubnetId() {
@@ -119,7 +119,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * Set 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      * @param SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
      */
     public void setSubnetId(String SubnetId) {
@@ -127,7 +127,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Get 弹性网卡描述，可任意命名，但不得超过60个字符。 
      * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      */
     public String getNetworkInterfaceDescription() {
@@ -135,7 +135,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Set 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
@@ -143,7 +143,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。 
      * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public Integer getSecondaryPrivateIpAddressCount() {
@@ -151,7 +151,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
      */
     public void setSecondaryPrivateIpAddressCount(Integer SecondaryPrivateIpAddressCount) {
@@ -159,7 +159,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定绑定的安全组，例如：['sg-1dd51d']。
+     * Get 指定绑定的安全组，例如：['sg-1dd51d']。 
      * @return SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      */
     public String [] getSecurityGroupIds() {
@@ -167,7 +167,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定绑定的安全组，例如：['sg-1dd51d']。
+     * Set 指定绑定的安全组，例如：['sg-1dd51d']。
      * @param SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -175,7 +175,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定的内网IP信息，单次最多指定10个。
+     * Get 指定的内网IP信息，单次最多指定10个。 
      * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
@@ -183,7 +183,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定的内网IP信息，单次最多指定10个。
+     * Set 指定的内网IP信息，单次最多指定10个。
      * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
@@ -191,7 +191,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
      * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public Tag [] getTags() {
@@ -199,7 +199,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
      */
     public void setTags(Tag [] Tags) {
@@ -207,7 +207,7 @@ public class CreateNetworkInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

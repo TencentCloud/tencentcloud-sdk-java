@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
+public class SecurityGroupsInboundAndOutbound extends AbstractModel{
 
     /**
     * 执行动作
@@ -51,7 +51,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     private String Proto;
 
     /**
-     * 获取执行动作
+     * Get 执行动作 
      * @return Action 执行动作
      */
     public String getAction() {
@@ -59,7 +59,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 设置执行动作
+     * Set 执行动作
      * @param Action 执行动作
      */
     public void setAction(String Action) {
@@ -67,7 +67,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址
+     * Get IP地址 
      * @return Ip IP地址
      */
     public String getIp() {
@@ -75,7 +75,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址
+     * Set IP地址
      * @param Ip IP地址
      */
     public void setIp(String Ip) {
@@ -83,7 +83,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 获取端口号
+     * Get 端口号 
      * @return Port 端口号
      */
     public String getPort() {
@@ -91,7 +91,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 设置端口号
+     * Set 端口号
      * @param Port 端口号
      */
     public void setPort(String Port) {
@@ -99,7 +99,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 获取协议类型
+     * Get 协议类型 
      * @return Proto 协议类型
      */
     public String getProto() {
@@ -107,7 +107,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 设置协议类型
+     * Set 协议类型
      * @param Proto 协议类型
      */
     public void setProto(String Proto) {
@@ -115,7 +115,7 @@ public class SecurityGroupsInboundAndOutbound  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);

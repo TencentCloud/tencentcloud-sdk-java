@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AvailableProtoStatus  extends AbstractModel{
+public class AvailableProtoStatus extends AbstractModel{
 
     /**
     * 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
@@ -37,7 +37,7 @@ public class AvailableProtoStatus  extends AbstractModel{
     private String Protocol;
 
     /**
-     * 获取售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
+     * Get 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售 
      * @return SaleStatus 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
      */
     public String getSaleStatus() {
@@ -45,7 +45,7 @@ public class AvailableProtoStatus  extends AbstractModel{
     }
 
     /**
-     * 设置售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
+     * Set 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
      * @param SaleStatus 售卖状态。可选值有 sale_out 售罄、saling可售、no_saling不可销售
      */
     public void setSaleStatus(String SaleStatus) {
@@ -53,7 +53,7 @@ public class AvailableProtoStatus  extends AbstractModel{
     }
 
     /**
-     * 获取协议类型。可选值有 NFS、CIFS
+     * Get 协议类型。可选值有 NFS、CIFS 
      * @return Protocol 协议类型。可选值有 NFS、CIFS
      */
     public String getProtocol() {
@@ -61,7 +61,7 @@ public class AvailableProtoStatus  extends AbstractModel{
     }
 
     /**
-     * 设置协议类型。可选值有 NFS、CIFS
+     * Set 协议类型。可选值有 NFS、CIFS
      * @param Protocol 协议类型。可选值有 NFS、CIFS
      */
     public void setProtocol(String Protocol) {
@@ -69,7 +69,7 @@ public class AvailableProtoStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SaleStatus", this.SaleStatus);

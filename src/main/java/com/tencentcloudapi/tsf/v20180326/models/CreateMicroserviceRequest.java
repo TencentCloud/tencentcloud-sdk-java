@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMicroserviceRequest  extends AbstractModel{
+public class CreateMicroserviceRequest extends AbstractModel{
 
     /**
     * 命名空间ID
@@ -44,7 +44,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     private String MicroserviceDesc;
 
     /**
-     * 获取命名空间ID
+     * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
     public String getNamespaceId() {
@@ -52,7 +52,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
      * @param NamespaceId 命名空间ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -60,7 +60,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取微服务名称
+     * Get 微服务名称 
      * @return MicroserviceName 微服务名称
      */
     public String getMicroserviceName() {
@@ -68,7 +68,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置微服务名称
+     * Set 微服务名称
      * @param MicroserviceName 微服务名称
      */
     public void setMicroserviceName(String MicroserviceName) {
@@ -76,7 +76,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取微服务描述信息
+     * Get 微服务描述信息 
      * @return MicroserviceDesc 微服务描述信息
      */
     public String getMicroserviceDesc() {
@@ -84,7 +84,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置微服务描述信息
+     * Set 微服务描述信息
      * @param MicroserviceDesc 微服务描述信息
      */
     public void setMicroserviceDesc(String MicroserviceDesc) {
@@ -92,7 +92,7 @@ public class CreateMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);

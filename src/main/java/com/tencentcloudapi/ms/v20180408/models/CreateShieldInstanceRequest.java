@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateShieldInstanceRequest  extends AbstractModel{
+public class CreateShieldInstanceRequest extends AbstractModel{
 
     /**
     * 待加固的应用信息
@@ -37,7 +37,7 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     private ServiceInfo ServiceInfo;
 
     /**
-     * 获取待加固的应用信息
+     * Get 待加固的应用信息 
      * @return AppInfo 待加固的应用信息
      */
     public AppInfo getAppInfo() {
@@ -45,7 +45,7 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待加固的应用信息
+     * Set 待加固的应用信息
      * @param AppInfo 待加固的应用信息
      */
     public void setAppInfo(AppInfo AppInfo) {
@@ -53,7 +53,7 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取加固服务信息
+     * Get 加固服务信息 
      * @return ServiceInfo 加固服务信息
      */
     public ServiceInfo getServiceInfo() {
@@ -61,7 +61,7 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置加固服务信息
+     * Set 加固服务信息
      * @param ServiceInfo 加固服务信息
      */
     public void setServiceInfo(ServiceInfo ServiceInfo) {
@@ -69,7 +69,7 @@ public class CreateShieldInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AppInfo.", this.AppInfo);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListGroupsRequest  extends AbstractModel{
+public class ListGroupsRequest extends AbstractModel{
 
     /**
     * 页码。默认为1。
@@ -44,7 +44,7 @@ public class ListGroupsRequest  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取页码。默认为1。
+     * Get 页码。默认为1。 
      * @return Page 页码。默认为1。
      */
     public Long getPage() {
@@ -52,7 +52,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页码。默认为1。
+     * Set 页码。默认为1。
      * @param Page 页码。默认为1。
      */
     public void setPage(Long Page) {
@@ -60,7 +60,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页数量。默认为20。
+     * Get 每页数量。默认为20。 
      * @return Rp 每页数量。默认为20。
      */
     public Long getRp() {
@@ -68,7 +68,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页数量。默认为20。
+     * Set 每页数量。默认为20。
      * @param Rp 每页数量。默认为20。
      */
     public void setRp(Long Rp) {
@@ -76,7 +76,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按用户组名称匹配。
+     * Get 按用户组名称匹配。 
      * @return Keyword 按用户组名称匹配。
      */
     public String getKeyword() {
@@ -84,7 +84,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按用户组名称匹配。
+     * Set 按用户组名称匹配。
      * @param Keyword 按用户组名称匹配。
      */
     public void setKeyword(String Keyword) {
@@ -92,7 +92,7 @@ public class ListGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyZoneNameRequest  extends AbstractModel{
+public class ModifyZoneNameRequest extends AbstractModel{
 
     /**
     * 大区所属的应用实例ID
@@ -44,7 +44,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     private String ZoneName;
 
     /**
-     * 获取大区所属的应用实例ID
+     * Get 大区所属的应用实例ID 
      * @return ApplicationId 大区所属的应用实例ID
      */
     public String getApplicationId() {
@@ -52,7 +52,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大区所属的应用实例ID
+     * Set 大区所属的应用实例ID
      * @param ApplicationId 大区所属的应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -60,7 +60,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待修改名称的大区ID
+     * Get 待修改名称的大区ID 
      * @return LogicZoneId 待修改名称的大区ID
      */
     public String getLogicZoneId() {
@@ -68,7 +68,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改名称的大区ID
+     * Set 待修改名称的大区ID
      * @param LogicZoneId 待修改名称的大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -76,7 +76,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的大区名称
+     * Get 新的大区名称 
      * @return ZoneName 新的大区名称
      */
     public String getZoneName() {
@@ -84,7 +84,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的大区名称
+     * Set 新的大区名称
      * @param ZoneName 新的大区名称
      */
     public void setZoneName(String ZoneName) {
@@ -92,7 +92,7 @@ public class ModifyZoneNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

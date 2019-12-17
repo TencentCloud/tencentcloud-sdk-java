@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealTimeSpeechStatisticsItem  extends AbstractModel{
+public class RealTimeSpeechStatisticsItem extends AbstractModel{
 
     /**
     * 大陆地区DAU
@@ -65,7 +65,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     private Long OverseaDuration;
 
     /**
-     * 获取大陆地区DAU
+     * Get 大陆地区DAU 
      * @return MainLandDau 大陆地区DAU
      */
     public Long getMainLandDau() {
@@ -73,7 +73,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置大陆地区DAU
+     * Set 大陆地区DAU
      * @param MainLandDau 大陆地区DAU
      */
     public void setMainLandDau(Long MainLandDau) {
@@ -81,7 +81,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取大陆地区PCU
+     * Get 大陆地区PCU 
      * @return MainLandPcu 大陆地区PCU
      */
     public Long getMainLandPcu() {
@@ -89,7 +89,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置大陆地区PCU
+     * Set 大陆地区PCU
      * @param MainLandPcu 大陆地区PCU
      */
     public void setMainLandPcu(Long MainLandPcu) {
@@ -97,7 +97,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取大陆地区总使用时长，单位为min
+     * Get 大陆地区总使用时长，单位为min 
      * @return MainLandDuration 大陆地区总使用时长，单位为min
      */
     public Long getMainLandDuration() {
@@ -105,7 +105,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置大陆地区总使用时长，单位为min
+     * Set 大陆地区总使用时长，单位为min
      * @param MainLandDuration 大陆地区总使用时长，单位为min
      */
     public void setMainLandDuration(Long MainLandDuration) {
@@ -113,7 +113,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取海外地区DAU
+     * Get 海外地区DAU 
      * @return OverseaDau 海外地区DAU
      */
     public Long getOverseaDau() {
@@ -121,7 +121,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置海外地区DAU
+     * Set 海外地区DAU
      * @param OverseaDau 海外地区DAU
      */
     public void setOverseaDau(Long OverseaDau) {
@@ -129,7 +129,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取海外地区PCU
+     * Get 海外地区PCU 
      * @return OverseaPcu 海外地区PCU
      */
     public Long getOverseaPcu() {
@@ -137,7 +137,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置海外地区PCU
+     * Set 海外地区PCU
      * @param OverseaPcu 海外地区PCU
      */
     public void setOverseaPcu(Long OverseaPcu) {
@@ -145,7 +145,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 获取海外地区总使用时长，单位为min
+     * Get 海外地区总使用时长，单位为min 
      * @return OverseaDuration 海外地区总使用时长，单位为min
      */
     public Long getOverseaDuration() {
@@ -153,7 +153,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置海外地区总使用时长，单位为min
+     * Set 海外地区总使用时长，单位为min
      * @param OverseaDuration 海外地区总使用时长，单位为min
      */
     public void setOverseaDuration(Long OverseaDuration) {
@@ -161,7 +161,7 @@ public class RealTimeSpeechStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MainLandDau", this.MainLandDau);

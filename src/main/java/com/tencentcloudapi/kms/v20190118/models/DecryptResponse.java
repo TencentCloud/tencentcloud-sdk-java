@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DecryptResponse  extends AbstractModel{
+public class DecryptResponse extends AbstractModel{
 
     /**
     * CMK的全局唯一标识
@@ -44,7 +44,7 @@ public class DecryptResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CMK的全局唯一标识
+     * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
     public String getKeyId() {
@@ -52,7 +52,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的全局唯一标识
+     * Set CMK的全局唯一标识
      * @param KeyId CMK的全局唯一标识
      */
     public void setKeyId(String KeyId) {
@@ -60,7 +60,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 获取解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
+     * Get 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码 
      * @return Plaintext 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
      */
     public String getPlaintext() {
@@ -68,7 +68,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
+     * Set 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
      * @param Plaintext 解密后的明文。该字段是base64编码的，为了得到原始明文，调用方需要进行base64解码
      */
     public void setPlaintext(String Plaintext) {
@@ -76,7 +76,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DecryptResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

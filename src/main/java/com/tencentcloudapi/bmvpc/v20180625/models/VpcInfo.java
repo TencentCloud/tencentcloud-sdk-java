@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcInfo  extends AbstractModel{
+public class VpcInfo extends AbstractModel{
 
     /**
     * 私有网络的唯一ID。
@@ -65,7 +65,7 @@ public class VpcInfo  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取私有网络的唯一ID。
+     * Get 私有网络的唯一ID。 
      * @return VpcId 私有网络的唯一ID。
      */
     public String getVpcId() {
@@ -73,7 +73,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的唯一ID。
+     * Set 私有网络的唯一ID。
      * @param VpcId 私有网络的唯一ID。
      */
     public void setVpcId(String VpcId) {
@@ -81,7 +81,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC的名称。
+     * Get VPC的名称。 
      * @return VpcName VPC的名称。
      */
     public String getVpcName() {
@@ -89,7 +89,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC的名称。
+     * Set VPC的名称。
      * @param VpcName VPC的名称。
      */
     public void setVpcName(String VpcName) {
@@ -97,7 +97,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC的CIDR。
+     * Get VPC的CIDR。 
      * @return CidrBlock VPC的CIDR。
      */
     public String getCidrBlock() {
@@ -105,7 +105,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC的CIDR。
+     * Set VPC的CIDR。
      * @param CidrBlock VPC的CIDR。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -113,7 +113,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -121,7 +121,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -129,7 +129,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPC状态
+     * Get VPC状态 
      * @return State VPC状态
      */
     public String getState() {
@@ -137,7 +137,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPC状态
+     * Set VPC状态
      * @param State VPC状态
      */
     public void setState(String State) {
@@ -145,7 +145,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -153,7 +153,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -161,7 +161,7 @@ public class VpcInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationsRequest  extends AbstractModel{
+public class DescribeMigrationsRequest extends AbstractModel{
 
     /**
     * 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
     */
     @SerializedName("StatusSet")
     @Expose
-    private Integer [] StatusSet;
+    private Long [] StatusSet;
 
     /**
     * 迁移任务的名称，模糊匹配
@@ -41,14 +41,14 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 查询第几页的记录
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
@@ -65,23 +65,23 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     private String OrderByType;
 
     /**
-     * 获取状态集合。只要符合集合中某一状态的迁移任务，就会查出来
+     * Get 状态集合。只要符合集合中某一状态的迁移任务，就会查出来 
      * @return StatusSet 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
      */
-    public Integer [] getStatusSet() {
+    public Long [] getStatusSet() {
         return this.StatusSet;
     }
 
     /**
-     * 设置状态集合。只要符合集合中某一状态的迁移任务，就会查出来
+     * Set 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
      * @param StatusSet 状态集合。只要符合集合中某一状态的迁移任务，就会查出来
      */
-    public void setStatusSet(Integer [] StatusSet) {
+    public void setStatusSet(Long [] StatusSet) {
         this.StatusSet = StatusSet;
     }
 
     /**
-     * 获取迁移任务的名称，模糊匹配
+     * Get 迁移任务的名称，模糊匹配 
      * @return MigrateName 迁移任务的名称，模糊匹配
      */
     public String getMigrateName() {
@@ -89,7 +89,7 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务的名称，模糊匹配
+     * Set 迁移任务的名称，模糊匹配
      * @param MigrateName 迁移任务的名称，模糊匹配
      */
     public void setMigrateName(String MigrateName) {
@@ -97,39 +97,39 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页的记录数
+     * Get 每页的记录数 
      * @return Limit 每页的记录数
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置每页的记录数
+     * Set 每页的记录数
      * @param Limit 每页的记录数
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取查询第几页的记录
+     * Get 查询第几页的记录 
      * @return Offset 查询第几页的记录
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置查询第几页的记录
+     * Set 查询第几页的记录
      * @param Offset 查询第几页的记录
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
+     * Get 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status 
      * @return OrderBy 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
      */
     public String getOrderBy() {
@@ -137,7 +137,7 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
+     * Set 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
      * @param OrderBy 查询结果按照关键字排序，可选值为name、createTime、startTime，endTime，status
      */
     public void setOrderBy(String OrderBy) {
@@ -145,7 +145,7 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，可选值为desc、asc
+     * Get 排序方式，可选值为desc、asc 
      * @return OrderByType 排序方式，可选值为desc、asc
      */
     public String getOrderByType() {
@@ -153,7 +153,7 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，可选值为desc、asc
+     * Set 排序方式，可选值为desc、asc
      * @param OrderByType 排序方式，可选值为desc、asc
      */
     public void setOrderByType(String OrderByType) {
@@ -161,7 +161,7 @@ public class DescribeMigrationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);

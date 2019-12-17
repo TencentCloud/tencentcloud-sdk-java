@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
+public class CreateAIAnalysisTemplateRequest extends AbstractModel{
 
     /**
     * 视频内容分析模板名称，长度限制：64 个字符。
@@ -65,7 +65,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
-     * 获取视频内容分析模板名称，长度限制：64 个字符。
+     * Get 视频内容分析模板名称，长度限制：64 个字符。 
      * @return Name 视频内容分析模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -73,7 +73,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板名称，长度限制：64 个字符。
+     * Set 视频内容分析模板名称，长度限制：64 个字符。
      * @param Name 视频内容分析模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -81,7 +81,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析模板描述信息，长度限制：256 个字符。
+     * Get 视频内容分析模板描述信息，长度限制：256 个字符。 
      * @return Comment 视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -89,7 +89,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板描述信息，长度限制：256 个字符。
+     * Set 视频内容分析模板描述信息，长度限制：256 个字符。
      * @param Comment 视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -97,7 +97,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能分类任务控制参数。
+     * Get 智能分类任务控制参数。 
      * @return ClassificationConfigure 智能分类任务控制参数。
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
@@ -105,7 +105,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能分类任务控制参数。
+     * Set 智能分类任务控制参数。
      * @param ClassificationConfigure 智能分类任务控制参数。
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
@@ -113,7 +113,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能标签任务控制参数。
+     * Get 智能标签任务控制参数。 
      * @return TagConfigure 智能标签任务控制参数。
      */
     public TagConfigureInfo getTagConfigure() {
@@ -121,7 +121,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能标签任务控制参数。
+     * Set 智能标签任务控制参数。
      * @param TagConfigure 智能标签任务控制参数。
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
@@ -129,7 +129,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能封面任务控制参数。
+     * Get 智能封面任务控制参数。 
      * @return CoverConfigure 智能封面任务控制参数。
      */
     public CoverConfigureInfo getCoverConfigure() {
@@ -137,7 +137,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面任务控制参数。
+     * Set 智能封面任务控制参数。
      * @param CoverConfigure 智能封面任务控制参数。
      */
     public void setCoverConfigure(CoverConfigureInfo CoverConfigure) {
@@ -145,7 +145,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能按帧标签任务控制参数。
+     * Get 智能按帧标签任务控制参数。 
      * @return FrameTagConfigure 智能按帧标签任务控制参数。
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
@@ -153,7 +153,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能按帧标签任务控制参数。
+     * Set 智能按帧标签任务控制参数。
      * @param FrameTagConfigure 智能按帧标签任务控制参数。
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
@@ -161,7 +161,7 @@ public class CreateAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

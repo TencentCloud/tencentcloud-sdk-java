@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDisasterRecoverGroupsRequest  extends AbstractModel{
+public class DeleteDisasterRecoverGroupsRequest extends AbstractModel{
 
     /**
     * 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
@@ -30,7 +30,7 @@ public class DeleteDisasterRecoverGroupsRequest  extends AbstractModel{
     private String [] DisasterRecoverGroupIds;
 
     /**
-     * 获取分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * Get 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。 
      * @return DisasterRecoverGroupIds 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public String [] getDisasterRecoverGroupIds() {
@@ -38,7 +38,7 @@ public class DeleteDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * Set 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      * @param DisasterRecoverGroupIds 分散置放群组ID列表，可通过[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
@@ -46,7 +46,7 @@ public class DeleteDisasterRecoverGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);

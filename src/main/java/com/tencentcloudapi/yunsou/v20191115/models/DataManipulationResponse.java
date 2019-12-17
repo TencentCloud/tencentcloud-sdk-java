@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataManipulationResponse  extends AbstractModel{
+public class DataManipulationResponse extends AbstractModel{
 
     /**
     * 数据操作结果
@@ -37,7 +37,7 @@ public class DataManipulationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据操作结果
+     * Get 数据操作结果 
      * @return Data 数据操作结果
      */
     public DataManipulationResult getData() {
@@ -45,7 +45,7 @@ public class DataManipulationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据操作结果
+     * Set 数据操作结果
      * @param Data 数据操作结果
      */
     public void setData(DataManipulationResult Data) {
@@ -53,7 +53,7 @@ public class DataManipulationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DataManipulationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DataManipulationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);

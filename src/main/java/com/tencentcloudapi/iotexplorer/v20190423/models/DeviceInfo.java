@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceInfo  extends AbstractModel{
+public class DeviceInfo extends AbstractModel{
 
     /**
     * 设备名
@@ -93,7 +93,7 @@ public class DeviceInfo  extends AbstractModel{
     private Long LogLevel;
 
     /**
-     * 获取设备名
+     * Get 设备名 
      * @return DeviceName 设备名
      */
     public String getDeviceName() {
@@ -101,7 +101,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备名
+     * Set 设备名
      * @param DeviceName 设备名
      */
     public void setDeviceName(String DeviceName) {
@@ -109,7 +109,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0: 离线, 1: 在线, 2: 获取失败, 3 未激活
+     * Get 0: 离线, 1: 在线, 2: 获取失败, 3 未激活 
      * @return Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      */
     public Long getStatus() {
@@ -117,7 +117,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0: 离线, 1: 在线, 2: 获取失败, 3 未激活
+     * Set 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      * @param Status 0: 离线, 1: 在线, 2: 获取失败, 3 未激活
      */
     public void setStatus(Long Status) {
@@ -125,7 +125,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备密钥，密钥加密的设备返回
+     * Get 设备密钥，密钥加密的设备返回 
      * @return DevicePsk 设备密钥，密钥加密的设备返回
      */
     public String getDevicePsk() {
@@ -133,7 +133,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备密钥，密钥加密的设备返回
+     * Set 设备密钥，密钥加密的设备返回
      * @param DevicePsk 设备密钥，密钥加密的设备返回
      */
     public void setDevicePsk(String DevicePsk) {
@@ -141,9 +141,9 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取首次上线时间
+     * Get 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FirstOnlineTime 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,7 +153,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置首次上线时间
+     * Set 首次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstOnlineTime 首次上线时间
@@ -165,8 +165,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最后一次上线时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 最后一次上线时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoginTime 最后一次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -175,7 +175,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最后一次上线时间
+     * Set 最后一次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginTime 最后一次上线时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -185,8 +185,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -195,7 +195,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备创建时间
+     * Set 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 设备创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -205,8 +205,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备固件版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备固件版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 设备固件版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -215,7 +215,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备固件版本
+     * Set 设备固件版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 设备固件版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -225,8 +225,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备证书
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设备证书
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceCert 设备证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -235,7 +235,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书
+     * Set 设备证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceCert 设备证书
 注意：此字段可能返回 null，表示取不到有效值。
@@ -245,8 +245,8 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取日志级别
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 日志级别
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogLevel 日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -255,7 +255,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置日志级别
+     * Set 日志级别
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LogLevel 日志级别
 注意：此字段可能返回 null，表示取不到有效值。
@@ -265,7 +265,7 @@ public class DeviceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

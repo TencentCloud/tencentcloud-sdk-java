@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillDataInfo  extends AbstractModel{
+public class BillDataInfo extends AbstractModel{
 
     /**
     * 时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -51,7 +51,7 @@ public class BillDataInfo  extends AbstractModel{
     private String PeakTime;
 
     /**
-     * 获取时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
@@ -59,7 +59,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param Time 时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
@@ -67,7 +67,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取带宽，单位是Mbps。
+     * Get 带宽，单位是Mbps。 
      * @return Bandwidth 带宽，单位是Mbps。
      */
     public Float getBandwidth() {
@@ -75,7 +75,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带宽，单位是Mbps。
+     * Set 带宽，单位是Mbps。
      * @param Bandwidth 带宽，单位是Mbps。
      */
     public void setBandwidth(Float Bandwidth) {
@@ -83,7 +83,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流量，单位是MB。
+     * Get 流量，单位是MB。 
      * @return Flux 流量，单位是MB。
      */
     public Float getFlux() {
@@ -91,7 +91,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流量，单位是MB。
+     * Set 流量，单位是MB。
      * @param Flux 流量，单位是MB。
      */
     public void setFlux(Float Flux) {
@@ -99,7 +99,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * Get 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。 
      * @return PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     public String getPeakTime() {
@@ -107,7 +107,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
+     * Set 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      * @param PeakTime 峰值时间点，格式为yyyy-mm-dd HH:MM:SS，原始数据为5分钟粒度，如果查询小时和天粒度数据，则返回对应粒度内的带宽峰值时间点。
      */
     public void setPeakTime(String PeakTime) {
@@ -115,7 +115,7 @@ public class BillDataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Time", this.Time);

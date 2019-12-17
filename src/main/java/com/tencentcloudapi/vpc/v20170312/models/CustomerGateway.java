@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomerGateway  extends AbstractModel{
+public class CustomerGateway extends AbstractModel{
 
     /**
     * 用户网关唯一ID
@@ -51,7 +51,7 @@ public class CustomerGateway  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取用户网关唯一ID
+     * Get 用户网关唯一ID 
      * @return CustomerGatewayId 用户网关唯一ID
      */
     public String getCustomerGatewayId() {
@@ -59,7 +59,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 设置用户网关唯一ID
+     * Set 用户网关唯一ID
      * @param CustomerGatewayId 用户网关唯一ID
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
@@ -67,7 +67,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关名称
+     * Get 网关名称 
      * @return CustomerGatewayName 网关名称
      */
     public String getCustomerGatewayName() {
@@ -75,7 +75,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关名称
+     * Set 网关名称
      * @param CustomerGatewayName 网关名称
      */
     public void setCustomerGatewayName(String CustomerGatewayName) {
@@ -83,7 +83,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 获取公网地址
+     * Get 公网地址 
      * @return IpAddress 公网地址
      */
     public String getIpAddress() {
@@ -91,7 +91,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 设置公网地址
+     * Set 公网地址
      * @param IpAddress 公网地址
      */
     public void setIpAddress(String IpAddress) {
@@ -99,7 +99,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreatedTime 创建时间
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreatedTime 创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class CustomerGateway  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);

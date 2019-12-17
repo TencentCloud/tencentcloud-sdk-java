@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMonitorsRequest  extends AbstractModel{
+public class CreateMonitorsRequest extends AbstractModel{
 
     /**
     * 站点的url列表
@@ -65,7 +65,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     private String FirstScanStartTime;
 
     /**
-     * 获取站点的url列表
+     * Get 站点的url列表 
      * @return Urls 站点的url列表
      */
     public String [] getUrls() {
@@ -73,7 +73,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点的url列表
+     * Set 站点的url列表
      * @param Urls 站点的url列表
      */
     public void setUrls(String [] Urls) {
@@ -81,7 +81,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -89,7 +89,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -97,7 +97,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描模式，normal-正常扫描；deep-深度扫描
+     * Get 扫描模式，normal-正常扫描；deep-深度扫描 
      * @return ScannerType 扫描模式，normal-正常扫描；deep-深度扫描
      */
     public String getScannerType() {
@@ -105,7 +105,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描模式，normal-正常扫描；deep-深度扫描
+     * Set 扫描模式，normal-正常扫描；deep-深度扫描
      * @param ScannerType 扫描模式，normal-正常扫描；deep-深度扫描
      */
     public void setScannerType(String ScannerType) {
@@ -113,7 +113,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描周期，单位小时，每X小时执行一次
+     * Get 扫描周期，单位小时，每X小时执行一次 
      * @return Crontab 扫描周期，单位小时，每X小时执行一次
      */
     public Integer getCrontab() {
@@ -121,7 +121,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描周期，单位小时，每X小时执行一次
+     * Set 扫描周期，单位小时，每X小时执行一次
      * @param Crontab 扫描周期，单位小时，每X小时执行一次
      */
     public void setCrontab(Integer Crontab) {
@@ -129,7 +129,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描速率限制，每秒发送X个HTTP请求
+     * Get 扫描速率限制，每秒发送X个HTTP请求 
      * @return RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
     public Integer getRateLimit() {
@@ -137,7 +137,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描速率限制，每秒发送X个HTTP请求
+     * Set 扫描速率限制，每秒发送X个HTTP请求
      * @param RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
     public void setRateLimit(Integer RateLimit) {
@@ -145,7 +145,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取首次扫描开始时间
+     * Get 首次扫描开始时间 
      * @return FirstScanStartTime 首次扫描开始时间
      */
     public String getFirstScanStartTime() {
@@ -153,7 +153,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置首次扫描开始时间
+     * Set 首次扫描开始时间
      * @param FirstScanStartTime 首次扫描开始时间
      */
     public void setFirstScanStartTime(String FirstScanStartTime) {
@@ -161,7 +161,7 @@ public class CreateMonitorsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

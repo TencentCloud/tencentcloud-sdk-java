@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TollInvoiceInfo  extends AbstractModel{
+public class TollInvoiceInfo extends AbstractModel{
 
     /**
     * 识别出的字段名称（关键字）。
@@ -44,7 +44,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     private Rect Rect;
 
     /**
-     * 获取识别出的字段名称（关键字）。
+     * Get 识别出的字段名称（关键字）。 
      * @return Name 识别出的字段名称（关键字）。
      */
     public String getName() {
@@ -52,7 +52,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称（关键字）。
+     * Set 识别出的字段名称（关键字）。
      * @param Name 识别出的字段名称（关键字）。
      */
     public void setName(String Name) {
@@ -60,7 +60,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+     * Get 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。 
      * @return Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     public String getValue() {
@@ -68,7 +68,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
+     * Set 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      * @param Value 识别出的字段名称对应的值，也就是字段Name对应的字符串结果。
      */
     public void setValue(String Value) {
@@ -76,7 +76,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文本行在旋转纠正之后的图像中的像素坐标。
+     * Get 文本行在旋转纠正之后的图像中的像素坐标。 
      * @return Rect 文本行在旋转纠正之后的图像中的像素坐标。
      */
     public Rect getRect() {
@@ -84,7 +84,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文本行在旋转纠正之后的图像中的像素坐标。
+     * Set 文本行在旋转纠正之后的图像中的像素坐标。
      * @param Rect 文本行在旋转纠正之后的图像中的像素坐标。
      */
     public void setRect(Rect Rect) {
@@ -92,7 +92,7 @@ public class TollInvoiceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParameterDetail  extends AbstractModel{
+public class ParameterDetail extends AbstractModel{
 
     /**
     * 参数名称
@@ -86,7 +86,7 @@ public class ParameterDetail  extends AbstractModel{
     private String [] EnumValue;
 
     /**
-     * 获取参数名称
+     * Get 参数名称 
      * @return Name 参数名称
      */
     public String getName() {
@@ -94,7 +94,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数名称
+     * Set 参数名称
      * @param Name 参数名称
      */
     public void setName(String Name) {
@@ -102,7 +102,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数类型
+     * Get 参数类型 
      * @return ParamType 参数类型
      */
     public String getParamType() {
@@ -110,7 +110,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数类型
+     * Set 参数类型
      * @param ParamType 参数类型
      */
     public void setParamType(String ParamType) {
@@ -118,7 +118,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数默认值
+     * Get 参数默认值 
      * @return Default 参数默认值
      */
     public String getDefault() {
@@ -126,7 +126,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数默认值
+     * Set 参数默认值
      * @param Default 参数默认值
      */
     public void setDefault(String Default) {
@@ -134,7 +134,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数描述
+     * Get 参数描述 
      * @return Description 参数描述
      */
     public String getDescription() {
@@ -142,7 +142,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数描述
+     * Set 参数描述
      * @param Description 参数描述
      */
     public void setDescription(String Description) {
@@ -150,7 +150,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数当前值
+     * Get 参数当前值 
      * @return CurrentValue 参数当前值
      */
     public String getCurrentValue() {
@@ -158,7 +158,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数当前值
+     * Set 参数当前值
      * @param CurrentValue 参数当前值
      */
     public void setCurrentValue(String CurrentValue) {
@@ -166,7 +166,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+     * Get 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启 
      * @return NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
     public Integer getNeedReboot() {
@@ -174,7 +174,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+     * Set 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      * @param NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
      */
     public void setNeedReboot(Integer NeedReboot) {
@@ -182,7 +182,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数允许的最大值
+     * Get 参数允许的最大值 
      * @return Max 参数允许的最大值
      */
     public Integer getMax() {
@@ -190,7 +190,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数允许的最大值
+     * Set 参数允许的最大值
      * @param Max 参数允许的最大值
      */
     public void setMax(Integer Max) {
@@ -198,7 +198,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数允许的最小值
+     * Get 参数允许的最小值 
      * @return Min 参数允许的最小值
      */
     public Integer getMin() {
@@ -206,7 +206,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数允许的最小值
+     * Set 参数允许的最小值
      * @param Min 参数允许的最小值
      */
     public void setMin(Integer Min) {
@@ -214,7 +214,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 获取参数的可选枚举值。如果为非枚举参数，则为空
+     * Get 参数的可选枚举值。如果为非枚举参数，则为空 
      * @return EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
      */
     public String [] getEnumValue() {
@@ -222,7 +222,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 设置参数的可选枚举值。如果为非枚举参数，则为空
+     * Set 参数的可选枚举值。如果为非枚举参数，则为空
      * @param EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
      */
     public void setEnumValue(String [] EnumValue) {
@@ -230,7 +230,7 @@ public class ParameterDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

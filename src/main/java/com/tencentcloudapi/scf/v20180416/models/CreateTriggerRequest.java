@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTriggerRequest  extends AbstractModel{
+public class CreateTriggerRequest extends AbstractModel{
 
     /**
     * 新建触发器绑定的函数名称
@@ -72,7 +72,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     private String Enable;
 
     /**
-     * 获取新建触发器绑定的函数名称
+     * Get 新建触发器绑定的函数名称 
      * @return FunctionName 新建触发器绑定的函数名称
      */
     public String getFunctionName() {
@@ -80,7 +80,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新建触发器绑定的函数名称
+     * Set 新建触发器绑定的函数名称
      * @param FunctionName 新建触发器绑定的函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -88,7 +88,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
+     * Get 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明 
      * @return TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      */
     public String getTriggerName() {
@@ -96,7 +96,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
+     * Set 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      * @param TriggerName 新建触发器名称。如果是定时触发器，名称支持英文字母、数字、连接符和下划线，最长100个字符；如果是cos触发器，需要是对应cos存储桶适用于XML API的访问域名(例如:5401-5ff414-12345.cos.ap-shanghai.myqcloud.com);如果是其他触发器，见具体触发器绑定参数的说明
      */
     public void setTriggerName(String TriggerName) {
@@ -104,7 +104,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * Get 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型 
      * @return Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      */
     public String getType() {
@@ -112,7 +112,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
+     * Set 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      * @param Type 触发器类型，目前支持 cos 、cmq、 timer、 ckafka类型
      */
     public void setType(String Type) {
@@ -120,7 +120,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
+     * Get 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明 
      * @return TriggerDesc 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
      */
     public String getTriggerDesc() {
@@ -128,7 +128,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
+     * Set 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
      * @param TriggerDesc 触发器对应的参数，如果是 timer 类型的触发器其内容是 Linux cron 表达式。如果是cos类型的触发器，其内容是json字符串 {"event":"cos:ObjectCreated:*","filter":{"Prefix":"","Suffix":""}},其中event是触发的cos事件，fitler中Prefix是对应的文件前缀过滤条件，Suffix是后缀过滤条件，如果不需要filter条件可不传。如果是其他触发器，见具体触发器说明
      */
     public void setTriggerDesc(String TriggerDesc) {
@@ -136,7 +136,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的命名空间
+     * Get 函数的命名空间 
      * @return Namespace 函数的命名空间
      */
     public String getNamespace() {
@@ -144,7 +144,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的命名空间
+     * Set 函数的命名空间
      * @param Namespace 函数的命名空间
      */
     public void setNamespace(String Namespace) {
@@ -152,7 +152,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的版本
+     * Get 函数的版本 
      * @return Qualifier 函数的版本
      */
     public String getQualifier() {
@@ -160,7 +160,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本
+     * Set 函数的版本
      * @param Qualifier 函数的版本
      */
     public void setQualifier(String Qualifier) {
@@ -168,7 +168,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     * Get 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭 
      * @return Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      */
     public String getEnable() {
@@ -176,7 +176,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
+     * Set 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      * @param Enable 触发器的初始是能状态 OPEN表示开启 CLOSE表示关闭
      */
     public void setEnable(String Enable) {
@@ -184,7 +184,7 @@ public class CreateTriggerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
+public class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
     * 画面鉴恐任务开关，可选值：
@@ -61,9 +61,9 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * 获取画面鉴恐任务开关，可选值：
+     * Get 画面鉴恐任务开关，可选值：
 <li>ON：开启画面鉴恐任务；</li>
-<li>OFF：关闭画面鉴恐任务。</li>
+<li>OFF：关闭画面鉴恐任务。</li> 
      * @return Switch 画面鉴恐任务开关，可选值：
 <li>ON：开启画面鉴恐任务；</li>
 <li>OFF：关闭画面鉴恐任务。</li>
@@ -73,7 +73,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置画面鉴恐任务开关，可选值：
+     * Set 画面鉴恐任务开关，可选值：
 <li>ON：开启画面鉴恐任务；</li>
 <li>OFF：关闭画面鉴恐任务。</li>
      * @param Switch 画面鉴恐任务开关，可选值：
@@ -85,7 +85,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+     * Get 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -93,7 +93,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
 <li>banners：暴恐旗帜；</li>
 <li>militant：武装分子；</li>
 <li>explosion：爆炸火灾；</li>
-<li>terrorists：暴恐人物。</li>
+<li>terrorists：暴恐人物。</li> 
      * @return LabelSet 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
@@ -109,7 +109,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+     * Set 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
 <li>guns：武器枪支；</li>
 <li>crowd：人群聚集；</li>
 <li>bloody：血腥画面；</li>
@@ -133,7 +133,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。 
      * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public Long getBlockConfidence() {
@@ -141,7 +141,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
@@ -149,7 +149,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。 
      * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public Long getReviewConfidence() {
@@ -157,7 +157,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
      * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
@@ -165,7 +165,7 @@ public class TerrorismImgReviewTemplateInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

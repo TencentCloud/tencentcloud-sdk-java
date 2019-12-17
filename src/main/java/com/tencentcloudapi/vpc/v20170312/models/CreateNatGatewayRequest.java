@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatGatewayRequest  extends AbstractModel{
+public class CreateNatGatewayRequest extends AbstractModel{
 
     /**
     * NAT网关名称
@@ -72,7 +72,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取NAT网关名称
+     * Get NAT网关名称 
      * @return NatGatewayName NAT网关名称
      */
     public String getNatGatewayName() {
@@ -80,7 +80,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关名称
+     * Set NAT网关名称
      * @param NatGatewayName NAT网关名称
      */
     public void setNatGatewayName(String NatGatewayName) {
@@ -88,7 +88,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -96,7 +96,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -104,7 +104,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+     * Get NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。 
      * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -112,7 +112,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+     * Set NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -120,7 +120,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+     * Get NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。 
      * @return MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      */
     public Integer getMaxConcurrentConnection() {
@@ -128,7 +128,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+     * Set NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      * @param MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
      */
     public void setMaxConcurrentConnection(Integer MaxConcurrentConnection) {
@@ -136,7 +136,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+     * Get 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。 
      * @return AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      */
     public Integer getAddressCount() {
@@ -144,7 +144,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+     * Set 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      * @param AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
      */
     public void setAddressCount(Integer AddressCount) {
@@ -152,7 +152,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * Get 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。 
      * @return PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      */
     public String [] getPublicIpAddresses() {
@@ -160,7 +160,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * Set 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      * @param PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -168,7 +168,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区，形如：`ap-guangzhou-1`。
+     * Get 可用区，形如：`ap-guangzhou-1`。 
      * @return Zone 可用区，形如：`ap-guangzhou-1`。
      */
     public String getZone() {
@@ -176,7 +176,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区，形如：`ap-guangzhou-1`。
+     * Set 可用区，形如：`ap-guangzhou-1`。
      * @param Zone 可用区，形如：`ap-guangzhou-1`。
      */
     public void setZone(String Zone) {
@@ -184,7 +184,7 @@ public class CreateNatGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayName", this.NatGatewayName);

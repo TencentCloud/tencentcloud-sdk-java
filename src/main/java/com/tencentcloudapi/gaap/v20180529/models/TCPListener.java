@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TCPListener  extends AbstractModel{
+public class TCPListener extends AbstractModel{
 
     /**
     * 监听器ID
@@ -135,7 +135,7 @@ lc，最小连接数。
     private Long CreateTime;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -143,7 +143,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -151,7 +151,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -159,7 +159,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -167,7 +167,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器端口
+     * Get 监听器端口 
      * @return Port 监听器端口
      */
     public Long getPort() {
@@ -175,7 +175,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器端口
+     * Set 监听器端口
      * @param Port 监听器端口
      */
     public void setPort(Long Port) {
@@ -183,8 +183,8 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器转发源站端口，仅对版本为1.0的通道有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器转发源站端口，仅对版本为1.0的通道有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerPort 监听器转发源站端口，仅对版本为1.0的通道有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器转发源站端口，仅对版本为1.0的通道有效
+     * Set 监听器转发源站端口，仅对版本为1.0的通道有效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerPort 监听器转发源站端口，仅对版本为1.0的通道有效
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,7 +203,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器绑定源站类型
+     * Get 监听器绑定源站类型 
      * @return RealServerType 监听器绑定源站类型
      */
     public String getRealServerType() {
@@ -211,7 +211,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器绑定源站类型
+     * Set 监听器绑定源站类型
      * @param RealServerType 监听器绑定源站类型
      */
     public void setRealServerType(String RealServerType) {
@@ -219,7 +219,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器协议， TCP
+     * Get 监听器协议， TCP 
      * @return Protocol 监听器协议， TCP
      */
     public String getProtocol() {
@@ -227,7 +227,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器协议， TCP
+     * Set 监听器协议， TCP
      * @param Protocol 监听器协议， TCP
      */
     public void setProtocol(String Protocol) {
@@ -235,12 +235,12 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器状态，其中：
+     * Get 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
 3，源站调整中；
-4，配置变更中。
+4，配置变更中。 
      * @return ListenerStatus 监听器状态，其中：
 0， 运行中；
 1， 创建中；
@@ -253,7 +253,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器状态，其中：
+     * Set 监听器状态，其中：
 0， 运行中；
 1， 创建中；
 2，销毁中；
@@ -271,10 +271,10 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器源站访问策略，其中：
+     * Get 监听器源站访问策略，其中：
 rr，轮询；
 wrr，加权轮询；
-lc，最小连接数。
+lc，最小连接数。 
      * @return Scheduler 监听器源站访问策略，其中：
 rr，轮询；
 wrr，加权轮询；
@@ -285,7 +285,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器源站访问策略，其中：
+     * Set 监听器源站访问策略，其中：
 rr，轮询；
 wrr，加权轮询；
 lc，最小连接数。
@@ -299,7 +299,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取源站健康检查响应超时时间，单位：秒
+     * Get 源站健康检查响应超时时间，单位：秒 
      * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒
      */
     public Long getConnectTimeout() {
@@ -307,7 +307,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置源站健康检查响应超时时间，单位：秒
+     * Set 源站健康检查响应超时时间，单位：秒
      * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒
      */
     public void setConnectTimeout(Long ConnectTimeout) {
@@ -315,7 +315,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取源站健康检查时间间隔，单位：秒
+     * Get 源站健康检查时间间隔，单位：秒 
      * @return DelayLoop 源站健康检查时间间隔，单位：秒
      */
     public Long getDelayLoop() {
@@ -323,7 +323,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置源站健康检查时间间隔，单位：秒
+     * Set 源站健康检查时间间隔，单位：秒
      * @param DelayLoop 源站健康检查时间间隔，单位：秒
      */
     public void setDelayLoop(Long DelayLoop) {
@@ -331,9 +331,9 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器是否开启健康检查，其中：
+     * Get 监听器是否开启健康检查，其中：
 0，关闭；
-1，开启
+1，开启 
      * @return HealthCheck 监听器是否开启健康检查，其中：
 0，关闭；
 1，开启
@@ -343,7 +343,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器是否开启健康检查，其中：
+     * Set 监听器是否开启健康检查，其中：
 0，关闭；
 1，开启
      * @param HealthCheck 监听器是否开启健康检查，其中：
@@ -355,9 +355,9 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器绑定的源站状态， 其中：
+     * Get 监听器绑定的源站状态， 其中：
 0，异常；
-1，正常。
+1，正常。 
      * @return BindStatus 监听器绑定的源站状态， 其中：
 0，异常；
 1，正常。
@@ -367,7 +367,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器绑定的源站状态， 其中：
+     * Set 监听器绑定的源站状态， 其中：
 0，异常；
 1，正常。
      * @param BindStatus 监听器绑定的源站状态， 其中：
@@ -379,8 +379,8 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 监听器绑定的源站信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerSet 监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -389,7 +389,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器绑定的源站信息
+     * Set 监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerSet 监听器绑定的源站信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -399,7 +399,7 @@ lc，最小连接数。
     }
 
     /**
-     * 获取监听器创建时间，Unix时间戳
+     * Get 监听器创建时间，Unix时间戳 
      * @return CreateTime 监听器创建时间，Unix时间戳
      */
     public Long getCreateTime() {
@@ -407,7 +407,7 @@ lc，最小连接数。
     }
 
     /**
-     * 设置监听器创建时间，Unix时间戳
+     * Set 监听器创建时间，Unix时间戳
      * @param CreateTime 监听器创建时间，Unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -415,7 +415,7 @@ lc，最小连接数。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

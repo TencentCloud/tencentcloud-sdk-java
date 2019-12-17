@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDomainAttributesRequest  extends AbstractModel{
+public class ModifyDomainAttributesRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -72,7 +72,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -80,7 +80,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -88,7 +88,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -96,7 +96,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -104,7 +104,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名（必须是已经创建的转发规则下的域名）
+     * Get 域名（必须是已经创建的转发规则下的域名） 
      * @return Domain 域名（必须是已经创建的转发规则下的域名）
      */
     public String getDomain() {
@@ -112,7 +112,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名（必须是已经创建的转发规则下的域名）
+     * Set 域名（必须是已经创建的转发规则下的域名）
      * @param Domain 域名（必须是已经创建的转发规则下的域名）
      */
     public void setDomain(String Domain) {
@@ -120,7 +120,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改的新域名
+     * Get 要修改的新域名 
      * @return NewDomain 要修改的新域名
      */
     public String getNewDomain() {
@@ -128,7 +128,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的新域名
+     * Set 要修改的新域名
      * @param NewDomain 要修改的新域名
      */
     public void setNewDomain(String NewDomain) {
@@ -136,7 +136,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * Get 域名相关的证书信息，注意，仅对启用SNI的监听器适用。 
      * @return Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
      */
     public CertificateInput getCertificate() {
@@ -144,7 +144,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用。
+     * Set 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
      * @param Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用。
      */
     public void setCertificate(CertificateInput Certificate) {
@@ -152,7 +152,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Get 是否开启Http2，注意，只有HTTPS域名才能开启Http2。 
      * @return Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public Boolean getHttp2() {
@@ -160,7 +160,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * Set 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      * @param Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public void setHttp2(Boolean Http2) {
@@ -168,7 +168,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Get 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。 
      * @return DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     public Boolean getDefaultServer() {
@@ -176,7 +176,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Set 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     public void setDefaultServer(Boolean DefaultServer) {
@@ -184,7 +184,7 @@ public class ModifyDomainAttributesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

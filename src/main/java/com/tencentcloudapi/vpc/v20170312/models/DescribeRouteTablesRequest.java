@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteTablesRequest  extends AbstractModel{
+public class DescribeRouteTablesRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -57,7 +57,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String [] getRouteTableIds() {
@@ -65,7 +65,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableIds 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableIds(String [] RouteTableIds) {
@@ -73,13 +73,13 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
+     * Get 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>association.main - String - （过滤条件）是否主路由表。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li> 
      * @return Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -93,7 +93,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
+     * Set 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
@@ -113,7 +113,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public String getOffset() {
@@ -121,7 +121,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(String Offset) {
@@ -129,7 +129,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求对象个数。
+     * Get 请求对象个数。 
      * @return Limit 请求对象个数。
      */
     public String getLimit() {
@@ -137,7 +137,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求对象个数。
+     * Set 请求对象个数。
      * @param Limit 请求对象个数。
      */
     public void setLimit(String Limit) {
@@ -145,7 +145,7 @@ public class DescribeRouteTablesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);

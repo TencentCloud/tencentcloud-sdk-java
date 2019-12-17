@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
+public class AsrWordsConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 语音关键词识别任务开关，可选值：
@@ -40,9 +40,9 @@ public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
     private String [] LabelSet;
 
     /**
-     * 获取语音关键词识别任务开关，可选值：
+     * Get 语音关键词识别任务开关，可选值：
 <li>ON：开启语音关键词识别任务；</li>
-<li>OFF：关闭语音关键词识别任务。</li>
+<li>OFF：关闭语音关键词识别任务。</li> 
      * @return Switch 语音关键词识别任务开关，可选值：
 <li>ON：开启语音关键词识别任务；</li>
 <li>OFF：关闭语音关键词识别任务。</li>
@@ -52,7 +52,7 @@ public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词识别任务开关，可选值：
+     * Set 语音关键词识别任务开关，可选值：
 <li>ON：开启语音关键词识别任务；</li>
 <li>OFF：关闭语音关键词识别任务。</li>
      * @param Switch 语音关键词识别任务开关，可选值：
@@ -64,8 +64,8 @@ public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+     * Get 关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
+标签个数最多 10 个，每个标签长度最多 16 个字符。 
      * @return LabelSet 关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
@@ -74,7 +74,7 @@ public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
+     * Set 关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      * @param LabelSet 关键词过滤标签，指定需要返回的关键词的标签。如果未填或者为空，则全部结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
@@ -84,7 +84,7 @@ public class AsrWordsConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

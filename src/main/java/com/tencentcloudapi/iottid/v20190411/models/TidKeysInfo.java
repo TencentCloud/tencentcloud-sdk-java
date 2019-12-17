@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TidKeysInfo  extends AbstractModel{
+public class TidKeysInfo extends AbstractModel{
 
     /**
     * TID号码
@@ -65,7 +65,7 @@ public class TidKeysInfo  extends AbstractModel{
     private String DeviceCode;
 
     /**
-     * 获取TID号码
+     * Get TID号码 
      * @return Tid TID号码
      */
     public String getTid() {
@@ -73,7 +73,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置TID号码
+     * Set TID号码
      * @param Tid TID号码
      */
     public void setTid(String Tid) {
@@ -81,7 +81,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取公钥
+     * Get 公钥 
      * @return PublicKey 公钥
      */
     public String getPublicKey() {
@@ -89,7 +89,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置公钥
+     * Set 公钥
      * @param PublicKey 公钥
      */
     public void setPublicKey(String PublicKey) {
@@ -97,7 +97,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私钥
+     * Get 私钥 
      * @return PrivateKey 私钥
      */
     public String getPrivateKey() {
@@ -105,7 +105,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私钥
+     * Set 私钥
      * @param PrivateKey 私钥
      */
     public void setPrivateKey(String PrivateKey) {
@@ -113,7 +113,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取共享密钥
+     * Get 共享密钥 
      * @return Psk 共享密钥
      */
     public String getPsk() {
@@ -121,7 +121,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置共享密钥
+     * Set 共享密钥
      * @param Psk 共享密钥
      */
     public void setPsk(String Psk) {
@@ -129,7 +129,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取软加固白盒密钥下载地址
+     * Get 软加固白盒密钥下载地址 
      * @return DownloadUrl 软加固白盒密钥下载地址
      */
     public String getDownloadUrl() {
@@ -137,7 +137,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置软加固白盒密钥下载地址
+     * Set 软加固白盒密钥下载地址
      * @param DownloadUrl 软加固白盒密钥下载地址
      */
     public void setDownloadUrl(String DownloadUrl) {
@@ -145,7 +145,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 获取软加固设备标识码
+     * Get 软加固设备标识码 
      * @return DeviceCode 软加固设备标识码
      */
     public String getDeviceCode() {
@@ -153,7 +153,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 设置软加固设备标识码
+     * Set 软加固设备标识码
      * @param DeviceCode 软加固设备标识码
      */
     public void setDeviceCode(String DeviceCode) {
@@ -161,7 +161,7 @@ public class TidKeysInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tid", this.Tid);

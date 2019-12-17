@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextDetection  extends AbstractModel{
+public class TextDetection extends AbstractModel{
 
     /**
     * 识别出的文本行内容
@@ -53,7 +53,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     private String AdvancedInfo;
 
     /**
-     * 获取识别出的文本行内容
+     * Get 识别出的文本行内容 
      * @return DetectedText 识别出的文本行内容
      */
     public String getDetectedText() {
@@ -61,7 +61,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 设置识别出的文本行内容
+     * Set 识别出的文本行内容
      * @param DetectedText 识别出的文本行内容
      */
     public void setDetectedText(String DetectedText) {
@@ -69,7 +69,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 获取置信度 0 ~100
+     * Get 置信度 0 ~100 
      * @return Confidence 置信度 0 ~100
      */
     public Integer getConfidence() {
@@ -77,7 +77,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 设置置信度 0 ~100
+     * Set 置信度 0 ~100
      * @param Confidence 置信度 0 ~100
      */
     public void setConfidence(Integer Confidence) {
@@ -85,8 +85,8 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 获取文本行坐标，以四个顶点坐标表示
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文本行坐标，以四个顶点坐标表示
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Polygon 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -95,7 +95,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 设置文本行坐标，以四个顶点坐标表示
+     * Set 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Polygon 文本行坐标，以四个顶点坐标表示
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,8 +105,8 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 获取此字段为扩展字段。
-GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
+     * Get 此字段为扩展字段。
+GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。 
      * @return AdvancedInfo 此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      */
@@ -115,7 +115,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 设置此字段为扩展字段。
+     * Set 此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
      * @param AdvancedInfo 此字段为扩展字段。
 GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
@@ -125,7 +125,7 @@ GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectedText", this.DetectedText);

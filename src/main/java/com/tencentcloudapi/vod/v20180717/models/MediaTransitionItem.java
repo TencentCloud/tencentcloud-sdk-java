@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaTransitionItem  extends AbstractModel{
+public class MediaTransitionItem extends AbstractModel{
 
     /**
     * 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
@@ -38,7 +38,7 @@ public class MediaTransitionItem  extends AbstractModel{
     private TransitionOpertion [] Transitions;
 
     /**
-     * 获取转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
+     * Get 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。 
      * @return Duration 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
      */
     public Float getDuration() {
@@ -46,7 +46,7 @@ public class MediaTransitionItem  extends AbstractModel{
     }
 
     /**
-     * 设置转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
+     * Set 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
      * @param Duration 转场持续时间，单位为秒。进行转场处理的两个媒体片段，第二个片段在轨道上的起始时间会自动进行调整，设置为前面一个片段的结束时间减去转场的持续时间。
      */
     public void setDuration(Float Duration) {
@@ -54,8 +54,8 @@ public class MediaTransitionItem  extends AbstractModel{
     }
 
     /**
-     * 获取转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Transitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class MediaTransitionItem  extends AbstractModel{
     }
 
     /**
-     * 设置转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
+     * Set 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Transitions 转场操作列表。图像转场操作和音频转场操作各自最多支持一个。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class MediaTransitionItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteWordSamplesRequest  extends AbstractModel{
+public class DeleteWordSamplesRequest extends AbstractModel{
 
     /**
     * 关键词，数组长度限制：100 个词。
@@ -30,7 +30,7 @@ public class DeleteWordSamplesRequest  extends AbstractModel{
     private String [] Keywords;
 
     /**
-     * 获取关键词，数组长度限制：100 个词。
+     * Get 关键词，数组长度限制：100 个词。 
      * @return Keywords 关键词，数组长度限制：100 个词。
      */
     public String [] getKeywords() {
@@ -38,7 +38,7 @@ public class DeleteWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词，数组长度限制：100 个词。
+     * Set 关键词，数组长度限制：100 个词。
      * @param Keywords 关键词，数组长度限制：100 个词。
      */
     public void setKeywords(String [] Keywords) {
@@ -46,7 +46,7 @@ public class DeleteWordSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);

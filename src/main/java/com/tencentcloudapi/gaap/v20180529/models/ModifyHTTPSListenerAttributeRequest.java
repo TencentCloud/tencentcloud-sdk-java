@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
+public class ModifyHTTPSListenerAttributeRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -72,7 +72,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     private String [] PolyClientCertificateIds;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -80,7 +80,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -88,7 +88,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID， 若为单通道监听器，此项必须填写
+     * Get 通道ID， 若为单通道监听器，此项必须填写 
      * @return ProxyId 通道ID， 若为单通道监听器，此项必须填写
      */
     public String getProxyId() {
@@ -96,7 +96,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID， 若为单通道监听器，此项必须填写
+     * Set 通道ID， 若为单通道监听器，此项必须填写
      * @param ProxyId 通道ID， 若为单通道监听器，此项必须填写
      */
     public void setProxyId(String ProxyId) {
@@ -104,7 +104,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的监听器名称
+     * Get 修改后的监听器名称 
      * @return ListenerName 修改后的监听器名称
      */
     public String getListenerName() {
@@ -112,7 +112,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的监听器名称
+     * Set 修改后的监听器名称
      * @param ListenerName 修改后的监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -120,7 +120,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器后端转发与源站之间的协议类型
+     * Get 监听器后端转发与源站之间的协议类型 
      * @return ForwardProtocol 监听器后端转发与源站之间的协议类型
      */
     public String getForwardProtocol() {
@@ -128,7 +128,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器后端转发与源站之间的协议类型
+     * Set 监听器后端转发与源站之间的协议类型
      * @param ForwardProtocol 监听器后端转发与源站之间的协议类型
      */
     public void setForwardProtocol(String ForwardProtocol) {
@@ -136,7 +136,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的监听器服务器证书ID
+     * Get 修改后的监听器服务器证书ID 
      * @return CertificateId 修改后的监听器服务器证书ID
      */
     public String getCertificateId() {
@@ -144,7 +144,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的监听器服务器证书ID
+     * Set 修改后的监听器服务器证书ID
      * @param CertificateId 修改后的监听器服务器证书ID
      */
     public void setCertificateId(String CertificateId) {
@@ -152,7 +152,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+     * Get 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段 
      * @return ClientCertificateId 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      */
     public String getClientCertificateId() {
@@ -160,7 +160,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
+     * Set 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      * @param ClientCertificateId 修改后的监听器客户端证书ID，不支持多客户端证书，多客户端证书新采用PolyClientCertificateIds字段
      */
     public void setClientCertificateId(String ClientCertificateId) {
@@ -168,7 +168,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新字段,修改后的监听器客户端证书ID
+     * Get 新字段,修改后的监听器客户端证书ID 
      * @return PolyClientCertificateIds 新字段,修改后的监听器客户端证书ID
      */
     public String [] getPolyClientCertificateIds() {
@@ -176,7 +176,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新字段,修改后的监听器客户端证书ID
+     * Set 新字段,修改后的监听器客户端证书ID
      * @param PolyClientCertificateIds 新字段,修改后的监听器客户端证书ID
      */
     public void setPolyClientCertificateIds(String [] PolyClientCertificateIds) {
@@ -184,7 +184,7 @@ public class ModifyHTTPSListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

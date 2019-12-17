@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Quota  extends AbstractModel{
+public class Quota extends AbstractModel{
 
     /**
     * 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
@@ -44,7 +44,7 @@ public class Quota  extends AbstractModel{
     private Integer QuotaLimit;
 
     /**
-     * 获取配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * Get 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。 
      * @return QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
      */
     public String getQuotaId() {
@@ -52,7 +52,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 设置配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * Set 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
      * @param QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
      */
     public void setQuotaId(String QuotaId) {
@@ -60,7 +60,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 获取当前数量
+     * Get 当前数量 
      * @return QuotaCurrent 当前数量
      */
     public Integer getQuotaCurrent() {
@@ -68,7 +68,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 设置当前数量
+     * Set 当前数量
      * @param QuotaCurrent 当前数量
      */
     public void setQuotaCurrent(Integer QuotaCurrent) {
@@ -76,7 +76,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 获取配额数量
+     * Get 配额数量 
      * @return QuotaLimit 配额数量
      */
     public Integer getQuotaLimit() {
@@ -84,7 +84,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 设置配额数量
+     * Set 配额数量
      * @param QuotaLimit 配额数量
      */
     public void setQuotaLimit(Integer QuotaLimit) {
@@ -92,7 +92,7 @@ public class Quota  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QuotaId", this.QuotaId);

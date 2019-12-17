@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAccountPrivilegeRequest  extends AbstractModel{
+public class ModifyAccountPrivilegeRequest extends AbstractModel{
 
     /**
     * 数据库实例ID，形如mssql-njj2mtpl
@@ -37,7 +37,7 @@ public class ModifyAccountPrivilegeRequest  extends AbstractModel{
     private AccountPrivilegeModifyInfo [] Accounts;
 
     /**
-     * 获取数据库实例ID，形如mssql-njj2mtpl
+     * Get 数据库实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyAccountPrivilegeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据库实例ID，形如mssql-njj2mtpl
+     * Set 数据库实例ID，形如mssql-njj2mtpl
      * @param InstanceId 数据库实例ID，形如mssql-njj2mtpl
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyAccountPrivilegeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取账号权限变更信息
+     * Get 账号权限变更信息 
      * @return Accounts 账号权限变更信息
      */
     public AccountPrivilegeModifyInfo [] getAccounts() {
@@ -61,7 +61,7 @@ public class ModifyAccountPrivilegeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置账号权限变更信息
+     * Set 账号权限变更信息
      * @param Accounts 账号权限变更信息
      */
     public void setAccounts(AccountPrivilegeModifyInfo [] Accounts) {
@@ -69,7 +69,7 @@ public class ModifyAccountPrivilegeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

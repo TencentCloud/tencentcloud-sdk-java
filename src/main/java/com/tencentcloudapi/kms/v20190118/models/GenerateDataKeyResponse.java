@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateDataKeyResponse  extends AbstractModel{
+public class GenerateDataKeyResponse extends AbstractModel{
 
     /**
     * CMK的全局唯一标识
@@ -51,7 +51,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CMK的全局唯一标识
+     * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
     public String getKeyId() {
@@ -59,7 +59,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的全局唯一标识
+     * Set CMK的全局唯一标识
      * @param KeyId CMK的全局唯一标识
      */
     public void setKeyId(String KeyId) {
@@ -67,7 +67,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+     * Get 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文 
      * @return Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
      */
     public String getPlaintext() {
@@ -75,7 +75,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
+     * Set 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
      * @param Plaintext 生成的DataKey的明文，该明文使用base64编码，用户需要使用base64解码得到明文
      */
     public void setPlaintext(String Plaintext) {
@@ -83,7 +83,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * Get DataKey加密后经过base64编码的密文，用户需要自行保存密文 
      * @return CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
      */
     public String getCiphertextBlob() {
@@ -91,7 +91,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置DataKey加密后经过base64编码的密文，用户需要自行保存密文
+     * Set DataKey加密后经过base64编码的密文，用户需要自行保存密文
      * @param CiphertextBlob DataKey加密后经过base64编码的密文，用户需要自行保存密文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
@@ -99,7 +99,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class GenerateDataKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

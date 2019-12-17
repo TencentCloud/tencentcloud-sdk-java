@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainPlayInfoListRequest  extends AbstractModel{
+public class DescribeLiveDomainPlayInfoListRequest extends AbstractModel{
 
     /**
     * 播放域名列表。
@@ -30,7 +30,7 @@ public class DescribeLiveDomainPlayInfoListRequest  extends AbstractModel{
     private String [] PlayDomains;
 
     /**
-     * 获取播放域名列表。
+     * Get 播放域名列表。 
      * @return PlayDomains 播放域名列表。
      */
     public String [] getPlayDomains() {
@@ -38,7 +38,7 @@ public class DescribeLiveDomainPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名列表。
+     * Set 播放域名列表。
      * @param PlayDomains 播放域名列表。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -46,7 +46,7 @@ public class DescribeLiveDomainPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);

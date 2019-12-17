@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignLocation  extends AbstractModel{
+public class SignLocation extends AbstractModel{
 
     /**
     * 签名域页数
@@ -58,7 +58,7 @@ public class SignLocation  extends AbstractModel{
     private String SignLocationRUY;
 
     /**
-     * 获取签名域页数
+     * Get 签名域页数 
      * @return SignOnPage 签名域页数
      */
     public String getSignOnPage() {
@@ -66,7 +66,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 设置签名域页数
+     * Set 签名域页数
      * @param SignOnPage 签名域页数
      */
     public void setSignOnPage(String SignOnPage) {
@@ -74,7 +74,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 获取签名域左下角X轴坐标轴
+     * Get 签名域左下角X轴坐标轴 
      * @return SignLocationLBX 签名域左下角X轴坐标轴
      */
     public String getSignLocationLBX() {
@@ -82,7 +82,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 设置签名域左下角X轴坐标轴
+     * Set 签名域左下角X轴坐标轴
      * @param SignLocationLBX 签名域左下角X轴坐标轴
      */
     public void setSignLocationLBX(String SignLocationLBX) {
@@ -90,7 +90,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 获取签名域左下角Y轴坐标轴
+     * Get 签名域左下角Y轴坐标轴 
      * @return SignLocationLBY 签名域左下角Y轴坐标轴
      */
     public String getSignLocationLBY() {
@@ -98,7 +98,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 设置签名域左下角Y轴坐标轴
+     * Set 签名域左下角Y轴坐标轴
      * @param SignLocationLBY 签名域左下角Y轴坐标轴
      */
     public void setSignLocationLBY(String SignLocationLBY) {
@@ -106,7 +106,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 获取签名域右上角X轴坐标轴
+     * Get 签名域右上角X轴坐标轴 
      * @return SignLocationRUX 签名域右上角X轴坐标轴
      */
     public String getSignLocationRUX() {
@@ -114,7 +114,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 设置签名域右上角X轴坐标轴
+     * Set 签名域右上角X轴坐标轴
      * @param SignLocationRUX 签名域右上角X轴坐标轴
      */
     public void setSignLocationRUX(String SignLocationRUX) {
@@ -122,7 +122,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 获取签名域右上角Y轴坐标轴
+     * Get 签名域右上角Y轴坐标轴 
      * @return SignLocationRUY 签名域右上角Y轴坐标轴
      */
     public String getSignLocationRUY() {
@@ -130,7 +130,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 设置签名域右上角Y轴坐标轴
+     * Set 签名域右上角Y轴坐标轴
      * @param SignLocationRUY 签名域右上角Y轴坐标轴
      */
     public void setSignLocationRUY(String SignLocationRUY) {
@@ -138,7 +138,7 @@ public class SignLocation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SignOnPage", this.SignOnPage);

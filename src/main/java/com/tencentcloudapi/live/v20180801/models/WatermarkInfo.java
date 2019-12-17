@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WatermarkInfo  extends AbstractModel{
+public class WatermarkInfo extends AbstractModel{
 
     /**
     * 水印ID。
@@ -86,7 +86,7 @@ public class WatermarkInfo  extends AbstractModel{
     private Integer Height;
 
     /**
-     * 获取水印ID。
+     * Get 水印ID。 
      * @return WatermarkId 水印ID。
      */
     public Integer getWatermarkId() {
@@ -94,7 +94,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印ID。
+     * Set 水印ID。
      * @param WatermarkId 水印ID。
      */
     public void setWatermarkId(Integer WatermarkId) {
@@ -102,7 +102,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取水印图片url。
+     * Get 水印图片url。 
      * @return PictureUrl 水印图片url。
      */
     public String getPictureUrl() {
@@ -110,7 +110,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印图片url。
+     * Set 水印图片url。
      * @param PictureUrl 水印图片url。
      */
     public void setPictureUrl(String PictureUrl) {
@@ -118,7 +118,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取显示位置，X轴偏移。
+     * Get 显示位置，X轴偏移。 
      * @return XPosition 显示位置，X轴偏移。
      */
     public Integer getXPosition() {
@@ -126,7 +126,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置显示位置，X轴偏移。
+     * Set 显示位置，X轴偏移。
      * @param XPosition 显示位置，X轴偏移。
      */
     public void setXPosition(Integer XPosition) {
@@ -134,7 +134,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取显示位置，Y轴偏移。
+     * Get 显示位置，Y轴偏移。 
      * @return YPosition 显示位置，Y轴偏移。
      */
     public Integer getYPosition() {
@@ -142,7 +142,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置显示位置，Y轴偏移。
+     * Set 显示位置，Y轴偏移。
      * @param YPosition 显示位置，Y轴偏移。
      */
     public void setYPosition(Integer YPosition) {
@@ -150,7 +150,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取水印名称。
+     * Get 水印名称。 
      * @return WatermarkName 水印名称。
      */
     public String getWatermarkName() {
@@ -158,7 +158,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印名称。
+     * Set 水印名称。
      * @param WatermarkName 水印名称。
      */
     public void setWatermarkName(String WatermarkName) {
@@ -166,7 +166,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前状态。0：未使用，1:使用中。
+     * Get 当前状态。0：未使用，1:使用中。 
      * @return Status 当前状态。0：未使用，1:使用中。
      */
     public Integer getStatus() {
@@ -174,7 +174,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前状态。0：未使用，1:使用中。
+     * Set 当前状态。0：未使用，1:使用中。
      * @param Status 当前状态。0：未使用，1:使用中。
      */
     public void setStatus(Integer Status) {
@@ -182,7 +182,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取添加时间。
+     * Get 添加时间。 
      * @return CreateTime 添加时间。
      */
     public String getCreateTime() {
@@ -190,7 +190,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置添加时间。
+     * Set 添加时间。
      * @param CreateTime 添加时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -198,7 +198,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取水印宽
+     * Get 水印宽 
      * @return Width 水印宽
      */
     public Integer getWidth() {
@@ -206,7 +206,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印宽
+     * Set 水印宽
      * @param Width 水印宽
      */
     public void setWidth(Integer Width) {
@@ -214,7 +214,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 获取水印高
+     * Get 水印高 
      * @return Height 水印高
      */
     public Integer getHeight() {
@@ -222,7 +222,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印高
+     * Set 水印高
      * @param Height 水印高
      */
     public void setHeight(Integer Height) {
@@ -230,7 +230,7 @@ public class WatermarkInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaSampleSnapshotItem  extends AbstractModel{
+public class MediaSampleSnapshotItem extends AbstractModel{
 
     /**
     * 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
@@ -69,7 +69,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     private Long [] WaterMarkDefinition;
 
     /**
-     * 获取采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -77,7 +77,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 采样截图规格 ID，参见[采样截图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -85,9 +85,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 获取采样方式，取值范围：
+     * Get 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
-<li>Time：根据时间间隔采样。</li>
+<li>Time：根据时间间隔采样。</li> 
      * @return SampleType 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
@@ -97,7 +97,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置采样方式，取值范围：
+     * Set 采样方式，取值范围：
 <li>Percent：根据百分比间隔采样。</li>
 <li>Time：根据时间间隔采样。</li>
      * @param SampleType 采样方式，取值范围：
@@ -109,9 +109,9 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 获取采样间隔
+     * Get 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
-<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
+<li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li> 
      * @return Interval 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
@@ -121,7 +121,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置采样间隔
+     * Set 采样间隔
 <li>当 SampleType 为 Percent 时，该值表示多少百分比一张图。</li>
 <li>当 SampleType 为 Time 时，该值表示多少时间间隔一张图，单位秒， 第一张图均为视频首帧。</li>
      * @param Interval 采样间隔
@@ -133,7 +133,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 获取截图后文件的存储位置。
+     * Get 截图后文件的存储位置。 
      * @return Storage 截图后文件的存储位置。
      */
     public TaskOutputStorage getStorage() {
@@ -141,7 +141,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置截图后文件的存储位置。
+     * Set 截图后文件的存储位置。
      * @param Storage 截图后文件的存储位置。
      */
     public void setStorage(TaskOutputStorage Storage) {
@@ -149,7 +149,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 获取生成的截图 path 列表。
+     * Get 生成的截图 path 列表。 
      * @return ImagePathSet 生成的截图 path 列表。
      */
     public String [] getImagePathSet() {
@@ -157,7 +157,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置生成的截图 path 列表。
+     * Set 生成的截图 path 列表。
      * @param ImagePathSet 生成的截图 path 列表。
      */
     public void setImagePathSet(String [] ImagePathSet) {
@@ -165,7 +165,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 获取截图如果被打上了水印，被打水印的模板 ID 列表。
+     * Get 截图如果被打上了水印，被打水印的模板 ID 列表。 
      * @return WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public Long [] getWaterMarkDefinition() {
@@ -173,7 +173,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 设置截图如果被打上了水印，被打水印的模板 ID 列表。
+     * Set 截图如果被打上了水印，被打水印的模板 ID 列表。
      * @param WaterMarkDefinition 截图如果被打上了水印，被打水印的模板 ID 列表。
      */
     public void setWaterMarkDefinition(Long [] WaterMarkDefinition) {
@@ -181,7 +181,7 @@ public class MediaSampleSnapshotItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

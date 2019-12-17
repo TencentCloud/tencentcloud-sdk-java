@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProIspPlayCodeDataInfo  extends AbstractModel{
+public class ProIspPlayCodeDataInfo extends AbstractModel{
 
     /**
     * 国家或地区。
@@ -72,7 +72,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     private Integer Code5xx;
 
     /**
-     * 获取国家或地区。
+     * Get 国家或地区。 
      * @return CountryAreaName 国家或地区。
      */
     public String getCountryAreaName() {
@@ -80,7 +80,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置国家或地区。
+     * Set 国家或地区。
      * @param CountryAreaName 国家或地区。
      */
     public void setCountryAreaName(String CountryAreaName) {
@@ -88,7 +88,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取省份。
+     * Get 省份。 
      * @return ProvinceName 省份。
      */
     public String getProvinceName() {
@@ -96,7 +96,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置省份。
+     * Set 省份。
      * @param ProvinceName 省份。
      */
     public void setProvinceName(String ProvinceName) {
@@ -104,7 +104,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取运营商。
+     * Get 运营商。 
      * @return IspName 运营商。
      */
     public String getIspName() {
@@ -112,7 +112,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运营商。
+     * Set 运营商。
      * @param IspName 运营商。
      */
     public void setIspName(String IspName) {
@@ -120,7 +120,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码为2开头的次数。
+     * Get 错误码为2开头的次数。 
      * @return Code2xx 错误码为2开头的次数。
      */
     public Integer getCode2xx() {
@@ -128,7 +128,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码为2开头的次数。
+     * Set 错误码为2开头的次数。
      * @param Code2xx 错误码为2开头的次数。
      */
     public void setCode2xx(Integer Code2xx) {
@@ -136,7 +136,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码为3开头的次数。
+     * Get 错误码为3开头的次数。 
      * @return Code3xx 错误码为3开头的次数。
      */
     public Integer getCode3xx() {
@@ -144,7 +144,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码为3开头的次数。
+     * Set 错误码为3开头的次数。
      * @param Code3xx 错误码为3开头的次数。
      */
     public void setCode3xx(Integer Code3xx) {
@@ -152,7 +152,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码为4开头的次数。
+     * Get 错误码为4开头的次数。 
      * @return Code4xx 错误码为4开头的次数。
      */
     public Integer getCode4xx() {
@@ -160,7 +160,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码为4开头的次数。
+     * Set 错误码为4开头的次数。
      * @param Code4xx 错误码为4开头的次数。
      */
     public void setCode4xx(Integer Code4xx) {
@@ -168,7 +168,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码为5开头的次数。
+     * Get 错误码为5开头的次数。 
      * @return Code5xx 错误码为5开头的次数。
      */
     public Integer getCode5xx() {
@@ -176,7 +176,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码为5开头的次数。
+     * Set 错误码为5开头的次数。
      * @param Code5xx 错误码为5开头的次数。
      */
     public void setCode5xx(Integer Code5xx) {
@@ -184,7 +184,7 @@ public class ProIspPlayCodeDataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CountryAreaName", this.CountryAreaName);

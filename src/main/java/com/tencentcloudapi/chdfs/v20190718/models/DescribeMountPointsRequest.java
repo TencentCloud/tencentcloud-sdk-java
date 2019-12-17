@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMountPointsRequest  extends AbstractModel{
+public class DescribeMountPointsRequest extends AbstractModel{
 
     /**
     * 文件系统ID
@@ -53,8 +53,8 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取文件系统ID
-注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
+     * Get 文件系统ID
+注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId 
      * @return FileSystemId 文件系统ID
 注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
      */
@@ -63,7 +63,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
 注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
      * @param FileSystemId 文件系统ID
 注意：若根据AccessGroupId查看挂载点列表，则无需设置FileSystemId
@@ -73,8 +73,8 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组ID
-注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId
+     * Get 权限组ID
+注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId 
      * @return AccessGroupId 权限组ID
 注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId
      */
@@ -83,7 +83,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
 注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId
      * @param AccessGroupId 权限组ID
 注意：若根据FileSystemId查看挂载点列表，则无需设置AccessGroupId
@@ -93,7 +93,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -101,7 +101,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -109,7 +109,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为所有
+     * Get 返回数量，默认为所有 
      * @return Limit 返回数量，默认为所有
      */
     public Long getLimit() {
@@ -117,7 +117,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为所有
+     * Set 返回数量，默认为所有
      * @param Limit 返回数量，默认为所有
      */
     public void setLimit(Long Limit) {
@@ -125,7 +125,7 @@ public class DescribeMountPointsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);

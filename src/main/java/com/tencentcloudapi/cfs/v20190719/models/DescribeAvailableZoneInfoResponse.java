@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
+public class DescribeAvailableZoneInfoResponse extends AbstractModel{
 
     /**
     * 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
@@ -37,7 +37,7 @@ public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+     * Get 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息 
      * @return RegionZones 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
      */
     public AvailableRegion [] getRegionZones() {
@@ -45,7 +45,7 @@ public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+     * Set 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
      * @param RegionZones 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
      */
     public void setRegionZones(AvailableRegion [] RegionZones) {
@@ -53,7 +53,7 @@ public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeAvailableZoneInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RegionZones.", this.RegionZones);

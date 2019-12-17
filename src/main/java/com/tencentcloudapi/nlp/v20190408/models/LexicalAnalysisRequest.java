@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LexicalAnalysisRequest  extends AbstractModel{
+public class LexicalAnalysisRequest extends AbstractModel{
 
     /**
     * 待分析的文本（仅支持UTF-8格式，不超过500字）
@@ -39,7 +39,7 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     private Long Flag;
 
     /**
-     * 获取待分析的文本（仅支持UTF-8格式，不超过500字）
+     * Get 待分析的文本（仅支持UTF-8格式，不超过500字） 
      * @return Text 待分析的文本（仅支持UTF-8格式，不超过500字）
      */
     public String getText() {
@@ -47,7 +47,7 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待分析的文本（仅支持UTF-8格式，不超过500字）
+     * Set 待分析的文本（仅支持UTF-8格式，不超过500字）
      * @param Text 待分析的文本（仅支持UTF-8格式，不超过500字）
      */
     public void setText(String Text) {
@@ -55,9 +55,9 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 获取词法分析模式（默认取2值）：
+     * Get 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
-2、高性能（单粒度分词能力）；
+2、高性能（单粒度分词能力）； 
      * @return Flag 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
@@ -67,7 +67,7 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 设置词法分析模式（默认取2值）：
+     * Set 词法分析模式（默认取2值）：
 1、高精度（混合粒度分词能力）；
 2、高性能（单粒度分词能力）；
      * @param Flag 词法分析模式（默认取2值）：
@@ -79,7 +79,7 @@ public class LexicalAnalysisRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

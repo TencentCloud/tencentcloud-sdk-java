@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OCRDetect  extends AbstractModel{
+public class OCRDetect extends AbstractModel{
 
     /**
     * 识别到的文本信息
@@ -30,7 +30,7 @@ public class OCRDetect  extends AbstractModel{
     private String TextInfo;
 
     /**
-     * 获取识别到的文本信息
+     * Get 识别到的文本信息 
      * @return TextInfo 识别到的文本信息
      */
     public String getTextInfo() {
@@ -38,7 +38,7 @@ public class OCRDetect  extends AbstractModel{
     }
 
     /**
-     * 设置识别到的文本信息
+     * Set 识别到的文本信息
      * @param TextInfo 识别到的文本信息
      */
     public void setTextInfo(String TextInfo) {
@@ -46,7 +46,7 @@ public class OCRDetect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TextInfo", this.TextInfo);

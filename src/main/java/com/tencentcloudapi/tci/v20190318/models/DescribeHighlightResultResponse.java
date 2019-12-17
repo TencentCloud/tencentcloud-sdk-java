@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeHighlightResultResponse  extends AbstractModel{
+public class DescribeHighlightResultResponse extends AbstractModel{
 
     /**
     * 精彩集锦详细信息。
@@ -51,7 +51,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取精彩集锦详细信息。
+     * Get 精彩集锦详细信息。 
      * @return HighlightsInfo 精彩集锦详细信息。
      */
     public HighlightsInfomation [] getHighlightsInfo() {
@@ -59,7 +59,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置精彩集锦详细信息。
+     * Set 精彩集锦详细信息。
      * @param HighlightsInfo 精彩集锦详细信息。
      */
     public void setHighlightsInfo(HighlightsInfomation [] HighlightsInfo) {
@@ -67,7 +67,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
+     * Get 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。 
      * @return JobId 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
      */
     public Long getJobId() {
@@ -75,7 +75,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
+     * Set 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
      * @param JobId 精彩集锦任务唯一id。在URL方式时提交请求后会返回一个JobId，后续查询该url的结果时使用这个JobId进行查询。
      */
     public void setJobId(Long JobId) {
@@ -83,7 +83,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的进度百分比，100表示任务已完成。
+     * Get 任务的进度百分比，100表示任务已完成。 
      * @return Progress 任务的进度百分比，100表示任务已完成。
      */
     public Float getProgress() {
@@ -91,7 +91,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的进度百分比，100表示任务已完成。
+     * Set 任务的进度百分比，100表示任务已完成。
      * @param Progress 任务的进度百分比，100表示任务已完成。
      */
     public void setProgress(Float Progress) {
@@ -99,7 +99,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeHighlightResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "HighlightsInfo.", this.HighlightsInfo);

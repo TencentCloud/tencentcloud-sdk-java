@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSpotDeviceRequest  extends AbstractModel{
+public class CreateSpotDeviceRequest extends AbstractModel{
 
     /**
     * 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
@@ -86,7 +86,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     private String Passwd;
 
     /**
-     * 获取可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
+     * Get 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取 
      * @return Zone 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
      */
     public String getZone() {
@@ -94,7 +94,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
+     * Set 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
      * @param Zone 可用区名称。如ap-guangzhou-bls-1, 通过DescribeRegions获取
      */
     public void setZone(String Zone) {
@@ -102,7 +102,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
+     * Get 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256) 
      * @return ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      */
     public String getComputeType() {
@@ -110,7 +110,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
+     * Set 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      * @param ComputeType 计算单元类型, 如v3.c2.medium，更详细的ComputeType参考[竞价实例产品文档](https://cloud.tencent.com/document/product/386/30256)
      */
     public void setComputeType(String ComputeType) {
@@ -118,7 +118,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统类型ID
+     * Get 操作系统类型ID 
      * @return OsTypeId 操作系统类型ID
      */
     public Integer getOsTypeId() {
@@ -126,7 +126,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统类型ID
+     * Set 操作系统类型ID
      * @param OsTypeId 操作系统类型ID
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -134,7 +134,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -142,7 +142,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -150,7 +150,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -158,7 +158,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -166,7 +166,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买的计算单元个数
+     * Get 购买的计算单元个数 
      * @return GoodsNum 购买的计算单元个数
      */
     public Integer getGoodsNum() {
@@ -174,7 +174,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买的计算单元个数
+     * Set 购买的计算单元个数
      * @param GoodsNum 购买的计算单元个数
      */
     public void setGoodsNum(Integer GoodsNum) {
@@ -182,7 +182,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
+     * Get 出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。 
      * @return SpotStrategy 出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
      */
     public String getSpotStrategy() {
@@ -190,7 +190,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
+     * Set 出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
      * @param SpotStrategy 出价策略。可取值为SpotWithPriceLimit和SpotAsPriceGo。SpotWithPriceLimit，用户设置价格上限，需要传SpotPriceLimit参数， 如果市场价高于用户的指定价格，则购买不成功;  SpotAsPriceGo 是随市场价的策略。
      */
     public void setSpotStrategy(String SpotStrategy) {
@@ -198,7 +198,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
+     * Get 用户设置的价格。当为SpotWithPriceLimit竞价策略时有效 
      * @return SpotPriceLimit 用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
      */
     public Float getSpotPriceLimit() {
@@ -206,7 +206,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
+     * Set 用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
      * @param SpotPriceLimit 用户设置的价格。当为SpotWithPriceLimit竞价策略时有效
      */
     public void setSpotPriceLimit(Float SpotPriceLimit) {
@@ -214,7 +214,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设置竞价实例密码。可选参数，没有指定会生成随机密码
+     * Get 设置竞价实例密码。可选参数，没有指定会生成随机密码 
      * @return Passwd 设置竞价实例密码。可选参数，没有指定会生成随机密码
      */
     public String getPasswd() {
@@ -222,7 +222,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置竞价实例密码。可选参数，没有指定会生成随机密码
+     * Set 设置竞价实例密码。可选参数，没有指定会生成随机密码
      * @param Passwd 设置竞价实例密码。可选参数，没有指定会生成随机密码
      */
     public void setPasswd(String Passwd) {
@@ -230,7 +230,7 @@ public class CreateSpotDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

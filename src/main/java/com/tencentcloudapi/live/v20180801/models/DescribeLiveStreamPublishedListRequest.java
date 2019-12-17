@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamPublishedListRequest  extends AbstractModel{
+public class DescribeLiveStreamPublishedListRequest extends AbstractModel{
 
     /**
     * 您的推流域名。
@@ -81,7 +81,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     private String StreamName;
 
     /**
-     * 获取您的推流域名。
+     * Get 您的推流域名。 
      * @return DomainName 您的推流域名。
      */
     public String getDomainName() {
@@ -89,7 +89,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置您的推流域名。
+     * Set 您的推流域名。
      * @param DomainName 您的推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -97,10 +97,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+注意：EndTime和StartTime相差不可超过30天。 
      * @return EndTime 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
@@ -111,7 +111,7 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
 UTC 格式，例如：2016-06-30T19:00:00Z。
 不超过当前时间。
 注意：EndTime和StartTime相差不可超过30天。
@@ -125,9 +125,9 @@ UTC 格式，例如：2016-06-30T19:00:00Z。
     }
 
     /**
-     * 获取起始时间。 
+     * Get 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+最长支持查询60天内数据。 
      * @return StartTime 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
 最长支持查询60天内数据。
@@ -137,7 +137,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置起始时间。 
+     * Set 起始时间。 
 UTC 格式，例如：2016-06-29T19:00:00Z。
 最长支持查询60天内数据。
      * @param StartTime 起始时间。 
@@ -149,7 +149,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      */
     public String getAppName() {
@@ -157,7 +157,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。不支持模糊匹配。
      */
     public void setAppName(String AppName) {
@@ -165,8 +165,8 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取取得第几页。
-默认值：1。
+     * Get 取得第几页。
+默认值：1。 
      * @return PageNum 取得第几页。
 默认值：1。
      */
@@ -175,7 +175,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置取得第几页。
+     * Set 取得第几页。
 默认值：1。
      * @param PageNum 取得第几页。
 默认值：1。
@@ -185,10 +185,10 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取分页大小。
+     * Get 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10。
+默认值：10。 
      * @return PageSize 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
@@ -199,7 +199,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置分页大小。
+     * Set 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
 默认值：10。
@@ -213,7 +213,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 获取流名称，支持模糊匹配。
+     * Get 流名称，支持模糊匹配。 
      * @return StreamName 流名称，支持模糊匹配。
      */
     public String getStreamName() {
@@ -221,7 +221,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 设置流名称，支持模糊匹配。
+     * Set 流名称，支持模糊匹配。
      * @param StreamName 流名称，支持模糊匹配。
      */
     public void setStreamName(String StreamName) {
@@ -229,7 +229,7 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

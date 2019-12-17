@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrdersRequest  extends AbstractModel{
+public class DescribeOrdersRequest extends AbstractModel{
 
     /**
     * 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
@@ -30,7 +30,7 @@ public class DescribeOrdersRequest  extends AbstractModel{
     private String [] DealNames;
 
     /**
-     * 获取订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
+     * Get 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况 
      * @return DealNames 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
      */
     public String [] getDealNames() {
@@ -38,7 +38,7 @@ public class DescribeOrdersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
+     * Set 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
      * @param DealNames 订单数组。发货时会返回订单名字，利用该订单名字调用DescribeOrders接口查询发货情况
      */
     public void setDealNames(String [] DealNames) {
@@ -46,7 +46,7 @@ public class DescribeOrdersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);

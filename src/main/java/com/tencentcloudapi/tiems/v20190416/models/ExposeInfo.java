@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExposeInfo  extends AbstractModel{
+public class ExposeInfo extends AbstractModel{
 
     /**
     * 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
@@ -53,7 +53,7 @@ public class ExposeInfo  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+     * Get 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通） 
      * @return ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      */
     public String getExposeType() {
@@ -61,7 +61,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+     * Set 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      * @param ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      */
     public void setExposeType(String ExposeType) {
@@ -69,7 +69,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
+     * Get 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip 
      * @return Ip 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
      */
     public String getIp() {
@@ -77,7 +77,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
+     * Set 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
      * @param Ip 暴露Ip。暴露方式为 EXTERNAL 为外网 Ip，暴露方式为 VPC 时为指定 Vpc 下的Vip
      */
     public void setIp(String Ip) {
@@ -85,8 +85,8 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式为 VPC 时，打通的私有网络Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 暴露方式为 VPC 时，打通的私有网络Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -95,7 +95,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式为 VPC 时，打通的私有网络Id
+     * Set 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 暴露方式为 VPC 时，打通的私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -105,8 +105,8 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式为 VPC 时，打通的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 暴露方式为 VPC 时，打通的子网Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -115,7 +115,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式为 VPC 时，打通的子网Id
+     * Set 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 暴露方式为 VPC 时，打通的子网Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -125,7 +125,7 @@ public class ExposeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExposeType", this.ExposeType);

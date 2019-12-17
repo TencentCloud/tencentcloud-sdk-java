@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceDiskSizeInfo  extends AbstractModel{
+public class DeviceDiskSizeInfo extends AbstractModel{
 
     /**
     * 硬盘名称
@@ -37,7 +37,7 @@ public class DeviceDiskSizeInfo  extends AbstractModel{
     private Integer DiskSize;
 
     /**
-     * 获取硬盘名称
+     * Get 硬盘名称 
      * @return DiskName 硬盘名称
      */
     public String getDiskName() {
@@ -45,7 +45,7 @@ public class DeviceDiskSizeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘名称
+     * Set 硬盘名称
      * @param DiskName 硬盘名称
      */
     public void setDiskName(String DiskName) {
@@ -53,7 +53,7 @@ public class DeviceDiskSizeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘大小（单位GiB）
+     * Get 硬盘大小（单位GiB） 
      * @return DiskSize 硬盘大小（单位GiB）
      */
     public Integer getDiskSize() {
@@ -61,7 +61,7 @@ public class DeviceDiskSizeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘大小（单位GiB）
+     * Set 硬盘大小（单位GiB）
      * @param DiskSize 硬盘大小（单位GiB）
      */
     public void setDiskSize(Integer DiskSize) {
@@ -69,7 +69,7 @@ public class DeviceDiskSizeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);

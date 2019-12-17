@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6CidrBlockRequest  extends AbstractModel{
+public class AssignIpv6CidrBlockRequest extends AbstractModel{
 
     /**
     * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
@@ -30,7 +30,7 @@ public class AssignIpv6CidrBlockRequest  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
      * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public String getVpcId() {
@@ -38,7 +38,7 @@ public class AssignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public void setVpcId(String VpcId) {
@@ -46,7 +46,7 @@ public class AssignIpv6CidrBlockRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

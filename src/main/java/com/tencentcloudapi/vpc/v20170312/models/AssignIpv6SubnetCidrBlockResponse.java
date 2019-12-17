@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
+public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel{
 
     /**
     * 分配 `IPv6` 子网段列表。
@@ -37,7 +37,7 @@ public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取分配 `IPv6` 子网段列表。
+     * Get 分配 `IPv6` 子网段列表。 
      * @return Ipv6SubnetCidrBlockSet 分配 `IPv6` 子网段列表。
      */
     public Ipv6SubnetCidrBlock [] getIpv6SubnetCidrBlockSet() {
@@ -45,7 +45,7 @@ public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分配 `IPv6` 子网段列表。
+     * Set 分配 `IPv6` 子网段列表。
      * @param Ipv6SubnetCidrBlockSet 分配 `IPv6` 子网段列表。
      */
     public void setIpv6SubnetCidrBlockSet(Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlockSet) {
@@ -53,7 +53,7 @@ public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class AssignIpv6SubnetCidrBlockResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Ipv6SubnetCidrBlockSet.", this.Ipv6SubnetCidrBlockSet);

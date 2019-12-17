@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatGatewaysRequest  extends AbstractModel{
+public class DescribeNatGatewaysRequest extends AbstractModel{
 
     /**
     * NAT网关统一 ID，形如：`nat-123xx454`。
@@ -54,7 +54,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取NAT网关统一 ID，形如：`nat-123xx454`。
+     * Get NAT网关统一 ID，形如：`nat-123xx454`。 
      * @return NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
      */
     public String [] getNatGatewayIds() {
@@ -62,7 +62,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关统一 ID，形如：`nat-123xx454`。
+     * Set NAT网关统一 ID，形如：`nat-123xx454`。
      * @param NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
@@ -70,10 +70,10 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * Get 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li> 
      * @return Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
@@ -84,7 +84,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * Set 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
@@ -98,7 +98,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -106,7 +106,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -114,7 +114,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -122,7 +122,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -130,7 +130,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NatGatewayIds.", this.NatGatewayIds);

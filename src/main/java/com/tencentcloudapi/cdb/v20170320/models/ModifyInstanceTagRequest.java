@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceTagRequest  extends AbstractModel{
+public class ModifyInstanceTagRequest extends AbstractModel{
 
     /**
     * 实例 ID。
@@ -44,7 +44,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     private TagInfo [] DeleteTags;
 
     /**
-     * 获取实例 ID。
+     * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID。
+     * Set 实例 ID。
      * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要增加或修改的标签。
+     * Get 要增加或修改的标签。 
      * @return ReplaceTags 要增加或修改的标签。
      */
     public TagInfo [] getReplaceTags() {
@@ -68,7 +68,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要增加或修改的标签。
+     * Set 要增加或修改的标签。
      * @param ReplaceTags 要增加或修改的标签。
      */
     public void setReplaceTags(TagInfo [] ReplaceTags) {
@@ -76,7 +76,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的标签。
+     * Get 要删除的标签。 
      * @return DeleteTags 要删除的标签。
      */
     public TagInfo [] getDeleteTags() {
@@ -84,7 +84,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的标签。
+     * Set 要删除的标签。
      * @param DeleteTags 要删除的标签。
      */
     public void setDeleteTags(TagInfo [] DeleteTags) {
@@ -92,7 +92,7 @@ public class ModifyInstanceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

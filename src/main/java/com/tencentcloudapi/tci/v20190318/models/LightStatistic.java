@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LightStatistic  extends AbstractModel{
+public class LightStatistic extends AbstractModel{
 
     /**
     * 各个时间点的光线值
@@ -37,7 +37,7 @@ public class LightStatistic  extends AbstractModel{
     private LightLevelRatioStatistic [] LightLevelRatio;
 
     /**
-     * 获取各个时间点的光线值
+     * Get 各个时间点的光线值 
      * @return LightDistribution 各个时间点的光线值
      */
     public LightDistributionStatistic [] getLightDistribution() {
@@ -45,7 +45,7 @@ public class LightStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置各个时间点的光线值
+     * Set 各个时间点的光线值
      * @param LightDistribution 各个时间点的光线值
      */
     public void setLightDistribution(LightDistributionStatistic [] LightDistribution) {
@@ -53,7 +53,7 @@ public class LightStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取光照程度比例统计结果
+     * Get 光照程度比例统计结果 
      * @return LightLevelRatio 光照程度比例统计结果
      */
     public LightLevelRatioStatistic [] getLightLevelRatio() {
@@ -61,7 +61,7 @@ public class LightStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置光照程度比例统计结果
+     * Set 光照程度比例统计结果
      * @param LightLevelRatio 光照程度比例统计结果
      */
     public void setLightLevelRatio(LightLevelRatioStatistic [] LightLevelRatio) {
@@ -69,7 +69,7 @@ public class LightStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LightDistribution.", this.LightDistribution);

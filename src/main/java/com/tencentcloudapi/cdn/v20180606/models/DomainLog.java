@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainLog  extends AbstractModel{
+public class DomainLog extends AbstractModel{
 
     /**
     * 日志包起始时间
@@ -60,7 +60,7 @@ overseas：境外
     private String LogName;
 
     /**
-     * 获取日志包起始时间
+     * Get 日志包起始时间 
      * @return StartTime 日志包起始时间
      */
     public String getStartTime() {
@@ -68,7 +68,7 @@ overseas：境外
     }
 
     /**
-     * 设置日志包起始时间
+     * Set 日志包起始时间
      * @param StartTime 日志包起始时间
      */
     public void setStartTime(String StartTime) {
@@ -76,7 +76,7 @@ overseas：境外
     }
 
     /**
-     * 获取日志包结束时间
+     * Get 日志包结束时间 
      * @return EndTime 日志包结束时间
      */
     public String getEndTime() {
@@ -84,7 +84,7 @@ overseas：境外
     }
 
     /**
-     * 设置日志包结束时间
+     * Set 日志包结束时间
      * @param EndTime 日志包结束时间
      */
     public void setEndTime(String EndTime) {
@@ -92,7 +92,7 @@ overseas：境外
     }
 
     /**
-     * 获取日志包下载链接
+     * Get 日志包下载链接 
      * @return LogPath 日志包下载链接
      */
     public String getLogPath() {
@@ -100,7 +100,7 @@ overseas：境外
     }
 
     /**
-     * 设置日志包下载链接
+     * Set 日志包下载链接
      * @param LogPath 日志包下载链接
      */
     public void setLogPath(String LogPath) {
@@ -108,9 +108,9 @@ overseas：境外
     }
 
     /**
-     * 获取日志包对应加速区域
+     * Get 日志包对应加速区域
 mainland：境内
-overseas：境外
+overseas：境外 
      * @return Area 日志包对应加速区域
 mainland：境内
 overseas：境外
@@ -120,7 +120,7 @@ overseas：境外
     }
 
     /**
-     * 设置日志包对应加速区域
+     * Set 日志包对应加速区域
 mainland：境内
 overseas：境外
      * @param Area 日志包对应加速区域
@@ -132,7 +132,7 @@ overseas：境外
     }
 
     /**
-     * 获取日志包文件名
+     * Get 日志包文件名 
      * @return LogName 日志包文件名
      */
     public String getLogName() {
@@ -140,7 +140,7 @@ overseas：境外
     }
 
     /**
-     * 设置日志包文件名
+     * Set 日志包文件名
      * @param LogName 日志包文件名
      */
     public void setLogName(String LogName) {
@@ -148,7 +148,7 @@ overseas：境外
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

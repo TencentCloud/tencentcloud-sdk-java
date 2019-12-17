@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFaceRequest  extends AbstractModel{
+public class DeleteFaceRequest extends AbstractModel{
 
     /**
     * 人员ID
@@ -37,7 +37,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     private String [] FaceIds;
 
     /**
-     * 获取人员ID
+     * Get 人员ID 
      * @return PersonId 人员ID
      */
     public String getPersonId() {
@@ -45,7 +45,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员ID
+     * Set 人员ID
      * @param PersonId 人员ID
      */
     public void setPersonId(String PersonId) {
@@ -53,7 +53,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待删除的人脸ID列表
+     * Get 待删除的人脸ID列表 
      * @return FaceIds 待删除的人脸ID列表
      */
     public String [] getFaceIds() {
@@ -61,7 +61,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的人脸ID列表
+     * Set 待删除的人脸ID列表
      * @param FaceIds 待删除的人脸ID列表
      */
     public void setFaceIds(String [] FaceIds) {
@@ -69,7 +69,7 @@ public class DeleteFaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

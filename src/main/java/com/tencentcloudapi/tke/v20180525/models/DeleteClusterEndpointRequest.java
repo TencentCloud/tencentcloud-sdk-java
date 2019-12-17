@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClusterEndpointRequest  extends AbstractModel{
+public class DeleteClusterEndpointRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -37,7 +37,7 @@ public class DeleteClusterEndpointRequest  extends AbstractModel{
     private Boolean IsExtranet;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -45,7 +45,7 @@ public class DeleteClusterEndpointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -53,7 +53,7 @@ public class DeleteClusterEndpointRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
+     * Get 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE） 
      * @return IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
      */
     public Boolean getIsExtranet() {
@@ -61,7 +61,7 @@ public class DeleteClusterEndpointRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
+     * Set 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
      * @param IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
      */
     public void setIsExtranet(Boolean IsExtranet) {
@@ -69,7 +69,7 @@ public class DeleteClusterEndpointRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

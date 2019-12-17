@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskOperationLog  extends AbstractModel{
+public class TaskOperationLog extends AbstractModel{
 
     /**
     * 操作步骤
@@ -51,7 +51,7 @@ public class TaskOperationLog  extends AbstractModel{
     private String OperationTime;
 
     /**
-     * 获取操作步骤
+     * Get 操作步骤 
      * @return TaskStep 操作步骤
      */
     public String getTaskStep() {
@@ -59,7 +59,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作步骤
+     * Set 操作步骤
      * @param TaskStep 操作步骤
      */
     public void setTaskStep(String TaskStep) {
@@ -67,7 +67,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作人
+     * Get 操作人 
      * @return Operator 操作人
      */
     public String getOperator() {
@@ -75,7 +75,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作人
+     * Set 操作人
      * @param Operator 操作人
      */
     public void setOperator(String Operator) {
@@ -83,7 +83,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作描述
+     * Get 操作描述 
      * @return OperationDetail 操作描述
      */
     public String getOperationDetail() {
@@ -91,7 +91,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作描述
+     * Set 操作描述
      * @param OperationDetail 操作描述
      */
     public void setOperationDetail(String OperationDetail) {
@@ -99,7 +99,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 获取操作时间
+     * Get 操作时间 
      * @return OperationTime 操作时间
      */
     public String getOperationTime() {
@@ -107,7 +107,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 设置操作时间
+     * Set 操作时间
      * @param OperationTime 操作时间
      */
     public void setOperationTime(String OperationTime) {
@@ -115,7 +115,7 @@ public class TaskOperationLog  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskStep", this.TaskStep);

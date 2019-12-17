@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TopDetailData  extends AbstractModel{
+public class TopDetailData extends AbstractModel{
 
     /**
     * 数据类型的名称
@@ -37,7 +37,7 @@ public class TopDetailData  extends AbstractModel{
     private Float Value;
 
     /**
-     * 获取数据类型的名称
+     * Get 数据类型的名称 
      * @return Name 数据类型的名称
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class TopDetailData  extends AbstractModel{
     }
 
     /**
-     * 设置数据类型的名称
+     * Set 数据类型的名称
      * @param Name 数据类型的名称
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class TopDetailData  extends AbstractModel{
     }
 
     /**
-     * 获取数据值
+     * Get 数据值 
      * @return Value 数据值
      */
     public Float getValue() {
@@ -61,7 +61,7 @@ public class TopDetailData  extends AbstractModel{
     }
 
     /**
-     * 设置数据值
+     * Set 数据值
      * @param Value 数据值
      */
     public void setValue(Float Value) {
@@ -69,7 +69,7 @@ public class TopDetailData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

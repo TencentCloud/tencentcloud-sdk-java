@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCCHostProtectionRequest  extends AbstractModel{
+public class ModifyCCHostProtectionRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
@@ -51,7 +51,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     private String Method;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -75,7 +75,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -83,7 +83,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -91,7 +91,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -99,7 +99,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)]
+     * Get 开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)] 
      * @return Method 开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)]
      */
     public String getMethod() {
@@ -107,7 +107,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)]
+     * Set 开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)]
      * @param Method 开启/关闭CC域名防护，取值[open(表示开启)，close(表示关闭)]
      */
     public void setMethod(String Method) {
@@ -115,7 +115,7 @@ public class ModifyCCHostProtectionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

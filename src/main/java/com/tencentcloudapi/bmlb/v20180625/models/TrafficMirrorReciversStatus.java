@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrafficMirrorReciversStatus  extends AbstractModel{
+public class TrafficMirrorReciversStatus extends AbstractModel{
 
     /**
     * 内网IP。
@@ -37,7 +37,7 @@ public class TrafficMirrorReciversStatus  extends AbstractModel{
     private TrafficMirrorPortStatus [] ReceiversPortStatusSet;
 
     /**
-     * 获取内网IP。
+     * Get 内网IP。 
      * @return LanIp 内网IP。
      */
     public String getLanIp() {
@@ -45,7 +45,7 @@ public class TrafficMirrorReciversStatus  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP。
+     * Set 内网IP。
      * @param LanIp 内网IP。
      */
     public void setLanIp(String LanIp) {
@@ -53,7 +53,7 @@ public class TrafficMirrorReciversStatus  extends AbstractModel{
     }
 
     /**
-     * 获取端口及对应的状态。
+     * Get 端口及对应的状态。 
      * @return ReceiversPortStatusSet 端口及对应的状态。
      */
     public TrafficMirrorPortStatus [] getReceiversPortStatusSet() {
@@ -61,7 +61,7 @@ public class TrafficMirrorReciversStatus  extends AbstractModel{
     }
 
     /**
-     * 设置端口及对应的状态。
+     * Set 端口及对应的状态。
      * @param ReceiversPortStatusSet 端口及对应的状态。
      */
     public void setReceiversPortStatusSet(TrafficMirrorPortStatus [] ReceiversPortStatusSet) {
@@ -69,7 +69,7 @@ public class TrafficMirrorReciversStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LanIp", this.LanIp);

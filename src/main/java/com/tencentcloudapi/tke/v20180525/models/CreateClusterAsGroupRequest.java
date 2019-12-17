@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterAsGroupRequest  extends AbstractModel{
+public class CreateClusterAsGroupRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -58,7 +58,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     private Label [] Labels;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -66,7 +66,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -74,7 +74,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
+     * Get 伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写 
      * @return AutoScalingGroupPara 伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
      */
     public String getAutoScalingGroupPara() {
@@ -82,7 +82,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
+     * Set 伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
      * @param AutoScalingGroupPara 伸缩组创建透传参数，json化字符串格式，详见[伸缩组创建实例](https://cloud.tencent.com/document/api/377/20440)接口。LaunchConfigurationId由LaunchConfigurePara参数创建，不支持填写
      */
     public void setAutoScalingGroupPara(String AutoScalingGroupPara) {
@@ -90,7 +90,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。
+     * Get 启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。 
      * @return LaunchConfigurePara 启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。
      */
     public String getLaunchConfigurePara() {
@@ -98,7 +98,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。
+     * Set 启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。
      * @param LaunchConfigurePara 启动配置创建透传参数，json化字符串格式，详见[创建启动配置](https://cloud.tencent.com/document/api/377/20447)接口。另外ImageId参数由于集群维度已经有的ImageId信息，这个字段不需要填写。UserData字段设置通过UserScript设置，这个字段不需要填写。
      */
     public void setLaunchConfigurePara(String LaunchConfigurePara) {
@@ -106,7 +106,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点高级配置信息
+     * Get 节点高级配置信息 
      * @return InstanceAdvancedSettings 节点高级配置信息
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -114,7 +114,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点高级配置信息
+     * Set 节点高级配置信息
      * @param InstanceAdvancedSettings 节点高级配置信息
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
@@ -122,7 +122,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取节点Label数组
+     * Get 节点Label数组 
      * @return Labels 节点Label数组
      */
     public Label [] getLabels() {
@@ -130,7 +130,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置节点Label数组
+     * Set 节点Label数组
      * @param Labels 节点Label数组
      */
     public void setLabels(Label [] Labels) {
@@ -138,7 +138,7 @@ public class CreateClusterAsGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

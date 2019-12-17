@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnIp  extends AbstractModel{
+public class CdnIp extends AbstractModel{
 
     /**
     * 节点 ip。
@@ -58,7 +58,7 @@ public class CdnIp  extends AbstractModel{
     private String Area;
 
     /**
-     * 获取节点 ip。
+     * Get 节点 ip。 
      * @return Ip 节点 ip。
      */
     public String getIp() {
@@ -66,7 +66,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 设置节点 ip。
+     * Set 节点 ip。
      * @param Ip 节点 ip。
      */
     public void setIp(String Ip) {
@@ -74,7 +74,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 获取是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+     * Get 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。 
      * @return Platform 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
      */
     public String getPlatform() {
@@ -82,7 +82,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 设置是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
+     * Set 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
      * @param Platform 是否为腾讯云 CDN 加速节点。yes 表示该节点为腾讯云 CDN 节点，no 表示该节点不是腾讯云 CDN 节点。
      */
     public void setPlatform(String Platform) {
@@ -90,7 +90,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 获取表示该节点所处的省份/国家。unknown 表示节点位置未知。
+     * Get 表示该节点所处的省份/国家。unknown 表示节点位置未知。 
      * @return Location 表示该节点所处的省份/国家。unknown 表示节点位置未知。
      */
     public String getLocation() {
@@ -98,7 +98,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 设置表示该节点所处的省份/国家。unknown 表示节点位置未知。
+     * Set 表示该节点所处的省份/国家。unknown 表示节点位置未知。
      * @param Location 表示该节点所处的省份/国家。unknown 表示节点位置未知。
      */
     public void setLocation(String Location) {
@@ -106,7 +106,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 获取节点上下线历史记录。
+     * Get 节点上下线历史记录。 
      * @return History 节点上下线历史记录。
      */
     public CdnIpHistory [] getHistory() {
@@ -114,7 +114,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 设置节点上下线历史记录。
+     * Set 节点上下线历史记录。
      * @param History 节点上下线历史记录。
      */
     public void setHistory(CdnIpHistory [] History) {
@@ -122,7 +122,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 获取节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * Get 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。 
      * @return Area 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
      */
     public String getArea() {
@@ -130,7 +130,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 设置节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
+     * Set 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
      * @param Area 节点的服务地域。mainland 表示服务地域为中国境内，overseas 表示服务地域为中国境外， unknown 表示服务地域未知。
      */
     public void setArea(String Area) {
@@ -138,7 +138,7 @@ public class CdnIp  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

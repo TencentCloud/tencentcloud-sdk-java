@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRuleRequest  extends AbstractModel{
+public class CreateRuleRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -44,7 +44,7 @@ public class CreateRuleRequest  extends AbstractModel{
     private RuleInput [] Rules;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器 ID
+     * Get 监听器 ID 
      * @return ListenerId 监听器 ID
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器 ID
+     * Set 监听器 ID
      * @param ListenerId 监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新建转发规则的信息
+     * Get 新建转发规则的信息 
      * @return Rules 新建转发规则的信息
      */
     public RuleInput [] getRules() {
@@ -84,7 +84,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新建转发规则的信息
+     * Set 新建转发规则的信息
      * @param Rules 新建转发规则的信息
      */
     public void setRules(RuleInput [] Rules) {
@@ -92,7 +92,7 @@ public class CreateRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

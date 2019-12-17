@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilterConf  extends AbstractModel{
+public class VoiceFilterConf extends AbstractModel{
 
     /**
     * 语音过滤服务开关，取值：open/close
@@ -30,7 +30,7 @@ public class VoiceFilterConf  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取语音过滤服务开关，取值：open/close
+     * Get 语音过滤服务开关，取值：open/close 
      * @return Status 语音过滤服务开关，取值：open/close
      */
     public String getStatus() {
@@ -38,7 +38,7 @@ public class VoiceFilterConf  extends AbstractModel{
     }
 
     /**
-     * 设置语音过滤服务开关，取值：open/close
+     * Set 语音过滤服务开关，取值：open/close
      * @param Status 语音过滤服务开关，取值：open/close
      */
     public void setStatus(String Status) {
@@ -46,7 +46,7 @@ public class VoiceFilterConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTaskRequest  extends AbstractModel{
+public class CreateTaskRequest extends AbstractModel{
 
     /**
     * 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
@@ -65,7 +65,7 @@ public class CreateTaskRequest  extends AbstractModel{
     private Integer MaxExecutionTimeInSeconds;
 
     /**
-     * 获取任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Get 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage” 
      * @return TaskType 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public String getTaskType() {
@@ -73,7 +73,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Set 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param TaskType 任务类型，取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public void setTaskType(String TaskType) {
@@ -81,7 +81,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行任务的产品ID
+     * Get 执行任务的产品ID 
      * @return ProductId 执行任务的产品ID
      */
     public String getProductId() {
@@ -89,7 +89,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行任务的产品ID
+     * Set 执行任务的产品ID
      * @param ProductId 执行任务的产品ID
      */
     public void setProductId(String ProductId) {
@@ -97,7 +97,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行任务的设备名的正则表达式
+     * Get 执行任务的设备名的正则表达式 
      * @return DeviceNameFilter 执行任务的设备名的正则表达式
      */
     public String getDeviceNameFilter() {
@@ -105,7 +105,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行任务的设备名的正则表达式
+     * Set 执行任务的设备名的正则表达式
      * @param DeviceNameFilter 执行任务的设备名的正则表达式
      */
     public void setDeviceNameFilter(String DeviceNameFilter) {
@@ -113,7 +113,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
+     * Get 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后 
      * @return ScheduleTimeInSeconds 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      */
     public Integer getScheduleTimeInSeconds() {
@@ -121,7 +121,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
+     * Set 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      * @param ScheduleTimeInSeconds 任务开始执行的时间。 取值为 Unix 时间戳，单位秒，且需大于等于当前时间时间戳，0为系统当前时间时间戳，即立即执行，最大为当前时间86400秒后，超过则取值为当前时间86400秒后
      */
     public void setScheduleTimeInSeconds(Integer ScheduleTimeInSeconds) {
@@ -129,7 +129,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务描述细节，描述见下 Task
+     * Get 任务描述细节，描述见下 Task 
      * @return Tasks 任务描述细节，描述见下 Task
      */
     public Task getTasks() {
@@ -137,7 +137,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务描述细节，描述见下 Task
+     * Set 任务描述细节，描述见下 Task
      * @param Tasks 任务描述细节，描述见下 Task
      */
     public void setTasks(Task Tasks) {
@@ -145,7 +145,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
+     * Get 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400 
      * @return MaxExecutionTimeInSeconds 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      */
     public Integer getMaxExecutionTimeInSeconds() {
@@ -153,7 +153,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
+     * Set 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      * @param MaxExecutionTimeInSeconds 最长执行时间，单位秒，被调度后超过此时间仍未有结果则视为任务失败。取值为0-86400，默认为86400
      */
     public void setMaxExecutionTimeInSeconds(Integer MaxExecutionTimeInSeconds) {
@@ -161,7 +161,7 @@ public class CreateTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);

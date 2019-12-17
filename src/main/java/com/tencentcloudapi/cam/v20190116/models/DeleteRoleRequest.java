@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteRoleRequest  extends AbstractModel{
+public class DeleteRoleRequest extends AbstractModel{
 
     /**
     * 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
@@ -37,7 +37,7 @@ public class DeleteRoleRequest  extends AbstractModel{
     private String RoleName;
 
     /**
-     * 获取角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleId() {
@@ -45,7 +45,7 @@ public class DeleteRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleId 角色ID，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleId(String RoleId) {
@@ -53,7 +53,7 @@ public class DeleteRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Get 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一 
      * @return RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public String getRoleName() {
@@ -61,7 +61,7 @@ public class DeleteRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
+     * Set 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      * @param RoleName 角色名称，用于指定角色，入参 RoleId 与 RoleName 二选一
      */
     public void setRoleName(String RoleName) {
@@ -69,7 +69,7 @@ public class DeleteRoleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);

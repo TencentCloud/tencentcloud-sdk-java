@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductInfo  extends AbstractModel{
+public class ProductInfo extends AbstractModel{
 
     /**
     * 产品ID
@@ -51,7 +51,7 @@ public class ProductInfo  extends AbstractModel{
     private ProductProperties ProductProperties;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品名
+     * Get 产品名 
      * @return ProductName 产品名
      */
     public String getProductName() {
@@ -75,7 +75,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品名
+     * Set 产品名
      * @param ProductName 产品名
      */
     public void setProductName(String ProductName) {
@@ -83,7 +83,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品元数据
+     * Get 产品元数据 
      * @return ProductMetadata 产品元数据
      */
     public ProductMetadata getProductMetadata() {
@@ -91,7 +91,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品元数据
+     * Set 产品元数据
      * @param ProductMetadata 产品元数据
      */
     public void setProductMetadata(ProductMetadata ProductMetadata) {
@@ -99,7 +99,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品属性
+     * Get 产品属性 
      * @return ProductProperties 产品属性
      */
     public ProductProperties getProductProperties() {
@@ -107,7 +107,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品属性
+     * Set 产品属性
      * @param ProductProperties 产品属性
      */
     public void setProductProperties(ProductProperties ProductProperties) {
@@ -115,7 +115,7 @@ public class ProductInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

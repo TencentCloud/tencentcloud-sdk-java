@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCardsRequest  extends AbstractModel{
+public class DescribeCardsRequest extends AbstractModel{
 
     /**
     * 应用id
@@ -44,7 +44,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取应用id
+     * Get 应用id 
      * @return Sdkappid 应用id
      */
     public String getSdkappid() {
@@ -52,7 +52,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用id
+     * Set 应用id
      * @param Sdkappid 应用id
      */
     public void setSdkappid(String Sdkappid) {
@@ -60,7 +60,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移值
+     * Get 偏移值 
      * @return Offset 偏移值
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移值
+     * Set 偏移值
      * @param Offset 偏移值
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取列表限制
+     * Get 列表限制 
      * @return Limit 列表限制
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置列表限制
+     * Set 列表限制
      * @param Limit 列表限制
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeCardsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sdkappid", this.Sdkappid);

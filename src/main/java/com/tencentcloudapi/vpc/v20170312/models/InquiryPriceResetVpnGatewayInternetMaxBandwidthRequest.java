@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends AbstractModel{
+public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest extends AbstractModel{
 
     /**
     * VPN网关实例ID。
@@ -37,7 +37,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends Abs
     private Integer InternetMaxBandwidthOut;
 
     /**
-     * 获取VPN网关实例ID。
+     * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -45,7 +45,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends Abs
     }
 
     /**
-     * 设置VPN网关实例ID。
+     * Set VPN网关实例ID。
      * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -53,7 +53,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends Abs
     }
 
     /**
-     * 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。 
      * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -61,7 +61,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends Abs
     }
 
     /**
-     * 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
+     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps。
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -69,7 +69,7 @@ public class InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest  extends Abs
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

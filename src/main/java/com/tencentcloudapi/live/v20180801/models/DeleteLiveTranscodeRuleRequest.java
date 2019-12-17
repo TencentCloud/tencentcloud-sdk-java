@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
+public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
 
     /**
     * 推流域名。
@@ -55,8 +55,8 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     private Integer TemplateId;
 
     /**
-     * 获取推流域名。
-域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+     * Get 推流域名。
+域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。 
      * @return DomainName 推流域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
@@ -65,7 +65,7 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param DomainName 推流域名。
 域名维度转码，域名+AppName+StreamName唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -75,8 +75,8 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
@@ -85,7 +85,7 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -95,8 +95,8 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
-域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+     * Get 流名称。
+域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。 
      * @return StreamName 流名称。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
@@ -105,7 +105,7 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param StreamName 流名称。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -115,8 +115,8 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板ID。
-域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
+     * Get 模板ID。
+域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。 
      * @return TemplateId 模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      */
@@ -125,7 +125,7 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板ID。
+     * Set 模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
      * @param TemplateId 模板ID。
 域名+AppName+StreamName+TemplateId唯一标识单个转码规则，如需删除需要强匹配，例如AppName为空也需要传空字符串进行强匹配。
@@ -135,7 +135,7 @@ public class DeleteLiveTranscodeRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

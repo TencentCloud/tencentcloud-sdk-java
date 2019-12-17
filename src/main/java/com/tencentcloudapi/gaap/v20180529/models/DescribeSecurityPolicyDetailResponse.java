@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityPolicyDetailResponse  extends AbstractModel{
+public class DescribeSecurityPolicyDetailResponse extends AbstractModel{
 
     /**
     * 通道ID
@@ -69,7 +69,7 @@ UNBINDING，安全策略关闭中。
     private String RequestId;
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -77,7 +77,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -85,11 +85,11 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 获取安全策略状态：
+     * Get 安全策略状态：
 BOUND，已开启安全策略
 UNBIND，已关闭安全策略
 BINDING，安全策略开启中
-UNBINDING，安全策略关闭中。
+UNBINDING，安全策略关闭中。 
      * @return Status 安全策略状态：
 BOUND，已开启安全策略
 UNBIND，已关闭安全策略
@@ -101,7 +101,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置安全策略状态：
+     * Set 安全策略状态：
 BOUND，已开启安全策略
 UNBIND，已关闭安全策略
 BINDING，安全策略开启中
@@ -117,7 +117,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 获取默认策略：ACCEPT或DROP。
+     * Get 默认策略：ACCEPT或DROP。 
      * @return DefaultAction 默认策略：ACCEPT或DROP。
      */
     public String getDefaultAction() {
@@ -125,7 +125,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置默认策略：ACCEPT或DROP。
+     * Set 默认策略：ACCEPT或DROP。
      * @param DefaultAction 默认策略：ACCEPT或DROP。
      */
     public void setDefaultAction(String DefaultAction) {
@@ -133,7 +133,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 获取策略ID
+     * Get 策略ID 
      * @return PolicyId 策略ID
      */
     public String getPolicyId() {
@@ -141,7 +141,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置策略ID
+     * Set 策略ID
      * @param PolicyId 策略ID
      */
     public void setPolicyId(String PolicyId) {
@@ -149,7 +149,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 获取规则列表
+     * Get 规则列表 
      * @return RuleList 规则列表
      */
     public SecurityPolicyRuleOut [] getRuleList() {
@@ -157,7 +157,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置规则列表
+     * Set 规则列表
      * @param RuleList 规则列表
      */
     public void setRuleList(SecurityPolicyRuleOut [] RuleList) {
@@ -165,7 +165,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -173,7 +173,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -181,7 +181,7 @@ UNBINDING，安全策略关闭中。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

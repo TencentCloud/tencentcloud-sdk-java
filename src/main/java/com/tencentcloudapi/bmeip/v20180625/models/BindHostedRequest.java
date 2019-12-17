@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindHostedRequest  extends AbstractModel{
+public class BindHostedRequest extends AbstractModel{
 
     /**
     * Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
@@ -37,7 +37,7 @@ public class BindHostedRequest  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+     * Get Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。 
      * @return EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      */
     public String getEipId() {
@@ -45,7 +45,7 @@ public class BindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+     * Set Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      * @param EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      */
     public void setEipId(String EipId) {
@@ -53,7 +53,7 @@ public class BindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 获取托管机器实例ID
+     * Get 托管机器实例ID 
      * @return InstanceId 托管机器实例ID
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class BindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器实例ID
+     * Set 托管机器实例ID
      * @param InstanceId 托管机器实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class BindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

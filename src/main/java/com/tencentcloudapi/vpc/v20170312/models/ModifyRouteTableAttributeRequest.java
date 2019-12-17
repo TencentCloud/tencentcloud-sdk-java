@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRouteTableAttributeRequest  extends AbstractModel{
+public class ModifyRouteTableAttributeRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -37,7 +37,7 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     private String RouteTableName;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -45,7 +45,7 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -53,7 +53,7 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表名称。
+     * Get 路由表名称。 
      * @return RouteTableName 路由表名称。
      */
     public String getRouteTableName() {
@@ -61,7 +61,7 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称。
+     * Set 路由表名称。
      * @param RouteTableName 路由表名称。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -69,7 +69,7 @@ public class ModifyRouteTableAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

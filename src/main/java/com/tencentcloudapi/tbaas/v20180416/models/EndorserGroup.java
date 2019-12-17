@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EndorserGroup  extends AbstractModel{
+public class EndorserGroup extends AbstractModel{
 
     /**
     * 背书组织名称
@@ -37,7 +37,7 @@ public class EndorserGroup  extends AbstractModel{
     private String [] EndorserPeerList;
 
     /**
-     * 获取背书组织名称
+     * Get 背书组织名称 
      * @return EndorserGroupName 背书组织名称
      */
     public String getEndorserGroupName() {
@@ -45,7 +45,7 @@ public class EndorserGroup  extends AbstractModel{
     }
 
     /**
-     * 设置背书组织名称
+     * Set 背书组织名称
      * @param EndorserGroupName 背书组织名称
      */
     public void setEndorserGroupName(String EndorserGroupName) {
@@ -53,7 +53,7 @@ public class EndorserGroup  extends AbstractModel{
     }
 
     /**
-     * 获取背书节点列表
+     * Get 背书节点列表 
      * @return EndorserPeerList 背书节点列表
      */
     public String [] getEndorserPeerList() {
@@ -61,7 +61,7 @@ public class EndorserGroup  extends AbstractModel{
     }
 
     /**
-     * 设置背书节点列表
+     * Set 背书节点列表
      * @param EndorserPeerList 背书节点列表
      */
     public void setEndorserPeerList(String [] EndorserPeerList) {
@@ -69,7 +69,7 @@ public class EndorserGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EndorserGroupName", this.EndorserGroupName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PsaRegulation  extends AbstractModel{
+public class PsaRegulation extends AbstractModel{
 
     /**
     * 规则ID
@@ -93,7 +93,7 @@ public class PsaRegulation  extends AbstractModel{
     private Integer [] TaskTypeIds;
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return PsaId 规则ID
      */
     public String getPsaId() {
@@ -101,7 +101,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param PsaId 规则ID
      */
     public void setPsaId(String PsaId) {
@@ -109,7 +109,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取规则别名
+     * Get 规则别名 
      * @return PsaName 规则别名
      */
     public String getPsaName() {
@@ -117,7 +117,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置规则别名
+     * Set 规则别名
      * @param PsaName 规则别名
      */
     public void setPsaName(String PsaName) {
@@ -125,7 +125,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取关联标签数量
+     * Get 关联标签数量 
      * @return TagCount 关联标签数量
      */
     public Integer getTagCount() {
@@ -133,7 +133,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置关联标签数量
+     * Set 关联标签数量
      * @param TagCount 关联标签数量
      */
     public void setTagCount(Integer TagCount) {
@@ -141,7 +141,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例数量
+     * Get 关联实例数量 
      * @return InstanceCount 关联实例数量
      */
     public Integer getInstanceCount() {
@@ -149,7 +149,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例数量
+     * Set 关联实例数量
      * @param InstanceCount 关联实例数量
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -157,7 +157,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取故障实例数量
+     * Get 故障实例数量 
      * @return RepairCount 故障实例数量
      */
     public Integer getRepairCount() {
@@ -165,7 +165,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置故障实例数量
+     * Set 故障实例数量
      * @param RepairCount 故障实例数量
      */
     public void setRepairCount(Integer RepairCount) {
@@ -173,7 +173,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取故障实例上限
+     * Get 故障实例上限 
      * @return RepairLimit 故障实例上限
      */
     public Integer getRepairLimit() {
@@ -181,7 +181,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置故障实例上限
+     * Set 故障实例上限
      * @param RepairLimit 故障实例上限
      */
     public void setRepairLimit(Integer RepairLimit) {
@@ -189,7 +189,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -197,7 +197,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -205,7 +205,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取规则备注
+     * Get 规则备注 
      * @return PsaDescription 规则备注
      */
     public String getPsaDescription() {
@@ -213,7 +213,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置规则备注
+     * Set 规则备注
      * @param PsaDescription 规则备注
      */
     public void setPsaDescription(String PsaDescription) {
@@ -221,7 +221,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取关联标签
+     * Get 关联标签 
      * @return Tags 关联标签
      */
     public Tag [] getTags() {
@@ -229,7 +229,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置关联标签
+     * Set 关联标签
      * @param Tags 关联标签
      */
     public void setTags(Tag [] Tags) {
@@ -237,7 +237,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 获取关联故障类型id
+     * Get 关联故障类型id 
      * @return TaskTypeIds 关联故障类型id
      */
     public Integer [] getTaskTypeIds() {
@@ -245,7 +245,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 设置关联故障类型id
+     * Set 关联故障类型id
      * @param TaskTypeIds 关联故障类型id
      */
     public void setTaskTypeIds(Integer [] TaskTypeIds) {
@@ -253,7 +253,7 @@ public class PsaRegulation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PsaId", this.PsaId);

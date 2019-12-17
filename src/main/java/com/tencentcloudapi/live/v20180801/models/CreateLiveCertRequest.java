@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveCertRequest  extends AbstractModel{
+public class CreateLiveCertRequest extends AbstractModel{
 
     /**
     * 证书类型。0-用户添加证书；1-腾讯云托管证书。
@@ -58,7 +58,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取证书类型。0-用户添加证书；1-腾讯云托管证书。
+     * Get 证书类型。0-用户添加证书；1-腾讯云托管证书。 
      * @return CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
     public Integer getCertType() {
@@ -66,7 +66,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型。0-用户添加证书；1-腾讯云托管证书。
+     * Set 证书类型。0-用户添加证书；1-腾讯云托管证书。
      * @param CertType 证书类型。0-用户添加证书；1-腾讯云托管证书。
      */
     public void setCertType(Integer CertType) {
@@ -74,7 +74,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容，即公钥。
+     * Get 证书内容，即公钥。 
      * @return HttpsCrt 证书内容，即公钥。
      */
     public String getHttpsCrt() {
@@ -82,7 +82,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容，即公钥。
+     * Set 证书内容，即公钥。
      * @param HttpsCrt 证书内容，即公钥。
      */
     public void setHttpsCrt(String HttpsCrt) {
@@ -90,7 +90,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私钥。
+     * Get 私钥。 
      * @return HttpsKey 私钥。
      */
     public String getHttpsKey() {
@@ -98,7 +98,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私钥。
+     * Set 私钥。
      * @param HttpsKey 私钥。
      */
     public void setHttpsKey(String HttpsKey) {
@@ -106,7 +106,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书名称。
+     * Get 证书名称。 
      * @return CertName 证书名称。
      */
     public String getCertName() {
@@ -114,7 +114,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称。
+     * Set 证书名称。
      * @param CertName 证书名称。
      */
     public void setCertName(String CertName) {
@@ -122,7 +122,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述。
+     * Get 描述。 
      * @return Description 描述。
      */
     public String getDescription() {
@@ -130,7 +130,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述。
+     * Set 描述。
      * @param Description 描述。
      */
     public void setDescription(String Description) {
@@ -138,7 +138,7 @@ public class CreateLiveCertRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertType", this.CertType);

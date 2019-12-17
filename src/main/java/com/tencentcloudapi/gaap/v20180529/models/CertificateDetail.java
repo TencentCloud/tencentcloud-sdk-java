@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CertificateDetail  extends AbstractModel{
+public class CertificateDetail extends AbstractModel{
 
     /**
     * 证书ID。
@@ -100,7 +100,7 @@ public class CertificateDetail  extends AbstractModel{
     private String SubjectCN;
 
     /**
-     * 获取证书ID。
+     * Get 证书ID。 
      * @return CertificateId 证书ID。
      */
     public String getCertificateId() {
@@ -108,7 +108,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书ID。
+     * Set 证书ID。
      * @param CertificateId 证书ID。
      */
     public void setCertificateId(String CertificateId) {
@@ -116,7 +116,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型。
+     * Get 证书类型。 
      * @return CertificateType 证书类型。
      */
     public Long getCertificateType() {
@@ -124,7 +124,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型。
+     * Set 证书类型。
      * @param CertificateType 证书类型。
      */
     public void setCertificateType(Long CertificateType) {
@@ -132,8 +132,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书名字。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertificateAlias 证书名字。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书名字。
+     * Set 证书名字。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateAlias 证书名字。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,7 +152,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容。
+     * Get 证书内容。 
      * @return CertificateContent 证书内容。
      */
     public String getCertificateContent() {
@@ -160,7 +160,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容。
+     * Set 证书内容。
      * @param CertificateContent 证书内容。
      */
     public void setCertificateContent(String CertificateContent) {
@@ -168,8 +168,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 密钥内容。仅当证书类型为SSL证书时，返回该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertificateKey 密钥内容。仅当证书类型为SSL证书时，返回该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -178,7 +178,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置密钥内容。仅当证书类型为SSL证书时，返回该字段。
+     * Set 密钥内容。仅当证书类型为SSL证书时，返回该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateKey 密钥内容。仅当证书类型为SSL证书时，返回该字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -188,8 +188,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -198,7 +198,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * Set 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -208,8 +208,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BeginTime 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -218,7 +218,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * Set 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginTime 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -228,8 +228,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -238,7 +238,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * Set 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -248,8 +248,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书签发者通用名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IssuerCN 证书签发者通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -258,7 +258,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书签发者通用名称。
+     * Set 证书签发者通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IssuerCN 证书签发者通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -268,8 +268,8 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 获取证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书主题通用名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubjectCN 证书主题通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -278,7 +278,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 设置证书主题通用名称。
+     * Set 证书主题通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubjectCN 证书主题通用名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -288,7 +288,7 @@ public class CertificateDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);

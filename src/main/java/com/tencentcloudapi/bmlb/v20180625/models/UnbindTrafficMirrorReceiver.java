@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindTrafficMirrorReceiver  extends AbstractModel{
+public class UnbindTrafficMirrorReceiver extends AbstractModel{
 
     /**
     * 待解绑的主机端口，可选值1~65535。
@@ -37,7 +37,7 @@ public class UnbindTrafficMirrorReceiver  extends AbstractModel{
     private String InstanceId;
 
     /**
-     * 获取待解绑的主机端口，可选值1~65535。
+     * Get 待解绑的主机端口，可选值1~65535。 
      * @return Port 待解绑的主机端口，可选值1~65535。
      */
     public Integer getPort() {
@@ -45,7 +45,7 @@ public class UnbindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置待解绑的主机端口，可选值1~65535。
+     * Set 待解绑的主机端口，可选值1~65535。
      * @param Port 待解绑的主机端口，可选值1~65535。
      */
     public void setPort(Integer Port) {
@@ -53,7 +53,7 @@ public class UnbindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取待解绑的主机实例ID。
+     * Get 待解绑的主机实例ID。 
      * @return InstanceId 待解绑的主机实例ID。
      */
     public String getInstanceId() {
@@ -61,7 +61,7 @@ public class UnbindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置待解绑的主机实例ID。
+     * Set 待解绑的主机实例ID。
      * @param InstanceId 待解绑的主机实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -69,7 +69,7 @@ public class UnbindTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Port", this.Port);

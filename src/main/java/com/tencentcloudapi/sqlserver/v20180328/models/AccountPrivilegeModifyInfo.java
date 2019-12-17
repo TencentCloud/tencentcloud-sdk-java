@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccountPrivilegeModifyInfo  extends AbstractModel{
+public class AccountPrivilegeModifyInfo extends AbstractModel{
 
     /**
     * 数据库用户名
@@ -37,7 +37,7 @@ public class AccountPrivilegeModifyInfo  extends AbstractModel{
     private DBPrivilegeModifyInfo [] DBPrivileges;
 
     /**
-     * 获取数据库用户名
+     * Get 数据库用户名 
      * @return UserName 数据库用户名
      */
     public String getUserName() {
@@ -45,7 +45,7 @@ public class AccountPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库用户名
+     * Set 数据库用户名
      * @param UserName 数据库用户名
      */
     public void setUserName(String UserName) {
@@ -53,7 +53,7 @@ public class AccountPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取账号权限变更信息
+     * Get 账号权限变更信息 
      * @return DBPrivileges 账号权限变更信息
      */
     public DBPrivilegeModifyInfo [] getDBPrivileges() {
@@ -61,7 +61,7 @@ public class AccountPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账号权限变更信息
+     * Set 账号权限变更信息
      * @param DBPrivileges 账号权限变更信息
      */
     public void setDBPrivileges(DBPrivilegeModifyInfo [] DBPrivileges) {
@@ -69,7 +69,7 @@ public class AccountPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClassicalLBByInstanceIdRequest  extends AbstractModel{
+public class DescribeClassicalLBByInstanceIdRequest extends AbstractModel{
 
     /**
     * 后端实例ID列表
@@ -30,7 +30,7 @@ public class DescribeClassicalLBByInstanceIdRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取后端实例ID列表
+     * Get 后端实例ID列表 
      * @return InstanceIds 后端实例ID列表
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class DescribeClassicalLBByInstanceIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置后端实例ID列表
+     * Set 后端实例ID列表
      * @param InstanceIds 后端实例ID列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class DescribeClassicalLBByInstanceIdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

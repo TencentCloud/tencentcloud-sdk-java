@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetAutoRenewFlagRequest  extends AbstractModel{
+public class SetAutoRenewFlagRequest extends AbstractModel{
 
     /**
     * 实例ID数组
@@ -37,7 +37,7 @@ public class SetAutoRenewFlagRequest  extends AbstractModel{
     private Integer AutoRenewFlag;
 
     /**
-     * 获取实例ID数组
+     * Get 实例ID数组 
      * @return DBInstanceIdSet 实例ID数组
      */
     public String [] getDBInstanceIdSet() {
@@ -45,7 +45,7 @@ public class SetAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID数组
+     * Set 实例ID数组
      * @param DBInstanceIdSet 实例ID数组
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
@@ -53,7 +53,7 @@ public class SetAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取续费标记。0-正常续费；1-自动续费；2-到期不续费
+     * Get 续费标记。0-正常续费；1-自动续费；2-到期不续费 
      * @return AutoRenewFlag 续费标记。0-正常续费；1-自动续费；2-到期不续费
      */
     public Integer getAutoRenewFlag() {
@@ -61,7 +61,7 @@ public class SetAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置续费标记。0-正常续费；1-自动续费；2-到期不续费
+     * Set 续费标记。0-正常续费；1-自动续费；2-到期不续费
      * @param AutoRenewFlag 续费标记。0-正常续费；1-自动续费；2-到期不续费
      */
     public void setAutoRenewFlag(Integer AutoRenewFlag) {
@@ -69,7 +69,7 @@ public class SetAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);

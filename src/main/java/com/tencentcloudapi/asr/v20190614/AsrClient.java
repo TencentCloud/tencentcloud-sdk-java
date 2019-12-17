@@ -29,21 +29,10 @@ public class AsrClient extends AbstractClient{
     private static String endpoint = "asr.tencentcloudapi.com";
     private static String version = "2019-06-14";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public AsrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public AsrClient(Credential credential, String region, ClientProfile profile) {
         super(AsrClient.endpoint, AsrClient.version, credential, region, profile);
     }

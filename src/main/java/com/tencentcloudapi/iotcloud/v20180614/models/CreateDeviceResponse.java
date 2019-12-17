@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeviceResponse  extends AbstractModel{
+public class CreateDeviceResponse extends AbstractModel{
 
     /**
     * 设备名称
@@ -86,7 +86,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -94,7 +94,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -102,7 +102,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取对称加密密钥，base64编码。采用对称加密时返回该参数
+     * Get 对称加密密钥，base64编码。采用对称加密时返回该参数 
      * @return DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数
      */
     public String getDevicePsk() {
@@ -110,7 +110,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置对称加密密钥，base64编码。采用对称加密时返回该参数
+     * Set 对称加密密钥，base64编码。采用对称加密时返回该参数
      * @param DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数
      */
     public void setDevicePsk(String DevicePsk) {
@@ -118,7 +118,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
+     * Get 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数 
      * @return DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
      */
     public String getDeviceCert() {
@@ -126,7 +126,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
+     * Set 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
      * @param DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数
      */
     public void setDeviceCert(String DeviceCert) {
@@ -134,7 +134,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
+     * Get 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数 
      * @return DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
      */
     public String getDevicePrivateKey() {
@@ -142,7 +142,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
+     * Set 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
      * @param DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数
      */
     public void setDevicePrivateKey(String DevicePrivateKey) {
@@ -150,7 +150,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     * Get LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段 
      * @return LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
      */
     public String getLoraDevEui() {
@@ -158,7 +158,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
+     * Set LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
      * @param LoraDevEui LoRa设备的DevEui，当设备是LoRa设备时，会返回该字段
      */
     public void setLoraDevEui(String LoraDevEui) {
@@ -166,7 +166,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     * Get LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段 
      * @return LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      */
     public Integer getLoraMoteType() {
@@ -174,7 +174,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
+     * Set LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      * @param LoraMoteType LoRa设备的MoteType，当设备是LoRa设备时，会返回该字段
      */
     public void setLoraMoteType(Integer LoraMoteType) {
@@ -182,7 +182,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     * Get LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段 
      * @return LoraAppKey LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
      */
     public String getLoraAppKey() {
@@ -190,7 +190,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
+     * Set LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
      * @param LoraAppKey LoRa设备的AppKey，当设备是LoRa设备时，会返回该字段
      */
     public void setLoraAppKey(String LoraAppKey) {
@@ -198,7 +198,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     * Get LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段 
      * @return LoraNwkKey LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
      */
     public String getLoraNwkKey() {
@@ -206,7 +206,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
+     * Set LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
      * @param LoraNwkKey LoRa设备的NwkKey，当设备是LoRa设备时，会返回该字段
      */
     public void setLoraNwkKey(String LoraNwkKey) {
@@ -214,7 +214,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class CreateDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);

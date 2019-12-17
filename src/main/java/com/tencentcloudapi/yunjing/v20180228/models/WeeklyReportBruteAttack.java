@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WeeklyReportBruteAttack  extends AbstractModel{
+public class WeeklyReportBruteAttack extends AbstractModel{
 
     /**
     * 主机IP。
@@ -48,7 +48,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 攻击时间。
@@ -58,7 +58,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     private String AttackTime;
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -66,7 +66,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -74,7 +74,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取被破解用户名。
+     * Get 被破解用户名。 
      * @return Username 被破解用户名。
      */
     public String getUsername() {
@@ -82,7 +82,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置被破解用户名。
+     * Set 被破解用户名。
      * @param Username 被破解用户名。
      */
     public void setUsername(String Username) {
@@ -90,7 +90,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取源IP。
+     * Get 源IP。 
      * @return SrcIp 源IP。
      */
     public String getSrcIp() {
@@ -98,7 +98,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置源IP。
+     * Set 源IP。
      * @param SrcIp 源IP。
      */
     public void setSrcIp(String SrcIp) {
@@ -106,23 +106,23 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取尝试次数。
+     * Get 尝试次数。 
      * @return Count 尝试次数。
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置尝试次数。
+     * Set 尝试次数。
      * @param Count 尝试次数。
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取攻击时间。
+     * Get 攻击时间。 
      * @return AttackTime 攻击时间。
      */
     public String getAttackTime() {
@@ -130,7 +130,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置攻击时间。
+     * Set 攻击时间。
      * @param AttackTime 攻击时间。
      */
     public void setAttackTime(String AttackTime) {
@@ -138,7 +138,7 @@ public class WeeklyReportBruteAttack  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineIp", this.MachineIp);

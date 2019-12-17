@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceHardwareInfoRequest  extends AbstractModel{
+public class DescribeDeviceHardwareInfoRequest extends AbstractModel{
 
     /**
     * 设备 ID 列表
@@ -30,7 +30,7 @@ public class DescribeDeviceHardwareInfoRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取设备 ID 列表
+     * Get 设备 ID 列表 
      * @return InstanceIds 设备 ID 列表
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class DescribeDeviceHardwareInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备 ID 列表
+     * Set 设备 ID 列表
      * @param InstanceIds 设备 ID 列表
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class DescribeDeviceHardwareInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

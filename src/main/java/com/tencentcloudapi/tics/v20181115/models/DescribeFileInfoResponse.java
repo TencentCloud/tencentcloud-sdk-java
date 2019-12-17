@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileInfoResponse  extends AbstractModel{
+public class DescribeFileInfoResponse extends AbstractModel{
 
     /**
     * 是否有数据，0代表有数据，1代表没有数据
@@ -81,7 +81,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取是否有数据，0代表有数据，1代表没有数据
+     * Get 是否有数据，0代表有数据，1代表没有数据 
      * @return ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public Integer getReturnCode() {
@@ -89,7 +89,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否有数据，0代表有数据，1代表没有数据
+     * Set 是否有数据，0代表有数据，1代表没有数据
      * @param ReturnCode 是否有数据，0代表有数据，1代表没有数据
      */
     public void setReturnCode(Integer ReturnCode) {
@@ -97,7 +97,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取判定结果，如：black、white、grey
+     * Get 判定结果，如：black、white、grey 
      * @return Result 判定结果，如：black、white、grey
      */
     public String getResult() {
@@ -105,7 +105,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置判定结果，如：black、white、grey
+     * Set 判定结果，如：black、white、grey
      * @param Result 判定结果，如：black、white、grey
      */
     public void setResult(String Result) {
@@ -113,7 +113,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取置信度，取值0-100
+     * Get 置信度，取值0-100 
      * @return Confidence 置信度，取值0-100
      */
     public Integer getConfidence() {
@@ -121,7 +121,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置置信度，取值0-100
+     * Set 置信度，取值0-100
      * @param Confidence 置信度，取值0-100
      */
     public void setConfidence(Integer Confidence) {
@@ -129,9 +129,9 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件类型，文件hash
+     * Get 文件类型，文件hash
 （md5,sha1,sha256）,文件大小等等文件
-基础信息
+基础信息 
      * @return FileInfo 文件类型，文件hash
 （md5,sha1,sha256）,文件大小等等文件
 基础信息
@@ -141,7 +141,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件类型，文件hash
+     * Set 文件类型，文件hash
 （md5,sha1,sha256）,文件大小等等文件
 基础信息
      * @param FileInfo 文件类型，文件hash
@@ -153,7 +153,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取恶意标签，对应的团伙，家族等信息。
+     * Get 恶意标签，对应的团伙，家族等信息。 
      * @return Tags 恶意标签，对应的团伙，家族等信息。
      */
     public TagType [] getTags() {
@@ -161,7 +161,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置恶意标签，对应的团伙，家族等信息。
+     * Set 恶意标签，对应的团伙，家族等信息。
      * @param Tags 恶意标签，对应的团伙，家族等信息。
      */
     public void setTags(TagType [] Tags) {
@@ -169,7 +169,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取对应的历史上的威胁情报事件
+     * Get 对应的历史上的威胁情报事件 
      * @return Intelligences 对应的历史上的威胁情报事件
      */
     public IntelligenceType [] getIntelligences() {
@@ -177,7 +177,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置对应的历史上的威胁情报事件
+     * Set 对应的历史上的威胁情报事件
      * @param Intelligences 对应的历史上的威胁情报事件
      */
     public void setIntelligences(IntelligenceType [] Intelligences) {
@@ -185,7 +185,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取情报相关的上下文
+     * Get 情报相关的上下文 
      * @return Context 情报相关的上下文
      */
     public String getContext() {
@@ -193,7 +193,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置情报相关的上下文
+     * Set 情报相关的上下文
      * @param Context 情报相关的上下文
      */
     public void setContext(String Context) {
@@ -201,7 +201,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -209,7 +209,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -217,7 +217,7 @@ public class DescribeFileInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);

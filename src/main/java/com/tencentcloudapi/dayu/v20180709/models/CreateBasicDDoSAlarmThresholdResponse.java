@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
+public class CreateBasicDDoSAlarmThresholdResponse extends AbstractModel{
 
     /**
     * 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
@@ -44,7 +44,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
+     * Get 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0； 
      * @return AlarmThreshold 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
      */
     public Long getAlarmThreshold() {
@@ -52,7 +52,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
+     * Set 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
      * @param AlarmThreshold 当存在告警阈值配置时，返回告警阈值大于0，当不存在告警配置时，返回告警阈值为0；
      */
     public void setAlarmThreshold(Long AlarmThreshold) {
@@ -60,7 +60,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
+     * Get 告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效； 
      * @return AlarmType 告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
      */
     public Long getAlarmType() {
@@ -68,7 +68,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
+     * Set 告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
      * @param AlarmType 告警阈值类型，1-入流量，2-清洗流量；当AlarmThreshold大于0时有效；
      */
     public void setAlarmType(Long AlarmType) {
@@ -76,7 +76,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class CreateBasicDDoSAlarmThresholdResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AlarmThreshold", this.AlarmThreshold);

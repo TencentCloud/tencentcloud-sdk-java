@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityRulesResponse  extends AbstractModel{
+public class DescribeSecurityRulesResponse extends AbstractModel{
 
     /**
     * 返回的安全规则详情总数。
@@ -44,7 +44,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回的安全规则详情总数。
+     * Get 返回的安全规则详情总数。 
      * @return TotalCount 返回的安全规则详情总数。
      */
     public Long getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的安全规则详情总数。
+     * Set 返回的安全规则详情总数。
      * @param TotalCount 返回的安全规则详情总数。
      */
     public void setTotalCount(Long TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的安全规则详情列表。
+     * Get 返回的安全规则详情列表。 
      * @return SecurityRuleSet 返回的安全规则详情列表。
      */
     public SecurityPolicyRuleOut [] getSecurityRuleSet() {
@@ -68,7 +68,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的安全规则详情列表。
+     * Set 返回的安全规则详情列表。
      * @param SecurityRuleSet 返回的安全规则详情列表。
      */
     public void setSecurityRuleSet(SecurityPolicyRuleOut [] SecurityRuleSet) {
@@ -76,7 +76,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeSecurityRulesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

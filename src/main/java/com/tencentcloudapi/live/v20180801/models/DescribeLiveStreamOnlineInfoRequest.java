@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
+public class DescribeLiveStreamOnlineInfoRequest extends AbstractModel{
 
     /**
     * 取得第几页。
@@ -55,8 +55,8 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取取得第几页。
-默认值：1。
+     * Get 取得第几页。
+默认值：1。 
      * @return PageNum 取得第几页。
 默认值：1。
      */
@@ -65,7 +65,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置取得第几页。
+     * Set 取得第几页。
 默认值：1。
      * @param PageNum 取得第几页。
 默认值：1。
@@ -75,10 +75,10 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小。
+     * Get 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
-默认值：10。
+默认值：10。 
      * @return PageSize 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
@@ -89,7 +89,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小。
+     * Set 分页大小。
 最大值：100。
 取值范围：1~100 之前的任意整数。
 默认值：10。
@@ -103,7 +103,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0:未开始推流 1:正在推流
+     * Get 0:未开始推流 1:正在推流 
      * @return Status 0:未开始推流 1:正在推流
      */
     public Integer getStatus() {
@@ -111,7 +111,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0:未开始推流 1:正在推流
+     * Set 0:未开始推流 1:正在推流
      * @param Status 0:未开始推流 1:正在推流
      */
     public void setStatus(Integer Status) {
@@ -119,7 +119,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -127,7 +127,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -135,7 +135,7 @@ public class DescribeLiveStreamOnlineInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);

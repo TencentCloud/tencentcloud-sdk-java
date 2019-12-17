@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
+public class ReplaceCertForLoadBalancersRequest extends AbstractModel{
 
     /**
     * 需要被替换的证书的ID，可以是服务端证书或客户端证书
@@ -37,7 +37,7 @@ public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
     private CertificateInput Certificate;
 
     /**
-     * 获取需要被替换的证书的ID，可以是服务端证书或客户端证书
+     * Get 需要被替换的证书的ID，可以是服务端证书或客户端证书 
      * @return OldCertificateId 需要被替换的证书的ID，可以是服务端证书或客户端证书
      */
     public String getOldCertificateId() {
@@ -45,7 +45,7 @@ public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要被替换的证书的ID，可以是服务端证书或客户端证书
+     * Set 需要被替换的证书的ID，可以是服务端证书或客户端证书
      * @param OldCertificateId 需要被替换的证书的ID，可以是服务端证书或客户端证书
      */
     public void setOldCertificateId(String OldCertificateId) {
@@ -53,7 +53,7 @@ public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新证书的内容等相关信息
+     * Get 新证书的内容等相关信息 
      * @return Certificate 新证书的内容等相关信息
      */
     public CertificateInput getCertificate() {
@@ -61,7 +61,7 @@ public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新证书的内容等相关信息
+     * Set 新证书的内容等相关信息
      * @param Certificate 新证书的内容等相关信息
      */
     public void setCertificate(CertificateInput Certificate) {
@@ -69,7 +69,7 @@ public class ReplaceCertForLoadBalancersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetFlagRequest  extends AbstractModel{
+public class SetFlagRequest extends AbstractModel{
 
     /**
     * 设置用户的uin
@@ -58,7 +58,7 @@ public class SetFlagRequest  extends AbstractModel{
     private Long NeedResetMfa;
 
     /**
-     * 获取设置用户的uin
+     * Get 设置用户的uin 
      * @return OpUin 设置用户的uin
      */
     public Long getOpUin() {
@@ -66,7 +66,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设置用户的uin
+     * Set 设置用户的uin
      * @param OpUin 设置用户的uin
      */
     public void setOpUin(Long OpUin) {
@@ -74,7 +74,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录设置
+     * Get 登录设置 
      * @return LoginFlag 登录设置
      */
     public LoginActionFlag getLoginFlag() {
@@ -82,7 +82,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录设置
+     * Set 登录设置
      * @param LoginFlag 登录设置
      */
     public void setLoginFlag(LoginActionFlag LoginFlag) {
@@ -90,7 +90,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取敏感操作设置
+     * Get 敏感操作设置 
      * @return ActionFlag 敏感操作设置
      */
     public LoginActionFlag getActionFlag() {
@@ -98,7 +98,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置敏感操作设置
+     * Set 敏感操作设置
      * @param ActionFlag 敏感操作设置
      */
     public void setActionFlag(LoginActionFlag ActionFlag) {
@@ -106,7 +106,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取异地登录设置
+     * Get 异地登录设置 
      * @return OffsiteFlag 异地登录设置
      */
     public OffsiteFlag getOffsiteFlag() {
@@ -114,7 +114,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置异地登录设置
+     * Set 异地登录设置
      * @param OffsiteFlag 异地登录设置
      */
     public void setOffsiteFlag(OffsiteFlag OffsiteFlag) {
@@ -122,7 +122,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要充值mfa
+     * Get 是否需要充值mfa 
      * @return NeedResetMfa 是否需要充值mfa
      */
     public Long getNeedResetMfa() {
@@ -130,7 +130,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要充值mfa
+     * Set 是否需要充值mfa
      * @param NeedResetMfa 是否需要充值mfa
      */
     public void setNeedResetMfa(Long NeedResetMfa) {
@@ -138,7 +138,7 @@ public class SetFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpUin", this.OpUin);

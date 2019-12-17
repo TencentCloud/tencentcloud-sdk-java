@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MasterNodeInfo  extends AbstractModel{
+public class MasterNodeInfo extends AbstractModel{
 
     /**
     * 是否启用了专用主节点
@@ -72,7 +72,7 @@ public class MasterNodeInfo  extends AbstractModel{
     private String MasterNodeDiskType;
 
     /**
-     * 获取是否启用了专用主节点
+     * Get 是否启用了专用主节点 
      * @return EnableDedicatedMaster 是否启用了专用主节点
      */
     public Boolean getEnableDedicatedMaster() {
@@ -80,7 +80,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用了专用主节点
+     * Set 是否启用了专用主节点
      * @param EnableDedicatedMaster 是否启用了专用主节点
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
@@ -88,7 +88,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Get 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li> 
      * @return MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public String getMasterNodeType() {
@@ -96,7 +96,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+     * Set 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      * @param MasterNodeType 专用主节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
@@ -104,7 +104,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点个数
+     * Get 专用主节点个数 
      * @return MasterNodeNum 专用主节点个数
      */
     public Integer getMasterNodeNum() {
@@ -112,7 +112,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点个数
+     * Set 专用主节点个数
      * @param MasterNodeNum 专用主节点个数
      */
     public void setMasterNodeNum(Integer MasterNodeNum) {
@@ -120,7 +120,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点CPU核数
+     * Get 专用主节点CPU核数 
      * @return MasterNodeCpuNum 专用主节点CPU核数
      */
     public Integer getMasterNodeCpuNum() {
@@ -128,7 +128,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点CPU核数
+     * Set 专用主节点CPU核数
      * @param MasterNodeCpuNum 专用主节点CPU核数
      */
     public void setMasterNodeCpuNum(Integer MasterNodeCpuNum) {
@@ -136,7 +136,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点内存大小，单位GB
+     * Get 专用主节点内存大小，单位GB 
      * @return MasterNodeMemSize 专用主节点内存大小，单位GB
      */
     public Integer getMasterNodeMemSize() {
@@ -144,7 +144,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点内存大小，单位GB
+     * Set 专用主节点内存大小，单位GB
      * @param MasterNodeMemSize 专用主节点内存大小，单位GB
      */
     public void setMasterNodeMemSize(Integer MasterNodeMemSize) {
@@ -152,7 +152,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点磁盘大小，单位GB
+     * Get 专用主节点磁盘大小，单位GB 
      * @return MasterNodeDiskSize 专用主节点磁盘大小，单位GB
      */
     public Integer getMasterNodeDiskSize() {
@@ -160,7 +160,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点磁盘大小，单位GB
+     * Set 专用主节点磁盘大小，单位GB
      * @param MasterNodeDiskSize 专用主节点磁盘大小，单位GB
      */
     public void setMasterNodeDiskSize(Integer MasterNodeDiskSize) {
@@ -168,7 +168,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专用主节点磁盘类型
+     * Get 专用主节点磁盘类型 
      * @return MasterNodeDiskType 专用主节点磁盘类型
      */
     public String getMasterNodeDiskType() {
@@ -176,7 +176,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专用主节点磁盘类型
+     * Set 专用主节点磁盘类型
      * @param MasterNodeDiskType 专用主节点磁盘类型
      */
     public void setMasterNodeDiskType(String MasterNodeDiskType) {
@@ -184,7 +184,7 @@ public class MasterNodeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableDedicatedMaster", this.EnableDedicatedMaster);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAlarmAttributeRequest  extends AbstractModel{
+public class ModifyAlarmAttributeRequest extends AbstractModel{
 
     /**
     * 告警项目。
@@ -43,11 +43,11 @@ public class ModifyAlarmAttributeRequest  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取告警项目。
+     * Get 告警项目。
 <li>Offline：防护软件离线</li>
 <li>Malware：发现木马文件</li>
 <li>NonlocalLogin：发现异地登录行为</li>
-<li>CrackSuccess：被暴力破解成功</li>
+<li>CrackSuccess：被暴力破解成功</li> 
      * @return Attribute 告警项目。
 <li>Offline：防护软件离线</li>
 <li>Malware：发现木马文件</li>
@@ -59,7 +59,7 @@ public class ModifyAlarmAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警项目。
+     * Set 告警项目。
 <li>Offline：防护软件离线</li>
 <li>Malware：发现木马文件</li>
 <li>NonlocalLogin：发现异地登录行为</li>
@@ -75,9 +75,9 @@ public class ModifyAlarmAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取告警项目属性。
+     * Get 告警项目属性。
 <li>CLOSE：关闭</li>
-<li>OPEN：打开</li>
+<li>OPEN：打开</li> 
      * @return Value 告警项目属性。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
@@ -87,7 +87,7 @@ public class ModifyAlarmAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警项目属性。
+     * Set 告警项目属性。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
      * @param Value 告警项目属性。
@@ -99,7 +99,7 @@ public class ModifyAlarmAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Attribute", this.Attribute);

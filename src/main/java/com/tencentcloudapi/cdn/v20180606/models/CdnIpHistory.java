@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdnIpHistory  extends AbstractModel{
+public class CdnIpHistory extends AbstractModel{
 
     /**
     * 上下线状态。online 为上线，offline 为下线。
@@ -38,7 +38,7 @@ public class CdnIpHistory  extends AbstractModel{
     private String Datetime;
 
     /**
-     * 获取上下线状态。online 为上线，offline 为下线。
+     * Get 上下线状态。online 为上线，offline 为下线。 
      * @return Status 上下线状态。online 为上线，offline 为下线。
      */
     public String getStatus() {
@@ -46,7 +46,7 @@ public class CdnIpHistory  extends AbstractModel{
     }
 
     /**
-     * 设置上下线状态。online 为上线，offline 为下线。
+     * Set 上下线状态。online 为上线，offline 为下线。
      * @param Status 上下线状态。online 为上线，offline 为下线。
      */
     public void setStatus(String Status) {
@@ -54,8 +54,8 @@ public class CdnIpHistory  extends AbstractModel{
     }
 
     /**
-     * 获取操作时间。当该值为 null 时表示无历史状态变更记录。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 操作时间。当该值为 null 时表示无历史状态变更记录。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Datetime 操作时间。当该值为 null 时表示无历史状态变更记录。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class CdnIpHistory  extends AbstractModel{
     }
 
     /**
-     * 设置操作时间。当该值为 null 时表示无历史状态变更记录。
+     * Set 操作时间。当该值为 null 时表示无历史状态变更记录。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Datetime 操作时间。当该值为 null 时表示无历史状态变更记录。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class CdnIpHistory  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

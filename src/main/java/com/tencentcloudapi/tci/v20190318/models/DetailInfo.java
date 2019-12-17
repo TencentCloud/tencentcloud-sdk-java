@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetailInfo  extends AbstractModel{
+public class DetailInfo extends AbstractModel{
 
     /**
     * 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
@@ -37,7 +37,7 @@ public class DetailInfo  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * Get 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳 
      * @return Value 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      */
     public WordTimePair [] getValue() {
@@ -45,7 +45,7 @@ public class DetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
+     * Set 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      * @param Value 单词出现在该音频中的那个句子的时间戳，出现了几次， 就返回对应次数的起始和结束时间戳
      */
     public void setValue(WordTimePair [] Value) {
@@ -53,7 +53,7 @@ public class DetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取词汇库中的单词
+     * Get 词汇库中的单词 
      * @return Keyword 词汇库中的单词
      */
     public String getKeyword() {
@@ -61,7 +61,7 @@ public class DetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库中的单词
+     * Set 词汇库中的单词
      * @param Keyword 词汇库中的单词
      */
     public void setKeyword(String Keyword) {
@@ -69,7 +69,7 @@ public class DetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Value.", this.Value);

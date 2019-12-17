@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Price  extends AbstractModel{
+public class Price extends AbstractModel{
 
     /**
     * 原价，单位：元
@@ -37,7 +37,7 @@ public class Price  extends AbstractModel{
     private Float OriginalPrice;
 
     /**
-     * 获取原价，单位：元
+     * Get 原价，单位：元 
      * @return DiscountPrice 原价，单位：元
      */
     public Float getDiscountPrice() {
@@ -45,7 +45,7 @@ public class Price  extends AbstractModel{
     }
 
     /**
-     * 设置原价，单位：元
+     * Set 原价，单位：元
      * @param DiscountPrice 原价，单位：元
      */
     public void setDiscountPrice(Float DiscountPrice) {
@@ -53,7 +53,7 @@ public class Price  extends AbstractModel{
     }
 
     /**
-     * 获取折扣价，单位：元
+     * Get 折扣价，单位：元 
      * @return OriginalPrice 折扣价，单位：元
      */
     public Float getOriginalPrice() {
@@ -61,7 +61,7 @@ public class Price  extends AbstractModel{
     }
 
     /**
-     * 设置折扣价，单位：元
+     * Set 折扣价，单位：元
      * @param OriginalPrice 折扣价，单位：元
      */
     public void setOriginalPrice(Float OriginalPrice) {
@@ -69,7 +69,7 @@ public class Price  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);

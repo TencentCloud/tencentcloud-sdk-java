@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultsRequest  extends AbstractModel{
+public class DescribeScanResultsRequest extends AbstractModel{
 
     /**
     * 任务唯一标识
@@ -37,7 +37,7 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     private String [] AppMd5s;
 
     /**
-     * 获取任务唯一标识
+     * Get 任务唯一标识 
      * @return ItemId 任务唯一标识
      */
     public String getItemId() {
@@ -45,7 +45,7 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识
+     * Set 任务唯一标识
      * @param ItemId 任务唯一标识
      */
     public void setItemId(String ItemId) {
@@ -53,7 +53,7 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
+     * Get 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app 
      * @return AppMd5s 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
      */
     public String [] getAppMd5s() {
@@ -61,7 +61,7 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
+     * Set 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
      * @param AppMd5s 批量查询一个或者多个app的扫描结果，如果不传表示查询该任务下所提交的所有app
      */
     public void setAppMd5s(String [] AppMd5s) {
@@ -69,7 +69,7 @@ public class DescribeScanResultsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

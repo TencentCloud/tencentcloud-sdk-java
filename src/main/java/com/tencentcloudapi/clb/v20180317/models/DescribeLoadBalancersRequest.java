@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancersRequest  extends AbstractModel{
+public class DescribeLoadBalancersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID。
@@ -151,7 +151,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String MasterZone;
 
     /**
-     * 获取负载均衡实例 ID。
+     * Get 负载均衡实例 ID。 
      * @return LoadBalancerIds 负载均衡实例 ID。
      */
     public String [] getLoadBalancerIds() {
@@ -159,7 +159,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例 ID。
+     * Set 负载均衡实例 ID。
      * @param LoadBalancerIds 负载均衡实例 ID。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -167,8 +167,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性。
+     * Get 负载均衡实例的网络类型：
+OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      */
@@ -177,7 +177,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的网络类型：
+     * Set 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
@@ -187,7 +187,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+     * Get 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。 
      * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
     public Integer getForward() {
@@ -195,7 +195,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
+     * Set 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，0：传统型负载均衡实例。如果不传此参数，则查询所有类型的负载均衡实例。
      */
     public void setForward(Integer Forward) {
@@ -203,7 +203,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的名称。
+     * Get 负载均衡实例的名称。 
      * @return LoadBalancerName 负载均衡实例的名称。
      */
     public String getLoadBalancerName() {
@@ -211,7 +211,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的名称。
+     * Set 负载均衡实例的名称。
      * @param LoadBalancerName 负载均衡实例的名称。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -219,7 +219,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * Get 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。 
      * @return Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      */
     public String getDomain() {
@@ -227,7 +227,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * Set 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      * @param Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
      */
     public void setDomain(String Domain) {
@@ -235,7 +235,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的 VIP 地址，支持多个。
+     * Get 负载均衡实例的 VIP 地址，支持多个。 
      * @return LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
      */
     public String [] getLoadBalancerVips() {
@@ -243,7 +243,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的 VIP 地址，支持多个。
+     * Set 负载均衡实例的 VIP 地址，支持多个。
      * @param LoadBalancerVips 负载均衡实例的 VIP 地址，支持多个。
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
@@ -251,7 +251,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡绑定的后端服务的外网 IP。
+     * Get 负载均衡绑定的后端服务的外网 IP。 
      * @return BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
      */
     public String [] getBackendPublicIps() {
@@ -259,7 +259,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡绑定的后端服务的外网 IP。
+     * Set 负载均衡绑定的后端服务的外网 IP。
      * @param BackendPublicIps 负载均衡绑定的后端服务的外网 IP。
      */
     public void setBackendPublicIps(String [] BackendPublicIps) {
@@ -267,7 +267,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡绑定的后端服务的内网 IP。
+     * Get 负载均衡绑定的后端服务的内网 IP。 
      * @return BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
      */
     public String [] getBackendPrivateIps() {
@@ -275,7 +275,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡绑定的后端服务的内网 IP。
+     * Set 负载均衡绑定的后端服务的内网 IP。
      * @param BackendPrivateIps 负载均衡绑定的后端服务的内网 IP。
      */
     public void setBackendPrivateIps(String [] BackendPrivateIps) {
@@ -283,7 +283,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取数据偏移量，默认为 0。
+     * Get 数据偏移量，默认为 0。 
      * @return Offset 数据偏移量，默认为 0。
      */
     public Integer getOffset() {
@@ -291,7 +291,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置数据偏移量，默认为 0。
+     * Set 数据偏移量，默认为 0。
      * @param Offset 数据偏移量，默认为 0。
      */
     public void setOffset(Integer Offset) {
@@ -299,7 +299,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取返回负载均衡实例的个数，默认为 20。
+     * Get 返回负载均衡实例的个数，默认为 20。 
      * @return Limit 返回负载均衡实例的个数，默认为 20。
      */
     public Integer getLimit() {
@@ -307,7 +307,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置返回负载均衡实例的个数，默认为 20。
+     * Set 返回负载均衡实例的个数，默认为 20。
      * @param Limit 返回负载均衡实例的个数，默认为 20。
      */
     public void setLimit(Integer Limit) {
@@ -315,7 +315,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+     * Get 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。 
      * @return OrderBy 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      */
     public String getOrderBy() {
@@ -323,7 +323,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
+     * Set 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      * @param OrderBy 排序参数，支持以下字段：LoadBalancerName，CreateTime，Domain，LoadBalancerType。
      */
     public void setOrderBy(String OrderBy) {
@@ -331,7 +331,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取1：倒序，0：顺序，默认按照创建时间倒序。
+     * Get 1：倒序，0：顺序，默认按照创建时间倒序。 
      * @return OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      */
     public Integer getOrderType() {
@@ -339,7 +339,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置1：倒序，0：顺序，默认按照创建时间倒序。
+     * Set 1：倒序，0：顺序，默认按照创建时间倒序。
      * @param OrderType 1：倒序，0：顺序，默认按照创建时间倒序。
      */
     public void setOrderType(Integer OrderType) {
@@ -347,7 +347,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取搜索字段，模糊匹配名称、域名、VIP。
+     * Get 搜索字段，模糊匹配名称、域名、VIP。 
      * @return SearchKey 搜索字段，模糊匹配名称、域名、VIP。
      */
     public String getSearchKey() {
@@ -355,7 +355,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置搜索字段，模糊匹配名称、域名、VIP。
+     * Set 搜索字段，模糊匹配名称、域名、VIP。
      * @param SearchKey 搜索字段，模糊匹配名称、域名、VIP。
      */
     public void setSearchKey(String SearchKey) {
@@ -363,7 +363,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
+     * Get 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。 
      * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      */
     public Integer getProjectId() {
@@ -371,7 +371,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
+     * Set 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。
      */
     public void setProjectId(Integer ProjectId) {
@@ -379,7 +379,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
+     * Get 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。 
      * @return WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      */
     public Integer getWithRs() {
@@ -387,7 +387,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
+     * Set 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      * @param WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
      */
     public void setWithRs(Integer WithRs) {
@@ -395,8 +395,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
-基础网络可传入'0'。
+     * Get 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+基础网络可传入'0'。 
      * @return VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
 基础网络可传入'0'。
      */
@@ -405,7 +405,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * Set 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
 基础网络可传入'0'。
      * @param VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
 基础网络可传入'0'。
@@ -415,7 +415,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取安全组ID，如 sg-m1cc9123
+     * Get 安全组ID，如 sg-m1cc9123 
      * @return SecurityGroup 安全组ID，如 sg-m1cc9123
      */
     public String getSecurityGroup() {
@@ -423,7 +423,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置安全组ID，如 sg-m1cc9123
+     * Set 安全组ID，如 sg-m1cc9123
      * @param SecurityGroup 安全组ID，如 sg-m1cc9123
      */
     public void setSecurityGroup(String SecurityGroup) {
@@ -431,7 +431,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取主可用区ID，如 ："100001" （对应的是广州一区）
+     * Get 主可用区ID，如 ："100001" （对应的是广州一区） 
      * @return MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
      */
     public String getMasterZone() {
@@ -439,7 +439,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置主可用区ID，如 ："100001" （对应的是广州一区）
+     * Set 主可用区ID，如 ："100001" （对应的是广州一区）
      * @param MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）
      */
     public void setMasterZone(String MasterZone) {
@@ -447,7 +447,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);

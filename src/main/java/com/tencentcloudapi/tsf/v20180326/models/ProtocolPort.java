@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProtocolPort  extends AbstractModel{
+public class ProtocolPort extends AbstractModel{
 
     /**
     * TCP UDP
@@ -44,7 +44,7 @@ public class ProtocolPort  extends AbstractModel{
     private Long TargetPort;
 
     /**
-     * 获取TCP UDP
+     * Get TCP UDP 
      * @return Protocol TCP UDP
      */
     public String getProtocol() {
@@ -52,7 +52,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 设置TCP UDP
+     * Set TCP UDP
      * @param Protocol TCP UDP
      */
     public void setProtocol(String Protocol) {
@@ -60,7 +60,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 获取服务端口
+     * Get 服务端口 
      * @return Port 服务端口
      */
     public Long getPort() {
@@ -68,7 +68,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 设置服务端口
+     * Set 服务端口
      * @param Port 服务端口
      */
     public void setPort(Long Port) {
@@ -76,7 +76,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 获取容器端口
+     * Get 容器端口 
      * @return TargetPort 容器端口
      */
     public Long getTargetPort() {
@@ -84,7 +84,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 设置容器端口
+     * Set 容器端口
      * @param TargetPort 容器端口
      */
     public void setTargetPort(Long TargetPort) {
@@ -92,7 +92,7 @@ public class ProtocolPort  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

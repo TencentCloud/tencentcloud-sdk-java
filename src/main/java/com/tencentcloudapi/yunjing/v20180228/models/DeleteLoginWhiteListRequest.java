@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLoginWhiteListRequest  extends AbstractModel{
+public class DeleteLoginWhiteListRequest extends AbstractModel{
 
     /**
     * 白名单ID
     */
     @SerializedName("Ids")
     @Expose
-    private Integer [] Ids;
+    private Long [] Ids;
 
     /**
-     * 获取白名单ID
+     * Get 白名单ID 
      * @return Ids 白名单ID
      */
-    public Integer [] getIds() {
+    public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * 设置白名单ID
+     * Set 白名单ID
      * @param Ids 白名单ID
      */
-    public void setIds(Integer [] Ids) {
+    public void setIds(Long [] Ids) {
         this.Ids = Ids;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

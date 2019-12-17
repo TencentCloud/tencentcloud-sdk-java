@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupAssociationStatisticsResponse  extends AbstractModel{
+public class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel{
 
     /**
     * 安全组关联实例统计。
@@ -37,7 +37,7 @@ public class DescribeSecurityGroupAssociationStatisticsResponse  extends Abstrac
     private String RequestId;
 
     /**
-     * 获取安全组关联实例统计。
+     * Get 安全组关联实例统计。 
      * @return SecurityGroupAssociationStatisticsSet 安全组关联实例统计。
      */
     public SecurityGroupAssociationStatistics [] getSecurityGroupAssociationStatisticsSet() {
@@ -45,7 +45,7 @@ public class DescribeSecurityGroupAssociationStatisticsResponse  extends Abstrac
     }
 
     /**
-     * 设置安全组关联实例统计。
+     * Set 安全组关联实例统计。
      * @param SecurityGroupAssociationStatisticsSet 安全组关联实例统计。
      */
     public void setSecurityGroupAssociationStatisticsSet(SecurityGroupAssociationStatistics [] SecurityGroupAssociationStatisticsSet) {
@@ -53,7 +53,7 @@ public class DescribeSecurityGroupAssociationStatisticsResponse  extends Abstrac
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeSecurityGroupAssociationStatisticsResponse  extends Abstrac
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeSecurityGroupAssociationStatisticsResponse  extends Abstrac
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SecurityGroupAssociationStatisticsSet.", this.SecurityGroupAssociationStatisticsSet);

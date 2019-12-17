@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyHaVipAttributeRequest  extends AbstractModel{
+public class ModifyHaVipAttributeRequest extends AbstractModel{
 
     /**
     * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
@@ -37,7 +37,7 @@ public class ModifyHaVipAttributeRequest  extends AbstractModel{
     private String HaVipName;
 
     /**
-     * 获取`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
      * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public String getHaVipId() {
@@ -45,7 +45,7 @@ public class ModifyHaVipAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
      */
     public void setHaVipId(String HaVipId) {
@@ -53,7 +53,7 @@ public class ModifyHaVipAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取`HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Get `HAVIP`名称，可任意命名，但不得超过60个字符。 
      * @return HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
      */
     public String getHaVipName() {
@@ -61,7 +61,7 @@ public class ModifyHaVipAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Set `HAVIP`名称，可任意命名，但不得超过60个字符。
      * @param HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
      */
     public void setHaVipName(String HaVipName) {
@@ -69,7 +69,7 @@ public class ModifyHaVipAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HaVipId", this.HaVipId);

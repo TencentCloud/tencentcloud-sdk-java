@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SAMLProviderInfo  extends AbstractModel{
+public class SAMLProviderInfo extends AbstractModel{
 
     /**
     * SAML身份提供商名称
@@ -51,7 +51,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取SAML身份提供商名称
+     * Get SAML身份提供商名称 
      * @return Name SAML身份提供商名称
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商名称
+     * Set SAML身份提供商名称
      * @param Name SAML身份提供商名称
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商描述
+     * Get SAML身份提供商描述 
      * @return Description SAML身份提供商描述
      */
     public String getDescription() {
@@ -75,7 +75,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商描述
+     * Set SAML身份提供商描述
      * @param Description SAML身份提供商描述
      */
     public void setDescription(String Description) {
@@ -83,7 +83,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商创建时间
+     * Get SAML身份提供商创建时间 
      * @return CreateTime SAML身份提供商创建时间
      */
     public String getCreateTime() {
@@ -91,7 +91,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商创建时间
+     * Set SAML身份提供商创建时间
      * @param CreateTime SAML身份提供商创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -99,7 +99,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 获取SAML身份提供商上次修改时间
+     * Get SAML身份提供商上次修改时间 
      * @return ModifyTime SAML身份提供商上次修改时间
      */
     public String getModifyTime() {
@@ -107,7 +107,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 设置SAML身份提供商上次修改时间
+     * Set SAML身份提供商上次修改时间
      * @param ModifyTime SAML身份提供商上次修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -115,7 +115,7 @@ public class SAMLProviderInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

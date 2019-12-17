@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateGroupRequest  extends AbstractModel{
+public class CreateGroupRequest extends AbstractModel{
 
     /**
     * 人员库名称，[1,60]个字符，可修改，不可重复。
@@ -66,7 +66,7 @@ public class CreateGroupRequest  extends AbstractModel{
     private String FaceModelVersion;
 
     /**
-     * 获取人员库名称，[1,60]个字符，可修改，不可重复。
+     * Get 人员库名称，[1,60]个字符，可修改，不可重复。 
      * @return GroupName 人员库名称，[1,60]个字符，可修改，不可重复。
      */
     public String getGroupName() {
@@ -74,7 +74,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库名称，[1,60]个字符，可修改，不可重复。
+     * Set 人员库名称，[1,60]个字符，可修改，不可重复。
      * @param GroupName 人员库名称，[1,60]个字符，可修改，不可重复。
      */
     public void setGroupName(String GroupName) {
@@ -82,7 +82,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * Get 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。 
      * @return GroupId 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      */
     public String getGroupId() {
@@ -90,7 +90,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * Set 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      * @param GroupId 人员库 ID，不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      */
     public void setGroupId(String GroupId) {
@@ -98,13 +98,13 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
+     * Get 人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
 最多可以创建5个。 
 每个自定义描述字段支持[1,30]个字符。 
 在同一人员库中自定义描述字段不可重复。 
 例： 设置某人员库“自定义描述字段”为["学号","工号","手机号"]， 
 则该人员库下所有人员将拥有名为“学号”、“工号”、“手机号”的描述字段， 
-可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。
+可在对应人员描述字段中填写内容，登记该人员的学号、工号、手机号等信息。 
      * @return GroupExDescriptions 人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
 最多可以创建5个。 
 每个自定义描述字段支持[1,30]个字符。 
@@ -118,7 +118,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
+     * Set 人员库自定义描述字段，用于描述人员库中人员属性，该人员库下所有人员将拥有此描述字段。 
 最多可以创建5个。 
 每个自定义描述字段支持[1,30]个字符。 
 在同一人员库中自定义描述字段不可重复。 
@@ -138,7 +138,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员库信息备注，[0，40]个字符。
+     * Get 人员库信息备注，[0，40]个字符。 
      * @return Tag 人员库信息备注，[0，40]个字符。
      */
     public String getTag() {
@@ -146,7 +146,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库信息备注，[0，40]个字符。
+     * Set 人员库信息备注，[0，40]个字符。
      * @param Tag 人员库信息备注，[0，40]个字符。
      */
     public void setTag(String Tag) {
@@ -154,9 +154,9 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+     * Get 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
 默认为"2.0"。
-不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
+不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。 
      * @return FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
 默认为"2.0"。
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
@@ -166,7 +166,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
+     * Set 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
 默认为"2.0"。
 不同算法模型版本对应的人脸识别算法不同，新版本的整体效果会优于旧版本，建议使用“3.0”版本。
      * @param FaceModelVersion 人脸识别服务所用的算法模型版本。目前入参支持 “2.0”和“3.0“ 两个输入。
@@ -178,7 +178,7 @@ public class CreateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);

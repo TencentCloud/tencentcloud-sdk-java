@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskInfoRequest  extends AbstractModel{
+public class DescribeTaskInfoRequest extends AbstractModel{
 
     /**
     * 开始位置
@@ -100,7 +100,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     private Integer [] TaskTypeIds;
 
     /**
-     * 获取开始位置
+     * Get 开始位置 
      * @return Offset 开始位置
      */
     public Integer getOffset() {
@@ -108,7 +108,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始位置
+     * Set 开始位置
      * @param Offset 开始位置
      */
     public void setOffset(Integer Offset) {
@@ -116,7 +116,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据条数
+     * Get 数据条数 
      * @return Limit 数据条数
      */
     public Integer getLimit() {
@@ -124,7 +124,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据条数
+     * Set 数据条数
      * @param Limit 数据条数
      */
     public void setLimit(Integer Limit) {
@@ -132,7 +132,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间过滤下限
+     * Get 时间过滤下限 
      * @return StartDate 时间过滤下限
      */
     public String getStartDate() {
@@ -140,7 +140,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间过滤下限
+     * Set 时间过滤下限
      * @param StartDate 时间过滤下限
      */
     public void setStartDate(String StartDate) {
@@ -148,7 +148,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间过滤上限
+     * Get 时间过滤上限 
      * @return EndDate 时间过滤上限
      */
     public String getEndDate() {
@@ -156,7 +156,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间过滤上限
+     * Set 时间过滤上限
      * @param EndDate 时间过滤上限
      */
     public void setEndDate(String EndDate) {
@@ -164,7 +164,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态ID过滤
+     * Get 任务状态ID过滤 
      * @return TaskStatus 任务状态ID过滤
      */
     public Integer [] getTaskStatus() {
@@ -172,7 +172,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态ID过滤
+     * Set 任务状态ID过滤
      * @param TaskStatus 任务状态ID过滤
      */
     public void setTaskStatus(Integer [] TaskStatus) {
@@ -180,7 +180,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，目前支持：CreateTime，AuthTime，EndTime
+     * Get 排序字段，目前支持：CreateTime，AuthTime，EndTime 
      * @return OrderField 排序字段，目前支持：CreateTime，AuthTime，EndTime
      */
     public String getOrderField() {
@@ -188,7 +188,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，目前支持：CreateTime，AuthTime，EndTime
+     * Set 排序字段，目前支持：CreateTime，AuthTime，EndTime
      * @param OrderField 排序字段，目前支持：CreateTime，AuthTime，EndTime
      */
     public void setOrderField(String OrderField) {
@@ -196,7 +196,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式 0:递增(默认) 1:递减
+     * Get 排序方式 0:递增(默认) 1:递减 
      * @return Order 排序方式 0:递增(默认) 1:递减
      */
     public Integer getOrder() {
@@ -204,7 +204,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式 0:递增(默认) 1:递减
+     * Set 排序方式 0:递增(默认) 1:递减
      * @param Order 排序方式 0:递增(默认) 1:递减
      */
     public void setOrder(Integer Order) {
@@ -212,7 +212,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID过滤
+     * Get 任务ID过滤 
      * @return TaskIds 任务ID过滤
      */
     public String [] getTaskIds() {
@@ -220,7 +220,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID过滤
+     * Set 任务ID过滤
      * @param TaskIds 任务ID过滤
      */
     public void setTaskIds(String [] TaskIds) {
@@ -228,7 +228,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID过滤
+     * Get 实例ID过滤 
      * @return InstanceIds 实例ID过滤
      */
     public String [] getInstanceIds() {
@@ -236,7 +236,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID过滤
+     * Set 实例ID过滤
      * @param InstanceIds 实例ID过滤
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -244,7 +244,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例别名过滤
+     * Get 实例别名过滤 
      * @return Aliases 实例别名过滤
      */
     public String [] getAliases() {
@@ -252,7 +252,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例别名过滤
+     * Set 实例别名过滤
      * @param Aliases 实例别名过滤
      */
     public void setAliases(String [] Aliases) {
@@ -260,7 +260,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取故障类型ID过滤
+     * Get 故障类型ID过滤 
      * @return TaskTypeIds 故障类型ID过滤
      */
     public Integer [] getTaskTypeIds() {
@@ -268,7 +268,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置故障类型ID过滤
+     * Set 故障类型ID过滤
      * @param TaskTypeIds 故障类型ID过滤
      */
     public void setTaskTypeIds(Integer [] TaskTypeIds) {
@@ -276,7 +276,7 @@ public class DescribeTaskInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

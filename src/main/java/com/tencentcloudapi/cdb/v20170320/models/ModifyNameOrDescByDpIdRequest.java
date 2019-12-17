@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
+public class ModifyNameOrDescByDpIdRequest extends AbstractModel{
 
     /**
     * 置放群组 ID。
@@ -44,7 +44,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取置放群组 ID。
+     * Get 置放群组 ID。 
      * @return DeployGroupId 置放群组 ID。
      */
     public String getDeployGroupId() {
@@ -52,7 +52,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组 ID。
+     * Set 置放群组 ID。
      * @param DeployGroupId 置放群组 ID。
      */
     public void setDeployGroupId(String DeployGroupId) {
@@ -60,7 +60,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
+     * Get 置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。 
      * @return DeployGroupName 置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
      */
     public String getDeployGroupName() {
@@ -68,7 +68,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
+     * Set 置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
      * @param DeployGroupName 置放群组名称，最长不能超过60个字符。置放群组名和置放群组描述不能都为空。
      */
     public void setDeployGroupName(String DeployGroupName) {
@@ -76,7 +76,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
+     * Get 置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。 
      * @return Description 置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
+     * Set 置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
      * @param Description 置放群组描述，最长不能超过200个字符。置放群组名和置放群组描述不能都为空。
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class ModifyNameOrDescByDpIdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);

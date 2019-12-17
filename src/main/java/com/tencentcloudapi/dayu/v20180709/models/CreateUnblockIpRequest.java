@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateUnblockIpRequest  extends AbstractModel{
+public class CreateUnblockIpRequest extends AbstractModel{
 
     /**
     * IP
@@ -37,7 +37,7 @@ public class CreateUnblockIpRequest  extends AbstractModel{
     private String ActionType;
 
     /**
-     * 获取IP
+     * Get IP 
      * @return Ip IP
      */
     public String getIp() {
@@ -45,7 +45,7 @@ public class CreateUnblockIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP
+     * Set IP
      * @param Ip IP
      */
     public void setIp(String Ip) {
@@ -53,7 +53,7 @@ public class CreateUnblockIpRequest  extends AbstractModel{
     }
 
     /**
-     * 获取解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Get 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封） 
      * @return ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public String getActionType() {
@@ -61,7 +61,7 @@ public class CreateUnblockIpRequest  extends AbstractModel{
     }
 
     /**
-     * 设置解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
+     * Set 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      * @param ActionType 解封类型（user：自助解封；auto：自动解封； update：升级解封；bind：绑定高防包解封）
      */
     public void setActionType(String ActionType) {
@@ -69,7 +69,7 @@ public class CreateUnblockIpRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

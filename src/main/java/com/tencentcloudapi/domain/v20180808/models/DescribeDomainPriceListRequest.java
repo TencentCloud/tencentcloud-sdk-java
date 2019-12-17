@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDomainPriceListRequest  extends AbstractModel{
+public class DescribeDomainPriceListRequest extends AbstractModel{
 
     /**
     * 查询价格的后缀列表。默认则为全部后缀
@@ -30,7 +30,7 @@ public class DescribeDomainPriceListRequest  extends AbstractModel{
     private String [] TldList;
 
     /**
-     * 获取查询价格的后缀列表。默认则为全部后缀
+     * Get 查询价格的后缀列表。默认则为全部后缀 
      * @return TldList 查询价格的后缀列表。默认则为全部后缀
      */
     public String [] getTldList() {
@@ -38,7 +38,7 @@ public class DescribeDomainPriceListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询价格的后缀列表。默认则为全部后缀
+     * Set 查询价格的后缀列表。默认则为全部后缀
      * @param TldList 查询价格的后缀列表。默认则为全部后缀
      */
     public void setTldList(String [] TldList) {
@@ -46,7 +46,7 @@ public class DescribeDomainPriceListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TldList.", this.TldList);

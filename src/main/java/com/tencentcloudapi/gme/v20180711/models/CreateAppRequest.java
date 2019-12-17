@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAppRequest  extends AbstractModel{
+public class CreateAppRequest extends AbstractModel{
 
     /**
     * 应用名称
@@ -79,7 +79,7 @@ public class CreateAppRequest  extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * 获取应用名称
+     * Get 应用名称 
      * @return AppName 应用名称
      */
     public String getAppName() {
@@ -87,7 +87,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
      * @param AppName 应用名称
      */
     public void setAppName(String AppName) {
@@ -95,7 +95,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取腾讯云项目ID，默认为0，表示默认项目
+     * Get 腾讯云项目ID，默认为0，表示默认项目 
      * @return ProjectId 腾讯云项目ID，默认为0，表示默认项目
      */
     public Long getProjectId() {
@@ -103,7 +103,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置腾讯云项目ID，默认为0，表示默认项目
+     * Set 腾讯云项目ID，默认为0，表示默认项目
      * @param ProjectId 腾讯云项目ID，默认为0，表示默认项目
      */
     public void setProjectId(Long ProjectId) {
@@ -111,7 +111,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要支持的引擎列表，默认全选。
+     * Get 需要支持的引擎列表，默认全选。 
      * @return EngineList 需要支持的引擎列表，默认全选。
      */
     public String [] getEngineList() {
@@ -119,7 +119,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要支持的引擎列表，默认全选。
+     * Set 需要支持的引擎列表，默认全选。
      * @param EngineList 需要支持的引擎列表，默认全选。
      */
     public void setEngineList(String [] EngineList) {
@@ -127,7 +127,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务区域列表，默认全选。
+     * Get 服务区域列表，默认全选。 
      * @return RegionList 服务区域列表，默认全选。
      */
     public String [] getRegionList() {
@@ -135,7 +135,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务区域列表，默认全选。
+     * Set 服务区域列表，默认全选。
      * @param RegionList 服务区域列表，默认全选。
      */
     public void setRegionList(String [] RegionList) {
@@ -143,7 +143,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实时语音服务配置数据
+     * Get 实时语音服务配置数据 
      * @return RealtimeSpeechConf 实时语音服务配置数据
      */
     public RealtimeSpeechConf getRealtimeSpeechConf() {
@@ -151,7 +151,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实时语音服务配置数据
+     * Set 实时语音服务配置数据
      * @param RealtimeSpeechConf 实时语音服务配置数据
      */
     public void setRealtimeSpeechConf(RealtimeSpeechConf RealtimeSpeechConf) {
@@ -159,7 +159,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音消息及转文本服务配置数据
+     * Get 语音消息及转文本服务配置数据 
      * @return VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
@@ -167,7 +167,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音消息及转文本服务配置数据
+     * Set 语音消息及转文本服务配置数据
      * @param VoiceMessageConf 语音消息及转文本服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
@@ -175,7 +175,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音分析服务配置数据
+     * Get 语音分析服务配置数据 
      * @return VoiceFilterConf 语音分析服务配置数据
      */
     public VoiceFilterConf getVoiceFilterConf() {
@@ -183,7 +183,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音分析服务配置数据
+     * Set 语音分析服务配置数据
      * @param VoiceFilterConf 语音分析服务配置数据
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
@@ -191,7 +191,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要添加的标签列表
+     * Get 需要添加的标签列表 
      * @return Tags 需要添加的标签列表
      */
     public Tag [] getTags() {
@@ -199,7 +199,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要添加的标签列表
+     * Set 需要添加的标签列表
      * @param Tags 需要添加的标签列表
      */
     public void setTags(Tag [] Tags) {
@@ -207,7 +207,7 @@ public class CreateAppRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

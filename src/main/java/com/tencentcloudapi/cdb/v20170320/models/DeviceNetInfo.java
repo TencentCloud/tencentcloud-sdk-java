@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceNetInfo  extends AbstractModel{
+public class DeviceNetInfo extends AbstractModel{
 
     /**
     * tcp连接数
@@ -58,7 +58,7 @@ public class DeviceNetInfo  extends AbstractModel{
     private Integer [] FlowOut;
 
     /**
-     * 获取tcp连接数
+     * Get tcp连接数 
      * @return Conn tcp连接数
      */
     public Integer [] getConn() {
@@ -66,7 +66,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置tcp连接数
+     * Set tcp连接数
      * @param Conn tcp连接数
      */
     public void setConn(Integer [] Conn) {
@@ -74,7 +74,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网卡入包量
+     * Get 网卡入包量 
      * @return PackageIn 网卡入包量
      */
     public Integer [] getPackageIn() {
@@ -82,7 +82,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网卡入包量
+     * Set 网卡入包量
      * @param PackageIn 网卡入包量
      */
     public void setPackageIn(Integer [] PackageIn) {
@@ -90,7 +90,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网卡出包量
+     * Get 网卡出包量 
      * @return PackageOut 网卡出包量
      */
     public Integer [] getPackageOut() {
@@ -98,7 +98,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网卡出包量
+     * Set 网卡出包量
      * @param PackageOut 网卡出包量
      */
     public void setPackageOut(Integer [] PackageOut) {
@@ -106,7 +106,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取入流量，单位：KB
+     * Get 入流量，单位：KB 
      * @return FlowIn 入流量，单位：KB
      */
     public Integer [] getFlowIn() {
@@ -114,7 +114,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置入流量，单位：KB
+     * Set 入流量，单位：KB
      * @param FlowIn 入流量，单位：KB
      */
     public void setFlowIn(Integer [] FlowIn) {
@@ -122,7 +122,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取出流量，单位：KB
+     * Get 出流量，单位：KB 
      * @return FlowOut 出流量，单位：KB
      */
     public Integer [] getFlowOut() {
@@ -130,7 +130,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置出流量，单位：KB
+     * Set 出流量，单位：KB
      * @param FlowOut 出流量，单位：KB
      */
     public void setFlowOut(Integer [] FlowOut) {
@@ -138,7 +138,7 @@ public class DeviceNetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Conn.", this.Conn);

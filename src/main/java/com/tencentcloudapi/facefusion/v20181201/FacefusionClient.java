@@ -29,21 +29,10 @@ public class FacefusionClient extends AbstractClient{
     private static String endpoint = "facefusion.tencentcloudapi.com";
     private static String version = "2018-12-01";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public FacefusionClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public FacefusionClient(Credential credential, String region, ClientProfile profile) {
         super(FacefusionClient.endpoint, FacefusionClient.version, credential, region, profile);
     }

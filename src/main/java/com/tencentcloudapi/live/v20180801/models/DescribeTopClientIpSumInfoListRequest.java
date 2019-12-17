@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
+public class DescribeTopClientIpSumInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -80,7 +80,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     private String OutLanguage;
 
     /**
-     * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getStartTime() {
@@ -88,7 +88,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setStartTime(String StartTime) {
@@ -96,8 +96,8 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在（0,4小时]，支持最近1天数据查询。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS
+时间跨度在（0,4小时]，支持最近1天数据查询。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,4小时]，支持最近1天数据查询。
      */
@@ -106,7 +106,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,4小时]，支持最近1天数据查询。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
 时间跨度在（0,4小时]，支持最近1天数据查询。
@@ -116,7 +116,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名，默认为不填，表示求总体数据。
+     * Get 播放域名，默认为不填，表示求总体数据。 
      * @return PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public String [] getPlayDomains() {
@@ -124,7 +124,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名，默认为不填，表示求总体数据。
+     * Set 播放域名，默认为不填，表示求总体数据。
      * @param PlayDomains 播放域名，默认为不填，表示求总体数据。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -132,7 +132,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页号，范围是[1,1000]，默认值是1。
+     * Get 页号，范围是[1,1000]，默认值是1。 
      * @return PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public Integer getPageNum() {
@@ -140,7 +140,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页号，范围是[1,1000]，默认值是1。
+     * Set 页号，范围是[1,1000]，默认值是1。
      * @param PageNum 页号，范围是[1,1000]，默认值是1。
      */
     public void setPageNum(Integer PageNum) {
@@ -148,7 +148,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页个数，范围是[1,1000]，默认值是20。
+     * Get 每页个数，范围是[1,1000]，默认值是20。 
      * @return PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public Integer getPageSize() {
@@ -156,7 +156,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页个数，范围是[1,1000]，默认值是20。
+     * Set 每页个数，范围是[1,1000]，默认值是20。
      * @param PageSize 每页个数，范围是[1,1000]，默认值是20。
      */
     public void setPageSize(Integer PageSize) {
@@ -164,7 +164,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+     * Get 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。 
      * @return OrderParam 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      */
     public String getOrderParam() {
@@ -172,7 +172,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
+     * Set 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      * @param OrderParam 排序指标，可选值包括TotalRequest（默认值），FailedRequest,TotalFlux。
      */
     public void setOrderParam(String OrderParam) {
@@ -180,7 +180,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Get 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。 
      * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public String getMainlandOrOversea() {
@@ -188,7 +188,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Set 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -196,7 +196,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * Get 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。 
      * @return OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     public String getOutLanguage() {
@@ -204,7 +204,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
+     * Set 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      * @param OutLanguage 输出字段使用的语言，可选值：Chinese（默认值），English；目前国家，省份和运营商支持多语言。
      */
     public void setOutLanguage(String OutLanguage) {
@@ -212,7 +212,7 @@ public class DescribeTopClientIpSumInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

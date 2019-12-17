@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupUrlResponse  extends AbstractModel{
+public class DescribeBackupUrlResponse extends AbstractModel{
 
     /**
     * 外网下载地址（6小时）
@@ -44,7 +44,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取外网下载地址（6小时）
+     * Get 外网下载地址（6小时） 
      * @return DownloadUrl 外网下载地址（6小时）
      */
     public String [] getDownloadUrl() {
@@ -52,7 +52,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 设置外网下载地址（6小时）
+     * Set 外网下载地址（6小时）
      * @param DownloadUrl 外网下载地址（6小时）
      */
     public void setDownloadUrl(String [] DownloadUrl) {
@@ -60,7 +60,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 获取内网下载地址（6小时）
+     * Get 内网下载地址（6小时） 
      * @return InnerDownloadUrl 内网下载地址（6小时）
      */
     public String [] getInnerDownloadUrl() {
@@ -68,7 +68,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 设置内网下载地址（6小时）
+     * Set 内网下载地址（6小时）
      * @param InnerDownloadUrl 内网下载地址（6小时）
      */
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
@@ -76,7 +76,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeBackupUrlResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);

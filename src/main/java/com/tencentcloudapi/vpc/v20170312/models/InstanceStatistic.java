@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceStatistic  extends AbstractModel{
+public class InstanceStatistic extends AbstractModel{
 
     /**
     * 实例的类型
@@ -37,7 +37,7 @@ public class InstanceStatistic  extends AbstractModel{
     private Integer InstanceCount;
 
     /**
-     * 获取实例的类型
+     * Get 实例的类型 
      * @return InstanceType 实例的类型
      */
     public String getInstanceType() {
@@ -45,7 +45,7 @@ public class InstanceStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置实例的类型
+     * Set 实例的类型
      * @param InstanceType 实例的类型
      */
     public void setInstanceType(String InstanceType) {
@@ -53,7 +53,7 @@ public class InstanceStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取实例的个数
+     * Get 实例的个数 
      * @return InstanceCount 实例的个数
      */
     public Integer getInstanceCount() {
@@ -61,7 +61,7 @@ public class InstanceStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置实例的个数
+     * Set 实例的个数
      * @param InstanceCount 实例的个数
      */
     public void setInstanceCount(Integer InstanceCount) {
@@ -69,7 +69,7 @@ public class InstanceStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);

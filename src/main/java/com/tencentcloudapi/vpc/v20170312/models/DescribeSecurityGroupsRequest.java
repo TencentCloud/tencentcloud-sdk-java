@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupsRequest  extends AbstractModel{
+public class DescribeSecurityGroupsRequest extends AbstractModel{
 
     /**
     * 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
@@ -56,7 +56,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     private String Limit;
 
     /**
-     * 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * Get 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。 
      * @return SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public String [] getSecurityGroupIds() {
@@ -64,7 +64,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * Set 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      * @param SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -72,12 +72,12 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+     * Get 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 <li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目ID。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。使用请参考示例2。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li>
+<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例3。</li> 
      * @return Filters 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 <li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目ID。</li>
@@ -90,7 +90,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
+     * Set 过滤条件，参数不支持同时指定SecurityGroupIds和Filters。
 <li>security-group-id - String - （过滤条件）安全组ID。</li>
 <li>project-id - Integer - （过滤条件）项目ID。</li>
 <li>security-group-name - String - （过滤条件）安全组名称。</li>
@@ -108,7 +108,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public String getOffset() {
@@ -116,7 +116,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(String Offset) {
@@ -124,7 +124,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量。
+     * Get 返回数量。 
      * @return Limit 返回数量。
      */
     public String getLimit() {
@@ -132,7 +132,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量。
+     * Set 返回数量。
      * @param Limit 返回数量。
      */
     public void setLimit(String Limit) {
@@ -140,7 +140,7 @@ public class DescribeSecurityGroupsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

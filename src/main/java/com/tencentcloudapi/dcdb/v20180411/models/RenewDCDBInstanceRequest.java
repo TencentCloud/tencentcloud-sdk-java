@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RenewDCDBInstanceRequest  extends AbstractModel{
+public class RenewDCDBInstanceRequest extends AbstractModel{
 
     /**
     * 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
@@ -51,7 +51,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Get 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Set 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param InstanceId 待续费的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取续费时长，单位：月。
+     * Get 续费时长，单位：月。 
      * @return Period 续费时长，单位：月。
      */
     public Integer getPeriod() {
@@ -75,7 +75,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置续费时长，单位：月。
+     * Set 续费时长，单位：月。
      * @param Period 续费时长，单位：月。
      */
     public void setPeriod(Integer Period) {
@@ -83,7 +83,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否自动使用代金券进行支付，默认不使用。
+     * Get 是否自动使用代金券进行支付，默认不使用。 
      * @return AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public Boolean getAutoVoucher() {
@@ -91,7 +91,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否自动使用代金券进行支付，默认不使用。
+     * Set 是否自动使用代金券进行支付，默认不使用。
      * @param AutoVoucher 是否自动使用代金券进行支付，默认不使用。
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
@@ -99,7 +99,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代金券ID列表，目前仅支持指定一张代金券。
+     * Get 代金券ID列表，目前仅支持指定一张代金券。 
      * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public String [] getVoucherIds() {
@@ -107,7 +107,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID列表，目前仅支持指定一张代金券。
+     * Set 代金券ID列表，目前仅支持指定一张代金券。
      * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -115,7 +115,7 @@ public class RenewDCDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

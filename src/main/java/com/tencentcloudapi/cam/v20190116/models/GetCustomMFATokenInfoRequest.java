@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCustomMFATokenInfoRequest  extends AbstractModel{
+public class GetCustomMFATokenInfoRequest extends AbstractModel{
 
     /**
     * 自定义多因子验证Token
@@ -30,7 +30,7 @@ public class GetCustomMFATokenInfoRequest  extends AbstractModel{
     private String MFAToken;
 
     /**
-     * 获取自定义多因子验证Token
+     * Get 自定义多因子验证Token 
      * @return MFAToken 自定义多因子验证Token
      */
     public String getMFAToken() {
@@ -38,7 +38,7 @@ public class GetCustomMFATokenInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自定义多因子验证Token
+     * Set 自定义多因子验证Token
      * @param MFAToken 自定义多因子验证Token
      */
     public void setMFAToken(String MFAToken) {
@@ -46,7 +46,7 @@ public class GetCustomMFATokenInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MFAToken", this.MFAToken);

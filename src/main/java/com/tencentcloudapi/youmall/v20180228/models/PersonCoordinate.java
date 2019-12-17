@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonCoordinate  extends AbstractModel{
+public class PersonCoordinate extends AbstractModel{
 
     /**
     * CAD图X坐标
@@ -79,7 +79,7 @@ public class PersonCoordinate  extends AbstractModel{
     private String Event;
 
     /**
-     * 获取CAD图X坐标
+     * Get CAD图X坐标 
      * @return CADX CAD图X坐标
      */
     public Float getCADX() {
@@ -87,7 +87,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置CAD图X坐标
+     * Set CAD图X坐标
      * @param CADX CAD图X坐标
      */
     public void setCADX(Float CADX) {
@@ -95,7 +95,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取CAD图Y坐标
+     * Get CAD图Y坐标 
      * @return CADY CAD图Y坐标
      */
     public Float getCADY() {
@@ -103,7 +103,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置CAD图Y坐标
+     * Set CAD图Y坐标
      * @param CADY CAD图Y坐标
      */
     public void setCADY(Float CADY) {
@@ -111,7 +111,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍时间点
+     * Get 抓拍时间点 
      * @return CapTime 抓拍时间点
      */
     public String getCapTime() {
@@ -119,7 +119,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍时间点
+     * Set 抓拍时间点
      * @param CapTime 抓拍时间点
      */
     public void setCapTime(String CapTime) {
@@ -127,7 +127,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍图片
+     * Get 抓拍图片 
      * @return CapPic 抓拍图片
      */
     public String getCapPic() {
@@ -135,7 +135,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍图片
+     * Set 抓拍图片
      * @param CapPic 抓拍图片
      */
     public void setCapPic(String CapPic) {
@@ -143,7 +143,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取卖场区域类型
+     * Get 卖场区域类型 
      * @return MallAreaType 卖场区域类型
      */
     public Integer getMallAreaType() {
@@ -151,7 +151,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置卖场区域类型
+     * Set 卖场区域类型
      * @param MallAreaType 卖场区域类型
      */
     public void setMallAreaType(Integer MallAreaType) {
@@ -159,7 +159,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取坐标编号
+     * Get 坐标编号 
      * @return PosId 坐标编号
      */
     public Integer getPosId() {
@@ -167,7 +167,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置坐标编号
+     * Set 坐标编号
      * @param PosId 坐标编号
      */
     public void setPosId(Integer PosId) {
@@ -175,7 +175,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取门店编号
+     * Get 门店编号 
      * @return ShopId 门店编号
      */
     public Integer getShopId() {
@@ -183,7 +183,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置门店编号
+     * Set 门店编号
      * @param ShopId 门店编号
      */
     public void setShopId(Integer ShopId) {
@@ -191,7 +191,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 获取事件
+     * Get 事件 
      * @return Event 事件
      */
     public String getEvent() {
@@ -199,7 +199,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置事件
+     * Set 事件
      * @param Event 事件
      */
     public void setEvent(String Event) {
@@ -207,7 +207,7 @@ public class PersonCoordinate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CADX", this.CADX);

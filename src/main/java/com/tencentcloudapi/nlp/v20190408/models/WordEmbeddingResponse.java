@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordEmbeddingResponse  extends AbstractModel{
+public class WordEmbeddingResponse extends AbstractModel{
 
     /**
     * 词向量的维度
@@ -44,7 +44,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取词向量的维度
+     * Get 词向量的维度 
      * @return Dimension 词向量的维度
      */
     public Long getDimension() {
@@ -52,7 +52,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置词向量的维度
+     * Set 词向量的维度
      * @param Dimension 词向量的维度
      */
     public void setDimension(Long Dimension) {
@@ -60,7 +60,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 获取词向量数组
+     * Get 词向量数组 
      * @return Vector 词向量数组
      */
     public Float [] getVector() {
@@ -68,7 +68,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置词向量数组
+     * Set 词向量数组
      * @param Vector 词向量数组
      */
     public void setVector(Float [] Vector) {
@@ -76,7 +76,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class WordEmbeddingResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Dimension", this.Dimension);

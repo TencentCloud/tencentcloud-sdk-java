@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditBashRuleRequest  extends AbstractModel{
+public class EditBashRuleRequest extends AbstractModel{
 
     /**
     * 规则名称
@@ -34,7 +34,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     */
     @SerializedName("Level")
     @Expose
-    private Integer Level;
+    private Long Level;
 
     /**
     * 正则表达式
@@ -48,7 +48,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
@@ -69,10 +69,10 @@ public class EditBashRuleRequest  extends AbstractModel{
     */
     @SerializedName("IsGlobal")
     @Expose
-    private Integer IsGlobal;
+    private Long IsGlobal;
 
     /**
-     * 获取规则名称
+     * Get 规则名称 
      * @return Name 规则名称
      */
     public String getName() {
@@ -80,7 +80,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则名称
+     * Set 规则名称
      * @param Name 规则名称
      */
     public void setName(String Name) {
@@ -88,23 +88,23 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取危险等级(1: 高危 2:中危 3: 低危)
+     * Get 危险等级(1: 高危 2:中危 3: 低危) 
      * @return Level 危险等级(1: 高危 2:中危 3: 低危)
      */
-    public Integer getLevel() {
+    public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * 设置危险等级(1: 高危 2:中危 3: 低危)
+     * Set 危险等级(1: 高危 2:中危 3: 低危)
      * @param Level 危险等级(1: 高危 2:中危 3: 低危)
      */
-    public void setLevel(Integer Level) {
+    public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * 获取正则表达式
+     * Get 正则表达式 
      * @return Rule 正则表达式
      */
     public String getRule() {
@@ -112,7 +112,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置正则表达式
+     * Set 正则表达式
      * @param Rule 正则表达式
      */
     public void setRule(String Rule) {
@@ -120,23 +120,23 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID(新增时不填)
+     * Get 规则ID(新增时不填) 
      * @return Id 规则ID(新增时不填)
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置规则ID(新增时不填)
+     * Set 规则ID(新增时不填)
      * @param Id 规则ID(新增时不填)
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个) 
      * @return Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public String getUuid() {
@@ -144,7 +144,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      * @param Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public void setUuid(String Uuid) {
@@ -152,7 +152,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 主机IP(IsGlobal为1时，Uuid或Hostip必填一个) 
      * @return Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public String getHostip() {
@@ -160,7 +160,7 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      * @param Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public void setHostip(String Hostip) {
@@ -168,23 +168,23 @@ public class EditBashRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否全局规则(默认否)
+     * Get 是否全局规则(默认否) 
      * @return IsGlobal 是否全局规则(默认否)
      */
-    public Integer getIsGlobal() {
+    public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * 设置是否全局规则(默认否)
+     * Set 是否全局规则(默认否)
      * @param IsGlobal 是否全局规则(默认否)
      */
-    public void setIsGlobal(Integer IsGlobal) {
+    public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

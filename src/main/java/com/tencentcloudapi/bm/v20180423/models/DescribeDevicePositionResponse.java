@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicePositionResponse  extends AbstractModel{
+public class DescribeDevicePositionResponse extends AbstractModel{
 
     /**
     * 返回数量
@@ -44,7 +44,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return TotalCount 返回数量
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param TotalCount 返回数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备所在机架信息
+     * Get 设备所在机架信息 
      * @return DevicePositionInfoSet 设备所在机架信息
      */
     public DevicePositionInfo [] getDevicePositionInfoSet() {
@@ -68,7 +68,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备所在机架信息
+     * Set 设备所在机架信息
      * @param DevicePositionInfoSet 设备所在机架信息
      */
     public void setDevicePositionInfoSet(DevicePositionInfo [] DevicePositionInfoSet) {
@@ -76,7 +76,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDevicePositionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

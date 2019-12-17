@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunUserCmdResponse  extends AbstractModel{
+public class RunUserCmdResponse extends AbstractModel{
 
     /**
     * 运行成功的任务信息列表
@@ -44,7 +44,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取运行成功的任务信息列表
+     * Get 运行成功的任务信息列表 
      * @return SuccessTaskInfoSet 运行成功的任务信息列表
      */
     public SuccessTaskInfo [] getSuccessTaskInfoSet() {
@@ -52,7 +52,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置运行成功的任务信息列表
+     * Set 运行成功的任务信息列表
      * @param SuccessTaskInfoSet 运行成功的任务信息列表
      */
     public void setSuccessTaskInfoSet(SuccessTaskInfo [] SuccessTaskInfoSet) {
@@ -60,7 +60,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取运行失败的任务信息列表
+     * Get 运行失败的任务信息列表 
      * @return FailedTaskInfoSet 运行失败的任务信息列表
      */
     public FailedTaskInfo [] getFailedTaskInfoSet() {
@@ -68,7 +68,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置运行失败的任务信息列表
+     * Set 运行失败的任务信息列表
      * @param FailedTaskInfoSet 运行失败的任务信息列表
      */
     public void setFailedTaskInfoSet(FailedTaskInfo [] FailedTaskInfoSet) {
@@ -76,7 +76,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class RunUserCmdResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SuccessTaskInfoSet.", this.SuccessTaskInfoSet);

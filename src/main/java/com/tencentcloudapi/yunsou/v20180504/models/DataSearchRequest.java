@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataSearchRequest  extends AbstractModel{
+public class DataSearchRequest extends AbstractModel{
 
     /**
     * 云搜的业务ID，用以表明当前数据请求的业务
@@ -184,7 +184,7 @@ public class DataSearchRequest  extends AbstractModel{
     private String [] MultiFilter;
 
     /**
-     * 获取云搜的业务ID，用以表明当前数据请求的业务
+     * Get 云搜的业务ID，用以表明当前数据请求的业务 
      * @return ResourceId 云搜的业务ID，用以表明当前数据请求的业务
      */
     public Long getResourceId() {
@@ -192,7 +192,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云搜的业务ID，用以表明当前数据请求的业务
+     * Set 云搜的业务ID，用以表明当前数据请求的业务
      * @param ResourceId 云搜的业务ID，用以表明当前数据请求的业务
      */
     public void setResourceId(Long ResourceId) {
@@ -200,7 +200,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检索串
+     * Get 检索串 
      * @return SearchQuery 检索串
      */
     public String getSearchQuery() {
@@ -208,7 +208,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检索串
+     * Set 检索串
      * @param SearchQuery 检索串
      */
     public void setSearchQuery(String SearchQuery) {
@@ -216,7 +216,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前页，从第0页开始计算
+     * Get 当前页，从第0页开始计算 
      * @return PageId 当前页，从第0页开始计算
      */
     public Long getPageId() {
@@ -224,7 +224,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前页，从第0页开始计算
+     * Set 当前页，从第0页开始计算
      * @param PageId 当前页，从第0页开始计算
      */
     public void setPageId(Long PageId) {
@@ -232,7 +232,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页结果数
+     * Get 每页结果数 
      * @return NumPerPage 每页结果数
      */
     public Long getNumPerPage() {
@@ -240,7 +240,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页结果数
+     * Set 每页结果数
      * @param NumPerPage 每页结果数
      */
     public void setNumPerPage(Long NumPerPage) {
@@ -248,7 +248,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取当前检索号，用于定位问题，建议指定并且全局唯一
+     * Get 当前检索号，用于定位问题，建议指定并且全局唯一 
      * @return SearchId 当前检索号，用于定位问题，建议指定并且全局唯一
      */
     public String getSearchId() {
@@ -256,7 +256,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置当前检索号，用于定位问题，建议指定并且全局唯一
+     * Set 当前检索号，用于定位问题，建议指定并且全局唯一
      * @param SearchId 当前检索号，用于定位问题，建议指定并且全局唯一
      */
     public void setSearchId(String SearchId) {
@@ -264,7 +264,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求编码，0表示utf8，1表示gbk，建议指定
+     * Get 请求编码，0表示utf8，1表示gbk，建议指定 
      * @return QueryEncode 请求编码，0表示utf8，1表示gbk，建议指定
      */
     public Long getQueryEncode() {
@@ -272,7 +272,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求编码，0表示utf8，1表示gbk，建议指定
+     * Set 请求编码，0表示utf8，1表示gbk，建议指定
      * @param QueryEncode 请求编码，0表示utf8，1表示gbk，建议指定
      */
     public void setQueryEncode(Long QueryEncode) {
@@ -280,7 +280,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型
+     * Get 排序类型 
      * @return RankType 排序类型
      */
     public Long getRankType() {
@@ -288,7 +288,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型
+     * Set 排序类型
      * @param RankType 排序类型
      */
     public void setRankType(Long RankType) {
@@ -296,7 +296,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数值过滤，结果中按属性过滤
+     * Get 数值过滤，结果中按属性过滤 
      * @return NumFilter 数值过滤，结果中按属性过滤
      */
     public String getNumFilter() {
@@ -304,7 +304,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数值过滤，结果中按属性过滤
+     * Set 数值过滤，结果中按属性过滤
      * @param NumFilter 数值过滤，结果中按属性过滤
      */
     public void setNumFilter(String NumFilter) {
@@ -312,7 +312,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分类过滤，导航类检索请求
+     * Get 分类过滤，导航类检索请求 
      * @return ClFilter 分类过滤，导航类检索请求
      */
     public String getClFilter() {
@@ -320,7 +320,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分类过滤，导航类检索请求
+     * Set 分类过滤，导航类检索请求
      * @param ClFilter 分类过滤，导航类检索请求
      */
     public void setClFilter(String ClFilter) {
@@ -328,7 +328,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检索用户相关字段
+     * Get 检索用户相关字段 
      * @return Extra 检索用户相关字段
      */
     public String getExtra() {
@@ -336,7 +336,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检索用户相关字段
+     * Set 检索用户相关字段
      * @param Extra 检索用户相关字段
      */
     public void setExtra(String Extra) {
@@ -344,7 +344,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检索来源
+     * Get 检索来源 
      * @return SourceId 检索来源
      */
     public Long getSourceId() {
@@ -352,7 +352,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检索来源
+     * Set 检索来源
      * @param SourceId 检索来源
      */
     public void setSourceId(Long SourceId) {
@@ -360,7 +360,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否进行二次检索，0关闭，1打开
+     * Get 是否进行二次检索，0关闭，1打开 
      * @return SecondSearch 是否进行二次检索，0关闭，1打开
      */
     public Long getSecondSearch() {
@@ -368,7 +368,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否进行二次检索，0关闭，1打开
+     * Set 是否进行二次检索，0关闭，1打开
      * @param SecondSearch 是否进行二次检索，0关闭，1打开
      */
     public void setSecondSearch(Long SecondSearch) {
@@ -376,7 +376,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定返回最大篇数，无特殊原因不建议指定
+     * Get 指定返回最大篇数，无特殊原因不建议指定 
      * @return MaxDocReturn 指定返回最大篇数，无特殊原因不建议指定
      */
     public Long getMaxDocReturn() {
@@ -384,7 +384,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定返回最大篇数，无特殊原因不建议指定
+     * Set 指定返回最大篇数，无特殊原因不建议指定
      * @param MaxDocReturn 指定返回最大篇数，无特殊原因不建议指定
      */
     public void setMaxDocReturn(Long MaxDocReturn) {
@@ -392,7 +392,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否smartbox检索，0关闭，1打开
+     * Get 是否smartbox检索，0关闭，1打开 
      * @return IsSmartbox 是否smartbox检索，0关闭，1打开
      */
     public Long getIsSmartbox() {
@@ -400,7 +400,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否smartbox检索，0关闭，1打开
+     * Set 是否smartbox检索，0关闭，1打开
      * @param IsSmartbox 是否smartbox检索，0关闭，1打开
      */
     public void setIsSmartbox(Long IsSmartbox) {
@@ -408,7 +408,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否打开高红标亮，0关闭，1打开
+     * Get 是否打开高红标亮，0关闭，1打开 
      * @return EnableAbsHighlight 是否打开高红标亮，0关闭，1打开
      */
     public Long getEnableAbsHighlight() {
@@ -416,7 +416,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否打开高红标亮，0关闭，1打开
+     * Set 是否打开高红标亮，0关闭，1打开
      * @param EnableAbsHighlight 是否打开高红标亮，0关闭，1打开
      */
     public void setEnableAbsHighlight(Long EnableAbsHighlight) {
@@ -424,7 +424,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定访问QC纠错业务ID
+     * Get 指定访问QC纠错业务ID 
      * @return QcBid 指定访问QC纠错业务ID
      */
     public Long getQcBid() {
@@ -432,7 +432,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定访问QC纠错业务ID
+     * Set 指定访问QC纠错业务ID
      * @param QcBid 指定访问QC纠错业务ID
      */
     public void setQcBid(Long QcBid) {
@@ -440,7 +440,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按指定字段进行group by，只能对数值字段进行操作
+     * Get 按指定字段进行group by，只能对数值字段进行操作 
      * @return GroupBy 按指定字段进行group by，只能对数值字段进行操作
      */
     public String getGroupBy() {
@@ -448,7 +448,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按指定字段进行group by，只能对数值字段进行操作
+     * Set 按指定字段进行group by，只能对数值字段进行操作
      * @param GroupBy 按指定字段进行group by，只能对数值字段进行操作
      */
     public void setGroupBy(String GroupBy) {
@@ -456,7 +456,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按指定字段进行distinct，只能对数值字段进行操作
+     * Get 按指定字段进行distinct，只能对数值字段进行操作 
      * @return Distinct 按指定字段进行distinct，只能对数值字段进行操作
      */
     public String getDistinct() {
@@ -464,7 +464,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按指定字段进行distinct，只能对数值字段进行操作
+     * Set 按指定字段进行distinct，只能对数值字段进行操作
      * @param Distinct 按指定字段进行distinct，只能对数值字段进行操作
      */
     public void setDistinct(String Distinct) {
@@ -472,7 +472,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取高级排序参数，具体参见高级排序说明
+     * Get 高级排序参数，具体参见高级排序说明 
      * @return L4RankExpression 高级排序参数，具体参见高级排序说明
      */
     public String getL4RankExpression() {
@@ -480,7 +480,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置高级排序参数，具体参见高级排序说明
+     * Set 高级排序参数，具体参见高级排序说明
      * @param L4RankExpression 高级排序参数，具体参见高级排序说明
      */
     public void setL4RankExpression(String L4RankExpression) {
@@ -488,7 +488,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取高级排序参数，具体参见高级排序说明
+     * Get 高级排序参数，具体参见高级排序说明 
      * @return MatchValue 高级排序参数，具体参见高级排序说明
      */
     public String getMatchValue() {
@@ -496,7 +496,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置高级排序参数，具体参见高级排序说明
+     * Set 高级排序参数，具体参见高级排序说明
      * @param MatchValue 高级排序参数，具体参见高级排序说明
      */
     public void setMatchValue(String MatchValue) {
@@ -504,7 +504,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取经度信息
+     * Get 经度信息 
      * @return Longitude 经度信息
      */
     public Float getLongitude() {
@@ -512,7 +512,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置经度信息
+     * Set 经度信息
      * @param Longitude 经度信息
      */
     public void setLongitude(Float Longitude) {
@@ -520,7 +520,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取纬度信息
+     * Get 纬度信息 
      * @return Latitude 纬度信息
      */
     public Float getLatitude() {
@@ -528,7 +528,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置纬度信息
+     * Set 纬度信息
      * @param Latitude 纬度信息
      */
     public void setLatitude(Float Latitude) {
@@ -536,7 +536,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分类过滤并集
+     * Get 分类过滤并集 
      * @return MultiFilter 分类过滤并集
      */
     public String [] getMultiFilter() {
@@ -544,7 +544,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分类过滤并集
+     * Set 分类过滤并集
      * @param MultiFilter 分类过滤并集
      */
     public void setMultiFilter(String [] MultiFilter) {
@@ -552,7 +552,7 @@ public class DataSearchRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

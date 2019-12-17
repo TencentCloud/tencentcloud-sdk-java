@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushTask  extends AbstractModel{
+public class PushTask extends AbstractModel{
 
     /**
     * 预热任务 ID
@@ -71,7 +71,7 @@ global：全球
     private String Area;
 
     /**
-     * 获取预热任务 ID
+     * Get 预热任务 ID 
      * @return TaskId 预热任务 ID
      */
     public String getTaskId() {
@@ -79,7 +79,7 @@ global：全球
     }
 
     /**
-     * 设置预热任务 ID
+     * Set 预热任务 ID
      * @param TaskId 预热任务 ID
      */
     public void setTaskId(String TaskId) {
@@ -87,7 +87,7 @@ global：全球
     }
 
     /**
-     * 获取预热 URL
+     * Get 预热 URL 
      * @return Url 预热 URL
      */
     public String getUrl() {
@@ -95,7 +95,7 @@ global：全球
     }
 
     /**
-     * 设置预热 URL
+     * Set 预热 URL
      * @param Url 预热 URL
      */
     public void setUrl(String Url) {
@@ -103,10 +103,10 @@ global：全球
     }
 
     /**
-     * 获取预热任务状态
+     * Get 预热任务状态
 fail：预热失败
 done：预热成功
-process：预热中
+process：预热中 
      * @return Status 预热任务状态
 fail：预热失败
 done：预热成功
@@ -117,7 +117,7 @@ process：预热中
     }
 
     /**
-     * 设置预热任务状态
+     * Set 预热任务状态
 fail：预热失败
 done：预热成功
 process：预热中
@@ -131,7 +131,7 @@ process：预热中
     }
 
     /**
-     * 获取预热进度百分比
+     * Get 预热进度百分比 
      * @return Percent 预热进度百分比
      */
     public Integer getPercent() {
@@ -139,7 +139,7 @@ process：预热中
     }
 
     /**
-     * 设置预热进度百分比
+     * Set 预热进度百分比
      * @param Percent 预热进度百分比
      */
     public void setPercent(Integer Percent) {
@@ -147,7 +147,7 @@ process：预热中
     }
 
     /**
-     * 获取预热任务提交时间
+     * Get 预热任务提交时间 
      * @return CreateTime 预热任务提交时间
      */
     public String getCreateTime() {
@@ -155,7 +155,7 @@ process：预热中
     }
 
     /**
-     * 设置预热任务提交时间
+     * Set 预热任务提交时间
      * @param CreateTime 预热任务提交时间
      */
     public void setCreateTime(String CreateTime) {
@@ -163,10 +163,10 @@ process：预热中
     }
 
     /**
-     * 获取预热区域
+     * Get 预热区域
 mainland：境内
 overseas：境外
-global：全球
+global：全球 
      * @return Area 预热区域
 mainland：境内
 overseas：境外
@@ -177,7 +177,7 @@ global：全球
     }
 
     /**
-     * 设置预热区域
+     * Set 预热区域
 mainland：境内
 overseas：境外
 global：全球
@@ -191,7 +191,7 @@ global：全球
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

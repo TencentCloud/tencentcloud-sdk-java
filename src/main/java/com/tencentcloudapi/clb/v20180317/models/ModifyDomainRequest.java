@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDomainRequest  extends AbstractModel{
+public class ModifyDomainRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -51,7 +51,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     private String NewDomain;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -59,7 +59,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -67,7 +67,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器 ID
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
     public String getListenerId() {
@@ -75,7 +75,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器 ID
+     * Set 负载均衡监听器 ID
      * @param ListenerId 负载均衡监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -83,7 +83,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器下的某个旧域名。
+     * Get 监听器下的某个旧域名。 
      * @return Domain 监听器下的某个旧域名。
      */
     public String getDomain() {
@@ -91,7 +91,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器下的某个旧域名。
+     * Set 监听器下的某个旧域名。
      * @param Domain 监听器下的某个旧域名。
      */
     public void setDomain(String Domain) {
@@ -99,7 +99,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
+     * Get 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。 
      * @return NewDomain 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
      */
     public String getNewDomain() {
@@ -107,7 +107,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
+     * Set 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
      * @param NewDomain 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
      */
     public void setNewDomain(String NewDomain) {
@@ -115,7 +115,7 @@ public class ModifyDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

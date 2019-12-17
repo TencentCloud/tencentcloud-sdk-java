@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskDetail  extends AbstractModel{
+public class TaskDetail extends AbstractModel{
 
     /**
     * 错误码。
@@ -114,7 +114,7 @@ public class TaskDetail  extends AbstractModel{
     private String AsyncRequestId;
 
     /**
-     * 获取错误码。
+     * Get 错误码。 
      * @return Code 错误码。
      */
     public Integer getCode() {
@@ -122,7 +122,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置错误码。
+     * Set 错误码。
      * @param Code 错误码。
      */
     public void setCode(Integer Code) {
@@ -130,7 +130,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -138,7 +138,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -146,7 +146,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务 ID。
+     * Get 实例任务 ID。 
      * @return JobId 实例任务 ID。
      */
     public Integer getJobId() {
@@ -154,7 +154,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务 ID。
+     * Set 实例任务 ID。
      * @param JobId 实例任务 ID。
      */
     public void setJobId(Integer JobId) {
@@ -162,7 +162,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务进度。
+     * Get 实例任务进度。 
      * @return Progress 实例任务进度。
      */
     public Integer getProgress() {
@@ -170,7 +170,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务进度。
+     * Set 实例任务进度。
      * @param Progress 实例任务进度。
      */
     public void setProgress(Integer Progress) {
@@ -178,7 +178,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务状态，可能的值包括：
+     * Get 实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
 "RUNNING" - 运行中；
@@ -186,7 +186,7 @@ public class TaskDetail  extends AbstractModel{
 "FAILED" - 执行失败；
 "KILLED" - 已终止；
 "REMOVED" - 已删除；
-"PAUSED" - 已暂停。
+"PAUSED" - 已暂停。 
      * @return TaskStatus 实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
@@ -202,7 +202,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务状态，可能的值包括：
+     * Set 实例任务状态，可能的值包括：
 "UNDEFINED" - 未定义；
 "INITIAL" - 初始化；
 "RUNNING" - 运行中；
@@ -226,7 +226,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务类型，可能的值包括：
+     * Get 实例任务类型，可能的值包括：
 "ROLLBACK" - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
@@ -238,7 +238,7 @@ public class TaskDetail  extends AbstractModel{
 "BATCH ROLLBACK" - 数据库批量回档；
 "UPGRADE MASTER" - 主实例升级；
 "DROP TABLES" - 删除云数据库库表；
-"SWITCH DR TO MASTER" - 灾备实例提升为主。
+"SWITCH DR TO MASTER" - 灾备实例提升为主。 
      * @return TaskType 实例任务类型，可能的值包括：
 "ROLLBACK" - 数据库回档；
 "SQL OPERATION" - SQL操作；
@@ -258,7 +258,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务类型，可能的值包括：
+     * Set 实例任务类型，可能的值包括：
 "ROLLBACK" - 数据库回档；
 "SQL OPERATION" - SQL操作；
 "IMPORT DATA" - 数据导入；
@@ -290,7 +290,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务开始时间。
+     * Get 实例任务开始时间。 
      * @return StartTime 实例任务开始时间。
      */
     public String getStartTime() {
@@ -298,7 +298,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务开始时间。
+     * Set 实例任务开始时间。
      * @param StartTime 实例任务开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -306,7 +306,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例任务结束时间。
+     * Get 实例任务结束时间。 
      * @return EndTime 实例任务结束时间。
      */
     public String getEndTime() {
@@ -314,7 +314,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例任务结束时间。
+     * Set 实例任务结束时间。
      * @param EndTime 实例任务结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -322,8 +322,8 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务关联的实例 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceIds 任务关联的实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -332,7 +332,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置任务关联的实例 ID。
+     * Set 任务关联的实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 任务关联的实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -342,7 +342,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 获取异步任务的请求 ID。
+     * Get 异步任务的请求 ID。 
      * @return AsyncRequestId 异步任务的请求 ID。
      */
     public String getAsyncRequestId() {
@@ -350,7 +350,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务的请求 ID。
+     * Set 异步任务的请求 ID。
      * @param AsyncRequestId 异步任务的请求 ID。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
@@ -358,7 +358,7 @@ public class TaskDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

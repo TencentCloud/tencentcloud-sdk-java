@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SSLCertificate  extends AbstractModel{
+public class SSLCertificate extends AbstractModel{
 
     /**
     * 所属账户
@@ -231,8 +231,8 @@ public class SSLCertificate  extends AbstractModel{
     private String Cert;
 
     /**
-     * 获取所属账户
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 所属账户
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 所属账户
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -241,7 +241,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置所属账户
+     * Set 所属账户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 所属账户
 注意：此字段可能返回 null，表示取不到有效值。
@@ -251,8 +251,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -261,7 +261,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,8 +271,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书来源：trustasia = 亚洲诚信， upload = 用户上传
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书来源：trustasia = 亚洲诚信， upload = 用户上传
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return From 证书来源：trustasia = 亚洲诚信， upload = 用户上传
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -281,7 +281,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书来源：trustasia = 亚洲诚信， upload = 用户上传
+     * Set 证书来源：trustasia = 亚洲诚信， upload = 用户上传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param From 证书来源：trustasia = 亚洲诚信， upload = 用户上传
 注意：此字段可能返回 null，表示取不到有效值。
@@ -291,8 +291,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 证书类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -301,7 +301,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型
+     * Set 证书类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 证书类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,8 +311,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertType 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,7 +321,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
+     * Set 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertType 证书类型（目前支持：CA = 客户端证书，SVR = 服务器证书）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,8 +331,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书办法者名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书办法者名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProductZhName 证书办法者名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -341,7 +341,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书办法者名称
+     * Set 证书办法者名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductZhName 证书办法者名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -351,8 +351,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取主域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主域名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 主域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -361,7 +361,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置主域名
+     * Set 主域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 主域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -371,8 +371,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Alias 别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -381,7 +381,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置别名
+     * Set 别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -391,8 +391,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -401,7 +401,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
+     * Set 状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态值 0：审核中，1：已通过，2：审核失败，3：已过期，4：已添加云解析记录，5：OV/EV 证书，待提交资料，6：订单取消中，7：已取消，8：已提交资料， 待上传确认函
 注意：此字段可能返回 null，表示取不到有效值。
@@ -411,8 +411,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VulnerabilityStatus 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -421,7 +421,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
+     * Set 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VulnerabilityStatus 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
 注意：此字段可能返回 null，表示取不到有效值。
@@ -431,8 +431,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取状态信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StatusMsg 状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -441,7 +441,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置状态信息
+     * Set 状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusMsg 状态信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -451,8 +451,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取验证类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 验证类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VerifyType 验证类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -461,7 +461,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置验证类型
+     * Set 验证类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifyType 验证类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -471,8 +471,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书生效时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书生效时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertBeginTime 证书生效时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -481,7 +481,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书生效时间
+     * Set 证书生效时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertBeginTime 证书生效时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -491,8 +491,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertEndTime 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -501,7 +501,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书过期时间
+     * Set 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertEndTime 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -511,8 +511,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ValidityPeriod 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -521,7 +521,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书过期时间
+     * Set 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityPeriod 证书过期时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -531,8 +531,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InsertTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -541,7 +541,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InsertTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -551,8 +551,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectInfo 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -561,7 +561,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
+     * Set 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectInfo 项目信息，ProjectId：项目ID，OwnerUin：项目所属的 uin（默认项目为0），Name：项目名称，CreatorUin：创建项目的 uin，CreateTime：项目创建时间，Info：项目说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -571,8 +571,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 证书Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -581,7 +581,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书Id
+     * Set 证书Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 证书Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -591,8 +591,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书包含的多个域名（包含主域名）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书包含的多个域名（包含主域名）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubjectAltName 证书包含的多个域名（包含主域名）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -601,7 +601,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书包含的多个域名（包含主域名）
+     * Set 证书包含的多个域名（包含主域名）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubjectAltName 证书包含的多个域名（包含主域名）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -611,8 +611,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书类型名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TypeName 证书类型名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -621,7 +621,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型名称
+     * Set 证书类型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeName 证书类型名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -631,8 +631,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取状态名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 状态名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StatusName 状态名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -641,7 +641,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置状态名称
+     * Set 状态名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusName 状态名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -651,8 +651,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取是否为 VIP 客户
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否为 VIP 客户
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsVip 是否为 VIP 客户
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -661,7 +661,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置是否为 VIP 客户
+     * Set 是否为 VIP 客户
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVip 是否为 VIP 客户
 注意：此字段可能返回 null，表示取不到有效值。
@@ -671,8 +671,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取是否我 DV 版证书
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否我 DV 版证书
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsDv 是否我 DV 版证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -681,7 +681,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置是否我 DV 版证书
+     * Set 是否我 DV 版证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDv 是否我 DV 版证书
 注意：此字段可能返回 null，表示取不到有效值。
@@ -691,8 +691,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取是否为泛域名证书
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否为泛域名证书
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsWildcard 是否为泛域名证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -701,7 +701,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置是否为泛域名证书
+     * Set 是否为泛域名证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsWildcard 是否为泛域名证书
 注意：此字段可能返回 null，表示取不到有效值。
@@ -711,8 +711,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用了漏洞扫描功能
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否启用了漏洞扫描功能
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsVulnerability 是否启用了漏洞扫描功能
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -721,7 +721,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用了漏洞扫描功能
+     * Set 是否启用了漏洞扫描功能
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVulnerability 是否启用了漏洞扫描功能
 注意：此字段可能返回 null，表示取不到有效值。
@@ -731,8 +731,8 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 获取证书
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cert 证书
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -741,7 +741,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 设置证书
+     * Set 证书
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cert 证书
 注意：此字段可能返回 null，表示取不到有效值。
@@ -751,7 +751,7 @@ public class SSLCertificate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);

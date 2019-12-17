@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SlowLogData  extends AbstractModel{
+public class SlowLogData extends AbstractModel{
 
     /**
     * 语句校验和，用于查询详情
@@ -150,7 +150,7 @@ public class SlowLogData  extends AbstractModel{
     private String ExampleSql;
 
     /**
-     * 获取语句校验和，用于查询详情
+     * Get 语句校验和，用于查询详情 
      * @return CheckSum 语句校验和，用于查询详情
      */
     public String getCheckSum() {
@@ -158,7 +158,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置语句校验和，用于查询详情
+     * Set 语句校验和，用于查询详情
      * @param CheckSum 语句校验和，用于查询详情
      */
     public void setCheckSum(String CheckSum) {
@@ -166,7 +166,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称
+     * Get 数据库名称 
      * @return Db 数据库名称
      */
     public String getDb() {
@@ -174,7 +174,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称
+     * Set 数据库名称
      * @param Db 数据库名称
      */
     public void setDb(String Db) {
@@ -182,7 +182,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取抽象的SQL语句
+     * Get 抽象的SQL语句 
      * @return FingerPrint 抽象的SQL语句
      */
     public String getFingerPrint() {
@@ -190,7 +190,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置抽象的SQL语句
+     * Set 抽象的SQL语句
      * @param FingerPrint 抽象的SQL语句
      */
     public void setFingerPrint(String FingerPrint) {
@@ -198,7 +198,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取平均的锁时间
+     * Get 平均的锁时间 
      * @return LockTimeAvg 平均的锁时间
      */
     public String getLockTimeAvg() {
@@ -206,7 +206,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置平均的锁时间
+     * Set 平均的锁时间
      * @param LockTimeAvg 平均的锁时间
      */
     public void setLockTimeAvg(String LockTimeAvg) {
@@ -214,7 +214,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取最大锁时间
+     * Get 最大锁时间 
      * @return LockTimeMax 最大锁时间
      */
     public String getLockTimeMax() {
@@ -222,7 +222,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置最大锁时间
+     * Set 最大锁时间
      * @param LockTimeMax 最大锁时间
      */
     public void setLockTimeMax(String LockTimeMax) {
@@ -230,7 +230,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取最小锁时间
+     * Get 最小锁时间 
      * @return LockTimeMin 最小锁时间
      */
     public String getLockTimeMin() {
@@ -238,7 +238,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置最小锁时间
+     * Set 最小锁时间
      * @param LockTimeMin 最小锁时间
      */
     public void setLockTimeMin(String LockTimeMin) {
@@ -246,7 +246,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取锁时间总和
+     * Get 锁时间总和 
      * @return LockTimeSum 锁时间总和
      */
     public String getLockTimeSum() {
@@ -254,7 +254,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置锁时间总和
+     * Set 锁时间总和
      * @param LockTimeSum 锁时间总和
      */
     public void setLockTimeSum(String LockTimeSum) {
@@ -262,7 +262,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取查询次数
+     * Get 查询次数 
      * @return QueryCount 查询次数
      */
     public String getQueryCount() {
@@ -270,7 +270,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置查询次数
+     * Set 查询次数
      * @param QueryCount 查询次数
      */
     public void setQueryCount(String QueryCount) {
@@ -278,7 +278,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取平均查询时间
+     * Get 平均查询时间 
      * @return QueryTimeAvg 平均查询时间
      */
     public String getQueryTimeAvg() {
@@ -286,7 +286,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置平均查询时间
+     * Set 平均查询时间
      * @param QueryTimeAvg 平均查询时间
      */
     public void setQueryTimeAvg(String QueryTimeAvg) {
@@ -294,7 +294,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取最大查询时间
+     * Get 最大查询时间 
      * @return QueryTimeMax 最大查询时间
      */
     public String getQueryTimeMax() {
@@ -302,7 +302,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置最大查询时间
+     * Set 最大查询时间
      * @param QueryTimeMax 最大查询时间
      */
     public void setQueryTimeMax(String QueryTimeMax) {
@@ -310,7 +310,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取最小查询时间
+     * Get 最小查询时间 
      * @return QueryTimeMin 最小查询时间
      */
     public String getQueryTimeMin() {
@@ -318,7 +318,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置最小查询时间
+     * Set 最小查询时间
      * @param QueryTimeMin 最小查询时间
      */
     public void setQueryTimeMin(String QueryTimeMin) {
@@ -326,7 +326,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取查询时间总和
+     * Get 查询时间总和 
      * @return QueryTimeSum 查询时间总和
      */
     public String getQueryTimeSum() {
@@ -334,7 +334,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置查询时间总和
+     * Set 查询时间总和
      * @param QueryTimeSum 查询时间总和
      */
     public void setQueryTimeSum(String QueryTimeSum) {
@@ -342,7 +342,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取扫描行数
+     * Get 扫描行数 
      * @return RowsExaminedSum 扫描行数
      */
     public String getRowsExaminedSum() {
@@ -350,7 +350,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置扫描行数
+     * Set 扫描行数
      * @param RowsExaminedSum 扫描行数
      */
     public void setRowsExaminedSum(String RowsExaminedSum) {
@@ -358,7 +358,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取发送行数
+     * Get 发送行数 
      * @return RowsSentSum 发送行数
      */
     public String getRowsSentSum() {
@@ -366,7 +366,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置发送行数
+     * Set 发送行数
      * @param RowsSentSum 发送行数
      */
     public void setRowsSentSum(String RowsSentSum) {
@@ -374,7 +374,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取最后执行时间
+     * Get 最后执行时间 
      * @return TsMax 最后执行时间
      */
     public String getTsMax() {
@@ -382,7 +382,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置最后执行时间
+     * Set 最后执行时间
      * @param TsMax 最后执行时间
      */
     public void setTsMax(String TsMax) {
@@ -390,7 +390,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取首次执行时间
+     * Get 首次执行时间 
      * @return TsMin 首次执行时间
      */
     public String getTsMin() {
@@ -398,7 +398,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置首次执行时间
+     * Set 首次执行时间
      * @param TsMin 首次执行时间
      */
     public void setTsMin(String TsMin) {
@@ -406,7 +406,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取帐号
+     * Get 帐号 
      * @return User 帐号
      */
     public String getUser() {
@@ -414,7 +414,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置帐号
+     * Set 帐号
      * @param User 帐号
      */
     public void setUser(String User) {
@@ -422,8 +422,8 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 获取样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 样例Sql
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExampleSql 样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -432,7 +432,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 设置样例Sql
+     * Set 样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExampleSql 样例Sql
 注意：此字段可能返回 null，表示取不到有效值。
@@ -442,7 +442,7 @@ public class SlowLogData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CheckSum", this.CheckSum);

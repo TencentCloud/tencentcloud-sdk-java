@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountPrivilegesResponse  extends AbstractModel{
+public class DescribeAccountPrivilegesResponse extends AbstractModel{
 
     /**
     * 全局权限数组。
@@ -58,7 +58,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取全局权限数组。
+     * Get 全局权限数组。 
      * @return GlobalPrivileges 全局权限数组。
      */
     public String [] getGlobalPrivileges() {
@@ -66,7 +66,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置全局权限数组。
+     * Set 全局权限数组。
      * @param GlobalPrivileges 全局权限数组。
      */
     public void setGlobalPrivileges(String [] GlobalPrivileges) {
@@ -74,7 +74,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库权限数组。
+     * Get 数据库权限数组。 
      * @return DatabasePrivileges 数据库权限数组。
      */
     public DatabasePrivilege [] getDatabasePrivileges() {
@@ -82,7 +82,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库权限数组。
+     * Set 数据库权限数组。
      * @param DatabasePrivileges 数据库权限数组。
      */
     public void setDatabasePrivileges(DatabasePrivilege [] DatabasePrivileges) {
@@ -90,7 +90,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库中的表权限数组。
+     * Get 数据库中的表权限数组。 
      * @return TablePrivileges 数据库中的表权限数组。
      */
     public TablePrivilege [] getTablePrivileges() {
@@ -98,7 +98,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库中的表权限数组。
+     * Set 数据库中的表权限数组。
      * @param TablePrivileges 数据库中的表权限数组。
      */
     public void setTablePrivileges(TablePrivilege [] TablePrivileges) {
@@ -106,7 +106,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库表中的列权限数组。
+     * Get 数据库表中的列权限数组。 
      * @return ColumnPrivileges 数据库表中的列权限数组。
      */
     public ColumnPrivilege [] getColumnPrivileges() {
@@ -114,7 +114,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库表中的列权限数组。
+     * Set 数据库表中的列权限数组。
      * @param ColumnPrivileges 数据库表中的列权限数组。
      */
     public void setColumnPrivileges(ColumnPrivilege [] ColumnPrivileges) {
@@ -122,7 +122,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "GlobalPrivileges.", this.GlobalPrivileges);

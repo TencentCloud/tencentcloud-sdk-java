@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskType  extends AbstractModel{
+public class TaskType extends AbstractModel{
 
     /**
     * 故障类ID
@@ -44,7 +44,7 @@ public class TaskType  extends AbstractModel{
     private String TaskSubType;
 
     /**
-     * 获取故障类ID
+     * Get 故障类ID 
      * @return TypeId 故障类ID
      */
     public Integer getTypeId() {
@@ -52,7 +52,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 设置故障类ID
+     * Set 故障类ID
      * @param TypeId 故障类ID
      */
     public void setTypeId(Integer TypeId) {
@@ -60,7 +60,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 获取故障类中文名
+     * Get 故障类中文名 
      * @return TypeName 故障类中文名
      */
     public String getTypeName() {
@@ -68,7 +68,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 设置故障类中文名
+     * Set 故障类中文名
      * @param TypeName 故障类中文名
      */
     public void setTypeName(String TypeName) {
@@ -76,7 +76,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 获取故障类型父类
+     * Get 故障类型父类 
      * @return TaskSubType 故障类型父类
      */
     public String getTaskSubType() {
@@ -84,7 +84,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 设置故障类型父类
+     * Set 故障类型父类
      * @param TaskSubType 故障类型父类
      */
     public void setTaskSubType(String TaskSubType) {
@@ -92,7 +92,7 @@ public class TaskType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);

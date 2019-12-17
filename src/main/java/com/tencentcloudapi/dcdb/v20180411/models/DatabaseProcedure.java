@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabaseProcedure  extends AbstractModel{
+public class DatabaseProcedure extends AbstractModel{
 
     /**
     * 存储过程名称
@@ -30,7 +30,7 @@ public class DatabaseProcedure  extends AbstractModel{
     private String Proc;
 
     /**
-     * 获取存储过程名称
+     * Get 存储过程名称 
      * @return Proc 存储过程名称
      */
     public String getProc() {
@@ -38,7 +38,7 @@ public class DatabaseProcedure  extends AbstractModel{
     }
 
     /**
-     * 设置存储过程名称
+     * Set 存储过程名称
      * @param Proc 存储过程名称
      */
     public void setProc(String Proc) {
@@ -46,7 +46,7 @@ public class DatabaseProcedure  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Proc", this.Proc);

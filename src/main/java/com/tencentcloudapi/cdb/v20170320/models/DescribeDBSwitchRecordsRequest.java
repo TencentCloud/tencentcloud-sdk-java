@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
+public class DescribeDBSwitchRecordsRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -44,7 +44,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量。
+     * Get 分页偏移量。 
      * @return Offset 分页偏移量。
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量。
+     * Set 分页偏移量。
      * @param Offset 分页偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * Get 分页大小，默认值为 50，最小值为 1，最大值为 2000。 
      * @return Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * Set 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      * @param Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeDBSwitchRecordsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

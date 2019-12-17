@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceLogsRequest  extends AbstractModel{
+public class DescribeInstanceLogsRequest extends AbstractModel{
 
     /**
     * 集群实例ID
@@ -85,7 +85,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     private Integer OrderByType;
 
     /**
-     * 获取集群实例ID
+     * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
     public String getInstanceId() {
@@ -93,7 +93,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例ID
+     * Set 集群实例ID
      * @param InstanceId 集群实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -101,11 +101,11 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志类型，默认值为1
+     * Get 日志类型，默认值为1
 <li>1, 主日志</li>
 <li>2, 搜索慢日志</li>
 <li>3, 索引慢日志</li>
-<li>4, GC日志</li>
+<li>4, GC日志</li> 
      * @return LogType 日志类型，默认值为1
 <li>1, 主日志</li>
 <li>2, 搜索慢日志</li>
@@ -117,7 +117,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志类型，默认值为1
+     * Set 日志类型，默认值为1
 <li>1, 主日志</li>
 <li>2, 搜索慢日志</li>
 <li>3, 索引慢日志</li>
@@ -133,7 +133,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+     * Get 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等 
      * @return SearchKey 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
      */
     public String getSearchKey() {
@@ -141,7 +141,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
+     * Set 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
      * @param SearchKey 搜索词，支持LUCENE语法，如 level:WARN、ip:1.1.1.1、message:test-index等
      */
     public void setSearchKey(String SearchKey) {
@@ -149,7 +149,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * Get 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53 
      * @return StartTime 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public String getStartTime() {
@@ -157,7 +157,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * Set 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      * @param StartTime 日志开始时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public void setStartTime(String StartTime) {
@@ -165,7 +165,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * Get 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53 
      * @return EndTime 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public String getEndTime() {
@@ -173,7 +173,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
+     * Set 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      * @param EndTime 日志结束时间，格式为YYYY-MM-DD HH:MM:SS, 如2019-01-22 20:15:53
      */
     public void setEndTime(String EndTime) {
@@ -181,7 +181,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页起始值, 默认值为0
+     * Get 分页起始值, 默认值为0 
      * @return Offset 分页起始值, 默认值为0
      */
     public Integer getOffset() {
@@ -189,7 +189,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页起始值, 默认值为0
+     * Set 分页起始值, 默认值为0
      * @param Offset 分页起始值, 默认值为0
      */
     public void setOffset(Integer Offset) {
@@ -197,7 +197,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，默认值为100，最大值100
+     * Get 分页大小，默认值为100，最大值100 
      * @return Limit 分页大小，默认值为100，最大值100
      */
     public Integer getLimit() {
@@ -205,7 +205,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，默认值为100，最大值100
+     * Set 分页大小，默认值为100，最大值100
      * @param Limit 分页大小，默认值为100，最大值100
      */
     public void setLimit(Integer Limit) {
@@ -213,9 +213,9 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间排序方式，默认值为0
+     * Get 时间排序方式，默认值为0
 <li>0, 降序</li>
-<li>1, 升序</li>
+<li>1, 升序</li> 
      * @return OrderByType 时间排序方式，默认值为0
 <li>0, 降序</li>
 <li>1, 升序</li>
@@ -225,7 +225,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间排序方式，默认值为0
+     * Set 时间排序方式，默认值为0
 <li>0, 降序</li>
 <li>1, 升序</li>
      * @param OrderByType 时间排序方式，默认值为0
@@ -237,7 +237,7 @@ public class DescribeInstanceLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcedureTemplate  extends AbstractModel{
+public class ProcedureTemplate extends AbstractModel{
 
     /**
     * 任务流名字。
@@ -93,7 +93,7 @@ public class ProcedureTemplate  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取任务流名字。
+     * Get 任务流名字。 
      * @return Name 任务流名字。
      */
     public String getName() {
@@ -101,7 +101,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置任务流名字。
+     * Set 任务流名字。
      * @param Name 任务流名字。
      */
     public void setName(String Name) {
@@ -109,9 +109,9 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取任务流模板类型，取值范围：
+     * Get 任务流模板类型，取值范围：
 <li>Preset：系统预置任务流模板；</li>
-<li>Custom：用户自定义任务流模板。</li>
+<li>Custom：用户自定义任务流模板。</li> 
      * @return Type 任务流模板类型，取值范围：
 <li>Preset：系统预置任务流模板；</li>
 <li>Custom：用户自定义任务流模板。</li>
@@ -121,7 +121,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置任务流模板类型，取值范围：
+     * Set 任务流模板类型，取值范围：
 <li>Preset：系统预置任务流模板；</li>
 <li>Custom：用户自定义任务流模板。</li>
      * @param Type 任务流模板类型，取值范围：
@@ -133,8 +133,8 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频处理类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -143,7 +143,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理类型任务参数。
+     * Set 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTask 视频处理类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -153,8 +153,8 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取AI 智能内容审核类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI 智能内容审核类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiContentReviewTask AI 智能内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -163,7 +163,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置AI 智能内容审核类型任务参数。
+     * Set AI 智能内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTask AI 智能内容审核类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -173,8 +173,8 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取AI 智能内容分析类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI 智能内容分析类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiAnalysisTask AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -183,7 +183,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置AI 智能内容分析类型任务参数。
+     * Set AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTask AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -193,8 +193,8 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取AI 内容识别类型任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get AI 内容识别类型任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiRecognitionTask AI 内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -203,7 +203,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置AI 内容识别类型任务参数。
+     * Set AI 内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTask AI 内容识别类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -213,8 +213,8 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取微信小程序发布任务参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 微信小程序发布任务参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MiniProgramPublishTask 微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -223,7 +223,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置微信小程序发布任务参数。
+     * Set 微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniProgramPublishTask 微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -233,7 +233,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -241,7 +241,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -249,7 +249,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -257,7 +257,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -265,7 +265,7 @@ public class ProcedureTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

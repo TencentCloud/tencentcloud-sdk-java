@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateJobRequest  extends AbstractModel{
+public class UpdateJobRequest extends AbstractModel{
 
     /**
     * 任务 Id
@@ -44,7 +44,7 @@ public class UpdateJobRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取任务 Id
+     * Get 任务 Id 
      * @return JobId 任务 Id
      */
     public String getJobId() {
@@ -52,7 +52,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务 Id
+     * Set 任务 Id
      * @param JobId 任务 Id
      */
     public void setJobId(String JobId) {
@@ -60,7 +60,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务更新动作，支持：Cancel
+     * Get 任务更新动作，支持：Cancel 
      * @return JobAction 任务更新动作，支持：Cancel
      */
     public String getJobAction() {
@@ -68,7 +68,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务更新动作，支持：Cancel
+     * Set 任务更新动作，支持：Cancel
      * @param JobAction 任务更新动作，支持：Cancel
      */
     public void setJobAction(String JobAction) {
@@ -76,7 +76,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Description 备注
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Description 备注
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class UpdateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

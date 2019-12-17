@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBruteAttacksResponse  extends AbstractModel{
+public class DescribeBruteAttacksResponse extends AbstractModel{
 
     /**
     * 事件数量
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 暴力破解事件列表
@@ -44,23 +44,23 @@ public class DescribeBruteAttacksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取事件数量
+     * Get 事件数量 
      * @return TotalCount 事件数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置事件数量
+     * Set 事件数量
      * @param TotalCount 事件数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取暴力破解事件列表
+     * Get 暴力破解事件列表 
      * @return BruteAttacks 暴力破解事件列表
      */
     public BruteAttack [] getBruteAttacks() {
@@ -68,7 +68,7 @@ public class DescribeBruteAttacksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置暴力破解事件列表
+     * Set 暴力破解事件列表
      * @param BruteAttacks 暴力破解事件列表
      */
     public void setBruteAttacks(BruteAttack [] BruteAttacks) {
@@ -76,7 +76,7 @@ public class DescribeBruteAttacksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeBruteAttacksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeBruteAttacksResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

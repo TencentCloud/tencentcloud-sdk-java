@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
+public class UpdateCfsFileSystemPGroupRequest extends AbstractModel{
 
     /**
     * 权限组 ID
@@ -37,7 +37,7 @@ public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
     private String FileSystemId;
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -45,7 +45,7 @@ public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -53,7 +53,7 @@ public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统 ID
+     * Get 文件系统 ID 
      * @return FileSystemId 文件系统 ID
      */
     public String getFileSystemId() {
@@ -61,7 +61,7 @@ public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统 ID
+     * Set 文件系统 ID
      * @param FileSystemId 文件系统 ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -69,7 +69,7 @@ public class UpdateCfsFileSystemPGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

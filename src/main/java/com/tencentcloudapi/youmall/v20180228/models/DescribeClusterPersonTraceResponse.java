@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterPersonTraceResponse  extends AbstractModel{
+public class DescribeClusterPersonTraceResponse extends AbstractModel{
 
     /**
     * 卖场系统编码
@@ -58,7 +58,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取卖场系统编码
+     * Get 卖场系统编码 
      * @return MallId 卖场系统编码
      */
     public String getMallId() {
@@ -66,7 +66,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置卖场系统编码
+     * Set 卖场系统编码
      * @param MallId 卖场系统编码
      */
     public void setMallId(String MallId) {
@@ -74,7 +74,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取卖场用户编码
+     * Get 卖场用户编码 
      * @return MallCode 卖场用户编码
      */
     public String getMallCode() {
@@ -82,7 +82,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置卖场用户编码
+     * Set 卖场用户编码
      * @param MallCode 卖场用户编码
      */
     public void setMallCode(String MallCode) {
@@ -90,7 +90,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户编码
+     * Get 客户编码 
      * @return PersonId 客户编码
      */
     public String getPersonId() {
@@ -98,7 +98,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户编码
+     * Set 客户编码
      * @param PersonId 客户编码
      */
     public void setPersonId(String PersonId) {
@@ -106,7 +106,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹序列
+     * Get 轨迹序列 
      * @return TracePointSet 轨迹序列
      */
     public DailyTracePoint [] getTracePointSet() {
@@ -114,7 +114,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹序列
+     * Set 轨迹序列
      * @param TracePointSet 轨迹序列
      */
     public void setTracePointSet(DailyTracePoint [] TracePointSet) {
@@ -122,7 +122,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeClusterPersonTraceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallId", this.MallId);

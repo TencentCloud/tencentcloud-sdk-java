@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicesResponse  extends AbstractModel{
+public class DescribeDevicesResponse extends AbstractModel{
 
     /**
     * 设备总数
@@ -44,7 +44,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取设备总数
+     * Get 设备总数 
      * @return TotalCount 设备总数
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备总数
+     * Set 设备总数
      * @param TotalCount 设备总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备详细信息列表
+     * Get 设备详细信息列表 
      * @return Devices 设备详细信息列表
      */
     public DeviceInfo [] getDevices() {
@@ -68,7 +68,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备详细信息列表
+     * Set 设备详细信息列表
      * @param Devices 设备详细信息列表
      */
     public void setDevices(DeviceInfo [] Devices) {
@@ -76,7 +76,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDevicesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

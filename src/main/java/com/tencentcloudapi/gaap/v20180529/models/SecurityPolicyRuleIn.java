@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityPolicyRuleIn  extends AbstractModel{
+public class SecurityPolicyRuleIn extends AbstractModel{
 
     /**
     * 请求来源IP或IP段。
@@ -62,7 +62,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     private String DestPortRange;
 
     /**
-     * 获取请求来源IP或IP段。
+     * Get 请求来源IP或IP段。 
      * @return SourceCidr 请求来源IP或IP段。
      */
     public String getSourceCidr() {
@@ -70,7 +70,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 设置请求来源IP或IP段。
+     * Set 请求来源IP或IP段。
      * @param SourceCidr 请求来源IP或IP段。
      */
     public void setSourceCidr(String SourceCidr) {
@@ -78,7 +78,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 获取策略：允许（ACCEPT）或拒绝（DROP）
+     * Get 策略：允许（ACCEPT）或拒绝（DROP） 
      * @return Action 策略：允许（ACCEPT）或拒绝（DROP）
      */
     public String getAction() {
@@ -86,7 +86,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 设置策略：允许（ACCEPT）或拒绝（DROP）
+     * Set 策略：允许（ACCEPT）或拒绝（DROP）
      * @param Action 策略：允许（ACCEPT）或拒绝（DROP）
      */
     public void setAction(String Action) {
@@ -94,7 +94,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 获取规则别名
+     * Get 规则别名 
      * @return AliasName 规则别名
      */
     public String getAliasName() {
@@ -102,7 +102,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 设置规则别名
+     * Set 规则别名
      * @param AliasName 规则别名
      */
     public void setAliasName(String AliasName) {
@@ -110,7 +110,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 获取协议：TCP或UDP，ALL表示所有协议
+     * Get 协议：TCP或UDP，ALL表示所有协议 
      * @return Protocol 协议：TCP或UDP，ALL表示所有协议
      */
     public String getProtocol() {
@@ -118,7 +118,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 设置协议：TCP或UDP，ALL表示所有协议
+     * Set 协议：TCP或UDP，ALL表示所有协议
      * @param Protocol 协议：TCP或UDP，ALL表示所有协议
      */
     public void setProtocol(String Protocol) {
@@ -126,11 +126,11 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口，填写格式举例：
+     * Get 目标端口，填写格式举例：
 单个端口: 80
 多个端口: 80,443
 连续端口: 3306-20000
-所有端口: ALL
+所有端口: ALL 
      * @return DestPortRange 目标端口，填写格式举例：
 单个端口: 80
 多个端口: 80,443
@@ -142,7 +142,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口，填写格式举例：
+     * Set 目标端口，填写格式举例：
 单个端口: 80
 多个端口: 80,443
 连续端口: 3306-20000
@@ -158,7 +158,7 @@ public class SecurityPolicyRuleIn  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceCidr", this.SourceCidr);

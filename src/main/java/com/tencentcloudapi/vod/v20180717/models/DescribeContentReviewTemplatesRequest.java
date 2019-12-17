@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
+public class DescribeContentReviewTemplatesRequest extends AbstractModel{
 
     /**
     * 内容审核模板唯一标识过滤条件，数组长度限制：100。
@@ -51,7 +51,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * Get 内容审核模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
@@ -59,7 +59,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核模板唯一标识过滤条件，数组长度限制：100。
+     * Set 内容审核模板唯一标识过滤条件，数组长度限制：100。
      * @param Definitions 内容审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
@@ -67,7 +67,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -75,7 +75,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -83,7 +83,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：10，最大值：100。
+     * Get 返回记录条数，默认值：10，最大值：100。 
      * @return Limit 返回记录条数，默认值：10，最大值：100。
      */
     public Long getLimit() {
@@ -91,7 +91,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：10，最大值：100。
+     * Set 返回记录条数，默认值：10，最大值：100。
      * @param Limit 返回记录条数，默认值：10，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -99,7 +99,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -107,7 +107,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -115,7 +115,7 @@ public class DescribeContentReviewTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);

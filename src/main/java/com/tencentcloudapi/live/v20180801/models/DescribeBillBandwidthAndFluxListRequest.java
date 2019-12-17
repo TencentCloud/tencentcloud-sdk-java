@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillBandwidthAndFluxListRequest  extends AbstractModel{
+public class DescribeBillBandwidthAndFluxListRequest extends AbstractModel{
 
     /**
     * 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -65,7 +65,7 @@ Oversea：则查询国外数据。
     private Integer Granularity;
 
     /**
-     * 获取起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getStartTime() {
@@ -73,7 +73,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 设置起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setStartTime(String StartTime) {
@@ -81,7 +81,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 获取结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      */
     public String getEndTime() {
@@ -89,7 +89,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 设置结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS，起始和结束时间跨度不支持超过31天。
      */
     public void setEndTime(String EndTime) {
@@ -97,7 +97,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 获取直播播放域名，若不填，表示总体数据。
+     * Get 直播播放域名，若不填，表示总体数据。 
      * @return PlayDomains 直播播放域名，若不填，表示总体数据。
      */
     public String [] getPlayDomains() {
@@ -105,7 +105,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 设置直播播放域名，若不填，表示总体数据。
+     * Set 直播播放域名，若不填，表示总体数据。
      * @param PlayDomains 直播播放域名，若不填，表示总体数据。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -113,10 +113,10 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 获取可选值：
+     * Get 可选值：
 Mainland：查询国内数据，
 Oversea：则查询国外数据。
-默认：查询国内+国外的数据。
+默认：查询国内+国外的数据。 
      * @return MainlandOrOversea 可选值：
 Mainland：查询国内数据，
 Oversea：则查询国外数据。
@@ -127,7 +127,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 设置可选值：
+     * Set 可选值：
 Mainland：查询国内数据，
 Oversea：则查询国外数据。
 默认：查询国内+国外的数据。
@@ -141,11 +141,11 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 获取数据粒度，支持如下粒度：
+     * Get 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
-默认值：5。
+默认值：5。 
      * @return Granularity 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
@@ -157,7 +157,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 设置数据粒度，支持如下粒度：
+     * Set 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
 1440：天粒度（跨度不支持超过一个月）。
@@ -173,7 +173,7 @@ Oversea：则查询国外数据。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

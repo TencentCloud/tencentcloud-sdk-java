@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteConflictsRequest  extends AbstractModel{
+public class DescribeRouteConflictsRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -37,7 +37,7 @@ public class DescribeRouteConflictsRequest  extends AbstractModel{
     private String [] DestinationCidrBlocks;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -45,7 +45,7 @@ public class DescribeRouteConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -53,7 +53,7 @@ public class DescribeRouteConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要检查的与之冲突的目的端列表
+     * Get 要检查的与之冲突的目的端列表 
      * @return DestinationCidrBlocks 要检查的与之冲突的目的端列表
      */
     public String [] getDestinationCidrBlocks() {
@@ -61,7 +61,7 @@ public class DescribeRouteConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要检查的与之冲突的目的端列表
+     * Set 要检查的与之冲突的目的端列表
      * @param DestinationCidrBlocks 要检查的与之冲突的目的端列表
      */
     public void setDestinationCidrBlocks(String [] DestinationCidrBlocks) {
@@ -69,7 +69,7 @@ public class DescribeRouteConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

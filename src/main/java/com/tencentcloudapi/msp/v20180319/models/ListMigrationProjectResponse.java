@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListMigrationProjectResponse  extends AbstractModel{
+public class ListMigrationProjectResponse extends AbstractModel{
 
     /**
     * 项目列表
@@ -44,7 +44,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取项目列表
+     * Get 项目列表 
      * @return Projects 项目列表
      */
     public Project [] getProjects() {
@@ -52,7 +52,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置项目列表
+     * Set 项目列表
      * @param Projects 项目列表
      */
     public void setProjects(Project [] Projects) {
@@ -60,7 +60,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 获取项目总数
+     * Get 项目总数 
      * @return TotalCount 项目总数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置项目总数
+     * Set 项目总数
      * @param TotalCount 项目总数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ListMigrationProjectResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Projects.", this.Projects);

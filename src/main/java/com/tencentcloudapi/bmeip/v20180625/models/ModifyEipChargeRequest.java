@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEipChargeRequest  extends AbstractModel{
+public class ModifyEipChargeRequest extends AbstractModel{
 
     /**
     * EIP计费方式，flow-流量计费；bandwidth-带宽计费
@@ -44,7 +44,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     private Integer Bandwidth;
 
     /**
-     * 获取EIP计费方式，flow-流量计费；bandwidth-带宽计费
+     * Get EIP计费方式，flow-流量计费；bandwidth-带宽计费 
      * @return PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
      */
     public String getPayMode() {
@@ -52,7 +52,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置EIP计费方式，flow-流量计费；bandwidth-带宽计费
+     * Set EIP计费方式，flow-流量计费；bandwidth-带宽计费
      * @param PayMode EIP计费方式，flow-流量计费；bandwidth-带宽计费
      */
     public void setPayMode(String PayMode) {
@@ -60,7 +60,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Eip实例ID列表
+     * Get Eip实例ID列表 
      * @return EipIds Eip实例ID列表
      */
     public String [] getEipIds() {
@@ -68,7 +68,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID列表
+     * Set Eip实例ID列表
      * @param EipIds Eip实例ID列表
      */
     public void setEipIds(String [] EipIds) {
@@ -76,7 +76,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽设定值（只在带宽计费时生效）
+     * Get 带宽设定值（只在带宽计费时生效） 
      * @return Bandwidth 带宽设定值（只在带宽计费时生效）
      */
     public Integer getBandwidth() {
@@ -84,7 +84,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽设定值（只在带宽计费时生效）
+     * Set 带宽设定值（只在带宽计费时生效）
      * @param Bandwidth 带宽设定值（只在带宽计费时生效）
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -92,7 +92,7 @@ public class ModifyEipChargeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);

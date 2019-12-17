@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
+public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel{
 
     /**
     * 识别片段置信度。取值：0~100。
@@ -51,7 +51,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     private String Text;
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -59,7 +59,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -67,7 +67,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段起始的偏移时间，单位：秒。
+     * Get 识别片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -75,7 +75,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的偏移时间，单位：秒。
+     * Set 识别片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -83,7 +83,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的偏移时间，单位：秒。
+     * Get 识别片段终止的偏移时间，单位：秒。 
      * @return EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -91,7 +91,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的偏移时间，单位：秒。
+     * Set 识别片段终止的偏移时间，单位：秒。
      * @param EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -99,7 +99,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取识别文本。
+     * Get 识别文本。 
      * @return Text 识别文本。
      */
     public String getText() {
@@ -107,7 +107,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置识别文本。
+     * Set 识别文本。
      * @param Text 识别文本。
      */
     public void setText(String Text) {
@@ -115,7 +115,7 @@ public class AiRecognitionTaskAsrFullTextSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

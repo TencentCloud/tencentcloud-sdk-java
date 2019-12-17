@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HeadTailConfigureInfo  extends AbstractModel{
+public class HeadTailConfigureInfo extends AbstractModel{
 
     /**
     * 视频片头片尾识别任务开关，可选值：
@@ -32,9 +32,9 @@ public class HeadTailConfigureInfo  extends AbstractModel{
     private String Switch;
 
     /**
-     * 获取视频片头片尾识别任务开关，可选值：
+     * Get 视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
-<li>OFF：关闭智能视频片头片尾识别任务。</li>
+<li>OFF：关闭智能视频片头片尾识别任务。</li> 
      * @return Switch 视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
 <li>OFF：关闭智能视频片头片尾识别任务。</li>
@@ -44,7 +44,7 @@ public class HeadTailConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频片头片尾识别任务开关，可选值：
+     * Set 视频片头片尾识别任务开关，可选值：
 <li>ON：开启智能视频片头片尾识别任务；</li>
 <li>OFF：关闭智能视频片头片尾识别任务。</li>
      * @param Switch 视频片头片尾识别任务开关，可选值：
@@ -56,7 +56,7 @@ public class HeadTailConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

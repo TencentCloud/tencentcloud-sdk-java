@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyL7ListenerRequest  extends AbstractModel{
+public class ModifyL7ListenerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -107,7 +107,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     private Integer Bandwidth;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -115,7 +115,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -123,7 +123,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -131,7 +131,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -139,7 +139,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器名称。
+     * Get 七层监听器名称。 
      * @return ListenerName 七层监听器名称。
      */
     public String getListenerName() {
@@ -147,7 +147,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器名称。
+     * Set 七层监听器名称。
      * @param ListenerName 七层监听器名称。
      */
     public void setListenerName(String ListenerName) {
@@ -155,7 +155,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Get 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。 
      * @return SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public Integer getSslMode() {
@@ -163,7 +163,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
+     * Set 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      * @param SslMode 认证方式：0（不认证，用于http），1（单向认证，用于https），2（双向认证，用于https）。
      */
     public void setSslMode(Integer SslMode) {
@@ -171,7 +171,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书ID。
+     * Get 服务端证书ID。 
      * @return CertId 服务端证书ID。
      */
     public String getCertId() {
@@ -179,7 +179,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书ID。
+     * Set 服务端证书ID。
      * @param CertId 服务端证书ID。
      */
     public void setCertId(String CertId) {
@@ -187,7 +187,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书名称。
+     * Get 服务端证书名称。 
      * @return CertName 服务端证书名称。
      */
     public String getCertName() {
@@ -195,7 +195,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书名称。
+     * Set 服务端证书名称。
      * @param CertName 服务端证书名称。
      */
     public void setCertName(String CertName) {
@@ -203,7 +203,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书内容。
+     * Get 服务端证书内容。 
      * @return CertContent 服务端证书内容。
      */
     public String getCertContent() {
@@ -211,7 +211,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书内容。
+     * Set 服务端证书内容。
      * @param CertContent 服务端证书内容。
      */
     public void setCertContent(String CertContent) {
@@ -219,7 +219,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务端证书密钥。
+     * Get 服务端证书密钥。 
      * @return CertKey 服务端证书密钥。
      */
     public String getCertKey() {
@@ -227,7 +227,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务端证书密钥。
+     * Set 服务端证书密钥。
      * @param CertKey 服务端证书密钥。
      */
     public void setCertKey(String CertKey) {
@@ -235,7 +235,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书ID。
+     * Get 客户端证书ID。 
      * @return CertCaId 客户端证书ID。
      */
     public String getCertCaId() {
@@ -243,7 +243,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书ID。
+     * Set 客户端证书ID。
      * @param CertCaId 客户端证书ID。
      */
     public void setCertCaId(String CertCaId) {
@@ -251,7 +251,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书名称。
+     * Get 客户端证书名称。 
      * @return CertCaName 客户端证书名称。
      */
     public String getCertCaName() {
@@ -259,7 +259,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书名称。
+     * Set 客户端证书名称。
      * @param CertCaName 客户端证书名称。
      */
     public void setCertCaName(String CertCaName) {
@@ -267,7 +267,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端证书内容。
+     * Get 客户端证书内容。 
      * @return CertCaContent 客户端证书内容。
      */
     public String getCertCaContent() {
@@ -275,7 +275,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端证书内容。
+     * Set 客户端证书内容。
      * @param CertCaContent 客户端证书内容。
      */
     public void setCertCaContent(String CertCaContent) {
@@ -283,7 +283,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
+     * Get 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。 
      * @return Bandwidth 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      */
     public Integer getBandwidth() {
@@ -291,7 +291,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
+     * Set 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      * @param Bandwidth 计费模式为按固定带宽方式时监听器的限速值，可选值：0-1000，单位：Mbps。
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -299,7 +299,7 @@ public class ModifyL7ListenerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

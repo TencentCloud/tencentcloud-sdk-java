@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAnimatedGraphicsItem  extends AbstractModel{
+public class MediaAnimatedGraphicsItem extends AbstractModel{
 
     /**
     * 转动图文件的存储位置。
@@ -100,7 +100,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-     * 获取转动图文件的存储位置。
+     * Get 转动图文件的存储位置。 
      * @return Storage 转动图文件的存储位置。
      */
     public TaskOutputStorage getStorage() {
@@ -108,7 +108,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置转动图文件的存储位置。
+     * Set 转动图文件的存储位置。
      * @param Storage 转动图文件的存储位置。
      */
     public void setStorage(TaskOutputStorage Storage) {
@@ -116,7 +116,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取转动图的文件路径。
+     * Get 转动图的文件路径。 
      * @return Path 转动图的文件路径。
      */
     public String getPath() {
@@ -124,7 +124,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置转动图的文件路径。
+     * Set 转动图的文件路径。
      * @param Path 转动图的文件路径。
      */
     public void setPath(String Path) {
@@ -132,7 +132,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
      * @return Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public Long getDefinition() {
@@ -140,7 +140,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      * @param Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/266/33481#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
      */
     public void setDefinition(Long Definition) {
@@ -148,7 +148,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图格式，如 gif。
+     * Get 动图格式，如 gif。 
      * @return Container 动图格式，如 gif。
      */
     public String getContainer() {
@@ -156,7 +156,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图格式，如 gif。
+     * Set 动图格式，如 gif。
      * @param Container 动图格式，如 gif。
      */
     public void setContainer(String Container) {
@@ -164,7 +164,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的高度，单位：px。
+     * Get 动图的高度，单位：px。 
      * @return Height 动图的高度，单位：px。
      */
     public Long getHeight() {
@@ -172,7 +172,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的高度，单位：px。
+     * Set 动图的高度，单位：px。
      * @param Height 动图的高度，单位：px。
      */
     public void setHeight(Long Height) {
@@ -180,7 +180,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的宽度，单位：px。
+     * Get 动图的宽度，单位：px。 
      * @return Width 动图的宽度，单位：px。
      */
     public Long getWidth() {
@@ -188,7 +188,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的宽度，单位：px。
+     * Set 动图的宽度，单位：px。
      * @param Width 动图的宽度，单位：px。
      */
     public void setWidth(Long Width) {
@@ -196,7 +196,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图码率，单位：bps。
+     * Get 动图码率，单位：bps。 
      * @return Bitrate 动图码率，单位：bps。
      */
     public Long getBitrate() {
@@ -204,7 +204,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图码率，单位：bps。
+     * Set 动图码率，单位：bps。
      * @param Bitrate 动图码率，单位：bps。
      */
     public void setBitrate(Long Bitrate) {
@@ -212,7 +212,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图大小，单位：字节。
+     * Get 动图大小，单位：字节。 
      * @return Size 动图大小，单位：字节。
      */
     public Long getSize() {
@@ -220,7 +220,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图大小，单位：字节。
+     * Set 动图大小，单位：字节。
      * @param Size 动图大小，单位：字节。
      */
     public void setSize(Long Size) {
@@ -228,7 +228,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图的md5值。
+     * Get 动图的md5值。 
      * @return Md5 动图的md5值。
      */
     public String getMd5() {
@@ -236,7 +236,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图的md5值。
+     * Set 动图的md5值。
      * @param Md5 动图的md5值。
      */
     public void setMd5(String Md5) {
@@ -244,7 +244,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的起始时间偏移，单位：秒。
+     * Get 动图在视频中的起始时间偏移，单位：秒。 
      * @return StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -252,7 +252,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的起始时间偏移，单位：秒。
+     * Set 动图在视频中的起始时间偏移，单位：秒。
      * @param StartTimeOffset 动图在视频中的起始时间偏移，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -260,7 +260,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 获取动图在视频中的结束时间偏移，单位：秒。
+     * Get 动图在视频中的结束时间偏移，单位：秒。 
      * @return EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -268,7 +268,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 设置动图在视频中的结束时间偏移，单位：秒。
+     * Set 动图在视频中的结束时间偏移，单位：秒。
      * @param EndTimeOffset 动图在视频中的结束时间偏移，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -276,7 +276,7 @@ public class MediaAnimatedGraphicsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Storage.", this.Storage);

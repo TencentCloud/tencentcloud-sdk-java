@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Deal  extends AbstractModel{
+public class Deal extends AbstractModel{
 
     /**
     * 订单号
@@ -135,7 +135,7 @@ public class Deal  extends AbstractModel{
     private Float TotalCost;
 
     /**
-     * 获取订单号
+     * Get 订单号 
      * @return OrderId 订单号
      */
     public String getOrderId() {
@@ -143,7 +143,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置订单号
+     * Set 订单号
      * @param OrderId 订单号
      */
     public void setOrderId(String OrderId) {
@@ -151,7 +151,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取订单状态
+     * Get 订单状态 
      * @return Status 订单状态
      */
     public Integer getStatus() {
@@ -159,7 +159,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置订单状态
+     * Set 订单状态
      * @param Status 订单状态
      */
     public void setStatus(Integer Status) {
@@ -167,7 +167,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取支付者
+     * Get 支付者 
      * @return Payer 支付者
      */
     public String getPayer() {
@@ -175,7 +175,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置支付者
+     * Set 支付者
      * @param Payer 支付者
      */
     public void setPayer(String Payer) {
@@ -183,7 +183,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -191,7 +191,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -199,7 +199,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取创建人
+     * Get 创建人 
      * @return Creator 创建人
      */
     public String getCreator() {
@@ -207,7 +207,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置创建人
+     * Set 创建人
      * @param Creator 创建人
      */
     public void setCreator(String Creator) {
@@ -215,7 +215,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取实际支付金额（分）
+     * Get 实际支付金额（分） 
      * @return RealTotalCost 实际支付金额（分）
      */
     public Integer getRealTotalCost() {
@@ -223,7 +223,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置实际支付金额（分）
+     * Set 实际支付金额（分）
      * @param RealTotalCost 实际支付金额（分）
      */
     public void setRealTotalCost(Integer RealTotalCost) {
@@ -231,7 +231,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取代金券抵扣金额（分）
+     * Get 代金券抵扣金额（分） 
      * @return VoucherDecline 代金券抵扣金额（分）
      */
     public Integer getVoucherDecline() {
@@ -239,7 +239,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置代金券抵扣金额（分）
+     * Set 代金券抵扣金额（分）
      * @param VoucherDecline 代金券抵扣金额（分）
      */
     public void setVoucherDecline(Integer VoucherDecline) {
@@ -247,7 +247,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -255,7 +255,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -263,7 +263,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取产品分类ID
+     * Get 产品分类ID 
      * @return GoodsCategoryId 产品分类ID
      */
     public Integer getGoodsCategoryId() {
@@ -271,7 +271,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置产品分类ID
+     * Set 产品分类ID
      * @param GoodsCategoryId 产品分类ID
      */
     public void setGoodsCategoryId(Integer GoodsCategoryId) {
@@ -279,7 +279,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取产品详情
+     * Get 产品详情 
      * @return ProductInfo 产品详情
      */
     public ProductInfo [] getProductInfo() {
@@ -287,7 +287,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置产品详情
+     * Set 产品详情
      * @param ProductInfo 产品详情
      */
     public void setProductInfo(ProductInfo [] ProductInfo) {
@@ -295,7 +295,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取时长
+     * Get 时长 
      * @return TimeSpan 时长
      */
     public Float getTimeSpan() {
@@ -303,7 +303,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置时长
+     * Set 时长
      * @param TimeSpan 时长
      */
     public void setTimeSpan(Float TimeSpan) {
@@ -311,7 +311,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取时间单位
+     * Get 时间单位 
      * @return TimeUnit 时间单位
      */
     public String getTimeUnit() {
@@ -319,7 +319,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位
+     * Set 时间单位
      * @param TimeUnit 时间单位
      */
     public void setTimeUnit(String TimeUnit) {
@@ -327,7 +327,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取货币单位
+     * Get 货币单位 
      * @return Currency 货币单位
      */
     public String getCurrency() {
@@ -335,7 +335,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置货币单位
+     * Set 货币单位
      * @param Currency 货币单位
      */
     public void setCurrency(String Currency) {
@@ -343,7 +343,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取折扣率
+     * Get 折扣率 
      * @return Policy 折扣率
      */
     public Float getPolicy() {
@@ -351,7 +351,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置折扣率
+     * Set 折扣率
      * @param Policy 折扣率
      */
     public void setPolicy(Float Policy) {
@@ -359,7 +359,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取单价（分）
+     * Get 单价（分） 
      * @return Price 单价（分）
      */
     public Float getPrice() {
@@ -367,7 +367,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置单价（分）
+     * Set 单价（分）
      * @param Price 单价（分）
      */
     public void setPrice(Float Price) {
@@ -375,7 +375,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取原价（分）
+     * Get 原价（分） 
      * @return TotalCost 原价（分）
      */
     public Float getTotalCost() {
@@ -383,7 +383,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置原价（分）
+     * Set 原价（分）
      * @param TotalCost 原价（分）
      */
     public void setTotalCost(Float TotalCost) {
@@ -391,7 +391,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SentenceSuggest  extends AbstractModel{
+public class SentenceSuggest extends AbstractModel{
 
     /**
     * 类型
@@ -72,7 +72,7 @@ public class SentenceSuggest  extends AbstractModel{
     private ErrorCoordinate [] ErrorCoordinates;
 
     /**
-     * 获取类型
+     * Get 类型 
      * @return Type 类型
      */
     public String getType() {
@@ -80,7 +80,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置类型
+     * Set 类型
      * @param Type 类型
      */
     public void setType(String Type) {
@@ -88,7 +88,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取错误类型
+     * Get 错误类型 
      * @return ErrorType 错误类型
      */
     public String getErrorType() {
@@ -96,7 +96,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置错误类型
+     * Set 错误类型
      * @param ErrorType 错误类型
      */
     public void setErrorType(String ErrorType) {
@@ -104,7 +104,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取原始单词
+     * Get 原始单词 
      * @return Origin 原始单词
      */
     public String getOrigin() {
@@ -112,7 +112,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置原始单词
+     * Set 原始单词
      * @param Origin 原始单词
      */
     public void setOrigin(String Origin) {
@@ -120,7 +120,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取替换成 的单词
+     * Get 替换成 的单词 
      * @return Replace 替换成 的单词
      */
     public String getReplace() {
@@ -128,7 +128,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置替换成 的单词
+     * Set 替换成 的单词
      * @param Replace 替换成 的单词
      */
     public void setReplace(String Replace) {
@@ -136,7 +136,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取提示信息
+     * Get 提示信息 
      * @return Message 提示信息
      */
     public String getMessage() {
@@ -144,7 +144,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置提示信息
+     * Set 提示信息
      * @param Message 提示信息
      */
     public void setMessage(String Message) {
@@ -152,7 +152,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取维度单词位置，在句子的第几个到第几个单词之间
+     * Get 维度单词位置，在句子的第几个到第几个单词之间 
      * @return ErrorPosition 维度单词位置，在句子的第几个到第几个单词之间
      */
     public Long [] getErrorPosition() {
@@ -160,7 +160,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置维度单词位置，在句子的第几个到第几个单词之间
+     * Set 维度单词位置，在句子的第几个到第几个单词之间
      * @param ErrorPosition 维度单词位置，在句子的第几个到第几个单词之间
      */
     public void setErrorPosition(Long [] ErrorPosition) {
@@ -168,7 +168,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 获取维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     * Get 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ] 
      * @return ErrorCoordinates 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
      */
     public ErrorCoordinate [] getErrorCoordinates() {
@@ -176,7 +176,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 设置维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
+     * Set 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
      * @param ErrorCoordinates 维度单词坐标，错误单词在图片中的坐标，只有传图片时正常返回，传文字时返回[ ]
      */
     public void setErrorCoordinates(ErrorCoordinate [] ErrorCoordinates) {
@@ -184,7 +184,7 @@ public class SentenceSuggest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyClientRemarkRequest  extends AbstractModel{
+public class ModifyClientRemarkRequest extends AbstractModel{
 
     /**
     * 客户备注名称
@@ -37,7 +37,7 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     private String ClientUin;
 
     /**
-     * 获取客户备注名称
+     * Get 客户备注名称 
      * @return ClientRemark 客户备注名称
      */
     public String getClientRemark() {
@@ -45,7 +45,7 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户备注名称
+     * Set 客户备注名称
      * @param ClientRemark 客户备注名称
      */
     public void setClientRemark(String ClientRemark) {
@@ -53,7 +53,7 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户账号ID
+     * Get 客户账号ID 
      * @return ClientUin 客户账号ID
      */
     public String getClientUin() {
@@ -61,7 +61,7 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户账号ID
+     * Set 客户账号ID
      * @param ClientUin 客户账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -69,7 +69,7 @@ public class ModifyClientRemarkRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientRemark", this.ClientRemark);

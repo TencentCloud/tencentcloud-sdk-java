@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskSegmentResult  extends AbstractModel{
+public class AiRecognitionTaskSegmentResult extends AbstractModel{
 
     /**
     * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
@@ -60,7 +60,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     private AiRecognitionTaskSegmentResultOutput Output;
 
     /**
-     * 获取任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public String getStatus() {
@@ -68,7 +68,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Set 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
     public void setStatus(String Status) {
@@ -76,7 +76,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0：成功，其他值：失败。
+     * Get 错误码，0：成功，其他值：失败。 
      * @return ErrCode 错误码，0：成功，其他值：失败。
      */
     public Long getErrCode() {
@@ -84,7 +84,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，0：成功，其他值：失败。
+     * Set 错误码，0：成功，其他值：失败。
      * @param ErrCode 错误码，0：成功，其他值：失败。
      */
     public void setErrCode(Long ErrCode) {
@@ -92,7 +92,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -100,7 +100,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -108,8 +108,8 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频拆条任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拆条任务输入信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Input 视频拆条任务输入信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -118,7 +118,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条任务输入信息。
+     * Set 视频拆条任务输入信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 视频拆条任务输入信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,8 +128,8 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频拆条任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频拆条任务输出信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 视频拆条任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -138,7 +138,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条任务输出信息。
+     * Set 视频拆条任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 视频拆条任务输出信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -148,7 +148,7 @@ public class AiRecognitionTaskSegmentResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

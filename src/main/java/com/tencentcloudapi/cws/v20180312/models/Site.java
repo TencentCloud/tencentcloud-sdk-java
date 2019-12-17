@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Site  extends AbstractModel{
+public class Site extends AbstractModel{
 
     /**
     * 站点ID。
@@ -261,7 +261,7 @@ public class Site  extends AbstractModel{
     private Integer LastScanContentNum;
 
     /**
-     * 获取站点ID。
+     * Get 站点ID。 
      * @return Id 站点ID。
      */
     public Integer getId() {
@@ -269,7 +269,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置站点ID。
+     * Set 站点ID。
      * @param Id 站点ID。
      */
     public void setId(Integer Id) {
@@ -277,7 +277,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取监控任务ID，为0时表示未加入监控任务。
+     * Get 监控任务ID，为0时表示未加入监控任务。 
      * @return MonitorId 监控任务ID，为0时表示未加入监控任务。
      */
     public Integer getMonitorId() {
@@ -285,7 +285,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置监控任务ID，为0时表示未加入监控任务。
+     * Set 监控任务ID，为0时表示未加入监控任务。
      * @param MonitorId 监控任务ID，为0时表示未加入监控任务。
      */
     public void setMonitorId(Integer MonitorId) {
@@ -293,7 +293,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取站点url。
+     * Get 站点url。 
      * @return Url 站点url。
      */
     public String getUrl() {
@@ -301,7 +301,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置站点url。
+     * Set 站点url。
      * @param Url 站点url。
      */
     public void setUrl(String Url) {
@@ -309,7 +309,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取站点名称。
+     * Get 站点名称。 
      * @return Name 站点名称。
      */
     public String getName() {
@@ -317,7 +317,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置站点名称。
+     * Set 站点名称。
      * @param Name 站点名称。
      */
     public void setName(String Name) {
@@ -325,7 +325,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     * Get 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。 
      * @return VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
     public Integer getVerifyStatus() {
@@ -333,7 +333,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
+     * Set 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      * @param VerifyStatus 验证状态：0-未验证；1-已验证；2-验证失效，待重新验证。
      */
     public void setVerifyStatus(Integer VerifyStatus) {
@@ -341,7 +341,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取监测状态：0-未监测；1-监测中；2-暂停监测。
+     * Get 监测状态：0-未监测；1-监测中；2-暂停监测。 
      * @return MonitorStatus 监测状态：0-未监测；1-监测中；2-暂停监测。
      */
     public Integer getMonitorStatus() {
@@ -349,7 +349,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置监测状态：0-未监测；1-监测中；2-暂停监测。
+     * Set 监测状态：0-未监测；1-监测中；2-暂停监测。
      * @param MonitorStatus 监测状态：0-未监测；1-监测中；2-暂停监测。
      */
     public void setMonitorStatus(Integer MonitorStatus) {
@@ -357,7 +357,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+     * Get 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。 
      * @return ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
     public Integer getScanStatus() {
@@ -365,7 +365,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
+     * Set 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      * @param ScanStatus 扫描状态：0-待扫描（无任何扫描结果）；1-扫描中（正在进行扫描）；2-已扫描（有扫描结果且不正在扫描）；3-扫描完成待同步结果。
      */
     public void setScanStatus(Integer ScanStatus) {
@@ -373,7 +373,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次的AIScanner的扫描任务id，注意取消的情况。
+     * Get 最近一次的AIScanner的扫描任务id，注意取消的情况。 
      * @return LastScanTaskId 最近一次的AIScanner的扫描任务id，注意取消的情况。
      */
     public Integer getLastScanTaskId() {
@@ -381,7 +381,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次的AIScanner的扫描任务id，注意取消的情况。
+     * Set 最近一次的AIScanner的扫描任务id，注意取消的情况。
      * @param LastScanTaskId 最近一次的AIScanner的扫描任务id，注意取消的情况。
      */
     public void setLastScanTaskId(Integer LastScanTaskId) {
@@ -389,7 +389,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描开始时间。
+     * Get 最近一次扫描开始时间。 
      * @return LastScanStartTime 最近一次扫描开始时间。
      */
     public String getLastScanStartTime() {
@@ -397,7 +397,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描开始时间。
+     * Set 最近一次扫描开始时间。
      * @param LastScanStartTime 最近一次扫描开始时间。
      */
     public void setLastScanStartTime(String LastScanStartTime) {
@@ -405,7 +405,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描完成时间。
+     * Get 最近一次扫描完成时间。 
      * @return LastScanFinishTime 最近一次扫描完成时间。
      */
     public String getLastScanFinishTime() {
@@ -413,7 +413,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描完成时间。
+     * Set 最近一次扫描完成时间。
      * @param LastScanFinishTime 最近一次扫描完成时间。
      */
     public void setLastScanFinishTime(String LastScanFinishTime) {
@@ -421,7 +421,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次取消时间，取消即使用上一次扫描结果。
+     * Get 最近一次取消时间，取消即使用上一次扫描结果。 
      * @return LastScanCancelTime 最近一次取消时间，取消即使用上一次扫描结果。
      */
     public String getLastScanCancelTime() {
@@ -429,7 +429,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次取消时间，取消即使用上一次扫描结果。
+     * Set 最近一次取消时间，取消即使用上一次扫描结果。
      * @param LastScanCancelTime 最近一次取消时间，取消即使用上一次扫描结果。
      */
     public void setLastScanCancelTime(String LastScanCancelTime) {
@@ -437,7 +437,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描扫描的页面数。
+     * Get 最近一次扫描扫描的页面数。 
      * @return LastScanPageCount 最近一次扫描扫描的页面数。
      */
     public Integer getLastScanPageCount() {
@@ -445,7 +445,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描扫描的页面数。
+     * Set 最近一次扫描扫描的页面数。
      * @param LastScanPageCount 最近一次扫描扫描的页面数。
      */
     public void setLastScanPageCount(Integer LastScanPageCount) {
@@ -453,7 +453,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取normal-正常扫描；deep-深度扫描。
+     * Get normal-正常扫描；deep-深度扫描。 
      * @return LastScanScannerType normal-正常扫描；deep-深度扫描。
      */
     public String getLastScanScannerType() {
@@ -461,7 +461,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置normal-正常扫描；deep-深度扫描。
+     * Set normal-正常扫描；deep-深度扫描。
      * @param LastScanScannerType normal-正常扫描；deep-深度扫描。
      */
     public void setLastScanScannerType(String LastScanScannerType) {
@@ -469,7 +469,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描高风险漏洞数量。
+     * Get 最近一次扫描高风险漏洞数量。 
      * @return LastScanVulsHighNum 最近一次扫描高风险漏洞数量。
      */
     public Integer getLastScanVulsHighNum() {
@@ -477,7 +477,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描高风险漏洞数量。
+     * Set 最近一次扫描高风险漏洞数量。
      * @param LastScanVulsHighNum 最近一次扫描高风险漏洞数量。
      */
     public void setLastScanVulsHighNum(Integer LastScanVulsHighNum) {
@@ -485,7 +485,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描中风险漏洞数量。
+     * Get 最近一次扫描中风险漏洞数量。 
      * @return LastScanVulsMiddleNum 最近一次扫描中风险漏洞数量。
      */
     public Integer getLastScanVulsMiddleNum() {
@@ -493,7 +493,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描中风险漏洞数量。
+     * Set 最近一次扫描中风险漏洞数量。
      * @param LastScanVulsMiddleNum 最近一次扫描中风险漏洞数量。
      */
     public void setLastScanVulsMiddleNum(Integer LastScanVulsMiddleNum) {
@@ -501,7 +501,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描低风险漏洞数量。
+     * Get 最近一次扫描低风险漏洞数量。 
      * @return LastScanVulsLowNum 最近一次扫描低风险漏洞数量。
      */
     public Integer getLastScanVulsLowNum() {
@@ -509,7 +509,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描低风险漏洞数量。
+     * Set 最近一次扫描低风险漏洞数量。
      * @param LastScanVulsLowNum 最近一次扫描低风险漏洞数量。
      */
     public void setLastScanVulsLowNum(Integer LastScanVulsLowNum) {
@@ -517,7 +517,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描提示信息数量。
+     * Get 最近一次扫描提示信息数量。 
      * @return LastScanVulsNoticeNum 最近一次扫描提示信息数量。
      */
     public Integer getLastScanVulsNoticeNum() {
@@ -525,7 +525,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描提示信息数量。
+     * Set 最近一次扫描提示信息数量。
      * @param LastScanVulsNoticeNum 最近一次扫描提示信息数量。
      */
     public void setLastScanVulsNoticeNum(Integer LastScanVulsNoticeNum) {
@@ -533,7 +533,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取记录添加时间。
+     * Get 记录添加时间。 
      * @return CreatedAt 记录添加时间。
      */
     public String getCreatedAt() {
@@ -541,7 +541,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置记录添加时间。
+     * Set 记录添加时间。
      * @param CreatedAt 记录添加时间。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -549,7 +549,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取记录最近修改时间。
+     * Get 记录最近修改时间。 
      * @return UpdatedAt 记录最近修改时间。
      */
     public String getUpdatedAt() {
@@ -557,7 +557,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置记录最近修改时间。
+     * Set 记录最近修改时间。
      * @param UpdatedAt 记录最近修改时间。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -565,7 +565,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取速率限制，每秒发送X个HTTP请求。
+     * Get 速率限制，每秒发送X个HTTP请求。 
      * @return LastScanRateLimit 速率限制，每秒发送X个HTTP请求。
      */
     public Integer getLastScanRateLimit() {
@@ -573,7 +573,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置速率限制，每秒发送X个HTTP请求。
+     * Set 速率限制，每秒发送X个HTTP请求。
      * @param LastScanRateLimit 速率限制，每秒发送X个HTTP请求。
      */
     public void setLastScanRateLimit(Integer LastScanRateLimit) {
@@ -581,7 +581,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描漏洞总数量。
+     * Get 最近一次扫描漏洞总数量。 
      * @return LastScanVulsNum 最近一次扫描漏洞总数量。
      */
     public Integer getLastScanVulsNum() {
@@ -589,7 +589,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描漏洞总数量。
+     * Set 最近一次扫描漏洞总数量。
      * @param LastScanVulsNum 最近一次扫描漏洞总数量。
      */
     public void setLastScanVulsNum(Integer LastScanVulsNum) {
@@ -597,7 +597,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描提示总数量
+     * Get 最近一次扫描提示总数量 
      * @return LastScanNoticeNum 最近一次扫描提示总数量
      */
     public Integer getLastScanNoticeNum() {
@@ -605,7 +605,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描提示总数量
+     * Set 最近一次扫描提示总数量
      * @param LastScanNoticeNum 最近一次扫描提示总数量
      */
     public void setLastScanNoticeNum(Integer LastScanNoticeNum) {
@@ -613,7 +613,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取扫描进度，百分比整数
+     * Get 扫描进度，百分比整数 
      * @return Progress 扫描进度，百分比整数
      */
     public Integer getProgress() {
@@ -621,7 +621,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置扫描进度，百分比整数
+     * Set 扫描进度，百分比整数
      * @param Progress 扫描进度，百分比整数
      */
     public void setProgress(Integer Progress) {
@@ -629,7 +629,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid。
+     * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
     public Integer getAppid() {
@@ -637,7 +637,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid。
+     * Set 云用户appid。
      * @param Appid 云用户appid。
      */
     public void setAppid(Integer Appid) {
@@ -645,7 +645,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取云用户标识。
+     * Get 云用户标识。 
      * @return Uin 云用户标识。
      */
     public String getUin() {
@@ -653,7 +653,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置云用户标识。
+     * Set 云用户标识。
      * @param Uin 云用户标识。
      */
     public void setUin(String Uin) {
@@ -661,7 +661,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * Get 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。 
      * @return NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      */
     public Integer getNeedLogin() {
@@ -669,7 +669,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
+     * Set 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      * @param NeedLogin 网站是否需要登录扫描：0-未知；-1-不需要；1-需要。
      */
     public void setNeedLogin(Integer NeedLogin) {
@@ -677,7 +677,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取登录后的cookie。
+     * Get 登录后的cookie。 
      * @return LoginCookie 登录后的cookie。
      */
     public String getLoginCookie() {
@@ -685,7 +685,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置登录后的cookie。
+     * Set 登录后的cookie。
      * @param LoginCookie 登录后的cookie。
      */
     public void setLoginCookie(String LoginCookie) {
@@ -693,7 +693,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取登录后的cookie是否有效：0-无效；1-有效。
+     * Get 登录后的cookie是否有效：0-无效；1-有效。 
      * @return LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
      */
     public Integer getLoginCookieValid() {
@@ -701,7 +701,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置登录后的cookie是否有效：0-无效；1-有效。
+     * Set 登录后的cookie是否有效：0-无效；1-有效。
      * @param LoginCookieValid 登录后的cookie是否有效：0-无效；1-有效。
      */
     public void setLoginCookieValid(Integer LoginCookieValid) {
@@ -709,7 +709,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取用于测试cookie是否有效的URL。
+     * Get 用于测试cookie是否有效的URL。 
      * @return LoginCheckUrl 用于测试cookie是否有效的URL。
      */
     public String getLoginCheckUrl() {
@@ -717,7 +717,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置用于测试cookie是否有效的URL。
+     * Set 用于测试cookie是否有效的URL。
      * @param LoginCheckUrl 用于测试cookie是否有效的URL。
      */
     public void setLoginCheckUrl(String LoginCheckUrl) {
@@ -725,7 +725,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取用于测试cookie是否有效的关键字。
+     * Get 用于测试cookie是否有效的关键字。 
      * @return LoginCheckKw 用于测试cookie是否有效的关键字。
      */
     public String getLoginCheckKw() {
@@ -733,7 +733,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置用于测试cookie是否有效的关键字。
+     * Set 用于测试cookie是否有效的关键字。
      * @param LoginCheckKw 用于测试cookie是否有效的关键字。
      */
     public void setLoginCheckKw(String LoginCheckKw) {
@@ -741,7 +741,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取禁止扫描器扫描的目录关键字。
+     * Get 禁止扫描器扫描的目录关键字。 
      * @return ScanDisallow 禁止扫描器扫描的目录关键字。
      */
     public String getScanDisallow() {
@@ -749,7 +749,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置禁止扫描器扫描的目录关键字。
+     * Set 禁止扫描器扫描的目录关键字。
      * @param ScanDisallow 禁止扫描器扫描的目录关键字。
      */
     public void setScanDisallow(String ScanDisallow) {
@@ -757,7 +757,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取访问网站的客户端标识。
+     * Get 访问网站的客户端标识。 
      * @return UserAgent 访问网站的客户端标识。
      */
     public String getUserAgent() {
@@ -765,7 +765,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置访问网站的客户端标识。
+     * Set 访问网站的客户端标识。
      * @param UserAgent 访问网站的客户端标识。
      */
     public void setUserAgent(String UserAgent) {
@@ -773,7 +773,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取内容检测状态：0-未检测；1-已检测；
+     * Get 内容检测状态：0-未检测；1-已检测； 
      * @return ContentStatus 内容检测状态：0-未检测；1-已检测；
      */
     public Integer getContentStatus() {
@@ -781,7 +781,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置内容检测状态：0-未检测；1-已检测；
+     * Set 内容检测状态：0-未检测；1-已检测；
      * @param ContentStatus 内容检测状态：0-未检测；1-已检测；
      */
     public void setContentStatus(Integer ContentStatus) {
@@ -789,7 +789,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次扫描内容检测数量
+     * Get 最近一次扫描内容检测数量 
      * @return LastScanContentNum 最近一次扫描内容检测数量
      */
     public Integer getLastScanContentNum() {
@@ -797,7 +797,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次扫描内容检测数量
+     * Set 最近一次扫描内容检测数量
      * @param LastScanContentNum 最近一次扫描内容检测数量
      */
     public void setLastScanContentNum(Integer LastScanContentNum) {
@@ -805,7 +805,7 @@ public class Site  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

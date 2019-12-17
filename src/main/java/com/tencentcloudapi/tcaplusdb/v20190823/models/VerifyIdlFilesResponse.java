@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyIdlFilesResponse  extends AbstractModel{
+public class VerifyIdlFilesResponse extends AbstractModel{
 
     /**
     * 本次上传校验所有的Idl文件信息列表
@@ -51,7 +51,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取本次上传校验所有的Idl文件信息列表
+     * Get 本次上传校验所有的Idl文件信息列表 
      * @return IdlFiles 本次上传校验所有的Idl文件信息列表
      */
     public IdlFileInfo [] getIdlFiles() {
@@ -59,7 +59,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置本次上传校验所有的Idl文件信息列表
+     * Set 本次上传校验所有的Idl文件信息列表
      * @param IdlFiles 本次上传校验所有的Idl文件信息列表
      */
     public void setIdlFiles(IdlFileInfo [] IdlFiles) {
@@ -67,7 +67,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+     * Get 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表 
      * @return TotalCount 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
      */
     public Long getTotalCount() {
@@ -75,7 +75,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
+     * Set 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
      * @param TotalCount 读取Idl描述文件后解析出的合法表数量，不包含已经创建的表
      */
     public void setTotalCount(Long TotalCount) {
@@ -83,7 +83,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * Get 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表 
      * @return TableInfos 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
      */
     public ParsedTableInfo [] getTableInfos() {
@@ -91,7 +91,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
+     * Set 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
      * @param TableInfos 读取Idl描述文件后解析出的合法表列表，不包含已经创建的表
      */
     public void setTableInfos(ParsedTableInfo [] TableInfos) {
@@ -99,7 +99,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class VerifyIdlFilesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);

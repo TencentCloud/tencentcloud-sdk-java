@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WeeklyReportVul  extends AbstractModel{
+public class WeeklyReportVul extends AbstractModel{
 
     /**
     * 主机内网IP。
@@ -71,7 +71,7 @@ public class WeeklyReportVul  extends AbstractModel{
     private String LastScanTime;
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -79,7 +79,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -87,7 +87,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞名称。
+     * Get 漏洞名称。 
      * @return VulName 漏洞名称。
      */
     public String getVulName() {
@@ -95,7 +95,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞名称。
+     * Set 漏洞名称。
      * @param VulName 漏洞名称。
      */
     public void setVulName(String VulName) {
@@ -103,10 +103,10 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞类型。
+     * Get 漏洞类型。
 <li> WEB : WEB漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
-<li> BASELINE : 安全基线</li>
+<li> BASELINE : 安全基线</li> 
      * @return VulType 漏洞类型。
 <li> WEB : WEB漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
@@ -117,7 +117,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞类型。
+     * Set 漏洞类型。
 <li> WEB : WEB漏洞</li>
 <li> SYSTEM :系统组件漏洞</li>
 <li> BASELINE : 安全基线</li>
@@ -131,7 +131,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞描述。
+     * Get 漏洞描述。 
      * @return Description 漏洞描述。
      */
     public String getDescription() {
@@ -139,7 +139,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞描述。
+     * Set 漏洞描述。
      * @param Description 漏洞描述。
      */
     public void setDescription(String Description) {
@@ -147,10 +147,10 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞状态。
+     * Get 漏洞状态。
 <li> UN_OPERATED : 待处理</li>
 <li> SCANING : 扫描中</li>
-<li> FIXED : 已修复</li>
+<li> FIXED : 已修复</li> 
      * @return VulStatus 漏洞状态。
 <li> UN_OPERATED : 待处理</li>
 <li> SCANING : 扫描中</li>
@@ -161,7 +161,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞状态。
+     * Set 漏洞状态。
 <li> UN_OPERATED : 待处理</li>
 <li> SCANING : 扫描中</li>
 <li> FIXED : 已修复</li>
@@ -175,7 +175,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 获取最后扫描时间。
+     * Get 最后扫描时间。 
      * @return LastScanTime 最后扫描时间。
      */
     public String getLastScanTime() {
@@ -183,7 +183,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 设置最后扫描时间。
+     * Set 最后扫描时间。
      * @param LastScanTime 最后扫描时间。
      */
     public void setLastScanTime(String LastScanTime) {
@@ -191,7 +191,7 @@ public class WeeklyReportVul  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineIp", this.MachineIp);

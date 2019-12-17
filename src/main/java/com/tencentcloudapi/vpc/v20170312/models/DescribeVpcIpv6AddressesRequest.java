@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
+public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
 
     /**
     * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
@@ -51,7 +51,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
      * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public String getVpcId() {
@@ -59,7 +59,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public void setVpcId(String VpcId) {
@@ -67,7 +67,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Get `IP`地址列表，批量查询单次请求最多支持`10`个。 
      * @return Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
      */
     public String [] getIpv6Addresses() {
@@ -75,7 +75,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Set `IP`地址列表，批量查询单次请求最多支持`10`个。
      * @param Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
      */
     public void setIpv6Addresses(String [] Ipv6Addresses) {
@@ -83,7 +83,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public Integer getOffset() {
@@ -91,7 +91,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -99,7 +99,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量。
+     * Get 返回数量。 
      * @return Limit 返回数量。
      */
     public Integer getLimit() {
@@ -107,7 +107,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量。
+     * Set 返回数量。
      * @param Limit 返回数量。
      */
     public void setLimit(Integer Limit) {
@@ -115,7 +115,7 @@ public class DescribeVpcIpv6AddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAvailableLibCountRequest  extends AbstractModel{
+public class DescribeAvailableLibCountRequest extends AbstractModel{
 
     /**
     * 订单编号
@@ -30,7 +30,7 @@ public class DescribeAvailableLibCountRequest  extends AbstractModel{
     private String OrderId;
 
     /**
-     * 获取订单编号
+     * Get 订单编号 
      * @return OrderId 订单编号
      */
     public String getOrderId() {
@@ -38,7 +38,7 @@ public class DescribeAvailableLibCountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单编号
+     * Set 订单编号
      * @param OrderId 订单编号
      */
     public void setOrderId(String OrderId) {
@@ -46,7 +46,7 @@ public class DescribeAvailableLibCountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);

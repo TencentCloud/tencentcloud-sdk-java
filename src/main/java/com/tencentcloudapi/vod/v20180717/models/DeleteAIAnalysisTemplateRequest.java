@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
+public class DeleteAIAnalysisTemplateRequest extends AbstractModel{
 
     /**
     * 视频内容分析模板唯一标识。
@@ -37,7 +37,7 @@ public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频内容分析模板唯一标识。
+     * Get 视频内容分析模板唯一标识。 
      * @return Definition 视频内容分析模板唯一标识。
      */
     public Long getDefinition() {
@@ -45,7 +45,7 @@ public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板唯一标识。
+     * Set 视频内容分析模板唯一标识。
      * @param Definition 视频内容分析模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -53,7 +53,7 @@ public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -61,7 +61,7 @@ public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -69,7 +69,7 @@ public class DeleteAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

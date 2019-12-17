@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSimilarPersonResultResponse  extends AbstractModel{
+public class GetSimilarPersonResultResponse extends AbstractModel{
 
     /**
     * 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
@@ -45,7 +45,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
+     * Get 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。 
      * @return Progress 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
      */
     public Float getProgress() {
@@ -53,7 +53,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
+     * Set 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
      * @param Progress 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
      */
     public void setProgress(Float Progress) {
@@ -61,8 +61,8 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
-文件内容由 SimilarPerson 的数组组成。
+     * Get 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
+文件内容由 SimilarPerson 的数组组成。 
      * @return SimilarPersonsUrl 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
 文件内容由 SimilarPerson 的数组组成。
      */
@@ -71,7 +71,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
+     * Set 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
 文件内容由 SimilarPerson 的数组组成。
      * @param SimilarPersonsUrl 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
 文件内容由 SimilarPerson 的数组组成。
@@ -81,7 +81,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class GetSimilarPersonResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Progress", this.Progress);

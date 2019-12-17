@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LivenessResponse  extends AbstractModel{
+public class LivenessResponse extends AbstractModel{
 
     /**
     * 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
@@ -51,7 +51,7 @@ public class LivenessResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+     * Get 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。 
      * @return BestFrameBase64 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
      */
     public String getBestFrameBase64() {
@@ -59,7 +59,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 设置验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
+     * Set 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
      * @param BestFrameBase64 验证通过后的视频最佳截图照片，照片为BASE64编码后的值，jpg格式。
      */
     public void setBestFrameBase64(String BestFrameBase64) {
@@ -67,7 +67,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Get 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分 
      * @return Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public String getResult() {
@@ -75,7 +75,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Set 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      * @param Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public void setResult(String Result) {
@@ -83,7 +83,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class LivenessResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);

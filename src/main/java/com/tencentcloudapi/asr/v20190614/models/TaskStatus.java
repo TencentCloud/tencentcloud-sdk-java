@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskStatus  extends AbstractModel{
+public class TaskStatus extends AbstractModel{
 
     /**
     * 任务标识。
@@ -58,7 +58,7 @@ public class TaskStatus  extends AbstractModel{
     private String ErrorMsg;
 
     /**
-     * 获取任务标识。
+     * Get 任务标识。 
      * @return TaskId 任务标识。
      */
     public Long getTaskId() {
@@ -66,7 +66,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置任务标识。
+     * Set 任务标识。
      * @param TaskId 任务标识。
      */
     public void setTaskId(Long TaskId) {
@@ -74,7 +74,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+     * Get 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。 
      * @return Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      */
     public Long getStatus() {
@@ -82,7 +82,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
+     * Set 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      * @param Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
      */
     public void setStatus(Long Status) {
@@ -90,7 +90,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+     * Get 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。 
      * @return StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      */
     public String getStatusStr() {
@@ -98,7 +98,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
+     * Set 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      * @param StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
      */
     public void setStatusStr(String StatusStr) {
@@ -106,7 +106,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取识别结果。
+     * Get 识别结果。 
      * @return Result 识别结果。
      */
     public String getResult() {
@@ -114,7 +114,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果。
+     * Set 识别结果。
      * @param Result 识别结果。
      */
     public void setResult(String Result) {
@@ -122,7 +122,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 获取失败原因说明。
+     * Get 失败原因说明。 
      * @return ErrorMsg 失败原因说明。
      */
     public String getErrorMsg() {
@@ -130,7 +130,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 设置失败原因说明。
+     * Set 失败原因说明。
      * @param ErrorMsg 失败原因说明。
      */
     public void setErrorMsg(String ErrorMsg) {
@@ -138,7 +138,7 @@ public class TaskStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

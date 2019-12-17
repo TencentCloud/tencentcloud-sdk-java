@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplicationAttribute  extends AbstractModel{
+public class ApplicationAttribute extends AbstractModel{
 
     /**
     * 总实例个数
@@ -47,8 +47,8 @@ public class ApplicationAttribute  extends AbstractModel{
     private Long GroupCount;
 
     /**
-     * 获取总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总实例个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceCount 总实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置总实例个数
+     * Set 总实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCount 总实例个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 获取运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 运行实例个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RunInstanceCount 运行实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置运行实例个数
+     * Set 运行实例个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RunInstanceCount 运行实例个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 获取应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用下部署组个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupCount 应用下部署组个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 设置应用下部署组个数
+     * Set 应用下部署组个数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupCount 应用下部署组个数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class ApplicationAttribute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);

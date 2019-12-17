@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFacePictureRequest  extends AbstractModel{
+public class CreateFacePictureRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -65,7 +65,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     private Boolean IsForceUpload;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Get 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单） 
      * @return PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public Integer getPersonType() {
@@ -89,7 +89,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
+     * Set 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      * @param PersonType 人物类型（0表示普通顾客，1 白名单，2 表示黑名单，101表示集团白名单，102表示集团黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -97,7 +97,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片BASE编码
+     * Get 图片BASE编码 
      * @return Picture 图片BASE编码
      */
     public String getPicture() {
@@ -105,7 +105,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片BASE编码
+     * Set 图片BASE编码
      * @param Picture 图片BASE编码
      */
     public void setPicture(String Picture) {
@@ -113,7 +113,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片名称
+     * Get 图片名称 
      * @return PictureName 图片名称
      */
     public String getPictureName() {
@@ -121,7 +121,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片名称
+     * Set 图片名称
      * @param PictureName 图片名称
      */
     public void setPictureName(String PictureName) {
@@ -129,7 +129,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID，如果不填表示操作集团身份库
+     * Get 店铺ID，如果不填表示操作集团身份库 
      * @return ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public Integer getShopId() {
@@ -137,7 +137,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID，如果不填表示操作集团身份库
+     * Set 店铺ID，如果不填表示操作集团身份库
      * @param ShopId 店铺ID，如果不填表示操作集团身份库
      */
     public void setShopId(Integer ShopId) {
@@ -145,7 +145,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     * Get 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传 
      * @return IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     public Boolean getIsForceUpload() {
@@ -153,7 +153,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
+     * Set 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      * @param IsForceUpload 是否强制更新：为ture时会为用户创建一个新的指定PersonType的身份;目前这个参数已废弃，可不传
      */
     public void setIsForceUpload(Boolean IsForceUpload) {
@@ -161,7 +161,7 @@ public class CreateFacePictureRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

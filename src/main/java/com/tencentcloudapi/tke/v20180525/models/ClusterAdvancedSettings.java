@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClusterAdvancedSettings  extends AbstractModel{
+public class ClusterAdvancedSettings extends AbstractModel{
 
     /**
     * 是否启用IPVS
@@ -51,7 +51,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     private String NodeNameType;
 
     /**
-     * 获取是否启用IPVS
+     * Get 是否启用IPVS 
      * @return IPVS 是否启用IPVS
      */
     public Boolean getIPVS() {
@@ -59,7 +59,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用IPVS
+     * Set 是否启用IPVS
      * @param IPVS 是否启用IPVS
      */
     public void setIPVS(Boolean IPVS) {
@@ -67,7 +67,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+     * Get 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能) 
      * @return AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
     public Boolean getAsEnabled() {
@@ -75,7 +75,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+     * Set 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      * @param AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
     public void setAsEnabled(Boolean AsEnabled) {
@@ -83,7 +83,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * Get 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker" 
      * @return ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      */
     public String getContainerRuntime() {
@@ -91,7 +91,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * Set 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      * @param ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      */
     public void setContainerRuntime(String ContainerRuntime) {
@@ -99,7 +99,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * Get 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致） 
      * @return NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     public String getNodeNameType() {
@@ -107,7 +107,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * Set 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      * @param NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      */
     public void setNodeNameType(String NodeNameType) {
@@ -115,7 +115,7 @@ public class ClusterAdvancedSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IPVS", this.IPVS);

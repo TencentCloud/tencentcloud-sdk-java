@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IntelligenceType  extends AbstractModel{
+public class IntelligenceType extends AbstractModel{
 
     /**
     * 来源
@@ -44,7 +44,7 @@ public class IntelligenceType  extends AbstractModel{
     private Integer Time;
 
     /**
-     * 获取来源
+     * Get 来源 
      * @return Source 来源
      */
     public String getSource() {
@@ -52,7 +52,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 设置来源
+     * Set 来源
      * @param Source 来源
      */
     public void setSource(String Source) {
@@ -60,7 +60,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 获取标记
+     * Get 标记 
      * @return Stamp 标记
      */
     public String getStamp() {
@@ -68,7 +68,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 设置标记
+     * Set 标记
      * @param Stamp 标记
      */
     public void setStamp(String Stamp) {
@@ -76,7 +76,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 获取时间
+     * Get 时间 
      * @return Time 时间
      */
     public Integer getTime() {
@@ -84,7 +84,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 设置时间
+     * Set 时间
      * @param Time 时间
      */
     public void setTime(Integer Time) {
@@ -92,7 +92,7 @@ public class IntelligenceType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Source", this.Source);

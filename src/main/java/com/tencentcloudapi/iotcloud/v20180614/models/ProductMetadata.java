@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductMetadata  extends AbstractModel{
+public class ProductMetadata extends AbstractModel{
 
     /**
     * 产品创建时间
@@ -30,7 +30,7 @@ public class ProductMetadata  extends AbstractModel{
     private Integer CreationDate;
 
     /**
-     * 获取产品创建时间
+     * Get 产品创建时间 
      * @return CreationDate 产品创建时间
      */
     public Integer getCreationDate() {
@@ -38,7 +38,7 @@ public class ProductMetadata  extends AbstractModel{
     }
 
     /**
-     * 设置产品创建时间
+     * Set 产品创建时间
      * @param CreationDate 产品创建时间
      */
     public void setCreationDate(Integer CreationDate) {
@@ -46,7 +46,7 @@ public class ProductMetadata  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreationDate", this.CreationDate);

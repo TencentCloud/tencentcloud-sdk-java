@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
+public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
 
     /**
     * 视频内容分析模板唯一标识。
@@ -86,7 +86,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取视频内容分析模板唯一标识。
+     * Get 视频内容分析模板唯一标识。 
      * @return Definition 视频内容分析模板唯一标识。
      */
     public Long getDefinition() {
@@ -94,7 +94,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板唯一标识。
+     * Set 视频内容分析模板唯一标识。
      * @param Definition 视频内容分析模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -102,7 +102,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析模板名称，长度限制：64 个字符。
+     * Get 视频内容分析模板名称，长度限制：64 个字符。 
      * @return Name 视频内容分析模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -110,7 +110,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板名称，长度限制：64 个字符。
+     * Set 视频内容分析模板名称，长度限制：64 个字符。
      * @param Name 视频内容分析模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -118,7 +118,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析模板描述信息，长度限制：256 个字符。
+     * Get 视频内容分析模板描述信息，长度限制：256 个字符。 
      * @return Comment 视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -126,7 +126,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析模板描述信息，长度限制：256 个字符。
+     * Set 视频内容分析模板描述信息，长度限制：256 个字符。
      * @param Comment 视频内容分析模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -134,7 +134,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能分类任务控制参数。
+     * Get 智能分类任务控制参数。 
      * @return ClassificationConfigure 智能分类任务控制参数。
      */
     public ClassificationConfigureInfoForUpdate getClassificationConfigure() {
@@ -142,7 +142,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能分类任务控制参数。
+     * Set 智能分类任务控制参数。
      * @param ClassificationConfigure 智能分类任务控制参数。
      */
     public void setClassificationConfigure(ClassificationConfigureInfoForUpdate ClassificationConfigure) {
@@ -150,7 +150,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能标签任务控制参数。
+     * Get 智能标签任务控制参数。 
      * @return TagConfigure 智能标签任务控制参数。
      */
     public TagConfigureInfoForUpdate getTagConfigure() {
@@ -158,7 +158,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能标签任务控制参数。
+     * Set 智能标签任务控制参数。
      * @param TagConfigure 智能标签任务控制参数。
      */
     public void setTagConfigure(TagConfigureInfoForUpdate TagConfigure) {
@@ -166,7 +166,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能封面任务控制参数。
+     * Get 智能封面任务控制参数。 
      * @return CoverConfigure 智能封面任务控制参数。
      */
     public CoverConfigureInfoForUpdate getCoverConfigure() {
@@ -174,7 +174,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面任务控制参数。
+     * Set 智能封面任务控制参数。
      * @param CoverConfigure 智能封面任务控制参数。
      */
     public void setCoverConfigure(CoverConfigureInfoForUpdate CoverConfigure) {
@@ -182,7 +182,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能按帧标签任务控制参数。
+     * Get 智能按帧标签任务控制参数。 
      * @return FrameTagConfigure 智能按帧标签任务控制参数。
      */
     public FrameTagConfigureInfoForUpdate getFrameTagConfigure() {
@@ -190,7 +190,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能按帧标签任务控制参数。
+     * Set 智能按帧标签任务控制参数。
      * @param FrameTagConfigure 智能按帧标签任务控制参数。
      */
     public void setFrameTagConfigure(FrameTagConfigureInfoForUpdate FrameTagConfigure) {
@@ -198,7 +198,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取智能精彩集锦任务控制参数。
+     * Get 智能精彩集锦任务控制参数。 
      * @return HighlightConfigure 智能精彩集锦任务控制参数。
      */
     public HighlightsConfigureInfoForUpdate getHighlightConfigure() {
@@ -206,7 +206,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置智能精彩集锦任务控制参数。
+     * Set 智能精彩集锦任务控制参数。
      * @param HighlightConfigure 智能精彩集锦任务控制参数。
      */
     public void setHighlightConfigure(HighlightsConfigureInfoForUpdate HighlightConfigure) {
@@ -214,7 +214,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -222,7 +222,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -230,7 +230,7 @@ public class ModifyAIAnalysisTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

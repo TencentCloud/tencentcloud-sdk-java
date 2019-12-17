@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PGroupInfo  extends AbstractModel{
+public class PGroupInfo extends AbstractModel{
 
     /**
     * 权限组ID
@@ -58,7 +58,7 @@ public class PGroupInfo  extends AbstractModel{
     private Long BindCfsNum;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return PGroupId 权限组ID
      */
     public String getPGroupId() {
@@ -66,7 +66,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param PGroupId 权限组ID
      */
     public void setPGroupId(String PGroupId) {
@@ -74,7 +74,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取权限组名称
+     * Get 权限组名称 
      * @return Name 权限组名称
      */
     public String getName() {
@@ -82,7 +82,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称
+     * Set 权限组名称
      * @param Name 权限组名称
      */
     public void setName(String Name) {
@@ -90,7 +90,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息
+     * Get 描述信息 
      * @return DescInfo 描述信息
      */
     public String getDescInfo() {
@@ -98,7 +98,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息
+     * Set 描述信息
      * @param DescInfo 描述信息
      */
     public void setDescInfo(String DescInfo) {
@@ -106,7 +106,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CDate 创建时间
      */
     public String getCDate() {
@@ -114,7 +114,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CDate 创建时间
      */
     public void setCDate(String CDate) {
@@ -122,7 +122,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取关联文件系统个数
+     * Get 关联文件系统个数 
      * @return BindCfsNum 关联文件系统个数
      */
     public Long getBindCfsNum() {
@@ -130,7 +130,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置关联文件系统个数
+     * Set 关联文件系统个数
      * @param BindCfsNum 关联文件系统个数
      */
     public void setBindCfsNum(Long BindCfsNum) {
@@ -138,7 +138,7 @@ public class PGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

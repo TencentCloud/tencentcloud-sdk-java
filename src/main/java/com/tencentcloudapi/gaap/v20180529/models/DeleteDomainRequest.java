@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDomainRequest  extends AbstractModel{
+public class DeleteDomainRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -45,7 +45,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     private Long Force;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -53,7 +53,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -61,7 +61,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要删除的域名
+     * Get 需要删除的域名 
      * @return Domain 需要删除的域名
      */
     public String getDomain() {
@@ -69,7 +69,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的域名
+     * Set 需要删除的域名
      * @param Domain 需要删除的域名
      */
     public void setDomain(String Domain) {
@@ -77,8 +77,8 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否强制删除已绑定源站的转发规则，0非强制，1强制。
-当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
+     * Get 是否强制删除已绑定源站的转发规则，0非强制，1强制。
+当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。 
      * @return Force 是否强制删除已绑定源站的转发规则，0非强制，1强制。
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
      */
@@ -87,7 +87,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否强制删除已绑定源站的转发规则，0非强制，1强制。
+     * Set 是否强制删除已绑定源站的转发规则，0非强制，1强制。
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
      * @param Force 是否强制删除已绑定源站的转发规则，0非强制，1强制。
 当采用非强制删除时，如果域名下已有规则绑定了源站，则无法删除。
@@ -97,7 +97,7 @@ public class DeleteDomainRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

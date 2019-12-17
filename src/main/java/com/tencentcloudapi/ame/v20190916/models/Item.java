@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Item  extends AbstractModel{
+public class Item extends AbstractModel{
 
     /**
     * Song ID
@@ -54,7 +54,7 @@ public class Item  extends AbstractModel{
     private Artist [] Artists;
 
     /**
-     * 获取Song ID
+     * Get Song ID 
      * @return ItemID Song ID
      */
     public String getItemID() {
@@ -62,7 +62,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置Song ID
+     * Set Song ID
      * @param ItemID Song ID
      */
     public void setItemID(String ItemID) {
@@ -70,8 +70,8 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取Song info
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Song info
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataInfo Song info
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -80,7 +80,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置Song info
+     * Set Song info
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataInfo Song info
 注意：此字段可能返回 null，表示取不到有效值。
@@ -90,8 +90,8 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取专辑信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 专辑信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Album 专辑信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -100,7 +100,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置专辑信息
+     * Set 专辑信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Album 专辑信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,8 +110,8 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取多个歌手集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 多个歌手集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Artists 多个歌手集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置多个歌手集合
+     * Set 多个歌手集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Artists 多个歌手集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,7 +130,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemID", this.ItemID);

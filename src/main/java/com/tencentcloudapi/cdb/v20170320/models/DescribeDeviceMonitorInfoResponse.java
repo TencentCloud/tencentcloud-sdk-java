@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
+public class DescribeDeviceMonitorInfoResponse extends AbstractModel{
 
     /**
     * 实例CPU监控数据
@@ -58,7 +58,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例CPU监控数据
+     * Get 实例CPU监控数据 
      * @return Cpu 实例CPU监控数据
      */
     public DeviceCpuInfo getCpu() {
@@ -66,7 +66,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例CPU监控数据
+     * Set 实例CPU监控数据
      * @param Cpu 实例CPU监控数据
      */
     public void setCpu(DeviceCpuInfo Cpu) {
@@ -74,7 +74,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存监控数据
+     * Get 实例内存监控数据 
      * @return Mem 实例内存监控数据
      */
     public DeviceMemInfo getMem() {
@@ -82,7 +82,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存监控数据
+     * Set 实例内存监控数据
      * @param Mem 实例内存监控数据
      */
     public void setMem(DeviceMemInfo Mem) {
@@ -90,7 +90,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例网络监控数据
+     * Get 实例网络监控数据 
      * @return Net 实例网络监控数据
      */
     public DeviceNetInfo getNet() {
@@ -98,7 +98,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例网络监控数据
+     * Set 实例网络监控数据
      * @param Net 实例网络监控数据
      */
     public void setNet(DeviceNetInfo Net) {
@@ -106,7 +106,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取实例磁盘监控数据
+     * Get 实例磁盘监控数据 
      * @return Disk 实例磁盘监控数据
      */
     public DeviceDiskInfo getDisk() {
@@ -114,7 +114,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例磁盘监控数据
+     * Set 实例磁盘监控数据
      * @param Disk 实例磁盘监控数据
      */
     public void setDisk(DeviceDiskInfo Disk) {
@@ -122,7 +122,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeDeviceMonitorInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Cpu.", this.Cpu);

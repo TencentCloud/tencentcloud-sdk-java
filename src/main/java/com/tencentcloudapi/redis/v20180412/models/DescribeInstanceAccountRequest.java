@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceAccountRequest  extends AbstractModel{
+public class DescribeInstanceAccountRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -44,7 +44,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小
+     * Get 分页大小 
      * @return Limit 分页大小
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小
+     * Set 分页大小
      * @param Limit 分页大小
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量
+     * Get 分页偏移量 
      * @return Offset 分页偏移量
      */
     public Integer getOffset() {
@@ -84,7 +84,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量
+     * Set 分页偏移量
      * @param Offset 分页偏移量
      */
     public void setOffset(Integer Offset) {
@@ -92,7 +92,7 @@ public class DescribeInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

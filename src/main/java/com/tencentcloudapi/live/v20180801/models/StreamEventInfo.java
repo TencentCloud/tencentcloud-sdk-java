@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StreamEventInfo  extends AbstractModel{
+public class StreamEventInfo extends AbstractModel{
 
     /**
     * 应用名称。
@@ -90,7 +90,7 @@ UTC格式时间，
     private String Resolution;
 
     /**
-     * 获取应用名称。
+     * Get 应用名称。 
      * @return AppName 应用名称。
      */
     public String getAppName() {
@@ -98,7 +98,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置应用名称。
+     * Set 应用名称。
      * @param AppName 应用名称。
      */
     public void setAppName(String AppName) {
@@ -106,7 +106,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -114,7 +114,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -122,7 +122,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -130,7 +130,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -138,9 +138,9 @@ UTC格式时间，
     }
 
     /**
-     * 获取推流开始时间。
+     * Get 推流开始时间。
 UTC格式时间，
-例如：2019-01-07T12:00:00Z。
+例如：2019-01-07T12:00:00Z。 
      * @return StreamStartTime 推流开始时间。
 UTC格式时间，
 例如：2019-01-07T12:00:00Z。
@@ -150,7 +150,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置推流开始时间。
+     * Set 推流开始时间。
 UTC格式时间，
 例如：2019-01-07T12:00:00Z。
      * @param StreamStartTime 推流开始时间。
@@ -162,9 +162,9 @@ UTC格式时间，
     }
 
     /**
-     * 获取推流结束时间。
+     * Get 推流结束时间。
 UTC格式时间，
-例如：2019-01-07T15:00:00Z。
+例如：2019-01-07T15:00:00Z。 
      * @return StreamEndTime 推流结束时间。
 UTC格式时间，
 例如：2019-01-07T15:00:00Z。
@@ -174,7 +174,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置推流结束时间。
+     * Set 推流结束时间。
 UTC格式时间，
 例如：2019-01-07T15:00:00Z。
      * @param StreamEndTime 推流结束时间。
@@ -186,7 +186,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取停止原因。
+     * Get 停止原因。 
      * @return StopReason 停止原因。
      */
     public String getStopReason() {
@@ -194,7 +194,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置停止原因。
+     * Set 停止原因。
      * @param StopReason 停止原因。
      */
     public void setStopReason(String StopReason) {
@@ -202,7 +202,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取推流持续时长，单位：秒。
+     * Get 推流持续时长，单位：秒。 
      * @return Duration 推流持续时长，单位：秒。
      */
     public Integer getDuration() {
@@ -210,7 +210,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置推流持续时长，单位：秒。
+     * Set 推流持续时长，单位：秒。
      * @param Duration 推流持续时长，单位：秒。
      */
     public void setDuration(Integer Duration) {
@@ -218,7 +218,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取主播IP。
+     * Get 主播IP。 
      * @return ClientIp 主播IP。
      */
     public String getClientIp() {
@@ -226,7 +226,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置主播IP。
+     * Set 主播IP。
      * @param ClientIp 主播IP。
      */
     public void setClientIp(String ClientIp) {
@@ -234,7 +234,7 @@ UTC格式时间，
     }
 
     /**
-     * 获取分辨率。
+     * Get 分辨率。 
      * @return Resolution 分辨率。
      */
     public String getResolution() {
@@ -242,7 +242,7 @@ UTC格式时间，
     }
 
     /**
-     * 设置分辨率。
+     * Set 分辨率。
      * @param Resolution 分辨率。
      */
     public void setResolution(String Resolution) {
@@ -250,7 +250,7 @@ UTC格式时间，
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

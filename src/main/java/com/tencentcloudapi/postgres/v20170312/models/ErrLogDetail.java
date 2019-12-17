@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ErrLogDetail  extends AbstractModel{
+public class ErrLogDetail extends AbstractModel{
 
     /**
     * 用户名
@@ -51,7 +51,7 @@ public class ErrLogDetail  extends AbstractModel{
     private String ErrMsg;
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -59,7 +59,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -67,7 +67,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名字
+     * Get 数据库名字 
      * @return Database 数据库名字
      */
     public String getDatabase() {
@@ -75,7 +75,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名字
+     * Set 数据库名字
      * @param Database 数据库名字
      */
     public void setDatabase(String Database) {
@@ -83,7 +83,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取错误发生时间
+     * Get 错误发生时间 
      * @return ErrTime 错误发生时间
      */
     public String getErrTime() {
@@ -91,7 +91,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置错误发生时间
+     * Set 错误发生时间
      * @param ErrTime 错误发生时间
      */
     public void setErrTime(String ErrTime) {
@@ -99,7 +99,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 获取错误消息
+     * Get 错误消息 
      * @return ErrMsg 错误消息
      */
     public String getErrMsg() {
@@ -107,7 +107,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 设置错误消息
+     * Set 错误消息
      * @param ErrMsg 错误消息
      */
     public void setErrMsg(String ErrMsg) {
@@ -115,7 +115,7 @@ public class ErrLogDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

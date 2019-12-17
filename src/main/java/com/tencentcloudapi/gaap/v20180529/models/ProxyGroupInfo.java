@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyGroupInfo  extends AbstractModel{
+public class ProxyGroupInfo extends AbstractModel{
 
     /**
     * 通道组id
@@ -79,7 +79,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
-     * 获取通道组id
+     * Get 通道组id 
      * @return GroupId 通道组id
      */
     public String getGroupId() {
@@ -87,7 +87,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组id
+     * Set 通道组id
      * @param GroupId 通道组id
      */
     public void setGroupId(String GroupId) {
@@ -95,8 +95,8 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道组域名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通道组域名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -105,7 +105,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组域名
+     * Set 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,8 +115,8 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通道组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 通道组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组名称
+     * Set 通道组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 通道组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,7 +135,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Long getProjectId() {
@@ -143,7 +143,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Long ProjectId) {
@@ -151,7 +151,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取目标地域
+     * Get 目标地域 
      * @return RealServerRegionInfo 目标地域
      */
     public RegionDetail getRealServerRegionInfo() {
@@ -159,7 +159,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置目标地域
+     * Set 目标地域
      * @param RealServerRegionInfo 目标地域
      */
     public void setRealServerRegionInfo(RegionDetail RealServerRegionInfo) {
@@ -167,12 +167,12 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道组状态。
+     * Get 通道组状态。
 其中，
 0，运行中；
 1，创建中；
 4，销毁中；
-11，通道迁移中。
+11，通道迁移中。 
      * @return Status 通道组状态。
 其中，
 0，运行中；
@@ -185,7 +185,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道组状态。
+     * Set 通道组状态。
 其中，
 0，运行中；
 1，创建中；
@@ -203,7 +203,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表。
+     * Get 标签列表。 
      * @return TagSet 标签列表。
      */
     public TagPair [] getTagSet() {
@@ -211,7 +211,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表。
+     * Set 标签列表。
      * @param TagSet 标签列表。
      */
     public void setTagSet(TagPair [] TagSet) {
@@ -219,7 +219,7 @@ public class ProxyGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

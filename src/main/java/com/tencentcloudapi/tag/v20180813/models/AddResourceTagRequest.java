@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddResourceTagRequest  extends AbstractModel{
+public class AddResourceTagRequest extends AbstractModel{
 
     /**
     * 标签键
@@ -44,7 +44,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     private String Resource;
 
     /**
-     * 获取标签键
+     * Get 标签键 
      * @return TagKey 标签键
      */
     public String getTagKey() {
@@ -52,7 +52,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签键
+     * Set 标签键
      * @param TagKey 标签键
      */
     public void setTagKey(String TagKey) {
@@ -60,7 +60,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签值
+     * Get 标签值 
      * @return TagValue 标签值
      */
     public String getTagValue() {
@@ -68,7 +68,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
      * @param TagValue 标签值
      */
     public void setTagValue(String TagValue) {
@@ -76,7 +76,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源六段式描述
+     * Get 资源六段式描述 
      * @return Resource 资源六段式描述
      */
     public String getResource() {
@@ -84,7 +84,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源六段式描述
+     * Set 资源六段式描述
      * @param Resource 资源六段式描述
      */
     public void setResource(String Resource) {
@@ -92,7 +92,7 @@ public class AddResourceTagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

@@ -29,21 +29,10 @@ public class CamClient extends AbstractClient{
     private static String endpoint = "cam.tencentcloudapi.com";
     private static String version = "2019-01-16";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public CamClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public CamClient(Credential credential, String region, ClientProfile profile) {
         super(CamClient.endpoint, CamClient.version, credential, region, profile);
     }

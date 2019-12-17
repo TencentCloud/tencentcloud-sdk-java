@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldResultRequest  extends AbstractModel{
+public class DescribeShieldResultRequest extends AbstractModel{
 
     /**
     * 任务唯一标识
@@ -30,7 +30,7 @@ public class DescribeShieldResultRequest  extends AbstractModel{
     private String ItemId;
 
     /**
-     * 获取任务唯一标识
+     * Get 任务唯一标识 
      * @return ItemId 任务唯一标识
      */
     public String getItemId() {
@@ -38,7 +38,7 @@ public class DescribeShieldResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识
+     * Set 任务唯一标识
      * @param ItemId 任务唯一标识
      */
     public void setItemId(String ItemId) {
@@ -46,7 +46,7 @@ public class DescribeShieldResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);

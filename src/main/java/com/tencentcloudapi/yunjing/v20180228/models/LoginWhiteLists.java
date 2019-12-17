@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginWhiteLists  extends AbstractModel{
+public class LoginWhiteLists extends AbstractModel{
 
     /**
     * 记录ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端ID
@@ -93,23 +93,23 @@ public class LoginWhiteLists  extends AbstractModel{
     private String HostIp;
 
     /**
-     * 获取记录ID
+     * Get 记录ID 
      * @return Id 记录ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置记录ID
+     * Set 记录ID
      * @param Id 记录ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端ID
+     * Get 云镜客户端ID 
      * @return Uuid 云镜客户端ID
      */
     public String getUuid() {
@@ -117,7 +117,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端ID
+     * Set 云镜客户端ID
      * @param Uuid 云镜客户端ID
      */
     public void setUuid(String Uuid) {
@@ -125,7 +125,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取白名单地域
+     * Get 白名单地域 
      * @return Places 白名单地域
      */
     public Place [] getPlaces() {
@@ -133,7 +133,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置白名单地域
+     * Set 白名单地域
      * @param Places 白名单地域
      */
     public void setPlaces(Place [] Places) {
@@ -141,7 +141,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取白名单用户（多个用户逗号隔开）
+     * Get 白名单用户（多个用户逗号隔开） 
      * @return UserName 白名单用户（多个用户逗号隔开）
      */
     public String getUserName() {
@@ -149,7 +149,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置白名单用户（多个用户逗号隔开）
+     * Set 白名单用户（多个用户逗号隔开）
      * @param UserName 白名单用户（多个用户逗号隔开）
      */
     public void setUserName(String UserName) {
@@ -157,7 +157,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取白名单IP（多个IP逗号隔开）
+     * Get 白名单IP（多个IP逗号隔开） 
      * @return SrcIp 白名单IP（多个IP逗号隔开）
      */
     public String getSrcIp() {
@@ -165,7 +165,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置白名单IP（多个IP逗号隔开）
+     * Set 白名单IP（多个IP逗号隔开）
      * @param SrcIp 白名单IP（多个IP逗号隔开）
      */
     public void setSrcIp(String SrcIp) {
@@ -173,7 +173,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取是否为全局规则
+     * Get 是否为全局规则 
      * @return IsGlobal 是否为全局规则
      */
     public Boolean getIsGlobal() {
@@ -181,7 +181,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置是否为全局规则
+     * Set 是否为全局规则
      * @param IsGlobal 是否为全局规则
      */
     public void setIsGlobal(Boolean IsGlobal) {
@@ -189,7 +189,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取创建白名单时间
+     * Get 创建白名单时间 
      * @return CreateTime 创建白名单时间
      */
     public String getCreateTime() {
@@ -197,7 +197,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置创建白名单时间
+     * Set 创建白名单时间
      * @param CreateTime 创建白名单时间
      */
     public void setCreateTime(String CreateTime) {
@@ -205,7 +205,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取修改白名单时间
+     * Get 修改白名单时间 
      * @return ModifyTime 修改白名单时间
      */
     public String getModifyTime() {
@@ -213,7 +213,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置修改白名单时间
+     * Set 修改白名单时间
      * @param ModifyTime 修改白名单时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -221,7 +221,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取机器名
+     * Get 机器名 
      * @return MachineName 机器名
      */
     public String getMachineName() {
@@ -229,7 +229,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置机器名
+     * Set 机器名
      * @param MachineName 机器名
      */
     public void setMachineName(String MachineName) {
@@ -237,7 +237,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 获取机器IP
+     * Get 机器IP 
      * @return HostIp 机器IP
      */
     public String getHostIp() {
@@ -245,7 +245,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 设置机器IP
+     * Set 机器IP
      * @param HostIp 机器IP
      */
     public void setHostIp(String HostIp) {
@@ -253,7 +253,7 @@ public class LoginWhiteLists  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

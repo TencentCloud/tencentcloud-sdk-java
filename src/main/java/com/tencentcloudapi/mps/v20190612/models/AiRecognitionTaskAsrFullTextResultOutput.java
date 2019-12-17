@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
+public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
 
     /**
     * 语音全文识别片段列表。
@@ -44,7 +44,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-     * 获取语音全文识别片段列表。
+     * Get 语音全文识别片段列表。 
      * @return SegmentSet 语音全文识别片段列表。
      */
     public AiRecognitionTaskAsrFullTextSegmentItem [] getSegmentSet() {
@@ -52,7 +52,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别片段列表。
+     * Set 语音全文识别片段列表。
      * @param SegmentSet 语音全文识别片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskAsrFullTextSegmentItem [] SegmentSet) {
@@ -60,7 +60,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取字幕文件地址。
+     * Get 字幕文件地址。 
      * @return SubtitlePath 字幕文件地址。
      */
     public String getSubtitlePath() {
@@ -68,7 +68,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置字幕文件地址。
+     * Set 字幕文件地址。
      * @param SubtitlePath 字幕文件地址。
      */
     public void setSubtitlePath(String SubtitlePath) {
@@ -76,7 +76,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 获取字幕文件存储位置。
+     * Get 字幕文件存储位置。 
      * @return OutputStorage 字幕文件存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -84,7 +84,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置字幕文件存储位置。
+     * Set 字幕文件存储位置。
      * @param OutputStorage 字幕文件存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -92,7 +92,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);

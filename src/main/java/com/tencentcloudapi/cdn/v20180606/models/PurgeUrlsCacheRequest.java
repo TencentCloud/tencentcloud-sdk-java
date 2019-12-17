@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurgeUrlsCacheRequest  extends AbstractModel{
+public class PurgeUrlsCacheRequest extends AbstractModel{
 
     /**
     * URL 列表，需要包含协议头部 http:// 或 https://
@@ -30,7 +30,7 @@ public class PurgeUrlsCacheRequest  extends AbstractModel{
     private String [] Urls;
 
     /**
-     * 获取URL 列表，需要包含协议头部 http:// 或 https://
+     * Get URL 列表，需要包含协议头部 http:// 或 https:// 
      * @return Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public String [] getUrls() {
@@ -38,7 +38,7 @@ public class PurgeUrlsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 设置URL 列表，需要包含协议头部 http:// 或 https://
+     * Set URL 列表，需要包含协议头部 http:// 或 https://
      * @param Urls URL 列表，需要包含协议头部 http:// 或 https://
      */
     public void setUrls(String [] Urls) {
@@ -46,7 +46,7 @@ public class PurgeUrlsCacheRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterEndpointVipStatusRequest  extends AbstractModel{
+public class DescribeClusterEndpointVipStatusRequest extends AbstractModel{
 
     /**
     * 集群ID
@@ -30,7 +30,7 @@ public class DescribeClusterEndpointVipStatusRequest  extends AbstractModel{
     private String ClusterId;
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -38,7 +38,7 @@ public class DescribeClusterEndpointVipStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -46,7 +46,7 @@ public class DescribeClusterEndpointVipStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

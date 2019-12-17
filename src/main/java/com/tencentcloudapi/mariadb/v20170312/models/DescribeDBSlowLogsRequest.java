@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBSlowLogsRequest  extends AbstractModel{
+public class DescribeDBSlowLogsRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc。
@@ -86,7 +86,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     private Integer Slave;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc。
+     * Get 实例 ID，形如：tdsql-ow728lmc。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public String getInstanceId() {
@@ -94,7 +94,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc。
+     * Set 实例 ID，形如：tdsql-ow728lmc。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -102,7 +102,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取从结果的第几条数据开始返回
+     * Get 从结果的第几条数据开始返回 
      * @return Offset 从结果的第几条数据开始返回
      */
     public Integer getOffset() {
@@ -110,7 +110,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置从结果的第几条数据开始返回
+     * Set 从结果的第几条数据开始返回
      * @param Offset 从结果的第几条数据开始返回
      */
     public void setOffset(Integer Offset) {
@@ -118,7 +118,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回的结果条数
+     * Get 返回的结果条数 
      * @return Limit 返回的结果条数
      */
     public Integer getLimit() {
@@ -126,7 +126,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回的结果条数
+     * Set 返回的结果条数
      * @param Limit 返回的结果条数
      */
     public void setLimit(Integer Limit) {
@@ -134,7 +134,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的起始时间，形如2016-07-23 14:55:20
+     * Get 查询的起始时间，形如2016-07-23 14:55:20 
      * @return StartTime 查询的起始时间，形如2016-07-23 14:55:20
      */
     public String getStartTime() {
@@ -142,7 +142,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的起始时间，形如2016-07-23 14:55:20
+     * Set 查询的起始时间，形如2016-07-23 14:55:20
      * @param StartTime 查询的起始时间，形如2016-07-23 14:55:20
      */
     public void setStartTime(String StartTime) {
@@ -150,7 +150,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的结束时间，形如2016-08-22 14:55:20
+     * Get 查询的结束时间，形如2016-08-22 14:55:20 
      * @return EndTime 查询的结束时间，形如2016-08-22 14:55:20
      */
     public String getEndTime() {
@@ -158,7 +158,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的结束时间，形如2016-08-22 14:55:20
+     * Set 查询的结束时间，形如2016-08-22 14:55:20
      * @param EndTime 查询的结束时间，形如2016-08-22 14:55:20
      */
     public void setEndTime(String EndTime) {
@@ -166,7 +166,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的具体数据库名称
+     * Get 要查询的具体数据库名称 
      * @return Db 要查询的具体数据库名称
      */
     public String getDb() {
@@ -174,7 +174,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的具体数据库名称
+     * Set 要查询的具体数据库名称
      * @param Db 要查询的具体数据库名称
      */
     public void setDb(String Db) {
@@ -182,7 +182,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序指标，取值为query_time_sum或者query_count
+     * Get 排序指标，取值为query_time_sum或者query_count 
      * @return OrderBy 排序指标，取值为query_time_sum或者query_count
      */
     public String getOrderBy() {
@@ -190,7 +190,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序指标，取值为query_time_sum或者query_count
+     * Set 排序指标，取值为query_time_sum或者query_count
      * @param OrderBy 排序指标，取值为query_time_sum或者query_count
      */
     public void setOrderBy(String OrderBy) {
@@ -198,7 +198,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序类型，desc或者asc
+     * Get 排序类型，desc或者asc 
      * @return OrderByType 排序类型，desc或者asc
      */
     public String getOrderByType() {
@@ -206,7 +206,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序类型，desc或者asc
+     * Set 排序类型，desc或者asc
      * @param OrderByType 排序类型，desc或者asc
      */
     public void setOrderByType(String OrderByType) {
@@ -214,7 +214,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否查询从机的慢查询，0-主机; 1-从机
+     * Get 是否查询从机的慢查询，0-主机; 1-从机 
      * @return Slave 是否查询从机的慢查询，0-主机; 1-从机
      */
     public Integer getSlave() {
@@ -222,7 +222,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否查询从机的慢查询，0-主机; 1-从机
+     * Set 是否查询从机的慢查询，0-主机; 1-从机
      * @param Slave 是否查询从机的慢查询，0-主机; 1-从机
      */
     public void setSlave(Integer Slave) {
@@ -230,7 +230,7 @@ public class DescribeDBSlowLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

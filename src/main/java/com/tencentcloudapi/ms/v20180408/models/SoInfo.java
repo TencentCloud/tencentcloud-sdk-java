@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SoInfo  extends AbstractModel{
+public class SoInfo extends AbstractModel{
 
     /**
     * so文件列表
@@ -30,7 +30,7 @@ public class SoInfo  extends AbstractModel{
     private String [] SoFileNames;
 
     /**
-     * 获取so文件列表
+     * Get so文件列表 
      * @return SoFileNames so文件列表
      */
     public String [] getSoFileNames() {
@@ -38,7 +38,7 @@ public class SoInfo  extends AbstractModel{
     }
 
     /**
-     * 设置so文件列表
+     * Set so文件列表
      * @param SoFileNames so文件列表
      */
     public void setSoFileNames(String [] SoFileNames) {
@@ -46,7 +46,7 @@ public class SoInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SoFileNames.", this.SoFileNames);

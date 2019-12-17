@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditTagsRequest  extends AbstractModel{
+public class EditTagsRequest extends AbstractModel{
 
     /**
     * 标签名
@@ -34,7 +34,7 @@ public class EditTagsRequest  extends AbstractModel{
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * CVM主机ID
@@ -44,7 +44,7 @@ public class EditTagsRequest  extends AbstractModel{
     private String [] Quuids;
 
     /**
-     * 获取标签名
+     * Get 标签名 
      * @return Name 标签名
      */
     public String getName() {
@@ -52,7 +52,7 @@ public class EditTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签名
+     * Set 标签名
      * @param Name 标签名
      */
     public void setName(String Name) {
@@ -60,23 +60,23 @@ public class EditTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签ID
+     * Get 标签ID 
      * @return Id 标签ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置标签ID
+     * Set 标签ID
      * @param Id 标签ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取CVM主机ID
+     * Get CVM主机ID 
      * @return Quuids CVM主机ID
      */
     public String [] getQuuids() {
@@ -84,7 +84,7 @@ public class EditTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CVM主机ID
+     * Set CVM主机ID
      * @param Quuids CVM主机ID
      */
     public void setQuuids(String [] Quuids) {
@@ -92,7 +92,7 @@ public class EditTagsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

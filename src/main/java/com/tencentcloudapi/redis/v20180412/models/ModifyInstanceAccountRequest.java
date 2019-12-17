@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceAccountRequest  extends AbstractModel{
+public class ModifyInstanceAccountRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -72,7 +72,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号名称，如果要修改主账号，填root
+     * Get 子账号名称，如果要修改主账号，填root 
      * @return AccountName 子账号名称，如果要修改主账号，填root
      */
     public String getAccountName() {
@@ -96,7 +96,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号名称，如果要修改主账号，填root
+     * Set 子账号名称，如果要修改主账号，填root
      * @param AccountName 子账号名称，如果要修改主账号，填root
      */
     public void setAccountName(String AccountName) {
@@ -104,7 +104,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号密码
+     * Get 子账号密码 
      * @return AccountPassword 子账号密码
      */
     public String getAccountPassword() {
@@ -112,7 +112,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号密码
+     * Set 子账号密码
      * @param AccountPassword 子账号密码
      */
     public void setAccountPassword(String AccountPassword) {
@@ -120,7 +120,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号描述信息
+     * Get 子账号描述信息 
      * @return Remark 子账号描述信息
      */
     public String getRemark() {
@@ -128,7 +128,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号描述信息
+     * Set 子账号描述信息
      * @param Remark 子账号描述信息
      */
     public void setRemark(String Remark) {
@@ -136,7 +136,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * Get 子账号路由策略：填写master或者slave，表示路由主节点，从节点 
      * @return ReadonlyPolicy 子账号路由策略：填写master或者slave，表示路由主节点，从节点
      */
     public String [] getReadonlyPolicy() {
@@ -144,7 +144,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号路由策略：填写master或者slave，表示路由主节点，从节点
+     * Set 子账号路由策略：填写master或者slave，表示路由主节点，从节点
      * @param ReadonlyPolicy 子账号路由策略：填写master或者slave，表示路由主节点，从节点
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
@@ -152,7 +152,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+     * Get 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略 
      * @return Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
      */
     public String getPrivilege() {
@@ -160,7 +160,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+     * Set 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
      * @param Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
      */
     public void setPrivilege(String Privilege) {
@@ -168,7 +168,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * Get true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密 
      * @return NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
      */
     public Boolean getNoAuth() {
@@ -176,7 +176,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * Set true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
      * @param NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
      */
     public void setNoAuth(Boolean NoAuth) {
@@ -184,7 +184,7 @@ public class ModifyInstanceAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioVolumeParam  extends AbstractModel{
+public class AudioVolumeParam extends AbstractModel{
 
     /**
     * 是否静音，取值范围0或1。
@@ -44,10 +44,10 @@ public class AudioVolumeParam  extends AbstractModel{
     private Float Gain;
 
     /**
-     * 获取是否静音，取值范围0或1。
+     * Get 是否静音，取值范围0或1。
 <li>0表示不静音。</li>
 <li>1表示静音。</li>
-默认是0。
+默认是0。 
      * @return Mute 是否静音，取值范围0或1。
 <li>0表示不静音。</li>
 <li>1表示静音。</li>
@@ -58,7 +58,7 @@ public class AudioVolumeParam  extends AbstractModel{
     }
 
     /**
-     * 设置是否静音，取值范围0或1。
+     * Set 是否静音，取值范围0或1。
 <li>0表示不静音。</li>
 <li>1表示静音。</li>
 默认是0。
@@ -72,11 +72,11 @@ public class AudioVolumeParam  extends AbstractModel{
     }
 
     /**
-     * 获取音频增益，取值范围0~10。
+     * Get 音频增益，取值范围0~10。
 <li>大于1表示增加音量。</li>
 <li>小于1表示降低音量。</li>
 <li>0和1：表示不改变。</li>
-默认是0。
+默认是0。 
      * @return Gain 音频增益，取值范围0~10。
 <li>大于1表示增加音量。</li>
 <li>小于1表示降低音量。</li>
@@ -88,7 +88,7 @@ public class AudioVolumeParam  extends AbstractModel{
     }
 
     /**
-     * 设置音频增益，取值范围0~10。
+     * Set 音频增益，取值范围0~10。
 <li>大于1表示增加音量。</li>
 <li>小于1表示降低音量。</li>
 <li>0和1：表示不改变。</li>
@@ -104,7 +104,7 @@ public class AudioVolumeParam  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mute", this.Mute);

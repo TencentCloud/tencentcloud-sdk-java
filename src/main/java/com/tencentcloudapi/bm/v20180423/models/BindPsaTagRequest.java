@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindPsaTagRequest  extends AbstractModel{
+public class BindPsaTagRequest extends AbstractModel{
 
     /**
     * 预授权规则ID
@@ -44,7 +44,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     private String TagValue;
 
     /**
-     * 获取预授权规则ID
+     * Get 预授权规则ID 
      * @return PsaId 预授权规则ID
      */
     public String getPsaId() {
@@ -52,7 +52,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预授权规则ID
+     * Set 预授权规则ID
      * @param PsaId 预授权规则ID
      */
     public void setPsaId(String PsaId) {
@@ -60,7 +60,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要绑定的标签key
+     * Get 需要绑定的标签key 
      * @return TagKey 需要绑定的标签key
      */
     public String getTagKey() {
@@ -68,7 +68,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要绑定的标签key
+     * Set 需要绑定的标签key
      * @param TagKey 需要绑定的标签key
      */
     public void setTagKey(String TagKey) {
@@ -76,7 +76,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要绑定的标签value
+     * Get 需要绑定的标签value 
      * @return TagValue 需要绑定的标签value
      */
     public String getTagValue() {
@@ -84,7 +84,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要绑定的标签value
+     * Set 需要绑定的标签value
      * @param TagValue 需要绑定的标签value
      */
     public void setTagValue(String TagValue) {
@@ -92,7 +92,7 @@ public class BindPsaTagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PsaId", this.PsaId);

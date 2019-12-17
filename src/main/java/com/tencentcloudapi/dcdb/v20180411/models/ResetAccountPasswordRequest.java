@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetAccountPasswordRequest  extends AbstractModel{
+public class ResetAccountPasswordRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：dcdbt-ow728lmc。
@@ -51,7 +51,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取实例 ID，形如：dcdbt-ow728lmc。
+     * Get 实例 ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：dcdbt-ow728lmc。
+     * Set 实例 ID，形如：dcdbt-ow728lmc。
      * @param InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录用户名。
+     * Get 登录用户名。 
      * @return UserName 登录用户名。
      */
     public String getUserName() {
@@ -75,7 +75,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录用户名。
+     * Set 登录用户名。
      * @param UserName 登录用户名。
      */
     public void setUserName(String UserName) {
@@ -83,7 +83,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Get 用户允许的访问 host，用户名+host唯一确定一个账号。 
      * @return Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public String getHost() {
@@ -91,7 +91,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户允许的访问 host，用户名+host唯一确定一个账号。
+     * Set 用户允许的访问 host，用户名+host唯一确定一个账号。
      * @param Host 用户允许的访问 host，用户名+host唯一确定一个账号。
      */
     public void setHost(String Host) {
@@ -99,7 +99,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Get 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。 
      * @return Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      */
     public String getPassword() {
@@ -107,7 +107,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
+     * Set 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      * @param Password 新密码，由字母、数字或常见符号组成，不能包含分号、单引号和双引号，长度为6~32位。
      */
     public void setPassword(String Password) {
@@ -115,7 +115,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

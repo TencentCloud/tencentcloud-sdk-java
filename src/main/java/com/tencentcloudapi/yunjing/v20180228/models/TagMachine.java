@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagMachine  extends AbstractModel{
+public class TagMachine extends AbstractModel{
 
     /**
     * ID
@@ -72,7 +72,7 @@ public class TagMachine  extends AbstractModel{
     private String MachineType;
 
     /**
-     * 获取ID
+     * Get ID 
      * @return Id ID
      */
     public String getId() {
@@ -80,7 +80,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置ID
+     * Set ID
      * @param Id ID
      */
     public void setId(String Id) {
@@ -88,7 +88,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID
+     * Get 主机ID 
      * @return Quuid 主机ID
      */
     public String getQuuid() {
@@ -96,7 +96,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID
+     * Set 主机ID
      * @param Quuid 主机ID
      */
     public void setQuuid(String Quuid) {
@@ -104,7 +104,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机名称
+     * Get 主机名称 
      * @return MachineName 主机名称
      */
     public String getMachineName() {
@@ -112,7 +112,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称
+     * Set 主机名称
      * @param MachineName 主机名称
      */
     public void setMachineName(String MachineName) {
@@ -120,7 +120,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP
+     * Get 主机内网IP 
      * @return MachineIp 主机内网IP
      */
     public String getMachineIp() {
@@ -128,7 +128,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP
+     * Set 主机内网IP
      * @param MachineIp 主机内网IP
      */
     public void setMachineIp(String MachineIp) {
@@ -136,7 +136,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机外网IP
+     * Get 主机外网IP 
      * @return MachineWanIp 主机外网IP
      */
     public String getMachineWanIp() {
@@ -144,7 +144,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机外网IP
+     * Set 主机外网IP
      * @param MachineWanIp 主机外网IP
      */
     public void setMachineWanIp(String MachineWanIp) {
@@ -152,7 +152,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机区域
+     * Get 主机区域 
      * @return MachineRegion 主机区域
      */
     public String getMachineRegion() {
@@ -160,7 +160,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机区域
+     * Set 主机区域
      * @param MachineRegion 主机区域
      */
     public void setMachineRegion(String MachineRegion) {
@@ -168,7 +168,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机区域类型
+     * Get 主机区域类型 
      * @return MachineType 主机区域类型
      */
     public String getMachineType() {
@@ -176,7 +176,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机区域类型
+     * Set 主机区域类型
      * @param MachineType 主机区域类型
      */
     public void setMachineType(String MachineType) {
@@ -184,7 +184,7 @@ public class TagMachine  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

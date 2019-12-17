@@ -29,21 +29,10 @@ public class CdbClient extends AbstractClient{
     private static String endpoint = "cdb.tencentcloudapi.com";
     private static String version = "2017-03-20";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public CdbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public CdbClient(Credential credential, String region, ClientProfile profile) {
         super(CdbClient.endpoint, CdbClient.version, credential, region, profile);
     }

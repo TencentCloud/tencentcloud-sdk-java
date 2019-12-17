@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CloneAccountRequest  extends AbstractModel{
+public class CloneAccountRequest extends AbstractModel{
 
     /**
     * 实例ID
@@ -65,7 +65,7 @@ public class CloneAccountRequest  extends AbstractModel{
     private String DstDesc;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -73,7 +73,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -81,7 +81,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源用户账户名
+     * Get 源用户账户名 
      * @return SrcUser 源用户账户名
      */
     public String getSrcUser() {
@@ -89,7 +89,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源用户账户名
+     * Set 源用户账户名
      * @param SrcUser 源用户账户名
      */
     public void setSrcUser(String SrcUser) {
@@ -97,7 +97,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源用户HOST
+     * Get 源用户HOST 
      * @return SrcHost 源用户HOST
      */
     public String getSrcHost() {
@@ -105,7 +105,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源用户HOST
+     * Set 源用户HOST
      * @param SrcHost 源用户HOST
      */
     public void setSrcHost(String SrcHost) {
@@ -113,7 +113,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的用户账户名
+     * Get 目的用户账户名 
      * @return DstUser 目的用户账户名
      */
     public String getDstUser() {
@@ -121,7 +121,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的用户账户名
+     * Set 目的用户账户名
      * @param DstUser 目的用户账户名
      */
     public void setDstUser(String DstUser) {
@@ -129,7 +129,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的用户HOST
+     * Get 目的用户HOST 
      * @return DstHost 目的用户HOST
      */
     public String getDstHost() {
@@ -137,7 +137,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的用户HOST
+     * Set 目的用户HOST
      * @param DstHost 目的用户HOST
      */
     public void setDstHost(String DstHost) {
@@ -145,7 +145,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目的用户账户描述
+     * Get 目的用户账户描述 
      * @return DstDesc 目的用户账户描述
      */
     public String getDstDesc() {
@@ -153,7 +153,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目的用户账户描述
+     * Set 目的用户账户描述
      * @param DstDesc 目的用户账户描述
      */
     public void setDstDesc(String DstDesc) {
@@ -161,7 +161,7 @@ public class CloneAccountRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

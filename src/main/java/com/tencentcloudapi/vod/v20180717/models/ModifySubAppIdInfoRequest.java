@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySubAppIdInfoRequest  extends AbstractModel{
+public class ModifySubAppIdInfoRequest extends AbstractModel{
 
     /**
     * 子应用 ID。
@@ -44,7 +44,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取子应用 ID。
+     * Get 子应用 ID。 
      * @return SubAppId 子应用 ID。
      */
     public Long getSubAppId() {
@@ -52,7 +52,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子应用 ID。
+     * Set 子应用 ID。
      * @param SubAppId 子应用 ID。
      */
     public void setSubAppId(Long SubAppId) {
@@ -60,7 +60,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子应用名称，长度限制：40个字符。
+     * Get 子应用名称，长度限制：40个字符。 
      * @return Name 子应用名称，长度限制：40个字符。
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子应用名称，长度限制：40个字符。
+     * Set 子应用名称，长度限制：40个字符。
      * @param Name 子应用名称，长度限制：40个字符。
      */
     public void setName(String Name) {
@@ -76,7 +76,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子应用简介，长度限制： 300个字符。
+     * Get 子应用简介，长度限制： 300个字符。 
      * @return Description 子应用简介，长度限制： 300个字符。
      */
     public String getDescription() {
@@ -84,7 +84,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子应用简介，长度限制： 300个字符。
+     * Set 子应用简介，长度限制： 300个字符。
      * @param Description 子应用简介，长度限制： 300个字符。
      */
     public void setDescription(String Description) {
@@ -92,7 +92,7 @@ public class ModifySubAppIdInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

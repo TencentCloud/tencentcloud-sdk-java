@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7ListenerInfoBackend  extends AbstractModel{
+public class L7ListenerInfoBackend extends AbstractModel{
 
     /**
     * 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
@@ -72,7 +72,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     private String LanIp;
 
     /**
-     * 获取绑定类别（0代表黑石物理机，1代表虚拟机IP）。
+     * Get 绑定类别（0代表黑石物理机，1代表虚拟机IP）。 
      * @return BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      */
     public Integer getBindType() {
@@ -80,7 +80,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类别（0代表黑石物理机，1代表虚拟机IP）。
+     * Set 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      * @param BindType 绑定类别（0代表黑石物理机，1代表虚拟机IP）。
      */
     public void setBindType(Integer BindType) {
@@ -88,7 +88,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取主机端口。
+     * Get 主机端口。 
      * @return Port 主机端口。
      */
     public Integer getPort() {
@@ -96,7 +96,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置主机端口。
+     * Set 主机端口。
      * @param Port 主机端口。
      */
     public void setPort(Integer Port) {
@@ -104,7 +104,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取权重。
+     * Get 权重。 
      * @return Weight 权重。
      */
     public Integer getWeight() {
@@ -112,7 +112,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置权重。
+     * Set 权重。
      * @param Weight 权重。
      */
     public void setWeight(Integer Weight) {
@@ -120,7 +120,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
+     * Get 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。 
      * @return Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
     public String getStatus() {
@@ -128,7 +128,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
+     * Set 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      * @param Status 当前绑定关系的健康检查状态（Dead代表不健康，Alive代表健康）。
      */
     public void setStatus(String Status) {
@@ -136,7 +136,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机的主机ID。
+     * Get 黑石物理机的主机ID。 
      * @return InstanceId 黑石物理机的主机ID。
      */
     public String getInstanceId() {
@@ -144,7 +144,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机的主机ID。
+     * Set 黑石物理机的主机ID。
      * @param InstanceId 黑石物理机的主机ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -152,7 +152,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取黑石物理机的别名。
+     * Get 黑石物理机的别名。 
      * @return Alias 黑石物理机的别名。
      */
     public String getAlias() {
@@ -160,7 +160,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置黑石物理机的别名。
+     * Set 黑石物理机的别名。
      * @param Alias 黑石物理机的别名。
      */
     public void setAlias(String Alias) {
@@ -168,7 +168,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return LanIp 主机IP。
      */
     public String getLanIp() {
@@ -176,7 +176,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param LanIp 主机IP。
      */
     public void setLanIp(String LanIp) {
@@ -184,7 +184,7 @@ public class L7ListenerInfoBackend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BindType", this.BindType);

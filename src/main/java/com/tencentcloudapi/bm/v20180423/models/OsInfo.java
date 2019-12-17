@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OsInfo  extends AbstractModel{
+public class OsInfo extends AbstractModel{
 
     /**
     * 操作系统ID
@@ -72,7 +72,7 @@ public class OsInfo  extends AbstractModel{
     private Integer MaxPartitionSize;
 
     /**
-     * 获取操作系统ID
+     * Get 操作系统ID 
      * @return OsTypeId 操作系统ID
      */
     public Integer getOsTypeId() {
@@ -80,7 +80,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统ID
+     * Set 操作系统ID
      * @param OsTypeId 操作系统ID
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -88,7 +88,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统名称
+     * Get 操作系统名称 
      * @return OsName 操作系统名称
      */
     public String getOsName() {
@@ -96,7 +96,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统名称
+     * Set 操作系统名称
      * @param OsName 操作系统名称
      */
     public void setOsName(String OsName) {
@@ -104,7 +104,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统名称描述
+     * Get 操作系统名称描述 
      * @return OsDescription 操作系统名称描述
      */
     public String getOsDescription() {
@@ -112,7 +112,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统名称描述
+     * Set 操作系统名称描述
      * @param OsDescription 操作系统名称描述
      */
     public void setOsDescription(String OsDescription) {
@@ -120,7 +120,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统英文名称
+     * Get 操作系统英文名称 
      * @return OsEnglishDescription 操作系统英文名称
      */
     public String getOsEnglishDescription() {
@@ -128,7 +128,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统英文名称
+     * Set 操作系统英文名称
      * @param OsEnglishDescription 操作系统英文名称
      */
     public void setOsEnglishDescription(String OsEnglishDescription) {
@@ -136,7 +136,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统的分类，如CentOs Debian
+     * Get 操作系统的分类，如CentOs Debian 
      * @return OsClass 操作系统的分类，如CentOs Debian
      */
     public String getOsClass() {
@@ -144,7 +144,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统的分类，如CentOs Debian
+     * Set 操作系统的分类，如CentOs Debian
      * @param OsClass 操作系统的分类，如CentOs Debian
      */
     public void setOsClass(String OsClass) {
@@ -152,7 +152,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取标识镜像分类。public:公共镜像; private: 专属镜像
+     * Get 标识镜像分类。public:公共镜像; private: 专属镜像 
      * @return ImageTag 标识镜像分类。public:公共镜像; private: 专属镜像
      */
     public String getImageTag() {
@@ -160,7 +160,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置标识镜像分类。public:公共镜像; private: 专属镜像
+     * Set 标识镜像分类。public:公共镜像; private: 专属镜像
      * @param ImageTag 标识镜像分类。public:公共镜像; private: 专属镜像
      */
     public void setImageTag(String ImageTag) {
@@ -168,7 +168,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 获取操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
+     * Get 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T 
      * @return MaxPartitionSize 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
      */
     public Integer getMaxPartitionSize() {
@@ -176,7 +176,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
+     * Set 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
      * @param MaxPartitionSize 操作系统，ext4文件下所支持的最大的磁盘大小。单位为T
      */
     public void setMaxPartitionSize(Integer MaxPartitionSize) {
@@ -184,7 +184,7 @@ public class OsInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OsTypeId", this.OsTypeId);

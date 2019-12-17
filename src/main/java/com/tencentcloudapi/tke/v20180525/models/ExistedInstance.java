@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExistedInstance  extends AbstractModel{
+public class ExistedInstance extends AbstractModel{
 
     /**
     * 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
@@ -130,8 +130,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     private String InstanceType;
 
     /**
-     * 获取实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -140,7 +140,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
+     * Set 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Usable 实例是否支持加入集群(TRUE 可以加入 FALSE 不能加入)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,8 +150,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例不支持加入的原因。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例不支持加入的原因。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UnusableReason 实例不支持加入的原因。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -160,7 +160,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例不支持加入的原因。
+     * Set 实例不支持加入的原因。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UnusableReason 实例不支持加入的原因。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,8 +170,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例已经所在的集群ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例已经所在的集群ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlreadyInCluster 实例已经所在的集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -180,7 +180,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例已经所在的集群ID。
+     * Set 实例已经所在的集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlreadyInCluster 实例已经所在的集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,7 +190,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例ID形如：ins-xxxxxxxx。
+     * Get 实例ID形如：ins-xxxxxxxx。 
      * @return InstanceId 实例ID形如：ins-xxxxxxxx。
      */
     public String getInstanceId() {
@@ -198,7 +198,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例ID形如：ins-xxxxxxxx。
+     * Set 实例ID形如：ins-xxxxxxxx。
      * @param InstanceId 实例ID形如：ins-xxxxxxxx。
      */
     public void setInstanceId(String InstanceId) {
@@ -206,8 +206,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -216,7 +216,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例名称。
+     * Set 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -226,8 +226,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例主网卡的内网IP列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例主网卡的内网IP列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PrivateIpAddresses 实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -236,7 +236,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例主网卡的内网IP列表。
+     * Set 实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 实例主网卡的内网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -246,9 +246,9 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例主网卡的公网IP列表。
+     * Get 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicIpAddresses 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -258,7 +258,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例主网卡的公网IP列表。
+     * Set 实例主网卡的公网IP列表。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 实例主网卡的公网IP列表。
@@ -270,8 +270,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -280,7 +280,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * Set 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -290,11 +290,11 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例计费模式。取值范围：
+     * Get 实例计费模式。取值范围：
 PREPAID：表示预付费，即包年包月
 POSTPAID_BY_HOUR：表示后付费，即按量计费
 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceChargeType 实例计费模式。取值范围：
 PREPAID：表示预付费，即包年包月
 POSTPAID_BY_HOUR：表示后付费，即按量计费
@@ -306,7 +306,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例计费模式。取值范围：
+     * Set 实例计费模式。取值范围：
 PREPAID：表示预付费，即包年包月
 POSTPAID_BY_HOUR：表示后付费，即按量计费
 CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
@@ -322,8 +322,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例的CPU核数，单位：核。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例的CPU核数，单位：核。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CPU 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -332,7 +332,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例的CPU核数，单位：核。
+     * Set 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CPU 实例的CPU核数，单位：核。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -342,8 +342,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例内存容量，单位：GB。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例内存容量，单位：GB。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Memory 实例内存容量，单位：GB。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -352,7 +352,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例内存容量，单位：GB。
+     * Set 实例内存容量，单位：GB。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 实例内存容量，单位：GB。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -362,8 +362,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取操作系统名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 操作系统名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OsName 操作系统名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -372,7 +372,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置操作系统名称。
+     * Set 操作系统名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OsName 操作系统名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -382,8 +382,8 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 获取实例机型。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例机型。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceType 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -392,7 +392,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -402,7 +402,7 @@ CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Usable", this.Usable);

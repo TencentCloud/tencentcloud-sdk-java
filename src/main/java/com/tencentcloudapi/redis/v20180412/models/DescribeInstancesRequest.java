@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesRequest  extends AbstractModel{
+public class DescribeInstancesRequest extends AbstractModel{
 
     /**
     * 实例列表的大小，参数默认值20
@@ -163,7 +163,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     private String [] SearchKeys;
 
     /**
-     * 获取实例列表的大小，参数默认值20
+     * Get 实例列表的大小，参数默认值20 
      * @return Limit 实例列表的大小，参数默认值20
      */
     public Integer getLimit() {
@@ -171,7 +171,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例列表的大小，参数默认值20
+     * Set 实例列表的大小，参数默认值20
      * @param Limit 实例列表的大小，参数默认值20
      */
     public void setLimit(Integer Limit) {
@@ -179,7 +179,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍 
      * @return Offset 偏移量，取Limit整数倍
      */
     public Integer getOffset() {
@@ -187,7 +187,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍
      * @param Offset 偏移量，取Limit整数倍
      */
     public void setOffset(Integer Offset) {
@@ -195,7 +195,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例Id，如：crs-6ubhgouj
+     * Get 实例Id，如：crs-6ubhgouj 
      * @return InstanceId 实例Id，如：crs-6ubhgouj
      */
     public String getInstanceId() {
@@ -203,7 +203,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id，如：crs-6ubhgouj
+     * Set 实例Id，如：crs-6ubhgouj
      * @param InstanceId 实例Id，如：crs-6ubhgouj
      */
     public void setInstanceId(String InstanceId) {
@@ -211,7 +211,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取枚举范围： projectId,createtime,instancename,type,curDeadline
+     * Get 枚举范围： projectId,createtime,instancename,type,curDeadline 
      * @return OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
      */
     public String getOrderBy() {
@@ -219,7 +219,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置枚举范围： projectId,createtime,instancename,type,curDeadline
+     * Set 枚举范围： projectId,createtime,instancename,type,curDeadline
      * @param OrderBy 枚举范围： projectId,createtime,instancename,type,curDeadline
      */
     public void setOrderBy(String OrderBy) {
@@ -227,7 +227,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取1倒序，0顺序，默认倒序
+     * Get 1倒序，0顺序，默认倒序 
      * @return OrderType 1倒序，0顺序，默认倒序
      */
     public Integer getOrderType() {
@@ -235,7 +235,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置1倒序，0顺序，默认倒序
+     * Set 1倒序，0顺序，默认倒序
      * @param OrderType 1倒序，0顺序，默认倒序
      */
     public void setOrderType(Integer OrderType) {
@@ -243,7 +243,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525 
      * @return VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      */
     public String [] getVpcIds() {
@@ -251,7 +251,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
+     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      * @param VpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：47525
      */
     public void setVpcIds(String [] VpcIds) {
@@ -259,7 +259,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID数组，数组下标从0开始，如：56854
+     * Get 子网ID数组，数组下标从0开始，如：56854 
      * @return SubnetIds 子网ID数组，数组下标从0开始，如：56854
      */
     public String [] getSubnetIds() {
@@ -267,7 +267,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID数组，数组下标从0开始，如：56854
+     * Set 子网ID数组，数组下标从0开始，如：56854
      * @param SubnetIds 子网ID数组，数组下标从0开始，如：56854
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -275,7 +275,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID 组成的数组，数组下标从0开始
+     * Get 项目ID 组成的数组，数组下标从0开始 
      * @return ProjectIds 项目ID 组成的数组，数组下标从0开始
      */
     public Integer [] getProjectIds() {
@@ -283,7 +283,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID 组成的数组，数组下标从0开始
+     * Set 项目ID 组成的数组，数组下标从0开始
      * @param ProjectIds 项目ID 组成的数组，数组下标从0开始
      */
     public void setProjectIds(Integer [] ProjectIds) {
@@ -291,7 +291,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查找实例的ID。
+     * Get 查找实例的ID。 
      * @return SearchKey 查找实例的ID。
      */
     public String getSearchKey() {
@@ -299,7 +299,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查找实例的ID。
+     * Set 查找实例的ID。
      * @param SearchKey 查找实例的ID。
      */
     public void setSearchKey(String SearchKey) {
@@ -307,7 +307,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -315,7 +315,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -323,7 +323,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Get 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk 
      * @return UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      */
     public String [] getUniqVpcIds() {
@@ -331,7 +331,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
+     * Set 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      * @param UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
@@ -339,7 +339,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Get 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2 
      * @return UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
      */
     public String [] getUniqSubnetIds() {
@@ -347,7 +347,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
+     * Set 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
      * @param UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
@@ -355,7 +355,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * Get 地域ID，已经弃用，可通过公共参数Region查询对应地域 
      * @return RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
     public Integer [] getRegionIds() {
@@ -363,7 +363,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID，已经弃用，可通过公共参数Region查询对应地域
+     * Set 地域ID，已经弃用，可通过公共参数Region查询对应地域
      * @param RegionIds 地域ID，已经弃用，可通过公共参数Region查询对应地域
      */
     public void setRegionIds(Integer [] RegionIds) {
@@ -371,7 +371,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Get 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除 
      * @return Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      */
     public Integer [] getStatus() {
@@ -379,7 +379,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Set 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      * @param Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
      */
     public void setStatus(Integer [] Status) {
@@ -387,7 +387,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取类型版本：1-单机版,2-主从版,3-集群版
+     * Get 类型版本：1-单机版,2-主从版,3-集群版 
      * @return TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
      */
     public Integer getTypeVersion() {
@@ -395,7 +395,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置类型版本：1-单机版,2-主从版,3-集群版
+     * Set 类型版本：1-单机版,2-主从版,3-集群版
      * @param TypeVersion 类型版本：1-单机版,2-主从版,3-集群版
      */
     public void setTypeVersion(Integer TypeVersion) {
@@ -403,7 +403,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取引擎信息：Redis-2.8，Redis-4.0，CKV
+     * Get 引擎信息：Redis-2.8，Redis-4.0，CKV 
      * @return EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
      */
     public String getEngineName() {
@@ -411,7 +411,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置引擎信息：Redis-2.8，Redis-4.0，CKV
+     * Set 引擎信息：Redis-2.8，Redis-4.0，CKV
      * @param EngineName 引擎信息：Redis-2.8，Redis-4.0，CKV
      */
     public void setEngineName(String EngineName) {
@@ -419,7 +419,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
      * @return AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public Integer [] getAutoRenew() {
@@ -427,7 +427,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      * @param AutoRenew 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
      */
     public void setAutoRenew(Integer [] AutoRenew) {
@@ -435,7 +435,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式：postpaid-按量计费；prepaid-包年包月
+     * Get 计费模式：postpaid-按量计费；prepaid-包年包月 
      * @return BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
      */
     public String getBillingMode() {
@@ -443,7 +443,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式：postpaid-按量计费；prepaid-包年包月
+     * Set 计费模式：postpaid-按量计费；prepaid-包年包月
      * @param BillingMode 计费模式：postpaid-按量计费；prepaid-包年包月
      */
     public void setBillingMode(String BillingMode) {
@@ -451,7 +451,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
+     * Get 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版 
      * @return Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      */
     public Integer getType() {
@@ -459,7 +459,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
+     * Set 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      * @param Type 实例类型：1-Redis老集群版；2-Redis 2.8主从版；3-CKV主从版；4-CKV集群版；5-Redis 2.8单机版；6-Redis 4.0主从版；7-Redis 4.0集群版
      */
     public void setType(Integer Type) {
@@ -467,7 +467,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索关键词：支持实例Id、实例名称、完整IP
+     * Get 搜索关键词：支持实例Id、实例名称、完整IP 
      * @return SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
      */
     public String [] getSearchKeys() {
@@ -475,7 +475,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索关键词：支持实例Id、实例名称、完整IP
+     * Set 搜索关键词：支持实例Id、实例名称、完整IP
      * @param SearchKeys 搜索关键词：支持实例Id、实例名称、完整IP
      */
     public void setSearchKeys(String [] SearchKeys) {
@@ -483,7 +483,7 @@ public class DescribeInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);

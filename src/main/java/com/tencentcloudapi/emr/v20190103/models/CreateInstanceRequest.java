@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceRequest  extends AbstractModel{
+public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -163,7 +163,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     private String ExtendFsField;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public Integer getProductId() {
@@ -171,7 +171,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(Integer ProductId) {
@@ -179,7 +179,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPC设置参数
+     * Get VPC设置参数 
      * @return VPCSettings VPC设置参数
      */
     public VPCSettings getVPCSettings() {
@@ -187,7 +187,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC设置参数
+     * Set VPC设置参数
      * @param VPCSettings VPC设置参数
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
@@ -195,7 +195,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取软件列表
+     * Get 软件列表 
      * @return Software 软件列表
      */
     public String [] getSoftware() {
@@ -203,7 +203,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置软件列表
+     * Set 软件列表
      * @param Software 软件列表
      */
     public void setSoftware(String [] Software) {
@@ -211,7 +211,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源描述
+     * Get 资源描述 
      * @return ResourceSpec 资源描述
      */
     public NewResourceSpec getResourceSpec() {
@@ -219,7 +219,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源描述
+     * Set 资源描述
      * @param ResourceSpec 资源描述
      */
     public void setResourceSpec(NewResourceSpec ResourceSpec) {
@@ -227,7 +227,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持HA
+     * Get 支持HA 
      * @return SupportHA 支持HA
      */
     public Integer getSupportHA() {
@@ -235,7 +235,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持HA
+     * Set 支持HA
      * @param SupportHA 支持HA
      */
     public void setSupportHA(Integer SupportHA) {
@@ -243,7 +243,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return InstanceName 实例名称
      */
     public String getInstanceName() {
@@ -251,7 +251,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param InstanceName 实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -259,7 +259,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计费类型
+     * Get 计费类型 
      * @return PayMode 计费类型
      */
     public Integer getPayMode() {
@@ -267,7 +267,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计费类型
+     * Set 计费类型
      * @param PayMode 计费类型
      */
     public void setPayMode(Integer PayMode) {
@@ -275,7 +275,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群位置信息
+     * Get 集群位置信息 
      * @return Placement 集群位置信息
      */
     public Placement getPlacement() {
@@ -283,7 +283,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群位置信息
+     * Set 集群位置信息
      * @param Placement 集群位置信息
      */
     public void setPlacement(Placement Placement) {
@@ -291,7 +291,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间长度
+     * Get 时间长度 
      * @return TimeSpan 时间长度
      */
     public Integer getTimeSpan() {
@@ -299,7 +299,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间长度
+     * Set 时间长度
      * @param TimeSpan 时间长度
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -307,7 +307,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间单位
+     * Get 时间单位 
      * @return TimeUnit 时间单位
      */
     public String getTimeUnit() {
@@ -315,7 +315,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间单位
+     * Set 时间单位
      * @param TimeUnit 时间单位
      */
     public void setTimeUnit(String TimeUnit) {
@@ -323,7 +323,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取登录配置
+     * Get 登录配置 
      * @return LoginSettings 登录配置
      */
     public LoginSettings getLoginSettings() {
@@ -331,7 +331,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置登录配置
+     * Set 登录配置
      * @param LoginSettings 登录配置
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
@@ -339,7 +339,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取COS设置参数
+     * Get COS设置参数 
      * @return COSSettings COS设置参数
      */
     public COSSettings getCOSSettings() {
@@ -347,7 +347,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置COS设置参数
+     * Set COS设置参数
      * @param COSSettings COS设置参数
      */
     public void setCOSSettings(COSSettings COSSettings) {
@@ -355,7 +355,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组ID
+     * Get 安全组ID 
      * @return SgId 安全组ID
      */
     public String getSgId() {
@@ -363,7 +363,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组ID
+     * Set 安全组ID
      * @param SgId 安全组ID
      */
     public void setSgId(String SgId) {
@@ -371,7 +371,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预执行脚本设置
+     * Get 预执行脚本设置 
      * @return PreExecutedFileSettings 预执行脚本设置
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
@@ -379,7 +379,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预执行脚本设置
+     * Set 预执行脚本设置
      * @param PreExecutedFileSettings 预执行脚本设置
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
@@ -387,7 +387,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费
+     * Get 自动续费 
      * @return AutoRenew 自动续费
      */
     public Integer getAutoRenew() {
@@ -395,7 +395,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费
+     * Set 自动续费
      * @param AutoRenew 自动续费
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -403,7 +403,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取客户端Token
+     * Get 客户端Token 
      * @return ClientToken 客户端Token
      */
     public String getClientToken() {
@@ -411,7 +411,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端Token
+     * Set 客户端Token
      * @param ClientToken 客户端Token
      */
     public void setClientToken(String ClientToken) {
@@ -419,7 +419,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * Get 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN 
      * @return NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
     public String getNeedMasterWan() {
@@ -427,7 +427,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
+     * Set 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      * @param NeedMasterWan 是否需要外网Ip。支持填NEED_MASTER_WAN，不支持使用NOT_NEED_MASTER_WAN，默认使用NEED_MASTER_WAN
      */
     public void setNeedMasterWan(String NeedMasterWan) {
@@ -435,7 +435,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * Get 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效 
      * @return RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
     public Integer getRemoteLoginAtCreate() {
@@ -443,7 +443,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
+     * Set 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      * @param RemoteLoginAtCreate 是否需要开启外网远程登录，即22号端口，在SgId不为空时，该选项无效
      */
     public void setRemoteLoginAtCreate(Integer RemoteLoginAtCreate) {
@@ -451,7 +451,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启安全集群，0表示不开启，非0表示开启
+     * Get 是否开启安全集群，0表示不开启，非0表示开启 
      * @return CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
      */
     public Integer getCheckSecurity() {
@@ -459,7 +459,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启安全集群，0表示不开启，非0表示开启
+     * Set 是否开启安全集群，0表示不开启，非0表示开启
      * @param CheckSecurity 是否开启安全集群，0表示不开启，非0表示开启
      */
     public void setCheckSecurity(Integer CheckSecurity) {
@@ -467,7 +467,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取访问外部文件系统
+     * Get 访问外部文件系统 
      * @return ExtendFsField 访问外部文件系统
      */
     public String getExtendFsField() {
@@ -475,7 +475,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置访问外部文件系统
+     * Set 访问外部文件系统
      * @param ExtendFsField 访问外部文件系统
      */
     public void setExtendFsField(String ExtendFsField) {
@@ -483,7 +483,7 @@ public class CreateInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

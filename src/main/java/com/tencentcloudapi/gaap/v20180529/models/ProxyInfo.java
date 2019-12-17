@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyInfo  extends AbstractModel{
+public class ProxyInfo extends AbstractModel{
 
     /**
     * （旧参数，请使用ProxyId）通道实例ID。
@@ -196,8 +196,8 @@ UNKNOWN，未知状态。
     private Long SupportSecurity;
 
     /**
-     * 获取（旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get （旧参数，请使用ProxyId）通道实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -206,7 +206,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置（旧参数，请使用ProxyId）通道实例ID。
+     * Set （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId （旧参数，请使用ProxyId）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -216,7 +216,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * Get 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。 
      * @return CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      */
     public Long getCreateTime() {
@@ -224,7 +224,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
+     * Set 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      * @param CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      */
     public void setCreateTime(Long CreateTime) {
@@ -232,7 +232,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取项目ID。
+     * Get 项目ID。 
      * @return ProjectId 项目ID。
      */
     public Long getProjectId() {
@@ -240,7 +240,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置项目ID。
+     * Set 项目ID。
      * @param ProjectId 项目ID。
      */
     public void setProjectId(Long ProjectId) {
@@ -248,7 +248,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道名称。
+     * Get 通道名称。 
      * @return ProxyName 通道名称。
      */
     public String getProxyName() {
@@ -256,7 +256,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道名称。
+     * Set 通道名称。
      * @param ProxyName 通道名称。
      */
     public void setProxyName(String ProxyName) {
@@ -264,7 +264,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取接入地域。
+     * Get 接入地域。 
      * @return AccessRegion 接入地域。
      */
     public String getAccessRegion() {
@@ -272,7 +272,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置接入地域。
+     * Set 接入地域。
      * @param AccessRegion 接入地域。
      */
     public void setAccessRegion(String AccessRegion) {
@@ -280,7 +280,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取源站地域。
+     * Get 源站地域。 
      * @return RealServerRegion 源站地域。
      */
     public String getRealServerRegion() {
@@ -288,7 +288,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置源站地域。
+     * Set 源站地域。
      * @param RealServerRegion 源站地域。
      */
     public void setRealServerRegion(String RealServerRegion) {
@@ -296,7 +296,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取带宽，单位：Mbps。
+     * Get 带宽，单位：Mbps。 
      * @return Bandwidth 带宽，单位：Mbps。
      */
     public Long getBandwidth() {
@@ -304,7 +304,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置带宽，单位：Mbps。
+     * Set 带宽，单位：Mbps。
      * @param Bandwidth 带宽，单位：Mbps。
      */
     public void setBandwidth(Long Bandwidth) {
@@ -312,7 +312,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取并发，单位：个/秒。
+     * Get 并发，单位：个/秒。 
      * @return Concurrent 并发，单位：个/秒。
      */
     public Long getConcurrent() {
@@ -320,7 +320,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置并发，单位：个/秒。
+     * Set 并发，单位：个/秒。
      * @param Concurrent 并发，单位：个/秒。
      */
     public void setConcurrent(Long Concurrent) {
@@ -328,7 +328,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道状态。其中：
+     * Get 通道状态。其中：
 RUNNING，运行中；
 CREATING，创建中；
 DESTROYING，销毁中；
@@ -339,7 +339,7 @@ ADJUSTING，配置变更中；
 ISOLATING，隔离中（欠费触发）；
 ISOLATED，已隔离（欠费触发）；
 CLONING，复制中；
-UNKNOWN，未知状态。
+UNKNOWN，未知状态。 
      * @return Status 通道状态。其中：
 RUNNING，运行中；
 CREATING，创建中；
@@ -358,7 +358,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道状态。其中：
+     * Set 通道状态。其中：
 RUNNING，运行中；
 CREATING，创建中；
 DESTROYING，销毁中；
@@ -388,7 +388,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取接入域名。
+     * Get 接入域名。 
      * @return Domain 接入域名。
      */
     public String getDomain() {
@@ -396,7 +396,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置接入域名。
+     * Set 接入域名。
      * @param Domain 接入域名。
      */
     public void setDomain(String Domain) {
@@ -404,7 +404,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取接入IP。
+     * Get 接入IP。 
      * @return IP 接入IP。
      */
     public String getIP() {
@@ -412,7 +412,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置接入IP。
+     * Set 接入IP。
      * @param IP 接入IP。
      */
     public void setIP(String IP) {
@@ -420,7 +420,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道版本号：1.0，2.0，3.0。
+     * Get 通道版本号：1.0，2.0，3.0。 
      * @return Version 通道版本号：1.0，2.0，3.0。
      */
     public String getVersion() {
@@ -428,7 +428,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道版本号：1.0，2.0，3.0。
+     * Set 通道版本号：1.0，2.0，3.0。
      * @param Version 通道版本号：1.0，2.0，3.0。
      */
     public void setVersion(String Version) {
@@ -436,8 +436,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取（新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get （新参数）通道实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProxyId （新参数）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -446,7 +446,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置（新参数）通道实例ID。
+     * Set （新参数）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId （新参数）通道实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -456,7 +456,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取1，该通道可缩扩容；0，该通道无法缩扩容。
+     * Get 1，该通道可缩扩容；0，该通道无法缩扩容。 
      * @return Scalarable 1，该通道可缩扩容；0，该通道无法缩扩容。
      */
     public Long getScalarable() {
@@ -464,7 +464,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置1，该通道可缩扩容；0，该通道无法缩扩容。
+     * Set 1，该通道可缩扩容；0，该通道无法缩扩容。
      * @param Scalarable 1，该通道可缩扩容；0，该通道无法缩扩容。
      */
     public void setScalarable(Long Scalarable) {
@@ -472,7 +472,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取支持的协议类型。
+     * Get 支持的协议类型。 
      * @return SupportProtocols 支持的协议类型。
      */
     public String [] getSupportProtocols() {
@@ -480,7 +480,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置支持的协议类型。
+     * Set 支持的协议类型。
      * @param SupportProtocols 支持的协议类型。
      */
     public void setSupportProtocols(String [] SupportProtocols) {
@@ -488,8 +488,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道组ID，当通道归属于某一通道组时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通道组ID，当通道归属于某一通道组时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 通道组ID，当通道归属于某一通道组时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -498,7 +498,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道组ID，当通道归属于某一通道组时，存在该字段。
+     * Set 通道组ID，当通道归属于某一通道组时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 通道组ID，当通道归属于某一通道组时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -508,8 +508,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 安全策略ID，当设置了安全策略时，存在该字段。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -518,7 +518,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置安全策略ID，当设置了安全策略时，存在该字段。
+     * Set 安全策略ID，当设置了安全策略时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -528,8 +528,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 接入地域详细信息，包括地域ID和地域名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessRegionInfo 接入地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -538,7 +538,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置接入地域详细信息，包括地域ID和地域名。
+     * Set 接入地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRegionInfo 接入地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -548,8 +548,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源站地域详细信息，包括地域ID和地域名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerRegionInfo 源站地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -558,7 +558,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置源站地域详细信息，包括地域ID和地域名。
+     * Set 源站地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerRegionInfo 源站地域详细信息，包括地域ID和地域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -568,7 +568,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道转发IP
+     * Get 通道转发IP 
      * @return ForwardIP 通道转发IP
      */
     public String getForwardIP() {
@@ -576,7 +576,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道转发IP
+     * Set 通道转发IP
      * @param ForwardIP 通道转发IP
      */
     public void setForwardIP(String ForwardIP) {
@@ -584,8 +584,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 标签列表，不存在标签时，该字段为空列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagSet 标签列表，不存在标签时，该字段为空列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -594,7 +594,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置标签列表，不存在标签时，该字段为空列表。
+     * Set 标签列表，不存在标签时，该字段为空列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 标签列表，不存在标签时，该字段为空列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -604,8 +604,8 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否支持安全组配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SupportSecurity 是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -614,7 +614,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置是否支持安全组配置
+     * Set 是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportSecurity 是否支持安全组配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -624,7 +624,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncDetailInfo  extends AbstractModel{
+public class SyncDetailInfo extends AbstractModel{
 
     /**
     * 总步骤数
@@ -72,7 +72,7 @@ public class SyncDetailInfo  extends AbstractModel{
     private SyncStepDetailInfo [] StepInfo;
 
     /**
-     * 获取总步骤数
+     * Get 总步骤数 
      * @return StepAll 总步骤数
      */
     public Integer getStepAll() {
@@ -80,7 +80,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总步骤数
+     * Set 总步骤数
      * @param StepAll 总步骤数
      */
     public void setStepAll(Integer StepAll) {
@@ -88,7 +88,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前步骤
+     * Get 当前步骤 
      * @return StepNow 当前步骤
      */
     public Integer getStepNow() {
@@ -96,7 +96,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前步骤
+     * Set 当前步骤
      * @param StepNow 当前步骤
      */
     public void setStepNow(Integer StepNow) {
@@ -104,7 +104,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总进度
+     * Get 总进度 
      * @return Progress 总进度
      */
     public String getProgress() {
@@ -112,7 +112,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总进度
+     * Set 总进度
      * @param Progress 总进度
      */
     public void setProgress(String Progress) {
@@ -120,7 +120,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前步骤进度
+     * Get 当前步骤进度 
      * @return CurrentStepProgress 当前步骤进度
      */
     public String getCurrentStepProgress() {
@@ -128,7 +128,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前步骤进度
+     * Set 当前步骤进度
      * @param CurrentStepProgress 当前步骤进度
      */
     public void setCurrentStepProgress(String CurrentStepProgress) {
@@ -136,7 +136,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主从差距，MB
+     * Get 主从差距，MB 
      * @return MasterSlaveDistance 主从差距，MB
      */
     public Integer getMasterSlaveDistance() {
@@ -144,7 +144,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主从差距，MB
+     * Set 主从差距，MB
      * @param MasterSlaveDistance 主从差距，MB
      */
     public void setMasterSlaveDistance(Integer MasterSlaveDistance) {
@@ -152,7 +152,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取主从差距，秒
+     * Get 主从差距，秒 
      * @return SecondsBehindMaster 主从差距，秒
      */
     public Integer getSecondsBehindMaster() {
@@ -160,7 +160,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置主从差距，秒
+     * Set 主从差距，秒
      * @param SecondsBehindMaster 主从差距，秒
      */
     public void setSecondsBehindMaster(Integer SecondsBehindMaster) {
@@ -168,7 +168,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤信息
+     * Get 步骤信息 
      * @return StepInfo 步骤信息
      */
     public SyncStepDetailInfo [] getStepInfo() {
@@ -176,7 +176,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤信息
+     * Set 步骤信息
      * @param StepInfo 步骤信息
      */
     public void setStepInfo(SyncStepDetailInfo [] StepInfo) {
@@ -184,7 +184,7 @@ public class SyncDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepAll", this.StepAll);

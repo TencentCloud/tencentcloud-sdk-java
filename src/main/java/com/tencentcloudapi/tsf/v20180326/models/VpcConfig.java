@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcConfig  extends AbstractModel{
+public class VpcConfig extends AbstractModel{
 
     /**
     * VpcId
@@ -37,7 +37,7 @@ public class VpcConfig  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取VpcId
+     * Get VpcId 
      * @return VpcId VpcId
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class VpcConfig  extends AbstractModel{
     }
 
     /**
-     * 设置VpcId
+     * Set VpcId
      * @param VpcId VpcId
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class VpcConfig  extends AbstractModel{
     }
 
     /**
-     * 获取SubnetId 子网ID
+     * Get SubnetId 子网ID 
      * @return SubnetId SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -61,7 +61,7 @@ public class VpcConfig  extends AbstractModel{
     }
 
     /**
-     * 设置SubnetId 子网ID
+     * Set SubnetId 子网ID
      * @param SubnetId SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -69,7 +69,7 @@ public class VpcConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

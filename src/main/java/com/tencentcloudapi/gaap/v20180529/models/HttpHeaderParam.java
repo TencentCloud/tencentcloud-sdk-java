@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpHeaderParam  extends AbstractModel{
+public class HttpHeaderParam extends AbstractModel{
 
     /**
     * HTTP头名
@@ -37,7 +37,7 @@ public class HttpHeaderParam  extends AbstractModel{
     private String HeaderValue;
 
     /**
-     * 获取HTTP头名
+     * Get HTTP头名 
      * @return HeaderName HTTP头名
      */
     public String getHeaderName() {
@@ -45,7 +45,7 @@ public class HttpHeaderParam  extends AbstractModel{
     }
 
     /**
-     * 设置HTTP头名
+     * Set HTTP头名
      * @param HeaderName HTTP头名
      */
     public void setHeaderName(String HeaderName) {
@@ -53,7 +53,7 @@ public class HttpHeaderParam  extends AbstractModel{
     }
 
     /**
-     * 获取HTTP头值
+     * Get HTTP头值 
      * @return HeaderValue HTTP头值
      */
     public String getHeaderValue() {
@@ -61,7 +61,7 @@ public class HttpHeaderParam  extends AbstractModel{
     }
 
     /**
-     * 设置HTTP头值
+     * Set HTTP头值
      * @param HeaderValue HTTP头值
      */
     public void setHeaderValue(String HeaderValue) {
@@ -69,7 +69,7 @@ public class HttpHeaderParam  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HeaderName", this.HeaderName);

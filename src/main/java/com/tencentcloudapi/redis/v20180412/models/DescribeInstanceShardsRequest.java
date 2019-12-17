@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceShardsRequest  extends AbstractModel{
+public class DescribeInstanceShardsRequest extends AbstractModel{
 
     /**
     * 实例id
@@ -37,7 +37,7 @@ public class DescribeInstanceShardsRequest  extends AbstractModel{
     private Boolean FilterSlave;
 
     /**
-     * 获取实例id
+     * Get 实例id 
      * @return InstanceId 实例id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeInstanceShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例id
+     * Set 实例id
      * @param InstanceId 实例id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeInstanceShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否过滤掉从节信息
+     * Get 是否过滤掉从节信息 
      * @return FilterSlave 是否过滤掉从节信息
      */
     public Boolean getFilterSlave() {
@@ -61,7 +61,7 @@ public class DescribeInstanceShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否过滤掉从节信息
+     * Set 是否过滤掉从节信息
      * @param FilterSlave 是否过滤掉从节信息
      */
     public void setFilterSlave(Boolean FilterSlave) {
@@ -69,7 +69,7 @@ public class DescribeInstanceShardsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

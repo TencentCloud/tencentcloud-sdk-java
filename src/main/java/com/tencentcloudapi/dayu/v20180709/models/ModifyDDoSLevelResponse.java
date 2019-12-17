@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDDoSLevelResponse  extends AbstractModel{
+public class ModifyDDoSLevelResponse extends AbstractModel{
 
     /**
     * 资源ID
@@ -44,7 +44,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -52,7 +52,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -60,7 +60,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 获取防护等级，取值[low,middle,high]
+     * Get 防护等级，取值[low,middle,high] 
      * @return DDoSLevel 防护等级，取值[low,middle,high]
      */
     public String getDDoSLevel() {
@@ -68,7 +68,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置防护等级，取值[low,middle,high]
+     * Set 防护等级，取值[low,middle,high]
      * @param DDoSLevel 防护等级，取值[low,middle,high]
      */
     public void setDDoSLevel(String DDoSLevel) {
@@ -76,7 +76,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ModifyDDoSLevelResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

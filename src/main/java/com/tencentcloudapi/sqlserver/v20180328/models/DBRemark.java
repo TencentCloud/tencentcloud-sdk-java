@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBRemark  extends AbstractModel{
+public class DBRemark extends AbstractModel{
 
     /**
     * 据库名
@@ -37,7 +37,7 @@ public class DBRemark  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取据库名
+     * Get 据库名 
      * @return Name 据库名
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class DBRemark  extends AbstractModel{
     }
 
     /**
-     * 设置据库名
+     * Set 据库名
      * @param Name 据库名
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class DBRemark  extends AbstractModel{
     }
 
     /**
-     * 获取备注信息
+     * Get 备注信息 
      * @return Remark 备注信息
      */
     public String getRemark() {
@@ -61,7 +61,7 @@ public class DBRemark  extends AbstractModel{
     }
 
     /**
-     * 设置备注信息
+     * Set 备注信息
      * @param Remark 备注信息
      */
     public void setRemark(String Remark) {
@@ -69,7 +69,7 @@ public class DBRemark  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

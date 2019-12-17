@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScoreCategory  extends AbstractModel{
+public class ScoreCategory extends AbstractModel{
 
     /**
     * 词汇维度
@@ -65,7 +65,7 @@ public class ScoreCategory  extends AbstractModel{
     private Float Percentage;
 
     /**
-     * 获取词汇维度
+     * Get 词汇维度 
      * @return Words 词汇维度
      */
     public Aspect getWords() {
@@ -73,7 +73,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置词汇维度
+     * Set 词汇维度
      * @param Words 词汇维度
      */
     public void setWords(Aspect Words) {
@@ -81,7 +81,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 获取句子维度
+     * Get 句子维度 
      * @return Sentences 句子维度
      */
     public Aspect getSentences() {
@@ -89,7 +89,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置句子维度
+     * Set 句子维度
      * @param Sentences 句子维度
      */
     public void setSentences(Aspect Sentences) {
@@ -97,7 +97,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 获取篇章结构维度
+     * Get 篇章结构维度 
      * @return Structure 篇章结构维度
      */
     public Aspect getStructure() {
@@ -105,7 +105,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置篇章结构维度
+     * Set 篇章结构维度
      * @param Structure 篇章结构维度
      */
     public void setStructure(Aspect Structure) {
@@ -113,7 +113,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 获取内容维度
+     * Get 内容维度 
      * @return Content 内容维度
      */
     public Aspect getContent() {
@@ -121,7 +121,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置内容维度
+     * Set 内容维度
      * @param Content 内容维度
      */
     public void setContent(Aspect Content) {
@@ -129,7 +129,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 获取维度得分
+     * Get 维度得分 
      * @return Score 维度得分
      */
     public Float getScore() {
@@ -137,7 +137,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置维度得分
+     * Set 维度得分
      * @param Score 维度得分
      */
     public void setScore(Float Score) {
@@ -145,7 +145,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 获取维度分数占比
+     * Get 维度分数占比 
      * @return Percentage 维度分数占比
      */
     public Float getPercentage() {
@@ -153,7 +153,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 设置维度分数占比
+     * Set 维度分数占比
      * @param Percentage 维度分数占比
      */
     public void setPercentage(Float Percentage) {
@@ -161,7 +161,7 @@ public class ScoreCategory  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Words.", this.Words);

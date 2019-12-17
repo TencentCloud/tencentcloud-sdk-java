@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityRulesRequest  extends AbstractModel{
+public class DescribeSecurityRulesRequest extends AbstractModel{
 
     /**
     * 安全规则ID列表。总数不能超过20个。
@@ -30,7 +30,7 @@ public class DescribeSecurityRulesRequest  extends AbstractModel{
     private String [] SecurityRuleIds;
 
     /**
-     * 获取安全规则ID列表。总数不能超过20个。
+     * Get 安全规则ID列表。总数不能超过20个。 
      * @return SecurityRuleIds 安全规则ID列表。总数不能超过20个。
      */
     public String [] getSecurityRuleIds() {
@@ -38,7 +38,7 @@ public class DescribeSecurityRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全规则ID列表。总数不能超过20个。
+     * Set 安全规则ID列表。总数不能超过20个。
      * @param SecurityRuleIds 安全规则ID列表。总数不能超过20个。
      */
     public void setSecurityRuleIds(String [] SecurityRuleIds) {
@@ -46,7 +46,7 @@ public class DescribeSecurityRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SecurityRuleIds.", this.SecurityRuleIds);

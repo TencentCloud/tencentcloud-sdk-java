@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullUploadTask  extends AbstractModel{
+public class PullUploadTask extends AbstractModel{
 
     /**
     * 转拉上传任务 ID。
@@ -99,7 +99,7 @@ public class PullUploadTask  extends AbstractModel{
     private String SessionId;
 
     /**
-     * 获取转拉上传任务 ID。
+     * Get 转拉上传任务 ID。 
      * @return TaskId 转拉上传任务 ID。
      */
     public String getTaskId() {
@@ -107,7 +107,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置转拉上传任务 ID。
+     * Set 转拉上传任务 ID。
      * @param TaskId 转拉上传任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -115,9 +115,9 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取任务流状态，取值：
+     * Get 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+<li>FINISH：已完成。</li> 
      * @return Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
@@ -127,7 +127,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置任务流状态，取值：
+     * Set 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
      * @param Status 任务流状态，取值：
@@ -139,10 +139,10 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，0 表示成功，其他值表示失败：
+     * Get 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
-<li>70000：内部服务错误，建议重试。</li>
+<li>70000：内部服务错误，建议重试。</li> 
      * @return ErrCode 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
@@ -153,7 +153,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，0 表示成功，其他值表示失败：
+     * Set 错误码，0 表示成功，其他值表示失败：
 <li>40000：输入参数不合法，请检查输入参数；</li>
 <li>60000：源文件错误（如视频数据损坏），请确认源文件是否正常；</li>
 <li>70000：内部服务错误，建议重试。</li>
@@ -167,7 +167,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
+     * Get 错误信息。 
      * @return Message 错误信息。
      */
     public String getMessage() {
@@ -175,7 +175,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
      * @param Message 错误信息。
      */
     public void setMessage(String Message) {
@@ -183,7 +183,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取转拉上传完成后生成的视频 ID。
+     * Get 转拉上传完成后生成的视频 ID。 
      * @return FileId 转拉上传完成后生成的视频 ID。
      */
     public String getFileId() {
@@ -191,7 +191,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置转拉上传完成后生成的视频 ID。
+     * Set 转拉上传完成后生成的视频 ID。
      * @param FileId 转拉上传完成后生成的视频 ID。
      */
     public void setFileId(String FileId) {
@@ -199,8 +199,8 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取转拉完成后生成的媒体文件基础信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转拉完成后生成的媒体文件基础信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -209,7 +209,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置转拉完成后生成的媒体文件基础信息。
+     * Set 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -219,7 +219,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取转拉上传完成后生成的播放地址。
+     * Get 转拉上传完成后生成的播放地址。 
      * @return FileUrl 转拉上传完成后生成的播放地址。
      */
     public String getFileUrl() {
@@ -227,7 +227,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置转拉上传完成后生成的播放地址。
+     * Set 转拉上传完成后生成的播放地址。
      * @param FileUrl 转拉上传完成后生成的播放地址。
      */
     public void setFileUrl(String FileUrl) {
@@ -235,7 +235,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+     * Get 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。 
      * @return ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
      */
     public String getProcedureTaskId() {
@@ -243,7 +243,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+     * Set 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
      * @param ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
@@ -251,7 +251,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -259,7 +259,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -267,7 +267,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -275,7 +275,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -283,7 +283,7 @@ public class PullUploadTask  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

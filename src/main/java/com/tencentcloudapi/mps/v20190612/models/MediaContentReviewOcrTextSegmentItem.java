@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaContentReviewOcrTextSegmentItem  extends AbstractModel{
+public class MediaContentReviewOcrTextSegmentItem extends AbstractModel{
 
     /**
     * 嫌疑片段起始的偏移时间，单位：秒。
@@ -83,7 +83,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     private String PicUrlExpireTime;
 
     /**
-     * 获取嫌疑片段起始的偏移时间，单位：秒。
+     * Get 嫌疑片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -91,7 +91,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段起始的偏移时间，单位：秒。
+     * Set 嫌疑片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -99,7 +99,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段结束的偏移时间，单位：秒。
+     * Get 嫌疑片段结束的偏移时间，单位：秒。 
      * @return EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -107,7 +107,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段结束的偏移时间，单位：秒。
+     * Set 嫌疑片段结束的偏移时间，单位：秒。
      * @param EndTimeOffset 嫌疑片段结束的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -115,7 +115,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段置信度。
+     * Get 嫌疑片段置信度。 
      * @return Confidence 嫌疑片段置信度。
      */
     public Float getConfidence() {
@@ -123,7 +123,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段置信度。
+     * Set 嫌疑片段置信度。
      * @param Confidence 嫌疑片段置信度。
      */
     public void setConfidence(Float Confidence) {
@@ -131,10 +131,10 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑片段审核结果建议，取值范围：
+     * Get 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
-<li>block。</li>
+<li>block。</li> 
      * @return Suggestion 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -145,7 +145,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑片段审核结果建议，取值范围：
+     * Set 嫌疑片段审核结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -159,7 +159,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑关键词列表。
+     * Get 嫌疑关键词列表。 
      * @return KeywordSet 嫌疑关键词列表。
      */
     public String [] getKeywordSet() {
@@ -167,7 +167,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑关键词列表。
+     * Set 嫌疑关键词列表。
      * @param KeywordSet 嫌疑关键词列表。
      */
     public void setKeywordSet(String [] KeywordSet) {
@@ -175,7 +175,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。 
      * @return AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public Long [] getAreaCoordSet() {
@@ -183,7 +183,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      * @param AreaCoordSet 嫌疑文字出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
@@ -191,8 +191,8 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑图片 URL （图片不会永久存储，到达
-PicUrlExpireTime 时间点后图片将被删除）。
+     * Get 嫌疑图片 URL （图片不会永久存储，到达
+PicUrlExpireTime 时间点后图片将被删除）。 
      * @return Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      */
@@ -201,7 +201,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑图片 URL （图片不会永久存储，到达
+     * Set 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
      * @param Url 嫌疑图片 URL （图片不会永久存储，到达
 PicUrlExpireTime 时间点后图片将被删除）。
@@ -211,7 +211,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 获取嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getPicUrlExpireTime() {
@@ -219,7 +219,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 设置嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
@@ -227,7 +227,7 @@ PicUrlExpireTime 时间点后图片将被删除）。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

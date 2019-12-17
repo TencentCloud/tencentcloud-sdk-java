@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ParseLiveStreamProcessNotificationRequest  extends AbstractModel{
+public class ParseLiveStreamProcessNotificationRequest extends AbstractModel{
 
     /**
     * 从 CMQ 获取到的直播流事件通知内容。
@@ -30,7 +30,7 @@ public class ParseLiveStreamProcessNotificationRequest  extends AbstractModel{
     private String Content;
 
     /**
-     * 获取从 CMQ 获取到的直播流事件通知内容。
+     * Get 从 CMQ 获取到的直播流事件通知内容。 
      * @return Content 从 CMQ 获取到的直播流事件通知内容。
      */
     public String getContent() {
@@ -38,7 +38,7 @@ public class ParseLiveStreamProcessNotificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置从 CMQ 获取到的直播流事件通知内容。
+     * Set 从 CMQ 获取到的直播流事件通知内容。
      * @param Content 从 CMQ 获取到的直播流事件通知内容。
      */
     public void setContent(String Content) {
@@ -46,7 +46,7 @@ public class ParseLiveStreamProcessNotificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskResponse  extends AbstractModel{
+public class DescribeTaskResponse extends AbstractModel{
 
     /**
     * 作文识别文本
@@ -53,8 +53,8 @@ public class DescribeTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取作文识别文本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 作文识别文本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 作文识别文本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -63,7 +63,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作文识别文本
+     * Set 作文识别文本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 作文识别文本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -73,8 +73,8 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取整体的批改结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 整体的批改结果
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CorrectData 整体的批改结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -83,7 +83,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置整体的批改结果
+     * Set 整体的批改结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CorrectData 整体的批改结果
 注意：此字段可能返回 null，表示取不到有效值。
@@ -93,7 +93,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
+     * Get 任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成 
      * @return Status 任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
      */
     public String getStatus() {
@@ -101,7 +101,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
+     * Set 任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
      * @param Status 任务状态，“Progressing”: 处理中（此时无结果返回）、“Finished”: 处理完成
      */
     public void setStatus(String Status) {
@@ -109,7 +109,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -117,7 +117,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -125,7 +125,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);

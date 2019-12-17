@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDirectConnectGatewayRequest  extends AbstractModel{
+public class CreateDirectConnectGatewayRequest extends AbstractModel{
 
     /**
     * 专线网关名称
@@ -56,7 +56,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     private String GatewayType;
 
     /**
-     * 获取专线网关名称
+     * Get 专线网关名称 
      * @return DirectConnectGatewayName 专线网关名称
      */
     public String getDirectConnectGatewayName() {
@@ -64,7 +64,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关名称
+     * Set 专线网关名称
      * @param DirectConnectGatewayName 专线网关名称
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
@@ -72,9 +72,9 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关联网络类型，可选值：
+     * Get 关联网络类型，可选值：
 <li>VPC - 私有网络</li>
-<li>CCN - 云联网</li>
+<li>CCN - 云联网</li> 
      * @return NetworkType 关联网络类型，可选值：
 <li>VPC - 私有网络</li>
 <li>CCN - 云联网</li>
@@ -84,7 +84,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关联网络类型，可选值：
+     * Set 关联网络类型，可选值：
 <li>VPC - 私有网络</li>
 <li>CCN - 云联网</li>
      * @param NetworkType 关联网络类型，可选值：
@@ -96,8 +96,8 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
-<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
+     * Get <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
+<li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li> 
      * @return NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
 <li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      */
@@ -106,7 +106,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
+     * Set <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
 <li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
      * @param NetworkInstanceId <li>NetworkType 为 VPC 时，这里传值为私有网络实例ID</li>
 <li>NetworkType 为 CCN 时，这里传值为云联网实例ID</li>
@@ -116,9 +116,9 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网关类型，可选值：
+     * Get 网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
-<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+<li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关 
      * @return GatewayType 网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
@@ -128,7 +128,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网关类型，可选值：
+     * Set 网关类型，可选值：
 <li>NORMAL - （默认）标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
      * @param GatewayType 网关类型，可选值：
@@ -140,7 +140,7 @@ public class CreateDirectConnectGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);

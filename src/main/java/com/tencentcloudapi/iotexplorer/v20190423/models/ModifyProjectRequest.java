@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProjectRequest  extends AbstractModel{
+public class ModifyProjectRequest extends AbstractModel{
 
     /**
     * 项目ID
@@ -44,7 +44,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     private String ProjectDesc;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public String getProjectId() {
@@ -52,7 +52,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(String ProjectId) {
@@ -60,7 +60,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目名称
+     * Get 项目名称 
      * @return ProjectName 项目名称
      */
     public String getProjectName() {
@@ -68,7 +68,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目名称
+     * Set 项目名称
      * @param ProjectName 项目名称
      */
     public void setProjectName(String ProjectName) {
@@ -76,7 +76,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目描述
+     * Get 项目描述 
      * @return ProjectDesc 项目描述
      */
     public String getProjectDesc() {
@@ -84,7 +84,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目描述
+     * Set 项目描述
      * @param ProjectDesc 项目描述
      */
     public void setProjectDesc(String ProjectDesc) {
@@ -92,7 +92,7 @@ public class ModifyProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

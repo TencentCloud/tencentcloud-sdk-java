@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompareIdlFilesRequest  extends AbstractModel{
+public class CompareIdlFilesRequest extends AbstractModel{
 
     /**
     * 待修改表所在应用实例ID
@@ -51,7 +51,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     private IdlFileInfo [] NewIdlFiles;
 
     /**
-     * 获取待修改表所在应用实例ID
+     * Get 待修改表所在应用实例ID 
      * @return ApplicationId 待修改表所在应用实例ID
      */
     public String getApplicationId() {
@@ -59,7 +59,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改表所在应用实例ID
+     * Set 待修改表所在应用实例ID
      * @param ApplicationId 待修改表所在应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -67,7 +67,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待修改表列表
+     * Get 待修改表列表 
      * @return SelectedTables 待修改表列表
      */
     public SelectedTableInfo [] getSelectedTables() {
@@ -75,7 +75,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改表列表
+     * Set 待修改表列表
      * @param SelectedTables 待修改表列表
      */
     public void setSelectedTables(SelectedTableInfo [] SelectedTables) {
@@ -83,7 +83,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取选中的已上传IDL文件列表，与NewIdlFiles必选其一
+     * Get 选中的已上传IDL文件列表，与NewIdlFiles必选其一 
      * @return ExistingIdlFiles 选中的已上传IDL文件列表，与NewIdlFiles必选其一
      */
     public IdlFileInfo [] getExistingIdlFiles() {
@@ -91,7 +91,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置选中的已上传IDL文件列表，与NewIdlFiles必选其一
+     * Set 选中的已上传IDL文件列表，与NewIdlFiles必选其一
      * @param ExistingIdlFiles 选中的已上传IDL文件列表，与NewIdlFiles必选其一
      */
     public void setExistingIdlFiles(IdlFileInfo [] ExistingIdlFiles) {
@@ -99,7 +99,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取本次上传IDL文件列表，与ExistingIdlFiles必选其一
+     * Get 本次上传IDL文件列表，与ExistingIdlFiles必选其一 
      * @return NewIdlFiles 本次上传IDL文件列表，与ExistingIdlFiles必选其一
      */
     public IdlFileInfo [] getNewIdlFiles() {
@@ -107,7 +107,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置本次上传IDL文件列表，与ExistingIdlFiles必选其一
+     * Set 本次上传IDL文件列表，与ExistingIdlFiles必选其一
      * @param NewIdlFiles 本次上传IDL文件列表，与ExistingIdlFiles必选其一
      */
     public void setNewIdlFiles(IdlFileInfo [] NewIdlFiles) {
@@ -115,7 +115,7 @@ public class CompareIdlFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

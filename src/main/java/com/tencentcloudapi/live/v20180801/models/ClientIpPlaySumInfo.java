@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClientIpPlaySumInfo  extends AbstractModel{
+public class ClientIpPlaySumInfo extends AbstractModel{
 
     /**
     * 客户端ip，点分型。
@@ -65,7 +65,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     private String CountryArea;
 
     /**
-     * 获取客户端ip，点分型。
+     * Get 客户端ip，点分型。 
      * @return ClientIp 客户端ip，点分型。
      */
     public String getClientIp() {
@@ -73,7 +73,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客户端ip，点分型。
+     * Set 客户端ip，点分型。
      * @param ClientIp 客户端ip，点分型。
      */
     public void setClientIp(String ClientIp) {
@@ -81,7 +81,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取客户端所在省份。
+     * Get 客户端所在省份。 
      * @return Province 客户端所在省份。
      */
     public String getProvince() {
@@ -89,7 +89,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客户端所在省份。
+     * Set 客户端所在省份。
      * @param Province 客户端所在省份。
      */
     public void setProvince(String Province) {
@@ -97,7 +97,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总流量。
+     * Get 总流量。 
      * @return TotalFlux 总流量。
      */
     public Float getTotalFlux() {
@@ -105,7 +105,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总流量。
+     * Set 总流量。
      * @param TotalFlux 总流量。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -113,7 +113,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总请求数。
+     * Get 总请求数。 
      * @return TotalRequest 总请求数。
      */
     public Integer getTotalRequest() {
@@ -121,7 +121,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总请求数。
+     * Set 总请求数。
      * @param TotalRequest 总请求数。
      */
     public void setTotalRequest(Integer TotalRequest) {
@@ -129,7 +129,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总失败请求数。
+     * Get 总失败请求数。 
      * @return TotalFailedRequest 总失败请求数。
      */
     public Integer getTotalFailedRequest() {
@@ -137,7 +137,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总失败请求数。
+     * Set 总失败请求数。
      * @param TotalFailedRequest 总失败请求数。
      */
     public void setTotalFailedRequest(Integer TotalFailedRequest) {
@@ -145,7 +145,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 获取客户端所在国家。
+     * Get 客户端所在国家。 
      * @return CountryArea 客户端所在国家。
      */
     public String getCountryArea() {
@@ -153,7 +153,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客户端所在国家。
+     * Set 客户端所在国家。
      * @param CountryArea 客户端所在国家。
      */
     public void setCountryArea(String CountryArea) {
@@ -161,7 +161,7 @@ public class ClientIpPlaySumInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);

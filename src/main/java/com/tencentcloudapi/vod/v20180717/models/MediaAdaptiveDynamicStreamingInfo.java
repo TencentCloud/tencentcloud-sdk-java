@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAdaptiveDynamicStreamingInfo  extends AbstractModel{
+public class MediaAdaptiveDynamicStreamingInfo extends AbstractModel{
 
     /**
     * 转自适应码流信息数组。
@@ -31,8 +31,8 @@ public class MediaAdaptiveDynamicStreamingInfo  extends AbstractModel{
     private AdaptiveDynamicStreamingInfoItem [] AdaptiveDynamicStreamingSet;
 
     /**
-     * 获取转自适应码流信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转自适应码流信息数组。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdaptiveDynamicStreamingSet 转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaAdaptiveDynamicStreamingInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流信息数组。
+     * Set 转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingSet 转自适应码流信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaAdaptiveDynamicStreamingInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AdaptiveDynamicStreamingSet.", this.AdaptiveDynamicStreamingSet);

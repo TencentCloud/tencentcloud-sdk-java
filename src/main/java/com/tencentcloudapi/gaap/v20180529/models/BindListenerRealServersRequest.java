@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindListenerRealServersRequest  extends AbstractModel{
+public class BindListenerRealServersRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -37,7 +37,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     private RealServerBindSetReq [] RealServerBindSet;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -45,7 +45,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -53,7 +53,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * Get 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。 
      * @return RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      */
     public RealServerBindSetReq [] getRealServerBindSet() {
@@ -61,7 +61,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * Set 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      * @param RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
      */
     public void setRealServerBindSet(RealServerBindSetReq [] RealServerBindSet) {
@@ -69,7 +69,7 @@ public class BindListenerRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

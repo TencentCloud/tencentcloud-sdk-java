@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Job  extends AbstractModel{
+public class Job extends AbstractModel{
 
     /**
     * 任务名称
@@ -184,7 +184,7 @@ public class Job  extends AbstractModel{
     private String Id;
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -192,7 +192,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -200,7 +200,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Get 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST 
      * @return CreateTime 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public String getCreateTime() {
@@ -208,7 +208,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Set 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      * @param CreateTime 任务创建时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public void setCreateTime(String CreateTime) {
@@ -216,7 +216,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Get 任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST 
      * @return StartTime 任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public String getStartTime() {
@@ -224,7 +224,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Set 任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      * @param StartTime 任务开始时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public void setStartTime(String StartTime) {
@@ -232,7 +232,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Get 任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST 
      * @return EndTime 任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public String getEndTime() {
@@ -240,7 +240,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Set 任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      * @param EndTime 任务结束时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public void setEndTime(String EndTime) {
@@ -248,7 +248,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
+     * Get 任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败） 
      * @return State 任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
      */
     public String getState() {
@@ -256,7 +256,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
+     * Set 任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
      * @param State 任务状态，可能的状态为Created（已创建），Running（运行中），Succeeded（运行完成：成功），Failed（运行完成：失败）
      */
     public void setState(String State) {
@@ -264,7 +264,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态信息
+     * Get 任务状态信息 
      * @return Message 任务状态信息
      */
     public String getMessage() {
@@ -272,7 +272,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态信息
+     * Set 任务状态信息
      * @param Message 任务状态信息
      */
     public void setMessage(String Message) {
@@ -280,7 +280,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的配置信息
+     * Get 运行任务的配置信息 
      * @return ScaleTier 运行任务的配置信息
      */
     public String getScaleTier() {
@@ -288,7 +288,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的配置信息
+     * Set 运行任务的配置信息
      * @param ScaleTier 运行任务的配置信息
      */
     public void setScaleTier(String ScaleTier) {
@@ -296,7 +296,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取（ScaleTier为Custom时）master机器类型
+     * Get （ScaleTier为Custom时）master机器类型 
      * @return MasterType （ScaleTier为Custom时）master机器类型
      */
     public String getMasterType() {
@@ -304,7 +304,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置（ScaleTier为Custom时）master机器类型
+     * Set （ScaleTier为Custom时）master机器类型
      * @param MasterType （ScaleTier为Custom时）master机器类型
      */
     public void setMasterType(String MasterType) {
@@ -312,7 +312,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取（ScaleTier为Custom时）worker机器类型
+     * Get （ScaleTier为Custom时）worker机器类型 
      * @return WorkerType （ScaleTier为Custom时）worker机器类型
      */
     public String getWorkerType() {
@@ -320,7 +320,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置（ScaleTier为Custom时）worker机器类型
+     * Set （ScaleTier为Custom时）worker机器类型
      * @param WorkerType （ScaleTier为Custom时）worker机器类型
      */
     public void setWorkerType(String WorkerType) {
@@ -328,7 +328,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取（ScaleTier为Custom时）parameter server机器类型
+     * Get （ScaleTier为Custom时）parameter server机器类型 
      * @return ParameterServerType （ScaleTier为Custom时）parameter server机器类型
      */
     public String getParameterServerType() {
@@ -336,7 +336,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置（ScaleTier为Custom时）parameter server机器类型
+     * Set （ScaleTier为Custom时）parameter server机器类型
      * @param ParameterServerType （ScaleTier为Custom时）parameter server机器类型
      */
     public void setParameterServerType(String ParameterServerType) {
@@ -344,7 +344,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取（ScaleTier为Custom时）worker机器数量
+     * Get （ScaleTier为Custom时）worker机器数量 
      * @return WorkerCount （ScaleTier为Custom时）worker机器数量
      */
     public Integer getWorkerCount() {
@@ -352,7 +352,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置（ScaleTier为Custom时）worker机器数量
+     * Set （ScaleTier为Custom时）worker机器数量
      * @param WorkerCount （ScaleTier为Custom时）worker机器数量
      */
     public void setWorkerCount(Integer WorkerCount) {
@@ -360,7 +360,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取（ScaleTier为Custom时）parameter server机器数量
+     * Get （ScaleTier为Custom时）parameter server机器数量 
      * @return ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
      */
     public Integer getParameterServerCount() {
@@ -368,7 +368,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置（ScaleTier为Custom时）parameter server机器数量
+     * Set （ScaleTier为Custom时）parameter server机器数量
      * @param ParameterServerCount （ScaleTier为Custom时）parameter server机器数量
      */
     public void setParameterServerCount(Integer ParameterServerCount) {
@@ -376,7 +376,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取挂载的路径
+     * Get 挂载的路径 
      * @return PackageDir 挂载的路径
      */
     public String [] getPackageDir() {
@@ -384,7 +384,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置挂载的路径
+     * Set 挂载的路径
      * @param PackageDir 挂载的路径
      */
     public void setPackageDir(String [] PackageDir) {
@@ -392,7 +392,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动命令
+     * Get 任务启动命令 
      * @return Command 任务启动命令
      */
     public String [] getCommand() {
@@ -400,7 +400,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务启动命令
+     * Set 任务启动命令
      * @param Command 任务启动命令
      */
     public void setCommand(String [] Command) {
@@ -408,7 +408,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动参数
+     * Get 任务启动参数 
      * @return Args 任务启动参数
      */
     public String [] getArgs() {
@@ -416,7 +416,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务启动参数
+     * Set 任务启动参数
      * @param Args 任务启动参数
      */
     public void setArgs(String [] Args) {
@@ -424,7 +424,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的集群
+     * Get 运行任务的集群 
      * @return Cluster 运行任务的集群
      */
     public String getCluster() {
@@ -432,7 +432,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的集群
+     * Set 运行任务的集群
      * @param Cluster 运行任务的集群
      */
     public void setCluster(String Cluster) {
@@ -440,7 +440,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的环境
+     * Get 运行任务的环境 
      * @return RuntimeVersion 运行任务的环境
      */
     public String getRuntimeVersion() {
@@ -448,7 +448,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的环境
+     * Set 运行任务的环境
      * @param RuntimeVersion 运行任务的环境
      */
     public void setRuntimeVersion(String RuntimeVersion) {
@@ -456,7 +456,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Get 任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST 
      * @return DelTime 任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public String getDelTime() {
@@ -464,7 +464,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
+     * Set 任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      * @param DelTime 任务删除时间，格式为：2006-01-02 15:04:05.999999999 -0700 MST
      */
     public void setDelTime(String DelTime) {
@@ -472,7 +472,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取创建任务的AppId
+     * Get 创建任务的AppId 
      * @return AppId 创建任务的AppId
      */
     public Integer getAppId() {
@@ -480,7 +480,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置创建任务的AppId
+     * Set 创建任务的AppId
      * @param AppId 创建任务的AppId
      */
     public void setAppId(Integer AppId) {
@@ -488,7 +488,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取创建任务的Uin
+     * Get 创建任务的Uin 
      * @return Uin 创建任务的Uin
      */
     public String getUin() {
@@ -496,7 +496,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置创建任务的Uin
+     * Set 创建任务的Uin
      * @param Uin 创建任务的Uin
      */
     public void setUin(String Uin) {
@@ -504,7 +504,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取创建任务的Debug模式
+     * Get 创建任务的Debug模式 
      * @return Debug 创建任务的Debug模式
      */
     public Boolean getDebug() {
@@ -512,7 +512,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置创建任务的Debug模式
+     * Set 创建任务的Debug模式
      * @param Debug 创建任务的Debug模式
      */
     public void setDebug(Boolean Debug) {
@@ -520,7 +520,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取Runtime的额外配置信息
+     * Get Runtime的额外配置信息 
      * @return RuntimeConf Runtime的额外配置信息
      */
     public String [] getRuntimeConf() {
@@ -528,7 +528,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置Runtime的额外配置信息
+     * Set Runtime的额外配置信息
      * @param RuntimeConf Runtime的额外配置信息
      */
     public void setRuntimeConf(String [] RuntimeConf) {
@@ -536,7 +536,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务Id
+     * Get 任务Id 
      * @return Id 任务Id
      */
     public String getId() {
@@ -544,7 +544,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务Id
+     * Set 任务Id
      * @param Id 任务Id
      */
     public void setId(String Id) {
@@ -552,7 +552,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

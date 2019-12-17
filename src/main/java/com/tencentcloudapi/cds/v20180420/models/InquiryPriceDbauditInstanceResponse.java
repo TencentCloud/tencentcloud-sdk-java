@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
+public class InquiryPriceDbauditInstanceResponse extends AbstractModel{
 
     /**
     * 总价，单位：元
@@ -44,7 +44,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取总价，单位：元
+     * Get 总价，单位：元 
      * @return TotalPrice 总价，单位：元
      */
     public Float getTotalPrice() {
@@ -52,7 +52,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总价，单位：元
+     * Set 总价，单位：元
      * @param TotalPrice 总价，单位：元
      */
     public void setTotalPrice(Float TotalPrice) {
@@ -60,7 +60,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取真实价钱，预支费用的折扣价，单位：元
+     * Get 真实价钱，预支费用的折扣价，单位：元 
      * @return RealTotalCost 真实价钱，预支费用的折扣价，单位：元
      */
     public Float getRealTotalCost() {
@@ -68,7 +68,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置真实价钱，预支费用的折扣价，单位：元
+     * Set 真实价钱，预支费用的折扣价，单位：元
      * @param RealTotalCost 真实价钱，预支费用的折扣价，单位：元
      */
     public void setRealTotalCost(Float RealTotalCost) {
@@ -76,7 +76,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class InquiryPriceDbauditInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalPrice", this.TotalPrice);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CdsAuditInstance  extends AbstractModel{
+public class CdsAuditInstance extends AbstractModel{
 
     /**
     * 实例ID
@@ -100,7 +100,7 @@ public class CdsAuditInstance  extends AbstractModel{
     private String ExpireTime;
 
     /**
-     * 获取实例ID
+     * Get 实例ID 
      * @return InstanceId 实例ID
      */
     public String getInstanceId() {
@@ -108,7 +108,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID
+     * Set 实例ID
      * @param InstanceId 实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -116,7 +116,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取用户AppId
+     * Get 用户AppId 
      * @return AppId 用户AppId
      */
     public String getAppId() {
@@ -124,7 +124,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置用户AppId
+     * Set 用户AppId
      * @param AppId 用户AppId
      */
     public void setAppId(String AppId) {
@@ -132,7 +132,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取用户Uin
+     * Get 用户Uin 
      * @return Uin 用户Uin
      */
     public String getUin() {
@@ -140,7 +140,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置用户Uin
+     * Set 用户Uin
      * @param Uin 用户Uin
      */
     public void setUin(String Uin) {
@@ -148,7 +148,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
     public Integer getProjectId() {
@@ -156,7 +156,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
     public void setProjectId(Integer ProjectId) {
@@ -164,7 +164,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取续费标识
+     * Get 续费标识 
      * @return RenewFlag 续费标识
      */
     public Integer getRenewFlag() {
@@ -172,7 +172,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置续费标识
+     * Set 续费标识
      * @param RenewFlag 续费标识
      */
     public void setRenewFlag(Integer RenewFlag) {
@@ -180,7 +180,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取所属地域
+     * Get 所属地域 
      * @return Region 所属地域
      */
     public String getRegion() {
@@ -188,7 +188,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置所属地域
+     * Set 所属地域
      * @param Region 所属地域
      */
     public void setRegion(String Region) {
@@ -196,7 +196,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式（数据安全审计只支持预付费：1）
+     * Get 付费模式（数据安全审计只支持预付费：1） 
      * @return PayMode 付费模式（数据安全审计只支持预付费：1）
      */
     public Integer getPayMode() {
@@ -204,7 +204,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式（数据安全审计只支持预付费：1）
+     * Set 付费模式（数据安全审计只支持预付费：1）
      * @param PayMode 付费模式（数据安全审计只支持预付费：1）
      */
     public void setPayMode(Integer PayMode) {
@@ -212,7 +212,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
+     * Get 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期 
      * @return Status 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      */
     public Integer getStatus() {
@@ -220,7 +220,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
+     * Set 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      * @param Status 实例状态： 0，未生效；1：正常运行； 2：被隔离； 3，已过期
      */
     public void setStatus(Integer Status) {
@@ -228,7 +228,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
+     * Get 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss 
      * @return IsolatedTimestamp 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
      */
     public String getIsolatedTimestamp() {
@@ -236,7 +236,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
+     * Set 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
      * @param IsolatedTimestamp 实例被隔离时间，格式：yyyy-mm-dd HH:ii:ss
      */
     public void setIsolatedTimestamp(String IsolatedTimestamp) {
@@ -244,7 +244,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例创建时间，格式： yyyy-mm-dd HH:ii:ss
+     * Get 实例创建时间，格式： yyyy-mm-dd HH:ii:ss 
      * @return CreateTime 实例创建时间，格式： yyyy-mm-dd HH:ii:ss
      */
     public String getCreateTime() {
@@ -252,7 +252,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例创建时间，格式： yyyy-mm-dd HH:ii:ss
+     * Set 实例创建时间，格式： yyyy-mm-dd HH:ii:ss
      * @param CreateTime 实例创建时间，格式： yyyy-mm-dd HH:ii:ss
      */
     public void setCreateTime(String CreateTime) {
@@ -260,7 +260,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例过期时间，格式：yyyy-mm-dd HH:ii:ss
+     * Get 实例过期时间，格式：yyyy-mm-dd HH:ii:ss 
      * @return ExpireTime 实例过期时间，格式：yyyy-mm-dd HH:ii:ss
      */
     public String getExpireTime() {
@@ -268,7 +268,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例过期时间，格式：yyyy-mm-dd HH:ii:ss
+     * Set 实例过期时间，格式：yyyy-mm-dd HH:ii:ss
      * @param ExpireTime 实例过期时间，格式：yyyy-mm-dd HH:ii:ss
      */
     public void setExpireTime(String ExpireTime) {
@@ -276,7 +276,7 @@ public class CdsAuditInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

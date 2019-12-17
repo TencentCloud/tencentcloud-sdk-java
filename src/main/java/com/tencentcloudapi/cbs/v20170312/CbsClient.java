@@ -29,21 +29,10 @@ public class CbsClient extends AbstractClient{
     private static String endpoint = "cbs.tencentcloudapi.com";
     private static String version = "2017-03-12";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public CbsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public CbsClient(Credential credential, String region, ClientProfile profile) {
         super(CbsClient.endpoint, CbsClient.version, credential, region, profile);
     }

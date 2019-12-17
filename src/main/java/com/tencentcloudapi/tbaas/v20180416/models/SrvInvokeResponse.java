@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrvInvokeResponse  extends AbstractModel{
+public class SrvInvokeResponse extends AbstractModel{
 
     /**
     * 返回码
@@ -51,7 +51,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取返回码
+     * Get 返回码 
      * @return RetCode 返回码
      */
     public Integer getRetCode() {
@@ -59,7 +59,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回码
+     * Set 返回码
      * @param RetCode 返回码
      */
     public void setRetCode(Integer RetCode) {
@@ -67,7 +67,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回消息
+     * Get 返回消息 
      * @return RetMsg 返回消息
      */
     public String getRetMsg() {
@@ -75,7 +75,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回消息
+     * Set 返回消息
      * @param RetMsg 返回消息
      */
     public void setRetMsg(String RetMsg) {
@@ -83,7 +83,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回数据
+     * Get 返回数据 
      * @return Data 返回数据
      */
     public String getData() {
@@ -91,7 +91,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回数据
+     * Set 返回数据
      * @param Data 返回数据
      */
     public void setData(String Data) {
@@ -99,7 +99,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class SrvInvokeResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RetCode", this.RetCode);

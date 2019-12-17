@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
+public class CreateBasicDDoSAlarmThresholdRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（basic表示DDoS基础防护）
@@ -51,7 +51,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     private Long AlarmThreshold;
 
     /**
-     * 获取大禹子产品代号（basic表示DDoS基础防护）
+     * Get 大禹子产品代号（basic表示DDoS基础防护） 
      * @return Business 大禹子产品代号（basic表示DDoS基础防护）
      */
     public String getBusiness() {
@@ -59,7 +59,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（basic表示DDoS基础防护）
+     * Set 大禹子产品代号（basic表示DDoS基础防护）
      * @param Business 大禹子产品代号（basic表示DDoS基础防护）
      */
     public void setBusiness(String Business) {
@@ -67,7 +67,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取=get表示读取告警阈值；=set表示设置告警阈值；
+     * Get =get表示读取告警阈值；=set表示设置告警阈值； 
      * @return Method =get表示读取告警阈值；=set表示设置告警阈值；
      */
     public String getMethod() {
@@ -75,7 +75,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置=get表示读取告警阈值；=set表示设置告警阈值；
+     * Set =get表示读取告警阈值；=set表示设置告警阈值；
      * @param Method =get表示读取告警阈值；=set表示设置告警阈值；
      */
     public void setMethod(String Method) {
@@ -83,7 +83,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
+     * Get 可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写； 
      * @return AlarmType 可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
      */
     public Long getAlarmType() {
@@ -91,7 +91,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
+     * Set 可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
      * @param AlarmType 可选，告警阈值类型，1-入流量，2-清洗流量；当Method为set时必须填写；
      */
     public void setAlarmType(Long AlarmType) {
@@ -99,7 +99,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
+     * Get 可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置； 
      * @return AlarmThreshold 可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
      */
     public Long getAlarmThreshold() {
@@ -107,7 +107,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
+     * Set 可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
      * @param AlarmThreshold 可选，告警阈值，当Method为set时必须填写；当设置阈值为0时表示清除告警阈值配置；
      */
     public void setAlarmThreshold(Long AlarmThreshold) {
@@ -115,7 +115,7 @@ public class CreateBasicDDoSAlarmThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

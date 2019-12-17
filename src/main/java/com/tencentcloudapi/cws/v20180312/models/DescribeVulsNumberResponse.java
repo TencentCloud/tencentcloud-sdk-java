@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulsNumberResponse  extends AbstractModel{
+public class DescribeVulsNumberResponse extends AbstractModel{
 
     /**
     * 受影响的网站总数。
@@ -93,7 +93,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取受影响的网站总数。
+     * Get 受影响的网站总数。 
      * @return ImpactSiteNumber 受影响的网站总数。
      */
     public Integer getImpactSiteNumber() {
@@ -101,7 +101,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置受影响的网站总数。
+     * Set 受影响的网站总数。
      * @param ImpactSiteNumber 受影响的网站总数。
      */
     public void setImpactSiteNumber(Integer ImpactSiteNumber) {
@@ -109,7 +109,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已验证的网站总数。
+     * Get 已验证的网站总数。 
      * @return SiteNumber 已验证的网站总数。
      */
     public Integer getSiteNumber() {
@@ -117,7 +117,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已验证的网站总数。
+     * Set 已验证的网站总数。
      * @param SiteNumber 已验证的网站总数。
      */
     public void setSiteNumber(Integer SiteNumber) {
@@ -125,7 +125,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取高风险漏洞总数。
+     * Get 高风险漏洞总数。 
      * @return VulsHighNumber 高风险漏洞总数。
      */
     public Integer getVulsHighNumber() {
@@ -133,7 +133,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置高风险漏洞总数。
+     * Set 高风险漏洞总数。
      * @param VulsHighNumber 高风险漏洞总数。
      */
     public void setVulsHighNumber(Integer VulsHighNumber) {
@@ -141,7 +141,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取中风险漏洞总数。
+     * Get 中风险漏洞总数。 
      * @return VulsMiddleNumber 中风险漏洞总数。
      */
     public Integer getVulsMiddleNumber() {
@@ -149,7 +149,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置中风险漏洞总数。
+     * Set 中风险漏洞总数。
      * @param VulsMiddleNumber 中风险漏洞总数。
      */
     public void setVulsMiddleNumber(Integer VulsMiddleNumber) {
@@ -157,7 +157,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取低高风险漏洞总数。
+     * Get 低高风险漏洞总数。 
      * @return VulsLowNumber 低高风险漏洞总数。
      */
     public Integer getVulsLowNumber() {
@@ -165,7 +165,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置低高风险漏洞总数。
+     * Set 低高风险漏洞总数。
      * @param VulsLowNumber 低高风险漏洞总数。
      */
     public void setVulsLowNumber(Integer VulsLowNumber) {
@@ -173,7 +173,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取风险提示总数。
+     * Get 风险提示总数。 
      * @return VulsNoticeNumber 风险提示总数。
      */
     public Integer getVulsNoticeNumber() {
@@ -181,7 +181,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置风险提示总数。
+     * Set 风险提示总数。
      * @param VulsNoticeNumber 风险提示总数。
      */
     public void setVulsNoticeNumber(Integer VulsNoticeNumber) {
@@ -189,7 +189,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取扫描页面总数。
+     * Get 扫描页面总数。 
      * @return PageCount 扫描页面总数。
      */
     public Integer getPageCount() {
@@ -197,7 +197,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置扫描页面总数。
+     * Set 扫描页面总数。
      * @param PageCount 扫描页面总数。
      */
     public void setPageCount(Integer PageCount) {
@@ -205,7 +205,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已验证的网站列表。
+     * Get 已验证的网站列表。 
      * @return Sites 已验证的网站列表。
      */
     public MonitorMiniSite [] getSites() {
@@ -213,7 +213,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已验证的网站列表。
+     * Set 已验证的网站列表。
      * @param Sites 已验证的网站列表。
      */
     public void setSites(MonitorMiniSite [] Sites) {
@@ -221,7 +221,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取受影响的网站列表。
+     * Get 受影响的网站列表。 
      * @return ImpactSites 受影响的网站列表。
      */
     public MonitorMiniSite [] getImpactSites() {
@@ -229,7 +229,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置受影响的网站列表。
+     * Set 受影响的网站列表。
      * @param ImpactSites 受影响的网站列表。
      */
     public void setImpactSites(MonitorMiniSite [] ImpactSites) {
@@ -237,7 +237,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -245,7 +245,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -253,7 +253,7 @@ public class DescribeVulsNumberResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImpactSiteNumber", this.ImpactSiteNumber);

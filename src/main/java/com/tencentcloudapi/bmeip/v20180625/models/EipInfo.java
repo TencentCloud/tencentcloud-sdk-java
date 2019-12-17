@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EipInfo  extends AbstractModel{
+public class EipInfo extends AbstractModel{
 
     /**
     * EIP实例ID
@@ -219,7 +219,7 @@ public class EipInfo  extends AbstractModel{
     private String HInstanceAlias;
 
     /**
-     * 获取EIP实例ID
+     * Get EIP实例ID 
      * @return EipId EIP实例ID
      */
     public String getEipId() {
@@ -227,7 +227,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP实例ID
+     * Set EIP实例ID
      * @param EipId EIP实例ID
      */
     public void setEipId(String EipId) {
@@ -235,7 +235,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP名称
+     * Get EIP名称 
      * @return EipName EIP名称
      */
     public String getEipName() {
@@ -243,7 +243,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP名称
+     * Set EIP名称
      * @param EipName EIP名称
      */
     public void setEipName(String EipName) {
@@ -251,7 +251,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP地址
+     * Get EIP地址 
      * @return Eip EIP地址
      */
     public String getEip() {
@@ -259,7 +259,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP地址
+     * Set EIP地址
      * @param Eip EIP地址
      */
     public void setEip(String Eip) {
@@ -267,7 +267,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
+     * Get 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港 
      * @return IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      */
     public Integer getIspId() {
@@ -275,7 +275,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
+     * Set 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      * @param IspId 运营商ID 0：电信； 1：联通； 2：移动； 3：教育网； 4：盈科； 5：BGP； 6：中国香港
      */
     public void setIspId(Integer IspId) {
@@ -283,7 +283,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
+     * Get 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败 
      * @return Status 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      */
     public Integer getStatus() {
@@ -291,7 +291,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
+     * Set 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      * @param Status 状态 0：创建中； 1：绑定中； 2：已绑定； 3：解绑中； 4：未绑定； 6：下线中； 9：创建失败
      */
     public void setStatus(Integer Status) {
@@ -299,7 +299,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
+     * Get 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。 
      * @return Arrears 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      */
     public Integer getArrears() {
@@ -307,7 +307,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
+     * Set 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      * @param Arrears 是否欠费隔离 1： 欠费隔离； 0： 正常。处在欠费隔离情况下的EIP不能进行任何管理操作。
      */
     public void setArrears(Integer Arrears) {
@@ -315,7 +315,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP所绑定的服务器实例ID，未绑定则为空
+     * Get EIP所绑定的服务器实例ID，未绑定则为空 
      * @return InstanceId EIP所绑定的服务器实例ID，未绑定则为空
      */
     public String getInstanceId() {
@@ -323,7 +323,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP所绑定的服务器实例ID，未绑定则为空
+     * Set EIP所绑定的服务器实例ID，未绑定则为空
      * @param InstanceId EIP所绑定的服务器实例ID，未绑定则为空
      */
     public void setInstanceId(String InstanceId) {
@@ -331,7 +331,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取服务器别名
+     * Get 服务器别名 
      * @return InstanceAlias 服务器别名
      */
     public String getInstanceAlias() {
@@ -339,7 +339,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置服务器别名
+     * Set 服务器别名
      * @param InstanceAlias 服务器别名
      */
     public void setInstanceAlias(String InstanceAlias) {
@@ -347,7 +347,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP解绑时间
+     * Get EIP解绑时间 
      * @return FreeAt EIP解绑时间
      */
     public String getFreeAt() {
@@ -355,7 +355,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP解绑时间
+     * Set EIP解绑时间
      * @param FreeAt EIP解绑时间
      */
     public void setFreeAt(String FreeAt) {
@@ -363,7 +363,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP创建时间
+     * Get EIP创建时间 
      * @return CreatedAt EIP创建时间
      */
     public String getCreatedAt() {
@@ -371,7 +371,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP创建时间
+     * Set EIP创建时间
      * @param CreatedAt EIP创建时间
      */
     public void setCreatedAt(String CreatedAt) {
@@ -379,7 +379,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP更新时间
+     * Get EIP更新时间 
      * @return UpdatedAt EIP更新时间
      */
     public String getUpdatedAt() {
@@ -387,7 +387,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP更新时间
+     * Set EIP更新时间
      * @param UpdatedAt EIP更新时间
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -395,7 +395,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP未绑定服务器时长（单位：秒）
+     * Get EIP未绑定服务器时长（单位：秒） 
      * @return FreeSecond EIP未绑定服务器时长（单位：秒）
      */
     public Integer getFreeSecond() {
@@ -403,7 +403,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP未绑定服务器时长（单位：秒）
+     * Set EIP未绑定服务器时长（单位：秒）
      * @param FreeSecond EIP未绑定服务器时长（单位：秒）
      */
     public void setFreeSecond(Integer FreeSecond) {
@@ -411,7 +411,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
+     * Get EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias 
      * @return Type EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      */
     public Integer getType() {
@@ -419,7 +419,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
+     * Set EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      * @param Type EIP所绑定的资源类型，-1：未绑定资源；0：黑石物理机，字段对应unInstanceId；1：Nat网关，字段对应natUid；2：云服务器字段对应vpcIp; 3: 托管机器，字段对应HInstanceId, HInstanceAlias
      */
     public void setType(Integer Type) {
@@ -427,7 +427,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * Get EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费 
      * @return PayMode EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      */
     public String getPayMode() {
@@ -435,7 +435,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * Set EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      * @param PayMode EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      */
     public void setPayMode(String PayMode) {
@@ -443,7 +443,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP带宽计费模式下的带宽上限（单位：MB）
+     * Get EIP带宽计费模式下的带宽上限（单位：MB） 
      * @return Bandwidth EIP带宽计费模式下的带宽上限（单位：MB）
      */
     public Integer getBandwidth() {
@@ -451,7 +451,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP带宽计费模式下的带宽上限（单位：MB）
+     * Set EIP带宽计费模式下的带宽上限（单位：MB）
      * @param Bandwidth EIP带宽计费模式下的带宽上限（单位：MB）
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -459,7 +459,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * Get 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费 
      * @return LatestPayMode 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      */
     public String getLatestPayMode() {
@@ -467,7 +467,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
+     * Set 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      * @param LatestPayMode 最近一次操作变更的EIP计费模式，"flow"：流量计费； "bandwidth"：带宽计费
      */
     public void setLatestPayMode(String LatestPayMode) {
@@ -475,7 +475,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
+     * Get 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB） 
      * @return LatestBandwidth 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      */
     public Integer getLatestBandwidth() {
@@ -483,7 +483,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
+     * Set 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      * @param LatestBandwidth 最近一次操作变更的EIP计费模式对应的带宽上限值，仅在带宽计费模式下有效（单位：MB）
      */
     public void setLatestBandwidth(Integer LatestBandwidth) {
@@ -491,7 +491,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -499,7 +499,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -507,7 +507,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
+     * Get EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空 
      * @return NatId EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      */
     public Integer getNatId() {
@@ -515,7 +515,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
+     * Set EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      * @param NatId EIP所绑定的NAT网关的数字ID，形如：1001,，未绑定则为空
      */
     public void setNatId(Integer NatId) {
@@ -523,7 +523,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
+     * Get EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空 
      * @return NatUid EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
      */
     public String getNatUid() {
@@ -531,7 +531,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
+     * Set EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
      * @param NatUid EIP所绑定的NAT网关实例ID，形如："nat-n47xxxxx"，未绑定则为空
      */
     public void setNatUid(String NatUid) {
@@ -539,7 +539,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
+     * Get EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空 
      * @return VpcIp EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
      */
     public String getVpcIp() {
@@ -547,7 +547,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
+     * Set EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
      * @param VpcIp EIP所绑定的云服务器IP(托管或者云服务器的IP），形如："10.1.1.3"。 注意：IP资源需要通过bmvpc模块注册或者申请后才可以绑定eip，接口使用申请子网IP和注册子网IP：,未绑定则为空
      */
     public void setVpcIp(String VpcIp) {
@@ -555,7 +555,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络实例ID
+     * Get 私有网络实例ID 
      * @return VpcId 私有网络实例ID
      */
     public String getVpcId() {
@@ -563,7 +563,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络实例ID
+     * Set 私有网络实例ID
      * @param VpcId 私有网络实例ID
      */
     public void setVpcId(String VpcId) {
@@ -571,7 +571,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否为独占类型EIP
+     * Get 是否为独占类型EIP 
      * @return Exclusive 是否为独占类型EIP
      */
     public Integer getExclusive() {
@@ -579,7 +579,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否为独占类型EIP
+     * Set 是否为独占类型EIP
      * @param Exclusive 是否为独占类型EIP
      */
     public void setExclusive(Integer Exclusive) {
@@ -587,7 +587,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的cidr
+     * Get 私有网络的cidr 
      * @return VpcCidr 私有网络的cidr
      */
     public String getVpcCidr() {
@@ -595,7 +595,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的cidr
+     * Set 私有网络的cidr
      * @param VpcCidr 私有网络的cidr
      */
     public void setVpcCidr(String VpcCidr) {
@@ -603,7 +603,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP ACL实例ID
+     * Get EIP ACL实例ID 
      * @return AclId EIP ACL实例ID
      */
     public String getAclId() {
@@ -611,7 +611,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP ACL实例ID
+     * Set EIP ACL实例ID
      * @param AclId EIP ACL实例ID
      */
     public void setAclId(String AclId) {
@@ -619,7 +619,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP ACL名称
+     * Get EIP ACL名称 
      * @return AclName EIP ACL名称
      */
     public String getAclName() {
@@ -627,7 +627,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP ACL名称
+     * Set EIP ACL名称
      * @param AclName EIP ACL名称
      */
     public void setAclName(String AclName) {
@@ -635,7 +635,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取托管机器实例ID
+     * Get 托管机器实例ID 
      * @return HInstanceId 托管机器实例ID
      */
     public String getHInstanceId() {
@@ -643,7 +643,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器实例ID
+     * Set 托管机器实例ID
      * @param HInstanceId 托管机器实例ID
      */
     public void setHInstanceId(String HInstanceId) {
@@ -651,7 +651,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 获取托管机器别名
+     * Get 托管机器别名 
      * @return HInstanceAlias 托管机器别名
      */
     public String getHInstanceAlias() {
@@ -659,7 +659,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器别名
+     * Set 托管机器别名
      * @param HInstanceAlias 托管机器别名
      */
     public void setHInstanceAlias(String HInstanceAlias) {
@@ -667,7 +667,7 @@ public class EipInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EipId", this.EipId);

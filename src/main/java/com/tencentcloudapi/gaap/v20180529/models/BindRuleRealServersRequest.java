@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindRuleRealServersRequest  extends AbstractModel{
+public class BindRuleRealServersRequest extends AbstractModel{
 
     /**
     * 转发规则ID
@@ -40,7 +40,7 @@ public class BindRuleRealServersRequest  extends AbstractModel{
     private RealServerBindSetReq [] RealServerBindSet;
 
     /**
-     * 获取转发规则ID
+     * Get 转发规则ID 
      * @return RuleId 转发规则ID
      */
     public String getRuleId() {
@@ -48,7 +48,7 @@ public class BindRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则ID
+     * Set 转发规则ID
      * @param RuleId 转发规则ID
      */
     public void setRuleId(String RuleId) {
@@ -56,10 +56,10 @@ public class BindRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要绑定的源站信息列表。
+     * Get 需要绑定的源站信息列表。
 如果已经存在绑定的源站，则会覆盖更新成这个源站列表。
 当不带该字段时，表示解绑该规则上的所有源站。
-如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。 
      * @return RealServerBindSet 需要绑定的源站信息列表。
 如果已经存在绑定的源站，则会覆盖更新成这个源站列表。
 当不带该字段时，表示解绑该规则上的所有源站。
@@ -70,7 +70,7 @@ public class BindRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要绑定的源站信息列表。
+     * Set 需要绑定的源站信息列表。
 如果已经存在绑定的源站，则会覆盖更新成这个源站列表。
 当不带该字段时，表示解绑该规则上的所有源站。
 如果该规则的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
@@ -84,7 +84,7 @@ public class BindRuleRealServersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceFamilyConfig  extends AbstractModel{
+public class InstanceFamilyConfig extends AbstractModel{
 
     /**
     * 机型族名称的中文全称。
@@ -37,7 +37,7 @@ public class InstanceFamilyConfig  extends AbstractModel{
     private String InstanceFamily;
 
     /**
-     * 获取机型族名称的中文全称。
+     * Get 机型族名称的中文全称。 
      * @return InstanceFamilyName 机型族名称的中文全称。
      */
     public String getInstanceFamilyName() {
@@ -45,7 +45,7 @@ public class InstanceFamilyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置机型族名称的中文全称。
+     * Set 机型族名称的中文全称。
      * @param InstanceFamilyName 机型族名称的中文全称。
      */
     public void setInstanceFamilyName(String InstanceFamilyName) {
@@ -53,7 +53,7 @@ public class InstanceFamilyConfig  extends AbstractModel{
     }
 
     /**
-     * 获取机型族名称的英文简称。
+     * Get 机型族名称的英文简称。 
      * @return InstanceFamily 机型族名称的英文简称。
      */
     public String getInstanceFamily() {
@@ -61,7 +61,7 @@ public class InstanceFamilyConfig  extends AbstractModel{
     }
 
     /**
-     * 设置机型族名称的英文简称。
+     * Set 机型族名称的英文简称。
      * @param InstanceFamily 机型族名称的英文简称。
      */
     public void setInstanceFamily(String InstanceFamily) {
@@ -69,7 +69,7 @@ public class InstanceFamilyConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceFamilyName", this.InstanceFamilyName);

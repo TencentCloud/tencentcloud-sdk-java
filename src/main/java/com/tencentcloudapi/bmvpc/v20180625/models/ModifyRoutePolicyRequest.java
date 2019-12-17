@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoutePolicyRequest  extends AbstractModel{
+public class ModifyRoutePolicyRequest extends AbstractModel{
 
     /**
     * 路由表ID
@@ -37,7 +37,7 @@ public class ModifyRoutePolicyRequest  extends AbstractModel{
     private RoutePolicy RoutePolicy;
 
     /**
-     * 获取路由表ID
+     * Get 路由表ID 
      * @return RouteTableId 路由表ID
      */
     public String getRouteTableId() {
@@ -45,7 +45,7 @@ public class ModifyRoutePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表ID
+     * Set 路由表ID
      * @param RouteTableId 路由表ID
      */
     public void setRouteTableId(String RouteTableId) {
@@ -53,7 +53,7 @@ public class ModifyRoutePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改的路由
+     * Get 修改的路由 
      * @return RoutePolicy 修改的路由
      */
     public RoutePolicy getRoutePolicy() {
@@ -61,7 +61,7 @@ public class ModifyRoutePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改的路由
+     * Set 修改的路由
      * @param RoutePolicy 修改的路由
      */
     public void setRoutePolicy(RoutePolicy RoutePolicy) {
@@ -69,7 +69,7 @@ public class ModifyRoutePolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

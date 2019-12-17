@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateHostedInterfaceRequest  extends AbstractModel{
+public class CreateHostedInterfaceRequest extends AbstractModel{
 
     /**
     * 托管机器唯一ID 数组
@@ -44,7 +44,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取托管机器唯一ID 数组
+     * Get 托管机器唯一ID 数组 
      * @return InstanceIds 托管机器唯一ID 数组
      */
     public String [] getInstanceIds() {
@@ -52,7 +52,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器唯一ID 数组
+     * Set 托管机器唯一ID 数组
      * @param InstanceIds 托管机器唯一ID 数组
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -60,7 +60,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID或者私有网络统一ID，建议使用统一ID
+     * Get 私有网络ID或者私有网络统一ID，建议使用统一ID 
      * @return VpcId 私有网络ID或者私有网络统一ID，建议使用统一ID
      */
     public String getVpcId() {
@@ -68,7 +68,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID或者私有网络统一ID，建议使用统一ID
+     * Set 私有网络ID或者私有网络统一ID，建议使用统一ID
      * @param VpcId 私有网络ID或者私有网络统一ID，建议使用统一ID
      */
     public void setVpcId(String VpcId) {
@@ -76,7 +76,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID或者子网统一ID，建议使用统一ID
+     * Get 子网ID或者子网统一ID，建议使用统一ID 
      * @return SubnetId 子网ID或者子网统一ID，建议使用统一ID
      */
     public String getSubnetId() {
@@ -84,7 +84,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID或者子网统一ID，建议使用统一ID
+     * Set 子网ID或者子网统一ID，建议使用统一ID
      * @param SubnetId 子网ID或者子网统一ID，建议使用统一ID
      */
     public void setSubnetId(String SubnetId) {
@@ -92,7 +92,7 @@ public class CreateHostedInterfaceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

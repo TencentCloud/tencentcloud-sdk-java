@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUserCmdsRequest  extends AbstractModel{
+public class DescribeUserCmdsRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -65,7 +65,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     private String CmdId;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -73,7 +73,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -81,7 +81,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制
+     * Get 数量限制 
      * @return Limit 数量限制
      */
     public Integer getLimit() {
@@ -89,7 +89,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制
+     * Set 数量限制
      * @param Limit 数量限制
      */
     public void setLimit(Integer Limit) {
@@ -97,7 +97,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序字段，支持： OsType,CreateTime,ModifyTime
+     * Get 排序字段，支持： OsType,CreateTime,ModifyTime 
      * @return OrderField 排序字段，支持： OsType,CreateTime,ModifyTime
      */
     public String getOrderField() {
@@ -105,7 +105,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序字段，支持： OsType,CreateTime,ModifyTime
+     * Set 排序字段，支持： OsType,CreateTime,ModifyTime
      * @param OrderField 排序字段，支持： OsType,CreateTime,ModifyTime
      */
     public void setOrderField(String OrderField) {
@@ -113,7 +113,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，取值: 1倒序，0顺序；默认倒序
+     * Get 排序方式，取值: 1倒序，0顺序；默认倒序 
      * @return Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
     public Integer getOrder() {
@@ -121,7 +121,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，取值: 1倒序，0顺序；默认倒序
+     * Set 排序方式，取值: 1倒序，0顺序；默认倒序
      * @param Order 排序方式，取值: 1倒序，0顺序；默认倒序
      */
     public void setOrder(Integer Order) {
@@ -129,7 +129,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键字搜索，可搜索ID或别名，支持模糊搜索
+     * Get 关键字搜索，可搜索ID或别名，支持模糊搜索 
      * @return SearchKey 关键字搜索，可搜索ID或别名，支持模糊搜索
      */
     public String getSearchKey() {
@@ -137,7 +137,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键字搜索，可搜索ID或别名，支持模糊搜索
+     * Set 关键字搜索，可搜索ID或别名，支持模糊搜索
      * @param SearchKey 关键字搜索，可搜索ID或别名，支持模糊搜索
      */
     public void setSearchKey(String SearchKey) {
@@ -145,7 +145,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询的脚本ID
+     * Get 查询的脚本ID 
      * @return CmdId 查询的脚本ID
      */
     public String getCmdId() {
@@ -153,7 +153,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的脚本ID
+     * Set 查询的脚本ID
      * @param CmdId 查询的脚本ID
      */
     public void setCmdId(String CmdId) {
@@ -161,7 +161,7 @@ public class DescribeUserCmdsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

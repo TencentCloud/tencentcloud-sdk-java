@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTableMemosRequest  extends AbstractModel{
+public class ModifyTableMemosRequest extends AbstractModel{
 
     /**
     * 表所属应用实例ID
@@ -37,7 +37,7 @@ public class ModifyTableMemosRequest  extends AbstractModel{
     private SelectedTableInfo [] TableMemos;
 
     /**
-     * 获取表所属应用实例ID
+     * Get 表所属应用实例ID 
      * @return ApplicationId 表所属应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class ModifyTableMemosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表所属应用实例ID
+     * Set 表所属应用实例ID
      * @param ApplicationId 表所属应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class ModifyTableMemosRequest  extends AbstractModel{
     }
 
     /**
-     * 获取选定表详情列表
+     * Get 选定表详情列表 
      * @return TableMemos 选定表详情列表
      */
     public SelectedTableInfo [] getTableMemos() {
@@ -61,7 +61,7 @@ public class ModifyTableMemosRequest  extends AbstractModel{
     }
 
     /**
-     * 设置选定表详情列表
+     * Set 选定表详情列表
      * @param TableMemos 选定表详情列表
      */
     public void setTableMemos(SelectedTableInfo [] TableMemos) {
@@ -69,7 +69,7 @@ public class ModifyTableMemosRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

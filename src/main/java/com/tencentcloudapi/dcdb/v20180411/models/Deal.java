@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Deal  extends AbstractModel{
+public class Deal extends AbstractModel{
 
     /**
     * 订单号
@@ -66,7 +66,7 @@ public class Deal  extends AbstractModel{
     private Integer PayMode;
 
     /**
-     * 获取订单号
+     * Get 订单号 
      * @return DealName 订单号
      */
     public String getDealName() {
@@ -74,7 +74,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置订单号
+     * Set 订单号
      * @param DealName 订单号
      */
     public void setDealName(String DealName) {
@@ -82,7 +82,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取所属账号
+     * Get 所属账号 
      * @return OwnerUin 所属账号
      */
     public String getOwnerUin() {
@@ -90,7 +90,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置所属账号
+     * Set 所属账号
      * @param OwnerUin 所属账号
      */
     public void setOwnerUin(String OwnerUin) {
@@ -98,7 +98,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取商品数量
+     * Get 商品数量 
      * @return Count 商品数量
      */
     public Integer getCount() {
@@ -106,7 +106,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置商品数量
+     * Set 商品数量
      * @param Count 商品数量
      */
     public void setCount(Integer Count) {
@@ -114,7 +114,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取关联的流程 Id，可用于查询流程执行状态
+     * Get 关联的流程 Id，可用于查询流程执行状态 
      * @return FlowId 关联的流程 Id，可用于查询流程执行状态
      */
     public Integer getFlowId() {
@@ -122,7 +122,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置关联的流程 Id，可用于查询流程执行状态
+     * Set 关联的流程 Id，可用于查询流程执行状态
      * @param FlowId 关联的流程 Id，可用于查询流程执行状态
      */
     public void setFlowId(Integer FlowId) {
@@ -130,8 +130,8 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -140,7 +140,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
+     * Set 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 只有创建实例的订单会填充该字段，表示该订单创建的实例的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,7 +150,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式，0后付费/1预付费
+     * Get 付费模式，0后付费/1预付费 
      * @return PayMode 付费模式，0后付费/1预付费
      */
     public Integer getPayMode() {
@@ -158,7 +158,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式，0后付费/1预付费
+     * Set 付费模式，0后付费/1预付费
      * @param PayMode 付费模式，0后付费/1预付费
      */
     public void setPayMode(Integer PayMode) {
@@ -166,7 +166,7 @@ public class Deal  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrateCheckJobResponse  extends AbstractModel{
+public class DescribeMigrateCheckJobResponse extends AbstractModel{
 
     /**
     * 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
@@ -65,7 +65,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
+     * Get 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成) 
      * @return Status 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
      */
     public String getStatus() {
@@ -73,7 +73,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
+     * Set 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
      * @param Status 校验任务状态：unavailable(当前不可用), starting(开始中)，running(校验中)，finished(校验完成)
      */
     public void setStatus(String Status) {
@@ -81,7 +81,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的错误码
+     * Get 任务的错误码 
      * @return ErrorCode 任务的错误码
      */
     public Integer getErrorCode() {
@@ -89,7 +89,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的错误码
+     * Set 任务的错误码
      * @param ErrorCode 任务的错误码
      */
     public void setErrorCode(Integer ErrorCode) {
@@ -97,7 +97,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务的错误信息
+     * Get 任务的错误信息 
      * @return ErrorMessage 任务的错误信息
      */
     public String getErrorMessage() {
@@ -105,7 +105,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务的错误信息
+     * Set 任务的错误信息
      * @param ErrorMessage 任务的错误信息
      */
     public void setErrorMessage(String ErrorMessage) {
@@ -113,7 +113,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Check任务总进度,如："30"表示30%
+     * Get Check任务总进度,如："30"表示30% 
      * @return Progress Check任务总进度,如："30"表示30%
      */
     public String getProgress() {
@@ -121,7 +121,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Check任务总进度,如："30"表示30%
+     * Set Check任务总进度,如："30"表示30%
      * @param Progress Check任务总进度,如："30"表示30%
      */
     public void setProgress(String Progress) {
@@ -129,7 +129,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取校验是否通过,0-未通过，1-校验通过, 3-未校验
+     * Get 校验是否通过,0-未通过，1-校验通过, 3-未校验 
      * @return CheckFlag 校验是否通过,0-未通过，1-校验通过, 3-未校验
      */
     public Integer getCheckFlag() {
@@ -137,7 +137,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置校验是否通过,0-未通过，1-校验通过, 3-未校验
+     * Set 校验是否通过,0-未通过，1-校验通过, 3-未校验
      * @param CheckFlag 校验是否通过,0-未通过，1-校验通过, 3-未校验
      */
     public void setCheckFlag(Integer CheckFlag) {
@@ -145,7 +145,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeMigrateCheckJobResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

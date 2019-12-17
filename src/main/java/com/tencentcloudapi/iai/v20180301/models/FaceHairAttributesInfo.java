@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceHairAttributesInfo  extends AbstractModel{
+public class FaceHairAttributesInfo extends AbstractModel{
 
     /**
     * 0：光头，1：短发，2：中发，3：长发，4：绑发
@@ -47,8 +47,8 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     private Long Color;
 
     /**
-     * 获取0：光头，1：短发，2：中发，3：长发，4：绑发
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0：光头，1：短发，2：中发，3：长发，4：绑发
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Length 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0：光头，1：短发，2：中发，3：长发，4：绑发
+     * Set 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Length 0：光头，1：短发，2：中发，3：长发，4：绑发
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0：有刘海，1：无刘海
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0：有刘海，1：无刘海
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Bang 0：有刘海，1：无刘海
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0：有刘海，1：无刘海
+     * Set 0：有刘海，1：无刘海
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Bang 0：有刘海，1：无刘海
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0：黑色，1：金色，2：棕色，3：灰白色
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 0：黑色，1：金色，2：棕色，3：灰白色
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Color 0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0：黑色，1：金色，2：棕色，3：灰白色
+     * Set 0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Color 0：黑色，1：金色，2：棕色，3：灰白色
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class FaceHairAttributesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Length", this.Length);

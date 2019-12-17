@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KeyValueRecord  extends AbstractModel{
+public class KeyValueRecord extends AbstractModel{
 
     /**
     * 一条记录的Key-Value数组
@@ -30,7 +30,7 @@ public class KeyValueRecord  extends AbstractModel{
     private KeyValue [] Record;
 
     /**
-     * 获取一条记录的Key-Value数组
+     * Get 一条记录的Key-Value数组 
      * @return Record 一条记录的Key-Value数组
      */
     public KeyValue [] getRecord() {
@@ -38,7 +38,7 @@ public class KeyValueRecord  extends AbstractModel{
     }
 
     /**
-     * 设置一条记录的Key-Value数组
+     * Set 一条记录的Key-Value数组
      * @param Record 一条记录的Key-Value数组
      */
     public void setRecord(KeyValue [] Record) {
@@ -46,7 +46,7 @@ public class KeyValueRecord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Record.", this.Record);

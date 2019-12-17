@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateTaskInstanceRequest  extends AbstractModel{
+public class TerminateTaskInstanceRequest extends AbstractModel{
 
     /**
     * 作业ID
@@ -44,7 +44,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     private Integer TaskInstanceIndex;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -52,7 +52,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -60,7 +60,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -68,7 +68,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -76,7 +76,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务实例索引
+     * Get 任务实例索引 
      * @return TaskInstanceIndex 任务实例索引
      */
     public Integer getTaskInstanceIndex() {
@@ -84,7 +84,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务实例索引
+     * Set 任务实例索引
      * @param TaskInstanceIndex 任务实例索引
      */
     public void setTaskInstanceIndex(Integer TaskInstanceIndex) {
@@ -92,7 +92,7 @@ public class TerminateTaskInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

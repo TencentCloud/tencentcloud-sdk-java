@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDirectConnectRequest  extends AbstractModel{
+public class DeleteDirectConnectRequest extends AbstractModel{
 
     /**
     * 物理专线的ID。
@@ -30,7 +30,7 @@ public class DeleteDirectConnectRequest  extends AbstractModel{
     private String DirectConnectId;
 
     /**
-     * 获取物理专线的ID。
+     * Get 物理专线的ID。 
      * @return DirectConnectId 物理专线的ID。
      */
     public String getDirectConnectId() {
@@ -38,7 +38,7 @@ public class DeleteDirectConnectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置物理专线的ID。
+     * Set 物理专线的ID。
      * @param DirectConnectId 物理专线的ID。
      */
     public void setDirectConnectId(String DirectConnectId) {
@@ -46,7 +46,7 @@ public class DeleteDirectConnectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectId", this.DirectConnectId);

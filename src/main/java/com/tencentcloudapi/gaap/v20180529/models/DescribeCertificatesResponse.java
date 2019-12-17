@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificatesResponse  extends AbstractModel{
+public class DescribeCertificatesResponse extends AbstractModel{
 
     /**
     * 服务器证书列表，包括证书ID 和证书名称。
@@ -44,7 +44,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取服务器证书列表，包括证书ID 和证书名称。
+     * Get 服务器证书列表，包括证书ID 和证书名称。 
      * @return CertificateSet 服务器证书列表，包括证书ID 和证书名称。
      */
     public Certificate [] getCertificateSet() {
@@ -52,7 +52,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务器证书列表，包括证书ID 和证书名称。
+     * Set 服务器证书列表，包括证书ID 和证书名称。
      * @param CertificateSet 服务器证书列表，包括证书ID 和证书名称。
      */
     public void setCertificateSet(Certificate [] CertificateSet) {
@@ -60,7 +60,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取满足查询条件的服务器证书总数量。
+     * Get 满足查询条件的服务器证书总数量。 
      * @return TotalCount 满足查询条件的服务器证书总数量。
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置满足查询条件的服务器证书总数量。
+     * Set 满足查询条件的服务器证书总数量。
      * @param TotalCount 满足查询条件的服务器证书总数量。
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeCertificatesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CertificateSet.", this.CertificateSet);

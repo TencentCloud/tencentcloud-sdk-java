@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListGroupsForUserResponse  extends AbstractModel{
+public class ListGroupsForUserResponse extends AbstractModel{
 
     /**
     * 子用户加入的用户组总数
@@ -44,7 +44,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取子用户加入的用户组总数
+     * Get 子用户加入的用户组总数 
      * @return TotalNum 子用户加入的用户组总数
      */
     public Long getTotalNum() {
@@ -52,7 +52,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子用户加入的用户组总数
+     * Set 子用户加入的用户组总数
      * @param TotalNum 子用户加入的用户组总数
      */
     public void setTotalNum(Long TotalNum) {
@@ -60,7 +60,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组信息
+     * Get 用户组信息 
      * @return GroupInfo 用户组信息
      */
     public GroupInfo [] getGroupInfo() {
@@ -68,7 +68,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组信息
+     * Set 用户组信息
      * @param GroupInfo 用户组信息
      */
     public void setGroupInfo(GroupInfo [] GroupInfo) {
@@ -76,7 +76,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ListGroupsForUserResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);

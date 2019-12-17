@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskCoverOutput  extends AbstractModel{
+public class AiAnalysisTaskCoverOutput extends AbstractModel{
 
     /**
     * 智能封面列表。
@@ -30,7 +30,7 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
     private MediaAiAnalysisCoverItem [] CoverSet;
 
     /**
-     * 获取智能封面列表。
+     * Get 智能封面列表。 
      * @return CoverSet 智能封面列表。
      */
     public MediaAiAnalysisCoverItem [] getCoverSet() {
@@ -38,7 +38,7 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
     }
 
     /**
-     * 设置智能封面列表。
+     * Set 智能封面列表。
      * @param CoverSet 智能封面列表。
      */
     public void setCoverSet(MediaAiAnalysisCoverItem [] CoverSet) {
@@ -46,7 +46,7 @@ public class AiAnalysisTaskCoverOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CoverSet.", this.CoverSet);

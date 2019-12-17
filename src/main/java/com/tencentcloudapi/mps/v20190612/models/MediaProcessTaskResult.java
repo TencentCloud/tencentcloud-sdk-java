@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskResult  extends AbstractModel{
+public class MediaProcessTaskResult extends AbstractModel{
 
     /**
     * 任务的类型，可以取的值有：
@@ -77,14 +77,14 @@ public class MediaProcessTaskResult  extends AbstractModel{
     private MediaProcessTaskImageSpriteResult ImageSpriteTask;
 
     /**
-     * 获取任务的类型，可以取的值有：
+     * Get 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
 <li>SnapshotByTimeOffset：时间点截图</li>
 <li>SampleSnapshot：采样截图</li>
 <li>ImageSprites：雪碧图</li>
 <li>CoverBySnapshot：截图做封面</li>
-<li>AdaptiveDynamicStreaming：自适应码流</li>
+<li>AdaptiveDynamicStreaming：自适应码流</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
@@ -99,7 +99,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置任务的类型，可以取的值有：
+     * Set 任务的类型，可以取的值有：
 <li>Transcode：转码</li>
 <li>AnimatedGraphics：转动图</li>
 <li>SnapshotByTimeOffset：时间点截图</li>
@@ -121,8 +121,8 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频转码任务的查询结果，当任务类型为 Transcode 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -131,7 +131,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码任务的查询结果，当任务类型为 Transcode 时有效。
+     * Set 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask 视频转码任务的查询结果，当任务类型为 Transcode 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,8 +141,8 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AnimatedGraphicTask 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -151,7 +151,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
+     * Set 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTask 视频转动图任务的查询结果，当任务类型为 AnimatedGraphics 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -161,8 +161,8 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetTask 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -171,7 +171,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
+     * Set 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask 对视频按时间点截图任务的查询结果，当任务类型为 SnapshotByTimeOffset 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -181,8 +181,8 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SampleSnapshotTask 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -191,7 +191,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
+     * Set 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTask 对视频采样截图任务的查询结果，当任务类型为 SampleSnapshot 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -201,8 +201,8 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteTask 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -211,7 +211,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
+     * Set 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteTask 对视频截雪碧图任务的查询结果，当任务类型为 ImageSprite 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -221,7 +221,7 @@ public class MediaProcessTaskResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

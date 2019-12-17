@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleFailFaceInfo  extends AbstractModel{
+public class AiSampleFailFaceInfo extends AbstractModel{
 
     /**
     * 对应入参 FaceContents 中错误图片下标，从 0 开始。
@@ -46,7 +46,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     private String Message;
 
     /**
-     * 获取对应入参 FaceContents 中错误图片下标，从 0 开始。
+     * Get 对应入参 FaceContents 中错误图片下标，从 0 开始。 
      * @return Index 对应入参 FaceContents 中错误图片下标，从 0 开始。
      */
     public Long getIndex() {
@@ -54,7 +54,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置对应入参 FaceContents 中错误图片下标，从 0 开始。
+     * Set 对应入参 FaceContents 中错误图片下标，从 0 开始。
      * @param Index 对应入参 FaceContents 中错误图片下标，从 0 开始。
      */
     public void setIndex(Long Index) {
@@ -62,9 +62,9 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误码，取值：
+     * Get 错误码，取值：
 <li>0：成功；</li>
-<li>其他：失败。</li>
+<li>其他：失败。</li> 
      * @return ErrCode 错误码，取值：
 <li>0：成功；</li>
 <li>其他：失败。</li>
@@ -74,7 +74,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误码，取值：
+     * Set 错误码，取值：
 <li>0：成功；</li>
 <li>其他：失败。</li>
      * @param ErrCode 错误码，取值：
@@ -86,7 +86,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取错误描述。
+     * Get 错误描述。 
      * @return Message 错误描述。
      */
     public String getMessage() {
@@ -94,7 +94,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误描述。
+     * Set 错误描述。
      * @param Message 错误描述。
      */
     public void setMessage(String Message) {
@@ -102,7 +102,7 @@ public class AiSampleFailFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Index", this.Index);

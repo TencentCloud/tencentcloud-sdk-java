@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FunctionVersion  extends AbstractModel{
+public class FunctionVersion extends AbstractModel{
 
     /**
     * 函数版本名称
@@ -38,7 +38,7 @@ public class FunctionVersion  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取函数版本名称
+     * Get 函数版本名称 
      * @return Version 函数版本名称
      */
     public String getVersion() {
@@ -46,7 +46,7 @@ public class FunctionVersion  extends AbstractModel{
     }
 
     /**
-     * 设置函数版本名称
+     * Set 函数版本名称
      * @param Version 函数版本名称
      */
     public void setVersion(String Version) {
@@ -54,8 +54,8 @@ public class FunctionVersion  extends AbstractModel{
     }
 
     /**
-     * 获取版本描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 版本描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 版本描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class FunctionVersion  extends AbstractModel{
     }
 
     /**
-     * 设置版本描述信息
+     * Set 版本描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 版本描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class FunctionVersion  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Version", this.Version);

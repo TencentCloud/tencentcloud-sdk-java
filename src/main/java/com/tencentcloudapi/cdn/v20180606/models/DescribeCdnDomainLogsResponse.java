@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCdnDomainLogsResponse  extends AbstractModel{
+public class DescribeCdnDomainLogsResponse extends AbstractModel{
 
     /**
     * 日志包下载链接
@@ -44,7 +44,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取日志包下载链接
+     * Get 日志包下载链接 
      * @return DomainLogs 日志包下载链接
      */
     public DomainLog [] getDomainLogs() {
@@ -52,7 +52,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日志包下载链接
+     * Set 日志包下载链接
      * @param DomainLogs 日志包下载链接
      */
     public void setDomainLogs(DomainLog [] DomainLogs) {
@@ -60,7 +60,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取查询到的总条数
+     * Get 查询到的总条数 
      * @return TotalCount 查询到的总条数
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置查询到的总条数
+     * Set 查询到的总条数
      * @param TotalCount 查询到的总条数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeCdnDomainLogsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DomainLogs.", this.DomainLogs);

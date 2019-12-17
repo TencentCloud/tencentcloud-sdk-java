@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayCodeTotalInfo  extends AbstractModel{
+public class PlayCodeTotalInfo extends AbstractModel{
 
     /**
     * HTTP code，可选值包括400,403,404,500,502,503,504
@@ -37,7 +37,7 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     private Integer Num;
 
     /**
-     * 获取HTTP code，可选值包括400,403,404,500,502,503,504
+     * Get HTTP code，可选值包括400,403,404,500,502,503,504 
      * @return Code HTTP code，可选值包括400,403,404,500,502,503,504
      */
     public String getCode() {
@@ -45,7 +45,7 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置HTTP code，可选值包括400,403,404,500,502,503,504
+     * Set HTTP code，可选值包括400,403,404,500,502,503,504
      * @param Code HTTP code，可选值包括400,403,404,500,502,503,504
      */
     public void setCode(String Code) {
@@ -53,7 +53,7 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     }
 
     /**
-     * 获取总次数
+     * Get 总次数 
      * @return Num 总次数
      */
     public Integer getNum() {
@@ -61,7 +61,7 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总次数
+     * Set 总次数
      * @param Num 总次数
      */
     public void setNum(Integer Num) {
@@ -69,7 +69,7 @@ public class PlayCodeTotalInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

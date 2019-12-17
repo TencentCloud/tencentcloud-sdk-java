@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEipTaskResponse  extends AbstractModel{
+public class DescribeEipTaskResponse extends AbstractModel{
 
     /**
     * 当前任务状态码：0-成功，1-失败，2-进行中
@@ -37,7 +37,7 @@ public class DescribeEipTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取当前任务状态码：0-成功，1-失败，2-进行中
+     * Get 当前任务状态码：0-成功，1-失败，2-进行中 
      * @return Status 当前任务状态码：0-成功，1-失败，2-进行中
      */
     public Integer getStatus() {
@@ -45,7 +45,7 @@ public class DescribeEipTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前任务状态码：0-成功，1-失败，2-进行中
+     * Set 当前任务状态码：0-成功，1-失败，2-进行中
      * @param Status 当前任务状态码：0-成功，1-失败，2-进行中
      */
     public void setStatus(Integer Status) {
@@ -53,7 +53,7 @@ public class DescribeEipTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeEipTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeEipTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProductsRequest  extends AbstractModel{
+public class DescribeProductsRequest extends AbstractModel{
 
     /**
     * 分页偏移，Offset从0开始
@@ -44,7 +44,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取分页偏移，Offset从0开始
+     * Get 分页偏移，Offset从0开始 
      * @return Offset 分页偏移，Offset从0开始
      */
     public Integer getOffset() {
@@ -52,7 +52,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移，Offset从0开始
+     * Set 分页偏移，Offset从0开始
      * @param Offset 分页偏移，Offset从0开始
      */
     public void setOffset(Integer Offset) {
@@ -60,7 +60,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小，当前页面中显示的最大数量，值范围 10-250。
+     * Get 分页大小，当前页面中显示的最大数量，值范围 10-250。 
      * @return Limit 分页大小，当前页面中显示的最大数量，值范围 10-250。
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小，当前页面中显示的最大数量，值范围 10-250。
+     * Set 分页大小，当前页面中显示的最大数量，值范围 10-250。
      * @param Limit 分页大小，当前页面中显示的最大数量，值范围 10-250。
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件
+     * Get 过滤条件 
      * @return Filters 过滤条件
      */
     public Filter [] getFilters() {
@@ -84,7 +84,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件
+     * Set 过滤条件
      * @param Filters 过滤条件
      */
     public void setFilters(Filter [] Filters) {
@@ -92,7 +92,7 @@ public class DescribeProductsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

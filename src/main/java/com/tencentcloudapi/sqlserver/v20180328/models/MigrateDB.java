@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateDB  extends AbstractModel{
+public class MigrateDB extends AbstractModel{
 
     /**
     * 迁移数据库的名称
@@ -30,7 +30,7 @@ public class MigrateDB  extends AbstractModel{
     private String DBName;
 
     /**
-     * 获取迁移数据库的名称
+     * Get 迁移数据库的名称 
      * @return DBName 迁移数据库的名称
      */
     public String getDBName() {
@@ -38,7 +38,7 @@ public class MigrateDB  extends AbstractModel{
     }
 
     /**
-     * 设置迁移数据库的名称
+     * Set 迁移数据库的名称
      * @param DBName 迁移数据库的名称
      */
     public void setDBName(String DBName) {
@@ -46,7 +46,7 @@ public class MigrateDB  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBName", this.DBName);

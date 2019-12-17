@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFunctionAddressRequest  extends AbstractModel{
+public class GetFunctionAddressRequest extends AbstractModel{
 
     /**
     * 函数的名称
@@ -44,7 +44,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     private String Namespace;
 
     /**
-     * 获取函数的名称
+     * Get 函数的名称 
      * @return FunctionName 函数的名称
      */
     public String getFunctionName() {
@@ -52,7 +52,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的名称
+     * Set 函数的名称
      * @param FunctionName 函数的名称
      */
     public void setFunctionName(String FunctionName) {
@@ -60,7 +60,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的版本
+     * Get 函数的版本 
      * @return Qualifier 函数的版本
      */
     public String getQualifier() {
@@ -68,7 +68,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的版本
+     * Set 函数的版本
      * @param Qualifier 函数的版本
      */
     public void setQualifier(String Qualifier) {
@@ -76,7 +76,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的命名空间
+     * Get 函数的命名空间 
      * @return Namespace 函数的命名空间
      */
     public String getNamespace() {
@@ -84,7 +84,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的命名空间
+     * Set 函数的命名空间
      * @param Namespace 函数的命名空间
      */
     public void setNamespace(String Namespace) {
@@ -92,7 +92,7 @@ public class GetFunctionAddressRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

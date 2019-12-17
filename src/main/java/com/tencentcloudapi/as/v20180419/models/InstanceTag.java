@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTag  extends AbstractModel{
+public class InstanceTag extends AbstractModel{
 
     /**
     * 标签键
@@ -37,7 +37,7 @@ public class InstanceTag  extends AbstractModel{
     private String Value;
 
     /**
-     * 获取标签键
+     * Get 标签键 
      * @return Key 标签键
      */
     public String getKey() {
@@ -45,7 +45,7 @@ public class InstanceTag  extends AbstractModel{
     }
 
     /**
-     * 设置标签键
+     * Set 标签键
      * @param Key 标签键
      */
     public void setKey(String Key) {
@@ -53,7 +53,7 @@ public class InstanceTag  extends AbstractModel{
     }
 
     /**
-     * 获取标签值
+     * Get 标签值 
      * @return Value 标签值
      */
     public String getValue() {
@@ -61,7 +61,7 @@ public class InstanceTag  extends AbstractModel{
     }
 
     /**
-     * 设置标签值
+     * Set 标签值
      * @param Value 标签值
      */
     public void setValue(String Value) {
@@ -69,7 +69,7 @@ public class InstanceTag  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkLastInfo  extends AbstractModel{
+public class NetworkLastInfo extends AbstractModel{
 
     /**
     * 总数
@@ -37,7 +37,7 @@ public class NetworkLastInfo  extends AbstractModel{
     private NetworkAndShopInfo [] Infos;
 
     /**
-     * 获取总数
+     * Get 总数 
      * @return Count 总数
      */
     public Integer getCount() {
@@ -45,7 +45,7 @@ public class NetworkLastInfo  extends AbstractModel{
     }
 
     /**
-     * 设置总数
+     * Set 总数
      * @param Count 总数
      */
     public void setCount(Integer Count) {
@@ -53,7 +53,7 @@ public class NetworkLastInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网络状态
+     * Get 网络状态 
      * @return Infos 网络状态
      */
     public NetworkAndShopInfo [] getInfos() {
@@ -61,7 +61,7 @@ public class NetworkLastInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网络状态
+     * Set 网络状态
      * @param Infos 网络状态
      */
     public void setInfos(NetworkAndShopInfo [] Infos) {
@@ -69,7 +69,7 @@ public class NetworkLastInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);

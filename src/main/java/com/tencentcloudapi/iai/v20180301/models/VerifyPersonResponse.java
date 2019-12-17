@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyPersonResponse  extends AbstractModel{
+public class VerifyPersonResponse extends AbstractModel{
 
     /**
     * 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
@@ -51,7 +51,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
+     * Get 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。 
      * @return Score 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
      */
     public Float getScore() {
@@ -59,7 +59,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
+     * Set 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
      * @param Score 给定的人脸照片与 PersonId 对应的相似度。若 PersonId 下有多张人脸（Face），会融合多张人脸信息进行验证。
      */
     public void setScore(Float Score) {
@@ -67,7 +67,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否为同一人的判断。
+     * Get 是否为同一人的判断。 
      * @return IsMatch 是否为同一人的判断。
      */
     public Boolean getIsMatch() {
@@ -75,7 +75,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否为同一人的判断。
+     * Set 是否为同一人的判断。
      * @param IsMatch 是否为同一人的判断。
      */
     public void setIsMatch(Boolean IsMatch) {
@@ -83,7 +83,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -91,7 +91,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -99,7 +99,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class VerifyPersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestartDBInstancesRequest  extends AbstractModel{
+public class RestartDBInstancesRequest extends AbstractModel{
 
     /**
     * 实例ID的数组
@@ -30,7 +30,7 @@ public class RestartDBInstancesRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取实例ID的数组
+     * Get 实例ID的数组 
      * @return InstanceIds 实例ID的数组
      */
     public String [] getInstanceIds() {
@@ -38,7 +38,7 @@ public class RestartDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID的数组
+     * Set 实例ID的数组
      * @param InstanceIds 实例ID的数组
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -46,7 +46,7 @@ public class RestartDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

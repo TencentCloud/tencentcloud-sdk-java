@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageTransform  extends AbstractModel{
+public class ImageTransform extends AbstractModel{
 
     /**
     * 类型，取值有：
@@ -49,9 +49,9 @@ public class ImageTransform  extends AbstractModel{
     private String Flip;
 
     /**
-     * 获取类型，取值有：
+     * Get 类型，取值有：
 <li> Rotate：图像旋转。</li>
-<li> Flip：图像翻转。</li>
+<li> Flip：图像翻转。</li> 
      * @return Type 类型，取值有：
 <li> Rotate：图像旋转。</li>
 <li> Flip：图像翻转。</li>
@@ -61,7 +61,7 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 设置类型，取值有：
+     * Set 类型，取值有：
 <li> Rotate：图像旋转。</li>
 <li> Flip：图像翻转。</li>
      * @param Type 类型，取值有：
@@ -73,7 +73,7 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 获取图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。
+     * Get 图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。 
      * @return RotateAngle 图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。
      */
     public Float getRotateAngle() {
@@ -81,7 +81,7 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 设置图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。
+     * Set 图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。
      * @param RotateAngle 图像以中心点为原点进行旋转的角度，取值范围0~360。当 Type = Rotate 时有效。
      */
     public void setRotateAngle(Float RotateAngle) {
@@ -89,10 +89,10 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 获取图像翻转动作，取值有：
+     * Get 图像翻转动作，取值有：
 <li>Horizental：水平翻转，即左右镜像。</li>
 <li>Vertical：垂直翻转，即上下镜像。</li>
-当 Type = Flip 时有效。
+当 Type = Flip 时有效。 
      * @return Flip 图像翻转动作，取值有：
 <li>Horizental：水平翻转，即左右镜像。</li>
 <li>Vertical：垂直翻转，即上下镜像。</li>
@@ -103,7 +103,7 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 设置图像翻转动作，取值有：
+     * Set 图像翻转动作，取值有：
 <li>Horizental：水平翻转，即左右镜像。</li>
 <li>Vertical：垂直翻转，即上下镜像。</li>
 当 Type = Flip 时有效。
@@ -117,7 +117,7 @@ public class ImageTransform  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

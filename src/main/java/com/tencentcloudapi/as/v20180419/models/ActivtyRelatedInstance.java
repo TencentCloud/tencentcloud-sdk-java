@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActivtyRelatedInstance  extends AbstractModel{
+public class ActivtyRelatedInstance extends AbstractModel{
 
     /**
     * 实例ID。
@@ -41,7 +41,7 @@ public class ActivtyRelatedInstance  extends AbstractModel{
     private String InstanceStatus;
 
     /**
-     * 获取实例ID。
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
@@ -49,7 +49,7 @@ public class ActivtyRelatedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID。
+     * Set 实例ID。
      * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -57,11 +57,11 @@ public class ActivtyRelatedInstance  extends AbstractModel{
     }
 
     /**
-     * 获取实例在伸缩活动中的状态。取值如下：
+     * Get 实例在伸缩活动中的状态。取值如下：
 <li>INIT：初始化中
 <li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+<li>FAILED：活动失败 
      * @return InstanceStatus 实例在伸缩活动中的状态。取值如下：
 <li>INIT：初始化中
 <li>RUNNING：实例操作中
@@ -73,7 +73,7 @@ public class ActivtyRelatedInstance  extends AbstractModel{
     }
 
     /**
-     * 设置实例在伸缩活动中的状态。取值如下：
+     * Set 实例在伸缩活动中的状态。取值如下：
 <li>INIT：初始化中
 <li>RUNNING：实例操作中
 <li>SUCCESSFUL：活动成功
@@ -89,7 +89,7 @@ public class ActivtyRelatedInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

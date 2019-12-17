@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaInfo  extends AbstractModel{
+public class MediaInfo extends AbstractModel{
 
     /**
     * 基础信息。包括视频名称、分类、播放地址、封面图片等。
@@ -110,8 +110,8 @@ public class MediaInfo  extends AbstractModel{
     private String FileId;
 
     /**
-     * 获取基础信息。包括视频名称、分类、播放地址、封面图片等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 基础信息。包括视频名称、分类、播放地址、封面图片等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -120,7 +120,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * Set 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -130,8 +130,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取元信息。包括大小、时长、视频流信息、音频流信息等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 元信息。包括大小、时长、视频流信息、音频流信息等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -140,7 +140,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置元信息。包括大小、时长、视频流信息、音频流信息等。
+     * Set 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,8 +150,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -160,7 +160,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * Set 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -170,8 +170,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -180,7 +180,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * Set 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -190,8 +190,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图信息。对视频采样截图后，相关截图信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 采样截图信息。对视频采样截图后，相关截图信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -200,7 +200,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图信息。对视频采样截图后，相关截图信息。
+     * Set 采样截图信息。对视频采样截图后，相关截图信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -210,8 +210,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -220,7 +220,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * Set 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -230,8 +230,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -240,7 +240,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * Set 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -250,8 +250,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频打点信息。对视频设置的各个打点信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频打点信息。对视频设置的各个打点信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -260,7 +260,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频打点信息。对视频设置的各个打点信息。
+     * Set 视频打点信息。对视频设置的各个打点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -270,8 +270,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -280,7 +280,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * Set 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -290,8 +290,8 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取小程序审核信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 小程序审核信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MiniProgramReviewInfo 小程序审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -300,7 +300,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置小程序审核信息。
+     * Set 小程序审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniProgramReviewInfo 小程序审核信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -310,7 +310,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 获取媒体文件唯一标识 ID。
+     * Get 媒体文件唯一标识 ID。 
      * @return FileId 媒体文件唯一标识 ID。
      */
     public String getFileId() {
@@ -318,7 +318,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 设置媒体文件唯一标识 ID。
+     * Set 媒体文件唯一标识 ID。
      * @param FileId 媒体文件唯一标识 ID。
      */
     public void setFileId(String FileId) {
@@ -326,7 +326,7 @@ public class MediaInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BasicInfo.", this.BasicInfo);

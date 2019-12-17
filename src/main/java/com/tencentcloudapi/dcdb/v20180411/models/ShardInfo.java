@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShardInfo  extends AbstractModel{
+public class ShardInfo extends AbstractModel{
 
     /**
     * 分片ID
@@ -86,7 +86,7 @@ public class ShardInfo  extends AbstractModel{
     private Integer Pid;
 
     /**
-     * 获取分片ID
+     * Get 分片ID 
      * @return ShardInstanceId 分片ID
      */
     public String getShardInstanceId() {
@@ -94,7 +94,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片ID
+     * Set 分片ID
      * @param ShardInstanceId 分片ID
      */
     public void setShardInstanceId(String ShardInstanceId) {
@@ -102,7 +102,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片Set ID
+     * Get 分片Set ID 
      * @return ShardSerialId 分片Set ID
      */
     public String getShardSerialId() {
@@ -110,7 +110,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片Set ID
+     * Set 分片Set ID
      * @param ShardSerialId 分片Set ID
      */
     public void setShardSerialId(String ShardSerialId) {
@@ -118,7 +118,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
+     * Get 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除 
      * @return Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
     public Integer getStatus() {
@@ -126,7 +126,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
+     * Set 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      * @param Status 状态：0 创建中，1 流程处理中， 2 运行中，3 分片未初始化，-2 分片已删除
      */
     public void setStatus(Integer Status) {
@@ -134,7 +134,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return Createtime 创建时间
      */
     public String getCreatetime() {
@@ -142,7 +142,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param Createtime 创建时间
      */
     public void setCreatetime(String Createtime) {
@@ -150,7 +150,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位 GB
+     * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
     public Integer getMemory() {
@@ -158,7 +158,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位 GB
+     * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
     public void setMemory(Integer Memory) {
@@ -166,7 +166,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取存储大小，单位 GB
+     * Get 存储大小，单位 GB 
      * @return Storage 存储大小，单位 GB
      */
     public Integer getStorage() {
@@ -174,7 +174,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置存储大小，单位 GB
+     * Set 存储大小，单位 GB
      * @param Storage 存储大小，单位 GB
      */
     public void setStorage(Integer Storage) {
@@ -182,7 +182,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分片数字ID
+     * Get 分片数字ID 
      * @return ShardId 分片数字ID
      */
     public Integer getShardId() {
@@ -190,7 +190,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分片数字ID
+     * Set 分片数字ID
      * @param ShardId 分片数字ID
      */
     public void setShardId(Integer ShardId) {
@@ -198,7 +198,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取节点数，2 为一主一从， 3 为一主二从
+     * Get 节点数，2 为一主一从， 3 为一主二从 
      * @return NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public Integer getNodeCount() {
@@ -206,7 +206,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点数，2 为一主一从， 3 为一主二从
+     * Set 节点数，2 为一主一从， 3 为一主二从
      * @param NodeCount 节点数，2 为一主一从， 3 为一主二从
      */
     public void setNodeCount(Integer NodeCount) {
@@ -214,7 +214,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 Id（过时字段，请勿依赖该值）
+     * Get 产品类型 Id（过时字段，请勿依赖该值） 
      * @return Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
     public Integer getPid() {
@@ -222,7 +222,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型 Id（过时字段，请勿依赖该值）
+     * Set 产品类型 Id（过时字段，请勿依赖该值）
      * @param Pid 产品类型 Id（过时字段，请勿依赖该值）
      */
     public void setPid(Integer Pid) {
@@ -230,7 +230,7 @@ public class ShardInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShardInstanceId", this.ShardInstanceId);

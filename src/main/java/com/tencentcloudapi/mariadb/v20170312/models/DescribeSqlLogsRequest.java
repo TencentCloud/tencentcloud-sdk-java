@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSqlLogsRequest  extends AbstractModel{
+public class DescribeSqlLogsRequest extends AbstractModel{
 
     /**
     * 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -44,7 +44,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取SQL日志偏移。
+     * Get SQL日志偏移。 
      * @return Offset SQL日志偏移。
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置SQL日志偏移。
+     * Set SQL日志偏移。
      * @param Offset SQL日志偏移。
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取拉取数量（0-10000，为0时拉取总数信息）。
+     * Get 拉取数量（0-10000，为0时拉取总数信息）。 
      * @return Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取数量（0-10000，为0时拉取总数信息）。
+     * Set 拉取数量（0-10000，为0时拉取总数信息）。
      * @param Limit 拉取数量（0-10000，为0时拉取总数信息）。
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeSqlLogsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

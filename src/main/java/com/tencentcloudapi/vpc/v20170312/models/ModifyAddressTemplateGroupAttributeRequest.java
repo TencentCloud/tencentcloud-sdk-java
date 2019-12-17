@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
+public class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel{
 
     /**
     * IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
@@ -44,7 +44,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     private String [] AddressTemplateIds;
 
     /**
-     * 获取IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+     * Get IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。 
      * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
      */
     public String getAddressTemplateGroupId() {
@@ -52,7 +52,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+     * Set IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
      * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
@@ -60,7 +60,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模板集合名称。
+     * Get IP地址模板集合名称。 
      * @return AddressTemplateGroupName IP地址模板集合名称。
      */
     public String getAddressTemplateGroupName() {
@@ -68,7 +68,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板集合名称。
+     * Set IP地址模板集合名称。
      * @param AddressTemplateGroupName IP地址模板集合名称。
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
@@ -76,7 +76,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * Get IP地址模板实例ID， 例如：ipm-mdunqeb6。 
      * @return AddressTemplateIds IP地址模板实例ID， 例如：ipm-mdunqeb6。
      */
     public String [] getAddressTemplateIds() {
@@ -84,7 +84,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * Set IP地址模板实例ID， 例如：ipm-mdunqeb6。
      * @param AddressTemplateIds IP地址模板实例ID， 例如：ipm-mdunqeb6。
      */
     public void setAddressTemplateIds(String [] AddressTemplateIds) {
@@ -92,7 +92,7 @@ public class ModifyAddressTemplateGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateGroupId", this.AddressTemplateGroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageData  extends AbstractModel{
+public class ImageData extends AbstractModel{
 
     /**
     * 是否恶意 0：正常 1：可疑
@@ -101,7 +101,7 @@ public class ImageData  extends AbstractModel{
     private ImageTerrorDetect TerrorDetect;
 
     /**
-     * 获取是否恶意 0：正常 1：可疑
+     * Get 是否恶意 0：正常 1：可疑 
      * @return EvilFlag 是否恶意 0：正常 1：可疑
      */
     public Long getEvilFlag() {
@@ -109,7 +109,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置是否恶意 0：正常 1：可疑
+     * Set 是否恶意 0：正常 1：可疑
      * @param EvilFlag 是否恶意 0：正常 1：可疑
      */
     public void setEvilFlag(Long EvilFlag) {
@@ -117,7 +117,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常 
 20001：政治
 20002：色情 
@@ -125,7 +125,7 @@ public class ImageData  extends AbstractModel{
 20007：谩骂 
 20103：性感
 24001：暴恐
-21000：综合
+21000：综合 
      * @return EvilType 恶意类型
 100：正常 
 20001：政治
@@ -141,7 +141,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常 
 20001：政治
 20002：色情 
@@ -165,7 +165,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片二维码详情
+     * Get 图片二维码详情 
      * @return CodeDetect 图片二维码详情
      */
     public CodeDetect getCodeDetect() {
@@ -173,7 +173,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片二维码详情
+     * Set 图片二维码详情
      * @param CodeDetect 图片二维码详情
      */
     public void setCodeDetect(CodeDetect CodeDetect) {
@@ -181,7 +181,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片性感详情
+     * Get 图片性感详情 
      * @return HotDetect 图片性感详情
      */
     public ImageHotDetect getHotDetect() {
@@ -189,7 +189,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片性感详情
+     * Set 图片性感详情
      * @param HotDetect 图片性感详情
      */
     public void setHotDetect(ImageHotDetect HotDetect) {
@@ -197,7 +197,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片违法详情
+     * Get 图片违法详情 
      * @return IllegalDetect 图片违法详情
      */
     public ImageIllegalDetect getIllegalDetect() {
@@ -205,7 +205,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片违法详情
+     * Set 图片违法详情
      * @param IllegalDetect 图片违法详情
      */
     public void setIllegalDetect(ImageIllegalDetect IllegalDetect) {
@@ -213,7 +213,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片OCR详情
+     * Get 图片OCR详情 
      * @return OCRDetect 图片OCR详情
      */
     public OCRDetect getOCRDetect() {
@@ -221,7 +221,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片OCR详情
+     * Set 图片OCR详情
      * @param OCRDetect 图片OCR详情
      */
     public void setOCRDetect(OCRDetect OCRDetect) {
@@ -229,7 +229,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片涉政详情
+     * Get 图片涉政详情 
      * @return PolityDetect 图片涉政详情
      */
     public ImagePolityDetect getPolityDetect() {
@@ -237,7 +237,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片涉政详情
+     * Set 图片涉政详情
      * @param PolityDetect 图片涉政详情
      */
     public void setPolityDetect(ImagePolityDetect PolityDetect) {
@@ -245,7 +245,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片涉黄详情
+     * Get 图片涉黄详情 
      * @return PornDetect 图片涉黄详情
      */
     public ImagePornDetect getPornDetect() {
@@ -253,7 +253,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片涉黄详情
+     * Set 图片涉黄详情
      * @param PornDetect 图片涉黄详情
      */
     public void setPornDetect(ImagePornDetect PornDetect) {
@@ -261,7 +261,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片相似度详情
+     * Get 图片相似度详情 
      * @return Similar 图片相似度详情
      */
     public Similar getSimilar() {
@@ -269,7 +269,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片相似度详情
+     * Set 图片相似度详情
      * @param Similar 图片相似度详情
      */
     public void setSimilar(Similar Similar) {
@@ -277,7 +277,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 获取图片暴恐详情
+     * Get 图片暴恐详情 
      * @return TerrorDetect 图片暴恐详情
      */
     public ImageTerrorDetect getTerrorDetect() {
@@ -285,7 +285,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 设置图片暴恐详情
+     * Set 图片暴恐详情
      * @param TerrorDetect 图片暴恐详情
      */
     public void setTerrorDetect(ImageTerrorDetect TerrorDetect) {
@@ -293,7 +293,7 @@ public class ImageData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerRequest  extends AbstractModel{
+public class CreateLoadBalancerRequest extends AbstractModel{
 
     /**
     * 负载均衡实例的网络类型：
@@ -117,8 +117,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     private TagInfo [] Tags;
 
     /**
-     * 获取负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性。
+     * Get 负载均衡实例的网络类型：
+OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      */
@@ -127,7 +127,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的网络类型：
+     * Set 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
@@ -137,7 +137,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * Get 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1 
      * @return Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
     public Integer getForward() {
@@ -145,7 +145,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+     * Set 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      * @param Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
      */
     public void setForward(Integer Forward) {
@@ -153,8 +153,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
-注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
+     * Get 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。 
      * @return LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      */
@@ -163,7 +163,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
+     * Set 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
      * @param LoadBalancerName 负载均衡实例的名称，只在创建一个实例的时候才会生效。规则：1-50 个英文、汉字、数字、连接线“-”或下划线“_”。
 注意：如果名称与系统中已有负载均衡实例的名称相同，则系统将会自动生成此次创建的负载均衡实例的名称。
@@ -173,7 +173,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * Get 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。 
      * @return VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public String getVpcId() {
@@ -181,7 +181,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
+     * Set 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      * @param VpcId 负载均衡后端目标设备所属的网络 ID，如vpc-12345678，可以通过 DescribeVpcEx 接口获取。 不传此参数则默认为基础网络（"0"）。
      */
     public void setVpcId(String VpcId) {
@@ -189,7 +189,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。 
      * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      */
     public String getSubnetId() {
@@ -197,7 +197,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
      */
     public void setSubnetId(String SubnetId) {
@@ -205,7 +205,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * Get 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。 
      * @return ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
     public Integer getProjectId() {
@@ -213,7 +213,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
+     * Set 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      * @param ProjectId 负载均衡实例所属的项目 ID，可以通过 DescribeProject 接口获取。不传此参数则视为默认项目。
      */
     public void setProjectId(Integer ProjectId) {
@@ -221,7 +221,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * Get 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。 
      * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      */
     public String getAddressIPVersion() {
@@ -229,7 +229,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * Set 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
      */
     public void setAddressIPVersion(String AddressIPVersion) {
@@ -237,7 +237,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取创建负载均衡的个数，默认值 1。
+     * Get 创建负载均衡的个数，默认值 1。 
      * @return Number 创建负载均衡的个数，默认值 1。
      */
     public Integer getNumber() {
@@ -245,7 +245,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置创建负载均衡的个数，默认值 1。
+     * Set 创建负载均衡的个数，默认值 1。
      * @param Number 创建负载均衡的个数，默认值 1。
      */
     public void setNumber(Integer Number) {
@@ -253,8 +253,8 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
-注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
+     * Get 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。 
      * @return MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
      */
@@ -263,7 +263,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
+     * Set 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
      * @param MasterZoneId 仅适用于公网负载均衡。设置跨可用区容灾时的主可用区ID，例如 100001 或 ap-guangzhou-1
 注：主可用区是需要承载流量的可用区，备可用区默认不承载流量，主可用区不可用时才使用备可用区，平台将为您自动选择最佳备可用区。可通过 DescribeMasterZones 接口查询一个地域的主可用区的列表。
@@ -273,7 +273,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * Get 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1 
      * @return ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      */
     public String getZoneId() {
@@ -281,7 +281,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+     * Set 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      * @param ZoneId 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
      */
     public void setZoneId(String ZoneId) {
@@ -289,7 +289,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+     * Get 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。 
      * @return AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      */
     public String getAnycastZone() {
@@ -297,7 +297,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
+     * Set 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      * @param AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
      */
     public void setAnycastZone(String AnycastZone) {
@@ -305,7 +305,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+     * Get 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。 
      * @return InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
     public InternetAccessible getInternetAccessible() {
@@ -313,7 +313,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
+     * Set 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      * @param InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -321,7 +321,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 获取购买负载均衡同时，给负载均衡打上标签
+     * Get 购买负载均衡同时，给负载均衡打上标签 
      * @return Tags 购买负载均衡同时，给负载均衡打上标签
      */
     public TagInfo [] getTags() {
@@ -329,7 +329,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 设置购买负载均衡同时，给负载均衡打上标签
+     * Set 购买负载均衡同时，给负载均衡打上标签
      * @param Tags 购买负载均衡同时，给负载均衡打上标签
      */
     public void setTags(TagInfo [] Tags) {
@@ -337,7 +337,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);

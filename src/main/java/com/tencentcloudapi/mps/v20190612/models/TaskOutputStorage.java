@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskOutputStorage  extends AbstractModel{
+public class TaskOutputStorage extends AbstractModel{
 
     /**
     * 视频处理输出对象存储位置的类型，现在仅支持 COS。
@@ -38,7 +38,7 @@ public class TaskOutputStorage  extends AbstractModel{
     private CosOutputStorage CosOutputStorage;
 
     /**
-     * 获取视频处理输出对象存储位置的类型，现在仅支持 COS。
+     * Get 视频处理输出对象存储位置的类型，现在仅支持 COS。 
      * @return Type 视频处理输出对象存储位置的类型，现在仅支持 COS。
      */
     public String getType() {
@@ -46,7 +46,7 @@ public class TaskOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理输出对象存储位置的类型，现在仅支持 COS。
+     * Set 视频处理输出对象存储位置的类型，现在仅支持 COS。
      * @param Type 视频处理输出对象存储位置的类型，现在仅支持 COS。
      */
     public void setType(String Type) {
@@ -54,8 +54,8 @@ public class TaskOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 获取当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class TaskOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 设置当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
+     * Set 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class TaskOutputStorage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

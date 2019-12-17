@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EncryptResponse  extends AbstractModel{
+public class EncryptResponse extends AbstractModel{
 
     /**
     * 加密后经过base64编码的密文
@@ -44,7 +44,7 @@ public class EncryptResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取加密后经过base64编码的密文
+     * Get 加密后经过base64编码的密文 
      * @return CiphertextBlob 加密后经过base64编码的密文
      */
     public String getCiphertextBlob() {
@@ -52,7 +52,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加密后经过base64编码的密文
+     * Set 加密后经过base64编码的密文
      * @param CiphertextBlob 加密后经过base64编码的密文
      */
     public void setCiphertextBlob(String CiphertextBlob) {
@@ -60,7 +60,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 获取加密使用的CMK的全局唯一标识
+     * Get 加密使用的CMK的全局唯一标识 
      * @return KeyId 加密使用的CMK的全局唯一标识
      */
     public String getKeyId() {
@@ -68,7 +68,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加密使用的CMK的全局唯一标识
+     * Set 加密使用的CMK的全局唯一标识
      * @param KeyId 加密使用的CMK的全局唯一标识
      */
     public void setKeyId(String KeyId) {
@@ -76,7 +76,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class EncryptResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);

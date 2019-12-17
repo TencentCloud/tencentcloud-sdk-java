@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Face  extends AbstractModel{
+public class Face extends AbstractModel{
 
     /**
     * 与图片中人脸最相似的公众人物的名字。
@@ -80,7 +80,7 @@ public class Face  extends AbstractModel{
     private Long Height;
 
     /**
-     * 获取与图片中人脸最相似的公众人物的名字。
+     * Get 与图片中人脸最相似的公众人物的名字。 
      * @return Name 与图片中人脸最相似的公众人物的名字。
      */
     public String getName() {
@@ -88,7 +88,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置与图片中人脸最相似的公众人物的名字。
+     * Set 与图片中人脸最相似的公众人物的名字。
      * @param Name 与图片中人脸最相似的公众人物的名字。
      */
     public void setName(String Name) {
@@ -96,7 +96,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取公众人物身份标签的数组，一个公众人物可能有多个身份标签。
+     * Get 公众人物身份标签的数组，一个公众人物可能有多个身份标签。 
      * @return Labels 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
      */
     public Labels [] getLabels() {
@@ -104,7 +104,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置公众人物身份标签的数组，一个公众人物可能有多个身份标签。
+     * Set 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
      * @param Labels 公众人物身份标签的数组，一个公众人物可能有多个身份标签。
      */
     public void setLabels(Labels [] Labels) {
@@ -112,7 +112,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取对人物的简介。
+     * Get 对人物的简介。 
      * @return BasicInfo 对人物的简介。
      */
     public String getBasicInfo() {
@@ -120,7 +120,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置对人物的简介。
+     * Set 对人物的简介。
      * @param BasicInfo 对人物的简介。
      */
     public void setBasicInfo(String BasicInfo) {
@@ -128,8 +128,8 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
-当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
+     * Get 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
+当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。 
      * @return Confidence 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
 当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
      */
@@ -138,7 +138,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
+     * Set 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
 当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
      * @param Confidence 算法对于Name的置信度（图像中人脸与公众人物的相似度），0-100之间，值越高，表示对于Name越确定。
 当Confidence低于70分时，Name仅供参考。您可以根据业务实际情况调整阈值。
@@ -148,7 +148,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人脸区域左上角横坐标。
+     * Get 人脸区域左上角横坐标。 
      * @return X 人脸区域左上角横坐标。
      */
     public Long getX() {
@@ -156,7 +156,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸区域左上角横坐标。
+     * Set 人脸区域左上角横坐标。
      * @param X 人脸区域左上角横坐标。
      */
     public void setX(Long X) {
@@ -164,7 +164,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人脸区域左上角纵坐标。
+     * Get 人脸区域左上角纵坐标。 
      * @return Y 人脸区域左上角纵坐标。
      */
     public Long getY() {
@@ -172,7 +172,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸区域左上角纵坐标。
+     * Set 人脸区域左上角纵坐标。
      * @param Y 人脸区域左上角纵坐标。
      */
     public void setY(Long Y) {
@@ -180,7 +180,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人脸区域宽度。
+     * Get 人脸区域宽度。 
      * @return Width 人脸区域宽度。
      */
     public Long getWidth() {
@@ -188,7 +188,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸区域宽度。
+     * Set 人脸区域宽度。
      * @param Width 人脸区域宽度。
      */
     public void setWidth(Long Width) {
@@ -196,7 +196,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 获取人脸区域高度。
+     * Get 人脸区域高度。 
      * @return Height 人脸区域高度。
      */
     public Long getHeight() {
@@ -204,7 +204,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 设置人脸区域高度。
+     * Set 人脸区域高度。
      * @param Height 人脸区域高度。
      */
     public void setHeight(Long Height) {
@@ -212,7 +212,7 @@ public class Face  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

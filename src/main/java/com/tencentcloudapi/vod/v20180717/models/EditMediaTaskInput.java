@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaTaskInput  extends AbstractModel{
+public class EditMediaTaskInput extends AbstractModel{
 
     /**
     * 输入视频的来源类型，可以取的值为 File，Stream 两种。
@@ -46,7 +46,7 @@ public class EditMediaTaskInput  extends AbstractModel{
     private EditMediaStreamInfo [] StreamInfoSet;
 
     /**
-     * 获取输入视频的来源类型，可以取的值为 File，Stream 两种。
+     * Get 输入视频的来源类型，可以取的值为 File，Stream 两种。 
      * @return InputType 输入视频的来源类型，可以取的值为 File，Stream 两种。
      */
     public String getInputType() {
@@ -54,7 +54,7 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入视频的来源类型，可以取的值为 File，Stream 两种。
+     * Set 输入视频的来源类型，可以取的值为 File，Stream 两种。
      * @param InputType 输入视频的来源类型，可以取的值为 File，Stream 两种。
      */
     public void setInputType(String InputType) {
@@ -62,8 +62,8 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取输入的视频文件信息，当 InputType 为 File 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入的视频文件信息，当 InputType 为 File 时，该字段有值。
+     * Set 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileInfoSet 输入的视频文件信息，当 InputType 为 File 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取输入的流信息，当 InputType 为 Stream 时，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输入的流信息，当 InputType 为 Stream 时，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StreamInfoSet 输入的流信息，当 InputType 为 Stream 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置输入的流信息，当 InputType 为 Stream 时，该字段有值。
+     * Set 输入的流信息，当 InputType 为 Stream 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamInfoSet 输入的流信息，当 InputType 为 Stream 时，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ public class EditMediaTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InputType", this.InputType);

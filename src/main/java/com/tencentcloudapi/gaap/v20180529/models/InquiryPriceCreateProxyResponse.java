@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateProxyResponse  extends AbstractModel{
+public class InquiryPriceCreateProxyResponse extends AbstractModel{
 
     /**
     * 通道基础费用价格，单位：元/天。
@@ -58,7 +58,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取通道基础费用价格，单位：元/天。
+     * Get 通道基础费用价格，单位：元/天。 
      * @return ProxyDailyPrice 通道基础费用价格，单位：元/天。
      */
     public Float getProxyDailyPrice() {
@@ -66,7 +66,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道基础费用价格，单位：元/天。
+     * Set 通道基础费用价格，单位：元/天。
      * @param ProxyDailyPrice 通道基础费用价格，单位：元/天。
      */
     public void setProxyDailyPrice(Float ProxyDailyPrice) {
@@ -74,7 +74,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取通道带宽费用梯度价格。
+     * Get 通道带宽费用梯度价格。 
      * @return BandwidthUnitPrice 通道带宽费用梯度价格。
      */
     public BandwidthPriceGradient [] getBandwidthUnitPrice() {
@@ -82,7 +82,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道带宽费用梯度价格。
+     * Set 通道带宽费用梯度价格。
      * @param BandwidthUnitPrice 通道带宽费用梯度价格。
      */
     public void setBandwidthUnitPrice(BandwidthPriceGradient [] BandwidthUnitPrice) {
@@ -90,7 +90,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取通道基础费用折扣价格，单位：元/天。
+     * Get 通道基础费用折扣价格，单位：元/天。 
      * @return DiscountProxyDailyPrice 通道基础费用折扣价格，单位：元/天。
      */
     public Float getDiscountProxyDailyPrice() {
@@ -98,7 +98,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道基础费用折扣价格，单位：元/天。
+     * Set 通道基础费用折扣价格，单位：元/天。
      * @param DiscountProxyDailyPrice 通道基础费用折扣价格，单位：元/天。
      */
     public void setDiscountProxyDailyPrice(Float DiscountProxyDailyPrice) {
@@ -106,7 +106,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取价格使用的货币，支持人民币，美元等。
+     * Get 价格使用的货币，支持人民币，美元等。 
      * @return Currency 价格使用的货币，支持人民币，美元等。
      */
     public String getCurrency() {
@@ -114,7 +114,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置价格使用的货币，支持人民币，美元等。
+     * Set 价格使用的货币，支持人民币，美元等。
      * @param Currency 价格使用的货币，支持人民币，美元等。
      */
     public void setCurrency(String Currency) {
@@ -122,7 +122,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class InquiryPriceCreateProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyDailyPrice", this.ProxyDailyPrice);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Block  extends AbstractModel{
+public class Block extends AbstractModel{
 
     /**
     * 区块编号
@@ -58,7 +58,7 @@ public class Block  extends AbstractModel{
     private Integer TxCount;
 
     /**
-     * 获取区块编号
+     * Get 区块编号 
      * @return BlockNum 区块编号
      */
     public Integer getBlockNum() {
@@ -66,7 +66,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 设置区块编号
+     * Set 区块编号
      * @param BlockNum 区块编号
      */
     public void setBlockNum(Integer BlockNum) {
@@ -74,7 +74,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 获取区块Hash数值
+     * Get 区块Hash数值 
      * @return DataHash 区块Hash数值
      */
     public String getDataHash() {
@@ -82,7 +82,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 设置区块Hash数值
+     * Set 区块Hash数值
      * @param DataHash 区块Hash数值
      */
     public void setDataHash(String DataHash) {
@@ -90,7 +90,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 获取区块ID，与区块编号一致
+     * Get 区块ID，与区块编号一致 
      * @return BlockId 区块ID，与区块编号一致
      */
     public Integer getBlockId() {
@@ -98,7 +98,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 设置区块ID，与区块编号一致
+     * Set 区块ID，与区块编号一致
      * @param BlockId 区块ID，与区块编号一致
      */
     public void setBlockId(Integer BlockId) {
@@ -106,7 +106,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 获取前一个区块Hash（未使用）,与区块Hash数值一致
+     * Get 前一个区块Hash（未使用）,与区块Hash数值一致 
      * @return PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
      */
     public String getPreHash() {
@@ -114,7 +114,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 设置前一个区块Hash（未使用）,与区块Hash数值一致
+     * Set 前一个区块Hash（未使用）,与区块Hash数值一致
      * @param PreHash 前一个区块Hash（未使用）,与区块Hash数值一致
      */
     public void setPreHash(String PreHash) {
@@ -122,7 +122,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 获取区块内的交易数量
+     * Get 区块内的交易数量 
      * @return TxCount 区块内的交易数量
      */
     public Integer getTxCount() {
@@ -130,7 +130,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 设置区块内的交易数量
+     * Set 区块内的交易数量
      * @param TxCount 区块内的交易数量
      */
     public void setTxCount(Integer TxCount) {
@@ -138,7 +138,7 @@ public class Block  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BlockNum", this.BlockNum);

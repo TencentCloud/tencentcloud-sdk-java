@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProVersionMachine  extends AbstractModel{
+public class ProVersionMachine extends AbstractModel{
 
     /**
     * 主机类型。
@@ -48,9 +48,9 @@ public class ProVersionMachine  extends AbstractModel{
     private String Quuid;
 
     /**
-     * 获取主机类型。
+     * Get 主机类型。
 <li>CVM: 虚拟主机</li>
-<li>BM: 黑石物理机</li>
+<li>BM: 黑石物理机</li> 
      * @return MachineType 主机类型。
 <li>CVM: 虚拟主机</li>
 <li>BM: 黑石物理机</li>
@@ -60,7 +60,7 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机类型。
+     * Set 主机类型。
 <li>CVM: 虚拟主机</li>
 <li>BM: 黑石物理机</li>
      * @param MachineType 主机类型。
@@ -72,8 +72,8 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机所在地域。
-如：ap-guangzhou、ap-beijing
+     * Get 主机所在地域。
+如：ap-guangzhou、ap-beijing 
      * @return MachineRegion 主机所在地域。
 如：ap-guangzhou、ap-beijing
      */
@@ -82,7 +82,7 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机所在地域。
+     * Set 主机所在地域。
 如：ap-guangzhou、ap-beijing
      * @param MachineRegion 主机所在地域。
 如：ap-guangzhou、ap-beijing
@@ -92,8 +92,8 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 获取主机唯一标识Uuid。
-黑石的InstanceId，CVM的Uuid
+     * Get 主机唯一标识Uuid。
+黑石的InstanceId，CVM的Uuid 
      * @return Quuid 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
      */
@@ -102,7 +102,7 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 设置主机唯一标识Uuid。
+     * Set 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
      * @param Quuid 主机唯一标识Uuid。
 黑石的InstanceId，CVM的Uuid
@@ -112,7 +112,7 @@ public class ProVersionMachine  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);

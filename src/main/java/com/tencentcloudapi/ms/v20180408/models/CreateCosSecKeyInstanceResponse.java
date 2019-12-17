@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
+public class CreateCosSecKeyInstanceResponse extends AbstractModel{
 
     /**
     * COS密钥对应的AppId
@@ -86,7 +86,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取COS密钥对应的AppId
+     * Get COS密钥对应的AppId 
      * @return CosAppid COS密钥对应的AppId
      */
     public Integer getCosAppid() {
@@ -94,7 +94,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置COS密钥对应的AppId
+     * Set COS密钥对应的AppId
      * @param CosAppid COS密钥对应的AppId
      */
     public void setCosAppid(Integer CosAppid) {
@@ -102,7 +102,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取COS密钥对应的存储桶名
+     * Get COS密钥对应的存储桶名 
      * @return CosBucket COS密钥对应的存储桶名
      */
     public String getCosBucket() {
@@ -110,7 +110,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置COS密钥对应的存储桶名
+     * Set COS密钥对应的存储桶名
      * @param CosBucket COS密钥对应的存储桶名
      */
     public void setCosBucket(String CosBucket) {
@@ -118,7 +118,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取存储桶对应的地域
+     * Get 存储桶对应的地域 
      * @return CosRegion 存储桶对应的地域
      */
     public String getCosRegion() {
@@ -126,7 +126,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置存储桶对应的地域
+     * Set 存储桶对应的地域
      * @param CosRegion 存储桶对应的地域
      */
     public void setCosRegion(String CosRegion) {
@@ -134,7 +134,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥过期时间
+     * Get 密钥过期时间 
      * @return ExpireTime 密钥过期时间
      */
     public Integer getExpireTime() {
@@ -142,7 +142,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥过期时间
+     * Set 密钥过期时间
      * @param ExpireTime 密钥过期时间
      */
     public void setExpireTime(Integer ExpireTime) {
@@ -150,7 +150,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥ID信息
+     * Get 密钥ID信息 
      * @return CosId 密钥ID信息
      */
     public String getCosId() {
@@ -158,7 +158,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥ID信息
+     * Set 密钥ID信息
      * @param CosId 密钥ID信息
      */
     public void setCosId(String CosId) {
@@ -166,7 +166,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥KEY信息
+     * Get 密钥KEY信息 
      * @return CosKey 密钥KEY信息
      */
     public String getCosKey() {
@@ -174,7 +174,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥KEY信息
+     * Set 密钥KEY信息
      * @param CosKey 密钥KEY信息
      */
     public void setCosKey(String CosKey) {
@@ -182,7 +182,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥TOCKEN信息
+     * Get 密钥TOCKEN信息 
      * @return CosTocken 密钥TOCKEN信息
      */
     public String getCosTocken() {
@@ -190,7 +190,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥TOCKEN信息
+     * Set 密钥TOCKEN信息
      * @param CosTocken 密钥TOCKEN信息
      */
     public void setCosTocken(String CosTocken) {
@@ -198,7 +198,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
+     * Get 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt 
      * @return CosPrefix 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
      */
     public String getCosPrefix() {
@@ -206,7 +206,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
+     * Set 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
      * @param CosPrefix 密钥可访问的文件前缀人。例如：CosPrefix=test/123/666，则该密钥只能操作test/123/666为前缀的文件，例如test/123/666/1.txt
      */
     public void setCosPrefix(String CosPrefix) {
@@ -214,7 +214,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class CreateCosSecKeyInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosAppid", this.CosAppid);

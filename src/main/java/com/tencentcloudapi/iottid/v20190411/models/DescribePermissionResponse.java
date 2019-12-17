@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePermissionResponse  extends AbstractModel{
+public class DescribePermissionResponse extends AbstractModel{
 
     /**
     * 企业用户
@@ -51,7 +51,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取企业用户
+     * Get 企业用户 
      * @return EnterpriseUser 企业用户
      */
     public Boolean getEnterpriseUser() {
@@ -59,7 +59,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置企业用户
+     * Set 企业用户
      * @param EnterpriseUser 企业用户
      */
     public void setEnterpriseUser(Boolean EnterpriseUser) {
@@ -67,7 +67,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取下载控制台权限
+     * Get 下载控制台权限 
      * @return DownloadPermission 下载控制台权限
      */
     public String getDownloadPermission() {
@@ -75,7 +75,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置下载控制台权限
+     * Set 下载控制台权限
      * @param DownloadPermission 下载控制台权限
      */
     public void setDownloadPermission(String DownloadPermission) {
@@ -83,7 +83,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取使用控制台权限
+     * Get 使用控制台权限 
      * @return UsePermission 使用控制台权限
      */
     public String getUsePermission() {
@@ -91,7 +91,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置使用控制台权限
+     * Set 使用控制台权限
      * @param UsePermission 使用控制台权限
      */
     public void setUsePermission(String UsePermission) {
@@ -99,7 +99,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribePermissionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnterpriseUser", this.EnterpriseUser);

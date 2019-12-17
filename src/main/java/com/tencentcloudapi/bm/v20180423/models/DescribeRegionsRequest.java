@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionsRequest  extends AbstractModel{
+public class DescribeRegionsRequest extends AbstractModel{
 
     /**
     * 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
@@ -30,7 +30,7 @@ public class DescribeRegionsRequest  extends AbstractModel{
     private Integer RegionId;
 
     /**
-     * 获取地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
+     * Get 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆 
      * @return RegionId 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
     public Integer getRegionId() {
@@ -38,7 +38,7 @@ public class DescribeRegionsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
+     * Set 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      * @param RegionId 地域整型ID，目前黑石可用地域包括：8-北京，4-上海，1-广州， 19-重庆
      */
     public void setRegionId(Integer RegionId) {
@@ -46,7 +46,7 @@ public class DescribeRegionsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
+public class InquiryPriceOpenProVersionPrepaidRequest extends AbstractModel{
 
     /**
     * 预付费模式(包年包月)参数设置。
@@ -37,7 +37,7 @@ public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
     private ProVersionMachine [] Machines;
 
     /**
-     * 获取预付费模式(包年包月)参数设置。
+     * Get 预付费模式(包年包月)参数设置。 
      * @return ChargePrepaid 预付费模式(包年包月)参数设置。
      */
     public ChargePrepaid getChargePrepaid() {
@@ -45,7 +45,7 @@ public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式(包年包月)参数设置。
+     * Set 预付费模式(包年包月)参数设置。
      * @param ChargePrepaid 预付费模式(包年包月)参数设置。
      */
     public void setChargePrepaid(ChargePrepaid ChargePrepaid) {
@@ -53,7 +53,7 @@ public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要开通专业版机器列表数组。
+     * Get 需要开通专业版机器列表数组。 
      * @return Machines 需要开通专业版机器列表数组。
      */
     public ProVersionMachine [] getMachines() {
@@ -61,7 +61,7 @@ public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要开通专业版机器列表数组。
+     * Set 需要开通专业版机器列表数组。
      * @param Machines 需要开通专业版机器列表数组。
      */
     public void setMachines(ProVersionMachine [] Machines) {
@@ -69,7 +69,7 @@ public class InquiryPriceOpenProVersionPrepaidRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);

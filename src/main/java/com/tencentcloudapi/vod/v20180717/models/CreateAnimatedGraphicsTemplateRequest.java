@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
+public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
 
     /**
     * 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
@@ -89,12 +89,12 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Width 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -107,7 +107,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -125,12 +125,12 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
-默认值：0。
+默认值：0。 
      * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -143,7 +143,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+     * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -161,7 +161,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帧率，取值范围：[1, 30]，单位：Hz。
+     * Get 帧率，取值范围：[1, 30]，单位：Hz。 
      * @return Fps 帧率，取值范围：[1, 30]，单位：Hz。
      */
     public Long getFps() {
@@ -169,7 +169,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帧率，取值范围：[1, 30]，单位：Hz。
+     * Set 帧率，取值范围：[1, 30]，单位：Hz。
      * @param Fps 帧率，取值范围：[1, 30]，单位：Hz。
      */
     public void setFps(Long Fps) {
@@ -177,7 +177,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取动图格式，取值为 gif 和 webp。默认为 gif。
+     * Get 动图格式，取值为 gif 和 webp。默认为 gif。 
      * @return Format 动图格式，取值为 gif 和 webp。默认为 gif。
      */
     public String getFormat() {
@@ -185,7 +185,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置动图格式，取值为 gif 和 webp。默认为 gif。
+     * Set 动图格式，取值为 gif 和 webp。默认为 gif。
      * @param Format 动图格式，取值为 gif 和 webp。默认为 gif。
      */
     public void setFormat(String Format) {
@@ -193,7 +193,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片质量，取值范围：[1, 100]，默认值为 75。
+     * Get 图片质量，取值范围：[1, 100]，默认值为 75。 
      * @return Quality 图片质量，取值范围：[1, 100]，默认值为 75。
      */
     public Float getQuality() {
@@ -201,7 +201,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片质量，取值范围：[1, 100]，默认值为 75。
+     * Set 图片质量，取值范围：[1, 100]，默认值为 75。
      * @param Quality 图片质量，取值范围：[1, 100]，默认值为 75。
      */
     public void setQuality(Float Quality) {
@@ -209,7 +209,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转动图模板名称，长度限制：64 个字符。
+     * Get 转动图模板名称，长度限制：64 个字符。 
      * @return Name 转动图模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -217,7 +217,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转动图模板名称，长度限制：64 个字符。
+     * Set 转动图模板名称，长度限制：64 个字符。
      * @param Name 转动图模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -225,7 +225,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -233,7 +233,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -241,7 +241,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -249,7 +249,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -257,7 +257,7 @@ public class CreateAnimatedGraphicsTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Width", this.Width);

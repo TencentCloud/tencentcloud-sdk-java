@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SellType  extends AbstractModel{
+public class SellType extends AbstractModel{
 
     /**
     * 售卖实例名称
@@ -44,7 +44,7 @@ public class SellType  extends AbstractModel{
     private SellConfig [] Configs;
 
     /**
-     * 获取售卖实例名称
+     * Get 售卖实例名称 
      * @return TypeName 售卖实例名称
      */
     public String getTypeName() {
@@ -52,7 +52,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 设置售卖实例名称
+     * Set 售卖实例名称
      * @param TypeName 售卖实例名称
      */
     public void setTypeName(String TypeName) {
@@ -60,7 +60,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 获取内核版本号
+     * Get 内核版本号 
      * @return EngineVersion 内核版本号
      */
     public String [] getEngineVersion() {
@@ -68,7 +68,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 设置内核版本号
+     * Set 内核版本号
      * @param EngineVersion 内核版本号
      */
     public void setEngineVersion(String [] EngineVersion) {
@@ -76,7 +76,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 获取售卖规格详细配置
+     * Get 售卖规格详细配置 
      * @return Configs 售卖规格详细配置
      */
     public SellConfig [] getConfigs() {
@@ -84,7 +84,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 设置售卖规格详细配置
+     * Set 售卖规格详细配置
      * @param Configs 售卖规格详细配置
      */
     public void setConfigs(SellConfig [] Configs) {
@@ -92,7 +92,7 @@ public class SellType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TypeName", this.TypeName);

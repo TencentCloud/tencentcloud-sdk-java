@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceOperationLogResponse  extends AbstractModel{
+public class DescribeDeviceOperationLogResponse extends AbstractModel{
 
     /**
     * 操作日志列表
@@ -44,7 +44,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取操作日志列表
+     * Get 操作日志列表 
      * @return DeviceOperationLogSet 操作日志列表
      */
     public DeviceOperationLog [] getDeviceOperationLogSet() {
@@ -52,7 +52,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置操作日志列表
+     * Set 操作日志列表
      * @param DeviceOperationLogSet 操作日志列表
      */
     public void setDeviceOperationLogSet(DeviceOperationLog [] DeviceOperationLogSet) {
@@ -60,7 +60,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回数目
+     * Get 返回数目 
      * @return TotalCount 返回数目
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回数目
+     * Set 返回数目
      * @param TotalCount 返回数目
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDeviceOperationLogResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DeviceOperationLogSet.", this.DeviceOperationLogSet);

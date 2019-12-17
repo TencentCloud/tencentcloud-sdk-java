@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DirectConnectGateway  extends AbstractModel{
+public class DirectConnectGateway extends AbstractModel{
 
     /**
     * 专线网关`ID`。
@@ -116,7 +116,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     private Boolean EnableBGPCommunity;
 
     /**
-     * 获取专线网关`ID`。
+     * Get 专线网关`ID`。 
      * @return DirectConnectGatewayId 专线网关`ID`。
      */
     public String getDirectConnectGatewayId() {
@@ -124,7 +124,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置专线网关`ID`。
+     * Set 专线网关`ID`。
      * @param DirectConnectGatewayId 专线网关`ID`。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
@@ -132,7 +132,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取专线网关名称。
+     * Get 专线网关名称。 
      * @return DirectConnectGatewayName 专线网关名称。
      */
     public String getDirectConnectGatewayName() {
@@ -140,7 +140,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置专线网关名称。
+     * Set 专线网关名称。
      * @param DirectConnectGatewayName 专线网关名称。
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
@@ -148,7 +148,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取专线网关关联`VPC`实例`ID`。
+     * Get 专线网关关联`VPC`实例`ID`。 
      * @return VpcId 专线网关关联`VPC`实例`ID`。
      */
     public String getVpcId() {
@@ -156,7 +156,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置专线网关关联`VPC`实例`ID`。
+     * Set 专线网关关联`VPC`实例`ID`。
      * @param VpcId 专线网关关联`VPC`实例`ID`。
      */
     public void setVpcId(String VpcId) {
@@ -164,9 +164,9 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取关联网络类型：
+     * Get 关联网络类型：
 <li>`VPC` - 私有网络</li>
-<li>`CCN` - 云联网</li>
+<li>`CCN` - 云联网</li> 
      * @return NetworkType 关联网络类型：
 <li>`VPC` - 私有网络</li>
 <li>`CCN` - 云联网</li>
@@ -176,7 +176,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置关联网络类型：
+     * Set 关联网络类型：
 <li>`VPC` - 私有网络</li>
 <li>`CCN` - 云联网</li>
      * @param NetworkType 关联网络类型：
@@ -188,9 +188,9 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取关联网络实例`ID`：
+     * Get 关联网络实例`ID`：
 <li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
-<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
+<li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li> 
      * @return NetworkInstanceId 关联网络实例`ID`：
 <li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
 <li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
@@ -200,7 +200,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置关联网络实例`ID`：
+     * Set 关联网络实例`ID`：
 <li>`NetworkType`为`VPC`时，这里为私有网络实例`ID`</li>
 <li>`NetworkType`为`CCN`时，这里为云联网实例`ID`</li>
      * @param NetworkInstanceId 关联网络实例`ID`：
@@ -212,10 +212,10 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取网关类型：
+     * Get 网关类型：
 <li>NORMAL - 标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>
-NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
+NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关 
      * @return GatewayType 网关类型：
 <li>NORMAL - 标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>
@@ -226,7 +226,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置网关类型：
+     * Set 网关类型：
 <li>NORMAL - 标准型，注：云联网只支持标准型</li>
 <li>NAT - NAT型</li>
 NAT类型支持网络地址转换配置，类型确定后不能修改；一个私有网络可以创建一个NAT类型的专线网关和一个非NAT类型的专线网关
@@ -240,7 +240,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -248,7 +248,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -256,7 +256,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取专线网关IP。
+     * Get 专线网关IP。 
      * @return DirectConnectGatewayIp 专线网关IP。
      */
     public String getDirectConnectGatewayIp() {
@@ -264,7 +264,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置专线网关IP。
+     * Set 专线网关IP。
      * @param DirectConnectGatewayIp 专线网关IP。
      */
     public void setDirectConnectGatewayIp(String DirectConnectGatewayIp) {
@@ -272,7 +272,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取专线网关关联`CCN`实例`ID`。
+     * Get 专线网关关联`CCN`实例`ID`。 
      * @return CcnId 专线网关关联`CCN`实例`ID`。
      */
     public String getCcnId() {
@@ -280,7 +280,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置专线网关关联`CCN`实例`ID`。
+     * Set 专线网关关联`CCN`实例`ID`。
      * @param CcnId 专线网关关联`CCN`实例`ID`。
      */
     public void setCcnId(String CcnId) {
@@ -288,9 +288,9 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取云联网路由学习类型：
+     * Get 云联网路由学习类型：
 <li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置。</li>
+<li>`STATIC` - 静态，即用户配置。</li> 
      * @return CcnRouteType 云联网路由学习类型：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置。</li>
@@ -300,7 +300,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置云联网路由学习类型：
+     * Set 云联网路由学习类型：
 <li>`BGP` - 自动学习。</li>
 <li>`STATIC` - 静态，即用户配置。</li>
      * @param CcnRouteType 云联网路由学习类型：
@@ -312,7 +312,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取是否启用BGP。
+     * Get 是否启用BGP。 
      * @return EnableBGP 是否启用BGP。
      */
     public Boolean getEnableBGP() {
@@ -320,7 +320,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置是否启用BGP。
+     * Set 是否启用BGP。
      * @param EnableBGP 是否启用BGP。
      */
     public void setEnableBGP(Boolean EnableBGP) {
@@ -328,7 +328,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 获取开启和关闭BGP的community属性。
+     * Get 开启和关闭BGP的community属性。 
      * @return EnableBGPCommunity 开启和关闭BGP的community属性。
      */
     public Boolean getEnableBGPCommunity() {
@@ -336,7 +336,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 设置开启和关闭BGP的community属性。
+     * Set 开启和关闭BGP的community属性。
      * @param EnableBGPCommunity 开启和关闭BGP的community属性。
      */
     public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
@@ -344,7 +344,7 @@ NAT类型支持网络地址转换配置，类型确定后不能修改；一个�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);

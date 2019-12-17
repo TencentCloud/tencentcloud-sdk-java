@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MigrateOption  extends AbstractModel{
+public class MigrateOption extends AbstractModel{
 
     /**
     * 任务运行模式，值包括：1-立即执行，2-定时执行
@@ -94,7 +94,7 @@ MySQL暂不支持额外参数设置。
     private ConsistencyParams ConsistencyParams;
 
     /**
-     * 获取任务运行模式，值包括：1-立即执行，2-定时执行
+     * Get 任务运行模式，值包括：1-立即执行，2-定时执行 
      * @return RunMode 任务运行模式，值包括：1-立即执行，2-定时执行
      */
     public Integer getRunMode() {
@@ -102,7 +102,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置任务运行模式，值包括：1-立即执行，2-定时执行
+     * Set 任务运行模式，值包括：1-立即执行，2-定时执行
      * @param RunMode 任务运行模式，值包括：1-立即执行，2-定时执行
      */
     public void setRunMode(Integer RunMode) {
@@ -110,7 +110,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
+     * Get 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss 
      * @return ExpectTime 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
      */
     public String getExpectTime() {
@@ -118,7 +118,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
+     * Set 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
      * @param ExpectTime 期望执行时间，当runMode=2时，该字段必填，时间格式：yyyy-mm-dd hh:mm:ss
      */
     public void setExpectTime(String ExpectTime) {
@@ -126,7 +126,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
+     * Get 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移 
      * @return MigrateType 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      */
     public Integer getMigrateType() {
@@ -134,7 +134,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
+     * Set 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      * @param MigrateType 数据迁移类型，值包括：1-结构迁移,2-全量迁移,3-全量+增量迁移
      */
     public void setMigrateType(Integer MigrateType) {
@@ -142,7 +142,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取迁移对象，1-整个实例，2-指定库表
+     * Get 迁移对象，1-整个实例，2-指定库表 
      * @return MigrateObject 迁移对象，1-整个实例，2-指定库表
      */
     public Integer getMigrateObject() {
@@ -150,7 +150,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置迁移对象，1-整个实例，2-指定库表
+     * Set 迁移对象，1-整个实例，2-指定库表
      * @param MigrateObject 迁移对象，1-整个实例，2-指定库表
      */
     public void setMigrateObject(Integer MigrateObject) {
@@ -158,7 +158,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * Get 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测 
      * @return ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
     public Integer getConsistencyType() {
@@ -166,7 +166,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
+     * Set 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      * @param ConsistencyType 抽样数据一致性检测参数，1-未配置,2-全量检测,3-抽样检测, 4-仅校验不一致表,5-不检测
      */
     public void setConsistencyType(Integer ConsistencyType) {
@@ -174,7 +174,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
+     * Get 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0 
      * @return IsOverrideRoot 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      */
     public Integer getIsOverrideRoot() {
@@ -182,7 +182,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
+     * Set 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      * @param IsOverrideRoot 是否用源库Root账户覆盖目标库，值包括：0-不覆盖，1-覆盖，选择库表或者结构迁移时应该为0
      */
     public void setIsOverrideRoot(Integer IsOverrideRoot) {
@@ -190,7 +190,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取不同数据库用到的额外参数.以JSON格式描述. 
+     * Get 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
 	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
@@ -205,7 +205,7 @@ MongoDB可定义如下的参数:
 	'SrcAuthFlag': "1", 
 	'SrcAuthMechanism':"SCRAM-SHA-1"
 }
-MySQL暂不支持额外参数设置。
+MySQL暂不支持额外参数设置。 
      * @return ExternParams 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
@@ -228,7 +228,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置不同数据库用到的额外参数.以JSON格式描述. 
+     * Set 不同数据库用到的额外参数.以JSON格式描述. 
 Redis可定义如下的参数: 
 { 
 	"ClientOutputBufferHardLimit":512, 	从机缓冲区的硬性容量限制(MB) 
@@ -266,7 +266,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 获取仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
+     * Get 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选 
      * @return ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public ConsistencyParams getConsistencyParams() {
@@ -274,7 +274,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 设置仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
+     * Set 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      * @param ConsistencyParams 仅用于“抽样数据一致性检测”，ConsistencyType配置为抽样检测时，必选
      */
     public void setConsistencyParams(ConsistencyParams ConsistencyParams) {
@@ -282,7 +282,7 @@ MySQL暂不支持额外参数设置。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextResult  extends AbstractModel{
+public class TextResult extends AbstractModel{
 
     /**
     * 该识别场景的错误码：
@@ -98,13 +98,13 @@ OTHERS：其他
     private String AdvancedInfo;
 
     /**
-     * 获取该识别场景的错误码：
+     * Get 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
 -1400表示图片解码失败，
 -1401表示图片不符合规范。
--1402表示图片文件太大。
+-1402表示图片文件太大。 
      * @return Code 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -118,7 +118,7 @@ OTHERS：其他
     }
 
     /**
-     * 设置该识别场景的错误码：
+     * Set 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
@@ -138,7 +138,7 @@ OTHERS：其他
     }
 
     /**
-     * 获取错误码描述信息。
+     * Get 错误码描述信息。 
      * @return Msg 错误码描述信息。
      */
     public String getMsg() {
@@ -146,7 +146,7 @@ OTHERS：其他
     }
 
     /**
-     * 设置错误码描述信息。
+     * Set 错误码描述信息。
      * @param Msg 错误码描述信息。
      */
     public void setMsg(String Msg) {
@@ -154,7 +154,7 @@ OTHERS：其他
     }
 
     /**
-     * 获取识别场景的审核结论：
+     * Get 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -162,7 +162,7 @@ BLOCK：违规
 Suggestion由Type决定：
 Type为 NOTEXT/NORMAL 时，Suggestion为PASS；
 Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
-其他情况下Suggestion为REVIEW。
+其他情况下Suggestion为REVIEW。 
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -178,7 +178,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 设置识别场景的审核结论：
+     * Set 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -202,7 +202,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 获取算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
+     * Get 算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。 
      * @return Confidence 算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
      */
     public Long getConfidence() {
@@ -210,7 +210,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 设置算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
+     * Set 算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
      * @param Confidence 算法对于识别结果的置信度，0-100之间，值越高，表示对于结论越确定。
      */
     public void setConfidence(Long Confidence) {
@@ -218,7 +218,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 获取识别到的关键词数组
+     * Get 识别到的关键词数组 
      * @return Keywords 识别到的关键词数组
      */
     public String [] getKeywords() {
@@ -226,7 +226,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 设置识别到的关键词数组
+     * Set 识别到的关键词数组
      * @param Keywords 识别到的关键词数组
      */
     public void setKeywords(String [] Keywords) {
@@ -234,7 +234,7 @@ Type为 POLITICS/PORN/TERRORISM/ADS 时，Suggestion为BLOCK；
     }
 
     /**
-     * 获取图片中是否包含敏感文本内容。
+     * Get 图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
 NORMAL：内容正常
@@ -246,7 +246,7 @@ CURSE：谩骂
 TERRORISM：暴恐
 OTHERS：其他
 
-本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。
+本服务利用微信团队提供的算法，可以准确识别图片中是否包含二维码。当图片中存在二维码时，分类为ADS，关键词输出为“二维码”。 
      * @return Type 图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
@@ -266,7 +266,7 @@ OTHERS：其他
     }
 
     /**
-     * 设置图片中是否包含敏感文本内容。
+     * Set 图片中是否包含敏感文本内容。
 包含：
 NOTEXT：无文本
 NORMAL：内容正常
@@ -298,7 +298,7 @@ OTHERS：其他
     }
 
     /**
-     * 获取预留字段，后期用于展示更多识别信息。
+     * Get 预留字段，后期用于展示更多识别信息。 
      * @return AdvancedInfo 预留字段，后期用于展示更多识别信息。
      */
     public String getAdvancedInfo() {
@@ -306,7 +306,7 @@ OTHERS：其他
     }
 
     /**
-     * 设置预留字段，后期用于展示更多识别信息。
+     * Set 预留字段，后期用于展示更多识别信息。
      * @param AdvancedInfo 预留字段，后期用于展示更多识别信息。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -314,7 +314,7 @@ OTHERS：其他
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

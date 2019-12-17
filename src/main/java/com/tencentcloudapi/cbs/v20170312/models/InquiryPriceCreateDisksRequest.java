@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDisksRequest  extends AbstractModel{
+public class InquiryPriceCreateDisksRequest extends AbstractModel{
 
     /**
     * 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
@@ -65,7 +65,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * Get 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。 
      * @return DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      */
     public String getDiskType() {
@@ -73,7 +73,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
+     * Set 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      * @param DiskType 云硬盘类型。取值范围：<br><li>普通云硬盘：CLOUD_BASIC<br><li>高性能云硬盘：CLOUD_PREMIUM<br><li>SSD云硬盘：CLOUD_SSD。
      */
     public void setDiskType(String DiskType) {
@@ -81,7 +81,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * Get 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
      * @return DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public Integer getDiskSize() {
@@ -89,7 +89,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * Set 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      * @param DiskSize 云硬盘大小，单位为GB。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public void setDiskSize(Integer DiskSize) {
@@ -97,7 +97,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * Get 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费 
      * @return DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
      */
     public String getDiskChargeType() {
@@ -105,7 +105,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+     * Set 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
      * @param DiskChargeType 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
      */
     public void setDiskChargeType(String DiskChargeType) {
@@ -113,7 +113,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。 
      * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
@@ -121,7 +121,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
@@ -129,7 +129,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取购买云盘的数量。不填则默认为1。
+     * Get 购买云盘的数量。不填则默认为1。 
      * @return DiskCount 购买云盘的数量。不填则默认为1。
      */
     public Integer getDiskCount() {
@@ -137,7 +137,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买云盘的数量。不填则默认为1。
+     * Set 购买云盘的数量。不填则默认为1。
      * @param DiskCount 购买云盘的数量。不填则默认为1。
      */
     public void setDiskCount(Integer DiskCount) {
@@ -145,7 +145,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云盘所属项目ID。
+     * Get 云盘所属项目ID。 
      * @return ProjectId 云盘所属项目ID。
      */
     public Integer getProjectId() {
@@ -153,7 +153,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云盘所属项目ID。
+     * Set 云盘所属项目ID。
      * @param ProjectId 云盘所属项目ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -161,7 +161,7 @@ public class InquiryPriceCreateDisksRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);

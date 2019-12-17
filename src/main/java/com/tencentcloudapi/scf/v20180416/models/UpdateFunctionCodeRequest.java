@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateFunctionCodeRequest  extends AbstractModel{
+public class UpdateFunctionCodeRequest extends AbstractModel{
 
     /**
     * 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
@@ -100,7 +100,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     private String CodeSource;
 
     /**
-     * 获取函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
+     * Get 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符 
      * @return Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      */
     public String getHandler() {
@@ -108,7 +108,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
+     * Set 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      * @param Handler 函数处理方法名称。名称格式支持“文件名称.函数名称”形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
      */
     public void setHandler(String Handler) {
@@ -116,7 +116,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改的函数名称
+     * Get 要修改的函数名称 
      * @return FunctionName 要修改的函数名称
      */
     public String getFunctionName() {
@@ -124,7 +124,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的函数名称
+     * Set 要修改的函数名称
      * @param FunctionName 要修改的函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -132,7 +132,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储桶名称
+     * Get 对象存储桶名称 
      * @return CosBucketName 对象存储桶名称
      */
     public String getCosBucketName() {
@@ -140,7 +140,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储桶名称
+     * Set 对象存储桶名称
      * @param CosBucketName 对象存储桶名称
      */
     public void setCosBucketName(String CosBucketName) {
@@ -148,7 +148,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储对象路径
+     * Get 对象存储对象路径 
      * @return CosObjectName 对象存储对象路径
      */
     public String getCosObjectName() {
@@ -156,7 +156,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储对象路径
+     * Set 对象存储对象路径
      * @param CosObjectName 对象存储对象路径
      */
     public void setCosObjectName(String CosObjectName) {
@@ -164,7 +164,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+     * Get 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M 
      * @return ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      */
     public String getZipFile() {
@@ -172,7 +172,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+     * Set 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      * @param ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      */
     public void setZipFile(String ZipFile) {
@@ -180,7 +180,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属命名空间
+     * Get 函数所属命名空间 
      * @return Namespace 函数所属命名空间
      */
     public String getNamespace() {
@@ -188,7 +188,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属命名空间
+     * Set 函数所属命名空间
      * @param Namespace 函数所属命名空间
      */
     public void setNamespace(String Namespace) {
@@ -196,7 +196,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * Get 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1 
      * @return CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public String getCosBucketRegion() {
@@ -204,7 +204,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
+     * Set 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      * @param CosBucketRegion 对象存储的地域，注：北京分为ap-beijing和ap-beijing-1
      */
     public void setCosBucketRegion(String CosBucketRegion) {
@@ -212,7 +212,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属环境
+     * Get 函数所属环境 
      * @return EnvId 函数所属环境
      */
     public String getEnvId() {
@@ -220,7 +220,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属环境
+     * Set 函数所属环境
      * @param EnvId 函数所属环境
      */
     public void setEnvId(String EnvId) {
@@ -228,7 +228,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Get 在更新时是否同步发布新版本，默认为：FALSE，不发布 
      * @return Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public String getPublish() {
@@ -236,7 +236,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置在更新时是否同步发布新版本，默认为：FALSE，不发布
+     * Set 在更新时是否同步发布新版本，默认为：FALSE，不发布
      * @param Publish 在更新时是否同步发布新版本，默认为：FALSE，不发布
      */
     public void setPublish(String Publish) {
@@ -244,7 +244,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数代码
+     * Get 函数代码 
      * @return Code 函数代码
      */
     public Code getCode() {
@@ -252,7 +252,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数代码
+     * Set 函数代码
      * @param Code 函数代码
      */
     public void setCode(Code Code) {
@@ -260,7 +260,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * Get 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段 
      * @return CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
      */
     public String getCodeSource() {
@@ -268,7 +268,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
+     * Set 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
      * @param CodeSource 代码来源方式，支持以下'ZipFile', 'Cos', 'Inline', 'TempCos', 'Git' 之一，使用Git来源必须指定此字段
      */
     public void setCodeSource(String CodeSource) {
@@ -276,7 +276,7 @@ public class UpdateFunctionCodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Handler", this.Handler);

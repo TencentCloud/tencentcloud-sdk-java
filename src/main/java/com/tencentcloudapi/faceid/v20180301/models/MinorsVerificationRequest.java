@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MinorsVerificationRequest  extends AbstractModel{
+public class MinorsVerificationRequest extends AbstractModel{
 
     /**
     * 参与校验的参数类型。
@@ -53,9 +53,9 @@ public class MinorsVerificationRequest  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取参与校验的参数类型。
+     * Get 参与校验的参数类型。
 0：使用手机号进行校验；
-1：使用姓名与身份证号进行校验。
+1：使用姓名与身份证号进行校验。 
      * @return Type 参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
@@ -65,7 +65,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参与校验的参数类型。
+     * Set 参与校验的参数类型。
 0：使用手机号进行校验；
 1：使用姓名与身份证号进行校验。
      * @param Type 参与校验的参数类型。
@@ -77,7 +77,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取手机号。11位数字。
+     * Get 手机号。11位数字。 
      * @return Mobile 手机号。11位数字。
      */
     public String getMobile() {
@@ -85,7 +85,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置手机号。11位数字。
+     * Set 手机号。11位数字。
      * @param Mobile 手机号。11位数字。
      */
     public void setMobile(String Mobile) {
@@ -93,7 +93,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取身份证号码。
+     * Get 身份证号码。 
      * @return IdCard 身份证号码。
      */
     public String getIdCard() {
@@ -101,7 +101,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置身份证号码。
+     * Set 身份证号码。
      * @param IdCard 身份证号码。
      */
     public void setIdCard(String IdCard) {
@@ -109,7 +109,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取姓名。
+     * Get 姓名。 
      * @return Name 姓名。
      */
     public String getName() {
@@ -117,7 +117,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置姓名。
+     * Set 姓名。
      * @param Name 姓名。
      */
     public void setName(String Name) {
@@ -125,7 +125,7 @@ public class MinorsVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonSamplesRequest  extends AbstractModel{
+public class DescribePersonSamplesRequest extends AbstractModel{
 
     /**
     * 拉取的人物类型，可选值：
@@ -77,12 +77,12 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取拉取的人物类型，可选值：
+     * Get 拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
 <li>Default：系统默认人物库。</li>
 
 默认值：UserDefine，拉取用户自定义人物库人物。
-说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。
+说明：如果是拉取系统默认人物库，只能使用人物名字或者人物 ID + 人物名字的方式进行拉取，且人脸图片只返回一张。 
      * @return Type 拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
 <li>Default：系统默认人物库。</li>
@@ -95,7 +95,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置拉取的人物类型，可选值：
+     * Set 拉取的人物类型，可选值：
 <li>UserDefine：用户自定义人物库；</li>
 <li>Default：系统默认人物库。</li>
 
@@ -113,7 +113,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物 ID，数组长度限制：100。
+     * Get 人物 ID，数组长度限制：100。 
      * @return PersonIds 人物 ID，数组长度限制：100。
      */
     public String [] getPersonIds() {
@@ -121,7 +121,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物 ID，数组长度限制：100。
+     * Set 人物 ID，数组长度限制：100。
      * @param PersonIds 人物 ID，数组长度限制：100。
      */
     public void setPersonIds(String [] PersonIds) {
@@ -129,7 +129,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物名称，数组长度限制：20。
+     * Get 人物名称，数组长度限制：20。 
      * @return Names 人物名称，数组长度限制：20。
      */
     public String [] getNames() {
@@ -137,7 +137,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物名称，数组长度限制：20。
+     * Set 人物名称，数组长度限制：20。
      * @param Names 人物名称，数组长度限制：20。
      */
     public void setNames(String [] Names) {
@@ -145,7 +145,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物标签，数组长度限制：20。
+     * Get 人物标签，数组长度限制：20。 
      * @return Tags 人物标签，数组长度限制：20。
      */
     public String [] getTags() {
@@ -153,7 +153,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物标签，数组长度限制：20。
+     * Set 人物标签，数组长度限制：20。
      * @param Tags 人物标签，数组长度限制：20。
      */
     public void setTags(String [] Tags) {
@@ -161,7 +161,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页偏移量，默认值：0。
+     * Get 分页偏移量，默认值：0。 
      * @return Offset 分页偏移量，默认值：0。
      */
     public Long getOffset() {
@@ -169,7 +169,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页偏移量，默认值：0。
+     * Set 分页偏移量，默认值：0。
      * @param Offset 分页偏移量，默认值：0。
      */
     public void setOffset(Long Offset) {
@@ -177,7 +177,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回记录条数，默认值：100，最大值：100。
+     * Get 返回记录条数，默认值：100，最大值：100。 
      * @return Limit 返回记录条数，默认值：100，最大值：100。
      */
     public Long getLimit() {
@@ -185,7 +185,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回记录条数，默认值：100，最大值：100。
+     * Set 返回记录条数，默认值：100，最大值：100。
      * @param Limit 返回记录条数，默认值：100，最大值：100。
      */
     public void setLimit(Long Limit) {
@@ -193,7 +193,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -201,7 +201,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -209,7 +209,7 @@ public class DescribePersonSamplesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

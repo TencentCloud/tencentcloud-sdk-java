@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUploadedFilesRequest  extends AbstractModel{
+public class DescribeUploadedFilesRequest extends AbstractModel{
 
     /**
     * 文件路径。该字段应填用户主账号的OwnerUin信息。
@@ -44,7 +44,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取文件路径。该字段应填用户主账号的OwnerUin信息。
+     * Get 文件路径。该字段应填用户主账号的OwnerUin信息。 
      * @return Path 文件路径。该字段应填用户主账号的OwnerUin信息。
      */
     public String getPath() {
@@ -52,7 +52,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文件路径。该字段应填用户主账号的OwnerUin信息。
+     * Set 文件路径。该字段应填用户主账号的OwnerUin信息。
      * @param Path 文件路径。该字段应填用户主账号的OwnerUin信息。
      */
     public void setPath(String Path) {
@@ -60,7 +60,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量，默认值为0。
+     * Get 记录偏移量，默认值为0。 
      * @return Offset 记录偏移量，默认值为0。
      */
     public Integer getOffset() {
@@ -68,7 +68,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录偏移量，默认值为0。
+     * Set 记录偏移量，默认值为0。
      * @param Offset 记录偏移量，默认值为0。
      */
     public void setOffset(Integer Offset) {
@@ -76,7 +76,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单次请求返回的数量，默认值为20。
+     * Get 单次请求返回的数量，默认值为20。 
      * @return Limit 单次请求返回的数量，默认值为20。
      */
     public Integer getLimit() {
@@ -84,7 +84,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单次请求返回的数量，默认值为20。
+     * Set 单次请求返回的数量，默认值为20。
      * @param Limit 单次请求返回的数量，默认值为20。
      */
     public void setLimit(Integer Limit) {
@@ -92,7 +92,7 @@ public class DescribeUploadedFilesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);

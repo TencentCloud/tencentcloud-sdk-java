@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
+public class DescribeZoneTrafficInfoRequest extends AbstractModel{
 
     /**
     * 公司ID
@@ -65,7 +65,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期，格式yyyy-MM-dd
+     * Get 开始日期，格式yyyy-MM-dd 
      * @return StartDate 开始日期，格式yyyy-MM-dd
      */
     public String getStartDate() {
@@ -105,7 +105,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期，格式yyyy-MM-dd
+     * Set 开始日期，格式yyyy-MM-dd
      * @param StartDate 开始日期，格式yyyy-MM-dd
      */
     public void setStartDate(String StartDate) {
@@ -113,7 +113,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期，格式yyyy-MM-dd
+     * Get 结束日期，格式yyyy-MM-dd 
      * @return EndDate 结束日期，格式yyyy-MM-dd
      */
     public String getEndDate() {
@@ -121,7 +121,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期，格式yyyy-MM-dd
+     * Set 结束日期，格式yyyy-MM-dd
      * @param EndDate 结束日期，格式yyyy-MM-dd
      */
     public void setEndDate(String EndDate) {
@@ -129,7 +129,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public Integer getOffset() {
@@ -137,7 +137,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public void setOffset(Integer Offset) {
@@ -145,7 +145,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public Integer getLimit() {
@@ -153,7 +153,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public void setLimit(Integer Limit) {
@@ -161,7 +161,7 @@ public class DescribeZoneTrafficInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

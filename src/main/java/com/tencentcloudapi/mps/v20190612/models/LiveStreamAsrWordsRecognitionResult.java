@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
+public class LiveStreamAsrWordsRecognitionResult extends AbstractModel{
 
     /**
     * 语音关键词。
@@ -51,7 +51,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     private Float Confidence;
 
     /**
-     * 获取语音关键词。
+     * Get 语音关键词。 
      * @return Word 语音关键词。
      */
     public String getWord() {
@@ -59,7 +59,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词。
+     * Set 语音关键词。
      * @param Word 语音关键词。
      */
     public void setWord(String Word) {
@@ -67,7 +67,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段起始的 PTS 时间，单位：秒。
+     * Get 识别片段起始的 PTS 时间，单位：秒。 
      * @return StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public Float getStartPtsTime() {
@@ -75,7 +75,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段起始的 PTS 时间，单位：秒。
+     * Set 识别片段起始的 PTS 时间，单位：秒。
      * @param StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      */
     public void setStartPtsTime(Float StartPtsTime) {
@@ -83,7 +83,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段终止的 PTS 时间，单位：秒。
+     * Get 识别片段终止的 PTS 时间，单位：秒。 
      * @return EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public Float getEndPtsTime() {
@@ -91,7 +91,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段终止的 PTS 时间，单位：秒。
+     * Set 识别片段终止的 PTS 时间，单位：秒。
      * @param EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
      */
     public void setEndPtsTime(Float EndPtsTime) {
@@ -99,7 +99,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 获取识别片段置信度。取值：0~100。
+     * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -107,7 +107,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 设置识别片段置信度。取值：0~100。
+     * Set 识别片段置信度。取值：0~100。
      * @param Confidence 识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -115,7 +115,7 @@ public class LiveStreamAsrWordsRecognitionResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Word", this.Word);

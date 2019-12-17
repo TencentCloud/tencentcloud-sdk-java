@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
+public class DescribeBasicDeviceThresholdRequest extends AbstractModel{
 
     /**
     * 查询的IP地址，取值如：1.1.1.1
@@ -72,7 +72,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     private Long BasicIspCode;
 
     /**
-     * 获取查询的IP地址，取值如：1.1.1.1
+     * Get 查询的IP地址，取值如：1.1.1.1 
      * @return BasicIp 查询的IP地址，取值如：1.1.1.1
      */
     public String getBasicIp() {
@@ -80,7 +80,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询的IP地址，取值如：1.1.1.1
+     * Set 查询的IP地址，取值如：1.1.1.1
      * @param BasicIp 查询的IP地址，取值如：1.1.1.1
      */
     public void setBasicIp(String BasicIp) {
@@ -88,7 +88,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
+     * Get 查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写 
      * @return BasicRegion 查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
      */
     public String getBasicRegion() {
@@ -96,7 +96,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
+     * Set 查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
      * @param BasicRegion 查询IP所属地域，取值如：gz、bj、sh、hk等地域缩写
      */
     public void setBasicRegion(String BasicRegion) {
@@ -104,7 +104,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。
+     * Get 专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。 
      * @return BasicBizType 专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。
      */
     public String getBasicBizType() {
@@ -112,7 +112,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。
+     * Set 专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。
      * @param BasicBizType 专区类型，取值如：公有云专区：public，黑石专区：bm, NAT服务器专区：nat，互联网通道：channel。
      */
     public void setBasicBizType(String BasicBizType) {
@@ -120,7 +120,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
+     * Get 设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel. 
      * @return BasicDeviceType 设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
      */
     public String getBasicDeviceType() {
@@ -128,7 +128,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
+     * Set 设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
      * @param BasicDeviceType 设备类型，取值如：服务器：cvm，公有云负载均衡：clb，黑石负载均衡：lb，NAT服务器：nat，互联网通道：channel.
      */
     public void setBasicDeviceType(String BasicDeviceType) {
@@ -136,7 +136,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取有效性检查，取值为1
+     * Get 有效性检查，取值为1 
      * @return BasicCheckFlag 有效性检查，取值为1
      */
     public Long getBasicCheckFlag() {
@@ -144,7 +144,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置有效性检查，取值为1
+     * Set 有效性检查，取值为1
      * @param BasicCheckFlag 有效性检查，取值为1
      */
     public void setBasicCheckFlag(Long BasicCheckFlag) {
@@ -152,7 +152,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
+     * Get 可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取） 
      * @return BasicIpInstance 可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
      */
     public String getBasicIpInstance() {
@@ -160,7 +160,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
+     * Set 可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
      * @param BasicIpInstance 可选，IPInstance Nat 网关（如果查询的设备类型是NAT服务器，需要传此参数，通过nat资源查询接口获取）
      */
     public void setBasicIpInstance(String BasicIpInstance) {
@@ -168,7 +168,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
+     * Get 可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5） 
      * @return BasicIspCode 可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
      */
     public Long getBasicIspCode() {
@@ -176,7 +176,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
+     * Set 可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
      * @param BasicIspCode 可选，运营商线路（如果查询的设备类型是NAT服务器，需要传此参数为5）
      */
     public void setBasicIspCode(Long BasicIspCode) {
@@ -184,7 +184,7 @@ public class DescribeBasicDeviceThresholdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BasicIp", this.BasicIp);

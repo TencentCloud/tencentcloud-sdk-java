@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RouteTableAssociation  extends AbstractModel{
+public class RouteTableAssociation extends AbstractModel{
 
     /**
     * 子网实例ID。
@@ -37,7 +37,7 @@ public class RouteTableAssociation  extends AbstractModel{
     private String RouteTableId;
 
     /**
-     * 获取子网实例ID。
+     * Get 子网实例ID。 
      * @return SubnetId 子网实例ID。
      */
     public String getSubnetId() {
@@ -45,7 +45,7 @@ public class RouteTableAssociation  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID。
+     * Set 子网实例ID。
      * @param SubnetId 子网实例ID。
      */
     public void setSubnetId(String SubnetId) {
@@ -53,7 +53,7 @@ public class RouteTableAssociation  extends AbstractModel{
     }
 
     /**
-     * 获取路由表实例ID。
+     * Get 路由表实例ID。 
      * @return RouteTableId 路由表实例ID。
      */
     public String getRouteTableId() {
@@ -61,7 +61,7 @@ public class RouteTableAssociation  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID。
+     * Set 路由表实例ID。
      * @param RouteTableId 路由表实例ID。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -69,7 +69,7 @@ public class RouteTableAssociation  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

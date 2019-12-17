@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateDBInstanceRequest  extends AbstractModel{
+public class TerminateDBInstanceRequest extends AbstractModel{
 
     /**
     * 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
@@ -30,7 +30,7 @@ public class TerminateDBInstanceRequest  extends AbstractModel{
     private String [] InstanceIdSet;
 
     /**
-     * 获取主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
+     * Get 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceIdSet 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
      */
     public String [] getInstanceIdSet() {
@@ -38,7 +38,7 @@ public class TerminateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
+     * Set 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceIdSet 主动销毁的实例ID列表，格式如：[mssql-3l3fgqn7]。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
@@ -46,7 +46,7 @@ public class TerminateDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);

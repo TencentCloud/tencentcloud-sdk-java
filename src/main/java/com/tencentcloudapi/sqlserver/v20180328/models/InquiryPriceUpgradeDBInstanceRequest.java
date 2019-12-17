@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
+public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-njj2mtpl
@@ -34,17 +34,17 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
-     * 获取实例ID，形如mssql-njj2mtpl
+     * Get 实例ID，形如mssql-njj2mtpl 
      * @return InstanceId 实例ID，形如mssql-njj2mtpl
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-njj2mtpl
+     * Set 实例ID，形如mssql-njj2mtpl
      * @param InstanceId 实例ID，形如mssql-njj2mtpl
      */
     public void setInstanceId(String InstanceId) {
@@ -60,39 +60,39 @@ public class InquiryPriceUpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+     * Get 实例升级后的内存大小，单位GB，其值不能比当前实例内存小 
      * @return Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置实例升级后的内存大小，单位GB，其值不能比当前实例内存小
+     * Set 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
      * @param Memory 实例升级后的内存大小，单位GB，其值不能比当前实例内存小
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * Get 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小 
      * @return Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * 设置实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
+     * Set 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
      * @param Storage 实例升级后的磁盘大小，单位GB，其值不能比当前实例磁盘小
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

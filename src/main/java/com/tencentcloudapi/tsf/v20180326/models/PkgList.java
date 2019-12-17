@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PkgList  extends AbstractModel{
+public class PkgList extends AbstractModel{
 
     /**
     * 程序包总量
@@ -38,7 +38,7 @@ public class PkgList  extends AbstractModel{
     private PkgInfo [] Content;
 
     /**
-     * 获取程序包总量
+     * Get 程序包总量 
      * @return TotalCount 程序包总量
      */
     public Long getTotalCount() {
@@ -46,7 +46,7 @@ public class PkgList  extends AbstractModel{
     }
 
     /**
-     * 设置程序包总量
+     * Set 程序包总量
      * @param TotalCount 程序包总量
      */
     public void setTotalCount(Long TotalCount) {
@@ -54,8 +54,8 @@ public class PkgList  extends AbstractModel{
     }
 
     /**
-     * 获取程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 程序包信息列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class PkgList  extends AbstractModel{
     }
 
     /**
-     * 设置程序包信息列表
+     * Set 程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 程序包信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class PkgList  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

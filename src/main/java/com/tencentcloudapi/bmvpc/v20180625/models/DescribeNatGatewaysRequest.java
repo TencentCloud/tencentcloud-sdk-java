@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatGatewaysRequest  extends AbstractModel{
+public class DescribeNatGatewaysRequest extends AbstractModel{
 
     /**
     * NAT网关ID，例如：nat-kdm476mp
@@ -65,7 +65,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取NAT网关ID，例如：nat-kdm476mp
+     * Get NAT网关ID，例如：nat-kdm476mp 
      * @return NatId NAT网关ID，例如：nat-kdm476mp
      */
     public String getNatId() {
@@ -73,7 +73,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID，例如：nat-kdm476mp
+     * Set NAT网关ID，例如：nat-kdm476mp
      * @param NatId NAT网关ID，例如：nat-kdm476mp
      */
     public void setNatId(String NatId) {
@@ -81,7 +81,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取NAT名称
+     * Get NAT名称 
      * @return NatName NAT名称
      */
     public String getNatName() {
@@ -89,7 +89,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置NAT名称
+     * Set NAT名称
      * @param NatName NAT名称
      */
     public void setNatName(String NatName) {
@@ -97,7 +97,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索字段
+     * Get 搜索字段 
      * @return SearchKey 搜索字段
      */
     public String getSearchKey() {
@@ -105,7 +105,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索字段
+     * Set 搜索字段
      * @param SearchKey 搜索字段
      */
     public void setSearchKey(String SearchKey) {
@@ -113,7 +113,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，例如：vpc-kd7d06of
+     * Get 私有网络ID，例如：vpc-kd7d06of 
      * @return VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public String getVpcId() {
@@ -121,7 +121,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，例如：vpc-kd7d06of
+     * Set 私有网络ID，例如：vpc-kd7d06of
      * @param VpcId 私有网络ID，例如：vpc-kd7d06of
      */
     public void setVpcId(String VpcId) {
@@ -129,7 +129,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始值
+     * Get 起始值 
      * @return Offset 起始值
      */
     public Long getOffset() {
@@ -137,7 +137,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始值
+     * Set 起始值
      * @param Offset 起始值
      */
     public void setOffset(Long Offset) {
@@ -145,7 +145,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移值，默认值为 20
+     * Get 偏移值，默认值为 20 
      * @return Limit 偏移值，默认值为 20
      */
     public Long getLimit() {
@@ -153,7 +153,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移值，默认值为 20
+     * Set 偏移值，默认值为 20
      * @param Limit 偏移值，默认值为 20
      */
     public void setLimit(Long Limit) {
@@ -161,7 +161,7 @@ public class DescribeNatGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatId", this.NatId);

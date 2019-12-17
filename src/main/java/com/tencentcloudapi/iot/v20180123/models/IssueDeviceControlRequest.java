@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IssueDeviceControlRequest  extends AbstractModel{
+public class IssueDeviceControlRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -51,7 +51,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     private Boolean Metadata;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -75,7 +75,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -83,7 +83,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取控制数据（json）
+     * Get 控制数据（json） 
      * @return ControlData 控制数据（json）
      */
     public String getControlData() {
@@ -91,7 +91,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置控制数据（json）
+     * Set 控制数据（json）
      * @param ControlData 控制数据（json）
      */
     public void setControlData(String ControlData) {
@@ -99,7 +99,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否发送metadata字段
+     * Get 是否发送metadata字段 
      * @return Metadata 是否发送metadata字段
      */
     public Boolean getMetadata() {
@@ -107,7 +107,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否发送metadata字段
+     * Set 是否发送metadata字段
      * @param Metadata 是否发送metadata字段
      */
     public void setMetadata(Boolean Metadata) {
@@ -115,7 +115,7 @@ public class IssueDeviceControlRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

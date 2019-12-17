@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResidenceBookletOCRResponse  extends AbstractModel{
+public class ResidenceBookletOCRResponse extends AbstractModel{
 
     /**
     * 户号
@@ -114,7 +114,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取户号
+     * Get 户号 
      * @return HouseholdNumber 户号
      */
     public String getHouseholdNumber() {
@@ -122,7 +122,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置户号
+     * Set 户号
      * @param HouseholdNumber 户号
      */
     public void setHouseholdNumber(String HouseholdNumber) {
@@ -130,7 +130,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -138,7 +138,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -146,7 +146,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Sex 性别
      */
     public String getSex() {
@@ -154,7 +154,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Sex 性别
      */
     public void setSex(String Sex) {
@@ -162,7 +162,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生地
+     * Get 出生地 
      * @return BirthPlace 出生地
      */
     public String getBirthPlace() {
@@ -170,7 +170,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生地
+     * Set 出生地
      * @param BirthPlace 出生地
      */
     public void setBirthPlace(String BirthPlace) {
@@ -178,7 +178,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取民族
+     * Get 民族 
      * @return Nation 民族
      */
     public String getNation() {
@@ -186,7 +186,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置民族
+     * Set 民族
      * @param Nation 民族
      */
     public void setNation(String Nation) {
@@ -194,7 +194,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取籍贯
+     * Get 籍贯 
      * @return NativePlace 籍贯
      */
     public String getNativePlace() {
@@ -202,7 +202,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置籍贯
+     * Set 籍贯
      * @param NativePlace 籍贯
      */
     public void setNativePlace(String NativePlace) {
@@ -210,7 +210,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取出生日期
+     * Get 出生日期 
      * @return BirthDate 出生日期
      */
     public String getBirthDate() {
@@ -218,7 +218,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置出生日期
+     * Set 出生日期
      * @param BirthDate 出生日期
      */
     public void setBirthDate(String BirthDate) {
@@ -226,7 +226,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取公民身份证件编号
+     * Get 公民身份证件编号 
      * @return IdCardNumber 公民身份证件编号
      */
     public String getIdCardNumber() {
@@ -234,7 +234,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置公民身份证件编号
+     * Set 公民身份证件编号
      * @param IdCardNumber 公民身份证件编号
      */
     public void setIdCardNumber(String IdCardNumber) {
@@ -242,7 +242,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文化程度
+     * Get 文化程度 
      * @return EducationDegree 文化程度
      */
     public String getEducationDegree() {
@@ -250,7 +250,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文化程度
+     * Set 文化程度
      * @param EducationDegree 文化程度
      */
     public void setEducationDegree(String EducationDegree) {
@@ -258,7 +258,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务处所
+     * Get 服务处所 
      * @return ServicePlace 服务处所
      */
     public String getServicePlace() {
@@ -266,7 +266,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务处所
+     * Set 服务处所
      * @param ServicePlace 服务处所
      */
     public void setServicePlace(String ServicePlace) {
@@ -274,7 +274,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取户别
+     * Get 户别 
      * @return Household 户别
      */
     public String getHousehold() {
@@ -282,7 +282,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置户别
+     * Set 户别
      * @param Household 户别
      */
     public void setHousehold(String Household) {
@@ -290,7 +290,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取住址
+     * Get 住址 
      * @return Address 住址
      */
     public String getAddress() {
@@ -298,7 +298,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置住址
+     * Set 住址
      * @param Address 住址
      */
     public void setAddress(String Address) {
@@ -306,7 +306,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -314,7 +314,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -322,7 +322,7 @@ public class ResidenceBookletOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "HouseholdNumber", this.HouseholdNumber);

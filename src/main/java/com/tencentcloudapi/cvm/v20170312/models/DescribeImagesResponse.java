@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImagesResponse  extends AbstractModel{
+public class DescribeImagesResponse extends AbstractModel{
 
     /**
     * 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
@@ -44,7 +44,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
+     * Get 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。 
      * @return ImageSet 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
      */
     public Image [] getImageSet() {
@@ -52,7 +52,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
+     * Set 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
      * @param ImageSet 一个关于镜像详细信息的结构体，主要包括镜像的主要状态与属性。
      */
     public void setImageSet(Image [] ImageSet) {
@@ -60,7 +60,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合要求的镜像数量。
+     * Get 符合要求的镜像数量。 
      * @return TotalCount 符合要求的镜像数量。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合要求的镜像数量。
+     * Set 符合要求的镜像数量。
      * @param TotalCount 符合要求的镜像数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeImagesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageSet.", this.ImageSet);

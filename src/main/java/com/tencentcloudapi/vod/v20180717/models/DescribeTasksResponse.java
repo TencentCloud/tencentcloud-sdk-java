@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTasksResponse  extends AbstractModel{
+public class DescribeTasksResponse extends AbstractModel{
 
     /**
     * 任务概要列表。
@@ -46,8 +46,8 @@ public class DescribeTasksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务概要列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务概要列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskSet 任务概要列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -56,7 +56,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务概要列表。
+     * Set 任务概要列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskSet 任务概要列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,8 +66,8 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -76,7 +76,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
+     * Set 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScrollToken 翻页标识，当请求未返回所有数据，该字段表示下一条记录的 ID。当该字段为空，说明已无更多数据。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -86,7 +86,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -94,7 +94,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -102,7 +102,7 @@ public class DescribeTasksResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);

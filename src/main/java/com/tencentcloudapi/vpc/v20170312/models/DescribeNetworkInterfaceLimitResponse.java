@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
+public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
 
     /**
     * 弹性网卡配额
@@ -44,7 +44,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取弹性网卡配额
+     * Get 弹性网卡配额 
      * @return EniQuantity 弹性网卡配额
      */
     public Integer getEniQuantity() {
@@ -52,7 +52,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡配额
+     * Set 弹性网卡配额
      * @param EniQuantity 弹性网卡配额
      */
     public void setEniQuantity(Integer EniQuantity) {
@@ -60,7 +60,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每个弹性网卡可以分配的ip配额
+     * Get 每个弹性网卡可以分配的ip配额 
      * @return EniPrivateIpAddressQuantity 每个弹性网卡可以分配的ip配额
      */
     public Integer getEniPrivateIpAddressQuantity() {
@@ -68,7 +68,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每个弹性网卡可以分配的ip配额
+     * Set 每个弹性网卡可以分配的ip配额
      * @param EniPrivateIpAddressQuantity 每个弹性网卡可以分配的ip配额
      */
     public void setEniPrivateIpAddressQuantity(Integer EniPrivateIpAddressQuantity) {
@@ -76,7 +76,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeNetworkInterfaceLimitResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EniQuantity", this.EniQuantity);

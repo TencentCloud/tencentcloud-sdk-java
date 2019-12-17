@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CodeDetect  extends AbstractModel{
+public class CodeDetect extends AbstractModel{
 
     /**
     * 从图片中检测到的二维码，可能为多个
@@ -37,7 +37,7 @@ public class CodeDetect  extends AbstractModel{
     private Long ModerationCode;
 
     /**
-     * 获取从图片中检测到的二维码，可能为多个
+     * Get 从图片中检测到的二维码，可能为多个 
      * @return ModerationDetail 从图片中检测到的二维码，可能为多个
      */
     public CodeDetail [] getModerationDetail() {
@@ -45,7 +45,7 @@ public class CodeDetect  extends AbstractModel{
     }
 
     /**
-     * 设置从图片中检测到的二维码，可能为多个
+     * Set 从图片中检测到的二维码，可能为多个
      * @param ModerationDetail 从图片中检测到的二维码，可能为多个
      */
     public void setModerationDetail(CodeDetail [] ModerationDetail) {
@@ -53,7 +53,7 @@ public class CodeDetect  extends AbstractModel{
     }
 
     /**
-     * 获取检测是否成功，0：成功，-1：出错
+     * Get 检测是否成功，0：成功，-1：出错 
      * @return ModerationCode 检测是否成功，0：成功，-1：出错
      */
     public Long getModerationCode() {
@@ -61,7 +61,7 @@ public class CodeDetect  extends AbstractModel{
     }
 
     /**
-     * 设置检测是否成功，0：成功，-1：出错
+     * Set 检测是否成功，0：成功，-1：出错
      * @param ModerationCode 检测是否成功，0：成功，-1：出错
      */
     public void setModerationCode(Long ModerationCode) {
@@ -69,7 +69,7 @@ public class CodeDetect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ModerationDetail.", this.ModerationDetail);

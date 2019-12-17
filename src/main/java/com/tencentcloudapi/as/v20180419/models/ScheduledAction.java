@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScheduledAction  extends AbstractModel{
+public class ScheduledAction extends AbstractModel{
 
     /**
     * 定时任务ID。
@@ -93,7 +93,7 @@ public class ScheduledAction  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取定时任务ID。
+     * Get 定时任务ID。 
      * @return ScheduledActionId 定时任务ID。
      */
     public String getScheduledActionId() {
@@ -101,7 +101,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务ID。
+     * Set 定时任务ID。
      * @param ScheduledActionId 定时任务ID。
      */
     public void setScheduledActionId(String ScheduledActionId) {
@@ -109,7 +109,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务名称。
+     * Get 定时任务名称。 
      * @return ScheduledActionName 定时任务名称。
      */
     public String getScheduledActionName() {
@@ -117,7 +117,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务名称。
+     * Set 定时任务名称。
      * @param ScheduledActionName 定时任务名称。
      */
     public void setScheduledActionName(String ScheduledActionName) {
@@ -125,7 +125,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务所在伸缩组ID。
+     * Get 定时任务所在伸缩组ID。 
      * @return AutoScalingGroupId 定时任务所在伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -133,7 +133,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务所在伸缩组ID。
+     * Set 定时任务所在伸缩组ID。
      * @param AutoScalingGroupId 定时任务所在伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -141,7 +141,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Get 定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。 
      * @return StartTime 定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public String getStartTime() {
@@ -149,7 +149,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Set 定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param StartTime 定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public void setStartTime(String StartTime) {
@@ -157,7 +157,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的重复方式。
+     * Get 定时任务的重复方式。 
      * @return Recurrence 定时任务的重复方式。
      */
     public String getRecurrence() {
@@ -165,7 +165,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的重复方式。
+     * Set 定时任务的重复方式。
      * @param Recurrence 定时任务的重复方式。
      */
     public void setRecurrence(String Recurrence) {
@@ -173,7 +173,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Get 定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。 
      * @return EndTime 定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public String getEndTime() {
@@ -181,7 +181,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Set 定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param EndTime 定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      */
     public void setEndTime(String EndTime) {
@@ -189,7 +189,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务设置的最大实例数。
+     * Get 定时任务设置的最大实例数。 
      * @return MaxSize 定时任务设置的最大实例数。
      */
     public Integer getMaxSize() {
@@ -197,7 +197,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务设置的最大实例数。
+     * Set 定时任务设置的最大实例数。
      * @param MaxSize 定时任务设置的最大实例数。
      */
     public void setMaxSize(Integer MaxSize) {
@@ -205,7 +205,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务设置的期望实例数。
+     * Get 定时任务设置的期望实例数。 
      * @return DesiredCapacity 定时任务设置的期望实例数。
      */
     public Integer getDesiredCapacity() {
@@ -213,7 +213,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务设置的期望实例数。
+     * Set 定时任务设置的期望实例数。
      * @param DesiredCapacity 定时任务设置的期望实例数。
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -221,7 +221,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务设置的最小实例数。
+     * Get 定时任务设置的最小实例数。 
      * @return MinSize 定时任务设置的最小实例数。
      */
     public Integer getMinSize() {
@@ -229,7 +229,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务设置的最小实例数。
+     * Set 定时任务设置的最小实例数。
      * @param MinSize 定时任务设置的最小实例数。
      */
     public void setMinSize(Integer MinSize) {
@@ -237,7 +237,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 获取定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。 
      * @return CreatedTime 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public String getCreatedTime() {
@@ -245,7 +245,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 设置定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      * @param CreatedTime 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -253,7 +253,7 @@ public class ScheduledAction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScheduledActionId", this.ScheduledActionId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcSubnetCreateInfo  extends AbstractModel{
+public class VpcSubnetCreateInfo extends AbstractModel{
 
     /**
     * 子网名称
@@ -44,7 +44,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取子网名称
+     * Get 子网名称 
      * @return SubnetName 子网名称
      */
     public String getSubnetName() {
@@ -52,7 +52,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称
+     * Set 子网名称
      * @param SubnetName 子网名称
      */
     public void setSubnetName(String SubnetName) {
@@ -60,7 +60,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网的CIDR
+     * Get 子网的CIDR 
      * @return CidrBlock 子网的CIDR
      */
     public String getCidrBlock() {
@@ -68,7 +68,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网的CIDR
+     * Set 子网的CIDR
      * @param CidrBlock 子网的CIDR
      */
     public void setCidrBlock(String CidrBlock) {
@@ -76,7 +76,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网的可用区
+     * Get 子网的可用区 
      * @return Zone 子网的可用区
      */
     public String getZone() {
@@ -84,7 +84,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网的可用区
+     * Set 子网的可用区
      * @param Zone 子网的可用区
      */
     public void setZone(String Zone) {
@@ -92,7 +92,7 @@ public class VpcSubnetCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);

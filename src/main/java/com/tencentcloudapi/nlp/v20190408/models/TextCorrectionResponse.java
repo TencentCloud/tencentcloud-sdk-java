@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextCorrectionResponse  extends AbstractModel{
+public class TextCorrectionResponse extends AbstractModel{
 
     /**
     * 纠错详情
@@ -44,7 +44,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取纠错详情
+     * Get 纠错详情 
      * @return CCITokens 纠错详情
      */
     public CCIToken [] getCCITokens() {
@@ -52,7 +52,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置纠错详情
+     * Set 纠错详情
      * @param CCITokens 纠错详情
      */
     public void setCCITokens(CCIToken [] CCITokens) {
@@ -60,7 +60,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取纠错后的文本
+     * Get 纠错后的文本 
      * @return ResultText 纠错后的文本
      */
     public String getResultText() {
@@ -68,7 +68,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置纠错后的文本
+     * Set 纠错后的文本
      * @param ResultText 纠错后的文本
      */
     public void setResultText(String ResultText) {
@@ -76,7 +76,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class TextCorrectionResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CCITokens.", this.CCITokens);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePaiInstanceRequest  extends AbstractModel{
+public class CreatePaiInstanceRequest extends AbstractModel{
 
     /**
     * PAI实例的域名。
@@ -100,7 +100,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-     * 获取PAI实例的域名。
+     * Get PAI实例的域名。 
      * @return DomainName PAI实例的域名。
      */
     public String getDomainName() {
@@ -108,7 +108,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置PAI实例的域名。
+     * Set PAI实例的域名。
      * @param DomainName PAI实例的域名。
      */
     public void setDomainName(String DomainName) {
@@ -116,7 +116,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取公网带宽相关信息设置。
+     * Get 公网带宽相关信息设置。 
      * @return InternetAccessible 公网带宽相关信息设置。
      */
     public InternetAccessible getInternetAccessible() {
@@ -124,7 +124,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公网带宽相关信息设置。
+     * Set 公网带宽相关信息设置。
      * @param InternetAccessible 公网带宽相关信息设置。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -132,7 +132,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取启动脚本的base64编码字符串。
+     * Get 启动脚本的base64编码字符串。 
      * @return InitScript 启动脚本的base64编码字符串。
      */
     public String getInitScript() {
@@ -140,7 +140,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置启动脚本的base64编码字符串。
+     * Set 启动脚本的base64编码字符串。
      * @param InitScript 启动脚本的base64编码字符串。
      */
     public void setInitScript(String InitScript) {
@@ -148,7 +148,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区列表。
+     * Get 可用区列表。 
      * @return Zones 可用区列表。
      */
     public String [] getZones() {
@@ -156,7 +156,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区列表。
+     * Set 可用区列表。
      * @param Zones 可用区列表。
      */
     public void setZones(String [] Zones) {
@@ -164,7 +164,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VpcId。
+     * Get VpcId。 
      * @return VpcId VpcId。
      */
     public String getVpcId() {
@@ -172,7 +172,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VpcId。
+     * Set VpcId。
      * @param VpcId VpcId。
      */
     public void setVpcId(String VpcId) {
@@ -180,7 +180,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网列表。
+     * Get 子网列表。 
      * @return SubnetIds 子网列表。
      */
     public String [] getSubnetIds() {
@@ -188,7 +188,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网列表。
+     * Set 子网列表。
      * @param SubnetIds 子网列表。
      */
     public void setSubnetIds(String [] SubnetIds) {
@@ -196,7 +196,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例显示名称。
+     * Get 实例显示名称。 
      * @return InstanceName 实例显示名称。
      */
     public String getInstanceName() {
@@ -204,7 +204,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例显示名称。
+     * Set 实例显示名称。
      * @param InstanceName 实例显示名称。
      */
     public void setInstanceName(String InstanceName) {
@@ -212,7 +212,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型列表。
+     * Get 实例机型列表。 
      * @return InstanceTypes 实例机型列表。
      */
     public String [] getInstanceTypes() {
@@ -220,7 +220,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型列表。
+     * Set 实例机型列表。
      * @param InstanceTypes 实例机型列表。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
@@ -228,7 +228,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例登录设置。
+     * Get 实例登录设置。 
      * @return LoginSettings 实例登录设置。
      */
     public LoginSettings getLoginSettings() {
@@ -236,7 +236,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例登录设置。
+     * Set 实例登录设置。
      * @param LoginSettings 实例登录设置。
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
@@ -244,7 +244,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型。
+     * Get 实例计费类型。 
      * @return InstanceChargeType 实例计费类型。
      */
     public String getInstanceChargeType() {
@@ -252,7 +252,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型。
+     * Set 实例计费类型。
      * @param InstanceChargeType 实例计费类型。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -260,7 +260,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
      * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
@@ -268,7 +268,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
@@ -276,7 +276,7 @@ public class CreatePaiInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

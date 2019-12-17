@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleOutput  extends AbstractModel{
+public class RuleOutput extends AbstractModel{
 
     /**
     * 转发规则的 ID
@@ -133,7 +133,7 @@ public class RuleOutput  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取转发规则的 ID
+     * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
     public String getLocationId() {
@@ -141,7 +141,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的 ID
+     * Set 转发规则的 ID
      * @param LocationId 转发规则的 ID
      */
     public void setLocationId(String LocationId) {
@@ -149,8 +149,8 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转发规则的域名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -159,7 +159,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的域名。
+     * Set 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 转发规则的域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -169,8 +169,8 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转发规则的路径。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Url 转发规则的路径。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -179,7 +179,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的路径。
+     * Set 转发规则的路径。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 转发规则的路径。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -189,7 +189,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间
+     * Get 会话保持时间 
      * @return SessionExpireTime 会话保持时间
      */
     public Integer getSessionExpireTime() {
@@ -197,7 +197,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间
+     * Set 会话保持时间
      * @param SessionExpireTime 会话保持时间
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
@@ -205,8 +205,8 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 健康检查信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthCheck 健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -215,7 +215,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查信息
+     * Set 健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheck 健康检查信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -225,8 +225,8 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取证书信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证书信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Certificate 证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -235,7 +235,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置证书信息
+     * Set 证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Certificate 证书信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -245,7 +245,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取规则的请求转发方式
+     * Get 规则的请求转发方式 
      * @return Scheduler 规则的请求转发方式
      */
     public String getScheduler() {
@@ -253,7 +253,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置规则的请求转发方式
+     * Set 规则的请求转发方式
      * @param Scheduler 规则的请求转发方式
      */
     public void setScheduler(String Scheduler) {
@@ -261,7 +261,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则所属的监听器 ID
+     * Get 转发规则所属的监听器 ID 
      * @return ListenerId 转发规则所属的监听器 ID
      */
     public String getListenerId() {
@@ -269,7 +269,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则所属的监听器 ID
+     * Set 转发规则所属的监听器 ID
      * @param ListenerId 转发规则所属的监听器 ID
      */
     public void setListenerId(String ListenerId) {
@@ -277,8 +277,8 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 转发规则的重定向目标信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RewriteTarget 转发规则的重定向目标信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -287,7 +287,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的重定向目标信息
+     * Set 转发规则的重定向目标信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RewriteTarget 转发规则的重定向目标信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,7 +297,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启gzip
+     * Get 是否开启gzip 
      * @return HttpGzip 是否开启gzip
      */
     public Boolean getHttpGzip() {
@@ -305,7 +305,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启gzip
+     * Set 是否开启gzip
      * @param HttpGzip 是否开启gzip
      */
     public void setHttpGzip(Boolean HttpGzip) {
@@ -313,7 +313,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则是否为自动创建
+     * Get 转发规则是否为自动创建 
      * @return BeAutoCreated 转发规则是否为自动创建
      */
     public Boolean getBeAutoCreated() {
@@ -321,7 +321,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则是否为自动创建
+     * Set 转发规则是否为自动创建
      * @param BeAutoCreated 转发规则是否为自动创建
      */
     public void setBeAutoCreated(Boolean BeAutoCreated) {
@@ -329,7 +329,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取是否作为默认域名
+     * Get 是否作为默认域名 
      * @return DefaultServer 是否作为默认域名
      */
     public Boolean getDefaultServer() {
@@ -337,7 +337,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置是否作为默认域名
+     * Set 是否作为默认域名
      * @param DefaultServer 是否作为默认域名
      */
     public void setDefaultServer(Boolean DefaultServer) {
@@ -345,7 +345,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启Http2
+     * Get 是否开启Http2 
      * @return Http2 是否开启Http2
      */
     public Boolean getHttp2() {
@@ -353,7 +353,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启Http2
+     * Set 是否开启Http2
      * @param Http2 是否开启Http2
      */
     public void setHttp2(Boolean Http2) {
@@ -361,7 +361,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡与后端服务之间的转发协议
+     * Get 负载均衡与后端服务之间的转发协议 
      * @return ForwardType 负载均衡与后端服务之间的转发协议
      */
     public String getForwardType() {
@@ -369,7 +369,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡与后端服务之间的转发协议
+     * Set 负载均衡与后端服务之间的转发协议
      * @param ForwardType 负载均衡与后端服务之间的转发协议
      */
     public void setForwardType(String ForwardType) {
@@ -377,7 +377,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的创建时间
+     * Get 转发规则的创建时间 
      * @return CreateTime 转发规则的创建时间
      */
     public String getCreateTime() {
@@ -385,7 +385,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的创建时间
+     * Set 转发规则的创建时间
      * @param CreateTime 转发规则的创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -393,7 +393,7 @@ public class RuleOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);

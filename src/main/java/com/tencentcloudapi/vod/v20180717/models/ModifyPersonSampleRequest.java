@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonSampleRequest  extends AbstractModel{
+public class ModifyPersonSampleRequest extends AbstractModel{
 
     /**
     * 人物 ID。
@@ -75,7 +75,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取人物 ID。
+     * Get 人物 ID。 
      * @return PersonId 人物 ID。
      */
     public String getPersonId() {
@@ -83,7 +83,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物 ID。
+     * Set 人物 ID。
      * @param PersonId 人物 ID。
      */
     public void setPersonId(String PersonId) {
@@ -91,7 +91,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取名称，长度限制：128 个字符。
+     * Get 名称，长度限制：128 个字符。 
      * @return Name 名称，长度限制：128 个字符。
      */
     public String getName() {
@@ -99,7 +99,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置名称，长度限制：128 个字符。
+     * Set 名称，长度限制：128 个字符。
      * @param Name 名称，长度限制：128 个字符。
      */
     public void setName(String Name) {
@@ -107,7 +107,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取描述，长度限制：1024 个字符。
+     * Get 描述，长度限制：1024 个字符。 
      * @return Description 描述，长度限制：1024 个字符。
      */
     public String getDescription() {
@@ -115,7 +115,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置描述，长度限制：1024 个字符。
+     * Set 描述，长度限制：1024 个字符。
      * @param Description 描述，长度限制：1024 个字符。
      */
     public void setDescription(String Description) {
@@ -123,10 +123,10 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人物应用场景，可选值：
+     * Get 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
-3. All：用于内容识别、内容审核，等价于 1+2。
+3. All：用于内容识别、内容审核，等价于 1+2。 
      * @return Usages 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
@@ -137,7 +137,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人物应用场景，可选值：
+     * Set 人物应用场景，可选值：
 1. Recognition：用于内容识别，等价于 Recognition.Face。
 2. Review：用于内容审核，等价于 Review.Face。
 3. All：用于内容识别、内容审核，等价于 1+2。
@@ -151,7 +151,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人脸操作信息。
+     * Get 人脸操作信息。 
      * @return FaceOperationInfo 人脸操作信息。
      */
     public AiSampleFaceOperation getFaceOperationInfo() {
@@ -159,7 +159,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人脸操作信息。
+     * Set 人脸操作信息。
      * @param FaceOperationInfo 人脸操作信息。
      */
     public void setFaceOperationInfo(AiSampleFaceOperation FaceOperationInfo) {
@@ -167,7 +167,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签操作信息。
+     * Get 标签操作信息。 
      * @return TagOperationInfo 标签操作信息。
      */
     public AiSampleTagOperation getTagOperationInfo() {
@@ -175,7 +175,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签操作信息。
+     * Set 标签操作信息。
      * @param TagOperationInfo 标签操作信息。
      */
     public void setTagOperationInfo(AiSampleTagOperation TagOperationInfo) {
@@ -183,7 +183,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -191,7 +191,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -199,7 +199,7 @@ public class ModifyPersonSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

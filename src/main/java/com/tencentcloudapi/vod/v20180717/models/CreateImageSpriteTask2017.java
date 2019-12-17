@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageSpriteTask2017  extends AbstractModel{
+public class CreateImageSpriteTask2017 extends AbstractModel{
 
     /**
     * 截图雪碧图任务 ID。
@@ -88,7 +88,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     private String WebVttUrl;
 
     /**
-     * 获取截图雪碧图任务 ID。
+     * Get 截图雪碧图任务 ID。 
      * @return TaskId 截图雪碧图任务 ID。
      */
     public String getTaskId() {
@@ -96,7 +96,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截图雪碧图任务 ID。
+     * Set 截图雪碧图任务 ID。
      * @param TaskId 截图雪碧图任务 ID。
      */
     public void setTaskId(String TaskId) {
@@ -104,10 +104,10 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取错误码
+     * Get 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
@@ -118,7 +118,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误码
+     * Set 错误码
 <li>0：成功；</li>
 <li>其他值：失败。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,8 +132,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -142,7 +142,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置错误信息。
+     * Set 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -152,8 +152,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取截取雪碧图文件 ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 截取雪碧图文件 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 截取雪碧图文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -162,7 +162,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截取雪碧图文件 ID。
+     * Set 截取雪碧图文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 截取雪碧图文件 ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,8 +172,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -182,7 +182,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Definition 雪碧图规格，参见[雪碧图截图模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -192,8 +192,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图小图总数量。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 雪碧图小图总数量。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 雪碧图小图总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -202,7 +202,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图小图总数量。
+     * Set 雪碧图小图总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 雪碧图小图总数量。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,8 +212,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取截取雪碧图输出的地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 截取雪碧图输出的地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteUrlSet 截取雪碧图输出的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -222,7 +222,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置截取雪碧图输出的地址。
+     * Set 截取雪碧图输出的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteUrlSet 截取雪碧图输出的地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -232,8 +232,8 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图子图位置与时间关系 WebVtt 文件地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 雪碧图子图位置与时间关系 WebVtt 文件地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WebVttUrl 雪碧图子图位置与时间关系 WebVtt 文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -242,7 +242,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图子图位置与时间关系 WebVtt 文件地址。
+     * Set 雪碧图子图位置与时间关系 WebVtt 文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WebVttUrl 雪碧图子图位置与时间关系 WebVtt 文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -252,7 +252,7 @@ public class CreateImageSpriteTask2017  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

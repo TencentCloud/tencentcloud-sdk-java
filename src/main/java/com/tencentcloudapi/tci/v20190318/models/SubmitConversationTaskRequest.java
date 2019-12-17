@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitConversationTaskRequest  extends AbstractModel{
+public class SubmitConversationTaskRequest extends AbstractModel{
 
     /**
     * 音频源的语言，默认0为英文，1为中文
@@ -72,7 +72,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     private String [] VocabLibNameList;
 
     /**
-     * 获取音频源的语言，默认0为英文，1为中文
+     * Get 音频源的语言，默认0为英文，1为中文 
      * @return Lang 音频源的语言，默认0为英文，1为中文
      */
     public Long getLang() {
@@ -80,7 +80,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频源的语言，默认0为英文，1为中文
+     * Set 音频源的语言，默认0为英文，1为中文
      * @param Lang 音频源的语言，默认0为英文，1为中文
      */
     public void setLang(Long Lang) {
@@ -88,7 +88,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取学生音频流
+     * Get 学生音频流 
      * @return StudentUrl 学生音频流
      */
     public String getStudentUrl() {
@@ -96,7 +96,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置学生音频流
+     * Set 学生音频流
      * @param StudentUrl 学生音频流
      */
     public void setStudentUrl(String StudentUrl) {
@@ -104,7 +104,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取教师音频流
+     * Get 教师音频流 
      * @return TeacherUrl 教师音频流
      */
     public String getTeacherUrl() {
@@ -112,7 +112,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置教师音频流
+     * Set 教师音频流
      * @param TeacherUrl 教师音频流
      */
     public void setTeacherUrl(String TeacherUrl) {
@@ -120,7 +120,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音编码类型 1:pcm
+     * Get 语音编码类型 1:pcm 
      * @return VoiceEncodeType 语音编码类型 1:pcm
      */
     public Long getVoiceEncodeType() {
@@ -128,7 +128,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音编码类型 1:pcm
+     * Set 语音编码类型 1:pcm
      * @param VoiceEncodeType 语音编码类型 1:pcm
      */
     public void setVoiceEncodeType(Long VoiceEncodeType) {
@@ -136,7 +136,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+     * Get 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit） 
      * @return VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
      */
     public Long getVoiceFileType() {
@@ -144,7 +144,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
+     * Set 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
      * @param VoiceFileType 语音文件类型 1:raw, 2:wav, 3:mp3（三种格式目前仅支持16k采样率16bit）
      */
     public void setVoiceFileType(Long VoiceFileType) {
@@ -152,7 +152,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Get 功能开关列表，表示是否需要打开相应的功能，返回相应的信息 
      * @return Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public Function getFunctions() {
@@ -160,7 +160,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置功能开关列表，表示是否需要打开相应的功能，返回相应的信息
+     * Set 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      * @param Functions 功能开关列表，表示是否需要打开相应的功能，返回相应的信息
      */
     public void setFunctions(Function Functions) {
@@ -168,7 +168,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Get 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析 
      * @return VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public String [] getVocabLibNameList() {
@@ -176,7 +176,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
+     * Set 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      * @param VocabLibNameList 识别词库名列表，评估过程使用这些词汇库中的词汇进行词汇使用行为分析
      */
     public void setVocabLibNameList(String [] VocabLibNameList) {
@@ -184,7 +184,7 @@ public class SubmitConversationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Lang", this.Lang);

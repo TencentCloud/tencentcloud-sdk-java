@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindHostedRequest  extends AbstractModel{
+public class UnbindHostedRequest extends AbstractModel{
 
     /**
     * 托管机器实例ID
@@ -44,7 +44,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     private String Eip;
 
     /**
-     * 获取托管机器实例ID
+     * Get 托管机器实例ID 
      * @return InstanceId 托管机器实例ID
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 设置托管机器实例ID
+     * Set 托管机器实例ID
      * @param InstanceId 托管机器实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+     * Get Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。 
      * @return EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      */
     public String getEipId() {
@@ -68,7 +68,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
+     * Set Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      * @param EipId Eip实例ID，可通过DescribeBmEip 接口返回字段中的 eipId获取。Eip和EipId参数必须要填写一个。
      */
     public void setEipId(String EipId) {
@@ -76,7 +76,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性IP。Eip和EipId参数必须要填写一个。
+     * Get 弹性IP。Eip和EipId参数必须要填写一个。 
      * @return Eip 弹性IP。Eip和EipId参数必须要填写一个。
      */
     public String getEip() {
@@ -84,7 +84,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性IP。Eip和EipId参数必须要填写一个。
+     * Set 弹性IP。Eip和EipId参数必须要填写一个。
      * @param Eip 弹性IP。Eip和EipId参数必须要填写一个。
      */
     public void setEip(String Eip) {
@@ -92,7 +92,7 @@ public class UnbindHostedRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

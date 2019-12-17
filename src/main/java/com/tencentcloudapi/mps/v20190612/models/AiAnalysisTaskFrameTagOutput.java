@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskFrameTagOutput  extends AbstractModel{
+public class AiAnalysisTaskFrameTagOutput extends AbstractModel{
 
     /**
     * 视频按帧标签列表。
@@ -30,7 +30,7 @@ public class AiAnalysisTaskFrameTagOutput  extends AbstractModel{
     private MediaAiAnalysisFrameTagSegmentItem [] SegmentSet;
 
     /**
-     * 获取视频按帧标签列表。
+     * Get 视频按帧标签列表。 
      * @return SegmentSet 视频按帧标签列表。
      */
     public MediaAiAnalysisFrameTagSegmentItem [] getSegmentSet() {
@@ -38,7 +38,7 @@ public class AiAnalysisTaskFrameTagOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频按帧标签列表。
+     * Set 视频按帧标签列表。
      * @param SegmentSet 视频按帧标签列表。
      */
     public void setSegmentSet(MediaAiAnalysisFrameTagSegmentItem [] SegmentSet) {
@@ -46,7 +46,7 @@ public class AiAnalysisTaskFrameTagOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);

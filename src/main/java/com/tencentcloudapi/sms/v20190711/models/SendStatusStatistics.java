@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendStatusStatistics  extends AbstractModel{
+public class SendStatusStatistics extends AbstractModel{
 
     /**
     * 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
@@ -44,7 +44,7 @@ public class SendStatusStatistics  extends AbstractModel{
     private Long RequestSuccessCount;
 
     /**
-     * 获取短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * Get 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条 
      * @return FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      */
     public Long getFeeCount() {
@@ -52,7 +52,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * Set 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      * @param FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
      */
     public void setFeeCount(Long FeeCount) {
@@ -60,7 +60,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取短信提交量统计
+     * Get 短信提交量统计 
      * @return RequestCount 短信提交量统计
      */
     public Long getRequestCount() {
@@ -68,7 +68,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信提交量统计
+     * Set 短信提交量统计
      * @param RequestCount 短信提交量统计
      */
     public void setRequestCount(Long RequestCount) {
@@ -76,7 +76,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取短信提交成功量统计
+     * Get 短信提交成功量统计 
      * @return RequestSuccessCount 短信提交成功量统计
      */
     public Long getRequestSuccessCount() {
@@ -84,7 +84,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置短信提交成功量统计
+     * Set 短信提交成功量统计
      * @param RequestSuccessCount 短信提交成功量统计
      */
     public void setRequestSuccessCount(Long RequestSuccessCount) {
@@ -92,7 +92,7 @@ public class SendStatusStatistics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FeeCount", this.FeeCount);

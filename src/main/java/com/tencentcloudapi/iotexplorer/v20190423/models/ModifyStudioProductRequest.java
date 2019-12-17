@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyStudioProductRequest  extends AbstractModel{
+public class ModifyStudioProductRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -51,7 +51,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     private Long ModuleId;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return ProductName 产品名称
      */
     public String getProductName() {
@@ -75,7 +75,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param ProductName 产品名称
      */
     public void setProductName(String ProductName) {
@@ -83,7 +83,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return ProductDesc 产品描述
      */
     public String getProductDesc() {
@@ -91,7 +91,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param ProductDesc 产品描述
      */
     public void setProductDesc(String ProductDesc) {
@@ -99,7 +99,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模型ID
+     * Get 模型ID 
      * @return ModuleId 模型ID
      */
     public Long getModuleId() {
@@ -107,7 +107,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型ID
+     * Set 模型ID
      * @param ModuleId 模型ID
      */
     public void setModuleId(Long ModuleId) {
@@ -115,7 +115,7 @@ public class ModifyStudioProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsPGroupResponse  extends AbstractModel{
+public class UpdateCfsPGroupResponse extends AbstractModel{
 
     /**
     * 权限组ID
@@ -51,7 +51,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return PGroupId 权限组ID
      */
     public String getPGroupId() {
@@ -59,7 +59,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param PGroupId 权限组ID
      */
     public void setPGroupId(String PGroupId) {
@@ -67,7 +67,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限组名称
+     * Get 权限组名称 
      * @return Name 权限组名称
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限组名称
+     * Set 权限组名称
      * @param Name 权限组名称
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息
+     * Get 描述信息 
      * @return DescInfo 描述信息
      */
     public String getDescInfo() {
@@ -91,7 +91,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息
+     * Set 描述信息
      * @param DescInfo 描述信息
      */
     public void setDescInfo(String DescInfo) {
@@ -99,7 +99,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class UpdateCfsPGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

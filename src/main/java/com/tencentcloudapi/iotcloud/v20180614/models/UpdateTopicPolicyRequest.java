@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateTopicPolicyRequest  extends AbstractModel{
+public class UpdateTopicPolicyRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -58,7 +58,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     private BrokerSubscribe BrokerSubscribe;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductID 产品ID
      */
     public String getProductID() {
@@ -66,7 +66,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductID 产品ID
      */
     public void setProductID(String ProductID) {
@@ -74,7 +74,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新前Topic名
+     * Get 更新前Topic名 
      * @return TopicName 更新前Topic名
      */
     public String getTopicName() {
@@ -82,7 +82,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新前Topic名
+     * Set 更新前Topic名
      * @param TopicName 更新前Topic名
      */
     public void setTopicName(String TopicName) {
@@ -90,7 +90,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新后Topic名
+     * Get 更新后Topic名 
      * @return NewTopicName 更新后Topic名
      */
     public String getNewTopicName() {
@@ -98,7 +98,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新后Topic名
+     * Set 更新后Topic名
      * @param NewTopicName 更新后Topic名
      */
     public void setNewTopicName(String NewTopicName) {
@@ -106,7 +106,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Topic权限
+     * Get Topic权限 
      * @return Privilege Topic权限
      */
     public Integer getPrivilege() {
@@ -114,7 +114,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Topic权限
+     * Set Topic权限
      * @param Privilege Topic权限
      */
     public void setPrivilege(Integer Privilege) {
@@ -122,7 +122,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取代理订阅信息
+     * Get 代理订阅信息 
      * @return BrokerSubscribe 代理订阅信息
      */
     public BrokerSubscribe getBrokerSubscribe() {
@@ -130,7 +130,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代理订阅信息
+     * Set 代理订阅信息
      * @param BrokerSubscribe 代理订阅信息
      */
     public void setBrokerSubscribe(BrokerSubscribe BrokerSubscribe) {
@@ -138,7 +138,7 @@ public class UpdateTopicPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductID", this.ProductID);

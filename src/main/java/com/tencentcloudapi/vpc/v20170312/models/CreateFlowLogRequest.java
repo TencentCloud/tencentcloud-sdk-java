@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowLogRequest  extends AbstractModel{
+public class CreateFlowLogRequest extends AbstractModel{
 
     /**
     * 私用网络ID或者统一ID，建议使用统一ID
@@ -72,7 +72,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     private String FlowLogDescription;
 
     /**
-     * 获取私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public String getVpcId() {
@@ -80,7 +80,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID
      * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public void setVpcId(String VpcId) {
@@ -88,7 +88,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志实例名字
+     * Get 流日志实例名字 
      * @return FlowLogName 流日志实例名字
      */
     public String getFlowLogName() {
@@ -96,7 +96,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例名字
+     * Set 流日志实例名字
      * @param FlowLogName 流日志实例名字
      */
     public void setFlowLogName(String FlowLogName) {
@@ -104,7 +104,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE 
      * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      */
     public String getResourceType() {
@@ -112,7 +112,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
      */
     public void setResourceType(String ResourceType) {
@@ -120,7 +120,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源唯一ID
+     * Get 资源唯一ID 
      * @return ResourceId 资源唯一ID
      */
     public String getResourceId() {
@@ -128,7 +128,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源唯一ID
+     * Set 资源唯一ID
      * @param ResourceId 资源唯一ID
      */
     public void setResourceId(String ResourceId) {
@@ -136,7 +136,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志采集类型，ACCEPT|REJECT|ALL
+     * Get 流日志采集类型，ACCEPT|REJECT|ALL 
      * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      */
     public String getTrafficType() {
@@ -144,7 +144,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志采集类型，ACCEPT|REJECT|ALL
+     * Set 流日志采集类型，ACCEPT|REJECT|ALL
      * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
      */
     public void setTrafficType(String TrafficType) {
@@ -152,7 +152,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志存储ID
+     * Get 流日志存储ID 
      * @return CloudLogId 流日志存储ID
      */
     public String getCloudLogId() {
@@ -160,7 +160,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志存储ID
+     * Set 流日志存储ID
      * @param CloudLogId 流日志存储ID
      */
     public void setCloudLogId(String CloudLogId) {
@@ -168,7 +168,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志实例描述
+     * Get 流日志实例描述 
      * @return FlowLogDescription 流日志实例描述
      */
     public String getFlowLogDescription() {
@@ -176,7 +176,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例描述
+     * Set 流日志实例描述
      * @param FlowLogDescription 流日志实例描述
      */
     public void setFlowLogDescription(String FlowLogDescription) {
@@ -184,7 +184,7 @@ public class CreateFlowLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

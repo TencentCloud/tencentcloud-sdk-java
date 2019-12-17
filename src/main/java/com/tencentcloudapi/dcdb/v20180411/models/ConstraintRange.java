@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ConstraintRange  extends AbstractModel{
+public class ConstraintRange extends AbstractModel{
 
     /**
     * 约束类型为section时的最小值
@@ -37,7 +37,7 @@ public class ConstraintRange  extends AbstractModel{
     private String Max;
 
     /**
-     * 获取约束类型为section时的最小值
+     * Get 约束类型为section时的最小值 
      * @return Min 约束类型为section时的最小值
      */
     public String getMin() {
@@ -45,7 +45,7 @@ public class ConstraintRange  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型为section时的最小值
+     * Set 约束类型为section时的最小值
      * @param Min 约束类型为section时的最小值
      */
     public void setMin(String Min) {
@@ -53,7 +53,7 @@ public class ConstraintRange  extends AbstractModel{
     }
 
     /**
-     * 获取约束类型为section时的最大值
+     * Get 约束类型为section时的最大值 
      * @return Max 约束类型为section时的最大值
      */
     public String getMax() {
@@ -61,7 +61,7 @@ public class ConstraintRange  extends AbstractModel{
     }
 
     /**
-     * 设置约束类型为section时的最大值
+     * Set 约束类型为section时的最大值
      * @param Max 约束类型为section时的最大值
      */
     public void setMax(String Max) {
@@ -69,7 +69,7 @@ public class ConstraintRange  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Min", this.Min);

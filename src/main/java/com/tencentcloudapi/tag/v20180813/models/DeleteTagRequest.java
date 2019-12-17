@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTagRequest  extends AbstractModel{
+public class DeleteTagRequest extends AbstractModel{
 
     /**
     * 需要删除的标签键
@@ -37,7 +37,7 @@ public class DeleteTagRequest  extends AbstractModel{
     private String TagValue;
 
     /**
-     * 获取需要删除的标签键
+     * Get 需要删除的标签键 
      * @return TagKey 需要删除的标签键
      */
     public String getTagKey() {
@@ -45,7 +45,7 @@ public class DeleteTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的标签键
+     * Set 需要删除的标签键
      * @param TagKey 需要删除的标签键
      */
     public void setTagKey(String TagKey) {
@@ -53,7 +53,7 @@ public class DeleteTagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要删除的标签值
+     * Get 需要删除的标签值 
      * @return TagValue 需要删除的标签值
      */
     public String getTagValue() {
@@ -61,7 +61,7 @@ public class DeleteTagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的标签值
+     * Set 需要删除的标签值
      * @param TagValue 需要删除的标签值
      */
     public void setTagValue(String TagValue) {
@@ -69,7 +69,7 @@ public class DeleteTagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvaluationResponse  extends AbstractModel{
+public class EvaluationResponse extends AbstractModel{
 
     /**
     * 图片唯一标识，一张图片一个SessionId；
@@ -44,7 +44,7 @@ public class EvaluationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取图片唯一标识，一张图片一个SessionId；
+     * Get 图片唯一标识，一张图片一个SessionId； 
      * @return SessionId 图片唯一标识，一张图片一个SessionId；
      */
     public String getSessionId() {
@@ -52,7 +52,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片唯一标识，一张图片一个SessionId；
+     * Set 图片唯一标识，一张图片一个SessionId；
      * @param SessionId 图片唯一标识，一张图片一个SessionId；
      */
     public void setSessionId(String SessionId) {
@@ -60,7 +60,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的算式信息；
+     * Get 识别出的算式信息； 
      * @return Items 识别出的算式信息；
      */
     public Item [] getItems() {
@@ -68,7 +68,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的算式信息；
+     * Set 识别出的算式信息；
      * @param Items 识别出的算式信息；
      */
     public void setItems(Item [] Items) {
@@ -76,7 +76,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class EvaluationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

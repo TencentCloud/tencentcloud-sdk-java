@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePersonFeatureRequest  extends AbstractModel{
+public class DeletePersonFeatureRequest extends AbstractModel{
 
     /**
     * 公司ID
@@ -44,7 +44,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     private Integer PersonId;
 
     /**
-     * 获取公司ID
+     * Get 公司ID 
      * @return CompanyId 公司ID
      */
     public String getCompanyId() {
@@ -52,7 +52,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公司ID
+     * Set 公司ID
      * @param CompanyId 公司ID
      */
     public void setCompanyId(String CompanyId) {
@@ -60,7 +60,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -68,7 +68,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -76,7 +76,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 获取顾客ID
+     * Get 顾客ID 
      * @return PersonId 顾客ID
      */
     public Integer getPersonId() {
@@ -84,7 +84,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 设置顾客ID
+     * Set 顾客ID
      * @param PersonId 顾客ID
      */
     public void setPersonId(Integer PersonId) {
@@ -92,7 +92,7 @@ public class DeletePersonFeatureRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

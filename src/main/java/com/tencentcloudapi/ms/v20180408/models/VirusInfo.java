@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VirusInfo  extends AbstractModel{
+public class VirusInfo extends AbstractModel{
 
     /**
     * 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
@@ -44,7 +44,7 @@ public class VirusInfo  extends AbstractModel{
     private String VirusDesc;
 
     /**
-     * 获取软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
+     * Get 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件 
      * @return SafeType 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      */
     public Integer getSafeType() {
@@ -52,7 +52,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 设置软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
+     * Set 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      * @param SafeType 软件安全类型，分别为0-未知、 1-安全软件、2-风险软件、3-病毒软件
      */
     public void setSafeType(Integer SafeType) {
@@ -60,7 +60,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 获取病毒名称， utf8编码，非病毒时值为空
+     * Get 病毒名称， utf8编码，非病毒时值为空 
      * @return VirusName 病毒名称， utf8编码，非病毒时值为空
      */
     public String getVirusName() {
@@ -68,7 +68,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 设置病毒名称， utf8编码，非病毒时值为空
+     * Set 病毒名称， utf8编码，非病毒时值为空
      * @param VirusName 病毒名称， utf8编码，非病毒时值为空
      */
     public void setVirusName(String VirusName) {
@@ -76,7 +76,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 获取病毒描述，utf8编码，非病毒时值为空
+     * Get 病毒描述，utf8编码，非病毒时值为空 
      * @return VirusDesc 病毒描述，utf8编码，非病毒时值为空
      */
     public String getVirusDesc() {
@@ -84,7 +84,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 设置病毒描述，utf8编码，非病毒时值为空
+     * Set 病毒描述，utf8编码，非病毒时值为空
      * @param VirusDesc 病毒描述，utf8编码，非病毒时值为空
      */
     public void setVirusDesc(String VirusDesc) {
@@ -92,7 +92,7 @@ public class VirusInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SafeType", this.SafeType);

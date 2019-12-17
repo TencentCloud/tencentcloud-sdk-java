@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecItemInfo  extends AbstractModel{
+public class SpecItemInfo extends AbstractModel{
 
     /**
     * 规格ID
@@ -86,7 +86,7 @@ public class SpecItemInfo  extends AbstractModel{
     private Integer Pid;
 
     /**
-     * 获取规格ID
+     * Get 规格ID 
      * @return SpecCode 规格ID
      */
     public String getSpecCode() {
@@ -94,7 +94,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规格ID
+     * Set 规格ID
      * @param SpecCode 规格ID
      */
     public void setSpecCode(String SpecCode) {
@@ -102,7 +102,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取PostgreSQL的内核版本编号
+     * Get PostgreSQL的内核版本编号 
      * @return Version PostgreSQL的内核版本编号
      */
     public String getVersion() {
@@ -110,7 +110,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置PostgreSQL的内核版本编号
+     * Set PostgreSQL的内核版本编号
      * @param Version PostgreSQL的内核版本编号
      */
     public void setVersion(String Version) {
@@ -118,7 +118,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内核编号对应的完整版本名称
+     * Get 内核编号对应的完整版本名称 
      * @return VersionName 内核编号对应的完整版本名称
      */
     public String getVersionName() {
@@ -126,7 +126,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内核编号对应的完整版本名称
+     * Set 内核编号对应的完整版本名称
      * @param VersionName 内核编号对应的完整版本名称
      */
     public void setVersionName(String VersionName) {
@@ -134,7 +134,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取CPU核数
+     * Get CPU核数 
      * @return Cpu CPU核数
      */
     public Integer getCpu() {
@@ -142,7 +142,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置CPU核数
+     * Set CPU核数
      * @param Cpu CPU核数
      */
     public void setCpu(Integer Cpu) {
@@ -150,7 +150,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位：MB
+     * Get 内存大小，单位：MB 
      * @return Memory 内存大小，单位：MB
      */
     public Integer getMemory() {
@@ -158,7 +158,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位：MB
+     * Set 内存大小，单位：MB
      * @param Memory 内存大小，单位：MB
      */
     public void setMemory(Integer Memory) {
@@ -166,7 +166,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该规格所支持最大存储容量，单位：GB
+     * Get 该规格所支持最大存储容量，单位：GB 
      * @return MaxStorage 该规格所支持最大存储容量，单位：GB
      */
     public Integer getMaxStorage() {
@@ -174,7 +174,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该规格所支持最大存储容量，单位：GB
+     * Set 该规格所支持最大存储容量，单位：GB
      * @param MaxStorage 该规格所支持最大存储容量，单位：GB
      */
     public void setMaxStorage(Integer MaxStorage) {
@@ -182,7 +182,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该规格所支持最小存储容量，单位：GB
+     * Get 该规格所支持最小存储容量，单位：GB 
      * @return MinStorage 该规格所支持最小存储容量，单位：GB
      */
     public Integer getMinStorage() {
@@ -190,7 +190,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该规格所支持最小存储容量，单位：GB
+     * Set 该规格所支持最小存储容量，单位：GB
      * @param MinStorage 该规格所支持最小存储容量，单位：GB
      */
     public void setMinStorage(Integer MinStorage) {
@@ -198,7 +198,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该规格的预估QPS
+     * Get 该规格的预估QPS 
      * @return Qps 该规格的预估QPS
      */
     public Integer getQps() {
@@ -206,7 +206,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该规格的预估QPS
+     * Set 该规格的预估QPS
      * @param Qps 该规格的预估QPS
      */
     public void setQps(Integer Qps) {
@@ -214,7 +214,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该规格对应的计费ID
+     * Get 该规格对应的计费ID 
      * @return Pid 该规格对应的计费ID
      */
     public Integer getPid() {
@@ -222,7 +222,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该规格对应的计费ID
+     * Set 该规格对应的计费ID
      * @param Pid 该规格对应的计费ID
      */
     public void setPid(Integer Pid) {
@@ -230,7 +230,7 @@ public class SpecItemInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);

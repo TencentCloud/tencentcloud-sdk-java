@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BusinessCardOCRRequest  extends AbstractModel{
+public class BusinessCardOCRRequest extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -59,10 +59,10 @@ Config = {"RetImageType":"PROPROCESS"}
     private String Config;
 
     /**
-     * 获取图片的 Base64 值。
+     * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -73,7 +73,7 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 设置图片的 Base64 值。
+     * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -87,11 +87,11 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 获取图片的 Url 地址。
+     * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -103,7 +103,7 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 设置图片的 Url 地址。
+     * Set 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
@@ -119,7 +119,7 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 获取可选字段，根据需要选择是否请求对应字段。
+     * Get 可选字段，根据需要选择是否请求对应字段。
 目前支持的字段为：
 RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
@@ -127,7 +127,7 @@ RetImageType-“PROPROCESS” 图像预处理，string 类型。
 SDK 设置方式参考：
 Config = Json.stringify({"RetImageType":"PROPROCESS"})
 API 3.0 Explorer 设置方式参考：
-Config = {"RetImageType":"PROPROCESS"}
+Config = {"RetImageType":"PROPROCESS"} 
      * @return Config 可选字段，根据需要选择是否请求对应字段。
 目前支持的字段为：
 RetImageType-“PROPROCESS” 图像预处理，string 类型。
@@ -143,7 +143,7 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 设置可选字段，根据需要选择是否请求对应字段。
+     * Set 可选字段，根据需要选择是否请求对应字段。
 目前支持的字段为：
 RetImageType-“PROPROCESS” 图像预处理，string 类型。
 图像预处理功能为，检测图片倾斜的角度，将原本倾斜的图片围绕中心点转正，最终输出一张正的名片抠图。
@@ -167,7 +167,7 @@ Config = {"RetImageType":"PROPROCESS"}
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

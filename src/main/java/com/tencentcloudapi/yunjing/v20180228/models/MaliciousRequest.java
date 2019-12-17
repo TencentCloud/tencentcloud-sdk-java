@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MaliciousRequest  extends AbstractModel{
+public class MaliciousRequest extends AbstractModel{
 
     /**
     * 记录ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端UUID。
@@ -62,7 +62,7 @@ public class MaliciousRequest  extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 进程名。
@@ -129,26 +129,26 @@ public class MaliciousRequest  extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
-     * 获取记录ID。
+     * Get 记录ID。 
      * @return Id 记录ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置记录ID。
+     * Set 记录ID。
      * @param Id 记录ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端UUID。
+     * Get 云镜客户端UUID。 
      * @return Uuid 云镜客户端UUID。
      */
     public String getUuid() {
@@ -156,7 +156,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端UUID。
+     * Set 云镜客户端UUID。
      * @param Uuid 云镜客户端UUID。
      */
     public void setUuid(String Uuid) {
@@ -164,7 +164,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -172,7 +172,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -180,7 +180,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机名。
+     * Get 主机名。 
      * @return MachineName 主机名。
      */
     public String getMachineName() {
@@ -188,7 +188,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机名。
+     * Set 主机名。
      * @param MachineName 主机名。
      */
     public void setMachineName(String MachineName) {
@@ -196,7 +196,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恶意请求域名。
+     * Get 恶意请求域名。 
      * @return Domain 恶意请求域名。
      */
     public String getDomain() {
@@ -204,7 +204,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恶意请求域名。
+     * Set 恶意请求域名。
      * @param Domain 恶意请求域名。
      */
     public void setDomain(String Domain) {
@@ -212,23 +212,23 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恶意请求数。
+     * Get 恶意请求数。 
      * @return Count 恶意请求数。
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置恶意请求数。
+     * Set 恶意请求数。
      * @param Count 恶意请求数。
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取进程名。
+     * Get 进程名。 
      * @return ProcessName 进程名。
      */
     public String getProcessName() {
@@ -236,7 +236,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置进程名。
+     * Set 进程名。
      * @param ProcessName 进程名。
      */
     public void setProcessName(String ProcessName) {
@@ -244,10 +244,10 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录状态。
+     * Get 记录状态。
 <li>UN_OPERATED：待处理</li>
 <li>TRUSTED：已信任</li>
-<li>UN_TRUSTED：已取消信任</li>
+<li>UN_TRUSTED：已取消信任</li> 
      * @return Status 记录状态。
 <li>UN_OPERATED：待处理</li>
 <li>TRUSTED：已信任</li>
@@ -258,7 +258,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录状态。
+     * Set 记录状态。
 <li>UN_OPERATED：待处理</li>
 <li>TRUSTED：已信任</li>
 <li>UN_TRUSTED：已取消信任</li>
@@ -272,7 +272,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恶意请求域名描述。
+     * Get 恶意请求域名描述。 
      * @return Description 恶意请求域名描述。
      */
     public String getDescription() {
@@ -280,7 +280,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恶意请求域名描述。
+     * Set 恶意请求域名描述。
      * @param Description 恶意请求域名描述。
      */
     public void setDescription(String Description) {
@@ -288,7 +288,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取参考地址。
+     * Get 参考地址。 
      * @return Reference 参考地址。
      */
     public String getReference() {
@@ -296,7 +296,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置参考地址。
+     * Set 参考地址。
      * @param Reference 参考地址。
      */
     public void setReference(String Reference) {
@@ -304,7 +304,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取发现时间。
+     * Get 发现时间。 
      * @return CreateTime 发现时间。
      */
     public String getCreateTime() {
@@ -312,7 +312,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置发现时间。
+     * Set 发现时间。
      * @param CreateTime 发现时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -320,7 +320,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录合并时间。
+     * Get 记录合并时间。 
      * @return MergeTime 记录合并时间。
      */
     public String getMergeTime() {
@@ -328,7 +328,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录合并时间。
+     * Set 记录合并时间。
      * @param MergeTime 记录合并时间。
      */
     public void setMergeTime(String MergeTime) {
@@ -336,8 +336,8 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取进程MD5
-值。
+     * Get 进程MD5
+值。 
      * @return ProcessMd5 进程MD5
 值。
      */
@@ -346,7 +346,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置进程MD5
+     * Set 进程MD5
 值。
      * @param ProcessMd5 进程MD5
 值。
@@ -356,7 +356,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取执行命令行。
+     * Get 执行命令行。 
      * @return CmdLine 执行命令行。
      */
     public String getCmdLine() {
@@ -364,7 +364,7 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 设置执行命令行。
+     * Set 执行命令行。
      * @param CmdLine 执行命令行。
      */
     public void setCmdLine(String CmdLine) {
@@ -372,23 +372,23 @@ public class MaliciousRequest  extends AbstractModel{
     }
 
     /**
-     * 获取进程PID。
+     * Get 进程PID。 
      * @return Pid 进程PID。
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置进程PID。
+     * Set 进程PID。
      * @param Pid 进程PID。
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

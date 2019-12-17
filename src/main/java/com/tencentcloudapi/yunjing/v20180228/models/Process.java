@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Process  extends AbstractModel{
+public class Process extends AbstractModel{
 
     /**
     * 唯一ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜客户端唯一UUID。
@@ -55,14 +55,14 @@ public class Process  extends AbstractModel{
     */
     @SerializedName("Pid")
     @Expose
-    private Integer Pid;
+    private Long Pid;
 
     /**
     * 进程Ppid。
     */
     @SerializedName("Ppid")
     @Expose
-    private Integer Ppid;
+    private Long Ppid;
 
     /**
     * 进程名。
@@ -104,23 +104,23 @@ public class Process  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取唯一ID。
+     * Get 唯一ID。 
      * @return Id 唯一ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置唯一ID。
+     * Set 唯一ID。
      * @param Id 唯一ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜客户端唯一UUID。
+     * Get 云镜客户端唯一UUID。 
      * @return Uuid 云镜客户端唯一UUID。
      */
     public String getUuid() {
@@ -128,7 +128,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一UUID。
+     * Set 云镜客户端唯一UUID。
      * @param Uuid 云镜客户端唯一UUID。
      */
     public void setUuid(String Uuid) {
@@ -136,7 +136,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP。
+     * Get 主机内网IP。 
      * @return MachineIp 主机内网IP。
      */
     public String getMachineIp() {
@@ -144,7 +144,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP。
+     * Set 主机内网IP。
      * @param MachineIp 主机内网IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -152,7 +152,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取主机名。
+     * Get 主机名。 
      * @return MachineName 主机名。
      */
     public String getMachineName() {
@@ -160,7 +160,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置主机名。
+     * Set 主机名。
      * @param MachineName 主机名。
      */
     public void setMachineName(String MachineName) {
@@ -168,39 +168,39 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取进程Pid。
+     * Get 进程Pid。 
      * @return Pid 进程Pid。
      */
-    public Integer getPid() {
+    public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * 设置进程Pid。
+     * Set 进程Pid。
      * @param Pid 进程Pid。
      */
-    public void setPid(Integer Pid) {
+    public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * 获取进程Ppid。
+     * Get 进程Ppid。 
      * @return Ppid 进程Ppid。
      */
-    public Integer getPpid() {
+    public Long getPpid() {
         return this.Ppid;
     }
 
     /**
-     * 设置进程Ppid。
+     * Set 进程Ppid。
      * @param Ppid 进程Ppid。
      */
-    public void setPpid(Integer Ppid) {
+    public void setPpid(Long Ppid) {
         this.Ppid = Ppid;
     }
 
     /**
-     * 获取进程名。
+     * Get 进程名。 
      * @return ProcessName 进程名。
      */
     public String getProcessName() {
@@ -208,7 +208,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置进程名。
+     * Set 进程名。
      * @param ProcessName 进程名。
      */
     public void setProcessName(String ProcessName) {
@@ -216,7 +216,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取进程用户名。
+     * Get 进程用户名。 
      * @return Username 进程用户名。
      */
     public String getUsername() {
@@ -224,7 +224,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置进程用户名。
+     * Set 进程用户名。
      * @param Username 进程用户名。
      */
     public void setUsername(String Username) {
@@ -232,11 +232,11 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取所属平台。
+     * Get 所属平台。
 <li>WIN32：windows32位</li>
 <li>WIN64：windows64位</li>
 <li>LINUX32：Linux32位</li>
-<li>LINUX64：Linux64位</li>
+<li>LINUX64：Linux64位</li> 
      * @return Platform 所属平台。
 <li>WIN32：windows32位</li>
 <li>WIN64：windows64位</li>
@@ -248,7 +248,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置所属平台。
+     * Set 所属平台。
 <li>WIN32：windows32位</li>
 <li>WIN64：windows64位</li>
 <li>LINUX32：Linux32位</li>
@@ -264,7 +264,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取进程路径。
+     * Get 进程路径。 
      * @return FullPath 进程路径。
      */
     public String getFullPath() {
@@ -272,7 +272,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置进程路径。
+     * Set 进程路径。
      * @param FullPath 进程路径。
      */
     public void setFullPath(String FullPath) {
@@ -280,7 +280,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -288,7 +288,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -296,7 +296,7 @@ public class Process  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

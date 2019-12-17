@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddressTemplate  extends AbstractModel{
+public class AddressTemplate extends AbstractModel{
 
     /**
     * IP地址模板名称。
@@ -51,7 +51,7 @@ public class AddressTemplate  extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * 获取IP地址模板名称。
+     * Get IP地址模板名称。 
      * @return AddressTemplateName IP地址模板名称。
      */
     public String getAddressTemplateName() {
@@ -59,7 +59,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板名称。
+     * Set IP地址模板名称。
      * @param AddressTemplateName IP地址模板名称。
      */
     public void setAddressTemplateName(String AddressTemplateName) {
@@ -67,7 +67,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模板实例唯一ID。
+     * Get IP地址模板实例唯一ID。 
      * @return AddressTemplateId IP地址模板实例唯一ID。
      */
     public String getAddressTemplateId() {
@@ -75,7 +75,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模板实例唯一ID。
+     * Set IP地址模板实例唯一ID。
      * @param AddressTemplateId IP地址模板实例唯一ID。
      */
     public void setAddressTemplateId(String AddressTemplateId) {
@@ -83,7 +83,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址信息。
+     * Get IP地址信息。 
      * @return AddressSet IP地址信息。
      */
     public String [] getAddressSet() {
@@ -91,7 +91,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址信息。
+     * Set IP地址信息。
      * @param AddressSet IP地址信息。
      */
     public void setAddressSet(String [] AddressSet) {
@@ -99,7 +99,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -107,7 +107,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -115,7 +115,7 @@ public class AddressTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateConfigRequest  extends AbstractModel{
+public class CreateConfigRequest extends AbstractModel{
 
     /**
     * 配置项名称
@@ -65,7 +65,7 @@ public class CreateConfigRequest  extends AbstractModel{
     private String ConfigType;
 
     /**
-     * 获取配置项名称
+     * Get 配置项名称 
      * @return ConfigName 配置项名称
      */
     public String getConfigName() {
@@ -73,7 +73,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称
+     * Set 配置项名称
      * @param ConfigName 配置项名称
      */
     public void setConfigName(String ConfigName) {
@@ -81,7 +81,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本
+     * Get 配置项版本 
      * @return ConfigVersion 配置项版本
      */
     public String getConfigVersion() {
@@ -89,7 +89,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本
+     * Set 配置项版本
      * @param ConfigVersion 配置项版本
      */
     public void setConfigVersion(String ConfigVersion) {
@@ -97,7 +97,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项值
+     * Get 配置项值 
      * @return ConfigValue 配置项值
      */
     public String getConfigValue() {
@@ -105,7 +105,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项值
+     * Set 配置项值
      * @param ConfigValue 配置项值
      */
     public void setConfigValue(String ConfigValue) {
@@ -113,7 +113,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -121,7 +121,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -129,7 +129,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项版本描述
+     * Get 配置项版本描述 
      * @return ConfigVersionDesc 配置项版本描述
      */
     public String getConfigVersionDesc() {
@@ -137,7 +137,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项版本描述
+     * Set 配置项版本描述
      * @param ConfigVersionDesc 配置项版本描述
      */
     public void setConfigVersionDesc(String ConfigVersionDesc) {
@@ -145,7 +145,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项值类型
+     * Get 配置项值类型 
      * @return ConfigType 配置项值类型
      */
     public String getConfigType() {
@@ -153,7 +153,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项值类型
+     * Set 配置项值类型
      * @param ConfigType 配置项值类型
      */
     public void setConfigType(String ConfigType) {
@@ -161,7 +161,7 @@ public class CreateConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);

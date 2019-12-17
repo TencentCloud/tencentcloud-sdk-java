@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvoiceDetectInfo  extends AbstractModel{
+public class InvoiceDetectInfo extends AbstractModel{
 
     /**
     * 识别出的图片在混贴票据图片中的旋转角度。
@@ -68,7 +68,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     private String Image;
 
     /**
-     * 获取识别出的图片在混贴票据图片中的旋转角度。
+     * Get 识别出的图片在混贴票据图片中的旋转角度。 
      * @return Angle 识别出的图片在混贴票据图片中的旋转角度。
      */
     public Float getAngle() {
@@ -76,7 +76,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的图片在混贴票据图片中的旋转角度。
+     * Set 识别出的图片在混贴票据图片中的旋转角度。
      * @param Angle 识别出的图片在混贴票据图片中的旋转角度。
      */
     public void setAngle(Float Angle) {
@@ -84,7 +84,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的图片所属的票据类型。
+     * Get 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
@@ -100,7 +100,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
 11：增值税发票（卷票 ）
 12：购车发票
 13：过路过桥费发票
-14：购物小票
+14：购物小票 
      * @return Type 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
@@ -124,7 +124,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的图片所属的票据类型。
+     * Set 识别出的图片所属的票据类型。
 -1：未知类型
 0：出租车发票
 1：定额发票
@@ -164,7 +164,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取识别出的图片在混贴票据图片中的位置信息。
+     * Get 识别出的图片在混贴票据图片中的位置信息。 
      * @return Rect 识别出的图片在混贴票据图片中的位置信息。
      */
     public Rect getRect() {
@@ -172,7 +172,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置识别出的图片在混贴票据图片中的位置信息。
+     * Set 识别出的图片在混贴票据图片中的位置信息。
      * @param Rect 识别出的图片在混贴票据图片中的位置信息。
      */
     public void setRect(Rect Rect) {
@@ -180,8 +180,8 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 获取入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Image 入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -190,7 +190,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 设置入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
+     * Set 入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Image 入参 ReturnImage 为 True 时返回 Base64 编码后的图片。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -200,7 +200,7 @@ public class InvoiceDetectInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Angle", this.Angle);

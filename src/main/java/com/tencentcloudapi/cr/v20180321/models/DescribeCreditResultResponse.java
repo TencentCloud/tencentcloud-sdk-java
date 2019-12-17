@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCreditResultResponse  extends AbstractModel{
+public class DescribeCreditResultResponse extends AbstractModel{
 
     /**
     * <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
@@ -75,7 +75,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取<p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
+     * Get <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul> 
      * @return ResultCode <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
      */
     public String getResultCode() {
@@ -83,7 +83,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置<p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
+     * Set <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
      * @param ResultCode <p>呼叫结果，取值范围：</p><ul style="margin-bottom:0px;"><li>NON：接通</li><li>DBU：号码忙</li><li>DRF：不在服务区</li><li>ANA：欠费未接听</li><li>REJ：拒接</li><li>SHU：关机</li><li>NAN：空号</li><li>HAL：停机</li><li>DAD：未接听</li><li>EXE：其他异常</li></ul>
      */
     public void setResultCode(String ResultCode) {
@@ -91,8 +91,8 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientCode 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -101,7 +101,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
+     * Set 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCode 客户标识代码，多个标识码以英文逗号分隔，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,8 +111,8 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取开始振铃时间，ResultCode为NON或DAD时才有此字段。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 开始振铃时间，ResultCode为NON或DAD时才有此字段。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RingStartTime 开始振铃时间，ResultCode为NON或DAD时才有此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -121,7 +121,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置开始振铃时间，ResultCode为NON或DAD时才有此字段。
+     * Set 开始振铃时间，ResultCode为NON或DAD时才有此字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RingStartTime 开始振铃时间，ResultCode为NON或DAD时才有此字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -131,7 +131,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取振铃时长
+     * Get 振铃时长 
      * @return RingDuration 振铃时长
      */
     public Integer getRingDuration() {
@@ -139,7 +139,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置振铃时长
+     * Set 振铃时长
      * @param RingDuration 振铃时长
      */
     public void setRingDuration(Integer RingDuration) {
@@ -147,7 +147,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取接通时长
+     * Get 接通时长 
      * @return AnswerDuration 接通时长
      */
     public Integer getAnswerDuration() {
@@ -155,7 +155,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置接通时长
+     * Set 接通时长
      * @param AnswerDuration 接通时长
      */
     public void setAnswerDuration(Integer AnswerDuration) {
@@ -163,8 +163,8 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取JSON格式的扩展信息字段，ResultCode为NON时才有。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get JSON格式的扩展信息字段，ResultCode为NON时才有。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContextValue JSON格式的扩展信息字段，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,7 +173,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置JSON格式的扩展信息字段，ResultCode为NON时才有。
+     * Set JSON格式的扩展信息字段，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ContextValue JSON格式的扩展信息字段，ResultCode为NON时才有。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -183,7 +183,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -191,7 +191,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -199,7 +199,7 @@ public class DescribeCreditResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResultCode", this.ResultCode);

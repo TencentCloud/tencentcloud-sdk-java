@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecItem  extends AbstractModel{
+public class SpecItem extends AbstractModel{
 
     /**
     * 规格信息标识
@@ -170,7 +170,7 @@ public class SpecItem  extends AbstractModel{
     private String MachineType;
 
     /**
-     * 获取规格信息标识
+     * Get 规格信息标识 
      * @return SpecCode 规格信息标识
      */
     public String getSpecCode() {
@@ -178,7 +178,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置规格信息标识
+     * Set 规格信息标识
      * @param SpecCode 规格信息标识
      */
     public void setSpecCode(String SpecCode) {
@@ -186,7 +186,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
      * @return Status 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
     public Integer getStatus() {
@@ -194,7 +194,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
      * @param Status 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
     public void setStatus(Integer Status) {
@@ -202,7 +202,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
      * @return Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
     public Integer getCpu() {
@@ -210,7 +210,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
      * @param Cpu 规格有效标志，取值：0-停止售卖，1-开放售卖
      */
     public void setCpu(Integer Cpu) {
@@ -218,7 +218,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取内存规格，单位为MB
+     * Get 内存规格，单位为MB 
      * @return Memory 内存规格，单位为MB
      */
     public Integer getMemory() {
@@ -226,7 +226,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置内存规格，单位为MB
+     * Set 内存规格，单位为MB
      * @param Memory 内存规格，单位为MB
      */
     public void setMemory(Integer Memory) {
@@ -234,7 +234,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取默认磁盘规格，单位MB
+     * Get 默认磁盘规格，单位MB 
      * @return DefaultStorage 默认磁盘规格，单位MB
      */
     public Integer getDefaultStorage() {
@@ -242,7 +242,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置默认磁盘规格，单位MB
+     * Set 默认磁盘规格，单位MB
      * @param DefaultStorage 默认磁盘规格，单位MB
      */
     public void setDefaultStorage(Integer DefaultStorage) {
@@ -250,7 +250,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大磁盘规格，单位MB
+     * Get 最大磁盘规格，单位MB 
      * @return MaxStorage 最大磁盘规格，单位MB
      */
     public Integer getMaxStorage() {
@@ -258,7 +258,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大磁盘规格，单位MB
+     * Set 最大磁盘规格，单位MB
      * @param MaxStorage 最大磁盘规格，单位MB
      */
     public void setMaxStorage(Integer MaxStorage) {
@@ -266,7 +266,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小磁盘规格，单位MB
+     * Get 最小磁盘规格，单位MB 
      * @return MinStorage 最小磁盘规格，单位MB
      */
     public Integer getMinStorage() {
@@ -274,7 +274,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小磁盘规格，单位MB
+     * Set 最小磁盘规格，单位MB
      * @param MinStorage 最小磁盘规格，单位MB
      */
     public void setMinStorage(Integer MinStorage) {
@@ -282,7 +282,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取可承载qps信息
+     * Get 可承载qps信息 
      * @return Qps 可承载qps信息
      */
     public Integer getQps() {
@@ -290,7 +290,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置可承载qps信息
+     * Set 可承载qps信息
      * @param Qps 可承载qps信息
      */
     public void setQps(Integer Qps) {
@@ -298,7 +298,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取连接数限制
+     * Get 连接数限制 
      * @return Conns 连接数限制
      */
     public Integer getConns() {
@@ -306,7 +306,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置连接数限制
+     * Set 连接数限制
      * @param Conns 连接数限制
      */
     public void setConns(Integer Conns) {
@@ -314,7 +314,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例mongodb版本信息
+     * Get 实例mongodb版本信息 
      * @return MongoVersionCode 实例mongodb版本信息
      */
     public String getMongoVersionCode() {
@@ -322,7 +322,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例mongodb版本信息
+     * Set 实例mongodb版本信息
      * @param MongoVersionCode 实例mongodb版本信息
      */
     public void setMongoVersionCode(String MongoVersionCode) {
@@ -330,7 +330,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例mongodb版本号
+     * Get 实例mongodb版本号 
      * @return MongoVersionValue 实例mongodb版本号
      */
     public Integer getMongoVersionValue() {
@@ -338,7 +338,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例mongodb版本号
+     * Set 实例mongodb版本号
      * @param MongoVersionValue 实例mongodb版本号
      */
     public void setMongoVersionValue(Integer MongoVersionValue) {
@@ -346,7 +346,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取实例mongodb版本号（短）
+     * Get 实例mongodb版本号（短） 
      * @return Version 实例mongodb版本号（短）
      */
     public String getVersion() {
@@ -354,7 +354,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置实例mongodb版本号（短）
+     * Set 实例mongodb版本号（短）
      * @param Version 实例mongodb版本号（短）
      */
     public void setVersion(String Version) {
@@ -362,7 +362,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取存储引擎
+     * Get 存储引擎 
      * @return EngineName 存储引擎
      */
     public String getEngineName() {
@@ -370,7 +370,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置存储引擎
+     * Set 存储引擎
      * @param EngineName 存储引擎
      */
     public void setEngineName(String EngineName) {
@@ -378,7 +378,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型，取值：1-分片集群，0-副本集集群
+     * Get 集群类型，取值：1-分片集群，0-副本集集群 
      * @return ClusterType 集群类型，取值：1-分片集群，0-副本集集群
      */
     public Integer getClusterType() {
@@ -386,7 +386,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型，取值：1-分片集群，0-副本集集群
+     * Set 集群类型，取值：1-分片集群，0-副本集集群
      * @param ClusterType 集群类型，取值：1-分片集群，0-副本集集群
      */
     public void setClusterType(Integer ClusterType) {
@@ -394,7 +394,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小副本集从节点数
+     * Get 最小副本集从节点数 
      * @return MinNodeNum 最小副本集从节点数
      */
     public Integer getMinNodeNum() {
@@ -402,7 +402,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小副本集从节点数
+     * Set 最小副本集从节点数
      * @param MinNodeNum 最小副本集从节点数
      */
     public void setMinNodeNum(Integer MinNodeNum) {
@@ -410,7 +410,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大副本集从节点数
+     * Get 最大副本集从节点数 
      * @return MaxNodeNum 最大副本集从节点数
      */
     public Integer getMaxNodeNum() {
@@ -418,7 +418,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大副本集从节点数
+     * Set 最大副本集从节点数
      * @param MaxNodeNum 最大副本集从节点数
      */
     public void setMaxNodeNum(Integer MaxNodeNum) {
@@ -426,7 +426,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小分片数
+     * Get 最小分片数 
      * @return MinReplicateSetNum 最小分片数
      */
     public Integer getMinReplicateSetNum() {
@@ -434,7 +434,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小分片数
+     * Set 最小分片数
      * @param MinReplicateSetNum 最小分片数
      */
     public void setMinReplicateSetNum(Integer MinReplicateSetNum) {
@@ -442,7 +442,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大分片数
+     * Get 最大分片数 
      * @return MaxReplicateSetNum 最大分片数
      */
     public Integer getMaxReplicateSetNum() {
@@ -450,7 +450,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大分片数
+     * Set 最大分片数
      * @param MaxReplicateSetNum 最大分片数
      */
     public void setMaxReplicateSetNum(Integer MaxReplicateSetNum) {
@@ -458,7 +458,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最小分片从节点数
+     * Get 最小分片从节点数 
      * @return MinReplicateSetNodeNum 最小分片从节点数
      */
     public Integer getMinReplicateSetNodeNum() {
@@ -466,7 +466,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最小分片从节点数
+     * Set 最小分片从节点数
      * @param MinReplicateSetNodeNum 最小分片从节点数
      */
     public void setMinReplicateSetNodeNum(Integer MinReplicateSetNodeNum) {
@@ -474,7 +474,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取最大分片从节点数
+     * Get 最大分片从节点数 
      * @return MaxReplicateSetNodeNum 最大分片从节点数
      */
     public Integer getMaxReplicateSetNodeNum() {
@@ -482,7 +482,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置最大分片从节点数
+     * Set 最大分片从节点数
      * @param MaxReplicateSetNodeNum 最大分片从节点数
      */
     public void setMaxReplicateSetNodeNum(Integer MaxReplicateSetNodeNum) {
@@ -490,7 +490,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 获取机器类型，取值：0-HIO，4-HIO10G
+     * Get 机器类型，取值：0-HIO，4-HIO10G 
      * @return MachineType 机器类型，取值：0-HIO，4-HIO10G
      */
     public String getMachineType() {
@@ -498,7 +498,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 设置机器类型，取值：0-HIO，4-HIO10G
+     * Set 机器类型，取值：0-HIO，4-HIO10G
      * @param MachineType 机器类型，取值：0-HIO，4-HIO10G
      */
     public void setMachineType(String MachineType) {
@@ -506,7 +506,7 @@ public class SpecItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);

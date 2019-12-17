@@ -29,21 +29,10 @@ public class TciClient extends AbstractClient{
     private static String endpoint = "tci.tencentcloudapi.com";
     private static String version = "2019-03-18";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TciClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TciClient(Credential credential, String region, ClientProfile profile) {
         super(TciClient.endpoint, TciClient.version, credential, region, profile);
     }

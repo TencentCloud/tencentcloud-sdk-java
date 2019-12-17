@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBCreateInfo  extends AbstractModel{
+public class DBCreateInfo extends AbstractModel{
 
     /**
     * 数据库名
@@ -51,7 +51,7 @@ public class DBCreateInfo  extends AbstractModel{
     private String Remark;
 
     /**
-     * 获取数据库名
+     * Get 数据库名 
      * @return DBName 数据库名
      */
     public String getDBName() {
@@ -59,7 +59,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名
+     * Set 数据库名
      * @param DBName 数据库名
      */
     public void setDBName(String DBName) {
@@ -67,7 +67,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
+     * Get 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS 
      * @return Charset 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
      */
     public String getCharset() {
@@ -75,7 +75,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
+     * Set 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
      * @param Charset 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
      */
     public void setCharset(String Charset) {
@@ -83,7 +83,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号权限信息
+     * Get 数据库账号权限信息 
      * @return Accounts 数据库账号权限信息
      */
     public AccountPrivilege [] getAccounts() {
@@ -91,7 +91,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号权限信息
+     * Set 数据库账号权限信息
      * @param Accounts 数据库账号权限信息
      */
     public void setAccounts(AccountPrivilege [] Accounts) {
@@ -99,7 +99,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -107,7 +107,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -115,7 +115,7 @@ public class DBCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBName", this.DBName);

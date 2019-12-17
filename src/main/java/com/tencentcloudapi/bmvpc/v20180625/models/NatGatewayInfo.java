@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NatGatewayInfo  extends AbstractModel{
+public class NatGatewayInfo extends AbstractModel{
 
     /**
     * NAT网关ID
@@ -114,7 +114,7 @@ public class NatGatewayInfo  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取NAT网关ID
+     * Get NAT网关ID 
      * @return NatId NAT网关ID
      */
     public String getNatId() {
@@ -122,7 +122,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关ID
+     * Set NAT网关ID
      * @param NatId NAT网关ID
      */
     public void setNatId(String NatId) {
@@ -130,7 +130,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网关名称
+     * Get 网关名称 
      * @return NatName 网关名称
      */
     public String getNatName() {
@@ -138,7 +138,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网关名称
+     * Set 网关名称
      * @param NatName 网关名称
      */
     public void setNatName(String NatName) {
@@ -146,7 +146,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -154,7 +154,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -162,7 +162,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -170,7 +170,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -178,7 +178,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * Get 网关状态，其中0表示创建中，1表示运行中，2表示创建失败 
      * @return ProductionStatus 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
      */
     public Long getProductionStatus() {
@@ -186,7 +186,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网关状态，其中0表示创建中，1表示运行中，2表示创建失败
+     * Set 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
      * @param ProductionStatus 网关状态，其中0表示创建中，1表示运行中，2表示创建失败
      */
     public void setProductionStatus(Long ProductionStatus) {
@@ -194,7 +194,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取EIP列表
+     * Get EIP列表 
      * @return Eips EIP列表
      */
     public String [] getEips() {
@@ -202,7 +202,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置EIP列表
+     * Set EIP列表
      * @param Eips EIP列表
      */
     public void setEips(String [] Eips) {
@@ -210,7 +210,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取并发连接数规格，取值为1000000, 3000000, 10000000
+     * Get 并发连接数规格，取值为1000000, 3000000, 10000000 
      * @return MaxConcurrent 并发连接数规格，取值为1000000, 3000000, 10000000
      */
     public Long getMaxConcurrent() {
@@ -218,7 +218,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置并发连接数规格，取值为1000000, 3000000, 10000000
+     * Set 并发连接数规格，取值为1000000, 3000000, 10000000
      * @param MaxConcurrent 并发连接数规格，取值为1000000, 3000000, 10000000
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
@@ -226,7 +226,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -234,7 +234,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -242,7 +242,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取独占标识，其中0表示共享，1表示独占，默认值为0
+     * Get 独占标识，其中0表示共享，1表示独占，默认值为0 
      * @return Exclusive 独占标识，其中0表示共享，1表示独占，默认值为0
      */
     public Long getExclusive() {
@@ -250,7 +250,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置独占标识，其中0表示共享，1表示独占，默认值为0
+     * Set 独占标识，其中0表示共享，1表示独占，默认值为0
      * @param Exclusive 独占标识，其中0表示共享，1表示独占，默认值为0
      */
     public void setExclusive(Long Exclusive) {
@@ -258,7 +258,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取转发模式，其中0表示IP方式，1表示网段方式
+     * Get 转发模式，其中0表示IP方式，1表示网段方式 
      * @return ForwardMode 转发模式，其中0表示IP方式，1表示网段方式
      */
     public Long getForwardMode() {
@@ -266,7 +266,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转发模式，其中0表示IP方式，1表示网段方式
+     * Set 转发模式，其中0表示IP方式，1表示网段方式
      * @param ForwardMode 转发模式，其中0表示IP方式，1表示网段方式
      */
     public void setForwardMode(Long ForwardMode) {
@@ -274,7 +274,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络网段
+     * Get 私有网络网段 
      * @return VpcCidrBlock 私有网络网段
      */
     public String getVpcCidrBlock() {
@@ -282,7 +282,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络网段
+     * Set 私有网络网段
      * @param VpcCidrBlock 私有网络网段
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -290,7 +290,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网关类型，取值为 small，middle，big，分别对应小型、中型、大型
+     * Get 网关类型，取值为 small，middle，big，分别对应小型、中型、大型 
      * @return Type 网关类型，取值为 small，middle，big，分别对应小型、中型、大型
      */
     public String getType() {
@@ -298,7 +298,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网关类型，取值为 small，middle，big，分别对应小型、中型、大型
+     * Set 网关类型，取值为 small，middle，big，分别对应小型、中型、大型
      * @param Type 网关类型，取值为 small，middle，big，分别对应小型、中型、大型
      */
     public void setType(String Type) {
@@ -306,7 +306,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -314,7 +314,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -322,7 +322,7 @@ public class NatGatewayInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatId", this.NatId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
+public class ZoneAgeGroupAvrStayTime extends AbstractModel{
 
     /**
     * 男性平均停留时间
@@ -37,7 +37,7 @@ public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
     private Float FemaleAvrStayTime;
 
     /**
-     * 获取男性平均停留时间
+     * Get 男性平均停留时间 
      * @return MaleAvrStayTime 男性平均停留时间
      */
     public Float getMaleAvrStayTime() {
@@ -45,7 +45,7 @@ public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置男性平均停留时间
+     * Set 男性平均停留时间
      * @param MaleAvrStayTime 男性平均停留时间
      */
     public void setMaleAvrStayTime(Float MaleAvrStayTime) {
@@ -53,7 +53,7 @@ public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 获取女性平均停留时间
+     * Get 女性平均停留时间 
      * @return FemaleAvrStayTime 女性平均停留时间
      */
     public Float getFemaleAvrStayTime() {
@@ -61,7 +61,7 @@ public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 设置女性平均停留时间
+     * Set 女性平均停留时间
      * @param FemaleAvrStayTime 女性平均停留时间
      */
     public void setFemaleAvrStayTime(Float FemaleAvrStayTime) {
@@ -69,7 +69,7 @@ public class ZoneAgeGroupAvrStayTime  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaleAvrStayTime", this.MaleAvrStayTime);

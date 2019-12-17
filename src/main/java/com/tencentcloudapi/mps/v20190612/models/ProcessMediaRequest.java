@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessMediaRequest  extends AbstractModel{
+public class ProcessMediaRequest extends AbstractModel{
 
     /**
     * 视频处理的文件输入信息。
@@ -100,7 +100,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     private String SessionContext;
 
     /**
-     * 获取视频处理的文件输入信息。
+     * Get 视频处理的文件输入信息。 
      * @return InputInfo 视频处理的文件输入信息。
      */
     public MediaInputInfo getInputInfo() {
@@ -108,7 +108,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的文件输入信息。
+     * Set 视频处理的文件输入信息。
      * @param InputInfo 视频处理的文件输入信息。
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
@@ -116,7 +116,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+     * Get 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。 
      * @return OutputStorage 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -124,7 +124,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+     * Set 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param OutputStorage 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -132,7 +132,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Get 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。 
      * @return OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
      */
     public String getOutputDir() {
@@ -140,7 +140,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Set 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
      * @param OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
      */
     public void setOutputDir(String OutputDir) {
@@ -148,7 +148,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理类型任务参数。
+     * Get 视频处理类型任务参数。 
      * @return MediaProcessTask 视频处理类型任务参数。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
@@ -156,7 +156,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理类型任务参数。
+     * Set 视频处理类型任务参数。
      * @param MediaProcessTask 视频处理类型任务参数。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
@@ -164,7 +164,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核类型任务参数。
+     * Get 视频内容审核类型任务参数。 
      * @return AiContentReviewTask 视频内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -172,7 +172,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核类型任务参数。
+     * Set 视频内容审核类型任务参数。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -180,7 +180,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析类型任务参数。
+     * Get 视频内容分析类型任务参数。 
      * @return AiAnalysisTask 视频内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -188,7 +188,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析类型任务参数。
+     * Set 视频内容分析类型任务参数。
      * @param AiAnalysisTask 视频内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -196,7 +196,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别类型任务参数。
+     * Get 视频内容识别类型任务参数。 
      * @return AiRecognitionTask 视频内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -204,7 +204,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别类型任务参数。
+     * Set 视频内容识别类型任务参数。
      * @param AiRecognitionTask 视频内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -212,7 +212,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务的事件通知信息，不填代表不获取事件通知。
+     * Get 任务的事件通知信息，不填代表不获取事件通知。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
@@ -220,7 +220,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务的事件通知信息，不填代表不获取事件通知。
+     * Set 任务的事件通知信息，不填代表不获取事件通知。
      * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
@@ -228,7 +228,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Get 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。 
      * @return TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      */
     public Long getTasksPriority() {
@@ -236,7 +236,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Set 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      */
     public void setTasksPriority(Long TasksPriority) {
@@ -244,7 +244,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -252,7 +252,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -260,7 +260,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -268,7 +268,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -276,7 +276,7 @@ public class ProcessMediaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);

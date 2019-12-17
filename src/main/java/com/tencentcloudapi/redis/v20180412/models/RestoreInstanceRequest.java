@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestoreInstanceRequest  extends AbstractModel{
+public class RestoreInstanceRequest extends AbstractModel{
 
     /**
     * 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
@@ -44,7 +44,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
+     * Get 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。 
      * @return InstanceId 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
+     * Set 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
      * @param InstanceId 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * Get 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取 
      * @return BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
      */
     public String getBackupId() {
@@ -68,7 +68,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * Set 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
      * @param BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
      */
     public void setBackupId(String BackupId) {
@@ -76,7 +76,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     * Get 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码） 
      * @return Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      */
     public String getPassword() {
@@ -84,7 +84,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
+     * Set 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      * @param Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      */
     public void setPassword(String Password) {
@@ -92,7 +92,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

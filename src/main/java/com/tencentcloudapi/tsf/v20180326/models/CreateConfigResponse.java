@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateConfigResponse  extends AbstractModel{
+public class CreateConfigResponse extends AbstractModel{
 
     /**
     * true：创建成功；false：创建失败
@@ -37,7 +37,7 @@ public class CreateConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取true：创建成功；false：创建失败
+     * Get true：创建成功；false：创建失败 
      * @return Result true：创建成功；false：创建失败
      */
     public Boolean getResult() {
@@ -45,7 +45,7 @@ public class CreateConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置true：创建成功；false：创建失败
+     * Set true：创建成功；false：创建失败
      * @param Result true：创建成功；false：创建失败
      */
     public void setResult(Boolean Result) {
@@ -53,7 +53,7 @@ public class CreateConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

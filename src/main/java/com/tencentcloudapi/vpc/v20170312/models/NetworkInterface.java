@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetworkInterface  extends AbstractModel{
+public class NetworkInterface extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-f1xjkw1b。
@@ -141,7 +141,7 @@ public class NetworkInterface  extends AbstractModel{
     private Integer EniType;
 
     /**
-     * 获取弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
     public String getNetworkInterfaceId() {
@@ -149,7 +149,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * Set 弹性网卡实例ID，例如：eni-f1xjkw1b。
      * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -157,7 +157,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡名称。
+     * Get 弹性网卡名称。 
      * @return NetworkInterfaceName 弹性网卡名称。
      */
     public String getNetworkInterfaceName() {
@@ -165,7 +165,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡名称。
+     * Set 弹性网卡名称。
      * @param NetworkInterfaceName 弹性网卡名称。
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
@@ -173,7 +173,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡描述。
+     * Get 弹性网卡描述。 
      * @return NetworkInterfaceDescription 弹性网卡描述。
      */
     public String getNetworkInterfaceDescription() {
@@ -181,7 +181,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡描述。
+     * Set 弹性网卡描述。
      * @param NetworkInterfaceDescription 弹性网卡描述。
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
@@ -189,7 +189,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取子网实例ID。
+     * Get 子网实例ID。 
      * @return SubnetId 子网实例ID。
      */
     public String getSubnetId() {
@@ -197,7 +197,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置子网实例ID。
+     * Set 子网实例ID。
      * @param SubnetId 子网实例ID。
      */
     public void setSubnetId(String SubnetId) {
@@ -205,7 +205,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -213,7 +213,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -221,7 +221,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的安全组。
+     * Get 绑定的安全组。 
      * @return GroupSet 绑定的安全组。
      */
     public String [] getGroupSet() {
@@ -229,7 +229,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的安全组。
+     * Set 绑定的安全组。
      * @param GroupSet 绑定的安全组。
      */
     public void setGroupSet(String [] GroupSet) {
@@ -237,7 +237,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取是否是主网卡。
+     * Get 是否是主网卡。 
      * @return Primary 是否是主网卡。
      */
     public Boolean getPrimary() {
@@ -245,7 +245,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置是否是主网卡。
+     * Set 是否是主网卡。
      * @param Primary 是否是主网卡。
      */
     public void setPrimary(Boolean Primary) {
@@ -253,7 +253,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取MAC地址。
+     * Get MAC地址。 
      * @return MacAddress MAC地址。
      */
     public String getMacAddress() {
@@ -261,7 +261,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置MAC地址。
+     * Set MAC地址。
      * @param MacAddress MAC地址。
      */
     public void setMacAddress(String MacAddress) {
@@ -269,12 +269,12 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡状态：
+     * Get 弹性网卡状态：
 <li>`PENDING`：创建中</li>
 <li>`AVAILABLE`：可用的</li>
 <li>`ATTACHING`：绑定中</li>
 <li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+<li>`DELETING`：删除中</li> 
      * @return State 弹性网卡状态：
 <li>`PENDING`：创建中</li>
 <li>`AVAILABLE`：可用的</li>
@@ -287,7 +287,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡状态：
+     * Set 弹性网卡状态：
 <li>`PENDING`：创建中</li>
 <li>`AVAILABLE`：可用的</li>
 <li>`ATTACHING`：绑定中</li>
@@ -305,7 +305,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取内网IP信息。
+     * Get 内网IP信息。 
      * @return PrivateIpAddressSet 内网IP信息。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
@@ -313,7 +313,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置内网IP信息。
+     * Set 内网IP信息。
      * @param PrivateIpAddressSet 内网IP信息。
      */
     public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
@@ -321,8 +321,8 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 绑定的云服务器对象。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Attachment 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -331,7 +331,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置绑定的云服务器对象。
+     * Set 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Attachment 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -341,7 +341,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取可用区。
+     * Get 可用区。 
      * @return Zone 可用区。
      */
     public String getZone() {
@@ -349,7 +349,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置可用区。
+     * Set 可用区。
      * @param Zone 可用区。
      */
     public void setZone(String Zone) {
@@ -357,7 +357,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -365,7 +365,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -373,7 +373,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`地址列表。
+     * Get `IPv6`地址列表。 
      * @return Ipv6AddressSet `IPv6`地址列表。
      */
     public Ipv6Address [] getIpv6AddressSet() {
@@ -381,7 +381,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`地址列表。
+     * Set `IPv6`地址列表。
      * @param Ipv6AddressSet `IPv6`地址列表。
      */
     public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
@@ -389,7 +389,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取标签键值对。
+     * Get 标签键值对。 
      * @return TagSet 标签键值对。
      */
     public Tag [] getTagSet() {
@@ -397,7 +397,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置标签键值对。
+     * Set 标签键值对。
      * @param TagSet 标签键值对。
      */
     public void setTagSet(Tag [] TagSet) {
@@ -405,7 +405,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * Get 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。 
      * @return EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
     public Integer getEniType() {
@@ -413,7 +413,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * Set 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      * @param EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
      */
     public void setEniType(Integer EniType) {
@@ -421,7 +421,7 @@ public class NetworkInterface  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

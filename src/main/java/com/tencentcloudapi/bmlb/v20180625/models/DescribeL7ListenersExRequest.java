@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL7ListenersExRequest  extends AbstractModel{
+public class DescribeL7ListenersExRequest extends AbstractModel{
 
     /**
     * 返回的监听器中标识是否绑定在此流量镜像中。
@@ -65,7 +65,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     private Filter [] Filters;
 
     /**
-     * 获取返回的监听器中标识是否绑定在此流量镜像中。
+     * Get 返回的监听器中标识是否绑定在此流量镜像中。 
      * @return TrafficMirrorId 返回的监听器中标识是否绑定在此流量镜像中。
      */
     public String getTrafficMirrorId() {
@@ -73,7 +73,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 设置返回的监听器中标识是否绑定在此流量镜像中。
+     * Set 返回的监听器中标识是否绑定在此流量镜像中。
      * @param TrafficMirrorId 返回的监听器中标识是否绑定在此流量镜像中。
      */
     public void setTrafficMirrorId(String TrafficMirrorId) {
@@ -81,7 +81,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 获取待获取监听器所在的VPC的ID。
+     * Get 待获取监听器所在的VPC的ID。 
      * @return VpcId 待获取监听器所在的VPC的ID。
      */
     public String getVpcId() {
@@ -89,7 +89,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 设置待获取监听器所在的VPC的ID。
+     * Set 待获取监听器所在的VPC的ID。
      * @param VpcId 待获取监听器所在的VPC的ID。
      */
     public void setVpcId(String VpcId) {
@@ -97,7 +97,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 获取此VPC中获取负载均衡的偏移。
+     * Get 此VPC中获取负载均衡的偏移。 
      * @return Offset 此VPC中获取负载均衡的偏移。
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 设置此VPC中获取负载均衡的偏移。
+     * Set 此VPC中获取负载均衡的偏移。
      * @param Offset 此VPC中获取负载均衡的偏移。
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 获取此VPC中获取负载均衡的数量。
+     * Get 此VPC中获取负载均衡的数量。 
      * @return Limit 此VPC中获取负载均衡的数量。
      */
     public Integer getLimit() {
@@ -121,7 +121,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 设置此VPC中获取负载均衡的数量。
+     * Set 此VPC中获取负载均衡的数量。
      * @param Limit 此VPC中获取负载均衡的数量。
      */
     public void setLimit(Integer Limit) {
@@ -129,14 +129,14 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 LoadBalancerId - String - （过滤条件）负载均衡ID。
 LoadBalancerName - String - （过滤条件）负载均衡名称。
 Vip - String - （过滤条件）VIP。
 ListenerId - String - （过滤条件）监听器ID。
 ListenerName -  String - （过滤条件）监听器名称。
 Protocol -  String - （过滤条件）七层协议。
-LoadBalancerPort -  String - （过滤条件）监听器端口。
+LoadBalancerPort -  String - （过滤条件）监听器端口。 
      * @return Filters 过滤条件。
 LoadBalancerId - String - （过滤条件）负载均衡ID。
 LoadBalancerName - String - （过滤条件）负载均衡名称。
@@ -151,7 +151,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 LoadBalancerId - String - （过滤条件）负载均衡ID。
 LoadBalancerName - String - （过滤条件）负载均衡名称。
 Vip - String - （过滤条件）VIP。
@@ -173,7 +173,7 @@ LoadBalancerPort -  String - （过滤条件）监听器端口。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);

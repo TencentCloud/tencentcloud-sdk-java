@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MountDataDisk  extends AbstractModel{
+public class MountDataDisk extends AbstractModel{
 
     /**
     * 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
@@ -37,7 +37,7 @@ public class MountDataDisk  extends AbstractModel{
     private String FileSystemType;
 
     /**
-     * 获取挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
+     * Get 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\" 
      * @return LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
      */
     public String getLocalPath() {
@@ -45,7 +45,7 @@ public class MountDataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
+     * Set 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
      * @param LocalPath 挂载点，Linux系统合法路径，或Windows系统盘符,比如"H:\\"
      */
     public void setLocalPath(String LocalPath) {
@@ -53,7 +53,7 @@ public class MountDataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+     * Get 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS" 
      * @return FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
      */
     public String getFileSystemType() {
@@ -61,7 +61,7 @@ public class MountDataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
+     * Set 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
      * @param FileSystemType 文件系统类型，Linux系统下支持"EXT3"和"EXT4"两种，默认"EXT3"；Windows系统下仅支持"NTFS"
      */
     public void setFileSystemType(String FileSystemType) {
@@ -69,7 +69,7 @@ public class MountDataDisk  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LocalPath", this.LocalPath);

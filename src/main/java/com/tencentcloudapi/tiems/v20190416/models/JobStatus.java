@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JobStatus  extends AbstractModel{
+public class JobStatus extends AbstractModel{
 
     /**
     * 任务状态
@@ -62,7 +62,7 @@ public class JobStatus  extends AbstractModel{
     private String [] Replicas;
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public String getStatus() {
@@ -70,7 +70,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(String Status) {
@@ -78,8 +78,8 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 获取错误时为错误描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 错误时为错误描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 错误时为错误描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -88,7 +88,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 设置错误时为错误描述
+     * Set 错误时为错误描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 错误时为错误描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -98,8 +98,8 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 获取预期Worker数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 预期Worker数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DesiredWorkers 预期Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -108,7 +108,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 设置预期Worker数量
+     * Set 预期Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DesiredWorkers 预期Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,8 +118,8 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 获取当前Worker数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前Worker数量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CurrentWorkers 当前Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -128,7 +128,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 设置当前Worker数量
+     * Set 当前Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CurrentWorkers 当前Worker数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -138,8 +138,8 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 获取副本名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 副本名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Replicas 副本名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -148,7 +148,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 设置副本名
+     * Set 副本名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Replicas 副本名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -158,7 +158,7 @@ public class JobStatus  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

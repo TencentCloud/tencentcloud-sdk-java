@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceRenewInfo  extends AbstractModel{
+public class InstanceRenewInfo extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-j8kv137v
@@ -34,10 +34,10 @@ public class InstanceRenewInfo  extends AbstractModel{
     */
     @SerializedName("RenewFlag")
     @Expose
-    private Integer RenewFlag;
+    private Long RenewFlag;
 
     /**
-     * 获取实例ID，形如mssql-j8kv137v
+     * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class InstanceRenewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-j8kv137v
+     * Set 实例ID，形如mssql-j8kv137v
      * @param InstanceId 实例ID，形如mssql-j8kv137v
      */
     public void setInstanceId(String InstanceId) {
@@ -53,23 +53,23 @@ public class InstanceRenewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例续费标记。0：正常续费，1：自动续费，2：到期不续
+     * Get 实例续费标记。0：正常续费，1：自动续费，2：到期不续 
      * @return RenewFlag 实例续费标记。0：正常续费，1：自动续费，2：到期不续
      */
-    public Integer getRenewFlag() {
+    public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * 设置实例续费标记。0：正常续费，1：自动续费，2：到期不续
+     * Set 实例续费标记。0：正常续费，1：自动续费，2：到期不续
      * @param RenewFlag 实例续费标记。0：正常续费，1：自动续费，2：到期不续
      */
-    public void setRenewFlag(Integer RenewFlag) {
+    public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DrmOutputPara  extends AbstractModel{
+public class DrmOutputPara extends AbstractModel{
 
     /**
     * 内容类型。例:video，audio，mpd，m3u8
@@ -37,7 +37,7 @@ public class DrmOutputPara  extends AbstractModel{
     private String Language;
 
     /**
-     * 获取内容类型。例:video，audio，mpd，m3u8
+     * Get 内容类型。例:video，audio，mpd，m3u8 
      * @return Type 内容类型。例:video，audio，mpd，m3u8
      */
     public String getType() {
@@ -45,7 +45,7 @@ public class DrmOutputPara  extends AbstractModel{
     }
 
     /**
-     * 设置内容类型。例:video，audio，mpd，m3u8
+     * Set 内容类型。例:video，audio，mpd，m3u8
      * @param Type 内容类型。例:video，audio，mpd，m3u8
      */
     public void setType(String Type) {
@@ -53,7 +53,7 @@ public class DrmOutputPara  extends AbstractModel{
     }
 
     /**
-     * 获取语言,例: en, zh-cn
+     * Get 语言,例: en, zh-cn 
      * @return Language 语言,例: en, zh-cn
      */
     public String getLanguage() {
@@ -61,7 +61,7 @@ public class DrmOutputPara  extends AbstractModel{
     }
 
     /**
-     * 设置语言,例: en, zh-cn
+     * Set 语言,例: en, zh-cn
      * @param Language 语言,例: en, zh-cn
      */
     public void setLanguage(String Language) {
@@ -69,7 +69,7 @@ public class DrmOutputPara  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

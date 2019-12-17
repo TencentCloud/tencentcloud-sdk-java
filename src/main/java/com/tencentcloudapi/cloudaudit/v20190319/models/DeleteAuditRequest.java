@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAuditRequest  extends AbstractModel{
+public class DeleteAuditRequest extends AbstractModel{
 
     /**
     * 跟踪集名称
@@ -30,7 +30,7 @@ public class DeleteAuditRequest  extends AbstractModel{
     private String AuditName;
 
     /**
-     * 获取跟踪集名称
+     * Get 跟踪集名称 
      * @return AuditName 跟踪集名称
      */
     public String getAuditName() {
@@ -38,7 +38,7 @@ public class DeleteAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 设置跟踪集名称
+     * Set 跟踪集名称
      * @param AuditName 跟踪集名称
      */
     public void setAuditName(String AuditName) {
@@ -46,7 +46,7 @@ public class DeleteAuditRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuditName", this.AuditName);

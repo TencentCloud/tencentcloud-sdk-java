@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioModerationRequest  extends AbstractModel{
+public class AudioModerationRequest extends AbstractModel{
 
     /**
     * 回调URL，音频识别结果将以POST请求方式发送到此地址
@@ -51,7 +51,7 @@ public class AudioModerationRequest  extends AbstractModel{
     private String FileUrl;
 
     /**
-     * 获取回调URL，音频识别结果将以POST请求方式发送到此地址
+     * Get 回调URL，音频识别结果将以POST请求方式发送到此地址 
      * @return CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public String getCallbackUrl() {
@@ -59,7 +59,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置回调URL，音频识别结果将以POST请求方式发送到此地址
+     * Set 回调URL，音频识别结果将以POST请求方式发送到此地址
      * @param CallbackUrl 回调URL，音频识别结果将以POST请求方式发送到此地址
      */
     public void setCallbackUrl(String CallbackUrl) {
@@ -67,7 +67,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频内容的base64
+     * Get 音频内容的base64 
      * @return FileContent 音频内容的base64
      */
     public String getFileContent() {
@@ -75,7 +75,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频内容的base64
+     * Set 音频内容的base64
      * @param FileContent 音频内容的base64
      */
     public void setFileContent(String FileContent) {
@@ -83,7 +83,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频文件的MD5值
+     * Get 音频文件的MD5值 
      * @return FileMD5 音频文件的MD5值
      */
     public String getFileMD5() {
@@ -91,7 +91,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频文件的MD5值
+     * Set 音频文件的MD5值
      * @param FileMD5 音频文件的MD5值
      */
     public void setFileMD5(String FileMD5) {
@@ -99,7 +99,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取音频内容Url ，其中FileUrl和FileContent二选一
+     * Get 音频内容Url ，其中FileUrl和FileContent二选一 
      * @return FileUrl 音频内容Url ，其中FileUrl和FileContent二选一
      */
     public String getFileUrl() {
@@ -107,7 +107,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置音频内容Url ，其中FileUrl和FileContent二选一
+     * Set 音频内容Url ，其中FileUrl和FileContent二选一
      * @param FileUrl 音频内容Url ，其中FileUrl和FileContent二选一
      */
     public void setFileUrl(String FileUrl) {
@@ -115,7 +115,7 @@ public class AudioModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);

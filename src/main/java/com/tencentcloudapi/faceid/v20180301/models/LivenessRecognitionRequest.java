@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LivenessRecognitionRequest  extends AbstractModel{
+public class LivenessRecognitionRequest extends AbstractModel{
 
     /**
     * 身份证号
@@ -69,7 +69,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     private String Optional;
 
     /**
-     * 获取身份证号
+     * Get 身份证号 
      * @return IdCard 身份证号
      */
     public String getIdCard() {
@@ -77,7 +77,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
      * @param IdCard 身份证号
      */
     public void setIdCard(String IdCard) {
@@ -85,7 +85,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取姓名。中文请使用UTF-8编码。
+     * Get 姓名。中文请使用UTF-8编码。 
      * @return Name 姓名。中文请使用UTF-8编码。
      */
     public String getName() {
@@ -93,7 +93,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置姓名。中文请使用UTF-8编码。
+     * Set 姓名。中文请使用UTF-8编码。
      * @param Name 姓名。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
@@ -101,8 +101,8 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取用于活体检测的视频，视频的BASE64值；
-BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
+     * Get 用于活体检测的视频，视频的BASE64值；
+BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。 
      * @return VideoBase64 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
      */
@@ -111,7 +111,7 @@ BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
     }
 
     /**
-     * 设置用于活体检测的视频，视频的BASE64值；
+     * Set 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
      * @param VideoBase64 用于活体检测的视频，视频的BASE64值；
 BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
@@ -121,8 +121,8 @@ BASE64编码后的大小不超过5M，支持mp4、avi、flv格式。
     }
 
     /**
-     * 获取活体检测类型，取值：LIP/ACTION/SILENT。
-LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+     * Get 活体检测类型，取值：LIP/ACTION/SILENT。
+LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。 
      * @return LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
 LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
      */
@@ -131,7 +131,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置活体检测类型，取值：LIP/ACTION/SILENT。
+     * Set 活体检测类型，取值：LIP/ACTION/SILENT。
 LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
      * @param LivenessType 活体检测类型，取值：LIP/ACTION/SILENT。
 LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
@@ -141,9 +141,9 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+     * Get 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
-静默模式传参：空。
+静默模式传参：空。 
      * @return ValidateData 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
@@ -153,7 +153,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
+     * Set 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
 动作模式传参：传动作顺序(2,1 or 1,2)，需先调用接口获取动作顺序；
 静默模式传参：空。
      * @param ValidateData 数字模式传参：数字验证码(1234)，需先调用接口获取数字验证码；
@@ -165,7 +165,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 获取本接口不需要传递此参数。
+     * Get 本接口不需要传递此参数。 
      * @return Optional 本接口不需要传递此参数。
      */
     public String getOptional() {
@@ -173,7 +173,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 设置本接口不需要传递此参数。
+     * Set 本接口不需要传递此参数。
      * @param Optional 本接口不需要传递此参数。
      */
     public void setOptional(String Optional) {
@@ -181,7 +181,7 @@ LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);

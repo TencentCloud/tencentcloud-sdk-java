@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpnGateway  extends AbstractModel{
+public class VpnGateway extends AbstractModel{
 
     /**
     * 网关实例ID。
@@ -135,7 +135,7 @@ public class VpnGateway  extends AbstractModel{
     private VpnGatewayQuota [] VpnGatewayQuotaSet;
 
     /**
-     * 获取网关实例ID。
+     * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
     public String getVpnGatewayId() {
@@ -143,7 +143,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例ID。
+     * Set 网关实例ID。
      * @param VpnGatewayId 网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
@@ -151,7 +151,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取VPC实例ID。
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
@@ -159,7 +159,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。
+     * Set VPC实例ID。
      * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
@@ -167,7 +167,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关实例名称。
+     * Get 网关实例名称。 
      * @return VpnGatewayName 网关实例名称。
      */
     public String getVpnGatewayName() {
@@ -175,7 +175,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例名称。
+     * Set 网关实例名称。
      * @param VpnGatewayName 网关实例名称。
      */
     public void setVpnGatewayName(String VpnGatewayName) {
@@ -183,7 +183,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关实例类型：'IPSEC', 'SSL'。
+     * Get 网关实例类型：'IPSEC', 'SSL'。 
      * @return Type 网关实例类型：'IPSEC', 'SSL'。
      */
     public String getType() {
@@ -191,7 +191,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例类型：'IPSEC', 'SSL'。
+     * Set 网关实例类型：'IPSEC', 'SSL'。
      * @param Type 网关实例类型：'IPSEC', 'SSL'。
      */
     public void setType(String Type) {
@@ -199,7 +199,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Get 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。 
      * @return State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
      */
     public String getState() {
@@ -207,7 +207,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Set 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
      * @param State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
      */
     public void setState(String State) {
@@ -215,7 +215,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关公网IP。
+     * Get 网关公网IP。 
      * @return PublicIpAddress 网关公网IP。
      */
     public String getPublicIpAddress() {
@@ -223,7 +223,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关公网IP。
+     * Set 网关公网IP。
      * @param PublicIpAddress 网关公网IP。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
@@ -231,7 +231,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+     * Get 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。 
      * @return RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      */
     public String getRenewFlag() {
@@ -239,7 +239,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+     * Set 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      * @param RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
      */
     public void setRenewFlag(String RenewFlag) {
@@ -247,7 +247,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Get 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费， 
      * @return InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
      */
     public String getInstanceChargeType() {
@@ -255,7 +255,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Set 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
      * @param InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -263,7 +263,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关出带宽。
+     * Get 网关出带宽。 
      * @return InternetMaxBandwidthOut 网关出带宽。
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -271,7 +271,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关出带宽。
+     * Set 网关出带宽。
      * @param InternetMaxBandwidthOut 网关出带宽。
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -279,7 +279,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
      */
     public String getCreatedTime() {
@@ -287,7 +287,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreatedTime 创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -295,7 +295,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取预付费网关过期时间。
+     * Get 预付费网关过期时间。 
      * @return ExpiredTime 预付费网关过期时间。
      */
     public String getExpiredTime() {
@@ -303,7 +303,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置预付费网关过期时间。
+     * Set 预付费网关过期时间。
      * @param ExpiredTime 预付费网关过期时间。
      */
     public void setExpiredTime(String ExpiredTime) {
@@ -311,7 +311,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取公网IP是否被封堵。
+     * Get 公网IP是否被封堵。 
      * @return IsAddressBlocked 公网IP是否被封堵。
      */
     public Boolean getIsAddressBlocked() {
@@ -319,7 +319,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置公网IP是否被封堵。
+     * Set 公网IP是否被封堵。
      * @param IsAddressBlocked 公网IP是否被封堵。
      */
     public void setIsAddressBlocked(Boolean IsAddressBlocked) {
@@ -327,7 +327,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+     * Get 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。 
      * @return NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
      */
     public String getNewPurchasePlan() {
@@ -335,7 +335,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+     * Set 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
      * @param NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
      */
     public void setNewPurchasePlan(String NewPurchasePlan) {
@@ -343,7 +343,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Get 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。 
      * @return RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public String getRestrictState() {
@@ -351,7 +351,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Set 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      * @param RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public void setRestrictState(String RestrictState) {
@@ -359,7 +359,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取可用区，如：ap-guangzhou-2
+     * Get 可用区，如：ap-guangzhou-2 
      * @return Zone 可用区，如：ap-guangzhou-2
      */
     public String getZone() {
@@ -367,7 +367,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置可用区，如：ap-guangzhou-2
+     * Set 可用区，如：ap-guangzhou-2
      * @param Zone 可用区，如：ap-guangzhou-2
      */
     public void setZone(String Zone) {
@@ -375,7 +375,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 获取网关带宽配额信息
+     * Get 网关带宽配额信息 
      * @return VpnGatewayQuotaSet 网关带宽配额信息
      */
     public VpnGatewayQuota [] getVpnGatewayQuotaSet() {
@@ -383,7 +383,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 设置网关带宽配额信息
+     * Set 网关带宽配额信息
      * @param VpnGatewayQuotaSet 网关带宽配额信息
      */
     public void setVpnGatewayQuotaSet(VpnGatewayQuota [] VpnGatewayQuotaSet) {
@@ -391,7 +391,7 @@ public class VpnGateway  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NatSubnetInfo  extends AbstractModel{
+public class NatSubnetInfo extends AbstractModel{
 
     /**
     * 子网名称
@@ -51,7 +51,7 @@ public class NatSubnetInfo  extends AbstractModel{
     private String CidrBlock;
 
     /**
-     * 获取子网名称
+     * Get 子网名称 
      * @return Name 子网名称
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网名称
+     * Set 子网名称
      * @param Name 子网名称
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -75,7 +75,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -83,7 +83,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
+     * Get NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网 
      * @return SubnetNatType NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
      */
     public Long getSubnetNatType() {
@@ -91,7 +91,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
+     * Set NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
      * @param SubnetNatType NAT子网类型，其中0表示绑定部分IP的NAT子网，1表示绑定全部IP的NAT子网，2表示绑定网关方式的NAT子网
      */
     public void setSubnetNatType(Long SubnetNatType) {
@@ -99,7 +99,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网网段
+     * Get 子网网段 
      * @return CidrBlock 子网网段
      */
     public String getCidrBlock() {
@@ -107,7 +107,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网网段
+     * Set 子网网段
      * @param CidrBlock 子网网段
      */
     public void setCidrBlock(String CidrBlock) {
@@ -115,7 +115,7 @@ public class NatSubnetInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

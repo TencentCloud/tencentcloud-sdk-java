@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Authentication  extends AbstractModel{
+public class Authentication extends AbstractModel{
 
     /**
     * 授权场景，例如COS
@@ -44,7 +44,7 @@ public class Authentication  extends AbstractModel{
     private String SecretKey;
 
     /**
-     * 获取授权场景，例如COS
+     * Get 授权场景，例如COS 
      * @return Scene 授权场景，例如COS
      */
     public String getScene() {
@@ -52,7 +52,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 设置授权场景，例如COS
+     * Set 授权场景，例如COS
      * @param Scene 授权场景，例如COS
      */
     public void setScene(String Scene) {
@@ -60,7 +60,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 获取SecretId
+     * Get SecretId 
      * @return SecretId SecretId
      */
     public String getSecretId() {
@@ -68,7 +68,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 设置SecretId
+     * Set SecretId
      * @param SecretId SecretId
      */
     public void setSecretId(String SecretId) {
@@ -76,7 +76,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 获取SecretKey
+     * Get SecretKey 
      * @return SecretKey SecretKey
      */
     public String getSecretKey() {
@@ -84,7 +84,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 设置SecretKey
+     * Set SecretKey
      * @param SecretKey SecretKey
      */
     public void setSecretKey(String SecretKey) {
@@ -92,7 +92,7 @@ public class Authentication  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Scene", this.Scene);

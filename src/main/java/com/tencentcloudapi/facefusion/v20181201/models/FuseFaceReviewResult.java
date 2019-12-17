@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FuseFaceReviewResult  extends AbstractModel{
+public class FuseFaceReviewResult extends AbstractModel{
 
     /**
     * 保留字段
@@ -65,7 +65,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     private FuseFaceReviewDetail [] DetailSet;
 
     /**
-     * 获取保留字段
+     * Get 保留字段 
      * @return Category 保留字段
      */
     public String getCategory() {
@@ -73,7 +73,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
      * @param Category 保留字段
      */
     public void setCategory(String Category) {
@@ -81,7 +81,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取状态码， 0为处理成功，其他值为处理失败
+     * Get 状态码， 0为处理成功，其他值为处理失败 
      * @return Code 状态码， 0为处理成功，其他值为处理失败
      */
     public String getCode() {
@@ -89,7 +89,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置状态码， 0为处理成功，其他值为处理失败
+     * Set 状态码， 0为处理成功，其他值为处理失败
      * @param Code 状态码， 0为处理成功，其他值为处理失败
      */
     public void setCode(String Code) {
@@ -97,7 +97,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取对应状态码信息描述
+     * Get 对应状态码信息描述 
      * @return CodeDescription 对应状态码信息描述
      */
     public String getCodeDescription() {
@@ -105,7 +105,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置对应状态码信息描述
+     * Set 对应状态码信息描述
      * @param CodeDescription 对应状态码信息描述
      */
     public void setCodeDescription(String CodeDescription) {
@@ -113,7 +113,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段
+     * Get 保留字段 
      * @return Confidence 保留字段
      */
     public Float getConfidence() {
@@ -121,7 +121,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
      * @param Confidence 保留字段
      */
     public void setConfidence(Float Confidence) {
@@ -129,7 +129,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段
+     * Get 保留字段 
      * @return Suggestion 保留字段
      */
     public String getSuggestion() {
@@ -137,7 +137,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
      * @param Suggestion 保留字段
      */
     public void setSuggestion(String Suggestion) {
@@ -145,7 +145,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 获取审核详细内容
+     * Get 审核详细内容 
      * @return DetailSet 审核详细内容
      */
     public FuseFaceReviewDetail [] getDetailSet() {
@@ -153,7 +153,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 设置审核详细内容
+     * Set 审核详细内容
      * @param DetailSet 审核详细内容
      */
     public void setDetailSet(FuseFaceReviewDetail [] DetailSet) {
@@ -161,7 +161,7 @@ public class FuseFaceReviewResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Category", this.Category);

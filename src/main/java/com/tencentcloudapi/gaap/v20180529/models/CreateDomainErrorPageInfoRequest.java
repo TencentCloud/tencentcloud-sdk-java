@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
+public class CreateDomainErrorPageInfoRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -72,7 +72,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     private HttpHeaderParam [] SetHeaders;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -80,7 +80,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -88,7 +88,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return Domain 域名
      */
     public String getDomain() {
@@ -96,7 +96,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param Domain 域名
      */
     public void setDomain(String Domain) {
@@ -104,7 +104,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取原始错误码
+     * Get 原始错误码 
      * @return ErrorNos 原始错误码
      */
     public Long [] getErrorNos() {
@@ -112,7 +112,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置原始错误码
+     * Set 原始错误码
      * @param ErrorNos 原始错误码
      */
     public void setErrorNos(Long [] ErrorNos) {
@@ -120,7 +120,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的响应包体
+     * Get 新的响应包体 
      * @return Body 新的响应包体
      */
     public String getBody() {
@@ -128,7 +128,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的响应包体
+     * Set 新的响应包体
      * @param Body 新的响应包体
      */
     public void setBody(String Body) {
@@ -136,7 +136,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新错误码
+     * Get 新错误码 
      * @return NewErrorNo 新错误码
      */
     public Long getNewErrorNo() {
@@ -144,7 +144,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新错误码
+     * Set 新错误码
      * @param NewErrorNo 新错误码
      */
     public void setNewErrorNo(Long NewErrorNo) {
@@ -152,7 +152,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要删除的响应头
+     * Get 需要删除的响应头 
      * @return ClearHeaders 需要删除的响应头
      */
     public String [] getClearHeaders() {
@@ -160,7 +160,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要删除的响应头
+     * Set 需要删除的响应头
      * @param ClearHeaders 需要删除的响应头
      */
     public void setClearHeaders(String [] ClearHeaders) {
@@ -168,7 +168,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要设置的响应头
+     * Get 需要设置的响应头 
      * @return SetHeaders 需要设置的响应头
      */
     public HttpHeaderParam [] getSetHeaders() {
@@ -176,7 +176,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要设置的响应头
+     * Set 需要设置的响应头
      * @param SetHeaders 需要设置的响应头
      */
     public void setSetHeaders(HttpHeaderParam [] SetHeaders) {
@@ -184,7 +184,7 @@ public class CreateDomainErrorPageInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

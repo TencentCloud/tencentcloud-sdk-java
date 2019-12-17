@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAddressTemplateGroupRequest  extends AbstractModel{
+public class CreateAddressTemplateGroupRequest extends AbstractModel{
 
     /**
     * IP地址模版集合名称。
@@ -37,7 +37,7 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     private String [] AddressTemplateIds;
 
     /**
-     * 获取IP地址模版集合名称。
+     * Get IP地址模版集合名称。 
      * @return AddressTemplateGroupName IP地址模版集合名称。
      */
     public String getAddressTemplateGroupName() {
@@ -45,7 +45,7 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模版集合名称。
+     * Set IP地址模版集合名称。
      * @param AddressTemplateGroupName IP地址模版集合名称。
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
@@ -53,7 +53,7 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * Get IP地址模版实例ID，例如：ipm-mdunqeb6。 
      * @return AddressTemplateIds IP地址模版实例ID，例如：ipm-mdunqeb6。
      */
     public String [] getAddressTemplateIds() {
@@ -61,7 +61,7 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * Set IP地址模版实例ID，例如：ipm-mdunqeb6。
      * @param AddressTemplateIds IP地址模版实例ID，例如：ipm-mdunqeb6。
      */
     public void setAddressTemplateIds(String [] AddressTemplateIds) {
@@ -69,7 +69,7 @@ public class CreateAddressTemplateGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateGroupName", this.AddressTemplateGroupName);

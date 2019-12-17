@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SrcInfo  extends AbstractModel{
+public class SrcInfo extends AbstractModel{
 
     /**
     * 阿里云AccessKey。源库是阿里云RDS5.6适用
@@ -136,7 +136,7 @@ public class SrcInfo  extends AbstractModel{
     private String EngineVersion;
 
     /**
-     * 获取阿里云AccessKey。源库是阿里云RDS5.6适用
+     * Get 阿里云AccessKey。源库是阿里云RDS5.6适用 
      * @return AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      */
     public String getAccessKey() {
@@ -144,7 +144,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置阿里云AccessKey。源库是阿里云RDS5.6适用
+     * Set 阿里云AccessKey。源库是阿里云RDS5.6适用
      * @param AccessKey 阿里云AccessKey。源库是阿里云RDS5.6适用
      */
     public void setAccessKey(String AccessKey) {
@@ -152,7 +152,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例的IP地址
+     * Get 实例的IP地址 
      * @return Ip 实例的IP地址
      */
     public String getIp() {
@@ -160,7 +160,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例的IP地址
+     * Set 实例的IP地址
      * @param Ip 实例的IP地址
      */
     public void setIp(String Ip) {
@@ -168,7 +168,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例的端口
+     * Get 实例的端口 
      * @return Port 实例的端口
      */
     public Integer getPort() {
@@ -176,7 +176,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例的端口
+     * Set 实例的端口
      * @param Port 实例的端口
      */
     public void setPort(Integer Port) {
@@ -184,7 +184,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例的用户名
+     * Get 实例的用户名 
      * @return User 实例的用户名
      */
     public String getUser() {
@@ -192,7 +192,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例的用户名
+     * Set 实例的用户名
      * @param User 实例的用户名
      */
     public void setUser(String User) {
@@ -200,7 +200,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取实例的密码
+     * Get 实例的密码 
      * @return Password 实例的密码
      */
     public String getPassword() {
@@ -208,7 +208,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置实例的密码
+     * Set 实例的密码
      * @param Password 实例的密码
      */
     public void setPassword(String Password) {
@@ -216,7 +216,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
+     * Get 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用 
      * @return RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      */
     public String getRdsInstanceId() {
@@ -224,7 +224,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
+     * Set 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      * @param RdsInstanceId 阿里云RDS实例ID。源库是阿里云RDS5.6/5.6适用
      */
     public void setRdsInstanceId(String RdsInstanceId) {
@@ -232,7 +232,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * Get CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段 
      * @return CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public String getCvmInstanceId() {
@@ -240,7 +240,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
+     * Set CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      * @param CvmInstanceId CVM实例短ID，格式如：ins-olgl39y8，与云主机控制台页面显示的实例ID相同。如果是CVM自建实例，需要传递此字段
      */
     public void setCvmInstanceId(String CvmInstanceId) {
@@ -248,7 +248,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取专线网关ID，格式如：dcg-0rxtqqxb
+     * Get 专线网关ID，格式如：dcg-0rxtqqxb 
      * @return UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      */
     public String getUniqDcgId() {
@@ -256,7 +256,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关ID，格式如：dcg-0rxtqqxb
+     * Set 专线网关ID，格式如：dcg-0rxtqqxb
      * @param UniqDcgId 专线网关ID，格式如：dcg-0rxtqqxb
      */
     public void setUniqDcgId(String UniqDcgId) {
@@ -264,7 +264,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID，格式如：vpc-92jblxto
+     * Get 私有网络ID，格式如：vpc-92jblxto 
      * @return VpcId 私有网络ID，格式如：vpc-92jblxto
      */
     public String getVpcId() {
@@ -272,7 +272,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID，格式如：vpc-92jblxto
+     * Set 私有网络ID，格式如：vpc-92jblxto
      * @param VpcId 私有网络ID，格式如：vpc-92jblxto
      */
     public void setVpcId(String VpcId) {
@@ -280,7 +280,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络下的子网ID，格式如：subnet-3paxmkdz
+     * Get 私有网络下的子网ID，格式如：subnet-3paxmkdz 
      * @return SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
      */
     public String getSubnetId() {
@@ -288,7 +288,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络下的子网ID，格式如：subnet-3paxmkdz
+     * Set 私有网络下的子网ID，格式如：subnet-3paxmkdz
      * @param SubnetId 私有网络下的子网ID，格式如：subnet-3paxmkdz
      */
     public void setSubnetId(String SubnetId) {
@@ -296,7 +296,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关ID，格式如：vpngw-9ghexg7q
+     * Get VPN网关ID，格式如：vpngw-9ghexg7q 
      * @return UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
      */
     public String getUniqVpnGwId() {
@@ -304,7 +304,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关ID，格式如：vpngw-9ghexg7q
+     * Set VPN网关ID，格式如：vpngw-9ghexg7q
      * @param UniqVpnGwId VPN网关ID，格式如：vpngw-9ghexg7q
      */
     public void setUniqVpnGwId(String UniqVpnGwId) {
@@ -312,7 +312,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库实例ID，格式如：cdb-powiqx8q
+     * Get 数据库实例ID，格式如：cdb-powiqx8q 
      * @return InstanceId 数据库实例ID，格式如：cdb-powiqx8q
      */
     public String getInstanceId() {
@@ -320,7 +320,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库实例ID，格式如：cdb-powiqx8q
+     * Set 数据库实例ID，格式如：cdb-powiqx8q
      * @param InstanceId 数据库实例ID，格式如：cdb-powiqx8q
      */
     public void setInstanceId(String InstanceId) {
@@ -328,7 +328,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域英文名，如：ap-guangzhou
+     * Get 地域英文名，如：ap-guangzhou 
      * @return Region 地域英文名，如：ap-guangzhou
      */
     public String getRegion() {
@@ -336,7 +336,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域英文名，如：ap-guangzhou
+     * Set 地域英文名，如：ap-guangzhou
      * @param Region 地域英文名，如：ap-guangzhou
      */
     public void setRegion(String Region) {
@@ -344,7 +344,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+     * Get 当实例为RDS实例时，填写为aliyun, 其他情况均填写others 
      * @return Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public String getSupplier() {
@@ -352,7 +352,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当实例为RDS实例时，填写为aliyun, 其他情况均填写others
+     * Set 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      * @param Supplier 当实例为RDS实例时，填写为aliyun, 其他情况均填写others
      */
     public void setSupplier(String Supplier) {
@@ -360,8 +360,8 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取云联网ID，如：ccn-afp6kltc
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 云联网ID，如：ccn-afp6kltc
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CcnId 云联网ID，如：ccn-afp6kltc
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -370,7 +370,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置云联网ID，如：ccn-afp6kltc
+     * Set 云联网ID，如：ccn-afp6kltc
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 云联网ID，如：ccn-afp6kltc
 注意：此字段可能返回 null，表示取不到有效值。
@@ -380,7 +380,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     * Get 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6 
      * @return EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
      */
     public String getEngineVersion() {
@@ -388,7 +388,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
+     * Set 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
      * @param EngineVersion 数据库版本，当实例为RDS实例时才有效，格式如：5.6或者5.7，默认为5.6
      */
     public void setEngineVersion(String EngineVersion) {
@@ -396,7 +396,7 @@ public class SrcInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanPiece  extends AbstractModel{
+public class ScanPiece extends AbstractModel{
 
     /**
     * 流检测时返回，音频转存地址，保留30min
@@ -101,8 +101,8 @@ public class ScanPiece  extends AbstractModel{
     private Long PieceStartTime;
 
     /**
-     * 获取流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流检测时返回，音频转存地址，保留30min
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -111,7 +111,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置流检测时返回，音频转存地址，保留30min
+     * Set 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DumpUrl 流检测时返回，音频转存地址，保留30min
 注意：此字段可能返回 null，表示取不到有效值。
@@ -121,7 +121,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取是否违规
+     * Get 是否违规 
      * @return HitFlag 是否违规
      */
     public Boolean getHitFlag() {
@@ -129,7 +129,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置是否违规
+     * Set 是否违规
      * @param HitFlag 是否违规
      */
     public void setHitFlag(Boolean HitFlag) {
@@ -137,8 +137,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 违规主要类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MainType 违规主要类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -147,7 +147,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置违规主要类型
+     * Set 违规主要类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MainType 违规主要类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -157,7 +157,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取语音检测详情
+     * Get 语音检测详情 
      * @return ScanDetail 语音检测详情
      */
     public ScanDetail [] getScanDetail() {
@@ -165,7 +165,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置语音检测详情
+     * Set 语音检测详情
      * @param ScanDetail 语音检测详情
      */
     public void setScanDetail(ScanDetail [] ScanDetail) {
@@ -173,8 +173,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取gme实时语音房间id，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get gme实时语音房间id，透传任务传入时的RoomId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RoomId gme实时语音房间id，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -183,7 +183,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置gme实时语音房间id，透传任务传入时的RoomId
+     * Set gme实时语音房间id，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RoomId gme实时语音房间id，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -193,8 +193,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取gme实时语音用户id，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get gme实时语音用户id，透传任务传入时的OpenId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OpenId gme实时语音用户id，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -203,7 +203,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置gme实时语音用户id，透传任务传入时的OpenId
+     * Set gme实时语音用户id，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId gme实时语音用户id，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
@@ -213,8 +213,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Info 备注
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -223,7 +223,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 备注
 注意：此字段可能返回 null，表示取不到有效值。
@@ -233,8 +233,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流检测时分片在流中的偏移时间，单位毫秒
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Offset 流检测时分片在流中的偏移时间，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -243,7 +243,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置流检测时分片在流中的偏移时间，单位毫秒
+     * Set 流检测时分片在流中的偏移时间，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Offset 流检测时分片在流中的偏移时间，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
@@ -253,8 +253,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流检测时分片时长
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Duration 流检测时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -263,7 +263,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置流检测时分片时长
+     * Set 流检测时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 流检测时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
@@ -273,8 +273,8 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 获取分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分片开始检测时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PieceStartTime 分片开始检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -283,7 +283,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 设置分片开始检测时间
+     * Set 分片开始检测时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PieceStartTime 分片开始检测时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -293,7 +293,7 @@ public class ScanPiece  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DumpUrl", this.DumpUrl);

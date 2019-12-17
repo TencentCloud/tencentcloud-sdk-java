@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomImage  extends AbstractModel{
+public class CustomImage extends AbstractModel{
 
     /**
     * 镜像ID
@@ -107,7 +107,7 @@ public class CustomImage  extends AbstractModel{
     private Integer OsTypeId;
 
     /**
-     * 获取镜像ID
+     * Get 镜像ID 
      * @return ImageId 镜像ID
      */
     public String getImageId() {
@@ -115,7 +115,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID
+     * Set 镜像ID
      * @param ImageId 镜像ID
      */
     public void setImageId(String ImageId) {
@@ -123,7 +123,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取镜像别名
+     * Get 镜像别名 
      * @return ImageName 镜像别名
      */
     public String getImageName() {
@@ -131,7 +131,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像别名
+     * Set 镜像别名
      * @param ImageName 镜像别名
      */
     public void setImageName(String ImageName) {
@@ -139,7 +139,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取镜像状态码
+     * Get 镜像状态码 
      * @return ImageStatus 镜像状态码
      */
     public Integer getImageStatus() {
@@ -147,7 +147,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像状态码
+     * Set 镜像状态码
      * @param ImageStatus 镜像状态码
      */
     public void setImageStatus(Integer ImageStatus) {
@@ -155,7 +155,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取镜像OS名
+     * Get 镜像OS名 
      * @return OsClass 镜像OS名
      */
     public String getOsClass() {
@@ -163,7 +163,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像OS名
+     * Set 镜像OS名
      * @param OsClass 镜像OS名
      */
     public void setOsClass(String OsClass) {
@@ -171,7 +171,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取镜像OS版本
+     * Get 镜像OS版本 
      * @return OsVersion 镜像OS版本
      */
     public String getOsVersion() {
@@ -179,7 +179,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像OS版本
+     * Set 镜像OS版本
      * @param OsVersion 镜像OS版本
      */
     public void setOsVersion(String OsVersion) {
@@ -187,7 +187,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取OS是64还是32位
+     * Get OS是64还是32位 
      * @return OsBit OS是64还是32位
      */
     public Integer getOsBit() {
@@ -195,7 +195,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置OS是64还是32位
+     * Set OS是64还是32位
      * @param OsBit OS是64还是32位
      */
     public void setOsBit(Integer OsBit) {
@@ -203,7 +203,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取镜像大小(M)
+     * Get 镜像大小(M) 
      * @return ImageSize 镜像大小(M)
      */
     public Integer getImageSize() {
@@ -211,7 +211,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置镜像大小(M)
+     * Set 镜像大小(M)
      * @param ImageSize 镜像大小(M)
      */
     public void setImageSize(Integer ImageSize) {
@@ -219,7 +219,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -227,7 +227,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -235,7 +235,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取分区信息
+     * Get 分区信息 
      * @return PartitionInfoSet 分区信息
      */
     public PartitionInfo [] getPartitionInfoSet() {
@@ -243,7 +243,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置分区信息
+     * Set 分区信息
      * @param PartitionInfoSet 分区信息
      */
     public void setPartitionInfoSet(PartitionInfo [] PartitionInfoSet) {
@@ -251,7 +251,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取适用机型
+     * Get 适用机型 
      * @return DeviceClassCode 适用机型
      */
     public String getDeviceClassCode() {
@@ -259,7 +259,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置适用机型
+     * Set 适用机型
      * @param DeviceClassCode 适用机型
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -267,7 +267,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return ImageDescription 备注
      */
     public String getImageDescription() {
@@ -275,7 +275,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param ImageDescription 备注
      */
     public void setImageDescription(String ImageDescription) {
@@ -283,7 +283,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 获取原始镜像id
+     * Get 原始镜像id 
      * @return OsTypeId 原始镜像id
      */
     public Integer getOsTypeId() {
@@ -291,7 +291,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 设置原始镜像id
+     * Set 原始镜像id
      * @param OsTypeId 原始镜像id
      */
     public void setOsTypeId(Integer OsTypeId) {
@@ -299,7 +299,7 @@ public class CustomImage  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);

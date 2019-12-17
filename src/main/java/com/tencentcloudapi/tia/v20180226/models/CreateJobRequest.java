@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateJobRequest  extends AbstractModel{
+public class CreateJobRequest extends AbstractModel{
 
     /**
     * 任务名称
@@ -121,7 +121,7 @@ public class CreateJobRequest  extends AbstractModel{
     private String [] RuntimeConf;
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -129,7 +129,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -137,7 +137,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+     * Get 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317) 
      * @return Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      */
     public String getCluster() {
@@ -145,7 +145,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
+     * Set 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      * @param Cluster 运行任务的集群，详见 [使用集群](https://cloud.tencent.com/document/product/851/17317)
      */
     public void setCluster(String Cluster) {
@@ -153,7 +153,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+     * Get 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320) 
      * @return RuntimeVersion 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      */
     public String getRuntimeVersion() {
@@ -161,7 +161,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
+     * Set 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      * @param RuntimeVersion 运行任务的环境，详见 [运行环境](https://cloud.tencent.com/document/product/851/17320)
      */
     public void setRuntimeVersion(String RuntimeVersion) {
@@ -169,7 +169,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+     * Get 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持 
      * @return PackageDir 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      */
     public String [] getPackageDir() {
@@ -177,7 +177,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
+     * Set 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      * @param PackageDir 挂载的路径，支持 NFS，[CFS](https://cloud.tencent.com/product/cfs) 和 [COS](https://cloud.tencent.com/product/cos)，其中 COS 只在 [TI-A 定制环境](https://cloud.tencent.com/document/product/851/17320#ti-a-.E5.AE.9A.E5.88.B6.E7.8E.AF.E5.A2.83) 中支持
      */
     public void setPackageDir(String [] PackageDir) {
@@ -185,7 +185,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动命令
+     * Get 任务启动命令 
      * @return Command 任务启动命令
      */
     public String [] getCommand() {
@@ -193,7 +193,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务启动命令
+     * Set 任务启动命令
      * @param Command 任务启动命令
      */
     public void setCommand(String [] Command) {
@@ -201,7 +201,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务启动参数
+     * Get 任务启动参数 
      * @return Args 任务启动参数
      */
     public String [] getArgs() {
@@ -209,7 +209,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务启动参数
+     * Set 任务启动参数
      * @param Args 任务启动参数
      */
     public void setArgs(String [] Args) {
@@ -217,7 +217,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return ScaleTier 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getScaleTier() {
@@ -225,7 +225,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param ScaleTier 运行任务的配置信息，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setScaleTier(String ScaleTier) {
@@ -233,7 +233,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return MasterType Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getMasterType() {
@@ -241,7 +241,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param MasterType Master 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setMasterType(String MasterType) {
@@ -249,7 +249,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return WorkerType Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getWorkerType() {
@@ -257,7 +257,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param WorkerType Worker 机器类型，ScaleTier 取值为 `CUSTOM` 时必填，详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setWorkerType(String WorkerType) {
@@ -265,7 +265,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return ParameterServerType Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public String getParameterServerType() {
@@ -273,7 +273,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param ParameterServerType Parameter server 机器类型，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setParameterServerType(String ParameterServerType) {
@@ -281,7 +281,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public Integer getWorkerCount() {
@@ -289,7 +289,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param WorkerCount Worker 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setWorkerCount(Integer WorkerCount) {
@@ -297,7 +297,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Get Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319) 
      * @return ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public Integer getParameterServerCount() {
@@ -305,7 +305,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
+     * Set Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      * @param ParameterServerCount Parameter server 机器数量，ScaleTier 取值为 `CUSTOM` 时必填,详见 [训练规模](https://cloud.tencent.com/document/product/851/17319)
      */
     public void setParameterServerCount(Integer ParameterServerCount) {
@@ -313,7 +313,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取启动 debug 模式，默认为 false
+     * Get 启动 debug 模式，默认为 false 
      * @return Debug 启动 debug 模式，默认为 false
      */
     public Boolean getDebug() {
@@ -321,7 +321,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置启动 debug 模式，默认为 false
+     * Set 启动 debug 模式，默认为 false
      * @param Debug 启动 debug 模式，默认为 false
      */
     public void setDebug(Boolean Debug) {
@@ -329,7 +329,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行任务的其他配置信息
+     * Get 运行任务的其他配置信息 
      * @return RuntimeConf 运行任务的其他配置信息
      */
     public String [] getRuntimeConf() {
@@ -337,7 +337,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的其他配置信息
+     * Set 运行任务的其他配置信息
      * @param RuntimeConf 运行任务的其他配置信息
      */
     public void setRuntimeConf(String [] RuntimeConf) {
@@ -345,7 +345,7 @@ public class CreateJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableTopicRuleRequest  extends AbstractModel{
+public class EnableTopicRuleRequest extends AbstractModel{
 
     /**
     * 规则名称
@@ -30,7 +30,7 @@ public class EnableTopicRuleRequest  extends AbstractModel{
     private String RuleName;
 
     /**
-     * 获取规则名称
+     * Get 规则名称 
      * @return RuleName 规则名称
      */
     public String getRuleName() {
@@ -38,7 +38,7 @@ public class EnableTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则名称
+     * Set 规则名称
      * @param RuleName 规则名称
      */
     public void setRuleName(String RuleName) {
@@ -46,7 +46,7 @@ public class EnableTopicRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);

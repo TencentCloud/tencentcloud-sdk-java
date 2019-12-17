@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateL4ListenersRequest  extends AbstractModel{
+public class CreateL4ListenersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -37,7 +37,7 @@ public class CreateL4ListenersRequest  extends AbstractModel{
     private CreateL4Listener [] ListenerSet;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -45,7 +45,7 @@ public class CreateL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -53,7 +53,7 @@ public class CreateL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
+     * Get 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器 
      * @return ListenerSet 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
      */
     public CreateL4Listener [] getListenerSet() {
@@ -61,7 +61,7 @@ public class CreateL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
+     * Set 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
      * @param ListenerSet 监听器信息数组，可以创建多个监听器。目前一个负载均衡下面最多允许创建50个监听器
      */
     public void setListenerSet(CreateL4Listener [] ListenerSet) {
@@ -69,7 +69,7 @@ public class CreateL4ListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

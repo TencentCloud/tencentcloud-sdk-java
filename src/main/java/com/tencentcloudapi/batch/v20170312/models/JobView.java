@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JobView  extends AbstractModel{
+public class JobView extends AbstractModel{
 
     /**
     * 作业ID
@@ -81,7 +81,7 @@ public class JobView  extends AbstractModel{
     private TaskMetrics TaskMetrics;
 
     /**
-     * 获取作业ID
+     * Get 作业ID 
      * @return JobId 作业ID
      */
     public String getJobId() {
@@ -89,7 +89,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置作业ID
+     * Set 作业ID
      * @param JobId 作业ID
      */
     public void setJobId(String JobId) {
@@ -97,7 +97,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取作业名称
+     * Get 作业名称 
      * @return JobName 作业名称
      */
     public String getJobName() {
@@ -105,7 +105,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置作业名称
+     * Set 作业名称
      * @param JobName 作业名称
      */
     public void setJobName(String JobName) {
@@ -113,7 +113,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取作业状态
+     * Get 作业状态 
      * @return JobState 作业状态
      */
     public String getJobState() {
@@ -121,7 +121,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置作业状态
+     * Set 作业状态
      * @param JobState 作业状态
      */
     public void setJobState(String JobState) {
@@ -129,7 +129,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取作业优先级
+     * Get 作业优先级 
      * @return Priority 作业优先级
      */
     public Integer getPriority() {
@@ -137,7 +137,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置作业优先级
+     * Set 作业优先级
      * @param Priority 作业优先级
      */
     public void setPriority(Integer Priority) {
@@ -145,8 +145,8 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取位置信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 位置信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Placement 位置信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -155,7 +155,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置位置信息
+     * Set 位置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Placement 位置信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -165,7 +165,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -173,7 +173,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -181,8 +181,8 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -191,7 +191,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -201,7 +201,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 获取任务统计指标
+     * Get 任务统计指标 
      * @return TaskMetrics 任务统计指标
      */
     public TaskMetrics getTaskMetrics() {
@@ -209,7 +209,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 设置任务统计指标
+     * Set 任务统计指标
      * @param TaskMetrics 任务统计指标
      */
     public void setTaskMetrics(TaskMetrics TaskMetrics) {
@@ -217,7 +217,7 @@ public class JobView  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

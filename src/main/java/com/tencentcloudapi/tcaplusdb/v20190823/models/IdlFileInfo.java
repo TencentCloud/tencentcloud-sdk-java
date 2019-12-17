@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdlFileInfo  extends AbstractModel{
+public class IdlFileInfo extends AbstractModel{
 
     /**
     * 文件名称，不包含扩展名
@@ -67,7 +67,7 @@ public class IdlFileInfo  extends AbstractModel{
     private String FileContent;
 
     /**
-     * 获取文件名称，不包含扩展名
+     * Get 文件名称，不包含扩展名 
      * @return FileName 文件名称，不包含扩展名
      */
     public String getFileName() {
@@ -75,7 +75,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件名称，不包含扩展名
+     * Set 文件名称，不包含扩展名
      * @param FileName 文件名称，不包含扩展名
      */
     public void setFileName(String FileName) {
@@ -83,7 +83,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据描述语言（IDL）类型
+     * Get 数据描述语言（IDL）类型 
      * @return FileType 数据描述语言（IDL）类型
      */
     public String getFileType() {
@@ -91,7 +91,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据描述语言（IDL）类型
+     * Set 数据描述语言（IDL）类型
      * @param FileType 数据描述语言（IDL）类型
      */
     public void setFileType(String FileType) {
@@ -99,7 +99,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件扩展名
+     * Get 文件扩展名 
      * @return FileExtType 文件扩展名
      */
     public String getFileExtType() {
@@ -107,7 +107,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件扩展名
+     * Set 文件扩展名
      * @param FileExtType 文件扩展名
      */
     public void setFileExtType(String FileExtType) {
@@ -115,7 +115,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小（Bytes）
+     * Get 文件大小（Bytes） 
      * @return FileSize 文件大小（Bytes）
      */
     public Long getFileSize() {
@@ -123,7 +123,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小（Bytes）
+     * Set 文件大小（Bytes）
      * @param FileSize 文件大小（Bytes）
      */
     public void setFileSize(Long FileSize) {
@@ -131,8 +131,8 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件ID，对于已上传的文件有意义
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileId 文件ID，对于已上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,7 +141,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件ID，对于已上传的文件有意义
+     * Set 文件ID，对于已上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件ID，对于已上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
@@ -151,8 +151,8 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件内容，对于本次新上传的文件有意义
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileContent 文件内容，对于本次新上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +161,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件内容，对于本次新上传的文件有意义
+     * Set 文件内容，对于本次新上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FileContent 文件内容，对于本次新上传的文件有意义
 注意：此字段可能返回 null，表示取不到有效值。
@@ -171,7 +171,7 @@ public class IdlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileName", this.FileName);

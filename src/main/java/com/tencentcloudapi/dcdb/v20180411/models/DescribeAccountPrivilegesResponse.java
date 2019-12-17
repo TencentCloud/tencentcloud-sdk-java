@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountPrivilegesResponse  extends AbstractModel{
+public class DescribeAccountPrivilegesResponse extends AbstractModel{
 
     /**
     * 实例Id
@@ -58,7 +58,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取权限列表。
+     * Get 权限列表。 
      * @return Privileges 权限列表。
      */
     public String [] getPrivileges() {
@@ -82,7 +82,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置权限列表。
+     * Set 权限列表。
      * @param Privileges 权限列表。
      */
     public void setPrivileges(String [] Privileges) {
@@ -90,7 +90,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号用户名
+     * Get 数据库账号用户名 
      * @return UserName 数据库账号用户名
      */
     public String getUserName() {
@@ -98,7 +98,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号用户名
+     * Set 数据库账号用户名
      * @param UserName 数据库账号用户名
      */
     public void setUserName(String UserName) {
@@ -106,7 +106,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库账号Host
+     * Get 数据库账号Host 
      * @return Host 数据库账号Host
      */
     public String getHost() {
@@ -114,7 +114,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库账号Host
+     * Set 数据库账号Host
      * @param Host 数据库账号Host
      */
     public void setHost(String Host) {
@@ -122,7 +122,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeAccountPrivilegesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeletePullStreamConfigRequest  extends AbstractModel{
+public class DeletePullStreamConfigRequest extends AbstractModel{
 
     /**
     * 配置id。
@@ -30,7 +30,7 @@ public class DeletePullStreamConfigRequest  extends AbstractModel{
     private String ConfigId;
 
     /**
-     * 获取配置id。
+     * Get 配置id。 
      * @return ConfigId 配置id。
      */
     public String getConfigId() {
@@ -38,7 +38,7 @@ public class DeletePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置id。
+     * Set 配置id。
      * @param ConfigId 配置id。
      */
     public void setConfigId(String ConfigId) {
@@ -46,7 +46,7 @@ public class DeletePullStreamConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
+public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
 
     /**
     * 推流域名。
@@ -60,7 +60,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -76,7 +76,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -84,7 +84,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -92,7 +92,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取取得第几页，默认1。
+     * Get 取得第几页，默认1。 
      * @return PageNum 取得第几页，默认1。
      */
     public Integer getPageNum() {
@@ -100,7 +100,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置取得第几页，默认1。
+     * Set 取得第几页，默认1。
      * @param PageNum 取得第几页，默认1。
      */
     public void setPageNum(Integer PageNum) {
@@ -108,9 +108,9 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，最大100。 
+     * Get 每页大小，最大100。 
 取值：10~100之间的任意整数。
-默认值：10。
+默认值：10。 
      * @return PageSize 每页大小，最大100。 
 取值：10~100之间的任意整数。
 默认值：10。
@@ -120,7 +120,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，最大100。 
+     * Set 每页大小，最大100。 
 取值：10~100之间的任意整数。
 默认值：10。
      * @param PageSize 每页大小，最大100。 
@@ -132,7 +132,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称，用于精确查询。
+     * Get 流名称，用于精确查询。 
      * @return StreamName 流名称，用于精确查询。
      */
     public String getStreamName() {
@@ -140,7 +140,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称，用于精确查询。
+     * Set 流名称，用于精确查询。
      * @param StreamName 流名称，用于精确查询。
      */
     public void setStreamName(String StreamName) {
@@ -148,7 +148,7 @@ public class DescribeLiveStreamOnlineListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

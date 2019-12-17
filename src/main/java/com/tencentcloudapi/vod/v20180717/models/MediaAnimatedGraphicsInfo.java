@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaAnimatedGraphicsInfo  extends AbstractModel{
+public class MediaAnimatedGraphicsInfo extends AbstractModel{
 
     /**
     * 视频转动图结果信息
@@ -31,8 +31,8 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
     private MediaAnimatedGraphicsItem [] AnimatedGraphicsSet;
 
     /**
-     * 获取视频转动图结果信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 视频转动图结果信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AnimatedGraphicsSet 视频转动图结果信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频转动图结果信息
+     * Set 视频转动图结果信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicsSet 视频转动图结果信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class MediaAnimatedGraphicsInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AnimatedGraphicsSet.", this.AnimatedGraphicsSet);

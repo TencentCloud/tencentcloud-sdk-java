@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsRuleRequest  extends AbstractModel{
+public class UpdateCfsRuleRequest extends AbstractModel{
 
     /**
     * 权限组 ID
@@ -65,7 +65,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     private Long Priority;
 
     /**
-     * 获取权限组 ID
+     * Get 权限组 ID 
      * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
@@ -73,7 +73,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组 ID
+     * Set 权限组 ID
      * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
@@ -81,7 +81,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则 ID
+     * Get 规则 ID 
      * @return RuleId 规则 ID
      */
     public String getRuleId() {
@@ -89,7 +89,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则 ID
+     * Set 规则 ID
      * @param RuleId 规则 ID
      */
     public void setRuleId(String RuleId) {
@@ -97,7 +97,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
+     * Get 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。 
      * @return AuthClientIp 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
      */
     public String getAuthClientIp() {
@@ -105,7 +105,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
+     * Set 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
      * @param AuthClientIp 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
      */
     public void setAuthClientIp(String AuthClientIp) {
@@ -113,7 +113,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
+     * Get 读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读 
      * @return RWPermission 读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
      */
     public String getRWPermission() {
@@ -121,7 +121,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
+     * Set 读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
      * @param RWPermission 读写权限, 值为RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读
      */
     public void setRWPermission(String RWPermission) {
@@ -129,7 +129,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
+     * Get 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。 
      * @return UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
      */
     public String getUserPermission() {
@@ -137,7 +137,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
+     * Set 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
      * @param UserPermission 用户权限，值为all_squash、no_all_squash、root_squash、no_root_squash。其中all_squash为所有访问用户都会被映射为匿名用户或用户组；no_all_squash为访问用户会先与本机用户匹配，匹配失败后再映射为匿名用户或用户组；root_squash为将来访的root用户映射为匿名用户或用户组；no_root_squash为来访的root用户保持root帐号权限。不填默认为root_squash。
      */
     public void setUserPermission(String UserPermission) {
@@ -145,7 +145,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+     * Get 规则优先级，参数范围1-100。 其中 1 为最高，100为最低 
      * @return Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
      */
     public Long getPriority() {
@@ -153,7 +153,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则优先级，参数范围1-100。 其中 1 为最高，100为最低
+     * Set 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
      * @param Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
      */
     public void setPriority(Long Priority) {
@@ -161,7 +161,7 @@ public class UpdateCfsRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PGroupId", this.PGroupId);

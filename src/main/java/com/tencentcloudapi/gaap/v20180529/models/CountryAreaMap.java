@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CountryAreaMap  extends AbstractModel{
+public class CountryAreaMap extends AbstractModel{
 
     /**
     * 国家名称。
@@ -65,7 +65,7 @@ public class CountryAreaMap  extends AbstractModel{
     private String ContinentInnerCode;
 
     /**
-     * 获取国家名称。
+     * Get 国家名称。 
      * @return NationCountryName 国家名称。
      */
     public String getNationCountryName() {
@@ -73,7 +73,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置国家名称。
+     * Set 国家名称。
      * @param NationCountryName 国家名称。
      */
     public void setNationCountryName(String NationCountryName) {
@@ -81,7 +81,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 获取国家编码。
+     * Get 国家编码。 
      * @return NationCountryInnerCode 国家编码。
      */
     public String getNationCountryInnerCode() {
@@ -89,7 +89,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置国家编码。
+     * Set 国家编码。
      * @param NationCountryInnerCode 国家编码。
      */
     public void setNationCountryInnerCode(String NationCountryInnerCode) {
@@ -97,7 +97,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 获取地区名称。
+     * Get 地区名称。 
      * @return GeographicalZoneName 地区名称。
      */
     public String getGeographicalZoneName() {
@@ -105,7 +105,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置地区名称。
+     * Set 地区名称。
      * @param GeographicalZoneName 地区名称。
      */
     public void setGeographicalZoneName(String GeographicalZoneName) {
@@ -113,7 +113,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 获取地区编码。
+     * Get 地区编码。 
      * @return GeographicalZoneInnerCode 地区编码。
      */
     public String getGeographicalZoneInnerCode() {
@@ -121,7 +121,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置地区编码。
+     * Set 地区编码。
      * @param GeographicalZoneInnerCode 地区编码。
      */
     public void setGeographicalZoneInnerCode(String GeographicalZoneInnerCode) {
@@ -129,7 +129,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 获取大洲名称。
+     * Get 大洲名称。 
      * @return ContinentName 大洲名称。
      */
     public String getContinentName() {
@@ -137,7 +137,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置大洲名称。
+     * Set 大洲名称。
      * @param ContinentName 大洲名称。
      */
     public void setContinentName(String ContinentName) {
@@ -145,7 +145,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 获取大洲编码。
+     * Get 大洲编码。 
      * @return ContinentInnerCode 大洲编码。
      */
     public String getContinentInnerCode() {
@@ -153,7 +153,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 设置大洲编码。
+     * Set 大洲编码。
      * @param ContinentInnerCode 大洲编码。
      */
     public void setContinentInnerCode(String ContinentInnerCode) {
@@ -161,7 +161,7 @@ public class CountryAreaMap  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NationCountryName", this.NationCountryName);

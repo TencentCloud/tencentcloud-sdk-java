@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4BackendsRequest  extends AbstractModel{
+public class DescribeL4BackendsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -44,7 +44,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     private DescribeL4Backend [] BackendSet;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -52,7 +52,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -60,7 +60,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。
+     * Get 负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。 
      * @return ListenerId 负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。
      */
     public String getListenerId() {
@@ -68,7 +68,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。
+     * Set 负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。
      * @param ListenerId 负载均衡四层监听器ID，可通过接口DescribeL4Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -76,7 +76,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待查询的主机信息。
+     * Get 待查询的主机信息。 
      * @return BackendSet 待查询的主机信息。
      */
     public DescribeL4Backend [] getBackendSet() {
@@ -84,7 +84,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待查询的主机信息。
+     * Set 待查询的主机信息。
      * @param BackendSet 待查询的主机信息。
      */
     public void setBackendSet(DescribeL4Backend [] BackendSet) {
@@ -92,7 +92,7 @@ public class DescribeL4BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

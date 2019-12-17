@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSNetTrendResponse  extends AbstractModel{
+public class DescribeDDoSNetTrendResponse extends AbstractModel{
 
     /**
     * 大禹子产品代号（net表示高防IP专业版）
@@ -86,7 +86,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取大禹子产品代号（net表示高防IP专业版）
+     * Get 大禹子产品代号（net表示高防IP专业版） 
      * @return Business 大禹子产品代号（net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -94,7 +94,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（net表示高防IP专业版）
+     * Set 大禹子产品代号（net表示高防IP专业版）
      * @param Business 大禹子产品代号（net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -102,7 +102,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -110,7 +110,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -118,7 +118,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
+     * Get 指标，取值[bps(攻击流量带宽，pps(攻击包速率))] 
      * @return MetricName 指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
      */
     public String getMetricName() {
@@ -126,7 +126,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
+     * Set 指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
      * @param MetricName 指标，取值[bps(攻击流量带宽，pps(攻击包速率))]
      */
     public void setMetricName(String MetricName) {
@@ -134,7 +134,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
+     * Get 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)] 
      * @return Period 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      */
     public Long getPeriod() {
@@ -142,7 +142,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
+     * Set 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      * @param Period 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
      */
     public void setPeriod(Long Period) {
@@ -150,7 +150,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计开始时间
+     * Get 统计开始时间 
      * @return StartTime 统计开始时间
      */
     public String getStartTime() {
@@ -158,7 +158,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计开始时间
+     * Set 统计开始时间
      * @param StartTime 统计开始时间
      */
     public void setStartTime(String StartTime) {
@@ -166,7 +166,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取统计结束时间
+     * Get 统计结束时间 
      * @return EndTime 统计结束时间
      */
     public String getEndTime() {
@@ -174,7 +174,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置统计结束时间
+     * Set 统计结束时间
      * @param EndTime 统计结束时间
      */
     public void setEndTime(String EndTime) {
@@ -182,7 +182,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取值数组
+     * Get 值数组 
      * @return Data 值数组
      */
     public Long [] getData() {
@@ -190,7 +190,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置值数组
+     * Set 值数组
      * @param Data 值数组
      */
     public void setData(Long [] Data) {
@@ -198,7 +198,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取值个数
+     * Get 值个数 
      * @return Count 值个数
      */
     public Long getCount() {
@@ -206,7 +206,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置值个数
+     * Set 值个数
      * @param Count 值个数
      */
     public void setCount(Long Count) {
@@ -214,7 +214,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -222,7 +222,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -230,7 +230,7 @@ public class DescribeDDoSNetTrendResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

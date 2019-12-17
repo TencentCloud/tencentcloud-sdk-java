@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindL7BackendsRequest  extends AbstractModel{
+public class UnbindL7BackendsRequest extends AbstractModel{
 
     /**
     * 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
@@ -65,7 +65,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     private Integer BindType;
 
     /**
-     * 获取负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Get 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。 
      * @return LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public String getLoadBalancerId() {
@@ -73,7 +73,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
+     * Set 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      * @param LoadBalancerId 负载均衡实例ID，可通过接口DescribeLoadBalancers查询。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -81,7 +81,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Get 七层监听器实例ID，可通过接口DescribeL7Listeners查询。 
      * @return ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public String getListenerId() {
@@ -89,7 +89,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置七层监听器实例ID，可通过接口DescribeL7Listeners查询。
+     * Set 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      * @param ListenerId 七层监听器实例ID，可通过接口DescribeL7Listeners查询。
      */
     public void setListenerId(String ListenerId) {
@@ -97,7 +97,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Get 转发域名实例ID，可通过接口DescribeL7Rules查询。 
      * @return DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public String getDomainId() {
@@ -105,7 +105,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名实例ID，可通过接口DescribeL7Rules查询。
+     * Set 转发域名实例ID，可通过接口DescribeL7Rules查询。
      * @param DomainId 转发域名实例ID，可通过接口DescribeL7Rules查询。
      */
     public void setDomainId(String DomainId) {
@@ -113,7 +113,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径实例ID，可通过接口DescribeL7Rules查询。
+     * Get 转发路径实例ID，可通过接口DescribeL7Rules查询。 
      * @return LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
      */
     public String getLocationId() {
@@ -121,7 +121,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径实例ID，可通过接口DescribeL7Rules查询。
+     * Set 转发路径实例ID，可通过接口DescribeL7Rules查询。
      * @param LocationId 转发路径实例ID，可通过接口DescribeL7Rules查询。
      */
     public void setLocationId(String LocationId) {
@@ -129,7 +129,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取待绑定的主机信息。
+     * Get 待绑定的主机信息。 
      * @return BackendSet 待绑定的主机信息。
      */
     public UnbindL7Backend [] getBackendSet() {
@@ -137,7 +137,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待绑定的主机信息。
+     * Set 待绑定的主机信息。
      * @param BackendSet 待绑定的主机信息。
      */
     public void setBackendSet(UnbindL7Backend [] BackendSet) {
@@ -145,7 +145,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取绑定类型。0：物理机  1：虚拟机 2：半托管机器
+     * Get 绑定类型。0：物理机  1：虚拟机 2：半托管机器 
      * @return BindType 绑定类型。0：物理机  1：虚拟机 2：半托管机器
      */
     public Integer getBindType() {
@@ -153,7 +153,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置绑定类型。0：物理机  1：虚拟机 2：半托管机器
+     * Set 绑定类型。0：物理机  1：虚拟机 2：半托管机器
      * @param BindType 绑定类型。0：物理机  1：虚拟机 2：半托管机器
      */
     public void setBindType(Integer BindType) {
@@ -161,7 +161,7 @@ public class UnbindL7BackendsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

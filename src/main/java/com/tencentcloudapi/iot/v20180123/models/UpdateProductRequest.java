@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateProductRequest  extends AbstractModel{
+public class UpdateProductRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -51,7 +51,7 @@ public class UpdateProductRequest  extends AbstractModel{
     private DataTemplate [] DataTemplate;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品名称
+     * Get 产品名称 
      * @return Name 产品名称
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称
+     * Set 产品名称
      * @param Name 产品名称
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品描述
+     * Get 产品描述 
      * @return Description 产品描述
      */
     public String getDescription() {
@@ -91,7 +91,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品描述
+     * Set 产品描述
      * @param Description 产品描述
      */
     public void setDescription(String Description) {
@@ -99,7 +99,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据模版
+     * Get 数据模版 
      * @return DataTemplate 数据模版
      */
     public DataTemplate [] getDataTemplate() {
@@ -107,7 +107,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据模版
+     * Set 数据模版
      * @param DataTemplate 数据模版
      */
     public void setDataTemplate(DataTemplate [] DataTemplate) {
@@ -115,7 +115,7 @@ public class UpdateProductRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

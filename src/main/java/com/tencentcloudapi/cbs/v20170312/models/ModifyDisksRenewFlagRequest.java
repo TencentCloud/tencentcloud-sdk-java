@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDisksRenewFlagRequest  extends AbstractModel{
+public class ModifyDisksRenewFlagRequest extends AbstractModel{
 
     /**
     * 一个或多个待操作的云硬盘ID。
@@ -37,7 +37,7 @@ public class ModifyDisksRenewFlagRequest  extends AbstractModel{
     private String RenewFlag;
 
     /**
-     * 获取一个或多个待操作的云硬盘ID。
+     * Get 一个或多个待操作的云硬盘ID。 
      * @return DiskIds 一个或多个待操作的云硬盘ID。
      */
     public String [] getDiskIds() {
@@ -45,7 +45,7 @@ public class ModifyDisksRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个或多个待操作的云硬盘ID。
+     * Set 一个或多个待操作的云硬盘ID。
      * @param DiskIds 一个或多个待操作的云硬盘ID。
      */
     public void setDiskIds(String [] DiskIds) {
@@ -53,7 +53,7 @@ public class ModifyDisksRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+     * Get 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。 
      * @return RenewFlag 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
      */
     public String getRenewFlag() {
@@ -61,7 +61,7 @@ public class ModifyDisksRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
+     * Set 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
      * @param RenewFlag 云盘的续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费<br><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
@@ -69,7 +69,7 @@ public class ModifyDisksRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);

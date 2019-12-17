@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertDetailResponse  extends AbstractModel{
+public class DescribeCertDetailResponse extends AbstractModel{
 
     /**
     * 证书ID。
@@ -100,7 +100,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取证书ID。
+     * Get 证书ID。 
      * @return CertId 证书ID。
      */
     public String getCertId() {
@@ -108,7 +108,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书ID。
+     * Set 证书ID。
      * @param CertId 证书ID。
      */
     public void setCertId(String CertId) {
@@ -116,7 +116,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书名称。
+     * Get 证书名称。 
      * @return CertName 证书名称。
      */
     public String getCertName() {
@@ -124,7 +124,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书名称。
+     * Set 证书名称。
      * @param CertName 证书名称。
      */
     public void setCertName(String CertName) {
@@ -132,7 +132,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型（SVR=服务器证书，CA=客户端证书）。
+     * Get 证书类型（SVR=服务器证书，CA=客户端证书）。 
      * @return CertType 证书类型（SVR=服务器证书，CA=客户端证书）。
      */
     public String getCertType() {
@@ -140,7 +140,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型（SVR=服务器证书，CA=客户端证书）。
+     * Set 证书类型（SVR=服务器证书，CA=客户端证书）。
      * @param CertType 证书类型（SVR=服务器证书，CA=客户端证书）。
      */
     public void setCertType(String CertType) {
@@ -148,7 +148,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书内容。
+     * Get 证书内容。 
      * @return CertContent 证书内容。
      */
     public String getCertContent() {
@@ -156,7 +156,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书内容。
+     * Set 证书内容。
      * @param CertContent 证书内容。
      */
     public void setCertContent(String CertContent) {
@@ -164,7 +164,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书主域名。
+     * Get 证书主域名。 
      * @return CertDomain 证书主域名。
      */
     public String getCertDomain() {
@@ -172,7 +172,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书主域名。
+     * Set 证书主域名。
      * @param CertDomain 证书主域名。
      */
     public void setCertDomain(String CertDomain) {
@@ -180,7 +180,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书子域名列表。
+     * Get 证书子域名列表。 
      * @return CertSubjectDomain 证书子域名列表。
      */
     public String [] getCertSubjectDomain() {
@@ -188,7 +188,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书子域名列表。
+     * Set 证书子域名列表。
      * @param CertSubjectDomain 证书子域名列表。
      */
     public void setCertSubjectDomain(String [] CertSubjectDomain) {
@@ -196,7 +196,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书上传时间。
+     * Get 证书上传时间。 
      * @return CertUploadTime 证书上传时间。
      */
     public String getCertUploadTime() {
@@ -204,7 +204,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书上传时间。
+     * Set 证书上传时间。
      * @param CertUploadTime 证书上传时间。
      */
     public void setCertUploadTime(String CertUploadTime) {
@@ -212,7 +212,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书生效时间。
+     * Get 证书生效时间。 
      * @return CertBeginTime 证书生效时间。
      */
     public String getCertBeginTime() {
@@ -220,7 +220,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书生效时间。
+     * Set 证书生效时间。
      * @param CertBeginTime 证书生效时间。
      */
     public void setCertBeginTime(String CertBeginTime) {
@@ -228,7 +228,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取证书失效时间。
+     * Get 证书失效时间。 
      * @return CertEndTime 证书失效时间。
      */
     public String getCertEndTime() {
@@ -236,7 +236,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置证书失效时间。
+     * Set 证书失效时间。
      * @param CertEndTime 证书失效时间。
      */
     public void setCertEndTime(String CertEndTime) {
@@ -244,7 +244,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取该证书关联的黑石负载均衡对象列表。
+     * Get 该证书关联的黑石负载均衡对象列表。 
      * @return CertLoadBalancerSet 该证书关联的黑石负载均衡对象列表。
      */
     public CertDetailLoadBalancer [] getCertLoadBalancerSet() {
@@ -252,7 +252,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置该证书关联的黑石负载均衡对象列表。
+     * Set 该证书关联的黑石负载均衡对象列表。
      * @param CertLoadBalancerSet 该证书关联的黑石负载均衡对象列表。
      */
     public void setCertLoadBalancerSet(CertDetailLoadBalancer [] CertLoadBalancerSet) {
@@ -260,7 +260,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -268,7 +268,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -276,7 +276,7 @@ public class DescribeCertDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertId", this.CertId);

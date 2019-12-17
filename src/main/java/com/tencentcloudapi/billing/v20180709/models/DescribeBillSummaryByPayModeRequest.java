@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
+public class DescribeBillSummaryByPayModeRequest extends AbstractModel{
 
     /**
     * 查询账单数据的用户UIN
@@ -44,7 +44,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取查询账单数据的用户UIN
+     * Get 查询账单数据的用户UIN 
      * @return PayerUin 查询账单数据的用户UIN
      */
     public String getPayerUin() {
@@ -52,7 +52,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询账单数据的用户UIN
+     * Set 查询账单数据的用户UIN
      * @param PayerUin 查询账单数据的用户UIN
      */
     public void setPayerUin(String PayerUin) {
@@ -60,7 +60,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+     * Get 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00 
      * @return BeginTime 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
      */
     public String getBeginTime() {
@@ -68,7 +68,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
+     * Set 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
      * @param BeginTime 目前只支持传当月开始，且必须和EndTime为相同月份，例 2018-09-01 00:00:00
      */
     public void setBeginTime(String BeginTime) {
@@ -76,7 +76,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+     * Get 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59 
      * @return EndTime 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
      */
     public String getEndTime() {
@@ -84,7 +84,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
+     * Set 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
      * @param EndTime 目前只支持传当月结束，且必须和BeginTime为相同月份，例 2018-09-30 23:59:59
      */
     public void setEndTime(String EndTime) {
@@ -92,7 +92,7 @@ public class DescribeBillSummaryByPayModeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetPasswordRequest  extends AbstractModel{
+public class SetPasswordRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
@@ -44,7 +44,7 @@ public class SetPasswordRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例账户名称
+     * Get 实例账户名称 
      * @return UserName 实例账户名称
      */
     public String getUserName() {
@@ -68,7 +68,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例账户名称
+     * Set 实例账户名称
      * @param UserName 实例账户名称
      */
     public void setUserName(String UserName) {
@@ -76,7 +76,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * Get 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符 
      * @return Password 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
      */
     public String getPassword() {
@@ -84,7 +84,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * Set 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
      * @param Password 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
      */
     public void setPassword(String Password) {
@@ -92,7 +92,7 @@ public class SetPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

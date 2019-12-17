@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExistedInstancesResponse  extends AbstractModel{
+public class DescribeExistedInstancesResponse extends AbstractModel{
 
     /**
     * 已经存在的实例信息数组。
@@ -45,8 +45,8 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取已经存在的实例信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 已经存在的实例信息数组。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExistedInstanceSet 已经存在的实例信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -55,7 +55,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已经存在的实例信息数组。
+     * Set 已经存在的实例信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExistedInstanceSet 已经存在的实例信息数组。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -65,7 +65,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合条件的实例数量。
+     * Get 符合条件的实例数量。 
      * @return TotalCount 符合条件的实例数量。
      */
     public Integer getTotalCount() {
@@ -73,7 +73,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的实例数量。
+     * Set 符合条件的实例数量。
      * @param TotalCount 符合条件的实例数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -81,7 +81,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class DescribeExistedInstancesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ExistedInstanceSet.", this.ExistedInstanceSet);

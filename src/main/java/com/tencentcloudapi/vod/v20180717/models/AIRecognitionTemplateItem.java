@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AIRecognitionTemplateItem  extends AbstractModel{
+public class AIRecognitionTemplateItem extends AbstractModel{
 
     /**
     * 视频内容识别模板唯一标识。
@@ -129,7 +129,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * 获取视频内容识别模板唯一标识。
+     * Get 视频内容识别模板唯一标识。 
      * @return Definition 视频内容识别模板唯一标识。
      */
     public Long getDefinition() {
@@ -137,7 +137,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板唯一标识。
+     * Set 视频内容识别模板唯一标识。
      * @param Definition 视频内容识别模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -145,7 +145,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别模板名称。
+     * Get 视频内容识别模板名称。 
      * @return Name 视频内容识别模板名称。
      */
     public String getName() {
@@ -153,7 +153,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板名称。
+     * Set 视频内容识别模板名称。
      * @param Name 视频内容识别模板名称。
      */
     public void setName(String Name) {
@@ -161,7 +161,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别模板描述信息。
+     * Get 视频内容识别模板描述信息。 
      * @return Comment 视频内容识别模板描述信息。
      */
     public String getComment() {
@@ -169,7 +169,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别模板描述信息。
+     * Set 视频内容识别模板描述信息。
      * @param Comment 视频内容识别模板描述信息。
      */
     public void setComment(String Comment) {
@@ -177,8 +177,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取头尾识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 头尾识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeadTailConfigure 头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -187,7 +187,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置头尾识别控制参数。
+     * Set 头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadTailConfigure 头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,8 +197,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取拆条识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 拆条识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentConfigure 拆条识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,7 +207,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置拆条识别控制参数。
+     * Set 拆条识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentConfigure 拆条识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -217,8 +217,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 人脸识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FaceConfigure 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -227,7 +227,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别控制参数。
+     * Set 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceConfigure 人脸识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -237,8 +237,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取文本全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文本全文识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrFullTextConfigure 文本全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -247,7 +247,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置文本全文识别控制参数。
+     * Set 文本全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrFullTextConfigure 文本全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -257,8 +257,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取文本关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文本关键词识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrWordsConfigure 文本关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -267,7 +267,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置文本关键词识别控制参数。
+     * Set 文本关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrWordsConfigure 文本关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -277,8 +277,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取语音全文识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语音全文识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsrFullTextConfigure 语音全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -287,7 +287,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音全文识别控制参数。
+     * Set 语音全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrFullTextConfigure 语音全文识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -297,8 +297,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取语音关键词识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语音关键词识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsrWordsConfigure 语音关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -307,7 +307,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置语音关键词识别控制参数。
+     * Set 语音关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrWordsConfigure 语音关键词识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -317,8 +317,8 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取物体识别控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 物体识别控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ObjectConfigure 物体识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -327,7 +327,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置物体识别控制参数。
+     * Set 物体识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectConfigure 物体识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -337,7 +337,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取截图时间间隔，单位：秒。
+     * Get 截图时间间隔，单位：秒。 
      * @return ScreenshotInterval 截图时间间隔，单位：秒。
      */
     public Float getScreenshotInterval() {
@@ -345,7 +345,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置截图时间间隔，单位：秒。
+     * Set 截图时间间隔，单位：秒。
      * @param ScreenshotInterval 截图时间间隔，单位：秒。
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
@@ -353,7 +353,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -361,7 +361,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -369,7 +369,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -377,7 +377,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -385,7 +385,7 @@ public class AIRecognitionTemplateItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

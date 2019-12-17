@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLibraryRequest  extends AbstractModel{
+public class DeleteLibraryRequest extends AbstractModel{
 
     /**
     * 人员库唯一标识符
@@ -30,7 +30,7 @@ public class DeleteLibraryRequest  extends AbstractModel{
     private String LibraryId;
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -38,7 +38,7 @@ public class DeleteLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -46,7 +46,7 @@ public class DeleteLibraryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);

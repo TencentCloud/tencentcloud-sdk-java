@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonRequest  extends AbstractModel{
+public class ModifyPersonRequest extends AbstractModel{
 
     /**
     * 人员库唯一标识符
@@ -79,7 +79,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     private String StudentNumber;
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -87,7 +87,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -95,7 +95,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -103,7 +103,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -111,7 +111,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员工作号码
+     * Get 人员工作号码 
      * @return JobNumber 人员工作号码
      */
     public String getJobNumber() {
@@ -119,7 +119,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员工作号码
+     * Set 人员工作号码
      * @param JobNumber 人员工作号码
      */
     public void setJobNumber(String JobNumber) {
@@ -127,7 +127,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员邮箱
+     * Get 人员邮箱 
      * @return Mail 人员邮箱
      */
     public String getMail() {
@@ -135,7 +135,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员邮箱
+     * Set 人员邮箱
      * @param Mail 人员邮箱
      */
     public void setMail(String Mail) {
@@ -143,7 +143,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员性别
+     * Get 人员性别 
      * @return Male 人员性别
      */
     public Long getMale() {
@@ -151,7 +151,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员性别
+     * Set 人员性别
      * @param Male 人员性别
      */
     public void setMale(Long Male) {
@@ -159,7 +159,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -167,7 +167,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -175,7 +175,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员电话号码
+     * Get 人员电话号码 
      * @return PhoneNumber 人员电话号码
      */
     public String getPhoneNumber() {
@@ -183,7 +183,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员电话号码
+     * Set 人员电话号码
      * @param PhoneNumber 人员电话号码
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -191,7 +191,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 获取人员学生号码
+     * Get 人员学生号码 
      * @return StudentNumber 人员学生号码
      */
     public String getStudentNumber() {
@@ -199,7 +199,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 设置人员学生号码
+     * Set 人员学生号码
      * @param StudentNumber 人员学生号码
      */
     public void setStudentNumber(String StudentNumber) {
@@ -207,7 +207,7 @@ public class ModifyPersonRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);

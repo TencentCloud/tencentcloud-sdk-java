@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
+public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
 
     /**
     * 起始时间点，当前使用北京时间，
@@ -88,8 +88,8 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     private String MainlandOrOversea;
 
     /**
-     * 获取起始时间点，当前使用北京时间，
-例：2019-02-21 10:00:00。
+     * Get 起始时间点，当前使用北京时间，
+例：2019-02-21 10:00:00。 
      * @return StartTime 起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。
      */
@@ -98,7 +98,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间点，当前使用北京时间，
+     * Set 起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。
      * @param StartTime 起始时间点，当前使用北京时间，
 例：2019-02-21 10:00:00。
@@ -108,9 +108,9 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间点，当前使用北京时间，
+     * Get 结束时间点，当前使用北京时间，
 例：2019-02-21 12:00:00。
-注：EndTime 和 StartTime 只支持最近1天的数据查询。
+注：EndTime 和 StartTime 只支持最近1天的数据查询。 
      * @return EndTime 结束时间点，当前使用北京时间，
 例：2019-02-21 12:00:00。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
@@ -120,7 +120,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间点，当前使用北京时间，
+     * Set 结束时间点，当前使用北京时间，
 例：2019-02-21 12:00:00。
 注：EndTime 和 StartTime 只支持最近1天的数据查询。
      * @param EndTime 结束时间点，当前使用北京时间，
@@ -132,8 +132,8 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取支持如下粒度：
-1：1分钟粒度（跨度不支持超过1天）
+     * Get 支持如下粒度：
+1：1分钟粒度（跨度不支持超过1天） 
      * @return Granularity 支持如下粒度：
 1：1分钟粒度（跨度不支持超过1天）
      */
@@ -142,7 +142,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持如下粒度：
+     * Set 支持如下粒度：
 1：1分钟粒度（跨度不支持超过1天）
      * @param Granularity 支持如下粒度：
 1：1分钟粒度（跨度不支持超过1天）
@@ -152,12 +152,12 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计指标类型：
+     * Get 统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
+“Online”：并发连接数 
      * @return StatType 统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
@@ -170,7 +170,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计指标类型：
+     * Set 统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
@@ -188,7 +188,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取播放域名列表。
+     * Get 播放域名列表。 
      * @return PlayDomains 播放域名列表。
      */
     public String [] getPlayDomains() {
@@ -196,7 +196,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置播放域名列表。
+     * Set 播放域名列表。
      * @param PlayDomains 播放域名列表。
      */
     public void setPlayDomains(String [] PlayDomains) {
@@ -204,7 +204,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的省份（地区）英文名称列表，如 Beijing。
+     * Get 要查询的省份（地区）英文名称列表，如 Beijing。 
      * @return ProvinceNames 要查询的省份（地区）英文名称列表，如 Beijing。
      */
     public String [] getProvinceNames() {
@@ -212,7 +212,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的省份（地区）英文名称列表，如 Beijing。
+     * Set 要查询的省份（地区）英文名称列表，如 Beijing。
      * @param ProvinceNames 要查询的省份（地区）英文名称列表，如 Beijing。
      */
     public void setProvinceNames(String [] ProvinceNames) {
@@ -220,7 +220,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
+     * Get 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。 
      * @return IspNames 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
      */
     public String [] getIspNames() {
@@ -228,7 +228,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
+     * Set 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
      * @param IspNames 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。
      */
     public void setIspNames(String [] IspNames) {
@@ -236,7 +236,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Get 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。 
      * @return MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public String getMainlandOrOversea() {
@@ -244,7 +244,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
+     * Set 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      * @param MainlandOrOversea 地域，可选值：Mainland，Oversea，China，Foreign，Global（默认值）；如果为空，查询总的数据；如果为“Mainland”，查询中国大陆的数据；如果为“Oversea”，则查询中国大陆以外的数据；如果为China，查询中国的数据（包括港澳台）；如果为Foreign，查询国外的数据（不包括港澳台）。
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
@@ -252,7 +252,7 @@ public class DescribeProvinceIspPlayInfoListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CarTagItem  extends AbstractModel{
+public class CarTagItem extends AbstractModel{
 
     /**
     * 车系
@@ -65,7 +65,7 @@ public class CarTagItem  extends AbstractModel{
     private Long Year;
 
     /**
-     * 获取车系
+     * Get 车系 
      * @return Serial 车系
      */
     public String getSerial() {
@@ -73,7 +73,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置车系
+     * Set 车系
      * @param Serial 车系
      */
     public void setSerial(String Serial) {
@@ -81,7 +81,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取车辆品牌
+     * Get 车辆品牌 
      * @return Brand 车辆品牌
      */
     public String getBrand() {
@@ -89,7 +89,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置车辆品牌
+     * Set 车辆品牌
      * @param Brand 车辆品牌
      */
     public void setBrand(String Brand) {
@@ -97,7 +97,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取车辆类型
+     * Get 车辆类型 
      * @return Type 车辆类型
      */
     public String getType() {
@@ -105,7 +105,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置车辆类型
+     * Set 车辆类型
      * @param Type 车辆类型
      */
     public void setType(String Type) {
@@ -113,7 +113,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取车辆颜色
+     * Get 车辆颜色 
      * @return Color 车辆颜色
      */
     public String getColor() {
@@ -121,7 +121,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置车辆颜色
+     * Set 车辆颜色
      * @param Color 车辆颜色
      */
     public void setColor(String Color) {
@@ -129,7 +129,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取置信度，0-100
+     * Get 置信度，0-100 
      * @return Confidence 置信度，0-100
      */
     public Long getConfidence() {
@@ -137,7 +137,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置置信度，0-100
+     * Set 置信度，0-100
      * @param Confidence 置信度，0-100
      */
     public void setConfidence(Long Confidence) {
@@ -145,7 +145,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 获取年份，没识别出年份的时候返回0
+     * Get 年份，没识别出年份的时候返回0 
      * @return Year 年份，没识别出年份的时候返回0
      */
     public Long getYear() {
@@ -153,7 +153,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 设置年份，没识别出年份的时候返回0
+     * Set 年份，没识别出年份的时候返回0
      * @param Year 年份，没识别出年份的时候返回0
      */
     public void setYear(Long Year) {
@@ -161,7 +161,7 @@ public class CarTagItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Serial", this.Serial);

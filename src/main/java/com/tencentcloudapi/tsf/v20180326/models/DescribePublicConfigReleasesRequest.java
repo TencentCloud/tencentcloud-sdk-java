@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePublicConfigReleasesRequest  extends AbstractModel{
+public class DescribePublicConfigReleasesRequest extends AbstractModel{
 
     /**
     * 配置项名称，不传入时查询全量
@@ -58,7 +58,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     private String ConfigId;
 
     /**
-     * 获取配置项名称，不传入时查询全量
+     * Get 配置项名称，不传入时查询全量 
      * @return ConfigName 配置项名称，不传入时查询全量
      */
     public String getConfigName() {
@@ -66,7 +66,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项名称，不传入时查询全量
+     * Set 配置项名称，不传入时查询全量
      * @param ConfigName 配置项名称，不传入时查询全量
      */
     public void setConfigName(String ConfigName) {
@@ -74,7 +74,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID，不传入时查询全量
+     * Get 命名空间ID，不传入时查询全量 
      * @return NamespaceId 命名空间ID，不传入时查询全量
      */
     public String getNamespaceId() {
@@ -82,7 +82,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID，不传入时查询全量
+     * Set 命名空间ID，不传入时查询全量
      * @param NamespaceId 命名空间ID，不传入时查询全量
      */
     public void setNamespaceId(String NamespaceId) {
@@ -90,7 +90,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数
+     * Get 每页条数 
      * @return Limit 每页条数
      */
     public Long getLimit() {
@@ -98,7 +98,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数
+     * Set 每页条数
      * @param Limit 每页条数
      */
     public void setLimit(Long Limit) {
@@ -106,7 +106,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -114,7 +114,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -122,7 +122,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置项ID，不传入时查询全量
+     * Get 配置项ID，不传入时查询全量 
      * @return ConfigId 配置项ID，不传入时查询全量
      */
     public String getConfigId() {
@@ -130,7 +130,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置项ID，不传入时查询全量
+     * Set 配置项ID，不传入时查询全量
      * @param ConfigId 配置项ID，不传入时查询全量
      */
     public void setConfigId(String ConfigId) {
@@ -138,7 +138,7 @@ public class DescribePublicConfigReleasesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);

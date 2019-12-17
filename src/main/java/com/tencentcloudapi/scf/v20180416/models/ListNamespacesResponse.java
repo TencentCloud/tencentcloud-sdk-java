@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListNamespacesResponse  extends AbstractModel{
+public class ListNamespacesResponse extends AbstractModel{
 
     /**
     * namespace详情
@@ -44,7 +44,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取namespace详情
+     * Get namespace详情 
      * @return Namespaces namespace详情
      */
     public Namespace [] getNamespaces() {
@@ -52,7 +52,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置namespace详情
+     * Set namespace详情
      * @param Namespaces namespace详情
      */
     public void setNamespaces(Namespace [] Namespaces) {
@@ -60,7 +60,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的namespace数量
+     * Get 返回的namespace数量 
      * @return TotalCount 返回的namespace数量
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的namespace数量
+     * Set 返回的namespace数量
      * @param TotalCount 返回的namespace数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ListNamespacesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Namespaces.", this.Namespaces);

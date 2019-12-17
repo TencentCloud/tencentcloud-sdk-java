@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFacePictureResponse  extends AbstractModel{
+public class CreateFacePictureResponse extends AbstractModel{
 
     /**
     * 人物ID
@@ -51,7 +51,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人物ID
+     * Get 人物ID 
      * @return PersonId 人物ID
      */
     public Integer getPersonId() {
@@ -59,7 +59,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人物ID
+     * Set 人物ID
      * @param PersonId 人物ID
      */
     public void setPersonId(Integer PersonId) {
@@ -67,7 +67,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
+     * Get 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误 
      * @return Status 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      */
     public Integer getStatus() {
@@ -75,7 +75,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
+     * Set 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      * @param Status 0.正常建档 1.重复身份 2.未检测到人脸 3.检测到多个人脸 4.人脸大小过小 5.人脸质量不达标 6.其他错误
      */
     public void setStatus(Integer Status) {
@@ -83,7 +83,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片url
+     * Get 图片url 
      * @return PictureUrl 图片url
      */
     public String getPictureUrl() {
@@ -91,7 +91,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片url
+     * Set 图片url
      * @param PictureUrl 图片url
      */
     public void setPictureUrl(String PictureUrl) {
@@ -99,7 +99,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class CreateFacePictureResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataTemplate  extends AbstractModel{
+public class DataTemplate extends AbstractModel{
 
     /**
     * 数字类型
@@ -51,7 +51,7 @@ public class DataTemplate  extends AbstractModel{
     private BoolData Bool;
 
     /**
-     * 获取数字类型
+     * Get 数字类型 
      * @return Number 数字类型
      */
     public NumberData getNumber() {
@@ -59,7 +59,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置数字类型
+     * Set 数字类型
      * @param Number 数字类型
      */
     public void setNumber(NumberData Number) {
@@ -67,7 +67,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取字符串类型
+     * Get 字符串类型 
      * @return String 字符串类型
      */
     public StringData getString() {
@@ -75,7 +75,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置字符串类型
+     * Set 字符串类型
      * @param String 字符串类型
      */
     public void setString(StringData String) {
@@ -83,7 +83,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取枚举类型
+     * Get 枚举类型 
      * @return Enum 枚举类型
      */
     public EnumData getEnum() {
@@ -91,7 +91,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置枚举类型
+     * Set 枚举类型
      * @param Enum 枚举类型
      */
     public void setEnum(EnumData Enum) {
@@ -99,7 +99,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取布尔类型
+     * Get 布尔类型 
      * @return Bool 布尔类型
      */
     public BoolData getBool() {
@@ -107,7 +107,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置布尔类型
+     * Set 布尔类型
      * @param Bool 布尔类型
      */
     public void setBool(BoolData Bool) {
@@ -115,7 +115,7 @@ public class DataTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Number.", this.Number);

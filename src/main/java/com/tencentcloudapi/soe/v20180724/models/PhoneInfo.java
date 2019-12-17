@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PhoneInfo  extends AbstractModel{
+public class PhoneInfo extends AbstractModel{
 
     /**
     * 当前音节语音起始时间点，单位为ms
@@ -79,7 +79,7 @@ public class PhoneInfo  extends AbstractModel{
     private Integer MatchTag;
 
     /**
-     * 获取当前音节语音起始时间点，单位为ms
+     * Get 当前音节语音起始时间点，单位为ms 
      * @return MemBeginTime 当前音节语音起始时间点，单位为ms
      */
     public Integer getMemBeginTime() {
@@ -87,7 +87,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前音节语音起始时间点，单位为ms
+     * Set 当前音节语音起始时间点，单位为ms
      * @param MemBeginTime 当前音节语音起始时间点，单位为ms
      */
     public void setMemBeginTime(Integer MemBeginTime) {
@@ -95,7 +95,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前音节语音终止时间点，单位为ms
+     * Get 当前音节语音终止时间点，单位为ms 
      * @return MemEndTime 当前音节语音终止时间点，单位为ms
      */
     public Integer getMemEndTime() {
@@ -103,7 +103,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前音节语音终止时间点，单位为ms
+     * Set 当前音节语音终止时间点，单位为ms
      * @param MemEndTime 当前音节语音终止时间点，单位为ms
      */
     public void setMemEndTime(Integer MemEndTime) {
@@ -111,7 +111,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+     * Get 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配 
      * @return PronAccuracy 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      */
     public Float getPronAccuracy() {
@@ -119,7 +119,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
+     * Set 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      * @param PronAccuracy 音节发音准确度，取值范围[-1, 100]，当取-1时指完全不匹配
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -127,7 +127,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前音节是否检测为重音
+     * Get 当前音节是否检测为重音 
      * @return DetectedStress 当前音节是否检测为重音
      */
     public Boolean getDetectedStress() {
@@ -135,7 +135,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前音节是否检测为重音
+     * Set 当前音节是否检测为重音
      * @param DetectedStress 当前音节是否检测为重音
      */
     public void setDetectedStress(Boolean DetectedStress) {
@@ -143,7 +143,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前音节
+     * Get 当前音节 
      * @return Phone 当前音节
      */
     public String getPhone() {
@@ -151,7 +151,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前音节
+     * Set 当前音节
      * @param Phone 当前音节
      */
     public void setPhone(String Phone) {
@@ -159,7 +159,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前音节是否应为重音
+     * Get 当前音节是否应为重音 
      * @return Stress 当前音节是否应为重音
      */
     public Boolean getStress() {
@@ -167,7 +167,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前音节是否应为重音
+     * Set 当前音节是否应为重音
      * @param Stress 当前音节是否应为重音
      */
     public void setStress(Boolean Stress) {
@@ -175,7 +175,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取参考音素，在单词诊断模式下，代表标准音素
+     * Get 参考音素，在单词诊断模式下，代表标准音素 
      * @return ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      */
     public String getReferencePhone() {
@@ -183,7 +183,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置参考音素，在单词诊断模式下，代表标准音素
+     * Set 参考音素，在单词诊断模式下，代表标准音素
      * @param ReferencePhone 参考音素，在单词诊断模式下，代表标准音素
      */
     public void setReferencePhone(String ReferencePhone) {
@@ -191,7 +191,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * Get 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。 
      * @return MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public Integer getMatchTag() {
@@ -199,7 +199,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
+     * Set 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      * @param MatchTag 当前词与输入语句的匹配情况，0：匹配单词、1：新增单词、2：缺少单词、3：错读的词、4：未录入单词。
      */
     public void setMatchTag(Integer MatchTag) {
@@ -207,7 +207,7 @@ public class PhoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MemBeginTime", this.MemBeginTime);

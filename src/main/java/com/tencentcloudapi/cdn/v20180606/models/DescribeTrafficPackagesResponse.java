@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficPackagesResponse  extends AbstractModel{
+public class DescribeTrafficPackagesResponse extends AbstractModel{
 
     /**
     * 流量包总个数
@@ -58,7 +58,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取流量包总个数
+     * Get 流量包总个数 
      * @return TotalCount 流量包总个数
      */
     public Integer getTotalCount() {
@@ -66,7 +66,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置流量包总个数
+     * Set 流量包总个数
      * @param TotalCount 流量包总个数
      */
     public void setTotalCount(Integer TotalCount) {
@@ -74,7 +74,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取流量包详情
+     * Get 流量包详情 
      * @return TrafficPackages 流量包详情
      */
     public TrafficPackage [] getTrafficPackages() {
@@ -82,7 +82,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置流量包详情
+     * Set 流量包详情
      * @param TrafficPackages 流量包详情
      */
     public void setTrafficPackages(TrafficPackage [] TrafficPackages) {
@@ -90,7 +90,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取即将过期的流量包个数（7天内）
+     * Get 即将过期的流量包个数（7天内） 
      * @return ExpiringCount 即将过期的流量包个数（7天内）
      */
     public Integer getExpiringCount() {
@@ -98,7 +98,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置即将过期的流量包个数（7天内）
+     * Set 即将过期的流量包个数（7天内）
      * @param ExpiringCount 即将过期的流量包个数（7天内）
      */
     public void setExpiringCount(Integer ExpiringCount) {
@@ -106,7 +106,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取有效流量包个数
+     * Get 有效流量包个数 
      * @return EnabledCount 有效流量包个数
      */
     public Integer getEnabledCount() {
@@ -114,7 +114,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置有效流量包个数
+     * Set 有效流量包个数
      * @param EnabledCount 有效流量包个数
      */
     public void setEnabledCount(Integer EnabledCount) {
@@ -122,7 +122,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeTrafficPackagesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

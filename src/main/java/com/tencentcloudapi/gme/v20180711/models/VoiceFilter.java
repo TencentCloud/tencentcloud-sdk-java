@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceFilter  extends AbstractModel{
+public class VoiceFilter extends AbstractModel{
 
     /**
     * 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
@@ -39,8 +39,8 @@ public class VoiceFilter  extends AbstractModel{
     private String Word;
 
     /**
-     * 获取过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class VoiceFilter  extends AbstractModel{
     }
 
     /**
-     * 设置过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+     * Set 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class VoiceFilter  extends AbstractModel{
     }
 
     /**
-     * 获取过滤命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤命中关键词
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Word 过滤命中关键词
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class VoiceFilter  extends AbstractModel{
     }
 
     /**
-     * 设置过滤命中关键词
+     * Set 过滤命中关键词
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Word 过滤命中关键词
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class VoiceFilter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

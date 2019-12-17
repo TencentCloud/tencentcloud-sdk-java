@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAppNameRequest  extends AbstractModel{
+public class ModifyAppNameRequest extends AbstractModel{
 
     /**
     * 需要修改名称的应用实例ID
@@ -37,7 +37,7 @@ public class ModifyAppNameRequest  extends AbstractModel{
     private String AppName;
 
     /**
-     * 获取需要修改名称的应用实例ID
+     * Get 需要修改名称的应用实例ID 
      * @return ApplicationId 需要修改名称的应用实例ID
      */
     public String getApplicationId() {
@@ -45,7 +45,7 @@ public class ModifyAppNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改名称的应用实例ID
+     * Set 需要修改名称的应用实例ID
      * @param ApplicationId 需要修改名称的应用实例ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -53,7 +53,7 @@ public class ModifyAppNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要修改的应用名称，需要URLEncode
+     * Get 需要修改的应用名称，需要URLEncode 
      * @return AppName 需要修改的应用名称，需要URLEncode
      */
     public String getAppName() {
@@ -61,7 +61,7 @@ public class ModifyAppNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的应用名称，需要URLEncode
+     * Set 需要修改的应用名称，需要URLEncode
      * @param AppName 需要修改的应用名称，需要URLEncode
      */
     public void setAppName(String AppName) {
@@ -69,7 +69,7 @@ public class ModifyAppNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

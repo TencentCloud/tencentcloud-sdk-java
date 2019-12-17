@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceOperationsRequest  extends AbstractModel{
+public class DescribeInstanceOperationsRequest extends AbstractModel{
 
     /**
     * 集群实例ID
@@ -58,7 +58,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取集群实例ID
+     * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群实例ID
+     * Set 集群实例ID
      * @param InstanceId 集群实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间, e.g. "2019-03-07 16:30:39"
+     * Get 起始时间, e.g. "2019-03-07 16:30:39" 
      * @return StartTime 起始时间, e.g. "2019-03-07 16:30:39"
      */
     public String getStartTime() {
@@ -82,7 +82,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间, e.g. "2019-03-07 16:30:39"
+     * Set 起始时间, e.g. "2019-03-07 16:30:39"
      * @param StartTime 起始时间, e.g. "2019-03-07 16:30:39"
      */
     public void setStartTime(String StartTime) {
@@ -90,7 +90,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间, e.g. "2019-03-30 20:18:03"
+     * Get 结束时间, e.g. "2019-03-30 20:18:03" 
      * @return EndTime 结束时间, e.g. "2019-03-30 20:18:03"
      */
     public String getEndTime() {
@@ -98,7 +98,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间, e.g. "2019-03-30 20:18:03"
+     * Set 结束时间, e.g. "2019-03-30 20:18:03"
      * @param EndTime 结束时间, e.g. "2019-03-30 20:18:03"
      */
     public void setEndTime(String EndTime) {
@@ -106,7 +106,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页起始值
+     * Get 分页起始值 
      * @return Offset 分页起始值
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页起始值
+     * Set 分页起始值
      * @param Offset 分页起始值
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页大小
+     * Get 分页大小 
      * @return Limit 分页大小
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页大小
+     * Set 分页大小
      * @param Limit 分页大小
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeInstanceOperationsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

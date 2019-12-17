@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageSpriteTemplate  extends AbstractModel{
+public class ImageSpriteTemplate extends AbstractModel{
 
     /**
     * 雪碧图模板唯一标识。
@@ -112,7 +112,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     private String FillType;
 
     /**
-     * 获取雪碧图模板唯一标识。
+     * Get 雪碧图模板唯一标识。 
      * @return Definition 雪碧图模板唯一标识。
      */
     public Long getDefinition() {
@@ -120,7 +120,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图模板唯一标识。
+     * Set 雪碧图模板唯一标识。
      * @param Definition 雪碧图模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -128,9 +128,9 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板类型，取值范围：
+     * Get 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+<li>Custom：用户自定义模板。</li> 
      * @return Type 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
@@ -140,7 +140,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板类型，取值范围：
+     * Set 模板类型，取值范围：
 <li>Preset：系统预置模板；</li>
 <li>Custom：用户自定义模板。</li>
      * @param Type 模板类型，取值范围：
@@ -152,7 +152,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图模板名称。
+     * Get 雪碧图模板名称。 
      * @return Name 雪碧图模板名称。
      */
     public String getName() {
@@ -160,7 +160,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图模板名称。
+     * Set 雪碧图模板名称。
      * @param Name 雪碧图模板名称。
      */
     public void setName(String Name) {
@@ -168,7 +168,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的宽度。
+     * Get 雪碧图中小图的宽度。 
      * @return Width 雪碧图中小图的宽度。
      */
     public Long getWidth() {
@@ -176,7 +176,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的宽度。
+     * Set 雪碧图中小图的宽度。
      * @param Width 雪碧图中小图的宽度。
      */
     public void setWidth(Long Width) {
@@ -184,7 +184,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的高度。
+     * Get 雪碧图中小图的高度。 
      * @return Height 雪碧图中小图的高度。
      */
     public Long getHeight() {
@@ -192,7 +192,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的高度。
+     * Set 雪碧图中小图的高度。
      * @param Height 雪碧图中小图的高度。
      */
     public void setHeight(Long Height) {
@@ -200,7 +200,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取采样类型。
+     * Get 采样类型。 
      * @return SampleType 采样类型。
      */
     public String getSampleType() {
@@ -208,7 +208,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置采样类型。
+     * Set 采样类型。
      * @param SampleType 采样类型。
      */
     public void setSampleType(String SampleType) {
@@ -216,7 +216,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取采样间隔。
+     * Get 采样间隔。 
      * @return SampleInterval 采样间隔。
      */
     public Long getSampleInterval() {
@@ -224,7 +224,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置采样间隔。
+     * Set 采样间隔。
      * @param SampleInterval 采样间隔。
      */
     public void setSampleInterval(Long SampleInterval) {
@@ -232,7 +232,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的行数。
+     * Get 雪碧图中小图的行数。 
      * @return RowCount 雪碧图中小图的行数。
      */
     public Long getRowCount() {
@@ -240,7 +240,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的行数。
+     * Set 雪碧图中小图的行数。
      * @param RowCount 雪碧图中小图的行数。
      */
     public void setRowCount(Long RowCount) {
@@ -248,7 +248,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取雪碧图中小图的列数。
+     * Get 雪碧图中小图的列数。 
      * @return ColumnCount 雪碧图中小图的列数。
      */
     public Long getColumnCount() {
@@ -256,7 +256,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置雪碧图中小图的列数。
+     * Set 雪碧图中小图的列数。
      * @param ColumnCount 雪碧图中小图的列数。
      */
     public void setColumnCount(Long ColumnCount) {
@@ -264,7 +264,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getCreateTime() {
@@ -272,7 +272,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setCreateTime(String CreateTime) {
@@ -280,7 +280,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
      * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public String getUpdateTime() {
@@ -288,7 +288,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -296,10 +296,10 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+     * Get 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+默认值：black 。 
      * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -310,7 +310,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
+     * Set 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 默认值：black 。
@@ -324,7 +324,7 @@ public class ImageSpriteTemplate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

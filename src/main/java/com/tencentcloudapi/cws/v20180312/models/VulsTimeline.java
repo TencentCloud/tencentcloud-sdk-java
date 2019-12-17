@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VulsTimeline  extends AbstractModel{
+public class VulsTimeline extends AbstractModel{
 
     /**
     * ID。
@@ -107,7 +107,7 @@ public class VulsTimeline  extends AbstractModel{
     private String UpdatedAt;
 
     /**
-     * 获取ID。
+     * Get ID。 
      * @return Id ID。
      */
     public Integer getId() {
@@ -115,7 +115,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置ID。
+     * Set ID。
      * @param Id ID。
      */
     public void setId(Integer Id) {
@@ -123,7 +123,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取云用户appid。
+     * Get 云用户appid。 
      * @return Appid 云用户appid。
      */
     public Integer getAppid() {
@@ -131,7 +131,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置云用户appid。
+     * Set 云用户appid。
      * @param Appid 云用户appid。
      */
     public void setAppid(Integer Appid) {
@@ -139,7 +139,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取日期。
+     * Get 日期。 
      * @return Date 日期。
      */
     public String getDate() {
@@ -147,7 +147,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置日期。
+     * Set 日期。
      * @param Date 日期。
      */
     public void setDate(String Date) {
@@ -155,7 +155,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取扫描页面总数量。
+     * Get 扫描页面总数量。 
      * @return PageCount 扫描页面总数量。
      */
     public Integer getPageCount() {
@@ -163,7 +163,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置扫描页面总数量。
+     * Set 扫描页面总数量。
      * @param PageCount 扫描页面总数量。
      */
     public void setPageCount(Integer PageCount) {
@@ -171,7 +171,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取已验证网站总数量。
+     * Get 已验证网站总数量。 
      * @return SiteNum 已验证网站总数量。
      */
     public Integer getSiteNum() {
@@ -179,7 +179,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置已验证网站总数量。
+     * Set 已验证网站总数量。
      * @param SiteNum 已验证网站总数量。
      */
     public void setSiteNum(Integer SiteNum) {
@@ -187,7 +187,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取受影响的网站总数量。
+     * Get 受影响的网站总数量。 
      * @return ImpactSiteNum 受影响的网站总数量。
      */
     public Integer getImpactSiteNum() {
@@ -195,7 +195,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置受影响的网站总数量。
+     * Set 受影响的网站总数量。
      * @param ImpactSiteNum 受影响的网站总数量。
      */
     public void setImpactSiteNum(Integer ImpactSiteNum) {
@@ -203,7 +203,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取高危漏洞总数量。
+     * Get 高危漏洞总数量。 
      * @return VulsHighNum 高危漏洞总数量。
      */
     public Integer getVulsHighNum() {
@@ -211,7 +211,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置高危漏洞总数量。
+     * Set 高危漏洞总数量。
      * @param VulsHighNum 高危漏洞总数量。
      */
     public void setVulsHighNum(Integer VulsHighNum) {
@@ -219,7 +219,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取中危漏洞总数量。
+     * Get 中危漏洞总数量。 
      * @return VulsMiddleNum 中危漏洞总数量。
      */
     public Integer getVulsMiddleNum() {
@@ -227,7 +227,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置中危漏洞总数量。
+     * Set 中危漏洞总数量。
      * @param VulsMiddleNum 中危漏洞总数量。
      */
     public void setVulsMiddleNum(Integer VulsMiddleNum) {
@@ -235,7 +235,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取低危漏洞总数量。
+     * Get 低危漏洞总数量。 
      * @return VulsLowNum 低危漏洞总数量。
      */
     public Integer getVulsLowNum() {
@@ -243,7 +243,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置低危漏洞总数量。
+     * Set 低危漏洞总数量。
      * @param VulsLowNum 低危漏洞总数量。
      */
     public void setVulsLowNum(Integer VulsLowNum) {
@@ -251,7 +251,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取风险提示总数量
+     * Get 风险提示总数量 
      * @return VulsNoticeNum 风险提示总数量
      */
     public Integer getVulsNoticeNum() {
@@ -259,7 +259,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置风险提示总数量
+     * Set 风险提示总数量
      * @param VulsNoticeNum 风险提示总数量
      */
     public void setVulsNoticeNum(Integer VulsNoticeNum) {
@@ -267,7 +267,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取记录添加时间。
+     * Get 记录添加时间。 
      * @return CreatedAt 记录添加时间。
      */
     public String getCreatedAt() {
@@ -275,7 +275,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置记录添加时间。
+     * Set 记录添加时间。
      * @param CreatedAt 记录添加时间。
      */
     public void setCreatedAt(String CreatedAt) {
@@ -283,7 +283,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 获取记录最近修改时间。
+     * Get 记录最近修改时间。 
      * @return UpdatedAt 记录最近修改时间。
      */
     public String getUpdatedAt() {
@@ -291,7 +291,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 设置记录最近修改时间。
+     * Set 记录最近修改时间。
      * @param UpdatedAt 记录最近修改时间。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -299,7 +299,7 @@ public class VulsTimeline  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

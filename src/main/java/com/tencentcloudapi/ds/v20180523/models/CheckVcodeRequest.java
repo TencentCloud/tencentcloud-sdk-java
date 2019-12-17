@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckVcodeRequest  extends AbstractModel{
+public class CheckVcodeRequest extends AbstractModel{
 
     /**
     * 模块名VerifyCode
@@ -58,7 +58,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     private String VerifyCode;
 
     /**
-     * 获取模块名VerifyCode
+     * Get 模块名VerifyCode 
      * @return Module 模块名VerifyCode
      */
     public String getModule() {
@@ -66,7 +66,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名VerifyCode
+     * Set 模块名VerifyCode
      * @param Module 模块名VerifyCode
      */
     public void setModule(String Module) {
@@ -74,7 +74,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名CheckVcode
+     * Get 操作名CheckVcode 
      * @return Operation 操作名CheckVcode
      */
     public String getOperation() {
@@ -82,7 +82,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名CheckVcode
+     * Set 操作名CheckVcode
      * @param Operation 操作名CheckVcode
      */
     public void setOperation(String Operation) {
@@ -90,7 +90,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取帐号ID
+     * Get 帐号ID 
      * @return AccountResId 帐号ID
      */
     public String getAccountResId() {
@@ -98,7 +98,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置帐号ID
+     * Set 帐号ID
      * @param AccountResId 帐号ID
      */
     public void setAccountResId(String AccountResId) {
@@ -106,7 +106,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取合同ID
+     * Get 合同ID 
      * @return ContractResId 合同ID
      */
     public String getContractResId() {
@@ -114,7 +114,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置合同ID
+     * Set 合同ID
      * @param ContractResId 合同ID
      */
     public void setContractResId(String ContractResId) {
@@ -122,7 +122,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取验证码
+     * Get 验证码 
      * @return VerifyCode 验证码
      */
     public String getVerifyCode() {
@@ -130,7 +130,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置验证码
+     * Set 验证码
      * @param VerifyCode 验证码
      */
     public void setVerifyCode(String VerifyCode) {
@@ -138,7 +138,7 @@ public class CheckVcodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

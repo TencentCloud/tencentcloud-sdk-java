@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityGroupPolicySet  extends AbstractModel{
+public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
     * 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
@@ -44,7 +44,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     private SecurityGroupPolicy [] Ingress;
 
     /**
-     * 获取安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * Get 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。 
      * @return Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
      */
     public String getVersion() {
@@ -52,7 +52,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 设置安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * Set 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
      * @param Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
      */
     public void setVersion(String Version) {
@@ -60,7 +60,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 获取出站规则。
+     * Get 出站规则。 
      * @return Egress 出站规则。
      */
     public SecurityGroupPolicy [] getEgress() {
@@ -68,7 +68,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 设置出站规则。
+     * Set 出站规则。
      * @param Egress 出站规则。
      */
     public void setEgress(SecurityGroupPolicy [] Egress) {
@@ -76,7 +76,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 获取入站规则。
+     * Get 入站规则。 
      * @return Ingress 入站规则。
      */
     public SecurityGroupPolicy [] getIngress() {
@@ -84,7 +84,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 设置入站规则。
+     * Set 入站规则。
      * @param Ingress 入站规则。
      */
     public void setIngress(SecurityGroupPolicy [] Ingress) {
@@ -92,7 +92,7 @@ public class SecurityGroupPolicySet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Version", this.Version);

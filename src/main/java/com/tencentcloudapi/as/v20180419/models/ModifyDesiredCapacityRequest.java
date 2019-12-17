@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDesiredCapacityRequest  extends AbstractModel{
+public class ModifyDesiredCapacityRequest extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -37,7 +37,7 @@ public class ModifyDesiredCapacityRequest  extends AbstractModel{
     private Integer DesiredCapacity;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -45,7 +45,7 @@ public class ModifyDesiredCapacityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -53,7 +53,7 @@ public class ModifyDesiredCapacityRequest  extends AbstractModel{
     }
 
     /**
-     * 获取期望实例数
+     * Get 期望实例数 
      * @return DesiredCapacity 期望实例数
      */
     public Integer getDesiredCapacity() {
@@ -61,7 +61,7 @@ public class ModifyDesiredCapacityRequest  extends AbstractModel{
     }
 
     /**
-     * 设置期望实例数
+     * Set 期望实例数
      * @param DesiredCapacity 期望实例数
      */
     public void setDesiredCapacity(Integer DesiredCapacity) {
@@ -69,7 +69,7 @@ public class ModifyDesiredCapacityRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

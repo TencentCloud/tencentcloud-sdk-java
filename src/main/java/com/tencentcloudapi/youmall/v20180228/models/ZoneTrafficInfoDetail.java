@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneTrafficInfoDetail  extends AbstractModel{
+public class ZoneTrafficInfoDetail extends AbstractModel{
 
     /**
     * 区域ID
@@ -51,7 +51,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     private Integer AvgStayTime;
 
     /**
-     * 获取区域ID
+     * Get 区域ID 
      * @return ZoneId 区域ID
      */
     public Integer getZoneId() {
@@ -59,7 +59,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID
+     * Set 区域ID
      * @param ZoneId 区域ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -67,7 +67,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return ZoneName 区域名称
      */
     public String getZoneName() {
@@ -75,7 +75,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param ZoneName 区域名称
      */
     public void setZoneName(String ZoneName) {
@@ -83,7 +83,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取客流量
+     * Get 客流量 
      * @return TrafficTotalCount 客流量
      */
     public Integer getTrafficTotalCount() {
@@ -91,7 +91,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置客流量
+     * Set 客流量
      * @param TrafficTotalCount 客流量
      */
     public void setTrafficTotalCount(Integer TrafficTotalCount) {
@@ -99,7 +99,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 获取平均停留时间
+     * Get 平均停留时间 
      * @return AvgStayTime 平均停留时间
      */
     public Integer getAvgStayTime() {
@@ -107,7 +107,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 设置平均停留时间
+     * Set 平均停留时间
      * @param AvgStayTime 平均停留时间
      */
     public void setAvgStayTime(Integer AvgStayTime) {
@@ -115,7 +115,7 @@ public class ZoneTrafficInfoDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

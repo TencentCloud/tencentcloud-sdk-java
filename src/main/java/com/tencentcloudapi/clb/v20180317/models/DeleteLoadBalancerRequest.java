@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLoadBalancerRequest  extends AbstractModel{
+public class DeleteLoadBalancerRequest extends AbstractModel{
 
     /**
     * 要删除的负载均衡实例 ID数组，数组大小最大支持20
@@ -30,7 +30,7 @@ public class DeleteLoadBalancerRequest  extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-     * 获取要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * Get 要删除的负载均衡实例 ID数组，数组大小最大支持20 
      * @return LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20
      */
     public String [] getLoadBalancerIds() {
@@ -38,7 +38,7 @@ public class DeleteLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的负载均衡实例 ID数组，数组大小最大支持20
+     * Set 要删除的负载均衡实例 ID数组，数组大小最大支持20
      * @param LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -46,7 +46,7 @@ public class DeleteLoadBalancerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);

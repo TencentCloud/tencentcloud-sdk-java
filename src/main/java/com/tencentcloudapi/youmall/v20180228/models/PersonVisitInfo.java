@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PersonVisitInfo  extends AbstractModel{
+public class PersonVisitInfo extends AbstractModel{
 
     /**
     * 用户ID
@@ -86,7 +86,7 @@ public class PersonVisitInfo  extends AbstractModel{
     private SceneInfo SceneInfo;
 
     /**
-     * 获取用户ID
+     * Get 用户ID 
      * @return PersonId 用户ID
      */
     public Integer getPersonId() {
@@ -94,7 +94,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户ID
+     * Set 用户ID
      * @param PersonId 用户ID
      */
     public void setPersonId(Integer PersonId) {
@@ -102,7 +102,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户到访ID
+     * Get 用户到访ID 
      * @return VisitId 用户到访ID
      */
     public Integer getVisitId() {
@@ -110,7 +110,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户到访ID
+     * Set 用户到访ID
      * @param VisitId 用户到访ID
      */
     public void setVisitId(Integer VisitId) {
@@ -118,7 +118,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到访时间：Unix时间戳
+     * Get 到访时间：Unix时间戳 
      * @return InTime 到访时间：Unix时间戳
      */
     public Integer getInTime() {
@@ -126,7 +126,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到访时间：Unix时间戳
+     * Set 到访时间：Unix时间戳
      * @param InTime 到访时间：Unix时间戳
      */
     public void setInTime(Integer InTime) {
@@ -134,7 +134,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍到的头像Base64内容，已弃用，返回默认空值
+     * Get 抓拍到的头像Base64内容，已弃用，返回默认空值 
      * @return CapturedPicture 抓拍到的头像Base64内容，已弃用，返回默认空值
      */
     public String getCapturedPicture() {
@@ -142,7 +142,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍到的头像Base64内容，已弃用，返回默认空值
+     * Set 抓拍到的头像Base64内容，已弃用，返回默认空值
      * @param CapturedPicture 抓拍到的头像Base64内容，已弃用，返回默认空值
      */
     public void setCapturedPicture(String CapturedPicture) {
@@ -150,7 +150,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取口罩类型：0不戴口罩，1戴口罩
+     * Get 口罩类型：0不戴口罩，1戴口罩 
      * @return MaskType 口罩类型：0不戴口罩，1戴口罩
      */
     public Integer getMaskType() {
@@ -158,7 +158,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置口罩类型：0不戴口罩，1戴口罩
+     * Set 口罩类型：0不戴口罩，1戴口罩
      * @param MaskType 口罩类型：0不戴口罩，1戴口罩
      */
     public void setMaskType(Integer MaskType) {
@@ -166,7 +166,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
+     * Get 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜 
      * @return GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      */
     public Integer getGlassType() {
@@ -174,7 +174,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
+     * Set 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      * @param GlassType 眼镜类型：0不戴眼镜，1普通眼镜 , 2墨镜
      */
     public void setGlassType(Integer GlassType) {
@@ -182,7 +182,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取发型：0 短发,  1长发
+     * Get 发型：0 短发,  1长发 
      * @return HairType 发型：0 短发,  1长发
      */
     public Integer getHairType() {
@@ -190,7 +190,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置发型：0 短发,  1长发
+     * Set 发型：0 短发,  1长发
      * @param HairType 发型：0 短发,  1长发
      */
     public void setHairType(Integer HairType) {
@@ -198,7 +198,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍到的头像Url，在有效期内可以访问下载
+     * Get 抓拍到的头像Url，在有效期内可以访问下载 
      * @return CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
      */
     public String getCapturedPictureUrl() {
@@ -206,7 +206,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍到的头像Url，在有效期内可以访问下载
+     * Set 抓拍到的头像Url，在有效期内可以访问下载
      * @param CapturedPictureUrl 抓拍到的头像Url，在有效期内可以访问下载
      */
     public void setCapturedPictureUrl(String CapturedPictureUrl) {
@@ -214,7 +214,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 获取抓拍头像的场景图信息
+     * Get 抓拍头像的场景图信息 
      * @return SceneInfo 抓拍头像的场景图信息
      */
     public SceneInfo getSceneInfo() {
@@ -222,7 +222,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 设置抓拍头像的场景图信息
+     * Set 抓拍头像的场景图信息
      * @param SceneInfo 抓拍头像的场景图信息
      */
     public void setSceneInfo(SceneInfo SceneInfo) {
@@ -230,7 +230,7 @@ public class PersonVisitInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

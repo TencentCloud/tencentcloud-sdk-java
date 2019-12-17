@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataDisk  extends AbstractModel{
+public class DataDisk extends AbstractModel{
 
     /**
     * 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
@@ -64,7 +64,7 @@ public class DataDisk  extends AbstractModel{
     private String SnapshotId;
 
     /**
-     * 获取数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * Get 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。 
      * @return DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public Integer getDiskSize() {
@@ -72,7 +72,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * Set 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      * @param DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[实例规格](/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public void setDiskSize(Integer DiskSize) {
@@ -80,7 +80,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
+     * Get 数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。 
      * @return DiskType 数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
      */
     public String getDiskType() {
@@ -88,7 +88,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
+     * Set 数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
      * @param DiskType 数据盘类型。数据盘类型限制详见[实例规格](/document/product/213/2177)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><br>默认取值：LOCAL_BASIC。<br><br>该参数对`ResizeInstanceDisk`接口无效。
      */
     public void setDiskType(String DiskType) {
@@ -96,7 +96,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+     * Get 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。 
      * @return DiskId 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
      */
     public String getDiskId() {
@@ -104,7 +104,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+     * Set 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
      * @param DiskId 数据盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
      */
     public void setDiskId(String DiskId) {
@@ -112,12 +112,12 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘是否随子机销毁。取值范围：
+     * Get 数据盘是否随子机销毁。取值范围：
 <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
 该参数目前仅用于 `RunInstances` 接口。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteWithInstance 数据盘是否随子机销毁。取值范围：
 <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
@@ -130,7 +130,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘是否随子机销毁。取值范围：
+     * Set 数据盘是否随子机销毁。取值范围：
 <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘
 <li>FALSE：子机销毁时，保留数据盘<br>
 默认取值：TRUE<br>
@@ -148,8 +148,8 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -158,7 +158,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
+     * Set 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -168,7 +168,7 @@ public class DataDisk  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);

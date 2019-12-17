@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L7Rule  extends AbstractModel{
+public class L7Rule extends AbstractModel{
 
     /**
     * 转发域名。
@@ -58,7 +58,7 @@ public class L7Rule  extends AbstractModel{
     private L7RulesLocation [] LocationSet;
 
     /**
-     * 获取转发域名。
+     * Get 转发域名。 
      * @return Domain 转发域名。
      */
     public String getDomain() {
@@ -66,7 +66,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名。
+     * Set 转发域名。
      * @param Domain 转发域名。
      */
     public void setDomain(String Domain) {
@@ -74,7 +74,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取转发域名实例ID。
+     * Get 转发域名实例ID。 
      * @return DomainId 转发域名实例ID。
      */
     public String getDomainId() {
@@ -82,7 +82,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转发域名实例ID。
+     * Set 转发域名实例ID。
      * @param DomainId 转发域名实例ID。
      */
     public void setDomainId(String DomainId) {
@@ -90,7 +90,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Get 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。 
      * @return Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public Integer getStatus() {
@@ -98,7 +98,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
+     * Set 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      * @param Status 转发路径当前状态（0代表创建中，1代表正常运行，2代表创建失败，3代表删除中，4代表删除失败）。
      */
     public void setStatus(Integer Status) {
@@ -106,7 +106,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间戳。
+     * Get 创建时间戳。 
      * @return AddTimestamp 创建时间戳。
      */
     public String getAddTimestamp() {
@@ -114,7 +114,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳。
+     * Set 创建时间戳。
      * @param AddTimestamp 创建时间戳。
      */
     public void setAddTimestamp(String AddTimestamp) {
@@ -122,7 +122,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 获取该转发域名下面的转发路径列表。
+     * Get 该转发域名下面的转发路径列表。 
      * @return LocationSet 该转发域名下面的转发路径列表。
      */
     public L7RulesLocation [] getLocationSet() {
@@ -130,7 +130,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 设置该转发域名下面的转发路径列表。
+     * Set 该转发域名下面的转发路径列表。
      * @param LocationSet 该转发域名下面的转发路径列表。
      */
     public void setLocationSet(L7RulesLocation [] LocationSet) {
@@ -138,7 +138,7 @@ public class L7Rule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

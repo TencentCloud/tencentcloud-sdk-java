@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
+public class AiRecognitionTaskOcrWordsResultOutput extends AbstractModel{
 
     /**
     * 文本关键词识别结果集。
@@ -30,7 +30,7 @@ public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
     private AiRecognitionTaskOcrWordsResultItem [] ResultSet;
 
     /**
-     * 获取文本关键词识别结果集。
+     * Get 文本关键词识别结果集。 
      * @return ResultSet 文本关键词识别结果集。
      */
     public AiRecognitionTaskOcrWordsResultItem [] getResultSet() {
@@ -38,7 +38,7 @@ public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置文本关键词识别结果集。
+     * Set 文本关键词识别结果集。
      * @param ResultSet 文本关键词识别结果集。
      */
     public void setResultSet(AiRecognitionTaskOcrWordsResultItem [] ResultSet) {
@@ -46,7 +46,7 @@ public class AiRecognitionTaskOcrWordsResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);

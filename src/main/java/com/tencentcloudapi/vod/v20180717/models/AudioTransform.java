@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioTransform  extends AbstractModel{
+public class AudioTransform extends AbstractModel{
 
     /**
     * 音频操作类型，取值有：
@@ -39,8 +39,8 @@ public class AudioTransform  extends AbstractModel{
     private AudioVolumeParam VolumeParam;
 
     /**
-     * 获取音频操作类型，取值有：
-<li>Volume：音量调节。</li>
+     * Get 音频操作类型，取值有：
+<li>Volume：音量调节。</li> 
      * @return Type 音频操作类型，取值有：
 <li>Volume：音量调节。</li>
      */
@@ -49,7 +49,7 @@ public class AudioTransform  extends AbstractModel{
     }
 
     /**
-     * 设置音频操作类型，取值有：
+     * Set 音频操作类型，取值有：
 <li>Volume：音量调节。</li>
      * @param Type 音频操作类型，取值有：
 <li>Volume：音量调节。</li>
@@ -59,8 +59,8 @@ public class AudioTransform  extends AbstractModel{
     }
 
     /**
-     * 获取音量调节参数， 当 Type = Volume 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 音量调节参数， 当 Type = Volume 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VolumeParam 音量调节参数， 当 Type = Volume 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class AudioTransform  extends AbstractModel{
     }
 
     /**
-     * 设置音量调节参数， 当 Type = Volume 时有效。
+     * Set 音量调节参数， 当 Type = Volume 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeParam 音量调节参数， 当 Type = Volume 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class AudioTransform  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

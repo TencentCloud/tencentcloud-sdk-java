@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DownloadReportRequest  extends AbstractModel{
+public class DownloadReportRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Report
@@ -51,7 +51,7 @@ public class DownloadReportRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Report
+     * Get 模块名，本接口取值：Report 
      * @return Module 模块名，本接口取值：Report
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Report
+     * Set 模块名，本接口取值：Report
      * @param Module 模块名，本接口取值：Report
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：DownloadReport
+     * Get 操作名，本接口取值：DownloadReport 
      * @return Operation 操作名，本接口取值：DownloadReport
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：DownloadReport
+     * Set 操作名，本接口取值：DownloadReport
      * @param Operation 操作名，本接口取值：DownloadReport
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取报告日期，格式为YYYY-MM-DD
+     * Get 报告日期，格式为YYYY-MM-DD 
      * @return ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public String getReportDate() {
@@ -91,7 +91,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置报告日期，格式为YYYY-MM-DD
+     * Set 报告日期，格式为YYYY-MM-DD
      * @param ReportDate 报告日期，格式为YYYY-MM-DD
      */
     public void setReportDate(String ReportDate) {
@@ -99,7 +99,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，不传默认为系统分配的初始实例。
+     * Get 实例ID，不传默认为系统分配的初始实例。 
      * @return InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public String getInstId() {
@@ -107,7 +107,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，不传默认为系统分配的初始实例。
+     * Set 实例ID，不传默认为系统分配的初始实例。
      * @param InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public void setInstId(String InstId) {
@@ -115,7 +115,7 @@ public class DownloadReportRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

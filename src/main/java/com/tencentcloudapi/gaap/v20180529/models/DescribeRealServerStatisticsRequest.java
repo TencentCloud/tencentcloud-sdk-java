@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealServerStatisticsRequest  extends AbstractModel{
+public class DescribeRealServerStatisticsRequest extends AbstractModel{
 
     /**
     * 源站ID
@@ -51,7 +51,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     private String RuleId;
 
     /**
-     * 获取源站ID
+     * Get 源站ID 
      * @return RealServerId 源站ID
      */
     public String getRealServerId() {
@@ -59,7 +59,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站ID
+     * Set 源站ID
      * @param RealServerId 源站ID
      */
     public void setRealServerId(String RealServerId) {
@@ -67,7 +67,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -75,7 +75,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -83,7 +83,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
+     * Get 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询 
      * @return WithinTime 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
      */
     public Long getWithinTime() {
@@ -91,7 +91,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
+     * Set 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
      * @param WithinTime 统计时长，单位：小时。仅支持最近1,3,6,12,24小时的统计查询
      */
     public void setWithinTime(Long WithinTime) {
@@ -99,7 +99,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取规则ID
+     * Get 规则ID 
      * @return RuleId 规则ID
      */
     public String getRuleId() {
@@ -107,7 +107,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置规则ID
+     * Set 规则ID
      * @param RuleId 规则ID
      */
     public void setRuleId(String RuleId) {
@@ -115,7 +115,7 @@ public class DescribeRealServerStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);

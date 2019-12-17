@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetAccountPasswordRequest  extends AbstractModel{
+public class ResetAccountPasswordRequest extends AbstractModel{
 
     /**
     * 实例ID，形如postgres-4wdeb0zv
@@ -44,7 +44,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     private String Password;
 
     /**
-     * 获取实例ID，形如postgres-4wdeb0zv
+     * Get 实例ID，形如postgres-4wdeb0zv 
      * @return DBInstanceId 实例ID，形如postgres-4wdeb0zv
      */
     public String getDBInstanceId() {
@@ -52,7 +52,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如postgres-4wdeb0zv
+     * Set 实例ID，形如postgres-4wdeb0zv
      * @param DBInstanceId 实例ID，形如postgres-4wdeb0zv
      */
     public void setDBInstanceId(String DBInstanceId) {
@@ -60,7 +60,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例账户名
+     * Get 实例账户名 
      * @return UserName 实例账户名
      */
     public String getUserName() {
@@ -68,7 +68,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例账户名
+     * Set 实例账户名
      * @param UserName 实例账户名
      */
     public void setUserName(String UserName) {
@@ -76,7 +76,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取UserName账户对应的新密码
+     * Get UserName账户对应的新密码 
      * @return Password UserName账户对应的新密码
      */
     public String getPassword() {
@@ -84,7 +84,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置UserName账户对应的新密码
+     * Set UserName账户对应的新密码
      * @param Password UserName账户对应的新密码
      */
     public void setPassword(String Password) {
@@ -92,7 +92,7 @@ public class ResetAccountPasswordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);

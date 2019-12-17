@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstallAgentRequest  extends AbstractModel{
+public class InstallAgentRequest extends AbstractModel{
 
     /**
     * 集群名称
@@ -44,7 +44,7 @@ public class InstallAgentRequest  extends AbstractModel{
     private Boolean Update;
 
     /**
-     * 获取集群名称
+     * Get 集群名称 
      * @return Cluster 集群名称
      */
     public String getCluster() {
@@ -52,7 +52,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
      * @param Cluster 集群名称
      */
     public void setCluster(String Cluster) {
@@ -60,7 +60,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Agent版本, 用于私有集群的agent安装，默认为“private-training”
+     * Get Agent版本, 用于私有集群的agent安装，默认为“private-training” 
      * @return TiaVersion Agent版本, 用于私有集群的agent安装，默认为“private-training”
      */
     public String getTiaVersion() {
@@ -68,7 +68,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Agent版本, 用于私有集群的agent安装，默认为“private-training”
+     * Set Agent版本, 用于私有集群的agent安装，默认为“private-training”
      * @param TiaVersion Agent版本, 用于私有集群的agent安装，默认为“private-training”
      */
     public void setTiaVersion(String TiaVersion) {
@@ -76,7 +76,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否允许更新Agent
+     * Get 是否允许更新Agent 
      * @return Update 是否允许更新Agent
      */
     public Boolean getUpdate() {
@@ -84,7 +84,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否允许更新Agent
+     * Set 是否允许更新Agent
      * @param Update 是否允许更新Agent
      */
     public void setUpdate(Boolean Update) {
@@ -92,7 +92,7 @@ public class InstallAgentRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);

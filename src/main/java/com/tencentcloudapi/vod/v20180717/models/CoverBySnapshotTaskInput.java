@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CoverBySnapshotTaskInput  extends AbstractModel{
+public class CoverBySnapshotTaskInput extends AbstractModel{
 
     /**
     * 指定时间点截图模板 ID。
@@ -56,7 +56,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * 获取指定时间点截图模板 ID。
+     * Get 指定时间点截图模板 ID。 
      * @return Definition 指定时间点截图模板 ID。
      */
     public Long getDefinition() {
@@ -64,7 +64,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置指定时间点截图模板 ID。
+     * Set 指定时间点截图模板 ID。
      * @param Definition 指定时间点截图模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -72,9 +72,9 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取截图方式。包含：
+     * Get 截图方式。包含：
 <li>Time：依照时间点截图</li>
-<li>Percent：依照百分比截图</li>
+<li>Percent：依照百分比截图</li> 
      * @return PositionType 截图方式。包含：
 <li>Time：依照时间点截图</li>
 <li>Percent：依照百分比截图</li>
@@ -84,7 +84,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置截图方式。包含：
+     * Set 截图方式。包含：
 <li>Time：依照时间点截图</li>
 <li>Percent：依照百分比截图</li>
      * @param PositionType 截图方式。包含：
@@ -96,9 +96,9 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取截图位置：
+     * Get 截图位置：
 <li>对于依照时间点截图，该值表示指定视频第几秒的截图作为封面</li>
-<li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li>
+<li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li> 
      * @return PositionValue 截图位置：
 <li>对于依照时间点截图，该值表示指定视频第几秒的截图作为封面</li>
 <li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li>
@@ -108,7 +108,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置截图位置：
+     * Set 截图位置：
 <li>对于依照时间点截图，该值表示指定视频第几秒的截图作为封面</li>
 <li>对于依照百分比截图，该值表示使用视频百分之多少的截图作为封面</li>
      * @param PositionValue 截图位置：
@@ -120,8 +120,8 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -130,7 +130,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,7 +140,7 @@ public class CoverBySnapshotTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

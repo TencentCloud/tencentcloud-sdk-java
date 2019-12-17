@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMultiDeviceRequest  extends AbstractModel{
+public class CreateMultiDeviceRequest extends AbstractModel{
 
     /**
     * 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
@@ -37,7 +37,7 @@ public class CreateMultiDeviceRequest  extends AbstractModel{
     private String [] DeviceNames;
 
     /**
-     * 获取产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID 
      * @return ProductId 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public String getProductId() {
@@ -45,7 +45,7 @@ public class CreateMultiDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param ProductId 产品 ID。创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public void setProductId(String ProductId) {
@@ -53,7 +53,7 @@ public class CreateMultiDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
+     * Get 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48} 
      * @return DeviceNames 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
      */
     public String [] getDeviceNames() {
@@ -61,7 +61,7 @@ public class CreateMultiDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
+     * Set 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
      * @param DeviceNames 批量创建的设备名数组，单次最多创建 100 个设备。命名规则：[a-zA-Z0-9:_-]{1,48}
      */
     public void setDeviceNames(String [] DeviceNames) {
@@ -69,7 +69,7 @@ public class CreateMultiDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

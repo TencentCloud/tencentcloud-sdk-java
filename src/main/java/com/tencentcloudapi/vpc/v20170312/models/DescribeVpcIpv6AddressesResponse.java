@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
+public class DescribeVpcIpv6AddressesResponse extends AbstractModel{
 
     /**
     * `IPv6`地址列表。
@@ -44,7 +44,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取`IPv6`地址列表。
+     * Get `IPv6`地址列表。 
      * @return Ipv6AddressSet `IPv6`地址列表。
      */
     public VpcIpv6Address [] getIpv6AddressSet() {
@@ -52,7 +52,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`地址列表。
+     * Set `IPv6`地址列表。
      * @param Ipv6AddressSet `IPv6`地址列表。
      */
     public void setIpv6AddressSet(VpcIpv6Address [] Ipv6AddressSet) {
@@ -60,7 +60,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取`IPv6`地址总数。
+     * Get `IPv6`地址总数。 
      * @return TotalCount `IPv6`地址总数。
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置`IPv6`地址总数。
+     * Set `IPv6`地址总数。
      * @param TotalCount `IPv6`地址总数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeVpcIpv6AddressesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);

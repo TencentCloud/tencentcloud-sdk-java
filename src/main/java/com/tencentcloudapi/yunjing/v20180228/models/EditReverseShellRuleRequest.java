@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditReverseShellRuleRequest  extends AbstractModel{
+public class EditReverseShellRuleRequest extends AbstractModel{
 
     /**
     * 规则ID(新增时请留空)
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
@@ -69,26 +69,26 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     */
     @SerializedName("IsGlobal")
     @Expose
-    private Integer IsGlobal;
+    private Long IsGlobal;
 
     /**
-     * 获取规则ID(新增时请留空)
+     * Get 规则ID(新增时请留空) 
      * @return Id 规则ID(新增时请留空)
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置规则ID(新增时请留空)
+     * Set 规则ID(新增时请留空)
      * @param Id 规则ID(新增时请留空)
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个) 
      * @return Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public String getUuid() {
@@ -96,7 +96,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      * @param Uuid 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public void setUuid(String Uuid) {
@@ -104,7 +104,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Get 主机IP(IsGlobal为1时，Uuid或Hostip必填一个) 
      * @return Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public String getHostip() {
@@ -112,7 +112,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+     * Set 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      * @param Hostip 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
      */
     public void setHostip(String Hostip) {
@@ -120,7 +120,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标IP
+     * Get 目标IP 
      * @return DestIp 目标IP
      */
     public String getDestIp() {
@@ -128,7 +128,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标IP
+     * Set 目标IP
      * @param DestIp 目标IP
      */
     public void setDestIp(String DestIp) {
@@ -136,7 +136,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口
+     * Get 目标端口 
      * @return DestPort 目标端口
      */
     public String getDestPort() {
@@ -144,7 +144,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口
+     * Set 目标端口
      * @param DestPort 目标端口
      */
     public void setDestPort(String DestPort) {
@@ -152,7 +152,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取进程名
+     * Get 进程名 
      * @return ProcessName 进程名
      */
     public String getProcessName() {
@@ -160,7 +160,7 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置进程名
+     * Set 进程名
      * @param ProcessName 进程名
      */
     public void setProcessName(String ProcessName) {
@@ -168,23 +168,23 @@ public class EditReverseShellRuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否全局规则(默认否)
+     * Get 是否全局规则(默认否) 
      * @return IsGlobal 是否全局规则(默认否)
      */
-    public Integer getIsGlobal() {
+    public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * 设置是否全局规则(默认否)
+     * Set 是否全局规则(默认否)
      * @param IsGlobal 是否全局规则(默认否)
      */
-    public void setIsGlobal(Integer IsGlobal) {
+    public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

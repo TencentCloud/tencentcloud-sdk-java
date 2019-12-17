@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OmittedDuration  extends AbstractModel{
+public class OmittedDuration extends AbstractModel{
 
     /**
     * 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
@@ -44,7 +44,7 @@ public class OmittedDuration  extends AbstractModel{
     private Long ResumeTime;
 
     /**
-     * 获取录制暂停时间戳对应的视频播放时间(单位: 毫秒)
+     * Get 录制暂停时间戳对应的视频播放时间(单位: 毫秒) 
      * @return VideoTime 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
      */
     public Long getVideoTime() {
@@ -52,7 +52,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 设置录制暂停时间戳对应的视频播放时间(单位: 毫秒)
+     * Set 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
      * @param VideoTime 录制暂停时间戳对应的视频播放时间(单位: 毫秒)
      */
     public void setVideoTime(Long VideoTime) {
@@ -60,7 +60,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 获取录制暂停时间戳(单位: 毫秒)
+     * Get 录制暂停时间戳(单位: 毫秒) 
      * @return PauseTime 录制暂停时间戳(单位: 毫秒)
      */
     public Long getPauseTime() {
@@ -68,7 +68,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 设置录制暂停时间戳(单位: 毫秒)
+     * Set 录制暂停时间戳(单位: 毫秒)
      * @param PauseTime 录制暂停时间戳(单位: 毫秒)
      */
     public void setPauseTime(Long PauseTime) {
@@ -76,7 +76,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 获取录制恢复时间戳(单位: 毫秒)
+     * Get 录制恢复时间戳(单位: 毫秒) 
      * @return ResumeTime 录制恢复时间戳(单位: 毫秒)
      */
     public Long getResumeTime() {
@@ -84,7 +84,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 设置录制恢复时间戳(单位: 毫秒)
+     * Set 录制恢复时间戳(单位: 毫秒)
      * @param ResumeTime 录制恢复时间戳(单位: 毫秒)
      */
     public void setResumeTime(Long ResumeTime) {
@@ -92,7 +92,7 @@ public class OmittedDuration  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoTime", this.VideoTime);

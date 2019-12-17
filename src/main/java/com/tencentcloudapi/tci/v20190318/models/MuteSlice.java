@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MuteSlice  extends AbstractModel{
+public class MuteSlice extends AbstractModel{
 
     /**
     * 起始时间。
@@ -37,7 +37,7 @@ public class MuteSlice  extends AbstractModel{
     private Long MuteEtm;
 
     /**
-     * 获取起始时间。
+     * Get 起始时间。 
      * @return MuteBtm 起始时间。
      */
     public Long getMuteBtm() {
@@ -45,7 +45,7 @@ public class MuteSlice  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间。
+     * Set 起始时间。
      * @param MuteBtm 起始时间。
      */
     public void setMuteBtm(Long MuteBtm) {
@@ -53,7 +53,7 @@ public class MuteSlice  extends AbstractModel{
     }
 
     /**
-     * 获取终止时间。
+     * Get 终止时间。 
      * @return MuteEtm 终止时间。
      */
     public Long getMuteEtm() {
@@ -61,7 +61,7 @@ public class MuteSlice  extends AbstractModel{
     }
 
     /**
-     * 设置终止时间。
+     * Set 终止时间。
      * @param MuteEtm 终止时间。
      */
     public void setMuteEtm(Long MuteEtm) {
@@ -69,7 +69,7 @@ public class MuteSlice  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MuteBtm", this.MuteBtm);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BankCardVerificationRequest  extends AbstractModel{
+public class BankCardVerificationRequest extends AbstractModel{
 
     /**
     * 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
@@ -52,7 +52,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     private Integer CertType;
 
     /**
-     * 获取开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * Get 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。 
      * @return IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public String getIdCard() {
@@ -60,7 +60,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * Set 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      * @param IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public void setIdCard(String IdCard) {
@@ -68,7 +68,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取姓名
+     * Get 姓名 
      * @return Name 姓名
      */
     public String getName() {
@@ -76,7 +76,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置姓名
+     * Set 姓名
      * @param Name 姓名
      */
     public void setName(String Name) {
@@ -84,7 +84,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取银行卡
+     * Get 银行卡 
      * @return BankCard 银行卡
      */
     public String getBankCard() {
@@ -92,7 +92,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置银行卡
+     * Set 银行卡
      * @param BankCard 银行卡
      */
     public void setBankCard(String BankCard) {
@@ -100,8 +100,8 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
+     * Get 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。 
      * @return CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      */
@@ -110,7 +110,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+     * Set 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
      * @param CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
 目前默认：0 身份证，其他证件类型需求可以联系小助手faceid001确认。
@@ -120,7 +120,7 @@ public class BankCardVerificationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);

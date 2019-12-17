@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeliverTidNotifyResponse  extends AbstractModel{
+public class DeliverTidNotifyResponse extends AbstractModel{
 
     /**
     * 剩余空发数量
@@ -51,7 +51,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取剩余空发数量
+     * Get 剩余空发数量 
      * @return RemaindCount 剩余空发数量
      */
     public Long getRemaindCount() {
@@ -59,7 +59,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置剩余空发数量
+     * Set 剩余空发数量
      * @param RemaindCount 剩余空发数量
      */
     public void setRemaindCount(Long RemaindCount) {
@@ -67,7 +67,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已回执的TID编码
+     * Get 已回执的TID编码 
      * @return Tid 已回执的TID编码
      */
     public String getTid() {
@@ -75,7 +75,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已回执的TID编码
+     * Set 已回执的TID编码
      * @param Tid 已回执的TID编码
      */
     public void setTid(String Tid) {
@@ -83,7 +83,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品公钥
+     * Get 产品公钥 
      * @return ProductKey 产品公钥
      */
     public String getProductKey() {
@@ -91,7 +91,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品公钥
+     * Set 产品公钥
      * @param ProductKey 产品公钥
      */
     public void setProductKey(String ProductKey) {
@@ -99,7 +99,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DeliverTidNotifyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RemaindCount", this.RemaindCount);

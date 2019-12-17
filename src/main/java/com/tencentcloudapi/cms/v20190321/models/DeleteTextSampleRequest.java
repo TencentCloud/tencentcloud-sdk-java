@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTextSampleRequest  extends AbstractModel{
+public class DeleteTextSampleRequest extends AbstractModel{
 
     /**
     * 唯一标识数组，目前暂时只支持单个删除
@@ -30,7 +30,7 @@ public class DeleteTextSampleRequest  extends AbstractModel{
     private String [] Ids;
 
     /**
-     * 获取唯一标识数组，目前暂时只支持单个删除
+     * Get 唯一标识数组，目前暂时只支持单个删除 
      * @return Ids 唯一标识数组，目前暂时只支持单个删除
      */
     public String [] getIds() {
@@ -38,7 +38,7 @@ public class DeleteTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置唯一标识数组，目前暂时只支持单个删除
+     * Set 唯一标识数组，目前暂时只支持单个删除
      * @param Ids 唯一标识数组，目前暂时只支持单个删除
      */
     public void setIds(String [] Ids) {
@@ -46,7 +46,7 @@ public class DeleteTextSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

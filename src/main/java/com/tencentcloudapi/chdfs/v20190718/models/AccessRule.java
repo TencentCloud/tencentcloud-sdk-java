@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AccessRule  extends AbstractModel{
+public class AccessRule extends AbstractModel{
 
     /**
     * 权限规则ID
@@ -58,7 +58,7 @@ public class AccessRule  extends AbstractModel{
     private String CreateTime;
 
     /**
-     * 获取权限规则ID
+     * Get 权限规则ID 
      * @return AccessRuleId 权限规则ID
      */
     public Long getAccessRuleId() {
@@ -66,7 +66,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 设置权限规则ID
+     * Set 权限规则ID
      * @param AccessRuleId 权限规则ID
      */
     public void setAccessRuleId(Long AccessRuleId) {
@@ -74,7 +74,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 获取权限规则地址（网段或IP）
+     * Get 权限规则地址（网段或IP） 
      * @return Address 权限规则地址（网段或IP）
      */
     public String getAddress() {
@@ -82,7 +82,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 设置权限规则地址（网段或IP）
+     * Set 权限规则地址（网段或IP）
      * @param Address 权限规则地址（网段或IP）
      */
     public void setAddress(String Address) {
@@ -90,7 +90,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 获取权限规则访问模式（1：只读；2：读写）
+     * Get 权限规则访问模式（1：只读；2：读写） 
      * @return AccessMode 权限规则访问模式（1：只读；2：读写）
      */
     public Long getAccessMode() {
@@ -98,7 +98,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 设置权限规则访问模式（1：只读；2：读写）
+     * Set 权限规则访问模式（1：只读；2：读写）
      * @param AccessMode 权限规则访问模式（1：只读；2：读写）
      */
     public void setAccessMode(Long AccessMode) {
@@ -106,7 +106,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 获取优先级（取值范围1~100，值越小优先级越高）
+     * Get 优先级（取值范围1~100，值越小优先级越高） 
      * @return Priority 优先级（取值范围1~100，值越小优先级越高）
      */
     public Long getPriority() {
@@ -114,7 +114,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 设置优先级（取值范围1~100，值越小优先级越高）
+     * Set 优先级（取值范围1~100，值越小优先级越高）
      * @param Priority 优先级（取值范围1~100，值越小优先级越高）
      */
     public void setPriority(Long Priority) {
@@ -122,7 +122,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -130,7 +130,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -138,7 +138,7 @@ public class AccessRule  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccessRuleId", this.AccessRuleId);

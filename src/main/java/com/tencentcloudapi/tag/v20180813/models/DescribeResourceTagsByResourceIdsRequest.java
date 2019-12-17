@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
+public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
 
     /**
     * 业务类型
@@ -65,7 +65,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取业务类型
+     * Get 业务类型 
      * @return ServiceType 业务类型
      */
     public String getServiceType() {
@@ -73,7 +73,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置业务类型
+     * Set 业务类型
      * @param ServiceType 业务类型
      */
     public void setServiceType(String ServiceType) {
@@ -81,7 +81,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源前缀
+     * Get 资源前缀 
      * @return ResourcePrefix 资源前缀
      */
     public String getResourcePrefix() {
@@ -89,7 +89,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源前缀
+     * Set 资源前缀
      * @param ResourcePrefix 资源前缀
      */
     public void setResourcePrefix(String ResourcePrefix) {
@@ -97,7 +97,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源唯一标记
+     * Get 资源唯一标记 
      * @return ResourceIds 资源唯一标记
      */
     public String [] getResourceIds() {
@@ -105,7 +105,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源唯一标记
+     * Set 资源唯一标记
      * @param ResourceIds 资源唯一标记
      */
     public void setResourceIds(String [] ResourceIds) {
@@ -113,7 +113,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源所在地域
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
      */
     public String getResourceRegion() {
@@ -121,7 +121,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源所在地域
+     * Set 资源所在地域
      * @param ResourceRegion 资源所在地域
      */
     public void setResourceRegion(String ResourceRegion) {
@@ -129,7 +129,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
      * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public Long getOffset() {
@@ -137,7 +137,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      */
     public void setOffset(Long Offset) {
@@ -145,7 +145,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小，默认为 15
+     * Get 每页大小，默认为 15 
      * @return Limit 每页大小，默认为 15
      */
     public Long getLimit() {
@@ -153,7 +153,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小，默认为 15
+     * Set 每页大小，默认为 15
      * @param Limit 每页大小，默认为 15
      */
     public void setLimit(Long Limit) {
@@ -161,7 +161,7 @@ public class DescribeResourceTagsByResourceIdsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);

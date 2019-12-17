@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Code  extends AbstractModel{
+public class Code extends AbstractModel{
 
     /**
     * 对象存储桶名称
@@ -121,7 +121,7 @@ public class Code  extends AbstractModel{
     private String GitUserNameSecret;
 
     /**
-     * 获取对象存储桶名称
+     * Get 对象存储桶名称 
      * @return CosBucketName 对象存储桶名称
      */
     public String getCosBucketName() {
@@ -129,7 +129,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储桶名称
+     * Set 对象存储桶名称
      * @param CosBucketName 对象存储桶名称
      */
     public void setCosBucketName(String CosBucketName) {
@@ -137,7 +137,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储对象路径
+     * Get 对象存储对象路径 
      * @return CosObjectName 对象存储对象路径
      */
     public String getCosObjectName() {
@@ -145,7 +145,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储对象路径
+     * Set 对象存储对象路径
      * @param CosObjectName 对象存储对象路径
      */
     public void setCosObjectName(String CosObjectName) {
@@ -153,7 +153,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+     * Get 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M 
      * @return ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      */
     public String getZipFile() {
@@ -161,7 +161,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+     * Set 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      * @param ZipFile 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
      */
     public void setZipFile(String ZipFile) {
@@ -169,7 +169,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * Get 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。 
      * @return CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
      */
     public String getCosBucketRegion() {
@@ -177,7 +177,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
+     * Set 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
      * @param CosBucketRegion 对象存储的地域，地域为北京时需要传入ap-beijing,北京一区时需要传递ap-beijing-1，其他的地域不需要传递。
      */
     public void setCosBucketRegion(String CosBucketRegion) {
@@ -185,7 +185,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取如果是通过Demo创建的话，需要传入DemoId
+     * Get 如果是通过Demo创建的话，需要传入DemoId 
      * @return DemoId 如果是通过Demo创建的话，需要传入DemoId
      */
     public String getDemoId() {
@@ -193,7 +193,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置如果是通过Demo创建的话，需要传入DemoId
+     * Set 如果是通过Demo创建的话，需要传入DemoId
      * @param DemoId 如果是通过Demo创建的话，需要传入DemoId
      */
     public void setDemoId(String DemoId) {
@@ -201,7 +201,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取如果是从TempCos创建的话，需要传入TempCosObjectName
+     * Get 如果是从TempCos创建的话，需要传入TempCosObjectName 
      * @return TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
      */
     public String getTempCosObjectName() {
@@ -209,7 +209,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置如果是从TempCos创建的话，需要传入TempCosObjectName
+     * Set 如果是从TempCos创建的话，需要传入TempCosObjectName
      * @param TempCosObjectName 如果是从TempCos创建的话，需要传入TempCosObjectName
      */
     public void setTempCosObjectName(String TempCosObjectName) {
@@ -217,7 +217,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取Git地址
+     * Get Git地址 
      * @return GitUrl Git地址
      */
     public String getGitUrl() {
@@ -225,7 +225,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置Git地址
+     * Set Git地址
      * @param GitUrl Git地址
      */
     public void setGitUrl(String GitUrl) {
@@ -233,7 +233,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取Git用户名
+     * Get Git用户名 
      * @return GitUserName Git用户名
      */
     public String getGitUserName() {
@@ -241,7 +241,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置Git用户名
+     * Set Git用户名
      * @param GitUserName Git用户名
      */
     public void setGitUserName(String GitUserName) {
@@ -249,7 +249,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取Git密码
+     * Get Git密码 
      * @return GitPassword Git密码
      */
     public String getGitPassword() {
@@ -257,7 +257,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置Git密码
+     * Set Git密码
      * @param GitPassword Git密码
      */
     public void setGitPassword(String GitPassword) {
@@ -265,7 +265,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取加密后的Git密码，一般无需指定
+     * Get 加密后的Git密码，一般无需指定 
      * @return GitPasswordSecret 加密后的Git密码，一般无需指定
      */
     public String getGitPasswordSecret() {
@@ -273,7 +273,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置加密后的Git密码，一般无需指定
+     * Set 加密后的Git密码，一般无需指定
      * @param GitPasswordSecret 加密后的Git密码，一般无需指定
      */
     public void setGitPasswordSecret(String GitPasswordSecret) {
@@ -281,7 +281,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取Git分支
+     * Get Git分支 
      * @return GitBranch Git分支
      */
     public String getGitBranch() {
@@ -289,7 +289,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置Git分支
+     * Set Git分支
      * @param GitBranch Git分支
      */
     public void setGitBranch(String GitBranch) {
@@ -297,7 +297,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取代码在Git仓库中的路径
+     * Get 代码在Git仓库中的路径 
      * @return GitDirectory 代码在Git仓库中的路径
      */
     public String getGitDirectory() {
@@ -305,7 +305,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置代码在Git仓库中的路径
+     * Set 代码在Git仓库中的路径
      * @param GitDirectory 代码在Git仓库中的路径
      */
     public void setGitDirectory(String GitDirectory) {
@@ -313,7 +313,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取指定要拉取的版本
+     * Get 指定要拉取的版本 
      * @return GitCommitId 指定要拉取的版本
      */
     public String getGitCommitId() {
@@ -321,7 +321,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置指定要拉取的版本
+     * Set 指定要拉取的版本
      * @param GitCommitId 指定要拉取的版本
      */
     public void setGitCommitId(String GitCommitId) {
@@ -329,7 +329,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 获取加密后的Git用户名，一般无需指定
+     * Get 加密后的Git用户名，一般无需指定 
      * @return GitUserNameSecret 加密后的Git用户名，一般无需指定
      */
     public String getGitUserNameSecret() {
@@ -337,7 +337,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 设置加密后的Git用户名，一般无需指定
+     * Set 加密后的Git用户名，一般无需指定
      * @param GitUserNameSecret 加密后的Git用户名，一般无需指定
      */
     public void setGitUserNameSecret(String GitUserNameSecret) {
@@ -345,7 +345,7 @@ public class Code  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceShadowRequest  extends AbstractModel{
+public class DescribeDeviceShadowRequest extends AbstractModel{
 
     /**
     * 产品 ID
@@ -37,7 +37,7 @@ public class DescribeDeviceShadowRequest  extends AbstractModel{
     private String DeviceName;
 
     /**
-     * 获取产品 ID
+     * Get 产品 ID 
      * @return ProductId 产品 ID
      */
     public String getProductId() {
@@ -45,7 +45,7 @@ public class DescribeDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID
+     * Set 产品 ID
      * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
@@ -53,7 +53,7 @@ public class DescribeDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}
+     * Get 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48} 
      * @return DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}
      */
     public String getDeviceName() {
@@ -61,7 +61,7 @@ public class DescribeDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}
+     * Set 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}
      * @param DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}
      */
     public void setDeviceName(String DeviceName) {
@@ -69,7 +69,7 @@ public class DescribeDeviceShadowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

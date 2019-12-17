@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EditMediaStreamInfo  extends AbstractModel{
+public class EditMediaStreamInfo extends AbstractModel{
 
     /**
     * 录制的流 ID
@@ -46,7 +46,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取录制的流 ID
+     * Get 录制的流 ID 
      * @return StreamId 录制的流 ID
      */
     public String getStreamId() {
@@ -54,7 +54,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置录制的流 ID
+     * Set 录制的流 ID
      * @param StreamId 录制的流 ID
      */
     public void setStreamId(String StreamId) {
@@ -62,8 +62,8 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -72,7 +72,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 流剪辑的起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,8 +82,8 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -92,7 +92,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 流剪辑的结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -102,7 +102,7 @@ public class EditMediaStreamInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
+public class DescribeGroupAndStatisticsProxyResponse extends AbstractModel{
 
     /**
     * 可以统计的通道组信息
@@ -44,7 +44,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可以统计的通道组信息
+     * Get 可以统计的通道组信息 
      * @return GroupSet 可以统计的通道组信息
      */
     public GroupStatisticsInfo [] getGroupSet() {
@@ -52,7 +52,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可以统计的通道组信息
+     * Set 可以统计的通道组信息
      * @param GroupSet 可以统计的通道组信息
      */
     public void setGroupSet(GroupStatisticsInfo [] GroupSet) {
@@ -60,7 +60,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取通道组数量
+     * Get 通道组数量 
      * @return TotalCount 通道组数量
      */
     public Long getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置通道组数量
+     * Set 通道组数量
      * @param TotalCount 通道组数量
      */
     public void setTotalCount(Long TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeGroupAndStatisticsProxyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "GroupSet.", this.GroupSet);

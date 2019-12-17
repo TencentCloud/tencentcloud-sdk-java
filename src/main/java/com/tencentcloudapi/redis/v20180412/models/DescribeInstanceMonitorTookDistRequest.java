@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
+public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -44,7 +44,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     private Integer SpanType;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间；例如："20190219"
+     * Get 时间；例如："20190219" 
      * @return Date 时间；例如："20190219"
      */
     public String getDate() {
@@ -68,7 +68,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间；例如："20190219"
+     * Set 时间；例如："20190219"
      * @param Date 时间；例如："20190219"
      */
     public void setDate(String Date) {
@@ -76,7 +76,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求类型：1——string类型，2——所有类型
+     * Get 请求类型：1——string类型，2——所有类型 
      * @return SpanType 请求类型：1——string类型，2——所有类型
      */
     public Integer getSpanType() {
@@ -84,7 +84,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求类型：1——string类型，2——所有类型
+     * Set 请求类型：1——string类型，2——所有类型
      * @param SpanType 请求类型：1——string类型，2——所有类型
      */
     public void setSpanType(Integer SpanType) {
@@ -92,7 +92,7 @@ public class DescribeInstanceMonitorTookDistRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

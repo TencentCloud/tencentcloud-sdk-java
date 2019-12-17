@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssistantCidr  extends AbstractModel{
+public class AssistantCidr extends AbstractModel{
 
     /**
     * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
@@ -52,7 +52,7 @@ public class AssistantCidr  extends AbstractModel{
     private Subnet [] SubnetSet;
 
     /**
-     * 获取`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
      * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      */
     public String getVpcId() {
@@ -60,7 +60,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
      */
     public void setVpcId(String VpcId) {
@@ -68,7 +68,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 获取辅助CIDR。形如：`172.16.0.0/16`
+     * Get 辅助CIDR。形如：`172.16.0.0/16` 
      * @return CidrBlock 辅助CIDR。形如：`172.16.0.0/16`
      */
     public String getCidrBlock() {
@@ -76,7 +76,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 设置辅助CIDR。形如：`172.16.0.0/16`
+     * Set 辅助CIDR。形如：`172.16.0.0/16`
      * @param CidrBlock 辅助CIDR。形如：`172.16.0.0/16`
      */
     public void setCidrBlock(String CidrBlock) {
@@ -84,7 +84,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 获取辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
+     * Get 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。 
      * @return AssistantType 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      */
     public Integer getAssistantType() {
@@ -92,7 +92,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 设置辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
+     * Set 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      * @param AssistantType 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      */
     public void setAssistantType(Integer AssistantType) {
@@ -100,8 +100,8 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 获取辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 辅助CIDR拆分的子网。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetSet 辅助CIDR拆分的子网。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,7 +110,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 设置辅助CIDR拆分的子网。
+     * Set 辅助CIDR拆分的子网。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetSet 辅助CIDR拆分的子网。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,7 +120,7 @@ public class AssistantCidr  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

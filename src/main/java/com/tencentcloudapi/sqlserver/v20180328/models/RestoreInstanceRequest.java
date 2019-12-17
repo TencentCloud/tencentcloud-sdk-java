@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RestoreInstanceRequest  extends AbstractModel{
+public class RestoreInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-j8kv137v
@@ -34,10 +34,10 @@ public class RestoreInstanceRequest  extends AbstractModel{
     */
     @SerializedName("BackupId")
     @Expose
-    private Integer BackupId;
+    private Long BackupId;
 
     /**
-     * 获取实例ID，形如mssql-j8kv137v
+     * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-j8kv137v
+     * Set 实例ID，形如mssql-j8kv137v
      * @param InstanceId 实例ID，形如mssql-j8kv137v
      */
     public void setInstanceId(String InstanceId) {
@@ -53,23 +53,23 @@ public class RestoreInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
+     * Get 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得 
      * @return BackupId 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
      */
-    public Integer getBackupId() {
+    public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * 设置备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
+     * Set 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
      * @param BackupId 备份文件ID，该ID可以通过DescribeBackups接口返回数据中的Id字段获得
      */
-    public void setBackupId(Integer BackupId) {
+    public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

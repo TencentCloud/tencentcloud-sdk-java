@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteServiceTemplateRequest  extends AbstractModel{
+public class DeleteServiceTemplateRequest extends AbstractModel{
 
     /**
     * 协议端口模板实例ID，例如：ppm-e6dy460g。
@@ -30,7 +30,7 @@ public class DeleteServiceTemplateRequest  extends AbstractModel{
     private String ServiceTemplateId;
 
     /**
-     * 获取协议端口模板实例ID，例如：ppm-e6dy460g。
+     * Get 协议端口模板实例ID，例如：ppm-e6dy460g。 
      * @return ServiceTemplateId 协议端口模板实例ID，例如：ppm-e6dy460g。
      */
     public String getServiceTemplateId() {
@@ -38,7 +38,7 @@ public class DeleteServiceTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置协议端口模板实例ID，例如：ppm-e6dy460g。
+     * Set 协议端口模板实例ID，例如：ppm-e6dy460g。
      * @param ServiceTemplateId 协议端口模板实例ID，例如：ppm-e6dy460g。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
@@ -46,7 +46,7 @@ public class DeleteServiceTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);

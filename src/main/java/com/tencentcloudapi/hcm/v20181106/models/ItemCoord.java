@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ItemCoord  extends AbstractModel{
+public class ItemCoord extends AbstractModel{
 
     /**
     * 算式高度
@@ -51,7 +51,7 @@ public class ItemCoord  extends AbstractModel{
     private Integer Y;
 
     /**
-     * 获取算式高度
+     * Get 算式高度 
      * @return Height 算式高度
      */
     public Integer getHeight() {
@@ -59,7 +59,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置算式高度
+     * Set 算式高度
      * @param Height 算式高度
      */
     public void setHeight(Integer Height) {
@@ -67,7 +67,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取算式宽度
+     * Get 算式宽度 
      * @return Width 算式宽度
      */
     public Integer getWidth() {
@@ -75,7 +75,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置算式宽度
+     * Set 算式宽度
      * @param Width 算式宽度
      */
     public void setWidth(Integer Width) {
@@ -83,7 +83,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取算式图的左上角横坐标
+     * Get 算式图的左上角横坐标 
      * @return X 算式图的左上角横坐标
      */
     public Integer getX() {
@@ -91,7 +91,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置算式图的左上角横坐标
+     * Set 算式图的左上角横坐标
      * @param X 算式图的左上角横坐标
      */
     public void setX(Integer X) {
@@ -99,7 +99,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 获取算式图的左上角纵坐标
+     * Get 算式图的左上角纵坐标 
      * @return Y 算式图的左上角纵坐标
      */
     public Integer getY() {
@@ -107,7 +107,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 设置算式图的左上角纵坐标
+     * Set 算式图的左上角纵坐标
      * @param Y 算式图的左上角纵坐标
      */
     public void setY(Integer Y) {
@@ -115,7 +115,7 @@ public class ItemCoord  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Height", this.Height);

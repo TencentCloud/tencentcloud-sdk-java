@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskResponse  extends AbstractModel{
+public class DescribeTaskResponse extends AbstractModel{
 
     /**
     * 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
@@ -121,7 +121,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Get 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage” 
      * @return Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public String getType() {
@@ -129,7 +129,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
+     * Set 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      * @param Type 任务类型，目前取值为 “UpdateShadow” 或者 “PublishMessage”
      */
     public void setType(String Type) {
@@ -137,7 +137,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务 ID
+     * Get 任务 ID 
      * @return Id 任务 ID
      */
     public String getId() {
@@ -145,7 +145,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务 ID
+     * Set 任务 ID
      * @param Id 任务 ID
      */
     public void setId(String Id) {
@@ -153,7 +153,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取产品 ID
+     * Get 产品 ID 
      * @return ProductId 产品 ID
      */
     public String getProductId() {
@@ -161,7 +161,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID
+     * Set 产品 ID
      * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
@@ -169,7 +169,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
+     * Get 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消 
      * @return Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
     public Integer getStatus() {
@@ -177,7 +177,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
+     * Set 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      * @param Status 状态。1表示等待处理，2表示调度处理中，3表示已完成，4表示失败，5表示已取消
      */
     public void setStatus(Integer Status) {
@@ -185,7 +185,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间，Unix 时间戳
+     * Get 任务创建时间，Unix 时间戳 
      * @return CreateTime 任务创建时间，Unix 时间戳
      */
     public Integer getCreateTime() {
@@ -193,7 +193,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间，Unix 时间戳
+     * Set 任务创建时间，Unix 时间戳
      * @param CreateTime 任务创建时间，Unix 时间戳
      */
     public void setCreateTime(Integer CreateTime) {
@@ -201,7 +201,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取最后任务更新时间，Unix 时间戳
+     * Get 最后任务更新时间，Unix 时间戳 
      * @return UpdateTime 最后任务更新时间，Unix 时间戳
      */
     public Integer getUpdateTime() {
@@ -209,7 +209,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置最后任务更新时间，Unix 时间戳
+     * Set 最后任务更新时间，Unix 时间戳
      * @param UpdateTime 最后任务更新时间，Unix 时间戳
      */
     public void setUpdateTime(Integer UpdateTime) {
@@ -217,7 +217,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务完成时间，Unix 时间戳
+     * Get 任务完成时间，Unix 时间戳 
      * @return DoneTime 任务完成时间，Unix 时间戳
      */
     public Integer getDoneTime() {
@@ -225,7 +225,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务完成时间，Unix 时间戳
+     * Set 任务完成时间，Unix 时间戳
      * @param DoneTime 任务完成时间，Unix 时间戳
      */
     public void setDoneTime(Integer DoneTime) {
@@ -233,7 +233,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取被调度时间，Unix 时间戳
+     * Get 被调度时间，Unix 时间戳 
      * @return ScheduleTime 被调度时间，Unix 时间戳
      */
     public Integer getScheduleTime() {
@@ -241,7 +241,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置被调度时间，Unix 时间戳
+     * Set 被调度时间，Unix 时间戳
      * @param ScheduleTime 被调度时间，Unix 时间戳
      */
     public void setScheduleTime(Integer ScheduleTime) {
@@ -249,7 +249,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的错误码
+     * Get 返回的错误码 
      * @return RetCode 返回的错误码
      */
     public Integer getRetCode() {
@@ -257,7 +257,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的错误码
+     * Set 返回的错误码
      * @param RetCode 返回的错误码
      */
     public void setRetCode(Integer RetCode) {
@@ -265,7 +265,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回的错误信息
+     * Get 返回的错误信息 
      * @return ErrMsg 返回的错误信息
      */
     public String getErrMsg() {
@@ -273,7 +273,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回的错误信息
+     * Set 返回的错误信息
      * @param ErrMsg 返回的错误信息
      */
     public void setErrMsg(String ErrMsg) {
@@ -281,7 +281,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取完成任务的设备比例
+     * Get 完成任务的设备比例 
      * @return Percent 完成任务的设备比例
      */
     public Integer getPercent() {
@@ -289,7 +289,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置完成任务的设备比例
+     * Set 完成任务的设备比例
      * @param Percent 完成任务的设备比例
      */
     public void setPercent(Integer Percent) {
@@ -297,7 +297,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取匹配到的需执行任务的设备数目
+     * Get 匹配到的需执行任务的设备数目 
      * @return AllDeviceCnt 匹配到的需执行任务的设备数目
      */
     public Integer getAllDeviceCnt() {
@@ -305,7 +305,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置匹配到的需执行任务的设备数目
+     * Set 匹配到的需执行任务的设备数目
      * @param AllDeviceCnt 匹配到的需执行任务的设备数目
      */
     public void setAllDeviceCnt(Integer AllDeviceCnt) {
@@ -313,7 +313,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取已完成任务的设备数目
+     * Get 已完成任务的设备数目 
      * @return DoneDeviceCnt 已完成任务的设备数目
      */
     public Integer getDoneDeviceCnt() {
@@ -321,7 +321,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置已完成任务的设备数目
+     * Set 已完成任务的设备数目
      * @param DoneDeviceCnt 已完成任务的设备数目
      */
     public void setDoneDeviceCnt(Integer DoneDeviceCnt) {
@@ -329,7 +329,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -337,7 +337,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -345,7 +345,7 @@ public class DescribeTaskResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

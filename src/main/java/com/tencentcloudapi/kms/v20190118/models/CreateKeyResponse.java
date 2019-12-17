@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateKeyResponse  extends AbstractModel{
+public class CreateKeyResponse extends AbstractModel{
 
     /**
     * CMK的全局唯一标识符
@@ -73,7 +73,7 @@ public class CreateKeyResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取CMK的全局唯一标识符
+     * Get CMK的全局唯一标识符 
      * @return KeyId CMK的全局唯一标识符
      */
     public String getKeyId() {
@@ -81,7 +81,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的全局唯一标识符
+     * Set CMK的全局唯一标识符
      * @param KeyId CMK的全局唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -89,7 +89,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取作为密钥更容易辨识，更容易被人看懂的别名
+     * Get 作为密钥更容易辨识，更容易被人看懂的别名 
      * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名
      */
     public String getAlias() {
@@ -97,7 +97,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置作为密钥更容易辨识，更容易被人看懂的别名
+     * Set 作为密钥更容易辨识，更容易被人看懂的别名
      * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名
      */
     public void setAlias(String Alias) {
@@ -105,7 +105,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取密钥创建时间，unix时间戳
+     * Get 密钥创建时间，unix时间戳 
      * @return CreateTime 密钥创建时间，unix时间戳
      */
     public Long getCreateTime() {
@@ -113,7 +113,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置密钥创建时间，unix时间戳
+     * Set 密钥创建时间，unix时间戳
      * @param CreateTime 密钥创建时间，unix时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -121,8 +121,8 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CMK的描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description CMK的描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -131,7 +131,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的描述
+     * Set CMK的描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description CMK的描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,7 +141,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的状态
+     * Get CMK的状态 
      * @return KeyState CMK的状态
      */
     public String getKeyState() {
@@ -149,7 +149,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的状态
+     * Set CMK的状态
      * @param KeyState CMK的状态
      */
     public void setKeyState(String KeyState) {
@@ -157,7 +157,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取CMK的用途
+     * Get CMK的用途 
      * @return KeyUsage CMK的用途
      */
     public String getKeyUsage() {
@@ -165,7 +165,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置CMK的用途
+     * Set CMK的用途
      * @param KeyUsage CMK的用途
      */
     public void setKeyUsage(String KeyUsage) {
@@ -173,7 +173,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -181,7 +181,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -189,7 +189,7 @@ public class CreateKeyResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
+public class DescribeDiskConfigQuotaRequest extends AbstractModel{
 
     /**
     * 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
@@ -79,7 +79,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     private Integer Memory;
 
     /**
-     * 获取查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
+     * Get 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。 
      * @return InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      */
     public String getInquiryType() {
@@ -87,7 +87,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
+     * Set 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      * @param InquiryType 查询类别，取值范围。<br><li>INQUIRY_CBS_CONFIG：查询云盘配置列表<br><li>INQUIRY_CVM_CONFIG：查询云盘与实例搭配的配置列表。
      */
     public void setInquiryType(String InquiryType) {
@@ -95,7 +95,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     * Get 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。 
      * @return Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      */
     public String [] getZones() {
@@ -103,7 +103,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
+     * Set 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      * @param Zones 查询一个或多个[可用区](/document/product/213/15753#ZoneInfo)下的配置。
      */
     public void setZones(String [] Zones) {
@@ -111,7 +111,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
+     * Get 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。 
      * @return DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      */
     public String getDiskChargeType() {
@@ -119,7 +119,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
+     * Set 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      * @param DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费<br><li>POSTPAID_BY_HOUR：后付费。
      */
     public void setDiskChargeType(String DiskChargeType) {
@@ -127,7 +127,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * Get 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。 
      * @return DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
     public String [] getDiskTypes() {
@@ -135,7 +135,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
+     * Set 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      * @param DiskTypes 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘。
      */
     public void setDiskTypes(String [] DiskTypes) {
@@ -143,7 +143,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Get 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。 
      * @return DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
     public String getDiskUsage() {
@@ -151,7 +151,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * Set 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      * @param DiskUsage 系统盘或数据盘。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
      */
     public void setDiskUsage(String DiskUsage) {
@@ -159,7 +159,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     * Get 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518) 
      * @return InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
      */
     public String [] getInstanceFamilies() {
@@ -167,7 +167,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
+     * Set 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
      * @param InstanceFamilies 按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
      */
     public void setInstanceFamilies(String [] InstanceFamilies) {
@@ -175,7 +175,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例CPU核数。
+     * Get 实例CPU核数。 
      * @return CPU 实例CPU核数。
      */
     public Integer getCPU() {
@@ -183,7 +183,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例CPU核数。
+     * Set 实例CPU核数。
      * @param CPU 实例CPU核数。
      */
     public void setCPU(Integer CPU) {
@@ -191,7 +191,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例内存大小。
+     * Get 实例内存大小。 
      * @return Memory 实例内存大小。
      */
     public Integer getMemory() {
@@ -199,7 +199,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例内存大小。
+     * Set 实例内存大小。
      * @param Memory 实例内存大小。
      */
     public void setMemory(Integer Memory) {
@@ -207,7 +207,7 @@ public class DescribeDiskConfigQuotaRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InquiryType", this.InquiryType);

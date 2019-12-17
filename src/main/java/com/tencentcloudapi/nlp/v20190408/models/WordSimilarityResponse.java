@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WordSimilarityResponse  extends AbstractModel{
+public class WordSimilarityResponse extends AbstractModel{
 
     /**
     * 两个词语的相似度
@@ -37,7 +37,7 @@ public class WordSimilarityResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取两个词语的相似度
+     * Get 两个词语的相似度 
      * @return Similarity 两个词语的相似度
      */
     public Float getSimilarity() {
@@ -45,7 +45,7 @@ public class WordSimilarityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置两个词语的相似度
+     * Set 两个词语的相似度
      * @param Similarity 两个词语的相似度
      */
     public void setSimilarity(Float Similarity) {
@@ -53,7 +53,7 @@ public class WordSimilarityResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class WordSimilarityResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class WordSimilarityResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Similarity", this.Similarity);

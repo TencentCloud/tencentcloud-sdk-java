@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddUserRequest  extends AbstractModel{
+public class AddUserRequest extends AbstractModel{
 
     /**
     * 子用户用户名
@@ -86,7 +86,7 @@ public class AddUserRequest  extends AbstractModel{
     private String Email;
 
     /**
-     * 获取子用户用户名
+     * Get 子用户用户名 
      * @return Name 子用户用户名
      */
     public String getName() {
@@ -94,7 +94,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户用户名
+     * Set 子用户用户名
      * @param Name 子用户用户名
      */
     public void setName(String Name) {
@@ -102,7 +102,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子用户备注
+     * Get 子用户备注 
      * @return Remark 子用户备注
      */
     public String getRemark() {
@@ -110,7 +110,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户备注
+     * Set 子用户备注
      * @param Remark 子用户备注
      */
     public void setRemark(String Remark) {
@@ -118,7 +118,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * Get 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。 
      * @return ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
      */
     public Long getConsoleLogin() {
@@ -126,7 +126,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
+     * Set 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
      * @param ConsoleLogin 子用户是否可以登录控制台。传0子用户无法登录控制台，传1子用户可以登录控制台。
      */
     public void setConsoleLogin(Long ConsoleLogin) {
@@ -134,7 +134,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * Get 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。 
      * @return UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
      */
     public Long getUseApi() {
@@ -142,7 +142,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
+     * Set 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
      * @param UseApi 是否生成子用户密钥。传0不生成子用户密钥，传1生成子用户密钥。
      */
     public void setUseApi(Long UseApi) {
@@ -150,7 +150,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * Get 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。 
      * @return Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
      */
     public String getPassword() {
@@ -158,7 +158,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
+     * Set 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
      * @param Password 子用户控制台登录密码，若未进行密码规则设置则默认密码规则为8位以上同时包含大写小字母、数字和特殊字符。只有可以登录控制台时才有效，如果传空并且上面指定允许登录控制台，则自动生成随机密码，随机密码规则为32位包含大写小字母、数字和特殊字符。
      */
     public void setPassword(String Password) {
@@ -166,7 +166,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * Get 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。 
      * @return NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      */
     public Long getNeedResetPassword() {
@@ -174,7 +174,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
+     * Set 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      * @param NeedResetPassword 子用户是否要在下次登录时重置密码。传0子用户下次登录控制台不需重置密码，传1子用户下次登录控制台需要重置密码。
      */
     public void setNeedResetPassword(Long NeedResetPassword) {
@@ -182,7 +182,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取手机号
+     * Get 手机号 
      * @return PhoneNum 手机号
      */
     public String getPhoneNum() {
@@ -190,7 +190,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置手机号
+     * Set 手机号
      * @param PhoneNum 手机号
      */
     public void setPhoneNum(String PhoneNum) {
@@ -198,7 +198,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区号
+     * Get 区号 
      * @return CountryCode 区号
      */
     public String getCountryCode() {
@@ -206,7 +206,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区号
+     * Set 区号
      * @param CountryCode 区号
      */
     public void setCountryCode(String CountryCode) {
@@ -214,7 +214,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 获取邮箱
+     * Get 邮箱 
      * @return Email 邮箱
      */
     public String getEmail() {
@@ -222,7 +222,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 设置邮箱
+     * Set 邮箱
      * @param Email 邮箱
      */
     public void setEmail(String Email) {
@@ -230,7 +230,7 @@ public class AddUserRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

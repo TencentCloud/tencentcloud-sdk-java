@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PropOwnerCertOCRResponse  extends AbstractModel{
+public class PropOwnerCertOCRResponse extends AbstractModel{
 
     /**
     * 房地产权利人
@@ -72,7 +72,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取房地产权利人
+     * Get 房地产权利人 
      * @return Owner 房地产权利人
      */
     public String getOwner() {
@@ -80,7 +80,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置房地产权利人
+     * Set 房地产权利人
      * @param Owner 房地产权利人
      */
     public void setOwner(String Owner) {
@@ -88,7 +88,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取共有情况
+     * Get 共有情况 
      * @return Possession 共有情况
      */
     public String getPossession() {
@@ -96,7 +96,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置共有情况
+     * Set 共有情况
      * @param Possession 共有情况
      */
     public void setPossession(String Possession) {
@@ -104,7 +104,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取登记时间
+     * Get 登记时间 
      * @return RegisterTime 登记时间
      */
     public String getRegisterTime() {
@@ -112,7 +112,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置登记时间
+     * Set 登记时间
      * @param RegisterTime 登记时间
      */
     public void setRegisterTime(String RegisterTime) {
@@ -120,7 +120,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取规划用途
+     * Get 规划用途 
      * @return Purpose 规划用途
      */
     public String getPurpose() {
@@ -128,7 +128,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置规划用途
+     * Set 规划用途
      * @param Purpose 规划用途
      */
     public void setPurpose(String Purpose) {
@@ -136,7 +136,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取房屋性质
+     * Get 房屋性质 
      * @return Nature 房屋性质
      */
     public String getNature() {
@@ -144,7 +144,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置房屋性质
+     * Set 房屋性质
      * @param Nature 房屋性质
      */
     public void setNature(String Nature) {
@@ -152,7 +152,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取房地坐落
+     * Get 房地坐落 
      * @return Location 房地坐落
      */
     public String getLocation() {
@@ -160,7 +160,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置房地坐落
+     * Set 房地坐落
      * @param Location 房地坐落
      */
     public void setLocation(String Location) {
@@ -168,7 +168,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class PropOwnerCertOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Owner", this.Owner);

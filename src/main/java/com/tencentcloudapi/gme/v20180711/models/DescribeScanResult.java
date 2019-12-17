@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResult  extends AbstractModel{
+public class DescribeScanResult extends AbstractModel{
 
     /**
     * 业务返回码
@@ -112,7 +112,7 @@ public class DescribeScanResult  extends AbstractModel{
     private String Status;
 
     /**
-     * 获取业务返回码
+     * Get 业务返回码 
      * @return Code 业务返回码
      */
     public Long getCode() {
@@ -120,7 +120,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置业务返回码
+     * Set 业务返回码
      * @param Code 业务返回码
      */
     public void setCode(Long Code) {
@@ -128,7 +128,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取数据唯一 ID
+     * Get 数据唯一 ID 
      * @return DataId 数据唯一 ID
      */
     public String getDataId() {
@@ -136,7 +136,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置数据唯一 ID
+     * Set 数据唯一 ID
      * @param DataId 数据唯一 ID
      */
     public void setDataId(String DataId) {
@@ -144,7 +144,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取检测完成的时间戳
+     * Get 检测完成的时间戳 
      * @return ScanFinishTime 检测完成的时间戳
      */
     public Long getScanFinishTime() {
@@ -152,7 +152,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置检测完成的时间戳
+     * Set 检测完成的时间戳
      * @param ScanFinishTime 检测完成的时间戳
      */
     public void setScanFinishTime(Long ScanFinishTime) {
@@ -160,7 +160,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取是否违规
+     * Get 是否违规 
      * @return HitFlag 是否违规
      */
     public Boolean getHitFlag() {
@@ -168,7 +168,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置是否违规
+     * Set 是否违规
      * @param HitFlag 是否违规
      */
     public void setHitFlag(Boolean HitFlag) {
@@ -176,7 +176,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取是否为流
+     * Get 是否为流 
      * @return Live 是否为流
      */
     public Boolean getLive() {
@@ -184,7 +184,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置是否为流
+     * Set 是否为流
      * @param Live 是否为流
      */
     public void setLive(Boolean Live) {
@@ -192,8 +192,8 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取业务返回描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务返回描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Msg 业务返回描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -202,7 +202,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置业务返回描述
+     * Set 业务返回描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 业务返回描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -212,8 +212,8 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取检测结果，Code 为 0 时返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 检测结果，Code 为 0 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ScanPiece 检测结果，Code 为 0 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -222,7 +222,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置检测结果，Code 为 0 时返回
+     * Set 检测结果，Code 为 0 时返回
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanPiece 检测结果，Code 为 0 时返回
 注意：此字段可能返回 null，表示取不到有效值。
@@ -232,7 +232,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取提交检测的时间戳
+     * Get 提交检测的时间戳 
      * @return ScanStartTime 提交检测的时间戳
      */
     public Long getScanStartTime() {
@@ -240,7 +240,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置提交检测的时间戳
+     * Set 提交检测的时间戳
      * @param ScanStartTime 提交检测的时间戳
      */
     public void setScanStartTime(Long ScanStartTime) {
@@ -248,7 +248,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取语音检测场景，对应请求时的 Scene
+     * Get 语音检测场景，对应请求时的 Scene 
      * @return Scenes 语音检测场景，对应请求时的 Scene
      */
     public String [] getScenes() {
@@ -256,7 +256,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置语音检测场景，对应请求时的 Scene
+     * Set 语音检测场景，对应请求时的 Scene
      * @param Scenes 语音检测场景，对应请求时的 Scene
      */
     public void setScenes(String [] Scenes) {
@@ -264,7 +264,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取语音检测任务 ID，由后台分配
+     * Get 语音检测任务 ID，由后台分配 
      * @return TaskId 语音检测任务 ID，由后台分配
      */
     public String getTaskId() {
@@ -272,7 +272,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置语音检测任务 ID，由后台分配
+     * Set 语音检测任务 ID，由后台分配
      * @param TaskId 语音检测任务 ID，由后台分配
      */
     public void setTaskId(String TaskId) {
@@ -280,7 +280,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取文件或接流地址
+     * Get 文件或接流地址 
      * @return Url 文件或接流地址
      */
     public String getUrl() {
@@ -288,7 +288,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置文件或接流地址
+     * Set 文件或接流地址
      * @param Url 文件或接流地址
      */
     public void setUrl(String Url) {
@@ -296,10 +296,10 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 获取检测任务执行结果状态，分别为：
+     * Get 检测任务执行结果状态，分别为：
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
-<li>Error: 异常</li>
+<li>Error: 异常</li> 
      * @return Status 检测任务执行结果状态，分别为：
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
@@ -310,7 +310,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 设置检测任务执行结果状态，分别为：
+     * Set 检测任务执行结果状态，分别为：
 <li>Start: 任务开始</li>
 <li>Success: 成功结束</li>
 <li>Error: 异常</li>
@@ -324,7 +324,7 @@ public class DescribeScanResult  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

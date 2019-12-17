@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteBandwidthPackageRequest  extends AbstractModel{
+public class DeleteBandwidthPackageRequest extends AbstractModel{
 
     /**
     * 待删除带宽包唯一ID
@@ -30,7 +30,7 @@ public class DeleteBandwidthPackageRequest  extends AbstractModel{
     private String BandwidthPackageId;
 
     /**
-     * 获取待删除带宽包唯一ID
+     * Get 待删除带宽包唯一ID 
      * @return BandwidthPackageId 待删除带宽包唯一ID
      */
     public String getBandwidthPackageId() {
@@ -38,7 +38,7 @@ public class DeleteBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除带宽包唯一ID
+     * Set 待删除带宽包唯一ID
      * @param BandwidthPackageId 待删除带宽包唯一ID
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
@@ -46,7 +46,7 @@ public class DeleteBandwidthPackageRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

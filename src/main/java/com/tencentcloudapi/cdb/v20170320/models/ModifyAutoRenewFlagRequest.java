@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAutoRenewFlagRequest  extends AbstractModel{
+public class ModifyAutoRenewFlagRequest extends AbstractModel{
 
     /**
     * 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -37,7 +37,7 @@ public class ModifyAutoRenewFlagRequest  extends AbstractModel{
     private Integer AutoRenew;
 
     /**
-     * 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class ModifyAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class ModifyAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 获取自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
+     * Get 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。 
      * @return AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     public Integer getAutoRenew() {
@@ -61,7 +61,7 @@ public class ModifyAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 设置自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
+     * Set 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      * @param AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     public void setAutoRenew(Integer AutoRenew) {
@@ -69,7 +69,7 @@ public class ModifyAutoRenewFlagRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractModel{
+public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel{
 
     /**
     * 符合过滤条件的记录总数。
@@ -44,7 +44,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     private String RequestId;
 
     /**
-     * 获取符合过滤条件的记录总数。
+     * Get 符合过滤条件的记录总数。 
      * @return TotalCount 符合过滤条件的记录总数。
      */
     public Long getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 设置符合过滤条件的记录总数。
+     * Set 符合过滤条件的记录总数。
      * @param TotalCount 符合过滤条件的记录总数。
      */
     public void setTotalCount(Long TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 获取指定时间点截图模板详情列表。
+     * Get 指定时间点截图模板详情列表。 
      * @return SnapshotByTimeOffsetTemplateSet 指定时间点截图模板详情列表。
      */
     public SnapshotByTimeOffsetTemplate [] getSnapshotByTimeOffsetTemplateSet() {
@@ -68,7 +68,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 设置指定时间点截图模板详情列表。
+     * Set 指定时间点截图模板详情列表。
      * @param SnapshotByTimeOffsetTemplateSet 指定时间点截图模板详情列表。
      */
     public void setSnapshotByTimeOffsetTemplateSet(SnapshotByTimeOffsetTemplate [] SnapshotByTimeOffsetTemplateSet) {
@@ -76,7 +76,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse  extends AbstractMode
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

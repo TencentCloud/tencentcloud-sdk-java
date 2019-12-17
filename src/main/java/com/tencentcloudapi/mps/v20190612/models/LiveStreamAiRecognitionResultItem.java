@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiRecognitionResultItem  extends AbstractModel{
+public class LiveStreamAiRecognitionResultItem extends AbstractModel{
 
     /**
     * 结果的类型，取值范围：
@@ -75,12 +75,12 @@ OcrFullTextRecognition 时有效。
     private LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet;
 
     /**
-     * 获取结果的类型，取值范围：
+     * Get 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
-<li>OcrFullTextRecognition：文本全文识别。</li>
+<li>OcrFullTextRecognition：文本全文识别。</li> 
      * @return Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
@@ -93,7 +93,7 @@ OcrFullTextRecognition 时有效。
     }
 
     /**
-     * 设置结果的类型，取值范围：
+     * Set 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
@@ -111,8 +111,8 @@ OcrFullTextRecognition 时有效。
     }
 
     /**
-     * 获取人脸识别结果，当 Type 为
-FaceRecognition 时有效。
+     * Get 人脸识别结果，当 Type 为
+FaceRecognition 时有效。 
      * @return FaceRecognitionResultSet 人脸识别结果，当 Type 为
 FaceRecognition 时有效。
      */
@@ -121,7 +121,7 @@ FaceRecognition 时有效。
     }
 
     /**
-     * 设置人脸识别结果，当 Type 为
+     * Set 人脸识别结果，当 Type 为
 FaceRecognition 时有效。
      * @param FaceRecognitionResultSet 人脸识别结果，当 Type 为
 FaceRecognition 时有效。
@@ -131,8 +131,8 @@ FaceRecognition 时有效。
     }
 
     /**
-     * 获取语音关键词识别结果，当 Type 为
-AsrWordsRecognition 时有效。
+     * Get 语音关键词识别结果，当 Type 为
+AsrWordsRecognition 时有效。 
      * @return AsrWordsRecognitionResultSet 语音关键词识别结果，当 Type 为
 AsrWordsRecognition 时有效。
      */
@@ -141,7 +141,7 @@ AsrWordsRecognition 时有效。
     }
 
     /**
-     * 设置语音关键词识别结果，当 Type 为
+     * Set 语音关键词识别结果，当 Type 为
 AsrWordsRecognition 时有效。
      * @param AsrWordsRecognitionResultSet 语音关键词识别结果，当 Type 为
 AsrWordsRecognition 时有效。
@@ -151,8 +151,8 @@ AsrWordsRecognition 时有效。
     }
 
     /**
-     * 获取文本关键词识别结果，当 Type 为
-OcrWordsRecognition 时有效。
+     * Get 文本关键词识别结果，当 Type 为
+OcrWordsRecognition 时有效。 
      * @return OcrWordsRecognitionResultSet 文本关键词识别结果，当 Type 为
 OcrWordsRecognition 时有效。
      */
@@ -161,7 +161,7 @@ OcrWordsRecognition 时有效。
     }
 
     /**
-     * 设置文本关键词识别结果，当 Type 为
+     * Set 文本关键词识别结果，当 Type 为
 OcrWordsRecognition 时有效。
      * @param OcrWordsRecognitionResultSet 文本关键词识别结果，当 Type 为
 OcrWordsRecognition 时有效。
@@ -171,8 +171,8 @@ OcrWordsRecognition 时有效。
     }
 
     /**
-     * 获取语音全文识别结果，当 Type 为
-AsrFullTextRecognition 时有效。
+     * Get 语音全文识别结果，当 Type 为
+AsrFullTextRecognition 时有效。 
      * @return AsrFullTextRecognitionResultSet 语音全文识别结果，当 Type 为
 AsrFullTextRecognition 时有效。
      */
@@ -181,7 +181,7 @@ AsrFullTextRecognition 时有效。
     }
 
     /**
-     * 设置语音全文识别结果，当 Type 为
+     * Set 语音全文识别结果，当 Type 为
 AsrFullTextRecognition 时有效。
      * @param AsrFullTextRecognitionResultSet 语音全文识别结果，当 Type 为
 AsrFullTextRecognition 时有效。
@@ -191,8 +191,8 @@ AsrFullTextRecognition 时有效。
     }
 
     /**
-     * 获取文本全文识别结果，当 Type 为
-OcrFullTextRecognition 时有效。
+     * Get 文本全文识别结果，当 Type 为
+OcrFullTextRecognition 时有效。 
      * @return OcrFullTextRecognitionResultSet 文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
      */
@@ -201,7 +201,7 @@ OcrFullTextRecognition 时有效。
     }
 
     /**
-     * 设置文本全文识别结果，当 Type 为
+     * Set 文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
      * @param OcrFullTextRecognitionResultSet 文本全文识别结果，当 Type 为
 OcrFullTextRecognition 时有效。
@@ -211,7 +211,7 @@ OcrFullTextRecognition 时有效。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

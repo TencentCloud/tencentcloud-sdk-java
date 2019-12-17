@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Backend  extends AbstractModel{
+public class Backend extends AbstractModel{
 
     /**
     * 后端服务的类型，可取：CVM、ENI（即将支持）
@@ -91,7 +91,7 @@ public class Backend  extends AbstractModel{
     private String EniId;
 
     /**
-     * 获取后端服务的类型，可取：CVM、ENI（即将支持）
+     * Get 后端服务的类型，可取：CVM、ENI（即将支持） 
      * @return Type 后端服务的类型，可取：CVM、ENI（即将支持）
      */
     public String getType() {
@@ -99,7 +99,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的类型，可取：CVM、ENI（即将支持）
+     * Set 后端服务的类型，可取：CVM、ENI（即将支持）
      * @param Type 后端服务的类型，可取：CVM、ENI（即将支持）
      */
     public void setType(String Type) {
@@ -107,7 +107,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的唯一 ID，如 ins-abcd1234
+     * Get 后端服务的唯一 ID，如 ins-abcd1234 
      * @return InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      */
     public String getInstanceId() {
@@ -115,7 +115,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的唯一 ID，如 ins-abcd1234
+     * Set 后端服务的唯一 ID，如 ins-abcd1234
      * @param InstanceId 后端服务的唯一 ID，如 ins-abcd1234
      */
     public void setInstanceId(String InstanceId) {
@@ -123,7 +123,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的监听端口
+     * Get 后端服务的监听端口 
      * @return Port 后端服务的监听端口
      */
     public Integer getPort() {
@@ -131,7 +131,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的监听端口
+     * Set 后端服务的监听端口
      * @param Port 后端服务的监听端口
      */
     public void setPort(Integer Port) {
@@ -139,7 +139,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
      * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public Integer getWeight() {
@@ -147,7 +147,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      */
     public void setWeight(Integer Weight) {
@@ -155,8 +155,8 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的外网 IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -165,7 +165,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的外网 IP
+     * Set 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -175,8 +175,8 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的内网 IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PrivateIpAddresses 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -185,7 +185,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的内网 IP
+     * Set 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddresses 后端服务的内网 IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -195,8 +195,8 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务的实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -205,7 +205,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的实例名称
+     * Set 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -215,8 +215,8 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 后端服务被绑定的时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -225,7 +225,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务被绑定的时间
+     * Set 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -235,8 +235,8 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡唯一ID，如 eni-1234abcd
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 弹性网卡唯一ID，如 eni-1234abcd
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -245,7 +245,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡唯一ID，如 eni-1234abcd
+     * Set 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
@@ -255,7 +255,7 @@ public class Backend  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

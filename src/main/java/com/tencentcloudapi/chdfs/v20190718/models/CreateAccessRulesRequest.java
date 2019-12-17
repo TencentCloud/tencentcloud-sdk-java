@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccessRulesRequest  extends AbstractModel{
+public class CreateAccessRulesRequest extends AbstractModel{
 
     /**
     * 多个权限规则，上限为10
@@ -37,7 +37,7 @@ public class CreateAccessRulesRequest  extends AbstractModel{
     private String AccessGroupId;
 
     /**
-     * 获取多个权限规则，上限为10
+     * Get 多个权限规则，上限为10 
      * @return AccessRules 多个权限规则，上限为10
      */
     public AccessRule [] getAccessRules() {
@@ -45,7 +45,7 @@ public class CreateAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置多个权限规则，上限为10
+     * Set 多个权限规则，上限为10
      * @param AccessRules 多个权限规则，上限为10
      */
     public void setAccessRules(AccessRule [] AccessRules) {
@@ -53,7 +53,7 @@ public class CreateAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取权限组ID
+     * Get 权限组ID 
      * @return AccessGroupId 权限组ID
      */
     public String getAccessGroupId() {
@@ -61,7 +61,7 @@ public class CreateAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置权限组ID
+     * Set 权限组ID
      * @param AccessGroupId 权限组ID
      */
     public void setAccessGroupId(String AccessGroupId) {
@@ -69,7 +69,7 @@ public class CreateAccessRulesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AccessRules.", this.AccessRules);

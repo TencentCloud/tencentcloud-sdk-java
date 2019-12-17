@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
+public class DescribeDirectConnectGatewaysRequest extends AbstractModel{
 
     /**
     * 专线网关唯一`ID`，形如：`dcg-9o233uri`。
@@ -58,7 +58,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Get 专线网关唯一`ID`，形如：`dcg-9o233uri`。 
      * @return DirectConnectGatewayIds 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public String [] getDirectConnectGatewayIds() {
@@ -66,7 +66,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关唯一`ID`，形如：`dcg-9o233uri`。
+     * Set 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      * @param DirectConnectGatewayIds 专线网关唯一`ID`，形如：`dcg-9o233uri`。
      */
     public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
@@ -74,14 +74,14 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
+     * Get 过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
 <li>direct-connect-gateway-id - String - 专线网关唯一`ID`，形如：`dcg-9o233uri`。</li>
 <li>direct-connect-gateway-name - String - 专线网关名称，默认模糊查询。</li>
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
 <li>gateway-type - String - 网关类型，可选值：`NORMAL`（普通型）、`NAT`（NAT型）。</li>
 <li>network-type- String - 网络类型，可选值：`VPC`（私有网络类型）、`CCN`（云联网类型）。</li>
 <li>ccn-id - String - 专线网关所在云联网`ID`。</li>
-<li>vpc-id - String - 专线网关所在私有网络`ID`。</li>
+<li>vpc-id - String - 专线网关所在私有网络`ID`。</li> 
      * @return Filters 过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
 <li>direct-connect-gateway-id - String - 专线网关唯一`ID`，形如：`dcg-9o233uri`。</li>
 <li>direct-connect-gateway-name - String - 专线网关名称，默认模糊查询。</li>
@@ -96,7 +96,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
+     * Set 过滤条件，参数不支持同时指定`DirectConnectGatewayIds`和`Filters`。
 <li>direct-connect-gateway-id - String - 专线网关唯一`ID`，形如：`dcg-9o233uri`。</li>
 <li>direct-connect-gateway-name - String - 专线网关名称，默认模糊查询。</li>
 <li>direct-connect-gateway-ip - String - 专线网关`IP`。</li>
@@ -118,7 +118,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量。
+     * Get 偏移量。 
      * @return Offset 偏移量。
      */
     public Integer getOffset() {
@@ -126,7 +126,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量。
+     * Set 偏移量。
      * @param Offset 偏移量。
      */
     public void setOffset(Integer Offset) {
@@ -134,7 +134,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量。
+     * Get 返回数量。 
      * @return Limit 返回数量。
      */
     public Integer getLimit() {
@@ -142,7 +142,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量。
+     * Set 返回数量。
      * @param Limit 返回数量。
      */
     public void setLimit(Integer Limit) {
@@ -150,7 +150,7 @@ public class DescribeDirectConnectGatewaysRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);

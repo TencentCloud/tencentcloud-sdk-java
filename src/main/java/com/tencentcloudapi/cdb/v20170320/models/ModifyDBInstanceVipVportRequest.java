@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
+public class ModifyDBInstanceVipVportRequest extends AbstractModel{
 
     /**
     * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
@@ -58,7 +58,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-     * 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标 IP。该参数和 DstPort 参数，两者必传一个。
+     * Get 目标 IP。该参数和 DstPort 参数，两者必传一个。 
      * @return DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
      */
     public String getDstIp() {
@@ -82,7 +82,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标 IP。该参数和 DstPort 参数，两者必传一个。
+     * Set 目标 IP。该参数和 DstPort 参数，两者必传一个。
      * @param DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
      */
     public void setDstIp(String DstIp) {
@@ -90,7 +90,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * Get 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。 
      * @return DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      */
     public Integer getDstPort() {
@@ -98,7 +98,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * Set 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      * @param DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
      */
     public void setDstPort(Integer DstPort) {
@@ -106,7 +106,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络统一 ID。
+     * Get 私有网络统一 ID。 
      * @return UniqVpcId 私有网络统一 ID。
      */
     public String getUniqVpcId() {
@@ -114,7 +114,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络统一 ID。
+     * Set 私有网络统一 ID。
      * @param UniqVpcId 私有网络统一 ID。
      */
     public void setUniqVpcId(String UniqVpcId) {
@@ -122,7 +122,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网统一 ID。
+     * Get 子网统一 ID。 
      * @return UniqSubnetId 子网统一 ID。
      */
     public String getUniqSubnetId() {
@@ -130,7 +130,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网统一 ID。
+     * Set 子网统一 ID。
      * @param UniqSubnetId 子网统一 ID。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
@@ -138,7 +138,7 @@ public class ModifyDBInstanceVipVportRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

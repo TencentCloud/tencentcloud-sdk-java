@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyWordSampleRequest  extends AbstractModel{
+public class ModifyWordSampleRequest extends AbstractModel{
 
     /**
     * 关键词，长度限制：128 个字符。
@@ -52,7 +52,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-     * 获取关键词，长度限制：128 个字符。
+     * Get 关键词，长度限制：128 个字符。 
      * @return Keyword 关键词，长度限制：128 个字符。
      */
     public String getKeyword() {
@@ -60,7 +60,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键词，长度限制：128 个字符。
+     * Set 关键词，长度限制：128 个字符。
      * @param Keyword 关键词，长度限制：128 个字符。
      */
     public void setKeyword(String Keyword) {
@@ -68,7 +68,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取<b>关键词应用场景，可选值：</b>
+     * Get <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
 3. Review.Ocr：通过光学字符识别技术，进行内容审核；
@@ -76,7 +76,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
 <b>可合并简写为：</b>
 5. Recognition：通过光学字符识别技术、语音识别技术，进行内容识别，等价于 1+2；
 6. Review：通过光学字符识别技术、语音识别技术，进行内容审核，等价于 3+4；
-7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。
+7. All：通过光学字符识别技术、语音识别技术，进行内容识别、内容审核，等价于 1+2+3+4。 
      * @return Usages <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
@@ -92,7 +92,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置<b>关键词应用场景，可选值：</b>
+     * Set <b>关键词应用场景，可选值：</b>
 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
 2. Recognition.Asr：通过语音识别技术，进行内容识别；
 3. Review.Ocr：通过光学字符识别技术，进行内容审核；
@@ -116,7 +116,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取标签操作信息。
+     * Get 标签操作信息。 
      * @return TagOperationInfo 标签操作信息。
      */
     public AiSampleTagOperation getTagOperationInfo() {
@@ -124,7 +124,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置标签操作信息。
+     * Set 标签操作信息。
      * @param TagOperationInfo 标签操作信息。
      */
     public void setTagOperationInfo(AiSampleTagOperation TagOperationInfo) {
@@ -132,7 +132,7 @@ public class ModifyWordSampleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);

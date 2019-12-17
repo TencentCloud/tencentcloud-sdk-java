@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StorageBlock  extends AbstractModel{
+public class StorageBlock extends AbstractModel{
 
     /**
     * HDD本地存储类型，值为：LOCAL_PRO.
@@ -47,8 +47,8 @@ public class StorageBlock  extends AbstractModel{
     private Integer MaxSize;
 
     /**
-     * 获取HDD本地存储类型，值为：LOCAL_PRO.
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get HDD本地存储类型，值为：LOCAL_PRO.
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type HDD本地存储类型，值为：LOCAL_PRO.
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 设置HDD本地存储类型，值为：LOCAL_PRO.
+     * Set HDD本地存储类型，值为：LOCAL_PRO.
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type HDD本地存储类型，值为：LOCAL_PRO.
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 获取HDD本地存储的最小容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get HDD本地存储的最小容量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MinSize HDD本地存储的最小容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 设置HDD本地存储的最小容量
+     * Set HDD本地存储的最小容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MinSize HDD本地存储的最小容量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 获取HDD本地存储的最大容量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get HDD本地存储的最大容量
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxSize HDD本地存储的最大容量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 设置HDD本地存储的最大容量
+     * Set HDD本地存储的最大容量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxSize HDD本地存储的最大容量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class StorageBlock  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

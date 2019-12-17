@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillDetailComponent  extends AbstractModel{
+public class BillDetailComponent extends AbstractModel{
 
     /**
     * 组件类型:资源组件类型的名称，如内存、硬盘等
@@ -135,7 +135,7 @@ public class BillDetailComponent  extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-     * 获取组件类型:资源组件类型的名称，如内存、硬盘等
+     * Get 组件类型:资源组件类型的名称，如内存、硬盘等 
      * @return ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
     public String getComponentCodeName() {
@@ -143,7 +143,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件类型:资源组件类型的名称，如内存、硬盘等
+     * Set 组件类型:资源组件类型的名称，如内存、硬盘等
      * @param ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
      */
     public void setComponentCodeName(String ComponentCodeName) {
@@ -151,7 +151,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * Get 组件名称:资源组件的名称，如云数据库MySQL-内存等 
      * @return ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
      */
     public String getItemCodeName() {
@@ -159,7 +159,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * Set 组件名称:资源组件的名称，如云数据库MySQL-内存等
      * @param ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
      */
     public void setItemCodeName(String ItemCodeName) {
@@ -167,7 +167,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件刊例价:资源组件的原始价格，保持原始粒度
+     * Get 组件刊例价:资源组件的原始价格，保持原始粒度 
      * @return SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
      */
     public String getSinglePrice() {
@@ -175,7 +175,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件刊例价:资源组件的原始价格，保持原始粒度
+     * Set 组件刊例价:资源组件的原始价格，保持原始粒度
      * @param SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
      */
     public void setSinglePrice(String SinglePrice) {
@@ -183,7 +183,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件指定价
+     * Get 组件指定价 
      * @return SpecifiedPrice 组件指定价
      */
     public String getSpecifiedPrice() {
@@ -191,7 +191,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件指定价
+     * Set 组件指定价
      * @param SpecifiedPrice 组件指定价
      */
     public void setSpecifiedPrice(String SpecifiedPrice) {
@@ -199,7 +199,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取价格单位
+     * Get 价格单位 
      * @return PriceUnit 价格单位
      */
     public String getPriceUnit() {
@@ -207,7 +207,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置价格单位
+     * Set 价格单位
      * @param PriceUnit 价格单位
      */
     public void setPriceUnit(String PriceUnit) {
@@ -215,7 +215,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件用量
+     * Get 组件用量 
      * @return UsedAmount 组件用量
      */
     public String getUsedAmount() {
@@ -223,7 +223,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件用量
+     * Set 组件用量
      * @param UsedAmount 组件用量
      */
     public void setUsedAmount(String UsedAmount) {
@@ -231,7 +231,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件用量单位
+     * Get 组件用量单位 
      * @return UsedAmountUnit 组件用量单位
      */
     public String getUsedAmountUnit() {
@@ -239,7 +239,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件用量单位
+     * Set 组件用量单位
      * @param UsedAmountUnit 组件用量单位
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
@@ -247,7 +247,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取使用时长
+     * Get 使用时长 
      * @return TimeSpan 使用时长
      */
     public String getTimeSpan() {
@@ -255,7 +255,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置使用时长
+     * Set 使用时长
      * @param TimeSpan 使用时长
      */
     public void setTimeSpan(String TimeSpan) {
@@ -263,7 +263,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取时长单位
+     * Get 时长单位 
      * @return TimeUnitName 时长单位
      */
     public String getTimeUnitName() {
@@ -271,7 +271,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置时长单位
+     * Set 时长单位
      * @param TimeUnitName 时长单位
      */
     public void setTimeUnitName(String TimeUnitName) {
@@ -279,7 +279,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取组件原价
+     * Get 组件原价 
      * @return Cost 组件原价
      */
     public String getCost() {
@@ -287,7 +287,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置组件原价
+     * Set 组件原价
      * @param Cost 组件原价
      */
     public void setCost(String Cost) {
@@ -295,7 +295,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取折扣率
+     * Get 折扣率 
      * @return Discount 折扣率
      */
     public String getDiscount() {
@@ -303,7 +303,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置折扣率
+     * Set 折扣率
      * @param Discount 折扣率
      */
     public void setDiscount(String Discount) {
@@ -311,7 +311,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取优惠类型
+     * Get 优惠类型 
      * @return ReduceType 优惠类型
      */
     public String getReduceType() {
@@ -319,7 +319,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置优惠类型
+     * Set 优惠类型
      * @param ReduceType 优惠类型
      */
     public void setReduceType(String ReduceType) {
@@ -327,7 +327,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取优惠后总价
+     * Get 优惠后总价 
      * @return RealCost 优惠后总价
      */
     public String getRealCost() {
@@ -335,7 +335,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置优惠后总价
+     * Set 优惠后总价
      * @param RealCost 优惠后总价
      */
     public void setRealCost(String RealCost) {
@@ -343,7 +343,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取代金券支付金额
+     * Get 代金券支付金额 
      * @return VoucherPayAmount 代金券支付金额
      */
     public String getVoucherPayAmount() {
@@ -351,7 +351,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置代金券支付金额
+     * Set 代金券支付金额
      * @param VoucherPayAmount 代金券支付金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
@@ -359,7 +359,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取现金支付金额
+     * Get 现金支付金额 
      * @return CashPayAmount 现金支付金额
      */
     public String getCashPayAmount() {
@@ -367,7 +367,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置现金支付金额
+     * Set 现金支付金额
      * @param CashPayAmount 现金支付金额
      */
     public void setCashPayAmount(String CashPayAmount) {
@@ -375,7 +375,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 获取赠送账户支付金额
+     * Get 赠送账户支付金额 
      * @return IncentivePayAmount 赠送账户支付金额
      */
     public String getIncentivePayAmount() {
@@ -383,7 +383,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 设置赠送账户支付金额
+     * Set 赠送账户支付金额
      * @param IncentivePayAmount 赠送账户支付金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
@@ -391,7 +391,7 @@ public class BillDetailComponent  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ComponentCodeName", this.ComponentCodeName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExecuteScalingPolicyRequest  extends AbstractModel{
+public class ExecuteScalingPolicyRequest extends AbstractModel{
 
     /**
     * 告警伸缩策略ID
@@ -37,7 +37,7 @@ public class ExecuteScalingPolicyRequest  extends AbstractModel{
     private Boolean HonorCooldown;
 
     /**
-     * 获取告警伸缩策略ID
+     * Get 告警伸缩策略ID 
      * @return AutoScalingPolicyId 告警伸缩策略ID
      */
     public String getAutoScalingPolicyId() {
@@ -45,7 +45,7 @@ public class ExecuteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置告警伸缩策略ID
+     * Set 告警伸缩策略ID
      * @param AutoScalingPolicyId 告警伸缩策略ID
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
@@ -53,7 +53,7 @@ public class ExecuteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否检查伸缩组活动处于冷却时间内，默认值为false
+     * Get 是否检查伸缩组活动处于冷却时间内，默认值为false 
      * @return HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
      */
     public Boolean getHonorCooldown() {
@@ -61,7 +61,7 @@ public class ExecuteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否检查伸缩组活动处于冷却时间内，默认值为false
+     * Set 是否检查伸缩组活动处于冷却时间内，默认值为false
      * @param HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
      */
     public void setHonorCooldown(Boolean HonorCooldown) {
@@ -69,7 +69,7 @@ public class ExecuteScalingPolicyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);

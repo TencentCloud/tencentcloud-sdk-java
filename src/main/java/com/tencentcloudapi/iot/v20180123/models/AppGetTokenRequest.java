@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AppGetTokenRequest  extends AbstractModel{
+public class AppGetTokenRequest extends AbstractModel{
 
     /**
     * 用户名
@@ -44,7 +44,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     private Integer Expire;
 
     /**
-     * 获取用户名
+     * Get 用户名 
      * @return UserName 用户名
      */
     public String getUserName() {
@@ -52,7 +52,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户名
+     * Set 用户名
      * @param UserName 用户名
      */
     public void setUserName(String UserName) {
@@ -60,7 +60,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 获取密码
+     * Get 密码 
      * @return Password 密码
      */
     public String getPassword() {
@@ -68,7 +68,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置密码
+     * Set 密码
      * @param Password 密码
      */
     public void setPassword(String Password) {
@@ -76,7 +76,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 获取TTL
+     * Get TTL 
      * @return Expire TTL
      */
     public Integer getExpire() {
@@ -84,7 +84,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 设置TTL
+     * Set TTL
      * @param Expire TTL
      */
     public void setExpire(Integer Expire) {
@@ -92,7 +92,7 @@ public class AppGetTokenRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Music  extends AbstractModel{
+public class Music extends AbstractModel{
 
     /**
     * 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
@@ -60,7 +60,7 @@ Unit :ms
     private Long AuditionEnd;
 
     /**
-     * 获取音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+     * Get 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。 
      * @return Url 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
      */
     public String getUrl() {
@@ -68,7 +68,7 @@ Unit :ms
     }
 
     /**
-     * 设置音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
+     * Set 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
      * @param Url 音乐播放链接相对路径，必须通过在音乐版权助手上登记的域名进行拼接。
      */
     public void setUrl(String Url) {
@@ -76,7 +76,7 @@ Unit :ms
     }
 
     /**
-     * 获取音频文件大小
+     * Get 音频文件大小 
      * @return FileSize 音频文件大小
      */
     public Long getFileSize() {
@@ -84,7 +84,7 @@ Unit :ms
     }
 
     /**
-     * 设置音频文件大小
+     * Set 音频文件大小
      * @param FileSize 音频文件大小
      */
     public void setFileSize(Long FileSize) {
@@ -92,7 +92,7 @@ Unit :ms
     }
 
     /**
-     * 获取音频文件类型
+     * Get 音频文件类型 
      * @return FileExtension 音频文件类型
      */
     public String getFileExtension() {
@@ -100,7 +100,7 @@ Unit :ms
     }
 
     /**
-     * 设置音频文件类型
+     * Set 音频文件类型
      * @param FileExtension 音频文件类型
      */
     public void setFileExtension(String FileExtension) {
@@ -108,8 +108,8 @@ Unit :ms
     }
 
     /**
-     * 获取Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
-Unit :ms
+     * Get Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
+Unit :ms 
      * @return AuditionBegin Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
 Unit :ms
      */
@@ -118,7 +118,7 @@ Unit :ms
     }
 
     /**
-     * 设置Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
+     * Set Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
 Unit :ms
      * @param AuditionBegin Song fragment start.试听片段开始时间，试听时长为auditionEnd-auditionBegin
 Unit :ms
@@ -128,8 +128,8 @@ Unit :ms
     }
 
     /**
-     * 获取Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
-Unit :ms
+     * Get Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
+Unit :ms 
      * @return AuditionEnd Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
 Unit :ms
      */
@@ -138,7 +138,7 @@ Unit :ms
     }
 
     /**
-     * 设置Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
+     * Set Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
 Unit :ms
      * @param AuditionEnd Song fragment end.试听片段结束时间, 试听时长为auditionEnd-auditionBegin
 Unit :ms
@@ -148,7 +148,7 @@ Unit :ms
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

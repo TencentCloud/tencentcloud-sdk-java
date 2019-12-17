@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContentReviewTemplateRequest  extends AbstractModel{
+public class CreateContentReviewTemplateRequest extends AbstractModel{
 
     /**
     * 内容审核模板名称，长度限制：64 个字符。
@@ -65,7 +65,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-     * 获取内容审核模板名称，长度限制：64 个字符。
+     * Get 内容审核模板名称，长度限制：64 个字符。 
      * @return Name 内容审核模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -73,7 +73,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核模板名称，长度限制：64 个字符。
+     * Set 内容审核模板名称，长度限制：64 个字符。
      * @param Name 内容审核模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -81,7 +81,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内容审核模板描述信息，长度限制：256 个字符。
+     * Get 内容审核模板描述信息，长度限制：256 个字符。 
      * @return Comment 内容审核模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -89,7 +89,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内容审核模板描述信息，长度限制：256 个字符。
+     * Set 内容审核模板描述信息，长度限制：256 个字符。
      * @param Comment 内容审核模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -97,7 +97,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴黄控制参数。
+     * Get 鉴黄控制参数。 
      * @return PornConfigure 鉴黄控制参数。
      */
     public PornConfigureInfo getPornConfigure() {
@@ -105,7 +105,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴黄控制参数。
+     * Set 鉴黄控制参数。
      * @param PornConfigure 鉴黄控制参数。
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
@@ -113,7 +113,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴恐控制参数。
+     * Get 鉴恐控制参数。 
      * @return TerrorismConfigure 鉴恐控制参数。
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
@@ -121,7 +121,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴恐控制参数。
+     * Set 鉴恐控制参数。
      * @param TerrorismConfigure 鉴恐控制参数。
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
@@ -129,7 +129,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取鉴政控制参数。
+     * Get 鉴政控制参数。 
      * @return PoliticalConfigure 鉴政控制参数。
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
@@ -137,7 +137,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置鉴政控制参数。
+     * Set 鉴政控制参数。
      * @param PoliticalConfigure 鉴政控制参数。
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
@@ -145,7 +145,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义内容审核控制参数。
+     * Get 用户自定义内容审核控制参数。 
      * @return UserDefineConfigure 用户自定义内容审核控制参数。
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
@@ -153,7 +153,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义内容审核控制参数。
+     * Set 用户自定义内容审核控制参数。
      * @param UserDefineConfigure 用户自定义内容审核控制参数。
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
@@ -161,7 +161,7 @@ public class CreateContentReviewTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

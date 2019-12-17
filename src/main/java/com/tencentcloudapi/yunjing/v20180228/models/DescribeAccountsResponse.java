@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsResponse  extends AbstractModel{
+public class DescribeAccountsResponse extends AbstractModel{
 
     /**
     * 帐号列表记录总数。
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 帐号数据列表。
@@ -44,23 +44,23 @@ public class DescribeAccountsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取帐号列表记录总数。
+     * Get 帐号列表记录总数。 
      * @return TotalCount 帐号列表记录总数。
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置帐号列表记录总数。
+     * Set 帐号列表记录总数。
      * @param TotalCount 帐号列表记录总数。
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取帐号数据列表。
+     * Get 帐号数据列表。 
      * @return Accounts 帐号数据列表。
      */
     public Account [] getAccounts() {
@@ -68,7 +68,7 @@ public class DescribeAccountsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置帐号数据列表。
+     * Set 帐号数据列表。
      * @param Accounts 帐号数据列表。
      */
     public void setAccounts(Account [] Accounts) {
@@ -76,7 +76,7 @@ public class DescribeAccountsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeAccountsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeAccountsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

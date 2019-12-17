@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDevicesRequest  extends AbstractModel{
+public class GetDevicesRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -51,7 +51,7 @@ public class GetDevicesRequest  extends AbstractModel{
     private String Keyword;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移
+     * Get 偏移 
      * @return Offset 偏移
      */
     public Integer getOffset() {
@@ -75,7 +75,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移
+     * Set 偏移
      * @param Offset 偏移
      */
     public void setOffset(Integer Offset) {
@@ -83,7 +83,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取长度
+     * Get 长度 
      * @return Length 长度
      */
     public Integer getLength() {
@@ -91,7 +91,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置长度
+     * Set 长度
      * @param Length 长度
      */
     public void setLength(Integer Length) {
@@ -99,7 +99,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取关键字查询
+     * Get 关键字查询 
      * @return Keyword 关键字查询
      */
     public String getKeyword() {
@@ -107,7 +107,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置关键字查询
+     * Set 关键字查询
      * @param Keyword 关键字查询
      */
     public void setKeyword(String Keyword) {
@@ -115,7 +115,7 @@ public class GetDevicesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

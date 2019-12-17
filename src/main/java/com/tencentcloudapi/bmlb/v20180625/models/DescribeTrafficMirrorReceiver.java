@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorReceiver  extends AbstractModel{
+public class DescribeTrafficMirrorReceiver extends AbstractModel{
 
     /**
     * 物理机实例ID。
@@ -37,7 +37,7 @@ public class DescribeTrafficMirrorReceiver  extends AbstractModel{
     private Integer Port;
 
     /**
-     * 获取物理机实例ID。
+     * Get 物理机实例ID。 
      * @return InstanceId 物理机实例ID。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置物理机实例ID。
+     * Set 物理机实例ID。
      * @param InstanceId 物理机实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 获取物理机绑定的端口。
+     * Get 物理机绑定的端口。 
      * @return Port 物理机绑定的端口。
      */
     public Integer getPort() {
@@ -61,7 +61,7 @@ public class DescribeTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 设置物理机绑定的端口。
+     * Set 物理机绑定的端口。
      * @param Port 物理机绑定的端口。
      */
     public void setPort(Integer Port) {
@@ -69,7 +69,7 @@ public class DescribeTrafficMirrorReceiver  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

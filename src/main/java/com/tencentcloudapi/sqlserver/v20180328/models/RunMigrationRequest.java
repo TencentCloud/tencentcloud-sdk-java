@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RunMigrationRequest  extends AbstractModel{
+public class RunMigrationRequest extends AbstractModel{
 
     /**
     * 迁移任务ID
     */
     @SerializedName("MigrateId")
     @Expose
-    private Integer MigrateId;
+    private Long MigrateId;
 
     /**
-     * 获取迁移任务ID
+     * Get 迁移任务ID 
      * @return MigrateId 迁移任务ID
      */
-    public Integer getMigrateId() {
+    public Long getMigrateId() {
         return this.MigrateId;
     }
 
     /**
-     * 设置迁移任务ID
+     * Set 迁移任务ID
      * @param MigrateId 迁移任务ID
      */
-    public void setMigrateId(Integer MigrateId) {
+    public void setMigrateId(Long MigrateId) {
         this.MigrateId = MigrateId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MigrateId", this.MigrateId);

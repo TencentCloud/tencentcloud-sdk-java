@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter  extends AbstractModel{
+public class Filter extends AbstractModel{
 
     /**
     * 需要过滤的字段。
@@ -37,7 +37,7 @@ public class Filter  extends AbstractModel{
     private String [] Values;
 
     /**
-     * 获取需要过滤的字段。
+     * Get 需要过滤的字段。 
      * @return Name 需要过滤的字段。
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置需要过滤的字段。
+     * Set 需要过滤的字段。
      * @param Name 需要过滤的字段。
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 获取字段的过滤值。
+     * Get 字段的过滤值。 
      * @return Values 字段的过滤值。
      */
     public String [] getValues() {
@@ -61,7 +61,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 设置字段的过滤值。
+     * Set 字段的过滤值。
      * @param Values 字段的过滤值。
      */
     public void setValues(String [] Values) {
@@ -69,7 +69,7 @@ public class Filter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

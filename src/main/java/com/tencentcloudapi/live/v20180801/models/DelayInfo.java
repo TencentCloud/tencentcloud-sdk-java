@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DelayInfo  extends AbstractModel{
+public class DelayInfo extends AbstractModel{
 
     /**
     * 推流域名。
@@ -78,7 +78,7 @@ public class DelayInfo  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return DomainName 推流域名。
      */
     public String getDomainName() {
@@ -86,7 +86,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param DomainName 推流域名。
      */
     public void setDomainName(String DomainName) {
@@ -94,7 +94,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -102,7 +102,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -110,7 +110,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -118,7 +118,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -126,7 +126,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取延播时间，单位：秒。
+     * Get 延播时间，单位：秒。 
      * @return DelayInterval 延播时间，单位：秒。
      */
     public Integer getDelayInterval() {
@@ -134,7 +134,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置延播时间，单位：秒。
+     * Set 延播时间，单位：秒。
      * @param DelayInterval 延播时间，单位：秒。
      */
     public void setDelayInterval(Integer DelayInterval) {
@@ -142,9 +142,9 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，UTC时间。
+     * Get 创建时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
-例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
+例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。 
      * @return CreateTime 创建时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
@@ -154,7 +154,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，UTC时间。
+     * Set 创建时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      * @param CreateTime 创建时间，UTC时间。
@@ -166,9 +166,9 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取过期时间，UTC时间。
+     * Get 过期时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
-例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
+例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。 
      * @return ExpireTime 过期时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
@@ -178,7 +178,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置过期时间，UTC时间。
+     * Set 过期时间，UTC时间。
 注意：UTC时间和北京时间相差8小时。
 例如：2019-06-18T12:00:00Z（为北京时间 2019 年 6 月 18 日 20 点 0 分 0 秒）。
      * @param ExpireTime 过期时间，UTC时间。
@@ -190,9 +190,9 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前状态，
+     * Get 当前状态，
 -1：已过期，
-1： 生效中。
+1： 生效中。 
      * @return Status 当前状态，
 -1：已过期，
 1： 生效中。
@@ -202,7 +202,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前状态，
+     * Set 当前状态，
 -1：已过期，
 1： 生效中。
      * @param Status 当前状态，
@@ -214,7 +214,7 @@ public class DelayInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

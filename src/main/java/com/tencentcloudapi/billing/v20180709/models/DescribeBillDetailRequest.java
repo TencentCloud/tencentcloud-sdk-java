@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillDetailRequest  extends AbstractModel{
+public class DescribeBillDetailRequest extends AbstractModel{
 
     /**
     * 偏移量
@@ -94,7 +94,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     private String ResourceId;
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -102,7 +102,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -110,7 +110,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量，最大值为100
+     * Get 数量，最大值为100 
      * @return Limit 数量，最大值为100
      */
     public Integer getLimit() {
@@ -118,7 +118,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量，最大值为100
+     * Set 数量，最大值为100
      * @param Limit 数量，最大值为100
      */
     public void setLimit(Integer Limit) {
@@ -126,7 +126,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * Get 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。 
      * @return PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public String getPeriodType() {
@@ -134,7 +134,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+     * Set 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      * @param PeriodType 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
      */
     public void setPeriodType(String PeriodType) {
@@ -142,7 +142,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Get 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。 
      * @return Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getMonth() {
@@ -150,7 +150,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Set 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setMonth(String Month) {
@@ -158,7 +158,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Get 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。 
      * @return BeginTime 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getBeginTime() {
@@ -166,7 +166,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Set 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param BeginTime 周期开始时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setBeginTime(String BeginTime) {
@@ -174,7 +174,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Get 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。 
      * @return EndTime 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public String getEndTime() {
@@ -182,7 +182,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
+     * Set 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      * @param EndTime 周期结束时间，格式为Y-m-d H:i:s，Month和BeginTime&EndTime必传一个，如果有该字段则Month字段无效。BeginTime和EndTime必须一起传。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
      */
     public void setEndTime(String EndTime) {
@@ -190,8 +190,8 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要访问列表的总记录数，用于前端分页
-1-表示需要， 0-表示不需要
+     * Get 是否需要访问列表的总记录数，用于前端分页
+1-表示需要， 0-表示不需要 
      * @return NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      */
@@ -200,7 +200,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要访问列表的总记录数，用于前端分页
+     * Set 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      * @param NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
@@ -210,7 +210,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询指定产品信息
+     * Get 查询指定产品信息 
      * @return ProductCode 查询指定产品信息
      */
     public String getProductCode() {
@@ -218,7 +218,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询指定产品信息
+     * Set 查询指定产品信息
      * @param ProductCode 查询指定产品信息
      */
     public void setProductCode(String ProductCode) {
@@ -226,7 +226,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式 prePay/postPay
+     * Get 付费模式 prePay/postPay 
      * @return PayMode 付费模式 prePay/postPay
      */
     public String getPayMode() {
@@ -234,7 +234,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式 prePay/postPay
+     * Set 付费模式 prePay/postPay
      * @param PayMode 付费模式 prePay/postPay
      */
     public void setPayMode(String PayMode) {
@@ -242,7 +242,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询指定资源信息
+     * Get 查询指定资源信息 
      * @return ResourceId 查询指定资源信息
      */
     public String getResourceId() {
@@ -250,7 +250,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询指定资源信息
+     * Set 查询指定资源信息
      * @param ResourceId 查询指定资源信息
      */
     public void setResourceId(String ResourceId) {
@@ -258,7 +258,7 @@ public class DescribeBillDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

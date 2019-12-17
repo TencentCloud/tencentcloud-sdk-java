@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeviceRequest  extends AbstractModel{
+public class CreateDeviceRequest extends AbstractModel{
 
     /**
     * 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
@@ -93,7 +93,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     private String LoraAppKey;
 
     /**
-     * 获取产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
+     * Get 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID 
      * @return ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public String getProductId() {
@@ -101,7 +101,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
+     * Set 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      * @param ProductId 产品 ID 。创建产品时腾讯云为用户分配全局唯一的 ID
      */
     public void setProductId(String ProductId) {
@@ -109,7 +109,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * Get 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。 
      * @return DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      */
     public String getDeviceName() {
@@ -117,7 +117,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
+     * Set 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      * @param DeviceName 设备名称。命名规则：[a-zA-Z0-9:_-]{1,48}。
      */
     public void setDeviceName(String DeviceName) {
@@ -125,7 +125,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备属性
+     * Get 设备属性 
      * @return Attribute 设备属性
      */
     public Attribute getAttribute() {
@@ -133,7 +133,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备属性
+     * Set 设备属性
      * @param Attribute 设备属性
      */
     public void setAttribute(Attribute Attribute) {
@@ -141,7 +141,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否使用自定义PSK，默认不使用
+     * Get 是否使用自定义PSK，默认不使用 
      * @return DefinedPsk 是否使用自定义PSK，默认不使用
      */
     public String getDefinedPsk() {
@@ -149,7 +149,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否使用自定义PSK，默认不使用
+     * Set 是否使用自定义PSK，默认不使用
      * @param DefinedPsk 是否使用自定义PSK，默认不使用
      */
     public void setDefinedPsk(String DefinedPsk) {
@@ -157,7 +157,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
+     * Get 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通 
      * @return Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      */
     public Integer getIsp() {
@@ -165,7 +165,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
+     * Set 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      * @param Isp 运营商类型，当产品是NB-IoT产品时，此字段必填。1表示中国电信，2表示中国移动，3表示中国联通
      */
     public void setIsp(Integer Isp) {
@@ -173,7 +173,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IMEI，当产品是NB-IoT产品时，此字段必填
+     * Get IMEI，当产品是NB-IoT产品时，此字段必填 
      * @return Imei IMEI，当产品是NB-IoT产品时，此字段必填
      */
     public String getImei() {
@@ -181,7 +181,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IMEI，当产品是NB-IoT产品时，此字段必填
+     * Set IMEI，当产品是NB-IoT产品时，此字段必填
      * @param Imei IMEI，当产品是NB-IoT产品时，此字段必填
      */
     public void setImei(String Imei) {
@@ -189,7 +189,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的DevEui，当创建LoRa时，此字段必填
+     * Get LoRa设备的DevEui，当创建LoRa时，此字段必填 
      * @return LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
      */
     public String getLoraDevEui() {
@@ -197,7 +197,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的DevEui，当创建LoRa时，此字段必填
+     * Set LoRa设备的DevEui，当创建LoRa时，此字段必填
      * @param LoraDevEui LoRa设备的DevEui，当创建LoRa时，此字段必填
      */
     public void setLoraDevEui(String LoraDevEui) {
@@ -205,7 +205,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的MoteType
+     * Get LoRa设备的MoteType 
      * @return LoraMoteType LoRa设备的MoteType
      */
     public Integer getLoraMoteType() {
@@ -213,7 +213,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的MoteType
+     * Set LoRa设备的MoteType
      * @param LoraMoteType LoRa设备的MoteType
      */
     public void setLoraMoteType(Integer LoraMoteType) {
@@ -221,7 +221,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取创建LoRa设备需要skey
+     * Get 创建LoRa设备需要skey 
      * @return Skey 创建LoRa设备需要skey
      */
     public String getSkey() {
@@ -229,7 +229,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建LoRa设备需要skey
+     * Set 创建LoRa设备需要skey
      * @param Skey 创建LoRa设备需要skey
      */
     public void setSkey(String Skey) {
@@ -237,7 +237,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备的AppKey
+     * Get LoRa设备的AppKey 
      * @return LoraAppKey LoRa设备的AppKey
      */
     public String getLoraAppKey() {
@@ -245,7 +245,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备的AppKey
+     * Set LoRa设备的AppKey
      * @param LoraAppKey LoRa设备的AppKey
      */
     public void setLoraAppKey(String LoraAppKey) {
@@ -253,7 +253,7 @@ public class CreateDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

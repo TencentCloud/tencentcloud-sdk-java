@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VideoTrackItem  extends AbstractModel{
+public class VideoTrackItem extends AbstractModel{
 
     /**
     * 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
@@ -113,7 +113,7 @@ public class VideoTrackItem  extends AbstractModel{
     private AudioTransform [] AudioOperations;
 
     /**
-     * 获取视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * Get 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。 
      * @return SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
      */
     public String getSourceMedia() {
@@ -121,7 +121,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
+     * Set 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
      * @param SourceMedia 视频片段的媒体素材来源，可以是点播的文件 ID，或者是其它文件的 URL。
      */
     public void setSourceMedia(String SourceMedia) {
@@ -129,7 +129,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段取自素材文件的起始时间，单位为秒。默认为0。
+     * Get 视频片段取自素材文件的起始时间，单位为秒。默认为0。 
      * @return SourceMediaStartTime 视频片段取自素材文件的起始时间，单位为秒。默认为0。
      */
     public Float getSourceMediaStartTime() {
@@ -137,7 +137,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段取自素材文件的起始时间，单位为秒。默认为0。
+     * Set 视频片段取自素材文件的起始时间，单位为秒。默认为0。
      * @param SourceMediaStartTime 视频片段取自素材文件的起始时间，单位为秒。默认为0。
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
@@ -145,7 +145,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
+     * Get 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。 
      * @return Duration 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
      */
     public Float getDuration() {
@@ -153,7 +153,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
+     * Set 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
      * @param Duration 视频片段时长，单位为秒。默认取视频素材本身长度，表示截取全部素材。如果源文件是图片，Duration需要大于0。
      */
     public void setDuration(Float Duration) {
@@ -161,9 +161,9 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频原点位置，取值有：
+     * Get 视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
-默认值 ：Center。
+默认值 ：Center。 
      * @return CoordinateOrigin 视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值 ：Center。
@@ -173,7 +173,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频原点位置，取值有：
+     * Set 视频原点位置，取值有：
 <li>Center：坐标原点为中心位置，如画布中心。</li>
 默认值 ：Center。
      * @param CoordinateOrigin 视频原点位置，取值有：
@@ -185,10 +185,10 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段原点距离画布原点的水平位置。支持 %、px 两种格式：
+     * Get 视频片段原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布口宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 XPos 单位为像素，如 100px 表示 XPos 为100像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return XPos 视频片段原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布口宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 XPos 单位为像素，如 100px 表示 XPos 为100像素。</li>
@@ -199,7 +199,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段原点距离画布原点的水平位置。支持 %、px 两种格式：
+     * Set 视频片段原点距离画布原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 XPos 为画布宽度指定百分比的位置，如 10% 表示 XPos 为画布口宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 XPos 单位为像素，如 100px 表示 XPos 为100像素。</li>
 默认值：0px。
@@ -213,10 +213,10 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段原点距离画布原点的垂直位置。支持 %、px 两种格式：
+     * Get 视频片段原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 YPos 单位为像素，如 100px 表示 YPos 为100像素。</li>
-默认值：0px。
+默认值：0px。 
      * @return YPos 视频片段原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 YPos 单位为像素，如 100px 表示 YPos 为100像素。</li>
@@ -227,7 +227,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段原点距离画布原点的垂直位置。支持 %、px 两种格式：
+     * Set 视频片段原点距离画布原点的垂直位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 YPos 为画布高度指定百分比的位置，如 10% 表示 YPos 为画布高度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 YPos 单位为像素，如 100px 表示 YPos 为100像素。</li>
 默认值：0px。
@@ -241,12 +241,12 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段的宽度。支持 %、px 两种格式：
+     * Get 视频片段的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 Width 单位为像素，如 100px 表示 Width 为100像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
-<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
+<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li> 
      * @return Width 视频片段的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 Width 单位为像素，如 100px 表示 Width 为100像素。</li>
@@ -259,7 +259,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段的宽度。支持 %、px 两种格式：
+     * Set 视频片段的宽度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Width 为画布宽度的百分比大小，如 10% 表示 Width 为画布宽度的 10%。</li>
 <li>当字符串以 px 结尾，表示视频片段 Width 单位为像素，如 100px 表示 Width 为100像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
@@ -277,12 +277,12 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频片段的高度。支持 %、px 两种格式：
+     * Get 视频片段的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%；
 </li><li>当字符串以 px 结尾，表示视频片段 Height 单位为像素，如 100px 表示 Height 为100像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
 <li>当 Width 为空，Height 非空，则 Width 按比例缩放</li>
-<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li>
+<li>当 Width 非空，Height 为空，则 Height 按比例缩放。</li> 
      * @return Height 视频片段的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%；
 </li><li>当字符串以 px 结尾，表示视频片段 Height 单位为像素，如 100px 表示 Height 为100像素。</li>
@@ -295,7 +295,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频片段的高度。支持 %、px 两种格式：
+     * Set 视频片段的高度。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示视频片段 Height 为画布高度的百分比大小，如 10% 表示 Height 为画布高度的 10%；
 </li><li>当字符串以 px 结尾，表示视频片段 Height 单位为像素，如 100px 表示 Height 为100像素。</li>
 <li>当 Width、Height 均为空，则 Width 和 Height 取视频素材本身的 Width、Height。</li>
@@ -313,8 +313,8 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取对图像进行的操作，如图像旋转等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对图像进行的操作，如图像旋转等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageOperations 对图像进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -323,7 +323,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置对图像进行的操作，如图像旋转等。
+     * Set 对图像进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageOperations 对图像进行的操作，如图像旋转等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -333,8 +333,8 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 获取对音频进行操作，如静音等。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对音频进行操作，如静音等。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AudioOperations 对音频进行操作，如静音等。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -343,7 +343,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 设置对音频进行操作，如静音等。
+     * Set 对音频进行操作，如静音等。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioOperations 对音频进行操作，如静音等。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -353,7 +353,7 @@ public class VideoTrackItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MsInstance  extends AbstractModel{
+public class MsInstance extends AbstractModel{
 
     /**
     * 机器实例ID信息
@@ -183,8 +183,8 @@ public class MsInstance  extends AbstractModel{
     private String ApplicationType;
 
     /**
-     * 获取机器实例ID信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例ID信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -193,7 +193,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例ID信息
+     * Set 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,8 +203,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例名称信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例名称信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceName 机器实例名称信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例名称信息
+     * Set 机器实例名称信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 机器实例名称信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取服务运行的端口号
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务运行的端口号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Port 服务运行的端口号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置服务运行的端口号
+     * Set 服务运行的端口号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 服务运行的端口号
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例内网IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例内网IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LanIp 机器实例内网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例内网IP
+     * Set 机器实例内网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LanIp 机器实例内网IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器实例外网IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器实例外网IP
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WanIp 机器实例外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器实例外网IP
+     * Set 机器实例外网IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIp 机器实例外网IP
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器可用状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器可用状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceAvailableStatus 机器可用状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器可用状态
+     * Set 机器可用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceAvailableStatus 机器可用状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,8 +303,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取服务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务运行状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceInstanceStatus 服务运行状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -313,7 +313,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置服务运行状态
+     * Set 服务运行状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceInstanceStatus 服务运行状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,8 +323,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -333,7 +333,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -343,8 +343,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -353,7 +353,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置应用名称
+     * Set 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -363,8 +363,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -373,7 +373,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -383,8 +383,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -393,7 +393,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -403,8 +403,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -413,7 +413,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间ID
+     * Set 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceId 命名空间ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -423,8 +423,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 命名空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -433,7 +433,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间名称
+     * Set 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NamespaceName 命名空间名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -443,8 +443,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -453,7 +453,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -463,8 +463,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 部署组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -473,7 +473,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置部署组名称
+     * Set 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 部署组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -483,8 +483,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取机器TSF可用状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器TSF可用状态
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceStatus 机器TSF可用状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -493,7 +493,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置机器TSF可用状态
+     * Set 机器TSF可用状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStatus 机器TSF可用状态
 注意：此字段可能返回 null，表示取不到有效值。
@@ -503,8 +503,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查URL
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 健康检查URL
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthCheckUrl 健康检查URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -513,7 +513,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查URL
+     * Set 健康检查URL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckUrl 健康检查URL
 注意：此字段可能返回 null，表示取不到有效值。
@@ -523,8 +523,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -533,7 +533,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型
+     * Set 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterType 集群类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -543,8 +543,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取应用程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用程序包版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationPackageVersion 应用程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -553,7 +553,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置应用程序包版本
+     * Set 应用程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationPackageVersion 应用程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -563,8 +563,8 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 应用类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -573,7 +573,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 设置应用类型
+     * Set 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationType 应用类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -583,7 +583,7 @@ public class MsInstance  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

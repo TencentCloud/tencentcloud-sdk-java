@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncStepDetailInfo  extends AbstractModel{
+public class SyncStepDetailInfo extends AbstractModel{
 
     /**
     * 步骤编号
@@ -51,7 +51,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     private Integer StepId;
 
     /**
-     * 获取步骤编号
+     * Get 步骤编号 
      * @return StepNo 步骤编号
      */
     public Integer getStepNo() {
@@ -59,7 +59,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤编号
+     * Set 步骤编号
      * @param StepNo 步骤编号
      */
     public void setStepNo(Integer StepNo) {
@@ -67,7 +67,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤名
+     * Get 步骤名 
      * @return StepName 步骤名
      */
     public String getStepName() {
@@ -75,7 +75,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤名
+     * Set 步骤名
      * @param StepName 步骤名
      */
     public void setStepName(String StepName) {
@@ -83,7 +83,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取能否中止
+     * Get 能否中止 
      * @return CanStop 能否中止
      */
     public Integer getCanStop() {
@@ -91,7 +91,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置能否中止
+     * Set 能否中止
      * @param CanStop 能否中止
      */
     public void setCanStop(Integer CanStop) {
@@ -99,7 +99,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 获取步骤号
+     * Get 步骤号 
      * @return StepId 步骤号
      */
     public Integer getStepId() {
@@ -107,7 +107,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 设置步骤号
+     * Set 步骤号
      * @param StepId 步骤号
      */
     public void setStepId(Integer StepId) {
@@ -115,7 +115,7 @@ public class SyncStepDetailInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StepNo", this.StepNo);

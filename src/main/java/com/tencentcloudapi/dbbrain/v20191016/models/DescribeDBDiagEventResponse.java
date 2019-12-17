@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBDiagEventResponse  extends AbstractModel{
+public class DescribeDBDiagEventResponse extends AbstractModel{
 
     /**
     * 诊断项。
@@ -108,7 +108,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取诊断项。
+     * Get 诊断项。 
      * @return DiagItem 诊断项。
      */
     public String getDiagItem() {
@@ -116,7 +116,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置诊断项。
+     * Set 诊断项。
      * @param DiagItem 诊断项。
      */
     public void setDiagItem(String DiagItem) {
@@ -124,7 +124,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取诊断类型。
+     * Get 诊断类型。 
      * @return DiagType 诊断类型。
      */
     public String getDiagType() {
@@ -132,7 +132,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置诊断类型。
+     * Set 诊断类型。
      * @param DiagType 诊断类型。
      */
     public void setDiagType(String DiagType) {
@@ -140,7 +140,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取事件 ID 。
+     * Get 事件 ID 。 
      * @return EventId 事件 ID 。
      */
     public Long getEventId() {
@@ -148,7 +148,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置事件 ID 。
+     * Set 事件 ID 。
      * @param EventId 事件 ID 。
      */
     public void setEventId(Long EventId) {
@@ -156,7 +156,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取事件详情。
+     * Get 事件详情。 
      * @return Explanation 事件详情。
      */
     public String getExplanation() {
@@ -164,7 +164,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置事件详情。
+     * Set 事件详情。
      * @param Explanation 事件详情。
      */
     public void setExplanation(String Explanation) {
@@ -172,7 +172,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取概要。
+     * Get 概要。 
      * @return Outline 概要。
      */
     public String getOutline() {
@@ -180,7 +180,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置概要。
+     * Set 概要。
      * @param Outline 概要。
      */
     public void setOutline(String Outline) {
@@ -188,7 +188,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取诊断出的问题。
+     * Get 诊断出的问题。 
      * @return Problem 诊断出的问题。
      */
     public String getProblem() {
@@ -196,7 +196,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置诊断出的问题。
+     * Set 诊断出的问题。
      * @param Problem 诊断出的问题。
      */
     public void setProblem(String Problem) {
@@ -204,7 +204,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取严重程度。
+     * Get 严重程度。 
      * @return Severity 严重程度。
      */
     public Long getSeverity() {
@@ -212,7 +212,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置严重程度。
+     * Set 严重程度。
      * @param Severity 严重程度。
      */
     public void setSeverity(Long Severity) {
@@ -220,7 +220,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -228,7 +228,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -236,7 +236,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取建议。
+     * Get 建议。 
      * @return Suggestions 建议。
      */
     public String getSuggestions() {
@@ -244,7 +244,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置建议。
+     * Set 建议。
      * @param Suggestions 建议。
      */
     public void setSuggestions(String Suggestions) {
@@ -252,8 +252,8 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 保留字段。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Metric 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -262,7 +262,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段。
+     * Set 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Metric 保留字段。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -272,7 +272,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间。
+     * Get 结束时间。 
      * @return EndTime 结束时间。
      */
     public String getEndTime() {
@@ -280,7 +280,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间。
+     * Set 结束时间。
      * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -288,7 +288,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -296,7 +296,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -304,7 +304,7 @@ public class DescribeDBDiagEventResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiagItem", this.DiagItem);

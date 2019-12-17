@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceMessageStatisticsItem  extends AbstractModel{
+public class VoiceMessageStatisticsItem extends AbstractModel{
 
     /**
     * 离线语音DAU
@@ -30,7 +30,7 @@ public class VoiceMessageStatisticsItem  extends AbstractModel{
     private Long Dau;
 
     /**
-     * 获取离线语音DAU
+     * Get 离线语音DAU 
      * @return Dau 离线语音DAU
      */
     public Long getDau() {
@@ -38,7 +38,7 @@ public class VoiceMessageStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 设置离线语音DAU
+     * Set 离线语音DAU
      * @param Dau 离线语音DAU
      */
     public void setDau(Long Dau) {
@@ -46,7 +46,7 @@ public class VoiceMessageStatisticsItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Dau", this.Dau);

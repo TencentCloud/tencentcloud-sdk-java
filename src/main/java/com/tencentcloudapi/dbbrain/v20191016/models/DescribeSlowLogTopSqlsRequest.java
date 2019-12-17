@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
+public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
 
     /**
     * 实例 ID 。
@@ -72,7 +72,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取实例 ID 。
+     * Get 实例 ID 。 
      * @return InstanceId 实例 ID 。
      */
     public String getInstanceId() {
@@ -80,7 +80,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例 ID 。
+     * Set 实例 ID 。
      * @param InstanceId 实例 ID 。
      */
     public void setInstanceId(String InstanceId) {
@@ -88,7 +88,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间。
+     * Get 开始时间。 
      * @return StartTime 开始时间。
      */
     public String getStartTime() {
@@ -96,7 +96,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间。
+     * Set 开始时间。
      * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -104,7 +104,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取截止时间。
+     * Get 截止时间。 
      * @return EndTime 截止时间。
      */
     public String getEndTime() {
@@ -112,7 +112,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置截止时间。
+     * Set 截止时间。
      * @param EndTime 截止时间。
      */
     public void setEndTime(String EndTime) {
@@ -120,7 +120,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+     * Get 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。 
      * @return SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
      */
     public String getSortBy() {
@@ -128,7 +128,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+     * Set 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
      * @param SortBy 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
      */
     public void setSortBy(String SortBy) {
@@ -136,7 +136,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序方式，支持ASC（升序）以及DESC（降序）。
+     * Get 排序方式，支持ASC（升序）以及DESC（降序）。 
      * @return OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
      */
     public String getOrderBy() {
@@ -144,7 +144,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序方式，支持ASC（升序）以及DESC（降序）。
+     * Set 排序方式，支持ASC（升序）以及DESC（降序）。
      * @param OrderBy 排序方式，支持ASC（升序）以及DESC（降序）。
      */
     public void setOrderBy(String OrderBy) {
@@ -152,7 +152,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
@@ -160,7 +160,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -168,7 +168,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
@@ -176,7 +176,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -184,7 +184,7 @@ public class DescribeSlowLogTopSqlsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

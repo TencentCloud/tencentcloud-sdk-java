@@ -20,79 +20,79 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Place  extends AbstractModel{
+public class Place extends AbstractModel{
 
     /**
     * 城市 ID。
     */
     @SerializedName("CityId")
     @Expose
-    private Integer CityId;
+    private Long CityId;
 
     /**
     * 省份 ID。
     */
     @SerializedName("ProvinceId")
     @Expose
-    private Integer ProvinceId;
+    private Long ProvinceId;
 
     /**
     * 国家ID，暂只支持国内：1。
     */
     @SerializedName("CountryId")
     @Expose
-    private Integer CountryId;
+    private Long CountryId;
 
     /**
-     * 获取城市 ID。
+     * Get 城市 ID。 
      * @return CityId 城市 ID。
      */
-    public Integer getCityId() {
+    public Long getCityId() {
         return this.CityId;
     }
 
     /**
-     * 设置城市 ID。
+     * Set 城市 ID。
      * @param CityId 城市 ID。
      */
-    public void setCityId(Integer CityId) {
+    public void setCityId(Long CityId) {
         this.CityId = CityId;
     }
 
     /**
-     * 获取省份 ID。
+     * Get 省份 ID。 
      * @return ProvinceId 省份 ID。
      */
-    public Integer getProvinceId() {
+    public Long getProvinceId() {
         return this.ProvinceId;
     }
 
     /**
-     * 设置省份 ID。
+     * Set 省份 ID。
      * @param ProvinceId 省份 ID。
      */
-    public void setProvinceId(Integer ProvinceId) {
+    public void setProvinceId(Long ProvinceId) {
         this.ProvinceId = ProvinceId;
     }
 
     /**
-     * 获取国家ID，暂只支持国内：1。
+     * Get 国家ID，暂只支持国内：1。 
      * @return CountryId 国家ID，暂只支持国内：1。
      */
-    public Integer getCountryId() {
+    public Long getCountryId() {
         return this.CountryId;
     }
 
     /**
-     * 设置国家ID，暂只支持国内：1。
+     * Set 国家ID，暂只支持国内：1。
      * @param CountryId 国家ID，暂只支持国内：1。
      */
-    public void setCountryId(Integer CountryId) {
+    public void setCountryId(Long CountryId) {
         this.CountryId = CountryId;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CityId", this.CityId);

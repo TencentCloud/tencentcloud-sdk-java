@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeActionLogRequest  extends AbstractModel{
+public class DescribeActionLogRequest extends AbstractModel{
 
     /**
     * 开始时间
@@ -65,7 +65,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -73,7 +73,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -81,7 +81,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -89,7 +89,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -97,7 +97,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -105,7 +105,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -113,7 +113,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索值，只支持资源ID或用户UIN
+     * Get 搜索值，只支持资源ID或用户UIN 
      * @return Filter 搜索值，只支持资源ID或用户UIN
      */
     public String getFilter() {
@@ -121,7 +121,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索值，只支持资源ID或用户UIN
+     * Set 搜索值，只支持资源ID或用户UIN
      * @param Filter 搜索值，只支持资源ID或用户UIN
      */
     public void setFilter(String Filter) {
@@ -129,7 +129,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页条数，填0表示不分页
+     * Get 一页条数，填0表示不分页 
      * @return Limit 一页条数，填0表示不分页
      */
     public Long getLimit() {
@@ -137,7 +137,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页条数，填0表示不分页
+     * Set 一页条数，填0表示不分页
      * @param Limit 一页条数，填0表示不分页
      */
     public void setLimit(Long Limit) {
@@ -145,7 +145,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页起始偏移，取值为(页码-1)*一页条数
+     * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public Long getOffset() {
@@ -153,7 +153,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页起始偏移，取值为(页码-1)*一页条数
+     * Set 页起始偏移，取值为(页码-1)*一页条数
      * @param Offset 页起始偏移，取值为(页码-1)*一页条数
      */
     public void setOffset(Long Offset) {
@@ -161,7 +161,7 @@ public class DescribeActionLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

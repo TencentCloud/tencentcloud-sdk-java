@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaxiInvoiceOCRResponse  extends AbstractModel{
+public class TaxiInvoiceOCRResponse extends AbstractModel{
 
     /**
     * 发票代码
@@ -79,7 +79,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取发票代码
+     * Get 发票代码 
      * @return InvoiceNum 发票代码
      */
     public String getInvoiceNum() {
@@ -87,7 +87,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发票代码
+     * Set 发票代码
      * @param InvoiceNum 发票代码
      */
     public void setInvoiceNum(String InvoiceNum) {
@@ -95,7 +95,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发票号码
+     * Get 发票号码 
      * @return InvoiceCode 发票号码
      */
     public String getInvoiceCode() {
@@ -103,7 +103,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发票号码
+     * Set 发票号码
      * @param InvoiceCode 发票号码
      */
     public void setInvoiceCode(String InvoiceCode) {
@@ -111,7 +111,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取日期
+     * Get 日期 
      * @return Date 日期
      */
     public String getDate() {
@@ -119,7 +119,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置日期
+     * Set 日期
      * @param Date 日期
      */
     public void setDate(String Date) {
@@ -127,7 +127,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取金额
+     * Get 金额 
      * @return Fare 金额
      */
     public String getFare() {
@@ -135,7 +135,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置金额
+     * Set 金额
      * @param Fare 金额
      */
     public void setFare(String Fare) {
@@ -143,7 +143,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取上车时间
+     * Get 上车时间 
      * @return GetOnTime 上车时间
      */
     public String getGetOnTime() {
@@ -151,7 +151,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置上车时间
+     * Set 上车时间
      * @param GetOnTime 上车时间
      */
     public void setGetOnTime(String GetOnTime) {
@@ -159,7 +159,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取下车时间
+     * Get 下车时间 
      * @return GetOffTime 下车时间
      */
     public String getGetOffTime() {
@@ -167,7 +167,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置下车时间
+     * Set 下车时间
      * @param GetOffTime 下车时间
      */
     public void setGetOffTime(String GetOffTime) {
@@ -175,7 +175,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取里程
+     * Get 里程 
      * @return Distance 里程
      */
     public String getDistance() {
@@ -183,7 +183,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置里程
+     * Set 里程
      * @param Distance 里程
      */
     public void setDistance(String Distance) {
@@ -191,7 +191,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class TaxiInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InvoiceNum", this.InvoiceNum);

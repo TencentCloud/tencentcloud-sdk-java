@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HostedDeviceOutBandInfo  extends AbstractModel{
+public class HostedDeviceOutBandInfo extends AbstractModel{
 
     /**
     * 物理机ID
@@ -51,7 +51,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     private Integer VpnPort;
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return InstanceId 物理机ID
      */
     public String getInstanceId() {
@@ -59,7 +59,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param InstanceId 物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -67,7 +67,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 获取带外IP
+     * Get 带外IP 
      * @return OutBandIp 带外IP
      */
     public String getOutBandIp() {
@@ -75,7 +75,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带外IP
+     * Set 带外IP
      * @param OutBandIp 带外IP
      */
     public void setOutBandIp(String OutBandIp) {
@@ -83,7 +83,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPN的IP
+     * Get VPN的IP 
      * @return VpnIp VPN的IP
      */
     public String getVpnIp() {
@@ -91,7 +91,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPN的IP
+     * Set VPN的IP
      * @param VpnIp VPN的IP
      */
     public void setVpnIp(String VpnIp) {
@@ -99,7 +99,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 获取VPN的端口
+     * Get VPN的端口 
      * @return VpnPort VPN的端口
      */
     public Integer getVpnPort() {
@@ -107,7 +107,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 设置VPN的端口
+     * Set VPN的端口
      * @param VpnPort VPN的端口
      */
     public void setVpnPort(Integer VpnPort) {
@@ -115,7 +115,7 @@ public class HostedDeviceOutBandInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

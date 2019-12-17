@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitImageTaskPlusResponse  extends AbstractModel{
+public class SubmitImageTaskPlusResponse extends AbstractModel{
 
     /**
     * 识别结果
@@ -58,7 +58,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别结果
+     * Get 识别结果 
      * @return ResultSet 识别结果
      */
     public ImageTaskResult [] getResultSet() {
@@ -66,7 +66,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果
+     * Set 识别结果
      * @param ResultSet 识别结果
      */
     public void setResultSet(ImageTaskResult [] ResultSet) {
@@ -74,7 +74,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务标识符
+     * Get 任务标识符 
      * @return JobId 任务标识符
      */
     public Long getJobId() {
@@ -82,7 +82,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务标识符
+     * Set 任务标识符
      * @param JobId 任务标识符
      */
     public void setJobId(Long JobId) {
@@ -90,7 +90,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务进度
+     * Get 任务进度 
      * @return Progress 任务进度
      */
     public Long getProgress() {
@@ -98,7 +98,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务进度
+     * Set 任务进度
      * @param Progress 任务进度
      */
     public void setProgress(Long Progress) {
@@ -106,7 +106,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取结果总数目
+     * Get 结果总数目 
      * @return TotalCount 结果总数目
      */
     public Long getTotalCount() {
@@ -114,7 +114,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结果总数目
+     * Set 结果总数目
      * @param TotalCount 结果总数目
      */
     public void setTotalCount(Long TotalCount) {
@@ -122,7 +122,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class SubmitImageTaskPlusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);

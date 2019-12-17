@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDevicesBindInfoRequest  extends AbstractModel{
+public class DescribeDevicesBindInfoRequest extends AbstractModel{
 
     /**
     * 黑石私有网络唯一ID。
@@ -37,7 +37,7 @@ public class DescribeDevicesBindInfoRequest  extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * 获取黑石私有网络唯一ID。
+     * Get 黑石私有网络唯一ID。 
      * @return VpcId 黑石私有网络唯一ID。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DescribeDevicesBindInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置黑石私有网络唯一ID。
+     * Set 黑石私有网络唯一ID。
      * @param VpcId 黑石私有网络唯一ID。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DescribeDevicesBindInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
+     * Get 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。 
      * @return InstanceIds 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
      */
     public String [] getInstanceIds() {
@@ -61,7 +61,7 @@ public class DescribeDevicesBindInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
+     * Set 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
      * @param InstanceIds 主机ID或虚机IP列表，可用于获取绑定了该主机的负载均衡列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -69,7 +69,7 @@ public class DescribeDevicesBindInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

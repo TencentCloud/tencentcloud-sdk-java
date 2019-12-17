@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextSample  extends AbstractModel{
+public class TextSample extends AbstractModel{
 
     /**
     * 处理错误码
@@ -84,7 +84,7 @@ public class TextSample  extends AbstractModel{
     private Long Status;
 
     /**
-     * 获取处理错误码
+     * Get 处理错误码 
      * @return Code 处理错误码
      */
     public Long getCode() {
@@ -92,7 +92,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置处理错误码
+     * Set 处理错误码
      * @param Code 处理错误码
      */
     public void setCode(Long Code) {
@@ -100,7 +100,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取关键词
+     * Get 关键词 
      * @return Content 关键词
      */
     public String getContent() {
@@ -108,7 +108,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置关键词
+     * Set 关键词
      * @param Content 关键词
      */
     public void setContent(String Content) {
@@ -116,7 +116,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间戳
+     * Get 创建时间戳 
      * @return CreatedAt 创建时间戳
      */
     public Long getCreatedAt() {
@@ -124,7 +124,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳
+     * Set 创建时间戳
      * @param CreatedAt 创建时间戳
      */
     public void setCreatedAt(Long CreatedAt) {
@@ -132,7 +132,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取恶意类型
+     * Get 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -140,7 +140,7 @@ public class TextSample  extends AbstractModel{
 20007：谩骂 
 20105：广告引流 
 24001：暴恐
-20004/21000：综合
+20004/21000：综合 
      * @return EvilType 恶意类型
 100：正常
 20001：政治
@@ -156,7 +156,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置恶意类型
+     * Set 恶意类型
 100：正常
 20001：政治
 20002：色情 
@@ -180,7 +180,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取唯一标识
+     * Get 唯一标识 
      * @return Id 唯一标识
      */
     public String getId() {
@@ -188,7 +188,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置唯一标识
+     * Set 唯一标识
      * @param Id 唯一标识
      */
     public void setId(String Id) {
@@ -196,9 +196,9 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取样本类型
+     * Get 样本类型
 1：黑库
-2：白库
+2：白库 
      * @return Label 样本类型
 1：黑库
 2：白库
@@ -208,7 +208,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置样本类型
+     * Set 样本类型
 1：黑库
 2：白库
      * @param Label 样本类型
@@ -220,9 +220,9 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态
 1：已完成
-2：处理中
+2：处理中 
      * @return Status 任务状态
 1：已完成
 2：处理中
@@ -232,7 +232,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
 1：已完成
 2：处理中
      * @param Status 任务状态
@@ -244,7 +244,7 @@ public class TextSample  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

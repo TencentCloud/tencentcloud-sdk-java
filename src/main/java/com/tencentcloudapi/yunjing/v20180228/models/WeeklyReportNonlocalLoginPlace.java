@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
+public class WeeklyReportNonlocalLoginPlace extends AbstractModel{
 
     /**
     * 主机IP。
@@ -48,21 +48,21 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     */
     @SerializedName("Country")
     @Expose
-    private Integer Country;
+    private Long Country;
 
     /**
     * 省份ID。
     */
     @SerializedName("Province")
     @Expose
-    private Integer Province;
+    private Long Province;
 
     /**
     * 城市ID。
     */
     @SerializedName("City")
     @Expose
-    private Integer City;
+    private Long City;
 
     /**
     * 登录时间。
@@ -72,7 +72,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     private String LoginTime;
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -80,7 +80,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -88,7 +88,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取用户名。
+     * Get 用户名。 
      * @return Username 用户名。
      */
     public String getUsername() {
@@ -96,7 +96,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置用户名。
+     * Set 用户名。
      * @param Username 用户名。
      */
     public void setUsername(String Username) {
@@ -104,7 +104,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取源IP。
+     * Get 源IP。 
      * @return SrcIp 源IP。
      */
     public String getSrcIp() {
@@ -112,7 +112,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置源IP。
+     * Set 源IP。
      * @param SrcIp 源IP。
      */
     public void setSrcIp(String SrcIp) {
@@ -120,55 +120,55 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 获取国家ID。
+     * Get 国家ID。 
      * @return Country 国家ID。
      */
-    public Integer getCountry() {
+    public Long getCountry() {
         return this.Country;
     }
 
     /**
-     * 设置国家ID。
+     * Set 国家ID。
      * @param Country 国家ID。
      */
-    public void setCountry(Integer Country) {
+    public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * 获取省份ID。
+     * Get 省份ID。 
      * @return Province 省份ID。
      */
-    public Integer getProvince() {
+    public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * 设置省份ID。
+     * Set 省份ID。
      * @param Province 省份ID。
      */
-    public void setProvince(Integer Province) {
+    public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * 获取城市ID。
+     * Get 城市ID。 
      * @return City 城市ID。
      */
-    public Integer getCity() {
+    public Long getCity() {
         return this.City;
     }
 
     /**
-     * 设置城市ID。
+     * Set 城市ID。
      * @param City 城市ID。
      */
-    public void setCity(Integer City) {
+    public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * 获取登录时间。
+     * Get 登录时间。 
      * @return LoginTime 登录时间。
      */
     public String getLoginTime() {
@@ -176,7 +176,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 设置登录时间。
+     * Set 登录时间。
      * @param LoginTime 登录时间。
      */
     public void setLoginTime(String LoginTime) {
@@ -184,7 +184,7 @@ public class WeeklyReportNonlocalLoginPlace  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MachineIp", this.MachineIp);

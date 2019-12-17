@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassicalListener  extends AbstractModel{
+public class ClassicalListener extends AbstractModel{
 
     /**
     * 负载均衡监听器ID
@@ -149,7 +149,7 @@ public class ClassicalListener  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取负载均衡监听器ID
+     * Get 负载均衡监听器ID 
      * @return ListenerId 负载均衡监听器ID
      */
     public String getListenerId() {
@@ -157,7 +157,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器ID
+     * Set 负载均衡监听器ID
      * @param ListenerId 负载均衡监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -165,7 +165,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器端口
+     * Get 负载均衡监听器端口 
      * @return ListenerPort 负载均衡监听器端口
      */
     public Integer getListenerPort() {
@@ -173,7 +173,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器端口
+     * Set 负载均衡监听器端口
      * @param ListenerPort 负载均衡监听器端口
      */
     public void setListenerPort(Integer ListenerPort) {
@@ -181,7 +181,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器后端转发端口
+     * Get 监听器后端转发端口 
      * @return InstancePort 监听器后端转发端口
      */
     public Integer getInstancePort() {
@@ -189,7 +189,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器后端转发端口
+     * Set 监听器后端转发端口
      * @param InstancePort 监听器后端转发端口
      */
     public void setInstancePort(Integer InstancePort) {
@@ -197,7 +197,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -205,7 +205,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -213,7 +213,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器协议类型
+     * Get 监听器协议类型 
      * @return Protocol 监听器协议类型
      */
     public String getProtocol() {
@@ -221,7 +221,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器协议类型
+     * Set 监听器协议类型
      * @param Protocol 监听器协议类型
      */
     public void setProtocol(String Protocol) {
@@ -229,7 +229,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间
+     * Get 会话保持时间 
      * @return SessionExpire 会话保持时间
      */
     public Integer getSessionExpire() {
@@ -237,7 +237,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间
+     * Set 会话保持时间
      * @param SessionExpire 会话保持时间
      */
     public void setSessionExpire(Integer SessionExpire) {
@@ -245,7 +245,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启了健康检查：1（开启）、0（关闭）
+     * Get 是否开启了健康检查：1（开启）、0（关闭） 
      * @return HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
     public Integer getHealthSwitch() {
@@ -253,7 +253,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启了健康检查：1（开启）、0（关闭）
+     * Set 是否开启了健康检查：1（开启）、0（关闭）
      * @param HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
      */
     public void setHealthSwitch(Integer HealthSwitch) {
@@ -261,7 +261,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取响应超时时间
+     * Get 响应超时时间 
      * @return TimeOut 响应超时时间
      */
     public Integer getTimeOut() {
@@ -269,7 +269,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置响应超时时间
+     * Set 响应超时时间
      * @param TimeOut 响应超时时间
      */
     public void setTimeOut(Integer TimeOut) {
@@ -277,7 +277,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取检查间隔
+     * Get 检查间隔 
      * @return IntervalTime 检查间隔
      */
     public Integer getIntervalTime() {
@@ -285,7 +285,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置检查间隔
+     * Set 检查间隔
      * @param IntervalTime 检查间隔
      */
     public void setIntervalTime(Integer IntervalTime) {
@@ -293,7 +293,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取健康阈值
+     * Get 健康阈值 
      * @return HealthNum 健康阈值
      */
     public Integer getHealthNum() {
@@ -301,7 +301,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置健康阈值
+     * Set 健康阈值
      * @param HealthNum 健康阈值
      */
     public void setHealthNum(Integer HealthNum) {
@@ -309,7 +309,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取不健康阈值
+     * Get 不健康阈值 
      * @return UnhealthNum 不健康阈值
      */
     public Integer getUnhealthNum() {
@@ -317,7 +317,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置不健康阈值
+     * Set 不健康阈值
      * @param UnhealthNum 不健康阈值
      */
     public void setUnhealthNum(Integer UnhealthNum) {
@@ -325,7 +325,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发 
      * @return HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      */
     public String getHttpHash() {
@@ -333,7 +333,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
+     * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      * @param HttpHash 传统型公网负载均衡的 HTTP、HTTPS 监听器的请求均衡方法。wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发
      */
     public void setHttpHash(String HttpHash) {
@@ -341,7 +341,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释 
      * @return HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
     public Integer getHttpCode() {
@@ -349,7 +349,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      * @param HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
      */
     public void setHttpCode(Integer HttpCode) {
@@ -357,7 +357,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径 
      * @return HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      */
     public String getHttpCheckPath() {
@@ -365,7 +365,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      * @param HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
      */
     public void setHttpCheckPath(String HttpCheckPath) {
@@ -373,7 +373,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * Get 传统型公网负载均衡的 HTTPS 监听器的认证方式 
      * @return SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
      */
     public String getSSLMode() {
@@ -381,7 +381,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * Set 传统型公网负载均衡的 HTTPS 监听器的认证方式
      * @param SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
      */
     public void setSSLMode(String SSLMode) {
@@ -389,7 +389,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * Get 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID 
      * @return CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      */
     public String getCertId() {
@@ -397,7 +397,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * Set 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      * @param CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
      */
     public void setCertId(String CertId) {
@@ -405,7 +405,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * Get 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID 
      * @return CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      */
     public String getCertCaId() {
@@ -413,7 +413,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * Set 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      * @param CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
      */
     public void setCertCaId(String CertCaId) {
@@ -421,7 +421,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的状态，0 表示创建中，1 表示运行中
+     * Get 监听器的状态，0 表示创建中，1 表示运行中 
      * @return Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     public Integer getStatus() {
@@ -429,7 +429,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的状态，0 表示创建中，1 表示运行中
+     * Set 监听器的状态，0 表示创建中，1 表示运行中
      * @param Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     public void setStatus(Integer Status) {
@@ -437,7 +437,7 @@ public class ClassicalListener  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

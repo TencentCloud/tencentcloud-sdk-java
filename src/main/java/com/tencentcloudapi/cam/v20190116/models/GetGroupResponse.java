@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetGroupResponse  extends AbstractModel{
+public class GetGroupResponse extends AbstractModel{
 
     /**
     * 用户组 ID
@@ -72,7 +72,7 @@ public class GetGroupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户组 ID
+     * Get 用户组 ID 
      * @return GroupId 用户组 ID
      */
     public Long getGroupId() {
@@ -80,7 +80,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组 ID
+     * Set 用户组 ID
      * @param GroupId 用户组 ID
      */
     public void setGroupId(Long GroupId) {
@@ -88,7 +88,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组名称
+     * Get 用户组名称 
      * @return GroupName 用户组名称
      */
     public String getGroupName() {
@@ -96,7 +96,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组名称
+     * Set 用户组名称
      * @param GroupName 用户组名称
      */
     public void setGroupName(String GroupName) {
@@ -104,7 +104,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组成员数量
+     * Get 用户组成员数量 
      * @return GroupNum 用户组成员数量
      */
     public Long getGroupNum() {
@@ -112,7 +112,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组成员数量
+     * Set 用户组成员数量
      * @param GroupNum 用户组成员数量
      */
     public void setGroupNum(Long GroupNum) {
@@ -120,7 +120,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组描述
+     * Get 用户组描述 
      * @return Remark 用户组描述
      */
     public String getRemark() {
@@ -128,7 +128,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组描述
+     * Set 用户组描述
      * @param Remark 用户组描述
      */
     public void setRemark(String Remark) {
@@ -136,7 +136,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组创建时间
+     * Get 用户组创建时间 
      * @return CreateTime 用户组创建时间
      */
     public String getCreateTime() {
@@ -144,7 +144,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组创建时间
+     * Set 用户组创建时间
      * @param CreateTime 用户组创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -152,7 +152,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户组成员信息
+     * Get 用户组成员信息 
      * @return UserInfo 用户组成员信息
      */
     public GroupMemberInfo [] getUserInfo() {
@@ -160,7 +160,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户组成员信息
+     * Set 用户组成员信息
      * @param UserInfo 用户组成员信息
      */
     public void setUserInfo(GroupMemberInfo [] UserInfo) {
@@ -168,7 +168,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class GetGroupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeviceDiskInfo  extends AbstractModel{
+public class DeviceDiskInfo extends AbstractModel{
 
     /**
     * 平均每秒有百分之几的时间用于IO操作
@@ -51,7 +51,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     private Integer [] Write;
 
     /**
-     * 获取平均每秒有百分之几的时间用于IO操作
+     * Get 平均每秒有百分之几的时间用于IO操作 
      * @return IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      */
     public Integer [] getIoRatioPerSec() {
@@ -59,7 +59,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均每秒有百分之几的时间用于IO操作
+     * Set 平均每秒有百分之几的时间用于IO操作
      * @param IoRatioPerSec 平均每秒有百分之几的时间用于IO操作
      */
     public void setIoRatioPerSec(Integer [] IoRatioPerSec) {
@@ -67,7 +67,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
+     * Get 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒 
      * @return IoWaitTime 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      */
     public Integer [] getIoWaitTime() {
@@ -75,7 +75,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
+     * Set 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      * @param IoWaitTime 平均每次设备I/O操作的等待时间*100，单位为毫秒。例如：该值为201，表示平均每次I/O操作等待时间为：201/100=2.1毫秒
      */
     public void setIoWaitTime(Integer [] IoWaitTime) {
@@ -83,7 +83,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
+     * Get 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次 
      * @return Read 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      */
     public Integer [] getRead() {
@@ -91,7 +91,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
+     * Set 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      * @param Read 磁盘平均每秒完成的读操作次数总和*100。例如：该值为2002，表示磁盘平均每秒完成读操作为：2002/100=20.2次
      */
     public void setRead(Integer [] Read) {
@@ -99,7 +99,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
+     * Get 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次 
      * @return Write 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      */
     public Integer [] getWrite() {
@@ -107,7 +107,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
+     * Set 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      * @param Write 磁盘平均每秒完成的写操作次数总和*100。例如：该值为30001，表示磁盘平均每秒完成写操作为：30001/100=300.01次
      */
     public void setWrite(Integer [] Write) {
@@ -115,7 +115,7 @@ public class DeviceDiskInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IoRatioPerSec.", this.IoRatioPerSec);

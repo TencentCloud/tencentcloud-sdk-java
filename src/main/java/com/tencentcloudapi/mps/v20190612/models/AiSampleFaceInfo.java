@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiSampleFaceInfo  extends AbstractModel{
+public class AiSampleFaceInfo extends AbstractModel{
 
     /**
     * 人脸图片 ID。
@@ -37,7 +37,7 @@ public class AiSampleFaceInfo  extends AbstractModel{
     private String Url;
 
     /**
-     * 获取人脸图片 ID。
+     * Get 人脸图片 ID。 
      * @return FaceId 人脸图片 ID。
      */
     public String getFaceId() {
@@ -45,7 +45,7 @@ public class AiSampleFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片 ID。
+     * Set 人脸图片 ID。
      * @param FaceId 人脸图片 ID。
      */
     public void setFaceId(String FaceId) {
@@ -53,7 +53,7 @@ public class AiSampleFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取人脸图片地址。
+     * Get 人脸图片地址。 
      * @return Url 人脸图片地址。
      */
     public String getUrl() {
@@ -61,7 +61,7 @@ public class AiSampleFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置人脸图片地址。
+     * Set 人脸图片地址。
      * @param Url 人脸图片地址。
      */
     public void setUrl(String Url) {
@@ -69,7 +69,7 @@ public class AiSampleFaceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceId", this.FaceId);

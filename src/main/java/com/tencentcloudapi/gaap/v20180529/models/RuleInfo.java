@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleInfo  extends AbstractModel{
+public class RuleInfo extends AbstractModel{
 
     /**
     * 规则信息
@@ -110,7 +110,7 @@ public class RuleInfo  extends AbstractModel{
     private String ForwardHost;
 
     /**
-     * 获取规则信息
+     * Get 规则信息 
      * @return RuleId 规则信息
      */
     public String getRuleId() {
@@ -118,7 +118,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则信息
+     * Set 规则信息
      * @param RuleId 规则信息
      */
     public void setRuleId(String RuleId) {
@@ -126,7 +126,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器信息
+     * Get 监听器信息 
      * @return ListenerId 监听器信息
      */
     public String getListenerId() {
@@ -134,7 +134,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器信息
+     * Set 监听器信息
      * @param ListenerId 监听器信息
      */
     public void setListenerId(String ListenerId) {
@@ -142,7 +142,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规则域名
+     * Get 规则域名 
      * @return Domain 规则域名
      */
     public String getDomain() {
@@ -150,7 +150,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则域名
+     * Set 规则域名
      * @param Domain 规则域名
      */
     public void setDomain(String Domain) {
@@ -158,7 +158,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规则路径
+     * Get 规则路径 
      * @return Path 规则路径
      */
     public String getPath() {
@@ -166,7 +166,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则路径
+     * Set 规则路径
      * @param Path 规则路径
      */
     public void setPath(String Path) {
@@ -174,7 +174,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源站类型
+     * Get 源站类型 
      * @return RealServerType 源站类型
      */
     public String getRealServerType() {
@@ -182,7 +182,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源站类型
+     * Set 源站类型
      * @param RealServerType 源站类型
      */
     public void setRealServerType(String RealServerType) {
@@ -190,7 +190,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取转发源站策略
+     * Get 转发源站策略 
      * @return Scheduler 转发源站策略
      */
     public String getScheduler() {
@@ -198,7 +198,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置转发源站策略
+     * Set 转发源站策略
      * @param Scheduler 转发源站策略
      */
     public void setScheduler(String Scheduler) {
@@ -206,7 +206,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启健康检查标志，1开启，0关闭
+     * Get 是否开启健康检查标志，1开启，0关闭 
      * @return HealthCheck 是否开启健康检查标志，1开启，0关闭
      */
     public Long getHealthCheck() {
@@ -214,7 +214,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启健康检查标志，1开启，0关闭
+     * Set 是否开启健康检查标志，1开启，0关闭
      * @param HealthCheck 是否开启健康检查标志，1开启，0关闭
      */
     public void setHealthCheck(Long HealthCheck) {
@@ -222,7 +222,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * Get 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中 
      * @return RuleStatus 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
      */
     public Long getRuleStatus() {
@@ -230,7 +230,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
+     * Set 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
      * @param RuleStatus 规则状态，0运行中，1创建中，2销毁中，3绑定解绑源站中，4配置更新中
      */
     public void setRuleStatus(Long RuleStatus) {
@@ -238,7 +238,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查相关参数
+     * Get 健康检查相关参数 
      * @return CheckParams 健康检查相关参数
      */
     public RuleCheckParams getCheckParams() {
@@ -246,7 +246,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查相关参数
+     * Set 健康检查相关参数
      * @param CheckParams 健康检查相关参数
      */
     public void setCheckParams(RuleCheckParams CheckParams) {
@@ -254,7 +254,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取已绑定的源站相关信息
+     * Get 已绑定的源站相关信息 
      * @return RealServerSet 已绑定的源站相关信息
      */
     public BindRealServer [] getRealServerSet() {
@@ -262,7 +262,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置已绑定的源站相关信息
+     * Set 已绑定的源站相关信息
      * @param RealServerSet 已绑定的源站相关信息
      */
     public void setRealServerSet(BindRealServer [] RealServerSet) {
@@ -270,9 +270,9 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源站的服务状态，0：异常，1：正常。
+     * Get 源站的服务状态，0：异常，1：正常。
 未开启健康检查时，该状态始终未正常。
-只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
+只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。 
      * @return BindStatus 源站的服务状态，0：异常，1：正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
@@ -282,7 +282,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源站的服务状态，0：异常，1：正常。
+     * Set 源站的服务状态，0：异常，1：正常。
 未开启健康检查时，该状态始终未正常。
 只要有一个源站健康状态为异常时，该状态为异常，具体源站的状态请查看RealServerSet。
      * @param BindStatus 源站的服务状态，0：异常，1：正常。
@@ -294,8 +294,8 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -304,7 +304,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
+     * Set 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ForwardHost 通道转发到源站的请求所携带的host，其中default表示直接转发接收到的host。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -314,7 +314,7 @@ public class RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);

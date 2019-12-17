@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaDeleteItem  extends AbstractModel{
+public class MediaDeleteItem extends AbstractModel{
 
     /**
     * 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
@@ -40,9 +40,9 @@ public class MediaDeleteItem  extends AbstractModel{
     private Long Definition;
 
     /**
-     * 获取所指定的删除部分。如果未填写该字段则参数无效。可选值有：
+     * Get 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>TranscodeFiles（删除转码文件）。</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li>
+<li>WechatPublishFiles（删除微信发布文件）。</li> 
      * @return Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>TranscodeFiles（删除转码文件）。</li>
 <li>WechatPublishFiles（删除微信发布文件）。</li>
@@ -52,7 +52,7 @@ public class MediaDeleteItem  extends AbstractModel{
     }
 
     /**
-     * 设置所指定的删除部分。如果未填写该字段则参数无效。可选值有：
+     * Set 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>TranscodeFiles（删除转码文件）。</li>
 <li>WechatPublishFiles（删除微信发布文件）。</li>
      * @param Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
@@ -64,8 +64,8 @@ public class MediaDeleteItem  extends AbstractModel{
     }
 
     /**
-     * 获取删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
-默认值为0，表示删除参数Type指定种类下所有的视频。
+     * Get 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+默认值为0，表示删除参数Type指定种类下所有的视频。 
      * @return Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
      */
@@ -74,7 +74,7 @@ public class MediaDeleteItem  extends AbstractModel{
     }
 
     /**
-     * 设置删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
+     * Set 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
      * @param Definition 删除由Type参数指定的种类下的视频模板号，模板定义参见[转码模板](https://cloud.tencent.com/document/product/266/33478#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF)。
 默认值为0，表示删除参数Type指定种类下所有的视频。
@@ -84,7 +84,7 @@ public class MediaDeleteItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

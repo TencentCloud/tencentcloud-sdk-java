@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Product  extends AbstractModel{
+public class Product extends AbstractModel{
 
     /**
     * 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
@@ -72,7 +72,7 @@ public class Product  extends AbstractModel{
     private Long YMax;
 
     /**
-     * 获取图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
+     * Get 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者 
      * @return Name 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
      */
     public String getName() {
@@ -80,7 +80,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
+     * Set 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
      * @param Name 图片中商品的三级分类识别结果，选取所有三级分类中的置信度最大者
      */
     public void setName(String Name) {
@@ -88,7 +88,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
+     * Get 三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件” 
      * @return Parents 三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
      */
     public String getParents() {
@@ -96,7 +96,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
+     * Set 三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
      * @param Parents 三级商品分类对应的一级分类和二级分类，两级之间用“-”（中划线）隔开，例如商品名称是“硬盘”，那么Parents输出为“电脑、办公-电脑配件”
      */
     public void setParents(String Parents) {
@@ -104,7 +104,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定
+     * Get 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定 
      * @return Confidence 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定
      */
     public Long getConfidence() {
@@ -112,7 +112,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定
+     * Set 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定
      * @param Confidence 算法对于Name的置信度，0-100之间，值越高，表示对于Name越确定
      */
     public void setConfidence(Long Confidence) {
@@ -120,7 +120,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取商品坐标X轴的最小值
+     * Get 商品坐标X轴的最小值 
      * @return XMin 商品坐标X轴的最小值
      */
     public Long getXMin() {
@@ -128,7 +128,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置商品坐标X轴的最小值
+     * Set 商品坐标X轴的最小值
      * @param XMin 商品坐标X轴的最小值
      */
     public void setXMin(Long XMin) {
@@ -136,7 +136,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取商品坐标Y轴的最小值
+     * Get 商品坐标Y轴的最小值 
      * @return YMin 商品坐标Y轴的最小值
      */
     public Long getYMin() {
@@ -144,7 +144,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置商品坐标Y轴的最小值
+     * Set 商品坐标Y轴的最小值
      * @param YMin 商品坐标Y轴的最小值
      */
     public void setYMin(Long YMin) {
@@ -152,7 +152,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取商品坐标X轴的最大值
+     * Get 商品坐标X轴的最大值 
      * @return XMax 商品坐标X轴的最大值
      */
     public Long getXMax() {
@@ -160,7 +160,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置商品坐标X轴的最大值
+     * Set 商品坐标X轴的最大值
      * @param XMax 商品坐标X轴的最大值
      */
     public void setXMax(Long XMax) {
@@ -168,7 +168,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 获取商品坐标Y轴的最大值
+     * Get 商品坐标Y轴的最大值 
      * @return YMax 商品坐标Y轴的最大值
      */
     public Long getYMax() {
@@ -176,7 +176,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 设置商品坐标Y轴的最大值
+     * Set 商品坐标Y轴的最大值
      * @param YMax 商品坐标Y轴的最大值
      */
     public void setYMax(Long YMax) {
@@ -184,7 +184,7 @@ public class Product  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

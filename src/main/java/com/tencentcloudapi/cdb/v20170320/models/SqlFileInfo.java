@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SqlFileInfo  extends AbstractModel{
+public class SqlFileInfo extends AbstractModel{
 
     /**
     * 上传时间
@@ -65,7 +65,7 @@ public class SqlFileInfo  extends AbstractModel{
     private String FileId;
 
     /**
-     * 获取上传时间
+     * Get 上传时间 
      * @return UploadTime 上传时间
      */
     public String getUploadTime() {
@@ -73,7 +73,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传时间
+     * Set 上传时间
      * @param UploadTime 上传时间
      */
     public void setUploadTime(String UploadTime) {
@@ -81,7 +81,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上传进度
+     * Get 上传进度 
      * @return UploadInfo 上传进度
      */
     public UploadInfo getUploadInfo() {
@@ -89,7 +89,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传进度
+     * Set 上传进度
      * @param UploadInfo 上传进度
      */
     public void setUploadInfo(UploadInfo UploadInfo) {
@@ -97,7 +97,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件名
+     * Get 文件名 
      * @return FileName 文件名
      */
     public String getFileName() {
@@ -105,7 +105,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件名
+     * Set 文件名
      * @param FileName 文件名
      */
     public void setFileName(String FileName) {
@@ -113,7 +113,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小，单位为Bytes
+     * Get 文件大小，单位为Bytes 
      * @return FileSize 文件大小，单位为Bytes
      */
     public Integer getFileSize() {
@@ -121,7 +121,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小，单位为Bytes
+     * Set 文件大小，单位为Bytes
      * @param FileSize 文件大小，单位为Bytes
      */
     public void setFileSize(Integer FileSize) {
@@ -129,7 +129,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取上传是否完成标志，可选值：0 - 未完成，1 - 已完成
+     * Get 上传是否完成标志，可选值：0 - 未完成，1 - 已完成 
      * @return IsUploadFinished 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      */
     public Integer getIsUploadFinished() {
@@ -137,7 +137,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置上传是否完成标志，可选值：0 - 未完成，1 - 已完成
+     * Set 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      * @param IsUploadFinished 上传是否完成标志，可选值：0 - 未完成，1 - 已完成
      */
     public void setIsUploadFinished(Integer IsUploadFinished) {
@@ -145,7 +145,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文件ID
+     * Get 文件ID 
      * @return FileId 文件ID
      */
     public String getFileId() {
@@ -153,7 +153,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文件ID
+     * Set 文件ID
      * @param FileId 文件ID
      */
     public void setFileId(String FileId) {
@@ -161,7 +161,7 @@ public class SqlFileInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UploadTime", this.UploadTime);

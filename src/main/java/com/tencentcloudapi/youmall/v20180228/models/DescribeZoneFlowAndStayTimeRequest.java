@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
+public class DescribeZoneFlowAndStayTimeRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -51,7 +51,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     private String EndDate;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -59,7 +59,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -67,7 +67,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -75,7 +75,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -83,7 +83,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期，格式yyyy-MM-dd
+     * Get 开始日期，格式yyyy-MM-dd 
      * @return StartDate 开始日期，格式yyyy-MM-dd
      */
     public String getStartDate() {
@@ -91,7 +91,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期，格式yyyy-MM-dd
+     * Set 开始日期，格式yyyy-MM-dd
      * @param StartDate 开始日期，格式yyyy-MM-dd
      */
     public void setStartDate(String StartDate) {
@@ -99,7 +99,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期，格式yyyy-MM-dd
+     * Get 结束日期，格式yyyy-MM-dd 
      * @return EndDate 结束日期，格式yyyy-MM-dd
      */
     public String getEndDate() {
@@ -107,7 +107,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期，格式yyyy-MM-dd
+     * Set 结束日期，格式yyyy-MM-dd
      * @param EndDate 结束日期，格式yyyy-MM-dd
      */
     public void setEndDate(String EndDate) {
@@ -115,7 +115,7 @@ public class DescribeZoneFlowAndStayTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

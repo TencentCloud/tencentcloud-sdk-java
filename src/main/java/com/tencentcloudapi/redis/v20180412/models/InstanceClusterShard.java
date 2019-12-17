@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceClusterShard  extends AbstractModel{
+public class InstanceClusterShard extends AbstractModel{
 
     /**
     * 分片节点名称
@@ -86,7 +86,7 @@ public class InstanceClusterShard  extends AbstractModel{
     private Integer Connected;
 
     /**
-     * 获取分片节点名称
+     * Get 分片节点名称 
      * @return ShardName 分片节点名称
      */
     public String getShardName() {
@@ -94,7 +94,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置分片节点名称
+     * Set 分片节点名称
      * @param ShardName 分片节点名称
      */
     public void setShardName(String ShardName) {
@@ -102,7 +102,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取分片节点Id
+     * Get 分片节点Id 
      * @return ShardId 分片节点Id
      */
     public String getShardId() {
@@ -110,7 +110,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置分片节点Id
+     * Set 分片节点Id
      * @param ShardId 分片节点Id
      */
     public void setShardId(String ShardId) {
@@ -118,7 +118,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取角色
+     * Get 角色 
      * @return Role 角色
      */
     public Integer getRole() {
@@ -126,7 +126,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置角色
+     * Set 角色
      * @param Role 角色
      */
     public void setRole(Integer Role) {
@@ -134,7 +134,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取Key数量
+     * Get Key数量 
      * @return Keys Key数量
      */
     public Integer getKeys() {
@@ -142,7 +142,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置Key数量
+     * Set Key数量
      * @param Keys Key数量
      */
     public void setKeys(Integer Keys) {
@@ -150,7 +150,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取slot信息
+     * Get slot信息 
      * @return Slots slot信息
      */
     public String getSlots() {
@@ -158,7 +158,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置slot信息
+     * Set slot信息
      * @param Slots slot信息
      */
     public void setSlots(String Slots) {
@@ -166,7 +166,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取使用容量
+     * Get 使用容量 
      * @return Storage 使用容量
      */
     public Integer getStorage() {
@@ -174,7 +174,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置使用容量
+     * Set 使用容量
      * @param Storage 使用容量
      */
     public void setStorage(Integer Storage) {
@@ -182,7 +182,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取容量倾斜率
+     * Get 容量倾斜率 
      * @return StorageSlope 容量倾斜率
      */
     public Float getStorageSlope() {
@@ -190,7 +190,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置容量倾斜率
+     * Set 容量倾斜率
      * @param StorageSlope 容量倾斜率
      */
     public void setStorageSlope(Float StorageSlope) {
@@ -198,7 +198,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取实例运行时节点Id
+     * Get 实例运行时节点Id 
      * @return Runid 实例运行时节点Id
      */
     public String getRunid() {
@@ -206,7 +206,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置实例运行时节点Id
+     * Set 实例运行时节点Id
      * @param Runid 实例运行时节点Id
      */
     public void setRunid(String Runid) {
@@ -214,7 +214,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 获取服务状态：0-down；1-on
+     * Get 服务状态：0-down；1-on 
      * @return Connected 服务状态：0-down；1-on
      */
     public Integer getConnected() {
@@ -222,7 +222,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 设置服务状态：0-down；1-on
+     * Set 服务状态：0-down；1-on
      * @param Connected 服务状态：0-down；1-on
      */
     public void setConnected(Integer Connected) {
@@ -230,7 +230,7 @@ public class InstanceClusterShard  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShardName", this.ShardName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DayStreamPlayInfo  extends AbstractModel{
+public class DayStreamPlayInfo extends AbstractModel{
 
     /**
     * 带宽（单位Mbps）。
@@ -58,7 +58,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     private String Time;
 
     /**
-     * 获取带宽（单位Mbps）。
+     * Get 带宽（单位Mbps）。 
      * @return Bandwidth 带宽（单位Mbps）。
      */
     public Float getBandwidth() {
@@ -66,7 +66,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置带宽（单位Mbps）。
+     * Set 带宽（单位Mbps）。
      * @param Bandwidth 带宽（单位Mbps）。
      */
     public void setBandwidth(Float Bandwidth) {
@@ -74,7 +74,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流量 （单位MB）。
+     * Get 流量 （单位MB）。 
      * @return Flux 流量 （单位MB）。
      */
     public Float getFlux() {
@@ -82,7 +82,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流量 （单位MB）。
+     * Set 流量 （单位MB）。
      * @param Flux 流量 （单位MB）。
      */
     public void setFlux(Float Flux) {
@@ -90,7 +90,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取在线人数。
+     * Get 在线人数。 
      * @return Online 在线人数。
      */
     public Long getOnline() {
@@ -98,7 +98,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置在线人数。
+     * Set 在线人数。
      * @param Online 在线人数。
      */
     public void setOnline(Long Online) {
@@ -106,7 +106,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取请求数。
+     * Get 请求数。 
      * @return Request 请求数。
      */
     public Long getRequest() {
@@ -114,7 +114,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置请求数。
+     * Set 请求数。
      * @param Request 请求数。
      */
     public void setRequest(Long Request) {
@@ -122,7 +122,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * Get 数据时间点，格式：yyyy-mm-dd HH:MM:SS。 
      * @return Time 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
      */
     public String getTime() {
@@ -130,7 +130,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * Set 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
      * @param Time 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
      */
     public void setTime(String Time) {
@@ -138,7 +138,7 @@ public class DayStreamPlayInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

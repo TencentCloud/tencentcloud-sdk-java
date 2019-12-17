@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TargetHealth  extends AbstractModel{
+public class TargetHealth extends AbstractModel{
 
     /**
     * Target的内网IP
@@ -58,7 +58,7 @@ public class TargetHealth  extends AbstractModel{
     private String HealthStatusDetial;
 
     /**
-     * 获取Target的内网IP
+     * Get Target的内网IP 
      * @return IP Target的内网IP
      */
     public String getIP() {
@@ -66,7 +66,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 设置Target的内网IP
+     * Set Target的内网IP
      * @param IP Target的内网IP
      */
     public void setIP(String IP) {
@@ -74,7 +74,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 获取Target绑定的端口
+     * Get Target绑定的端口 
      * @return Port Target绑定的端口
      */
     public Integer getPort() {
@@ -82,7 +82,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 设置Target绑定的端口
+     * Set Target绑定的端口
      * @param Port Target绑定的端口
      */
     public void setPort(Integer Port) {
@@ -90,7 +90,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 获取当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
+     * Get 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。 
      * @return HealthStatus 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
      */
     public Boolean getHealthStatus() {
@@ -98,7 +98,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 设置当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
+     * Set 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
      * @param HealthStatus 当前健康状态，true：健康，false：不健康（包括尚未开始探测、探测中、状态异常等几种状态）。只有处于健康状态（且权重大于0），负载均衡才会向其转发流量。
      */
     public void setHealthStatus(Boolean HealthStatus) {
@@ -106,7 +106,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 获取Target的实例ID，如 ins-12345678
+     * Get Target的实例ID，如 ins-12345678 
      * @return TargetId Target的实例ID，如 ins-12345678
      */
     public String getTargetId() {
@@ -114,7 +114,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 设置Target的实例ID，如 ins-12345678
+     * Set Target的实例ID，如 ins-12345678
      * @param TargetId Target的实例ID，如 ins-12345678
      */
     public void setTargetId(String TargetId) {
@@ -122,7 +122,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 获取当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * Get 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。 
      * @return HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
      */
     public String getHealthStatusDetial() {
@@ -130,7 +130,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 设置当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
      * @param HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
      */
     public void setHealthStatusDetial(String HealthStatusDetial) {
@@ -138,7 +138,7 @@ public class TargetHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IP", this.IP);

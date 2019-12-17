@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceInventoryRequest  extends AbstractModel{
+public class DescribeDeviceInventoryRequest extends AbstractModel{
 
     /**
     * 可用区
@@ -93,7 +93,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     private Integer HaveRaidCard;
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -101,7 +101,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -109,7 +109,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备型号
+     * Get 设备型号 
      * @return DeviceClassCode 设备型号
      */
     public String getDeviceClassCode() {
@@ -117,7 +117,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备型号
+     * Set 设备型号
      * @param DeviceClassCode 设备型号
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -125,7 +125,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -133,7 +133,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -141,7 +141,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -149,7 +149,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -157,7 +157,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CpuId，自定义机型时需传入
+     * Get CpuId，自定义机型时需传入 
      * @return CpuId CpuId，自定义机型时需传入
      */
     public Integer getCpuId() {
@@ -165,7 +165,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CpuId，自定义机型时需传入
+     * Set CpuId，自定义机型时需传入
      * @param CpuId CpuId，自定义机型时需传入
      */
     public void setCpuId(Integer CpuId) {
@@ -173,7 +173,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘类型，自定义机型时需传入
+     * Get 硬盘类型，自定义机型时需传入 
      * @return DiskType 硬盘类型，自定义机型时需传入
      */
     public String getDiskType() {
@@ -181,7 +181,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘类型，自定义机型时需传入
+     * Set 硬盘类型，自定义机型时需传入
      * @param DiskType 硬盘类型，自定义机型时需传入
      */
     public void setDiskType(String DiskType) {
@@ -189,7 +189,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取单块硬盘大小，自定义机型时需传入
+     * Get 单块硬盘大小，自定义机型时需传入 
      * @return DiskSize 单块硬盘大小，自定义机型时需传入
      */
     public Integer getDiskSize() {
@@ -197,7 +197,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置单块硬盘大小，自定义机型时需传入
+     * Set 单块硬盘大小，自定义机型时需传入
      * @param DiskSize 单块硬盘大小，自定义机型时需传入
      */
     public void setDiskSize(Integer DiskSize) {
@@ -205,7 +205,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘数量，自定义机型时需传入
+     * Get 硬盘数量，自定义机型时需传入 
      * @return DiskNum 硬盘数量，自定义机型时需传入
      */
     public Integer getDiskNum() {
@@ -213,7 +213,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘数量，自定义机型时需传入
+     * Set 硬盘数量，自定义机型时需传入
      * @param DiskNum 硬盘数量，自定义机型时需传入
      */
     public void setDiskNum(Integer DiskNum) {
@@ -221,7 +221,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内存总大小，自定义机型时需传入
+     * Get 内存总大小，自定义机型时需传入 
      * @return Mem 内存总大小，自定义机型时需传入
      */
     public Integer getMem() {
@@ -229,7 +229,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内存总大小，自定义机型时需传入
+     * Set 内存总大小，自定义机型时需传入
      * @param Mem 内存总大小，自定义机型时需传入
      */
     public void setMem(Integer Mem) {
@@ -237,7 +237,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否支持raid，自定义机型时需传入
+     * Get 是否支持raid，自定义机型时需传入 
      * @return HaveRaidCard 是否支持raid，自定义机型时需传入
      */
     public Integer getHaveRaidCard() {
@@ -245,7 +245,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否支持raid，自定义机型时需传入
+     * Set 是否支持raid，自定义机型时需传入
      * @param HaveRaidCard 是否支持raid，自定义机型时需传入
      */
     public void setHaveRaidCard(Integer HaveRaidCard) {
@@ -253,7 +253,7 @@ public class DescribeDeviceInventoryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

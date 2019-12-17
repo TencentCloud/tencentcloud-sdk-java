@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetDetectsRequest  extends AbstractModel{
+public class DescribeNetDetectsRequest extends AbstractModel{
 
     /**
     * 网络探测实例`ID`数组。形如：[`netd-12345678`]
@@ -55,7 +55,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * Get 网络探测实例`ID`数组。形如：[`netd-12345678`] 
      * @return NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
      */
     public String [] getNetDetectIds() {
@@ -63,7 +63,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * Set 网络探测实例`ID`数组。形如：[`netd-12345678`]
      * @param NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
      */
     public void setNetDetectIds(String [] NetDetectIds) {
@@ -71,11 +71,11 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取过滤条件，参数不支持同时指定NetDetectIds和Filters。
+     * Get 过滤条件，参数不支持同时指定NetDetectIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678</li>
 <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
 <li>subnet-id - String - （过滤条件）子网实例ID，形如：subnet-12345678</li>
-<li>net-detect-name - String - （过滤条件）网络探测名称</li>
+<li>net-detect-name - String - （过滤条件）网络探测名称</li> 
      * @return Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678</li>
 <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
@@ -87,7 +87,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件，参数不支持同时指定NetDetectIds和Filters。
+     * Set 过滤条件，参数不支持同时指定NetDetectIds和Filters。
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-12345678</li>
 <li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
 <li>subnet-id - String - （过滤条件）子网实例ID，形如：subnet-12345678</li>
@@ -103,7 +103,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -111,7 +111,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -119,7 +119,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -127,7 +127,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -135,7 +135,7 @@ public class DescribeNetDetectsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "NetDetectIds.", this.NetDetectIds);

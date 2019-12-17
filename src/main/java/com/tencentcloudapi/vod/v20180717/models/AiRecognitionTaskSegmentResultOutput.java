@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskSegmentResultOutput  extends AbstractModel{
+public class AiRecognitionTaskSegmentResultOutput extends AbstractModel{
 
     /**
     * 视频拆条片段列表。
@@ -30,7 +30,7 @@ public class AiRecognitionTaskSegmentResultOutput  extends AbstractModel{
     private AiRecognitionTaskSegmentSegmentItem [] SegmentSet;
 
     /**
-     * 获取视频拆条片段列表。
+     * Get 视频拆条片段列表。 
      * @return SegmentSet 视频拆条片段列表。
      */
     public AiRecognitionTaskSegmentSegmentItem [] getSegmentSet() {
@@ -38,7 +38,7 @@ public class AiRecognitionTaskSegmentResultOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条片段列表。
+     * Set 视频拆条片段列表。
      * @param SegmentSet 视频拆条片段列表。
      */
     public void setSegmentSet(AiRecognitionTaskSegmentSegmentItem [] SegmentSet) {
@@ -46,7 +46,7 @@ public class AiRecognitionTaskSegmentResultOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
+public class DescribeDCDBUpgradePriceRequest extends AbstractModel{
 
     /**
     * 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
@@ -61,7 +61,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     private SplitShardConfig SplitShardConfig;
 
     /**
-     * 获取待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Get 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -69,7 +69,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
+     * Set 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      * @param InstanceId 待升级的实例ID。形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -77,10 +77,10 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升级类型，取值范围: 
+     * Get 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
- <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
+ <li> SPLIT: 将已有分片中的数据切分到新增分片上</li> 
      * @return UpgradeType 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
@@ -91,7 +91,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升级类型，取值范围: 
+     * Set 升级类型，取值范围: 
 <li> ADD: 新增分片 </li> 
  <li> EXPAND: 升级实例中的已有分片 </li> 
  <li> SPLIT: 将已有分片中的数据切分到新增分片上</li>
@@ -105,7 +105,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新增分片配置，当UpgradeType为ADD时生效。
+     * Get 新增分片配置，当UpgradeType为ADD时生效。 
      * @return AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
      */
     public AddShardConfig getAddShardConfig() {
@@ -113,7 +113,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新增分片配置，当UpgradeType为ADD时生效。
+     * Set 新增分片配置，当UpgradeType为ADD时生效。
      * @param AddShardConfig 新增分片配置，当UpgradeType为ADD时生效。
      */
     public void setAddShardConfig(AddShardConfig AddShardConfig) {
@@ -121,7 +121,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Get 扩容分片配置，当UpgradeType为EXPAND时生效。 
      * @return ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
      */
     public ExpandShardConfig getExpandShardConfig() {
@@ -129,7 +129,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容分片配置，当UpgradeType为EXPAND时生效。
+     * Set 扩容分片配置，当UpgradeType为EXPAND时生效。
      * @param ExpandShardConfig 扩容分片配置，当UpgradeType为EXPAND时生效。
      */
     public void setExpandShardConfig(ExpandShardConfig ExpandShardConfig) {
@@ -137,7 +137,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取切分分片配置，当UpgradeType为SPLIT时生效。
+     * Get 切分分片配置，当UpgradeType为SPLIT时生效。 
      * @return SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      */
     public SplitShardConfig getSplitShardConfig() {
@@ -145,7 +145,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置切分分片配置，当UpgradeType为SPLIT时生效。
+     * Set 切分分片配置，当UpgradeType为SPLIT时生效。
      * @param SplitShardConfig 切分分片配置，当UpgradeType为SPLIT时生效。
      */
     public void setSplitShardConfig(SplitShardConfig SplitShardConfig) {
@@ -153,7 +153,7 @@ public class DescribeDCDBUpgradePriceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

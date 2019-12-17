@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextApprovalRequest  extends AbstractModel{
+public class TextApprovalRequest extends AbstractModel{
 
     /**
     * 待审核的文本（仅支持UTF-8格式，不超过2000字）
@@ -38,7 +38,7 @@ public class TextApprovalRequest  extends AbstractModel{
     private Long Flag;
 
     /**
-     * 获取待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Get 待审核的文本（仅支持UTF-8格式，不超过2000字） 
      * @return Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public String getText() {
@@ -46,7 +46,7 @@ public class TextApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Set 待审核的文本（仅支持UTF-8格式，不超过2000字）
      * @param Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public void setText(String Text) {
@@ -54,8 +54,8 @@ public class TextApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 获取文本审核模式（默认取1值）：
-1、全领域审核
+     * Get 文本审核模式（默认取1值）：
+1、全领域审核 
      * @return Flag 文本审核模式（默认取1值）：
 1、全领域审核
      */
@@ -64,7 +64,7 @@ public class TextApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 设置文本审核模式（默认取1值）：
+     * Set 文本审核模式（默认取1值）：
 1、全领域审核
      * @param Flag 文本审核模式（默认取1值）：
 1、全领域审核
@@ -74,7 +74,7 @@ public class TextApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

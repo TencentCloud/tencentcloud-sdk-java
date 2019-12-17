@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldInstancesRequest  extends AbstractModel{
+public class DescribeShieldInstancesRequest extends AbstractModel{
 
     /**
     * 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
@@ -65,7 +65,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     private String OrderDirection;
 
     /**
-     * 获取支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
+     * Get 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。 
      * @return Filters 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
      */
     public Filter [] getFilters() {
@@ -73,7 +73,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
+     * Set 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
      * @param Filters 支持通过app名称，app包名，加固的服务版本，提交的渠道进行筛选。
      */
     public void setFilters(Filter [] Filters) {
@@ -81,7 +81,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Integer getOffset() {
@@ -89,7 +89,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Integer Offset) {
@@ -97,7 +97,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数量限制，默认为20，最大值为100。
+     * Get 数量限制，默认为20，最大值为100。 
      * @return Limit 数量限制，默认为20，最大值为100。
      */
     public Integer getLimit() {
@@ -105,7 +105,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数量限制，默认为20，最大值为100。
+     * Set 数量限制，默认为20，最大值为100。
      * @param Limit 数量限制，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
@@ -113,7 +113,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
+     * Get 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。 
      * @return ItemIds 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
      */
     public String [] getItemIds() {
@@ -121,7 +121,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
+     * Set 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
      * @param ItemIds 可以提供ItemId数组来查询一个或者多个结果。注意不可以同时指定ItemIds和Filters。
      */
     public void setItemIds(String [] ItemIds) {
@@ -129,7 +129,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取按某个字段排序，目前仅支持TaskTime排序。
+     * Get 按某个字段排序，目前仅支持TaskTime排序。 
      * @return OrderField 按某个字段排序，目前仅支持TaskTime排序。
      */
     public String getOrderField() {
@@ -137,7 +137,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置按某个字段排序，目前仅支持TaskTime排序。
+     * Set 按某个字段排序，目前仅支持TaskTime排序。
      * @param OrderField 按某个字段排序，目前仅支持TaskTime排序。
      */
     public void setOrderField(String OrderField) {
@@ -145,7 +145,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取升序（asc）还是降序（desc），默认：desc。
+     * Get 升序（asc）还是降序（desc），默认：desc。 
      * @return OrderDirection 升序（asc）还是降序（desc），默认：desc。
      */
     public String getOrderDirection() {
@@ -153,7 +153,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置升序（asc）还是降序（desc），默认：desc。
+     * Set 升序（asc）还是降序（desc），默认：desc。
      * @param OrderDirection 升序（asc）还是降序（desc），默认：desc。
      */
     public void setOrderDirection(String OrderDirection) {
@@ -161,7 +161,7 @@ public class DescribeShieldInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

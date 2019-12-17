@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TsfPageSimpleGroup  extends AbstractModel{
+public class TsfPageSimpleGroup extends AbstractModel{
 
     /**
     * 总条数
@@ -39,8 +39,8 @@ public class TsfPageSimpleGroup  extends AbstractModel{
     private SimpleGroup [] Content;
 
     /**
-     * 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总条数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 总条数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class TsfPageSimpleGroup  extends AbstractModel{
     }
 
     /**
-     * 设置总条数
+     * Set 总条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class TsfPageSimpleGroup  extends AbstractModel{
     }
 
     /**
-     * 获取简单部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 简单部署组列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 简单部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class TsfPageSimpleGroup  extends AbstractModel{
     }
 
     /**
-     * 设置简单部署组列表
+     * Set 简单部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 简单部署组列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class TsfPageSimpleGroup  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

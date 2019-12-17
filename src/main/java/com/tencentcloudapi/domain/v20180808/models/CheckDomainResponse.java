@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckDomainResponse  extends AbstractModel{
+public class CheckDomainResponse extends AbstractModel{
 
     /**
     * 所查询域名名称
@@ -72,7 +72,7 @@ public class CheckDomainResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取所查询域名名称
+     * Get 所查询域名名称 
      * @return DomainName 所查询域名名称
      */
     public String getDomainName() {
@@ -80,7 +80,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置所查询域名名称
+     * Set 所查询域名名称
      * @param DomainName 所查询域名名称
      */
     public void setDomainName(String DomainName) {
@@ -88,7 +88,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否能够注册
+     * Get 是否能够注册 
      * @return Available 是否能够注册
      */
     public Boolean getAvailable() {
@@ -96,7 +96,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否能够注册
+     * Set 是否能够注册
      * @param Available 是否能够注册
      */
     public void setAvailable(Boolean Available) {
@@ -104,7 +104,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取不能注册原因
+     * Get 不能注册原因 
      * @return Reason 不能注册原因
      */
     public String getReason() {
@@ -112,7 +112,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置不能注册原因
+     * Set 不能注册原因
      * @param Reason 不能注册原因
      */
     public void setReason(String Reason) {
@@ -120,7 +120,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否是溢价词
+     * Get 是否是溢价词 
      * @return Premium 是否是溢价词
      */
     public Boolean getPremium() {
@@ -128,7 +128,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否是溢价词
+     * Set 是否是溢价词
      * @param Premium 是否是溢价词
      */
     public void setPremium(Boolean Premium) {
@@ -136,7 +136,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取价格
+     * Get 价格 
      * @return Price 价格
      */
     public Long getPrice() {
@@ -144,7 +144,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置价格
+     * Set 价格
      * @param Price 价格
      */
     public void setPrice(Long Price) {
@@ -152,7 +152,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取是否是敏感词
+     * Get 是否是敏感词 
      * @return BlackWord 是否是敏感词
      */
     public Boolean getBlackWord() {
@@ -160,7 +160,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置是否是敏感词
+     * Set 是否是敏感词
      * @param BlackWord 是否是敏感词
      */
     public void setBlackWord(Boolean BlackWord) {
@@ -168,7 +168,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class CheckDomainResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);

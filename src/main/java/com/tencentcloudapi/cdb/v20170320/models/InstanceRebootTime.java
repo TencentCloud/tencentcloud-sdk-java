@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceRebootTime  extends AbstractModel{
+public class InstanceRebootTime extends AbstractModel{
 
     /**
     * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
@@ -37,7 +37,7 @@ public class InstanceRebootTime  extends AbstractModel{
     private Integer TimeInSeconds;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class InstanceRebootTime  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
      * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class InstanceRebootTime  extends AbstractModel{
     }
 
     /**
-     * 获取预期重启时间
+     * Get 预期重启时间 
      * @return TimeInSeconds 预期重启时间
      */
     public Integer getTimeInSeconds() {
@@ -61,7 +61,7 @@ public class InstanceRebootTime  extends AbstractModel{
     }
 
     /**
-     * 设置预期重启时间
+     * Set 预期重启时间
      * @param TimeInSeconds 预期重启时间
      */
     public void setTimeInSeconds(Integer TimeInSeconds) {
@@ -69,7 +69,7 @@ public class InstanceRebootTime  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

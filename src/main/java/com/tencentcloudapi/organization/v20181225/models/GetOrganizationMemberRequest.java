@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetOrganizationMemberRequest  extends AbstractModel{
+public class GetOrganizationMemberRequest extends AbstractModel{
 
     /**
     * 组织成员UIN
@@ -30,7 +30,7 @@ public class GetOrganizationMemberRequest  extends AbstractModel{
     private Long MemberUin;
 
     /**
-     * 获取组织成员UIN
+     * Get 组织成员UIN 
      * @return MemberUin 组织成员UIN
      */
     public Long getMemberUin() {
@@ -38,7 +38,7 @@ public class GetOrganizationMemberRequest  extends AbstractModel{
     }
 
     /**
-     * 设置组织成员UIN
+     * Set 组织成员UIN
      * @param MemberUin 组织成员UIN
      */
     public void setMemberUin(Long MemberUin) {
@@ -46,7 +46,7 @@ public class GetOrganizationMemberRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);

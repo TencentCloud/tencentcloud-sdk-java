@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
+public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * 采样截图模板唯一标识。
@@ -90,7 +90,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * 获取采样截图模板唯一标识。
+     * Get 采样截图模板唯一标识。 
      * @return Definition 采样截图模板唯一标识。
      */
     public Long getDefinition() {
@@ -98,7 +98,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图模板唯一标识。
+     * Set 采样截图模板唯一标识。
      * @param Definition 采样截图模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -106,7 +106,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图模板名称，长度限制：64 个字符。
+     * Get 采样截图模板名称，长度限制：64 个字符。 
      * @return Name 采样截图模板名称，长度限制：64 个字符。
      */
     public String getName() {
@@ -114,7 +114,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图模板名称，长度限制：64 个字符。
+     * Set 采样截图模板名称，长度限制：64 个字符。
      * @param Name 采样截图模板名称，长度限制：64 个字符。
      */
     public void setName(String Name) {
@@ -122,7 +122,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片宽度，取值范围： [128, 4096]，单位：px。
+     * Get 图片宽度，取值范围： [128, 4096]，单位：px。 
      * @return Width 图片宽度，取值范围： [128, 4096]，单位：px。
      */
     public Long getWidth() {
@@ -130,7 +130,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片宽度，取值范围： [128, 4096]，单位：px。
+     * Set 图片宽度，取值范围： [128, 4096]，单位：px。
      * @param Width 图片宽度，取值范围： [128, 4096]，单位：px。
      */
     public void setWidth(Long Width) {
@@ -138,7 +138,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片高度，取值范围： [128, 4096]，单位：px。
+     * Get 图片高度，取值范围： [128, 4096]，单位：px。 
      * @return Height 图片高度，取值范围： [128, 4096]，单位：px。
      */
     public Long getHeight() {
@@ -146,7 +146,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片高度，取值范围： [128, 4096]，单位：px。
+     * Set 图片高度，取值范围： [128, 4096]，单位：px。
      * @param Height 图片高度，取值范围： [128, 4096]，单位：px。
      */
     public void setHeight(Long Height) {
@@ -154,9 +154,9 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取采样截图类型，取值：
+     * Get 采样截图类型，取值：
 <li>Percent：按百分比。</li>
-<li>Time：按时间间隔。</li>
+<li>Time：按时间间隔。</li> 
      * @return SampleType 采样截图类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
@@ -166,7 +166,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图类型，取值：
+     * Set 采样截图类型，取值：
 <li>Percent：按百分比。</li>
 <li>Time：按时间间隔。</li>
      * @param SampleType 采样截图类型，取值：
@@ -178,9 +178,9 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取采样间隔。
+     * Get 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
-<li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
+<li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li> 
      * @return SampleInterval 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
@@ -190,7 +190,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样间隔。
+     * Set 采样间隔。
 <li>当 SampleType 为 Percent 时，指定采样间隔的百分比。</li>
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
      * @param SampleInterval 采样间隔。
@@ -202,7 +202,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片格式，取值为 jpg 和 png。
+     * Get 图片格式，取值为 jpg 和 png。 
      * @return Format 图片格式，取值为 jpg 和 png。
      */
     public String getFormat() {
@@ -210,7 +210,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片格式，取值为 jpg 和 png。
+     * Set 图片格式，取值为 jpg 和 png。
      * @param Format 图片格式，取值为 jpg 和 png。
      */
     public void setFormat(String Format) {
@@ -218,7 +218,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模板描述信息，长度限制：256 个字符。
+     * Get 模板描述信息，长度限制：256 个字符。 
      * @return Comment 模板描述信息，长度限制：256 个字符。
      */
     public String getComment() {
@@ -226,7 +226,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模板描述信息，长度限制：256 个字符。
+     * Set 模板描述信息，长度限制：256 个字符。
      * @param Comment 模板描述信息，长度限制：256 个字符。
      */
     public void setComment(String Comment) {
@@ -234,7 +234,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 获取点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
      * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public Long getSubAppId() {
@@ -242,7 +242,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
      */
     public void setSubAppId(Long SubAppId) {
@@ -250,7 +250,7 @@ public class ModifySampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

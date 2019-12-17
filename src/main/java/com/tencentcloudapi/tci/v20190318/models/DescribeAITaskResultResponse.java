@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAITaskResultResponse  extends AbstractModel{
+public class DescribeAITaskResultResponse extends AbstractModel{
 
     /**
     * 音频分析结果
@@ -65,7 +65,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取音频分析结果
+     * Get 音频分析结果 
      * @return AudioResult 音频分析结果
      */
     public StandardAudioResult getAudioResult() {
@@ -73,7 +73,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置音频分析结果
+     * Set 音频分析结果
      * @param AudioResult 音频分析结果
      */
     public void setAudioResult(StandardAudioResult AudioResult) {
@@ -81,7 +81,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图像分析结果
+     * Get 图像分析结果 
      * @return ImageResult 图像分析结果
      */
     public StandardImageResult getImageResult() {
@@ -89,7 +89,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图像分析结果
+     * Set 图像分析结果
      * @param ImageResult 图像分析结果
      */
     public void setImageResult(StandardImageResult ImageResult) {
@@ -97,7 +97,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取视频分析结果
+     * Get 视频分析结果 
      * @return VideoResult 视频分析结果
      */
     public StandardVideoResult getVideoResult() {
@@ -105,7 +105,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置视频分析结果
+     * Set 视频分析结果
      * @param VideoResult 视频分析结果
      */
     public void setVideoResult(StandardVideoResult VideoResult) {
@@ -113,7 +113,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public String getStatus() {
@@ -121,7 +121,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(String Status) {
@@ -129,7 +129,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Get 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。 
      * @return TaskId 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public Long getTaskId() {
@@ -137,7 +137,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
+     * Set 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      * @param TaskId 任务唯一id。在URL方式时提交请求后会返回一个jobid，后续查询该url的结果时使用这个jobid进行查询。
      */
     public void setTaskId(Long TaskId) {
@@ -145,7 +145,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeAITaskResultResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AudioResult.", this.AudioResult);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
+public class DeleteSecurityGroupPoliciesRequest extends AbstractModel{
 
     /**
     * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
@@ -37,7 +37,7 @@ public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
-     * 获取安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public String getSecurityGroupId() {
@@ -45,7 +45,7 @@ public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
@@ -53,7 +53,7 @@ public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+     * Get 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。 
      * @return SecurityGroupPolicySet 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
      */
     public SecurityGroupPolicySet getSecurityGroupPolicySet() {
@@ -61,7 +61,7 @@ public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+     * Set 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
      * @param SecurityGroupPolicySet 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
      */
     public void setSecurityGroupPolicySet(SecurityGroupPolicySet SecurityGroupPolicySet) {
@@ -69,7 +69,7 @@ public class DeleteSecurityGroupPoliciesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

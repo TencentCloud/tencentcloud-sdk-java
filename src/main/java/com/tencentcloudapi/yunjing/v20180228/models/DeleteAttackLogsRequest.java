@@ -20,33 +20,33 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAttackLogsRequest  extends AbstractModel{
+public class DeleteAttackLogsRequest extends AbstractModel{
 
     /**
     * 日志ID数组，最大100条。
     */
     @SerializedName("Ids")
     @Expose
-    private Integer [] Ids;
+    private Long [] Ids;
 
     /**
-     * 获取日志ID数组，最大100条。
+     * Get 日志ID数组，最大100条。 
      * @return Ids 日志ID数组，最大100条。
      */
-    public Integer [] getIds() {
+    public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * 设置日志ID数组，最大100条。
+     * Set 日志ID数组，最大100条。
      * @param Ids 日志ID数组，最大100条。
      */
-    public void setIds(Integer [] Ids) {
+    public void setIds(Long [] Ids) {
         this.Ids = Ids;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);

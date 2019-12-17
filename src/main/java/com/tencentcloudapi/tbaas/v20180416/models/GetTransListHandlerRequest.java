@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTransListHandlerRequest  extends AbstractModel{
+public class GetTransListHandlerRequest extends AbstractModel{
 
     /**
     * 模块名，固定字段：transaction
@@ -65,7 +65,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     private String TransHash;
 
     /**
-     * 获取模块名，固定字段：transaction
+     * Get 模块名，固定字段：transaction 
      * @return Module 模块名，固定字段：transaction
      */
     public String getModule() {
@@ -73,7 +73,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，固定字段：transaction
+     * Set 模块名，固定字段：transaction
      * @param Module 模块名，固定字段：transaction
      */
     public void setModule(String Module) {
@@ -81,7 +81,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，固定字段：get_trans_list
+     * Get 操作名，固定字段：get_trans_list 
      * @return Operation 操作名，固定字段：get_trans_list
      */
     public String getOperation() {
@@ -89,7 +89,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，固定字段：get_trans_list
+     * Set 操作名，固定字段：get_trans_list
      * @param Operation 操作名，固定字段：get_trans_list
      */
     public void setOperation(String Operation) {
@@ -97,7 +97,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取记录偏移量
+     * Get 记录偏移量 
      * @return Offset 记录偏移量
      */
     public Integer getOffset() {
@@ -105,7 +105,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置记录偏移量
+     * Set 记录偏移量
      * @param Offset 记录偏移量
      */
     public void setOffset(Integer Offset) {
@@ -113,7 +113,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页记录数
+     * Get 每页记录数 
      * @return Limit 每页记录数
      */
     public Integer getLimit() {
@@ -121,7 +121,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页记录数
+     * Set 每页记录数
      * @param Limit 每页记录数
      */
     public void setLimit(Integer Limit) {
@@ -129,7 +129,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取群组编号
+     * Get 群组编号 
      * @return GroupPk 群组编号
      */
     public String getGroupPk() {
@@ -137,7 +137,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置群组编号
+     * Set 群组编号
      * @param GroupPk 群组编号
      */
     public void setGroupPk(String GroupPk) {
@@ -145,7 +145,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 获取交易哈希
+     * Get 交易哈希 
      * @return TransHash 交易哈希
      */
     public String getTransHash() {
@@ -153,7 +153,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 设置交易哈希
+     * Set 交易哈希
      * @param TransHash 交易哈希
      */
     public void setTransHash(String TransHash) {
@@ -161,7 +161,7 @@ public class GetTransListHandlerRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

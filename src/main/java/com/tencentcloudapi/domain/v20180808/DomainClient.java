@@ -29,21 +29,10 @@ public class DomainClient extends AbstractClient{
     private static String endpoint = "domain.tencentcloudapi.com";
     private static String version = "2018-08-08";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public DomainClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public DomainClient(Credential credential, String region, ClientProfile profile) {
         super(DomainClient.endpoint, DomainClient.version, credential, region, profile);
     }

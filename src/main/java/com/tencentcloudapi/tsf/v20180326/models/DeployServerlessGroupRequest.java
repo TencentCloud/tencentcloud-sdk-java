@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeployServerlessGroupRequest  extends AbstractModel{
+public class DeployServerlessGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID
@@ -44,7 +44,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     private VpcConfig VpcConfig;
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -52,7 +52,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -60,7 +60,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包ID
+     * Get 程序包ID 
      * @return PkgId 程序包ID
      */
     public String getPkgId() {
@@ -68,7 +68,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包ID
+     * Set 程序包ID
      * @param PkgId 程序包ID
      */
     public void setPkgId(String PkgId) {
@@ -76,7 +76,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VpcConfig对象，和创建接口中对象一致
+     * Get VpcConfig对象，和创建接口中对象一致 
      * @return VpcConfig VpcConfig对象，和创建接口中对象一致
      */
     public VpcConfig getVpcConfig() {
@@ -84,7 +84,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VpcConfig对象，和创建接口中对象一致
+     * Set VpcConfig对象，和创建接口中对象一致
      * @param VpcConfig VpcConfig对象，和创建接口中对象一致
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
@@ -92,7 +92,7 @@ public class DeployServerlessGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

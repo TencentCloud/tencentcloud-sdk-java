@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddTimeWindowRequest  extends AbstractModel{
+public class AddTimeWindowRequest extends AbstractModel{
 
     /**
     * 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
@@ -79,7 +79,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     private String [] Sunday;
 
     /**
-     * 获取实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Get 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
@@ -87,7 +87,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
@@ -95,7 +95,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+     * Get 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。 
      * @return Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
      */
     public String [] getMonday() {
@@ -103,7 +103,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
+     * Set 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
      * @param Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；下同。
      */
     public void setMonday(String [] Monday) {
@@ -111,7 +111,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期二的可维护时间窗口。
+     * Get 星期二的可维护时间窗口。 
      * @return Tuesday 星期二的可维护时间窗口。
      */
     public String [] getTuesday() {
@@ -119,7 +119,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期二的可维护时间窗口。
+     * Set 星期二的可维护时间窗口。
      * @param Tuesday 星期二的可维护时间窗口。
      */
     public void setTuesday(String [] Tuesday) {
@@ -127,7 +127,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期三的可维护时间窗口。
+     * Get 星期三的可维护时间窗口。 
      * @return Wednesday 星期三的可维护时间窗口。
      */
     public String [] getWednesday() {
@@ -135,7 +135,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期三的可维护时间窗口。
+     * Set 星期三的可维护时间窗口。
      * @param Wednesday 星期三的可维护时间窗口。
      */
     public void setWednesday(String [] Wednesday) {
@@ -143,7 +143,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期四的可维护时间窗口。
+     * Get 星期四的可维护时间窗口。 
      * @return Thursday 星期四的可维护时间窗口。
      */
     public String [] getThursday() {
@@ -151,7 +151,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期四的可维护时间窗口。
+     * Set 星期四的可维护时间窗口。
      * @param Thursday 星期四的可维护时间窗口。
      */
     public void setThursday(String [] Thursday) {
@@ -159,7 +159,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期五的可维护时间窗口。
+     * Get 星期五的可维护时间窗口。 
      * @return Friday 星期五的可维护时间窗口。
      */
     public String [] getFriday() {
@@ -167,7 +167,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期五的可维护时间窗口。
+     * Set 星期五的可维护时间窗口。
      * @param Friday 星期五的可维护时间窗口。
      */
     public void setFriday(String [] Friday) {
@@ -175,7 +175,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期六的可维护时间窗口。
+     * Get 星期六的可维护时间窗口。 
      * @return Saturday 星期六的可维护时间窗口。
      */
     public String [] getSaturday() {
@@ -183,7 +183,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期六的可维护时间窗口。
+     * Set 星期六的可维护时间窗口。
      * @param Saturday 星期六的可维护时间窗口。
      */
     public void setSaturday(String [] Saturday) {
@@ -191,7 +191,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取星期日的可维护时间窗口。
+     * Get 星期日的可维护时间窗口。 
      * @return Sunday 星期日的可维护时间窗口。
      */
     public String [] getSunday() {
@@ -199,7 +199,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置星期日的可维护时间窗口。
+     * Set 星期日的可维护时间窗口。
      * @param Sunday 星期日的可维护时间窗口。
      */
     public void setSunday(String [] Sunday) {
@@ -207,7 +207,7 @@ public class AddTimeWindowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

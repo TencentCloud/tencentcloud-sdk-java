@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BruteAttack  extends AbstractModel{
+public class BruteAttack extends AbstractModel{
 
     /**
     * 事件ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 主机IP。
@@ -58,21 +58,21 @@ public class BruteAttack  extends AbstractModel{
     */
     @SerializedName("City")
     @Expose
-    private Integer City;
+    private Long City;
 
     /**
     * 国家ID。
     */
     @SerializedName("Country")
     @Expose
-    private Integer Country;
+    private Long Country;
 
     /**
     * 省份ID。
     */
     @SerializedName("Province")
     @Expose
-    private Integer Province;
+    private Long Province;
 
     /**
     * 来源IP。
@@ -86,7 +86,7 @@ public class BruteAttack  extends AbstractModel{
     */
     @SerializedName("Count")
     @Expose
-    private Integer Count;
+    private Long Count;
 
     /**
     * 发生时间。
@@ -110,23 +110,23 @@ public class BruteAttack  extends AbstractModel{
     private String Uuid;
 
     /**
-     * 获取事件ID。
+     * Get 事件ID。 
      * @return Id 事件ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置事件ID。
+     * Set 事件ID。
      * @param Id 事件ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取主机IP。
+     * Get 主机IP。 
      * @return MachineIp 主机IP。
      */
     public String getMachineIp() {
@@ -134,7 +134,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置主机IP。
+     * Set 主机IP。
      * @param MachineIp 主机IP。
      */
     public void setMachineIp(String MachineIp) {
@@ -142,10 +142,10 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取破解事件状态
+     * Get 破解事件状态
 <li>BRUTEATTACK_FAIL_ACCOUNT： 暴力破解事件-失败(存在帐号)  </li>
 <li>BRUTEATTACK_FAIL_NOACCOUNT：暴力破解事件-失败(帐号不存在)</li>
-<li>BRUTEATTACK_SUCCESS：暴力破解事件-成功</li>
+<li>BRUTEATTACK_SUCCESS：暴力破解事件-成功</li> 
      * @return Status 破解事件状态
 <li>BRUTEATTACK_FAIL_ACCOUNT： 暴力破解事件-失败(存在帐号)  </li>
 <li>BRUTEATTACK_FAIL_NOACCOUNT：暴力破解事件-失败(帐号不存在)</li>
@@ -156,7 +156,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置破解事件状态
+     * Set 破解事件状态
 <li>BRUTEATTACK_FAIL_ACCOUNT： 暴力破解事件-失败(存在帐号)  </li>
 <li>BRUTEATTACK_FAIL_NOACCOUNT：暴力破解事件-失败(帐号不存在)</li>
 <li>BRUTEATTACK_SUCCESS：暴力破解事件-成功</li>
@@ -170,7 +170,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取用户名称。
+     * Get 用户名称。 
      * @return UserName 用户名称。
      */
     public String getUserName() {
@@ -178,7 +178,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置用户名称。
+     * Set 用户名称。
      * @param UserName 用户名称。
      */
     public void setUserName(String UserName) {
@@ -186,55 +186,55 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取城市ID。
+     * Get 城市ID。 
      * @return City 城市ID。
      */
-    public Integer getCity() {
+    public Long getCity() {
         return this.City;
     }
 
     /**
-     * 设置城市ID。
+     * Set 城市ID。
      * @param City 城市ID。
      */
-    public void setCity(Integer City) {
+    public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * 获取国家ID。
+     * Get 国家ID。 
      * @return Country 国家ID。
      */
-    public Integer getCountry() {
+    public Long getCountry() {
         return this.Country;
     }
 
     /**
-     * 设置国家ID。
+     * Set 国家ID。
      * @param Country 国家ID。
      */
-    public void setCountry(Integer Country) {
+    public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * 获取省份ID。
+     * Get 省份ID。 
      * @return Province 省份ID。
      */
-    public Integer getProvince() {
+    public Long getProvince() {
         return this.Province;
     }
 
     /**
-     * 设置省份ID。
+     * Set 省份ID。
      * @param Province 省份ID。
      */
-    public void setProvince(Integer Province) {
+    public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * 获取来源IP。
+     * Get 来源IP。 
      * @return SrcIp 来源IP。
      */
     public String getSrcIp() {
@@ -242,7 +242,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置来源IP。
+     * Set 来源IP。
      * @param SrcIp 来源IP。
      */
     public void setSrcIp(String SrcIp) {
@@ -250,23 +250,23 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取尝试破解次数。
+     * Get 尝试破解次数。 
      * @return Count 尝试破解次数。
      */
-    public Integer getCount() {
+    public Long getCount() {
         return this.Count;
     }
 
     /**
-     * 设置尝试破解次数。
+     * Set 尝试破解次数。
      * @param Count 尝试破解次数。
      */
-    public void setCount(Integer Count) {
+    public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * 获取发生时间。
+     * Get 发生时间。 
      * @return CreateTime 发生时间。
      */
     public String getCreateTime() {
@@ -274,7 +274,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置发生时间。
+     * Set 发生时间。
      * @param CreateTime 发生时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -282,7 +282,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取主机名称。
+     * Get 主机名称。 
      * @return MachineName 主机名称。
      */
     public String getMachineName() {
@@ -290,7 +290,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置主机名称。
+     * Set 主机名称。
      * @param MachineName 主机名称。
      */
     public void setMachineName(String MachineName) {
@@ -298,7 +298,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 获取云镜客户端唯一标识UUID。
+     * Get 云镜客户端唯一标识UUID。 
      * @return Uuid 云镜客户端唯一标识UUID。
      */
     public String getUuid() {
@@ -306,7 +306,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端唯一标识UUID。
+     * Set 云镜客户端唯一标识UUID。
      * @param Uuid 云镜客户端唯一标识UUID。
      */
     public void setUuid(String Uuid) {
@@ -314,7 +314,7 @@ public class BruteAttack  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

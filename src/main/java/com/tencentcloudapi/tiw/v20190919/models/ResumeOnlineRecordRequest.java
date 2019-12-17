@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeOnlineRecordRequest  extends AbstractModel{
+public class ResumeOnlineRecordRequest extends AbstractModel{
 
     /**
     * 客户的SdkAppId
@@ -37,7 +37,7 @@ public class ResumeOnlineRecordRequest  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取客户的SdkAppId
+     * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
     public Long getSdkAppId() {
@@ -45,7 +45,7 @@ public class ResumeOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置客户的SdkAppId
+     * Set 客户的SdkAppId
      * @param SdkAppId 客户的SdkAppId
      */
     public void setSdkAppId(Long SdkAppId) {
@@ -53,7 +53,7 @@ public class ResumeOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 获取恢复录制的实时录制任务 Id
+     * Get 恢复录制的实时录制任务 Id 
      * @return TaskId 恢复录制的实时录制任务 Id
      */
     public String getTaskId() {
@@ -61,7 +61,7 @@ public class ResumeOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 设置恢复录制的实时录制任务 Id
+     * Set 恢复录制的实时录制任务 Id
      * @param TaskId 恢复录制的实时录制任务 Id
      */
     public void setTaskId(String TaskId) {
@@ -69,7 +69,7 @@ public class ResumeOnlineRecordRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);

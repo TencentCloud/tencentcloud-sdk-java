@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMicroserviceRequest  extends AbstractModel{
+public class DescribeMicroserviceRequest extends AbstractModel{
 
     /**
     * 微服务ID
@@ -44,7 +44,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     private Long Limit;
 
     /**
-     * 获取微服务ID
+     * Get 微服务ID 
      * @return MicroserviceId 微服务ID
      */
     public String getMicroserviceId() {
@@ -52,7 +52,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置微服务ID
+     * Set 微服务ID
      * @param MicroserviceId 微服务ID
      */
     public void setMicroserviceId(String MicroserviceId) {
@@ -60,7 +60,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -68,7 +68,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -76,7 +76,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数
+     * Get 分页个数 
      * @return Limit 分页个数
      */
     public Long getLimit() {
@@ -84,7 +84,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数
+     * Set 分页个数
      * @param Limit 分页个数
      */
     public void setLimit(Long Limit) {
@@ -92,7 +92,7 @@ public class DescribeMicroserviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);

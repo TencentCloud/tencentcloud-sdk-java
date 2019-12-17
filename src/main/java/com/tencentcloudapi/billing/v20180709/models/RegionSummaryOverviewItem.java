@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionSummaryOverviewItem  extends AbstractModel{
+public class RegionSummaryOverviewItem extends AbstractModel{
 
     /**
     * 地域ID
@@ -80,8 +80,8 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     private String BillMonth;
 
     /**
-     * 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -90,7 +90,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置地域ID
+     * Set 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,7 +100,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取地域名称
+     * Get 地域名称 
      * @return RegionName 地域名称
      */
     public String getRegionName() {
@@ -108,7 +108,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置地域名称
+     * Set 地域名称
      * @param RegionName 地域名称
      */
     public void setRegionName(String RegionName) {
@@ -116,7 +116,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取实际花费
+     * Get 实际花费 
      * @return RealTotalCost 实际花费
      */
     public String getRealTotalCost() {
@@ -124,7 +124,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置实际花费
+     * Set 实际花费
      * @param RealTotalCost 实际花费
      */
     public void setRealTotalCost(String RealTotalCost) {
@@ -132,7 +132,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取费用所占百分比，两位小数
+     * Get 费用所占百分比，两位小数 
      * @return RealTotalCostRatio 费用所占百分比，两位小数
      */
     public String getRealTotalCostRatio() {
@@ -140,7 +140,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置费用所占百分比，两位小数
+     * Set 费用所占百分比，两位小数
      * @param RealTotalCostRatio 费用所占百分比，两位小数
      */
     public void setRealTotalCostRatio(String RealTotalCostRatio) {
@@ -148,7 +148,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取现金金额
+     * Get 现金金额 
      * @return CashPayAmount 现金金额
      */
     public String getCashPayAmount() {
@@ -156,7 +156,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置现金金额
+     * Set 现金金额
      * @param CashPayAmount 现金金额
      */
     public void setCashPayAmount(String CashPayAmount) {
@@ -164,7 +164,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取赠送金金额
+     * Get 赠送金金额 
      * @return IncentivePayAmount 赠送金金额
      */
     public String getIncentivePayAmount() {
@@ -172,7 +172,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置赠送金金额
+     * Set 赠送金金额
      * @param IncentivePayAmount 赠送金金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
@@ -180,7 +180,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取代金券金额
+     * Get 代金券金额 
      * @return VoucherPayAmount 代金券金额
      */
     public String getVoucherPayAmount() {
@@ -188,7 +188,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置代金券金额
+     * Set 代金券金额
      * @param VoucherPayAmount 代金券金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
@@ -196,7 +196,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 获取账单月份，格式2019-08
+     * Get 账单月份，格式2019-08 
      * @return BillMonth 账单月份，格式2019-08
      */
     public String getBillMonth() {
@@ -204,7 +204,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 设置账单月份，格式2019-08
+     * Set 账单月份，格式2019-08
      * @param BillMonth 账单月份，格式2019-08
      */
     public void setBillMonth(String BillMonth) {
@@ -212,7 +212,7 @@ public class RegionSummaryOverviewItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);

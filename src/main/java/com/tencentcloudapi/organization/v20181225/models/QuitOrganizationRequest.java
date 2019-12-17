@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuitOrganizationRequest  extends AbstractModel{
+public class QuitOrganizationRequest extends AbstractModel{
 
     /**
     * 企业组织ID
@@ -30,7 +30,7 @@ public class QuitOrganizationRequest  extends AbstractModel{
     private Long OrgId;
 
     /**
-     * 获取企业组织ID
+     * Get 企业组织ID 
      * @return OrgId 企业组织ID
      */
     public Long getOrgId() {
@@ -38,7 +38,7 @@ public class QuitOrganizationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业组织ID
+     * Set 企业组织ID
      * @param OrgId 企业组织ID
      */
     public void setOrgId(Long OrgId) {
@@ -46,7 +46,7 @@ public class QuitOrganizationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrgId", this.OrgId);

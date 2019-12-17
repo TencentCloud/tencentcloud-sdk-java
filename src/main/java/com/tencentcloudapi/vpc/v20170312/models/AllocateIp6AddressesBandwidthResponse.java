@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
+public class AllocateIp6AddressesBandwidthResponse extends AbstractModel{
 
     /**
     * 弹性公网 IPV6 的唯一 ID 列表。
@@ -44,7 +44,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取弹性公网 IPV6 的唯一 ID 列表。
+     * Get 弹性公网 IPV6 的唯一 ID 列表。 
      * @return AddressSet 弹性公网 IPV6 的唯一 ID 列表。
      */
     public String [] getAddressSet() {
@@ -52,7 +52,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网 IPV6 的唯一 ID 列表。
+     * Set 弹性公网 IPV6 的唯一 ID 列表。
      * @param AddressSet 弹性公网 IPV6 的唯一 ID 列表。
      */
     public void setAddressSet(String [] AddressSet) {
@@ -60,7 +60,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 获取异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Get 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。 
      * @return TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
      */
     public String getTaskId() {
@@ -68,7 +68,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Set 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
      * @param TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
      */
     public void setTaskId(String TaskId) {
@@ -76,7 +76,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class AllocateIp6AddressesBandwidthResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AddressSet.", this.AddressSet);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSitesScansRequest  extends AbstractModel{
+public class CreateSitesScansRequest extends AbstractModel{
 
     /**
     * 站点的ID列表
@@ -44,7 +44,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     private Integer RateLimit;
 
     /**
-     * 获取站点的ID列表
+     * Get 站点的ID列表 
      * @return SiteIds 站点的ID列表
      */
     public Integer [] getSiteIds() {
@@ -52,7 +52,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置站点的ID列表
+     * Set 站点的ID列表
      * @param SiteIds 站点的ID列表
      */
     public void setSiteIds(Integer [] SiteIds) {
@@ -60,7 +60,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描模式，normal-正常扫描；deep-深度扫描
+     * Get 扫描模式，normal-正常扫描；deep-深度扫描 
      * @return ScannerType 扫描模式，normal-正常扫描；deep-深度扫描
      */
     public String getScannerType() {
@@ -68,7 +68,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描模式，normal-正常扫描；deep-深度扫描
+     * Set 扫描模式，normal-正常扫描；deep-深度扫描
      * @param ScannerType 扫描模式，normal-正常扫描；deep-深度扫描
      */
     public void setScannerType(String ScannerType) {
@@ -76,7 +76,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扫描速率限制，每秒发送X个HTTP请求
+     * Get 扫描速率限制，每秒发送X个HTTP请求 
      * @return RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
     public Integer getRateLimit() {
@@ -84,7 +84,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扫描速率限制，每秒发送X个HTTP请求
+     * Set 扫描速率限制，每秒发送X个HTTP请求
      * @param RateLimit 扫描速率限制，每秒发送X个HTTP请求
      */
     public void setRateLimit(Integer RateLimit) {
@@ -92,7 +92,7 @@ public class CreateSitesScansRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SiteIds.", this.SiteIds);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnalyzeFaceResponse  extends AbstractModel{
+public class AnalyzeFaceResponse extends AbstractModel{
 
     /**
     * 请求的图片宽度。
@@ -58,7 +58,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取请求的图片宽度。
+     * Get 请求的图片宽度。 
      * @return ImageWidth 请求的图片宽度。
      */
     public Long getImageWidth() {
@@ -66,7 +66,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求的图片宽度。
+     * Set 请求的图片宽度。
      * @param ImageWidth 请求的图片宽度。
      */
     public void setImageWidth(Long ImageWidth) {
@@ -74,7 +74,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取请求的图片高度。
+     * Get 请求的图片高度。 
      * @return ImageHeight 请求的图片高度。
      */
     public Long getImageHeight() {
@@ -82,7 +82,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置请求的图片高度。
+     * Set 请求的图片高度。
      * @param ImageHeight 请求的图片高度。
      */
     public void setImageHeight(Long ImageHeight) {
@@ -90,7 +90,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取五官定位（人脸关键点）具体信息。
+     * Get 五官定位（人脸关键点）具体信息。 
      * @return FaceShapeSet 五官定位（人脸关键点）具体信息。
      */
     public FaceShape [] getFaceShapeSet() {
@@ -98,7 +98,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置五官定位（人脸关键点）具体信息。
+     * Set 五官定位（人脸关键点）具体信息。
      * @param FaceShapeSet 五官定位（人脸关键点）具体信息。
      */
     public void setFaceShapeSet(FaceShape [] FaceShapeSet) {
@@ -106,7 +106,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别所用的算法模型版本。
+     * Get 人脸识别所用的算法模型版本。 
      * @return FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public String getFaceModelVersion() {
@@ -114,7 +114,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别所用的算法模型版本。
+     * Set 人脸识别所用的算法模型版本。
      * @param FaceModelVersion 人脸识别所用的算法模型版本。
      */
     public void setFaceModelVersion(String FaceModelVersion) {
@@ -122,7 +122,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class AnalyzeFaceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);

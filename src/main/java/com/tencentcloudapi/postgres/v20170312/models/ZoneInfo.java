@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 该可用区的英文名称
@@ -51,7 +51,7 @@ public class ZoneInfo  extends AbstractModel{
     private String ZoneState;
 
     /**
-     * 获取该可用区的英文名称
+     * Get 该可用区的英文名称 
      * @return Zone 该可用区的英文名称
      */
     public String getZone() {
@@ -59,7 +59,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该可用区的英文名称
+     * Set 该可用区的英文名称
      * @param Zone 该可用区的英文名称
      */
     public void setZone(String Zone) {
@@ -67,7 +67,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该可用区的中文名称
+     * Get 该可用区的中文名称 
      * @return ZoneName 该可用区的中文名称
      */
     public String getZoneName() {
@@ -75,7 +75,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该可用区的中文名称
+     * Set 该可用区的中文名称
      * @param ZoneName 该可用区的中文名称
      */
     public void setZoneName(String ZoneName) {
@@ -83,7 +83,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取该可用区对应的数字编号
+     * Get 该可用区对应的数字编号 
      * @return ZoneId 该可用区对应的数字编号
      */
     public Integer getZoneId() {
@@ -91,7 +91,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该可用区对应的数字编号
+     * Set 该可用区对应的数字编号
      * @param ZoneId 该可用区对应的数字编号
      */
     public void setZoneId(Integer ZoneId) {
@@ -99,7 +99,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * Get 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用 
      * @return ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
      */
     public String getZoneState() {
@@ -107,7 +107,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+     * Set 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
      * @param ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
      */
     public void setZoneState(String ZoneState) {
@@ -115,7 +115,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);

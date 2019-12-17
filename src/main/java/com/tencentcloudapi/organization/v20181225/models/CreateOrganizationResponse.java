@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOrganizationResponse  extends AbstractModel{
+public class CreateOrganizationResponse extends AbstractModel{
 
     /**
     * 企业组织ID
@@ -58,7 +58,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取企业组织ID
+     * Get 企业组织ID 
      * @return OrgId 企业组织ID
      */
     public Long getOrgId() {
@@ -66,7 +66,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置企业组织ID
+     * Set 企业组织ID
      * @param OrgId 企业组织ID
      */
     public void setOrgId(Long OrgId) {
@@ -74,7 +74,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建者昵称
+     * Get 创建者昵称 
      * @return Nickname 创建者昵称
      */
     public String getNickname() {
@@ -82,7 +82,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建者昵称
+     * Set 创建者昵称
      * @param Nickname 创建者昵称
      */
     public void setNickname(String Nickname) {
@@ -90,7 +90,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建者邮箱
+     * Get 创建者邮箱 
      * @return Mail 创建者邮箱
      */
     public String getMail() {
@@ -98,7 +98,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建者邮箱
+     * Set 创建者邮箱
      * @param Mail 创建者邮箱
      */
     public void setMail(String Mail) {
@@ -106,7 +106,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组织类型
+     * Get 组织类型 
      * @return OrgType 组织类型
      */
     public Long getOrgType() {
@@ -114,7 +114,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组织类型
+     * Set 组织类型
      * @param OrgType 组织类型
      */
     public void setOrgType(Long OrgType) {
@@ -122,7 +122,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class CreateOrganizationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrgId", this.OrgId);

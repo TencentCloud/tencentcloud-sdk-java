@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxyStatisticsRequest  extends AbstractModel{
+public class DescribeProxyStatisticsRequest extends AbstractModel{
 
     /**
     * 通道ID
@@ -61,7 +61,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     private Long Granularity;
 
     /**
-     * 获取通道ID
+     * Get 通道ID 
      * @return ProxyId 通道ID
      */
     public String getProxyId() {
@@ -69,7 +69,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID
+     * Set 通道ID
      * @param ProxyId 通道ID
      */
     public void setProxyId(String ProxyId) {
@@ -77,7 +77,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取起始时间(2019-03-25 12:00:00)
+     * Get 起始时间(2019-03-25 12:00:00) 
      * @return StartTime 起始时间(2019-03-25 12:00:00)
      */
     public String getStartTime() {
@@ -85,7 +85,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置起始时间(2019-03-25 12:00:00)
+     * Set 起始时间(2019-03-25 12:00:00)
      * @param StartTime 起始时间(2019-03-25 12:00:00)
      */
     public void setStartTime(String StartTime) {
@@ -93,7 +93,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间(2019-03-25 12:00:00)
+     * Get 结束时间(2019-03-25 12:00:00) 
      * @return EndTime 结束时间(2019-03-25 12:00:00)
      */
     public String getEndTime() {
@@ -101,7 +101,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间(2019-03-25 12:00:00)
+     * Set 结束时间(2019-03-25 12:00:00)
      * @param EndTime 结束时间(2019-03-25 12:00:00)
      */
     public void setEndTime(String EndTime) {
@@ -109,7 +109,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+     * Get 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency 
      * @return MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
      */
     public String [] getMetricNames() {
@@ -117,7 +117,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
+     * Set 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
      * @param MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency
      */
     public void setMetricNames(String [] MetricNames) {
@@ -125,10 +125,10 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监控粒度，目前支持60，300，3600，86400，单位：秒。
+     * Get 监控粒度，目前支持60，300，3600，86400，单位：秒。
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
-当时间范围不超过30天，支持最小粒度3600秒。
+当时间范围不超过30天，支持最小粒度3600秒。 
      * @return Granularity 监控粒度，目前支持60，300，3600，86400，单位：秒。
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
@@ -139,7 +139,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监控粒度，目前支持60，300，3600，86400，单位：秒。
+     * Set 监控粒度，目前支持60，300，3600，86400，单位：秒。
 当时间范围不超过3天，支持最小粒度60秒；
 当时间范围不超过7天，支持最小粒度300秒；
 当时间范围不超过30天，支持最小粒度3600秒。
@@ -153,7 +153,7 @@ public class DescribeProxyStatisticsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

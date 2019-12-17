@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LaunchConfiguration  extends AbstractModel{
+public class LaunchConfiguration extends AbstractModel{
 
     /**
     * 实例所属项目ID。
@@ -195,7 +195,7 @@ public class LaunchConfiguration  extends AbstractModel{
     private HostNameSettings HostNameSettings;
 
     /**
-     * 获取实例所属项目ID。
+     * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
     public Integer getProjectId() {
@@ -203,7 +203,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属项目ID。
+     * Set 实例所属项目ID。
      * @param ProjectId 实例所属项目ID。
      */
     public void setProjectId(Integer ProjectId) {
@@ -211,7 +211,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置ID。
+     * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
     public String getLaunchConfigurationId() {
@@ -219,7 +219,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置ID。
+     * Set 启动配置ID。
      * @param LaunchConfigurationId 启动配置ID。
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
@@ -227,7 +227,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置名称。
+     * Get 启动配置名称。 
      * @return LaunchConfigurationName 启动配置名称。
      */
     public String getLaunchConfigurationName() {
@@ -235,7 +235,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置名称。
+     * Set 启动配置名称。
      * @param LaunchConfigurationName 启动配置名称。
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
@@ -243,7 +243,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型。
+     * Get 实例机型。 
      * @return InstanceType 实例机型。
      */
     public String getInstanceType() {
@@ -251,7 +251,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型。
+     * Set 实例机型。
      * @param InstanceType 实例机型。
      */
     public void setInstanceType(String InstanceType) {
@@ -259,7 +259,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例系统盘配置信息。
+     * Get 实例系统盘配置信息。 
      * @return SystemDisk 实例系统盘配置信息。
      */
     public SystemDisk getSystemDisk() {
@@ -267,7 +267,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例系统盘配置信息。
+     * Set 实例系统盘配置信息。
      * @param SystemDisk 实例系统盘配置信息。
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
@@ -275,7 +275,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例数据盘配置信息。
+     * Get 实例数据盘配置信息。 
      * @return DataDisks 实例数据盘配置信息。
      */
     public DataDisk [] getDataDisks() {
@@ -283,7 +283,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例数据盘配置信息。
+     * Set 实例数据盘配置信息。
      * @param DataDisks 实例数据盘配置信息。
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -291,7 +291,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例登录设置。
+     * Get 实例登录设置。 
      * @return LoginSettings 实例登录设置。
      */
     public LimitedLoginSettings getLoginSettings() {
@@ -299,7 +299,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例登录设置。
+     * Set 实例登录设置。
      * @param LoginSettings 实例登录设置。
      */
     public void setLoginSettings(LimitedLoginSettings LoginSettings) {
@@ -307,7 +307,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取公网带宽相关信息设置。
+     * Get 公网带宽相关信息设置。 
      * @return InternetAccessible 公网带宽相关信息设置。
      */
     public InternetAccessible getInternetAccessible() {
@@ -315,7 +315,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置公网带宽相关信息设置。
+     * Set 公网带宽相关信息设置。
      * @param InternetAccessible 公网带宽相关信息设置。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
@@ -323,7 +323,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例所属安全组。
+     * Get 实例所属安全组。 
      * @return SecurityGroupIds 实例所属安全组。
      */
     public String [] getSecurityGroupIds() {
@@ -331,7 +331,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例所属安全组。
+     * Set 实例所属安全组。
      * @param SecurityGroupIds 实例所属安全组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -339,7 +339,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置关联的伸缩组。
+     * Get 启动配置关联的伸缩组。 
      * @return AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
      */
     public AutoScalingGroupAbstract [] getAutoScalingGroupAbstractSet() {
@@ -347,7 +347,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置关联的伸缩组。
+     * Set 启动配置关联的伸缩组。
      * @param AutoScalingGroupAbstractSet 启动配置关联的伸缩组。
      */
     public void setAutoScalingGroupAbstractSet(AutoScalingGroupAbstract [] AutoScalingGroupAbstractSet) {
@@ -355,8 +355,8 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取自定义数据。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自定义数据。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserData 自定义数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -365,7 +365,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置自定义数据。
+     * Set 自定义数据。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserData 自定义数据。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -375,7 +375,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置创建时间。
+     * Get 启动配置创建时间。 
      * @return CreatedTime 启动配置创建时间。
      */
     public String getCreatedTime() {
@@ -383,7 +383,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置创建时间。
+     * Set 启动配置创建时间。
      * @param CreatedTime 启动配置创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -391,7 +391,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例的增强服务启用情况与其设置。
+     * Get 实例的增强服务启用情况与其设置。 
      * @return EnhancedService 实例的增强服务启用情况与其设置。
      */
     public EnhancedService getEnhancedService() {
@@ -399,7 +399,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例的增强服务启用情况与其设置。
+     * Set 实例的增强服务启用情况与其设置。
      * @param EnhancedService 实例的增强服务启用情况与其设置。
      */
     public void setEnhancedService(EnhancedService EnhancedService) {
@@ -407,7 +407,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取镜像ID。
+     * Get 镜像ID。 
      * @return ImageId 镜像ID。
      */
     public String getImageId() {
@@ -415,7 +415,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置镜像ID。
+     * Set 镜像ID。
      * @param ImageId 镜像ID。
      */
     public void setImageId(String ImageId) {
@@ -423,7 +423,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
+     * Get 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br> 
      * @return LaunchConfigurationStatus 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
      */
     public String getLaunchConfigurationStatus() {
@@ -431,7 +431,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
+     * Set 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
      * @param LaunchConfigurationStatus 启动配置当前状态。取值范围：<br><li>NORMAL：正常<br><li>IMAGE_ABNORMAL：启动配置镜像异常<br><li>CBS_SNAP_ABNORMAL：启动配置数据盘快照异常<br><li>SECURITY_GROUP_ABNORMAL：启动配置安全组异常<br>
      */
     public void setLaunchConfigurationStatus(String LaunchConfigurationStatus) {
@@ -439,9 +439,9 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+     * Get 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
-<br><li>SPOTPAID：竞价付费
+<br><li>SPOTPAID：竞价付费 
      * @return InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
@@ -451,7 +451,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
+     * Set 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <br><li>POSTPAID_BY_HOUR：按小时后付费
 <br><li>SPOTPAID：竞价付费
      * @param InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
@@ -463,8 +463,8 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -473,7 +473,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+     * Set 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -483,7 +483,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取实例机型列表。
+     * Get 实例机型列表。 
      * @return InstanceTypes 实例机型列表。
      */
     public String [] getInstanceTypes() {
@@ -491,7 +491,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置实例机型列表。
+     * Set 实例机型列表。
      * @param InstanceTypes 实例机型列表。
      */
     public void setInstanceTypes(String [] InstanceTypes) {
@@ -499,7 +499,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取标签列表。
+     * Get 标签列表。 
      * @return InstanceTags 标签列表。
      */
     public InstanceTag [] getInstanceTags() {
@@ -507,7 +507,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置标签列表。
+     * Set 标签列表。
      * @param InstanceTags 标签列表。
      */
     public void setInstanceTags(InstanceTag [] InstanceTags) {
@@ -515,7 +515,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取版本号。
+     * Get 版本号。 
      * @return VersionNumber 版本号。
      */
     public Integer getVersionNumber() {
@@ -523,7 +523,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置版本号。
+     * Set 版本号。
      * @param VersionNumber 版本号。
      */
     public void setVersionNumber(Integer VersionNumber) {
@@ -531,7 +531,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间。
+     * Get 更新时间。 
      * @return UpdatedTime 更新时间。
      */
     public String getUpdatedTime() {
@@ -539,7 +539,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间。
+     * Set 更新时间。
      * @param UpdatedTime 更新时间。
      */
     public void setUpdatedTime(String UpdatedTime) {
@@ -547,7 +547,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Get CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。 
      * @return CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     public String getCamRoleName() {
@@ -555,7 +555,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * Set CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      * @param CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
      */
     public void setCamRoleName(String CamRoleName) {
@@ -563,7 +563,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取上次操作时，InstanceTypesCheckPolicy 取值。
+     * Get 上次操作时，InstanceTypesCheckPolicy 取值。 
      * @return LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
      */
     public String getLastOperationInstanceTypesCheckPolicy() {
@@ -571,7 +571,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置上次操作时，InstanceTypesCheckPolicy 取值。
+     * Set 上次操作时，InstanceTypesCheckPolicy 取值。
      * @param LastOperationInstanceTypesCheckPolicy 上次操作时，InstanceTypesCheckPolicy 取值。
      */
     public void setLastOperationInstanceTypesCheckPolicy(String LastOperationInstanceTypesCheckPolicy) {
@@ -579,7 +579,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 获取云服务器主机名（HostName）的相关设置。
+     * Get 云服务器主机名（HostName）的相关设置。 
      * @return HostNameSettings 云服务器主机名（HostName）的相关设置。
      */
     public HostNameSettings getHostNameSettings() {
@@ -587,7 +587,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 设置云服务器主机名（HostName）的相关设置。
+     * Set 云服务器主机名（HostName）的相关设置。
      * @param HostNameSettings 云服务器主机名（HostName）的相关设置。
      */
     public void setHostNameSettings(HostNameSettings HostNameSettings) {
@@ -595,7 +595,7 @@ public class LaunchConfiguration  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

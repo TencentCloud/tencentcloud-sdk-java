@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SourceInfo  extends AbstractModel{
+public class SourceInfo extends AbstractModel{
 
     /**
     * 来源IP
@@ -44,7 +44,7 @@ public class SourceInfo  extends AbstractModel{
     private Integer Cmd;
 
     /**
-     * 获取来源IP
+     * Get 来源IP 
      * @return Ip 来源IP
      */
     public String getIp() {
@@ -52,7 +52,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置来源IP
+     * Set 来源IP
      * @param Ip 来源IP
      */
     public void setIp(String Ip) {
@@ -60,7 +60,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取连接数
+     * Get 连接数 
      * @return Conn 连接数
      */
     public Integer getConn() {
@@ -68,7 +68,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置连接数
+     * Set 连接数
      * @param Conn 连接数
      */
     public void setConn(Integer Conn) {
@@ -76,7 +76,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取命令
+     * Get 命令 
      * @return Cmd 命令
      */
     public Integer getCmd() {
@@ -84,7 +84,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置命令
+     * Set 命令
      * @param Cmd 命令
      */
     public void setCmd(Integer Cmd) {
@@ -92,7 +92,7 @@ public class SourceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip", this.Ip);

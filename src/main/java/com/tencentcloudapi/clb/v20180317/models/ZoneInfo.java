@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 可用区数值形式的唯一ID，如：100001
@@ -47,8 +47,8 @@ public class ZoneInfo  extends AbstractModel{
     private String ZoneName;
 
     /**
-     * 获取可用区数值形式的唯一ID，如：100001
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 可用区数值形式的唯一ID，如：100001
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区数值形式的唯一ID，如：100001
+     * Set 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区字符串形式的唯一ID，如：ap-guangzhou-1
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 可用区字符串形式的唯一ID，如：ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区字符串形式的唯一ID，如：ap-guangzhou-1
+     * Set 可用区字符串形式的唯一ID，如：ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 可用区字符串形式的唯一ID，如：ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可用区名称，如：广州一区
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 可用区名称，如：广州一区
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneName 可用区名称，如：广州一区
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可用区名称，如：广州一区
+     * Set 可用区名称，如：广州一区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 可用区名称，如：广州一区
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);

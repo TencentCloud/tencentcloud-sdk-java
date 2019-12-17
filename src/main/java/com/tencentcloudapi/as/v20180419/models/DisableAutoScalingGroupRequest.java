@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableAutoScalingGroupRequest  extends AbstractModel{
+public class DisableAutoScalingGroupRequest extends AbstractModel{
 
     /**
     * 伸缩组ID
@@ -30,7 +30,7 @@ public class DisableAutoScalingGroupRequest  extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-     * 获取伸缩组ID
+     * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
     public String getAutoScalingGroupId() {
@@ -38,7 +38,7 @@ public class DisableAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID
+     * Set 伸缩组ID
      * @param AutoScalingGroupId 伸缩组ID
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -46,7 +46,7 @@ public class DisableAutoScalingGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

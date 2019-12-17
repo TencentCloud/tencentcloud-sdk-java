@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaProcessTaskInput  extends AbstractModel{
+public class MediaProcessTaskInput extends AbstractModel{
 
     /**
     * 视频转码任务列表。
@@ -58,7 +58,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
-     * 获取视频转码任务列表。
+     * Get 视频转码任务列表。 
      * @return TranscodeTaskSet 视频转码任务列表。
      */
     public TranscodeTaskInput [] getTranscodeTaskSet() {
@@ -66,7 +66,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码任务列表。
+     * Set 视频转码任务列表。
      * @param TranscodeTaskSet 视频转码任务列表。
      */
     public void setTranscodeTaskSet(TranscodeTaskInput [] TranscodeTaskSet) {
@@ -74,7 +74,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取视频转动图任务列表。
+     * Get 视频转动图任务列表。 
      * @return AnimatedGraphicTaskSet 视频转动图任务列表。
      */
     public AnimatedGraphicTaskInput [] getAnimatedGraphicTaskSet() {
@@ -82,7 +82,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转动图任务列表。
+     * Set 视频转动图任务列表。
      * @param AnimatedGraphicTaskSet 视频转动图任务列表。
      */
     public void setAnimatedGraphicTaskSet(AnimatedGraphicTaskInput [] AnimatedGraphicTaskSet) {
@@ -90,7 +90,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频按时间点截图任务列表。
+     * Get 对视频按时间点截图任务列表。 
      * @return SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
      */
     public SnapshotByTimeOffsetTaskInput [] getSnapshotByTimeOffsetTaskSet() {
@@ -98,7 +98,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频按时间点截图任务列表。
+     * Set 对视频按时间点截图任务列表。
      * @param SnapshotByTimeOffsetTaskSet 对视频按时间点截图任务列表。
      */
     public void setSnapshotByTimeOffsetTaskSet(SnapshotByTimeOffsetTaskInput [] SnapshotByTimeOffsetTaskSet) {
@@ -106,7 +106,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频采样截图任务列表。
+     * Get 对视频采样截图任务列表。 
      * @return SampleSnapshotTaskSet 对视频采样截图任务列表。
      */
     public SampleSnapshotTaskInput [] getSampleSnapshotTaskSet() {
@@ -114,7 +114,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频采样截图任务列表。
+     * Set 对视频采样截图任务列表。
      * @param SampleSnapshotTaskSet 对视频采样截图任务列表。
      */
     public void setSampleSnapshotTaskSet(SampleSnapshotTaskInput [] SampleSnapshotTaskSet) {
@@ -122,7 +122,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取对视频截雪碧图任务列表。
+     * Get 对视频截雪碧图任务列表。 
      * @return ImageSpriteTaskSet 对视频截雪碧图任务列表。
      */
     public ImageSpriteTaskInput [] getImageSpriteTaskSet() {
@@ -130,7 +130,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置对视频截雪碧图任务列表。
+     * Set 对视频截雪碧图任务列表。
      * @param ImageSpriteTaskSet 对视频截雪碧图任务列表。
      */
     public void setImageSpriteTaskSet(ImageSpriteTaskInput [] ImageSpriteTaskSet) {
@@ -138,7 +138,7 @@ public class MediaProcessTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TranscodeTaskSet.", this.TranscodeTaskSet);

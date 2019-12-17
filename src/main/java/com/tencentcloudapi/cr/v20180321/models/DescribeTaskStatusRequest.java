@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskStatusRequest  extends AbstractModel{
+public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * 模块名，本接口取值：Task
@@ -51,7 +51,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     private String InstId;
 
     /**
-     * 获取模块名，本接口取值：Task
+     * Get 模块名，本接口取值：Task 
      * @return Module 模块名，本接口取值：Task
      */
     public String getModule() {
@@ -59,7 +59,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名，本接口取值：Task
+     * Set 模块名，本接口取值：Task
      * @param Module 模块名，本接口取值：Task
      */
     public void setModule(String Module) {
@@ -67,7 +67,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取操作名，本接口取值：DescribeTaskStatus
+     * Get 操作名，本接口取值：DescribeTaskStatus 
      * @return Operation 操作名，本接口取值：DescribeTaskStatus
      */
     public String getOperation() {
@@ -75,7 +75,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作名，本接口取值：DescribeTaskStatus
+     * Set 操作名，本接口取值：DescribeTaskStatus
      * @param Operation 操作名，本接口取值：DescribeTaskStatus
      */
     public void setOperation(String Operation) {
@@ -83,7 +83,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+     * Get 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123 
      * @return TaskId 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      */
     public String getTaskId() {
@@ -91,7 +91,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
+     * Set 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      * @param TaskId 任务ID，"上传文件"接口返回的DataResId，形如abc-xyz123
      */
     public void setTaskId(String TaskId) {
@@ -99,7 +99,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，不传默认为系统分配的初始实例。
+     * Get 实例ID，不传默认为系统分配的初始实例。 
      * @return InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public String getInstId() {
@@ -107,7 +107,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，不传默认为系统分配的初始实例。
+     * Set 实例ID，不传默认为系统分配的初始实例。
      * @param InstId 实例ID，不传默认为系统分配的初始实例。
      */
     public void setInstId(String InstId) {
@@ -115,7 +115,7 @@ public class DescribeTaskStatusRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OrgMember  extends AbstractModel{
+public class OrgMember extends AbstractModel{
 
     /**
     * UIN
@@ -51,7 +51,7 @@ public class OrgMember  extends AbstractModel{
     private String JoinTime;
 
     /**
-     * 获取UIN
+     * Get UIN 
      * @return Uin UIN
      */
     public Long getUin() {
@@ -59,7 +59,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 设置UIN
+     * Set UIN
      * @param Uin UIN
      */
     public void setUin(Long Uin) {
@@ -67,7 +67,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -75,7 +75,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -83,7 +83,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 获取备注
+     * Get 备注 
      * @return Remark 备注
      */
     public String getRemark() {
@@ -91,7 +91,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 设置备注
+     * Set 备注
      * @param Remark 备注
      */
     public void setRemark(String Remark) {
@@ -99,7 +99,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 获取加入时间
+     * Get 加入时间 
      * @return JoinTime 加入时间
      */
     public String getJoinTime() {
@@ -107,7 +107,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 设置加入时间
+     * Set 加入时间
      * @param JoinTime 加入时间
      */
     public void setJoinTime(String JoinTime) {
@@ -115,7 +115,7 @@ public class OrgMember  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

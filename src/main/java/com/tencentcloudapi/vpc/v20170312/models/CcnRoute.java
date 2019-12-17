@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CcnRoute  extends AbstractModel{
+public class CcnRoute extends AbstractModel{
 
     /**
     * 路由策略ID
@@ -86,7 +86,7 @@ public class CcnRoute  extends AbstractModel{
     private String InstanceUin;
 
     /**
-     * 获取路由策略ID
+     * Get 路由策略ID 
      * @return RouteId 路由策略ID
      */
     public String getRouteId() {
@@ -94,7 +94,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置路由策略ID
+     * Set 路由策略ID
      * @param RouteId 路由策略ID
      */
     public void setRouteId(String RouteId) {
@@ -102,7 +102,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取目的端
+     * Get 目的端 
      * @return DestinationCidrBlock 目的端
      */
     public String getDestinationCidrBlock() {
@@ -110,7 +110,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置目的端
+     * Set 目的端
      * @param DestinationCidrBlock 目的端
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
@@ -118,7 +118,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Get 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT 
      * @return InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
      */
     public String getInstanceType() {
@@ -126,7 +126,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Set 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
      * @param InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
      */
     public void setInstanceType(String InstanceType) {
@@ -134,7 +134,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳（关联实例）
+     * Get 下一跳（关联实例） 
      * @return InstanceId 下一跳（关联实例）
      */
     public String getInstanceId() {
@@ -142,7 +142,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置下一跳（关联实例）
+     * Set 下一跳（关联实例）
      * @param InstanceId 下一跳（关联实例）
      */
     public void setInstanceId(String InstanceId) {
@@ -150,7 +150,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳名称（关联实例名称）
+     * Get 下一跳名称（关联实例名称） 
      * @return InstanceName 下一跳名称（关联实例名称）
      */
     public String getInstanceName() {
@@ -158,7 +158,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置下一跳名称（关联实例名称）
+     * Set 下一跳名称（关联实例名称）
      * @param InstanceName 下一跳名称（关联实例名称）
      */
     public void setInstanceName(String InstanceName) {
@@ -166,7 +166,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取下一跳所属地域（关联实例所属地域）
+     * Get 下一跳所属地域（关联实例所属地域） 
      * @return InstanceRegion 下一跳所属地域（关联实例所属地域）
      */
     public String getInstanceRegion() {
@@ -174,7 +174,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置下一跳所属地域（关联实例所属地域）
+     * Set 下一跳所属地域（关联实例所属地域）
      * @param InstanceRegion 下一跳所属地域（关联实例所属地域）
      */
     public void setInstanceRegion(String InstanceRegion) {
@@ -182,7 +182,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间
+     * Get 更新时间 
      * @return UpdateTime 更新时间
      */
     public String getUpdateTime() {
@@ -190,7 +190,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间
+     * Set 更新时间
      * @param UpdateTime 更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -198,7 +198,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取路由是否启用
+     * Get 路由是否启用 
      * @return Enabled 路由是否启用
      */
     public Boolean getEnabled() {
@@ -206,7 +206,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置路由是否启用
+     * Set 路由是否启用
      * @param Enabled 路由是否启用
      */
     public void setEnabled(Boolean Enabled) {
@@ -214,7 +214,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 获取关联实例所属UIN（根账号）
+     * Get 关联实例所属UIN（根账号） 
      * @return InstanceUin 关联实例所属UIN（根账号）
      */
     public String getInstanceUin() {
@@ -222,7 +222,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 设置关联实例所属UIN（根账号）
+     * Set 关联实例所属UIN（根账号）
      * @param InstanceUin 关联实例所属UIN（根账号）
      */
     public void setInstanceUin(String InstanceUin) {
@@ -230,7 +230,7 @@ public class CcnRoute  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);

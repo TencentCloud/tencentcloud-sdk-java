@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAITaskResultRequest  extends AbstractModel{
+public class DescribeAITaskResultRequest extends AbstractModel{
 
     /**
     * 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
@@ -44,7 +44,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     private Long Offset;
 
     /**
-     * 获取任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
+     * Get 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。 
      * @return TaskId 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
      */
     public Long getTaskId() {
@@ -52,7 +52,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
+     * Set 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
      * @param TaskId 任务唯一标识符。在URL方式时提交请求后会返回一个任务标识符，后续查询该url的结果时使用这个标识符进行查询。
      */
     public void setTaskId(Long TaskId) {
@@ -60,7 +60,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目
+     * Get 限制数目 
      * @return Limit 限制数目
      */
     public Long getLimit() {
@@ -68,7 +68,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目
+     * Set 限制数目
      * @param Limit 限制数目
      */
     public void setLimit(Long Limit) {
@@ -76,7 +76,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Long getOffset() {
@@ -84,7 +84,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
@@ -92,7 +92,7 @@ public class DescribeAITaskResultRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

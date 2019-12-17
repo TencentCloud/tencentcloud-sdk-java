@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CustomerGatewayVendor  extends AbstractModel{
+public class CustomerGatewayVendor extends AbstractModel{
 
     /**
     * 平台。
@@ -44,7 +44,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     private String VendorName;
 
     /**
-     * 获取平台。
+     * Get 平台。 
      * @return Platform 平台。
      */
     public String getPlatform() {
@@ -52,7 +52,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 设置平台。
+     * Set 平台。
      * @param Platform 平台。
      */
     public void setPlatform(String Platform) {
@@ -60,7 +60,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 获取软件版本。
+     * Get 软件版本。 
      * @return SoftwareVersion 软件版本。
      */
     public String getSoftwareVersion() {
@@ -68,7 +68,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 设置软件版本。
+     * Set 软件版本。
      * @param SoftwareVersion 软件版本。
      */
     public void setSoftwareVersion(String SoftwareVersion) {
@@ -76,7 +76,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 获取供应商名称。
+     * Get 供应商名称。 
      * @return VendorName 供应商名称。
      */
     public String getVendorName() {
@@ -84,7 +84,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 设置供应商名称。
+     * Set 供应商名称。
      * @param VendorName 供应商名称。
      */
     public void setVendorName(String VendorName) {
@@ -92,7 +92,7 @@ public class CustomerGatewayVendor  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Platform", this.Platform);

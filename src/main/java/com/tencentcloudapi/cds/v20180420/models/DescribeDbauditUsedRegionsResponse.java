@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
+public class DescribeDbauditUsedRegionsResponse extends AbstractModel{
 
     /**
     * 可售卖地域信息列表
@@ -37,7 +37,7 @@ public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取可售卖地域信息列表
+     * Get 可售卖地域信息列表 
      * @return RegionSet 可售卖地域信息列表
      */
     public RegionInfo [] getRegionSet() {
@@ -45,7 +45,7 @@ public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置可售卖地域信息列表
+     * Set 可售卖地域信息列表
      * @param RegionSet 可售卖地域信息列表
      */
     public void setRegionSet(RegionInfo [] RegionSet) {
@@ -53,7 +53,7 @@ public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeDbauditUsedRegionsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RegionSet.", this.RegionSet);

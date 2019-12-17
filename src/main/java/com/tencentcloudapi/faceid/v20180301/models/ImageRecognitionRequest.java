@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageRecognitionRequest  extends AbstractModel{
+public class ImageRecognitionRequest extends AbstractModel{
 
     /**
     * 身份证号
@@ -52,7 +52,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     private String Optional;
 
     /**
-     * 获取身份证号
+     * Get 身份证号 
      * @return IdCard 身份证号
      */
     public String getIdCard() {
@@ -60,7 +60,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置身份证号
+     * Set 身份证号
      * @param IdCard 身份证号
      */
     public void setIdCard(String IdCard) {
@@ -68,7 +68,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取姓名。中文请使用UTF-8编码。
+     * Get 姓名。中文请使用UTF-8编码。 
      * @return Name 姓名。中文请使用UTF-8编码。
      */
     public String getName() {
@@ -76,7 +76,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置姓名。中文请使用UTF-8编码。
+     * Set 姓名。中文请使用UTF-8编码。
      * @param Name 姓名。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
@@ -84,8 +84,8 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取用于人脸比对的照片，图片的BASE64值；
-BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
+     * Get 用于人脸比对的照片，图片的BASE64值；
+BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。 
      * @return ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      */
@@ -94,7 +94,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置用于人脸比对的照片，图片的BASE64值；
+     * Set 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
      * @param ImageBase64 用于人脸比对的照片，图片的BASE64值；
 BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
@@ -104,7 +104,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 获取本接口不需要传递此参数。
+     * Get 本接口不需要传递此参数。 
      * @return Optional 本接口不需要传递此参数。
      */
     public String getOptional() {
@@ -112,7 +112,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 设置本接口不需要传递此参数。
+     * Set 本接口不需要传递此参数。
      * @param Optional 本接口不需要传递此参数。
      */
     public void setOptional(String Optional) {
@@ -120,7 +120,7 @@ BASE64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);

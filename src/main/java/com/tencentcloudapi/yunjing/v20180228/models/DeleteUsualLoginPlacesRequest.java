@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUsualLoginPlacesRequest  extends AbstractModel{
+public class DeleteUsualLoginPlacesRequest extends AbstractModel{
 
     /**
     * 云镜客户端Uuid
@@ -34,10 +34,10 @@ public class DeleteUsualLoginPlacesRequest  extends AbstractModel{
     */
     @SerializedName("CityIds")
     @Expose
-    private Integer [] CityIds;
+    private Long [] CityIds;
 
     /**
-     * 获取云镜客户端Uuid
+     * Get 云镜客户端Uuid 
      * @return Uuid 云镜客户端Uuid
      */
     public String getUuid() {
@@ -45,7 +45,7 @@ public class DeleteUsualLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置云镜客户端Uuid
+     * Set 云镜客户端Uuid
      * @param Uuid 云镜客户端Uuid
      */
     public void setUuid(String Uuid) {
@@ -53,23 +53,23 @@ public class DeleteUsualLoginPlacesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取已添加常用登录地城市ID数组
+     * Get 已添加常用登录地城市ID数组 
      * @return CityIds 已添加常用登录地城市ID数组
      */
-    public Integer [] getCityIds() {
+    public Long [] getCityIds() {
         return this.CityIds;
     }
 
     /**
-     * 设置已添加常用登录地城市ID数组
+     * Set 已添加常用登录地城市ID数组
      * @param CityIds 已添加常用登录地城市ID数组
      */
-    public void setCityIds(Integer [] CityIds) {
+    public void setCityIds(Long [] CityIds) {
         this.CityIds = CityIds;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);

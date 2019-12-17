@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchFacesReturnsByGroupRequest  extends AbstractModel{
+public class SearchFacesReturnsByGroupRequest extends AbstractModel{
 
     /**
     * 希望搜索的人员库列表，上限10个。
@@ -103,7 +103,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     private Float FaceMatchThreshold;
 
     /**
-     * 获取希望搜索的人员库列表，上限10个。
+     * Get 希望搜索的人员库列表，上限10个。 
      * @return GroupIds 希望搜索的人员库列表，上限10个。
      */
     public String [] getGroupIds() {
@@ -111,7 +111,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置希望搜索的人员库列表，上限10个。
+     * Set 希望搜索的人员库列表，上限10个。
      * @param GroupIds 希望搜索的人员库列表，上限10个。
      */
     public void setGroupIds(String [] GroupIds) {
@@ -119,8 +119,8 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取图片 base64 数据，base64 编码后大小不可超过5M。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Get 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
@@ -129,7 +129,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置图片 base64 数据，base64 编码后大小不可超过5M。
+     * Set 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -139,11 +139,11 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Get 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
@@ -155,7 +155,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Set 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -171,9 +171,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
+     * Get 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
-例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
+例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。 
      * @return MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
@@ -183,7 +183,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
+     * Set 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
 MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要搜索的人脸的数量。
 例：输入的Image或Url中的图片包含多张人脸，设MaxFaceNum=5，则会识别图片中面积最大的5张人脸。
      * @param MaxFaceNum 最多识别的人脸数目。默认值为1（仅检测图片中面积最大的那张人脸），最大值为10。
@@ -195,7 +195,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * Get 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。 
      * @return MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      */
     public Long getMinFaceSize() {
@@ -203,7 +203,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
+     * Set 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      * @param MinFaceSize 人脸长和宽的最小尺寸，单位为像素。默认为80。低于40将影响搜索精度。建议设置为80。
      */
     public void setMinFaceSize(Long MinFaceSize) {
@@ -211,8 +211,8 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+     * Get 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
+例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。 
      * @return MaxPersonNumPerGroup 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
      */
@@ -221,7 +221,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
+     * Set 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
      * @param MaxPersonNumPerGroup 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
@@ -231,7 +231,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * Get 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0 
      * @return NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
     public Long getNeedPersonInfo() {
@@ -239,7 +239,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
+     * Set 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      * @param NeedPersonInfo 是否返回人员具体信息。0 为关闭，1 为开启。默认为 0。其他非0非1值默认为0
      */
     public void setNeedPersonInfo(Long NeedPersonInfo) {
@@ -247,14 +247,14 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取图片质量控制。 
+     * Get 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
 2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
 3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
 4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
 默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。 
      * @return QualityControl 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
@@ -269,7 +269,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置图片质量控制。 
+     * Set 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
 2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
@@ -291,9 +291,9 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 获取出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
+     * Get 出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
 默认为0。
-取值范围[0.0,100.0) 。
+取值范围[0.0,100.0) 。 
      * @return FaceMatchThreshold 出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
 默认为0。
 取值范围[0.0,100.0) 。
@@ -303,7 +303,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 设置出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
+     * Set 出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
 默认为0。
 取值范围[0.0,100.0) 。
      * @param FaceMatchThreshold 出参Score中，只有大于等于FaceMatchThreshold值的结果才会返回。
@@ -315,7 +315,7 @@ MaxFaceNum用于，当输入的待识别图片包含多张人脸时，设定要�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);

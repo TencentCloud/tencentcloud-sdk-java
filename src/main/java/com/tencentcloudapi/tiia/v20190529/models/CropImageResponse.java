@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CropImageResponse  extends AbstractModel{
+public class CropImageResponse extends AbstractModel{
 
     /**
     * 裁剪区域左上角X坐标值
@@ -86,7 +86,7 @@ Width : Height取值超出[1, 2.5]的范围；
     private String RequestId;
 
     /**
-     * 获取裁剪区域左上角X坐标值
+     * Get 裁剪区域左上角X坐标值 
      * @return X 裁剪区域左上角X坐标值
      */
     public Long getX() {
@@ -94,7 +94,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置裁剪区域左上角X坐标值
+     * Set 裁剪区域左上角X坐标值
      * @param X 裁剪区域左上角X坐标值
      */
     public void setX(Long X) {
@@ -102,7 +102,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取裁剪区域左上角Y坐标值
+     * Get 裁剪区域左上角Y坐标值 
      * @return Y 裁剪区域左上角Y坐标值
      */
     public Long getY() {
@@ -110,7 +110,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置裁剪区域左上角Y坐标值
+     * Set 裁剪区域左上角Y坐标值
      * @param Y 裁剪区域左上角Y坐标值
      */
     public void setY(Long Y) {
@@ -118,7 +118,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取裁剪区域的宽度，单位为像素
+     * Get 裁剪区域的宽度，单位为像素 
      * @return Width 裁剪区域的宽度，单位为像素
      */
     public Long getWidth() {
@@ -126,7 +126,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置裁剪区域的宽度，单位为像素
+     * Set 裁剪区域的宽度，单位为像素
      * @param Width 裁剪区域的宽度，单位为像素
      */
     public void setWidth(Long Width) {
@@ -134,7 +134,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取裁剪区域的高度，单位为像素
+     * Get 裁剪区域的高度，单位为像素 
      * @return Height 裁剪区域的高度，单位为像素
      */
     public Long getHeight() {
@@ -142,7 +142,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置裁剪区域的高度，单位为像素
+     * Set 裁剪区域的高度，单位为像素
      * @param Height 裁剪区域的高度，单位为像素
      */
     public void setHeight(Long Height) {
@@ -150,7 +150,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取原图宽度，单位为像素
+     * Get 原图宽度，单位为像素 
      * @return OriginalWidth 原图宽度，单位为像素
      */
     public Long getOriginalWidth() {
@@ -158,7 +158,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置原图宽度，单位为像素
+     * Set 原图宽度，单位为像素
      * @param OriginalWidth 原图宽度，单位为像素
      */
     public void setOriginalWidth(Long OriginalWidth) {
@@ -166,7 +166,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取原图高度，单位为像素
+     * Get 原图高度，单位为像素 
      * @return OriginalHeight 原图高度，单位为像素
      */
     public Long getOriginalHeight() {
@@ -174,7 +174,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置原图高度，单位为像素
+     * Set 原图高度，单位为像素
      * @param OriginalHeight 原图高度，单位为像素
      */
     public void setOriginalHeight(Long OriginalHeight) {
@@ -182,14 +182,14 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取0：抠图正常, 1：原图过长, 2：原图过宽, 3：抠图区域过长, 4：抠图区域过宽, 5：纯色图 6：宽高比异常
+     * Get 0：抠图正常, 1：原图过长, 2：原图过宽, 3：抠图区域过长, 4：抠图区域过宽, 5：纯色图 6：宽高比异常
 原图过长是指原图的高度是宽度的1.8倍以上；
 原图过宽是指原图的宽度是高度的1.8倍以上；
 抠图区域过长是指抠图的高度是主体备选框高度的1.6倍以上；
 抠图过宽是指当没有检测到人脸时，抠图区域宽度是检测出的原图主体区域宽度的1.6倍以上；
 纯色图是指裁剪区域视觉较为单一、缺乏主体部分；
 Width : Height取值超出[1, 2.5]的范围；
-以上是辅助决策的参考建议，可以根据业务需求选择采纳或忽视。
+以上是辅助决策的参考建议，可以根据业务需求选择采纳或忽视。 
      * @return CropResult 0：抠图正常, 1：原图过长, 2：原图过宽, 3：抠图区域过长, 4：抠图区域过宽, 5：纯色图 6：宽高比异常
 原图过长是指原图的高度是宽度的1.8倍以上；
 原图过宽是指原图的宽度是高度的1.8倍以上；
@@ -204,7 +204,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置0：抠图正常, 1：原图过长, 2：原图过宽, 3：抠图区域过长, 4：抠图区域过宽, 5：纯色图 6：宽高比异常
+     * Set 0：抠图正常, 1：原图过长, 2：原图过宽, 3：抠图区域过长, 4：抠图区域过宽, 5：纯色图 6：宽高比异常
 原图过长是指原图的高度是宽度的1.8倍以上；
 原图过宽是指原图的宽度是高度的1.8倍以上；
 抠图区域过长是指抠图的高度是主体备选框高度的1.6倍以上；
@@ -226,7 +226,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -234,7 +234,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -242,7 +242,7 @@ Width : Height取值超出[1, 2.5]的范围；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

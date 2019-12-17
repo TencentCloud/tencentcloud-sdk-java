@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LBChargePrepaid  extends AbstractModel{
+public class LBChargePrepaid extends AbstractModel{
 
     /**
     * 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
@@ -39,8 +39,8 @@ public class LBChargePrepaid  extends AbstractModel{
     private Integer Period;
 
     /**
-     * 获取续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -49,7 +49,7 @@ public class LBChargePrepaid  extends AbstractModel{
     }
 
     /**
-     * 设置续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
+     * Set 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,8 +59,8 @@ public class LBChargePrepaid  extends AbstractModel{
     }
 
     /**
-     * 获取周期，表示多少个月（保留字段）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 周期，表示多少个月（保留字段）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Period 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -69,7 +69,7 @@ public class LBChargePrepaid  extends AbstractModel{
     }
 
     /**
-     * 设置周期，表示多少个月（保留字段）
+     * Set 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 周期，表示多少个月（保留字段）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,7 +79,7 @@ public class LBChargePrepaid  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);

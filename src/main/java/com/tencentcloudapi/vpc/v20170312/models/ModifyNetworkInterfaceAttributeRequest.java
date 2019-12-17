@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
+public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
 
     /**
     * 弹性网卡实例ID，例如：eni-pxir56ns。
@@ -51,7 +51,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-     * 获取弹性网卡实例ID，例如：eni-pxir56ns。
+     * Get 弹性网卡实例ID，例如：eni-pxir56ns。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
      */
     public String getNetworkInterfaceId() {
@@ -59,7 +59,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡实例ID，例如：eni-pxir56ns。
+     * Set 弹性网卡实例ID，例如：eni-pxir56ns。
      * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
@@ -67,7 +67,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡名称，最大长度不能超过60个字节。
+     * Get 弹性网卡名称，最大长度不能超过60个字节。 
      * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      */
     public String getNetworkInterfaceName() {
@@ -75,7 +75,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡名称，最大长度不能超过60个字节。
+     * Set 弹性网卡名称，最大长度不能超过60个字节。
      * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
@@ -83,7 +83,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Get 弹性网卡描述，可任意命名，但不得超过60个字符。 
      * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      */
     public String getNetworkInterfaceDescription() {
@@ -91,7 +91,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Set 弹性网卡描述，可任意命名，但不得超过60个字符。
      * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
@@ -99,7 +99,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定绑定的安全组，例如:['sg-1dd51d']。
+     * Get 指定绑定的安全组，例如:['sg-1dd51d']。 
      * @return SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
      */
     public String [] getSecurityGroupIds() {
@@ -107,7 +107,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定绑定的安全组，例如:['sg-1dd51d']。
+     * Set 指定绑定的安全组，例如:['sg-1dd51d']。
      * @param SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -115,7 +115,7 @@ public class ModifyNetworkInterfaceAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);

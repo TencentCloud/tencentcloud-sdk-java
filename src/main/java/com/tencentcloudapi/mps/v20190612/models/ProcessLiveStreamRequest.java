@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProcessLiveStreamRequest  extends AbstractModel{
+public class ProcessLiveStreamRequest extends AbstractModel{
 
     /**
     * 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
@@ -79,7 +79,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     private String SessionContext;
 
     /**
-     * 获取直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * Get 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。 
      * @return Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      */
     public String getUrl() {
@@ -87,7 +87,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * Set 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      * @param Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
      */
     public void setUrl(String Url) {
@@ -95,7 +95,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务的事件通知信息，用于指定直播流处理的结果。
+     * Get 任务的事件通知信息，用于指定直播流处理的结果。 
      * @return TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      */
     public LiveStreamTaskNotifyConfig getTaskNotifyConfig() {
@@ -103,7 +103,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务的事件通知信息，用于指定直播流处理的结果。
+     * Set 任务的事件通知信息，用于指定直播流处理的结果。
      * @param TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      */
     public void setTaskNotifyConfig(LiveStreamTaskNotifyConfig TaskNotifyConfig) {
@@ -111,7 +111,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
+     * Get 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。 
      * @return OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -119,7 +119,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
+     * Set 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      * @param OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -127,7 +127,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
+     * Get 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。 
      * @return OutputDir 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
      */
     public String getOutputDir() {
@@ -135,7 +135,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
+     * Set 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
      * @param OutputDir 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。
      */
     public void setOutputDir(String OutputDir) {
@@ -143,7 +143,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核类型任务参数。
+     * Get 视频内容审核类型任务参数。 
      * @return AiContentReviewTask 视频内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -151,7 +151,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核类型任务参数。
+     * Set 视频内容审核类型任务参数。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -159,7 +159,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别类型任务参数。
+     * Get 视频内容识别类型任务参数。 
      * @return AiRecognitionTask 视频内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -167,7 +167,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别类型任务参数。
+     * Set 视频内容识别类型任务参数。
      * @param AiRecognitionTask 视频内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -175,7 +175,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public String getSessionId() {
@@ -183,7 +183,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
     public void setSessionId(String SessionId) {
@@ -191,7 +191,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
      * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
@@ -199,7 +199,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
@@ -207,7 +207,7 @@ public class ProcessLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);

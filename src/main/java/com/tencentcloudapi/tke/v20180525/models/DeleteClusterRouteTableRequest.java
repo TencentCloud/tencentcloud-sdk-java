@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteClusterRouteTableRequest  extends AbstractModel{
+public class DeleteClusterRouteTableRequest extends AbstractModel{
 
     /**
     * 路由表名称
@@ -30,7 +30,7 @@ public class DeleteClusterRouteTableRequest  extends AbstractModel{
     private String RouteTableName;
 
     /**
-     * 获取路由表名称
+     * Get 路由表名称 
      * @return RouteTableName 路由表名称
      */
     public String getRouteTableName() {
@@ -38,7 +38,7 @@ public class DeleteClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称
+     * Set 路由表名称
      * @param RouteTableName 路由表名称
      */
     public void setRouteTableName(String RouteTableName) {
@@ -46,7 +46,7 @@ public class DeleteClusterRouteTableRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteTableConflictsRequest  extends AbstractModel{
+public class DescribeRouteTableConflictsRequest extends AbstractModel{
 
     /**
     * 路由表CIDR
@@ -37,7 +37,7 @@ public class DescribeRouteTableConflictsRequest  extends AbstractModel{
     private String VpcId;
 
     /**
-     * 获取路由表CIDR
+     * Get 路由表CIDR 
      * @return RouteTableCidrBlock 路由表CIDR
      */
     public String getRouteTableCidrBlock() {
@@ -45,7 +45,7 @@ public class DescribeRouteTableConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表CIDR
+     * Set 路由表CIDR
      * @param RouteTableCidrBlock 路由表CIDR
      */
     public void setRouteTableCidrBlock(String RouteTableCidrBlock) {
@@ -53,7 +53,7 @@ public class DescribeRouteTableConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表绑定的VPC
+     * Get 路由表绑定的VPC 
      * @return VpcId 路由表绑定的VPC
      */
     public String getVpcId() {
@@ -61,7 +61,7 @@ public class DescribeRouteTableConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表绑定的VPC
+     * Set 路由表绑定的VPC
      * @param VpcId 路由表绑定的VPC
      */
     public void setVpcId(String VpcId) {
@@ -69,7 +69,7 @@ public class DescribeRouteTableConflictsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableCidrBlock", this.RouteTableCidrBlock);

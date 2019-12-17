@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeL4ListenersResponse  extends AbstractModel{
+public class DescribeL4ListenersResponse extends AbstractModel{
 
     /**
     * 监听器信息数组。
@@ -37,7 +37,7 @@ public class DescribeL4ListenersResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取监听器信息数组。
+     * Get 监听器信息数组。 
      * @return ListenerSet 监听器信息数组。
      */
     public L4Listener [] getListenerSet() {
@@ -45,7 +45,7 @@ public class DescribeL4ListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置监听器信息数组。
+     * Set 监听器信息数组。
      * @param ListenerSet 监听器信息数组。
      */
     public void setListenerSet(L4Listener [] ListenerSet) {
@@ -53,7 +53,7 @@ public class DescribeL4ListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeL4ListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeL4ListenersResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ListenerSet.", this.ListenerSet);

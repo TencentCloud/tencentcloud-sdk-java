@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContainGroupRequest  extends AbstractModel{
+public class CreateContainGroupRequest extends AbstractModel{
 
     /**
     * 分组所属应用ID
@@ -121,7 +121,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     private String MemRequest;
 
     /**
-     * 获取分组所属应用ID
+     * Get 分组所属应用ID 
      * @return ApplicationId 分组所属应用ID
      */
     public String getApplicationId() {
@@ -129,7 +129,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组所属应用ID
+     * Set 分组所属应用ID
      * @param ApplicationId 分组所属应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -137,7 +137,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分组所属命名空间ID
+     * Get 分组所属命名空间ID 
      * @return NamespaceId 分组所属命名空间ID
      */
     public String getNamespaceId() {
@@ -145,7 +145,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组所属命名空间ID
+     * Set 分组所属命名空间ID
      * @param NamespaceId 分组所属命名空间ID
      */
     public void setNamespaceId(String NamespaceId) {
@@ -153,7 +153,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+     * Get 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线 
      * @return GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      */
     public String getGroupName() {
@@ -161,7 +161,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+     * Set 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      * @param GroupName 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
      */
     public void setGroupName(String GroupName) {
@@ -169,7 +169,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例数量
+     * Get 实例数量 
      * @return InstanceNum 实例数量
      */
     public Long getInstanceNum() {
@@ -177,7 +177,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例数量
+     * Set 实例数量
      * @param InstanceNum 实例数量
      */
     public void setInstanceNum(Long InstanceNum) {
@@ -185,7 +185,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0:公网 1:集群内访问 2：NodePort
+     * Get 0:公网 1:集群内访问 2：NodePort 
      * @return AccessType 0:公网 1:集群内访问 2：NodePort
      */
     public Long getAccessType() {
@@ -193,7 +193,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0:公网 1:集群内访问 2：NodePort
+     * Set 0:公网 1:集群内访问 2：NodePort
      * @param AccessType 0:公网 1:集群内访问 2：NodePort
      */
     public void setAccessType(Long AccessType) {
@@ -201,7 +201,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数组对象，见下方定义
+     * Get 数组对象，见下方定义 
      * @return ProtocolPorts 数组对象，见下方定义
      */
     public ProtocolPort [] getProtocolPorts() {
@@ -209,7 +209,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数组对象，见下方定义
+     * Set 数组对象，见下方定义
      * @param ProtocolPorts 数组对象，见下方定义
      */
     public void setProtocolPorts(ProtocolPort [] ProtocolPorts) {
@@ -217,7 +217,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群ID
+     * Get 集群ID 
      * @return ClusterId 集群ID
      */
     public String getClusterId() {
@@ -225,7 +225,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群ID
+     * Set 集群ID
      * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
@@ -233,7 +233,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配 CPU 核数，对应 K8S limit
+     * Get 最大分配 CPU 核数，对应 K8S limit 
      * @return CpuLimit 最大分配 CPU 核数，对应 K8S limit
      */
     public String getCpuLimit() {
@@ -241,7 +241,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配 CPU 核数，对应 K8S limit
+     * Set 最大分配 CPU 核数，对应 K8S limit
      * @param CpuLimit 最大分配 CPU 核数，对应 K8S limit
      */
     public void setCpuLimit(String CpuLimit) {
@@ -249,7 +249,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取最大分配内存 MiB 数，对应 K8S limit
+     * Get 最大分配内存 MiB 数，对应 K8S limit 
      * @return MemLimit 最大分配内存 MiB 数，对应 K8S limit
      */
     public String getMemLimit() {
@@ -257,7 +257,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置最大分配内存 MiB 数，对应 K8S limit
+     * Set 最大分配内存 MiB 数，对应 K8S limit
      * @param MemLimit 最大分配内存 MiB 数，对应 K8S limit
      */
     public void setMemLimit(String MemLimit) {
@@ -265,7 +265,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分组备注字段，长度应不大于200字符
+     * Get 分组备注字段，长度应不大于200字符 
      * @return GroupComment 分组备注字段，长度应不大于200字符
      */
     public String getGroupComment() {
@@ -273,7 +273,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分组备注字段，长度应不大于200字符
+     * Set 分组备注字段，长度应不大于200字符
      * @param GroupComment 分组备注字段，长度应不大于200字符
      */
     public void setGroupComment(String GroupComment) {
@@ -281,7 +281,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新方式：0:快速更新 1:滚动更新
+     * Get 更新方式：0:快速更新 1:滚动更新 
      * @return UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public Long getUpdateType() {
@@ -289,7 +289,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新方式：0:快速更新 1:滚动更新
+     * Set 更新方式：0:快速更新 1:滚动更新
      * @param UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public void setUpdateType(Long UpdateType) {
@@ -297,7 +297,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取滚动更新必填，更新间隔
+     * Get 滚动更新必填，更新间隔 
      * @return UpdateIvl 滚动更新必填，更新间隔
      */
     public Long getUpdateIvl() {
@@ -305,7 +305,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置滚动更新必填，更新间隔
+     * Set 滚动更新必填，更新间隔
      * @param UpdateIvl 滚动更新必填，更新间隔
      */
     public void setUpdateIvl(Long UpdateIvl) {
@@ -313,7 +313,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的 CPU 核数，对应 K8S request
+     * Get 初始分配的 CPU 核数，对应 K8S request 
      * @return CpuRequest 初始分配的 CPU 核数，对应 K8S request
      */
     public String getCpuRequest() {
@@ -321,7 +321,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的 CPU 核数，对应 K8S request
+     * Set 初始分配的 CPU 核数，对应 K8S request
      * @param CpuRequest 初始分配的 CPU 核数，对应 K8S request
      */
     public void setCpuRequest(String CpuRequest) {
@@ -329,7 +329,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取初始分配的内存 MiB 数，对应 K8S request
+     * Get 初始分配的内存 MiB 数，对应 K8S request 
      * @return MemRequest 初始分配的内存 MiB 数，对应 K8S request
      */
     public String getMemRequest() {
@@ -337,7 +337,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置初始分配的内存 MiB 数，对应 K8S request
+     * Set 初始分配的内存 MiB 数，对应 K8S request
      * @param MemRequest 初始分配的内存 MiB 数，对应 K8S request
      */
     public void setMemRequest(String MemRequest) {
@@ -345,7 +345,7 @@ public class CreateContainGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FileInfoType  extends AbstractModel{
+public class FileInfoType extends AbstractModel{
 
     /**
     * 判定渠道
@@ -149,7 +149,7 @@ public class FileInfoType  extends AbstractModel{
     private String WhiteScore;
 
     /**
-     * 获取判定渠道
+     * Get 判定渠道 
      * @return DetectId 判定渠道
      */
     public String getDetectId() {
@@ -157,7 +157,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置判定渠道
+     * Set 判定渠道
      * @param DetectId 判定渠道
      */
     public void setDetectId(String DetectId) {
@@ -165,7 +165,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取检测优先级
+     * Get 检测优先级 
      * @return DetectPriority 检测优先级
      */
     public String getDetectPriority() {
@@ -173,7 +173,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置检测优先级
+     * Set 检测优先级
      * @param DetectPriority 检测优先级
      */
     public void setDetectPriority(String DetectPriority) {
@@ -181,7 +181,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取引擎优先级
+     * Get 引擎优先级 
      * @return EnginePriority 引擎优先级
      */
     public String getEnginePriority() {
@@ -189,7 +189,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置引擎优先级
+     * Set 引擎优先级
      * @param EnginePriority 引擎优先级
      */
     public void setEnginePriority(String EnginePriority) {
@@ -197,7 +197,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取样本是否存在
+     * Get 样本是否存在 
      * @return FileExist 样本是否存在
      */
     public String getFileExist() {
@@ -205,7 +205,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置样本是否存在
+     * Set 样本是否存在
      * @param FileExist 样本是否存在
      */
     public void setFileExist(String FileExist) {
@@ -213,7 +213,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取文件上传
+     * Get 文件上传 
      * @return FileForceUpload 文件上传
      */
     public String getFileForceUpload() {
@@ -221,7 +221,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置文件上传
+     * Set 文件上传
      * @param FileForceUpload 文件上传
      */
     public void setFileForceUpload(String FileForceUpload) {
@@ -229,7 +229,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取文件大小
+     * Get 文件大小 
      * @return FileSize 文件大小
      */
     public String getFileSize() {
@@ -237,7 +237,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置文件大小
+     * Set 文件大小
      * @param FileSize 文件大小
      */
     public void setFileSize(String FileSize) {
@@ -245,7 +245,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取文件上传时间
+     * Get 文件上传时间 
      * @return FileupTime 文件上传时间
      */
     public String getFileupTime() {
@@ -253,7 +253,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置文件上传时间
+     * Set 文件上传时间
      * @param FileupTime 文件上传时间
      */
     public void setFileupTime(String FileupTime) {
@@ -261,7 +261,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取病毒文件全名
+     * Get 病毒文件全名 
      * @return FullVirusName 病毒文件全名
      */
     public String getFullVirusName() {
@@ -269,7 +269,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置病毒文件全名
+     * Set 病毒文件全名
      * @param FullVirusName 病毒文件全名
      */
     public void setFullVirusName(String FullVirusName) {
@@ -277,7 +277,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取IDC位置
+     * Get IDC位置 
      * @return IdcPosition IDC位置
      */
     public String getIdcPosition() {
@@ -285,7 +285,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置IDC位置
+     * Set IDC位置
      * @param IdcPosition IDC位置
      */
     public void setIdcPosition(String IdcPosition) {
@@ -293,7 +293,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取文件md5值
+     * Get 文件md5值 
      * @return Md5Type 文件md5值
      */
     public String getMd5Type() {
@@ -301,7 +301,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置文件md5值
+     * Set 文件md5值
      * @param Md5Type 文件md5值
      */
     public void setMd5Type(String Md5Type) {
@@ -309,7 +309,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取PE结构是否存在
+     * Get PE结构是否存在 
      * @return PeExist PE结构是否存在
      */
     public String getPeExist() {
@@ -317,7 +317,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置PE结构是否存在
+     * Set PE结构是否存在
      * @param PeExist PE结构是否存在
      */
     public void setPeExist(String PeExist) {
@@ -325,7 +325,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取PE结构上传
+     * Get PE结构上传 
      * @return PeForceUpload PE结构上传
      */
     public String getPeForceUpload() {
@@ -333,7 +333,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置PE结构上传
+     * Set PE结构上传
      * @param PeForceUpload PE结构上传
      */
     public void setPeForceUpload(String PeForceUpload) {
@@ -341,7 +341,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取安全性等级
+     * Get 安全性等级 
      * @return SafeLevel 安全性等级
      */
     public String getSafeLevel() {
@@ -349,7 +349,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置安全性等级
+     * Set 安全性等级
      * @param SafeLevel 安全性等级
      */
     public void setSafeLevel(String SafeLevel) {
@@ -357,7 +357,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取扫描时间
+     * Get 扫描时间 
      * @return ScanModiTime 扫描时间
      */
     public String getScanModiTime() {
@@ -365,7 +365,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置扫描时间
+     * Set 扫描时间
      * @param ScanModiTime 扫描时间
      */
     public void setScanModiTime(String ScanModiTime) {
@@ -373,7 +373,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取子判定渠道
+     * Get 子判定渠道 
      * @return SubdetectId 子判定渠道
      */
     public String getSubdetectId() {
@@ -381,7 +381,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置子判定渠道
+     * Set 子判定渠道
      * @param SubdetectId 子判定渠道
      */
     public void setSubdetectId(String SubdetectId) {
@@ -389,7 +389,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取病毒名
+     * Get 病毒名 
      * @return UserDefName 病毒名
      */
     public String getUserDefName() {
@@ -397,7 +397,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置病毒名
+     * Set 病毒名
      * @param UserDefName 病毒名
      */
     public void setUserDefName(String UserDefName) {
@@ -405,7 +405,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取病毒类型
+     * Get 病毒类型 
      * @return VirusType 病毒类型
      */
     public String getVirusType() {
@@ -413,7 +413,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置病毒类型
+     * Set 病毒类型
      * @param VirusType 病毒类型
      */
     public void setVirusType(String VirusType) {
@@ -421,7 +421,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 获取白名单分数
+     * Get 白名单分数 
      * @return WhiteScore 白名单分数
      */
     public String getWhiteScore() {
@@ -429,7 +429,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 设置白名单分数
+     * Set 白名单分数
      * @param WhiteScore 白名单分数
      */
     public void setWhiteScore(String WhiteScore) {
@@ -437,7 +437,7 @@ public class FileInfoType  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectId", this.DetectId);

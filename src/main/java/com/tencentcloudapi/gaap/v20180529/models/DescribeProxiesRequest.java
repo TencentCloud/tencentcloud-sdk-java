@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxiesRequest  extends AbstractModel{
+public class DescribeProxiesRequest extends AbstractModel{
 
     /**
     * （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
@@ -80,7 +80,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     private Long Independent;
 
     /**
-     * 获取（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Get （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。 
      * @return InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      */
     public String [] getInstanceIds() {
@@ -88,7 +88,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置（旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Set （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param InstanceIds （旧参数，请切换到ProxyIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -96,7 +96,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取偏移量，默认为0。
+     * Get 偏移量，默认为0。 
      * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
@@ -104,7 +104,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置偏移量，默认为0。
+     * Set 偏移量，默认为0。
      * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
@@ -112,7 +112,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为100。
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
@@ -120,7 +120,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为100。
+     * Set 返回数量，默认为20，最大值为100。
      * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
@@ -128,12 +128,12 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取过滤条件。   
+     * Get 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
 RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
-GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
+GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。 
      * @return Filters 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
@@ -146,7 +146,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置过滤条件。   
+     * Set 过滤条件。   
 每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定InstanceIds和Filters。 
 ProjectId - String - 是否必填：否 -（过滤条件）按照项目ID过滤。    
 AccessRegion - String - 是否必填：否 - （过滤条件）按照接入地域过滤。    
@@ -164,7 +164,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Get （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。 
      * @return ProxyIds （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      */
     public String [] getProxyIds() {
@@ -172,7 +172,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置（新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
+     * Set （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      * @param ProxyIds （新参数，替代InstanceIds）按照一个或者多个实例ID查询。每次请求的实例的上限为100。参数不支持同时指定InstanceIds和Filters。
      */
     public void setProxyIds(String [] ProxyIds) {
@@ -180,8 +180,8 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取标签列表，当存在该字段时，拉取对应标签下的资源列表。
-最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
+     * Get 标签列表，当存在该字段时，拉取对应标签下的资源列表。
+最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。 
      * @return TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
      */
@@ -190,7 +190,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置标签列表，当存在该字段时，拉取对应标签下的资源列表。
+     * Set 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
      * @param TagSet 标签列表，当存在该字段时，拉取对应标签下的资源列表。
 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，通道会被拉取出来。
@@ -200,9 +200,9 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 获取当该字段为1时，仅拉取非通道组的通道，
+     * Get 当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
-不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
+不存在该字段时，拉取所有通道，包括独立通道和通道组通道。 
      * @return Independent 当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
@@ -212,7 +212,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 设置当该字段为1时，仅拉取非通道组的通道，
+     * Set 当该字段为1时，仅拉取非通道组的通道，
 当该字段为0时，仅拉取通道组的通道，
 不存在该字段时，拉取所有通道，包括独立通道和通道组通道。
      * @param Independent 当该字段为1时，仅拉取非通道组的通道，
@@ -224,7 +224,7 @@ GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

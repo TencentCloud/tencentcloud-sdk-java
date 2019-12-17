@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBindInstanceRequest  extends AbstractModel{
+public class CreateBindInstanceRequest extends AbstractModel{
 
     /**
     * 资源id，全局唯一
@@ -51,7 +51,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     private String AppPkgName;
 
     /**
-     * 获取资源id，全局唯一
+     * Get 资源id，全局唯一 
      * @return ResourceId 资源id，全局唯一
      */
     public String getResourceId() {
@@ -59,7 +59,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源id，全局唯一
+     * Set 资源id，全局唯一
      * @param ResourceId 资源id，全局唯一
      */
     public void setResourceId(String ResourceId) {
@@ -67,7 +67,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取app的icon的url
+     * Get app的icon的url 
      * @return AppIconUrl app的icon的url
      */
     public String getAppIconUrl() {
@@ -75,7 +75,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置app的icon的url
+     * Set app的icon的url
      * @param AppIconUrl app的icon的url
      */
     public void setAppIconUrl(String AppIconUrl) {
@@ -83,7 +83,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取app的名称
+     * Get app的名称 
      * @return AppName app的名称
      */
     public String getAppName() {
@@ -91,7 +91,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置app的名称
+     * Set app的名称
      * @param AppName app的名称
      */
     public void setAppName(String AppName) {
@@ -99,7 +99,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取app的包名
+     * Get app的包名 
      * @return AppPkgName app的包名
      */
     public String getAppPkgName() {
@@ -107,7 +107,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置app的包名
+     * Set app的包名
      * @param AppPkgName app的包名
      */
     public void setAppPkgName(String AppPkgName) {
@@ -115,7 +115,7 @@ public class CreateBindInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

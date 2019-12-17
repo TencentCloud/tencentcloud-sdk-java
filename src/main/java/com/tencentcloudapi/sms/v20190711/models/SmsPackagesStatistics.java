@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatistics  extends AbstractModel{
+public class SmsPackagesStatistics extends AbstractModel{
 
     /**
     * 套餐包创建时间
@@ -72,7 +72,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     private Long CurrentUsage;
 
     /**
-     * 获取套餐包创建时间
+     * Get 套餐包创建时间 
      * @return PackageCreateTime 套餐包创建时间
      */
     public String getPackageCreateTime() {
@@ -80,7 +80,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置套餐包创建时间
+     * Set 套餐包创建时间
      * @param PackageCreateTime 套餐包创建时间
      */
     public void setPackageCreateTime(String PackageCreateTime) {
@@ -88,7 +88,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取套餐包生效时间
+     * Get 套餐包生效时间 
      * @return PackageEffectiveTime 套餐包生效时间
      */
     public String getPackageEffectiveTime() {
@@ -96,7 +96,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置套餐包生效时间
+     * Set 套餐包生效时间
      * @param PackageEffectiveTime 套餐包生效时间
      */
     public void setPackageEffectiveTime(String PackageEffectiveTime) {
@@ -104,7 +104,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取套餐包过期时间
+     * Get 套餐包过期时间 
      * @return PackageExpiredTime 套餐包过期时间
      */
     public String getPackageExpiredTime() {
@@ -112,7 +112,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置套餐包过期时间
+     * Set 套餐包过期时间
      * @param PackageExpiredTime 套餐包过期时间
      */
     public void setPackageExpiredTime(String PackageExpiredTime) {
@@ -120,7 +120,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取套餐包条数
+     * Get 套餐包条数 
      * @return AmountOfPackage 套餐包条数
      */
     public Long getAmountOfPackage() {
@@ -128,7 +128,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置套餐包条数
+     * Set 套餐包条数
      * @param AmountOfPackage 套餐包条数
      */
     public void setAmountOfPackage(Long AmountOfPackage) {
@@ -136,7 +136,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取0表示赠送套餐包，1表示购买套餐包
+     * Get 0表示赠送套餐包，1表示购买套餐包 
      * @return TypeOfPackage 0表示赠送套餐包，1表示购买套餐包
      */
     public Long getTypeOfPackage() {
@@ -144,7 +144,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置0表示赠送套餐包，1表示购买套餐包
+     * Set 0表示赠送套餐包，1表示购买套餐包
      * @param TypeOfPackage 0表示赠送套餐包，1表示购买套餐包
      */
     public void setTypeOfPackage(Long TypeOfPackage) {
@@ -152,7 +152,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取套餐包 ID
+     * Get 套餐包 ID 
      * @return PackageId 套餐包 ID
      */
     public Long getPackageId() {
@@ -160,7 +160,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置套餐包 ID
+     * Set 套餐包 ID
      * @param PackageId 套餐包 ID
      */
     public void setPackageId(Long PackageId) {
@@ -168,7 +168,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 获取当前使用量
+     * Get 当前使用量 
      * @return CurrentUsage 当前使用量
      */
     public Long getCurrentUsage() {
@@ -176,7 +176,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 设置当前使用量
+     * Set 当前使用量
      * @param CurrentUsage 当前使用量
      */
     public void setCurrentUsage(Long CurrentUsage) {
@@ -184,7 +184,7 @@ public class SmsPackagesStatistics  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PackageCreateTime", this.PackageCreateTime);

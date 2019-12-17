@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupRequest  extends AbstractModel{
+public class DescribeGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID
@@ -30,7 +30,7 @@ public class DescribeGroupRequest  extends AbstractModel{
     private String GroupId;
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -38,7 +38,7 @@ public class DescribeGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -46,7 +46,7 @@ public class DescribeGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

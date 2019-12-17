@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IKEOptionsSpecification  extends AbstractModel{
+public class IKEOptionsSpecification extends AbstractModel{
 
     /**
     * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
@@ -107,7 +107,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     private String IKEVersion;
 
     /**
-     * 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC 
      * @return PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      */
     public String getPropoEncryAlgorithm() {
@@ -115,7 +115,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
+     * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      * @param PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，默认为3DES-CBC
      */
     public void setPropoEncryAlgorithm(String PropoEncryAlgorithm) {
@@ -123,7 +123,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * Get 认证算法：可选值：'MD5', 'SHA1'，默认为MD5 
      * @return PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
      */
     public String getPropoAuthenAlgorithm() {
@@ -131,7 +131,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置认证算法：可选值：'MD5', 'SHA1'，默认为MD5
+     * Set 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
      * @param PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，默认为MD5
      */
     public void setPropoAuthenAlgorithm(String PropoAuthenAlgorithm) {
@@ -139,7 +139,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * Get 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN 
      * @return ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
      */
     public String getExchangeMode() {
@@ -147,7 +147,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * Set 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
      * @param ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
      */
     public void setExchangeMode(String ExchangeMode) {
@@ -155,7 +155,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * Get 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS 
      * @return LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      */
     public String getLocalIdentity() {
@@ -163,7 +163,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * Set 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      * @param LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      */
     public void setLocalIdentity(String LocalIdentity) {
@@ -171,7 +171,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * Get 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS 
      * @return RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      */
     public String getRemoteIdentity() {
@@ -179,7 +179,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
+     * Set 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      * @param RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      */
     public void setRemoteIdentity(String RemoteIdentity) {
@@ -187,7 +187,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+     * Get 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP 
      * @return LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
      */
     public String getLocalAddress() {
@@ -195,7 +195,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
+     * Set 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
      * @param LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
      */
     public void setLocalAddress(String LocalAddress) {
@@ -203,7 +203,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+     * Get 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填 
      * @return RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
      */
     public String getRemoteAddress() {
@@ -211,7 +211,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
+     * Set 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
      * @param RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
      */
     public void setRemoteAddress(String RemoteAddress) {
@@ -219,7 +219,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+     * Get 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填 
      * @return LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
      */
     public String getLocalFqdnName() {
@@ -227,7 +227,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
+     * Set 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
      * @param LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
      */
     public void setLocalFqdnName(String LocalFqdnName) {
@@ -235,7 +235,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+     * Get 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填 
      * @return RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
      */
     public String getRemoteFqdnName() {
@@ -243,7 +243,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
+     * Set 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
      * @param RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
      */
     public void setRemoteFqdnName(String RemoteFqdnName) {
@@ -251,7 +251,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * Get DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'， 
      * @return DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
      */
     public String getDhGroupName() {
@@ -259,7 +259,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * Set DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
      * @param DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
      */
     public void setDhGroupName(String DhGroupName) {
@@ -267,7 +267,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+     * Get IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800 
      * @return IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      */
     public Integer getIKESaLifetimeSeconds() {
@@ -275,7 +275,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
+     * Set IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      * @param IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      */
     public void setIKESaLifetimeSeconds(Integer IKESaLifetimeSeconds) {
@@ -283,7 +283,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 获取IKE版本
+     * Get IKE版本 
      * @return IKEVersion IKE版本
      */
     public String getIKEVersion() {
@@ -291,7 +291,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 设置IKE版本
+     * Set IKE版本
      * @param IKEVersion IKE版本
      */
     public void setIKEVersion(String IKEVersion) {
@@ -299,7 +299,7 @@ public class IKEOptionsSpecification  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PropoEncryAlgorithm", this.PropoEncryAlgorithm);

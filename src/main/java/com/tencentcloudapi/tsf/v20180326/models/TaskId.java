@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TaskId  extends AbstractModel{
+public class TaskId extends AbstractModel{
 
     /**
     * 任务ID
@@ -31,8 +31,8 @@ public class TaskId  extends AbstractModel{
     private String TaskId;
 
     /**
-     * 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -41,7 +41,7 @@ public class TaskId  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -51,7 +51,7 @@ public class TaskId  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

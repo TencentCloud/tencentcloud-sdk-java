@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Parameter  extends AbstractModel{
+public class Parameter extends AbstractModel{
 
     /**
     * 参数名称
@@ -37,7 +37,7 @@ public class Parameter  extends AbstractModel{
     private String CurrentValue;
 
     /**
-     * 获取参数名称
+     * Get 参数名称 
      * @return Name 参数名称
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class Parameter  extends AbstractModel{
     }
 
     /**
-     * 设置参数名称
+     * Set 参数名称
      * @param Name 参数名称
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class Parameter  extends AbstractModel{
     }
 
     /**
-     * 获取参数值
+     * Get 参数值 
      * @return CurrentValue 参数值
      */
     public String getCurrentValue() {
@@ -61,7 +61,7 @@ public class Parameter  extends AbstractModel{
     }
 
     /**
-     * 设置参数值
+     * Set 参数值
      * @param CurrentValue 参数值
      */
     public void setCurrentValue(String CurrentValue) {
@@ -69,7 +69,7 @@ public class Parameter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

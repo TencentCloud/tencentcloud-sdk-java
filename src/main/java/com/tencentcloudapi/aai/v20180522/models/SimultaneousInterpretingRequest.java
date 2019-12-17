@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SimultaneousInterpretingRequest  extends AbstractModel{
+public class SimultaneousInterpretingRequest extends AbstractModel{
 
     /**
     * 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
@@ -107,7 +107,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     private Integer Seq;
 
     /**
-     * 获取腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * Get 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。 
      * @return ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
     public Integer getProjectId() {
@@ -115,7 +115,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+     * Set 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      * @param ProjectId 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
      */
     public void setProjectId(Integer ProjectId) {
@@ -123,7 +123,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
+     * Get 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。 
      * @return SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      */
     public Integer getSubServiceType() {
@@ -131,7 +131,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
+     * Set 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      * @param SubServiceType 子服务类型。0：离线语音识别。1：实时流式识别，2，一句话识别。3：同传。
      */
     public void setSubServiceType(Integer SubServiceType) {
@@ -139,7 +139,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
+     * Get 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。 
      * @return RecEngineModelType 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
      */
     public String getRecEngineModelType() {
@@ -147,7 +147,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
+     * Set 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
      * @param RecEngineModelType 识别引擎类型。8k_zh： 8k 中文会场模型；16k_zh：16k 中文会场模型，8k_en： 8k 英文会场模型；16k_en：16k 英文会场模型。当前仅支持16K。
      */
     public void setRecEngineModelType(String RecEngineModelType) {
@@ -155,7 +155,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取语音数据，要base64编码。
+     * Get 语音数据，要base64编码。 
      * @return Data 语音数据，要base64编码。
      */
     public String getData() {
@@ -163,7 +163,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置语音数据，要base64编码。
+     * Set 语音数据，要base64编码。
      * @param Data 语音数据，要base64编码。
      */
     public void setData(String Data) {
@@ -171,7 +171,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据长度。
+     * Get 数据长度。 
      * @return DataLen 数据长度。
      */
     public Integer getDataLen() {
@@ -179,7 +179,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据长度。
+     * Set 数据长度。
      * @param DataLen 数据长度。
      */
     public void setDataLen(Integer DataLen) {
@@ -187,7 +187,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取声音id，标识一句话。
+     * Get 声音id，标识一句话。 
      * @return VoiceId 声音id，标识一句话。
      */
     public String getVoiceId() {
@@ -195,7 +195,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置声音id，标识一句话。
+     * Set 声音id，标识一句话。
      * @param VoiceId 声音id，标识一句话。
      */
     public void setVoiceId(String VoiceId) {
@@ -203,7 +203,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否是一句话的结束。
+     * Get 是否是一句话的结束。 
      * @return IsEnd 是否是一句话的结束。
      */
     public Integer getIsEnd() {
@@ -211,7 +211,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否是一句话的结束。
+     * Set 是否是一句话的结束。
      * @param IsEnd 是否是一句话的结束。
      */
     public void setIsEnd(Integer IsEnd) {
@@ -219,7 +219,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取声音编码的格式1:pcm，4:speex，6:silk，默认为1。
+     * Get 声音编码的格式1:pcm，4:speex，6:silk，默认为1。 
      * @return VoiceFormat 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      */
     public Integer getVoiceFormat() {
@@ -227,7 +227,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置声音编码的格式1:pcm，4:speex，6:silk，默认为1。
+     * Set 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      * @param VoiceFormat 声音编码的格式1:pcm，4:speex，6:silk，默认为1。
      */
     public void setVoiceFormat(Integer VoiceFormat) {
@@ -235,7 +235,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否需要翻译结果，1表示需要翻译，0是不需要。
+     * Get 是否需要翻译结果，1表示需要翻译，0是不需要。 
      * @return OpenTranslate 是否需要翻译结果，1表示需要翻译，0是不需要。
      */
     public Integer getOpenTranslate() {
@@ -243,7 +243,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否需要翻译结果，1表示需要翻译，0是不需要。
+     * Set 是否需要翻译结果，1表示需要翻译，0是不需要。
      * @param OpenTranslate 是否需要翻译结果，1表示需要翻译，0是不需要。
      */
     public void setOpenTranslate(Integer OpenTranslate) {
@@ -251,7 +251,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取如果需要翻译，表示源语言类型，可取值：zh，en。
+     * Get 如果需要翻译，表示源语言类型，可取值：zh，en。 
      * @return SourceLanguage 如果需要翻译，表示源语言类型，可取值：zh，en。
      */
     public String getSourceLanguage() {
@@ -259,7 +259,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置如果需要翻译，表示源语言类型，可取值：zh，en。
+     * Set 如果需要翻译，表示源语言类型，可取值：zh，en。
      * @param SourceLanguage 如果需要翻译，表示源语言类型，可取值：zh，en。
      */
     public void setSourceLanguage(String SourceLanguage) {
@@ -267,7 +267,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取如果需要翻译，表示目标语言类型，可取值：zh，en。
+     * Get 如果需要翻译，表示目标语言类型，可取值：zh，en。 
      * @return TargetLanguage 如果需要翻译，表示目标语言类型，可取值：zh，en。
      */
     public String getTargetLanguage() {
@@ -275,7 +275,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置如果需要翻译，表示目标语言类型，可取值：zh，en。
+     * Set 如果需要翻译，表示目标语言类型，可取值：zh，en。
      * @param TargetLanguage 如果需要翻译，表示目标语言类型，可取值：zh，en。
      */
     public void setTargetLanguage(String TargetLanguage) {
@@ -283,7 +283,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 获取表明当前语音分片的索引，从0开始
+     * Get 表明当前语音分片的索引，从0开始 
      * @return Seq 表明当前语音分片的索引，从0开始
      */
     public Integer getSeq() {
@@ -291,7 +291,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 设置表明当前语音分片的索引，从0开始
+     * Set 表明当前语音分片的索引，从0开始
      * @param Seq 表明当前语音分片的索引，从0开始
      */
     public void setSeq(Integer Seq) {
@@ -299,7 +299,7 @@ public class SimultaneousInterpretingRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

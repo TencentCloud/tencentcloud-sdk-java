@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableWorkflowRequest  extends AbstractModel{
+public class DisableWorkflowRequest extends AbstractModel{
 
     /**
     * 工作流 ID。
@@ -30,7 +30,7 @@ public class DisableWorkflowRequest  extends AbstractModel{
     private Long WorkflowId;
 
     /**
-     * 获取工作流 ID。
+     * Get 工作流 ID。 
      * @return WorkflowId 工作流 ID。
      */
     public Long getWorkflowId() {
@@ -38,7 +38,7 @@ public class DisableWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流 ID。
+     * Set 工作流 ID。
      * @param WorkflowId 工作流 ID。
      */
     public void setWorkflowId(Long WorkflowId) {
@@ -46,7 +46,7 @@ public class DisableWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);

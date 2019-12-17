@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDatabaseTableResponse  extends AbstractModel{
+public class DescribeDatabaseTableResponse extends AbstractModel{
 
     /**
     * 实例名称。
@@ -58,7 +58,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取实例名称。
+     * Get 实例名称。 
      * @return InstanceId 实例名称。
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称。
+     * Set 实例名称。
      * @param InstanceId 实例名称。
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 获取数据库名称。
+     * Get 数据库名称。 
      * @return DbName 数据库名称。
      */
     public String getDbName() {
@@ -82,7 +82,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称。
+     * Set 数据库名称。
      * @param DbName 数据库名称。
      */
     public void setDbName(String DbName) {
@@ -90,7 +90,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 获取表名称。
+     * Get 表名称。 
      * @return Table 表名称。
      */
     public String getTable() {
@@ -98,7 +98,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 设置表名称。
+     * Set 表名称。
      * @param Table 表名称。
      */
     public void setTable(String Table) {
@@ -106,7 +106,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 获取列信息。
+     * Get 列信息。 
      * @return Cols 列信息。
      */
     public TableColumn [] getCols() {
@@ -114,7 +114,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 设置列信息。
+     * Set 列信息。
      * @param Cols 列信息。
      */
     public void setCols(TableColumn [] Cols) {
@@ -122,7 +122,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribeDatabaseTableResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

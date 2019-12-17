@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionSellConf  extends AbstractModel{
+public class RegionSellConf extends AbstractModel{
 
     /**
     * 地域中文名称
@@ -58,7 +58,7 @@ public class RegionSellConf  extends AbstractModel{
     private ZoneSellConf [] ZonesConf;
 
     /**
-     * 获取地域中文名称
+     * Get 地域中文名称 
      * @return RegionName 地域中文名称
      */
     public String getRegionName() {
@@ -66,7 +66,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域中文名称
+     * Set 地域中文名称
      * @param RegionName 地域中文名称
      */
     public void setRegionName(String RegionName) {
@@ -74,7 +74,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取所属大区
+     * Get 所属大区 
      * @return Area 所属大区
      */
     public String getArea() {
@@ -82,7 +82,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置所属大区
+     * Set 所属大区
      * @param Area 所属大区
      */
     public void setArea(String Area) {
@@ -90,7 +90,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取是否为默认地域
+     * Get 是否为默认地域 
      * @return IsDefaultRegion 是否为默认地域
      */
     public Integer getIsDefaultRegion() {
@@ -98,7 +98,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置是否为默认地域
+     * Set 是否为默认地域
      * @param IsDefaultRegion 是否为默认地域
      */
     public void setIsDefaultRegion(Integer IsDefaultRegion) {
@@ -106,7 +106,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取地域名称
+     * Get 地域名称 
      * @return Region 地域名称
      */
     public String getRegion() {
@@ -114,7 +114,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置地域名称
+     * Set 地域名称
      * @param Region 地域名称
      */
     public void setRegion(String Region) {
@@ -122,7 +122,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 获取可用区售卖配置
+     * Get 可用区售卖配置 
      * @return ZonesConf 可用区售卖配置
      */
     public ZoneSellConf [] getZonesConf() {
@@ -130,7 +130,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 设置可用区售卖配置
+     * Set 可用区售卖配置
      * @param ZonesConf 可用区售卖配置
      */
     public void setZonesConf(ZoneSellConf [] ZonesConf) {
@@ -138,7 +138,7 @@ public class RegionSellConf  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);

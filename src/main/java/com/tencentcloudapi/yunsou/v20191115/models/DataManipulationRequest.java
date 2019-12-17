@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataManipulationRequest  extends AbstractModel{
+public class DataManipulationRequest extends AbstractModel{
 
     /**
     * 操作类型，add或del
@@ -51,7 +51,7 @@ public class DataManipulationRequest  extends AbstractModel{
     private Long ResourceId;
 
     /**
-     * 获取操作类型，add或del
+     * Get 操作类型，add或del 
      * @return OpType 操作类型，add或del
      */
     public String getOpType() {
@@ -59,7 +59,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置操作类型，add或del
+     * Set 操作类型，add或del
      * @param OpType 操作类型，add或del
      */
     public void setOpType(String OpType) {
@@ -67,7 +67,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据编码类型
+     * Get 数据编码类型 
      * @return Encoding 数据编码类型
      */
     public String getEncoding() {
@@ -75,7 +75,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据编码类型
+     * Set 数据编码类型
      * @param Encoding 数据编码类型
      */
     public void setEncoding(String Encoding) {
@@ -83,7 +83,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取数据
+     * Get 数据 
      * @return Contents 数据
      */
     public String getContents() {
@@ -91,7 +91,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置数据
+     * Set 数据
      * @param Contents 数据
      */
     public void setContents(String Contents) {
@@ -99,7 +99,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取应用Id
+     * Get 应用Id 
      * @return ResourceId 应用Id
      */
     public Long getResourceId() {
@@ -107,7 +107,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用Id
+     * Set 应用Id
      * @param ResourceId 应用Id
      */
     public void setResourceId(Long ResourceId) {
@@ -115,7 +115,7 @@ public class DataManipulationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OpType", this.OpType);

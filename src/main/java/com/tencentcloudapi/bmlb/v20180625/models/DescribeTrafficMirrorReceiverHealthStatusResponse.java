@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends AbstractModel{
+public class DescribeTrafficMirrorReceiverHealthStatusResponse extends AbstractModel{
 
     /**
     * 内网IP和端口对应的状态。
@@ -37,7 +37,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends Abstract
     private String RequestId;
 
     /**
-     * 获取内网IP和端口对应的状态。
+     * Get 内网IP和端口对应的状态。 
      * @return ReceiversStatusSet 内网IP和端口对应的状态。
      */
     public TrafficMirrorReciversStatus [] getReceiversStatusSet() {
@@ -45,7 +45,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends Abstract
     }
 
     /**
-     * 设置内网IP和端口对应的状态。
+     * Set 内网IP和端口对应的状态。
      * @param ReceiversStatusSet 内网IP和端口对应的状态。
      */
     public void setReceiversStatusSet(TrafficMirrorReciversStatus [] ReceiversStatusSet) {
@@ -53,7 +53,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends Abstract
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends Abstract
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class DescribeTrafficMirrorReceiverHealthStatusResponse  extends Abstract
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ReceiversStatusSet.", this.ReceiversStatusSet);

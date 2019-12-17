@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeDBInstanceRequest  extends AbstractModel{
+public class UpgradeDBInstanceRequest extends AbstractModel{
 
     /**
     * 实例ID，形如mssql-j8kv137v
@@ -34,21 +34,21 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     */
     @SerializedName("Memory")
     @Expose
-    private Integer Memory;
+    private Long Memory;
 
     /**
     * 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
     */
     @SerializedName("Storage")
     @Expose
-    private Integer Storage;
+    private Long Storage;
 
     /**
     * 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
     */
     @SerializedName("AutoVoucher")
     @Expose
-    private Integer AutoVoucher;
+    private Long AutoVoucher;
 
     /**
     * 代金券ID，目前单个订单只能使用一张代金券
@@ -58,7 +58,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * 获取实例ID，形如mssql-j8kv137v
+     * Get 实例ID，形如mssql-j8kv137v 
      * @return InstanceId 实例ID，形如mssql-j8kv137v
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如mssql-j8kv137v
+     * Set 实例ID，形如mssql-j8kv137v
      * @param InstanceId 实例ID，形如mssql-j8kv137v
      */
     public void setInstanceId(String InstanceId) {
@@ -74,55 +74,55 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+     * Get 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小 
      * @return Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      */
-    public Integer getMemory() {
+    public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * 设置实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
+     * Set 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      * @param Memory 实例升级后内存大小，单位GB，其值不能小于当前实例内存大小
      */
-    public void setMemory(Integer Memory) {
+    public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * 获取实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+     * Get 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小 
      * @return Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
      */
-    public Integer getStorage() {
+    public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * 设置实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
+     * Set 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
      * @param Storage 实例升级后磁盘大小，单位GB，其值不能小于当前实例磁盘大小
      */
-    public void setStorage(Integer Storage) {
+    public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * 获取是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+     * Get 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0 
      * @return AutoVoucher 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
      */
-    public Integer getAutoVoucher() {
+    public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * 设置是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
+     * Set 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
      * @param AutoVoucher 是否自动使用代金券，0 - 不使用；1 - 默认使用。取值默认为0
      */
-    public void setAutoVoucher(Integer AutoVoucher) {
+    public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * 获取代金券ID，目前单个订单只能使用一张代金券
+     * Get 代金券ID，目前单个订单只能使用一张代金券 
      * @return VoucherIds 代金券ID，目前单个订单只能使用一张代金券
      */
     public String [] getVoucherIds() {
@@ -130,7 +130,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置代金券ID，目前单个订单只能使用一张代金券
+     * Set 代金券ID，目前单个订单只能使用一张代金券
      * @param VoucherIds 代金券ID，目前单个订单只能使用一张代金券
      */
     public void setVoucherIds(String [] VoucherIds) {
@@ -138,7 +138,7 @@ public class UpgradeDBInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

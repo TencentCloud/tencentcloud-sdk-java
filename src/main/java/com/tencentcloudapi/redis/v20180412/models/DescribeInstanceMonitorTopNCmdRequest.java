@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
+public class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
     private Integer SpanType;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * Get 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时 
      * @return SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     public Integer getSpanType() {
@@ -61,7 +61,7 @@ public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * Set 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      * @param SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
      */
     public void setSpanType(Integer SpanType) {
@@ -69,7 +69,7 @@ public class DescribeInstanceMonitorTopNCmdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

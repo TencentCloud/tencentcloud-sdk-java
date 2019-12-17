@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVpnGatewayRequest  extends AbstractModel{
+public class CreateVpnGatewayRequest extends AbstractModel{
 
     /**
     * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
@@ -65,7 +65,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     private String Zone;
 
     /**
-     * 获取VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
@@ -73,7 +73,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
@@ -81,7 +81,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关名称，最大长度不能超过60个字节。
+     * Get VPN网关名称，最大长度不能超过60个字节。 
      * @return VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      */
     public String getVpnGatewayName() {
@@ -89,7 +89,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关名称，最大长度不能超过60个字节。
+     * Set VPN网关名称，最大长度不能超过60个字节。
      * @param VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      */
     public void setVpnGatewayName(String VpnGatewayName) {
@@ -97,7 +97,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps 
      * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -105,7 +105,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
      * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -113,7 +113,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
+     * Get VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。 
      * @return InstanceChargeType VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
      */
     public String getInstanceChargeType() {
@@ -121,7 +121,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
+     * Set VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
      * @param InstanceChargeType VPN网关计费模式，PREPAID：表示预付费，即包年包月，POSTPAID_BY_HOUR：表示后付费，即按量计费。默认：POSTPAID_BY_HOUR，如果指定预付费模式，参数InstanceChargePrepaid必填。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -129,7 +129,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
      * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
@@ -137,7 +137,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
@@ -145,7 +145,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 获取可用区，如：ap-guangzhou-2。
+     * Get 可用区，如：ap-guangzhou-2。 
      * @return Zone 可用区，如：ap-guangzhou-2。
      */
     public String getZone() {
@@ -153,7 +153,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 设置可用区，如：ap-guangzhou-2。
+     * Set 可用区，如：ap-guangzhou-2。
      * @param Zone 可用区，如：ap-guangzhou-2。
      */
     public void setZone(String Zone) {
@@ -161,7 +161,7 @@ public class CreateVpnGatewayRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

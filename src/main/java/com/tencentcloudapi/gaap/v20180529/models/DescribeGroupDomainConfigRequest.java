@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGroupDomainConfigRequest  extends AbstractModel{
+public class DescribeGroupDomainConfigRequest extends AbstractModel{
 
     /**
     * 通道组ID。
@@ -30,7 +30,7 @@ public class DescribeGroupDomainConfigRequest  extends AbstractModel{
     private String GroupId;
 
     /**
-     * 获取通道组ID。
+     * Get 通道组ID。 
      * @return GroupId 通道组ID。
      */
     public String getGroupId() {
@@ -38,7 +38,7 @@ public class DescribeGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID。
+     * Set 通道组ID。
      * @param GroupId 通道组ID。
      */
     public void setGroupId(String GroupId) {
@@ -46,7 +46,7 @@ public class DescribeGroupDomainConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

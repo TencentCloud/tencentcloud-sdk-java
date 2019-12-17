@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecordTemplateInfo  extends AbstractModel{
+public class RecordTemplateInfo extends AbstractModel{
 
     /**
     * 模板Id。
@@ -94,7 +94,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
-     * 获取模板Id。
+     * Get 模板Id。 
      * @return TemplateId 模板Id。
      */
     public Integer getTemplateId() {
@@ -102,7 +102,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板Id。
+     * Set 模板Id。
      * @param TemplateId 模板Id。
      */
     public void setTemplateId(Integer TemplateId) {
@@ -110,7 +110,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取模板名称。
+     * Get 模板名称。 
      * @return TemplateName 模板名称。
      */
     public String getTemplateName() {
@@ -118,7 +118,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置模板名称。
+     * Set 模板名称。
      * @param TemplateName 模板名称。
      */
     public void setTemplateName(String TemplateName) {
@@ -126,7 +126,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取描述信息。
+     * Get 描述信息。 
      * @return Description 描述信息。
      */
     public String getDescription() {
@@ -134,7 +134,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置描述信息。
+     * Set 描述信息。
      * @param Description 描述信息。
      */
     public void setDescription(String Description) {
@@ -142,7 +142,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Flv录制参数。
+     * Get Flv录制参数。 
      * @return FlvParam Flv录制参数。
      */
     public RecordParam getFlvParam() {
@@ -150,7 +150,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Flv录制参数。
+     * Set Flv录制参数。
      * @param FlvParam Flv录制参数。
      */
     public void setFlvParam(RecordParam FlvParam) {
@@ -158,7 +158,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Hls录制参数。
+     * Get Hls录制参数。 
      * @return HlsParam Hls录制参数。
      */
     public RecordParam getHlsParam() {
@@ -166,7 +166,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Hls录制参数。
+     * Set Hls录制参数。
      * @param HlsParam Hls录制参数。
      */
     public void setHlsParam(RecordParam HlsParam) {
@@ -174,7 +174,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Mp4录制参数。
+     * Get Mp4录制参数。 
      * @return Mp4Param Mp4录制参数。
      */
     public RecordParam getMp4Param() {
@@ -182,7 +182,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Mp4录制参数。
+     * Set Mp4录制参数。
      * @param Mp4Param Mp4录制参数。
      */
     public void setMp4Param(RecordParam Mp4Param) {
@@ -190,7 +190,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Aac录制参数。
+     * Get Aac录制参数。 
      * @return AacParam Aac录制参数。
      */
     public RecordParam getAacParam() {
@@ -198,7 +198,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Aac录制参数。
+     * Set Aac录制参数。
      * @param AacParam Aac录制参数。
      */
     public void setAacParam(RecordParam AacParam) {
@@ -206,8 +206,8 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0：普通直播，
-1：慢直播。
+     * Get 0：普通直播，
+1：慢直播。 
      * @return IsDelayLive 0：普通直播，
 1：慢直播。
      */
@@ -216,7 +216,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0：普通直播，
+     * Set 0：普通直播，
 1：慢直播。
      * @param IsDelayLive 0：普通直播，
 1：慢直播。
@@ -226,7 +226,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取HLS录制定制参数
+     * Get HLS录制定制参数 
      * @return HlsSpecialParam HLS录制定制参数
      */
     public HlsSpecialParam getHlsSpecialParam() {
@@ -234,7 +234,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置HLS录制定制参数
+     * Set HLS录制定制参数
      * @param HlsSpecialParam HLS录制定制参数
      */
     public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
@@ -242,7 +242,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Mp3录制参数。
+     * Get Mp3录制参数。 
      * @return Mp3Param Mp3录制参数。
      */
     public RecordParam getMp3Param() {
@@ -250,7 +250,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Mp3录制参数。
+     * Set Mp3录制参数。
      * @param Mp3Param Mp3录制参数。
      */
     public void setMp3Param(RecordParam Mp3Param) {
@@ -258,7 +258,7 @@ public class RecordTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);

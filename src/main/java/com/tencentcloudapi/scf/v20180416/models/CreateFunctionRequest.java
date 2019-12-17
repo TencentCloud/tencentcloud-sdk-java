@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFunctionRequest  extends AbstractModel{
+public class CreateFunctionRequest extends AbstractModel{
 
     /**
     * 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
@@ -128,7 +128,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     private String CodeSource;
 
     /**
-     * 获取创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
+     * Get 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60 
      * @return FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
     public String getFunctionName() {
@@ -136,7 +136,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
+     * Set 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      * @param FunctionName 创建的函数名称，函数名称支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度2-60
      */
     public void setFunctionName(String FunctionName) {
@@ -144,7 +144,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的代码. 注意：不能同时指定Cos与ZipFile
+     * Get 函数的代码. 注意：不能同时指定Cos与ZipFile 
      * @return Code 函数的代码. 注意：不能同时指定Cos与ZipFile
      */
     public Code getCode() {
@@ -152,7 +152,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的代码. 注意：不能同时指定Cos与ZipFile
+     * Set 函数的代码. 注意：不能同时指定Cos与ZipFile
      * @param Code 函数的代码. 注意：不能同时指定Cos与ZipFile
      */
     public void setCode(Code Code) {
@@ -160,7 +160,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
+     * Get 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符 
      * @return Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
      */
     public String getHandler() {
@@ -168,7 +168,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
+     * Set 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
      * @param Handler 函数处理方法名称，名称格式支持 "文件名称.方法名称" 形式，文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求是 2-60 个字符
      */
     public void setHandler(String Handler) {
@@ -176,7 +176,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
+     * Get 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文 
      * @return Description 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
      */
     public String getDescription() {
@@ -184,7 +184,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
+     * Set 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
      * @param Description 函数描述,最大支持 1000 个英文字母、数字、空格、逗号、换行符和英文句号，支持中文
      */
     public void setDescription(String Description) {
@@ -192,7 +192,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
+     * Get 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯 
      * @return MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
     public Integer getMemorySize() {
@@ -200,7 +200,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
+     * Set 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      * @param MemorySize 函数运行时内存大小，默认为 128M，可选范围 128MB-1536MB，并且以 128MB 为阶梯
      */
     public void setMemorySize(Integer MemorySize) {
@@ -208,7 +208,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+     * Get 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒 
      * @return Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
     public Integer getTimeout() {
@@ -216,7 +216,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
+     * Set 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      * @param Timeout 函数最长执行时间，单位为秒，可选值范围 1-300 秒，默认为 3 秒
      */
     public void setTimeout(Integer Timeout) {
@@ -224,7 +224,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的环境变量
+     * Get 函数的环境变量 
      * @return Environment 函数的环境变量
      */
     public Environment getEnvironment() {
@@ -232,7 +232,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的环境变量
+     * Set 函数的环境变量
      * @param Environment 函数的环境变量
      */
     public void setEnvironment(Environment Environment) {
@@ -240,7 +240,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+     * Get 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7 
      * @return Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      */
     public String getRuntime() {
@@ -248,7 +248,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
+     * Set 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      * @param Runtime 函数运行环境，目前仅支持 Python2.7，Python3.6，Nodejs6.10， PHP5， PHP7，Golang1 和 Java8，默认Python2.7
      */
     public void setRuntime(String Runtime) {
@@ -256,7 +256,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数的私有网络配置
+     * Get 函数的私有网络配置 
      * @return VpcConfig 函数的私有网络配置
      */
     public VpcConfig getVpcConfig() {
@@ -264,7 +264,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数的私有网络配置
+     * Set 函数的私有网络配置
      * @param VpcConfig 函数的私有网络配置
      */
     public void setVpcConfig(VpcConfig VpcConfig) {
@@ -272,7 +272,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数所属命名空间
+     * Get 函数所属命名空间 
      * @return Namespace 函数所属命名空间
      */
     public String getNamespace() {
@@ -280,7 +280,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数所属命名空间
+     * Set 函数所属命名空间
      * @param Namespace 函数所属命名空间
      */
     public void setNamespace(String Namespace) {
@@ -288,7 +288,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数绑定的角色
+     * Get 函数绑定的角色 
      * @return Role 函数绑定的角色
      */
     public String getRole() {
@@ -296,7 +296,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数绑定的角色
+     * Set 函数绑定的角色
      * @param Role 函数绑定的角色
      */
     public void setRole(String Role) {
@@ -304,7 +304,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数日志投递到的CLS LogsetID
+     * Get 函数日志投递到的CLS LogsetID 
      * @return ClsLogsetId 函数日志投递到的CLS LogsetID
      */
     public String getClsLogsetId() {
@@ -312,7 +312,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数日志投递到的CLS LogsetID
+     * Set 函数日志投递到的CLS LogsetID
      * @param ClsLogsetId 函数日志投递到的CLS LogsetID
      */
     public void setClsLogsetId(String ClsLogsetId) {
@@ -320,7 +320,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数日志投递到的CLS TopicID
+     * Get 函数日志投递到的CLS TopicID 
      * @return ClsTopicId 函数日志投递到的CLS TopicID
      */
     public String getClsTopicId() {
@@ -328,7 +328,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数日志投递到的CLS TopicID
+     * Set 函数日志投递到的CLS TopicID
      * @param ClsTopicId 函数日志投递到的CLS TopicID
      */
     public void setClsTopicId(String ClsTopicId) {
@@ -336,7 +336,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     * Get 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP 
      * @return Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
      */
     public String getType() {
@@ -344,7 +344,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
+     * Set 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
      * @param Type 函数类型，默认值为Event，创建触发器函数请填写Event，创建HTTP函数级服务请填写HTTP
      */
     public void setType(String Type) {
@@ -352,7 +352,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     * Get CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段 
      * @return CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
      */
     public String getCodeSource() {
@@ -360,7 +360,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
+     * Set CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
      * @param CodeSource CodeSource 代码来源，支持以下'ZipFile', 'Cos', 'Demo', 'TempCos', 'Git'之一，使用Git来源必须指定此字段
      */
     public void setCodeSource(String CodeSource) {
@@ -368,7 +368,7 @@ public class CreateFunctionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

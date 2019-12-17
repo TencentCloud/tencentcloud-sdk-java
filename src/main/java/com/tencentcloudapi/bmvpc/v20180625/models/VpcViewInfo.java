@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcViewInfo  extends AbstractModel{
+public class VpcViewInfo extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -79,7 +79,7 @@ public class VpcViewInfo  extends AbstractModel{
     private VpcSubnetViewInfo [] SubnetSet;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -87,7 +87,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -95,7 +95,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -103,7 +103,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -111,7 +111,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络CIDR
+     * Get 私有网络CIDR 
      * @return CidrBlock 私有网络CIDR
      */
     public String getCidrBlock() {
@@ -119,7 +119,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络CIDR
+     * Set 私有网络CIDR
      * @param CidrBlock 私有网络CIDR
      */
     public void setCidrBlock(String CidrBlock) {
@@ -127,7 +127,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络所在可用区
+     * Get 私有网络所在可用区 
      * @return Zone 私有网络所在可用区
      */
     public String getZone() {
@@ -135,7 +135,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络所在可用区
+     * Set 私有网络所在可用区
      * @param Zone 私有网络所在可用区
      */
     public void setZone(String Zone) {
@@ -143,7 +143,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取外网负载均衡个数
+     * Get 外网负载均衡个数 
      * @return LbNum 外网负载均衡个数
      */
     public Long getLbNum() {
@@ -151,7 +151,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置外网负载均衡个数
+     * Set 外网负载均衡个数
      * @param LbNum 外网负载均衡个数
      */
     public void setLbNum(Long LbNum) {
@@ -159,7 +159,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取弹性公网IP个数
+     * Get 弹性公网IP个数 
      * @return EipNum 弹性公网IP个数
      */
     public Long getEipNum() {
@@ -167,7 +167,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置弹性公网IP个数
+     * Set 弹性公网IP个数
      * @param EipNum 弹性公网IP个数
      */
     public void setEipNum(Long EipNum) {
@@ -175,7 +175,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取NAT网关个数
+     * Get NAT网关个数 
      * @return NatNum NAT网关个数
      */
     public Long getNatNum() {
@@ -183,7 +183,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置NAT网关个数
+     * Set NAT网关个数
      * @param NatNum NAT网关个数
      */
     public void setNatNum(Long NatNum) {
@@ -191,7 +191,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 获取子网列表
+     * Get 子网列表 
      * @return SubnetSet 子网列表
      */
     public VpcSubnetViewInfo [] getSubnetSet() {
@@ -199,7 +199,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 设置子网列表
+     * Set 子网列表
      * @param SubnetSet 子网列表
      */
     public void setSubnetSet(VpcSubnetViewInfo [] SubnetSet) {
@@ -207,7 +207,7 @@ public class VpcViewInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

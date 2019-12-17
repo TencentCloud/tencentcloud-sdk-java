@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListPoliciesResponse  extends AbstractModel{
+public class ListPoliciesResponse extends AbstractModel{
 
     /**
     * 策略总数
@@ -58,7 +58,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     private String RequestId;
 
     /**
-     * 获取策略总数
+     * Get 策略总数 
      * @return TotalNum 策略总数
      */
     public Long getTotalNum() {
@@ -66,7 +66,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 设置策略总数
+     * Set 策略总数
      * @param TotalNum 策略总数
      */
     public void setTotalNum(Long TotalNum) {
@@ -74,13 +74,13 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 获取策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
+     * Get 策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
 policyId：策略 id 
 policyName：策略名
 addTime：策略创建时间
 type：1 表示自定义策略，2 表示预设策略 
 description：策略描述 
-createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略
+createMode：1 表示按业务权限创建的策略，其他值表示可以查看策略语法和通过策略语法更新策略 
      * @return List 策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
 policyId：策略 id 
 policyName：策略名
@@ -94,7 +94,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 设置策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
+     * Set 策略数组，数组每个成员包括 policyId、policyName、addTime、type、description、 createMode 字段。其中： 
 policyId：策略 id 
 policyName：策略名
 addTime：策略创建时间
@@ -114,8 +114,8 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 获取保留字段
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 保留字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceTypeList 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -124,7 +124,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 设置保留字段
+     * Set 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTypeList 保留字段
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,7 +134,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -142,7 +142,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -150,7 +150,7 @@ createMode：1 表示按业务权限创建的策略，其他值表示可以查�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);

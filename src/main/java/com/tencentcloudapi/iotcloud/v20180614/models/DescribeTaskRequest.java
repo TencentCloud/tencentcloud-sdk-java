@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskRequest  extends AbstractModel{
+public class DescribeTaskRequest extends AbstractModel{
 
     /**
     * 任务ID
@@ -30,7 +30,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     private String Id;
 
     /**
-     * 获取任务ID
+     * Get 任务ID 
      * @return Id 任务ID
      */
     public String getId() {
@@ -38,7 +38,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID
+     * Set 任务ID
      * @param Id 任务ID
      */
     public void setId(String Id) {
@@ -46,7 +46,7 @@ public class DescribeTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

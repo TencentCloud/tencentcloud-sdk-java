@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
+public class ModifyProxyGroupAttributeRequest extends AbstractModel{
 
     /**
     * 需要修改的通道组ID。
@@ -37,7 +37,7 @@ public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
     private String GroupName;
 
     /**
-     * 获取需要修改的通道组ID。
+     * Get 需要修改的通道组ID。 
      * @return GroupId 需要修改的通道组ID。
      */
     public String getGroupId() {
@@ -45,7 +45,7 @@ public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要修改的通道组ID。
+     * Set 需要修改的通道组ID。
      * @param GroupId 需要修改的通道组ID。
      */
     public void setGroupId(String GroupId) {
@@ -53,7 +53,7 @@ public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * Get 修改后的通道组名称：不超过30个字符，超过部分会被截断。 
      * @return GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
      */
     public String getGroupName() {
@@ -61,7 +61,7 @@ public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * Set 修改后的通道组名称：不超过30个字符，超过部分会被截断。
      * @param GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
      */
     public void setGroupName(String GroupName) {
@@ -69,7 +69,7 @@ public class ModifyProxyGroupAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

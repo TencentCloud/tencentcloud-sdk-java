@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetRoutesRequest  extends AbstractModel{
+public class ResetRoutesRequest extends AbstractModel{
 
     /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
@@ -44,7 +44,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     private Route [] Routes;
 
     /**
-     * 获取路由表实例ID，例如：rtb-azd4dt1c。
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
      * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public String getRouteTableId() {
@@ -52,7 +52,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表实例ID，例如：rtb-azd4dt1c。
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
      * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      */
     public void setRouteTableId(String RouteTableId) {
@@ -60,7 +60,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由表名称，最大长度不能超过60个字节。
+     * Get 路由表名称，最大长度不能超过60个字节。 
      * @return RouteTableName 路由表名称，最大长度不能超过60个字节。
      */
     public String getRouteTableName() {
@@ -68,7 +68,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由表名称，最大长度不能超过60个字节。
+     * Set 路由表名称，最大长度不能超过60个字节。
      * @param RouteTableName 路由表名称，最大长度不能超过60个字节。
      */
     public void setRouteTableName(String RouteTableName) {
@@ -76,7 +76,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取路由策略。
+     * Get 路由策略。 
      * @return Routes 路由策略。
      */
     public Route [] getRoutes() {
@@ -84,7 +84,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置路由策略。
+     * Set 路由策略。
      * @param Routes 路由策略。
      */
     public void setRoutes(Route [] Routes) {
@@ -92,7 +92,7 @@ public class ResetRoutesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);

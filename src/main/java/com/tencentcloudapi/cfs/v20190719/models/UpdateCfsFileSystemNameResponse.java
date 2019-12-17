@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
+public class UpdateCfsFileSystemNameResponse extends AbstractModel{
 
     /**
     * 用户自定义文件系统名称
@@ -51,7 +51,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return CreationToken 用户自定义文件系统名称
      */
     public String getCreationToken() {
@@ -59,7 +59,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param CreationToken 用户自定义文件系统名称
      */
     public void setCreationToken(String CreationToken) {
@@ -67,7 +67,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 获取文件系统ID
+     * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
     public String getFileSystemId() {
@@ -75,7 +75,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 设置文件系统ID
+     * Set 文件系统ID
      * @param FileSystemId 文件系统ID
      */
     public void setFileSystemId(String FileSystemId) {
@@ -83,7 +83,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文件系统名称
+     * Get 用户自定义文件系统名称 
      * @return FsName 用户自定义文件系统名称
      */
     public String getFsName() {
@@ -91,7 +91,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文件系统名称
+     * Set 用户自定义文件系统名称
      * @param FsName 用户自定义文件系统名称
      */
     public void setFsName(String FsName) {
@@ -99,7 +99,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class UpdateCfsFileSystemNameResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreationToken", this.CreationToken);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BcosTransInfo  extends AbstractModel{
+public class BcosTransInfo extends AbstractModel{
 
     /**
     * 所属区块高度
@@ -72,7 +72,7 @@ public class BcosTransInfo  extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * 获取所属区块高度
+     * Get 所属区块高度 
      * @return BlockNumber 所属区块高度
      */
     public Integer getBlockNumber() {
@@ -80,7 +80,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属区块高度
+     * Set 所属区块高度
      * @param BlockNumber 所属区块高度
      */
     public void setBlockNumber(Integer BlockNumber) {
@@ -88,7 +88,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取区块时间戳
+     * Get 区块时间戳 
      * @return BlockTimestamp 区块时间戳
      */
     public String getBlockTimestamp() {
@@ -96,7 +96,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置区块时间戳
+     * Set 区块时间戳
      * @param BlockTimestamp 区块时间戳
      */
     public void setBlockTimestamp(String BlockTimestamp) {
@@ -104,7 +104,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取交易哈希
+     * Get 交易哈希 
      * @return TransHash 交易哈希
      */
     public String getTransHash() {
@@ -112,7 +112,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置交易哈希
+     * Set 交易哈希
      * @param TransHash 交易哈希
      */
     public void setTransHash(String TransHash) {
@@ -120,7 +120,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取交易发起者
+     * Get 交易发起者 
      * @return TransFrom 交易发起者
      */
     public String getTransFrom() {
@@ -128,7 +128,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置交易发起者
+     * Set 交易发起者
      * @param TransFrom 交易发起者
      */
     public void setTransFrom(String TransFrom) {
@@ -136,7 +136,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取交易接收者
+     * Get 交易接收者 
      * @return TransTo 交易接收者
      */
     public String getTransTo() {
@@ -144,7 +144,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置交易接收者
+     * Set 交易接收者
      * @param TransTo 交易接收者
      */
     public void setTransTo(String TransTo) {
@@ -152,7 +152,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取落库时间
+     * Get 落库时间 
      * @return CreateTime 落库时间
      */
     public String getCreateTime() {
@@ -160,7 +160,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置落库时间
+     * Set 落库时间
      * @param CreateTime 落库时间
      */
     public void setCreateTime(String CreateTime) {
@@ -168,7 +168,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return ModifyTime 修改时间
      */
     public String getModifyTime() {
@@ -176,7 +176,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param ModifyTime 修改时间
      */
     public void setModifyTime(String ModifyTime) {
@@ -184,7 +184,7 @@ public class BcosTransInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BlockNumber", this.BlockNumber);

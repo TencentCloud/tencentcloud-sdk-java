@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ControlDeviceDataRequest  extends AbstractModel{
+public class ControlDeviceDataRequest extends AbstractModel{
 
     /**
     * 产品ID
@@ -58,7 +58,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     private String DeviceId;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -66,7 +66,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -74,7 +74,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -82,7 +82,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -90,7 +90,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取属性数据
+     * Get 属性数据 
      * @return Data 属性数据
      */
     public String getData() {
@@ -98,7 +98,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置属性数据
+     * Set 属性数据
      * @param Data 属性数据
      */
     public void setData(String Data) {
@@ -106,7 +106,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取请求类型
+     * Get 请求类型 
      * @return Method 请求类型
      */
     public String getMethod() {
@@ -114,7 +114,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置请求类型
+     * Set 请求类型
      * @param Method 请求类型
      */
     public void setMethod(String Method) {
@@ -122,7 +122,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备ID，该字段有值将代替 ProductId/DeviceName
+     * Get 设备ID，该字段有值将代替 ProductId/DeviceName 
      * @return DeviceId 设备ID，该字段有值将代替 ProductId/DeviceName
      */
     public String getDeviceId() {
@@ -130,7 +130,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备ID，该字段有值将代替 ProductId/DeviceName
+     * Set 设备ID，该字段有值将代替 ProductId/DeviceName
      * @param DeviceId 设备ID，该字段有值将代替 ProductId/DeviceName
      */
     public void setDeviceId(String DeviceId) {
@@ -138,7 +138,7 @@ public class ControlDeviceDataRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

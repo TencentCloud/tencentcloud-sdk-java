@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateOrganizationNodeRequest  extends AbstractModel{
+public class UpdateOrganizationNodeRequest extends AbstractModel{
 
     /**
     * 企业组织单元ID
@@ -44,7 +44,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     private Long ParentNodeId;
 
     /**
-     * 获取企业组织单元ID
+     * Get 企业组织单元ID 
      * @return NodeId 企业组织单元ID
      */
     public Long getNodeId() {
@@ -52,7 +52,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置企业组织单元ID
+     * Set 企业组织单元ID
      * @param NodeId 企业组织单元ID
      */
     public void setNodeId(Long NodeId) {
@@ -60,7 +60,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -76,7 +76,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取父单元ID
+     * Get 父单元ID 
      * @return ParentNodeId 父单元ID
      */
     public Long getParentNodeId() {
@@ -84,7 +84,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置父单元ID
+     * Set 父单元ID
      * @param ParentNodeId 父单元ID
      */
     public void setParentNodeId(Long ParentNodeId) {
@@ -92,7 +92,7 @@ public class UpdateOrganizationNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);

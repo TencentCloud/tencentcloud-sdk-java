@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUploadInfoRequest  extends AbstractModel{
+public class DescribeUploadInfoRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -58,7 +58,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     private String PkgDesc;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包名
+     * Get 程序包名 
      * @return PkgName 程序包名
      */
     public String getPkgName() {
@@ -82,7 +82,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包名
+     * Set 程序包名
      * @param PkgName 程序包名
      */
     public void setPkgName(String PkgName) {
@@ -90,7 +90,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包版本
+     * Get 程序包版本 
      * @return PkgVersion 程序包版本
      */
     public String getPkgVersion() {
@@ -98,7 +98,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包版本
+     * Set 程序包版本
      * @param PkgVersion 程序包版本
      */
     public void setPkgVersion(String PkgVersion) {
@@ -106,7 +106,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包类型
+     * Get 程序包类型 
      * @return PkgType 程序包类型
      */
     public String getPkgType() {
@@ -114,7 +114,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包类型
+     * Set 程序包类型
      * @param PkgType 程序包类型
      */
     public void setPkgType(String PkgType) {
@@ -122,7 +122,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包介绍
+     * Get 程序包介绍 
      * @return PkgDesc 程序包介绍
      */
     public String getPkgDesc() {
@@ -130,7 +130,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包介绍
+     * Set 程序包介绍
      * @param PkgDesc 程序包介绍
      */
     public void setPkgDesc(String PkgDesc) {
@@ -138,7 +138,7 @@ public class DescribeUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResumeLiveStreamRequest  extends AbstractModel{
+public class ResumeLiveStreamRequest extends AbstractModel{
 
     /**
     * 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
@@ -44,7 +44,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     private String StreamName;
 
     /**
-     * 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。 
      * @return AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public String getAppName() {
@@ -52,7 +52,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      * @param AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
      */
     public void setAppName(String AppName) {
@@ -60,7 +60,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取您的加速域名。
+     * Get 您的加速域名。 
      * @return DomainName 您的加速域名。
      */
     public String getDomainName() {
@@ -68,7 +68,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置您的加速域名。
+     * Set 您的加速域名。
      * @param DomainName 您的加速域名。
      */
     public void setDomainName(String DomainName) {
@@ -76,7 +76,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -84,7 +84,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -92,7 +92,7 @@ public class ResumeLiveStreamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

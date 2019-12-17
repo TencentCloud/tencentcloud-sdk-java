@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListJobsRequest  extends AbstractModel{
+public class ListJobsRequest extends AbstractModel{
 
     /**
     * 运行任务的集群
@@ -44,7 +44,7 @@ public class ListJobsRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取运行任务的集群
+     * Get 运行任务的集群 
      * @return Cluster 运行任务的集群
      */
     public String getCluster() {
@@ -52,7 +52,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行任务的集群
+     * Set 运行任务的集群
      * @param Cluster 运行任务的集群
      */
     public void setCluster(String Cluster) {
@@ -60,7 +60,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，返回数量
+     * Get 分页参数，返回数量 
      * @return Limit 分页参数，返回数量
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，返回数量
+     * Set 分页参数，返回数量
      * @param Limit 分页参数，返回数量
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页参数，起始位置
+     * Get 分页参数，起始位置 
      * @return Offset 分页参数，起始位置
      */
     public Integer getOffset() {
@@ -84,7 +84,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页参数，起始位置
+     * Set 分页参数，起始位置
      * @param Offset 分页参数，起始位置
      */
     public void setOffset(Integer Offset) {
@@ -92,7 +92,7 @@ public class ListJobsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cluster", this.Cluster);

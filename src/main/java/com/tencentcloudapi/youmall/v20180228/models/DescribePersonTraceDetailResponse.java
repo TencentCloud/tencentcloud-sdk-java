@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonTraceDetailResponse  extends AbstractModel{
+public class DescribePersonTraceDetailResponse extends AbstractModel{
 
     /**
     * 卖场编码
@@ -58,7 +58,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取卖场编码
+     * Get 卖场编码 
      * @return MallId 卖场编码
      */
     public String getMallId() {
@@ -66,7 +66,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置卖场编码
+     * Set 卖场编码
      * @param MallId 卖场编码
      */
     public void setMallId(String MallId) {
@@ -74,7 +74,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取客户编码
+     * Get 客户编码 
      * @return PersonId 客户编码
      */
     public String getPersonId() {
@@ -82,7 +82,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置客户编码
+     * Set 客户编码
      * @param PersonId 客户编码
      */
     public void setPersonId(String PersonId) {
@@ -90,7 +90,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹编码
+     * Get 轨迹编码 
      * @return TraceId 轨迹编码
      */
     public String getTraceId() {
@@ -98,7 +98,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹编码
+     * Set 轨迹编码
      * @param TraceId 轨迹编码
      */
     public void setTraceId(String TraceId) {
@@ -106,7 +106,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取轨迹点坐标序列
+     * Get 轨迹点坐标序列 
      * @return CoordinateSet 轨迹点坐标序列
      */
     public PersonCoordinate [] getCoordinateSet() {
@@ -114,7 +114,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置轨迹点坐标序列
+     * Set 轨迹点坐标序列
      * @param CoordinateSet 轨迹点坐标序列
      */
     public void setCoordinateSet(PersonCoordinate [] CoordinateSet) {
@@ -122,7 +122,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class DescribePersonTraceDetailResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MallId", this.MallId);

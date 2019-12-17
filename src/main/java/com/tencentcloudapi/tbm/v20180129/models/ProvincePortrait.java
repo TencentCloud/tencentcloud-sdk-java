@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProvincePortrait  extends AbstractModel{
+public class ProvincePortrait extends AbstractModel{
 
     /**
     * 省份名称
@@ -37,7 +37,7 @@ public class ProvincePortrait  extends AbstractModel{
     private Float Percent;
 
     /**
-     * 获取省份名称
+     * Get 省份名称 
      * @return Province 省份名称
      */
     public String getProvince() {
@@ -45,7 +45,7 @@ public class ProvincePortrait  extends AbstractModel{
     }
 
     /**
-     * 设置省份名称
+     * Set 省份名称
      * @param Province 省份名称
      */
     public void setProvince(String Province) {
@@ -53,7 +53,7 @@ public class ProvincePortrait  extends AbstractModel{
     }
 
     /**
-     * 获取百分比
+     * Get 百分比 
      * @return Percent 百分比
      */
     public Float getPercent() {
@@ -61,7 +61,7 @@ public class ProvincePortrait  extends AbstractModel{
     }
 
     /**
-     * 设置百分比
+     * Set 百分比
      * @param Percent 百分比
      */
     public void setPercent(Float Percent) {
@@ -69,7 +69,7 @@ public class ProvincePortrait  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Province", this.Province);

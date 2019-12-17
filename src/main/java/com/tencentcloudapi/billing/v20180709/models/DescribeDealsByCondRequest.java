@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDealsByCondRequest  extends AbstractModel{
+public class DescribeDealsByCondRequest extends AbstractModel{
 
     /**
     * 开始时间
@@ -77,7 +77,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     private String OrderId;
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -85,7 +85,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -93,7 +93,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -101,7 +101,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -109,7 +109,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 获取一页多少条数据，默认是20条，最大不超过1000
+     * Get 一页多少条数据，默认是20条，最大不超过1000 
      * @return Limit 一页多少条数据，默认是20条，最大不超过1000
      */
     public Integer getLimit() {
@@ -117,7 +117,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一页多少条数据，默认是20条，最大不超过1000
+     * Set 一页多少条数据，默认是20条，最大不超过1000
      * @param Limit 一页多少条数据，默认是20条，最大不超过1000
      */
     public void setLimit(Integer Limit) {
@@ -125,7 +125,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 获取第多少页，从0开始，默认是0
+     * Get 第多少页，从0开始，默认是0 
      * @return Offset 第多少页，从0开始，默认是0
      */
     public Integer getOffset() {
@@ -133,7 +133,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置第多少页，从0开始，默认是0
+     * Set 第多少页，从0开始，默认是0
      * @param Offset 第多少页，从0开始，默认是0
      */
     public void setOffset(Integer Offset) {
@@ -141,7 +141,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 获取订单状态,默认为4（成功的订单）
+     * Get 订单状态,默认为4（成功的订单）
 订单的状态
 1：未支付
 2：已支付3：发货中
@@ -153,7 +153,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
 9：订单已失效
 10：产品已失效
 11：代付拒绝
-12：支付中
+12：支付中 
      * @return Status 订单状态,默认为4（成功的订单）
 订单的状态
 1：未支付
@@ -173,7 +173,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单状态,默认为4（成功的订单）
+     * Set 订单状态,默认为4（成功的订单）
 订单的状态
 1：未支付
 2：已支付3：发货中
@@ -205,7 +205,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 获取订单号
+     * Get 订单号 
      * @return OrderId 订单号
      */
     public String getOrderId() {
@@ -213,7 +213,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 设置订单号
+     * Set 订单号
      * @param OrderId 订单号
      */
     public void setOrderId(String OrderId) {
@@ -221,7 +221,7 @@ public class DescribeDealsByCondRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

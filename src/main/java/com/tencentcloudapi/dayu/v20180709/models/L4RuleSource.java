@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class L4RuleSource  extends AbstractModel{
+public class L4RuleSource extends AbstractModel{
 
     /**
     * 回源IP或域名
@@ -37,7 +37,7 @@ public class L4RuleSource  extends AbstractModel{
     private Long Weight;
 
     /**
-     * 获取回源IP或域名
+     * Get 回源IP或域名 
      * @return Source 回源IP或域名
      */
     public String getSource() {
@@ -45,7 +45,7 @@ public class L4RuleSource  extends AbstractModel{
     }
 
     /**
-     * 设置回源IP或域名
+     * Set 回源IP或域名
      * @param Source 回源IP或域名
      */
     public void setSource(String Source) {
@@ -53,7 +53,7 @@ public class L4RuleSource  extends AbstractModel{
     }
 
     /**
-     * 获取权重值，取值[0,100]
+     * Get 权重值，取值[0,100] 
      * @return Weight 权重值，取值[0,100]
      */
     public Long getWeight() {
@@ -61,7 +61,7 @@ public class L4RuleSource  extends AbstractModel{
     }
 
     /**
-     * 设置权重值，取值[0,100]
+     * Set 权重值，取值[0,100]
      * @param Weight 权重值，取值[0,100]
      */
     public void setWeight(Long Weight) {
@@ -69,7 +69,7 @@ public class L4RuleSource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Source", this.Source);

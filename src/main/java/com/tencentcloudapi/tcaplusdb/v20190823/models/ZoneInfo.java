@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ZoneInfo  extends AbstractModel{
+public class ZoneInfo extends AbstractModel{
 
     /**
     * 大区ID
@@ -58,7 +58,7 @@ public class ZoneInfo  extends AbstractModel{
     private Long TotalSize;
 
     /**
-     * 获取大区ID
+     * Get 大区ID 
      * @return LogicZoneId 大区ID
      */
     public String getLogicZoneId() {
@@ -66,7 +66,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大区ID
+     * Set 大区ID
      * @param LogicZoneId 大区ID
      */
     public void setLogicZoneId(String LogicZoneId) {
@@ -74,7 +74,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大区名称
+     * Get 大区名称 
      * @return ZoneName 大区名称
      */
     public String getZoneName() {
@@ -82,7 +82,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大区名称
+     * Set 大区名称
      * @param ZoneName 大区名称
      */
     public void setZoneName(String ZoneName) {
@@ -90,7 +90,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大区创建时间
+     * Get 大区创建时间 
      * @return CreatedTime 大区创建时间
      */
     public String getCreatedTime() {
@@ -98,7 +98,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大区创建时间
+     * Set 大区创建时间
      * @param CreatedTime 大区创建时间
      */
     public void setCreatedTime(String CreatedTime) {
@@ -106,7 +106,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大区表格数量
+     * Get 大区表格数量 
      * @return TableCount 大区表格数量
      */
     public Long getTableCount() {
@@ -114,7 +114,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大区表格数量
+     * Set 大区表格数量
      * @param TableCount 大区表格数量
      */
     public void setTableCount(Long TableCount) {
@@ -122,7 +122,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 获取大区表格存储总量（MB）
+     * Get 大区表格存储总量（MB） 
      * @return TotalSize 大区表格存储总量（MB）
      */
     public Long getTotalSize() {
@@ -130,7 +130,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 设置大区表格存储总量（MB）
+     * Set 大区表格存储总量（MB）
      * @param TotalSize 大区表格存储总量（MB）
      */
     public void setTotalSize(Long TotalSize) {
@@ -138,7 +138,7 @@ public class ZoneInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogicZoneId", this.LogicZoneId);

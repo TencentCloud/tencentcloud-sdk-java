@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLifecycleHookRequest  extends AbstractModel{
+public class DeleteLifecycleHookRequest extends AbstractModel{
 
     /**
     * 生命周期挂钩ID
@@ -30,7 +30,7 @@ public class DeleteLifecycleHookRequest  extends AbstractModel{
     private String LifecycleHookId;
 
     /**
-     * 获取生命周期挂钩ID
+     * Get 生命周期挂钩ID 
      * @return LifecycleHookId 生命周期挂钩ID
      */
     public String getLifecycleHookId() {
@@ -38,7 +38,7 @@ public class DeleteLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩ID
+     * Set 生命周期挂钩ID
      * @param LifecycleHookId 生命周期挂钩ID
      */
     public void setLifecycleHookId(String LifecycleHookId) {
@@ -46,7 +46,7 @@ public class DeleteLifecycleHookRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoginSettings  extends AbstractModel{
+public class LoginSettings extends AbstractModel{
 
     /**
     * Password
@@ -37,7 +37,7 @@ public class LoginSettings  extends AbstractModel{
     private String PublicKeyId;
 
     /**
-     * 获取Password
+     * Get Password 
      * @return Password Password
      */
     public String getPassword() {
@@ -45,7 +45,7 @@ public class LoginSettings  extends AbstractModel{
     }
 
     /**
-     * 设置Password
+     * Set Password
      * @param Password Password
      */
     public void setPassword(String Password) {
@@ -53,7 +53,7 @@ public class LoginSettings  extends AbstractModel{
     }
 
     /**
-     * 获取Public Key
+     * Get Public Key 
      * @return PublicKeyId Public Key
      */
     public String getPublicKeyId() {
@@ -61,7 +61,7 @@ public class LoginSettings  extends AbstractModel{
     }
 
     /**
-     * 设置Public Key
+     * Set Public Key
      * @param PublicKeyId Public Key
      */
     public void setPublicKeyId(String PublicKeyId) {
@@ -69,7 +69,7 @@ public class LoginSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Password", this.Password);

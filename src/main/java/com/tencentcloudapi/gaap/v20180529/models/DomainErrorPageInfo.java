@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainErrorPageInfo  extends AbstractModel{
+public class DomainErrorPageInfo extends AbstractModel{
 
     /**
     * 错误定制响应的配置ID
@@ -83,7 +83,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     private String Body;
 
     /**
-     * 获取错误定制响应的配置ID
+     * Get 错误定制响应的配置ID 
      * @return ErrorPageId 错误定制响应的配置ID
      */
     public String getErrorPageId() {
@@ -91,7 +91,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置错误定制响应的配置ID
+     * Set 错误定制响应的配置ID
      * @param ErrorPageId 错误定制响应的配置ID
      */
     public void setErrorPageId(String ErrorPageId) {
@@ -99,7 +99,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -107,7 +107,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -115,7 +115,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取域名
+     * Get 域名 
      * @return Domain 域名
      */
     public String getDomain() {
@@ -123,7 +123,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名
+     * Set 域名
      * @param Domain 域名
      */
     public void setDomain(String Domain) {
@@ -131,7 +131,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取原始错误码
+     * Get 原始错误码 
      * @return ErrorNos 原始错误码
      */
     public Long [] getErrorNos() {
@@ -139,7 +139,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置原始错误码
+     * Set 原始错误码
      * @param ErrorNos 原始错误码
      */
     public void setErrorNos(Long [] ErrorNos) {
@@ -147,8 +147,8 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 新的错误码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return NewErrorNo 新的错误码
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -157,7 +157,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置新的错误码
+     * Set 新的错误码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NewErrorNo 新的错误码
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,8 +167,8 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 需要清理的响应头
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClearHeaders 需要清理的响应头
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,7 +177,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置需要清理的响应头
+     * Set 需要清理的响应头
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClearHeaders 需要清理的响应头
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,8 +187,8 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 需要设置的响应头
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetHeaders 需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置需要设置的响应头
+     * Set 需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SetHeaders 需要设置的响应头
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 设置的响应体(不包括 HTTP头)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Body 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设置的响应体(不包括 HTTP头)
+     * Set 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 设置的响应体(不包括 HTTP头)
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,7 +227,7 @@ public class DomainErrorPageInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ErrorPageId", this.ErrorPageId);

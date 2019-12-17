@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
+public class DescribeZoneFlowAgeInfoByZoneIdResponse extends AbstractModel{
 
     /**
     * 集团ID
@@ -65,7 +65,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域ID
+     * Get 区域ID 
      * @return ZoneId 区域ID
      */
     public Integer getZoneId() {
@@ -105,7 +105,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域ID
+     * Set 区域ID
      * @param ZoneId 区域ID
      */
     public void setZoneId(Integer ZoneId) {
@@ -113,7 +113,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取区域名称
+     * Get 区域名称 
      * @return ZoneName 区域名称
      */
     public String getZoneName() {
@@ -121,7 +121,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置区域名称
+     * Set 区域名称
      * @param ZoneName 区域名称
      */
     public void setZoneName(String ZoneName) {
@@ -129,7 +129,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当前年龄段占比
+     * Get 当前年龄段占比 
      * @return Data 当前年龄段占比
      */
     public Float [] getData() {
@@ -137,7 +137,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当前年龄段占比
+     * Set 当前年龄段占比
      * @param Data 当前年龄段占比
      */
     public void setData(Float [] Data) {
@@ -145,7 +145,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeZoneFlowAgeInfoByZoneIdResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

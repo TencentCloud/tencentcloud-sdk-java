@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterRequest  extends AbstractModel{
+public class CreateClusterRequest extends AbstractModel{
 
     /**
     * 集群名称
@@ -72,7 +72,7 @@ public class CreateClusterRequest  extends AbstractModel{
     private String TsfZoneId;
 
     /**
-     * 获取集群名称
+     * Get 集群名称 
      * @return ClusterName 集群名称
      */
     public String getClusterName() {
@@ -80,7 +80,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群名称
+     * Set 集群名称
      * @param ClusterName 集群名称
      */
     public void setClusterName(String ClusterName) {
@@ -88,7 +88,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群类型
+     * Get 集群类型 
      * @return ClusterType 集群类型
      */
     public String getClusterType() {
@@ -96,7 +96,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群类型
+     * Set 集群类型
      * @param ClusterType 集群类型
      */
     public void setClusterType(String ClusterType) {
@@ -104,7 +104,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -112,7 +112,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -120,7 +120,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分配给集群容器和服务IP的CIDR
+     * Get 分配给集群容器和服务IP的CIDR 
      * @return ClusterCIDR 分配给集群容器和服务IP的CIDR
      */
     public String getClusterCIDR() {
@@ -128,7 +128,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分配给集群容器和服务IP的CIDR
+     * Set 分配给集群容器和服务IP的CIDR
      * @param ClusterCIDR 分配给集群容器和服务IP的CIDR
      */
     public void setClusterCIDR(String ClusterCIDR) {
@@ -136,7 +136,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群备注
+     * Get 集群备注 
      * @return ClusterDesc 集群备注
      */
     public String getClusterDesc() {
@@ -144,7 +144,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群备注
+     * Set 集群备注
      * @param ClusterDesc 集群备注
      */
     public void setClusterDesc(String ClusterDesc) {
@@ -152,7 +152,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群所属TSF地域
+     * Get 集群所属TSF地域 
      * @return TsfRegionId 集群所属TSF地域
      */
     public String getTsfRegionId() {
@@ -160,7 +160,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群所属TSF地域
+     * Set 集群所属TSF地域
      * @param TsfRegionId 集群所属TSF地域
      */
     public void setTsfRegionId(String TsfRegionId) {
@@ -168,7 +168,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 获取集群所属TSF可用区
+     * Get 集群所属TSF可用区 
      * @return TsfZoneId 集群所属TSF可用区
      */
     public String getTsfZoneId() {
@@ -176,7 +176,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集群所属TSF可用区
+     * Set 集群所属TSF可用区
      * @param TsfZoneId 集群所属TSF可用区
      */
     public void setTsfZoneId(String TsfZoneId) {
@@ -184,7 +184,7 @@ public class CreateClusterRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);

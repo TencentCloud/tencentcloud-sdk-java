@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComputeEnvCreateInfo  extends AbstractModel{
+public class ComputeEnvCreateInfo extends AbstractModel{
 
     /**
     * 计算环境 ID
@@ -99,7 +99,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     private Integer DesiredComputeNodeCount;
 
     /**
-     * 获取计算环境 ID
+     * Get 计算环境 ID 
      * @return EnvId 计算环境 ID
      */
     public String getEnvId() {
@@ -107,7 +107,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境 ID
+     * Set 计算环境 ID
      * @param EnvId 计算环境 ID
      */
     public void setEnvId(String EnvId) {
@@ -115,8 +115,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 计算环境名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnvName 计算环境名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -125,7 +125,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境名称
+     * Set 计算环境名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvName 计算环境名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,8 +135,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 计算环境描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnvDescription 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -145,7 +145,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境描述
+     * Set 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvDescription 计算环境描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,7 +155,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境类型，仅支持“MANAGED”类型
+     * Get 计算环境类型，仅支持“MANAGED”类型 
      * @return EnvType 计算环境类型，仅支持“MANAGED”类型
      */
     public String getEnvType() {
@@ -163,7 +163,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境类型，仅支持“MANAGED”类型
+     * Set 计算环境类型，仅支持“MANAGED”类型
      * @param EnvType 计算环境类型，仅支持“MANAGED”类型
      */
     public void setEnvType(String EnvType) {
@@ -171,7 +171,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计算环境参数
+     * Get 计算环境参数 
      * @return EnvData 计算环境参数
      */
     public EnvData getEnvData() {
@@ -179,7 +179,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境参数
+     * Set 计算环境参数
      * @param EnvData 计算环境参数
      */
     public void setEnvData(EnvData EnvData) {
@@ -187,8 +187,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据盘挂载选项
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountDataDisks 数据盘挂载选项
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -197,7 +197,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘挂载选项
+     * Set 数据盘挂载选项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MountDataDisks 数据盘挂载选项
 注意：此字段可能返回 null，表示取不到有效值。
@@ -207,8 +207,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取输入映射
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 输入映射
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InputMappings 输入映射
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -217,7 +217,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置输入映射
+     * Set 输入映射
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InputMappings 输入映射
 注意：此字段可能返回 null，表示取不到有效值。
@@ -227,8 +227,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取授权信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 授权信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Authentications 授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -237,7 +237,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置授权信息
+     * Set 授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Authentications 授权信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,8 +247,8 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取通知信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 通知信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Notifications 通知信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -257,7 +257,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置通知信息
+     * Set 通知信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Notifications 通知信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -267,7 +267,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点期望个数
+     * Get 计算节点期望个数 
      * @return DesiredComputeNodeCount 计算节点期望个数
      */
     public Integer getDesiredComputeNodeCount() {
@@ -275,7 +275,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点期望个数
+     * Set 计算节点期望个数
      * @param DesiredComputeNodeCount 计算节点期望个数
      */
     public void setDesiredComputeNodeCount(Integer DesiredComputeNodeCount) {
@@ -283,7 +283,7 @@ public class ComputeEnvCreateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

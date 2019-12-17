@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDbauditInstancesRequest  extends AbstractModel{
+public class DescribeDbauditInstancesRequest extends AbstractModel{
 
     /**
     * 查询条件地域
@@ -44,7 +44,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     private Integer Offset;
 
     /**
-     * 获取查询条件地域
+     * Get 查询条件地域 
      * @return SearchRegion 查询条件地域
      */
     public String getSearchRegion() {
@@ -52,7 +52,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询条件地域
+     * Set 查询条件地域
      * @param SearchRegion 查询条件地域
      */
     public void setSearchRegion(String SearchRegion) {
@@ -60,7 +60,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制数目，默认10， 最大50
+     * Get 限制数目，默认10， 最大50 
      * @return Limit 限制数目，默认10， 最大50
      */
     public Integer getLimit() {
@@ -68,7 +68,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制数目，默认10， 最大50
+     * Set 限制数目，默认10， 最大50
      * @param Limit 限制数目，默认10， 最大50
      */
     public void setLimit(Integer Limit) {
@@ -76,7 +76,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认1
+     * Get 偏移量，默认1 
      * @return Offset 偏移量，默认1
      */
     public Integer getOffset() {
@@ -84,7 +84,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认1
+     * Set 偏移量，默认1
      * @param Offset 偏移量，默认1
      */
     public void setOffset(Integer Offset) {
@@ -92,7 +92,7 @@ public class DescribeDbauditInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SearchRegion", this.SearchRegion);

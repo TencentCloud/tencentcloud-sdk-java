@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QuotaInvoiceOCRResponse  extends AbstractModel{
+public class QuotaInvoiceOCRResponse extends AbstractModel{
 
     /**
     * 发票号码
@@ -51,7 +51,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取发票号码
+     * Get 发票号码 
      * @return InvoiceNum 发票号码
      */
     public String getInvoiceNum() {
@@ -59,7 +59,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发票号码
+     * Set 发票号码
      * @param InvoiceNum 发票号码
      */
     public void setInvoiceNum(String InvoiceNum) {
@@ -67,7 +67,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取发票代码
+     * Get 发票代码 
      * @return InvoiceCode 发票代码
      */
     public String getInvoiceCode() {
@@ -75,7 +75,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置发票代码
+     * Set 发票代码
      * @param InvoiceCode 发票代码
      */
     public void setInvoiceCode(String InvoiceCode) {
@@ -83,7 +83,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取大写金额
+     * Get 大写金额 
      * @return Rate 大写金额
      */
     public String getRate() {
@@ -91,7 +91,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置大写金额
+     * Set 大写金额
      * @param Rate 大写金额
      */
     public void setRate(String Rate) {
@@ -99,7 +99,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class QuotaInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InvoiceNum", this.InvoiceNum);

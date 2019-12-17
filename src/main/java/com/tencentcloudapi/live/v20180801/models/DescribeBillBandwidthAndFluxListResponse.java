@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
+public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
 
     /**
     * 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
@@ -72,7 +72,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return PeakBandwidthTime 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getPeakBandwidthTime() {
@@ -80,7 +80,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param PeakBandwidthTime 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setPeakBandwidthTime(String PeakBandwidthTime) {
@@ -88,7 +88,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取峰值带宽，单位是Mbps。
+     * Get 峰值带宽，单位是Mbps。 
      * @return PeakBandwidth 峰值带宽，单位是Mbps。
      */
     public Float getPeakBandwidth() {
@@ -96,7 +96,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置峰值带宽，单位是Mbps。
+     * Set 峰值带宽，单位是Mbps。
      * @param PeakBandwidth 峰值带宽，单位是Mbps。
      */
     public void setPeakBandwidth(Float PeakBandwidth) {
@@ -104,7 +104,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。 
      * @return P95PeakBandwidthTime 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public String getP95PeakBandwidthTime() {
@@ -112,7 +112,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      * @param P95PeakBandwidthTime 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
      */
     public void setP95PeakBandwidthTime(String P95PeakBandwidthTime) {
@@ -120,7 +120,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取95峰值带宽，单位是Mbps。
+     * Get 95峰值带宽，单位是Mbps。 
      * @return P95PeakBandwidth 95峰值带宽，单位是Mbps。
      */
     public Float getP95PeakBandwidth() {
@@ -128,7 +128,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置95峰值带宽，单位是Mbps。
+     * Set 95峰值带宽，单位是Mbps。
      * @param P95PeakBandwidth 95峰值带宽，单位是Mbps。
      */
     public void setP95PeakBandwidth(Float P95PeakBandwidth) {
@@ -136,7 +136,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总流量，单位是MB。
+     * Get 总流量，单位是MB。 
      * @return SumFlux 总流量，单位是MB。
      */
     public Float getSumFlux() {
@@ -144,7 +144,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总流量，单位是MB。
+     * Set 总流量，单位是MB。
      * @param SumFlux 总流量，单位是MB。
      */
     public void setSumFlux(Float SumFlux) {
@@ -152,7 +152,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取明细数据信息。
+     * Get 明细数据信息。 
      * @return DataInfoList 明细数据信息。
      */
     public BillDataInfo [] getDataInfoList() {
@@ -160,7 +160,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置明细数据信息。
+     * Set 明细数据信息。
      * @param DataInfoList 明细数据信息。
      */
     public void setDataInfoList(BillDataInfo [] DataInfoList) {
@@ -168,7 +168,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -176,7 +176,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -184,7 +184,7 @@ public class DescribeBillBandwidthAndFluxListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PeakBandwidthTime", this.PeakBandwidthTime);

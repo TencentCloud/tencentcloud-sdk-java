@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSecurityGroupRequest  extends AbstractModel{
+public class CreateSecurityGroupRequest extends AbstractModel{
 
     /**
     * 安全组名称，可任意命名，但不得超过60个字符。
@@ -44,7 +44,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     private String ProjectId;
 
     /**
-     * 获取安全组名称，可任意命名，但不得超过60个字符。
+     * Get 安全组名称，可任意命名，但不得超过60个字符。 
      * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public String getGroupName() {
@@ -52,7 +52,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组名称，可任意命名，但不得超过60个字符。
+     * Set 安全组名称，可任意命名，但不得超过60个字符。
      * @param GroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
     public void setGroupName(String GroupName) {
@@ -60,7 +60,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取安全组备注，最多100个字符。
+     * Get 安全组备注，最多100个字符。 
      * @return GroupDescription 安全组备注，最多100个字符。
      */
     public String getGroupDescription() {
@@ -68,7 +68,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置安全组备注，最多100个字符。
+     * Set 安全组备注，最多100个字符。
      * @param GroupDescription 安全组备注，最多100个字符。
      */
     public void setGroupDescription(String GroupDescription) {
@@ -76,7 +76,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get 项目id，默认0。可在qcloud控制台项目管理页面查询到。 
      * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      */
     public String getProjectId() {
@@ -84,7 +84,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
      */
     public void setProjectId(String ProjectId) {
@@ -92,7 +92,7 @@ public class CreateSecurityGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);

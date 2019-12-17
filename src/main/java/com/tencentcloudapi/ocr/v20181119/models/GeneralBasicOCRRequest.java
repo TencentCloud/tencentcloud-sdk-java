@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GeneralBasicOCRRequest  extends AbstractModel{
+public class GeneralBasicOCRRequest extends AbstractModel{
 
     /**
     * 图片的 Base64 值。
@@ -71,10 +71,10 @@ nor\hun\tha\lat
     private String LanguageType;
 
     /**
-     * 获取图片的 Base64 值。
+     * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
-图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -85,7 +85,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 设置图片的 Base64 值。
+     * Set 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
@@ -99,11 +99,11 @@ nor\hun\tha\lat
     }
 
     /**
-     * 获取图片的 Url 地址。
+     * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
@@ -115,7 +115,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 设置图片的 Url 地址。
+     * Set 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 3M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
@@ -131,7 +131,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 获取保留字段。
+     * Get 保留字段。 
      * @return Scene 保留字段。
      */
     public String getScene() {
@@ -139,7 +139,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 设置保留字段。
+     * Set 保留字段。
      * @param Scene 保留字段。
      */
     public void setScene(String Scene) {
@@ -147,7 +147,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 获取识别语言类型。
+     * Get 识别语言类型。
 支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
 可选值：
 zh\auto\jap\kor\
@@ -160,7 +160,7 @@ nor\hun\tha\lat
 西班牙语、法语、德语、葡萄牙语、
 越南语、马来语、俄语、意大利语、
 荷兰语、瑞典语、芬兰语、丹麦语、
-挪威语、匈牙利语、泰语、拉丁语系。
+挪威语、匈牙利语、泰语、拉丁语系。 
      * @return LanguageType 识别语言类型。
 支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
 可选值：
@@ -181,7 +181,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 设置识别语言类型。
+     * Set 识别语言类型。
 支持自动识别语言类型，同时支持自选语言种类，默认中英文混合(zh)。
 可选值：
 zh\auto\jap\kor\
@@ -215,7 +215,7 @@ nor\hun\tha\lat
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);

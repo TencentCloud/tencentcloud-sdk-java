@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegionInfo  extends AbstractModel{
+public class RegionInfo extends AbstractModel{
 
     /**
     * 地域英文ID，类似ap-guanghou
@@ -41,7 +41,7 @@ public class RegionInfo  extends AbstractModel{
     */
     @SerializedName("RegionId")
     @Expose
-    private Integer RegionId;
+    private Long RegionId;
 
     /**
     * 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
@@ -51,7 +51,7 @@ public class RegionInfo  extends AbstractModel{
     private String RegionState;
 
     /**
-     * 获取地域英文ID，类似ap-guanghou
+     * Get 地域英文ID，类似ap-guanghou 
      * @return Region 地域英文ID，类似ap-guanghou
      */
     public String getRegion() {
@@ -59,7 +59,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域英文ID，类似ap-guanghou
+     * Set 地域英文ID，类似ap-guanghou
      * @param Region 地域英文ID，类似ap-guanghou
      */
     public void setRegion(String Region) {
@@ -67,7 +67,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域中文名称
+     * Get 地域中文名称 
      * @return RegionName 地域中文名称
      */
     public String getRegionName() {
@@ -75,7 +75,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置地域中文名称
+     * Set 地域中文名称
      * @param RegionName 地域中文名称
      */
     public void setRegionName(String RegionName) {
@@ -83,23 +83,23 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取地域数字ID
+     * Get 地域数字ID 
      * @return RegionId 地域数字ID
      */
-    public Integer getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * 设置地域数字ID
+     * Set 地域数字ID
      * @param RegionId 地域数字ID
      */
-    public void setRegionId(Integer RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * 获取该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
+     * Get 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖 
      * @return RegionState 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
      */
     public String getRegionState() {
@@ -107,7 +107,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
+     * Set 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
      * @param RegionState 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖
      */
     public void setRegionState(String RegionState) {
@@ -115,7 +115,7 @@ public class RegionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);

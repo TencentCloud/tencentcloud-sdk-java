@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeKeyRequest  extends AbstractModel{
+public class DescribeKeyRequest extends AbstractModel{
 
     /**
     * CMK全局唯一标识符
@@ -30,7 +30,7 @@ public class DescribeKeyRequest  extends AbstractModel{
     private String KeyId;
 
     /**
-     * 获取CMK全局唯一标识符
+     * Get CMK全局唯一标识符 
      * @return KeyId CMK全局唯一标识符
      */
     public String getKeyId() {
@@ -38,7 +38,7 @@ public class DescribeKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK全局唯一标识符
+     * Set CMK全局唯一标识符
      * @param KeyId CMK全局唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -46,7 +46,7 @@ public class DescribeKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

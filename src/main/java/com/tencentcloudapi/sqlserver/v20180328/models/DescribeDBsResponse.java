@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBsResponse  extends AbstractModel{
+public class DescribeDBsResponse extends AbstractModel{
 
     /**
     * 数据库数量
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 实例数据库列表
@@ -44,23 +44,23 @@ public class DescribeDBsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取数据库数量
+     * Get 数据库数量 
      * @return TotalCount 数据库数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置数据库数量
+     * Set 数据库数量
      * @param TotalCount 数据库数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取实例数据库列表
+     * Get 实例数据库列表 
      * @return DBInstances 实例数据库列表
      */
     public InstanceDBDetail [] getDBInstances() {
@@ -68,7 +68,7 @@ public class DescribeDBsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置实例数据库列表
+     * Set 实例数据库列表
      * @param DBInstances 实例数据库列表
      */
     public void setDBInstances(InstanceDBDetail [] DBInstances) {
@@ -76,7 +76,7 @@ public class DescribeDBsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeDBsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeDBsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

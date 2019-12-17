@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StreamLayout  extends AbstractModel{
+public class StreamLayout extends AbstractModel{
 
     /**
     * 流布局配置参数
@@ -49,7 +49,7 @@ public class StreamLayout  extends AbstractModel{
     private String BackgroundColor;
 
     /**
-     * 获取流布局配置参数
+     * Get 流布局配置参数 
      * @return LayoutParams 流布局配置参数
      */
     public LayoutParams getLayoutParams() {
@@ -57,7 +57,7 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 设置流布局配置参数
+     * Set 流布局配置参数
      * @param LayoutParams 流布局配置参数
      */
     public void setLayoutParams(LayoutParams LayoutParams) {
@@ -65,12 +65,12 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 获取视频流ID
+     * Get 视频流ID
 流ID的取值含义如下：
 1. tic_record_user - 表示当前画面用于显示白板视频流
 2. tic_substream - 表示当前画面用于显示辅路视频流
 3. 特定用户ID - 表示当前画面用于显示指定用户的视频流
-4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面
+4. 不填 - 表示当前画面用于备选，当有新的视频流加入时，会从这些备选的空位中选择一个没有被占用的位置来显示新的视频流画面 
      * @return InputStreamId 视频流ID
 流ID的取值含义如下：
 1. tic_record_user - 表示当前画面用于显示白板视频流
@@ -83,7 +83,7 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 设置视频流ID
+     * Set 视频流ID
 流ID的取值含义如下：
 1. tic_record_user - 表示当前画面用于显示白板视频流
 2. tic_substream - 表示当前画面用于显示辅路视频流
@@ -101,7 +101,7 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 获取背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+     * Get 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000" 
      * @return BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public String getBackgroundColor() {
@@ -109,7 +109,7 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 设置背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
+     * Set 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      * @param BackgroundColor 背景颜色，默认为黑色，格式为RGB格式，如红色为"#FF0000"
      */
     public void setBackgroundColor(String BackgroundColor) {
@@ -117,7 +117,7 @@ public class StreamLayout  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);

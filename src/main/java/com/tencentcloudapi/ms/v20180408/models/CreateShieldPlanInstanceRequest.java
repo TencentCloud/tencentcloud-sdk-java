@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateShieldPlanInstanceRequest  extends AbstractModel{
+public class CreateShieldPlanInstanceRequest extends AbstractModel{
 
     /**
     * 资源id
@@ -44,7 +44,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     private PlanInfo PlanInfo;
 
     /**
-     * 获取资源id
+     * Get 资源id 
      * @return ResourceId 资源id
      */
     public String getResourceId() {
@@ -52,7 +52,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源id
+     * Set 资源id
      * @param ResourceId 资源id
      */
     public void setResourceId(String ResourceId) {
@@ -60,7 +60,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略名称
+     * Get 策略名称 
      * @return PlanName 策略名称
      */
     public String getPlanName() {
@@ -68,7 +68,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略名称
+     * Set 策略名称
      * @param PlanName 策略名称
      */
     public void setPlanName(String PlanName) {
@@ -76,7 +76,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取策略具体信息
+     * Get 策略具体信息 
      * @return PlanInfo 策略具体信息
      */
     public PlanInfo getPlanInfo() {
@@ -84,7 +84,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置策略具体信息
+     * Set 策略具体信息
      * @param PlanInfo 策略具体信息
      */
     public void setPlanInfo(PlanInfo PlanInfo) {
@@ -92,7 +92,7 @@ public class CreateShieldPlanInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QrcodePositionObj  extends AbstractModel{
+public class QrcodePositionObj extends AbstractModel{
 
     /**
     * 左上顶点坐标（如果是条形码，X和Y都为-1）
@@ -51,7 +51,7 @@ public class QrcodePositionObj  extends AbstractModel{
     private Coord LeftBottom;
 
     /**
-     * 获取左上顶点坐标（如果是条形码，X和Y都为-1）
+     * Get 左上顶点坐标（如果是条形码，X和Y都为-1） 
      * @return LeftTop 左上顶点坐标（如果是条形码，X和Y都为-1）
      */
     public Coord getLeftTop() {
@@ -59,7 +59,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 设置左上顶点坐标（如果是条形码，X和Y都为-1）
+     * Set 左上顶点坐标（如果是条形码，X和Y都为-1）
      * @param LeftTop 左上顶点坐标（如果是条形码，X和Y都为-1）
      */
     public void setLeftTop(Coord LeftTop) {
@@ -67,7 +67,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 获取右上顶点坐标（如果是条形码，X和Y都为-1）
+     * Get 右上顶点坐标（如果是条形码，X和Y都为-1） 
      * @return RightTop 右上顶点坐标（如果是条形码，X和Y都为-1）
      */
     public Coord getRightTop() {
@@ -75,7 +75,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 设置右上顶点坐标（如果是条形码，X和Y都为-1）
+     * Set 右上顶点坐标（如果是条形码，X和Y都为-1）
      * @param RightTop 右上顶点坐标（如果是条形码，X和Y都为-1）
      */
     public void setRightTop(Coord RightTop) {
@@ -83,7 +83,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 获取右下顶点坐标（如果是条形码，X和Y都为-1）
+     * Get 右下顶点坐标（如果是条形码，X和Y都为-1） 
      * @return RightBottom 右下顶点坐标（如果是条形码，X和Y都为-1）
      */
     public Coord getRightBottom() {
@@ -91,7 +91,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 设置右下顶点坐标（如果是条形码，X和Y都为-1）
+     * Set 右下顶点坐标（如果是条形码，X和Y都为-1）
      * @param RightBottom 右下顶点坐标（如果是条形码，X和Y都为-1）
      */
     public void setRightBottom(Coord RightBottom) {
@@ -99,7 +99,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 获取左下顶点坐标（如果是条形码，X和Y都为-1）
+     * Get 左下顶点坐标（如果是条形码，X和Y都为-1） 
      * @return LeftBottom 左下顶点坐标（如果是条形码，X和Y都为-1）
      */
     public Coord getLeftBottom() {
@@ -107,7 +107,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 设置左下顶点坐标（如果是条形码，X和Y都为-1）
+     * Set 左下顶点坐标（如果是条形码，X和Y都为-1）
      * @param LeftBottom 左下顶点坐标（如果是条形码，X和Y都为-1）
      */
     public void setLeftBottom(Coord LeftBottom) {
@@ -115,7 +115,7 @@ public class QrcodePositionObj  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LeftTop.", this.LeftTop);

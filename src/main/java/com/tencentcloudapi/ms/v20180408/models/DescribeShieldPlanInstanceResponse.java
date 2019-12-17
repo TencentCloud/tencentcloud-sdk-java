@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
+public class DescribeShieldPlanInstanceResponse extends AbstractModel{
 
     /**
     * 绑定资源信息
@@ -51,7 +51,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取绑定资源信息
+     * Get 绑定资源信息 
      * @return BindInfo 绑定资源信息
      */
     public BindInfo getBindInfo() {
@@ -59,7 +59,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置绑定资源信息
+     * Set 绑定资源信息
      * @param BindInfo 绑定资源信息
      */
     public void setBindInfo(BindInfo BindInfo) {
@@ -67,7 +67,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取加固策略信息
+     * Get 加固策略信息 
      * @return ShieldPlanInfo 加固策略信息
      */
     public ShieldPlanInfo getShieldPlanInfo() {
@@ -75,7 +75,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加固策略信息
+     * Set 加固策略信息
      * @param ShieldPlanInfo 加固策略信息
      */
     public void setShieldPlanInfo(ShieldPlanInfo ShieldPlanInfo) {
@@ -83,7 +83,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取加固资源信息
+     * Get 加固资源信息 
      * @return ResourceServiceInfo 加固资源信息
      */
     public ResourceServiceInfo getResourceServiceInfo() {
@@ -91,7 +91,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置加固资源信息
+     * Set 加固资源信息
      * @param ResourceServiceInfo 加固资源信息
      */
     public void setResourceServiceInfo(ResourceServiceInfo ResourceServiceInfo) {
@@ -99,7 +99,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeShieldPlanInstanceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BindInfo.", this.BindInfo);

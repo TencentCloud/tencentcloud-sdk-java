@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetWorkflowRequest  extends AbstractModel{
+public class ResetWorkflowRequest extends AbstractModel{
 
     /**
     * 工作流 ID。
@@ -100,7 +100,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-     * 获取工作流 ID。
+     * Get 工作流 ID。 
      * @return WorkflowId 工作流 ID。
      */
     public Long getWorkflowId() {
@@ -108,7 +108,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流 ID。
+     * Set 工作流 ID。
      * @param WorkflowId 工作流 ID。
      */
     public void setWorkflowId(Long WorkflowId) {
@@ -116,7 +116,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取工作流名称，最多128字符。同一个用户该名称唯一。
+     * Get 工作流名称，最多128字符。同一个用户该名称唯一。 
      * @return WorkflowName 工作流名称，最多128字符。同一个用户该名称唯一。
      */
     public String getWorkflowName() {
@@ -124,7 +124,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流名称，最多128字符。同一个用户该名称唯一。
+     * Set 工作流名称，最多128字符。同一个用户该名称唯一。
      * @param WorkflowName 工作流名称，最多128字符。同一个用户该名称唯一。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -132,7 +132,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Get 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。 
      * @return Trigger 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
      */
     public WorkflowTrigger getTrigger() {
@@ -140,7 +140,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Set 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
      * @param Trigger 工作流绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
      */
     public void setTrigger(WorkflowTrigger Trigger) {
@@ -148,7 +148,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
+     * Get 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。 
      * @return OutputStorage 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -156,7 +156,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
+     * Set 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
      * @param OutputStorage 视频处理的文件输出配置。不填则继承 Trigger 中的存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -164,7 +164,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
+     * Get 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。 
      * @return OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
      */
     public String getOutputDir() {
@@ -172,7 +172,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
+     * Set 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
      * @param OutputDir 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致，即`{inputDir}`。
      */
     public void setOutputDir(String OutputDir) {
@@ -180,7 +180,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理类型任务参数。
+     * Get 视频处理类型任务参数。 
      * @return MediaProcessTask 视频处理类型任务参数。
      */
     public MediaProcessTaskInput getMediaProcessTask() {
@@ -188,7 +188,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理类型任务参数。
+     * Set 视频处理类型任务参数。
      * @param MediaProcessTask 视频处理类型任务参数。
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
@@ -196,7 +196,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容审核类型任务参数。
+     * Get 视频内容审核类型任务参数。 
      * @return AiContentReviewTask 视频内容审核类型任务参数。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
@@ -204,7 +204,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容审核类型任务参数。
+     * Set 视频内容审核类型任务参数。
      * @param AiContentReviewTask 视频内容审核类型任务参数。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
@@ -212,7 +212,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容分析类型任务参数。
+     * Get 视频内容分析类型任务参数。 
      * @return AiAnalysisTask 视频内容分析类型任务参数。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
@@ -220,7 +220,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容分析类型任务参数。
+     * Set 视频内容分析类型任务参数。
      * @param AiAnalysisTask 视频内容分析类型任务参数。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
@@ -228,7 +228,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取视频内容识别类型任务参数。
+     * Get 视频内容识别类型任务参数。 
      * @return AiRecognitionTask 视频内容识别类型任务参数。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
@@ -236,7 +236,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置视频内容识别类型任务参数。
+     * Set 视频内容识别类型任务参数。
      * @param AiRecognitionTask 视频内容识别类型任务参数。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
@@ -244,7 +244,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Get 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
      * @return TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public Long getTaskPriority() {
@@ -252,7 +252,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Set 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      * @param TaskPriority 工作流的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
      */
     public void setTaskPriority(Long TaskPriority) {
@@ -260,7 +260,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务的事件通知信息，不填代表不获取事件通知。
+     * Get 任务的事件通知信息，不填代表不获取事件通知。 
      * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
@@ -268,7 +268,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务的事件通知信息，不填代表不获取事件通知。
+     * Set 任务的事件通知信息，不填代表不获取事件通知。
      * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
@@ -276,7 +276,7 @@ public class ResetWorkflowRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);

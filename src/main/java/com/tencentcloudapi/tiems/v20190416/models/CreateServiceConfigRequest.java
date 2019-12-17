@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateServiceConfigRequest  extends AbstractModel{
+public class CreateServiceConfigRequest extends AbstractModel{
 
     /**
     * 配置名称
@@ -51,7 +51,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     private String Description;
 
     /**
-     * 获取配置名称
+     * Get 配置名称 
      * @return Name 配置名称
      */
     public String getName() {
@@ -59,7 +59,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置名称
+     * Set 配置名称
      * @param Name 配置名称
      */
     public void setName(String Name) {
@@ -67,7 +67,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行环境
+     * Get 运行环境 
      * @return Runtime 运行环境
      */
     public String getRuntime() {
@@ -75,7 +75,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行环境
+     * Set 运行环境
      * @param Runtime 运行环境
      */
     public void setRuntime(String Runtime) {
@@ -83,7 +83,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
+     * Get 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。 
      * @return ModelUri 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
      */
     public String getModelUri() {
@@ -91,7 +91,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
+     * Set 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
      * @param ModelUri 模型地址，支持cos路径，格式为 cos://bucket名-appid.cos.region名.myqcloud.com/模型文件夹路径。为模型文件的上一层文件夹地址。
      */
     public void setModelUri(String ModelUri) {
@@ -99,7 +99,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 获取配置描述
+     * Get 配置描述 
      * @return Description 配置描述
      */
     public String getDescription() {
@@ -107,7 +107,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 设置配置描述
+     * Set 配置描述
      * @param Description 配置描述
      */
     public void setDescription(String Description) {
@@ -115,7 +115,7 @@ public class CreateServiceConfigRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CosInputInfo  extends AbstractModel{
+public class CosInputInfo extends AbstractModel{
 
     /**
     * 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
@@ -44,7 +44,7 @@ public class CosInputInfo  extends AbstractModel{
     private String Object;
 
     /**
-     * 获取视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * Get 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。 
      * @return Bucket 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
      */
     public String getBucket() {
@@ -52,7 +52,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+     * Set 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
      * @param Bucket 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
      */
     public void setBucket(String Bucket) {
@@ -60,7 +60,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+     * Get 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。 
      * @return Region 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
      */
     public String getRegion() {
@@ -68,7 +68,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+     * Set 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
      * @param Region 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
      */
     public void setRegion(String Region) {
@@ -76,7 +76,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+     * Get 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。 
      * @return Object 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      */
     public String getObject() {
@@ -84,7 +84,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+     * Set 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      * @param Object 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
      */
     public void setObject(String Object) {
@@ -92,7 +92,7 @@ public class CosInputInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);

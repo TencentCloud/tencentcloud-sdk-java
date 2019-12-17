@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RollbackInstancesInfo  extends AbstractModel{
+public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * 云数据库实例ID
@@ -58,7 +58,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     private RollbackTables [] Tables;
 
     /**
-     * 获取云数据库实例ID
+     * Get 云数据库实例ID 
      * @return InstanceId 云数据库实例ID
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置云数据库实例ID
+     * Set 云数据库实例ID
      * @param InstanceId 云数据库实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
+     * Get 回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。 
      * @return Strategy 回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
      */
     public String getStrategy() {
@@ -82,7 +82,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
+     * Set 回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
      * @param Strategy 回档策略。可选值为：table、db、full；默认值为full。table - 急速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
      */
     public void setStrategy(String Strategy) {
@@ -90,7 +90,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
+     * Get 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss 
      * @return RollbackTime 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
      */
     public String getRollbackTime() {
@@ -98,7 +98,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
+     * Set 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
      * @param RollbackTime 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
      */
     public void setRollbackTime(String RollbackTime) {
@@ -106,7 +106,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取待回档的数据库信息，表示整库回档
+     * Get 待回档的数据库信息，表示整库回档 
      * @return Databases 待回档的数据库信息，表示整库回档
      */
     public RollbackDBName [] getDatabases() {
@@ -114,7 +114,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置待回档的数据库信息，表示整库回档
+     * Set 待回档的数据库信息，表示整库回档
      * @param Databases 待回档的数据库信息，表示整库回档
      */
     public void setDatabases(RollbackDBName [] Databases) {
@@ -122,7 +122,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取待回档的数据库表信息，表示按表回档
+     * Get 待回档的数据库表信息，表示按表回档 
      * @return Tables 待回档的数据库表信息，表示按表回档
      */
     public RollbackTables [] getTables() {
@@ -130,7 +130,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置待回档的数据库表信息，表示按表回档
+     * Set 待回档的数据库表信息，表示按表回档
      * @param Tables 待回档的数据库表信息，表示按表回档
      */
     public void setTables(RollbackTables [] Tables) {
@@ -138,7 +138,7 @@ public class RollbackInstancesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

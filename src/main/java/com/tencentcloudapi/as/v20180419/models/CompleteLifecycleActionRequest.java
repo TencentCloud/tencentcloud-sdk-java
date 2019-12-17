@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CompleteLifecycleActionRequest  extends AbstractModel{
+public class CompleteLifecycleActionRequest extends AbstractModel{
 
     /**
     * 生命周期挂钩ID
@@ -51,7 +51,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     private String LifecycleActionToken;
 
     /**
-     * 获取生命周期挂钩ID
+     * Get 生命周期挂钩ID 
      * @return LifecycleHookId 生命周期挂钩ID
      */
     public String getLifecycleHookId() {
@@ -59,7 +59,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩ID
+     * Set 生命周期挂钩ID
      * @param LifecycleHookId 生命周期挂钩ID
      */
     public void setLifecycleHookId(String LifecycleHookId) {
@@ -67,7 +67,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+     * Get 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON” 
      * @return LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
      */
     public String getLifecycleActionResult() {
@@ -75,7 +75,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+     * Set 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
      * @param LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
      */
     public void setLifecycleActionResult(String LifecycleActionResult) {
@@ -83,7 +83,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Get 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个 
      * @return InstanceId 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
      */
     public String getInstanceId() {
@@ -91,7 +91,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Set 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
      * @param InstanceId 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
      */
     public void setInstanceId(String InstanceId) {
@@ -99,7 +99,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 获取“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Get “InstanceId”和“LifecycleActionToken”必须填充其中一个 
      * @return LifecycleActionToken “InstanceId”和“LifecycleActionToken”必须填充其中一个
      */
     public String getLifecycleActionToken() {
@@ -107,7 +107,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 设置“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * Set “InstanceId”和“LifecycleActionToken”必须填充其中一个
      * @param LifecycleActionToken “InstanceId”和“LifecycleActionToken”必须填充其中一个
      */
     public void setLifecycleActionToken(String LifecycleActionToken) {
@@ -115,7 +115,7 @@ public class CompleteLifecycleActionRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);

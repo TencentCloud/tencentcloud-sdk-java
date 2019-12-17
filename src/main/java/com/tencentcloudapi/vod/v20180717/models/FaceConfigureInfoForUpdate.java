@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceConfigureInfoForUpdate  extends AbstractModel{
+public class FaceConfigureInfoForUpdate extends AbstractModel{
 
     /**
     * 人脸识别任务开关，可选值：
@@ -67,9 +67,9 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     private String FaceLibrary;
 
     /**
-     * 获取人脸识别任务开关，可选值：
+     * Get 人脸识别任务开关，可选值：
 <li>ON：开启智能人脸识别任务；</li>
-<li>OFF：关闭智能人脸识别任务。</li>
+<li>OFF：关闭智能人脸识别任务。</li> 
      * @return Switch 人脸识别任务开关，可选值：
 <li>ON：开启智能人脸识别任务；</li>
 <li>OFF：关闭智能人脸识别任务。</li>
@@ -79,7 +79,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别任务开关，可选值：
+     * Set 人脸识别任务开关，可选值：
 <li>ON：开启智能人脸识别任务；</li>
 <li>OFF：关闭智能人脸识别任务。</li>
      * @param Switch 人脸识别任务开关，可选值：
@@ -91,7 +91,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
+     * Get 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。 
      * @return Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
      */
     public Float getScore() {
@@ -99,7 +99,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
+     * Set 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
      * @param Score 人脸识别过滤分数，当识别结果达到该分数以上，返回识别结果。取值范围：0-100。
      */
     public void setScore(Float Score) {
@@ -107,10 +107,10 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
+     * Get 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
-<li>politician：政治人物。</li>
+<li>politician：政治人物。</li> 
      * @return DefaultLibraryLabelSet 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
@@ -121,7 +121,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
+     * Set 默认人物过滤标签，指定需要返回的默认人物的标签。如果未填或者为空，则全部默认人物结果都返回。标签可选值：
 <li>entertainment：娱乐明星；</li>
 <li>sport：体育明星；</li>
 <li>politician：政治人物。</li>
@@ -135,8 +135,8 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+     * Get 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
+标签个数最多 10 个，每个标签长度最多 16 个字符。 
      * @return UserDefineLibraryLabelSet 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
@@ -145,7 +145,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
+     * Set 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      * @param UserDefineLibraryLabelSet 用户自定义人物过滤标签，指定需要返回的用户自定义人物的标签。如果未填或者为空，则全部自定义人物结果都返回。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
@@ -155,10 +155,10 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 获取人物库选择，可选值：
+     * Get 人物库选择，可选值：
 <li>Default：使用默认人物库；</li>
 <li>UserDefine：使用用户自定义人物库。</li>
-<li>All：同时使用默认人物库和用户自定义人物库。</li>
+<li>All：同时使用默认人物库和用户自定义人物库。</li> 
      * @return FaceLibrary 人物库选择，可选值：
 <li>Default：使用默认人物库；</li>
 <li>UserDefine：使用用户自定义人物库。</li>
@@ -169,7 +169,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 设置人物库选择，可选值：
+     * Set 人物库选择，可选值：
 <li>Default：使用默认人物库；</li>
 <li>UserDefine：使用用户自定义人物库。</li>
 <li>All：同时使用默认人物库和用户自定义人物库。</li>
@@ -183,7 +183,7 @@ public class FaceConfigureInfoForUpdate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

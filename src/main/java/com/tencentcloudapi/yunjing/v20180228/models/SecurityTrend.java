@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SecurityTrend  extends AbstractModel{
+public class SecurityTrend extends AbstractModel{
 
     /**
     * 事件时间。
@@ -34,10 +34,10 @@ public class SecurityTrend  extends AbstractModel{
     */
     @SerializedName("EventNum")
     @Expose
-    private Integer EventNum;
+    private Long EventNum;
 
     /**
-     * 获取事件时间。
+     * Get 事件时间。 
      * @return Date 事件时间。
      */
     public String getDate() {
@@ -45,7 +45,7 @@ public class SecurityTrend  extends AbstractModel{
     }
 
     /**
-     * 设置事件时间。
+     * Set 事件时间。
      * @param Date 事件时间。
      */
     public void setDate(String Date) {
@@ -53,23 +53,23 @@ public class SecurityTrend  extends AbstractModel{
     }
 
     /**
-     * 获取事件数量。
+     * Get 事件数量。 
      * @return EventNum 事件数量。
      */
-    public Integer getEventNum() {
+    public Long getEventNum() {
         return this.EventNum;
     }
 
     /**
-     * 设置事件数量。
+     * Set 事件数量。
      * @param EventNum 事件数量。
      */
-    public void setEventNum(Integer EventNum) {
+    public void setEventNum(Long EventNum) {
         this.EventNum = EventNum;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

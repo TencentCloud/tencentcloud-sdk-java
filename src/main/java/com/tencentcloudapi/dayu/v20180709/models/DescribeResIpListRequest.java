@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResIpListRequest  extends AbstractModel{
+public class DescribeResIpListRequest extends AbstractModel{
 
     /**
     * 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
@@ -37,7 +37,7 @@ public class DescribeResIpListRequest  extends AbstractModel{
     private String [] IdList;
 
     /**
-     * 获取大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版） 
      * @return Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public String getBusiness() {
@@ -45,7 +45,7 @@ public class DescribeResIpListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      * @param Business 大禹子产品代号（bgpip表示高防IP；bgp表示独享包；bgp-multip表示共享包；net表示高防IP专业版）
      */
     public void setBusiness(String Business) {
@@ -53,7 +53,7 @@ public class DescribeResIpListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取资源ID, 如果不填，则获取用户所有资源的IP
+     * Get 资源ID, 如果不填，则获取用户所有资源的IP 
      * @return IdList 资源ID, 如果不填，则获取用户所有资源的IP
      */
     public String [] getIdList() {
@@ -61,7 +61,7 @@ public class DescribeResIpListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID, 如果不填，则获取用户所有资源的IP
+     * Set 资源ID, 如果不填，则获取用户所有资源的IP
      * @param IdList 资源ID, 如果不填，则获取用户所有资源的IP
      */
     public void setIdList(String [] IdList) {
@@ -69,7 +69,7 @@ public class DescribeResIpListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Business", this.Business);

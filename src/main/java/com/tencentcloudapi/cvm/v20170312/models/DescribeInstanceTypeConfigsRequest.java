@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceTypeConfigsRequest  extends AbstractModel{
+public class DescribeInstanceTypeConfigsRequest extends AbstractModel{
 
     /**
     * 过滤条件。
@@ -33,10 +33,10 @@ public class DescribeInstanceTypeConfigsRequest  extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * 获取过滤条件。
+     * Get 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
-每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
+每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。 
      * @return Filters 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
@@ -47,7 +47,7 @@ public class DescribeInstanceTypeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置过滤条件。
+     * Set 过滤条件。
 <li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15753#ZoneInfo)过滤。</li>
 <li> instance-family - String - 是否必填：否 -（过滤条件）按照实例机型系列过滤。实例机型系列形如：S1、I1、M1等。</li>
 每次请求的`Filters`的上限为10，`Filter.Values`的上限为1。
@@ -61,7 +61,7 @@ public class DescribeInstanceTypeConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

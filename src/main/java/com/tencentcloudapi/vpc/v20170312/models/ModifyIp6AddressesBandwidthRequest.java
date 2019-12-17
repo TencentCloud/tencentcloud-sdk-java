@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
+public class ModifyIp6AddressesBandwidthRequest extends AbstractModel{
 
     /**
     * 修改的目标带宽，单位Mbps
@@ -44,7 +44,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     private String [] Ip6AddressIds;
 
     /**
-     * 获取修改的目标带宽，单位Mbps
+     * Get 修改的目标带宽，单位Mbps 
      * @return InternetMaxBandwidthOut 修改的目标带宽，单位Mbps
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -52,7 +52,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置修改的目标带宽，单位Mbps
+     * Set 修改的目标带宽，单位Mbps
      * @param InternetMaxBandwidthOut 修改的目标带宽，单位Mbps
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -60,7 +60,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
+     * Get IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个 
      * @return Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
      */
     public String [] getIp6Addresses() {
@@ -68,7 +68,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
+     * Set IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
      * @param Ip6Addresses IPV6地址。Ip6Addresses和Ip6AddressId必须且只能传一个
      */
     public void setIp6Addresses(String [] Ip6Addresses) {
@@ -76,7 +76,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
+     * Get IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个 
      * @return Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
      */
     public String [] getIp6AddressIds() {
@@ -84,7 +84,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
+     * Set IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
      * @param Ip6AddressIds IPV6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressId必须且只能传一个
      */
     public void setIp6AddressIds(String [] Ip6AddressIds) {
@@ -92,7 +92,7 @@ public class ModifyIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);

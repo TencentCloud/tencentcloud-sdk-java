@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceServiceInfo  extends AbstractModel{
+public class ResourceServiceInfo extends AbstractModel{
 
     /**
     * 创建时间戳
@@ -44,7 +44,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     private String ResourceName;
 
     /**
-     * 获取创建时间戳
+     * Get 创建时间戳 
      * @return CreateTime 创建时间戳
      */
     public Integer getCreateTime() {
@@ -52,7 +52,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间戳
+     * Set 创建时间戳
      * @param CreateTime 创建时间戳
      */
     public void setCreateTime(Integer CreateTime) {
@@ -60,7 +60,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取到期时间戳
+     * Get 到期时间戳 
      * @return ExpireTime 到期时间戳
      */
     public Integer getExpireTime() {
@@ -68,7 +68,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置到期时间戳
+     * Set 到期时间戳
      * @param ExpireTime 到期时间戳
      */
     public void setExpireTime(Integer ExpireTime) {
@@ -76,7 +76,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取资源名称，如应用加固，源码混淆
+     * Get 资源名称，如应用加固，源码混淆 
      * @return ResourceName 资源名称，如应用加固，源码混淆
      */
     public String getResourceName() {
@@ -84,7 +84,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置资源名称，如应用加固，源码混淆
+     * Set 资源名称，如应用加固，源码混淆
      * @param ResourceName 资源名称，如应用加固，源码混淆
      */
     public void setResourceName(String ResourceName) {
@@ -92,7 +92,7 @@ public class ResourceServiceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

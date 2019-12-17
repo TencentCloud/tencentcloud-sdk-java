@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeResourcesByTagRequest  extends AbstractModel{
+public class DescribeResourcesByTagRequest extends AbstractModel{
 
     /**
     * 标签键。
@@ -48,7 +48,7 @@ RealServer表示源站。
     private String ResourceType;
 
     /**
-     * 获取标签键。
+     * Get 标签键。 
      * @return TagKey 标签键。
      */
     public String getTagKey() {
@@ -56,7 +56,7 @@ RealServer表示源站。
     }
 
     /**
-     * 设置标签键。
+     * Set 标签键。
      * @param TagKey 标签键。
      */
     public void setTagKey(String TagKey) {
@@ -64,7 +64,7 @@ RealServer表示源站。
     }
 
     /**
-     * 获取标签值。
+     * Get 标签值。 
      * @return TagValue 标签值。
      */
     public String getTagValue() {
@@ -72,7 +72,7 @@ RealServer表示源站。
     }
 
     /**
-     * 设置标签值。
+     * Set 标签值。
      * @param TagValue 标签值。
      */
     public void setTagValue(String TagValue) {
@@ -80,11 +80,11 @@ RealServer表示源站。
     }
 
     /**
-     * 获取资源类型，其中：
+     * Get 资源类型，其中：
 Proxy表示通道；
 ProxyGroup表示通道组；
 RealServer表示源站。
-不指定该字段则查询该标签下所有资源。
+不指定该字段则查询该标签下所有资源。 
      * @return ResourceType 资源类型，其中：
 Proxy表示通道；
 ProxyGroup表示通道组；
@@ -96,7 +96,7 @@ RealServer表示源站。
     }
 
     /**
-     * 设置资源类型，其中：
+     * Set 资源类型，其中：
 Proxy表示通道；
 ProxyGroup表示通道组；
 RealServer表示源站。
@@ -112,7 +112,7 @@ RealServer表示源站。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);

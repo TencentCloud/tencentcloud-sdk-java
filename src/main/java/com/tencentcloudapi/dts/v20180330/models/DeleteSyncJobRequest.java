@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSyncJobRequest  extends AbstractModel{
+public class DeleteSyncJobRequest extends AbstractModel{
 
     /**
     * 待删除的灾备同步任务ID
@@ -30,7 +30,7 @@ public class DeleteSyncJobRequest  extends AbstractModel{
     private String JobId;
 
     /**
-     * 获取待删除的灾备同步任务ID
+     * Get 待删除的灾备同步任务ID 
      * @return JobId 待删除的灾备同步任务ID
      */
     public String getJobId() {
@@ -38,7 +38,7 @@ public class DeleteSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待删除的灾备同步任务ID
+     * Set 待删除的灾备同步任务ID
      * @param JobId 待删除的灾备同步任务ID
      */
     public void setJobId(String JobId) {
@@ -46,7 +46,7 @@ public class DeleteSyncJobRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

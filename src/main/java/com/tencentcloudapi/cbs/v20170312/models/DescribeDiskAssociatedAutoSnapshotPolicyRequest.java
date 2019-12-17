@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiskAssociatedAutoSnapshotPolicyRequest  extends AbstractModel{
+public class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
     * 要查询的云硬盘ID。
@@ -30,7 +30,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyRequest  extends AbstractMo
     private String DiskId;
 
     /**
-     * 获取要查询的云硬盘ID。
+     * Get 要查询的云硬盘ID。 
      * @return DiskId 要查询的云硬盘ID。
      */
     public String getDiskId() {
@@ -38,7 +38,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyRequest  extends AbstractMo
     }
 
     /**
-     * 设置要查询的云硬盘ID。
+     * Set 要查询的云硬盘ID。
      * @param DiskId 要查询的云硬盘ID。
      */
     public void setDiskId(String DiskId) {
@@ -46,7 +46,7 @@ public class DescribeDiskAssociatedAutoSnapshotPolicyRequest  extends AbstractMo
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);

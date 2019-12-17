@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignKeyword  extends AbstractModel{
+public class SignKeyword extends AbstractModel{
 
     /**
     * 关键字
@@ -58,7 +58,7 @@ public class SignKeyword  extends AbstractModel{
     private String ImageHeight;
 
     /**
-     * 获取关键字
+     * Get 关键字 
      * @return Keyword 关键字
      */
     public String getKeyword() {
@@ -66,7 +66,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 设置关键字
+     * Set 关键字
      * @param Keyword 关键字
      */
     public void setKeyword(String Keyword) {
@@ -74,7 +74,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 获取X轴偏移坐标
+     * Get X轴偏移坐标 
      * @return OffsetCoordX X轴偏移坐标
      */
     public String getOffsetCoordX() {
@@ -82,7 +82,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 设置X轴偏移坐标
+     * Set X轴偏移坐标
      * @param OffsetCoordX X轴偏移坐标
      */
     public void setOffsetCoordX(String OffsetCoordX) {
@@ -90,7 +90,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 获取Y轴偏移坐标
+     * Get Y轴偏移坐标 
      * @return OffsetCoordY Y轴偏移坐标
      */
     public String getOffsetCoordY() {
@@ -98,7 +98,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 设置Y轴偏移坐标
+     * Set Y轴偏移坐标
      * @param OffsetCoordY Y轴偏移坐标
      */
     public void setOffsetCoordY(String OffsetCoordY) {
@@ -106,7 +106,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 获取签章图片宽度
+     * Get 签章图片宽度 
      * @return ImageWidth 签章图片宽度
      */
     public String getImageWidth() {
@@ -114,7 +114,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 设置签章图片宽度
+     * Set 签章图片宽度
      * @param ImageWidth 签章图片宽度
      */
     public void setImageWidth(String ImageWidth) {
@@ -122,7 +122,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 获取签章图片高度
+     * Get 签章图片高度 
      * @return ImageHeight 签章图片高度
      */
     public String getImageHeight() {
@@ -130,7 +130,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 设置签章图片高度
+     * Set 签章图片高度
      * @param ImageHeight 签章图片高度
      */
     public void setImageHeight(String ImageHeight) {
@@ -138,7 +138,7 @@ public class SignKeyword  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);

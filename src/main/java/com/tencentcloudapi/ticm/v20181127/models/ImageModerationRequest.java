@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageModerationRequest  extends AbstractModel{
+public class ImageModerationRequest extends AbstractModel{
 
     /**
     * 本次调用支持的识别场景，可选值如下：
@@ -69,12 +69,12 @@ public class ImageModerationRequest  extends AbstractModel{
     private String ImageBase64;
 
     /**
-     * 获取本次调用支持的识别场景，可选值如下：
+     * Get 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
 
-支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。
+支持多场景（Scenes）一起检测。例如，使用 Scenes=["PORN", "TERRORISM"]，即对一张图片同时进行色情识别和暴恐识别。 
      * @return Scenes 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
@@ -87,7 +87,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置本次调用支持的识别场景，可选值如下：
+     * Set 本次调用支持的识别场景，可选值如下：
 1. PORN，即色情识别
 2. TERRORISM，即暴恐识别
 3. POLITICS，即政治敏感识别
@@ -105,13 +105,13 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片URL地址。 
+     * Get 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
  • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
  • 图片像素：大于50*50像素，否则影响识别效果； 
  • 长宽比：长边：短边<5； 
-接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。
+接口响应时间会受到图片下载时间的影响，建议使用更可靠的存储服务，推荐将图片存储在腾讯云COS。 
      * @return ImageUrl 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
@@ -125,7 +125,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片URL地址。 
+     * Set 图片URL地址。 
 图片限制： 
  • 图片格式：PNG、JPG、JPEG。 
  • 图片大小：所下载图片经Base64编码后不超过4M。图片下载时间不超过3秒。 
@@ -145,7 +145,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取预留字段，后期用于展示更多识别信息。
+     * Get 预留字段，后期用于展示更多识别信息。 
      * @return Config 预留字段，后期用于展示更多识别信息。
      */
     public String getConfig() {
@@ -153,7 +153,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置预留字段，后期用于展示更多识别信息。
+     * Set 预留字段，后期用于展示更多识别信息。
      * @param Config 预留字段，后期用于展示更多识别信息。
      */
     public void setConfig(String Config) {
@@ -161,7 +161,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取透传字段，透传简单信息。
+     * Get 透传字段，透传简单信息。 
      * @return Extra 透传字段，透传简单信息。
      */
     public String getExtra() {
@@ -169,7 +169,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置透传字段，透传简单信息。
+     * Set 透传字段，透传简单信息。
      * @param Extra 透传字段，透传简单信息。
      */
     public void setExtra(String Extra) {
@@ -177,7 +177,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+     * Get 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。 
      * @return ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
      */
     public String getImageBase64() {
@@ -185,7 +185,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
+     * Set 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
      * @param ImageBase64 图片经过base64编码的内容。最大不超过4M。与ImageUrl同时存在时优先使用ImageUrl字段。
      */
     public void setImageBase64(String ImageBase64) {
@@ -193,7 +193,7 @@ public class ImageModerationRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrajectoryDataResponse  extends AbstractModel{
+public class DescribeTrajectoryDataResponse extends AbstractModel{
 
     /**
     * 集团ID
@@ -79,7 +79,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -87,7 +87,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -95,7 +95,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -103,7 +103,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -111,7 +111,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总人数
+     * Get 总人数 
      * @return TotalPerson 总人数
      */
     public Integer getTotalPerson() {
@@ -119,7 +119,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总人数
+     * Set 总人数
      * @param TotalPerson 总人数
      */
     public void setTotalPerson(Integer TotalPerson) {
@@ -127,7 +127,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总动迹数目
+     * Get 总动迹数目 
      * @return TotalTrajectory 总动迹数目
      */
     public Integer getTotalTrajectory() {
@@ -135,7 +135,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总动迹数目
+     * Set 总动迹数目
      * @param TotalTrajectory 总动迹数目
      */
     public void setTotalTrajectory(Integer TotalTrajectory) {
@@ -143,7 +143,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回动迹中的总人数
+     * Get 返回动迹中的总人数 
      * @return Person 返回动迹中的总人数
      */
     public Integer getPerson() {
@@ -151,7 +151,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回动迹中的总人数
+     * Set 返回动迹中的总人数
      * @param Person 返回动迹中的总人数
      */
     public void setPerson(Integer Person) {
@@ -159,7 +159,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回动迹的数目
+     * Get 返回动迹的数目 
      * @return Trajectory 返回动迹的数目
      */
     public Integer getTrajectory() {
@@ -167,7 +167,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回动迹的数目
+     * Set 返回动迹的数目
      * @param Trajectory 返回动迹的数目
      */
     public void setTrajectory(Integer Trajectory) {
@@ -175,7 +175,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取返回动迹的具体信息
+     * Get 返回动迹的具体信息 
      * @return Data 返回动迹的具体信息
      */
     public TrajectorySunData [] getData() {
@@ -183,7 +183,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置返回动迹的具体信息
+     * Set 返回动迹的具体信息
      * @param Data 返回动迹的具体信息
      */
     public void setData(TrajectorySunData [] Data) {
@@ -191,7 +191,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -199,7 +199,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -207,7 +207,7 @@ public class DescribeTrajectoryDataResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

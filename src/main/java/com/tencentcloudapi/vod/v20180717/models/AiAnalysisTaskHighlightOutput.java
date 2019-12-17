@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskHighlightOutput  extends AbstractModel{
+public class AiAnalysisTaskHighlightOutput extends AbstractModel{
 
     /**
     * 视频智能精彩片段列表。
@@ -30,7 +30,7 @@ public class AiAnalysisTaskHighlightOutput  extends AbstractModel{
     private MediaAiAnalysisHighlightItem [] HighlightSet;
 
     /**
-     * 获取视频智能精彩片段列表。
+     * Get 视频智能精彩片段列表。 
      * @return HighlightSet 视频智能精彩片段列表。
      */
     public MediaAiAnalysisHighlightItem [] getHighlightSet() {
@@ -38,7 +38,7 @@ public class AiAnalysisTaskHighlightOutput  extends AbstractModel{
     }
 
     /**
-     * 设置视频智能精彩片段列表。
+     * Set 视频智能精彩片段列表。
      * @param HighlightSet 视频智能精彩片段列表。
      */
     public void setHighlightSet(MediaAiAnalysisHighlightItem [] HighlightSet) {
@@ -46,7 +46,7 @@ public class AiAnalysisTaskHighlightOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "HighlightSet.", this.HighlightSet);

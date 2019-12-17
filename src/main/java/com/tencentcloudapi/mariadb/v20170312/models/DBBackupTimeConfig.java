@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBBackupTimeConfig  extends AbstractModel{
+public class DBBackupTimeConfig extends AbstractModel{
 
     /**
     * 实例 Id
@@ -44,7 +44,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     private String EndBackupTime;
 
     /**
-     * 获取实例 Id
+     * Get 实例 Id 
      * @return InstanceId 实例 Id
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置实例 Id
+     * Set 实例 Id
      * @param InstanceId 实例 Id
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
+     * Get 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00 
      * @return StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      */
     public String getStartBackupTime() {
@@ -68,7 +68,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
+     * Set 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      * @param StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      */
     public void setStartBackupTime(String StartBackupTime) {
@@ -76,7 +76,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 获取每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
+     * Get 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00 
      * @return EndBackupTime 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
      */
     public String getEndBackupTime() {
@@ -84,7 +84,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 设置每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
+     * Set 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
      * @param EndBackupTime 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:00
      */
     public void setEndBackupTime(String EndBackupTime) {
@@ -92,7 +92,7 @@ public class DBBackupTimeConfig  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

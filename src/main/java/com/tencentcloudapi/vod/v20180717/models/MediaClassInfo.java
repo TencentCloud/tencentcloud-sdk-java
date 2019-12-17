@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MediaClassInfo  extends AbstractModel{
+public class MediaClassInfo extends AbstractModel{
 
     /**
     * 分类 ID
@@ -59,7 +59,7 @@ public class MediaClassInfo  extends AbstractModel{
     private Long [] SubClassIdSet;
 
     /**
-     * 获取分类 ID
+     * Get 分类 ID 
      * @return ClassId 分类 ID
      */
     public Long getClassId() {
@@ -67,7 +67,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分类 ID
+     * Set 分类 ID
      * @param ClassId 分类 ID
      */
     public void setClassId(Long ClassId) {
@@ -75,7 +75,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 获取父类 ID，一级分类的父类 ID 为 -1。
+     * Get 父类 ID，一级分类的父类 ID 为 -1。 
      * @return ParentId 父类 ID，一级分类的父类 ID 为 -1。
      */
     public Long getParentId() {
@@ -83,7 +83,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 设置父类 ID，一级分类的父类 ID 为 -1。
+     * Set 父类 ID，一级分类的父类 ID 为 -1。
      * @param ParentId 父类 ID，一级分类的父类 ID 为 -1。
      */
     public void setParentId(Long ParentId) {
@@ -91,7 +91,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分类名称
+     * Get 分类名称 
      * @return ClassName 分类名称
      */
     public String getClassName() {
@@ -99,7 +99,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分类名称
+     * Set 分类名称
      * @param ClassName 分类名称
      */
     public void setClassName(String ClassName) {
@@ -107,7 +107,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
+     * Get 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。 
      * @return Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      */
     public Long getLevel() {
@@ -115,7 +115,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
+     * Set 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      * @param Level 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
      */
     public void setLevel(Long Level) {
@@ -123,8 +123,8 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前分类的第一级子类 ID 集合
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 当前分类的第一级子类 ID 集合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubClassIdSet 当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前分类的第一级子类 ID 集合
+     * Set 当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubClassIdSet 当前分类的第一级子类 ID 集合
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,7 +143,7 @@ public class MediaClassInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Externals  extends AbstractModel{
+public class Externals extends AbstractModel{
 
     /**
     * 释放地址
@@ -47,8 +47,8 @@ public class Externals  extends AbstractModel{
     private StorageBlock StorageBlockAttr;
 
     /**
-     * 获取释放地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 释放地址
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReleaseAddress 释放地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 设置释放地址
+     * Set 释放地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseAddress 释放地址
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 获取不支持的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 不支持的网络类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UnsupportNetworks 不支持的网络类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 设置不支持的网络类型
+     * Set 不支持的网络类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UnsupportNetworks 不支持的网络类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 获取HDD本地存储属性
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get HDD本地存储属性
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageBlockAttr HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 设置HDD本地存储属性
+     * Set HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageBlockAttr HDD本地存储属性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class Externals  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReleaseAddress", this.ReleaseAddress);

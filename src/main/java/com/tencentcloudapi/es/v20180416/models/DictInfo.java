@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DictInfo  extends AbstractModel{
+public class DictInfo extends AbstractModel{
 
     /**
     * 词典键值
@@ -44,7 +44,7 @@ public class DictInfo  extends AbstractModel{
     private Integer Size;
 
     /**
-     * 获取词典键值
+     * Get 词典键值 
      * @return Key 词典键值
      */
     public String getKey() {
@@ -52,7 +52,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 设置词典键值
+     * Set 词典键值
      * @param Key 词典键值
      */
     public void setKey(String Key) {
@@ -60,7 +60,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 获取词典名称
+     * Get 词典名称 
      * @return Name 词典名称
      */
     public String getName() {
@@ -68,7 +68,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 设置词典名称
+     * Set 词典名称
      * @param Name 词典名称
      */
     public void setName(String Name) {
@@ -76,7 +76,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 获取词典大小，单位B
+     * Get 词典大小，单位B 
      * @return Size 词典大小，单位B
      */
     public Integer getSize() {
@@ -84,7 +84,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 设置词典大小，单位B
+     * Set 词典大小，单位B
      * @param Size 词典大小，单位B
      */
     public void setSize(Integer Size) {
@@ -92,7 +92,7 @@ public class DictInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

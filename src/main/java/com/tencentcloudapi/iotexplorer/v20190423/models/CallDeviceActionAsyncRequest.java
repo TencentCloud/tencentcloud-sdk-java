@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CallDeviceActionAsyncRequest  extends AbstractModel{
+public class CallDeviceActionAsyncRequest extends AbstractModel{
 
     /**
     * 产品Id
@@ -51,7 +51,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     private String InputParams;
 
     /**
-     * 获取产品Id
+     * Get 产品Id 
      * @return ProductId 产品Id
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品Id
+     * Set 产品Id
      * @param ProductId 产品Id
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -75,7 +75,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -83,7 +83,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 获取动作Id
+     * Get 动作Id 
      * @return ActionId 动作Id
      */
     public String getActionId() {
@@ -91,7 +91,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 设置动作Id
+     * Set 动作Id
      * @param ActionId 动作Id
      */
     public void setActionId(String ActionId) {
@@ -99,7 +99,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输入参数
+     * Get 输入参数 
      * @return InputParams 输入参数
      */
     public String getInputParams() {
@@ -107,7 +107,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输入参数
+     * Set 输入参数
      * @param InputParams 输入参数
      */
     public void setInputParams(String InputParams) {
@@ -115,7 +115,7 @@ public class CallDeviceActionAsyncRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BgpPeer  extends AbstractModel{
+public class BgpPeer extends AbstractModel{
 
     /**
     * 用户侧，BGP Asn
@@ -37,7 +37,7 @@ public class BgpPeer  extends AbstractModel{
     private String AuthKey;
 
     /**
-     * 获取用户侧，BGP Asn
+     * Get 用户侧，BGP Asn 
      * @return Asn 用户侧，BGP Asn
      */
     public Integer getAsn() {
@@ -45,7 +45,7 @@ public class BgpPeer  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧，BGP Asn
+     * Set 用户侧，BGP Asn
      * @param Asn 用户侧，BGP Asn
      */
     public void setAsn(Integer Asn) {
@@ -53,7 +53,7 @@ public class BgpPeer  extends AbstractModel{
     }
 
     /**
-     * 获取用户侧BGP密钥
+     * Get 用户侧BGP密钥 
      * @return AuthKey 用户侧BGP密钥
      */
     public String getAuthKey() {
@@ -61,7 +61,7 @@ public class BgpPeer  extends AbstractModel{
     }
 
     /**
-     * 设置用户侧BGP密钥
+     * Set 用户侧BGP密钥
      * @param AuthKey 用户侧BGP密钥
      */
     public void setAuthKey(String AuthKey) {
@@ -69,7 +69,7 @@ public class BgpPeer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Asn", this.Asn);

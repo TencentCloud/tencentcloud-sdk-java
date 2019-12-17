@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UnbindEipAclsRequest  extends AbstractModel{
+public class UnbindEipAclsRequest extends AbstractModel{
 
     /**
     * 待解关联的 EIP 与 ACL列表
@@ -30,7 +30,7 @@ public class UnbindEipAclsRequest  extends AbstractModel{
     private EipAclMap [] EipIdAclIdList;
 
     /**
-     * 获取待解关联的 EIP 与 ACL列表
+     * Get 待解关联的 EIP 与 ACL列表 
      * @return EipIdAclIdList 待解关联的 EIP 与 ACL列表
      */
     public EipAclMap [] getEipIdAclIdList() {
@@ -38,7 +38,7 @@ public class UnbindEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待解关联的 EIP 与 ACL列表
+     * Set 待解关联的 EIP 与 ACL列表
      * @param EipIdAclIdList 待解关联的 EIP 与 ACL列表
      */
     public void setEipIdAclIdList(EipAclMap [] EipIdAclIdList) {
@@ -46,7 +46,7 @@ public class UnbindEipAclsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EipIdAclIdList.", this.EipIdAclIdList);

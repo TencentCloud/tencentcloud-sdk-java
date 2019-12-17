@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PriceInfo  extends AbstractModel{
+public class PriceInfo extends AbstractModel{
 
     /**
     * 域名后缀，例如.com
@@ -58,7 +58,7 @@ public class PriceInfo  extends AbstractModel{
     private String Operation;
 
     /**
-     * 获取域名后缀，例如.com
+     * Get 域名后缀，例如.com 
      * @return Tld 域名后缀，例如.com
      */
     public String getTld() {
@@ -66,7 +66,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名后缀，例如.com
+     * Set 域名后缀，例如.com
      * @param Tld 域名后缀，例如.com
      */
     public void setTld(String Tld) {
@@ -74,7 +74,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取购买年限，范围[1-10]
+     * Get 购买年限，范围[1-10] 
      * @return Year 购买年限，范围[1-10]
      */
     public Long getYear() {
@@ -82,7 +82,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置购买年限，范围[1-10]
+     * Set 购买年限，范围[1-10]
      * @param Year 购买年限，范围[1-10]
      */
     public void setYear(Long Year) {
@@ -90,7 +90,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取域名原价
+     * Get 域名原价 
      * @return Price 域名原价
      */
     public Long getPrice() {
@@ -98,7 +98,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名原价
+     * Set 域名原价
      * @param Price 域名原价
      */
     public void setPrice(Long Price) {
@@ -106,7 +106,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取域名现价
+     * Get 域名现价 
      * @return RealPrice 域名现价
      */
     public Long getRealPrice() {
@@ -114,7 +114,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名现价
+     * Set 域名现价
      * @param RealPrice 域名现价
      */
     public void setRealPrice(Long RealPrice) {
@@ -122,7 +122,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取商品的购买类型，新购，续费，赎回，转入，续费并转入
+     * Get 商品的购买类型，新购，续费，赎回，转入，续费并转入 
      * @return Operation 商品的购买类型，新购，续费，赎回，转入，续费并转入
      */
     public String getOperation() {
@@ -130,7 +130,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置商品的购买类型，新购，续费，赎回，转入，续费并转入
+     * Set 商品的购买类型，新购，续费，赎回，转入，续费并转入
      * @param Operation 商品的购买类型，新购，续费，赎回，转入，续费并转入
      */
     public void setOperation(String Operation) {
@@ -138,7 +138,7 @@ public class PriceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tld", this.Tld);

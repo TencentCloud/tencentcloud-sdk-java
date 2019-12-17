@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextModerationResponse  extends AbstractModel{
+public class TextModerationResponse extends AbstractModel{
 
     /**
     * 识别结果
@@ -44,7 +44,7 @@ public class TextModerationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取识别结果
+     * Get 识别结果 
      * @return Data 识别结果
      */
     public TextData getData() {
@@ -52,7 +52,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置识别结果
+     * Set 识别结果
      * @param Data 识别结果
      */
     public void setData(TextData Data) {
@@ -60,7 +60,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务返回码
+     * Get 业务返回码 
      * @return BusinessCode 业务返回码
      */
     public Long getBusinessCode() {
@@ -68,7 +68,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务返回码
+     * Set 业务返回码
      * @param BusinessCode 业务返回码
      */
     public void setBusinessCode(Long BusinessCode) {
@@ -76,7 +76,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class TextModerationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Data.", this.Data);

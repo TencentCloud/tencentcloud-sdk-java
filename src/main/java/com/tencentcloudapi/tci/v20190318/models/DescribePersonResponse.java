@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePersonResponse  extends AbstractModel{
+public class DescribePersonResponse extends AbstractModel{
 
     /**
     * 人员人脸列表
@@ -107,7 +107,7 @@ public class DescribePersonResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取人员人脸列表
+     * Get 人员人脸列表 
      * @return FaceSet 人员人脸列表
      */
     public Face [] getFaceSet() {
@@ -115,7 +115,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员人脸列表
+     * Set 人员人脸列表
      * @param FaceSet 人员人脸列表
      */
     public void setFaceSet(Face [] FaceSet) {
@@ -123,7 +123,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -131,7 +131,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -139,7 +139,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取工作号码
+     * Get 工作号码 
      * @return JobNumber 工作号码
      */
     public String getJobNumber() {
@@ -147,7 +147,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置工作号码
+     * Set 工作号码
      * @param JobNumber 工作号码
      */
     public void setJobNumber(String JobNumber) {
@@ -155,7 +155,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员库唯一标识符
+     * Get 人员库唯一标识符 
      * @return LibraryId 人员库唯一标识符
      */
     public String getLibraryId() {
@@ -163,7 +163,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员库唯一标识符
+     * Set 人员库唯一标识符
      * @param LibraryId 人员库唯一标识符
      */
     public void setLibraryId(String LibraryId) {
@@ -171,7 +171,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取邮箱
+     * Get 邮箱 
      * @return Mail 邮箱
      */
     public String getMail() {
@@ -179,7 +179,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置邮箱
+     * Set 邮箱
      * @param Mail 邮箱
      */
     public void setMail(String Mail) {
@@ -187,7 +187,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Male 性别
      */
     public Long getMale() {
@@ -195,7 +195,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Male 性别
      */
     public void setMale(Long Male) {
@@ -203,7 +203,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -211,7 +211,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -219,7 +219,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取人员名称
+     * Get 人员名称 
      * @return PersonName 人员名称
      */
     public String getPersonName() {
@@ -227,7 +227,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置人员名称
+     * Set 人员名称
      * @param PersonName 人员名称
      */
     public void setPersonName(String PersonName) {
@@ -235,7 +235,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取电话号码
+     * Get 电话号码 
      * @return PhoneNumber 电话号码
      */
     public String getPhoneNumber() {
@@ -243,7 +243,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置电话号码
+     * Set 电话号码
      * @param PhoneNumber 电话号码
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -251,7 +251,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取学生号码
+     * Get 学生号码 
      * @return StudentNumber 学生号码
      */
     public String getStudentNumber() {
@@ -259,7 +259,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置学生号码
+     * Set 学生号码
      * @param StudentNumber 学生号码
      */
     public void setStudentNumber(String StudentNumber) {
@@ -267,7 +267,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取修改时间
+     * Get 修改时间 
      * @return UpdateTime 修改时间
      */
     public String getUpdateTime() {
@@ -275,7 +275,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置修改时间
+     * Set 修改时间
      * @param UpdateTime 修改时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -283,7 +283,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -291,7 +291,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -299,7 +299,7 @@ public class DescribePersonResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FaceSet.", this.FaceSet);

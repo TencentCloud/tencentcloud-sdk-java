@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
+public class UserDefineFaceReviewTemplateInfo extends AbstractModel{
 
     /**
     * 用户自定义人物审核任务开关，可选值：
@@ -54,9 +54,9 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * 获取用户自定义人物审核任务开关，可选值：
+     * Get 用户自定义人物审核任务开关，可选值：
 <li>ON：开启自定义人物审核任务；</li>
-<li>OFF：关闭自定义人物审核任务。</li>
+<li>OFF：关闭自定义人物审核任务。</li> 
      * @return Switch 用户自定义人物审核任务开关，可选值：
 <li>ON：开启自定义人物审核任务；</li>
 <li>OFF：关闭自定义人物审核任务。</li>
@@ -66,7 +66,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义人物审核任务开关，可选值：
+     * Set 用户自定义人物审核任务开关，可选值：
 <li>ON：开启自定义人物审核任务；</li>
 <li>OFF：关闭自定义人物审核任务。</li>
      * @param Switch 用户自定义人物审核任务开关，可选值：
@@ -78,8 +78,8 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
-标签个数最多 10 个，每个标签长度最多 16 个字符。
+     * Get 用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
+标签个数最多 10 个，每个标签长度最多 16 个字符。 
      * @return LabelSet 用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
@@ -88,7 +88,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
+     * Set 用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      * @param LabelSet 用户自定义人物过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义人物库的时，需要添加对应人物标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
@@ -98,7 +98,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
+     * Get 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。 
      * @return BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
      */
     public Long getBlockConfidence() {
@@ -106,7 +106,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
+     * Set 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
      * @param BlockConfidence 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
      */
     public void setBlockConfidence(Long BlockConfidence) {
@@ -114,7 +114,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 获取判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
+     * Get 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。 
      * @return ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
      */
     public Long getReviewConfidence() {
@@ -122,7 +122,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 设置判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
+     * Set 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
      * @param ReviewConfidence 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
      */
     public void setReviewConfidence(Long ReviewConfidence) {
@@ -130,7 +130,7 @@ public class UserDefineFaceReviewTemplateInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);

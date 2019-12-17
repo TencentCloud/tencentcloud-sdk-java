@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CpuInfo  extends AbstractModel{
+public class CpuInfo extends AbstractModel{
 
     /**
     * CPU的ID
@@ -51,7 +51,7 @@ public class CpuInfo  extends AbstractModel{
     private Integer [] ContainRaidCard;
 
     /**
-     * 获取CPU的ID
+     * Get CPU的ID 
      * @return CpuId CPU的ID
      */
     public Integer getCpuId() {
@@ -59,7 +59,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 设置CPU的ID
+     * Set CPU的ID
      * @param CpuId CPU的ID
      */
     public void setCpuId(Integer CpuId) {
@@ -67,7 +67,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 获取CPU型号描述
+     * Get CPU型号描述 
      * @return CpuDescription CPU型号描述
      */
     public String getCpuDescription() {
@@ -75,7 +75,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 设置CPU型号描述
+     * Set CPU型号描述
      * @param CpuDescription CPU型号描述
      */
     public void setCpuDescription(String CpuDescription) {
@@ -83,7 +83,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 获取机型序列
+     * Get 机型序列 
      * @return Series 机型序列
      */
     public Integer getSeries() {
@@ -91,7 +91,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 设置机型序列
+     * Set 机型序列
      * @param Series 机型序列
      */
     public void setSeries(Integer Series) {
@@ -99,7 +99,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 获取支持的RAID方式，0：有RAID卡，1：没有RAID卡
+     * Get 支持的RAID方式，0：有RAID卡，1：没有RAID卡 
      * @return ContainRaidCard 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      */
     public Integer [] getContainRaidCard() {
@@ -107,7 +107,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 设置支持的RAID方式，0：有RAID卡，1：没有RAID卡
+     * Set 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      * @param ContainRaidCard 支持的RAID方式，0：有RAID卡，1：没有RAID卡
      */
     public void setContainRaidCard(Integer [] ContainRaidCard) {
@@ -115,7 +115,7 @@ public class CpuInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CpuId", this.CpuId);

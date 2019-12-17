@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainRuleSet  extends AbstractModel{
+public class DomainRuleSet extends AbstractModel{
 
     /**
     * 转发规则域名。
@@ -171,7 +171,7 @@ public class DomainRuleSet  extends AbstractModel{
     private CertificateAliasInfo [] PolyRealServerCertificateAliasInfo;
 
     /**
-     * 获取转发规则域名。
+     * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
     public String getDomain() {
@@ -179,7 +179,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则域名。
+     * Set 转发规则域名。
      * @param Domain 转发规则域名。
      */
     public void setDomain(String Domain) {
@@ -187,7 +187,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应的转发规则列表。
+     * Get 该域名对应的转发规则列表。 
      * @return RuleSet 该域名对应的转发规则列表。
      */
     public RuleInfo [] getRuleSet() {
@@ -195,7 +195,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应的转发规则列表。
+     * Set 该域名对应的转发规则列表。
      * @param RuleSet 该域名对应的转发规则列表。
      */
     public void setRuleSet(RuleInfo [] RuleSet) {
@@ -203,8 +203,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -213,7 +213,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
+     * Set 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -223,8 +223,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应服务器证书名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CertificateAlias 该域名对应服务器证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -233,7 +233,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应服务器证书名称。
+     * Set 该域名对应服务器证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateAlias 该域名对应服务器证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -243,8 +243,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientCertificateId 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -253,7 +253,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
+     * Set 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateId 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,8 +263,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应客户端证书名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClientCertificateAlias 该域名对应客户端证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -273,7 +273,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应客户端证书名称。
+     * Set 该域名对应客户端证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCertificateAlias 该域名对应客户端证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,8 +283,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应基础认证配置ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicAuthConfId 该域名对应基础认证配置ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -293,7 +293,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应基础认证配置ID。
+     * Set 该域名对应基础认证配置ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicAuthConfId 该域名对应基础认证配置ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,10 +303,10 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取基础认证开关，其中：
+     * Get 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicAuth 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
@@ -317,7 +317,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置基础认证开关，其中：
+     * Set 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -331,8 +331,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应基础认证配置名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicAuthConfAlias 该域名对应基础认证配置名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -341,7 +341,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应基础认证配置名称。
+     * Set 该域名对应基础认证配置名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BasicAuthConfAlias 该域名对应基础认证配置名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -351,8 +351,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应源站认证证书ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerCertificateId 该域名对应源站认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -361,7 +361,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应源站认证证书ID。
+     * Set 该域名对应源站认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateId 该域名对应源站认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -371,10 +371,10 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取源站认证开关，其中：
+     * Get 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerAuth 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
@@ -385,7 +385,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置源站认证开关，其中：
+     * Set 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -399,8 +399,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应源站认证证书名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerCertificateAlias 该域名对应源站认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -409,7 +409,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应源站认证证书名称。
+     * Set 该域名对应源站认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateAlias 该域名对应源站认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -419,8 +419,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应通道认证证书ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GaapCertificateId 该域名对应通道认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -429,7 +429,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应通道认证证书ID。
+     * Set 该域名对应通道认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GaapCertificateId 该域名对应通道认证证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -439,10 +439,10 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取通道认证开关，其中：
+     * Get 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GaapAuth 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
@@ -453,7 +453,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置通道认证开关，其中：
+     * Set 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -467,8 +467,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该域名对应通道认证证书名称。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GaapCertificateAlias 该域名对应通道认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -477,7 +477,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置该域名对应通道认证证书名称。
+     * Set 该域名对应通道认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GaapCertificateAlias 该域名对应通道认证证书名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -487,8 +487,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源站认证域名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealServerCertificateDomain 源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -497,7 +497,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置源站认证域名。
+     * Set 源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RealServerCertificateDomain 源站认证域名。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -507,8 +507,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 多客户端证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -517,7 +517,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置多客户端证书时，返回多个证书的id和别名
+     * Set 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -527,8 +527,8 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 获取多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 多源站证书时，返回多个证书的id和别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -537,7 +537,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 设置多源站证书时，返回多个证书的id和别名
+     * Set 多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -547,7 +547,7 @@ public class DomainRuleSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

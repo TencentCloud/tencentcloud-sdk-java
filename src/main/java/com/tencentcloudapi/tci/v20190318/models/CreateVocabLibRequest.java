@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVocabLibRequest  extends AbstractModel{
+public class CreateVocabLibRequest extends AbstractModel{
 
     /**
     * 词汇库名称
@@ -30,7 +30,7 @@ public class CreateVocabLibRequest  extends AbstractModel{
     private String VocabLibName;
 
     /**
-     * 获取词汇库名称
+     * Get 词汇库名称 
      * @return VocabLibName 词汇库名称
      */
     public String getVocabLibName() {
@@ -38,7 +38,7 @@ public class CreateVocabLibRequest  extends AbstractModel{
     }
 
     /**
-     * 设置词汇库名称
+     * Set 词汇库名称
      * @param VocabLibName 词汇库名称
      */
     public void setVocabLibName(String VocabLibName) {
@@ -46,7 +46,7 @@ public class CreateVocabLibRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VocabLibName", this.VocabLibName);

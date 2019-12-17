@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionStatistic  extends AbstractModel{
+public class ActionStatistic extends AbstractModel{
 
     /**
     * 数量统计
@@ -44,7 +44,7 @@ public class ActionStatistic  extends AbstractModel{
     private ActionDurationRatioStatistic [] ActionDurationRatio;
 
     /**
-     * 获取数量统计
+     * Get 数量统计 
      * @return ActionCount 数量统计
      */
     public ActionCountStatistic [] getActionCount() {
@@ -52,7 +52,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置数量统计
+     * Set 数量统计
      * @param ActionCount 数量统计
      */
     public void setActionCount(ActionCountStatistic [] ActionCount) {
@@ -60,7 +60,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取时长统计
+     * Get 时长统计 
      * @return ActionDuration 时长统计
      */
     public ActionDurationStatistic [] getActionDuration() {
@@ -68,7 +68,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置时长统计
+     * Set 时长统计
      * @param ActionDuration 时长统计
      */
     public void setActionDuration(ActionDurationStatistic [] ActionDuration) {
@@ -76,7 +76,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取时长比例统计
+     * Get 时长比例统计 
      * @return ActionDurationRatio 时长比例统计
      */
     public ActionDurationRatioStatistic [] getActionDurationRatio() {
@@ -84,7 +84,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置时长比例统计
+     * Set 时长比例统计
      * @param ActionDurationRatio 时长比例统计
      */
     public void setActionDurationRatio(ActionDurationRatioStatistic [] ActionDurationRatio) {
@@ -92,7 +92,7 @@ public class ActionStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ActionCount.", this.ActionCount);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AgentAuditedClient  extends AbstractModel{
+public class AgentAuditedClient extends AbstractModel{
 
     /**
     * 代理商账号ID
@@ -138,7 +138,7 @@ public class AgentAuditedClient  extends AbstractModel{
     private String Mail;
 
     /**
-     * 获取代理商账号ID
+     * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
     public String getUin() {
@@ -146,7 +146,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代理商账号ID
+     * Set 代理商账号ID
      * @param Uin 代理商账号ID
      */
     public void setUin(String Uin) {
@@ -154,7 +154,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客账号ID
+     * Get 代客账号ID 
      * @return ClientUin 代客账号ID
      */
     public String getClientUin() {
@@ -162,7 +162,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客账号ID
+     * Set 代客账号ID
      * @param ClientUin 代客账号ID
      */
     public void setClientUin(String ClientUin) {
@@ -170,7 +170,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客审核通过时间戳
+     * Get 代客审核通过时间戳 
      * @return AgentTime 代客审核通过时间戳
      */
     public String getAgentTime() {
@@ -178,7 +178,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客审核通过时间戳
+     * Set 代客审核通过时间戳
      * @param AgentTime 代客审核通过时间戳
      */
     public void setAgentTime(String AgentTime) {
@@ -186,7 +186,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客类型，可能值为a/b/c
+     * Get 代客类型，可能值为a/b/c 
      * @return ClientFlag 代客类型，可能值为a/b/c
      */
     public String getClientFlag() {
@@ -194,7 +194,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客类型，可能值为a/b/c
+     * Set 代客类型，可能值为a/b/c
      * @param ClientFlag 代客类型，可能值为a/b/c
      */
     public void setClientFlag(String ClientFlag) {
@@ -202,7 +202,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客备注
+     * Get 代客备注 
      * @return ClientRemark 代客备注
      */
     public String getClientRemark() {
@@ -210,7 +210,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客备注
+     * Set 代客备注
      * @param ClientRemark 代客备注
      */
     public void setClientRemark(String ClientRemark) {
@@ -218,7 +218,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客名称（首选实名认证名称）
+     * Get 代客名称（首选实名认证名称） 
      * @return ClientName 代客名称（首选实名认证名称）
      */
     public String getClientName() {
@@ -226,7 +226,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客名称（首选实名认证名称）
+     * Set 代客名称（首选实名认证名称）
      * @param ClientName 代客名称（首选实名认证名称）
      */
     public void setClientName(String ClientName) {
@@ -234,7 +234,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取认证类型, 0：个人，1：企业；其他：未认证
+     * Get 认证类型, 0：个人，1：企业；其他：未认证 
      * @return AuthType 认证类型, 0：个人，1：企业；其他：未认证
      */
     public String getAuthType() {
@@ -242,7 +242,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置认证类型, 0：个人，1：企业；其他：未认证
+     * Set 认证类型, 0：个人，1：企业；其他：未认证
      * @param AuthType 认证类型, 0：个人，1：企业；其他：未认证
      */
     public void setAuthType(String AuthType) {
@@ -250,7 +250,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客APPID
+     * Get 代客APPID 
      * @return AppId 代客APPID
      */
     public String getAppId() {
@@ -258,7 +258,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客APPID
+     * Set 代客APPID
      * @param AppId 代客APPID
      */
     public void setAppId(String AppId) {
@@ -266,7 +266,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取上月消费金额
+     * Get 上月消费金额 
      * @return LastMonthAmt 上月消费金额
      */
     public Integer getLastMonthAmt() {
@@ -274,7 +274,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置上月消费金额
+     * Set 上月消费金额
      * @param LastMonthAmt 上月消费金额
      */
     public void setLastMonthAmt(Integer LastMonthAmt) {
@@ -282,7 +282,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取本月消费金额
+     * Get 本月消费金额 
      * @return ThisMonthAmt 本月消费金额
      */
     public Integer getThisMonthAmt() {
@@ -290,7 +290,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置本月消费金额
+     * Set 本月消费金额
      * @param ThisMonthAmt 本月消费金额
      */
     public void setThisMonthAmt(Integer ThisMonthAmt) {
@@ -298,7 +298,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取是否欠费,0：不欠费；1：欠费
+     * Get 是否欠费,0：不欠费；1：欠费 
      * @return HasOverdueBill 是否欠费,0：不欠费；1：欠费
      */
     public Integer getHasOverdueBill() {
@@ -306,7 +306,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置是否欠费,0：不欠费；1：欠费
+     * Set 是否欠费,0：不欠费；1：欠费
      * @param HasOverdueBill 是否欠费,0：不欠费；1：欠费
      */
     public void setHasOverdueBill(Integer HasOverdueBill) {
@@ -314,7 +314,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Get 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空 
      * @return ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      */
     public String getClientType() {
@@ -322,7 +322,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+     * Set 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      * @param ClientType 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
      */
     public void setClientType(String ClientType) {
@@ -330,7 +330,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * Get 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空 
      * @return ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     public String getProjectType() {
@@ -338,7 +338,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
+     * Set 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      */
     public void setProjectType(String ProjectType) {
@@ -346,8 +346,8 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务员ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SalesUin 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -356,7 +356,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置业务员ID
+     * Set 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesUin 业务员ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -366,8 +366,8 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务员姓名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SalesName 业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -376,7 +376,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置业务员姓名
+     * Set 业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesName 业务员姓名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -386,8 +386,8 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 获取代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 代客邮箱
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mail 代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -396,7 +396,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 设置代客邮箱
+     * Set 代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Mail 代客邮箱
 注意：此字段可能返回 null，表示取不到有效值。
@@ -406,7 +406,7 @@ public class AgentAuditedClient  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);

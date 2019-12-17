@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CkafkaAction  extends AbstractModel{
+public class CkafkaAction extends AbstractModel{
 
     /**
     * 实例Id
@@ -44,7 +44,7 @@ public class CkafkaAction  extends AbstractModel{
     private String Region;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 获取topic名称
+     * Get topic名称 
      * @return TopicName topic名称
      */
     public String getTopicName() {
@@ -68,7 +68,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 设置topic名称
+     * Set topic名称
      * @param TopicName topic名称
      */
     public void setTopicName(String TopicName) {
@@ -76,7 +76,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 获取地域
+     * Get 地域 
      * @return Region 地域
      */
     public String getRegion() {
@@ -84,7 +84,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 设置地域
+     * Set 地域
      * @param Region 地域
      */
     public void setRegion(String Region) {
@@ -92,7 +92,7 @@ public class CkafkaAction  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

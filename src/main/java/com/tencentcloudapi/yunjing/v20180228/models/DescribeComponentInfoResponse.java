@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeComponentInfoResponse  extends AbstractModel{
+public class DescribeComponentInfoResponse extends AbstractModel{
 
     /**
     * 组件ID。
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 组件名称。
@@ -67,23 +67,23 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取组件ID。
+     * Get 组件ID。 
      * @return Id 组件ID。
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置组件ID。
+     * Set 组件ID。
      * @param Id 组件ID。
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取组件名称。
+     * Get 组件名称。 
      * @return ComponentName 组件名称。
      */
     public String getComponentName() {
@@ -91,7 +91,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组件名称。
+     * Set 组件名称。
      * @param ComponentName 组件名称。
      */
     public void setComponentName(String ComponentName) {
@@ -99,9 +99,9 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组件类型。
+     * Get 组件类型。
 <li>WEB：web组件</li>
-<li>SYSTEM：系统组件</li>
+<li>SYSTEM：系统组件</li> 
      * @return ComponentType 组件类型。
 <li>WEB：web组件</li>
 <li>SYSTEM：系统组件</li>
@@ -111,7 +111,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组件类型。
+     * Set 组件类型。
 <li>WEB：web组件</li>
 <li>SYSTEM：系统组件</li>
      * @param ComponentType 组件类型。
@@ -123,7 +123,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组件官网。
+     * Get 组件官网。 
      * @return Homepage 组件官网。
      */
     public String getHomepage() {
@@ -131,7 +131,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组件官网。
+     * Set 组件官网。
      * @param Homepage 组件官网。
      */
     public void setHomepage(String Homepage) {
@@ -139,7 +139,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取组件描述。
+     * Get 组件描述。 
      * @return Description 组件描述。
      */
     public String getDescription() {
@@ -147,7 +147,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置组件描述。
+     * Set 组件描述。
      * @param Description 组件描述。
      */
     public void setDescription(String Description) {
@@ -155,7 +155,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -163,7 +163,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -171,7 +171,7 @@ public class DescribeComponentInfoResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceIp  extends AbstractModel{
+public class ResourceIp extends AbstractModel{
 
     /**
     * 资源ID
@@ -37,7 +37,7 @@ public class ResourceIp  extends AbstractModel{
     private String [] IpList;
 
     /**
-     * 获取资源ID
+     * Get 资源ID 
      * @return Id 资源ID
      */
     public String getId() {
@@ -45,7 +45,7 @@ public class ResourceIp  extends AbstractModel{
     }
 
     /**
-     * 设置资源ID
+     * Set 资源ID
      * @param Id 资源ID
      */
     public void setId(String Id) {
@@ -53,7 +53,7 @@ public class ResourceIp  extends AbstractModel{
     }
 
     /**
-     * 获取资源的IP数组
+     * Get 资源的IP数组 
      * @return IpList 资源的IP数组
      */
     public String [] getIpList() {
@@ -61,7 +61,7 @@ public class ResourceIp  extends AbstractModel{
     }
 
     /**
-     * 设置资源的IP数组
+     * Set 资源的IP数组
      * @param IpList 资源的IP数组
      */
     public void setIpList(String [] IpList) {
@@ -69,7 +69,7 @@ public class ResourceIp  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

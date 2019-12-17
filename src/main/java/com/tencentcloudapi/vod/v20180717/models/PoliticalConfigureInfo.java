@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PoliticalConfigureInfo  extends AbstractModel{
+public class PoliticalConfigureInfo extends AbstractModel{
 
     /**
     * 画面鉴政控制参数。
@@ -47,8 +47,8 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     private PoliticalOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * 获取画面鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 画面鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImgReviewInfo 画面鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -57,7 +57,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置画面鉴政控制参数。
+     * Set 画面鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImgReviewInfo 画面鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,8 +67,8 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取语音鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 语音鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsrReviewInfo 语音鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,7 +77,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置语音鉴政控制参数。
+     * Set 语音鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrReviewInfo 语音鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,8 +87,8 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取文本鉴政控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文本鉴政控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OcrReviewInfo 文本鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -97,7 +97,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置文本鉴政控制参数。
+     * Set 文本鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrReviewInfo 文本鉴政控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -107,7 +107,7 @@ public class PoliticalConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);

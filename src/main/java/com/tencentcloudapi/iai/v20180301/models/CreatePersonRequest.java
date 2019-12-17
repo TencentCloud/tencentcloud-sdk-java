@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreatePersonRequest  extends AbstractModel{
+public class CreatePersonRequest extends AbstractModel{
 
     /**
     * 待加入的人员库ID。
@@ -107,7 +107,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private Long QualityControl;
 
     /**
-     * 获取待加入的人员库ID。
+     * Get 待加入的人员库ID。 
      * @return GroupId 待加入的人员库ID。
      */
     public String getGroupId() {
@@ -115,7 +115,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置待加入的人员库ID。
+     * Set 待加入的人员库ID。
      * @param GroupId 待加入的人员库ID。
      */
     public void setGroupId(String GroupId) {
@@ -123,7 +123,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取人员名称。[1，60]个字符，可修改，可重复。
+     * Get 人员名称。[1，60]个字符，可修改，可重复。 
      * @return PersonName 人员名称。[1，60]个字符，可修改，可重复。
      */
     public String getPersonName() {
@@ -131,7 +131,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置人员名称。[1，60]个字符，可修改，可重复。
+     * Set 人员名称。[1，60]个字符，可修改，可重复。
      * @param PersonName 人员名称。[1，60]个字符，可修改，可重复。
      */
     public void setPersonName(String PersonName) {
@@ -139,7 +139,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * Get 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。 
      * @return PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      */
     public String getPersonId() {
@@ -147,7 +147,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
+     * Set 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      * @param PersonId 人员ID，单个腾讯云账号下不可修改，不可重复。支持英文、数字、-%@#&_，长度限制64B。
      */
     public void setPersonId(String PersonId) {
@@ -155,7 +155,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取0代表未填写，1代表男性，2代表女性。
+     * Get 0代表未填写，1代表男性，2代表女性。 
      * @return Gender 0代表未填写，1代表男性，2代表女性。
      */
     public Long getGender() {
@@ -163,7 +163,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置0代表未填写，1代表男性，2代表女性。
+     * Set 0代表未填写，1代表男性，2代表女性。
      * @param Gender 0代表未填写，1代表男性，2代表女性。
      */
     public void setGender(Long Gender) {
@@ -171,7 +171,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     * Get 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。 
      * @return PersonExDescriptionInfos 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
      */
     public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
@@ -179,7 +179,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
+     * Set 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
      * @param PersonExDescriptionInfos 人员描述字段内容，key-value。[0，60]个字符，可修改，可重复。
      */
     public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
@@ -187,8 +187,8 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取图片 base64 数据，base64 编码后大小不可超过5M。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+     * Get 图片 base64 数据，base64 编码后大小不可超过5M。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      */
@@ -197,7 +197,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片 base64 数据，base64 编码后大小不可超过5M。
+     * Set 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
      * @param Image 图片 base64 数据，base64 编码后大小不可超过5M。
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -207,11 +207,11 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Get 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
-支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。 
      * @return Url 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
@@ -223,7 +223,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片的 Url 。对应图片 base64 编码后大小不可超过5M。
+     * Set 图片的 Url 。对应图片 base64 编码后大小不可超过5M。
 Url、Image必须提供一个，如果都提供，只使用 Url。  
 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。
@@ -239,7 +239,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
+     * Get 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
 如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。 
 如果判断没有，则完成创建人员。 
 0: 不进行判断，无论是否有疑似同一人在库中均完成入库； 
@@ -248,7 +248,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 3: 较高的同一人判断要求（万一误识别率）； 
 4: 很高的同一人判断要求（十万一误识别率）。 
 默认 0。  
-注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。
+注： 要求越高，则疑似同一人的概率越小。不同要求对应的误识别率仅为参考值，您可以根据实际情况调整。 
      * @return UniquePersonControl 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
 如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。 
 如果判断没有，则完成创建人员。 
@@ -265,7 +265,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
+     * Set 此参数用于控制判断 Image 或 Url 中图片包含的人脸，是否在人员库中已有疑似的同一人。 
 如果判断为已有相同人在人员库中，则不会创建新的人员，返回疑似同一人的人员信息。 
 如果判断没有，则完成创建人员。 
 0: 不进行判断，无论是否有疑似同一人在库中均完成入库； 
@@ -291,14 +291,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 获取图片质量控制。 
+     * Get 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
 2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
 3: 较高的质量要求，图像存在偏亮，偏暗，一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，其中一到两种的情况； 
 4: 很高的质量要求，各个维度均为最好或最多在某一维度上存在轻微问题； 
 默认 0。 
-若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。
+若图片质量不满足要求，则返回结果中会提示图片质量检测不符要求。 
      * @return QualityControl 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
@@ -313,7 +313,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 设置图片质量控制。 
+     * Set 图片质量控制。 
 0: 不进行控制； 
 1:较低的质量要求，图像存在非常模糊，眼睛鼻子嘴巴遮挡至少其中一种或多种的情况； 
 2: 一般的质量要求，图像存在偏亮，偏暗，模糊或一般模糊，眉毛遮挡，脸颊遮挡，下巴遮挡，至少其中三种的情况； 
@@ -335,7 +335,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

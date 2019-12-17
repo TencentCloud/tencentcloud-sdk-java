@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFairPlayPemRequest  extends AbstractModel{
+public class DeleteFairPlayPemRequest extends AbstractModel{
 
     /**
     * 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
@@ -38,7 +38,7 @@ public class DeleteFairPlayPemRequest  extends AbstractModel{
     private Integer FairPlayPemId;
 
     /**
-     * 获取委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Get 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。 
      * @return BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public Integer getBailorId() {
@@ -46,7 +46,7 @@ public class DeleteFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
+     * Set 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      * @param BailorId 委托者Id,适用于托管自身证书的客户。普通客户无需填该字段。
      */
     public void setBailorId(Integer BailorId) {
@@ -54,8 +54,8 @@ public class DeleteFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要删除的pem id。
-当未传入该值时，将删除所有的私钥。
+     * Get 要删除的pem id。
+当未传入该值时，将删除所有的私钥。 
      * @return FairPlayPemId 要删除的pem id。
 当未传入该值时，将删除所有的私钥。
      */
@@ -64,7 +64,7 @@ public class DeleteFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要删除的pem id。
+     * Set 要删除的pem id。
 当未传入该值时，将删除所有的私钥。
      * @param FairPlayPemId 要删除的pem id。
 当未传入该值时，将删除所有的私钥。
@@ -74,7 +74,7 @@ public class DeleteFairPlayPemRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BailorId", this.BailorId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TopicRulePayload  extends AbstractModel{
+public class TopicRulePayload extends AbstractModel{
 
     /**
     * 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
@@ -52,7 +52,7 @@ public class TopicRulePayload  extends AbstractModel{
     private Boolean RuleDisabled;
 
     /**
-     * 获取规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
+     * Get 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw== 
      * @return Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      */
     public String getSql() {
@@ -60,7 +60,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 设置规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
+     * Set 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      * @param Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      */
     public void setSql(String Sql) {
@@ -68,8 +68,8 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 获取行为的JSON字符串，大部分种类举例如下：
-[{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}]
+     * Get 行为的JSON字符串，大部分种类举例如下：
+[{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}] 
      * @return Actions 行为的JSON字符串，大部分种类举例如下：
 [{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}]
      */
@@ -78,7 +78,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 设置行为的JSON字符串，大部分种类举例如下：
+     * Set 行为的JSON字符串，大部分种类举例如下：
 [{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}]
      * @param Actions 行为的JSON字符串，大部分种类举例如下：
 [{"republish":{"topic":"TEST/test"}},{"forward":{"api":"http://127.0.0.1:8080"}},{"ckafka":{"instance":{"id":"ckafka-test","name":""},"topic":{"id":"topic-test","name":"test"},"region":"gz"}},{"cmqqueue":{"queuename":"queue-test-TEST","region":"gz"}},{"mysql":{"instanceid":"cdb-test","region":"gz","username":"test","userpwd":"*****","dbname":"d_mqtt","tablename":"t_test","fieldpairs":[{"field":"test","value":"test"}],"devicetype":"CUSTOM"}}]
@@ -88,7 +88,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 获取规则描述
+     * Get 规则描述 
      * @return Description 规则描述
      */
     public String getDescription() {
@@ -96,7 +96,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 设置规则描述
+     * Set 规则描述
      * @param Description 规则描述
      */
     public void setDescription(String Description) {
@@ -104,7 +104,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 获取是否禁用规则
+     * Get 是否禁用规则 
      * @return RuleDisabled 是否禁用规则
      */
     public Boolean getRuleDisabled() {
@@ -112,7 +112,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 设置是否禁用规则
+     * Set 是否禁用规则
      * @param RuleDisabled 是否禁用规则
      */
     public void setRuleDisabled(Boolean RuleDisabled) {
@@ -120,7 +120,7 @@ public class TopicRulePayload  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sql", this.Sql);

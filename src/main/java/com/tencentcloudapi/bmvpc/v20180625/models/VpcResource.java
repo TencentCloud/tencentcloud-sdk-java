@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpcResource  extends AbstractModel{
+public class VpcResource extends AbstractModel{
 
     /**
     * 私有网络ID
@@ -163,7 +163,7 @@ public class VpcResource  extends AbstractModel{
     private Boolean IsOld;
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -171,7 +171,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -179,7 +179,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
      */
     public String getVpcName() {
@@ -187,7 +187,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称
+     * Set 私有网络名称
      * @param VpcName 私有网络名称
      */
     public void setVpcName(String VpcName) {
@@ -195,7 +195,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络的CIDR
+     * Get 私有网络的CIDR 
      * @return CidrBlock 私有网络的CIDR
      */
     public String getCidrBlock() {
@@ -203,7 +203,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络的CIDR
+     * Set 私有网络的CIDR
      * @param CidrBlock 私有网络的CIDR
      */
     public void setCidrBlock(String CidrBlock) {
@@ -211,7 +211,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取子网个数
+     * Get 子网个数 
      * @return SubnetNum 子网个数
      */
     public Long getSubnetNum() {
@@ -219,7 +219,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置子网个数
+     * Set 子网个数
      * @param SubnetNum 子网个数
      */
     public void setSubnetNum(Long SubnetNum) {
@@ -227,7 +227,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取NAT个数
+     * Get NAT个数 
      * @return NatNum NAT个数
      */
     public Long getNatNum() {
@@ -235,7 +235,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置NAT个数
+     * Set NAT个数
      * @param NatNum NAT个数
      */
     public void setNatNum(Long NatNum) {
@@ -243,7 +243,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取VPC状态
+     * Get VPC状态 
      * @return State VPC状态
      */
     public String getState() {
@@ -251,7 +251,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置VPC状态
+     * Set VPC状态
      * @param State VPC状态
      */
     public void setState(String State) {
@@ -259,7 +259,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启监控
+     * Get 是否开启监控 
      * @return MonitorFlag 是否开启监控
      */
     public Boolean getMonitorFlag() {
@@ -267,7 +267,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启监控
+     * Set 是否开启监控
      * @param MonitorFlag 是否开启监控
      */
     public void setMonitorFlag(Boolean MonitorFlag) {
@@ -275,7 +275,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取物理机个数
+     * Get 物理机个数 
      * @return CpmNum 物理机个数
      */
     public Long getCpmNum() {
@@ -283,7 +283,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置物理机个数
+     * Set 物理机个数
      * @param CpmNum 物理机个数
      */
     public void setCpmNum(Long CpmNum) {
@@ -291,7 +291,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取可用IP个数
+     * Get 可用IP个数 
      * @return LeaveIpNum 可用IP个数
      */
     public Long getLeaveIpNum() {
@@ -299,7 +299,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置可用IP个数
+     * Set 可用IP个数
      * @param LeaveIpNum 可用IP个数
      */
     public void setLeaveIpNum(Long LeaveIpNum) {
@@ -307,7 +307,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡个数
+     * Get 负载均衡个数 
      * @return LbNum 负载均衡个数
      */
     public Long getLbNum() {
@@ -315,7 +315,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡个数
+     * Set 负载均衡个数
      * @param LbNum 负载均衡个数
      */
     public void setLbNum(Long LbNum) {
@@ -323,7 +323,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取流量镜像网关个数
+     * Get 流量镜像网关个数 
      * @return TrafficMirrorNum 流量镜像网关个数
      */
     public Long getTrafficMirrorNum() {
@@ -331,7 +331,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像网关个数
+     * Set 流量镜像网关个数
      * @param TrafficMirrorNum 流量镜像网关个数
      */
     public void setTrafficMirrorNum(Long TrafficMirrorNum) {
@@ -339,7 +339,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取弹性IP个数
+     * Get 弹性IP个数 
      * @return EipNum 弹性IP个数
      */
     public Long getEipNum() {
@@ -347,7 +347,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置弹性IP个数
+     * Set 弹性IP个数
      * @param EipNum 弹性IP个数
      */
     public void setEipNum(Long EipNum) {
@@ -355,7 +355,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取专线网关个数
+     * Get 专线网关个数 
      * @return PlgwNum 专线网关个数
      */
     public Long getPlgwNum() {
@@ -363,7 +363,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置专线网关个数
+     * Set 专线网关个数
      * @param PlgwNum 专线网关个数
      */
     public void setPlgwNum(Long PlgwNum) {
@@ -371,7 +371,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取专线通道个数
+     * Get 专线通道个数 
      * @return PlvpNum 专线通道个数
      */
     public Long getPlvpNum() {
@@ -379,7 +379,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置专线通道个数
+     * Set 专线通道个数
      * @param PlvpNum 专线通道个数
      */
     public void setPlvpNum(Long PlvpNum) {
@@ -387,7 +387,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取ssl vpn网关个数
+     * Get ssl vpn网关个数 
      * @return SslVpnGwNum ssl vpn网关个数
      */
     public Long getSslVpnGwNum() {
@@ -395,7 +395,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置ssl vpn网关个数
+     * Set ssl vpn网关个数
      * @param SslVpnGwNum ssl vpn网关个数
      */
     public void setSslVpnGwNum(Long SslVpnGwNum) {
@@ -403,7 +403,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取对等链接个数
+     * Get 对等链接个数 
      * @return VpcPeerNum 对等链接个数
      */
     public Long getVpcPeerNum() {
@@ -411,7 +411,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置对等链接个数
+     * Set 对等链接个数
      * @param VpcPeerNum 对等链接个数
      */
     public void setVpcPeerNum(Long VpcPeerNum) {
@@ -419,7 +419,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取ipsec vpn网关个数
+     * Get ipsec vpn网关个数 
      * @return IpsecVpnGwNum ipsec vpn网关个数
      */
     public Long getIpsecVpnGwNum() {
@@ -427,7 +427,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置ipsec vpn网关个数
+     * Set ipsec vpn网关个数
      * @param IpsecVpnGwNum ipsec vpn网关个数
      */
     public void setIpsecVpnGwNum(Long IpsecVpnGwNum) {
@@ -435,7 +435,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取可用区
+     * Get 可用区 
      * @return Zone 可用区
      */
     public String getZone() {
@@ -443,7 +443,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置可用区
+     * Set 可用区
      * @param Zone 可用区
      */
     public void setZone(String Zone) {
@@ -451,7 +451,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -459,7 +459,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -467,7 +467,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 获取是否老专区VPC
+     * Get 是否老专区VPC 
      * @return IsOld 是否老专区VPC
      */
     public Boolean getIsOld() {
@@ -475,7 +475,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 设置是否老专区VPC
+     * Set 是否老专区VPC
      * @param IsOld 是否老专区VPC
      */
     public void setIsOld(Boolean IsOld) {
@@ -483,7 +483,7 @@ public class VpcResource  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

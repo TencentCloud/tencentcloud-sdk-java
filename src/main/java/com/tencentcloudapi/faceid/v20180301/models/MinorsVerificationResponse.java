@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MinorsVerificationResponse  extends AbstractModel{
+public class MinorsVerificationResponse extends AbstractModel{
 
     /**
     * 结果码，收费情况如下。
@@ -64,7 +64,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取结果码，收费情况如下。
+     * Get 结果码，收费情况如下。
 收费结果码：
 0: 成年
 -1: 未成年
@@ -76,7 +76,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
 -5: 非法姓名（长度、格式等不正确）
 -6: 数据源服务异常
 -7: 数据源中无此身份证记录
--8: 公安比对系统升级中，请稍后再试
+-8: 公安比对系统升级中，请稍后再试 
      * @return Result 结果码，收费情况如下。
 收费结果码：
 0: 成年
@@ -96,7 +96,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置结果码，收费情况如下。
+     * Set 结果码，收费情况如下。
 收费结果码：
 0: 成年
 -1: 未成年
@@ -128,7 +128,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取业务结果描述。
+     * Get 业务结果描述。 
      * @return Description 业务结果描述。
      */
     public String getDescription() {
@@ -136,7 +136,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置业务结果描述。
+     * Set 业务结果描述。
      * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
@@ -144,8 +144,8 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取当结果码为0或者-1时，该字段的值为年龄区间。
-格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
+     * Get 当结果码为0或者-1时，该字段的值为年龄区间。
+格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。 
      * @return AgeRange 当结果码为0或者-1时，该字段的值为年龄区间。
 格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
      */
@@ -154,7 +154,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置当结果码为0或者-1时，该字段的值为年龄区间。
+     * Set 当结果码为0或者-1时，该字段的值为年龄区间。
 格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
      * @param AgeRange 当结果码为0或者-1时，该字段的值为年龄区间。
 格式为[a,b)，表示年龄在a岁以上（包括a岁），b岁以下（不包括b岁）。若b为+时表示没有上限。
@@ -164,7 +164,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -172,7 +172,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -180,7 +180,7 @@ public class MinorsVerificationResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Result", this.Result);

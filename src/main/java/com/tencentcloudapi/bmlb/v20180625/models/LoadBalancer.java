@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LoadBalancer  extends AbstractModel{
+public class LoadBalancer extends AbstractModel{
 
     /**
     * 负载均衡器ID
@@ -205,7 +205,7 @@ public class LoadBalancer  extends AbstractModel{
     private String BzL7Metrics;
 
     /**
-     * 获取负载均衡器ID
+     * Get 负载均衡器ID 
      * @return LoadBalancerId 负载均衡器ID
      */
     public String getLoadBalancerId() {
@@ -213,7 +213,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡器ID
+     * Set 负载均衡器ID
      * @param LoadBalancerId 负载均衡器ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -221,7 +221,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，通过v2/DescribeProject 接口获得
+     * Get 项目ID，通过v2/DescribeProject 接口获得 
      * @return ProjectId 项目ID，通过v2/DescribeProject 接口获得
      */
     public Integer getProjectId() {
@@ -229,7 +229,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，通过v2/DescribeProject 接口获得
+     * Set 项目ID，通过v2/DescribeProject 接口获得
      * @param ProjectId 项目ID，通过v2/DescribeProject 接口获得
      */
     public void setProjectId(Integer ProjectId) {
@@ -237,7 +237,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡器名称
+     * Get 负载均衡器名称 
      * @return LoadBalancerName 负载均衡器名称
      */
     public String getLoadBalancerName() {
@@ -245,7 +245,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡器名称
+     * Set 负载均衡器名称
      * @param LoadBalancerName 负载均衡器名称
      */
     public void setLoadBalancerName(String LoadBalancerName) {
@@ -253,7 +253,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型
+     * Get 负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型 
      * @return LoadBalancerType 负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型
      */
     public String getLoadBalancerType() {
@@ -261,7 +261,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型
+     * Set 负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型
      * @param LoadBalancerType 负载均衡的类型 : open表示公网负载均衡类型，internal表示内网负载均衡类型
      */
     public void setLoadBalancerType(String LoadBalancerType) {
@@ -269,7 +269,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
+     * Get 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾 
      * @return Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
     public Integer getExclusive() {
@@ -277,7 +277,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
+     * Set 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      * @param Exclusive 是否筛选独占集群，0表示非独占集群，1表示四层独占集群，2表示七层独占集群，3表示四层和七层独占集群，4表示共享容灾
      */
     public void setExclusive(Integer Exclusive) {
@@ -285,7 +285,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
+     * Get 该负载均衡对应的tgw集群（fullnat,tunnel,dnat） 
      * @return TgwSetType 该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
      */
     public String getTgwSetType() {
@@ -293,7 +293,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
+     * Set 该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
      * @param TgwSetType 该负载均衡对应的tgw集群（fullnat,tunnel,dnat）
      */
     public void setTgwSetType(String TgwSetType) {
@@ -301,7 +301,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段
+     * Get 负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段 
      * @return Domain 负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段
      */
     public String getDomain() {
@@ -309,7 +309,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段
+     * Set 负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段
      * @param Domain 负载均衡域名。规则：1-60个小写英文字母、数字、点号“.”或连接线“-”。内网类型的负载均衡不能配置该字段
      */
     public void setDomain(String Domain) {
@@ -317,7 +317,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取该负载均衡对应的所在的VpcId
+     * Get 该负载均衡对应的所在的VpcId 
      * @return VpcId 该负载均衡对应的所在的VpcId
      */
     public String getVpcId() {
@@ -325,7 +325,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置该负载均衡对应的所在的VpcId
+     * Set 该负载均衡对应的所在的VpcId
      * @param VpcId 该负载均衡对应的所在的VpcId
      */
     public void setVpcId(String VpcId) {
@@ -333,7 +333,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取该负载均衡对应的所在的SubnetId
+     * Get 该负载均衡对应的所在的SubnetId 
      * @return SubnetId 该负载均衡对应的所在的SubnetId
      */
     public String getSubnetId() {
@@ -341,7 +341,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置该负载均衡对应的所在的SubnetId
+     * Set 该负载均衡对应的所在的SubnetId
      * @param SubnetId 该负载均衡对应的所在的SubnetId
      */
     public void setSubnetId(String SubnetId) {
@@ -349,7 +349,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return Status 无
      */
     public Integer getStatus() {
@@ -357,7 +357,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param Status 无
      */
     public void setStatus(Integer Status) {
@@ -365,7 +365,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return PayMode 无
      */
     public String getPayMode() {
@@ -373,7 +373,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param PayMode 无
      */
     public void setPayMode(String PayMode) {
@@ -381,7 +381,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return LatestPayMode 无
      */
     public String getLatestPayMode() {
@@ -389,7 +389,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param LatestPayMode 无
      */
     public void setLatestPayMode(String LatestPayMode) {
@@ -397,7 +397,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return CreateTime 无
      */
     public String getCreateTime() {
@@ -405,7 +405,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param CreateTime 无
      */
     public void setCreateTime(String CreateTime) {
@@ -413,7 +413,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return StatusTime 无
      */
     public String getStatusTime() {
@@ -421,7 +421,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param StatusTime 无
      */
     public void setStatusTime(String StatusTime) {
@@ -429,7 +429,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络名称。
+     * Get 私有网络名称。 
      * @return VpcName 私有网络名称。
      */
     public String getVpcName() {
@@ -437,7 +437,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络名称。
+     * Set 私有网络名称。
      * @param VpcName 私有网络名称。
      */
     public void setVpcName(String VpcName) {
@@ -445,7 +445,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络Cidr。
+     * Get 私有网络Cidr。 
      * @return VpcCidrBlock 私有网络Cidr。
      */
     public String getVpcCidrBlock() {
@@ -453,7 +453,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络Cidr。
+     * Set 私有网络Cidr。
      * @param VpcCidrBlock 私有网络Cidr。
      */
     public void setVpcCidrBlock(String VpcCidrBlock) {
@@ -461,7 +461,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡获得的公网IP地址,支持多个
+     * Get 负载均衡获得的公网IP地址,支持多个 
      * @return LoadBalancerVips 负载均衡获得的公网IP地址,支持多个
      */
     public String [] getLoadBalancerVips() {
@@ -469,7 +469,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡获得的公网IP地址,支持多个
+     * Set 负载均衡获得的公网IP地址,支持多个
      * @param LoadBalancerVips 负载均衡获得的公网IP地址,支持多个
      */
     public void setLoadBalancerVips(String [] LoadBalancerVips) {
@@ -477,7 +477,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return SupportListenerTypes 无
      */
     public String [] getSupportListenerTypes() {
@@ -485,7 +485,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param SupportListenerTypes 无
      */
     public void setSupportListenerTypes(String [] SupportListenerTypes) {
@@ -493,7 +493,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return Bandwidth 无
      */
     public Integer getBandwidth() {
@@ -501,7 +501,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param Bandwidth 无
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -509,7 +509,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡个性化配置ID
+     * Get 负载均衡个性化配置ID 
      * @return ConfId 负载均衡个性化配置ID
      */
     public String getConfId() {
@@ -517,7 +517,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡个性化配置ID
+     * Set 负载均衡个性化配置ID
      * @param ConfId 负载均衡个性化配置ID
      */
     public void setConfId(String ConfId) {
@@ -525,7 +525,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取无
+     * Get 无 
      * @return ConfName 无
      */
     public String getConfName() {
@@ -533,7 +533,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置无
+     * Set 无
      * @param ConfName 无
      */
     public void setConfName(String ConfName) {
@@ -541,7 +541,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡的IPV6的VIP。
+     * Get 负载均衡的IPV6的VIP。 
      * @return LoadBalancerVipv6s 负载均衡的IPV6的VIP。
      */
     public String [] getLoadBalancerVipv6s() {
@@ -549,7 +549,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的IPV6的VIP。
+     * Set 负载均衡的IPV6的VIP。
      * @param LoadBalancerVipv6s 负载均衡的IPV6的VIP。
      */
     public void setLoadBalancerVipv6s(String [] LoadBalancerVipv6s) {
@@ -557,7 +557,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡IP协议类型。ipv4或者ipv6。
+     * Get 负载均衡IP协议类型。ipv4或者ipv6。 
      * @return IpProtocolType 负载均衡IP协议类型。ipv4或者ipv6。
      */
     public String getIpProtocolType() {
@@ -565,7 +565,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡IP协议类型。ipv4或者ipv6。
+     * Set 负载均衡IP协议类型。ipv4或者ipv6。
      * @param IpProtocolType 负载均衡IP协议类型。ipv4或者ipv6。
      */
     public void setIpProtocolType(String IpProtocolType) {
@@ -573,7 +573,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取保障型网关计费形式
+     * Get 保障型网关计费形式 
      * @return BzPayMode 保障型网关计费形式
      */
     public String getBzPayMode() {
@@ -581,7 +581,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置保障型网关计费形式
+     * Set 保障型网关计费形式
      * @param BzPayMode 保障型网关计费形式
      */
     public void setBzPayMode(String BzPayMode) {
@@ -589,7 +589,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取保障型网关四层计费指标
+     * Get 保障型网关四层计费指标 
      * @return BzL4Metrics 保障型网关四层计费指标
      */
     public String getBzL4Metrics() {
@@ -597,7 +597,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置保障型网关四层计费指标
+     * Set 保障型网关四层计费指标
      * @param BzL4Metrics 保障型网关四层计费指标
      */
     public void setBzL4Metrics(String BzL4Metrics) {
@@ -605,7 +605,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 获取保障型网关七层计费指标
+     * Get 保障型网关七层计费指标 
      * @return BzL7Metrics 保障型网关七层计费指标
      */
     public String getBzL7Metrics() {
@@ -613,7 +613,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 设置保障型网关七层计费指标
+     * Set 保障型网关七层计费指标
      * @param BzL7Metrics 保障型网关七层计费指标
      */
     public void setBzL7Metrics(String BzL7Metrics) {
@@ -621,7 +621,7 @@ public class LoadBalancer  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

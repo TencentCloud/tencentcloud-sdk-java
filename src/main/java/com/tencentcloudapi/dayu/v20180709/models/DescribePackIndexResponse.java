@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePackIndexResponse  extends AbstractModel{
+public class DescribePackIndexResponse extends AbstractModel{
 
     /**
     * 字段值，如下：
@@ -43,13 +43,13 @@ IsolatePackCount：隔离中的资源数
     private String RequestId;
 
     /**
-     * 获取字段值，如下：
+     * Get 字段值，如下：
 TotalPackCount：资源数
 AttackPackCount：清洗中的资源数
 BlockPackCount：封堵中的资源数
 ExpiredPackCount：过期的资源数
 ExpireingPackCount：即将过期的资源数
-IsolatePackCount：隔离中的资源数
+IsolatePackCount：隔离中的资源数 
      * @return Data 字段值，如下：
 TotalPackCount：资源数
 AttackPackCount：清洗中的资源数
@@ -63,7 +63,7 @@ IsolatePackCount：隔离中的资源数
     }
 
     /**
-     * 设置字段值，如下：
+     * Set 字段值，如下：
 TotalPackCount：资源数
 AttackPackCount：清洗中的资源数
 BlockPackCount：封堵中的资源数
@@ -83,7 +83,7 @@ IsolatePackCount：隔离中的资源数
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -91,7 +91,7 @@ IsolatePackCount：隔离中的资源数
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -99,7 +99,7 @@ IsolatePackCount：隔离中的资源数
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);

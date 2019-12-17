@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DbRollbackTimeInfo  extends AbstractModel{
+public class DbRollbackTimeInfo extends AbstractModel{
 
     /**
     * 数据库名称
@@ -44,7 +44,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取数据库名称
+     * Get 数据库名称 
      * @return DBName 数据库名称
      */
     public String getDBName() {
@@ -52,7 +52,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名称
+     * Set 数据库名称
      * @param DBName 数据库名称
      */
     public void setDBName(String DBName) {
@@ -60,7 +60,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可回档开始时间
+     * Get 可回档开始时间 
      * @return StartTime 可回档开始时间
      */
     public String getStartTime() {
@@ -68,7 +68,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可回档开始时间
+     * Set 可回档开始时间
      * @param StartTime 可回档开始时间
      */
     public void setStartTime(String StartTime) {
@@ -76,7 +76,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 获取可回档结束时间
+     * Get 可回档结束时间 
      * @return EndTime 可回档结束时间
      */
     public String getEndTime() {
@@ -84,7 +84,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 设置可回档结束时间
+     * Set 可回档结束时间
      * @param EndTime 可回档结束时间
      */
     public void setEndTime(String EndTime) {
@@ -92,7 +92,7 @@ public class DbRollbackTimeInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBName", this.DBName);

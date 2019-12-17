@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyContainerGroupRequest  extends AbstractModel{
+public class ModifyContainerGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID
@@ -58,7 +58,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     private Long UpdateIvl;
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -66,7 +66,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -74,7 +74,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取0:公网 1:集群内访问 2：NodePort
+     * Get 0:公网 1:集群内访问 2：NodePort 
      * @return AccessType 0:公网 1:集群内访问 2：NodePort
      */
     public Long getAccessType() {
@@ -82,7 +82,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置0:公网 1:集群内访问 2：NodePort
+     * Set 0:公网 1:集群内访问 2：NodePort
      * @param AccessType 0:公网 1:集群内访问 2：NodePort
      */
     public void setAccessType(Long AccessType) {
@@ -90,7 +90,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取ProtocolPorts数组
+     * Get ProtocolPorts数组 
      * @return ProtocolPorts ProtocolPorts数组
      */
     public ProtocolPort [] getProtocolPorts() {
@@ -98,7 +98,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置ProtocolPorts数组
+     * Set ProtocolPorts数组
      * @param ProtocolPorts ProtocolPorts数组
      */
     public void setProtocolPorts(ProtocolPort [] ProtocolPorts) {
@@ -106,7 +106,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新方式：0:快速更新 1:滚动更新
+     * Get 更新方式：0:快速更新 1:滚动更新 
      * @return UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public Long getUpdateType() {
@@ -114,7 +114,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新方式：0:快速更新 1:滚动更新
+     * Set 更新方式：0:快速更新 1:滚动更新
      * @param UpdateType 更新方式：0:快速更新 1:滚动更新
      */
     public void setUpdateType(Long UpdateType) {
@@ -122,7 +122,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取更新间隔,单位秒
+     * Get 更新间隔,单位秒 
      * @return UpdateIvl 更新间隔,单位秒
      */
     public Long getUpdateIvl() {
@@ -130,7 +130,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置更新间隔,单位秒
+     * Set 更新间隔,单位秒
      * @param UpdateIvl 更新间隔,单位秒
      */
     public void setUpdateIvl(Long UpdateIvl) {
@@ -138,7 +138,7 @@ public class ModifyContainerGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

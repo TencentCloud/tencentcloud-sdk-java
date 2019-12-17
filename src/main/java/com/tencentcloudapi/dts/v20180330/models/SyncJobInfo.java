@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncJobInfo  extends AbstractModel{
+public class SyncJobInfo extends AbstractModel{
 
     /**
     * 灾备任务id
@@ -128,7 +128,7 @@ public class SyncJobInfo  extends AbstractModel{
     private String EndTime;
 
     /**
-     * 获取灾备任务id
+     * Get 灾备任务id 
      * @return JobId 灾备任务id
      */
     public String getJobId() {
@@ -136,7 +136,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备任务id
+     * Set 灾备任务id
      * @param JobId 灾备任务id
      */
     public void setJobId(String JobId) {
@@ -144,7 +144,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取灾备任务名
+     * Get 灾备任务名 
      * @return JobName 灾备任务名
      */
     public String getJobName() {
@@ -152,7 +152,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备任务名
+     * Set 灾备任务名
      * @param JobName 灾备任务名
      */
     public void setJobName(String JobName) {
@@ -160,7 +160,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务同步
+     * Get 任务同步 
      * @return SyncOption 任务同步
      */
     public SyncOption getSyncOption() {
@@ -168,7 +168,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务同步
+     * Set 任务同步
      * @param SyncOption 任务同步
      */
     public void setSyncOption(SyncOption SyncOption) {
@@ -176,7 +176,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源接入类型
+     * Get 源接入类型 
      * @return SrcAccessType 源接入类型
      */
     public String getSrcAccessType() {
@@ -184,7 +184,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源接入类型
+     * Set 源接入类型
      * @param SrcAccessType 源接入类型
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -192,7 +192,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源数据类型
+     * Get 源数据类型 
      * @return SrcDatabaseType 源数据类型
      */
     public String getSrcDatabaseType() {
@@ -200,7 +200,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源数据类型
+     * Set 源数据类型
      * @param SrcDatabaseType 源数据类型
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -208,7 +208,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取源实例信息
+     * Get 源实例信息 
      * @return SrcInfo 源实例信息
      */
     public SyncInstanceInfo getSrcInfo() {
@@ -216,7 +216,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置源实例信息
+     * Set 源实例信息
      * @param SrcInfo 源实例信息
      */
     public void setSrcInfo(SyncInstanceInfo SrcInfo) {
@@ -224,7 +224,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取灾备接入类型
+     * Get 灾备接入类型 
      * @return DstAccessType 灾备接入类型
      */
     public String getDstAccessType() {
@@ -232,7 +232,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备接入类型
+     * Set 灾备接入类型
      * @param DstAccessType 灾备接入类型
      */
     public void setDstAccessType(String DstAccessType) {
@@ -240,7 +240,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取灾备数据类型
+     * Get 灾备数据类型 
      * @return DstDatabaseType 灾备数据类型
      */
     public String getDstDatabaseType() {
@@ -248,7 +248,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备数据类型
+     * Set 灾备数据类型
      * @param DstDatabaseType 灾备数据类型
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -256,7 +256,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取灾备实例信息
+     * Get 灾备实例信息 
      * @return DstInfo 灾备实例信息
      */
     public SyncInstanceInfo getDstInfo() {
@@ -264,7 +264,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置灾备实例信息
+     * Set 灾备实例信息
      * @param DstInfo 灾备实例信息
      */
     public void setDstInfo(SyncInstanceInfo DstInfo) {
@@ -272,7 +272,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务信息
+     * Get 任务信息 
      * @return Detail 任务信息
      */
     public SyncDetailInfo getDetail() {
@@ -280,7 +280,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务信息
+     * Set 任务信息
      * @param Detail 任务信息
      */
     public void setDetail(SyncDetailInfo Detail) {
@@ -288,7 +288,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public Integer getStatus() {
@@ -296,7 +296,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(Integer Status) {
@@ -304,7 +304,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取迁移库表
+     * Get 迁移库表 
      * @return DatabaseInfo 迁移库表
      */
     public String getDatabaseInfo() {
@@ -312,7 +312,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置迁移库表
+     * Set 迁移库表
      * @param DatabaseInfo 迁移库表
      */
     public void setDatabaseInfo(String DatabaseInfo) {
@@ -320,7 +320,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间
+     * Get 创建时间 
      * @return CreateTime 创建时间
      */
     public String getCreateTime() {
@@ -328,7 +328,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间
+     * Set 创建时间
      * @param CreateTime 创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -336,7 +336,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取开始时间
+     * Get 开始时间 
      * @return StartTime 开始时间
      */
     public String getStartTime() {
@@ -344,7 +344,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置开始时间
+     * Set 开始时间
      * @param StartTime 开始时间
      */
     public void setStartTime(String StartTime) {
@@ -352,7 +352,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 获取结束时间
+     * Get 结束时间 
      * @return EndTime 结束时间
      */
     public String getEndTime() {
@@ -360,7 +360,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 设置结束时间
+     * Set 结束时间
      * @param EndTime 结束时间
      */
     public void setEndTime(String EndTime) {
@@ -368,7 +368,7 @@ public class SyncJobInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);

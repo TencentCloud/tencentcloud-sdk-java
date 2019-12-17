@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ErrorCoordinate  extends AbstractModel{
+public class ErrorCoordinate extends AbstractModel{
 
     /**
     * 维度单词坐标
@@ -30,7 +30,7 @@ public class ErrorCoordinate  extends AbstractModel{
     private Long [] Coordinate;
 
     /**
-     * 获取维度单词坐标
+     * Get 维度单词坐标 
      * @return Coordinate 维度单词坐标
      */
     public Long [] getCoordinate() {
@@ -38,7 +38,7 @@ public class ErrorCoordinate  extends AbstractModel{
     }
 
     /**
-     * 设置维度单词坐标
+     * Set 维度单词坐标
      * @param Coordinate 维度单词坐标
      */
     public void setCoordinate(Long [] Coordinate) {
@@ -46,7 +46,7 @@ public class ErrorCoordinate  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Coordinate.", this.Coordinate);

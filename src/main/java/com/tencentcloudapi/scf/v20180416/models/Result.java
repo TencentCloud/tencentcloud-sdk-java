@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Result  extends AbstractModel{
+public class Result extends AbstractModel{
 
     /**
     * 表示执行过程中的日志输出，异步调用返回为空
@@ -79,7 +79,7 @@ public class Result  extends AbstractModel{
     private Integer InvokeResult;
 
     /**
-     * 获取表示执行过程中的日志输出，异步调用返回为空
+     * Get 表示执行过程中的日志输出，异步调用返回为空 
      * @return Log 表示执行过程中的日志输出，异步调用返回为空
      */
     public String getLog() {
@@ -87,7 +87,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置表示执行过程中的日志输出，异步调用返回为空
+     * Set 表示执行过程中的日志输出，异步调用返回为空
      * @param Log 表示执行过程中的日志输出，异步调用返回为空
      */
     public void setLog(String Log) {
@@ -95,7 +95,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取表示执行函数的返回，异步调用返回为空
+     * Get 表示执行函数的返回，异步调用返回为空 
      * @return RetMsg 表示执行函数的返回，异步调用返回为空
      */
     public String getRetMsg() {
@@ -103,7 +103,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置表示执行函数的返回，异步调用返回为空
+     * Set 表示执行函数的返回，异步调用返回为空
      * @param RetMsg 表示执行函数的返回，异步调用返回为空
      */
     public void setRetMsg(String RetMsg) {
@@ -111,7 +111,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取表示执行函数的错误返回信息，异步调用返回为空
+     * Get 表示执行函数的错误返回信息，异步调用返回为空 
      * @return ErrMsg 表示执行函数的错误返回信息，异步调用返回为空
      */
     public String getErrMsg() {
@@ -119,7 +119,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置表示执行函数的错误返回信息，异步调用返回为空
+     * Set 表示执行函数的错误返回信息，异步调用返回为空
      * @param ErrMsg 表示执行函数的错误返回信息，异步调用返回为空
      */
     public void setErrMsg(String ErrMsg) {
@@ -127,7 +127,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取执行函数时的内存大小，单位为Byte，异步调用返回为空
+     * Get 执行函数时的内存大小，单位为Byte，异步调用返回为空 
      * @return MemUsage 执行函数时的内存大小，单位为Byte，异步调用返回为空
      */
     public Integer getMemUsage() {
@@ -135,7 +135,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置执行函数时的内存大小，单位为Byte，异步调用返回为空
+     * Set 执行函数时的内存大小，单位为Byte，异步调用返回为空
      * @param MemUsage 执行函数时的内存大小，单位为Byte，异步调用返回为空
      */
     public void setMemUsage(Integer MemUsage) {
@@ -143,7 +143,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取表示执行函数的耗时，单位是毫秒，异步调用返回为空
+     * Get 表示执行函数的耗时，单位是毫秒，异步调用返回为空 
      * @return Duration 表示执行函数的耗时，单位是毫秒，异步调用返回为空
      */
     public Float getDuration() {
@@ -151,7 +151,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置表示执行函数的耗时，单位是毫秒，异步调用返回为空
+     * Set 表示执行函数的耗时，单位是毫秒，异步调用返回为空
      * @param Duration 表示执行函数的耗时，单位是毫秒，异步调用返回为空
      */
     public void setDuration(Float Duration) {
@@ -159,7 +159,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取表示函数的计费耗时，单位是毫秒，异步调用返回为空
+     * Get 表示函数的计费耗时，单位是毫秒，异步调用返回为空 
      * @return BillDuration 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      */
     public Integer getBillDuration() {
@@ -167,7 +167,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置表示函数的计费耗时，单位是毫秒，异步调用返回为空
+     * Set 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      * @param BillDuration 表示函数的计费耗时，单位是毫秒，异步调用返回为空
      */
     public void setBillDuration(Integer BillDuration) {
@@ -175,7 +175,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取此次函数执行的Id
+     * Get 此次函数执行的Id 
      * @return FunctionRequestId 此次函数执行的Id
      */
     public String getFunctionRequestId() {
@@ -183,7 +183,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置此次函数执行的Id
+     * Set 此次函数执行的Id
      * @param FunctionRequestId 此次函数执行的Id
      */
     public void setFunctionRequestId(String FunctionRequestId) {
@@ -191,7 +191,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 获取0为正确，异步调用返回为空
+     * Get 0为正确，异步调用返回为空 
      * @return InvokeResult 0为正确，异步调用返回为空
      */
     public Integer getInvokeResult() {
@@ -199,7 +199,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 设置0为正确，异步调用返回为空
+     * Set 0为正确，异步调用返回为空
      * @param InvokeResult 0为正确，异步调用返回为空
      */
     public void setInvokeResult(Integer InvokeResult) {
@@ -207,7 +207,7 @@ public class Result  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Log", this.Log);

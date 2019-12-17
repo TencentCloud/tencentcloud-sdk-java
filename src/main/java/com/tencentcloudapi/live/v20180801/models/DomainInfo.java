@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DomainInfo  extends AbstractModel{
+public class DomainInfo extends AbstractModel{
 
     /**
     * 直播域名
@@ -102,7 +102,7 @@ public class DomainInfo  extends AbstractModel{
     private String RentExpireTime;
 
     /**
-     * 获取直播域名
+     * Get 直播域名 
      * @return Name 直播域名
      */
     public String getName() {
@@ -110,7 +110,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置直播域名
+     * Set 直播域名
      * @param Name 直播域名
      */
     public void setName(String Name) {
@@ -118,7 +118,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取域名类型。0-推流，1-播放
+     * Get 域名类型。0-推流，1-播放 
      * @return Type 域名类型。0-推流，1-播放
      */
     public Integer getType() {
@@ -126,7 +126,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名类型。0-推流，1-播放
+     * Set 域名类型。0-推流，1-播放
      * @param Type 域名类型。0-推流，1-播放
      */
     public void setType(Integer Type) {
@@ -134,7 +134,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取域名状态。0-停用，1-启用
+     * Get 域名状态。0-停用，1-启用 
      * @return Status 域名状态。0-停用，1-启用
      */
     public Integer getStatus() {
@@ -142,7 +142,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置域名状态。0-停用，1-启用
+     * Set 域名状态。0-停用，1-启用
      * @param Status 域名状态。0-停用，1-启用
      */
     public void setStatus(Integer Status) {
@@ -150,7 +150,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取添加时间
+     * Get 添加时间 
      * @return CreateTime 添加时间
      */
     public String getCreateTime() {
@@ -158,7 +158,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置添加时间
+     * Set 添加时间
      * @param CreateTime 添加时间
      */
     public void setCreateTime(String CreateTime) {
@@ -166,7 +166,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否有CName到固定规则域名。0-否，1-是
+     * Get 是否有CName到固定规则域名。0-否，1-是 
      * @return BCName 是否有CName到固定规则域名。0-否，1-是
      */
     public Integer getBCName() {
@@ -174,7 +174,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否有CName到固定规则域名。0-否，1-是
+     * Set 是否有CName到固定规则域名。0-否，1-是
      * @param BCName 是否有CName到固定规则域名。0-否，1-是
      */
     public void setBCName(Integer BCName) {
@@ -182,7 +182,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取cname对应的域名
+     * Get cname对应的域名 
      * @return TargetDomain cname对应的域名
      */
     public String getTargetDomain() {
@@ -190,7 +190,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置cname对应的域名
+     * Set cname对应的域名
      * @param TargetDomain cname对应的域名
      */
     public void setTargetDomain(String TargetDomain) {
@@ -198,8 +198,8 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取播放区域，只在Type=1时该参数有意义。
-1-国内，2-全球，3-海外。
+     * Get 播放区域，只在Type=1时该参数有意义。
+1-国内，2-全球，3-海外。 
      * @return PlayType 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
      */
@@ -208,7 +208,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置播放区域，只在Type=1时该参数有意义。
+     * Set 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
      * @param PlayType 播放区域，只在Type=1时该参数有意义。
 1-国内，2-全球，3-海外。
@@ -218,8 +218,8 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取0：普通直播，
-1：慢直播。
+     * Get 0：普通直播，
+1：慢直播。 
      * @return IsDelayLive 0：普通直播，
 1：慢直播。
      */
@@ -228,7 +228,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置0：普通直播，
+     * Set 0：普通直播，
 1：慢直播。
      * @param IsDelayLive 0：普通直播，
 1：慢直播。
@@ -238,7 +238,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取当前客户使用的cname信息
+     * Get 当前客户使用的cname信息 
      * @return CurrentCName 当前客户使用的cname信息
      */
     public String getCurrentCName() {
@@ -246,7 +246,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置当前客户使用的cname信息
+     * Set 当前客户使用的cname信息
      * @param CurrentCName 当前客户使用的cname信息
      */
     public void setCurrentCName(String CurrentCName) {
@@ -254,7 +254,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否租用域名
+     * Get 是否租用域名 
      * @return RentTag 是否租用域名
      */
     public Integer getRentTag() {
@@ -262,7 +262,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否租用域名
+     * Set 是否租用域名
      * @param RentTag 是否租用域名
      */
     public void setRentTag(Integer RentTag) {
@@ -270,7 +270,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 获取租用域名过期时间
+     * Get 租用域名过期时间 
      * @return RentExpireTime 租用域名过期时间
      */
     public String getRentExpireTime() {
@@ -278,7 +278,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 设置租用域名过期时间
+     * Set 租用域名过期时间
      * @param RentExpireTime 租用域名过期时间
      */
     public void setRentExpireTime(String RentExpireTime) {
@@ -286,7 +286,7 @@ public class DomainInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

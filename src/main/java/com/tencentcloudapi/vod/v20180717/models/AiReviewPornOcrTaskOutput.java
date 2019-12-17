@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiReviewPornOcrTaskOutput  extends AbstractModel{
+public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
     * Ocr 文字涉黄评分，分值为0到100。
@@ -50,8 +50,8 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * 获取Ocr 文字涉黄评分，分值为0到100。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Ocr 文字涉黄评分，分值为0到100。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Confidence Ocr 文字涉黄评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -60,7 +60,7 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字涉黄评分，分值为0到100。
+     * Set Ocr 文字涉黄评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence Ocr 文字涉黄评分，分值为0到100。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -70,11 +70,11 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Ocr 文字涉黄结果建议，取值范围：
+     * Get Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Suggestion Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
@@ -86,7 +86,7 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字涉黄结果建议，取值范围：
+     * Set Ocr 文字涉黄结果建议，取值范围：
 <li>pass。</li>
 <li>review。</li>
 <li>block。</li>
@@ -102,8 +102,8 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 获取Ocr 文字有涉黄嫌疑的视频片段列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Ocr 文字有涉黄嫌疑的视频片段列表。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentSet Ocr 文字有涉黄嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,7 +112,7 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 设置Ocr 文字有涉黄嫌疑的视频片段列表。
+     * Set Ocr 文字有涉黄嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentSet Ocr 文字有涉黄嫌疑的视频片段列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -122,7 +122,7 @@ public class AiReviewPornOcrTaskOutput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);

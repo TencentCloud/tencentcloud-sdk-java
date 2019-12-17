@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WechatMiniProgramPublishTaskInput  extends AbstractModel{
+public class WechatMiniProgramPublishTaskInput extends AbstractModel{
 
     /**
     * 发布视频所对应的转码模板 ID，为 0 代表原始视频。
@@ -30,7 +30,7 @@ public class WechatMiniProgramPublishTaskInput  extends AbstractModel{
     private Long SourceDefinition;
 
     /**
-     * 获取发布视频所对应的转码模板 ID，为 0 代表原始视频。
+     * Get 发布视频所对应的转码模板 ID，为 0 代表原始视频。 
      * @return SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
     public Long getSourceDefinition() {
@@ -38,7 +38,7 @@ public class WechatMiniProgramPublishTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置发布视频所对应的转码模板 ID，为 0 代表原始视频。
+     * Set 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      * @param SourceDefinition 发布视频所对应的转码模板 ID，为 0 代表原始视频。
      */
     public void setSourceDefinition(Long SourceDefinition) {
@@ -46,7 +46,7 @@ public class WechatMiniProgramPublishTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceDefinition", this.SourceDefinition);

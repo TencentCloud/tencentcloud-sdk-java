@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteCustomImagesRequest  extends AbstractModel{
+public class DeleteCustomImagesRequest extends AbstractModel{
 
     /**
     * 准备删除的镜像ID列表
@@ -30,7 +30,7 @@ public class DeleteCustomImagesRequest  extends AbstractModel{
     private String [] ImageIds;
 
     /**
-     * 获取准备删除的镜像ID列表
+     * Get 准备删除的镜像ID列表 
      * @return ImageIds 准备删除的镜像ID列表
      */
     public String [] getImageIds() {
@@ -38,7 +38,7 @@ public class DeleteCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置准备删除的镜像ID列表
+     * Set 准备删除的镜像ID列表
      * @param ImageIds 准备删除的镜像ID列表
      */
     public void setImageIds(String [] ImageIds) {
@@ -46,7 +46,7 @@ public class DeleteCustomImagesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);

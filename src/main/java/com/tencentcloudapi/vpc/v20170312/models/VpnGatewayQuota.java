@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VpnGatewayQuota  extends AbstractModel{
+public class VpnGatewayQuota extends AbstractModel{
 
     /**
     * 带宽配额
@@ -44,7 +44,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取带宽配额
+     * Get 带宽配额 
      * @return Bandwidth 带宽配额
      */
     public Integer getBandwidth() {
@@ -52,7 +52,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 设置带宽配额
+     * Set 带宽配额
      * @param Bandwidth 带宽配额
      */
     public void setBandwidth(Integer Bandwidth) {
@@ -60,7 +60,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 获取配额中文名称
+     * Get 配额中文名称 
      * @return Cname 配额中文名称
      */
     public String getCname() {
@@ -68,7 +68,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 设置配额中文名称
+     * Set 配额中文名称
      * @param Cname 配额中文名称
      */
     public void setCname(String Cname) {
@@ -76,7 +76,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 获取配额英文名称
+     * Get 配额英文名称 
      * @return Name 配额英文名称
      */
     public String getName() {
@@ -84,7 +84,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 设置配额英文名称
+     * Set 配额英文名称
      * @param Name 配额英文名称
      */
     public void setName(String Name) {
@@ -92,7 +92,7 @@ public class VpnGatewayQuota  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

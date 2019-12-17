@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorsResponse  extends AbstractModel{
+public class DescribeTrafficMirrorsResponse extends AbstractModel{
 
     /**
     * 流量镜像总数。
@@ -44,7 +44,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取流量镜像总数。
+     * Get 流量镜像总数。 
      * @return TotalCount 流量镜像总数。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置流量镜像总数。
+     * Set 流量镜像总数。
      * @param TotalCount 流量镜像总数。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
+     * Get 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。 
      * @return TrafficMirrorSet 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
      */
     public TrafficMirror [] getTrafficMirrorSet() {
@@ -68,7 +68,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
+     * Set 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
      * @param TrafficMirrorSet 对象数组。数组元素为流量镜像信息，具体结构描述如list结构所示。
      */
     public void setTrafficMirrorSet(TrafficMirror [] TrafficMirrorSet) {
@@ -76,7 +76,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeTrafficMirrorsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

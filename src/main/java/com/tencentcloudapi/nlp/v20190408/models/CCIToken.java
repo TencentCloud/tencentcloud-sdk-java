@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CCIToken  extends AbstractModel{
+public class CCIToken extends AbstractModel{
 
     /**
     * 错别字的起始位置，从0开始
@@ -44,7 +44,7 @@ public class CCIToken  extends AbstractModel{
     private String Word;
 
     /**
-     * 获取错别字的起始位置，从0开始
+     * Get 错别字的起始位置，从0开始 
      * @return BeginOffset 错别字的起始位置，从0开始
      */
     public Long getBeginOffset() {
@@ -52,7 +52,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 设置错别字的起始位置，从0开始
+     * Set 错别字的起始位置，从0开始
      * @param BeginOffset 错别字的起始位置，从0开始
      */
     public void setBeginOffset(Long BeginOffset) {
@@ -60,7 +60,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 获取错别字纠错结果
+     * Get 错别字纠错结果 
      * @return CorrectWord 错别字纠错结果
      */
     public String getCorrectWord() {
@@ -68,7 +68,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 设置错别字纠错结果
+     * Set 错别字纠错结果
      * @param CorrectWord 错别字纠错结果
      */
     public void setCorrectWord(String CorrectWord) {
@@ -76,7 +76,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 获取错别字内容
+     * Get 错别字内容 
      * @return Word 错别字内容
      */
     public String getWord() {
@@ -84,7 +84,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 设置错别字内容
+     * Set 错别字内容
      * @param Word 错别字内容
      */
     public void setWord(String Word) {
@@ -92,7 +92,7 @@ public class CCIToken  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginOffset", this.BeginOffset);

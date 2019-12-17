@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceNameRequest  extends AbstractModel{
+public class ModifyDBInstanceNameRequest extends AbstractModel{
 
     /**
     * 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -37,7 +37,7 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
-     * 获取待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 待修改的实例 ID。形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     }
 
     /**
-     * 获取新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
+     * Get 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。 
      * @return InstanceName 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
      */
     public String getInstanceName() {
@@ -61,7 +61,7 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     }
 
     /**
-     * 设置新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
+     * Set 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
      * @param InstanceName 新的实例名称。允许的字符为字母、数字、下划线、连字符和中文。
      */
     public void setInstanceName(String InstanceName) {
@@ -69,7 +69,7 @@ public class ModifyDBInstanceNameRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupResponse  extends AbstractModel{
+public class CreateBackupResponse extends AbstractModel{
 
     /**
     * 备份任务 ID。
@@ -37,7 +37,7 @@ public class CreateBackupResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取备份任务 ID。
+     * Get 备份任务 ID。 
      * @return BackupId 备份任务 ID。
      */
     public Integer getBackupId() {
@@ -45,7 +45,7 @@ public class CreateBackupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置备份任务 ID。
+     * Set 备份任务 ID。
      * @param BackupId 备份任务 ID。
      */
     public void setBackupId(Integer BackupId) {
@@ -53,7 +53,7 @@ public class CreateBackupResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -61,7 +61,7 @@ public class CreateBackupResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -69,7 +69,7 @@ public class CreateBackupResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);

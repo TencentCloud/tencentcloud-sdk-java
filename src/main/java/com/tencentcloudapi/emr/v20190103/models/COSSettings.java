@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class COSSettings  extends AbstractModel{
+public class COSSettings extends AbstractModel{
 
     /**
     * COS SecretId
@@ -44,7 +44,7 @@ public class COSSettings  extends AbstractModel{
     private String LogOnCosPath;
 
     /**
-     * 获取COS SecretId
+     * Get COS SecretId 
      * @return CosSecretId COS SecretId
      */
     public String getCosSecretId() {
@@ -52,7 +52,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 设置COS SecretId
+     * Set COS SecretId
      * @param CosSecretId COS SecretId
      */
     public void setCosSecretId(String CosSecretId) {
@@ -60,7 +60,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 获取COS SecrectKey
+     * Get COS SecrectKey 
      * @return CosSecretKey COS SecrectKey
      */
     public String getCosSecretKey() {
@@ -68,7 +68,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 设置COS SecrectKey
+     * Set COS SecrectKey
      * @param CosSecretKey COS SecrectKey
      */
     public void setCosSecretKey(String CosSecretKey) {
@@ -76,7 +76,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 获取日志存储在COS上的路径
+     * Get 日志存储在COS上的路径 
      * @return LogOnCosPath 日志存储在COS上的路径
      */
     public String getLogOnCosPath() {
@@ -84,7 +84,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 设置日志存储在COS上的路径
+     * Set 日志存储在COS上的路径
      * @param LogOnCosPath 日志存储在COS上的路径
      */
     public void setLogOnCosPath(String LogOnCosPath) {
@@ -92,7 +92,7 @@ public class COSSettings  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CosSecretId", this.CosSecretId);

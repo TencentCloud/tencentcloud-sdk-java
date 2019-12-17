@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanFileHashRequest  extends AbstractModel{
+public class ScanFileHashRequest extends AbstractModel{
 
     /**
     * 购买服务后获得的授权信息，用于保证请求有效性
@@ -51,7 +51,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     private String SensitiveLevel;
 
     /**
-     * 获取购买服务后获得的授权信息，用于保证请求有效性
+     * Get 购买服务后获得的授权信息，用于保证请求有效性 
      * @return Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public String getKey() {
@@ -59,7 +59,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 设置购买服务后获得的授权信息，用于保证请求有效性
+     * Set 购买服务后获得的授权信息，用于保证请求有效性
      * @param Key 购买服务后获得的授权信息，用于保证请求有效性
      */
     public void setKey(String Key) {
@@ -67,7 +67,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
+     * Get 需要查询的md5值（支持单个和多个，多个md5间用逗号分格） 
      * @return Md5s 需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
      */
     public String getMd5s() {
@@ -75,7 +75,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
+     * Set 需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
      * @param Md5s 需要查询的md5值（支持单个和多个，多个md5间用逗号分格）
      */
     public void setMd5s(String Md5s) {
@@ -83,7 +83,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 获取保留字段默认填0
+     * Get 保留字段默认填0 
      * @return WithCategory 保留字段默认填0
      */
     public String getWithCategory() {
@@ -91,7 +91,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 设置保留字段默认填0
+     * Set 保留字段默认填0
      * @param WithCategory 保留字段默认填0
      */
     public void setWithCategory(String WithCategory) {
@@ -99,7 +99,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 获取松严规则控制字段默认填10（5-松、10-标准、15-严）
+     * Get 松严规则控制字段默认填10（5-松、10-标准、15-严） 
      * @return SensitiveLevel 松严规则控制字段默认填10（5-松、10-标准、15-严）
      */
     public String getSensitiveLevel() {
@@ -107,7 +107,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 设置松严规则控制字段默认填10（5-松、10-标准、15-严）
+     * Set 松严规则控制字段默认填10（5-松、10-标准、15-严）
      * @param SensitiveLevel 松严规则控制字段默认填10（5-松、10-标准、15-严）
      */
     public void setSensitiveLevel(String SensitiveLevel) {
@@ -115,7 +115,7 @@ public class ScanFileHashRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);

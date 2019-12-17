@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceData  extends AbstractModel{
+public class ResourceData extends AbstractModel{
 
     /**
     * 资源名称，根据查询条件不同分为以下几类：
@@ -41,11 +41,11 @@ all：账号维度明细数据
     private CdnData [] CdnData;
 
     /**
-     * 获取资源名称，根据查询条件不同分为以下几类：
+     * Get 资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
 项目 ID：指定项目查询时，显示为项目 ID
-all：账号维度明细数据
+all：账号维度明细数据 
      * @return Resource 资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
@@ -57,7 +57,7 @@ all：账号维度明细数据
     }
 
     /**
-     * 设置资源名称，根据查询条件不同分为以下几类：
+     * Set 资源名称，根据查询条件不同分为以下几类：
 具体域名：表示该域名明细数据
 multiDomains：表示多域名汇总明细数据
 项目 ID：指定项目查询时，显示为项目 ID
@@ -73,7 +73,7 @@ all：账号维度明细数据
     }
 
     /**
-     * 获取资源对应的数据明细
+     * Get 资源对应的数据明细 
      * @return CdnData 资源对应的数据明细
      */
     public CdnData [] getCdnData() {
@@ -81,7 +81,7 @@ all：账号维度明细数据
     }
 
     /**
-     * 设置资源对应的数据明细
+     * Set 资源对应的数据明细
      * @param CdnData 资源对应的数据明细
      */
     public void setCdnData(CdnData [] CdnData) {
@@ -89,7 +89,7 @@ all：账号维度明细数据
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Resource", this.Resource);

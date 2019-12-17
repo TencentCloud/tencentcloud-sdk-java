@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyUploadInfoRequest  extends AbstractModel{
+public class ModifyUploadInfoRequest extends AbstractModel{
 
     /**
     * 应用ID
@@ -58,7 +58,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     private Long Size;
 
     /**
-     * 获取应用ID
+     * Get 应用ID 
      * @return ApplicationId 应用ID
      */
     public String getApplicationId() {
@@ -66,7 +66,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置应用ID
+     * Set 应用ID
      * @param ApplicationId 应用ID
      */
     public void setApplicationId(String ApplicationId) {
@@ -74,7 +74,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取调用DescribeUploadInfo接口时返回的软件包ID
+     * Get 调用DescribeUploadInfo接口时返回的软件包ID 
      * @return PkgId 调用DescribeUploadInfo接口时返回的软件包ID
      */
     public String getPkgId() {
@@ -82,7 +82,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置调用DescribeUploadInfo接口时返回的软件包ID
+     * Set 调用DescribeUploadInfo接口时返回的软件包ID
      * @param PkgId 调用DescribeUploadInfo接口时返回的软件包ID
      */
     public void setPkgId(String PkgId) {
@@ -90,7 +90,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取COS返回上传结果（默认为0：成功，其他值表示失败）
+     * Get COS返回上传结果（默认为0：成功，其他值表示失败） 
      * @return Result COS返回上传结果（默认为0：成功，其他值表示失败）
      */
     public Long getResult() {
@@ -98,7 +98,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置COS返回上传结果（默认为0：成功，其他值表示失败）
+     * Set COS返回上传结果（默认为0：成功，其他值表示失败）
      * @param Result COS返回上传结果（默认为0：成功，其他值表示失败）
      */
     public void setResult(Long Result) {
@@ -106,7 +106,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包MD5
+     * Get 程序包MD5 
      * @return Md5 程序包MD5
      */
     public String getMd5() {
@@ -114,7 +114,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包MD5
+     * Set 程序包MD5
      * @param Md5 程序包MD5
      */
     public void setMd5(String Md5) {
@@ -122,7 +122,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取程序包大小（单位字节）
+     * Get 程序包大小（单位字节） 
      * @return Size 程序包大小（单位字节）
      */
     public Long getSize() {
@@ -130,7 +130,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置程序包大小（单位字节）
+     * Set 程序包大小（单位字节）
      * @param Size 程序包大小（单位字节）
      */
     public void setSize(Long Size) {
@@ -138,7 +138,7 @@ public class ModifyUploadInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);

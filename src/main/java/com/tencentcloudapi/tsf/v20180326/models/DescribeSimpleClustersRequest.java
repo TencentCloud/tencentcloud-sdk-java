@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSimpleClustersRequest  extends AbstractModel{
+public class DescribeSimpleClustersRequest extends AbstractModel{
 
     /**
     * 需要查询的集群ID列表，不填或不传入时查询所有内容
@@ -58,7 +58,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     private String SearchWord;
 
     /**
-     * 获取需要查询的集群ID列表，不填或不传入时查询所有内容
+     * Get 需要查询的集群ID列表，不填或不传入时查询所有内容 
      * @return ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      */
     public String [] getClusterIdList() {
@@ -66,7 +66,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的集群ID列表，不填或不传入时查询所有内容
+     * Set 需要查询的集群ID列表，不填或不传入时查询所有内容
      * @param ClusterIdList 需要查询的集群ID列表，不填或不传入时查询所有内容
      */
     public void setClusterIdList(String [] ClusterIdList) {
@@ -74,7 +74,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取需要查询的集群类型，不填或不传入时查询所有内容
+     * Get 需要查询的集群类型，不填或不传入时查询所有内容 
      * @return ClusterType 需要查询的集群类型，不填或不传入时查询所有内容
      */
     public String getClusterType() {
@@ -82,7 +82,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要查询的集群类型，不填或不传入时查询所有内容
+     * Set 需要查询的集群类型，不填或不传入时查询所有内容
      * @param ClusterType 需要查询的集群类型，不填或不传入时查询所有内容
      */
     public void setClusterType(String ClusterType) {
@@ -90,7 +90,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询偏移量，默认为0
+     * Get 查询偏移量，默认为0 
      * @return Offset 查询偏移量，默认为0
      */
     public Long getOffset() {
@@ -98,7 +98,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询偏移量，默认为0
+     * Set 查询偏移量，默认为0
      * @param Offset 查询偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -106,7 +106,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取分页个数，默认为20， 取值应为1~50
+     * Get 分页个数，默认为20， 取值应为1~50 
      * @return Limit 分页个数，默认为20， 取值应为1~50
      */
     public Long getLimit() {
@@ -114,7 +114,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置分页个数，默认为20， 取值应为1~50
+     * Set 分页个数，默认为20， 取值应为1~50
      * @param Limit 分页个数，默认为20， 取值应为1~50
      */
     public void setLimit(Long Limit) {
@@ -122,7 +122,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取对id和name进行关键词过滤
+     * Get 对id和name进行关键词过滤 
      * @return SearchWord 对id和name进行关键词过滤
      */
     public String getSearchWord() {
@@ -130,7 +130,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置对id和name进行关键词过滤
+     * Set 对id和name进行关键词过滤
      * @param SearchWord 对id和name进行关键词过滤
      */
     public void setSearchWord(String SearchWord) {
@@ -138,7 +138,7 @@ public class DescribeSimpleClustersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ClusterIdList.", this.ClusterIdList);

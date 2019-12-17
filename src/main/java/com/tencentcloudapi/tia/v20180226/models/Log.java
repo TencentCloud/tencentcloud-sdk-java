@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Log  extends AbstractModel{
+public class Log extends AbstractModel{
 
     /**
     * 容器名
@@ -65,7 +65,7 @@ public class Log  extends AbstractModel{
     private String Time;
 
     /**
-     * 获取容器名
+     * Get 容器名 
      * @return ContainerName 容器名
      */
     public String getContainerName() {
@@ -73,7 +73,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置容器名
+     * Set 容器名
      * @param ContainerName 容器名
      */
     public void setContainerName(String ContainerName) {
@@ -81,7 +81,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 获取日志内容
+     * Get 日志内容 
      * @return Log 日志内容
      */
     public String getLog() {
@@ -89,7 +89,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置日志内容
+     * Set 日志内容
      * @param Log 日志内容
      */
     public void setLog(String Log) {
@@ -97,7 +97,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 获取空间名
+     * Get 空间名 
      * @return Namespace 空间名
      */
     public String getNamespace() {
@@ -105,7 +105,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置空间名
+     * Set 空间名
      * @param Namespace 空间名
      */
     public void setNamespace(String Namespace) {
@@ -113,7 +113,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 获取Pod Id
+     * Get Pod Id 
      * @return PodId Pod Id
      */
     public String getPodId() {
@@ -121,7 +121,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置Pod Id
+     * Set Pod Id
      * @param PodId Pod Id
      */
     public void setPodId(String PodId) {
@@ -129,7 +129,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 获取Pod名
+     * Get Pod名 
      * @return PodName Pod名
      */
     public String getPodName() {
@@ -137,7 +137,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置Pod名
+     * Set Pod名
      * @param PodName Pod名
      */
     public void setPodName(String PodName) {
@@ -145,7 +145,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 获取日志日期，格式为“2018-07-02T09:10:04.916553368Z”
+     * Get 日志日期，格式为“2018-07-02T09:10:04.916553368Z” 
      * @return Time 日志日期，格式为“2018-07-02T09:10:04.916553368Z”
      */
     public String getTime() {
@@ -153,7 +153,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 设置日志日期，格式为“2018-07-02T09:10:04.916553368Z”
+     * Set 日志日期，格式为“2018-07-02T09:10:04.916553368Z”
      * @param Time 日志日期，格式为“2018-07-02T09:10:04.916553368Z”
      */
     public void setTime(String Time) {
@@ -161,7 +161,7 @@ public class Log  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);

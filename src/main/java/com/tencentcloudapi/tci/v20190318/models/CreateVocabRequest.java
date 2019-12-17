@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateVocabRequest  extends AbstractModel{
+public class CreateVocabRequest extends AbstractModel{
 
     /**
     * 要添加词汇的词汇库名
@@ -37,7 +37,7 @@ public class CreateVocabRequest  extends AbstractModel{
     private String [] VocabList;
 
     /**
-     * 获取要添加词汇的词汇库名
+     * Get 要添加词汇的词汇库名 
      * @return VocabLibName 要添加词汇的词汇库名
      */
     public String getVocabLibName() {
@@ -45,7 +45,7 @@ public class CreateVocabRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要添加词汇的词汇库名
+     * Set 要添加词汇的词汇库名
      * @param VocabLibName 要添加词汇的词汇库名
      */
     public void setVocabLibName(String VocabLibName) {
@@ -53,7 +53,7 @@ public class CreateVocabRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要添加的词汇列表
+     * Get 要添加的词汇列表 
      * @return VocabList 要添加的词汇列表
      */
     public String [] getVocabList() {
@@ -61,7 +61,7 @@ public class CreateVocabRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要添加的词汇列表
+     * Set 要添加的词汇列表
      * @param VocabList 要添加的词汇列表
      */
     public void setVocabList(String [] VocabList) {
@@ -69,7 +69,7 @@ public class CreateVocabRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VocabLibName", this.VocabLibName);

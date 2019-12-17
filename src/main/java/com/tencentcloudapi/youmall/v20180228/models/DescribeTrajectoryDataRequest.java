@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrajectoryDataRequest  extends AbstractModel{
+public class DescribeTrajectoryDataRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -65,7 +65,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     private Integer Gender;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取店铺ID
+     * Get 店铺ID 
      * @return ShopId 店铺ID
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置店铺ID
+     * Set 店铺ID
      * @param ShopId 店铺ID
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取开始日期，格式yyyy-MM-dd
+     * Get 开始日期，格式yyyy-MM-dd 
      * @return StartDate 开始日期，格式yyyy-MM-dd
      */
     public String getStartDate() {
@@ -105,7 +105,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置开始日期，格式yyyy-MM-dd
+     * Set 开始日期，格式yyyy-MM-dd
      * @param StartDate 开始日期，格式yyyy-MM-dd
      */
     public void setStartDate(String StartDate) {
@@ -113,7 +113,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取结束日期，格式yyyy-MM-dd
+     * Get 结束日期，格式yyyy-MM-dd 
      * @return EndDate 结束日期，格式yyyy-MM-dd
      */
     public String getEndDate() {
@@ -121,7 +121,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置结束日期，格式yyyy-MM-dd
+     * Set 结束日期，格式yyyy-MM-dd
      * @param EndDate 结束日期，格式yyyy-MM-dd
      */
     public void setEndDate(String EndDate) {
@@ -129,7 +129,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取限制返回数据的最大条数，最大 400（负数代为 400）
+     * Get 限制返回数据的最大条数，最大 400（负数代为 400） 
      * @return Limit 限制返回数据的最大条数，最大 400（负数代为 400）
      */
     public Integer getLimit() {
@@ -137,7 +137,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置限制返回数据的最大条数，最大 400（负数代为 400）
+     * Set 限制返回数据的最大条数，最大 400（负数代为 400）
      * @param Limit 限制返回数据的最大条数，最大 400（负数代为 400）
      */
     public void setLimit(Integer Limit) {
@@ -145,7 +145,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 获取顾客性别顾虑，0是男，1是女，其它代表不分性别
+     * Get 顾客性别顾虑，0是男，1是女，其它代表不分性别 
      * @return Gender 顾客性别顾虑，0是男，1是女，其它代表不分性别
      */
     public Integer getGender() {
@@ -153,7 +153,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 设置顾客性别顾虑，0是男，1是女，其它代表不分性别
+     * Set 顾客性别顾虑，0是男，1是女，其它代表不分性别
      * @param Gender 顾客性别顾虑，0是男，1是女，其它代表不分性别
      */
     public void setGender(Integer Gender) {
@@ -161,7 +161,7 @@ public class DescribeTrajectoryDataRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

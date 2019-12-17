@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DDoSPolicyPacketFilter  extends AbstractModel{
+public class DDoSPolicyPacketFilter extends AbstractModel{
 
     /**
     * 协议，取值范围[tcp,udp,icmp,all]
@@ -121,7 +121,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     private String Action;
 
     /**
-     * 获取协议，取值范围[tcp,udp,icmp,all]
+     * Get 协议，取值范围[tcp,udp,icmp,all] 
      * @return Protocol 协议，取值范围[tcp,udp,icmp,all]
      */
     public String getProtocol() {
@@ -129,7 +129,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置协议，取值范围[tcp,udp,icmp,all]
+     * Set 协议，取值范围[tcp,udp,icmp,all]
      * @param Protocol 协议，取值范围[tcp,udp,icmp,all]
      */
     public void setProtocol(String Protocol) {
@@ -137,7 +137,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取开始源端口，取值范围[0,65535]
+     * Get 开始源端口，取值范围[0,65535] 
      * @return SportStart 开始源端口，取值范围[0,65535]
      */
     public Long getSportStart() {
@@ -145,7 +145,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置开始源端口，取值范围[0,65535]
+     * Set 开始源端口，取值范围[0,65535]
      * @param SportStart 开始源端口，取值范围[0,65535]
      */
     public void setSportStart(Long SportStart) {
@@ -153,7 +153,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取结束源端口，取值范围[0,65535]
+     * Get 结束源端口，取值范围[0,65535] 
      * @return SportEnd 结束源端口，取值范围[0,65535]
      */
     public Long getSportEnd() {
@@ -161,7 +161,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置结束源端口，取值范围[0,65535]
+     * Set 结束源端口，取值范围[0,65535]
      * @param SportEnd 结束源端口，取值范围[0,65535]
      */
     public void setSportEnd(Long SportEnd) {
@@ -169,7 +169,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取开始目的端口，取值范围[0,65535]
+     * Get 开始目的端口，取值范围[0,65535] 
      * @return DportStart 开始目的端口，取值范围[0,65535]
      */
     public Long getDportStart() {
@@ -177,7 +177,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置开始目的端口，取值范围[0,65535]
+     * Set 开始目的端口，取值范围[0,65535]
      * @param DportStart 开始目的端口，取值范围[0,65535]
      */
     public void setDportStart(Long DportStart) {
@@ -185,7 +185,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取结束目的端口，取值范围[0,65535]
+     * Get 结束目的端口，取值范围[0,65535] 
      * @return DportEnd 结束目的端口，取值范围[0,65535]
      */
     public Long getDportEnd() {
@@ -193,7 +193,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置结束目的端口，取值范围[0,65535]
+     * Set 结束目的端口，取值范围[0,65535]
      * @param DportEnd 结束目的端口，取值范围[0,65535]
      */
     public void setDportEnd(Long DportEnd) {
@@ -201,7 +201,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取最小包长，取值范围[0,1500]
+     * Get 最小包长，取值范围[0,1500] 
      * @return PktlenMin 最小包长，取值范围[0,1500]
      */
     public Long getPktlenMin() {
@@ -209,7 +209,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置最小包长，取值范围[0,1500]
+     * Set 最小包长，取值范围[0,1500]
      * @param PktlenMin 最小包长，取值范围[0,1500]
      */
     public void setPktlenMin(Long PktlenMin) {
@@ -217,7 +217,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取最大包长，取值范围[0,1500]
+     * Get 最大包长，取值范围[0,1500] 
      * @return PktlenMax 最大包长，取值范围[0,1500]
      */
     public Long getPktlenMax() {
@@ -225,7 +225,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置最大包长，取值范围[0,1500]
+     * Set 最大包长，取值范围[0,1500]
      * @param PktlenMax 最大包长，取值范围[0,1500]
      */
     public void setPktlenMax(Long PktlenMax) {
@@ -233,7 +233,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+     * Get 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)] 
      * @return MatchBegin 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
      */
     public String getMatchBegin() {
@@ -241,7 +241,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
+     * Set 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
      * @param MatchBegin 是否检测载荷，取值范围[begin_l5(表示检测), no_match(表示不检测)]
      */
     public void setMatchBegin(String MatchBegin) {
@@ -249,7 +249,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
+     * Get 是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)] 
      * @return MatchType 是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
      */
     public String getMatchType() {
@@ -257,7 +257,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
+     * Set 是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
      * @param MatchType 是否是正则表达式，取值范围[sunday(表示关键字),pcre(表示正则表达式)]
      */
     public void setMatchType(String MatchType) {
@@ -265,7 +265,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取关键字或正则表达式
+     * Get 关键字或正则表达式 
      * @return Str 关键字或正则表达式
      */
     public String getStr() {
@@ -273,7 +273,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置关键字或正则表达式
+     * Set 关键字或正则表达式
      * @param Str 关键字或正则表达式
      */
     public void setStr(String Str) {
@@ -281,7 +281,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取检测深度，取值范围[0,1500]
+     * Get 检测深度，取值范围[0,1500] 
      * @return Depth 检测深度，取值范围[0,1500]
      */
     public Long getDepth() {
@@ -289,7 +289,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置检测深度，取值范围[0,1500]
+     * Set 检测深度，取值范围[0,1500]
      * @param Depth 检测深度，取值范围[0,1500]
      */
     public void setDepth(Long Depth) {
@@ -297,7 +297,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取检测偏移量，取值范围[0,1500]
+     * Get 检测偏移量，取值范围[0,1500] 
      * @return Offset 检测偏移量，取值范围[0,1500]
      */
     public Long getOffset() {
@@ -305,7 +305,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置检测偏移量，取值范围[0,1500]
+     * Set 检测偏移量，取值范围[0,1500]
      * @param Offset 检测偏移量，取值范围[0,1500]
      */
     public void setOffset(Long Offset) {
@@ -313,7 +313,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取是否包括，取值范围[0(表示不包含),1(表示包含)]
+     * Get 是否包括，取值范围[0(表示不包含),1(表示包含)] 
      * @return IsNot 是否包括，取值范围[0(表示不包含),1(表示包含)]
      */
     public Long getIsNot() {
@@ -321,7 +321,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置是否包括，取值范围[0(表示不包含),1(表示包含)]
+     * Set 是否包括，取值范围[0(表示不包含),1(表示包含)]
      * @param IsNot 是否包括，取值范围[0(表示不包含),1(表示包含)]
      */
     public void setIsNot(Long IsNot) {
@@ -329,7 +329,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 获取策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
+     * Get 策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit] 
      * @return Action 策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
      */
     public String getAction() {
@@ -337,7 +337,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 设置策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
+     * Set 策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
      * @param Action 策略动作，取值范围[drop，drop_black，drop_rst，drop_black_rst，transmit]
      */
     public void setAction(String Action) {
@@ -345,7 +345,7 @@ public class DDoSPolicyPacketFilter  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);

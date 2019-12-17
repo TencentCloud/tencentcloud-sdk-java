@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ContentApprovalRequest  extends AbstractModel{
+public class ContentApprovalRequest extends AbstractModel{
 
     /**
     * 待审核的文本（仅支持UTF-8格式，不超过2000字）
@@ -30,7 +30,7 @@ public class ContentApprovalRequest  extends AbstractModel{
     private String Text;
 
     /**
-     * 获取待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Get 待审核的文本（仅支持UTF-8格式，不超过2000字） 
      * @return Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public String getText() {
@@ -38,7 +38,7 @@ public class ContentApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 设置待审核的文本（仅支持UTF-8格式，不超过2000字）
+     * Set 待审核的文本（仅支持UTF-8格式，不超过2000字）
      * @param Text 待审核的文本（仅支持UTF-8格式，不超过2000字）
      */
     public void setText(String Text) {
@@ -46,7 +46,7 @@ public class ContentApprovalRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);

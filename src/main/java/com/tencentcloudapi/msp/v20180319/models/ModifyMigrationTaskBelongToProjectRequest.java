@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
+public class ModifyMigrationTaskBelongToProjectRequest extends AbstractModel{
 
     /**
     * 任务ID，例如msp-jitoh33n
@@ -37,7 +37,7 @@ public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
     private Integer ProjectId;
 
     /**
-     * 获取任务ID，例如msp-jitoh33n
+     * Get 任务ID，例如msp-jitoh33n 
      * @return TaskId 任务ID，例如msp-jitoh33n
      */
     public String getTaskId() {
@@ -45,7 +45,7 @@ public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务ID，例如msp-jitoh33n
+     * Set 任务ID，例如msp-jitoh33n
      * @param TaskId 任务ID，例如msp-jitoh33n
      */
     public void setTaskId(String TaskId) {
@@ -53,7 +53,7 @@ public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 获取项目ID，例如10005
+     * Get 项目ID，例如10005 
      * @return ProjectId 项目ID，例如10005
      */
     public Integer getProjectId() {
@@ -61,7 +61,7 @@ public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 设置项目ID，例如10005
+     * Set 项目ID，例如10005
      * @param ProjectId 项目ID，例如10005
      */
     public void setProjectId(Integer ProjectId) {
@@ -69,7 +69,7 @@ public class ModifyMigrationTaskBelongToProjectRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiReviewResultItem  extends AbstractModel{
+public class LiveStreamAiReviewResultItem extends AbstractModel{
 
     /**
     * 审核结果的类型，可以取的值有：
@@ -62,11 +62,11 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     private LiveStreamAiReviewVoicePornResult [] VoicePornResultSet;
 
     /**
-     * 获取审核结果的类型，可以取的值有：
+     * Get 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片鉴恐</li>
 <li>ImagePolitical：图片鉴政</li>
-<li>PornVoice：声音鉴黄</li>
+<li>PornVoice：声音鉴黄</li> 
      * @return Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片鉴恐</li>
@@ -78,7 +78,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置审核结果的类型，可以取的值有：
+     * Set 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片鉴恐</li>
 <li>ImagePolitical：图片鉴政</li>
@@ -94,7 +94,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
+     * Get 图片鉴黄的结果，当 Type 为 ImagePorn 时有效。 
      * @return ImagePornResultSet 图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
      */
     public LiveStreamAiReviewImagePornResult [] getImagePornResultSet() {
@@ -102,7 +102,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
+     * Set 图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
      * @param ImagePornResultSet 图片鉴黄的结果，当 Type 为 ImagePorn 时有效。
      */
     public void setImagePornResultSet(LiveStreamAiReviewImagePornResult [] ImagePornResultSet) {
@@ -110,7 +110,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+     * Get 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。 
      * @return ImageTerrorismResultSet 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
      */
     public LiveStreamAiReviewImageTerrorismResult [] getImageTerrorismResultSet() {
@@ -118,7 +118,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+     * Set 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
      * @param ImageTerrorismResultSet 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
      */
     public void setImageTerrorismResultSet(LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet) {
@@ -126,7 +126,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+     * Get 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。 
      * @return ImagePoliticalResultSet 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
      */
     public LiveStreamAiReviewImagePoliticalResult [] getImagePoliticalResultSet() {
@@ -134,7 +134,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+     * Set 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
      * @param ImagePoliticalResultSet 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
      */
     public void setImagePoliticalResultSet(LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet) {
@@ -142,7 +142,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 获取声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * Get 声音鉴黄的结果，当 Type 为 PornVoice 时有效。 
      * @return VoicePornResultSet 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
      */
     public LiveStreamAiReviewVoicePornResult [] getVoicePornResultSet() {
@@ -150,7 +150,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 设置声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * Set 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
      * @param VoicePornResultSet 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
      */
     public void setVoicePornResultSet(LiveStreamAiReviewVoicePornResult [] VoicePornResultSet) {
@@ -158,7 +158,7 @@ public class LiveStreamAiReviewResultItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);

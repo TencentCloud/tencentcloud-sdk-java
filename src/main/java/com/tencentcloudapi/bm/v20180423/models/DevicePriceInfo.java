@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DevicePriceInfo  extends AbstractModel{
+public class DevicePriceInfo extends AbstractModel{
 
     /**
     * 物理机ID
@@ -142,7 +142,7 @@ public class DevicePriceInfo  extends AbstractModel{
     private Integer GoodsCount;
 
     /**
-     * 获取物理机ID
+     * Get 物理机ID 
      * @return InstanceId 物理机ID
      */
     public String getInstanceId() {
@@ -150,7 +150,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置物理机ID
+     * Set 物理机ID
      * @param InstanceId 物理机ID
      */
     public void setInstanceId(String InstanceId) {
@@ -158,7 +158,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取设备型号
+     * Get 设备型号 
      * @return DeviceClassCode 设备型号
      */
     public String getDeviceClassCode() {
@@ -166,7 +166,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置设备型号
+     * Set 设备型号
      * @param DeviceClassCode 设备型号
      */
     public void setDeviceClassCode(String DeviceClassCode) {
@@ -174,7 +174,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取是否是弹性机型，1：是，0：否
+     * Get 是否是弹性机型，1：是，0：否 
      * @return IsElastic 是否是弹性机型，1：是，0：否
      */
     public Integer getIsElastic() {
@@ -182,7 +182,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置是否是弹性机型，1：是，0：否
+     * Set 是否是弹性机型，1：是，0：否
      * @param IsElastic 是否是弹性机型，1：是，0：否
      */
     public void setIsElastic(Integer IsElastic) {
@@ -190,7 +190,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
+     * Get 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中 
      * @return CpmPayMode 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      */
     public Integer getCpmPayMode() {
@@ -198,7 +198,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
+     * Set 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      * @param CpmPayMode 付费模式ID, 1:预付费; 2:后付费; 3:预付费转后付费中
      */
     public void setCpmPayMode(Integer CpmPayMode) {
@@ -206,7 +206,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Cpu信息描述
+     * Get Cpu信息描述 
      * @return CpuDescription Cpu信息描述
      */
     public String getCpuDescription() {
@@ -214,7 +214,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Cpu信息描述
+     * Set Cpu信息描述
      * @param CpuDescription Cpu信息描述
      */
     public void setCpuDescription(String CpuDescription) {
@@ -222,7 +222,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存信息描述
+     * Get 内存信息描述 
      * @return MemDescription 内存信息描述
      */
     public String getMemDescription() {
@@ -230,7 +230,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存信息描述
+     * Set 内存信息描述
      * @param MemDescription 内存信息描述
      */
     public void setMemDescription(String MemDescription) {
@@ -238,7 +238,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取硬盘信息描述
+     * Get 硬盘信息描述 
      * @return DiskDescription 硬盘信息描述
      */
     public String getDiskDescription() {
@@ -246,7 +246,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置硬盘信息描述
+     * Set 硬盘信息描述
      * @param DiskDescription 硬盘信息描述
      */
     public void setDiskDescription(String DiskDescription) {
@@ -254,7 +254,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取网卡信息描述
+     * Get 网卡信息描述 
      * @return NicDescription 网卡信息描述
      */
     public String getNicDescription() {
@@ -262,7 +262,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置网卡信息描述
+     * Set 网卡信息描述
      * @param NicDescription 网卡信息描述
      */
     public void setNicDescription(String NicDescription) {
@@ -270,7 +270,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Gpu信息描述
+     * Get Gpu信息描述 
      * @return GpuDescription Gpu信息描述
      */
     public String getGpuDescription() {
@@ -278,7 +278,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Gpu信息描述
+     * Set Gpu信息描述
      * @param GpuDescription Gpu信息描述
      */
     public void setGpuDescription(String GpuDescription) {
@@ -286,7 +286,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取Raid信息描述
+     * Get Raid信息描述 
      * @return RaidDescription Raid信息描述
      */
     public String getRaidDescription() {
@@ -294,7 +294,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置Raid信息描述
+     * Set Raid信息描述
      * @param RaidDescription Raid信息描述
      */
     public void setRaidDescription(String RaidDescription) {
@@ -302,7 +302,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取客户的单价
+     * Get 客户的单价 
      * @return Price 客户的单价
      */
     public Integer getPrice() {
@@ -310,7 +310,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置客户的单价
+     * Set 客户的单价
      * @param Price 客户的单价
      */
     public void setPrice(Integer Price) {
@@ -318,7 +318,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取刊例单价
+     * Get 刊例单价 
      * @return NormalPrice 刊例单价
      */
     public Integer getNormalPrice() {
@@ -326,7 +326,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置刊例单价
+     * Set 刊例单价
      * @param NormalPrice 刊例单价
      */
     public void setNormalPrice(Integer NormalPrice) {
@@ -334,7 +334,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取原价
+     * Get 原价 
      * @return TotalCost 原价
      */
     public Integer getTotalCost() {
@@ -342,7 +342,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置原价
+     * Set 原价
      * @param TotalCost 原价
      */
     public void setTotalCost(Integer TotalCost) {
@@ -350,7 +350,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取折扣价
+     * Get 折扣价 
      * @return RealTotalCost 折扣价
      */
     public Integer getRealTotalCost() {
@@ -358,7 +358,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置折扣价
+     * Set 折扣价
      * @param RealTotalCost 折扣价
      */
     public void setRealTotalCost(Integer RealTotalCost) {
@@ -366,7 +366,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计费时长
+     * Get 计费时长 
      * @return TimeSpan 计费时长
      */
     public Integer getTimeSpan() {
@@ -374,7 +374,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计费时长
+     * Set 计费时长
      * @param TimeSpan 计费时长
      */
     public void setTimeSpan(Integer TimeSpan) {
@@ -382,7 +382,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取计费时长单位, m:按月计费; d:按天计费
+     * Get 计费时长单位, m:按月计费; d:按天计费 
      * @return TimeUnit 计费时长单位, m:按月计费; d:按天计费
      */
     public String getTimeUnit() {
@@ -390,7 +390,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置计费时长单位, m:按月计费; d:按天计费
+     * Set 计费时长单位, m:按月计费; d:按天计费
      * @param TimeUnit 计费时长单位, m:按月计费; d:按天计费
      */
     public void setTimeUnit(String TimeUnit) {
@@ -398,7 +398,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 获取商品数量
+     * Get 商品数量 
      * @return GoodsCount 商品数量
      */
     public Integer getGoodsCount() {
@@ -406,7 +406,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 设置商品数量
+     * Set 商品数量
      * @param GoodsCount 商品数量
      */
     public void setGoodsCount(Integer GoodsCount) {
@@ -414,7 +414,7 @@ public class DevicePriceInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
+public class AllocateIp6AddressesBandwidthRequest extends AbstractModel{
 
     /**
     * 需要开通公网访问能力的IPV6地址
@@ -44,7 +44,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     private String InternetChargeType;
 
     /**
-     * 获取需要开通公网访问能力的IPV6地址
+     * Get 需要开通公网访问能力的IPV6地址 
      * @return Ip6Addresses 需要开通公网访问能力的IPV6地址
      */
     public String [] getIp6Addresses() {
@@ -52,7 +52,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需要开通公网访问能力的IPV6地址
+     * Set 需要开通公网访问能力的IPV6地址
      * @param Ip6Addresses 需要开通公网访问能力的IPV6地址
      */
     public void setIp6Addresses(String [] Ip6Addresses) {
@@ -60,7 +60,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取带宽，单位Mbps。默认是1Mbps
+     * Get 带宽，单位Mbps。默认是1Mbps 
      * @return InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -68,7 +68,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置带宽，单位Mbps。默认是1Mbps
+     * Set 带宽，单位Mbps。默认是1Mbps
      * @param InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -76,7 +76,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 获取网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * Get 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。 
      * @return InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public String getInternetChargeType() {
@@ -84,7 +84,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 设置网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * Set 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
      * @param InternetChargeType 网络计费模式。IPV6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，默认是"TRAFFIC_POSTPAID_BY_HOUR"。
      */
     public void setInternetChargeType(String InternetChargeType) {
@@ -92,7 +92,7 @@ public class AllocateIp6AddressesBandwidthRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ip6Addresses.", this.Ip6Addresses);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLifecycleHooksResponse  extends AbstractModel{
+public class DescribeLifecycleHooksResponse extends AbstractModel{
 
     /**
     * 生命周期挂钩数组
@@ -44,7 +44,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取生命周期挂钩数组
+     * Get 生命周期挂钩数组 
      * @return LifecycleHookSet 生命周期挂钩数组
      */
     public LifecycleHook [] getLifecycleHookSet() {
@@ -52,7 +52,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置生命周期挂钩数组
+     * Set 生命周期挂钩数组
      * @param LifecycleHookSet 生命周期挂钩数组
      */
     public void setLifecycleHookSet(LifecycleHook [] LifecycleHookSet) {
@@ -60,7 +60,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总体数量
+     * Get 总体数量 
      * @return TotalCount 总体数量
      */
     public Integer getTotalCount() {
@@ -68,7 +68,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总体数量
+     * Set 总体数量
      * @param TotalCount 总体数量
      */
     public void setTotalCount(Integer TotalCount) {
@@ -76,7 +76,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeLifecycleHooksResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "LifecycleHookSet.", this.LifecycleHookSet);

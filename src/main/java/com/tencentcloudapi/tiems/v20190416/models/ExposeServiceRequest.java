@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExposeServiceRequest  extends AbstractModel{
+public class ExposeServiceRequest extends AbstractModel{
 
     /**
     * 服务Id
@@ -51,7 +51,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     private String SubnetId;
 
     /**
-     * 获取服务Id
+     * Get 服务Id 
      * @return ServiceId 服务Id
      */
     public String getServiceId() {
@@ -59,7 +59,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务Id
+     * Set 服务Id
      * @param ServiceId 服务Id
      */
     public void setServiceId(String ServiceId) {
@@ -67,7 +67,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+     * Get 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通） 
      * @return ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      */
     public String getExposeType() {
@@ -75,7 +75,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
+     * Set 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      * @param ExposeType 暴露方式，支持 EXTERNAL（外网暴露），VPC （VPC内网打通）
      */
     public void setExposeType(String ExposeType) {
@@ -83,7 +83,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式为 VPC 时，填写需要打通的私有网络Id
+     * Get 暴露方式为 VPC 时，填写需要打通的私有网络Id 
      * @return VpcId 暴露方式为 VPC 时，填写需要打通的私有网络Id
      */
     public String getVpcId() {
@@ -91,7 +91,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式为 VPC 时，填写需要打通的私有网络Id
+     * Set 暴露方式为 VPC 时，填写需要打通的私有网络Id
      * @param VpcId 暴露方式为 VPC 时，填写需要打通的私有网络Id
      */
     public void setVpcId(String VpcId) {
@@ -99,7 +99,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取暴露方式为 VPC 时，填写需要打通的子网Id
+     * Get 暴露方式为 VPC 时，填写需要打通的子网Id 
      * @return SubnetId 暴露方式为 VPC 时，填写需要打通的子网Id
      */
     public String getSubnetId() {
@@ -107,7 +107,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置暴露方式为 VPC 时，填写需要打通的子网Id
+     * Set 暴露方式为 VPC 时，填写需要打通的子网Id
      * @param SubnetId 暴露方式为 VPC 时，填写需要打通的子网Id
      */
     public void setSubnetId(String SubnetId) {
@@ -115,7 +115,7 @@ public class ExposeServiceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);

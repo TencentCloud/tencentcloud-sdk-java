@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableOCRResponse  extends AbstractModel{
+public class TableOCRResponse extends AbstractModel{
 
     /**
     * 检测到的文本信息，具体内容请点击左侧链接。
@@ -44,7 +44,7 @@ public class TableOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取检测到的文本信息，具体内容请点击左侧链接。
+     * Get 检测到的文本信息，具体内容请点击左侧链接。 
      * @return TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public TextTable [] getTextDetections() {
@@ -52,7 +52,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置检测到的文本信息，具体内容请点击左侧链接。
+     * Set 检测到的文本信息，具体内容请点击左侧链接。
      * @param TextDetections 检测到的文本信息，具体内容请点击左侧链接。
      */
     public void setTextDetections(TextTable [] TextDetections) {
@@ -60,7 +60,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取Base64 编码后的 Excel 数据。
+     * Get Base64 编码后的 Excel 数据。 
      * @return Data Base64 编码后的 Excel 数据。
      */
     public String getData() {
@@ -68,7 +68,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置Base64 编码后的 Excel 数据。
+     * Set Base64 编码后的 Excel 数据。
      * @param Data Base64 编码后的 Excel 数据。
      */
     public void setData(String Data) {
@@ -76,7 +76,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class TableOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);

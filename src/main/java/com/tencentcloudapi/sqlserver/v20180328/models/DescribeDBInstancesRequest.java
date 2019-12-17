@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesRequest  extends AbstractModel{
+public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
-    private Integer ProjectId;
+    private Long ProjectId;
 
     /**
     * 实例状态。取值范围：
@@ -46,21 +46,21 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 页数，默认为 0
     */
     @SerializedName("Offset")
     @Expose
-    private Integer Offset;
+    private Long Offset;
 
     /**
     * 页大小，默认为50
     */
     @SerializedName("Limit")
     @Expose
-    private Integer Limit;
+    private Long Limit;
 
     /**
     * 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
@@ -74,26 +74,26 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     */
     @SerializedName("PayMode")
     @Expose
-    private Integer PayMode;
+    private Long PayMode;
 
     /**
-     * 获取项目ID
+     * Get 项目ID 
      * @return ProjectId 项目ID
      */
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * 设置项目ID
+     * Set 项目ID
      * @param ProjectId 项目ID
      */
-    public void setProjectId(Integer ProjectId) {
+    public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * 获取实例状态。取值范围：
+     * Get 实例状态。取值范围：
 <li>1：申请中</li>
 <li>2：运行中</li>
 <li>3：受限运行中 (主备切换中)</li>
@@ -105,7 +105,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
 <li>9：实例扩容中</li>
 <li>10：实例迁移中</li>
 <li>11：只读</li>
-<li>12：重启中</li>
+<li>12：重启中</li> 
      * @return Status 实例状态。取值范围：
 <li>1：申请中</li>
 <li>2：运行中</li>
@@ -120,12 +120,12 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
 <li>11：只读</li>
 <li>12：重启中</li>
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置实例状态。取值范围：
+     * Set 实例状态。取值范围：
 <li>1：申请中</li>
 <li>2：运行中</li>
 <li>3：受限运行中 (主备切换中)</li>
@@ -152,44 +152,44 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
 <li>11：只读</li>
 <li>12：重启中</li>
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取页数，默认为 0
+     * Get 页数，默认为 0 
      * @return Offset 页数，默认为 0
      */
-    public Integer getOffset() {
+    public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * 设置页数，默认为 0
+     * Set 页数，默认为 0
      * @param Offset 页数，默认为 0
      */
-    public void setOffset(Integer Offset) {
+    public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * 获取页大小，默认为50
+     * Get 页大小，默认为50 
      * @return Limit 页大小，默认为50
      */
-    public Integer getLimit() {
+    public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * 设置页大小，默认为50
+     * Set 页大小，默认为50
      * @param Limit 页大小，默认为50
      */
-    public void setLimit(Integer Limit) {
+    public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * 获取一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
+     * Get 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl 
      * @return InstanceIdSet 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      */
     public String [] getInstanceIdSet() {
@@ -197,7 +197,7 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
+     * Set 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      * @param InstanceIdSet 一个或者多个实例ID。实例ID，格式如：mssql-si2823jyl
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
@@ -205,23 +205,23 @@ public class DescribeDBInstancesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取付费类型检索 1-包年包月，0-按量计费
+     * Get 付费类型检索 1-包年包月，0-按量计费 
      * @return PayMode 付费类型检索 1-包年包月，0-按量计费
      */
-    public Integer getPayMode() {
+    public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * 设置付费类型检索 1-包年包月，0-按量计费
+     * Set 付费类型检索 1-包年包月，0-按量计费
      * @param PayMode 付费类型检索 1-包年包月，0-按量计费
      */
-    public void setPayMode(Integer PayMode) {
+    public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);

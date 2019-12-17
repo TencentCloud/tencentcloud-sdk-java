@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyUploadResponse  extends AbstractModel{
+public class ApplyUploadResponse extends AbstractModel{
 
     /**
     * 存储桶，用于上传接口 URL 的 bucket_name。
@@ -74,7 +74,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取存储桶，用于上传接口 URL 的 bucket_name。
+     * Get 存储桶，用于上传接口 URL 的 bucket_name。 
      * @return StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
      */
     public String getStorageBucket() {
@@ -82,7 +82,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置存储桶，用于上传接口 URL 的 bucket_name。
+     * Set 存储桶，用于上传接口 URL 的 bucket_name。
      * @param StorageBucket 存储桶，用于上传接口 URL 的 bucket_name。
      */
     public void setStorageBucket(String StorageBucket) {
@@ -90,7 +90,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取存储园区，用于上传接口 Host 的 Region。
+     * Get 存储园区，用于上传接口 Host 的 Region。 
      * @return StorageRegion 存储园区，用于上传接口 Host 的 Region。
      */
     public String getStorageRegion() {
@@ -98,7 +98,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置存储园区，用于上传接口 Host 的 Region。
+     * Set 存储园区，用于上传接口 Host 的 Region。
      * @param StorageRegion 存储园区，用于上传接口 Host 的 Region。
      */
     public void setStorageRegion(String StorageRegion) {
@@ -106,7 +106,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取点播会话，用于确认上传接口的参数 VodSessionKey。
+     * Get 点播会话，用于确认上传接口的参数 VodSessionKey。 
      * @return VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
      */
     public String getVodSessionKey() {
@@ -114,7 +114,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置点播会话，用于确认上传接口的参数 VodSessionKey。
+     * Set 点播会话，用于确认上传接口的参数 VodSessionKey。
      * @param VodSessionKey 点播会话，用于确认上传接口的参数 VodSessionKey。
      */
     public void setVodSessionKey(String VodSessionKey) {
@@ -122,8 +122,8 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取媒体存储路径，用于上传接口存储媒体的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -132,7 +132,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置媒体存储路径，用于上传接口存储媒体的对象键（Key）。
+     * Set 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaStoragePath 媒体存储路径，用于上传接口存储媒体的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -142,8 +142,8 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取封面存储路径，用于上传接口存储封面的对象键（Key）。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 封面存储路径，用于上传接口存储封面的对象键（Key）。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -152,7 +152,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置封面存储路径，用于上传接口存储封面的对象键（Key）。
+     * Set 封面存储路径，用于上传接口存储封面的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CoverStoragePath 封面存储路径，用于上传接口存储封面的对象键（Key）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -162,7 +162,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取临时凭证，用于上传接口的权限验证。
+     * Get 临时凭证，用于上传接口的权限验证。 
      * @return TempCertificate 临时凭证，用于上传接口的权限验证。
      */
     public TempCertificate getTempCertificate() {
@@ -170,7 +170,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置临时凭证，用于上传接口的权限验证。
+     * Set 临时凭证，用于上传接口的权限验证。
      * @param TempCertificate 临时凭证，用于上传接口的权限验证。
      */
     public void setTempCertificate(TempCertificate TempCertificate) {
@@ -178,7 +178,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -186,7 +186,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -194,7 +194,7 @@ public class ApplyUploadResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StorageBucket", this.StorageBucket);

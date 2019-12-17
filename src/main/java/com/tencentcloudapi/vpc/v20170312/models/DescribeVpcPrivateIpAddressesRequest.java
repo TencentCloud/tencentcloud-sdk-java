@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
+public class DescribeVpcPrivateIpAddressesRequest extends AbstractModel{
 
     /**
     * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
@@ -37,7 +37,7 @@ public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
     private String [] PrivateIpAddresses;
 
     /**
-     * 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
      * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public String getVpcId() {
@@ -45,7 +45,7 @@ public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
      */
     public void setVpcId(String VpcId) {
@@ -53,7 +53,7 @@ public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 获取内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Get 内网`IP`地址列表，批量查询单次请求最多支持`10`个。 
      * @return PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
      */
     public String [] getPrivateIpAddresses() {
@@ -61,7 +61,7 @@ public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Set 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
      * @param PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
@@ -69,7 +69,7 @@ public class DescribeVpcPrivateIpAddressesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

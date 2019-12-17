@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShipInvoiceOCRResponse  extends AbstractModel{
+public class ShipInvoiceOCRResponse extends AbstractModel{
 
     /**
     * 轮船票识别结果，具体内容请点击左侧链接。
@@ -44,7 +44,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取轮船票识别结果，具体内容请点击左侧链接。
+     * Get 轮船票识别结果，具体内容请点击左侧链接。 
      * @return ShipInvoiceInfos 轮船票识别结果，具体内容请点击左侧链接。
      */
     public ShipInvoiceInfo [] getShipInvoiceInfos() {
@@ -52,7 +52,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置轮船票识别结果，具体内容请点击左侧链接。
+     * Set 轮船票识别结果，具体内容请点击左侧链接。
      * @param ShipInvoiceInfos 轮船票识别结果，具体内容请点击左侧链接。
      */
     public void setShipInvoiceInfos(ShipInvoiceInfo [] ShipInvoiceInfos) {
@@ -60,7 +60,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
+     * Get 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。 
      * @return Angle 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
      */
     public Float getAngle() {
@@ -68,7 +68,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
+     * Set 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
      * @param Angle 图片旋转角度（角度制），文本的水平方向为0°，顺时针为正，逆时针为负。
      */
     public void setAngle(Float Angle) {
@@ -76,7 +76,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class ShipInvoiceOCRResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ShipInvoiceInfos.", this.ShipInvoiceInfos);

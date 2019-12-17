@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Rect  extends AbstractModel{
+public class Rect extends AbstractModel{
 
     /**
     * 左上角x
@@ -51,7 +51,7 @@ public class Rect  extends AbstractModel{
     private Integer Height;
 
     /**
-     * 获取左上角x
+     * Get 左上角x 
      * @return X 左上角x
      */
     public Integer getX() {
@@ -59,7 +59,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 设置左上角x
+     * Set 左上角x
      * @param X 左上角x
      */
     public void setX(Integer X) {
@@ -67,7 +67,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 获取左上角y
+     * Get 左上角y 
      * @return Y 左上角y
      */
     public Integer getY() {
@@ -75,7 +75,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 设置左上角y
+     * Set 左上角y
      * @param Y 左上角y
      */
     public void setY(Integer Y) {
@@ -83,7 +83,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 获取宽度
+     * Get 宽度 
      * @return Width 宽度
      */
     public Integer getWidth() {
@@ -91,7 +91,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 设置宽度
+     * Set 宽度
      * @param Width 宽度
      */
     public void setWidth(Integer Width) {
@@ -99,7 +99,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 获取高度
+     * Get 高度 
      * @return Height 高度
      */
     public Integer getHeight() {
@@ -107,7 +107,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 设置高度
+     * Set 高度
      * @param Height 高度
      */
     public void setHeight(Integer Height) {
@@ -115,7 +115,7 @@ public class Rect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

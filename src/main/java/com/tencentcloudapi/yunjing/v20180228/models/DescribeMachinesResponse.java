@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMachinesResponse  extends AbstractModel{
+public class DescribeMachinesResponse extends AbstractModel{
 
     /**
     * 主机列表
@@ -34,7 +34,7 @@ public class DescribeMachinesResponse  extends AbstractModel{
     */
     @SerializedName("TotalCount")
     @Expose
-    private Integer TotalCount;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,7 +44,7 @@ public class DescribeMachinesResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取主机列表
+     * Get 主机列表 
      * @return Machines 主机列表
      */
     public Machine [] getMachines() {
@@ -52,7 +52,7 @@ public class DescribeMachinesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置主机列表
+     * Set 主机列表
      * @param Machines 主机列表
      */
     public void setMachines(Machine [] Machines) {
@@ -60,23 +60,23 @@ public class DescribeMachinesResponse  extends AbstractModel{
     }
 
     /**
-     * 获取主机数量
+     * Get 主机数量 
      * @return TotalCount 主机数量
      */
-    public Integer getTotalCount() {
+    public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * 设置主机数量
+     * Set 主机数量
      * @param TotalCount 主机数量
      */
-    public void setTotalCount(Integer TotalCount) {
+    public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeMachinesResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeMachinesResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Machines.", this.Machines);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVulsResponse  extends AbstractModel{
+public class DescribeVulsResponse extends AbstractModel{
 
     /**
     * 漏洞数量。
@@ -44,7 +44,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取漏洞数量。
+     * Get 漏洞数量。 
      * @return TotalCount 漏洞数量。
      */
     public Integer getTotalCount() {
@@ -52,7 +52,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞数量。
+     * Set 漏洞数量。
      * @param TotalCount 漏洞数量。
      */
     public void setTotalCount(Integer TotalCount) {
@@ -60,7 +60,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取漏洞信息列表。
+     * Get 漏洞信息列表。 
      * @return Vuls 漏洞信息列表。
      */
     public Vul [] getVuls() {
@@ -68,7 +68,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置漏洞信息列表。
+     * Set 漏洞信息列表。
      * @param Vuls 漏洞信息列表。
      */
     public void setVuls(Vul [] Vuls) {
@@ -76,7 +76,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -84,7 +84,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -92,7 +92,7 @@ public class DescribeVulsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);

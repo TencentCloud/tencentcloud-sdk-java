@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PushDataInfo  extends AbstractModel{
+public class PushDataInfo extends AbstractModel{
 
     /**
     * 流名称。
@@ -123,7 +123,7 @@ public class PushDataInfo  extends AbstractModel{
     private Integer AsampleRate;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -131,7 +131,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -139,7 +139,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流路径。
+     * Get 推流路径。 
      * @return AppName 推流路径。
      */
     public String getAppName() {
@@ -147,7 +147,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流路径。
+     * Set 推流路径。
      * @param AppName 推流路径。
      */
     public void setAppName(String AppName) {
@@ -155,7 +155,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流客户端ip。
+     * Get 推流客户端ip。 
      * @return ClientIp 推流客户端ip。
      */
     public String getClientIp() {
@@ -163,7 +163,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流客户端ip。
+     * Set 推流客户端ip。
      * @param ClientIp 推流客户端ip。
      */
     public void setClientIp(String ClientIp) {
@@ -171,7 +171,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取接流服务器ip。
+     * Get 接流服务器ip。 
      * @return ServerIp 接流服务器ip。
      */
     public String getServerIp() {
@@ -179,7 +179,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置接流服务器ip。
+     * Set 接流服务器ip。
      * @param ServerIp 接流服务器ip。
      */
     public void setServerIp(String ServerIp) {
@@ -187,7 +187,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流视频帧率，单位是Hz。
+     * Get 推流视频帧率，单位是Hz。 
      * @return VideoFps 推流视频帧率，单位是Hz。
      */
     public Integer getVideoFps() {
@@ -195,7 +195,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流视频帧率，单位是Hz。
+     * Set 推流视频帧率，单位是Hz。
      * @param VideoFps 推流视频帧率，单位是Hz。
      */
     public void setVideoFps(Integer VideoFps) {
@@ -203,7 +203,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流视频码率，单位是bps。
+     * Get 推流视频码率，单位是bps。 
      * @return VideoSpeed 推流视频码率，单位是bps。
      */
     public Integer getVideoSpeed() {
@@ -211,7 +211,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流视频码率，单位是bps。
+     * Set 推流视频码率，单位是bps。
      * @param VideoSpeed 推流视频码率，单位是bps。
      */
     public void setVideoSpeed(Integer VideoSpeed) {
@@ -219,7 +219,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流音频帧率，单位是Hz。
+     * Get 推流音频帧率，单位是Hz。 
      * @return AudioFps 推流音频帧率，单位是Hz。
      */
     public Integer getAudioFps() {
@@ -227,7 +227,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流音频帧率，单位是Hz。
+     * Set 推流音频帧率，单位是Hz。
      * @param AudioFps 推流音频帧率，单位是Hz。
      */
     public void setAudioFps(Integer AudioFps) {
@@ -235,7 +235,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流音频码率，单位是bps。
+     * Get 推流音频码率，单位是bps。 
      * @return AudioSpeed 推流音频码率，单位是bps。
      */
     public Integer getAudioSpeed() {
@@ -243,7 +243,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流音频码率，单位是bps。
+     * Set 推流音频码率，单位是bps。
      * @param AudioSpeed 推流音频码率，单位是bps。
      */
     public void setAudioSpeed(Integer AudioSpeed) {
@@ -251,7 +251,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流域名。
+     * Get 推流域名。 
      * @return PushDomain 推流域名。
      */
     public String getPushDomain() {
@@ -259,7 +259,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流域名。
+     * Set 推流域名。
      * @param PushDomain 推流域名。
      */
     public void setPushDomain(String PushDomain) {
@@ -267,7 +267,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推流开始时间。
+     * Get 推流开始时间。 
      * @return BeginPushTime 推流开始时间。
      */
     public String getBeginPushTime() {
@@ -275,7 +275,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推流开始时间。
+     * Set 推流开始时间。
      * @param BeginPushTime 推流开始时间。
      */
     public void setBeginPushTime(String BeginPushTime) {
@@ -283,8 +283,8 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取音频编码格式，
-例："AAC"。
+     * Get 音频编码格式，
+例："AAC"。 
      * @return Acodec 音频编码格式，
 例："AAC"。
      */
@@ -293,7 +293,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置音频编码格式，
+     * Set 音频编码格式，
 例："AAC"。
      * @param Acodec 音频编码格式，
 例："AAC"。
@@ -303,8 +303,8 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取视频编码格式，
-例："H264"。
+     * Get 视频编码格式，
+例："H264"。 
      * @return Vcodec 视频编码格式，
 例："H264"。
      */
@@ -313,7 +313,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置视频编码格式，
+     * Set 视频编码格式，
 例："H264"。
      * @param Vcodec 视频编码格式，
 例："H264"。
@@ -323,7 +323,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分辨率。
+     * Get 分辨率。 
      * @return Resolution 分辨率。
      */
     public String getResolution() {
@@ -331,7 +331,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分辨率。
+     * Set 分辨率。
      * @param Resolution 分辨率。
      */
     public void setResolution(String Resolution) {
@@ -339,7 +339,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 获取采样率。
+     * Get 采样率。 
      * @return AsampleRate 采样率。
      */
     public Integer getAsampleRate() {
@@ -347,7 +347,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 设置采样率。
+     * Set 采样率。
      * @param AsampleRate 采样率。
      */
     public void setAsampleRate(Integer AsampleRate) {
@@ -355,7 +355,7 @@ public class PushDataInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

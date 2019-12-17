@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteTaskTemplatesRequest  extends AbstractModel{
+public class DeleteTaskTemplatesRequest extends AbstractModel{
 
     /**
     * 用于删除任务模板信息
@@ -30,7 +30,7 @@ public class DeleteTaskTemplatesRequest  extends AbstractModel{
     private String [] TaskTemplateIds;
 
     /**
-     * 获取用于删除任务模板信息
+     * Get 用于删除任务模板信息 
      * @return TaskTemplateIds 用于删除任务模板信息
      */
     public String [] getTaskTemplateIds() {
@@ -38,7 +38,7 @@ public class DeleteTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 设置用于删除任务模板信息
+     * Set 用于删除任务模板信息
      * @param TaskTemplateIds 用于删除任务模板信息
      */
     public void setTaskTemplateIds(String [] TaskTemplateIds) {
@@ -46,7 +46,7 @@ public class DeleteTaskTemplatesRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TaskTemplateIds.", this.TaskTemplateIds);

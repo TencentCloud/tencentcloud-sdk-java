@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PartitionInfo  extends AbstractModel{
+public class PartitionInfo extends AbstractModel{
 
     /**
     * 分区名称
@@ -37,7 +37,7 @@ public class PartitionInfo  extends AbstractModel{
     private Integer Size;
 
     /**
-     * 获取分区名称
+     * Get 分区名称 
      * @return Name 分区名称
      */
     public String getName() {
@@ -45,7 +45,7 @@ public class PartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分区名称
+     * Set 分区名称
      * @param Name 分区名称
      */
     public void setName(String Name) {
@@ -53,7 +53,7 @@ public class PartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 获取分区大小
+     * Get 分区大小 
      * @return Size 分区大小
      */
     public Integer getSize() {
@@ -61,7 +61,7 @@ public class PartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 设置分区大小
+     * Set 分区大小
      * @param Size 分区大小
      */
     public void setSize(Integer Size) {
@@ -69,7 +69,7 @@ public class PartitionInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateDataKeyRequest  extends AbstractModel{
+public class GenerateDataKeyRequest extends AbstractModel{
 
     /**
     * CMK全局唯一标识符
@@ -51,7 +51,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     private String EncryptionContext;
 
     /**
-     * 获取CMK全局唯一标识符
+     * Get CMK全局唯一标识符 
      * @return KeyId CMK全局唯一标识符
      */
     public String getKeyId() {
@@ -59,7 +59,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置CMK全局唯一标识符
+     * Set CMK全局唯一标识符
      * @param KeyId CMK全局唯一标识符
      */
     public void setKeyId(String KeyId) {
@@ -67,7 +67,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
+     * Get 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个 
      * @return KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public String getKeySpec() {
@@ -75,7 +75,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
+     * Set 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      * @param KeySpec 指定生成Datakey的加密算法以及Datakey大小，AES_128或者AES_256。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public void setKeySpec(String KeySpec) {
@@ -83,7 +83,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
+     * Get 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个 
      * @return NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public Long getNumberOfBytes() {
@@ -91,7 +91,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
+     * Set 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
      * @param NumberOfBytes 生成的DataKey的长度，同时指定NumberOfBytes和KeySpec时，以NumberOfBytes为准。最小值为1， 最大值为1024。KeySpec 和 NumberOfBytes 必须指定一个
      */
     public void setNumberOfBytes(Long NumberOfBytes) {
@@ -99,7 +99,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 获取key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
+     * Get key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串 
      * @return EncryptionContext key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
      */
     public String getEncryptionContext() {
@@ -107,7 +107,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 设置key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
+     * Set key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
      * @param EncryptionContext key/value对的json字符串，如果使用该字段，则返回的DataKey在解密时需要填入相同的字符串
      */
     public void setEncryptionContext(String EncryptionContext) {
@@ -115,7 +115,7 @@ public class GenerateDataKeyRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);

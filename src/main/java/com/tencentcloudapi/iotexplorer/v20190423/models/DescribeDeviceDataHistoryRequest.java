@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
+public class DescribeDeviceDataHistoryRequest extends AbstractModel{
 
     /**
     * 区间开始时间
@@ -72,7 +72,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     private String Context;
 
     /**
-     * 获取区间开始时间
+     * Get 区间开始时间 
      * @return MinTime 区间开始时间
      */
     public Long getMinTime() {
@@ -80,7 +80,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区间开始时间
+     * Set 区间开始时间
      * @param MinTime 区间开始时间
      */
     public void setMinTime(Long MinTime) {
@@ -88,7 +88,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取区间结束时间
+     * Get 区间结束时间 
      * @return MaxTime 区间结束时间
      */
     public Long getMaxTime() {
@@ -96,7 +96,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置区间结束时间
+     * Set 区间结束时间
      * @param MaxTime 区间结束时间
      */
     public void setMaxTime(Long MaxTime) {
@@ -104,7 +104,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -112,7 +112,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -120,7 +120,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -128,7 +128,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -136,7 +136,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取属性字段名称
+     * Get 属性字段名称 
      * @return FieldName 属性字段名称
      */
     public String getFieldName() {
@@ -144,7 +144,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置属性字段名称
+     * Set 属性字段名称
      * @param FieldName 属性字段名称
      */
     public void setFieldName(String FieldName) {
@@ -152,7 +152,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回条数
+     * Get 返回条数 
      * @return Limit 返回条数
      */
     public Long getLimit() {
@@ -160,7 +160,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回条数
+     * Set 返回条数
      * @param Limit 返回条数
      */
     public void setLimit(Long Limit) {
@@ -168,7 +168,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 获取检索上下文
+     * Get 检索上下文 
      * @return Context 检索上下文
      */
     public String getContext() {
@@ -176,7 +176,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 设置检索上下文
+     * Set 检索上下文
      * @param Context 检索上下文
      */
     public void setContext(String Context) {
@@ -184,7 +184,7 @@ public class DescribeDeviceDataHistoryRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MinTime", this.MinTime);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSampleSnapshotTemplateRequest  extends AbstractModel{
+public class DeleteSampleSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * 采样截图模板唯一标识。
@@ -30,7 +30,7 @@ public class DeleteSampleSnapshotTemplateRequest  extends AbstractModel{
     private Long Definition;
 
     /**
-     * 获取采样截图模板唯一标识。
+     * Get 采样截图模板唯一标识。 
      * @return Definition 采样截图模板唯一标识。
      */
     public Long getDefinition() {
@@ -38,7 +38,7 @@ public class DeleteSampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 设置采样截图模板唯一标识。
+     * Set 采样截图模板唯一标识。
      * @param Definition 采样截图模板唯一标识。
      */
     public void setDefinition(Long Definition) {
@@ -46,7 +46,7 @@ public class DeleteSampleSnapshotTemplateRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

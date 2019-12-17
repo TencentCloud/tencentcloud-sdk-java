@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StreamInfo  extends AbstractModel{
+public class StreamInfo extends AbstractModel{
 
     /**
     * 直播流所属应用名称
@@ -72,7 +72,7 @@ public class StreamInfo  extends AbstractModel{
     private String WaterMarkId;
 
     /**
-     * 获取直播流所属应用名称
+     * Get 直播流所属应用名称 
      * @return AppName 直播流所属应用名称
      */
     public String getAppName() {
@@ -80,7 +80,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置直播流所属应用名称
+     * Set 直播流所属应用名称
      * @param AppName 直播流所属应用名称
      */
     public void setAppName(String AppName) {
@@ -88,7 +88,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建模式
+     * Get 创建模式 
      * @return CreateMode 创建模式
      */
     public String getCreateMode() {
@@ -96,7 +96,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建模式
+     * Set 创建模式
      * @param CreateMode 创建模式
      */
     public void setCreateMode(String CreateMode) {
@@ -104,7 +104,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，如: 2018-07-13 14:48:23
+     * Get 创建时间，如: 2018-07-13 14:48:23 
      * @return CreateTime 创建时间，如: 2018-07-13 14:48:23
      */
     public String getCreateTime() {
@@ -112,7 +112,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，如: 2018-07-13 14:48:23
+     * Set 创建时间，如: 2018-07-13 14:48:23
      * @param CreateTime 创建时间，如: 2018-07-13 14:48:23
      */
     public void setCreateTime(String CreateTime) {
@@ -120,7 +120,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流状态
+     * Get 流状态 
      * @return Status 流状态
      */
     public Integer getStatus() {
@@ -128,7 +128,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流状态
+     * Set 流状态
      * @param Status 流状态
      */
     public void setStatus(Integer Status) {
@@ -136,7 +136,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流id
+     * Get 流id 
      * @return StreamId 流id
      */
     public String getStreamId() {
@@ -144,7 +144,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流id
+     * Set 流id
      * @param StreamId 流id
      */
     public void setStreamId(String StreamId) {
@@ -152,7 +152,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取流名称
+     * Get 流名称 
      * @return StreamName 流名称
      */
     public String getStreamName() {
@@ -160,7 +160,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置流名称
+     * Set 流名称
      * @param StreamName 流名称
      */
     public void setStreamName(String StreamName) {
@@ -168,7 +168,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 获取水印id
+     * Get 水印id 
      * @return WaterMarkId 水印id
      */
     public String getWaterMarkId() {
@@ -176,7 +176,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 设置水印id
+     * Set 水印id
      * @param WaterMarkId 水印id
      */
     public void setWaterMarkId(String WaterMarkId) {
@@ -184,7 +184,7 @@ public class StreamInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppName", this.AppName);

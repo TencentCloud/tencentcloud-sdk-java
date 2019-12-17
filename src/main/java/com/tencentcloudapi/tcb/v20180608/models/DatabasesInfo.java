@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DatabasesInfo  extends AbstractModel{
+public class DatabasesInfo extends AbstractModel{
 
     /**
     * 数据库唯一标识
@@ -49,7 +49,7 @@ public class DatabasesInfo  extends AbstractModel{
     private String Region;
 
     /**
-     * 获取数据库唯一标识
+     * Get 数据库唯一标识 
      * @return InstanceId 数据库唯一标识
      */
     public String getInstanceId() {
@@ -57,7 +57,7 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库唯一标识
+     * Set 数据库唯一标识
      * @param InstanceId 数据库唯一标识
      */
     public void setInstanceId(String InstanceId) {
@@ -65,11 +65,11 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取状态。包含以下取值：
+     * Get 状态。包含以下取值：
 <li>INITIALIZING：资源初始化中</li>
 <li>RUNNING：运行中，可正常使用的状态</li>
 <li>UNUSABLE：禁用，不可用</li>
-<li>OVERDUE：资源过期</li>
+<li>OVERDUE：资源过期</li> 
      * @return Status 状态。包含以下取值：
 <li>INITIALIZING：资源初始化中</li>
 <li>RUNNING：运行中，可正常使用的状态</li>
@@ -81,7 +81,7 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置状态。包含以下取值：
+     * Set 状态。包含以下取值：
 <li>INITIALIZING：资源初始化中</li>
 <li>RUNNING：运行中，可正常使用的状态</li>
 <li>UNUSABLE：禁用，不可用</li>
@@ -97,8 +97,8 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 获取所属地域。
-当前支持ap-shanghai
+     * Get 所属地域。
+当前支持ap-shanghai 
      * @return Region 所属地域。
 当前支持ap-shanghai
      */
@@ -107,7 +107,7 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 设置所属地域。
+     * Set 所属地域。
 当前支持ap-shanghai
      * @param Region 所属地域。
 当前支持ap-shanghai
@@ -117,7 +117,7 @@ public class DatabasesInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

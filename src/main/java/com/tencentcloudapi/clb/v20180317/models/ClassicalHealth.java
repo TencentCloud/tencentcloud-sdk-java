@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ClassicalHealth  extends AbstractModel{
+public class ClassicalHealth extends AbstractModel{
 
     /**
     * 后端服务的内网 IP
@@ -58,7 +58,7 @@ public class ClassicalHealth  extends AbstractModel{
     private Integer HealthStatus;
 
     /**
-     * 获取后端服务的内网 IP
+     * Get 后端服务的内网 IP 
      * @return IP 后端服务的内网 IP
      */
     public String getIP() {
@@ -66,7 +66,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的内网 IP
+     * Set 后端服务的内网 IP
      * @param IP 后端服务的内网 IP
      */
     public void setIP(String IP) {
@@ -74,7 +74,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 获取后端服务的端口
+     * Get 后端服务的端口 
      * @return Port 后端服务的端口
      */
     public Integer getPort() {
@@ -82,7 +82,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 设置后端服务的端口
+     * Set 后端服务的端口
      * @param Port 后端服务的端口
      */
     public void setPort(Integer Port) {
@@ -90,7 +90,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡的监听端口
+     * Get 负载均衡的监听端口 
      * @return ListenerPort 负载均衡的监听端口
      */
     public Integer getListenerPort() {
@@ -98,7 +98,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡的监听端口
+     * Set 负载均衡的监听端口
      * @param ListenerPort 负载均衡的监听端口
      */
     public void setListenerPort(Integer ListenerPort) {
@@ -106,7 +106,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 获取转发协议
+     * Get 转发协议 
      * @return Protocol 转发协议
      */
     public String getProtocol() {
@@ -114,7 +114,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 设置转发协议
+     * Set 转发协议
      * @param Protocol 转发协议
      */
     public void setProtocol(String Protocol) {
@@ -122,7 +122,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查结果，1 表示健康，0 表示不健康
+     * Get 健康检查结果，1 表示健康，0 表示不健康 
      * @return HealthStatus 健康检查结果，1 表示健康，0 表示不健康
      */
     public Integer getHealthStatus() {
@@ -130,7 +130,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查结果，1 表示健康，0 表示不健康
+     * Set 健康检查结果，1 表示健康，0 表示不健康
      * @param HealthStatus 健康检查结果，1 表示健康，0 表示不健康
      */
     public void setHealthStatus(Integer HealthStatus) {
@@ -138,7 +138,7 @@ public class ClassicalHealth  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IP", this.IP);

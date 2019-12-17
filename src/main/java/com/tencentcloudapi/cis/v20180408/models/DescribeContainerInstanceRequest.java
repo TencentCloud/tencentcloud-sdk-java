@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeContainerInstanceRequest  extends AbstractModel{
+public class DescribeContainerInstanceRequest extends AbstractModel{
 
     /**
     * 容器实例名称
@@ -30,7 +30,7 @@ public class DescribeContainerInstanceRequest  extends AbstractModel{
     private String InstanceName;
 
     /**
-     * 获取容器实例名称
+     * Get 容器实例名称 
      * @return InstanceName 容器实例名称
      */
     public String getInstanceName() {
@@ -38,7 +38,7 @@ public class DescribeContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置容器实例名称
+     * Set 容器实例名称
      * @param InstanceName 容器实例名称
      */
     public void setInstanceName(String InstanceName) {
@@ -46,7 +46,7 @@ public class DescribeContainerInstanceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);

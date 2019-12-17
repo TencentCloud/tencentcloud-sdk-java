@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyFlowLogAttributeRequest  extends AbstractModel{
+public class ModifyFlowLogAttributeRequest extends AbstractModel{
 
     /**
     * 私用网络ID或者统一ID，建议使用统一ID
@@ -51,7 +51,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     private String FlowLogDescription;
 
     /**
-     * 获取私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID 
      * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public String getVpcId() {
@@ -59,7 +59,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID
      * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
      */
     public void setVpcId(String VpcId) {
@@ -67,7 +67,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志唯一ID
+     * Get 流日志唯一ID 
      * @return FlowLogId 流日志唯一ID
      */
     public String getFlowLogId() {
@@ -75,7 +75,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志唯一ID
+     * Set 流日志唯一ID
      * @param FlowLogId 流日志唯一ID
      */
     public void setFlowLogId(String FlowLogId) {
@@ -83,7 +83,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志实例名字
+     * Get 流日志实例名字 
      * @return FlowLogName 流日志实例名字
      */
     public String getFlowLogName() {
@@ -91,7 +91,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例名字
+     * Set 流日志实例名字
      * @param FlowLogName 流日志实例名字
      */
     public void setFlowLogName(String FlowLogName) {
@@ -99,7 +99,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取流日志实例描述
+     * Get 流日志实例描述 
      * @return FlowLogDescription 流日志实例描述
      */
     public String getFlowLogDescription() {
@@ -107,7 +107,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置流日志实例描述
+     * Set 流日志实例描述
      * @param FlowLogDescription 流日志实例描述
      */
     public void setFlowLogDescription(String FlowLogDescription) {
@@ -115,7 +115,7 @@ public class ModifyFlowLogAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BillDetail  extends AbstractModel{
+public class BillDetail extends AbstractModel{
 
     /**
     * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
@@ -157,7 +157,7 @@ public class BillDetail  extends AbstractModel{
     private BillTagInfo [] Tags;
 
     /**
-     * 获取产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public String getBusinessCodeName() {
@@ -165,7 +165,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Set 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
     public void setBusinessCodeName(String BusinessCodeName) {
@@ -173,7 +173,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * Get 子产品名称：云产品子类，如云服务器CVM-标准型S1 
      * @return ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
      */
     public String getProductCodeName() {
@@ -181,7 +181,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * Set 子产品名称：云产品子类，如云服务器CVM-标准型S1
      * @param ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
      */
     public void setProductCodeName(String ProductCodeName) {
@@ -189,7 +189,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取计费模式：包年包月和按量计费
+     * Get 计费模式：包年包月和按量计费 
      * @return PayModeName 计费模式：包年包月和按量计费
      */
     public String getPayModeName() {
@@ -197,7 +197,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置计费模式：包年包月和按量计费
+     * Set 计费模式：包年包月和按量计费
      * @param PayModeName 计费模式：包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
@@ -205,7 +205,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取项目:资源所属项目
+     * Get 项目:资源所属项目 
      * @return ProjectName 项目:资源所属项目
      */
     public String getProjectName() {
@@ -213,7 +213,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置项目:资源所属项目
+     * Set 项目:资源所属项目
      * @param ProjectName 项目:资源所属项目
      */
     public void setProjectName(String ProjectName) {
@@ -221,7 +221,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取区域：资源所属地域，如华南地区（广州）
+     * Get 区域：资源所属地域，如华南地区（广州） 
      * @return RegionName 区域：资源所属地域，如华南地区（广州）
      */
     public String getRegionName() {
@@ -229,7 +229,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置区域：资源所属地域，如华南地区（广州）
+     * Set 区域：资源所属地域，如华南地区（广州）
      * @param RegionName 区域：资源所属地域，如华南地区（广州）
      */
     public void setRegionName(String RegionName) {
@@ -237,7 +237,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取可用区：资源所属可用区，如广州三区
+     * Get 可用区：资源所属可用区，如广州三区 
      * @return ZoneName 可用区：资源所属可用区，如广州三区
      */
     public String getZoneName() {
@@ -245,7 +245,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置可用区：资源所属可用区，如广州三区
+     * Set 可用区：资源所属可用区，如广州三区
      * @param ZoneName 可用区：资源所属可用区，如广州三区
      */
     public void setZoneName(String ZoneName) {
@@ -253,7 +253,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取资源实例ID
+     * Get 资源实例ID 
      * @return ResourceId 资源实例ID
      */
     public String getResourceId() {
@@ -261,7 +261,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置资源实例ID
+     * Set 资源实例ID
      * @param ResourceId 资源实例ID
      */
     public void setResourceId(String ResourceId) {
@@ -269,7 +269,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取实例名称
+     * Get 实例名称 
      * @return ResourceName 实例名称
      */
     public String getResourceName() {
@@ -277,7 +277,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置实例名称
+     * Set 实例名称
      * @param ResourceName 实例名称
      */
     public void setResourceName(String ResourceName) {
@@ -285,7 +285,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取交易类型
+     * Get 交易类型 
      * @return ActionTypeName 交易类型
      */
     public String getActionTypeName() {
@@ -293,7 +293,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置交易类型
+     * Set 交易类型
      * @param ActionTypeName 交易类型
      */
     public void setActionTypeName(String ActionTypeName) {
@@ -301,7 +301,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取订单ID
+     * Get 订单ID 
      * @return OrderId 订单ID
      */
     public String getOrderId() {
@@ -309,7 +309,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置订单ID
+     * Set 订单ID
      * @param OrderId 订单ID
      */
     public void setOrderId(String OrderId) {
@@ -317,7 +317,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取交易ID
+     * Get 交易ID 
      * @return BillId 交易ID
      */
     public String getBillId() {
@@ -325,7 +325,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置交易ID
+     * Set 交易ID
      * @param BillId 交易ID
      */
     public void setBillId(String BillId) {
@@ -333,7 +333,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取扣费时间
+     * Get 扣费时间 
      * @return PayTime 扣费时间
      */
     public String getPayTime() {
@@ -341,7 +341,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置扣费时间
+     * Set 扣费时间
      * @param PayTime 扣费时间
      */
     public void setPayTime(String PayTime) {
@@ -349,7 +349,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取开始使用时间
+     * Get 开始使用时间 
      * @return FeeBeginTime 开始使用时间
      */
     public String getFeeBeginTime() {
@@ -357,7 +357,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置开始使用时间
+     * Set 开始使用时间
      * @param FeeBeginTime 开始使用时间
      */
     public void setFeeBeginTime(String FeeBeginTime) {
@@ -365,7 +365,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取结束使用时间
+     * Get 结束使用时间 
      * @return FeeEndTime 结束使用时间
      */
     public String getFeeEndTime() {
@@ -373,7 +373,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置结束使用时间
+     * Set 结束使用时间
      * @param FeeEndTime 结束使用时间
      */
     public void setFeeEndTime(String FeeEndTime) {
@@ -381,7 +381,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取组件列表
+     * Get 组件列表 
      * @return ComponentSet 组件列表
      */
     public BillDetailComponent [] getComponentSet() {
@@ -389,7 +389,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置组件列表
+     * Set 组件列表
      * @param ComponentSet 组件列表
      */
     public void setComponentSet(BillDetailComponent [] ComponentSet) {
@@ -397,7 +397,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取支付者UIN
+     * Get 支付者UIN 
      * @return PayerUin 支付者UIN
      */
     public String getPayerUin() {
@@ -405,7 +405,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置支付者UIN
+     * Set 支付者UIN
      * @param PayerUin 支付者UIN
      */
     public void setPayerUin(String PayerUin) {
@@ -413,7 +413,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取使用者UIN
+     * Get 使用者UIN 
      * @return OwnerUin 使用者UIN
      */
     public String getOwnerUin() {
@@ -421,7 +421,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置使用者UIN
+     * Set 使用者UIN
      * @param OwnerUin 使用者UIN
      */
     public void setOwnerUin(String OwnerUin) {
@@ -429,7 +429,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取操作者UIN
+     * Get 操作者UIN 
      * @return OperateUin 操作者UIN
      */
     public String getOperateUin() {
@@ -437,7 +437,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置操作者UIN
+     * Set 操作者UIN
      * @param OperateUin 操作者UIN
      */
     public void setOperateUin(String OperateUin) {
@@ -445,8 +445,8 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 获取Tag 信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Tag 信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -455,7 +455,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 设置Tag 信息
+     * Set Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags Tag 信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -465,7 +465,7 @@ public class BillDetail  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);

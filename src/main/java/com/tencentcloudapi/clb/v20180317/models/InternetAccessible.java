@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InternetAccessible  extends AbstractModel{
+public class InternetAccessible extends AbstractModel{
 
     /**
     * TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
@@ -38,8 +38,8 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     private Integer InternetMaxBandwidthOut;
 
     /**
-     * 获取TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
-BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
+     * Get TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
+BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式） 
      * @return InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
 BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
      */
@@ -48,7 +48,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     }
 
     /**
-     * 设置TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
+     * Set TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
 BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
      * @param InternetChargeType TRAFFIC_POSTPAID_BY_HOUR 按流量按小时后计费 ; BANDWIDTH_POSTPAID_BY_HOUR 按带宽按小时后计费;
 BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支持此种计费模式）
@@ -58,7 +58,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     }
 
     /**
-     * 获取最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+     * Get 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10 
      * @return InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
      */
     public Integer getInternetMaxBandwidthOut() {
@@ -66,7 +66,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     }
 
     /**
-     * 设置最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+     * Set 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
      * @param InternetMaxBandwidthOut 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
      */
     public void setInternetMaxBandwidthOut(Integer InternetMaxBandwidthOut) {
@@ -74,7 +74,7 @@ BANDWIDTH_PACKAGE 按带宽包计费（当前，只有指定运营商时才支�
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);

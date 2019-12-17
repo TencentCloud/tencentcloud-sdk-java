@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExpandGroupRequest  extends AbstractModel{
+public class ExpandGroupRequest extends AbstractModel{
 
     /**
     * 部署组ID
@@ -37,7 +37,7 @@ public class ExpandGroupRequest  extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
-     * 获取部署组ID
+     * Get 部署组ID 
      * @return GroupId 部署组ID
      */
     public String getGroupId() {
@@ -45,7 +45,7 @@ public class ExpandGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置部署组ID
+     * Set 部署组ID
      * @param GroupId 部署组ID
      */
     public void setGroupId(String GroupId) {
@@ -53,7 +53,7 @@ public class ExpandGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 获取扩容的机器实例ID列表
+     * Get 扩容的机器实例ID列表 
      * @return InstanceIdList 扩容的机器实例ID列表
      */
     public String [] getInstanceIdList() {
@@ -61,7 +61,7 @@ public class ExpandGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 设置扩容的机器实例ID列表
+     * Set 扩容的机器实例ID列表
      * @param InstanceIdList 扩容的机器实例ID列表
      */
     public void setInstanceIdList(String [] InstanceIdList) {
@@ -69,7 +69,7 @@ public class ExpandGroupRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TranscodeTaskInput  extends AbstractModel{
+public class TranscodeTaskInput extends AbstractModel{
 
     /**
     * 视频转码模板 ID。
@@ -38,7 +38,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     private WatermarkInput [] WatermarkSet;
 
     /**
-     * 获取视频转码模板 ID。
+     * Get 视频转码模板 ID。 
      * @return Definition 视频转码模板 ID。
      */
     public Long getDefinition() {
@@ -46,7 +46,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置视频转码模板 ID。
+     * Set 视频转码模板 ID。
      * @param Definition 视频转码模板 ID。
      */
     public void setDefinition(Long Definition) {
@@ -54,8 +54,8 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class TranscodeTaskInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);

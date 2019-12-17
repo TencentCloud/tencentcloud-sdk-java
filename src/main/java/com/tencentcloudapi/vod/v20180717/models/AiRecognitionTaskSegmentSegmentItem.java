@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
+public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel{
 
     /**
     * 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
@@ -72,7 +72,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     private String SpecialInfo;
 
     /**
-     * 获取文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     * Get 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。 
      * @return FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
      */
     public String getFileId() {
@@ -80,7 +80,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
+     * Set 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
      * @param FileId 文件 ID。仅当处理的是点播文件并且拆条生成的子片段为点播文件时有效。
      */
     public void setFileId(String FileId) {
@@ -88,7 +88,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取视频拆条片段 Url。
+     * Get 视频拆条片段 Url。 
      * @return SegmentUrl 视频拆条片段 Url。
      */
     public String getSegmentUrl() {
@@ -96,7 +96,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置视频拆条片段 Url。
+     * Set 视频拆条片段 Url。
      * @param SegmentUrl 视频拆条片段 Url。
      */
     public void setSegmentUrl(String SegmentUrl) {
@@ -104,7 +104,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取拆条片段置信度。取值：0~100。
+     * Get 拆条片段置信度。取值：0~100。 
      * @return Confidence 拆条片段置信度。取值：0~100。
      */
     public Float getConfidence() {
@@ -112,7 +112,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置拆条片段置信度。取值：0~100。
+     * Set 拆条片段置信度。取值：0~100。
      * @param Confidence 拆条片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
@@ -120,7 +120,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取拆条片段起始的偏移时间，单位：秒。
+     * Get 拆条片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 拆条片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
@@ -128,7 +128,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置拆条片段起始的偏移时间，单位：秒。
+     * Set 拆条片段起始的偏移时间，单位：秒。
      * @param StartTimeOffset 拆条片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
@@ -136,7 +136,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取拆条片段终止的偏移时间，单位：秒。
+     * Get 拆条片段终止的偏移时间，单位：秒。 
      * @return EndTimeOffset 拆条片段终止的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
@@ -144,7 +144,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置拆条片段终止的偏移时间，单位：秒。
+     * Set 拆条片段终止的偏移时间，单位：秒。
      * @param EndTimeOffset 拆条片段终止的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
@@ -152,7 +152,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取拆条封面图片 Url。
+     * Get 拆条封面图片 Url。 
      * @return CovImgUrl 拆条封面图片 Url。
      */
     public String getCovImgUrl() {
@@ -160,7 +160,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置拆条封面图片 Url。
+     * Set 拆条封面图片 Url。
      * @param CovImgUrl 拆条封面图片 Url。
      */
     public void setCovImgUrl(String CovImgUrl) {
@@ -168,7 +168,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 获取特殊字段，请忽略。
+     * Get 特殊字段，请忽略。 
      * @return SpecialInfo 特殊字段，请忽略。
      */
     public String getSpecialInfo() {
@@ -176,7 +176,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 设置特殊字段，请忽略。
+     * Set 特殊字段，请忽略。
      * @param SpecialInfo 特殊字段，请忽略。
      */
     public void setSpecialInfo(String SpecialInfo) {
@@ -184,7 +184,7 @@ public class AiRecognitionTaskSegmentSegmentItem  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);

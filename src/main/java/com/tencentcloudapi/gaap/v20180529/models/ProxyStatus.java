@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProxyStatus  extends AbstractModel{
+public class ProxyStatus extends AbstractModel{
 
     /**
     * 通道实例ID。
@@ -48,7 +48,7 @@ UNKNOWN，未知状态。
     private String Status;
 
     /**
-     * 获取通道实例ID。
+     * Get 通道实例ID。 
      * @return InstanceId 通道实例ID。
      */
     public String getInstanceId() {
@@ -56,7 +56,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道实例ID。
+     * Set 通道实例ID。
      * @param InstanceId 通道实例ID。
      */
     public void setInstanceId(String InstanceId) {
@@ -64,7 +64,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 获取通道状态。
+     * Get 通道状态。
 其中：
 RUNNING，运行中；
 CREATING，创建中；
@@ -75,7 +75,7 @@ CLOSED，已关闭；
 ADJUSTING，配置变更中；
 ISOLATING，隔离中；
 ISOLATED，已隔离；
-UNKNOWN，未知状态。
+UNKNOWN，未知状态。 
      * @return Status 通道状态。
 其中：
 RUNNING，运行中；
@@ -94,7 +94,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 设置通道状态。
+     * Set 通道状态。
 其中：
 RUNNING，运行中；
 CREATING，创建中；
@@ -124,7 +124,7 @@ UNKNOWN，未知状态。
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

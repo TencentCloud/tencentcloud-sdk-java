@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpotMarketOptions  extends AbstractModel{
+public class SpotMarketOptions extends AbstractModel{
 
     /**
     * 竞价出价，例如“1.05”
@@ -38,7 +38,7 @@ public class SpotMarketOptions  extends AbstractModel{
     private String SpotInstanceType;
 
     /**
-     * 获取竞价出价，例如“1.05”
+     * Get 竞价出价，例如“1.05” 
      * @return MaxPrice 竞价出价，例如“1.05”
      */
     public String getMaxPrice() {
@@ -46,7 +46,7 @@ public class SpotMarketOptions  extends AbstractModel{
     }
 
     /**
-     * 设置竞价出价，例如“1.05”
+     * Set 竞价出价，例如“1.05”
      * @param MaxPrice 竞价出价，例如“1.05”
      */
     public void setMaxPrice(String MaxPrice) {
@@ -54,8 +54,8 @@ public class SpotMarketOptions  extends AbstractModel{
     }
 
     /**
-     * 获取竞价请求类型，当前仅支持类型：one-time，默认值为one-time
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SpotInstanceType 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -64,7 +64,7 @@ public class SpotMarketOptions  extends AbstractModel{
     }
 
     /**
-     * 设置竞价请求类型，当前仅支持类型：one-time，默认值为one-time
+     * Set 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SpotInstanceType 竞价请求类型，当前仅支持类型：one-time，默认值为one-time
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,7 +74,7 @@ public class SpotMarketOptions  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MaxPrice", this.MaxPrice);

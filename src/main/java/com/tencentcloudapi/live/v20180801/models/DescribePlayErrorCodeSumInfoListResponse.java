@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
+public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
 
     /**
     * 分省份分运营商错误码为4或5开头的状态码数据信息。
@@ -107,7 +107,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取分省份分运营商错误码为4或5开头的状态码数据信息。
+     * Get 分省份分运营商错误码为4或5开头的状态码数据信息。 
      * @return ProIspInfoList 分省份分运营商错误码为4或5开头的状态码数据信息。
      */
     public ProIspPlayCodeDataInfo [] getProIspInfoList() {
@@ -115,7 +115,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分省份分运营商错误码为4或5开头的状态码数据信息。
+     * Set 分省份分运营商错误码为4或5开头的状态码数据信息。
      * @param ProIspInfoList 分省份分运营商错误码为4或5开头的状态码数据信息。
      */
     public void setProIspInfoList(ProIspPlayCodeDataInfo [] ProIspInfoList) {
@@ -123,7 +123,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取所有状态码的加和的次数。
+     * Get 所有状态码的加和的次数。 
      * @return TotalCodeAll 所有状态码的加和的次数。
      */
     public Integer getTotalCodeAll() {
@@ -131,7 +131,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置所有状态码的加和的次数。
+     * Set 所有状态码的加和的次数。
      * @param TotalCodeAll 所有状态码的加和的次数。
      */
     public void setTotalCodeAll(Integer TotalCodeAll) {
@@ -139,7 +139,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态码为4开头的总次数。
+     * Get 状态码为4开头的总次数。 
      * @return TotalCode4xx 状态码为4开头的总次数。
      */
     public Integer getTotalCode4xx() {
@@ -147,7 +147,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态码为4开头的总次数。
+     * Set 状态码为4开头的总次数。
      * @param TotalCode4xx 状态码为4开头的总次数。
      */
     public void setTotalCode4xx(Integer TotalCode4xx) {
@@ -155,7 +155,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态码为5开头的总次数。
+     * Get 状态码为5开头的总次数。 
      * @return TotalCode5xx 状态码为5开头的总次数。
      */
     public Integer getTotalCode5xx() {
@@ -163,7 +163,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态码为5开头的总次数。
+     * Set 状态码为5开头的总次数。
      * @param TotalCode5xx 状态码为5开头的总次数。
      */
     public void setTotalCode5xx(Integer TotalCode5xx) {
@@ -171,7 +171,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取各状态码的总次数。
+     * Get 各状态码的总次数。 
      * @return TotalCodeList 各状态码的总次数。
      */
     public PlayCodeTotalInfo [] getTotalCodeList() {
@@ -179,7 +179,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置各状态码的总次数。
+     * Set 各状态码的总次数。
      * @param TotalCodeList 各状态码的总次数。
      */
     public void setTotalCodeList(PlayCodeTotalInfo [] TotalCodeList) {
@@ -187,7 +187,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取页号。
+     * Get 页号。 
      * @return PageNum 页号。
      */
     public Integer getPageNum() {
@@ -195,7 +195,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置页号。
+     * Set 页号。
      * @param PageNum 页号。
      */
     public void setPageNum(Integer PageNum) {
@@ -203,7 +203,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小。
+     * Get 每页大小。 
      * @return PageSize 每页大小。
      */
     public Integer getPageSize() {
@@ -211,7 +211,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小。
+     * Set 每页大小。
      * @param PageSize 每页大小。
      */
     public void setPageSize(Integer PageSize) {
@@ -219,7 +219,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总页数。
+     * Get 总页数。 
      * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
@@ -227,7 +227,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总页数。
+     * Set 总页数。
      * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -235,7 +235,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总记录数。
+     * Get 总记录数。 
      * @return TotalNum 总记录数。
      */
     public Integer getTotalNum() {
@@ -243,7 +243,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总记录数。
+     * Set 总记录数。
      * @param TotalNum 总记录数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -251,7 +251,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态码为2开头的总次数。
+     * Get 状态码为2开头的总次数。 
      * @return TotalCode2xx 状态码为2开头的总次数。
      */
     public Integer getTotalCode2xx() {
@@ -259,7 +259,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态码为2开头的总次数。
+     * Set 状态码为2开头的总次数。
      * @param TotalCode2xx 状态码为2开头的总次数。
      */
     public void setTotalCode2xx(Integer TotalCode2xx) {
@@ -267,7 +267,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取状态码为3开头的总次数。
+     * Get 状态码为3开头的总次数。 
      * @return TotalCode3xx 状态码为3开头的总次数。
      */
     public Integer getTotalCode3xx() {
@@ -275,7 +275,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置状态码为3开头的总次数。
+     * Set 状态码为3开头的总次数。
      * @param TotalCode3xx 状态码为3开头的总次数。
      */
     public void setTotalCode3xx(Integer TotalCode3xx) {
@@ -283,7 +283,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -291,7 +291,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -299,7 +299,7 @@ public class DescribePlayErrorCodeSumInfoListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ProIspInfoList.", this.ProIspInfoList);

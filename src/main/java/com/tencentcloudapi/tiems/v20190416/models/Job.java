@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Job  extends AbstractModel{
+public class Job extends AbstractModel{
 
     /**
     * 任务 Id
@@ -190,7 +190,7 @@ public class Job  extends AbstractModel{
     private String ConfigVersion;
 
     /**
-     * 获取任务 Id
+     * Get 任务 Id 
      * @return Id 任务 Id
      */
     public String getId() {
@@ -198,7 +198,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务 Id
+     * Set 任务 Id
      * @param Id 任务 Id
      */
     public void setId(String Id) {
@@ -206,7 +206,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取集群名
+     * Get 集群名 
      * @return Cluster 集群名
      */
     public String getCluster() {
@@ -214,7 +214,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置集群名
+     * Set 集群名
      * @param Cluster 集群名
      */
     public void setCluster(String Cluster) {
@@ -222,7 +222,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取Region 名
+     * Get Region 名 
      * @return Region Region 名
      */
     public String getRegion() {
@@ -230,7 +230,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置Region 名
+     * Set Region 名
      * @param Region Region 名
      */
     public void setRegion(String Region) {
@@ -238,7 +238,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return Name 任务名称
      */
     public String getName() {
@@ -246,7 +246,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param Name 任务名称
      */
     public void setName(String Name) {
@@ -254,7 +254,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取Worker 使用的运行环境
+     * Get Worker 使用的运行环境 
      * @return Runtime Worker 使用的运行环境
      */
     public String getRuntime() {
@@ -262,7 +262,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置Worker 使用的运行环境
+     * Set Worker 使用的运行环境
      * @param Runtime Worker 使用的运行环境
      */
     public void setRuntime(String Runtime) {
@@ -270,8 +270,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -280,7 +280,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务描述
+     * Set 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -290,7 +290,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取配置 Id
+     * Get 配置 Id 
      * @return ConfigId 配置 Id
      */
     public String getConfigId() {
@@ -298,7 +298,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置配置 Id
+     * Set 配置 Id
      * @param ConfigId 配置 Id
      */
     public void setConfigId(String ConfigId) {
@@ -306,7 +306,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取预测输入
+     * Get 预测输入 
      * @return PredictInput 预测输入
      */
     public PredictInput getPredictInput() {
@@ -314,7 +314,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置预测输入
+     * Set 预测输入
      * @param PredictInput 预测输入
      */
     public void setPredictInput(PredictInput PredictInput) {
@@ -322,7 +322,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务状态
+     * Get 任务状态 
      * @return Status 任务状态
      */
     public JobStatus getStatus() {
@@ -330,7 +330,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务状态
+     * Set 任务状态
      * @param Status 任务状态
      */
     public void setStatus(JobStatus Status) {
@@ -338,7 +338,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务创建时间
+     * Get 任务创建时间 
      * @return CreateTime 任务创建时间
      */
     public String getCreateTime() {
@@ -346,7 +346,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务创建时间
+     * Set 任务创建时间
      * @param CreateTime 任务创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -354,8 +354,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务开始时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartTime 任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -364,7 +364,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务开始时间
+     * Set 任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 任务开始时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -374,8 +374,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -384,7 +384,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务结束时间
+     * Set 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -394,8 +394,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务取消时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务取消时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CancelTime 任务取消时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -404,7 +404,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务取消时间
+     * Set 任务取消时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CancelTime 任务取消时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -414,8 +414,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务使用资源组 Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务使用资源组 Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceGroupId 任务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -424,7 +424,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务使用资源组 Id
+     * Set 任务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupId 任务使用资源组 Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -434,8 +434,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取处理器配置, 单位为1/1000核；范围[100, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 处理器配置, 单位为1/1000核；范围[100, 256000]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -444,7 +444,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置处理器配置, 单位为1/1000核；范围[100, 256000]
+     * Set 处理器配置, 单位为1/1000核；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu 处理器配置, 单位为1/1000核；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -454,8 +454,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取内存配置, 单位为1M；范围[100, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内存配置, 单位为1M；范围[100, 256000]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Memory 内存配置, 单位为1M；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -464,7 +464,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置内存配置, 单位为1M；范围[100, 256000]
+     * Set 内存配置, 单位为1M；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存配置, 单位为1M；范围[100, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -474,8 +474,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -484,7 +484,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
+     * Set GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Gpu GPU算力配置，单位为1/1000 卡，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -494,8 +494,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取显存配置, 单位为1M，范围 [0, 256000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 显存配置, 单位为1M，范围 [0, 256000]
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -504,7 +504,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置显存配置, 单位为1M，范围 [0, 256000]
+     * Set 显存配置, 单位为1M，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuMemory 显存配置, 单位为1M，范围 [0, 256000]
 注意：此字段可能返回 null，表示取不到有效值。
@@ -514,8 +514,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取任务使用资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 任务使用资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceGroupName 任务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -524,7 +524,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置任务使用资源组名称
+     * Set 任务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroupName 任务使用资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -534,8 +534,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取GPU类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get GPU类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GpuType GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -544,7 +544,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置GPU类型
+     * Set GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GpuType GPU类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -554,8 +554,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取配置名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigName 配置名
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -564,7 +564,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置配置名
+     * Set 配置名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigName 配置名
 注意：此字段可能返回 null，表示取不到有效值。
@@ -574,8 +574,8 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 获取配置版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 配置版本
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigVersion 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -584,7 +584,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 设置配置版本
+     * Set 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigVersion 配置版本
 注意：此字段可能返回 null，表示取不到有效值。
@@ -594,7 +594,7 @@ public class Job  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

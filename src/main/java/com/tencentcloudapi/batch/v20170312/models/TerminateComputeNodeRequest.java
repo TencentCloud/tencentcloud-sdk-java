@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateComputeNodeRequest  extends AbstractModel{
+public class TerminateComputeNodeRequest extends AbstractModel{
 
     /**
     * 计算环境ID
@@ -37,7 +37,7 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     private String ComputeNodeId;
 
     /**
-     * 获取计算环境ID
+     * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
     public String getEnvId() {
@@ -45,7 +45,7 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算环境ID
+     * Set 计算环境ID
      * @param EnvId 计算环境ID
      */
     public void setEnvId(String EnvId) {
@@ -53,7 +53,7 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取计算节点ID
+     * Get 计算节点ID 
      * @return ComputeNodeId 计算节点ID
      */
     public String getComputeNodeId() {
@@ -61,7 +61,7 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置计算节点ID
+     * Set 计算节点ID
      * @param ComputeNodeId 计算节点ID
      */
     public void setComputeNodeId(String ComputeNodeId) {
@@ -69,7 +69,7 @@ public class TerminateComputeNodeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);

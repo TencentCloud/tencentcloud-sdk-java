@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResourceUsageMonitorSet  extends AbstractModel{
+public class ResourceUsageMonitorSet extends AbstractModel{
 
     /**
     * binlog日志磁盘可用空间,单位GB
@@ -51,7 +51,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     private MonitorData DataDiskAvailable;
 
     /**
-     * 获取binlog日志磁盘可用空间,单位GB
+     * Get binlog日志磁盘可用空间,单位GB 
      * @return BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      */
     public MonitorData getBinlogDiskAvailable() {
@@ -59,7 +59,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 设置binlog日志磁盘可用空间,单位GB
+     * Set binlog日志磁盘可用空间,单位GB
      * @param BinlogDiskAvailable binlog日志磁盘可用空间,单位GB
      */
     public void setBinlogDiskAvailable(MonitorData BinlogDiskAvailable) {
@@ -67,7 +67,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 获取CPU利用率
+     * Get CPU利用率 
      * @return CpuUsageRate CPU利用率
      */
     public MonitorData getCpuUsageRate() {
@@ -75,7 +75,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 设置CPU利用率
+     * Set CPU利用率
      * @param CpuUsageRate CPU利用率
      */
     public void setCpuUsageRate(MonitorData CpuUsageRate) {
@@ -83,7 +83,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 获取内存可用空间,单位GB
+     * Get 内存可用空间,单位GB 
      * @return MemAvailable 内存可用空间,单位GB
      */
     public MonitorData getMemAvailable() {
@@ -91,7 +91,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 设置内存可用空间,单位GB
+     * Set 内存可用空间,单位GB
      * @param MemAvailable 内存可用空间,单位GB
      */
     public void setMemAvailable(MonitorData MemAvailable) {
@@ -99,7 +99,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 获取磁盘可用空间,单位GB
+     * Get 磁盘可用空间,单位GB 
      * @return DataDiskAvailable 磁盘可用空间,单位GB
      */
     public MonitorData getDataDiskAvailable() {
@@ -107,7 +107,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 设置磁盘可用空间,单位GB
+     * Set 磁盘可用空间,单位GB
      * @param DataDiskAvailable 磁盘可用空间,单位GB
      */
     public void setDataDiskAvailable(MonitorData DataDiskAvailable) {
@@ -115,7 +115,7 @@ public class ResourceUsageMonitorSet  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BinlogDiskAvailable.", this.BinlogDiskAvailable);

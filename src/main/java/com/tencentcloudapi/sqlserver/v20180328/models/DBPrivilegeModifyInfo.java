@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DBPrivilegeModifyInfo  extends AbstractModel{
+public class DBPrivilegeModifyInfo extends AbstractModel{
 
     /**
     * 数据库名
@@ -37,7 +37,7 @@ public class DBPrivilegeModifyInfo  extends AbstractModel{
     private String Privilege;
 
     /**
-     * 获取数据库名
+     * Get 数据库名 
      * @return DBName 数据库名
      */
     public String getDBName() {
@@ -45,7 +45,7 @@ public class DBPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据库名
+     * Set 数据库名
      * @param DBName 数据库名
      */
     public void setDBName(String DBName) {
@@ -53,7 +53,7 @@ public class DBPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 获取权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * Get 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限 
      * @return Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
      */
     public String getPrivilege() {
@@ -61,7 +61,7 @@ public class DBPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 设置权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * Set 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
      * @param Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
      */
     public void setPrivilege(String Privilege) {
@@ -69,7 +69,7 @@ public class DBPrivilegeModifyInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBName", this.DBName);

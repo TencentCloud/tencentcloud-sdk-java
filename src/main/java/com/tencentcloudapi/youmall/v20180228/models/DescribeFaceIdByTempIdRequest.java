@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
+public class DescribeFaceIdByTempIdRequest extends AbstractModel{
 
     /**
     * 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
@@ -65,7 +65,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     private Integer PictureExpires;
 
     /**
-     * 获取优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public String getCompanyId() {
@@ -73,7 +73,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      * @param CompanyId 优mall集团id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setCompanyId(String CompanyId) {
@@ -81,7 +81,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Get 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取 
      * @return ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public Integer getShopId() {
@@ -89,7 +89,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
+     * Set 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      * @param ShopId 优mall店铺id，通过"指定身份标识获取客户门店列表"接口获取
      */
     public void setShopId(Integer ShopId) {
@@ -97,7 +97,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取临时id
+     * Get 临时id 
      * @return TempId 临时id
      */
     public String getTempId() {
@@ -105,7 +105,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置临时id
+     * Set 临时id
      * @param TempId 临时id
      */
     public void setTempId(String TempId) {
@@ -113,7 +113,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取摄像头id
+     * Get 摄像头id 
      * @return CameraId 摄像头id
      */
     public Integer getCameraId() {
@@ -121,7 +121,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置摄像头id
+     * Set 摄像头id
      * @param CameraId 摄像头id
      */
     public void setCameraId(Integer CameraId) {
@@ -129,7 +129,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取pos机id
+     * Get pos机id 
      * @return PosId pos机id
      */
     public String getPosId() {
@@ -137,7 +137,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置pos机id
+     * Set pos机id
      * @param PosId pos机id
      */
     public void setPosId(String PosId) {
@@ -145,7 +145,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 获取图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Get 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天） 
      * @return PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public Integer getPictureExpires() {
@@ -153,7 +153,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 设置图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
+     * Set 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      * @param PictureExpires 图片url过期时间：在当前时间+PictureExpires秒后，图片url无法继续正常访问；单位s；默认值1*24*60*60（1天）
      */
     public void setPictureExpires(Integer PictureExpires) {
@@ -161,7 +161,7 @@ public class DescribeFaceIdByTempIdRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

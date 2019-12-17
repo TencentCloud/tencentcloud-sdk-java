@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoraDeviceResponse  extends AbstractModel{
+public class CreateLoraDeviceResponse extends AbstractModel{
 
     /**
     * LoRa应用UUID
@@ -58,7 +58,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取LoRa应用UUID
+     * Get LoRa应用UUID 
      * @return AppEui LoRa应用UUID
      */
     public String getAppEui() {
@@ -66,7 +66,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa应用UUID
+     * Set LoRa应用UUID
      * @param AppEui LoRa应用UUID
      */
     public void setAppEui(String AppEui) {
@@ -74,7 +74,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa设备UUID
+     * Get LoRa设备UUID 
      * @return DeviceEui LoRa设备UUID
      */
     public String getDeviceEui() {
@@ -82,7 +82,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa设备UUID
+     * Set LoRa设备UUID
      * @param DeviceEui LoRa设备UUID
      */
     public void setDeviceEui(String DeviceEui) {
@@ -90,7 +90,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备类型,目前支持A、B、C三种
+     * Get 设备类型,目前支持A、B、C三种 
      * @return ClassType 设备类型,目前支持A、B、C三种
      */
     public String getClassType() {
@@ -98,7 +98,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备类型,目前支持A、B、C三种
+     * Set 设备类型,目前支持A、B、C三种
      * @param ClassType 设备类型,目前支持A、B、C三种
      */
     public void setClassType(String ClassType) {
@@ -106,7 +106,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -114,7 +114,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -122,7 +122,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class CreateLoraDeviceResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppEui", this.AppEui);

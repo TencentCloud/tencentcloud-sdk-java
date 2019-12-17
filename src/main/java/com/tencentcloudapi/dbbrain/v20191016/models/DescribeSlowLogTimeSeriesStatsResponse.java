@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
+public class DescribeSlowLogTimeSeriesStatsResponse extends AbstractModel{
 
     /**
     * 柱间单位时间间隔，单位为秒。
@@ -51,7 +51,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取柱间单位时间间隔，单位为秒。
+     * Get 柱间单位时间间隔，单位为秒。 
      * @return Period 柱间单位时间间隔，单位为秒。
      */
     public Long getPeriod() {
@@ -59,7 +59,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置柱间单位时间间隔，单位为秒。
+     * Set 柱间单位时间间隔，单位为秒。
      * @param Period 柱间单位时间间隔，单位为秒。
      */
     public void setPeriod(Long Period) {
@@ -67,7 +67,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取单位时间间隔内慢日志数量统计。
+     * Get 单位时间间隔内慢日志数量统计。 
      * @return TimeSeries 单位时间间隔内慢日志数量统计。
      */
     public TimeSlice [] getTimeSeries() {
@@ -75,7 +75,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置单位时间间隔内慢日志数量统计。
+     * Set 单位时间间隔内慢日志数量统计。
      * @param TimeSeries 单位时间间隔内慢日志数量统计。
      */
     public void setTimeSeries(TimeSlice [] TimeSeries) {
@@ -83,7 +83,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取单位时间间隔内的实例 cpu 利用率监控数据。
+     * Get 单位时间间隔内的实例 cpu 利用率监控数据。 
      * @return SeriesData 单位时间间隔内的实例 cpu 利用率监控数据。
      */
     public MonitorMetricSeriesData getSeriesData() {
@@ -91,7 +91,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置单位时间间隔内的实例 cpu 利用率监控数据。
+     * Set 单位时间间隔内的实例 cpu 利用率监控数据。
      * @param SeriesData 单位时间间隔内的实例 cpu 利用率监控数据。
      */
     public void setSeriesData(MonitorMetricSeriesData SeriesData) {
@@ -99,7 +99,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -107,7 +107,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -115,7 +115,7 @@ public class DescribeSlowLogTimeSeriesStatsResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);

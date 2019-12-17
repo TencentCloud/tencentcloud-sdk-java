@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeShopInfoRequest  extends AbstractModel{
+public class DescribeShopInfoRequest extends AbstractModel{
 
     /**
     * 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
@@ -37,7 +37,7 @@ public class DescribeShopInfoRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Get 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit 
      * @return Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public Integer getOffset() {
@@ -45,7 +45,7 @@ public class DescribeShopInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
+     * Set 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      * @param Offset 偏移量：分页控制参数，第一页传0，第n页Offset=(n-1)*Limit
      */
     public void setOffset(Integer Offset) {
@@ -53,7 +53,7 @@ public class DescribeShopInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 获取Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Get Limit:每页的数据项，最大100，超过100会被强制指定为100 
      * @return Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public Integer getLimit() {
@@ -61,7 +61,7 @@ public class DescribeShopInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 设置Limit:每页的数据项，最大100，超过100会被强制指定为100
+     * Set Limit:每页的数据项，最大100，超过100会被强制指定为100
      * @param Limit Limit:每页的数据项，最大100，超过100会被强制指定为100
      */
     public void setLimit(Integer Limit) {
@@ -69,7 +69,7 @@ public class DescribeShopInfoRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);

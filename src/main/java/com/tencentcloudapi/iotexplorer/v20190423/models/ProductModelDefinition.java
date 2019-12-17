@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ProductModelDefinition  extends AbstractModel{
+public class ProductModelDefinition extends AbstractModel{
 
     /**
     * 产品ID
@@ -59,7 +59,7 @@ public class ProductModelDefinition  extends AbstractModel{
     private String CategoryModel;
 
     /**
-     * 获取产品ID
+     * Get 产品ID 
      * @return ProductId 产品ID
      */
     public String getProductId() {
@@ -67,7 +67,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 设置产品ID
+     * Set 产品ID
      * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
@@ -75,7 +75,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 获取模型定义
+     * Get 模型定义 
      * @return ModelDefine 模型定义
      */
     public String getModelDefine() {
@@ -83,7 +83,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 设置模型定义
+     * Set 模型定义
      * @param ModelDefine 模型定义
      */
     public void setModelDefine(String ModelDefine) {
@@ -91,7 +91,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 获取更新时间，秒级时间戳
+     * Get 更新时间，秒级时间戳 
      * @return UpdateTime 更新时间，秒级时间戳
      */
     public Long getUpdateTime() {
@@ -99,7 +99,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 设置更新时间，秒级时间戳
+     * Set 更新时间，秒级时间戳
      * @param UpdateTime 更新时间，秒级时间戳
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -107,7 +107,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间，秒级时间戳
+     * Get 创建时间，秒级时间戳 
      * @return CreateTime 创建时间，秒级时间戳
      */
     public Long getCreateTime() {
@@ -115,7 +115,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间，秒级时间戳
+     * Set 创建时间，秒级时间戳
      * @param CreateTime 创建时间，秒级时间戳
      */
     public void setCreateTime(Long CreateTime) {
@@ -123,8 +123,8 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 获取产品所属分类的模型快照（产品创建时刻的）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 产品所属分类的模型快照（产品创建时刻的）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CategoryModel 产品所属分类的模型快照（产品创建时刻的）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 设置产品所属分类的模型快照（产品创建时刻的）
+     * Set 产品所属分类的模型快照（产品创建时刻的）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryModel 产品所属分类的模型快照（产品创建时刻的）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,7 +143,7 @@ public class ProductModelDefinition  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

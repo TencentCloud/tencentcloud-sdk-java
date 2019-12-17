@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PornResult  extends AbstractModel{
+public class PornResult extends AbstractModel{
 
     /**
     * 该识别场景的错误码：
@@ -72,11 +72,11 @@ BLOCK：违规
     private String Type;
 
     /**
-     * 获取该识别场景的错误码：
+     * Get 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
--1400表示图片解码失败。
+-1400表示图片解码失败。 
      * @return Code 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
@@ -88,7 +88,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置该识别场景的错误码：
+     * Set 该识别场景的错误码：
 0表示成功，
 -1表示系统错误，
 -2表示引擎错误，
@@ -104,7 +104,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取错误码描述信息。
+     * Get 错误码描述信息。 
      * @return Msg 错误码描述信息。
      */
     public String getMsg() {
@@ -112,7 +112,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置错误码描述信息。
+     * Set 错误码描述信息。
      * @param Msg 错误码描述信息。
      */
     public void setMsg(String Msg) {
@@ -120,10 +120,10 @@ BLOCK：违规
     }
 
     /**
-     * 获取识别场景的审核结论：
+     * Get 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
-BLOCK：违规
+BLOCK：违规 
      * @return Suggestion 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
@@ -134,7 +134,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置识别场景的审核结论：
+     * Set 识别场景的审核结论：
 PASS：正常
 REVIEW：疑似
 BLOCK：违规
@@ -148,7 +148,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
+     * Get 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。 
      * @return Confidence 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
      */
     public Long getConfidence() {
@@ -156,7 +156,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
+     * Set 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
      * @param Confidence 算法对于Suggestion的置信度，0-100之间，值越高，表示对于Suggestion越确定。
      */
     public void setConfidence(Long Confidence) {
@@ -164,7 +164,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取预留字段，后期用于展示更多识别信息。
+     * Get 预留字段，后期用于展示更多识别信息。 
      * @return AdvancedInfo 预留字段，后期用于展示更多识别信息。
      */
     public String getAdvancedInfo() {
@@ -172,7 +172,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置预留字段，后期用于展示更多识别信息。
+     * Set 预留字段，后期用于展示更多识别信息。
      * @param AdvancedInfo 预留字段，后期用于展示更多识别信息。
      */
     public void setAdvancedInfo(String AdvancedInfo) {
@@ -180,7 +180,7 @@ BLOCK：违规
     }
 
     /**
-     * 获取取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+     * Get 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。 
      * @return Type 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
      */
     public String getType() {
@@ -188,7 +188,7 @@ BLOCK：违规
     }
 
     /**
-     * 设置取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
+     * Set 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
      * @param Type 取值'LABEL‘，LABEL表示结论和置信度来自标签分类。
      */
     public void setType(String Type) {
@@ -196,7 +196,7 @@ BLOCK：违规
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Code", this.Code);

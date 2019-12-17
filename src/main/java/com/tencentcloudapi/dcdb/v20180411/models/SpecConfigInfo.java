@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SpecConfigInfo  extends AbstractModel{
+public class SpecConfigInfo extends AbstractModel{
 
     /**
     * 节点个数，2 表示一主一从，3 表示一主二从
@@ -72,7 +72,7 @@ public class SpecConfigInfo  extends AbstractModel{
     private Integer Qps;
 
     /**
-     * 获取节点个数，2 表示一主一从，3 表示一主二从
+     * Get 节点个数，2 表示一主一从，3 表示一主二从 
      * @return NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      */
     public Integer getNodeCount() {
@@ -80,7 +80,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置节点个数，2 表示一主一从，3 表示一主二从
+     * Set 节点个数，2 表示一主一从，3 表示一主二从
      * @param NodeCount 节点个数，2 表示一主一从，3 表示一主二从
      */
     public void setNodeCount(Integer NodeCount) {
@@ -88,7 +88,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取内存大小，单位 GB
+     * Get 内存大小，单位 GB 
      * @return Memory 内存大小，单位 GB
      */
     public Integer getMemory() {
@@ -96,7 +96,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置内存大小，单位 GB
+     * Set 内存大小，单位 GB
      * @param Memory 内存大小，单位 GB
      */
     public void setMemory(Integer Memory) {
@@ -104,7 +104,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘规格最小值，单位 GB
+     * Get 数据盘规格最小值，单位 GB 
      * @return MinStorage 数据盘规格最小值，单位 GB
      */
     public Integer getMinStorage() {
@@ -112,7 +112,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘规格最小值，单位 GB
+     * Set 数据盘规格最小值，单位 GB
      * @param MinStorage 数据盘规格最小值，单位 GB
      */
     public void setMinStorage(Integer MinStorage) {
@@ -120,7 +120,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取数据盘规格最大值，单位 GB
+     * Get 数据盘规格最大值，单位 GB 
      * @return MaxStorage 数据盘规格最大值，单位 GB
      */
     public Integer getMaxStorage() {
@@ -128,7 +128,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置数据盘规格最大值，单位 GB
+     * Set 数据盘规格最大值，单位 GB
      * @param MaxStorage 数据盘规格最大值，单位 GB
      */
     public void setMaxStorage(Integer MaxStorage) {
@@ -136,7 +136,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取推荐的使用场景
+     * Get 推荐的使用场景 
      * @return SuitInfo 推荐的使用场景
      */
     public String getSuitInfo() {
@@ -144,7 +144,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置推荐的使用场景
+     * Set 推荐的使用场景
      * @param SuitInfo 推荐的使用场景
      */
     public void setSuitInfo(String SuitInfo) {
@@ -152,7 +152,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取产品类型 Id
+     * Get 产品类型 Id 
      * @return Pid 产品类型 Id
      */
     public Integer getPid() {
@@ -160,7 +160,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置产品类型 Id
+     * Set 产品类型 Id
      * @param Pid 产品类型 Id
      */
     public void setPid(Integer Pid) {
@@ -168,7 +168,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 获取最大 Qps 值
+     * Get 最大 Qps 值 
      * @return Qps 最大 Qps 值
      */
     public Integer getQps() {
@@ -176,7 +176,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 设置最大 Qps 值
+     * Set 最大 Qps 值
      * @param Qps 最大 Qps 值
      */
     public void setQps(Integer Qps) {
@@ -184,7 +184,7 @@ public class SpecConfigInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);

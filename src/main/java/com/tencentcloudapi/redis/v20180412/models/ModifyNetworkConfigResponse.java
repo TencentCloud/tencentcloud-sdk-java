@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNetworkConfigResponse  extends AbstractModel{
+public class ModifyNetworkConfigResponse extends AbstractModel{
 
     /**
     * 执行状态：true|false
@@ -58,7 +58,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取执行状态：true|false
+     * Get 执行状态：true|false 
      * @return Status 执行状态：true|false
      */
     public Boolean getStatus() {
@@ -66,7 +66,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置执行状态：true|false
+     * Set 执行状态：true|false
      * @param Status 执行状态：true|false
      */
     public void setStatus(Boolean Status) {
@@ -74,7 +74,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取子网ID
+     * Get 子网ID 
      * @return SubnetId 子网ID
      */
     public String getSubnetId() {
@@ -82,7 +82,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置子网ID
+     * Set 子网ID
      * @param SubnetId 子网ID
      */
     public void setSubnetId(String SubnetId) {
@@ -90,7 +90,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取私有网络ID
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
      */
     public String getVpcId() {
@@ -98,7 +98,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置私有网络ID
+     * Set 私有网络ID
      * @param VpcId 私有网络ID
      */
     public void setVpcId(String VpcId) {
@@ -106,7 +106,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取VIP地址
+     * Get VIP地址 
      * @return Vip VIP地址
      */
     public String getVip() {
@@ -114,7 +114,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置VIP地址
+     * Set VIP地址
      * @param Vip VIP地址
      */
     public void setVip(String Vip) {
@@ -122,7 +122,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -130,7 +130,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -138,7 +138,7 @@ public class ModifyNetworkConfigResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);

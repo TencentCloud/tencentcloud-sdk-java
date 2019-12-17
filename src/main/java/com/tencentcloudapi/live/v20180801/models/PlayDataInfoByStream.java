@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PlayDataInfoByStream  extends AbstractModel{
+public class PlayDataInfoByStream extends AbstractModel{
 
     /**
     * 流名称。
@@ -37,7 +37,7 @@ public class PlayDataInfoByStream  extends AbstractModel{
     private Float TotalFlux;
 
     /**
-     * 获取流名称。
+     * Get 流名称。 
      * @return StreamName 流名称。
      */
     public String getStreamName() {
@@ -45,7 +45,7 @@ public class PlayDataInfoByStream  extends AbstractModel{
     }
 
     /**
-     * 设置流名称。
+     * Set 流名称。
      * @param StreamName 流名称。
      */
     public void setStreamName(String StreamName) {
@@ -53,7 +53,7 @@ public class PlayDataInfoByStream  extends AbstractModel{
     }
 
     /**
-     * 获取总流量（单位MB）。
+     * Get 总流量（单位MB）。 
      * @return TotalFlux 总流量（单位MB）。
      */
     public Float getTotalFlux() {
@@ -61,7 +61,7 @@ public class PlayDataInfoByStream  extends AbstractModel{
     }
 
     /**
-     * 设置总流量（单位MB）。
+     * Set 总流量（单位MB）。
      * @param TotalFlux 总流量（单位MB）。
      */
     public void setTotalFlux(Float TotalFlux) {
@@ -69,7 +69,7 @@ public class PlayDataInfoByStream  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);

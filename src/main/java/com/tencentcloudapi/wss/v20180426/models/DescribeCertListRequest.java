@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertListRequest  extends AbstractModel{
+public class DescribeCertListRequest extends AbstractModel{
 
     /**
     * 模块名称，应填ssl
@@ -79,7 +79,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     private String AltDomain;
 
     /**
-     * 获取模块名称，应填ssl
+     * Get 模块名称，应填ssl 
      * @return ModuleType 模块名称，应填ssl
      */
     public String getModuleType() {
@@ -87,7 +87,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置模块名称，应填ssl
+     * Set 模块名称，应填ssl
      * @param ModuleType 模块名称，应填ssl
      */
     public void setModuleType(String ModuleType) {
@@ -95,7 +95,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取页数，默认第一页
+     * Get 页数，默认第一页 
      * @return Offset 页数，默认第一页
      */
     public Long getOffset() {
@@ -103,7 +103,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置页数，默认第一页
+     * Set 页数，默认第一页
      * @param Offset 页数，默认第一页
      */
     public void setOffset(Long Offset) {
@@ -111,7 +111,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每页条数，默认每页20条
+     * Get 每页条数，默认每页20条 
      * @return Limit 每页条数，默认每页20条
      */
     public Long getLimit() {
@@ -119,7 +119,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每页条数，默认每页20条
+     * Set 每页条数，默认每页20条
      * @param Limit 每页条数，默认每页20条
      */
     public void setLimit(Long Limit) {
@@ -127,7 +127,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取搜索关键字
+     * Get 搜索关键字 
      * @return SearchKey 搜索关键字
      */
     public String getSearchKey() {
@@ -135,7 +135,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置搜索关键字
+     * Set 搜索关键字
      * @param SearchKey 搜索关键字
      */
     public void setSearchKey(String SearchKey) {
@@ -143,7 +143,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+     * Get 证书类型（目前支持:CA=客户端证书,SVR=服务器证书） 
      * @return CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
      */
     public String getCertType() {
@@ -151,7 +151,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
+     * Set 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
      * @param CertType 证书类型（目前支持:CA=客户端证书,SVR=服务器证书）
      */
     public void setCertType(String CertType) {
@@ -159,7 +159,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取证书id
+     * Get 证书id 
      * @return Id 证书id
      */
     public String getId() {
@@ -167,7 +167,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置证书id
+     * Set 证书id
      * @param Id 证书id
      */
     public void setId(String Id) {
@@ -175,7 +175,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否同时获取证书内容
+     * Get 是否同时获取证书内容 
      * @return WithCert 是否同时获取证书内容
      */
     public String getWithCert() {
@@ -183,7 +183,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否同时获取证书内容
+     * Set 是否同时获取证书内容
      * @param WithCert 是否同时获取证书内容
      */
     public void setWithCert(String WithCert) {
@@ -191,7 +191,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 获取如传，则只返回可以给该域名使用的证书
+     * Get 如传，则只返回可以给该域名使用的证书 
      * @return AltDomain 如传，则只返回可以给该域名使用的证书
      */
     public String getAltDomain() {
@@ -199,7 +199,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 设置如传，则只返回可以给该域名使用的证书
+     * Set 如传，则只返回可以给该域名使用的证书
      * @param AltDomain 如传，则只返回可以给该域名使用的证书
      */
     public void setAltDomain(String AltDomain) {
@@ -207,7 +207,7 @@ public class DescribeCertListRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModuleType", this.ModuleType);

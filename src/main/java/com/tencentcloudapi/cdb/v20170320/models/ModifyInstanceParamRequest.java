@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyInstanceParamRequest  extends AbstractModel{
+public class ModifyInstanceParamRequest extends AbstractModel{
 
     /**
     * 实例短 ID 列表。
@@ -37,7 +37,7 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
-     * 获取实例短 ID 列表。
+     * Get 实例短 ID 列表。 
      * @return InstanceIds 实例短 ID 列表。
      */
     public String [] getInstanceIds() {
@@ -45,7 +45,7 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例短 ID 列表。
+     * Set 实例短 ID 列表。
      * @param InstanceIds 实例短 ID 列表。
      */
     public void setInstanceIds(String [] InstanceIds) {
@@ -53,7 +53,7 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     }
 
     /**
-     * 获取要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
+     * Get 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。 
      * @return ParamList 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
      */
     public Parameter [] getParamList() {
@@ -61,7 +61,7 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     }
 
     /**
-     * 设置要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
+     * Set 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
      * @param ParamList 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
      */
     public void setParamList(Parameter [] ParamList) {
@@ -69,7 +69,7 @@ public class ModifyInstanceParamRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);

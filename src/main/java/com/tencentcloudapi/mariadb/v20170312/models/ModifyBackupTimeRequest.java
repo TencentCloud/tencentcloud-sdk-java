@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyBackupTimeRequest  extends AbstractModel{
+public class ModifyBackupTimeRequest extends AbstractModel{
 
     /**
     * 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
@@ -44,7 +44,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     private String EndBackupTime;
 
     /**
-     * 获取实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Get 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
      * @return InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public String getInstanceId() {
@@ -52,7 +52,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
+     * Set 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      * @param InstanceId 实例ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。
      */
     public void setInstanceId(String InstanceId) {
@@ -60,7 +60,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
+     * Get 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00 
      * @return StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      */
     public String getStartBackupTime() {
@@ -68,7 +68,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
+     * Set 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      * @param StartBackupTime 每天备份执行的区间的开始时间，格式 mm:ss，形如 22:00
      */
     public void setStartBackupTime(String StartBackupTime) {
@@ -76,7 +76,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
+     * Get 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59 
      * @return EndBackupTime 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
      */
     public String getEndBackupTime() {
@@ -84,7 +84,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
+     * Set 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
      * @param EndBackupTime 每天备份执行的区间的结束时间，格式 mm:ss，形如 23:59
      */
     public void setEndBackupTime(String EndBackupTime) {
@@ -92,7 +92,7 @@ public class ModifyBackupTimeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

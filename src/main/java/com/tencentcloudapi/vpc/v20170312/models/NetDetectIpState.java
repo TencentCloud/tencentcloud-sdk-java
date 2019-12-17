@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class NetDetectIpState  extends AbstractModel{
+public class NetDetectIpState extends AbstractModel{
 
     /**
     * 探测目的IPv4地址。
@@ -56,7 +56,7 @@ public class NetDetectIpState  extends AbstractModel{
     private Integer PacketLossRate;
 
     /**
-     * 获取探测目的IPv4地址。
+     * Get 探测目的IPv4地址。 
      * @return DetectDestinationIp 探测目的IPv4地址。
      */
     public String getDetectDestinationIp() {
@@ -64,7 +64,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 设置探测目的IPv4地址。
+     * Set 探测目的IPv4地址。
      * @param DetectDestinationIp 探测目的IPv4地址。
      */
     public void setDetectDestinationIp(String DetectDestinationIp) {
@@ -72,12 +72,12 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 获取探测结果。
+     * Get 探测结果。
 0：成功；
 -1：查询不到路由丢包；
 -2：外出ACL丢包；
 -3：IN ACL丢包；
--4：其他错误；
+-4：其他错误； 
      * @return State 探测结果。
 0：成功；
 -1：查询不到路由丢包；
@@ -90,7 +90,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 设置探测结果。
+     * Set 探测结果。
 0：成功；
 -1：查询不到路由丢包；
 -2：外出ACL丢包；
@@ -108,7 +108,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 获取时延，单位毫秒
+     * Get 时延，单位毫秒 
      * @return Delay 时延，单位毫秒
      */
     public Integer getDelay() {
@@ -116,7 +116,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 设置时延，单位毫秒
+     * Set 时延，单位毫秒
      * @param Delay 时延，单位毫秒
      */
     public void setDelay(Integer Delay) {
@@ -124,7 +124,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 获取丢包率
+     * Get 丢包率 
      * @return PacketLossRate 丢包率
      */
     public Integer getPacketLossRate() {
@@ -132,7 +132,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 设置丢包率
+     * Set 丢包率
      * @param PacketLossRate 丢包率
      */
     public void setPacketLossRate(Integer PacketLossRate) {
@@ -140,7 +140,7 @@ public class NetDetectIpState  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DetectDestinationIp", this.DetectDestinationIp);

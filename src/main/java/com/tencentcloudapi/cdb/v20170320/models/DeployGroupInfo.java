@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeployGroupInfo  extends AbstractModel{
+public class DeployGroupInfo extends AbstractModel{
 
     /**
     * 置放群组 ID。
@@ -58,7 +58,7 @@ public class DeployGroupInfo  extends AbstractModel{
     private Integer Quota;
 
     /**
-     * 获取置放群组 ID。
+     * Get 置放群组 ID。 
      * @return DeployGroupId 置放群组 ID。
      */
     public String getDeployGroupId() {
@@ -66,7 +66,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组 ID。
+     * Set 置放群组 ID。
      * @param DeployGroupId 置放群组 ID。
      */
     public void setDeployGroupId(String DeployGroupId) {
@@ -74,7 +74,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组名称。
+     * Get 置放群组名称。 
      * @return DeployGroupName 置放群组名称。
      */
     public String getDeployGroupName() {
@@ -82,7 +82,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组名称。
+     * Set 置放群组名称。
      * @param DeployGroupName 置放群组名称。
      */
     public void setDeployGroupName(String DeployGroupName) {
@@ -90,7 +90,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取创建时间。
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
@@ -98,7 +98,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置创建时间。
+     * Set 创建时间。
      * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
@@ -106,7 +106,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组描述。
+     * Get 置放群组描述。 
      * @return Description 置放群组描述。
      */
     public String getDescription() {
@@ -114,7 +114,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组描述。
+     * Set 置放群组描述。
      * @param Description 置放群组描述。
      */
     public void setDescription(String Description) {
@@ -122,7 +122,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 获取置放群组实例配额。
+     * Get 置放群组实例配额。 
      * @return Quota 置放群组实例配额。
      */
     public Integer getQuota() {
@@ -130,7 +130,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 设置置放群组实例配额。
+     * Set 置放群组实例配额。
      * @param Quota 置放群组实例配额。
      */
     public void setQuota(Integer Quota) {
@@ -138,7 +138,7 @@ public class DeployGroupInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);

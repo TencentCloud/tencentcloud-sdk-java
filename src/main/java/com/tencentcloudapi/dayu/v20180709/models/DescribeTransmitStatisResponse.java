@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTransmitStatisResponse  extends AbstractModel{
+public class DescribeTransmitStatisResponse extends AbstractModel{
 
     /**
     * 当MetricName=traffic时，表示入流量带宽，单位bps；
@@ -55,8 +55,8 @@ pkg表示包速率；
     private String RequestId;
 
     /**
-     * 获取当MetricName=traffic时，表示入流量带宽，单位bps；
-当MetricName=pkg时，表示入包速率，单位pps；
+     * Get 当MetricName=traffic时，表示入流量带宽，单位bps；
+当MetricName=pkg时，表示入包速率，单位pps； 
      * @return InDataList 当MetricName=traffic时，表示入流量带宽，单位bps；
 当MetricName=pkg时，表示入包速率，单位pps；
      */
@@ -65,7 +65,7 @@ pkg表示包速率；
     }
 
     /**
-     * 设置当MetricName=traffic时，表示入流量带宽，单位bps；
+     * Set 当MetricName=traffic时，表示入流量带宽，单位bps；
 当MetricName=pkg时，表示入包速率，单位pps；
      * @param InDataList 当MetricName=traffic时，表示入流量带宽，单位bps；
 当MetricName=pkg时，表示入包速率，单位pps；
@@ -75,8 +75,8 @@ pkg表示包速率；
     }
 
     /**
-     * 获取当MetricName=traffic时，表示出流量带宽，单位bps；
-当MetricName=pkg时，表示出包速率，单位pps；
+     * Get 当MetricName=traffic时，表示出流量带宽，单位bps；
+当MetricName=pkg时，表示出包速率，单位pps； 
      * @return OutDataList 当MetricName=traffic时，表示出流量带宽，单位bps；
 当MetricName=pkg时，表示出包速率，单位pps；
      */
@@ -85,7 +85,7 @@ pkg表示包速率；
     }
 
     /**
-     * 设置当MetricName=traffic时，表示出流量带宽，单位bps；
+     * Set 当MetricName=traffic时，表示出流量带宽，单位bps；
 当MetricName=pkg时，表示出包速率，单位pps；
      * @param OutDataList 当MetricName=traffic时，表示出流量带宽，单位bps；
 当MetricName=pkg时，表示出包速率，单位pps；
@@ -95,9 +95,9 @@ pkg表示包速率；
     }
 
     /**
-     * 获取指标名：
+     * Get 指标名：
 traffic表示流量带宽；
-pkg表示包速率；
+pkg表示包速率； 
      * @return MetricName 指标名：
 traffic表示流量带宽；
 pkg表示包速率；
@@ -107,7 +107,7 @@ pkg表示包速率；
     }
 
     /**
-     * 设置指标名：
+     * Set 指标名：
 traffic表示流量带宽；
 pkg表示包速率；
      * @param MetricName 指标名：
@@ -119,7 +119,7 @@ pkg表示包速率；
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -127,7 +127,7 @@ pkg表示包速率；
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -135,7 +135,7 @@ pkg表示包速率；
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InDataList.", this.InDataList);

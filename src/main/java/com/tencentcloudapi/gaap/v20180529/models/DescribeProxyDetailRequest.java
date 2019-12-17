@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProxyDetailRequest  extends AbstractModel{
+public class DescribeProxyDetailRequest extends AbstractModel{
 
     /**
     * 需查询的通道ID。
@@ -30,7 +30,7 @@ public class DescribeProxyDetailRequest  extends AbstractModel{
     private String ProxyId;
 
     /**
-     * 获取需查询的通道ID。
+     * Get 需查询的通道ID。 
      * @return ProxyId 需查询的通道ID。
      */
     public String getProxyId() {
@@ -38,7 +38,7 @@ public class DescribeProxyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 设置需查询的通道ID。
+     * Set 需查询的通道ID。
      * @param ProxyId 需查询的通道ID。
      */
     public void setProxyId(String ProxyId) {
@@ -46,7 +46,7 @@ public class DescribeProxyDetailRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);

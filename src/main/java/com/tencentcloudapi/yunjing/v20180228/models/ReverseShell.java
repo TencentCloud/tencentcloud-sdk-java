@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReverseShell  extends AbstractModel{
+public class ReverseShell extends AbstractModel{
 
     /**
     * ID
     */
     @SerializedName("Id")
     @Expose
-    private Integer Id;
+    private Long Id;
 
     /**
     * 云镜UUID
@@ -62,7 +62,7 @@ public class ReverseShell  extends AbstractModel{
     */
     @SerializedName("DstPort")
     @Expose
-    private Integer DstPort;
+    private Long DstPort;
 
     /**
     * 进程名
@@ -132,7 +132,7 @@ public class ReverseShell  extends AbstractModel{
     */
     @SerializedName("Status")
     @Expose
-    private Integer Status;
+    private Long Status;
 
     /**
     * 产生时间
@@ -156,23 +156,23 @@ public class ReverseShell  extends AbstractModel{
     private String ProcTree;
 
     /**
-     * 获取ID
+     * Get ID 
      * @return Id ID
      */
-    public Integer getId() {
+    public Long getId() {
         return this.Id;
     }
 
     /**
-     * 设置ID
+     * Set ID
      * @param Id ID
      */
-    public void setId(Integer Id) {
+    public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * 获取云镜UUID
+     * Get 云镜UUID 
      * @return Uuid 云镜UUID
      */
     public String getUuid() {
@@ -180,7 +180,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置云镜UUID
+     * Set 云镜UUID
      * @param Uuid 云镜UUID
      */
     public void setUuid(String Uuid) {
@@ -188,7 +188,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取主机ID
+     * Get 主机ID 
      * @return Quuid 主机ID
      */
     public String getQuuid() {
@@ -196,7 +196,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置主机ID
+     * Set 主机ID
      * @param Quuid 主机ID
      */
     public void setQuuid(String Quuid) {
@@ -204,7 +204,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取主机内网IP
+     * Get 主机内网IP 
      * @return Hostip 主机内网IP
      */
     public String getHostip() {
@@ -212,7 +212,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置主机内网IP
+     * Set 主机内网IP
      * @param Hostip 主机内网IP
      */
     public void setHostip(String Hostip) {
@@ -220,7 +220,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取目标IP
+     * Get 目标IP 
      * @return DstIp 目标IP
      */
     public String getDstIp() {
@@ -228,7 +228,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置目标IP
+     * Set 目标IP
      * @param DstIp 目标IP
      */
     public void setDstIp(String DstIp) {
@@ -236,23 +236,23 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取目标端口
+     * Get 目标端口 
      * @return DstPort 目标端口
      */
-    public Integer getDstPort() {
+    public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * 设置目标端口
+     * Set 目标端口
      * @param DstPort 目标端口
      */
-    public void setDstPort(Integer DstPort) {
+    public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * 获取进程名
+     * Get 进程名 
      * @return ProcessName 进程名
      */
     public String getProcessName() {
@@ -260,7 +260,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置进程名
+     * Set 进程名
      * @param ProcessName 进程名
      */
     public void setProcessName(String ProcessName) {
@@ -268,7 +268,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取进程路径
+     * Get 进程路径 
      * @return FullPath 进程路径
      */
     public String getFullPath() {
@@ -276,7 +276,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置进程路径
+     * Set 进程路径
      * @param FullPath 进程路径
      */
     public void setFullPath(String FullPath) {
@@ -284,7 +284,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取命令详情
+     * Get 命令详情 
      * @return CmdLine 命令详情
      */
     public String getCmdLine() {
@@ -292,7 +292,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置命令详情
+     * Set 命令详情
      * @param CmdLine 命令详情
      */
     public void setCmdLine(String CmdLine) {
@@ -300,7 +300,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取执行用户
+     * Get 执行用户 
      * @return UserName 执行用户
      */
     public String getUserName() {
@@ -308,7 +308,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置执行用户
+     * Set 执行用户
      * @param UserName 执行用户
      */
     public void setUserName(String UserName) {
@@ -316,7 +316,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取执行用户组
+     * Get 执行用户组 
      * @return UserGroup 执行用户组
      */
     public String getUserGroup() {
@@ -324,7 +324,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置执行用户组
+     * Set 执行用户组
      * @param UserGroup 执行用户组
      */
     public void setUserGroup(String UserGroup) {
@@ -332,7 +332,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取父进程名
+     * Get 父进程名 
      * @return ParentProcName 父进程名
      */
     public String getParentProcName() {
@@ -340,7 +340,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置父进程名
+     * Set 父进程名
      * @param ParentProcName 父进程名
      */
     public void setParentProcName(String ParentProcName) {
@@ -348,7 +348,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取父进程用户
+     * Get 父进程用户 
      * @return ParentProcUser 父进程用户
      */
     public String getParentProcUser() {
@@ -356,7 +356,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置父进程用户
+     * Set 父进程用户
      * @param ParentProcUser 父进程用户
      */
     public void setParentProcUser(String ParentProcUser) {
@@ -364,7 +364,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取父进程用户组
+     * Get 父进程用户组 
      * @return ParentProcGroup 父进程用户组
      */
     public String getParentProcGroup() {
@@ -372,7 +372,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置父进程用户组
+     * Set 父进程用户组
      * @param ParentProcGroup 父进程用户组
      */
     public void setParentProcGroup(String ParentProcGroup) {
@@ -380,7 +380,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取父进程路径
+     * Get 父进程路径 
      * @return ParentProcPath 父进程路径
      */
     public String getParentProcPath() {
@@ -388,7 +388,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置父进程路径
+     * Set 父进程路径
      * @param ParentProcPath 父进程路径
      */
     public void setParentProcPath(String ParentProcPath) {
@@ -396,23 +396,23 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取处理状态
+     * Get 处理状态 
      * @return Status 处理状态
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * 设置处理状态
+     * Set 处理状态
      * @param Status 处理状态
      */
-    public void setStatus(Integer Status) {
+    public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * 获取产生时间
+     * Get 产生时间 
      * @return CreateTime 产生时间
      */
     public String getCreateTime() {
@@ -420,7 +420,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置产生时间
+     * Set 产生时间
      * @param CreateTime 产生时间
      */
     public void setCreateTime(String CreateTime) {
@@ -428,7 +428,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取主机名
+     * Get 主机名 
      * @return MachineName 主机名
      */
     public String getMachineName() {
@@ -436,7 +436,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置主机名
+     * Set 主机名
      * @param MachineName 主机名
      */
     public void setMachineName(String MachineName) {
@@ -444,7 +444,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 获取进程树
+     * Get 进程树 
      * @return ProcTree 进程树
      */
     public String getProcTree() {
@@ -452,7 +452,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 设置进程树
+     * Set 进程树
      * @param ProcTree 进程树
      */
     public void setProcTree(String ProcTree) {
@@ -460,7 +460,7 @@ public class ReverseShell  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);

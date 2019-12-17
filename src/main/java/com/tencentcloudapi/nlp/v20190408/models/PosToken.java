@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PosToken  extends AbstractModel{
+public class PosToken extends AbstractModel{
 
     /**
     * 起始位置
@@ -51,7 +51,7 @@ public class PosToken  extends AbstractModel{
     private String Word;
 
     /**
-     * 获取起始位置
+     * Get 起始位置 
      * @return BeginOffset 起始位置
      */
     public Long getBeginOffset() {
@@ -59,7 +59,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 设置起始位置
+     * Set 起始位置
      * @param BeginOffset 起始位置
      */
     public void setBeginOffset(Long BeginOffset) {
@@ -67,7 +67,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 获取长度
+     * Get 长度 
      * @return Length 长度
      */
     public Long getLength() {
@@ -75,7 +75,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 设置长度
+     * Set 长度
      * @param Length 长度
      */
     public void setLength(Long Length) {
@@ -83,7 +83,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 获取词性
+     * Get 词性 
      * @return Pos 词性
      */
     public String getPos() {
@@ -91,7 +91,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 设置词性
+     * Set 词性
      * @param Pos 词性
      */
     public void setPos(String Pos) {
@@ -99,7 +99,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 获取基础词
+     * Get 基础词 
      * @return Word 基础词
      */
     public String getWord() {
@@ -107,7 +107,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 设置基础词
+     * Set 基础词
      * @param Word 基础词
      */
     public void setWord(String Word) {
@@ -115,7 +115,7 @@ public class PosToken  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginOffset", this.BeginOffset);

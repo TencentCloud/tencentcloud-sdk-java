@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyPersonTypeRequest  extends AbstractModel{
+public class ModifyPersonTypeRequest extends AbstractModel{
 
     /**
     * 集团ID
@@ -61,7 +61,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     private Integer PersonSubType;
 
     /**
-     * 获取集团ID
+     * Get 集团ID 
      * @return CompanyId 集团ID
      */
     public String getCompanyId() {
@@ -69,7 +69,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置集团ID
+     * Set 集团ID
      * @param CompanyId 集团ID
      */
     public void setCompanyId(String CompanyId) {
@@ -77,7 +77,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取门店ID
+     * Get 门店ID 
      * @return ShopId 门店ID
      */
     public Integer getShopId() {
@@ -85,7 +85,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置门店ID
+     * Set 门店ID
      * @param ShopId 门店ID
      */
     public void setShopId(Integer ShopId) {
@@ -93,7 +93,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取顾客ID
+     * Get 顾客ID 
      * @return PersonId 顾客ID
      */
     public Integer getPersonId() {
@@ -101,7 +101,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置顾客ID
+     * Set 顾客ID
      * @param PersonId 顾客ID
      */
     public void setPersonId(Integer PersonId) {
@@ -109,7 +109,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * Get 身份类型(0表示普通顾客，1 白名单，2 表示黑名单） 
      * @return PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public Integer getPersonType() {
@@ -117,7 +117,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
+     * Set 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      * @param PersonType 身份类型(0表示普通顾客，1 白名单，2 表示黑名单）
      */
     public void setPersonType(Integer PersonType) {
@@ -125,10 +125,10 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 获取身份子类型:
+     * Get 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
-PersonType=2时(黑名单)，0普通黑名单，1小偷)
+PersonType=2时(黑名单)，0普通黑名单，1小偷) 
      * @return PersonSubType 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
@@ -139,7 +139,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 设置身份子类型:
+     * Set 身份子类型:
 PersonType=0时(普通顾客)，0普通顾客
 PersonType=1时(白名单)，0店员，1商场人员，2其他类型人员，3区域经理，4注册会员，5VIP用户
 PersonType=2时(黑名单)，0普通黑名单，1小偷)
@@ -153,7 +153,7 @@ PersonType=2时(黑名单)，0普通黑名单，1小偷)
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);

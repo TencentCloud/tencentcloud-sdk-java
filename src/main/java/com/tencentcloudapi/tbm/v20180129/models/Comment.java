@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Comment  extends AbstractModel{
+public class Comment extends AbstractModel{
 
     /**
     * 评论的日期
@@ -44,7 +44,7 @@ public class Comment  extends AbstractModel{
     private Integer PosCommentCount;
 
     /**
-     * 获取评论的日期
+     * Get 评论的日期 
      * @return Date 评论的日期
      */
     public String getDate() {
@@ -52,7 +52,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 设置评论的日期
+     * Set 评论的日期
      * @param Date 评论的日期
      */
     public void setDate(String Date) {
@@ -60,7 +60,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 获取差评的个数
+     * Get 差评的个数 
      * @return NegCommentCount 差评的个数
      */
     public Integer getNegCommentCount() {
@@ -68,7 +68,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 设置差评的个数
+     * Set 差评的个数
      * @param NegCommentCount 差评的个数
      */
     public void setNegCommentCount(Integer NegCommentCount) {
@@ -76,7 +76,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 获取好评的个数
+     * Get 好评的个数 
      * @return PosCommentCount 好评的个数
      */
     public Integer getPosCommentCount() {
@@ -84,7 +84,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 设置好评的个数
+     * Set 好评的个数
      * @param PosCommentCount 好评的个数
      */
     public void setPosCommentCount(Integer PosCommentCount) {
@@ -92,7 +92,7 @@ public class Comment  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);

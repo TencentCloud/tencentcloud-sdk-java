@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SignInfo  extends AbstractModel{
+public class SignInfo extends AbstractModel{
 
     /**
     * 账户ID
@@ -72,7 +72,7 @@ public class SignInfo  extends AbstractModel{
     private String SignLocation;
 
     /**
-     * 获取账户ID
+     * Get 账户ID 
      * @return AccountResId 账户ID
      */
     public String getAccountResId() {
@@ -80,7 +80,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置账户ID
+     * Set 账户ID
      * @param AccountResId 账户ID
      */
     public void setAccountResId(String AccountResId) {
@@ -88,7 +88,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取授权时间，格式为年月日时分秒，例20160801095509
+     * Get 授权时间，格式为年月日时分秒，例20160801095509 
      * @return AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      */
     public String getAuthorizationTime() {
@@ -96,7 +96,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置授权时间，格式为年月日时分秒，例20160801095509
+     * Set 授权时间，格式为年月日时分秒，例20160801095509
      * @param AuthorizationTime 授权时间，格式为年月日时分秒，例20160801095509
      */
     public void setAuthorizationTime(String AuthorizationTime) {
@@ -104,7 +104,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取授权IP地址
+     * Get 授权IP地址 
      * @return Location 授权IP地址
      */
     public String getLocation() {
@@ -112,7 +112,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置授权IP地址
+     * Set 授权IP地址
      * @param Location 授权IP地址
      */
     public void setLocation(String Location) {
@@ -120,7 +120,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取签章ID
+     * Get 签章ID 
      * @return SealId 签章ID
      */
     public String getSealId() {
@@ -128,7 +128,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置签章ID
+     * Set 签章ID
      * @param SealId 签章ID
      */
     public void setSealId(String SealId) {
@@ -136,7 +136,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取签名图片，优先级比SealId高
+     * Get 签名图片，优先级比SealId高 
      * @return ImageData 签名图片，优先级比SealId高
      */
     public String getImageData() {
@@ -144,7 +144,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置签名图片，优先级比SealId高
+     * Set 签名图片，优先级比SealId高
      * @param ImageData 签名图片，优先级比SealId高
      */
     public void setImageData(String ImageData) {
@@ -152,7 +152,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * Get 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1 
      * @return CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     public Integer getCertType() {
@@ -160,7 +160,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
+     * Set 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      * @param CertType 默认值：1  表示RSA证书， 2 表示国密证书， 参数不传时默认为1
      */
     public void setCertType(Integer CertType) {
@@ -168,7 +168,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 获取签名域的标签值
+     * Get 签名域的标签值 
      * @return SignLocation 签名域的标签值
      */
     public String getSignLocation() {
@@ -176,7 +176,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 设置签名域的标签值
+     * Set 签名域的标签值
      * @param SignLocation 签名域的标签值
      */
     public void setSignLocation(String SignLocation) {
@@ -184,7 +184,7 @@ public class SignInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountResId", this.AccountResId);

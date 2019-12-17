@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServiceConfigsRequest  extends AbstractModel{
+public class DescribeServiceConfigsRequest extends AbstractModel{
 
     /**
     * 筛选选项，支持按照name等进行筛选
@@ -65,7 +65,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     private Boolean PageByName;
 
     /**
-     * 获取筛选选项，支持按照name等进行筛选
+     * Get 筛选选项，支持按照name等进行筛选 
      * @return Filters 筛选选项，支持按照name等进行筛选
      */
     public Filter [] getFilters() {
@@ -73,7 +73,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置筛选选项，支持按照name等进行筛选
+     * Set 筛选选项，支持按照name等进行筛选
      * @param Filters 筛选选项，支持按照name等进行筛选
      */
     public void setFilters(Filter [] Filters) {
@@ -81,7 +81,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量，默认为0
+     * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
     public Long getOffset() {
@@ -89,7 +89,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量，默认为0
+     * Set 偏移量，默认为0
      * @param Offset 偏移量，默认为0
      */
     public void setOffset(Long Offset) {
@@ -97,7 +97,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量，默认为20，最大值为1000
+     * Get 返回数量，默认为20，最大值为1000 
      * @return Limit 返回数量，默认为20，最大值为1000
      */
     public Long getLimit() {
@@ -105,7 +105,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量，默认为20，最大值为1000
+     * Set 返回数量，默认为20，最大值为1000
      * @param Limit 返回数量，默认为20，最大值为1000
      */
     public void setLimit(Long Limit) {
@@ -113,7 +113,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Get 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列 
      * @return Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public String getOrder() {
@@ -121,7 +121,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
+     * Set 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      * @param Order 输出列表的排列顺序。取值范围：ASC：升序排列 DESC：降序排列
      */
     public void setOrder(String Order) {
@@ -129,7 +129,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+     * Get 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME" 
      * @return OrderField 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public String getOrderField() {
@@ -137,7 +137,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
+     * Set 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      * @param OrderField 排序的依据字段， 取值范围 "CREATE_TIME", "UPDATE_TIME", "NAME"
      */
     public void setOrderField(String OrderField) {
@@ -145,7 +145,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否按照配置名分页
+     * Get 是否按照配置名分页 
      * @return PageByName 是否按照配置名分页
      */
     public Boolean getPageByName() {
@@ -153,7 +153,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否按照配置名分页
+     * Set 是否按照配置名分页
      * @param PageByName 是否按照配置名分页
      */
     public void setPageByName(Boolean PageByName) {
@@ -161,7 +161,7 @@ public class DescribeServiceConfigsRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);

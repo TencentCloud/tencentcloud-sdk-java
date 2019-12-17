@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceRect  extends AbstractModel{
+public class FaceRect extends AbstractModel{
 
     /**
     * 人脸框左上角横坐标。
@@ -51,7 +51,7 @@ public class FaceRect  extends AbstractModel{
     private Integer Height;
 
     /**
-     * 获取人脸框左上角横坐标。
+     * Get 人脸框左上角横坐标。 
      * @return X 人脸框左上角横坐标。
      */
     public Integer getX() {
@@ -59,7 +59,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角横坐标。
+     * Set 人脸框左上角横坐标。
      * @param X 人脸框左上角横坐标。
      */
     public void setX(Integer X) {
@@ -67,7 +67,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框左上角纵坐标。
+     * Get 人脸框左上角纵坐标。 
      * @return Y 人脸框左上角纵坐标。
      */
     public Integer getY() {
@@ -75,7 +75,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框左上角纵坐标。
+     * Set 人脸框左上角纵坐标。
      * @param Y 人脸框左上角纵坐标。
      */
     public void setY(Integer Y) {
@@ -83,7 +83,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框宽度。
+     * Get 人脸框宽度。 
      * @return Width 人脸框宽度。
      */
     public Integer getWidth() {
@@ -91,7 +91,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框宽度。
+     * Set 人脸框宽度。
      * @param Width 人脸框宽度。
      */
     public void setWidth(Integer Width) {
@@ -99,7 +99,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 获取人脸框高度。
+     * Get 人脸框高度。 
      * @return Height 人脸框高度。
      */
     public Integer getHeight() {
@@ -107,7 +107,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 设置人脸框高度。
+     * Set 人脸框高度。
      * @param Height 人脸框高度。
      */
     public void setHeight(Integer Height) {
@@ -115,7 +115,7 @@ public class FaceRect  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "X", this.X);

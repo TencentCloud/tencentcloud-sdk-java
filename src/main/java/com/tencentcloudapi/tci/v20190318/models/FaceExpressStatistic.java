@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FaceExpressStatistic  extends AbstractModel{
+public class FaceExpressStatistic extends AbstractModel{
 
     /**
     * 人员唯一标识符
@@ -37,7 +37,7 @@ public class FaceExpressStatistic  extends AbstractModel{
     private ExpressRatioStatistic [] ExpressRatio;
 
     /**
-     * 获取人员唯一标识符
+     * Get 人员唯一标识符 
      * @return PersonId 人员唯一标识符
      */
     public String getPersonId() {
@@ -45,7 +45,7 @@ public class FaceExpressStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置人员唯一标识符
+     * Set 人员唯一标识符
      * @param PersonId 人员唯一标识符
      */
     public void setPersonId(String PersonId) {
@@ -53,7 +53,7 @@ public class FaceExpressStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取表情统计结果
+     * Get 表情统计结果 
      * @return ExpressRatio 表情统计结果
      */
     public ExpressRatioStatistic [] getExpressRatio() {
@@ -61,7 +61,7 @@ public class FaceExpressStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置表情统计结果
+     * Set 表情统计结果
      * @param ExpressRatio 表情统计结果
      */
     public void setExpressRatio(ExpressRatioStatistic [] ExpressRatio) {
@@ -69,7 +69,7 @@ public class FaceExpressStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);

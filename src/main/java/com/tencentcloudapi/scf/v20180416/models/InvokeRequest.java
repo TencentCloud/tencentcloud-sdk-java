@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InvokeRequest  extends AbstractModel{
+public class InvokeRequest extends AbstractModel{
 
     /**
     * 函数名称
@@ -65,7 +65,7 @@ public class InvokeRequest  extends AbstractModel{
     private String Namespace;
 
     /**
-     * 获取函数名称
+     * Get 函数名称 
      * @return FunctionName 函数名称
      */
     public String getFunctionName() {
@@ -73,7 +73,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置函数名称
+     * Set 函数名称
      * @param FunctionName 函数名称
      */
     public void setFunctionName(String FunctionName) {
@@ -81,7 +81,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取RequestResponse(同步) 和 Event(异步)，默认为同步
+     * Get RequestResponse(同步) 和 Event(异步)，默认为同步 
      * @return InvocationType RequestResponse(同步) 和 Event(异步)，默认为同步
      */
     public String getInvocationType() {
@@ -89,7 +89,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置RequestResponse(同步) 和 Event(异步)，默认为同步
+     * Set RequestResponse(同步) 和 Event(异步)，默认为同步
      * @param InvocationType RequestResponse(同步) 和 Event(异步)，默认为同步
      */
     public void setInvocationType(String InvocationType) {
@@ -97,7 +97,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取触发函数的版本号
+     * Get 触发函数的版本号 
      * @return Qualifier 触发函数的版本号
      */
     public String getQualifier() {
@@ -105,7 +105,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置触发函数的版本号
+     * Set 触发函数的版本号
      * @param Qualifier 触发函数的版本号
      */
     public void setQualifier(String Qualifier) {
@@ -113,7 +113,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+     * Get 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M 
      * @return ClientContext 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
      */
     public String getClientContext() {
@@ -121,7 +121,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
+     * Set 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
      * @param ClientContext 运行函数时的参数，以json格式传入，最大支持的参数长度是 1M
      */
     public void setClientContext(String ClientContext) {
@@ -129,7 +129,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+     * Get 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志 
      * @return LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
      */
     public String getLogType() {
@@ -137,7 +137,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+     * Set 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
      * @param LogType 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
      */
     public void setLogType(String LogType) {
@@ -145,7 +145,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取命名空间
+     * Get 命名空间 
      * @return Namespace 命名空间
      */
     public String getNamespace() {
@@ -153,7 +153,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置命名空间
+     * Set 命名空间
      * @param Namespace 命名空间
      */
     public void setNamespace(String Namespace) {
@@ -161,7 +161,7 @@ public class InvokeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);

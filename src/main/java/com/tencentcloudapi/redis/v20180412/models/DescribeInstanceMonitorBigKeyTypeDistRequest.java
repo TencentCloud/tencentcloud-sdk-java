@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel{
+public class DescribeInstanceMonitorBigKeyTypeDistRequest extends AbstractModel{
 
     /**
     * 实例Id
@@ -37,7 +37,7 @@ public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel
     private String Date;
 
     /**
-     * 获取实例Id
+     * Get 实例Id 
      * @return InstanceId 实例Id
      */
     public String getInstanceId() {
@@ -45,7 +45,7 @@ public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel
     }
 
     /**
-     * 设置实例Id
+     * Set 实例Id
      * @param InstanceId 实例Id
      */
     public void setInstanceId(String InstanceId) {
@@ -53,7 +53,7 @@ public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel
     }
 
     /**
-     * 获取时间；例如："20190219"
+     * Get 时间；例如："20190219" 
      * @return Date 时间；例如："20190219"
      */
     public String getDate() {
@@ -61,7 +61,7 @@ public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel
     }
 
     /**
-     * 设置时间；例如："20190219"
+     * Set 时间；例如："20190219"
      * @param Date 时间；例如："20190219"
      */
     public void setDate(String Date) {
@@ -69,7 +69,7 @@ public class DescribeInstanceMonitorBigKeyTypeDistRequest  extends AbstractModel
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

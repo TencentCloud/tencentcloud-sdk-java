@@ -29,21 +29,10 @@ public class TicmClient extends AbstractClient{
     private static String endpoint = "ticm.tencentcloudapi.com";
     private static String version = "2018-11-27";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public TicmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public TicmClient(Credential credential, String region, ClientProfile profile) {
         super(TicmClient.endpoint, TicmClient.version, credential, region, profile);
     }

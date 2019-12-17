@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UserDefineConfigureInfo  extends AbstractModel{
+public class UserDefineConfigureInfo extends AbstractModel{
 
     /**
     * 用户自定义人物审核控制参数。
@@ -44,7 +44,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * 获取用户自定义人物审核控制参数。
+     * Get 用户自定义人物审核控制参数。 
      * @return FaceReviewInfo 用户自定义人物审核控制参数。
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
@@ -52,7 +52,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义人物审核控制参数。
+     * Set 用户自定义人物审核控制参数。
      * @param FaceReviewInfo 用户自定义人物审核控制参数。
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
@@ -60,7 +60,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义语音审核控制参数。
+     * Get 用户自定义语音审核控制参数。 
      * @return AsrReviewInfo 用户自定义语音审核控制参数。
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
@@ -68,7 +68,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义语音审核控制参数。
+     * Set 用户自定义语音审核控制参数。
      * @param AsrReviewInfo 用户自定义语音审核控制参数。
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
@@ -76,7 +76,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 获取用户自定义文本审核控制参数。
+     * Get 用户自定义文本审核控制参数。 
      * @return OcrReviewInfo 用户自定义文本审核控制参数。
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
@@ -84,7 +84,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 设置用户自定义文本审核控制参数。
+     * Set 用户自定义文本审核控制参数。
      * @param OcrReviewInfo 用户自定义文本审核控制参数。
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
@@ -92,7 +92,7 @@ public class UserDefineConfigureInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FaceReviewInfo.", this.FaceReviewInfo);

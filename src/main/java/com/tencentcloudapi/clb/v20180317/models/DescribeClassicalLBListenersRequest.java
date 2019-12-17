@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClassicalLBListenersRequest  extends AbstractModel{
+public class DescribeClassicalLBListenersRequest extends AbstractModel{
 
     /**
     * 负载均衡实例 ID
@@ -58,7 +58,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     private Integer Status;
 
     /**
-     * 获取负载均衡实例 ID
+     * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
     public String getLoadBalancerId() {
@@ -66,7 +66,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡实例 ID
+     * Set 负载均衡实例 ID
      * @param LoadBalancerId 负载均衡实例 ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
@@ -74,7 +74,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听器ID列表
+     * Get 负载均衡监听器ID列表 
      * @return ListenerIds 负载均衡监听器ID列表
      */
     public String [] getListenerIds() {
@@ -82,7 +82,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听器ID列表
+     * Set 负载均衡监听器ID列表
      * @param ListenerIds 负载均衡监听器ID列表
      */
     public void setListenerIds(String [] ListenerIds) {
@@ -90,7 +90,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
+     * Get 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS' 
      * @return Protocol 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
      */
     public String getProtocol() {
@@ -98,7 +98,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
+     * Set 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
      * @param Protocol 负载均衡监听的协议, 'TCP', 'UDP', 'HTTP', 'HTTPS'
      */
     public void setProtocol(String Protocol) {
@@ -106,7 +106,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡监听端口， 范围[1-65535]
+     * Get 负载均衡监听端口， 范围[1-65535] 
      * @return ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
     public Integer getListenerPort() {
@@ -114,7 +114,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡监听端口， 范围[1-65535]
+     * Set 负载均衡监听端口， 范围[1-65535]
      * @param ListenerPort 负载均衡监听端口， 范围[1-65535]
      */
     public void setListenerPort(Integer ListenerPort) {
@@ -122,7 +122,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器的状态，0 表示创建中，1 表示运行中
+     * Get 监听器的状态，0 表示创建中，1 表示运行中 
      * @return Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     public Integer getStatus() {
@@ -130,7 +130,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器的状态，0 表示创建中，1 表示运行中
+     * Set 监听器的状态，0 表示创建中，1 表示运行中
      * @param Status 监听器的状态，0 表示创建中，1 表示运行中
      */
     public void setStatus(Integer Status) {
@@ -138,7 +138,7 @@ public class DescribeClassicalLBListenersRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);

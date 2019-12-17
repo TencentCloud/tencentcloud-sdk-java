@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PublishAsDeviceRequest  extends AbstractModel{
+public class PublishAsDeviceRequest extends AbstractModel{
 
     /**
     * 产品id
@@ -51,7 +51,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     private String Payload;
 
     /**
-     * 获取产品id
+     * Get 产品id 
      * @return ProductId 产品id
      */
     public String getProductId() {
@@ -59,7 +59,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置产品id
+     * Set 产品id
      * @param ProductId 产品id
      */
     public void setProductId(String ProductId) {
@@ -67,7 +67,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取设备名称
+     * Get 设备名称 
      * @return DeviceName 设备名称
      */
     public String getDeviceName() {
@@ -75,7 +75,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备名称
+     * Set 设备名称
      * @param DeviceName 设备名称
      */
     public void setDeviceName(String DeviceName) {
@@ -83,7 +83,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取LoRa 设备端口
+     * Get LoRa 设备端口 
      * @return Port LoRa 设备端口
      */
     public Integer getPort() {
@@ -91,7 +91,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置LoRa 设备端口
+     * Set LoRa 设备端口
      * @param Port LoRa 设备端口
      */
     public void setPort(Integer Port) {
@@ -99,7 +99,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 获取消息内容
+     * Get 消息内容 
      * @return Payload 消息内容
      */
     public String getPayload() {
@@ -107,7 +107,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 设置消息内容
+     * Set 消息内容
      * @param Payload 消息内容
      */
     public void setPayload(String Payload) {
@@ -115,7 +115,7 @@ public class PublishAsDeviceRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);

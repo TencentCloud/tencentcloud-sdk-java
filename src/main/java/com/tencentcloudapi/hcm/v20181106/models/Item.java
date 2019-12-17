@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Item  extends AbstractModel{
+public class Item extends AbstractModel{
 
     /**
     * 识别的算式是否正确
@@ -59,7 +59,7 @@ public class Item  extends AbstractModel{
     private String ExpressionType;
 
     /**
-     * 获取识别的算式是否正确
+     * Get 识别的算式是否正确 
      * @return Item 识别的算式是否正确
      */
     public String getItem() {
@@ -67,7 +67,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置识别的算式是否正确
+     * Set 识别的算式是否正确
      * @param Item 识别的算式是否正确
      */
     public void setItem(String Item) {
@@ -75,7 +75,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取识别的算式
+     * Get 识别的算式 
      * @return ItemString 识别的算式
      */
     public String getItemString() {
@@ -83,7 +83,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置识别的算式
+     * Set 识别的算式
      * @param ItemString 识别的算式
      */
     public void setItemString(String ItemString) {
@@ -91,7 +91,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取识别的算式在图片上的位置信息
+     * Get 识别的算式在图片上的位置信息 
      * @return ItemCoord 识别的算式在图片上的位置信息
      */
     public ItemCoord getItemCoord() {
@@ -99,7 +99,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置识别的算式在图片上的位置信息
+     * Set 识别的算式在图片上的位置信息
      * @param ItemCoord 识别的算式在图片上的位置信息
      */
     public void setItemCoord(ItemCoord ItemCoord) {
@@ -107,7 +107,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * Get 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。 
      * @return Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      */
     public String getAnswer() {
@@ -115,7 +115,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
+     * Set 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      * @param Answer 推荐的答案，暂不支持多个关系运算符、无关系运算符、单位换算错题的推荐答案返回。
      */
     public void setAnswer(String Answer) {
@@ -123,8 +123,8 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 获取算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -133,7 +133,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 设置算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
+     * Set 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpressionType 算式题型编号，如加减乘除四则题型，具体题型及编号如下：1 加减乘除四则 2 加减乘除已知结果求运算因子3 判断大小 4 约等于估算 5 带余数除法 6 分数四则运算 7 单位换算 8 竖式加减法 9 竖式乘除法 10 脱式计算 11 解方程
 注意：此字段可能返回 null，表示取不到有效值。
@@ -143,7 +143,7 @@ public class Item  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Item", this.Item);

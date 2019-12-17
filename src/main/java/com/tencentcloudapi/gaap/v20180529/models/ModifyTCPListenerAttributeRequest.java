@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
+public class ModifyTCPListenerAttributeRequest extends AbstractModel{
 
     /**
     * 监听器ID
@@ -79,7 +79,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     private Long HealthCheck;
 
     /**
-     * 获取监听器ID
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
      */
     public String getListenerId() {
@@ -87,7 +87,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器ID
+     * Set 监听器ID
      * @param ListenerId 监听器ID
      */
     public void setListenerId(String ListenerId) {
@@ -95,7 +95,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
@@ -103,7 +103,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
@@ -111,7 +111,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
      * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public String getProxyId() {
@@ -119,7 +119,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
      */
     public void setProxyId(String ProxyId) {
@@ -127,7 +127,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器名称
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
      */
     public String getListenerName() {
@@ -135,7 +135,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器名称
+     * Set 监听器名称
      * @param ListenerName 监听器名称
      */
     public void setListenerName(String ListenerName) {
@@ -143,7 +143,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Get 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。 
      * @return Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public String getScheduler() {
@@ -151,7 +151,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+     * Set 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      * @param Scheduler 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
      */
     public void setScheduler(String Scheduler) {
@@ -159,7 +159,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。 
      * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      */
     public Long getDelayLoop() {
@@ -167,7 +167,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
      */
     public void setDelayLoop(Long DelayLoop) {
@@ -175,7 +175,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。 
      * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      */
     public Long getConnectTimeout() {
@@ -183,7 +183,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
      */
     public void setConnectTimeout(Long ConnectTimeout) {
@@ -191,7 +191,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启健康检查，1开启，0关闭。
+     * Get 是否开启健康检查，1开启，0关闭。 
      * @return HealthCheck 是否开启健康检查，1开启，0关闭。
      */
     public Long getHealthCheck() {
@@ -199,7 +199,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启健康检查，1开启，0关闭。
+     * Set 是否开启健康检查，1开启，0关闭。
      * @param HealthCheck 是否开启健康检查，1开启，0关闭。
      */
     public void setHealthCheck(Long HealthCheck) {
@@ -207,7 +207,7 @@ public class ModifyTCPListenerAttributeRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);

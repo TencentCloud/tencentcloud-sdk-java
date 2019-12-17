@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RuleInput  extends AbstractModel{
+public class RuleInput extends AbstractModel{
 
     /**
     * 转发规则的域名。长度限制为：1~80。
@@ -94,7 +94,7 @@ public class RuleInput  extends AbstractModel{
     private String TargetType;
 
     /**
-     * 获取转发规则的域名。长度限制为：1~80。
+     * Get 转发规则的域名。长度限制为：1~80。 
      * @return Domain 转发规则的域名。长度限制为：1~80。
      */
     public String getDomain() {
@@ -102,7 +102,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的域名。长度限制为：1~80。
+     * Set 转发规则的域名。长度限制为：1~80。
      * @param Domain 转发规则的域名。长度限制为：1~80。
      */
     public void setDomain(String Domain) {
@@ -110,7 +110,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取转发规则的路径。长度限制为：1~200。
+     * Get 转发规则的路径。长度限制为：1~200。 
      * @return Url 转发规则的路径。长度限制为：1~200。
      */
     public String getUrl() {
@@ -118,7 +118,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置转发规则的路径。长度限制为：1~200。
+     * Set 转发规则的路径。长度限制为：1~200。
      * @param Url 转发规则的路径。长度限制为：1~200。
      */
     public void setUrl(String Url) {
@@ -126,7 +126,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * Get 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。 
      * @return SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
     public Integer getSessionExpireTime() {
@@ -134,7 +134,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
+     * Set 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      * @param SessionExpireTime 会话保持时间。设置为0表示关闭会话保持，开启会话保持可取值30~3600，单位：秒。
      */
     public void setSessionExpireTime(Integer SessionExpireTime) {
@@ -142,7 +142,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取健康检查信息
+     * Get 健康检查信息 
      * @return HealthCheck 健康检查信息
      */
     public HealthCheck getHealthCheck() {
@@ -150,7 +150,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置健康检查信息
+     * Set 健康检查信息
      * @param HealthCheck 健康检查信息
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
@@ -158,7 +158,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取证书信息
+     * Get 证书信息 
      * @return Certificate 证书信息
      */
     public CertificateInput getCertificate() {
@@ -166,7 +166,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置证书信息
+     * Set 证书信息
      * @param Certificate 证书信息
      */
     public void setCertificate(CertificateInput Certificate) {
@@ -174,8 +174,8 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
-分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
+     * Get 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。 
      * @return Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      */
@@ -184,7 +184,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
+     * Set 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
      * @param Scheduler 规则的请求转发方式，可选值：WRR、LEAST_CONN、IP_HASH
 分别表示按权重轮询、最小连接数、按IP哈希， 默认为 WRR。
@@ -194,7 +194,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP 
      * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      */
     public String getForwardType() {
@@ -202,7 +202,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
      */
     public void setForwardType(String ForwardType) {
@@ -210,7 +210,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Get 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。 
      * @return DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     public Boolean getDefaultServer() {
@@ -218,7 +218,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
+     * Set 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      * @param DefaultServer 是否将该域名设为默认域名，注意，一个监听器下只能设置一个默认域名。
      */
     public void setDefaultServer(Boolean DefaultServer) {
@@ -226,7 +226,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * Get 是否开启Http2，注意，只用HTTPS域名才能开启Http2。 
      * @return Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
      */
     public Boolean getHttp2() {
@@ -234,7 +234,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * Set 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
      * @param Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
      */
     public void setHttp2(Boolean Http2) {
@@ -242,7 +242,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 获取后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * Get 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组 
      * @return TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      */
     public String getTargetType() {
@@ -250,7 +250,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 设置后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
+     * Set 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      * @param TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组
      */
     public void setTargetType(String TargetType) {
@@ -258,7 +258,7 @@ public class RuleInput  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);

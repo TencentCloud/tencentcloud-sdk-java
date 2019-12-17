@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
+public class DescribeLiveStreamPublishedListResponse extends AbstractModel{
 
     /**
     * 推流记录信息。
@@ -65,7 +65,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取推流记录信息。
+     * Get 推流记录信息。 
      * @return PublishInfo 推流记录信息。
      */
     public StreamName [] getPublishInfo() {
@@ -73,7 +73,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置推流记录信息。
+     * Set 推流记录信息。
      * @param PublishInfo 推流记录信息。
      */
     public void setPublishInfo(StreamName [] PublishInfo) {
@@ -81,7 +81,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取分页的页码。
+     * Get 分页的页码。 
      * @return PageNum 分页的页码。
      */
     public Integer getPageNum() {
@@ -89,7 +89,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置分页的页码。
+     * Set 分页的页码。
      * @param PageNum 分页的页码。
      */
     public void setPageNum(Integer PageNum) {
@@ -97,7 +97,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取每页大小
+     * Get 每页大小 
      * @return PageSize 每页大小
      */
     public Integer getPageSize() {
@@ -105,7 +105,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置每页大小
+     * Set 每页大小
      * @param PageSize 每页大小
      */
     public void setPageSize(Integer PageSize) {
@@ -113,7 +113,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取符合条件的总个数。
+     * Get 符合条件的总个数。 
      * @return TotalNum 符合条件的总个数。
      */
     public Integer getTotalNum() {
@@ -121,7 +121,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置符合条件的总个数。
+     * Set 符合条件的总个数。
      * @param TotalNum 符合条件的总个数。
      */
     public void setTotalNum(Integer TotalNum) {
@@ -129,7 +129,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取总页数。
+     * Get 总页数。 
      * @return TotalPage 总页数。
      */
     public Integer getTotalPage() {
@@ -137,7 +137,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置总页数。
+     * Set 总页数。
      * @param TotalPage 总页数。
      */
     public void setTotalPage(Integer TotalPage) {
@@ -145,7 +145,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -153,7 +153,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -161,7 +161,7 @@ public class DescribeLiveStreamPublishedListResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "PublishInfo.", this.PublishInfo);

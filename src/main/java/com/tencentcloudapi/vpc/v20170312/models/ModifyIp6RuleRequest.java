@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyIp6RuleRequest  extends AbstractModel{
+public class ModifyIp6RuleRequest extends AbstractModel{
 
     /**
     * IPV6转换实例唯一ID，形如ip6-xxxxxxxx
@@ -58,7 +58,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     private Integer Vport;
 
     /**
-     * 获取IPV6转换实例唯一ID，形如ip6-xxxxxxxx
+     * Get IPV6转换实例唯一ID，形如ip6-xxxxxxxx 
      * @return Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public String getIp6TranslatorId() {
@@ -66,7 +66,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换实例唯一ID，形如ip6-xxxxxxxx
+     * Set IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      * @param Ip6TranslatorId IPV6转换实例唯一ID，形如ip6-xxxxxxxx
      */
     public void setIp6TranslatorId(String Ip6TranslatorId) {
@@ -74,7 +74,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则唯一ID，形如rule6-xxxxxxxx
+     * Get IPV6转换规则唯一ID，形如rule6-xxxxxxxx 
      * @return Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      */
     public String getIp6RuleId() {
@@ -82,7 +82,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则唯一ID，形如rule6-xxxxxxxx
+     * Set IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      * @param Ip6RuleId IPV6转换规则唯一ID，形如rule6-xxxxxxxx
      */
     public void setIp6RuleId(String Ip6RuleId) {
@@ -90,7 +90,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则修改后的名称
+     * Get IPV6转换规则修改后的名称 
      * @return Ip6RuleName IPV6转换规则修改后的名称
      */
     public String getIp6RuleName() {
@@ -98,7 +98,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则修改后的名称
+     * Set IPV6转换规则修改后的名称
      * @param Ip6RuleName IPV6转换规则修改后的名称
      */
     public void setIp6RuleName(String Ip6RuleName) {
@@ -106,7 +106,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则修改后的IPV4地址
+     * Get IPV6转换规则修改后的IPV4地址 
      * @return Vip IPV6转换规则修改后的IPV4地址
      */
     public String getVip() {
@@ -114,7 +114,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则修改后的IPV4地址
+     * Set IPV6转换规则修改后的IPV4地址
      * @param Vip IPV6转换规则修改后的IPV4地址
      */
     public void setVip(String Vip) {
@@ -122,7 +122,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 获取IPV6转换规则修改后的IPV4端口号
+     * Get IPV6转换规则修改后的IPV4端口号 
      * @return Vport IPV6转换规则修改后的IPV4端口号
      */
     public Integer getVport() {
@@ -130,7 +130,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6转换规则修改后的IPV4端口号
+     * Set IPV6转换规则修改后的IPV4端口号
      * @param Vport IPV6转换规则修改后的IPV4端口号
      */
     public void setVport(Integer Vport) {
@@ -138,7 +138,7 @@ public class ModifyIp6RuleRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ip6TranslatorId", this.Ip6TranslatorId);

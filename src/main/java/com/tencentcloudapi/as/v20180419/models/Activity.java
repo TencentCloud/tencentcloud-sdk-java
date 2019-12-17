@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Activity  extends AbstractModel{
+public class Activity extends AbstractModel{
 
     /**
     * 伸缩组ID。
@@ -114,7 +114,7 @@ public class Activity  extends AbstractModel{
     private String StatusMessageSimplified;
 
     /**
-     * 获取伸缩组ID。
+     * Get 伸缩组ID。 
      * @return AutoScalingGroupId 伸缩组ID。
      */
     public String getAutoScalingGroupId() {
@@ -122,7 +122,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩组ID。
+     * Set 伸缩组ID。
      * @param AutoScalingGroupId 伸缩组ID。
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
@@ -130,7 +130,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动ID。
+     * Get 伸缩活动ID。 
      * @return ActivityId 伸缩活动ID。
      */
     public String getActivityId() {
@@ -138,7 +138,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动ID。
+     * Set 伸缩活动ID。
      * @param ActivityId 伸缩活动ID。
      */
     public void setActivityId(String ActivityId) {
@@ -146,8 +146,8 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动类型。取值如下：<br>
-<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
+     * Get 伸缩活动类型。取值如下：<br>
+<li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例） 
      * @return ActivityType 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
      */
@@ -156,7 +156,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动类型。取值如下：<br>
+     * Set 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
      * @param ActivityType 伸缩活动类型。取值如下：<br>
 <li>SCALE_OUT：扩容活动<li>SCALE_IN：缩容活动<li>ATTACH_INSTANCES：添加实例<li>REMOVE_INSTANCES：销毁实例<li>DETACH_INSTANCES：移出实例<li>TERMINATE_INSTANCES_UNEXPECTEDLY：实例在CVM控制台被销毁<li>REPLACE_UNHEALTHY_INSTANCE：替换不健康实例）
@@ -166,13 +166,13 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动状态。取值如下：<br>
+     * Get 伸缩活动状态。取值如下：<br>
 <li>INIT：初始化中
 <li>RUNNING：运行中
 <li>SUCCESSFUL：活动成功
 <li>PARTIALLY_SUCCESSFUL：活动部分成功
 <li>FAILED：活动失败
-<li>CANCELLED：活动取消
+<li>CANCELLED：活动取消 
      * @return StatusCode 伸缩活动状态。取值如下：<br>
 <li>INIT：初始化中
 <li>RUNNING：运行中
@@ -186,7 +186,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动状态。取值如下：<br>
+     * Set 伸缩活动状态。取值如下：<br>
 <li>INIT：初始化中
 <li>RUNNING：运行中
 <li>SUCCESSFUL：活动成功
@@ -206,7 +206,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动状态描述。
+     * Get 伸缩活动状态描述。 
      * @return StatusMessage 伸缩活动状态描述。
      */
     public String getStatusMessage() {
@@ -214,7 +214,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动状态描述。
+     * Set 伸缩活动状态描述。
      * @param StatusMessage 伸缩活动状态描述。
      */
     public void setStatusMessage(String StatusMessage) {
@@ -222,7 +222,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动起因。
+     * Get 伸缩活动起因。 
      * @return Cause 伸缩活动起因。
      */
     public String getCause() {
@@ -230,7 +230,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动起因。
+     * Set 伸缩活动起因。
      * @param Cause 伸缩活动起因。
      */
     public void setCause(String Cause) {
@@ -238,7 +238,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动描述。
+     * Get 伸缩活动描述。 
      * @return Description 伸缩活动描述。
      */
     public String getDescription() {
@@ -246,7 +246,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动描述。
+     * Set 伸缩活动描述。
      * @param Description 伸缩活动描述。
      */
     public void setDescription(String Description) {
@@ -254,7 +254,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动开始时间。
+     * Get 伸缩活动开始时间。 
      * @return StartTime 伸缩活动开始时间。
      */
     public String getStartTime() {
@@ -262,7 +262,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动开始时间。
+     * Set 伸缩活动开始时间。
      * @param StartTime 伸缩活动开始时间。
      */
     public void setStartTime(String StartTime) {
@@ -270,7 +270,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动结束时间。
+     * Get 伸缩活动结束时间。 
      * @return EndTime 伸缩活动结束时间。
      */
     public String getEndTime() {
@@ -278,7 +278,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动结束时间。
+     * Set 伸缩活动结束时间。
      * @param EndTime 伸缩活动结束时间。
      */
     public void setEndTime(String EndTime) {
@@ -286,7 +286,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动创建时间。
+     * Get 伸缩活动创建时间。 
      * @return CreatedTime 伸缩活动创建时间。
      */
     public String getCreatedTime() {
@@ -294,7 +294,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动创建时间。
+     * Set 伸缩活动创建时间。
      * @param CreatedTime 伸缩活动创建时间。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -302,7 +302,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动相关实例信息集合。
+     * Get 伸缩活动相关实例信息集合。 
      * @return ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
      */
     public ActivtyRelatedInstance [] getActivityRelatedInstanceSet() {
@@ -310,7 +310,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动相关实例信息集合。
+     * Set 伸缩活动相关实例信息集合。
      * @param ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
      */
     public void setActivityRelatedInstanceSet(ActivtyRelatedInstance [] ActivityRelatedInstanceSet) {
@@ -318,7 +318,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 获取伸缩活动状态简要描述。
+     * Get 伸缩活动状态简要描述。 
      * @return StatusMessageSimplified 伸缩活动状态简要描述。
      */
     public String getStatusMessageSimplified() {
@@ -326,7 +326,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 设置伸缩活动状态简要描述。
+     * Set 伸缩活动状态简要描述。
      * @param StatusMessageSimplified 伸缩活动状态简要描述。
      */
     public void setStatusMessageSimplified(String StatusMessageSimplified) {
@@ -334,7 +334,7 @@ public class Activity  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Ip6RuleInfo  extends AbstractModel{
+public class Ip6RuleInfo extends AbstractModel{
 
     /**
     * IPV6端口号，可在0~65535范围取值
@@ -51,7 +51,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     private Integer Vport;
 
     /**
-     * 获取IPV6端口号，可在0~65535范围取值
+     * Get IPV6端口号，可在0~65535范围取值 
      * @return Vport6 IPV6端口号，可在0~65535范围取值
      */
     public Integer getVport6() {
@@ -59,7 +59,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置IPV6端口号，可在0~65535范围取值
+     * Set IPV6端口号，可在0~65535范围取值
      * @param Vport6 IPV6端口号，可在0~65535范围取值
      */
     public void setVport6(Integer Vport6) {
@@ -67,7 +67,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取协议类型，支持TCP/UDP
+     * Get 协议类型，支持TCP/UDP 
      * @return Protocol 协议类型，支持TCP/UDP
      */
     public String getProtocol() {
@@ -75,7 +75,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置协议类型，支持TCP/UDP
+     * Set 协议类型，支持TCP/UDP
      * @param Protocol 协议类型，支持TCP/UDP
      */
     public void setProtocol(String Protocol) {
@@ -83,7 +83,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取IPV4地址
+     * Get IPV4地址 
      * @return Vip IPV4地址
      */
     public String getVip() {
@@ -91,7 +91,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置IPV4地址
+     * Set IPV4地址
      * @param Vip IPV4地址
      */
     public void setVip(String Vip) {
@@ -99,7 +99,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 获取IPV4端口号，可在0~65535范围取值
+     * Get IPV4端口号，可在0~65535范围取值 
      * @return Vport IPV4端口号，可在0~65535范围取值
      */
     public Integer getVport() {
@@ -107,7 +107,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 设置IPV4端口号，可在0~65535范围取值
+     * Set IPV4端口号，可在0~65535范围取值
      * @param Vport IPV4端口号，可在0~65535范围取值
      */
     public void setVport(Integer Vport) {
@@ -115,7 +115,7 @@ public class Ip6RuleInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Vport6", this.Vport6);

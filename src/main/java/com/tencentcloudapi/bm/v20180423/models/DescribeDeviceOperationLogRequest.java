@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceOperationLogRequest  extends AbstractModel{
+public class DescribeDeviceOperationLogRequest extends AbstractModel{
 
     /**
     * 设备实例ID
@@ -58,7 +58,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     private Integer Limit;
 
     /**
-     * 获取设备实例ID
+     * Get 设备实例ID 
      * @return InstanceId 设备实例ID
      */
     public String getInstanceId() {
@@ -66,7 +66,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置设备实例ID
+     * Set 设备实例ID
      * @param InstanceId 设备实例ID
      */
     public void setInstanceId(String InstanceId) {
@@ -74,7 +74,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询开始日期
+     * Get 查询开始日期 
      * @return StartTime 查询开始日期
      */
     public String getStartTime() {
@@ -82,7 +82,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询开始日期
+     * Set 查询开始日期
      * @param StartTime 查询开始日期
      */
     public void setStartTime(String StartTime) {
@@ -90,7 +90,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取查询结束日期
+     * Get 查询结束日期 
      * @return EndTime 查询结束日期
      */
     public String getEndTime() {
@@ -98,7 +98,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置查询结束日期
+     * Set 查询结束日期
      * @param EndTime 查询结束日期
      */
     public void setEndTime(String EndTime) {
@@ -106,7 +106,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取偏移量
+     * Get 偏移量 
      * @return Offset 偏移量
      */
     public Integer getOffset() {
@@ -114,7 +114,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置偏移量
+     * Set 偏移量
      * @param Offset 偏移量
      */
     public void setOffset(Integer Offset) {
@@ -122,7 +122,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 获取返回数量
+     * Get 返回数量 
      * @return Limit 返回数量
      */
     public Integer getLimit() {
@@ -130,7 +130,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 设置返回数量
+     * Set 返回数量
      * @param Limit 返回数量
      */
     public void setLimit(Integer Limit) {
@@ -138,7 +138,7 @@ public class DescribeDeviceOperationLogRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);

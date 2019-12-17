@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetServiceStatusResponse  extends AbstractModel{
+public class GetServiceStatusResponse extends AbstractModel{
 
     /**
     * KMS服务是否开通， true 表示已开通
@@ -45,7 +45,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     private String RequestId;
 
     /**
-     * 获取KMS服务是否开通， true 表示已开通
+     * Get KMS服务是否开通， true 表示已开通 
      * @return ServiceEnabled KMS服务是否开通， true 表示已开通
      */
     public Boolean getServiceEnabled() {
@@ -53,7 +53,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置KMS服务是否开通， true 表示已开通
+     * Set KMS服务是否开通， true 表示已开通
      * @param ServiceEnabled KMS服务是否开通， true 表示已开通
      */
     public void setServiceEnabled(Boolean ServiceEnabled) {
@@ -61,8 +61,8 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -71,7 +71,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+     * Set 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
 注意：此字段可能返回 null，表示取不到有效值。
@@ -81,7 +81,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
@@ -89,7 +89,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
@@ -97,7 +97,7 @@ public class GetServiceStatusResponse  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);

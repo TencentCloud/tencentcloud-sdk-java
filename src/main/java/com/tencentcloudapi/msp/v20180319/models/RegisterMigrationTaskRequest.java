@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterMigrationTaskRequest  extends AbstractModel{
+public class RegisterMigrationTaskRequest extends AbstractModel{
 
     /**
     * 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
@@ -107,7 +107,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     private String DstDatabaseType;
 
     /**
-     * 获取任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
+     * Get 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移） 
      * @return TaskType 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
      */
     public String getTaskType() {
@@ -115,7 +115,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
+     * Set 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
      * @param TaskType 任务类型，取值database（数据库迁移）、file（文件迁移）、host（主机迁移）
      */
     public void setTaskType(String TaskType) {
@@ -123,7 +123,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取任务名称
+     * Get 任务名称 
      * @return TaskName 任务名称
      */
     public String getTaskName() {
@@ -131,7 +131,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置任务名称
+     * Set 任务名称
      * @param TaskName 任务名称
      */
     public void setTaskName(String TaskName) {
@@ -139,7 +139,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取服务提供商名称
+     * Get 服务提供商名称 
      * @return ServiceSupplier 服务提供商名称
      */
     public String getServiceSupplier() {
@@ -147,7 +147,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置服务提供商名称
+     * Set 服务提供商名称
      * @param ServiceSupplier 服务提供商名称
      */
     public void setServiceSupplier(String ServiceSupplier) {
@@ -155,7 +155,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务源信息
+     * Get 迁移任务源信息 
      * @return SrcInfo 迁移任务源信息
      */
     public SrcInfo getSrcInfo() {
@@ -163,7 +163,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务源信息
+     * Set 迁移任务源信息
      * @param SrcInfo 迁移任务源信息
      */
     public void setSrcInfo(SrcInfo SrcInfo) {
@@ -171,7 +171,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务目的信息
+     * Get 迁移任务目的信息 
      * @return DstInfo 迁移任务目的信息
      */
     public DstInfo getDstInfo() {
@@ -179,7 +179,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务目的信息
+     * Set 迁移任务目的信息
      * @param DstInfo 迁移任务目的信息
      */
     public void setDstInfo(DstInfo DstInfo) {
@@ -187,7 +187,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务创建时间
+     * Get 迁移任务创建时间 
      * @return CreateTime 迁移任务创建时间
      */
     public String getCreateTime() {
@@ -195,7 +195,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务创建时间
+     * Set 迁移任务创建时间
      * @param CreateTime 迁移任务创建时间
      */
     public void setCreateTime(String CreateTime) {
@@ -203,7 +203,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移任务更新时间
+     * Get 迁移任务更新时间 
      * @return UpdateTime 迁移任务更新时间
      */
     public String getUpdateTime() {
@@ -211,7 +211,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移任务更新时间
+     * Set 迁移任务更新时间
      * @param UpdateTime 迁移任务更新时间
      */
     public void setUpdateTime(String UpdateTime) {
@@ -219,7 +219,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
+     * Get 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos 
      * @return MigrateClass 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
      */
     public String getMigrateClass() {
@@ -227,7 +227,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
+     * Set 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
      * @param MigrateClass 迁移类别，如数据库迁移中mysql:mysql代表从mysql迁移到mysql，文件迁移中oss:cos代表从阿里云oss迁移到腾讯云cos
      */
     public void setMigrateClass(String MigrateClass) {
@@ -235,7 +235,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Get 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例) 
      * @return SrcAccessType 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public String getSrcAccessType() {
@@ -243,7 +243,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Set 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      * @param SrcAccessType 源实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -251,7 +251,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+     * Get 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一 
      * @return SrcDatabaseType 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      */
     public String getSrcDatabaseType() {
@@ -259,7 +259,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+     * Set 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      * @param SrcDatabaseType 源实例数据库类型，数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -267,7 +267,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Get 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例) 
      * @return DstAccessType 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public String getDstAccessType() {
@@ -275,7 +275,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
+     * Set 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      * @param DstAccessType 目标实例接入类型，数据库迁移时填写值为：extranet(外网),cvm(cvm自建实例),dcg(专线接入的实例),vpncloud(云vpn接入的实例),vpnselfbuild(自建vpn接入的实例)，cdb(云上cdb实例)
      */
     public void setDstAccessType(String DstAccessType) {
@@ -283,7 +283,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 获取目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+     * Get 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一 
      * @return DstDatabaseType 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      */
     public String getDstDatabaseType() {
@@ -291,7 +291,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 设置目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
+     * Set 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      * @param DstDatabaseType 目标实例数据库类型,数据库迁移时填写，取值为mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 之一
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -299,7 +299,7 @@ public class RegisterMigrationTaskRequest  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ActionDurationStatistic  extends AbstractModel{
+public class ActionDurationStatistic extends AbstractModel{
 
     /**
     * 时长
@@ -37,7 +37,7 @@ public class ActionDurationStatistic  extends AbstractModel{
     private String Name;
 
     /**
-     * 获取时长
+     * Get 时长 
      * @return Duration 时长
      */
     public Long getDuration() {
@@ -45,7 +45,7 @@ public class ActionDurationStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置时长
+     * Set 时长
      * @param Duration 时长
      */
     public void setDuration(Long Duration) {
@@ -53,7 +53,7 @@ public class ActionDurationStatistic  extends AbstractModel{
     }
 
     /**
-     * 获取名称
+     * Get 名称 
      * @return Name 名称
      */
     public String getName() {
@@ -61,7 +61,7 @@ public class ActionDurationStatistic  extends AbstractModel{
     }
 
     /**
-     * 设置名称
+     * Set 名称
      * @param Name 名称
      */
     public void setName(String Name) {
@@ -69,7 +69,7 @@ public class ActionDurationStatistic  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Duration", this.Duration);

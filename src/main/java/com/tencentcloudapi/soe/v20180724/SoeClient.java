@@ -29,21 +29,10 @@ public class SoeClient extends AbstractClient{
     private static String endpoint = "soe.tencentcloudapi.com";
     private static String version = "2018-07-24";
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     */
     public SoeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
 
-    /**
-     * 构造client
-     * @param credential 认证信息实例
-     * @param region	产品地域
-     * @param profile 配置实例
-     */
     public SoeClient(Credential credential, String region, ClientProfile profile) {
         super(SoeClient.endpoint, SoeClient.version, credential, region, profile);
     }

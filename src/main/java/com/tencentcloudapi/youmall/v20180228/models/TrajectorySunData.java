@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TrajectorySunData  extends AbstractModel{
+public class TrajectorySunData extends AbstractModel{
 
     /**
     * 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
@@ -44,7 +44,7 @@ public class TrajectorySunData  extends AbstractModel{
     private Integer AvgStayTime;
 
     /**
-     * 获取区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
+     * Get 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID 
      * @return Zones 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
      */
     public String getZones() {
@@ -52,7 +52,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 设置区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
+     * Set 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
      * @param Zones 区域动线，形如 x-x-x-x-x，其中 x 为区域 ID
      */
     public void setZones(String Zones) {
@@ -60,7 +60,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 获取该动线出现次数
+     * Get 该动线出现次数 
      * @return Count 该动线出现次数
      */
     public Integer getCount() {
@@ -68,7 +68,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 设置该动线出现次数
+     * Set 该动线出现次数
      * @param Count 该动线出现次数
      */
     public void setCount(Integer Count) {
@@ -76,7 +76,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 获取该动线平均停留时间（秒）
+     * Get 该动线平均停留时间（秒） 
      * @return AvgStayTime 该动线平均停留时间（秒）
      */
     public Integer getAvgStayTime() {
@@ -84,7 +84,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 设置该动线平均停留时间（秒）
+     * Set 该动线平均停留时间（秒）
      * @param AvgStayTime 该动线平均停留时间（秒）
      */
     public void setAvgStayTime(Integer AvgStayTime) {
@@ -92,7 +92,7 @@ public class TrajectorySunData  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zones", this.Zones);

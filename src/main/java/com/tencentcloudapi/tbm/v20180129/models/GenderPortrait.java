@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenderPortrait  extends AbstractModel{
+public class GenderPortrait extends AbstractModel{
 
     /**
     * 性别
@@ -37,7 +37,7 @@ public class GenderPortrait  extends AbstractModel{
     private Integer Percent;
 
     /**
-     * 获取性别
+     * Get 性别 
      * @return Gender 性别
      */
     public String getGender() {
@@ -45,7 +45,7 @@ public class GenderPortrait  extends AbstractModel{
     }
 
     /**
-     * 设置性别
+     * Set 性别
      * @param Gender 性别
      */
     public void setGender(String Gender) {
@@ -53,7 +53,7 @@ public class GenderPortrait  extends AbstractModel{
     }
 
     /**
-     * 获取百分比
+     * Get 百分比 
      * @return Percent 百分比
      */
     public Integer getPercent() {
@@ -61,7 +61,7 @@ public class GenderPortrait  extends AbstractModel{
     }
 
     /**
-     * 设置百分比
+     * Set 百分比
      * @param Percent 百分比
      */
     public void setPercent(Integer Percent) {
@@ -69,7 +69,7 @@ public class GenderPortrait  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Gender", this.Gender);

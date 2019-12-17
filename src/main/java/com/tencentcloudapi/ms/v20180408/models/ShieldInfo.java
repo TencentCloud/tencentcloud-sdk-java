@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ShieldInfo  extends AbstractModel{
+public class ShieldInfo extends AbstractModel{
 
     /**
     * 加固结果的返回码
@@ -72,7 +72,7 @@ public class ShieldInfo  extends AbstractModel{
     private String ServiceEdition;
 
     /**
-     * 获取加固结果的返回码
+     * Get 加固结果的返回码 
      * @return ShieldCode 加固结果的返回码
      */
     public Integer getShieldCode() {
@@ -80,7 +80,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固结果的返回码
+     * Set 加固结果的返回码
      * @param ShieldCode 加固结果的返回码
      */
     public void setShieldCode(Integer ShieldCode) {
@@ -88,7 +88,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后app的大小
+     * Get 加固后app的大小 
      * @return ShieldSize 加固后app的大小
      */
     public Integer getShieldSize() {
@@ -96,7 +96,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后app的大小
+     * Set 加固后app的大小
      * @param ShieldSize 加固后app的大小
      */
     public void setShieldSize(Integer ShieldSize) {
@@ -104,7 +104,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后app的md5
+     * Get 加固后app的md5 
      * @return ShieldMd5 加固后app的md5
      */
     public String getShieldMd5() {
@@ -112,7 +112,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后app的md5
+     * Set 加固后app的md5
      * @param ShieldMd5 加固后app的md5
      */
     public void setShieldMd5(String ShieldMd5) {
@@ -120,7 +120,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+     * Get 加固后的APP下载地址，该地址有效期为20分钟，请及时下载 
      * @return AppUrl 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      */
     public String getAppUrl() {
@@ -128,7 +128,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固后的APP下载地址，该地址有效期为20分钟，请及时下载
+     * Set 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      * @param AppUrl 加固后的APP下载地址，该地址有效期为20分钟，请及时下载
      */
     public void setAppUrl(String AppUrl) {
@@ -136,7 +136,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固的提交时间
+     * Get 加固的提交时间 
      * @return TaskTime 加固的提交时间
      */
     public Integer getTaskTime() {
@@ -144,7 +144,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固的提交时间
+     * Set 加固的提交时间
      * @param TaskTime 加固的提交时间
      */
     public void setTaskTime(Integer TaskTime) {
@@ -152,7 +152,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取任务唯一标识
+     * Get 任务唯一标识 
      * @return ItemId 任务唯一标识
      */
     public String getItemId() {
@@ -160,7 +160,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置任务唯一标识
+     * Set 任务唯一标识
      * @param ItemId 任务唯一标识
      */
     public void setItemId(String ItemId) {
@@ -168,7 +168,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 获取加固版本，basic基础版，professional专业版，enterprise企业版
+     * Get 加固版本，basic基础版，professional专业版，enterprise企业版 
      * @return ServiceEdition 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public String getServiceEdition() {
@@ -176,7 +176,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 设置加固版本，basic基础版，professional专业版，enterprise企业版
+     * Set 加固版本，basic基础版，professional专业版，enterprise企业版
      * @param ServiceEdition 加固版本，basic基础版，professional专业版，enterprise企业版
      */
     public void setServiceEdition(String ServiceEdition) {
@@ -184,7 +184,7 @@ public class ShieldInfo  extends AbstractModel{
     }
 
     /**
-     * 内部实现，用户禁止调用
+     * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShieldCode", this.ShieldCode);
