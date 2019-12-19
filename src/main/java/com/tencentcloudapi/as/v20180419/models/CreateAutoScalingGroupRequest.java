@@ -152,6 +152,13 @@ public class CreateAutoScalingGroupRequest extends AbstractModel{
     private ServiceSettings ServiceSettings;
 
     /**
+    * 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+    */
+    @SerializedName("Ipv6AddressCount")
+    @Expose
+    private Integer Ipv6AddressCount;
+
+    /**
      * Get 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。 
      * @return AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      */
@@ -464,6 +471,22 @@ public class CreateAutoScalingGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。 
+     * @return Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     */
+    public Integer getIpv6AddressCount() {
+        return this.Ipv6AddressCount;
+    }
+
+    /**
+     * Set 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     * @param Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     */
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
+        this.Ipv6AddressCount = Ipv6AddressCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -484,6 +507,7 @@ public class CreateAutoScalingGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
+        this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
 
     }
 }

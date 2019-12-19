@@ -51,7 +51,20 @@ public class Instance extends AbstractModel{
     private String LaunchConfigurationName;
 
     /**
-    * 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+    * 生命周期状态，取值如下：<br>
+<li>IN_SERVICE：运行中
+<li>CREATING：创建中
+<li>CREATION_FAILED：创建失败
+<li>TERMINATING：中止中
+<li>TERMINATION_FAILED：中止失败
+<li>ATTACHING：绑定中
+<li>DETACHING：解绑中
+<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>STARTING：开机中
+<li>START_FAILED：开机失败
+<li>STOPPING：关机中
+<li>STOP_FAILED：关机失败
+<li>STOPPED：已关机
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -178,16 +191,68 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等 
-     * @return LifeCycleState 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     * Get 生命周期状态，取值如下：<br>
+<li>IN_SERVICE：运行中
+<li>CREATING：创建中
+<li>CREATION_FAILED：创建失败
+<li>TERMINATING：中止中
+<li>TERMINATION_FAILED：中止失败
+<li>ATTACHING：绑定中
+<li>DETACHING：解绑中
+<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>STARTING：开机中
+<li>START_FAILED：开机失败
+<li>STOPPING：关机中
+<li>STOP_FAILED：关机失败
+<li>STOPPED：已关机 
+     * @return LifeCycleState 生命周期状态，取值如下：<br>
+<li>IN_SERVICE：运行中
+<li>CREATING：创建中
+<li>CREATION_FAILED：创建失败
+<li>TERMINATING：中止中
+<li>TERMINATION_FAILED：中止失败
+<li>ATTACHING：绑定中
+<li>DETACHING：解绑中
+<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>STARTING：开机中
+<li>START_FAILED：开机失败
+<li>STOPPING：关机中
+<li>STOP_FAILED：关机失败
+<li>STOPPED：已关机
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
-     * @param LifeCycleState 生命周期状态，取值包括IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB等
+     * Set 生命周期状态，取值如下：<br>
+<li>IN_SERVICE：运行中
+<li>CREATING：创建中
+<li>CREATION_FAILED：创建失败
+<li>TERMINATING：中止中
+<li>TERMINATION_FAILED：中止失败
+<li>ATTACHING：绑定中
+<li>DETACHING：解绑中
+<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>STARTING：开机中
+<li>START_FAILED：开机失败
+<li>STOPPING：关机中
+<li>STOP_FAILED：关机失败
+<li>STOPPED：已关机
+     * @param LifeCycleState 生命周期状态，取值如下：<br>
+<li>IN_SERVICE：运行中
+<li>CREATING：创建中
+<li>CREATION_FAILED：创建失败
+<li>TERMINATING：中止中
+<li>TERMINATION_FAILED：中止失败
+<li>ATTACHING：绑定中
+<li>DETACHING：解绑中
+<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>STARTING：开机中
+<li>START_FAILED：开机失败
+<li>STOPPING：关机中
+<li>STOP_FAILED：关机失败
+<li>STOPPED：已关机
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;

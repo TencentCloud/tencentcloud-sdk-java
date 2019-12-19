@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yunsou.v20191115.models;
+package com.tencentcloudapi.smpn.v20190822.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataManipulationResponse extends AbstractModel{
+public class DescribeSmpnFnrResponse extends AbstractModel{
 
     /**
-    * 数据操作结果
+    * 虚假号码识别回应内容
     */
-    @SerializedName("Data")
+    @SerializedName("ResponseData")
     @Expose
-    private DataManipulationResult Data;
+    private FNRResponse ResponseData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DataManipulationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 数据操作结果 
-     * @return Data 数据操作结果
+     * Get 虚假号码识别回应内容 
+     * @return ResponseData 虚假号码识别回应内容
      */
-    public DataManipulationResult getData() {
-        return this.Data;
+    public FNRResponse getResponseData() {
+        return this.ResponseData;
     }
 
     /**
-     * Set 数据操作结果
-     * @param Data 数据操作结果
+     * Set 虚假号码识别回应内容
+     * @param ResponseData 虚假号码识别回应内容
      */
-    public void setData(DataManipulationResult Data) {
-        this.Data = Data;
+    public void setResponseData(FNRResponse ResponseData) {
+        this.ResponseData = ResponseData;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DataManipulationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "ResponseData.", this.ResponseData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

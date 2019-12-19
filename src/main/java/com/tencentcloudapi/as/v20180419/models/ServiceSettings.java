@@ -30,6 +30,16 @@ public class ServiceSettings extends AbstractModel{
     private Boolean ReplaceMonitorUnhealthy;
 
     /**
+    * 取值范围： 
+CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+默认取值：CLASSIC_SCALING
+    */
+    @SerializedName("ScalingMode")
+    @Expose
+    private String ScalingMode;
+
+    /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
      * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      */
@@ -46,10 +56,39 @@ public class ServiceSettings extends AbstractModel{
     }
 
     /**
+     * Get 取值范围： 
+CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+默认取值：CLASSIC_SCALING 
+     * @return ScalingMode 取值范围： 
+CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+默认取值：CLASSIC_SCALING
+     */
+    public String getScalingMode() {
+        return this.ScalingMode;
+    }
+
+    /**
+     * Set 取值范围： 
+CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+默认取值：CLASSIC_SCALING
+     * @param ScalingMode 取值范围： 
+CLASSIC_SCALING：经典方式，使用创建、销毁实例来实现扩缩容； 
+WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实例执行开机操作，若开机后实例数仍低于期望实例数，则创建实例，缩容仍采用销毁实例的方式。用户可以使用StopAutoScalingInstances接口来关闭伸缩组内的实例。监控告警触发的扩容仍将创建实例
+默认取值：CLASSIC_SCALING
+     */
+    public void setScalingMode(String ScalingMode) {
+        this.ScalingMode = ScalingMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
+        this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
 
     }
 }

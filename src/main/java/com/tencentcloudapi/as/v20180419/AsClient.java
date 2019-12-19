@@ -841,6 +841,48 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *本接口（StartAutoScalingInstances）用于开启伸缩组内 CVM 实例。
+* 开机成功，实例转为`IN_SERVICE`状态后，会增加期望实例数，期望实例数不可超过设置的最大值
+* 本接口支持批量操作，每次请求开机实例的上限为100
+     * @param req StartAutoScalingInstancesRequest
+     * @return StartAutoScalingInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAutoScalingInstancesResponse StartAutoScalingInstances(StartAutoScalingInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartAutoScalingInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartAutoScalingInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartAutoScalingInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StopAutoScalingInstances）用于关闭伸缩组内 CVM 实例。
+* 关机方式采用`SOFT_FIRST`方式，表示在正常关闭失败后进行强制关闭
+* 关闭`IN_SERVICE`状态的实例，会减少期望实例数，期望实例数不可低于设置的最小值
+* 使用`STOP_CHARGING`选项关机，待关机的实例需要满足[关机不收费条件](https://cloud.tencent.com/document/product/213/19918)
+* 本接口支持批量操作，每次请求关机实例的上限为100
+     * @param req StopAutoScalingInstancesRequest
+     * @return StopAutoScalingInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAutoScalingInstancesResponse StopAutoScalingInstances(StopAutoScalingInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopAutoScalingInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopAutoScalingInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopAutoScalingInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（UpgradeLaunchConfiguration）用于升级启动配置。
 
 * 本接口用于升级启动配置，采用“完全覆盖”风格，无论之前参数如何，统一按照接口参数设置为新的配置。对于非必填字段，不填写则按照默认值赋值。

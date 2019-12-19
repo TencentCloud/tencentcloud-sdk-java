@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yunsou.v20191115.models;
+package com.tencentcloudapi.smpn.v20190822.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchResultSeg extends AbstractModel{
+public class EPARequest extends AbstractModel{
 
     /**
-    * 分词
+    * 电话号码
     */
-    @SerializedName("SegStr")
+    @SerializedName("PhoneNumber")
     @Expose
-    private String SegStr;
+    private String PhoneNumber;
 
     /**
-     * Get 分词 
-     * @return SegStr 分词
+    * 黄页名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+     * Get 电话号码 
+     * @return PhoneNumber 电话号码
      */
-    public String getSegStr() {
-        return this.SegStr;
+    public String getPhoneNumber() {
+        return this.PhoneNumber;
     }
 
     /**
-     * Set 分词
-     * @param SegStr 分词
+     * Set 电话号码
+     * @param PhoneNumber 电话号码
      */
-    public void setSegStr(String SegStr) {
-        this.SegStr = SegStr;
+    public void setPhoneNumber(String PhoneNumber) {
+        this.PhoneNumber = PhoneNumber;
+    }
+
+    /**
+     * Get 黄页名称 
+     * @return Name 黄页名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 黄页名称
+     * @param Name 黄页名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SegStr", this.SegStr);
+        this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

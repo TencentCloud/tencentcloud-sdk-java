@@ -51,7 +51,7 @@ public class CreatePaiInstanceRequest extends AbstractModel{
     private String [] Zones;
 
     /**
-    * VpcId。
+    * VPC ID。
     */
     @SerializedName("VpcId")
     @Expose
@@ -164,16 +164,16 @@ public class CreatePaiInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get VpcId。 
-     * @return VpcId VpcId。
+     * Get VPC ID。 
+     * @return VpcId VPC ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VpcId。
-     * @param VpcId VpcId。
+     * Set VPC ID。
+     * @param VpcId VPC ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

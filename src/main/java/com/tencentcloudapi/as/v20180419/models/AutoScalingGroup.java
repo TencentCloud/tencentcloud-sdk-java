@@ -191,6 +191,13 @@ public class AutoScalingGroup extends AbstractModel{
     private ServiceSettings ServiceSettings;
 
     /**
+    * 实例具有IPv6地址数量的配置
+    */
+    @SerializedName("Ipv6AddressCount")
+    @Expose
+    private Integer Ipv6AddressCount;
+
+    /**
      * Get 伸缩组ID 
      * @return AutoScalingGroupId 伸缩组ID
      */
@@ -575,6 +582,22 @@ public class AutoScalingGroup extends AbstractModel{
     }
 
     /**
+     * Get 实例具有IPv6地址数量的配置 
+     * @return Ipv6AddressCount 实例具有IPv6地址数量的配置
+     */
+    public Integer getIpv6AddressCount() {
+        return this.Ipv6AddressCount;
+    }
+
+    /**
+     * Set 实例具有IPv6地址数量的配置
+     * @param Ipv6AddressCount 实例具有IPv6地址数量的配置
+     */
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
+        this.Ipv6AddressCount = Ipv6AddressCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +625,7 @@ public class AutoScalingGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "InActivityStatus", this.InActivityStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
+        this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
 
     }
 }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.yunsou.v20191115.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DataSearchResponse extends AbstractModel{
+public class StartAutoScalingInstancesResponse extends AbstractModel{
 
     /**
-    * 检索结果
+    * 伸缩活动ID
     */
-    @SerializedName("Data")
+    @SerializedName("ActivityId")
     @Expose
-    private SearchResult Data;
+    private String ActivityId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DataSearchResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 检索结果 
-     * @return Data 检索结果
+     * Get 伸缩活动ID 
+     * @return ActivityId 伸缩活动ID
      */
-    public SearchResult getData() {
-        return this.Data;
+    public String getActivityId() {
+        return this.ActivityId;
     }
 
     /**
-     * Set 检索结果
-     * @param Data 检索结果
+     * Set 伸缩活动ID
+     * @param ActivityId 伸缩活动ID
      */
-    public void setData(SearchResult Data) {
-        this.Data = Data;
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class DataSearchResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
