@@ -416,6 +416,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
+     * @param req DescribeCCAlarmThresholdRequest
+     * @return DescribeCCAlarmThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(DescribeCCAlarmThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCAlarmThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCAlarmThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCCAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取CC攻击事件列表
      * @param req DescribeCCEvListRequest
      * @return DescribeCCEvListResponse
@@ -452,6 +470,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *获取CC自定义策略
+     * @param req DescribeCCSelfDefinePolicyRequest
+     * @return DescribeCCSelfDefinePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCSelfDefinePolicyResponse DescribeCCSelfDefinePolicy(DescribeCCSelfDefinePolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCSelfDefinePolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCSelfDefinePolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCCSelfDefinePolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
      * @param req DescribeCCTrendRequest
      * @return DescribeCCTrendResponse
@@ -481,6 +517,42 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCCUrlAllowResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCCUrlAllow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取高防包、高防IP、高防IP专业版、棋牌盾产品设置DDoS攻击的告警通知阈值
+     * @param req DescribeDDoSAlarmThresholdRequest
+     * @return DescribeDDoSAlarmThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAlarmThresholdResponse DescribeDDoSAlarmThreshold(DescribeDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAlarmThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAlarmThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDDoSAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取DDoS攻击源列表
+     * @param req DescribeDDoSAttackSourceRequest
+     * @return DescribeDDoSAttackSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAttackSourceResponse DescribeDDoSAttackSource(DescribeDDoSAttackSourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAttackSourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackSourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDDoSAttackSource"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1082,6 +1154,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *为高防包、高防IP、高防IP专业版、棋牌盾产品设置CC攻击的告警通知阈值
+     * @param req ModifyCCAlarmThresholdRequest
+     * @return ModifyCCAlarmThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCCAlarmThresholdResponse ModifyCCAlarmThreshold(ModifyCCAlarmThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCCAlarmThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCCAlarmThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCCAlarmThreshold"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开启或关闭CC域名防护
      * @param req ModifyCCHostProtectionRequest
      * @return ModifyCCHostProtectionResponse
@@ -1219,6 +1309,24 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSAIStatusResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyDDoSAIStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为高防包、高防IP、高防IP专业版、棋牌盾等产品设置DDoS攻击的告警通知阈值
+     * @param req ModifyDDoSAlarmThresholdRequest
+     * @return ModifyDDoSAlarmThresholdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDDoSAlarmThresholdResponse ModifyDDoSAlarmThreshold(ModifyDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDDoSAlarmThresholdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDDoSAlarmThresholdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDDoSAlarmThreshold"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

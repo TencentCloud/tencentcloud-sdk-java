@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class SendStatus extends AbstractModel{
 
     /**
-    * 发送流水号
+    * 发送流水号。
     */
     @SerializedName("SerialNo")
     @Expose
     private String SerialNo;
 
     /**
-    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135)
+    * 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
     */
     @SerializedName("Fee")
     @Expose
     private Long Fee;
 
     /**
-    * 用户Session内容
+    * 用户Session内容。
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 短信请求错误码，具体含义请参考错误码
+    * 短信请求错误码，具体含义请参考错误码。
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 短信请求错误码描述
+    * 短信请求错误码描述。
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 发送流水号 
-     * @return SerialNo 发送流水号
+     * Get 发送流水号。 
+     * @return SerialNo 发送流水号。
      */
     public String getSerialNo() {
         return this.SerialNo;
     }
 
     /**
-     * Set 发送流水号
-     * @param SerialNo 发送流水号
+     * Set 发送流水号。
+     * @param SerialNo 发送流水号。
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;
     }
 
     /**
-     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号 
-     * @return PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
+     * @return PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
-     * @param PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @param PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135) 
-     * @return Fee 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135)
+     * Get 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。 
+     * @return Fee 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
      */
     public Long getFee() {
         return this.Fee;
     }
 
     /**
-     * Set 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135)
-     * @param Fee 计费条数，计费规则请查询[计费策略](https://cloud.tencent.com/document/product/382/36135)
+     * Set 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
+     * @param Fee 计费条数，计费规则请查询 [计费策略](https://cloud.tencent.com/document/product/382/36135)。
      */
     public void setFee(Long Fee) {
         this.Fee = Fee;
     }
 
     /**
-     * Get 用户Session内容 
-     * @return SessionContext 用户Session内容
+     * Get 用户Session内容。 
+     * @return SessionContext 用户Session内容。
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 用户Session内容
-     * @param SessionContext 用户Session内容
+     * Set 用户Session内容。
+     * @param SessionContext 用户Session内容。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get 短信请求错误码，具体含义请参考错误码 
-     * @return Code 短信请求错误码，具体含义请参考错误码
+     * Get 短信请求错误码，具体含义请参考错误码。 
+     * @return Code 短信请求错误码，具体含义请参考错误码。
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 短信请求错误码，具体含义请参考错误码
-     * @param Code 短信请求错误码，具体含义请参考错误码
+     * Set 短信请求错误码，具体含义请参考错误码。
+     * @param Code 短信请求错误码，具体含义请参考错误码。
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 短信请求错误码描述 
-     * @return Message 短信请求错误码描述
+     * Get 短信请求错误码描述。 
+     * @return Message 短信请求错误码描述。
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 短信请求错误码描述
-     * @param Message 短信请求错误码描述
+     * Set 短信请求错误码描述。
+     * @param Message 短信请求错误码描述。
      */
     public void setMessage(String Message) {
         this.Message = Message;

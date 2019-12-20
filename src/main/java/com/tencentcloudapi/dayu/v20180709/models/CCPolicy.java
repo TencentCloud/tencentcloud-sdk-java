@@ -30,7 +30,7 @@ public class CCPolicy extends AbstractModel{
     private String Name;
 
     /**
-    * 匹配模式
+    * 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
     */
     @SerializedName("Smode")
     @Expose
@@ -51,7 +51,7 @@ public class CCPolicy extends AbstractModel{
     private Long Frequency;
 
     /**
-    * 执行策略模式，拦截或者验证码
+    * 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
     */
     @SerializedName("ExeMode")
     @Expose
@@ -93,14 +93,14 @@ public class CCPolicy extends AbstractModel{
     private String Protocol;
 
     /**
-    * 可选字段，表示https的CC防护域名对应的转发规则ID;
+    * 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * https的CC防护域名
+    * HTTPS的CC防护域名
     */
     @SerializedName("Domain")
     @Expose
@@ -123,16 +123,16 @@ public class CCPolicy extends AbstractModel{
     }
 
     /**
-     * Get 匹配模式 
-     * @return Smode 匹配模式
+     * Get 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)] 
+     * @return Smode 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
      */
     public String getSmode() {
         return this.Smode;
     }
 
     /**
-     * Set 匹配模式
-     * @param Smode 匹配模式
+     * Set 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
+     * @param Smode 匹配模式，取值[matching(匹配模式), speedlimit(限速模式)]
      */
     public void setSmode(String Smode) {
         this.Smode = Smode;
@@ -171,16 +171,16 @@ public class CCPolicy extends AbstractModel{
     }
 
     /**
-     * Get 执行策略模式，拦截或者验证码 
-     * @return ExeMode 执行策略模式，拦截或者验证码
+     * Get 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）] 
+     * @return ExeMode 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
      */
     public String getExeMode() {
         return this.ExeMode;
     }
 
     /**
-     * Set 执行策略模式，拦截或者验证码
-     * @param ExeMode 执行策略模式，拦截或者验证码
+     * Set 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
+     * @param ExeMode 执行策略模式，拦截或者验证码，取值[alg（验证码）, drop（拦截）]
      */
     public void setExeMode(String ExeMode) {
         this.ExeMode = ExeMode;
@@ -267,32 +267,32 @@ public class CCPolicy extends AbstractModel{
     }
 
     /**
-     * Get 可选字段，表示https的CC防护域名对应的转发规则ID; 
-     * @return RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
+     * Get 可选字段，表示HTTPS的CC防护域名对应的转发规则ID; 
+     * @return RuleId 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 可选字段，表示https的CC防护域名对应的转发规则ID;
-     * @param RuleId 可选字段，表示https的CC防护域名对应的转发规则ID;
+     * Set 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
+     * @param RuleId 可选字段，表示HTTPS的CC防护域名对应的转发规则ID;
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get https的CC防护域名 
-     * @return Domain https的CC防护域名
+     * Get HTTPS的CC防护域名 
+     * @return Domain HTTPS的CC防护域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set https的CC防护域名
-     * @param Domain https的CC防护域名
+     * Set HTTPS的CC防护域名
+     * @param Domain HTTPS的CC防护域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

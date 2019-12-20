@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatusResponse extends AbstractModel{
+public class DescribeDDoSAttackSourceResponse extends AbstractModel{
 
     /**
-    * 回复状态响应集合。
+    * 总攻击源条数
     */
-    @SerializedName("PullSmsReplyStatusSet")
+    @SerializedName("Total")
     @Expose
-    private PullSmsReplyStatus [] PullSmsReplyStatusSet;
+    private Long Total;
+
+    /**
+    * 攻击源列表
+    */
+    @SerializedName("AttackSourceList")
+    @Expose
+    private DDoSAttackSourceRecord [] AttackSourceList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class PullSmsReplyStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回复状态响应集合。 
-     * @return PullSmsReplyStatusSet 回复状态响应集合。
+     * Get 总攻击源条数 
+     * @return Total 总攻击源条数
      */
-    public PullSmsReplyStatus [] getPullSmsReplyStatusSet() {
-        return this.PullSmsReplyStatusSet;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 回复状态响应集合。
-     * @param PullSmsReplyStatusSet 回复状态响应集合。
+     * Set 总攻击源条数
+     * @param Total 总攻击源条数
      */
-    public void setPullSmsReplyStatusSet(PullSmsReplyStatus [] PullSmsReplyStatusSet) {
-        this.PullSmsReplyStatusSet = PullSmsReplyStatusSet;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 攻击源列表 
+     * @return AttackSourceList 攻击源列表
+     */
+    public DDoSAttackSourceRecord [] getAttackSourceList() {
+        return this.AttackSourceList;
+    }
+
+    /**
+     * Set 攻击源列表
+     * @param AttackSourceList 攻击源列表
+     */
+    public void setAttackSourceList(DDoSAttackSourceRecord [] AttackSourceList) {
+        this.AttackSourceList = AttackSourceList;
     }
 
     /**
@@ -72,7 +95,8 @@ public class PullSmsReplyStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PullSmsReplyStatusSet.", this.PullSmsReplyStatusSet);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "AttackSourceList.", this.AttackSourceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

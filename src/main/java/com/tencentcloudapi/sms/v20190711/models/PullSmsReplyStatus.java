@@ -23,141 +23,164 @@ import java.util.HashMap;
 public class PullSmsReplyStatus extends AbstractModel{
 
     /**
-    * 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+    * 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
     */
     @SerializedName("ExtendCode")
     @Expose
     private String ExtendCode;
 
     /**
-    * 国家（或地区）码
+    * 国家（或地区）码。
     */
     @SerializedName("NationCode")
     @Expose
     private String NationCode;
 
     /**
-    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * 短信签名
+    * 短信签名。
     */
     @SerializedName("Sign")
     @Expose
     private String Sign;
 
     /**
-    * 用户回复的内容
+    * 用户回复的内容。
     */
     @SerializedName("ReplyContent")
     @Expose
     private String ReplyContent;
 
     /**
-    * 回复时间(例如：2019-10-08 17:18:37)
+    * 回复时间（例如：2019-10-08 17:18:37）。
     */
     @SerializedName("ReplyTime")
     @Expose
     private String ReplyTime;
 
     /**
-     * Get 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773) 
-     * @return ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+    * 回复时间，UNIX 时间戳（单位：秒）。
+    */
+    @SerializedName("ReplyUnixTime")
+    @Expose
+    private Long ReplyUnixTime;
+
+    /**
+     * Get 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。 
+     * @return ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
      */
     public String getExtendCode() {
         return this.ExtendCode;
     }
 
     /**
-     * Set 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
-     * @param ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)
+     * Set 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
+     * @param ExtendCode 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773)。
      */
     public void setExtendCode(String ExtendCode) {
         this.ExtendCode = ExtendCode;
     }
 
     /**
-     * Get 国家（或地区）码 
-     * @return NationCode 国家（或地区）码
+     * Get 国家（或地区）码。 
+     * @return NationCode 国家（或地区）码。
      */
     public String getNationCode() {
         return this.NationCode;
     }
 
     /**
-     * Set 国家（或地区）码
-     * @param NationCode 国家（或地区）码
+     * Set 国家（或地区）码。
+     * @param NationCode 国家（或地区）码。
      */
     public void setNationCode(String NationCode) {
         this.NationCode = NationCode;
     }
 
     /**
-     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号 
-     * @return PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
+     * @return PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
-     * @param PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号
+     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * @param PhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get 短信签名 
-     * @return Sign 短信签名
+     * Get 短信签名。 
+     * @return Sign 短信签名。
      */
     public String getSign() {
         return this.Sign;
     }
 
     /**
-     * Set 短信签名
-     * @param Sign 短信签名
+     * Set 短信签名。
+     * @param Sign 短信签名。
      */
     public void setSign(String Sign) {
         this.Sign = Sign;
     }
 
     /**
-     * Get 用户回复的内容 
-     * @return ReplyContent 用户回复的内容
+     * Get 用户回复的内容。 
+     * @return ReplyContent 用户回复的内容。
      */
     public String getReplyContent() {
         return this.ReplyContent;
     }
 
     /**
-     * Set 用户回复的内容
-     * @param ReplyContent 用户回复的内容
+     * Set 用户回复的内容。
+     * @param ReplyContent 用户回复的内容。
      */
     public void setReplyContent(String ReplyContent) {
         this.ReplyContent = ReplyContent;
     }
 
     /**
-     * Get 回复时间(例如：2019-10-08 17:18:37) 
-     * @return ReplyTime 回复时间(例如：2019-10-08 17:18:37)
+     * Get 回复时间（例如：2019-10-08 17:18:37）。 
+     * @return ReplyTime 回复时间（例如：2019-10-08 17:18:37）。
      */
     public String getReplyTime() {
         return this.ReplyTime;
     }
 
     /**
-     * Set 回复时间(例如：2019-10-08 17:18:37)
-     * @param ReplyTime 回复时间(例如：2019-10-08 17:18:37)
+     * Set 回复时间（例如：2019-10-08 17:18:37）。
+     * @param ReplyTime 回复时间（例如：2019-10-08 17:18:37）。
      */
     public void setReplyTime(String ReplyTime) {
         this.ReplyTime = ReplyTime;
+    }
+
+    /**
+     * Get 回复时间，UNIX 时间戳（单位：秒）。 
+     * @return ReplyUnixTime 回复时间，UNIX 时间戳（单位：秒）。
+     */
+    public Long getReplyUnixTime() {
+        return this.ReplyUnixTime;
+    }
+
+    /**
+     * Set 回复时间，UNIX 时间戳（单位：秒）。
+     * @param ReplyUnixTime 回复时间，UNIX 时间戳（单位：秒）。
+     */
+    public void setReplyUnixTime(Long ReplyUnixTime) {
+        this.ReplyUnixTime = ReplyUnixTime;
     }
 
     /**
@@ -170,6 +193,7 @@ public class PullSmsReplyStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "Sign", this.Sign);
         this.setParamSimple(map, prefix + "ReplyContent", this.ReplyContent);
         this.setParamSimple(map, prefix + "ReplyTime", this.ReplyTime);
+        this.setParamSimple(map, prefix + "ReplyUnixTime", this.ReplyUnixTime);
 
     }
 }

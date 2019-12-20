@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PullSmsSendStatusResponse extends AbstractModel{
 
     /**
-    * 下发状态响应集合
+    * 下发状态响应集合。
     */
     @SerializedName("PullSmsSendStatusSet")
     @Expose
@@ -37,16 +37,16 @@ public class PullSmsSendStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 下发状态响应集合 
-     * @return PullSmsSendStatusSet 下发状态响应集合
+     * Get 下发状态响应集合。 
+     * @return PullSmsSendStatusSet 下发状态响应集合。
      */
     public PullSmsSendStatus [] getPullSmsSendStatusSet() {
         return this.PullSmsSendStatusSet;
     }
 
     /**
-     * Set 下发状态响应集合
-     * @param PullSmsSendStatusSet 下发状态响应集合
+     * Set 下发状态响应集合。
+     * @param PullSmsSendStatusSet 下发状态响应集合。
      */
     public void setPullSmsSendStatusSet(PullSmsSendStatus [] PullSmsSendStatusSet) {
         this.PullSmsSendStatusSet = PullSmsSendStatusSet;

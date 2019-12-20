@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendStatusStatisticsRequest extends AbstractModel{
 
     /**
-    * 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+    * 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
     */
     @SerializedName("StartDateTime")
     @Expose
@@ -31,46 +31,46 @@ public class SendStatusStatisticsRequest extends AbstractModel{
 
     /**
     * 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+注：EndDataTime 必须大于 StartDateTime。
     */
     @SerializedName("EndDataTime")
     @Expose
     private Long EndDataTime;
 
     /**
-    * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+    * 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
     */
     @SerializedName("SmsSdkAppid")
     @Expose
     private String SmsSdkAppid;
 
     /**
-    * 最大上限
-注：目前固定设置为0
+    * 最大上限。
+注：目前固定设置为0。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
-注：目前固定设置为0
+    * 偏移量。
+注：目前固定设置为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时 
-     * @return StartDateTime 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+     * Get 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。 
+     * @return StartDateTime 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
      */
     public Long getStartDateTime() {
         return this.StartDateTime;
     }
 
     /**
-     * Set 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
-     * @param StartDateTime 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时
+     * Set 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
+     * @param StartDateTime 拉取起始时间，yyyymmddhh 需要拉取的起始时间，精确到小时。
      */
     public void setStartDateTime(Long StartDateTime) {
         this.StartDateTime = StartDateTime;
@@ -78,9 +78,9 @@ public class SendStatusStatisticsRequest extends AbstractModel{
 
     /**
      * Get 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime 
+注：EndDataTime 必须大于 StartDateTime。 
      * @return EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+注：EndDataTime 必须大于 StartDateTime。
      */
     public Long getEndDataTime() {
         return this.EndDataTime;
@@ -88,65 +88,65 @@ public class SendStatusStatisticsRequest extends AbstractModel{
 
     /**
      * Set 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+注：EndDataTime 必须大于 StartDateTime。
      * @param EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于StartDateTime
+注：EndDataTime 必须大于 StartDateTime。
      */
     public void setEndDataTime(Long EndDataTime) {
         this.EndDataTime = EndDataTime;
     }
 
     /**
-     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
-     * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。 
+     * @return SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public String getSmsSdkAppid() {
         return this.SmsSdkAppid;
     }
 
     /**
-     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @param SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
         this.SmsSdkAppid = SmsSdkAppid;
     }
 
     /**
-     * Get 最大上限
-注：目前固定设置为0 
-     * @return Limit 最大上限
-注：目前固定设置为0
+     * Get 最大上限。
+注：目前固定设置为0。 
+     * @return Limit 最大上限。
+注：目前固定设置为0。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大上限
-注：目前固定设置为0
-     * @param Limit 最大上限
-注：目前固定设置为0
+     * Set 最大上限。
+注：目前固定设置为0。
+     * @param Limit 最大上限。
+注：目前固定设置为0。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量
-注：目前固定设置为0 
-     * @return Offset 偏移量
-注：目前固定设置为0
+     * Get 偏移量。
+注：目前固定设置为0。 
+     * @return Offset 偏移量。
+注：目前固定设置为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-注：目前固定设置为0
-     * @param Offset 偏移量
-注：目前固定设置为0
+     * Set 偏移量。
+注：目前固定设置为0。
+     * @param Offset 偏移量。
+注：目前固定设置为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

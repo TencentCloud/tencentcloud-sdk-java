@@ -31,6 +31,7 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * 视频码率。范围：100-8000。
+注意：码率必须是100的倍数。
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -174,8 +175,10 @@ baseline/main/high。默认baseline
     }
 
     /**
-     * Get 视频码率。范围：100-8000。 
+     * Get 视频码率。范围：100-8000。
+注意：码率必须是100的倍数。 
      * @return VideoBitrate 视频码率。范围：100-8000。
+注意：码率必须是100的倍数。
      */
     public Integer getVideoBitrate() {
         return this.VideoBitrate;
@@ -183,7 +186,9 @@ baseline/main/high。默认baseline
 
     /**
      * Set 视频码率。范围：100-8000。
+注意：码率必须是100的倍数。
      * @param VideoBitrate 视频码率。范围：100-8000。
+注意：码率必须是100的倍数。
      */
     public void setVideoBitrate(Integer VideoBitrate) {
         this.VideoBitrate = VideoBitrate;

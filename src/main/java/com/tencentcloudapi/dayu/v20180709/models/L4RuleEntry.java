@@ -72,7 +72,7 @@ public class L4RuleEntry extends AbstractModel{
     private Long LbType;
 
     /**
-    * 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+    * 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
     */
     @SerializedName("KeepEnable")
     @Expose
@@ -212,16 +212,16 @@ public class L4RuleEntry extends AbstractModel{
     }
 
     /**
-     * Get 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)] 
-     * @return KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Get 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]； 
+     * @return KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
      */
     public Long getKeepEnable() {
         return this.KeepEnable;
     }
 
     /**
-     * Set 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
-     * @param KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]
+     * Set 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
+     * @param KeepEnable 会话保持开关，取值[0(会话保持关闭)，1(会话保持开启)]；
      */
     public void setKeepEnable(Long KeepEnable) {
         this.KeepEnable = KeepEnable;

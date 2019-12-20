@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BindLiveDomainCertRequest extends AbstractModel{
 
     /**
-    * 证书Id。
+    * 证书Id。使用添加证书接口获取证书Id。
     */
     @SerializedName("CertId")
     @Expose
@@ -44,16 +44,16 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     private Integer Status;
 
     /**
-     * Get 证书Id。 
-     * @return CertId 证书Id。
+     * Get 证书Id。使用添加证书接口获取证书Id。 
+     * @return CertId 证书Id。使用添加证书接口获取证书Id。
      */
     public Integer getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书Id。
-     * @param CertId 证书Id。
+     * Set 证书Id。使用添加证书接口获取证书Id。
+     * @param CertId 证书Id。使用添加证书接口获取证书Id。
      */
     public void setCertId(Integer CertId) {
         this.CertId = CertId;

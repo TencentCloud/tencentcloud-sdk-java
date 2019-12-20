@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PullSmsReplyStatusResponse extends AbstractModel{
+public class ModifyCCAlarmThresholdResponse extends AbstractModel{
 
     /**
-    * 回复状态响应集合。
+    * 成功码
     */
-    @SerializedName("PullSmsReplyStatusSet")
+    @SerializedName("Success")
     @Expose
-    private PullSmsReplyStatus [] PullSmsReplyStatusSet;
+    private SuccessCode Success;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class PullSmsReplyStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回复状态响应集合。 
-     * @return PullSmsReplyStatusSet 回复状态响应集合。
+     * Get 成功码 
+     * @return Success 成功码
      */
-    public PullSmsReplyStatus [] getPullSmsReplyStatusSet() {
-        return this.PullSmsReplyStatusSet;
+    public SuccessCode getSuccess() {
+        return this.Success;
     }
 
     /**
-     * Set 回复状态响应集合。
-     * @param PullSmsReplyStatusSet 回复状态响应集合。
+     * Set 成功码
+     * @param Success 成功码
      */
-    public void setPullSmsReplyStatusSet(PullSmsReplyStatus [] PullSmsReplyStatusSet) {
-        this.PullSmsReplyStatusSet = PullSmsReplyStatusSet;
+    public void setSuccess(SuccessCode Success) {
+        this.Success = Success;
     }
 
     /**
@@ -72,7 +72,7 @@ public class PullSmsReplyStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PullSmsReplyStatusSet.", this.PullSmsReplyStatusSet);
+        this.setParamObj(map, prefix + "Success.", this.Success);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

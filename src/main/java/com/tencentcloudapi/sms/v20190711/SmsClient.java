@@ -38,7 +38,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *统计用户回执的数据
+     *统计用户回执的数据。
      * @param req CallbackStatusStatisticsRequest
      * @return CallbackStatusStatisticsResponse
      * @throws TencentCloudSDKException
@@ -56,7 +56,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *拉取短信回复状态
+     *拉取短信回复状态。
      * @param req PullSmsReplyStatusRequest
      * @return PullSmsReplyStatusResponse
      * @throws TencentCloudSDKException
@@ -74,7 +74,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *拉取单个号码短信回复状态
+     *拉取单个号码短信回复状态。
      * @param req PullSmsReplyStatusByPhoneNumberRequest
      * @return PullSmsReplyStatusByPhoneNumberResponse
      * @throws TencentCloudSDKException
@@ -92,7 +92,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *拉取短信下发状态
+     *拉取短信下发状态。
      * @param req PullSmsSendStatusRequest
      * @return PullSmsSendStatusResponse
      * @throws TencentCloudSDKException
@@ -110,7 +110,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *拉取单个号码短信下发状态
+     *拉取单个号码短信下发状态。
      * @param req PullSmsSendStatusByPhoneNumberRequest
      * @return PullSmsSendStatusByPhoneNumberResponse
      * @throws TencentCloudSDKException
@@ -148,7 +148,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *统计用户发送短信的数据
+     *统计用户发送短信的数据。
      * @param req SendStatusStatisticsRequest
      * @return SendStatusStatisticsResponse
      * @throws TencentCloudSDKException
@@ -166,7 +166,7 @@ public class SmsClient extends AbstractClient{
     }
 
     /**
-     *用户套餐包信息统计
+     *用户套餐包信息统计。
      * @param req SmsPackagesStatisticsRequest
      * @return SmsPackagesStatisticsResponse
      * @throws TencentCloudSDKException

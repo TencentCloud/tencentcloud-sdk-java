@@ -79,7 +79,7 @@ public class L7RuleEntry extends AbstractModel{
     private String RuleId;
 
     /**
-    * 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+    * 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
     */
     @SerializedName("CertType")
     @Expose
@@ -128,21 +128,21 @@ public class L7RuleEntry extends AbstractModel{
     private Long CCStatus;
 
     /**
-    * https的CC防护状态，取值[0(关闭), 1(开启)]
+    * HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
     */
     @SerializedName("CCEnable")
     @Expose
     private Long CCEnable;
 
     /**
-    * https的CC防护阈值
+    * HTTPS协议的CC防护阈值
     */
     @SerializedName("CCThreshold")
     @Expose
     private Long CCThreshold;
 
     /**
-    * https的CC防护等级
+    * HTTPS协议的CC防护等级
     */
     @SerializedName("CCLevel")
     @Expose
@@ -277,16 +277,16 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
-     * Get 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0 
-     * @return CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * Get 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0 
+     * @return CertType 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
-     * @param CertType 证书来源，当为协议为https协议时必须填，取值[2(腾讯云托管证书)]，当协议为http时也可以填0
+     * Set 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
+     * @param CertType 证书来源，当转发协议为https时必须填，取值[2(腾讯云托管证书)]，当转发协议为http时也可以填0
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
@@ -389,48 +389,48 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
-     * Get https的CC防护状态，取值[0(关闭), 1(开启)] 
-     * @return CCEnable https的CC防护状态，取值[0(关闭), 1(开启)]
+     * Get HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)] 
+     * @return CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
      */
     public Long getCCEnable() {
         return this.CCEnable;
     }
 
     /**
-     * Set https的CC防护状态，取值[0(关闭), 1(开启)]
-     * @param CCEnable https的CC防护状态，取值[0(关闭), 1(开启)]
+     * Set HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
+     * @param CCEnable HTTPS协议的CC防护状态，取值[0(关闭), 1(开启)]
      */
     public void setCCEnable(Long CCEnable) {
         this.CCEnable = CCEnable;
     }
 
     /**
-     * Get https的CC防护阈值 
-     * @return CCThreshold https的CC防护阈值
+     * Get HTTPS协议的CC防护阈值 
+     * @return CCThreshold HTTPS协议的CC防护阈值
      */
     public Long getCCThreshold() {
         return this.CCThreshold;
     }
 
     /**
-     * Set https的CC防护阈值
-     * @param CCThreshold https的CC防护阈值
+     * Set HTTPS协议的CC防护阈值
+     * @param CCThreshold HTTPS协议的CC防护阈值
      */
     public void setCCThreshold(Long CCThreshold) {
         this.CCThreshold = CCThreshold;
     }
 
     /**
-     * Get https的CC防护等级 
-     * @return CCLevel https的CC防护等级
+     * Get HTTPS协议的CC防护等级 
+     * @return CCLevel HTTPS协议的CC防护等级
      */
     public String getCCLevel() {
         return this.CCLevel;
     }
 
     /**
-     * Set https的CC防护等级
-     * @param CCLevel https的CC防护等级
+     * Set HTTPS协议的CC防护等级
+     * @param CCLevel HTTPS协议的CC防护等级
      */
     public void setCCLevel(String CCLevel) {
         this.CCLevel = CCLevel;

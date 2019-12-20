@@ -23,74 +23,74 @@ import java.util.HashMap;
 public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
-    * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+    * 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
     */
     @SerializedName("SmsSdkAppid")
     @Expose
     private String SmsSdkAppid;
 
     /**
-    * 最大上限(需要拉取的套餐包个数)
+    * 最大上限(需要拉取的套餐包个数)。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
-注：目前固定设置为0
+    * 偏移量。
+注：目前固定设置为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
-     * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。 
+     * @return SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public String getSmsSdkAppid() {
         return this.SmsSdkAppid;
     }
 
     /**
-     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @param SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
         this.SmsSdkAppid = SmsSdkAppid;
     }
 
     /**
-     * Get 最大上限(需要拉取的套餐包个数) 
-     * @return Limit 最大上限(需要拉取的套餐包个数)
+     * Get 最大上限(需要拉取的套餐包个数)。 
+     * @return Limit 最大上限(需要拉取的套餐包个数)。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 最大上限(需要拉取的套餐包个数)
-     * @param Limit 最大上限(需要拉取的套餐包个数)
+     * Set 最大上限(需要拉取的套餐包个数)。
+     * @param Limit 最大上限(需要拉取的套餐包个数)。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量
-注：目前固定设置为0 
-     * @return Offset 偏移量
-注：目前固定设置为0
+     * Get 偏移量。
+注：目前固定设置为0。 
+     * @return Offset 偏移量。
+注：目前固定设置为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-注：目前固定设置为0
-     * @param Offset 偏移量
-注：目前固定设置为0
+     * Set 偏移量。
+注：目前固定设置为0。
+     * @param Offset 偏移量。
+注：目前固定设置为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

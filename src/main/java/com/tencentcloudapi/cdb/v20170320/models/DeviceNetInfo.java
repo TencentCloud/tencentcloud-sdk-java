@@ -30,28 +30,28 @@ public class DeviceNetInfo extends AbstractModel{
     private Integer [] Conn;
 
     /**
-    * 网卡入包量
+    * 网卡入包量，单位：个/秒
     */
     @SerializedName("PackageIn")
     @Expose
     private Integer [] PackageIn;
 
     /**
-    * 网卡出包量
+    * 网卡出包量，单位：个/秒
     */
     @SerializedName("PackageOut")
     @Expose
     private Integer [] PackageOut;
 
     /**
-    * 入流量，单位：KB
+    * 入流量，单位：kbps
     */
     @SerializedName("FlowIn")
     @Expose
     private Integer [] FlowIn;
 
     /**
-    * 出流量，单位：KB
+    * 出流量，单位：kbps
     */
     @SerializedName("FlowOut")
     @Expose
@@ -74,64 +74,64 @@ public class DeviceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get 网卡入包量 
-     * @return PackageIn 网卡入包量
+     * Get 网卡入包量，单位：个/秒 
+     * @return PackageIn 网卡入包量，单位：个/秒
      */
     public Integer [] getPackageIn() {
         return this.PackageIn;
     }
 
     /**
-     * Set 网卡入包量
-     * @param PackageIn 网卡入包量
+     * Set 网卡入包量，单位：个/秒
+     * @param PackageIn 网卡入包量，单位：个/秒
      */
     public void setPackageIn(Integer [] PackageIn) {
         this.PackageIn = PackageIn;
     }
 
     /**
-     * Get 网卡出包量 
-     * @return PackageOut 网卡出包量
+     * Get 网卡出包量，单位：个/秒 
+     * @return PackageOut 网卡出包量，单位：个/秒
      */
     public Integer [] getPackageOut() {
         return this.PackageOut;
     }
 
     /**
-     * Set 网卡出包量
-     * @param PackageOut 网卡出包量
+     * Set 网卡出包量，单位：个/秒
+     * @param PackageOut 网卡出包量，单位：个/秒
      */
     public void setPackageOut(Integer [] PackageOut) {
         this.PackageOut = PackageOut;
     }
 
     /**
-     * Get 入流量，单位：KB 
-     * @return FlowIn 入流量，单位：KB
+     * Get 入流量，单位：kbps 
+     * @return FlowIn 入流量，单位：kbps
      */
     public Integer [] getFlowIn() {
         return this.FlowIn;
     }
 
     /**
-     * Set 入流量，单位：KB
-     * @param FlowIn 入流量，单位：KB
+     * Set 入流量，单位：kbps
+     * @param FlowIn 入流量，单位：kbps
      */
     public void setFlowIn(Integer [] FlowIn) {
         this.FlowIn = FlowIn;
     }
 
     /**
-     * Get 出流量，单位：KB 
-     * @return FlowOut 出流量，单位：KB
+     * Get 出流量，单位：kbps 
+     * @return FlowOut 出流量，单位：kbps
      */
     public Integer [] getFlowOut() {
         return this.FlowOut;
     }
 
     /**
-     * Set 出流量，单位：KB
-     * @param FlowOut 出流量，单位：KB
+     * Set 出流量，单位：kbps
+     * @param FlowOut 出流量，单位：kbps
      */
     public void setFlowOut(Integer [] FlowOut) {
         this.FlowOut = FlowOut;

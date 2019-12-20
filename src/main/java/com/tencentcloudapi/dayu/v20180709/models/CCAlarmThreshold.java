@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.dayu.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBackupConfigRequest extends AbstractModel{
+public class CCAlarmThreshold extends AbstractModel{
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    * CC告警阈值
     */
-    @SerializedName("InstanceId")
+    @SerializedName("AlarmThreshold")
     @Expose
-    private String InstanceId;
+    private Long AlarmThreshold;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get CC告警阈值 
+     * @return AlarmThreshold CC告警阈值
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Long getAlarmThreshold() {
+        return this.AlarmThreshold;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set CC告警阈值
+     * @param AlarmThreshold CC告警阈值
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setAlarmThreshold(Long AlarmThreshold) {
+        this.AlarmThreshold = AlarmThreshold;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AlarmThreshold", this.AlarmThreshold);
 
     }
 }

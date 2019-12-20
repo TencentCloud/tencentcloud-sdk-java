@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CallbackStatusStatisticsResponse extends AbstractModel{
 
     /**
-    * 回执数据统计响应包体
+    * 回执数据统计响应包体。
     */
     @SerializedName("CallbackStatusStatistics")
     @Expose
@@ -37,16 +37,16 @@ public class CallbackStatusStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 回执数据统计响应包体 
-     * @return CallbackStatusStatistics 回执数据统计响应包体
+     * Get 回执数据统计响应包体。 
+     * @return CallbackStatusStatistics 回执数据统计响应包体。
      */
     public CallbackStatusStatistics getCallbackStatusStatistics() {
         return this.CallbackStatusStatistics;
     }
 
     /**
-     * Set 回执数据统计响应包体
-     * @param CallbackStatusStatistics 回执数据统计响应包体
+     * Set 回执数据统计响应包体。
+     * @param CallbackStatusStatistics 回执数据统计响应包体。
      */
     public void setCallbackStatusStatistics(CallbackStatusStatistics CallbackStatusStatistics) {
         this.CallbackStatusStatistics = CallbackStatusStatistics;

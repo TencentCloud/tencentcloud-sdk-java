@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendSmsResponse extends AbstractModel{
 
     /**
-    * 短信发送状态
+    * 短信发送状态。
     */
     @SerializedName("SendStatusSet")
     @Expose
@@ -37,16 +37,16 @@ public class SendSmsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 短信发送状态 
-     * @return SendStatusSet 短信发送状态
+     * Get 短信发送状态。 
+     * @return SendStatusSet 短信发送状态。
      */
     public SendStatus [] getSendStatusSet() {
         return this.SendStatusSet;
     }
 
     /**
-     * Set 短信发送状态
-     * @param SendStatusSet 短信发送状态
+     * Set 短信发送状态。
+     * @param SendStatusSet 短信发送状态。
      */
     public void setSendStatusSet(SendStatus [] SendStatusSet) {
         this.SendStatusSet = SendStatusSet;

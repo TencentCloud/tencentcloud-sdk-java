@@ -23,22 +23,22 @@ import java.util.HashMap;
 public class PullSmsSendStatusByPhoneNumberRequest extends AbstractModel{
 
     /**
-    * 拉取起始时间，UNIX 时间戳（时间：秒）
+    * 拉取起始时间，UNIX 时间戳（时间：秒）。
     */
     @SerializedName("SendDateTime")
     @Expose
     private Long SendDateTime;
 
     /**
-    * 偏移量
-注：目前固定设置为0
+    * 偏移量。
+注：目前固定设置为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 拉取最大条数，最多 100
+    * 拉取最大条数，最多 100。
     */
     @SerializedName("Limit")
     @Expose
@@ -52,59 +52,59 @@ public class PullSmsSendStatusByPhoneNumberRequest extends AbstractModel{
     private String PhoneNumber;
 
     /**
-    * 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+    * 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
     */
     @SerializedName("SmsSdkAppid")
     @Expose
     private String SmsSdkAppid;
 
     /**
-     * Get 拉取起始时间，UNIX 时间戳（时间：秒） 
-     * @return SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
+     * Get 拉取起始时间，UNIX 时间戳（时间：秒）。 
+     * @return SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）。
      */
     public Long getSendDateTime() {
         return this.SendDateTime;
     }
 
     /**
-     * Set 拉取起始时间，UNIX 时间戳（时间：秒）
-     * @param SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）
+     * Set 拉取起始时间，UNIX 时间戳（时间：秒）。
+     * @param SendDateTime 拉取起始时间，UNIX 时间戳（时间：秒）。
      */
     public void setSendDateTime(Long SendDateTime) {
         this.SendDateTime = SendDateTime;
     }
 
     /**
-     * Get 偏移量
-注：目前固定设置为0 
-     * @return Offset 偏移量
-注：目前固定设置为0
+     * Get 偏移量。
+注：目前固定设置为0。 
+     * @return Offset 偏移量。
+注：目前固定设置为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-注：目前固定设置为0
-     * @param Offset 偏移量
-注：目前固定设置为0
+     * Set 偏移量。
+注：目前固定设置为0。
+     * @param Offset 偏移量。
+注：目前固定设置为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 拉取最大条数，最多 100 
-     * @return Limit 拉取最大条数，最多 100
+     * Get 拉取最大条数，最多 100。 
+     * @return Limit 拉取最大条数，最多 100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 拉取最大条数，最多 100
-     * @param Limit 拉取最大条数，最多 100
+     * Set 拉取最大条数，最多 100。
+     * @param Limit 拉取最大条数，最多 100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -127,16 +127,16 @@ public class PullSmsSendStatusByPhoneNumberRequest extends AbstractModel{
     }
 
     /**
-     * Get 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。 
-     * @return SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Get 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。 
+     * @return SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public String getSmsSdkAppid() {
         return this.SmsSdkAppid;
     }
 
     /**
-     * Set 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
-     * @param SmsSdkAppid 短信SdkAppid在[短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid,示例如1400006666。
+     * Set 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
+     * @param SmsSdkAppid 短信SdkAppid在 [短信控制台](https://console.cloud.tencent.com/sms/smslist) 添加应用后生成的实际SdkAppid，示例如1400006666。
      */
     public void setSmsSdkAppid(String SmsSdkAppid) {
         this.SmsSdkAppid = SmsSdkAppid;

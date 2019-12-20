@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class SendStatusStatistics extends AbstractModel{
 
     /**
-    * 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+    * 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
     */
     @SerializedName("FeeCount")
     @Expose
     private Long FeeCount;
 
     /**
-    * 短信提交量统计
+    * 短信提交量统计。
     */
     @SerializedName("RequestCount")
     @Expose
     private Long RequestCount;
 
     /**
-    * 短信提交成功量统计
+    * 短信提交成功量统计。
     */
     @SerializedName("RequestSuccessCount")
     @Expose
     private Long RequestSuccessCount;
 
     /**
-     * Get 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条 
-     * @return FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * Get 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。 
+     * @return FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
      */
     public Long getFeeCount() {
         return this.FeeCount;
     }
 
     /**
-     * Set 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
-     * @param FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条
+     * Set 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
+     * @param FeeCount 短信计费条数统计，例如提交成功量为100条，其中有20条是长短信（长度为80字）被拆分成2条，则计费条数为： ```80 * 1 + 20 * 2 = 120``` 条。
      */
     public void setFeeCount(Long FeeCount) {
         this.FeeCount = FeeCount;
     }
 
     /**
-     * Get 短信提交量统计 
-     * @return RequestCount 短信提交量统计
+     * Get 短信提交量统计。 
+     * @return RequestCount 短信提交量统计。
      */
     public Long getRequestCount() {
         return this.RequestCount;
     }
 
     /**
-     * Set 短信提交量统计
-     * @param RequestCount 短信提交量统计
+     * Set 短信提交量统计。
+     * @param RequestCount 短信提交量统计。
      */
     public void setRequestCount(Long RequestCount) {
         this.RequestCount = RequestCount;
     }
 
     /**
-     * Get 短信提交成功量统计 
-     * @return RequestSuccessCount 短信提交成功量统计
+     * Get 短信提交成功量统计。 
+     * @return RequestSuccessCount 短信提交成功量统计。
      */
     public Long getRequestSuccessCount() {
         return this.RequestSuccessCount;
     }
 
     /**
-     * Set 短信提交成功量统计
-     * @param RequestSuccessCount 短信提交成功量统计
+     * Set 短信提交成功量统计。
+     * @param RequestSuccessCount 短信提交成功量统计。
      */
     public void setRequestSuccessCount(Long RequestSuccessCount) {
         this.RequestSuccessCount = RequestSuccessCount;
