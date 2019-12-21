@@ -37,6 +37,7 @@ import java.lang.Math;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
@@ -170,7 +171,7 @@ abstract public class AbstractClient {
         // okhttp always set charset even we don't specify it,
         // to ensure signature be correct, we have to set it here as well.
         String contentType = "application/json; charset=utf-8";
-        byte[] requestPayload = jsonPayload.getBytes();
+        byte[] requestPayload = jsonPayload.getBytes(StandardCharsets.UTF_8);
         String canonicalUri = "/";
         String canonicalQueryString = "";
         String canonicalHeaders = "content-type:" + contentType + "\nhost:" + endpoint + "\n";
@@ -178,7 +179,7 @@ abstract public class AbstractClient {
 
         String hashedRequestPayload = "";
         if (this.profile.isUnsignedPayload()) {
-            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes());
+            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes(StandardCharsets.UTF_8));
         } else {
             hashedRequestPayload = Sign.sha256Hex(requestPayload);
         }
@@ -191,12 +192,12 @@ abstract public class AbstractClient {
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
         String service = endpoint.split("\\.")[0];
         String credentialScope = date + "/" + service + "/" + "tc3_request";
-        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes());
+        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
         String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
 
         String secretId = this.credential.getSecretId();
         String secretKey = this.credential.getSecretKey();
-        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(), date);
+        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
         byte[] secretService = Sign.hmac256(secretDate, service);
         byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
         String signature = DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
@@ -358,7 +359,7 @@ abstract public class AbstractClient {
             throw new TencentCloudSDKException("Request method should not be null, can only be GET or POST");
         }
         String contentType = "application/x-www-form-urlencoded";
-        byte [] requestPayload = "".getBytes();
+        byte [] requestPayload = "".getBytes(StandardCharsets.UTF_8);
         HashMap<String, String> params = new HashMap<String, String>();
         request.toMap(params, "");
         String [] binaryParams = request.getBinaryParams();
@@ -374,7 +375,7 @@ abstract public class AbstractClient {
                 throw new TencentCloudSDKException("Failed to generate multipart. because: " + e);
             }
         } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-            requestPayload = AbstractModel.toJsonString(request).getBytes();
+            requestPayload = AbstractModel.toJsonString(request).getBytes(StandardCharsets.UTF_8);
             // okhttp always set charset even we don't specify it,
             // to ensure signature be correct, we have to set it here as well.
             contentType = "application/json; charset=utf-8";
@@ -386,7 +387,7 @@ abstract public class AbstractClient {
 
         String hashedRequestPayload = "";
         if (this.profile.isUnsignedPayload()) {
-            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes());
+            hashedRequestPayload = Sign.sha256Hex("UNSIGNED-PAYLOAD".getBytes(StandardCharsets.UTF_8));
         } else {
             hashedRequestPayload = Sign.sha256Hex(requestPayload);
         }
@@ -399,12 +400,12 @@ abstract public class AbstractClient {
         String date = sdf.format(new Date(Long.valueOf(timestamp + "000")));
         String service = endpoint.split("\\.")[0];
         String credentialScope = date + "/" + service + "/" + "tc3_request";
-        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes());
+        String hashedCanonicalRequest = Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
         String stringToSign = "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
         
         String secretId = this.credential.getSecretId();
         String secretKey = this.credential.getSecretKey();
-        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(), date);
+        byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
         byte[] secretService = Sign.hmac256(secretDate, service);
         byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
         String signature = DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
@@ -450,26 +451,26 @@ abstract public class AbstractClient {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         String [] binaryParams = request.getBinaryParams();
         for (Map.Entry<String, byte []> entry : request.getMultipartRequestParams().entrySet()) {
-            baos.write("--".getBytes());
-            baos.write(boundary.getBytes());
-            baos.write("\r\n".getBytes());
-            baos.write("Content-Disposition: form-data; name=\"".getBytes());
-            baos.write(entry.getKey().getBytes());
+            baos.write("--".getBytes(StandardCharsets.UTF_8));
+            baos.write(boundary.getBytes(StandardCharsets.UTF_8));
+            baos.write("\r\n".getBytes(StandardCharsets.UTF_8));
+            baos.write("Content-Disposition: form-data; name=\"".getBytes(StandardCharsets.UTF_8));
+            baos.write(entry.getKey().getBytes(StandardCharsets.UTF_8));
             if (Arrays.asList(binaryParams).contains(entry.getKey())) {
-                baos.write("\"; filename=\"".getBytes());
-                baos.write(entry.getKey().getBytes());
-                baos.write("\"\r\n".getBytes());
+                baos.write("\"; filename=\"".getBytes(StandardCharsets.UTF_8));
+                baos.write(entry.getKey().getBytes(StandardCharsets.UTF_8));
+                baos.write("\"\r\n".getBytes(StandardCharsets.UTF_8));
             } else {
-                baos.write("\"\r\n".getBytes());
+                baos.write("\"\r\n".getBytes(StandardCharsets.UTF_8));
             }
-            baos.write("\r\n".getBytes());
+            baos.write("\r\n".getBytes(StandardCharsets.UTF_8));
             baos.write(entry.getValue());
-            baos.write("\r\n".getBytes());
+            baos.write("\r\n".getBytes(StandardCharsets.UTF_8));
         }
         if (baos.size() != 0) {
-            baos.write("--".getBytes());
-            baos.write(boundary.getBytes());
-            baos.write("--\r\n".getBytes());
+            baos.write("--".getBytes(StandardCharsets.UTF_8));
+            baos.write(boundary.getBytes(StandardCharsets.UTF_8));
+            baos.write("--\r\n".getBytes(StandardCharsets.UTF_8));
         }
         byte [] bytes = baos.toByteArray();
         baos.close();
