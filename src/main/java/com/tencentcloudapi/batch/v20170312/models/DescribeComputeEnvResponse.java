@@ -79,6 +79,13 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     private String EnvType;
 
     /**
+    * 计算环境资源类型，当前为CVM和CPM（黑石）
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +221,22 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     }
 
     /**
+     * Get 计算环境资源类型，当前为CVM和CPM（黑石） 
+     * @return ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -241,6 +264,7 @@ public class DescribeComputeEnvResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

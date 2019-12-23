@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTaskTemplatesRequest extends AbstractModel{
 
     /**
-    * 任务模板ID
+    * 任务模板ID列表，与Filters参数不能同时指定。
     */
     @SerializedName("TaskTemplateIds")
     @Expose
@@ -32,6 +32,7 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
     /**
     * 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+与TaskTemplateIds参数不能同时指定。
     */
     @SerializedName("Filters")
     @Expose
@@ -52,16 +53,16 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-     * Get 任务模板ID 
-     * @return TaskTemplateIds 任务模板ID
+     * Get 任务模板ID列表，与Filters参数不能同时指定。 
+     * @return TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
      */
     public String [] getTaskTemplateIds() {
         return this.TaskTemplateIds;
     }
 
     /**
-     * Set 任务模板ID
-     * @param TaskTemplateIds 任务模板ID
+     * Set 任务模板ID列表，与Filters参数不能同时指定。
+     * @param TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
      */
     public void setTaskTemplateIds(String [] TaskTemplateIds) {
         this.TaskTemplateIds = TaskTemplateIds;
@@ -69,9 +70,11 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
 
     /**
      * Get 过滤条件
-<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li> 
+<li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+与TaskTemplateIds参数不能同时指定。 
      * @return Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+与TaskTemplateIds参数不能同时指定。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -80,8 +83,10 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
     /**
      * Set 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+与TaskTemplateIds参数不能同时指定。
      * @param Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
+与TaskTemplateIds参数不能同时指定。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

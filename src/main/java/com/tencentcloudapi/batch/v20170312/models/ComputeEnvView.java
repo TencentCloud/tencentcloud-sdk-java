@@ -72,6 +72,13 @@ public class ComputeEnvView extends AbstractModel{
     private Integer DesiredComputeNodeCount;
 
     /**
+    * 计算环境资源类型，当前为CVM和CPM（黑石）
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
      * Get 计算环境ID 
      * @return EnvId 计算环境ID
      */
@@ -184,6 +191,22 @@ public class ComputeEnvView extends AbstractModel{
     }
 
     /**
+     * Get 计算环境资源类型，当前为CVM和CPM（黑石） 
+     * @return ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ComputeEnvView extends AbstractModel{
         this.setParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

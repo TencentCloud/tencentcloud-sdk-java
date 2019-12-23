@@ -58,7 +58,7 @@ public class EnvDataCpm extends AbstractModel{
     private Integer RaidId;
 
     /**
-    * 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+    * 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
     */
     @SerializedName("OsTypeId")
     @Expose
@@ -250,16 +250,16 @@ public class EnvDataCpm extends AbstractModel{
     }
 
     /**
-     * Get 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。 
-     * @return OsTypeId 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * Get 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。 
+     * @return OsTypeId 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
      */
     public Integer getOsTypeId() {
         return this.OsTypeId;
     }
 
     /**
-     * Set 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
-     * @param OsTypeId 部署服务器的操作系统ID。通过黑石接口[DescribeOsInfo]( https://cloud.tencent.com/document/product/386/32902)查询操作系统信息。
+     * Set 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
+     * @param OsTypeId 部署服务器的操作系统ID。通过批量计算接口DescribeCpmOsInfo查询操作系统信息。
      */
     public void setOsTypeId(Integer OsTypeId) {
         this.OsTypeId = OsTypeId;

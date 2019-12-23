@@ -256,6 +256,24 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
+     * @param req DescribeCpmOsInfoRequest
+     * @return DescribeCpmOsInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCpmOsInfoResponse DescribeCpmOsInfo(DescribeCpmOsInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCpmOsInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCpmOsInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCpmOsInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取批量计算可用区机型配置信息
      * @param req DescribeCvmZoneInstanceConfigInfosRequest
      * @return DescribeCvmZoneInstanceConfigInfosResponse

@@ -38,6 +38,60 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *将告警策略绑定到特定对象
+     * @param req BindingPolicyObjectRequest
+     * @return BindingPolicyObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindingPolicyObjectResponse BindingPolicyObject(BindingPolicyObjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindingPolicyObjectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindingPolicyObjectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindingPolicyObject"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *增加策略组
+     * @param req CreatePolicyGroupRequest
+     * @return CreatePolicyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyGroupResponse CreatePolicyGroup(CreatePolicyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePolicyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePolicyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePolicyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取平台事件列表
+     * @param req DescribeAccidentEventListRequest
+     * @return DescribeAccidentEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccidentEventListResponse DescribeAccidentEventList(DescribeAccidentEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccidentEventListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccidentEventListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccidentEventList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取基础指标详情
      * @param req DescribeBaseMetricsRequest
      * @return DescribeBaseMetricsResponse
@@ -49,6 +103,24 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBaseMetricsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBaseMetrics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *分页获取产品事件的列表
+     * @param req DescribeProductEventListRequest
+     * @return DescribeProductEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductEventListResponse DescribeProductEventList(DescribeProductEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductEventListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductEventListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProductEventList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -69,6 +141,24 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetMonitorDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetMonitorData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改告警接收人
+     * @param req ModifyAlarmReceiversRequest
+     * @return ModifyAlarmReceiversResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmReceiversResponse ModifyAlarmReceivers(ModifyAlarmReceiversRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmReceiversResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmReceiversResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAlarmReceivers"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

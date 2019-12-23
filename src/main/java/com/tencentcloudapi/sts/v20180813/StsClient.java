@@ -91,4 +91,22 @@ public class StsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *拉取API密钥列表
+     * @param req QueryApiKeyRequest
+     * @return QueryApiKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryApiKeyResponse QueryApiKey(QueryApiKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryApiKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryApiKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "QueryApiKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

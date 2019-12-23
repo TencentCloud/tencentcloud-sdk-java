@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeJobsRequest extends AbstractModel{
 
     /**
-    * 作业ID
+    * 作业ID列表，与Filters参数不能同时指定。
     */
     @SerializedName("JobIds")
     @Expose
@@ -35,6 +35,7 @@ public class DescribeJobsRequest extends AbstractModel{
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
     */
     @SerializedName("Filters")
     @Expose
@@ -55,16 +56,16 @@ public class DescribeJobsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-     * Get 作业ID 
-     * @return JobIds 作业ID
+     * Get 作业ID列表，与Filters参数不能同时指定。 
+     * @return JobIds 作业ID列表，与Filters参数不能同时指定。
      */
     public String [] getJobIds() {
         return this.JobIds;
     }
 
     /**
-     * Set 作业ID
-     * @param JobIds 作业ID
+     * Set 作业ID列表，与Filters参数不能同时指定。
+     * @param JobIds 作业ID列表，与Filters参数不能同时指定。
      */
     public void setJobIds(String [] JobIds) {
         this.JobIds = JobIds;
@@ -75,12 +76,14 @@ public class DescribeJobsRequest extends AbstractModel{
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li> 
+<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。 
      * @return Filters 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -92,11 +95,13 @@ public class DescribeJobsRequest extends AbstractModel{
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
      * @param Filters 过滤条件
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+与JobIds参数不能同时指定。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

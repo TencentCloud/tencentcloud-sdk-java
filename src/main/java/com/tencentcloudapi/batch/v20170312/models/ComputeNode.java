@@ -93,6 +93,13 @@ public class ComputeNode extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
+    * 计算环境资源类型，当前为CVM和CPM（黑石）
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
      * Get 计算节点ID 
      * @return ComputeNodeId 计算节点ID
      */
@@ -253,6 +260,22 @@ public class ComputeNode extends AbstractModel{
     }
 
     /**
+     * Get 计算环境资源类型，当前为CVM和CPM（黑石） 
+     * @return ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 计算环境资源类型，当前为CVM和CPM（黑石）
+     * @param ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class ComputeNode extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeComputeEnvsRequest extends AbstractModel{
 
     /**
-    * 计算环境ID
+    * 计算环境ID列表，与Filters参数不能同时指定。
     */
     @SerializedName("EnvIds")
     @Expose
@@ -34,6 +34,8 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+与EnvIds参数不能同时指定。
     */
     @SerializedName("Filters")
     @Expose
@@ -54,16 +56,16 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-     * Get 计算环境ID 
-     * @return EnvIds 计算环境ID
+     * Get 计算环境ID列表，与Filters参数不能同时指定。 
+     * @return EnvIds 计算环境ID列表，与Filters参数不能同时指定。
      */
     public String [] getEnvIds() {
         return this.EnvIds;
     }
 
     /**
-     * Set 计算环境ID
-     * @param EnvIds 计算环境ID
+     * Set 计算环境ID列表，与Filters参数不能同时指定。
+     * @param EnvIds 计算环境ID列表，与Filters参数不能同时指定。
      */
     public void setEnvIds(String [] EnvIds) {
         this.EnvIds = EnvIds;
@@ -73,11 +75,15 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
      * Get 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
-<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li> 
+<li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+与EnvIds参数不能同时指定。 
      * @return Filters 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+与EnvIds参数不能同时指定。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -88,10 +94,14 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+与EnvIds参数不能同时指定。
      * @param Filters 过滤条件
 <li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
 <li> env-id - String - 是否必填：否 -（过滤条件）按照计算环境ID过滤。</li>
 <li> env-name - String - 是否必填：否 -（过滤条件）按照计算环境名称过滤。</li>
+<li> resource-type - String - 是否必填：否 -（过滤条件）按照计算资源类型过滤，取值CVM或者CPM(黑石)。</li>
+与EnvIds参数不能同时指定。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
