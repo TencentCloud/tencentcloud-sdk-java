@@ -25,7 +25,8 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     /**
     * 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -51,7 +52,7 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
     */
     @SerializedName("CoordinateOrigin")
     @Expose
@@ -108,10 +109,12 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     /**
      * Get 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li> 
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li> 
      * @return Type 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public String getType() {
         return this.Type;
@@ -120,10 +123,12 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
     /**
      * Set 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      * @param Type 水印类型，可选值：
 <li>image：图片水印；</li>
-<li>text：文字水印。</li>
+<li>text：文字水印；</li>
+<li>svg：SVG 水印。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -167,13 +172,13 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。 
+默认值：TopLeft。 
      * @return CoordinateOrigin 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
@@ -185,13 +190,13 @@ public class CreateWatermarkTemplateRequest extends AbstractModel{
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
      * @param CoordinateOrigin 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角；</li>
 <li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
 <li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
 <li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
-默认值：TopLeft。目前，当 Type 为 image，该字段仅支持 TopLeft。
+默认值：TopLeft。
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;

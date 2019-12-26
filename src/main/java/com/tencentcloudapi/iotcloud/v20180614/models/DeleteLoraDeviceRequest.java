@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteLoraDeviceRequest extends AbstractModel{
 
     /**
-    * 设备所属产品id
+    * 设备所属产品ID
     */
     @SerializedName("ProductId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteLoraDeviceRequest extends AbstractModel{
     private String DeviceName;
 
     /**
-     * Get 设备所属产品id 
-     * @return ProductId 设备所属产品id
+     * Get 设备所属产品ID 
+     * @return ProductId 设备所属产品ID
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 设备所属产品id
-     * @param ProductId 设备所属产品id
+     * Set 设备所属产品ID
+     * @param ProductId 设备所属产品ID
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class PullEventsRequest extends AbstractModel{
 
     /**
+    * 保留字段，特殊用途时使用。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+     * Get 保留字段，特殊用途时使用。 
+     * @return ExtInfo 保留字段，特殊用途时使用。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 保留字段，特殊用途时使用。
+     * @param ExtInfo 保留字段，特殊用途时使用。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
 
     /**
      * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
@@ -49,6 +72,7 @@ public class PullEventsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

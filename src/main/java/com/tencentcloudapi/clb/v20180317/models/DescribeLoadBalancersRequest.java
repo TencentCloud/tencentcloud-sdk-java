@@ -87,7 +87,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer Offset;
 
     /**
-    * 返回负载均衡实例的个数，默认为 20。
+    * 返回负载均衡实例的数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -299,16 +299,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 返回负载均衡实例的个数，默认为 20。 
-     * @return Limit 返回负载均衡实例的个数，默认为 20。
+     * Get 返回负载均衡实例的数量，默认为20，最大值为100。 
+     * @return Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      */
     public Integer getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回负载均衡实例的个数，默认为 20。
-     * @param Limit 返回负载均衡实例的个数，默认为 20。
+     * Set 返回负载均衡实例的数量，默认为20，最大值为100。
+     * @param Limit 返回负载均衡实例的数量，默认为20，最大值为100。
      */
     public void setLimit(Integer Limit) {
         this.Limit = Limit;

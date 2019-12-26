@@ -53,7 +53,7 @@ public class ScanPiece extends AbstractModel{
     private ScanDetail [] ScanDetail;
 
     /**
-    * gme实时语音房间id，透传任务传入时的RoomId
+    * gme实时语音房间ID，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoomId")
@@ -61,7 +61,7 @@ public class ScanPiece extends AbstractModel{
     private String RoomId;
 
     /**
-    * gme实时语音用户id，透传任务传入时的OpenId
+    * gme实时语音用户ID，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
@@ -173,9 +173,9 @@ public class ScanPiece extends AbstractModel{
     }
 
     /**
-     * Get gme实时语音房间id，透传任务传入时的RoomId
+     * Get gme实时语音房间ID，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoomId gme实时语音房间id，透传任务传入时的RoomId
+     * @return RoomId gme实时语音房间ID，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoomId() {
@@ -183,9 +183,9 @@ public class ScanPiece extends AbstractModel{
     }
 
     /**
-     * Set gme实时语音房间id，透传任务传入时的RoomId
+     * Set gme实时语音房间ID，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoomId gme实时语音房间id，透传任务传入时的RoomId
+     * @param RoomId gme实时语音房间ID，透传任务传入时的RoomId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoomId(String RoomId) {
@@ -193,9 +193,9 @@ public class ScanPiece extends AbstractModel{
     }
 
     /**
-     * Get gme实时语音用户id，透传任务传入时的OpenId
+     * Get gme实时语音用户ID，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpenId gme实时语音用户id，透传任务传入时的OpenId
+     * @return OpenId gme实时语音用户ID，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
@@ -203,9 +203,9 @@ public class ScanPiece extends AbstractModel{
     }
 
     /**
-     * Set gme实时语音用户id，透传任务传入时的OpenId
+     * Set gme实时语音用户ID，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenId gme实时语音用户id，透传任务传入时的OpenId
+     * @param OpenId gme实时语音用户ID，透传任务传入时的OpenId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {

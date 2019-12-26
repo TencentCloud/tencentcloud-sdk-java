@@ -66,7 +66,7 @@ public class RuleInput extends AbstractModel{
     private String Scheduler;
 
     /**
-    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
     */
     @SerializedName("ForwardType")
     @Expose
@@ -80,7 +80,7 @@ public class RuleInput extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
-    * 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+    * 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
     */
     @SerializedName("Http2")
     @Expose
@@ -92,6 +92,20 @@ public class RuleInput extends AbstractModel{
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
+
+    /**
+    * TRPC被调服务器路由，ForwardType为TRPC时必填
+    */
+    @SerializedName("TrpcCallee")
+    @Expose
+    private String TrpcCallee;
+
+    /**
+    * TRPC调用服务接口，ForwardType为TRPC时必填
+    */
+    @SerializedName("TrpcFunc")
+    @Expose
+    private String TrpcFunc;
 
     /**
      * Get 转发规则的域名。长度限制为：1~80。 
@@ -194,16 +208,16 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP 
-     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC 
+     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP
-     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP
+     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
@@ -226,16 +240,16 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
-     * Get 是否开启Http2，注意，只用HTTPS域名才能开启Http2。 
-     * @return Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * Get 是否开启Http2，注意，只有HTTPS域名才能开启Http2。 
+     * @return Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
-     * @param Http2 是否开启Http2，注意，只用HTTPS域名才能开启Http2。
+     * Set 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @param Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;
@@ -258,6 +272,38 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
+     * Get TRPC被调服务器路由，ForwardType为TRPC时必填 
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     */
+    public String getTrpcCallee() {
+        return this.TrpcCallee;
+    }
+
+    /**
+     * Set TRPC被调服务器路由，ForwardType为TRPC时必填
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填
+     */
+    public void setTrpcCallee(String TrpcCallee) {
+        this.TrpcCallee = TrpcCallee;
+    }
+
+    /**
+     * Get TRPC调用服务接口，ForwardType为TRPC时必填 
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     */
+    public String getTrpcFunc() {
+        return this.TrpcFunc;
+    }
+
+    /**
+     * Set TRPC调用服务接口，ForwardType为TRPC时必填
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填
+     */
+    public void setTrpcFunc(String TrpcFunc) {
+        this.TrpcFunc = TrpcFunc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -271,6 +317,8 @@ public class RuleInput extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+        this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
 
     }
 }

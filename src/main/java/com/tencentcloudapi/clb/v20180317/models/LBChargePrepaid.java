@@ -31,7 +31,7 @@ public class LBChargePrepaid extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * 周期，表示多少个月（保留字段）
+    * 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
@@ -59,9 +59,9 @@ public class LBChargePrepaid extends AbstractModel{
     }
 
     /**
-     * Get 周期，表示多少个月（保留字段）
+     * Get 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 周期，表示多少个月（保留字段）
+     * @return Period 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Integer getPeriod() {
@@ -69,9 +69,9 @@ public class LBChargePrepaid extends AbstractModel{
     }
 
     /**
-     * Set 周期，表示多少个月（保留字段）
+     * Set 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 周期，表示多少个月（保留字段）
+     * @param Period 购买时长，单位：月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Integer Period) {

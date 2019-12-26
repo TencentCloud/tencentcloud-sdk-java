@@ -176,6 +176,14 @@ public class DescribeDeviceResponse extends AbstractModel{
     private Integer EnableState;
 
     /**
+    * 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private DeviceLabel [] Labels;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -543,6 +551,26 @@ public class DescribeDeviceResponse extends AbstractModel{
     }
 
     /**
+     * Get 设备标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceLabel [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(DeviceLabel [] Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -583,6 +611,7 @@ public class DescribeDeviceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "CertState", this.CertState);
         this.setParamSimple(map, prefix + "EnableState", this.EnableState);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

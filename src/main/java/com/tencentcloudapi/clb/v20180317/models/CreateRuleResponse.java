@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateRuleResponse extends AbstractModel{
 
     /**
+    * 创建的转发规则的唯一标识数组
+    */
+    @SerializedName("LocationIds")
+    @Expose
+    private String [] LocationIds;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 创建的转发规则的唯一标识数组 
+     * @return LocationIds 创建的转发规则的唯一标识数组
+     */
+    public String [] getLocationIds() {
+        return this.LocationIds;
+    }
+
+    /**
+     * Set 创建的转发规则的唯一标识数组
+     * @param LocationIds 创建的转发规则的唯一标识数组
+     */
+    public void setLocationIds(String [] LocationIds) {
+        this.LocationIds = LocationIds;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -49,6 +72,7 @@ public class CreateRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

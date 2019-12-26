@@ -133,6 +133,45 @@ public class RuleOutput extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 后端服务器类型
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
+    * 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroup")
+    @Expose
+    private BasicTargetGroupInfo TargetGroup;
+
+    /**
+    * WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WafDomainId")
+    @Expose
+    private String WafDomainId;
+
+    /**
+    * TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrpcCallee")
+    @Expose
+    private String TrpcCallee;
+
+    /**
+    * TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrpcFunc")
+    @Expose
+    private String TrpcFunc;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -393,6 +432,102 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
+     * Get 后端服务器类型 
+     * @return TargetType 后端服务器类型
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 后端服务器类型
+     * @param TargetType 后端服务器类型
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
+     * Get 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroup 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BasicTargetGroupInfo getTargetGroup() {
+        return this.TargetGroup;
+    }
+
+    /**
+     * Set 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroup 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroup(BasicTargetGroupInfo TargetGroup) {
+        this.TargetGroup = TargetGroup;
+    }
+
+    /**
+     * Get WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WafDomainId WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWafDomainId() {
+        return this.WafDomainId;
+    }
+
+    /**
+     * Set WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WafDomainId WAF实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWafDomainId(String WafDomainId) {
+        this.WafDomainId = WafDomainId;
+    }
+
+    /**
+     * Get TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrpcCallee() {
+        return this.TrpcCallee;
+    }
+
+    /**
+     * Set TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrpcCallee(String TrpcCallee) {
+        this.TrpcCallee = TrpcCallee;
+    }
+
+    /**
+     * Get TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrpcFunc() {
+        return this.TrpcFunc;
+    }
+
+    /**
+     * Set TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrpcFunc(String TrpcFunc) {
+        this.TrpcFunc = TrpcFunc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -411,6 +546,11 @@ public class RuleOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+        this.setParamSimple(map, prefix + "WafDomainId", this.WafDomainId);
+        this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+        this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
 
     }
 }

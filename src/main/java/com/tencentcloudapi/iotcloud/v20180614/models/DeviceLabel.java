@@ -20,60 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter extends AbstractModel{
+public class DeviceLabel extends AbstractModel{
 
     /**
-    * 过滤键的名称
+    * 标签标识
     */
-    @SerializedName("Name")
+    @SerializedName("Key")
     @Expose
-    private String Name;
+    private String Key;
 
     /**
-    * 一个或者多个过滤值
+    * 标签值
     */
-    @SerializedName("Values")
+    @SerializedName("Value")
     @Expose
-    private String [] Values;
+    private String Value;
 
     /**
-     * Get 过滤键的名称 
-     * @return Name 过滤键的名称
+     * Get 标签标识 
+     * @return Key 标签标识
      */
-    public String getName() {
-        return this.Name;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 过滤键的名称
-     * @param Name 过滤键的名称
+     * Set 标签标识
+     * @param Key 标签标识
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 一个或者多个过滤值 
-     * @return Values 一个或者多个过滤值
+     * Get 标签值 
+     * @return Value 标签值
      */
-    public String [] getValues() {
-        return this.Values;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 一个或者多个过滤值
-     * @param Values 一个或者多个过滤值
+     * Set 标签值
+     * @param Value 标签值
      */
-    public void setValues(String [] Values) {
-        this.Values = Values;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

@@ -72,6 +72,13 @@ public class CreateClusterRequest extends AbstractModel{
     private ExistedInstancesForNode [] ExistedInstancesForNode;
 
     /**
+    * CVM类型和其对应的数据盘挂载配置信息
+    */
+    @SerializedName("InstanceDataDiskMountSettings")
+    @Expose
+    private InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings;
+
+    /**
      * Get 集群容器网络配置信息 
      * @return ClusterCIDRSettings 集群容器网络配置信息
      */
@@ -184,6 +191,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get CVM类型和其对应的数据盘挂载配置信息 
+     * @return InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
+     */
+    public InstanceDataDiskMountSetting [] getInstanceDataDiskMountSettings() {
+        return this.InstanceDataDiskMountSettings;
+    }
+
+    /**
+     * Set CVM类型和其对应的数据盘挂载配置信息
+     * @param InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
+     */
+    public void setInstanceDataDiskMountSettings(InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings) {
+        this.InstanceDataDiskMountSettings = InstanceDataDiskMountSettings;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
+        this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
 
     }
 }

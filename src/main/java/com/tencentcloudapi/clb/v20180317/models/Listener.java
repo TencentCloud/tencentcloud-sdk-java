@@ -116,6 +116,22 @@ public class Listener extends AbstractModel{
     private Integer EndPort;
 
     /**
+    * 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
+    * 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroup")
+    @Expose
+    private BasicTargetGroupInfo TargetGroup;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -344,6 +360,46 @@ public class Listener extends AbstractModel{
     }
 
     /**
+     * Get 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetType 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetType 后端服务器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
+     * Get 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroup 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BasicTargetGroupInfo getTargetGroup() {
+        return this.TargetGroup;
+    }
+
+    /**
+     * Set 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroup 绑定的目标组基本信息；当监听器绑定目标组时，会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroup(BasicTargetGroupInfo TargetGroup) {
+        this.TargetGroup = TargetGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -359,6 +415,8 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "EndPort", this.EndPort);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
 
     }
 }

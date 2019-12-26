@@ -37,14 +37,14 @@ public class Task extends AbstractModel{
     private String Url;
 
     /**
-    * gme实时语音房间id，通过gme实时语音进行语音分析时输入
+    * gme实时语音房间ID，通过gme实时语音进行语音分析时输入
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * gme实时语音用户id，通过gme实时语音进行语音分析时输入
+    * gme实时语音用户ID，通过gme实时语音进行语音分析时输入
     */
     @SerializedName("OpenId")
     @Expose
@@ -83,32 +83,32 @@ public class Task extends AbstractModel{
     }
 
     /**
-     * Get gme实时语音房间id，通过gme实时语音进行语音分析时输入 
-     * @return RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * Get gme实时语音房间ID，通过gme实时语音进行语音分析时输入 
+     * @return RoomId gme实时语音房间ID，通过gme实时语音进行语音分析时输入
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set gme实时语音房间id，通过gme实时语音进行语音分析时输入
-     * @param RoomId gme实时语音房间id，通过gme实时语音进行语音分析时输入
+     * Set gme实时语音房间ID，通过gme实时语音进行语音分析时输入
+     * @param RoomId gme实时语音房间ID，通过gme实时语音进行语音分析时输入
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get gme实时语音用户id，通过gme实时语音进行语音分析时输入 
-     * @return OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * Get gme实时语音用户ID，通过gme实时语音进行语音分析时输入 
+     * @return OpenId gme实时语音用户ID，通过gme实时语音进行语音分析时输入
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set gme实时语音用户id，通过gme实时语音进行语音分析时输入
-     * @param OpenId gme实时语音用户id，通过gme实时语音进行语音分析时输入
+     * Set gme实时语音用户ID，通过gme实时语音进行语音分析时输入
+     * @param OpenId gme实时语音用户ID，通过gme实时语音进行语音分析时输入
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

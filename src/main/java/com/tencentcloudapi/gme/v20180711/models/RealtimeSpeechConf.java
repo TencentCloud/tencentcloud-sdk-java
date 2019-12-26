@@ -30,7 +30,7 @@ public class RealtimeSpeechConf extends AbstractModel{
     private String Status;
 
     /**
-    * 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+    * 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
     */
     @SerializedName("Quality")
     @Expose
@@ -53,16 +53,16 @@ public class RealtimeSpeechConf extends AbstractModel{
     }
 
     /**
-     * Get 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。 
-     * @return Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+     * Get 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。 
+     * @return Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
      */
     public String getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
-     * @param Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。 默认为普通音质。
+     * Set 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
+     * @param Quality 实时语音音质类型，取值：high-高音质，ordinary-普通音质。默认高音质。普通音质仅白名单开放，如需要普通音质，请联系腾讯云商务。
      */
     public void setQuality(String Quality) {
         this.Quality = Quality;

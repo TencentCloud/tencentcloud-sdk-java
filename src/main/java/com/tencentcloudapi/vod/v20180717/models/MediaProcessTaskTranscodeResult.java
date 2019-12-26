@@ -57,6 +57,7 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
 
     /**
     * 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -147,8 +148,10 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
     }
 
     /**
-     * Get 转码任务的输出。 
+     * Get 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Output 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaTranscodeItem getOutput() {
         return this.Output;
@@ -156,7 +159,9 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
 
     /**
      * Set 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 转码任务的输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(MediaTranscodeItem Output) {
         this.Output = Output;

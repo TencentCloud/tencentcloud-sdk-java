@@ -176,6 +176,14 @@ public class DeviceInfo extends AbstractModel{
     private Integer EnableState;
 
     /**
+    * 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private DeviceLabel [] Labels;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -536,6 +544,26 @@ public class DeviceInfo extends AbstractModel{
     }
 
     /**
+     * Get 设备标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceLabel [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 设备标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(DeviceLabel [] Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -560,6 +588,7 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "CertState", this.CertState);
         this.setParamSimple(map, prefix + "EnableState", this.EnableState);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
 
     }
 }

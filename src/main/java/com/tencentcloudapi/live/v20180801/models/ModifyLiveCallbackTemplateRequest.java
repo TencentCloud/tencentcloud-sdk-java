@@ -79,7 +79,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String PornCensorshipNotifyUrl;
 
     /**
-    * 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+    * 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -214,16 +214,16 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调key，回调URL公用，鉴权回调说明详见回调格式文档 
-     * @return CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * Get 回调key，回调URL公用，鉴权回调说明详见回调格式文档。 
+     * @return CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set 回调key，回调URL公用，鉴权回调说明详见回调格式文档
-     * @param CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档
+     * Set 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
+     * @param CallbackKey 回调key，回调URL公用，鉴权回调说明详见回调格式文档。
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;

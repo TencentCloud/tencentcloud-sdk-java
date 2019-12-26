@@ -31,7 +31,7 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 
     /**
     * 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+时间跨度在(0,4小时]，支持最近1天数据查询。
     */
     @SerializedName("EndTime")
     @Expose
@@ -93,9 +93,9 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 
     /**
      * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。 
+时间跨度在(0,4小时]，支持最近1天数据查询。 
      * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+时间跨度在(0,4小时]，支持最近1天数据查询。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -103,9 +103,9 @@ public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 
     /**
      * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+时间跨度在(0,4小时]，支持最近1天数据查询。
      * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS
-时间跨度在[0,4小时]，支持最近1天数据查询。
+时间跨度在(0,4小时]，支持最近1天数据查询。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

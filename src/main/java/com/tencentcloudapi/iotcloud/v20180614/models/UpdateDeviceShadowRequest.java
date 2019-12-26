@@ -51,6 +51,13 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
     private Integer ShadowVersion;
 
     /**
+    * 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+    */
+    @SerializedName("Prefix")
+    @Expose
+    private String Prefix;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
     }
 
     /**
+     * Get 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。 
+     * @return Prefix 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+     */
+    public String getPrefix() {
+        return this.Prefix;
+    }
+
+    /**
+     * Set 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+     * @param Prefix 下发delta消息的topic前缀，可选类型: "$shadow","$template"。不填写默认"$shadow"。
+     */
+    public void setPrefix(String Prefix) {
+        this.Prefix = Prefix;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UpdateDeviceShadowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "ShadowVersion", this.ShadowVersion);
+        this.setParamSimple(map, prefix + "Prefix", this.Prefix);
 
     }
 }

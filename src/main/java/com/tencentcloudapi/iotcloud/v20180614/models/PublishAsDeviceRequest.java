@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PublishAsDeviceRequest extends AbstractModel{
 
     /**
-    * 产品id
+    * 产品ID
     */
     @SerializedName("ProductId")
     @Expose
@@ -51,16 +51,16 @@ public class PublishAsDeviceRequest extends AbstractModel{
     private String Payload;
 
     /**
-     * Get 产品id 
-     * @return ProductId 产品id
+     * Get 产品ID 
+     * @return ProductId 产品ID
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品id
-     * @param ProductId 产品id
+     * Set 产品ID
+     * @param ProductId 产品ID
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;

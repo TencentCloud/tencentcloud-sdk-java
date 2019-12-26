@@ -46,23 +46,16 @@ public class DataDisk extends AbstractModel{
     /**
     * 是否自动化格式盘并挂载
     */
-    @SerializedName("AutuFormatAndMount")
+    @SerializedName("AutoFormatAndMount")
     @Expose
-    private Boolean AutuFormatAndMount;
+    private Boolean AutoFormatAndMount;
 
     /**
     * 挂载目录
     */
     @SerializedName("MountTarget")
     @Expose
-    private String [] MountTarget;
-
-    /**
-    * 云盘ID
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String [] DiskId;
+    private String MountTarget;
 
     /**
      * Get 云盘类型 
@@ -114,25 +107,25 @@ public class DataDisk extends AbstractModel{
 
     /**
      * Get 是否自动化格式盘并挂载 
-     * @return AutuFormatAndMount 是否自动化格式盘并挂载
+     * @return AutoFormatAndMount 是否自动化格式盘并挂载
      */
-    public Boolean getAutuFormatAndMount() {
-        return this.AutuFormatAndMount;
+    public Boolean getAutoFormatAndMount() {
+        return this.AutoFormatAndMount;
     }
 
     /**
      * Set 是否自动化格式盘并挂载
-     * @param AutuFormatAndMount 是否自动化格式盘并挂载
+     * @param AutoFormatAndMount 是否自动化格式盘并挂载
      */
-    public void setAutuFormatAndMount(Boolean AutuFormatAndMount) {
-        this.AutuFormatAndMount = AutuFormatAndMount;
+    public void setAutoFormatAndMount(Boolean AutoFormatAndMount) {
+        this.AutoFormatAndMount = AutoFormatAndMount;
     }
 
     /**
      * Get 挂载目录 
      * @return MountTarget 挂载目录
      */
-    public String [] getMountTarget() {
+    public String getMountTarget() {
         return this.MountTarget;
     }
 
@@ -140,24 +133,8 @@ public class DataDisk extends AbstractModel{
      * Set 挂载目录
      * @param MountTarget 挂载目录
      */
-    public void setMountTarget(String [] MountTarget) {
+    public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
-    }
-
-    /**
-     * Get 云盘ID 
-     * @return DiskId 云盘ID
-     */
-    public String [] getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set 云盘ID
-     * @param DiskId 云盘ID
-     */
-    public void setDiskId(String [] DiskId) {
-        this.DiskId = DiskId;
     }
 
     /**
@@ -167,9 +144,8 @@ public class DataDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
-        this.setParamSimple(map, prefix + "AutuFormatAndMount", this.AutuFormatAndMount);
-        this.setParamArraySimple(map, prefix + "MountTarget.", this.MountTarget);
-        this.setParamArraySimple(map, prefix + "DiskId.", this.DiskId);
+        this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
+        this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
 
     }
 }

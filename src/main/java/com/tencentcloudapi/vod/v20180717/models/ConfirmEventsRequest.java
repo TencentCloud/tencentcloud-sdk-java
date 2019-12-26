@@ -23,11 +23,19 @@ import java.util.HashMap;
 public class ConfirmEventsRequest extends AbstractModel{
 
     /**
-    * 事件句柄，数组长度限制：16。
+    * 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
     */
     @SerializedName("EventHandles")
     @Expose
     private String [] EventHandles;
+
+    /**
+    * 保留字段，特殊用途时使用。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
 
     /**
     * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
@@ -37,19 +45,39 @@ public class ConfirmEventsRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 事件句柄，数组长度限制：16。 
-     * @return EventHandles 事件句柄，数组长度限制：16。
+     * Get 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。 
+     * @return EventHandles 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
      */
     public String [] getEventHandles() {
         return this.EventHandles;
     }
 
     /**
-     * Set 事件句柄，数组长度限制：16。
-     * @param EventHandles 事件句柄，数组长度限制：16。
+     * Set 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
+     * @param EventHandles 事件句柄，即 [拉取事件通知](/document/product/266/33433) 接口输出参数中的 EventSet. EventHandle 字段。
+数组长度限制：16。
      */
     public void setEventHandles(String [] EventHandles) {
         this.EventHandles = EventHandles;
+    }
+
+    /**
+     * Get 保留字段，特殊用途时使用。 
+     * @return ExtInfo 保留字段，特殊用途时使用。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 保留字段，特殊用途时使用。
+     * @param ExtInfo 保留字段，特殊用途时使用。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
     }
 
     /**
@@ -73,6 +101,7 @@ public class ConfirmEventsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EventHandles.", this.EventHandles);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

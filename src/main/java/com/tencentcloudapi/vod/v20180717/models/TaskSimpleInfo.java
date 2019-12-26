@@ -69,6 +69,20 @@ public class TaskSimpleInfo extends AbstractModel{
     private String FinishTime;
 
     /**
+    * 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 来源上下文，用于透传用户请求信息。
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
      * Get 任务 ID。 
      * @return TaskId 任务 ID。
      */
@@ -193,6 +207,38 @@ public class TaskSimpleInfo extends AbstractModel{
     }
 
     /**
+     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求。 
+     * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+     * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 来源上下文，用于透传用户请求信息。 
+     * @return SessionContext 来源上下文，用于透传用户请求信息。
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set 来源上下文，用于透传用户请求信息。
+     * @param SessionContext 来源上下文，用于透传用户请求信息。
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -201,6 +247,8 @@ public class TaskSimpleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }

@@ -308,6 +308,46 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ConfigId;
 
     /**
+    * 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
+
+    /**
+    * 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExclusiveCluster")
+    @Expose
+    private ExclusiveCluster ExclusiveCluster;
+
+    /**
+    * IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPv6Mode")
+    @Expose
+    private String IPv6Mode;
+
+    /**
+    * 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
+
+    /**
+    * 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnatIps")
+    @Expose
+    private SnatIp [] SnatIps;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1016,6 +1056,106 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
+     * Get 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Get 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveCluster 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExclusiveCluster getExclusiveCluster() {
+        return this.ExclusiveCluster;
+    }
+
+    /**
+     * Set 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveCluster 内网独占集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
+        this.ExclusiveCluster = ExclusiveCluster;
+    }
+
+    /**
+     * Get IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIPv6Mode() {
+        return this.IPv6Mode;
+    }
+
+    /**
+     * Set IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPv6Mode(String IPv6Mode) {
+        this.IPv6Mode = IPv6Mode;
+    }
+
+    /**
+     * Get 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnatPro 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnatPro 是否开启SnatPro
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
+    }
+
+    /**
+     * Get 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnatIps 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SnatIp [] getSnatIps() {
+        return this.SnatIps;
+    }
+
+    /**
+     * Set 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnatIps 开启SnatPro负载均衡后，SnatIp列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnatIps(SnatIp [] SnatIps) {
+        this.SnatIps = SnatIps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1055,6 +1195,11 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
         this.setParamSimple(map, prefix + "IsDDos", this.IsDDos);
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
+        this.setParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
 
     }
 }

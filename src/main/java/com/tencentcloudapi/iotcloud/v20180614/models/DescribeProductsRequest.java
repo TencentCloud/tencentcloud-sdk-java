@@ -37,13 +37,6 @@ public class DescribeProductsRequest extends AbstractModel{
     private Integer Limit;
 
     /**
-    * 过滤条件
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
      * Get 分页偏移，Offset从0开始 
      * @return Offset 分页偏移，Offset从0开始
      */
@@ -76,28 +69,11 @@ public class DescribeProductsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件 
-     * @return Filters 过滤条件
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤条件
-     * @param Filters 过滤条件
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VoiceFilterInfo extends AbstractModel{
 
     /**
-    * 应用id
+    * 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BizId")
@@ -31,7 +31,7 @@ public class VoiceFilterInfo extends AbstractModel{
     private Long BizId;
 
     /**
-    * 文件id，表示文件唯一id
+    * 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
@@ -47,7 +47,7 @@ public class VoiceFilterInfo extends AbstractModel{
     private String FileName;
 
     /**
-    * 用户id
+    * 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
@@ -71,9 +71,9 @@ public class VoiceFilterInfo extends AbstractModel{
     private VoiceFilter [] Data;
 
     /**
-     * Get 应用id
+     * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BizId 应用id
+     * @return BizId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBizId() {
@@ -81,9 +81,9 @@ public class VoiceFilterInfo extends AbstractModel{
     }
 
     /**
-     * Set 应用id
+     * Set 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BizId 应用id
+     * @param BizId 应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBizId(Long BizId) {
@@ -91,9 +91,9 @@ public class VoiceFilterInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件id，表示文件唯一id
+     * Get 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileId 文件id，表示文件唯一id
+     * @return FileId 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileId() {
@@ -101,9 +101,9 @@ public class VoiceFilterInfo extends AbstractModel{
     }
 
     /**
-     * Set 文件id，表示文件唯一id
+     * Set 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileId 文件id，表示文件唯一id
+     * @param FileId 文件ID，表示文件唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(String FileId) {
@@ -131,9 +131,9 @@ public class VoiceFilterInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户id
+     * Get 用户ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpenId 用户id
+     * @return OpenId 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
@@ -141,9 +141,9 @@ public class VoiceFilterInfo extends AbstractModel{
     }
 
     /**
-     * Set 用户id
+     * Set 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenId 用户id
+     * @param OpenId 用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {

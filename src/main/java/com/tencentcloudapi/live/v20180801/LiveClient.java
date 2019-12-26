@@ -1024,24 +1024,6 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *查询在线推流信息列表
-     * @param req DescribeLiveStreamOnlineInfoRequest
-     * @return DescribeLiveStreamOnlineInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLiveStreamOnlineInfoResponse DescribeLiveStreamOnlineInfo(DescribeLiveStreamOnlineInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveStreamOnlineInfoResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineInfoResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveStreamOnlineInfo"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *返回正在直播中的流列表
      * @param req DescribeLiveStreamOnlineListRequest
      * @return DescribeLiveStreamOnlineListResponse
@@ -1514,7 +1496,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *修改回调模板
+     *修改回调模板。
      * @param req ModifyLiveCallbackTemplateRequest
      * @return ModifyLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException

@@ -53,7 +53,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VpcId;
 
     /**
-    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -67,7 +67,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Integer ProjectId;
 
     /**
-    * 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+    * 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
     */
     @SerializedName("AddressIPVersion")
     @Expose
@@ -94,13 +94,6 @@ OPEN：公网属性， INTERNAL：内网属性。
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
-
-    /**
-    * 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
-    */
-    @SerializedName("AnycastZone")
-    @Expose
-    private String AnycastZone;
 
     /**
     * 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
@@ -189,16 +182,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。 
-     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。 
+     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
-     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。其它情况不支持该参数。
+     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
+     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -221,16 +214,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。 
-     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * Get 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。 
+     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
-     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，IPV4 | IPV6，默认值 IPV4。
+     * Set 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
+     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPV6、IPv6FullChain，默认值 IPV4。
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
@@ -289,22 +282,6 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。 
-     * @return AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
-     */
-    public String getAnycastZone() {
-        return this.AnycastZone;
-    }
-
-    /**
-     * Set 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
-     * @param AnycastZone 仅适用于公网负载均衡。Anycast的发布域，可取 ZONE_A 或 ZONE_B。仅带宽非上移用户支持此参数。
-     */
-    public void setAnycastZone(String AnycastZone) {
-        this.AnycastZone = AnycastZone;
-    }
-
-    /**
      * Get 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。 
      * @return InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费方式，此参数仅对带宽上移用户生效。
      */
@@ -350,7 +327,6 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

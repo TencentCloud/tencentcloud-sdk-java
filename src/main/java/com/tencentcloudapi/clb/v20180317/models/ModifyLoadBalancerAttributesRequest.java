@@ -44,7 +44,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private TargetRegionInfo TargetRegionInfo;
 
     /**
-    * 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+    * 网络计费相关参数
     */
     @SerializedName("InternetChargeInfo")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。 
-     * @return InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * Get 网络计费相关参数 
+     * @return InternetChargeInfo 网络计费相关参数
      */
     public InternetAccessible getInternetChargeInfo() {
         return this.InternetChargeInfo;
     }
 
     /**
-     * Set 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
-     * @param InternetChargeInfo 网络计费相关参数，注意，目前只支持修改最大出带宽，不支持修改网络计费方式。
+     * Set 网络计费相关参数
+     * @param InternetChargeInfo 网络计费相关参数
      */
     public void setInternetChargeInfo(InternetAccessible InternetChargeInfo) {
         this.InternetChargeInfo = InternetChargeInfo;

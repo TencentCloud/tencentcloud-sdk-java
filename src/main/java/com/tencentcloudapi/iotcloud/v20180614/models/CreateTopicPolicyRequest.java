@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateTopicPolicyRequest extends AbstractModel{
 
     /**
-    * 产品自身id
+    * 产品自身ID
     */
     @SerializedName("ProductID")
     @Expose
@@ -44,23 +44,23 @@ public class CreateTopicPolicyRequest extends AbstractModel{
     private Integer Privilege;
 
     /**
-    * 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+    * 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。
     */
     @SerializedName("BrokerSubscribe")
     @Expose
     private BrokerSubscribe BrokerSubscribe;
 
     /**
-     * Get 产品自身id 
-     * @return ProductID 产品自身id
+     * Get 产品自身ID 
+     * @return ProductID 产品自身ID
      */
     public String getProductID() {
         return this.ProductID;
     }
 
     /**
-     * Set 产品自身id
-     * @param ProductID 产品自身id
+     * Set 产品自身ID
+     * @param ProductID 产品自身ID
      */
     public void setProductID(String ProductID) {
         this.ProductID = ProductID;
@@ -99,16 +99,16 @@ public class CreateTopicPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。 
-     * @return BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+     * Get 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。 
+     * @return BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。
      */
     public BrokerSubscribe getBrokerSubscribe() {
         return this.BrokerSubscribe;
     }
 
     /**
-     * Set 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
-     * @param BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的id和设备信息。
+     * Set 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。
+     * @param BrokerSubscribe 代理订阅信息，网关产品为绑定的子产品创建topic时需要填写，内容为子产品的ID和设备信息。
      */
     public void setBrokerSubscribe(BrokerSubscribe BrokerSubscribe) {
         this.BrokerSubscribe = BrokerSubscribe;

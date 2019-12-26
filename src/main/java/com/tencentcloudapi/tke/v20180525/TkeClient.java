@@ -308,6 +308,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *集群弹性伸缩配置
+     * @param req DescribeClusterAsGroupOptionRequest
+     * @return DescribeClusterAsGroupOptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOption(DescribeClusterAsGroupOptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterAsGroupOptionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterAsGroupOptionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterAsGroupOption"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *集群关联的伸缩组列表
+     * @param req DescribeClusterAsGroupsRequest
+     * @return DescribeClusterAsGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAsGroupsResponse DescribeClusterAsGroups(DescribeClusterAsGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterAsGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterAsGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterAsGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
      * @param req DescribeClusterEndpointStatusRequest
      * @return DescribeClusterEndpointStatusResponse
@@ -463,6 +499,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteTableConflicts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改集群伸缩组属性
+     * @param req ModifyClusterAsGroupAttributeRequest
+     * @return ModifyClusterAsGroupAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(ModifyClusterAsGroupAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterAsGroupAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterAsGroupAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
