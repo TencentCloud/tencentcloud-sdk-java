@@ -31,14 +31,14 @@ public class Route extends AbstractModel{
 
     /**
     * 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
+CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 SSLVPN：sslvpn网关；
 NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
+NORMAL_CVM：普通云服务器；
+EIP：云服务器的公网IP；
 CCN：云联网。
     */
     @SerializedName("GatewayType")
@@ -103,24 +103,24 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * Get 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
+CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 SSLVPN：sslvpn网关；
 NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
+NORMAL_CVM：普通云服务器；
+EIP：云服务器的公网IP；
 CCN：云联网。 
      * @return GatewayType 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
+CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 SSLVPN：sslvpn网关；
 NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
+NORMAL_CVM：普通云服务器；
+EIP：云服务器的公网IP；
 CCN：云联网。
      */
     public String getGatewayType() {
@@ -129,24 +129,24 @@ CCN：云联网。
 
     /**
      * Set 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
+CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 SSLVPN：sslvpn网关；
 NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
+NORMAL_CVM：普通云服务器；
+EIP：云服务器的公网IP；
 CCN：云联网。
      * @param GatewayType 下一跳类型，目前我们支持的类型有：
-CVM：公网网关类型的云主机；
+CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 SSLVPN：sslvpn网关；
 NAT：NAT网关; 
-NORMAL_CVM：普通云主机；
-EIP：云主机的公网IP；
+NORMAL_CVM：普通云服务器；
+EIP：云服务器的公网IP；
 CCN：云联网。
      */
     public void setGatewayType(String GatewayType) {

@@ -208,10 +208,7 @@ public class Instance extends AbstractModel{
     private String LatestOperation;
 
     /**
-    * 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+    * 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestOperationState")
@@ -655,15 +652,9 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * Get 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestOperationState 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * @return LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestOperationState() {
@@ -671,15 +662,9 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Set 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * Set 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestOperationState 实例的最新操作状态。取值范围：<br>
-<li>SUCCESS：表示操作成功<br>
-<li>OPERATING：表示操作执行中<br>
-<li>FAILED：表示操作失败
+     * @param LatestOperationState 实例的最新操作状态。取值范围：<br><li>SUCCESS：表示操作成功<br><li>OPERATING：表示操作执行中<br><li>FAILED：表示操作失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestOperationState(String LatestOperationState) {

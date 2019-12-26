@@ -652,6 +652,24 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *根据定制错误ID查询错误响应
+     * @param req DescribeDomainErrorPageInfoByIdsRequest
+     * @return DescribeDomainErrorPageInfoByIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainErrorPageInfoByIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口为内部接口，用于查询可以获取统计数据的通道组和通道信息
      * @param req DescribeGroupAndStatisticsProxyRequest
      * @return DescribeGroupAndStatisticsProxyResponse

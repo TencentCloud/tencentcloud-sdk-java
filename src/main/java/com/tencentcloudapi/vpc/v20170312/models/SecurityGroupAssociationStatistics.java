@@ -30,7 +30,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private String SecurityGroupId;
 
     /**
-    * 云主机实例数。
+    * 云服务器实例数。
     */
     @SerializedName("CVM")
     @Expose
@@ -88,16 +88,16 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
-     * Get 云主机实例数。 
-     * @return CVM 云主机实例数。
+     * Get 云服务器实例数。 
+     * @return CVM 云服务器实例数。
      */
     public Integer getCVM() {
         return this.CVM;
     }
 
     /**
-     * Set 云主机实例数。
-     * @param CVM 云主机实例数。
+     * Set 云服务器实例数。
+     * @param CVM 云服务器实例数。
      */
     public void setCVM(Integer CVM) {
         this.CVM = CVM;

@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
-
-    /**
-    * 弹性网卡配额
-    */
-    @SerializedName("EniQuantity")
-    @Expose
-    private Integer EniQuantity;
-
-    /**
-    * 每个弹性网卡可以分配的IP配额
-    */
-    @SerializedName("EniPrivateIpAddressQuantity")
-    @Expose
-    private Integer EniPrivateIpAddressQuantity;
+public class ModifyCcnRegionBandwidthLimitsTypeResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 弹性网卡配额 
-     * @return EniQuantity 弹性网卡配额
-     */
-    public Integer getEniQuantity() {
-        return this.EniQuantity;
-    }
-
-    /**
-     * Set 弹性网卡配额
-     * @param EniQuantity 弹性网卡配额
-     */
-    public void setEniQuantity(Integer EniQuantity) {
-        this.EniQuantity = EniQuantity;
-    }
-
-    /**
-     * Get 每个弹性网卡可以分配的IP配额 
-     * @return EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
-     */
-    public Integer getEniPrivateIpAddressQuantity() {
-        return this.EniPrivateIpAddressQuantity;
-    }
-
-    /**
-     * Set 每个弹性网卡可以分配的IP配额
-     * @param EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
-     */
-    public void setEniPrivateIpAddressQuantity(Integer EniPrivateIpAddressQuantity) {
-        this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -95,8 +49,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
-        this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

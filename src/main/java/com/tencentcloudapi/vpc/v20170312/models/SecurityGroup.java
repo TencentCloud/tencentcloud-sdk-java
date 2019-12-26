@@ -65,6 +65,13 @@ public class SecurityGroup extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 标签键值对。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 安全组实例ID，例如：sg-ohuuioma。 
      * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      */
@@ -161,6 +168,22 @@ public class SecurityGroup extends AbstractModel{
     }
 
     /**
+     * Get 标签键值对。 
+     * @return TagSet 标签键值对。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。
+     * @param TagSet 标签键值对。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SecurityGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

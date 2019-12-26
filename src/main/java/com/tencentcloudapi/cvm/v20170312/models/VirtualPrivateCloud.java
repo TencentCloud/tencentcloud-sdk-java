@@ -51,6 +51,13 @@ public class VirtualPrivateCloud extends AbstractModel{
     private String [] PrivateIpAddresses;
 
     /**
+    * 为弹性网卡指定随机生成的 IPv6 地址数量。
+    */
+    @SerializedName("Ipv6AddressCount")
+    @Expose
+    private Integer Ipv6AddressCount;
+
+    /**
      * Get 私有网络ID，形如`vpc-xxx`。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查询；也可以调用接口 [DescribeVpcEx](/document/api/215/1372) ，从接口返回中的`unVpcId`字段获取。若在创建子机时VpcId与SubnetId同时传入`DEFAULT`，则强制使用默认vpc网络。 
      * @return VpcId 私有网络ID，形如`vpc-xxx`。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc?rid=1)查询；也可以调用接口 [DescribeVpcEx](/document/api/215/1372) ，从接口返回中的`unVpcId`字段获取。若在创建子机时VpcId与SubnetId同时传入`DEFAULT`，则强制使用默认vpc网络。
      */
@@ -115,6 +122,22 @@ public class VirtualPrivateCloud extends AbstractModel{
     }
 
     /**
+     * Get 为弹性网卡指定随机生成的 IPv6 地址数量。 
+     * @return Ipv6AddressCount 为弹性网卡指定随机生成的 IPv6 地址数量。
+     */
+    public Integer getIpv6AddressCount() {
+        return this.Ipv6AddressCount;
+    }
+
+    /**
+     * Set 为弹性网卡指定随机生成的 IPv6 地址数量。
+     * @param Ipv6AddressCount 为弹性网卡指定随机生成的 IPv6 地址数量。
+     */
+    public void setIpv6AddressCount(Integer Ipv6AddressCount) {
+        this.Ipv6AddressCount = Ipv6AddressCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class VirtualPrivateCloud extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "AsVpcGateway", this.AsVpcGateway);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
 
     }
 }

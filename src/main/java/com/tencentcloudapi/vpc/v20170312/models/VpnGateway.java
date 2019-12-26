@@ -135,6 +135,13 @@ public class VpnGateway extends AbstractModel{
     private VpnGatewayQuota [] VpnGatewayQuotaSet;
 
     /**
+    * 网关实例版本信息
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
@@ -391,6 +398,22 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
+     * Get 网关实例版本信息 
+     * @return Version 网关实例版本信息
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 网关实例版本信息
+     * @param Version 网关实例版本信息
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class VpnGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

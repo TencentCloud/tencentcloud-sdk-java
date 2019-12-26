@@ -79,7 +79,14 @@ public class Image extends AbstractModel{
     private String Architecture;
 
     /**
-    * 镜像状态
+    * 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
     */
     @SerializedName("ImageState")
     @Expose
@@ -259,16 +266,44 @@ public class Image extends AbstractModel{
     }
 
     /**
-     * Get 镜像状态 
-     * @return ImageState 镜像状态
+     * Get 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败 
+     * @return ImageState 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
      */
     public String getImageState() {
         return this.ImageState;
     }
 
     /**
-     * Set 镜像状态
-     * @param ImageState 镜像状态
+     * Set 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
+     * @param ImageState 镜像状态:
+CREATING-创建中
+NORMAL-正常
+CREATEFAILED-创建失败
+USING-使用中
+SYNCING-同步中
+IMPORTING-导入中
+IMPORTFAILED-导入失败
      */
     public void setImageState(String ImageState) {
         this.ImageState = ImageState;

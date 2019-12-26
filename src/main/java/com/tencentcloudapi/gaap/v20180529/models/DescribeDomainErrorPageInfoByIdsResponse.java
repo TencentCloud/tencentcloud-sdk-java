@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
+public class DescribeDomainErrorPageInfoByIdsResponse extends AbstractModel{
 
     /**
-    * 弹性网卡配额
+    * 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("EniQuantity")
+    @SerializedName("ErrorPageSet")
     @Expose
-    private Integer EniQuantity;
-
-    /**
-    * 每个弹性网卡可以分配的IP配额
-    */
-    @SerializedName("EniPrivateIpAddressQuantity")
-    @Expose
-    private Integer EniPrivateIpAddressQuantity;
+    private DomainErrorPageInfo [] ErrorPageSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 弹性网卡配额 
-     * @return EniQuantity 弹性网卡配额
+     * Get 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorPageSet 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Integer getEniQuantity() {
-        return this.EniQuantity;
+    public DomainErrorPageInfo [] getErrorPageSet() {
+        return this.ErrorPageSet;
     }
 
     /**
-     * Set 弹性网卡配额
-     * @param EniQuantity 弹性网卡配额
+     * Set 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorPageSet 定制错误响应配置集
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEniQuantity(Integer EniQuantity) {
-        this.EniQuantity = EniQuantity;
-    }
-
-    /**
-     * Get 每个弹性网卡可以分配的IP配额 
-     * @return EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
-     */
-    public Integer getEniPrivateIpAddressQuantity() {
-        return this.EniPrivateIpAddressQuantity;
-    }
-
-    /**
-     * Set 每个弹性网卡可以分配的IP配额
-     * @param EniPrivateIpAddressQuantity 每个弹性网卡可以分配的IP配额
-     */
-    public void setEniPrivateIpAddressQuantity(Integer EniPrivateIpAddressQuantity) {
-        this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;
+    public void setErrorPageSet(DomainErrorPageInfo [] ErrorPageSet) {
+        this.ErrorPageSet = ErrorPageSet;
     }
 
     /**
@@ -95,8 +77,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
-        this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
+        this.setParamArrayObj(map, prefix + "ErrorPageSet.", this.ErrorPageSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

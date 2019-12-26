@@ -95,6 +95,13 @@ public class HaVip extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * 使用havip的业务标识。
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
      * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
      * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      */
@@ -263,6 +270,22 @@ public class HaVip extends AbstractModel{
     }
 
     /**
+     * Get 使用havip的业务标识。 
+     * @return Business 使用havip的业务标识。
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set 使用havip的业务标识。
+     * @param Business 使用havip的业务标识。
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ public class HaVip extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressIp", this.AddressIp);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }
