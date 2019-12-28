@@ -30,112 +30,102 @@ import java.util.concurrent.TimeUnit;
 import java.io.IOException;
 import java.net.Proxy;;
 
-/**
- * http连接类
- */
 public class HttpConnection {
-	
-	private OkHttpClient client;
-	
-    public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
-    	this.client = new OkHttpClient();
-    	this.client.setConnectTimeout(connTimeout, TimeUnit.SECONDS);
-    	this.client.setReadTimeout(readTimeout, TimeUnit.SECONDS);
-    	this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
-    }
-    
-    public void setProxy(Proxy proxy) {
-        this.client.setProxy(proxy);
-    }
-    
-    public void setAuthenticator(Authenticator authenticator) {
-        this.client.setAuthenticator(authenticator);
-    }
-    
-    public Response doRequest(Request request) throws TencentCloudSDKException {
-    	Response response = null;
-    	try {
-    		response = this.client.newCall(request).execute();
-    	} catch (IOException e) {
-    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-    	}
-    	return response;
-    }
-    
-    public Response getRequest(String url) throws TencentCloudSDKException {
-    	Request request = null;
-    	try {
-        	request = new Request.Builder()
-        			.url(url)
-        			.get()
-        			.build();
-    	} catch (IllegalArgumentException e) {
-    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-    	}
 
-    	return this.doRequest(request); 	
-    }
-    
-    public Response getRequest(String url, Headers headers) throws TencentCloudSDKException {
-        Request request = null;
-        try {
-            request = new Request.Builder()
-                    .url(url)
-                    .headers(headers)
-                    .get()
-                    .build();
-        } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
+  private OkHttpClient client;
 
-        return this.doRequest(request); 
-    }
-    
-    public Response postRequest(String url, String body) throws TencentCloudSDKException {   
-    	MediaType contentType = MediaType.parse("application/x-www-form-urlencoded");
-    	Request request = null;
-    	try {
-    		request = new Request.Builder()
-                    .url(url)
-                    .post(RequestBody.create(contentType, body))
-                    .build();
-    	} catch (IllegalArgumentException e) {
-    		throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-    	}
+  public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
+    this.client = new OkHttpClient();
+    this.client.setConnectTimeout(connTimeout, TimeUnit.SECONDS);
+    this.client.setReadTimeout(readTimeout, TimeUnit.SECONDS);
+    this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
+  }
 
-        return this.doRequest(request);   		
+  public void setProxy(Proxy proxy) {
+    this.client.setProxy(proxy);
+  }
+
+  public void setAuthenticator(Authenticator authenticator) {
+    this.client.setAuthenticator(authenticator);
+  }
+
+  public Response doRequest(Request request) throws TencentCloudSDKException {
+    Response response = null;
+    try {
+      response = this.client.newCall(request).execute();
+    } catch (IOException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+    }
+    return response;
+  }
+
+  public Response getRequest(String url) throws TencentCloudSDKException {
+    Request request = null;
+    try {
+      request = new Request.Builder().url(url).get().build();
+    } catch (IllegalArgumentException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
 
-    public Response postRequest(String url, String body, Headers headers) throws TencentCloudSDKException {   
-        MediaType contentType = MediaType.parse(headers.get("Content-Type"));
-        Request request = null;
-        try {
-            request = new Request.Builder()
-                    .url(url)
-                    .post(RequestBody.create(contentType, body))
-                    .headers(headers)
-                    .build();
-        } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
+    return this.doRequest(request);
+  }
 
-        return this.doRequest(request);         
+  public Response getRequest(String url, Headers headers) throws TencentCloudSDKException {
+    Request request = null;
+    try {
+      request = new Request.Builder().url(url).headers(headers).get().build();
+    } catch (IllegalArgumentException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
 
-    public Response postRequest(String url, byte [] body, Headers headers) throws TencentCloudSDKException {
-        MediaType contentType = MediaType.parse(headers.get("Content-Type"));
-        Request request = null;
-        try {
-            request = new Request.Builder()
-                    .url(url)
-                    .post(RequestBody.create(contentType, body))
-                    .headers(headers)
-                    .build();
-        } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
+    return this.doRequest(request);
+  }
 
-        return this.doRequest(request);
+  public Response postRequest(String url, String body) throws TencentCloudSDKException {
+    MediaType contentType = MediaType.parse("application/x-www-form-urlencoded");
+    Request request = null;
+    try {
+      request = new Request.Builder().url(url).post(RequestBody.create(contentType, body)).build();
+    } catch (IllegalArgumentException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
+
+    return this.doRequest(request);
+  }
+
+  public Response postRequest(String url, String body, Headers headers)
+      throws TencentCloudSDKException {
+    MediaType contentType = MediaType.parse(headers.get("Content-Type"));
+    Request request = null;
+    try {
+      request =
+          new Request.Builder()
+              .url(url)
+              .post(RequestBody.create(contentType, body))
+              .headers(headers)
+              .build();
+    } catch (IllegalArgumentException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+    }
+
+    return this.doRequest(request);
+  }
+
+  public Response postRequest(String url, byte[] body, Headers headers)
+      throws TencentCloudSDKException {
+    MediaType contentType = MediaType.parse(headers.get("Content-Type"));
+    Request request = null;
+    try {
+      request =
+          new Request.Builder()
+              .url(url)
+              .post(RequestBody.create(contentType, body))
+              .headers(headers)
+              .build();
+    } catch (IllegalArgumentException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+    }
+
+    return this.doRequest(request);
+  }
 }
-

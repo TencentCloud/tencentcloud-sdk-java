@@ -18,90 +18,56 @@
 package com.tencentcloudapi.common;
 
 /**
- * 认证相关信息类
+ * Credential has many types in Tencent Cloud Access Management service.
+ *
+ * <p>We mainly use two of them:
+ *
+ * <p>Permanent credential: SecretId & SecretKey, can only be obtained from Tencent Cloud Management
+ * Console, https://console.cloud.tencent.com/cam/capi.
+ *
+ * <p>Ephemeral credential, can be obtained from Security Token Service (STS), has three dimensions:
+ * SecretId, SecretKey and Token. It will expire after a short time, hence you need to invoke STS
+ * API to refresh it.
  */
 public class Credential {
-	
-	/**
-	 * secretId,在控制台申请
-	 */
-	private String secretId;
-	
-	/**
-	 * secretKey,在控制台申请
-	 */
-	private String secretKey;
-	
-	/**
-	 * token
-	 */
-	private String token;
-	
-	/**
-	 * @param secretId 在控制台申请
-	 * @param secretKey 在控制台申请
-	 */
-	public Credential(String secretId, String secretKey) {
-		this(secretId, secretKey, "");
-	}
-	
-	/**
-	 * @param secretId 在控制台申请
-	 * @param secretKey 在控制台申请
-	 * @param token
-	 */
-	public Credential(String secretId, String secretKey, String token) {
-		this.secretId = secretId;
-		this.secretKey = secretKey;
-		this.token = token;
-	}
-	
-	/**
-	 * 设置secretId
-	 * @param secretId
-	 */
-	public void setSecretId(String secretId) {
-		this.secretId = secretId;
-	}
-	
-	/**
-	 * 设置secretKey
-	 * @param secretKey
-	 */
-	public void setSecretKey(String secretKey) {
-		this.secretKey = secretKey;
-	}
-	
-	/**
-	 * 设置token
-	 * @param token
-	 */
-	public void setToken(String token) {
-		this.token = token;
-	}
-	
-	/**
-	 * 获取secretId
-	 * @return secretId
-	 */
-	public String getSecretId() {
-		return this.secretId;
-	}
-	
-	/**
-	 * 获取secretKey
-	 * @return secretKey
-	 */
-	public String getSecretKey() {
-		return this.secretKey;
-	}
-	
-	/**
-	 * 获取token
-	 * @return token
-	 */
-	public String getToken() {
-		return this.token;
-	}
-	
+
+  private String secretId;
+
+  private String secretKey;
+
+  private String token;
+
+  public Credential(String secretId, String secretKey) {
+    this(secretId, secretKey, "");
+  }
+
+  public Credential(String secretId, String secretKey, String token) {
+    this.secretId = secretId;
+    this.secretKey = secretKey;
+    this.token = token;
+  }
+
+  public void setSecretId(String secretId) {
+    this.secretId = secretId;
+  }
+
+  public void setSecretKey(String secretKey) {
+    this.secretKey = secretKey;
+  }
+
+  public void setToken(String token) {
+    this.token = token;
+  }
+
+  public String getSecretId() {
+    return this.secretId;
+  }
+
+  public String getSecretKey() {
+    return this.secretKey;
+  }
+
+  public String getToken() {
+    return this.token;
+  }
 }

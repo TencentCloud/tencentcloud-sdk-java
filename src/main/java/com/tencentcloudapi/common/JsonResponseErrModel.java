@@ -16,32 +16,26 @@
  */
 
 package com.tencentcloudapi.common;
+
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 
-/**
- * api 报错response类，用以格式化接收失败的http response
- * @author Administrator
- *
- */
 public class JsonResponseErrModel {
-	
-	@SerializedName("RequestId")
-	@Expose
-	public String requestId;
-	
-	@SerializedName("Error")
-	@Expose
-	public ErrorInfo error;
-	
-	class ErrorInfo {
-		@SerializedName("Code")
-		@Expose
-		public String code;
-		
-		@Expose
-		@SerializedName("Message")
-		public String message;
-	}
-}
+  @SerializedName("RequestId")
+  @Expose
+  public String requestId;
 
+  @SerializedName("Error")
+  @Expose
+  public ErrorInfo error;
+
+  class ErrorInfo {
+    @SerializedName("Code")
+    @Expose
+    public String code;
+
+    @Expose
+    @SerializedName("Message")
+    public String message;
+  }
+}

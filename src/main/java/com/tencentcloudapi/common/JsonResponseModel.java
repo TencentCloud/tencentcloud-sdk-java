@@ -16,16 +16,12 @@
  */
 
 package com.tencentcloudapi.common;
+
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 
-/**
- * api response类，用以格式化接收http response
- * @param <T> 具体对应的response类
- */
-public class JsonResponseModel <T> {
-	
-	@SerializedName("Response")
-	@Expose
-    public T response;
+public class JsonResponseModel<T> {
+  @SerializedName("Response")
+  @Expose
+  public T response;
 }

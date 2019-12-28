@@ -17,220 +17,170 @@
 
 package com.tencentcloudapi.common.profile;
 
-/**
- * http选项类
- */
 public class HttpProfile {
-	
-	/**
-	 * https协议
-	 */
-	public static final String REQ_HTTPS = "https://";
-	
-	/**
-	 * http协议
-	 */
-	public static final String REQ_HTTP = "http://";
-	
-	/**
-	 * post请求
-	 */
-    public static final String REQ_POST = "POST";
-    
-    /**
-     * get请求
-     */
-    public static final String REQ_GET = "GET";
-    
-    /**
-     * 时间单位，1分钟   60s
-     */
-    public static final int TM_MINUTE = 60;
-	
-    /**
-     * 请求方法
-     */
-	private String reqMethod;
-	
-	/**
-	 * 请求域名
-	 */
-	private String endpoint;
-	
-	/**
-	 * 请求协议
-	 */
-	private String protocol;
-	
-	/**
-	 * 读超时时间（秒）
-	 */
-	private int readTimeout;
-	
-	/**
-	 * 写超时时间（秒）
-	 */
-	private int writeTimeout;
-	
-	/**
-	 * 连接超时时间（秒）
-	 */
-	private int connTimeout;
-	
-	/**
-	 * http proxy host
-	 */
-	private String proxyHost;
-	
-	/**
-	 * http proxy port
-	 */
-	private int proxyPort;
-	
-	/**
-	 * http proxy user name
-	 */
-	private String proxyUsername;
-	
-	/**
-	 * http proxy password
-	 */
-	private String proxyPassword;
-	
-	public HttpProfile() {
-		this.reqMethod = HttpProfile.REQ_POST;
-		this.endpoint = null;
-		this.protocol = HttpProfile.REQ_HTTPS;
-		this.readTimeout = 0;
-		this.writeTimeout = 0;
-		this.connTimeout = HttpProfile.TM_MINUTE;
-	}
-	
-	/**
-	 * 设置请求方法
-	 * @param reqMethod 请求方法
-	 */
-	public void setReqMethod(String reqMethod) {
-		this.reqMethod = reqMethod;
-	}
-	
-	/**
-	 * 设置请求域名
-	 * @param endpoint 域名(xx.[region.]tencentcloudapi.com)
-	 */
-	public void setEndpoint(String endpoint) {
-		this.endpoint = endpoint;
-	}
-	
-	/**
-	 * 设置读超时时间
-	 * @param readTimeout 读超时时间
-	 */
-	public void setReadTimeout(int readTimeout) {
-		this.readTimeout = readTimeout;
-	}
-	
-	/**
-	 * 设置写超时时间
-	 * @param writeTimeout 写超时时间
-	 */
-	public void setWriteTimeout(int writeTimeout) {
-		this.writeTimeout = writeTimeout;
-	}
-	
-	/**
-	 * 设置连接超时时间
-	 * @param connTimeout 连接超时时间
-	 */
-	public void setConnTimeout(int connTimeout) {
-		this.connTimeout = connTimeout;
-	}
-	
-	/**
-	 * 设置请求协议
-	 * @param protocol 请求协议（https:// http://）
-	 */
-	public void setProtocol(String protocol) {
-		this.protocol = protocol;
-	}
-	
-	/**
-	 * 获取请求方法
-	 * @return reqMethod
-	 */
-	public String getReqMethod() {
-		return this.reqMethod;
-	}
-	
-	/**
-	 * 获取请求域名
-	 * @return endpoint
-	 */
-	public String getEndpoint() {
-		return this.endpoint;
-	}
-	
-	/**
-	 * 获取读超时时间
-	 * @return readTimeout
-	 */
-	public int getReadTimeout() {
-		return this.readTimeout;
-	}
-	
-	/**
-	 * 获取写超时时间
-	 * @return writeTimeout
-	 */
-	public int getWriteTimeout() {
-		return this.writeTimeout;
-	}
-	
-	/**
-	 * 获取连接超时时间
-	 * @return connTimeout
-	 */
-	public int getConnTimeout() {
-		return this.connTimeout;
-	}
-	
-	/**
-	 * 获取请求协议
-	 * @return protocol
-	 */
-	public String getProtocol() {
-		return this.protocol;
-	}
 
-    public String getProxyHost() {
-        return proxyHost;
-    }
+  public static final String REQ_HTTPS = "https://";
 
-    public void setProxyHost(String proxyHost) {
-        this.proxyHost = proxyHost;
-    }
+  public static final String REQ_HTTP = "http://";
 
-    public int getProxyPort() {
-        return proxyPort;
-    }
+  public static final String REQ_POST = "POST";
 
-    public void setProxyPort(int proxyPort) {
-        this.proxyPort = proxyPort;
-    }
+  public static final String REQ_GET = "GET";
 
-    public String getProxyUsername() {
-        return proxyUsername;
-    }
+  /** Time unit, 1 minute, equals 60 seconds. */
+  public static final int TM_MINUTE = 60;
 
-    public void setProxyUsername(String proxyUsername) {
-        this.proxyUsername = proxyUsername;
-    }
+  private String reqMethod;
 
-    public String getProxyPassword() {
-        return proxyPassword;
-    }
+  /** Endpoint means the domain which this request is sent to, such as cvm.tencentcloudapi.com. */
+  private String endpoint;
 
-    public void setProxyPassword(String proxyPassword) {
-        this.proxyPassword = proxyPassword;
-    }
+  /** HTTPS or HTTP, currently only HTTPS is valid. */
+  private String protocol;
+
+  /** Read timeout in seconds. */
+  private int readTimeout;
+
+  /** Write timeout in seconds */
+  private int writeTimeout;
+
+  /** Connect timeout in seconds */
+  private int connTimeout;
+
+  /** http proxy host */
+  private String proxyHost;
+
+  /** http proxy port */
+  private int proxyPort;
+
+  /** http proxy user name */
+  private String proxyUsername;
+
+  /** http proxy password */
+  private String proxyPassword;
+
+  public HttpProfile() {
+    this.reqMethod = HttpProfile.REQ_POST;
+    this.endpoint = null;
+    this.protocol = HttpProfile.REQ_HTTPS;
+    this.readTimeout = 0;
+    this.writeTimeout = 0;
+    this.connTimeout = HttpProfile.TM_MINUTE;
+  }
+
+  /**
+   * Set request method, GET or POST.
+   *
+   * @param reqMethod
+   */
+  public void setReqMethod(String reqMethod) {
+    this.reqMethod = reqMethod;
+  }
+
+  /**
+   * Set the endpoint.
+   *
+   * <p>Endpoint means the domain which this request is sent to, such as
+   * [productName].tencentcloudapi.com.
+   *
+   * <p>If you want to request to a specified region, such as Guangzhou, set it to
+   * [productName].ap-guangzhou.tencentcloudapi.com.
+   *
+   * @param endpoint
+   */
+  public void setEndpoint(String endpoint) {
+    this.endpoint = endpoint;
+  }
+
+  /**
+   * Set read timeout value.
+   *
+   * @param readTimeout A integer represents time in seconds.
+   */
+  public void setReadTimeout(int readTimeout) {
+    this.readTimeout = readTimeout;
+  }
+
+  /**
+   * Set write timeout value.
+   *
+   * @param writeTimeout A integer represents time in seconds.
+   */
+  public void setWriteTimeout(int writeTimeout) {
+    this.writeTimeout = writeTimeout;
+  }
+
+  /**
+   * Set connect timeout value.
+   *
+   * @param connTimeout A integer represents time in seconds.
+   */
+  public void setConnTimeout(int connTimeout) {
+    this.connTimeout = connTimeout;
+  }
+
+  /**
+   * Set request protocol.
+   *
+   * @param protocol https:// or http://
+   */
+  public void setProtocol(String protocol) {
+    this.protocol = protocol;
+  }
+
+  public String getReqMethod() {
+    return this.reqMethod;
+  }
+
+  public String getEndpoint() {
+    return this.endpoint;
+  }
+
+  public int getReadTimeout() {
+    return this.readTimeout;
+  }
+
+  public int getWriteTimeout() {
+    return this.writeTimeout;
+  }
+
+  public int getConnTimeout() {
+    return this.connTimeout;
+  }
+
+  public String getProtocol() {
+    return this.protocol;
+  }
+
+  public String getProxyHost() {
+    return proxyHost;
+  }
+
+  public void setProxyHost(String proxyHost) {
+    this.proxyHost = proxyHost;
+  }
+
+  public int getProxyPort() {
+    return proxyPort;
+  }
+
+  public void setProxyPort(int proxyPort) {
+    this.proxyPort = proxyPort;
+  }
+
+  public String getProxyUsername() {
+    return proxyUsername;
+  }
+
+  public void setProxyUsername(String proxyUsername) {
+    this.proxyUsername = proxyUsername;
+  }
+
+  public String getProxyPassword() {
+    return proxyPassword;
+  }
+
+  public void setProxyPassword(String proxyPassword) {
+    this.proxyPassword = proxyPassword;
+  }
 }
